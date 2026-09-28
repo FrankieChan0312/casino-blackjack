@@ -6,7 +6,7 @@ Intended repository location: `docs/STATE.md`
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
 Current task: `M1-T01 — Repository Bootstrap and Engineering Harness`  
-Status: M1-T01 VERIFIED; awaiting explicit human acceptance and a local commit decision. M1 gameplay remains NOT STARTED.
+Status: M1-T01 VERIFIED and explicitly ACCEPTED for the local checkpoint, committed as 56020d60ff41b54d0c345068befddf2790390cea. M1 gameplay remains NOT STARTED.
 
 ## 1. Current truth
 
@@ -32,13 +32,15 @@ At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and 
 
 ## 2. Delivery state
 
+Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, branch `main`, committed at `2026-09-28 19:19:50 +08:00` with message `chore: bootstrap M1 TypeScript verification harness`. All 18 reviewed files were committed with byte-identical staged content. The working tree was clean immediately after that commit. This metadata and the matching DEVELOPMENT_LOG.md entries belong to a separate docs-only checkpoint; the implementation checkpoint does not contain them. Git history identifies the metadata commit without requiring a self-referential hash update.
+
 | Item | State | Evidence / note |
 | --- | --- | --- |
 | Repository folder on Windows | `PASS` | Created and observed at the agreed path during M1-T01. |
 | Git repository initialized | `PASS` | Local repository initialized on `main`. |
 | Git branch | `main` | Observed during M1-T01 baseline. |
-| Git commit | `NO COMMIT` | New repository; no first commit yet. |
-| Working tree | `untracked bootstrap files` | Post-import files and M1-T01 harness; no commit yet. |
+| Implementation commit | `56020d60ff41b54d0c345068befddf2790390cea` | Local checkpoint, 2026-09-28 19:19:50 +08:00. |
+| Metadata checkpoint baseline | `modified documentation` | At 2026-09-28 19:26:25 +08:00, only STATE.md and DEVELOPMENT_LOG.md were modified. Final working-tree status is checked after the docs-only commit. |
 | Remote repository | `NO REMOTE` | `git remote -v` returned no configured remote. |
 | GitHub push | `NOT RUN` | No repository checkpoint has been pushed in this project workflow. |
 | M1 implementation | `NOT STARTED` | No gameplay source code implemented. |
@@ -46,8 +48,8 @@ At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and 
 | M1 automated verification | `NOT RUN` | Gameplay tests belong to later M1 tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
 | M1 user acceptance | `NOT RUN` | User acceptance can occur only after verified delivery. |
-| M1-T01 user acceptance | `NOT RUN` | Awaiting explicit human acceptance of this checkpoint. |
-| Local commit | `NOT RUN` | Proposed message recorded; no staging or commit performed. |
+| M1-T01 user acceptance | `ACCEPTED` | User explicitly accepted M1-T01 for the local checkpoint commit. |
+| Local commit | `PASS` | Exact requested message; 18 intended files committed; no remote or push. |
 | Deployment | `NOT APPLICABLE` | M1 is a headless local engine milestone. |
 
 ## 3. Approved planning baseline
@@ -150,7 +152,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is new, on branch `main`, has no commit, has untracked bootstrap work, and has no configured remote.
+The repository is on branch `main`; the accepted implementation checkpoint is `56020d60ff41b54d0c345068befddf2790390cea`. Its metadata is recorded separately. No remote is configured.
 
 ### Planning artifact placement
 
@@ -168,7 +170,7 @@ Do not create a public repository, change visibility, or push until the applicab
 
 ## 9. Next executable task
 
-Immediate next step: human review/acceptance of M1-T01 and confirmation of the proposed local commit `chore: bootstrap M1 TypeScript verification harness`. No remote configuration or push is authorized.
+The accepted implementation checkpoint is committed. The user authorized one separate local commit for its reviewed documentation metadata, with message `docs: record M1-T01 checkpoint metadata`. No further implementation, remote configuration, or push is authorized by this checkpoint task.
 
 Next implementation task after that checkpoint:
 
@@ -206,7 +208,7 @@ M1-T01 may be marked `VERIFIED` only after:
 - the task diff contains no unrelated modifications;
 - any commit/push status is recorded separately and truthfully.
 
-These M1-T01 conditions have been met. Commit, push, fresh-session milestone review, and human acceptance remain separate uncompleted events.
+These M1-T01 conditions have been met. The local checkpoint is committed and explicitly accepted; push and fresh-session milestone review remain uncompleted. Repair cycles remain 2/10.
 
 ## 11. Completion vocabulary
 

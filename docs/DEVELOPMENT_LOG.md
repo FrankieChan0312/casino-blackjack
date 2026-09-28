@@ -655,3 +655,52 @@ Final full harness run after the documentation update began at `2026-09-28 16:38
 Final approved read-only Git inspection completed at the entry timestamp: branch main (exit 0), `git rev-parse --verify HEAD` returned 128 with `Needed a single revision` (expected NO COMMIT), `git diff --check` PASS/0, `git status --short --untracked-files=all` PASS/0 with the same 18 intended additions, and `git remote -v` exit 0 with no remote. The timestamps are actual environment observations; no work is inferred during the interval between checks.
 
 Final document review confirmed STATE.md and PLAN.md reflect M1-T01 VERIFIED and cumulative repairs 2/10. No files were staged or committed; no remote was configured and no push/deployment occurred. This closing entry records evidence only and changes no executable file. Awaiting explicit human checkpoint acceptance and a local commit decision.
+
+### 2026-09-28 19:19:50 +08:00 — COMMIT
+
+The user explicitly accepted M1-T01 for a local checkpoint and authorized only the already VERIFIED files, using the exact message below. No gameplay/tooling/dependency/test change, M1-T02 work, remote configuration, or push was authorized. Recommended settings remained GPT-6 Astra / High; actual runtime settings remain NOT VERIFIED. Repair cycles carried forward unchanged at 2/10.
+
+Pre-commit baseline at `2026-09-28 19:17:56 +08:00`: correct repository, main, NO COMMIT (HEAD exit 128), empty index, 18 intended untracked files, and no remote. `git status --short` and the expanded file inventory returned exit 0. Fourteen original seed/harness SHA-256 hashes matched prior evidence; the four updated documents were reviewed against the preceding delivery and retained its modification times. No unexpected change was found.
+
+Pre-commit verification at `2026-09-28 19:18:26 +08:00`: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` PASS/0; typecheck PASS/0, lint PASS/0, and Vitest PASS/0 (1 file, 2 tests). No repair was needed.
+
+Captured SHA-256 hashes for all 18 reviewed files, checked them again before staging, staged the explicit file list, compared the staged names against that list, and compared every staged blob with `git hash-object --no-filters` of its working file. All matched exactly. Reviewed `git diff --cached --stat` and `git status --short`; only the 18 approved additions were staged. Existing LF/CRLF warnings did not change staged content, as confirmed by the blob comparisons.
+
+**Command:** `git commit -m 'chore: bootstrap M1 TypeScript verification harness'`
+
+**Result:** PASS, exit 0; root commit, 18 files, 8,415 insertions.
+
+**Branch:** `main`
+
+**Commit:** `56020d60ff41b54d0c345068befddf2790390cea`
+
+**Commit timestamp:** `2026-09-28T19:19:50+08:00` (Git committer timestamp).
+
+Required post-commit checks all returned exit 0:
+
+- `git rev-parse HEAD`: `56020d60ff41b54d0c345068befddf2790390cea`.
+- `git status --short`: empty; working tree clean immediately after commit.
+- `git log -1 --oneline`: `56020d6 chore: bootstrap M1 TypeScript verification harness`.
+- `git branch --show-current`: `main`.
+
+### 2026-09-28 19:20:09 +08:00 — USER_ACCEPTANCE / DOCUMENTATION
+
+**Accepted checkpoint:** M1-T01, branch main, commit `56020d60ff41b54d0c345068befddf2790390cea`. Acceptance is based on the user's explicit statement, "M1-T01 is accepted for local checkpoint commit," not inferred from verification or committing.
+
+Recorded the real commit hash/time and acceptance in STATE.md and this log after the commit, as required by the repository evidence rules. These two documentation edits remain uncommitted and are not contained in the checkpoint. No amend or second commit was performed. PLAN.md and all other checkpoint files were left unchanged under the user's limited scope.
+
+**M1-T01:** VERIFIED and ACCEPTED for the local checkpoint. **Repair cycles:** 2/10, unchanged. **M1-T02:** NOT STARTED. **Push:** NOT RUN. No remote creation/configuration, merge, release, or deployment occurred.
+
+### 2026-09-28 19:26:25 +08:00 — BASELINE / REVIEW
+
+The user authorized the M1-T01 post-commit metadata checkpoint, limited to STATE.md and this log, with message `docs: record M1-T01 checkpoint metadata`. Recommended settings: GPT-6 Astra / High; actual runtime settings remain NOT VERIFIED. Acceptance requires an unchanged original implementation commit, VERIFIED and ACCEPTED status, repair cycles exactly 2/10, one docs-only commit, and a clean final working tree. Stop on unexpected files or contradictions with Git history. No amend, remote configuration, push, or M1-T02 work is authorized.
+
+Executed `git rev-parse HEAD`, `git branch --show-current`, `git status --short`, `git diff --cached --stat`, the exact two-file `git diff`, `git log -1 --format='%H%n%s%n%cI'`, and `git remote -v`; each returned exit 0. Observed main, HEAD `56020d60ff41b54d0c345068befddf2790390cea`, no staged changes, only the two intended modified documents, and no remote. The implementation message and timestamp matched the recorded evidence exactly. Review found no unexpected files or history contradictions.
+
+Step -> verification: review the metadata against Git -> run verify.ps1 and git diff --check -> inspect the final two-file diff and staged content -> create the authorized docs-only commit -> inspect HEAD, the last two commits, and the final working tree. STATE.md now distinguishes the implementation commit from this metadata checkpoint and dates its pre-commit working-tree observation, so committing the metadata will not leave a false current claim that it is still uncommitted. Earlier timestamped log entries remain historical evidence.
+
+The metadata commit's own hash and timestamp are recorded by Git history and reported in the delivery, rather than adding another post-commit document edit. This follows the user's explicit clean-working-tree requirement and avoids an endless sequence of self-referential metadata commits. The original implementation checkpoint remains unchanged. Repair cycles remain 2/10.
+
+### 2026-09-28 19:27:33 +08:00 — VALIDATION
+
+Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` after the metadata review edits: PASS, exit 0. Typecheck and lint passed; Vitest passed 1 test file and 2 tests (started at 19:27:37 +08:00). No implementation, tooling, dependency, configuration, or test file changed, and no repair cycle was needed. This entry records that executed run. The exact final documentation version is also subject to the required pre-commit harness run, whitespace check, status check, and diff inspection; actual commit/post-commit results are reported in the delivery and Git history without further document edits.
