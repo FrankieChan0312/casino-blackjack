@@ -5,12 +5,14 @@ Document task: STATE-1.0
 Intended repository location: `docs/STATE.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
-Current task: `M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution`
-Status: M1-T06 IMPLEMENTED / VERIFIED; awaiting user acceptance and checkpoint commit; repair cycles 0/10. M1-T05 remains IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T04 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T03 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T02 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10. M1-T07/M1-T08 remain NOT STARTED.
+Current task: `M1-T07 — Player Hit/Stand and Terminal Protection`
+Status: M1-T07 IMPLEMENTED / VERIFIED; full harness and complete task review passed; awaiting user acceptance and checkpoint commit; repair cycles 1/10. M1-T06 remains IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T05 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T04 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T03 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T02 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10. M1-T08 remains NOT STARTED.
 
 ## 1. Current truth
 
-M1-T06 baseline at `2026-09-28 22:06:08 +08:00`: main, HEAD and origin/main both `7c30cc642090c2a8e7032a5f34b620978bdf9a5e`, clean working tree, behind/ahead 0/0. M1-T05 was explicitly accepted and committed at `2026-09-28 22:00:07 +08:00` as `feat: add blackjack hand evaluation`. The user supplied publication parity at `2026-09-28 22:02:10 +08:00`; fresh local parity corroborates this baseline, without a separate metadata-only commit. M1-T06 first verification at 22:10:13-22:11:11 +08:00 passed typecheck, lint, 7 files / 105 tests. Source/test diff and Git checks passed at 22:12:19 +08:00. No repair, acceptance, commit or push has occurred for M1-T06.
+M1-T07 baseline at `2026-09-28 22:29:33 +08:00`: main, HEAD and origin/main both `cacaae0c6522c3f23148de40aa0b6d6df5667f4d`, clean working tree, behind/ahead 0/0. M1-T06 was explicitly accepted and committed at `2026-09-28 22:24:02 +08:00` as `feat: add initial blackjack round resolution`. User publication parity at `2026-09-28 22:25:50 +08:00` is corroborated by this baseline and recorded within this task, without a separate metadata commit. M1-T07 first verification at 22:32:20-22:32:26 +08:00 passed typecheck, lint, 8 files / 119 tests. Source/test diff and Git checks passed at 22:33:12 +08:00. M1-T07 repairs are 1/10 after the documentation patch correction recorded in DEVELOPMENT_LOG.md; acceptance, commit and push have not occurred.
+
+M1-T06 baseline at `2026-09-28 22:06:08 +08:00`: main, HEAD and origin/main both `7c30cc642090c2a8e7032a5f34b620978bdf9a5e`, clean working tree, behind/ahead 0/0. M1-T05 was explicitly accepted and committed at `2026-09-28 22:00:07 +08:00` as `feat: add blackjack hand evaluation`. The user supplied publication parity at `2026-09-28 22:02:10 +08:00`; fresh local parity corroborates this baseline, without a separate metadata-only commit. M1-T06 first verification at 22:10:13-22:11:11 +08:00 passed typecheck, lint, 7 files / 105 tests. Source/test diff and Git checks passed at 22:12:19 +08:00. Subsequent acceptance, commit and publication are recorded in the M1-T07 baseline above; repairs remain 0/10.
 
 M1-T05 baseline at `2026-09-28 21:41:40 +08:00`: main, HEAD and origin/main both `4a25516854399587ec4f5dd47f8d8e5fc0096098`, clean working tree, behind/ahead 0/0. M1-T04 was explicitly accepted and committed at `2026-09-28 21:36:17 +08:00` as `feat: add shoe accounting and lifecycle`. The user supplied publication parity at `2026-09-28 21:38:53 +08:00`; fresh local parity corroborates that baseline. No separate publication-metadata commit is created. M1-T05 adds pure scoring and explicit original-hand natural eligibility only. First full verification at 21:43:22-21:43:27 +08:00 passed typecheck, lint and 5 files / 66 tests. A no-index exit-code handling repair was verified at 21:44:43 +08:00; source/tests were unchanged. Subsequent acceptance, commit and publication are recorded in the M1-T06 baseline above.
 
@@ -46,7 +48,7 @@ At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and 
 
 Initial GitHub publication was verified at `2026-09-28 19:50:22 +08:00` according to the user's publication evidence. Public repository: [FrankieChan0312/casino-blackjack](https://github.com/FrankieChan0312/casino-blackjack). Origin fetch/push URL: `https://github.com/FrankieChan0312/casino-blackjack.git`. At publication, local `main` and `origin/main` both pointed to `bf7c21a46e61784234658a21c31fdbf1cac8048e`, main tracked origin/main, and the working tree was clean.
 
-That initial parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. The later publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 was subsequently pushed, as reported by the user at 20:18:58 +08:00 and corroborated by the M1-T02 local baseline. Publication now includes M1-T05 through 7c30cc642090c2a8e7032a5f34b620978bdf9a5e as recorded above. No M1-T06 push is authorized.
+That initial parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. The later publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 was subsequently pushed, as reported by the user at 20:18:58 +08:00 and corroborated by the M1-T02 local baseline. Publication now includes M1-T06 through cacaae0c6522c3f23148de40aa0b6d6df5667f4d as recorded above. No M1-T07 push is authorized.
 
 Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, branch `main`, committed at `2026-09-28 19:19:50 +08:00` with message `chore: bootstrap M1 TypeScript verification harness`. All 18 reviewed files were committed with byte-identical staged content. The working tree was clean immediately after that commit. This metadata and the matching DEVELOPMENT_LOG.md entries belong to a separate docs-only checkpoint; the implementation checkpoint does not contain them. Git history identifies the metadata commit without requiring a self-referential hash update.
 
@@ -61,7 +63,7 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | Branch upstream | `origin/main` | Local main tracks origin/main; publication parity was 0 ahead / 0 behind. |
 | Initial GitHub publication | `PASS` | User verification at 2026-09-28 19:50:22 +08:00; local and public-API evidence corroborated bf7c21a46e61784234658a21c31fdbf1cac8048e. |
 | Publication-evidence commit push | `PASS` | User evidence at 20:18:58 +08:00; a1649501dd1b180e96ca6a766ec0fd00fab54c70 parity confirmed at M1-T02 baseline. |
-| M1 implementation | `IN PROGRESS` | Inventory, shoe, scoring and initial-round/public-view operations; no Hit/Stand, dealer drawing or ordinary outcome comparison. |
+| M1 implementation | `IN PROGRESS` | Initial rounds, public view and player actions; dealer drawing and ordinary outcome comparison remain unimplemented. |
 | M1-T02 inventory | `VERIFIED` | src/domain/card.ts and five inventory unit tests; full harness and task review passed. |
 | M1-T02 user acceptance | `ACCEPTED` | User explicitly confirms acceptance before the checkpoint commit; recorded in this metadata checkpoint. |
 | M1-T02 implementation commit | `COMMITTED` | 28bf85d5f172221efef9bc1e428ff73e88b6d98e, 2026-09-28 20:40:53 +08:00; only the six verified task files. |
@@ -73,7 +75,9 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | M1-T05 hand evaluation / natural classification | `VERIFIED` | Full harness PASS; 37 new tests and complete task diff review PASS. |
 | M1-T05 acceptance / commit / push | `ACCEPTED` / `COMMITTED` / `PUSHED` | 7c30cc642090c2a8e7032a5f34b620978bdf9a5e; user acceptance/publication evidence and M1-T06 parity baseline. |
 | M1-T06 initial round / public view | `VERIFIED` | Full harness and complete task diff review PASS; 39 new cases. |
-| M1-T06 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
+| M1-T06 acceptance / commit / push | `ACCEPTED` / `COMMITTED` / `PUSHED` | cacaae0c6522c3f23148de40aa0b6d6df5667f4d; user acceptance/publication evidence and M1-T07 parity baseline. |
+| M1-T07 player actions / terminal protection | `IMPLEMENTED` / `VERIFIED` | Full harness and complete task review PASS; awaiting user acceptance. |
+| M1-T07 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
 | M1-T01 harness | `VERIFIED` | Typecheck, lint, 2 tests, and failure-propagation self-test passed. |
 | Full M1 automated verification | `NOT RUN` | Inventory and harness checks PASS; full gameplay regression belongs to later tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
@@ -106,9 +110,9 @@ Current executable milestone:
 
 Current executable task:
 
-`M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution`
+`M1-T07 — Player Hit/Stand and Terminal Protection`
 
-Current task scope is readonly RoundState/GameState, createGame/startRound, original two-card natural resolution, gated dealer peek, initial-deal integrity handling and an explicit public projection. AC-M1-010/011 are covered at initial-round level. A normal non-terminal deal retains four cards inPlay; initial natural completion transfers them to discarded per DESIGN. Only PLAYER_TURN, ROUND_COMPLETE and INTEGRITY_ERROR are exposed. No Hit/Stand, dealer S17, ordinary outcome comparison, Split, wagering, UI, replay or future framework is included. Existing card/random/shoe/hand modules remain unchanged.
+Current task scope is hit/stand, player bust, automatic ordinary-21 transition, unchanged action rejection, Hit integrity failure and the public-view behavior required by DEALER_TURN. AC-M1-012/013 and player-action terminal protection in AC-M1-017 are covered. DESIGN section 12 authorizes reveal in DEALER_TURN and ROUND_COMPLETE; PLAYER_TURN and INTEGRITY_ERROR retain redaction. No dealer S17, dealer draw, ordinary result comparison, Split, wagering, UI or future framework is included. Existing card/random/shoe/hand modules remain unchanged.
 
 M1 remains:
 
@@ -148,7 +152,7 @@ Repair cycles are cumulative per substantive task and do not reset across sessio
 | `M1-T04` | 0 | 10 | `VERIFIED` |
 | `M1-T05` | 1 | 10 | `VERIFIED` |
 | `M1-T06` | 0 | 10 | `VERIFIED` |
-| `M1-T07` | 0 | 10 | `NOT STARTED` |
+| `M1-T07` | 1 | 10 | `VERIFIED` |
 | `M1-T08` | 0 | 10 | `NOT STARTED` |
 | `M1-T09` | 0 | 10 | `NOT STARTED` |
 | `M1-T10` | 0 | 10 | `NOT STARTED` |
@@ -156,6 +160,8 @@ Repair cycles are cumulative per substantive task and do not reset across sessio
 M1-T02 repair cycles are 1/10. The first implementation and first full validation passed; the later git diff --check failed on trailing spaces in the changed README status line. Cycle 1 removed only those spaces and re-ran the whitespace check and full harness successfully. A rejected patch before the first implementation-plus-validation wrote no files and consumed no cycle; all evidence is retained in DEVELOPMENT_LOG.md. M1-T01 remains 2/10 for its two recorded review-command repairs (PowerShell inline quoting and lockfile JSON parsing). No count was reset.
 
 ## 6. Verification state
+
+M1-T07 first implementation and full validation passed without repair, adding 9 player-action cases and 5 public-view cases. A subsequent documentation patch context correction consumes cycle 1/10; see DEVELOPMENT_LOG.md for evidence, hypothesis and correction. No validation was bypassed; prior counts remain unchanged.
 
 M1-T06 first implementation and full validation passed; repair cycles remain 0/10. The initial-round and projection tests add 39 cases to the 66 existing tests. Full M1 action/dealer/outcome integration remains incomplete.
 
@@ -167,7 +173,7 @@ M1-T04's first implementation and full validation passed without repairs (0/10).
 
 | Check | State | Note |
 | --- | --- | --- |
-| `scripts/verify.ps1` | `PASS` | M1-T06 first run at 2026-09-28 22:10:13-22:11:11 +08:00, exit 0; typecheck, lint, 7 files / 105 tests passed. |
+| `scripts/verify.ps1` | `PASS` | M1-T07 first run at 2026-09-28 22:32:20-22:32:26 +08:00, exit 0; typecheck, lint, 8 files / 119 tests passed. |
 | TypeScript typecheck | `PASS` | `npm run typecheck`, exit 0. |
 | Lint | `PASS` | `npm run lint`, exit 0. |
 | Harness tests | `PASS` | `npm run test`, exit 0; 1 file, 2 tests. |
@@ -177,16 +183,18 @@ M1-T04's first implementation and full validation passed without repairs (0/10).
 | Shoe accounting / lifecycle tests | `PASS` | 12 cases: fresh/single/all draws, completion, cut hit/crossing, reuse, 0..4 minimum guard, retirement/exhaustion, deterministic replacement. |
 | Hand evaluation / natural tests | `PASS` | 37 cases: explicit ranks/totals/flags, multiple Aces, bust, original eligibility, both card orders, empty boundary and frozen-input/shoe purity. |
 | Initial round / public projection tests | `PASS` | 27 game cases and 12 public-view cases; order/accounting, natural matrix, peek/no-peek, replacement, partial-deal integrity, secrecy and purity. |
+| Player actions / public-view additions | `PASS` | 14 new cases: Hit/repeated Hit/21/bust, Stand, all rejected phases, terminal snapshots, Hit exhaustion and phase-specific reveal. |
+| M1-T07 source/test review and Git checks | `PASS` | Tracked implementation diff and complete new action-test diff reviewed at 22:33:12 +08:00; whitespace/status checks passed. Complete documentation diff, whitespace and status review PASS at 22:38:46 +08:00; only eight intended files. |
 | M1-T06 complete task review and Git checks | `PASS` | Five new-file diffs/whitespace checks at 22:12:19 +08:00; complete tracked documentation diff, git diff --check and status PASS at 22:16:11 +08:00. Only nine intended files. |
 | M1-T05 complete task review and Git checks | `PASS` | New-file diffs reviewed; no-index whitespace and git diff --check/status passed at 21:44:43 +08:00 after command repair. Full tracked documentation diff and Git checks passed at 21:49:20 +08:00; only six intended files. |
 | M1-T04 diff / status / task review | `PASS` | Git whitespace/status/tracked diff at 21:26:06 +08:00, complete new-file diff reviewed; only six intended files. Review completed at 21:27:59 +08:00. |
 | M1-T03 diff / status / task review | `PASS` | git diff --check and status exited 0 at 20:58:32 +08:00; exact tracked diff and three new-file no-index diffs reviewed. Only seven intended files changed. |
-| Initial-round integration | `PASS` | game.test.ts exercises existing shoe/hand functions through startRound. Full post-deal gameplay integration remains NOT RUN. |
+| Initial-round and player-action integration | `PASS` | game.test.ts and playerActions.test.ts exercise shoe/hand integration. Full dealer/outcome gameplay integration remains NOT RUN. |
 | Browser/E2E tests | `NOT APPLICABLE` | M1 has no browser UI. |
 | M1-T02 `git diff --check` | `PASS` | Exit 0 at 20:32:52 +08:00 after cycle 1; new files also inspected with no-index checks. |
 | M1-T02 final task review | `PASS` | Completed at 20:33:19 +08:00: exact tracked diff and both new-file diffs inspected; only six intended files. |
 
-Post-deal gameplay-flow integration checks remain NOT RUN. Fresh-session milestone review is NOT RUN; same-session task review is not independent review.
+Dealer/outcome gameplay-flow integration checks remain NOT RUN. Fresh-session milestone review is NOT RUN; same-session task review is not independent review.
 
 ## 7. Known blockers
 
@@ -198,7 +206,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is on branch `main`, tracking `origin/main`. M1-T06 base HEAD and origin/main are 7c30cc642090c2a8e7032a5f34b620978bdf9a5e (ahead 0 / behind 0). Earlier accepted implementation history is unchanged. M1-T06 is an uncommitted diff on that published baseline; no history has been rewritten and no push occurred in this task.
+The repository is on branch `main`, tracking `origin/main`. M1-T07 base HEAD and origin/main are cacaae0c6522c3f23148de40aa0b6d6df5667f4d (ahead 0 / behind 0). Earlier accepted implementation history is unchanged. M1-T07 is an uncommitted diff on that published baseline; no history has been rewritten and no push occurred in this task.
 
 ### Planning artifact placement
 
@@ -216,11 +224,11 @@ Do not change visibility or perform another push without authorization for that 
 
 ## 9. Next executable task
 
-M1-T06 is VERIFIED and awaits explicit user acceptance and checkpoint-commit authorization. Proposed commit: `feat: add initial blackjack round resolution`. No M1-T06 commit/push or M1-T07/M1-T08 implementation is authorized.
+M1-T07 is IMPLEMENTED / VERIFIED and awaits explicit user acceptance and checkpoint-commit authorization. Proposed commit: `feat: add blackjack player actions`. No M1-T07 commit/push or M1-T08 implementation is authorized.
 
 Next implementation task after that checkpoint:
 
-`M1-T07 — Player Hit/Stand and Terminal Protection` (NOT STARTED; separate authorization required).
+`M1-T08 — Dealer S17 and Outcome Resolution` (NOT STARTED; separate authorization required).
 
 Completed baseline actions (historical):
 

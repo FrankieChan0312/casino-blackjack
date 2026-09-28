@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { startRound, type GameState } from '../../src/domain/game.js';
+import { hit, stand, startRound, type GameState } from '../../src/domain/game.js';
 import { getPublicView } from '../../src/domain/publicView.js';
 import type { Rank } from '../../src/domain/card.js';
 import { orderedShoe } from '../helpers/shoeFixture.js';
@@ -91,4 +91,42 @@ test('projection is deterministic, pure and returns detached public cards', () =
   expect(first.round?.dealer.visibleCards[0]).not.toBe(state.round.dealerCards[0]);
   expect(Object.keys(first)).toEqual(['round']);
   expect(Object.keys(first.round!.playerCards[0])).toEqual(['rank', 'suit']);
+});
+
+test('Hit below 21 updates public player cards while keeping the dealer hole hidden', () => {
+  const result = hit(dealt(['10', 'A', '5', '6', '3']));
+  expect(result.ok).toBe(true);
+  const view = getPublicView(result.state);
+  expect(view.round?.playerCards).toEqual([
+    { rank: '10', suit: 'clubs' }, { rank: '5', suit: 'hearts' }, { rank: '3', suit: 'clubs' },
+  ]);
+  expect(view.round?.phase).toBe('PLAYER_TURN');
+  expect(view.round?.dealer.holeCard).toBeNull();
+  expect(view.round?.dealer.visibleCards).toEqual([{ rank: 'A', suit: 'diamonds' }]);
+  expect(JSON.stringify(view)).not.toContain('spades');
+  expect(JSON.stringify(view)).not.toContain('total');
+});
+
+test.each(['stand', 'twenty-one', 'bust'] as const)('%s reveals at DEALER_TURN or completion per DESIGN section 12', (action) => {
+  const initial = action === 'bust' ? dealt(['10', '9', '8', '7', '7']) : dealt(['10', '9', '5', '7', '6']);
+  const next = (action === 'stand' ? stand(initial) : hit(initial)).state;
+  const snapshot = structuredClone(next);
+  const view = getPublicView(next);
+  expect(view.round?.phase).toBe(action === 'bust' ? 'ROUND_COMPLETE' : 'DEALER_TURN');
+  expect(view.round?.dealer.holeCard).toEqual({ rank: '7', suit: 'spades' });
+  expect(view.round?.dealer.visibleCards).toHaveLength(2);
+  expect(view.round?.outcome).toBe(action === 'bust' ? 'DEALER_WIN' : undefined);
+  expect(next).toEqual(snapshot);
+});
+
+test('failed Hit keeps the dealer hole hidden in the integrity view', () => {
+  const active = dealt(['10', 'A', '5', '6']);
+  const fault = { ...active, shoe: { ...active.shoe, available: [],
+    discarded: [...active.shoe.discarded, ...active.shoe.available],
+  } };
+  const view = getPublicView(hit(fault).state);
+  expect(view.round?.phase).toBe('INTEGRITY_ERROR');
+  expect(view.round?.dealer.holeCard).toBeNull();
+  expect(view.round?.outcome).toBeUndefined();
+  expect(JSON.stringify(view)).not.toContain('spades');
 });

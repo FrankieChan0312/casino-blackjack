@@ -2,8 +2,8 @@
 
 A portfolio-oriented Blackjack project focused on **verifiable game-engine behaviour, deterministic testing, clear domain modelling, and reproducible engineering evidence**.
 
-> **Current status:** M1-T06 initial deal, natural resolution and public projection implemented; see [STATE.md](docs/STATE.md) for verification evidence.
-> Post-deal player actions, dealer drawing and ordinary outcome comparison remain unimplemented.
+> **Current status:** M1-T07 player Hit/Stand and terminal protection implemented; see [STATE.md](docs/STATE.md) for verification evidence.
+> Dealer drawing and ordinary outcome comparison remain unimplemented.
 > No browser UI, deployment, or real-money functionality exists.
 
 ## Project Goal
@@ -40,7 +40,9 @@ Implemented so far: `src/domain/card.ts` defines card types and creates an unshu
 
 `hand.ts` evaluates readonly card arrays into total, soft, bust and 21 facts without mutation. Aces start at 11 and reduce to 1 as needed; empty hands total zero. `isNaturalBlackjack(cards, originalHandEligible)` requires explicit original-unsplit eligibility as well as exactly two cards, Ace plus 10/J/Q/K. Ordinary 21 remains distinct from natural Blackjack.
 
-`game.ts` provides `createGame(shoeId, random)` and `startRound(state, roundId, replacementShoeId, random)`. Initial order is player/upcard/player/hole. Dealer peek is gated to Ace or ten-valued upcards; initial naturals resolve immediately, otherwise the phase becomes PLAYER_TURN. Accepted commands return a new state, which may contain INTEGRITY_ERROR if a draw failed; an active-round start is rejected unchanged. Natural completion moves inPlay to discard. `getPublicView(state)` exposes copied rank/suit data and a null hole card until ROUND_COMPLETE, with no shoe inventory or hidden total. Use that projection for player-facing consumers; internal GameState contains secrets. Hit/Stand, dealer S17 and ordinary outcome comparison remain planned.
+`game.ts` provides `createGame(shoeId, random)` and `startRound(state, roundId, replacementShoeId, random)`. Initial order is player/upcard/player/hole. Dealer peek is gated to Ace or ten-valued upcards; initial naturals resolve immediately, otherwise the phase becomes PLAYER_TURN. Accepted commands return a new state, which may contain INTEGRITY_ERROR if a draw failed; an active-round start is rejected unchanged. Normal completion moves inPlay to discard.
+
+`hit(state)` draws one player card: below 21 stays in PLAYER_TURN, ordinary 21 enters DEALER_TURN, and bust completes with DEALER_WIN / PLAYER_BUST without dealer draws. `stand(state)` changes only the phase to DEALER_TURN. Both reject absent, wrong-phase or terminal rounds unchanged. A failed Hit retains the retired shoe and enters INTEGRITY_ERROR without a normal result. `getPublicView(state)` exposes copied rank/suit data, hiding the hole in PLAYER_TURN and INTEGRITY_ERROR and revealing it in DEALER_TURN or ROUND_COMPLETE, as DESIGN section 12 requires. It excludes shoe order and hidden totals. Use this projection for player-facing consumers; internal GameState contains secrets. Dealer S17 and ordinary outcome comparison remain planned.
 
 It will implement a one-seat, no-wager, headless Blackjack engine with:
 
@@ -126,7 +128,7 @@ If local script execution is restricted, invoke it in a child process:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 ```
 
-The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite covers the document harness, inventory, randomness, shoe lifecycle, hand scoring, initial-deal/natural integration and public-view secrecy. Post-deal gameplay integration remains unimplemented. Browser/E2E checks are NOT APPLICABLE to M1.
+The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite covers the document harness, inventory, randomness, shoe lifecycle, hand scoring, initial-deal/natural integration, player actions, terminal protection and public-view secrecy. Dealer/outcome integration remains unimplemented. Browser/E2E checks are NOT APPLICABLE to M1.
 
 The toolchain uses TypeScript, ESLint with typescript-eslint, and Vitest in its default Node environment. Vite is a Vitest development dependency; no browser application or server is implemented. Exact versions are in package.json and package-lock.json. No production dependencies or build output are needed for this checkpoint.
 
@@ -238,16 +240,16 @@ Specification:         prepared
 M1 design:             prepared
 Engineering plan:      prepared
 Repository bootstrap:  engineering harness implemented
-Blackjack source code: inventory, shoe, scoring, initial rounds and public view
+Blackjack source code: inventory, shoe, scoring, initial rounds, player actions, public view
 Automated verification:see docs/STATE.md
-GitHub push:            M1-T05 published; M1-T06 not committed/pushed
+GitHub push:            M1-T06 published; M1-T07 not committed/pushed
 Browser UI:             not implemented
 Deployment:             not applicable to M1
 ```
 
 The current executable task is:
 
-`M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution`
+`M1-T07 — Player Hit/Stand and Terminal Protection`
 
 ## Local Repository Target
 

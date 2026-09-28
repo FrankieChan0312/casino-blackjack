@@ -1,11 +1,11 @@
 import type { PhysicalCard } from './card.js';
-import { isNaturalBlackjack } from './hand.js';
+import { evaluateHand, isNaturalBlackjack } from './hand.js';
 import type { RandomSource } from './random.js';
 import { completeShoeRound, createShoe, drawCard, prepareShoeForNextRound, type ShoeState } from './shoe.js';
 
-export type RoundPhase = 'PLAYER_TURN' | 'ROUND_COMPLETE' | 'INTEGRITY_ERROR';
+export type RoundPhase = 'PLAYER_TURN' | 'DEALER_TURN' | 'ROUND_COMPLETE' | 'INTEGRITY_ERROR';
 export type RoundOutcome = 'PLAYER_BLACKJACK' | 'DEALER_WIN' | 'PUSH';
-export type OutcomeReason = 'PLAYER_NATURAL' | 'DEALER_NATURAL' | 'BOTH_NATURAL';
+export type OutcomeReason = 'PLAYER_NATURAL' | 'DEALER_NATURAL' | 'BOTH_NATURAL' | 'PLAYER_BUST';
 
 export interface RoundState {
   readonly roundId: string;
@@ -23,9 +23,11 @@ export interface GameState {
   readonly round: RoundState | null;
 }
 
+export type ActionError = 'ROUND_ALREADY_ACTIVE' | 'NO_ROUND' | 'WRONG_PHASE' | 'ROUND_ALREADY_TERMINAL';
+
 export type CommandResult =
   | { readonly ok: true; readonly state: GameState }
-  | { readonly ok: false; readonly state: GameState; readonly error: 'ROUND_ALREADY_ACTIVE' };
+  | { readonly ok: false; readonly state: GameState; readonly error: ActionError };
 
 export function createGame(shoeId: string, random: RandomSource): GameState {
   return { shoe: createShoe(shoeId, random), round: null };
@@ -39,7 +41,7 @@ export function startRound(
   replacementShoeId: string,
   random: RandomSource,
 ): CommandResult {
-  if (state.round?.phase === 'PLAYER_TURN') {
+  if (state.round?.phase === 'PLAYER_TURN' || state.round?.phase === 'DEALER_TURN') {
     return { ok: false, state, error: 'ROUND_ALREADY_ACTIVE' };
   }
   let shoe = prepareShoeForNextRound(state.shoe, replacementShoeId, random);
@@ -71,4 +73,44 @@ export function startRound(
     } } };
   }
   return { ok: true, state: { shoe, round: { roundId, phase: 'PLAYER_TURN', playerCards, dealerCards } } };
+}
+
+function playerActionError(round: RoundState): ActionError | undefined {
+  if (round.phase === 'ROUND_COMPLETE' || round.phase === 'INTEGRITY_ERROR' || round.integrityError !== undefined) {
+    return 'ROUND_ALREADY_TERMINAL';
+  }
+  if (round.phase !== 'PLAYER_TURN') return 'WRONG_PHASE';
+  return undefined;
+}
+
+export function hit(state: GameState): CommandResult {
+  const round = state.round;
+  if (!round) return { ok: false, state, error: 'NO_ROUND' };
+  const error = playerActionError(round);
+  if (error) return { ok: false, state, error };
+
+  const draw = drawCard(state.shoe);
+  if (!draw.ok) {
+    return { ok: true, state: { shoe: draw.shoe, round: {
+      ...round, phase: 'INTEGRITY_ERROR', integrityError: draw.error,
+    } } };
+  }
+  const playerCards = [...round.playerCards, draw.card];
+  const evaluation = evaluateHand(playerCards);
+  if (evaluation.isBust) {
+    return { ok: true, state: { shoe: completeShoeRound(draw.shoe), round: {
+      ...round, playerCards, phase: 'ROUND_COMPLETE', outcome: 'DEALER_WIN', outcomeReason: 'PLAYER_BUST',
+    } } };
+  }
+  return { ok: true, state: { shoe: draw.shoe, round: {
+    ...round, playerCards, phase: evaluation.isTwentyOne ? 'DEALER_TURN' : 'PLAYER_TURN',
+  } } };
+}
+
+export function stand(state: GameState): CommandResult {
+  const round = state.round;
+  if (!round) return { ok: false, state, error: 'NO_ROUND' };
+  const error = playerActionError(round);
+  if (error) return { ok: false, state, error };
+  return { ok: true, state: { shoe: state.shoe, round: { ...round, phase: 'DEALER_TURN' } } };
 }

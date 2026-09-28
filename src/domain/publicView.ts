@@ -32,7 +32,8 @@ function publicCard(card: PhysicalCard): PublicCard {
 export function getPublicView(state: GameState): PublicGameView {
   const round = state.round;
   if (round === null) return { round: null };
-  const revealed = round.phase === 'ROUND_COMPLETE';
+  // DESIGN section 12 authorizes reveal as player decisions end, before dealer draws.
+  const revealed = round.phase === 'DEALER_TURN' || round.phase === 'ROUND_COMPLETE';
   return { round: {
     roundId: round.roundId,
     phase: round.phase,
