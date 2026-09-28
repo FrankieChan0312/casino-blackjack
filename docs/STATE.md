@@ -5,12 +5,14 @@ Document task: STATE-1.0
 Intended repository location: `docs/STATE.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
-Current task: `M1-T03 — Randomness Boundary, Shuffle, and Cut Position`
-Status: M1-T03 IMPLEMENTED / VERIFIED; acceptance and checkpoint commit pending; repair cycles 0/10. M1-T02 remains IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10. M1-T04 remains NOT STARTED.
+Current task: `M1-T04 — Shoe Accounting and Lifecycle`
+Status: M1-T04 IMPLEMENTED / VERIFIED; pending user acceptance and checkpoint commit; repair cycles 0/10. M1-T03 remains IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 0/10. M1-T02 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10. M1-T05/M1-T06 remain NOT STARTED.
 
 ## 1. Current truth
 
-M1-T03 baseline at `2026-09-28 20:53:02 +08:00`: branch main, HEAD and origin/main both `a424ba5ca4de7ae28416b8d44420f7911d0fab75`, clean working tree, behind/ahead 0/0. The user supplied publication parity at `2026-09-28 20:49:10 +08:00`; this task records that push evidence without a separate metadata commit. Baseline harness PASS: typecheck, lint, 2 files / 7 tests. M1-T03 adds only RandomSource, a production adapter, copying Fisher-Yates shuffle, and cut selection. First implementation verification at 20:57:13 +08:00 passed typecheck, lint, 3 files / 17 tests; Git whitespace/status/diff checks passed at 20:58:32 +08:00. Source/test diff review found no unrelated implementation or M1-T04 state. User acceptance is pending; no commit or push has occurred for M1-T03.
+M1-T04 baseline at `2026-09-28 21:19:50 +08:00`: main, HEAD and origin/main both `3145254ad19a9c8f7fd87bc1271c5c4950e94da4`, clean working tree, behind/ahead 0/0. The user supplied publication parity at `2026-09-28 21:15:16 +08:00`; it is recorded within this task, without a separate metadata commit. M1-T03 was explicitly accepted and committed at `2026-09-28 21:11:29 +08:00` as `feat: add deterministic shuffle and cut selection`, then pushed according to that user evidence and fresh local parity. M1-T04 first verification at 21:22:50 +08:00 passed typecheck, lint, 4 files / 29 tests. Git whitespace/status/diff review passed at 21:26:06 +08:00; same-session task review completed at 21:27:59 +08:00. No M1-T04 acceptance, commit or push has occurred.
+
+M1-T03 baseline at `2026-09-28 20:53:02 +08:00`: branch main, HEAD and origin/main both `a424ba5ca4de7ae28416b8d44420f7911d0fab75`, clean working tree, behind/ahead 0/0. The user supplied publication parity at `2026-09-28 20:49:10 +08:00`; this task records that push evidence without a separate metadata commit. Baseline harness PASS: typecheck, lint, 2 files / 7 tests. M1-T03 adds only RandomSource, a production adapter, copying Fisher-Yates shuffle, and cut selection. First implementation verification at 20:57:13 +08:00 passed typecheck, lint, 3 files / 17 tests; Git whitespace/status/diff checks passed at 20:58:32 +08:00. Source/test diff review found no unrelated implementation or M1-T04 state at that checkpoint. Subsequent acceptance, commit and publication are recorded in the M1-T04 baseline above.
 
 M1-T02 baseline at `2026-09-28 20:23:41 +08:00`: main and origin/main both `a1649501dd1b180e96ca6a766ec0fd00fab54c70`, upstream origin/main, ahead/behind 0/0, and a clean working tree. The user supplied publication parity verification at `2026-09-28 20:18:58 +08:00`; it is recorded within this task rather than in another metadata-only commit. Baseline harness verification passed (2 existing tests). M1-T02 adds only the physical-card model and deterministic six-deck construction. Its first full verification at `2026-09-28 20:27:41 +08:00` passed typecheck, lint, and 7 tests (5 inventory + 2 harness). After one README whitespace repair, Git checks passed at 20:32:52 +08:00 and the full harness passed again at 20:33:05 +08:00. Task review completed at 20:33:19 +08:00; final exact-version checks passed at 20:35:02-20:35:09 +08:00.
 
@@ -40,7 +42,7 @@ At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and 
 
 Initial GitHub publication was verified at `2026-09-28 19:50:22 +08:00` according to the user's publication evidence. Public repository: [FrankieChan0312/casino-blackjack](https://github.com/FrankieChan0312/casino-blackjack). Origin fetch/push URL: `https://github.com/FrankieChan0312/casino-blackjack.git`. At publication, local `main` and `origin/main` both pointed to `bf7c21a46e61784234658a21c31fdbf1cac8048e`, main tracked origin/main, and the working tree was clean.
 
-That initial parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. The later publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 was subsequently pushed, as reported by the user at 20:18:58 +08:00 and corroborated by the M1-T02 local baseline. Publication now includes M1-T02 through a424ba5ca4de7ae28416b8d44420f7911d0fab75 as recorded above. No M1-T03 push is authorized.
+That initial parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. The later publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 was subsequently pushed, as reported by the user at 20:18:58 +08:00 and corroborated by the M1-T02 local baseline. Publication now includes M1-T03 through 3145254ad19a9c8f7fd87bc1271c5c4950e94da4 as recorded above. No M1-T04 push is authorized.
 
 Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, branch `main`, committed at `2026-09-28 19:19:50 +08:00` with message `chore: bootstrap M1 TypeScript verification harness`. All 18 reviewed files were committed with byte-identical staged content. The working tree was clean immediately after that commit. This metadata and the matching DEVELOPMENT_LOG.md entries belong to a separate docs-only checkpoint; the implementation checkpoint does not contain them. Git history identifies the metadata commit without requiring a self-referential hash update.
 
@@ -55,13 +57,15 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | Branch upstream | `origin/main` | Local main tracks origin/main; publication parity was 0 ahead / 0 behind. |
 | Initial GitHub publication | `PASS` | User verification at 2026-09-28 19:50:22 +08:00; local and public-API evidence corroborated bf7c21a46e61784234658a21c31fdbf1cac8048e. |
 | Publication-evidence commit push | `PASS` | User evidence at 20:18:58 +08:00; a1649501dd1b180e96ca6a766ec0fd00fab54c70 parity confirmed at M1-T02 baseline. |
-| M1 implementation | `IN PROGRESS` | Inventory, randomness, shuffle and cut selection; no shoe lifecycle or gameplay operations. |
+| M1 implementation | `IN PROGRESS` | Inventory, randomness and shoe accounting/lifecycle; no Round/Game/Hand or gameplay orchestration. |
 | M1-T02 inventory | `VERIFIED` | src/domain/card.ts and five inventory unit tests; full harness and task review passed. |
 | M1-T02 user acceptance | `ACCEPTED` | User explicitly confirms acceptance before the checkpoint commit; recorded in this metadata checkpoint. |
 | M1-T02 implementation commit | `COMMITTED` | 28bf85d5f172221efef9bc1e428ff73e88b6d98e, 2026-09-28 20:40:53 +08:00; only the six verified task files. |
 | M1-T02 push | `PASS` | User parity evidence at 20:49:10 +08:00; main/origin/main a424ba5ca4de7ae28416b8d44420f7911d0fab75 corroborated at the M1-T03 baseline. |
 | M1-T03 randomness / shuffle / cut selection | `VERIFIED` | Full harness and task review PASS. Cut lifetime storage belongs to M1-T04. |
-| M1-T03 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
+| M1-T03 acceptance / commit / push | `ACCEPTED` / `COMMITTED` / `PUSHED` | User acceptance; implementation 3145254ad19a9c8f7fd87bc1271c5c4950e94da4; parity at M1-T04 baseline. |
+| M1-T04 shoe accounting / lifecycle | `VERIFIED` | Full harness and same-session task review PASS; 12 new tests. |
+| M1-T04 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
 | M1-T01 harness | `VERIFIED` | Typecheck, lint, 2 tests, and failure-propagation self-test passed. |
 | Full M1 automated verification | `NOT RUN` | Inventory and harness checks PASS; full gameplay regression belongs to later tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
@@ -94,9 +98,9 @@ Current executable milestone:
 
 Current executable task:
 
-`M1-T03 — Randomness Boundary, Shuffle, and Cut Position`
+`M1-T04 — Shoe Accounting and Lifecycle`
 
-Current task scope is RandomSource, a Math.random production adapter, test-only scripts, copying Fisher-Yates shuffle of PhysicalCard arrays, and 219 + nextInt(31) cut selection. AC-M1-003 is covered at shuffle/cut level; exact initial dealing remains a later task. AC-M1-004 is covered only at selection/validation level; cut lifetime storage and multiple-round proof belong to M1-T04 and later integration. No ShoeState, draw/discard, gameplay, wagering, UI, replay product, or future abstraction is included.
+Current task scope is readonly ShoeState, disjoint available/inPlay/discarded accounting, front-of-array draw, sticky cut crossing, normal completion/discard, pre-round reuse/replacement, and explicit exhaustion/retirement results. AC-M1-002/005/006/007 are covered at shoe-operation level; fixed-cut retention across simulated round boundaries also supports AC-M1-004. Full game-round orchestration, outcomes and integrity phases remain later integration work. No RoundState, GameState, hand scoring, dealing policy, UI, wagering, replay product, or future abstraction is included.
 
 M1 remains:
 
@@ -133,7 +137,7 @@ Repair cycles are cumulative per substantive task and do not reset across sessio
 | `M1-T01` | 2 | 10 | `VERIFIED` |
 | `M1-T02` | 1 | 10 | `VERIFIED` |
 | `M1-T03` | 0 | 10 | `VERIFIED` |
-| `M1-T04` | 0 | 10 | `NOT STARTED` |
+| `M1-T04` | 0 | 10 | `VERIFIED` |
 | `M1-T05` | 0 | 10 | `NOT STARTED` |
 | `M1-T06` | 0 | 10 | `NOT STARTED` |
 | `M1-T07` | 0 | 10 | `NOT STARTED` |
@@ -147,17 +151,19 @@ M1-T02 repair cycles are 1/10. The first implementation and first full validatio
 
 M1-T03 first implementation verification and task review passed without repairs. M1-T03 repairs remain 0/10; M1-T02 remains 1/10 and M1-T01 remains 2/10. No counter was reset and no failing check was bypassed.
 
-M1-T01 remains verified. The current M1-T02 checks cover AC-M1-001 and the physical inventory foundation of AC-M1-002 only. Live/in-play/discard accounting and the full M1 gameplay milestone are not yet verified.
+M1-T04's first implementation and full validation passed without repairs (0/10). The shoe tests independently check live/in-play/discard accounting and lifecycle operations. Full M1 gameplay orchestration and milestone verification remain incomplete.
 
 | Check | State | Note |
 | --- | --- | --- |
-| `scripts/verify.ps1` | `PASS` | M1-T03 first implementation run at 2026-09-28 20:57:13 +08:00, exit 0; typecheck, lint, 3 files / 17 tests passed. |
+| `scripts/verify.ps1` | `PASS` | M1-T04 first implementation run at 2026-09-28 21:22:50 +08:00, exit 0; typecheck, lint, 4 files / 29 tests passed. |
 | TypeScript typecheck | `PASS` | `npm run typecheck`, exit 0. |
 | Lint | `PASS` | `npm run lint`, exit 0. |
 | Harness tests | `PASS` | `npm run test`, exit 0; 1 file, 2 tests. |
 | Failure propagation self-test | `PASS` | Historical M1-T01 evidence: deliberate type error returned overall exit 2; fixture restored. Harness unchanged in M1-T02. |
 | Inventory unit tests | `PASS` | 5 tests: 312 cards/IDs, exact ranks/suits, six copies, six complete decks, and deterministic full order. |
 | Randomness / shuffle / cut tests | `PASS` | 10 tests: adapter bounds, scripted order/repeat, input and 312-card preservation, invalid source outputs, endpoints and all 31 cut positions. |
+| Shoe accounting / lifecycle tests | `PASS` | 12 cases: fresh/single/all draws, completion, cut hit/crossing, reuse, 0..4 minimum guard, retirement/exhaustion, deterministic replacement. |
+| M1-T04 diff / status / task review | `PASS` | Git whitespace/status/tracked diff at 21:26:06 +08:00, complete new-file diff reviewed; only six intended files. Review completed at 21:27:59 +08:00. |
 | M1-T03 diff / status / task review | `PASS` | git diff --check and status exited 0 at 20:58:32 +08:00; exact tracked diff and three new-file no-index diffs reviewed. Only seven intended files changed. |
 | Integration tests | `NOT RUN` | No implementation/test suite exists yet. |
 | Browser/E2E tests | `NOT APPLICABLE` | M1 has no browser UI. |
@@ -176,7 +182,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is on branch `main`, tracking `origin/main`. M1-T03 base HEAD and origin/main are a424ba5ca4de7ae28416b8d44420f7911d0fab75 (ahead 0 / behind 0). The accepted implementations remain 28bf85d5f172221efef9bc1e428ff73e88b6d98e (M1-T02) and 56020d60ff41b54d0c345068befddf2790390cea (M1-T01). M1-T03 is an uncommitted diff on that published baseline; no history has been rewritten and no push occurred in this task.
+The repository is on branch `main`, tracking `origin/main`. M1-T04 base HEAD and origin/main are 3145254ad19a9c8f7fd87bc1271c5c4950e94da4 (ahead 0 / behind 0). Earlier accepted implementation history is unchanged. M1-T04 is an uncommitted diff on that published baseline; no history has been rewritten and no push occurred in this task.
 
 ### Planning artifact placement
 
@@ -194,11 +200,11 @@ Do not change visibility or perform another push without authorization for that 
 
 ## 9. Next executable task
 
-M1-T03 is VERIFIED and stopped before checkpoint commit. Await explicit user acceptance and local commit authorization. Proposed commit: `feat: add deterministic shuffle and cut selection`. No M1-T03 commit/push or M1-T04 implementation is authorized.
+M1-T04 is VERIFIED and awaits explicit user acceptance and checkpoint-commit authorization. Proposed commit: `feat: add shoe accounting and lifecycle`. No M1-T04 commit/push or M1-T05/M1-T06 implementation is authorized.
 
 Next implementation task after that checkpoint:
 
-`M1-T04 — Shoe Accounting and Lifecycle` (NOT STARTED; separate authorization required).
+`M1-T05 — Hand Evaluation and Natural Blackjack` (NOT STARTED; separate authorization required).
 
 Completed baseline actions (historical):
 

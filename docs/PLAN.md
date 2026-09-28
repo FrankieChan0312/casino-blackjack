@@ -242,7 +242,7 @@ Stop on any disagreement between card identity design and `DESIGN.md`.
 
 ## M1-T03 — Randomness Boundary, Shuffle, and Cut Position
 
-**Status:** `VERIFIED` — deterministic shuffle/cut checks and full harness passed; repair cycles 0/10. Acceptance and checkpoint commit pending.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T04 baseline in STATE.md.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -272,7 +272,7 @@ Do not add seeded replay as a product feature.
 
 ## M1-T04 — Shoe Accounting and Lifecycle
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — full verification and task review passed; awaiting user acceptance and checkpoint commit; repair cycles 0/10.
 **Depends on:** `M1-T03 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-The current task is `M1-T03 — Randomness Boundary, Shuffle, and Cut Position`: VERIFIED, awaiting user acceptance and checkpoint commit authorization. This task verifies selection only; fixed cut storage and lifetime checks remain M1-T04 scope under the user's task contract. M1-T02's accepted/published baseline is recorded in STATE.md. M1-T04 remains NOT STARTED and is outside the current authorization.
+The current task is `M1-T04 — Shoe Accounting and Lifecycle`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. This task provides shoe-level operations; Round/Game orchestration remains later scope. M1-T03's accepted/published baseline is recorded in STATE.md. M1-T05/M1-T06 remain NOT STARTED and outside the current authorization.
