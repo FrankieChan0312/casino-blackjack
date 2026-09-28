@@ -6,11 +6,13 @@ Intended repository location: `docs/STATE.md`
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
 Current task: `M1-T02 — Physical Card Model and Six-Deck Inventory`
-Status: M1-T02 VERIFIED; user acceptance and checkpoint commit pending; repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10.
+Status: M1-T02 IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED; repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10. M1-T03 remains NOT STARTED.
 
 ## 1. Current truth
 
-M1-T02 baseline at `2026-09-28 20:23:41 +08:00`: main and origin/main both `a1649501dd1b180e96ca6a766ec0fd00fab54c70`, upstream origin/main, ahead/behind 0/0, and a clean working tree. The user supplied publication parity verification at `2026-09-28 20:18:58 +08:00`; it is recorded within this task rather than in another metadata-only commit. Baseline harness verification passed (2 existing tests). M1-T02 adds only the physical-card model and deterministic six-deck construction. Its first full verification at `2026-09-28 20:27:41 +08:00` passed typecheck, lint, and 7 tests (5 inventory + 2 harness). After one README whitespace repair, Git checks passed at 20:32:52 +08:00 and the full harness passed again at 20:33:05 +08:00. Task review completed at 20:33:19 +08:00; acceptance and commit have not occurred.
+M1-T02 baseline at `2026-09-28 20:23:41 +08:00`: main and origin/main both `a1649501dd1b180e96ca6a766ec0fd00fab54c70`, upstream origin/main, ahead/behind 0/0, and a clean working tree. The user supplied publication parity verification at `2026-09-28 20:18:58 +08:00`; it is recorded within this task rather than in another metadata-only commit. Baseline harness verification passed (2 existing tests). M1-T02 adds only the physical-card model and deterministic six-deck construction. Its first full verification at `2026-09-28 20:27:41 +08:00` passed typecheck, lint, and 7 tests (5 inventory + 2 harness). After one README whitespace repair, Git checks passed at 20:32:52 +08:00 and the full harness passed again at 20:33:05 +08:00. Task review completed at 20:33:19 +08:00; final exact-version checks passed at 20:35:02-20:35:09 +08:00.
+
+The user explicitly confirms that M1-T02 was accepted before its checkpoint commit. Accepted implementation: `28bf85d5f172221efef9bc1e428ff73e88b6d98e`, committed on main at `2026-09-28 20:40:53 +08:00` with message `feat: add six-deck physical card inventory`. The earlier completion report stating "not yet ACCEPTED" is superseded by this acceptance evidence. At the acceptance-metadata baseline, `2026-09-28 20:42:43 +08:00`, HEAD was that implementation commit, the working tree was clean, and main was ahead of origin/main by 1 and behind by 0. This documentation checkpoint records acceptance separately and does not amend the implementation commit. No push has occurred for M1-T02.
 
 The Casino Blackjack repository directory now exists on the user's Windows machine and has been initialized as a local Git repository.
 
@@ -53,7 +55,9 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | Publication-evidence commit push | `PASS` | User evidence at 20:18:58 +08:00; a1649501dd1b180e96ca6a766ec0fd00fab54c70 parity confirmed at M1-T02 baseline. |
 | M1 implementation | `IN PROGRESS` | Physical-card inventory only; no gameplay operations implemented. |
 | M1-T02 inventory | `VERIFIED` | src/domain/card.ts and five inventory unit tests; full harness and task review passed. |
-| M1-T02 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
+| M1-T02 user acceptance | `ACCEPTED` | User explicitly confirms acceptance before the checkpoint commit; recorded in this metadata checkpoint. |
+| M1-T02 implementation commit | `COMMITTED` | 28bf85d5f172221efef9bc1e428ff73e88b6d98e, 2026-09-28 20:40:53 +08:00; only the six verified task files. |
+| M1-T02 push | `NOT RUN` | No push authorized for the implementation or acceptance metadata. |
 | M1-T01 harness | `VERIFIED` | Typecheck, lint, 2 tests, and failure-propagation self-test passed. |
 | Full M1 automated verification | `NOT RUN` | Inventory and harness checks PASS; full gameplay regression belongs to later tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
@@ -141,7 +145,7 @@ M1-T01 remains verified. The current M1-T02 checks cover AC-M1-001 and the physi
 
 | Check | State | Note |
 | --- | --- | --- |
-| `scripts/verify.ps1` | `PASS` | M1-T02 post-repair run at 2026-09-28 20:33:05 +08:00, exit 0; 2 files / 7 tests. |
+| `scripts/verify.ps1` | `PASS` | Acceptance-metadata run at 2026-09-28 20:44:09 +08:00, exit 0; typecheck, lint, 2 files / 7 tests passed. |
 | TypeScript typecheck | `PASS` | `npm run typecheck`, exit 0. |
 | Lint | `PASS` | `npm run lint`, exit 0. |
 | Harness tests | `PASS` | `npm run test`, exit 0; 1 file, 2 tests. |
@@ -164,7 +168,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is on branch `main`, tracking `origin/main`, both at a1649501dd1b180e96ca6a766ec0fd00fab54c70 at the M1-T02 baseline. The original accepted implementation checkpoint remains 56020d60ff41b54d0c345068befddf2790390cea. M1-T02 work is uncommitted and has not been pushed.
+The repository is on branch `main`, tracking `origin/main`. At the acceptance-metadata baseline (2026-09-28 20:42:43 +08:00), HEAD was the accepted M1-T02 implementation 28bf85d5f172221efef9bc1e428ff73e88b6d98e and origin/main remained a1649501dd1b180e96ca6a766ec0fd00fab54c70 (ahead 1 / behind 0). The original accepted M1-T01 implementation remains 56020d60ff41b54d0c345068befddf2790390cea. M1-T02 is committed locally and has not been pushed. This separate acceptance-metadata commit is identified by Git history; its own hash is reported after commit without another recursive documentation edit.
 
 ### Planning artifact placement
 
@@ -182,7 +186,7 @@ Do not change visibility or perform another push without authorization for that 
 
 ## 9. Next executable task
 
-M1-T02 is VERIFIED and stopped before the checkpoint commit. Await explicit user acceptance and local commit authorization. Proposed commit: `feat: add six-deck physical card inventory`. No M1-T02 push or M1-T03 implementation is authorized.
+M1-T02 is IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED. The user authorized this two-document acceptance checkpoint with message `docs: record M1-T02 acceptance`. After its required checks and local commit, stop. No M1-T02 push or M1-T03 implementation is authorized. PLAN.md and README.md retain their implementation-checkpoint wording because this task explicitly excludes editing them; the acceptance and commit state here supersedes that earlier wording.
 
 Next implementation task after that checkpoint:
 
