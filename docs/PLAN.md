@@ -405,7 +405,7 @@ Test accepted transitions, wrong-phase rejection, bust, ordinary 21, and post-te
 
 ## M1-T08 — Dealer S17 and Outcome Resolution
 
-**Status:** `VERIFIED` — full harness and task review PASS; checkpoint authorized; not ACCEPTED; repairs 0/10.
+**Status:** `VERIFIED` — committed/pushed; not ACCEPTED; repairs 0/10. See T09 baseline in STATE.md.
 **Depends on:** `M1-T07 VERIFIED`
 
 ### Scope
@@ -447,7 +447,7 @@ Include deterministic dealer sequences for:
 
 ## M1-T09 — M1 Integration Regression and Harness Completion
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — 155 tests, failure propagation and full task review PASS; not ACCEPTED; repairs 0/10.
 **Depends on:** `M1-T08 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-M1-T08 is VERIFIED; commit/push and confirm parity before M1-T09. T08–T10 are authorized as separate verified checkpoints. Stop after T10 for a new-session review; no automatic acceptance or M2 work.
+M1-T09 is VERIFIED; commit/push and confirm parity before T10. T08 is VERIFIED / COMMITTED / PUSHED, not ACCEPTED. Stop after T10 for a new-session review; no automatic acceptance or M2 work.

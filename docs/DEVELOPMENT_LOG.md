@@ -1028,3 +1028,25 @@ At 22:57:57 +08:00 began evidence updates. STATE is now a concise current-state 
 ### 2026-09-28 23:00:12 +08:00 — TASK REVIEW
 
 Git diff --check, status --short --untracked-files=all and full tracked diff PASS/0. Reviewed all four new source/test files in full, plus game.ts and the four documentation files: nine intended paths only. No authority, tooling or dependency change. STATE summary retains all repair counts and links historical evidence instead of stale current-status claims. Task is IMPLEMENTED / VERIFIED, not ACCEPTED; T08 remains 0/10. Run the final exact-version harness and staged whitespace/content checks, commit the authorized checkpoint, push and fetch; record the executed publication evidence at the T09 baseline.
+
+## M1-T09 — Full M1 Regression and Harness Completion
+
+### 2026-09-28 23:01:45 +08:00 — BASELINE / T08 PUBLICATION
+
+T08 checkpoint `a02e0135098f7f398f0bcac607e6eb4dd0e73334`, message `feat: add dealer resolution and outcomes`, committed nine reviewed files. Final exact-version harness at 23:00:40–23:00:46 +08:00 PASS/0, 10 files / 139 tests. Staged paths and whitespace checked; no unstaged change remained. git push origin main and git fetch origin main PASS/0. Fresh timestamp/branch/HEAD/origin/divergence/status: main=origin/main=a02e013..., 0/0, clean. T08 VERIFIED / COMMITTED / PUSHED, not ACCEPTED, repairs 0/10. This is the T09 baseline, not a metadata-only checkpoint.
+
+T09 contract: complete every existing M1 AC/regression mapping, cross-round/accounting/cut/pre-deal/fault/terminal scenarios and harness failure propagation. No new gameplay feature or weakened requirement. Actual model/effort remain NOT VERIFIED. T09 starts 0/10; previous task counts unchanged. Step -> verification: review all twenty SPEC ACs -> add missing complete-flow cases -> run full harness and deliberate failures -> restore/check exact diff -> verified checkpoint/push/parity. AC-M1-020 local evidence is reviewed now; the explicitly mandatory genuinely new-session review remains deferred after T10 and will not be claimed complete.
+
+### 2026-09-28 23:04:17–23:04:32 +08:00 — FIRST VALIDATION
+
+Added tests/integration/roundLifecycle.test.ts (11 cases) and tests/verifyHarness.test.ts (5 cases). No production, dependency or configuration changes. Full powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 PASS/0: typecheck, lint, 12 files / 155 tests. Tests independently check both cut endpoints through Hit and dealer completion into replacement; two ordinary rounds sharing a shoe; 0..4 initial-deal boundary; explicit repeated deal IDs/cut; natural precedence without illegal extra draw; integrity recovery. Harness tests execute a copied actual verify.ps1 against isolated controlled npm.cmd exits: all PASS=0, typecheck=2, lint=3, test=4, unavailable npm=1. Required steps run in order; all temporary test files are removed.
+
+### 2026-09-28 23:04:56–23:05:07 +08:00 — REAL FAILURE-PROPAGATION SELF-TEST
+
+Created only the absent temporary src/verifyFailureProbe.ts containing a deliberate string-to-number assignment. The real full harness executed: typecheck FAIL/2 (TS2322), lint PASS, all 155 tests PASS, overall FAIL/2. The driver asserted exact exit 2 and removed the probe in finally; absence was confirmed. This intentional negative test is successful validation, not a repair or bypass. No permanent source or harness change occurred. A restored-state full run is required before commit. T09 remains 0/10.
+
+STATE now maps AC-M1-001..020 and all REG-M1-001..024 to executed evidence. REG017 asserts the natural terminal result is protected even when the next dealer card would produce three-card 21; the engine correctly refuses that unnecessary draw. AC020 local review is separate from the outstanding fresh-session gate. PLAN reflects actual task state. No acceptance is implied.
+
+### 2026-09-28 23:07:06 +08:00 — COMPLETE TASK REVIEW
+
+git diff --check, status --short --untracked-files=all and complete tracked documentation diff PASS/0. Read both new test files in full. Exactly six intended paths: roundLifecycle.test.ts, verifyHarness.test.ts, README, PLAN, STATE and DEVELOPMENT_LOG. Temporary real-failure probe is absent; production/harness implementation and dependencies are unchanged. All twenty ACs and twenty-four REG scenarios reviewed individually against explicit test facts. T09 IMPLEMENTED / VERIFIED, not ACCEPTED, repairs 0/10. Run the restored exact-version harness after this status update; verify staged paths/whitespace and commit/push only on PASS. Preserve fresh-review distinction at T10.

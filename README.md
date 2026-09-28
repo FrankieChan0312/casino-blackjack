@@ -3,7 +3,7 @@
 A portfolio-oriented Blackjack project focused on **verifiable game-engine behaviour, deterministic testing, clear domain modelling, and reproducible engineering evidence**.
 
 > **Current status:** M1-T08 dealer S17 and ordinary outcomes implemented; see [STATE.md](docs/STATE.md) for verification evidence.
-> Full M1 regression mapping and the final review package are pending.
+> M1 regression mapping is complete; the final documentation package and fresh-session review are pending.
 > No browser UI, deployment, or real-money functionality exists.
 
 ## Project Goal
@@ -128,7 +128,7 @@ If local script execution is restricted, invoke it in a child process:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 ```
 
-The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite covers the document harness, inventory, randomness, shoe lifecycle, hand scoring, initial-deal/natural integration, player actions, terminal protection and public-view secrecy. Dealer/outcome integration is covered; T09 will complete the full AC regression mapping. Browser/E2E checks are NOT APPLICABLE to M1.
+The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite covers the document harness, inventory, randomness, shoe lifecycle, hand scoring, initial-deal/natural integration, player actions, terminal protection and public-view secrecy. Dealer/outcome and cross-round integration are covered; STATE.md maps all M1 ACs to executed checks. Fresh-session review remains pending. Browser/E2E checks are NOT APPLICABLE to M1.
 
 The toolchain uses TypeScript, ESLint with typescript-eslint, and Vitest in its default Node environment. Vite is a Vitest development dependency; no browser application or server is implemented. Exact versions are in package.json and package-lock.json. No production dependencies or build output are needed for this checkpoint.
 
@@ -242,14 +242,14 @@ Engineering plan:      prepared
 Repository bootstrap:  engineering harness implemented
 Blackjack source code: inventory, shoe, scoring, initial rounds, player actions, public view
 Automated verification:see docs/STATE.md
-GitHub push:            M1-T07 published; M1-T08 checkpoint pending
+GitHub push:            M1-T08 published; M1-T09 checkpoint pending
 Browser UI:             not implemented
 Deployment:             not applicable to M1
 ```
 
 The current executable task is:
 
-`M1-T08 — Dealer S17 and Outcome Resolution`
+`M1-T09 — Full M1 Regression and Harness Completion`
 
 ## Local Repository Target
 
