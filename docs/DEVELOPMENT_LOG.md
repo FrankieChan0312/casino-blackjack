@@ -1112,3 +1112,17 @@ Complete intended six-file content reviewed; Git diff --check/status PASS/0. No 
 ### 2026-09-29 00:07:22 +08:00 — T01 REPAIR 1/10
 
 Staged diff --check FAIL/2: extra blank line at EOF in this log; commit/push did not run. Hypothesis: Add-Content appended its own newline after an already newline-terminated entry. Removed only excess terminal whitespace and use one terminating newline. No executable change. Reverification: staged whitespace/full harness follow; no tests weakened.
+
+## M2-T02 — Multi-seat initial deal / public state
+
+### 2026-09-29 00:07:52 +08:00 — BASELINE / T01 PUBLICATION
+
+T01 committed/pushed as 7824e57e792db6c83ce874d8324538ae24b281a1. Final harness PASS/0: 13 files / 166 tests, started 00:07:28; repaired staged whitespace PASS/0. Push/fetch PASS/0; main=origin/main, 0/0, clean. T01 repairs 1/10. T02 starts independently at 0/10; recommended GPT-6 Astra / High, actual model/effort NOT VERIFIED.
+
+T02 scope/acceptance: two ascending active-seat passes around dealer upcard/hole, frozen seven-seat snapshot and per-seat hands, dealer natural matrix and player naturals independently, first eligible seat, public allowlisted projection, accounting and partial-deal integrity. No actions/automation/dealer comparison yet; global M2 non-goals/stop conditions in the batch contract apply. Step -> verification: table round orchestration and minimum 2*n+2 guard -> exact fixtures/secrecy/fault tests -> full harness/diff review -> verified checkpoint/push/parity -> T03.
+
+### 2026-09-29 00:11:27 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Added tableGame.ts, tablePublicView.ts, tableFixture.ts and tableDeal.test.ts; shoe.ts gains optional minimumCards defaulting to M1's four. Explicit public configuration is separate from the frozen round seats so later between-round edits cannot rewrite the prior round. Initial failure preserves cards and invalidates normal results, retiring the shoe. No M1 tests or other source changed.
+
+Full child-PowerShell verify.ps1 started 00:10:55: PASS/0, typecheck/lint, 14 files / 184 tests. Eighteen new cases cover one/sparse/full deal, sit-out and active lock, all peek ranks, mixed/all naturals, redaction/detachment, minimum cards and faults after 0/1/3/5 draws. Git diff --check/status PASS/0; reviewed five source/test paths in full and the shoe-only M1 extension. No failures/repairs: T02 0/10. Publication evidence follows at T03 baseline.

@@ -75,11 +75,15 @@ export function prepareShoeForNextRound(
   shoe: ShoeState,
   replacementShoeId: string,
   random: RandomSource,
+  minimumCards = 4,
 ): ShoeState {
+  if (!Number.isInteger(minimumCards) || minimumCards < 4 || minimumCards > 16) {
+    throw new RangeError('Initial deal requires between 4 and 16 cards');
+  }
   if (!shoe.retired && shoe.inPlay.length > 0) {
     throw new Error('Complete in-play cards before preparing the next round');
   }
-  if (shoe.retired || shoe.reshufflePending || shoe.available.length < 4) {
+  if (shoe.retired || shoe.reshufflePending || shoe.available.length < minimumCards) {
     if (replacementShoeId === shoe.shoeId) {
       throw new Error('Replacement shoe must have a different shoeId');
     }
