@@ -1,11 +1,14 @@
 import type { PhysicalCard } from './card.js';
+import { dealerShouldHit } from './dealer.js';
 import { evaluateHand, isNaturalBlackjack } from './hand.js';
+import { ordinaryOutcome } from './outcome.js';
 import type { RandomSource } from './random.js';
 import { completeShoeRound, createShoe, drawCard, prepareShoeForNextRound, type ShoeState } from './shoe.js';
 
 export type RoundPhase = 'PLAYER_TURN' | 'DEALER_TURN' | 'ROUND_COMPLETE' | 'INTEGRITY_ERROR';
-export type RoundOutcome = 'PLAYER_BLACKJACK' | 'DEALER_WIN' | 'PUSH';
-export type OutcomeReason = 'PLAYER_NATURAL' | 'DEALER_NATURAL' | 'BOTH_NATURAL' | 'PLAYER_BUST';
+export type RoundOutcome = 'PLAYER_BLACKJACK' | 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH';
+export type OutcomeReason = 'PLAYER_NATURAL' | 'DEALER_NATURAL' | 'BOTH_NATURAL' | 'PLAYER_BUST'
+  | 'DEALER_BUST' | 'HIGHER_TOTAL' | 'LOWER_TOTAL' | 'EQUAL_TOTAL';
 
 export interface RoundState {
   readonly roundId: string;
@@ -113,4 +116,32 @@ export function stand(state: GameState): CommandResult {
   const error = playerActionError(round);
   if (error) return { ok: false, state, error };
   return { ok: true, state: { shoe: state.shoe, round: { ...round, phase: 'DEALER_TURN' } } };
+}
+
+export function resolveDealer(state: GameState): CommandResult {
+  const round = state.round;
+  if (!round) return { ok: false, state, error: 'NO_ROUND' };
+  if (round.phase === 'ROUND_COMPLETE' || round.phase === 'INTEGRITY_ERROR' || round.integrityError !== undefined) {
+    return { ok: false, state, error: 'ROUND_ALREADY_TERMINAL' };
+  }
+  if (round.phase !== 'DEALER_TURN') return { ok: false, state, error: 'WRONG_PHASE' };
+
+  let shoe = state.shoe;
+  let dealerCards = round.dealerCards;
+  let dealer = evaluateHand(dealerCards);
+  while (dealerShouldHit(dealer)) {
+    const draw = drawCard(shoe);
+    shoe = draw.shoe;
+    if (!draw.ok) {
+      return { ok: true, state: { shoe, round: {
+        ...round, dealerCards, phase: 'INTEGRITY_ERROR', integrityError: draw.error,
+      } } };
+    }
+    dealerCards = [...dealerCards, draw.card];
+    dealer = evaluateHand(dealerCards);
+  }
+  return { ok: true, state: { shoe: completeShoeRound(shoe), round: {
+    ...round, dealerCards, phase: 'ROUND_COMPLETE',
+    ...ordinaryOutcome(evaluateHand(round.playerCards), dealer),
+  } } };
 }

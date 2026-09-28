@@ -1006,3 +1006,25 @@ Evidence: a log-update apply_patch failed its context check, making no file chan
 Executed git diff --check, git status --short --untracked-files=all and git diff -- README.md docs/PLAN.md docs/STATE.md docs/DEVELOPMENT_LOG.md: PASS/0. Reviewed the complete documentation diff together with the source/test review above. Exactly eight intended task paths changed, seven tracked modifications and one new action-test file. The corrected log append and repair counts are consistent; no unexpected changes or authority conflict. Re-verification of the documentation correction passed. Prior repair counts remain unchanged; T07 is 1/10.
 
 STATE/PLAN now record M1-T07 IMPLEMENTED / VERIFIED, awaiting explicit acceptance and checkpoint commit. This is same-session review, not the future full-M1 fresh-session review. After this status/evidence update, execute the full harness and final Git whitespace/status/parity checks on the exact deliverable, confirm source/test hashes unchanged, and report final executed results in delivery without recursive metadata edits. No commit/push or T08 work is authorized. Proposed commit: `feat: add blackjack player actions`.
+
+## M1-T08 — Dealer S17 and Outcome Resolution
+
+### 2026-09-28 22:53:54 +08:00 — BATCH ENTRY / BASELINE
+
+Read AGENTS/SKILL, RULES/SPEC/DESIGN, PLAN/STATE/DEVELOPMENT_LOG/LAB_MANUAL and current source/tests. Reused the repository Karpathy guidelines. Recommended GPT-6 Astra / High; actual model and reasoning NOT VERIFIED (client settings not exposed). Get-Date/Get-Location and Git branch/HEAD/origin/status/divergence checks PASS/0: correct path, main, HEAD=origin/main=`1f1e8fabd0d978e1b8b706e9009e4ceaa501eed5`, 0/0, clean. Credential-free public ls-remote independently returned that same remote main. T07 acceptance is explicit in the user checkpoint contract; commit timestamp 22:47:17 +08:00. Entry gate PASS: T07 implemented, verified, accepted, committed and pushed. No metadata-only commit is needed.
+
+User batch authorization permits verified T08/T09/T10 checkpoint commits and pushes on main, then requires a genuinely fresh-session review STOP. It does not authorize acceptance, M2+, destructive Git, credentials/paid resources or deployment. Separate counters start at 0/10. Prior counts T01–T07 are 2/1/0/0/1/0/1 and remain unchanged.
+
+T08 scope: DESIGN section 10 pure dealerShouldHit, pure ordinary comparison, resolveDealer orchestration, exhaustion integrity path and terminal protection. No wagers/advanced actions/seats/UI. Reveal remains at DEALER_TURN under DESIGN section 12. Step -> verification: minimal dealer/outcome helpers and game extension -> deterministic policy/outcome/accounting/privacy/fault cases -> full harness -> complete diff -> checkpoint/push/parity -> T09. No authority conflict or unexpected edits found.
+
+### 2026-09-28 22:57:33–22:57:40 +08:00 — FIRST VALIDATION
+
+Added dealer.ts and outcome.ts, extended game.ts, added tests/unit/dealer.test.ts and tests/integration/dealerResolution.test.ts. Existing public projection already handles all dealer cards on reveal, so no projection code change was needed. resolveDealer only accepts DEALER_TURN, performs S17 draws through the existing shoe API, preserves partial dealer cards on failure, and completes normal discard. Pure ordinaryOutcome has a surviving ordinary-player precondition; initial naturals/player bust never reach it through game commands.
+
+Executed powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1: PASS/0; typecheck, lint, 10 files / 139 tests PASS. Seven pure policy/comparison cases and thirteen integration cases independently cover S17, repeated draws, all ordinary outcomes, ordinary 21, earlier terminal results, wrong-phase rejection, subsequent actions, accounting, reveal, purity and exhaustion after zero/one dealer draw. First implementation/validation passed with no correction: T08 0/10.
+
+At 22:57:57 +08:00 began evidence updates. STATE is now a concise current-state record; historical bootstrap/task evidence remains intact in this log and Git. README reflects actual dealer resolution; PLAN tracks T08 and accepted/published T07. No authority files, dependencies or tooling changed. Final exact-version verification and complete diff review remain before commit.
+
+### 2026-09-28 23:00:12 +08:00 — TASK REVIEW
+
+Git diff --check, status --short --untracked-files=all and full tracked diff PASS/0. Reviewed all four new source/test files in full, plus game.ts and the four documentation files: nine intended paths only. No authority, tooling or dependency change. STATE summary retains all repair counts and links historical evidence instead of stale current-status claims. Task is IMPLEMENTED / VERIFIED, not ACCEPTED; T08 remains 0/10. Run the final exact-version harness and staged whitespace/content checks, commit the authorized checkpoint, push and fetch; record the executed publication evidence at the T09 baseline.

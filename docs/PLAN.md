@@ -380,7 +380,7 @@ Use deterministic ordered-shoe fixtures and public-view assertions.
 
 ## M1-T07 — Player Hit/Stand and Terminal Protection
 
-**Status:** `VERIFIED` — full harness and complete task review passed; awaiting user acceptance and checkpoint commit; repair cycles 1/10.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the T08 entry baseline in STATE.md.
 **Depends on:** `M1-T06 VERIFIED`
 
 ### Scope
@@ -405,7 +405,7 @@ Test accepted transitions, wrong-phase rejection, bust, ordinary 21, and post-te
 
 ## M1-T08 — Dealer S17 and Outcome Resolution
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — full harness and task review PASS; checkpoint authorized; not ACCEPTED; repairs 0/10.
 **Depends on:** `M1-T07 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-The current task is `M1-T07 — Player Hit/Stand and Terminal Protection`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. M1-T06's accepted/published baseline is recorded in STATE.md. M1-T08 dealer drawing and ordinary outcome comparison remain NOT STARTED and outside the current authorization.
+M1-T08 is VERIFIED; commit/push and confirm parity before M1-T09. T08–T10 are authorized as separate verified checkpoints. Stop after T10 for a new-session review; no automatic acceptance or M2 work.
