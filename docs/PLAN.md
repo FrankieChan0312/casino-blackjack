@@ -303,7 +303,7 @@ Use invariant tests and controlled fault injection.
 
 ## M1-T05 — Hand Evaluation and Natural Blackjack
 
-**Status:** `VERIFIED` — full harness and task review passed; awaiting user acceptance and checkpoint commit; repair cycles 1/10.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T06 baseline in STATE.md.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -338,7 +338,7 @@ Expected values are explicit test facts, not calculated by reusing the productio
 
 ## M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — full harness and task review passed; awaiting user acceptance and checkpoint commit; repair cycles 0/10.
 **Depends on:** `M1-T04 VERIFIED`, `M1-T05 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-The current task is `M1-T05 — Hand Evaluation and Natural Blackjack`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. This task provides pure scoring and explicit original-hand eligibility only. M1-T04's accepted/published baseline is recorded in STATE.md. M1-T06 remains NOT STARTED and outside the current authorization.
+The current task is `M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. This task provides initial round orchestration and public projection only. M1-T05's accepted/published baseline is recorded in STATE.md. M1-T07/M1-T08 remain NOT STARTED and outside the current authorization.

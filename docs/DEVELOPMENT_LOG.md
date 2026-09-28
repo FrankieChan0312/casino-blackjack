@@ -923,3 +923,47 @@ Executed git diff --check, git status --short --untracked-files=all and git diff
 STATE/PLAN now record M1-T05 IMPLEMENTED / VERIFIED. Repair cycles remain 1/10; M1-T04 0/10, M1-T03 0/10, M1-T02 1/10 and M1-T01 2/10 are unchanged. Review is same-session only; the full-M1 fresh-session milestone review remains NOT RUN. Acceptance, commit and push remain NOT RUN.
 
 After this evidence/status update, run the full harness and final Git whitespace/status/parity checks on the exact deliverable, confirm source/test hashes unchanged, and report actual final results in the delivery without recursive metadata updates. Stop before the proposed checkpoint commit `feat: add blackjack hand evaluation`; do not start M1-T06.
+
+## M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution
+
+### 2026-09-28 22:06:08 +08:00 — TASK_START / BASELINE
+
+Read AGENTS.md, SKILL.md, relevant RULES/SPEC/DESIGN/PLAN sections, STATE.md, DEVELOPMENT_LOG.md, UX_UI.md's public-information requirements, current card/random/shoe/hand source and existing tests. Applicable requirements: R05, deal/information portions of R08, M1 peek/natural portions of R09 and R12, AC-M1-010/011, DESIGN sections 5-8/11-17 and PLAN M1-T06. Recommended model GPT-6 Astra; effort High. Actual model NOT VERIFIED; actual reasoning/effort NOT VERIFIED because client settings are not exposed.
+
+Executed Get-Date, Get-Location, git branch --show-current, git rev-parse HEAD, git rev-parse origin/main, git status --short and git rev-list --left-right --count origin/main...HEAD. All Git checks PASS/0: correct repository, main, HEAD and origin/main both `7c30cc642090c2a8e7032a5f34b620978bdf9a5e`, clean tree, behind/ahead 0/0. M1-T05 was explicitly accepted and committed at 22:00:07 +08:00 as `feat: add blackjack hand evaluation`. User publication parity at 22:02:10 +08:00 is corroborated by the fresh local baseline and recorded within this task, without a separate metadata commit. M1-T06 starts at 0/10; previous counts remain T01 2/10, T02 1/10, T03 0/10, T04 0/10 and T05 1/10.
+
+Contract: only minimal GameState/RoundState, initial dealing, internal hole card, explicit public projection, gated peek, natural matrix, PLAYER_TURN transition and partial-deal integrity handling. No Hit/Stand, dealer S17, ordinary outcome comparison, wagering, Split, UI/network/persistence/replay/cloud or T07/T08 implementation. Stop on authority conflicts, unknown overlap, required future scope, missing tools, destructive Git, credentials/paid resources or 10 repairs. No commit/push/history rewrite. Proposed commit: `feat: add initial blackjack round resolution`.
+
+Step -> verification: minimal game/public-view modules -> ordered valid-shoe fixtures, explicit deal/result/privacy expectations and controlled draw failure -> full harness -> all tracked/new-file diff and whitespace/status checks -> persistent evidence and stop before commit. DESIGN's GameState keeps the active shoe beside RoundState. No half-dealt INITIAL_DEAL phase is exposed: dealing/peek form one transition. Four cards remain inPlay for non-terminal deals; natural terminal completion moves them to discarded under DESIGN section 8. These two lifecycle points satisfy accounting without retaining completed cards inPlay. No authority conflict was found.
+
+### 2026-09-28 22:10:13–22:11:11 +08:00 — FIRST VALIDATION
+
+Added src/domain/game.ts and src/domain/publicView.ts, tests/unit/game.test.ts, tests/unit/publicView.test.ts and the shared test-only tests/helpers/shoeFixture.ts. Existing source/tests, dependencies and tooling are unchanged. createGame uses the existing shoe factory; startRound takes caller-supplied round/replacement-shoe IDs, uses existing pre-round preparation and draws P1/upcard/P2/hole exactly once each. An active-round start returns an explicit unchanged rejection before consuming RNG/cards. Normal terminal snapshots remain unchanged when starting another round.
+
+RoundState contains readonly ID, player/dealer cards, phase and optional result/reason/integrity code. Current phases are PLAYER_TURN, ROUND_COMPLETE and INTEGRITY_ERROR. DealerCards[0] is upcard; [1] is internal hole. Newly dealt hands are explicitly passed as eligible to the existing natural predicate. Dealer classification is short-circuited unless the upcard is A/10/J/Q/K. Player-only natural is PLAYER_BLACKJACK, dealer-only is DEALER_WIN, both is PUSH, neither is PLAYER_TURN without outcome. No ordinary total comparison or extra draw occurs. Ineligible/three-card initial context is not representable through startRound; existing T05 tests continue to cover false eligibility and ordinary 21, without Split machinery.
+
+Draw failure stops the four-draw loop immediately, preserving partial hands and the returned retired shoe, recording INTEGRITY_ERROR with no outcome. In CommandResult, ok=true means the command was accepted; inspect the returned phase for integrity failure. ok=false is only an unchanged request rejection. Fault tests deliberately exhaust the prepared shoe after 0/1/2/3 successful draws through a test spy calling the real draw function; no fault-injection API was added to production. Remaining cards are accounted as discarded in these fault fixtures. A subsequent start replaces the retired shoe.
+
+Public projection is an explicit allowlist: copied rank/suit cards, round identity/phase and result/error fields. It never spreads RoundState or exposes shoe order, cut, physical IDs or dealer totals. HoleCard is null until ROUND_COMPLETE, including after negative peek and in INTEGRITY_ERROR; absent partial-deal upcards are null. A public card is detached from the internal object. No UI is implemented.
+
+Executed `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`, PASS/0. Typecheck and lint each PASS/0; Vitest start 22:11:09 +08:00, 7 files / 105 tests PASS. New tests comprise 27 game cases and 12 public-view cases: independent deal IDs/accounting, natural matrix, all five peek ranks positive/negative, all eight no-peek ranks, active rejection, terminal reuse, all replacement conditions, four failure positions/recovery, serialized secrecy and hidden-card substitution, terminal reveal, integrity redaction and frozen-input purity. First implementation and first validation required no fixes and consume no repair cycle; M1-T06 remains 0/10.
+
+### 2026-09-28 22:12:19–22:12:36 +08:00 — SOURCE / TEST REVIEW
+
+git diff --check and git status --short --untracked-files=all PASS/0; only the five expected new files appeared before documentation edits. For each new file, executed git diff --no-index --check -- NUL <path> and git diff --no-index -- NUL <path>. Expected difference status 1 was handled separately from error status; no whitespace diagnostics. Complete contents of all five new files reviewed: 74-line game.ts, 49-line publicView.ts, 38-line helper, 152-line game tests and 94-line public tests. No future action/dealer/outcome module or unrelated code was found.
+
+SHA-256 evidence at 22:12:36 +08:00 (unchanged since first verification):
+
+- src/domain/game.ts: `0045EF8F24E0A6E06607C39C4D5D785EF0327D6BF1BC6A2BC52F3FFF9F1644B3`
+- src/domain/publicView.ts: `0D4BC82DBEFCCDE543E4FD6AF9D23AB065B86E6E66793457DDE6EECD177E9EEE`
+- tests/helpers/shoeFixture.ts: `541A45E8FFEC9D93FC18F15B852497D4FFB48416848202185D92141EA44954A9`
+- tests/unit/game.test.ts: `6F5160311512EB63A809988233AC8F500144CBE0AEADDC6288D736AD3589C366`
+- tests/unit/publicView.test.ts: `C2C4110EE88B137B81B5D351538E345099DD59416F6E2E62CC35BF216ECF184E`
+
+README now describes the actual initial-round API and privacy boundary, STATE/PLAN track T06 and the accepted/published T05 prerequisite, and this log preserves evidence. RULES/SPEC/DESIGN/UX_UI and LAB_MANUAL remain unchanged; full-M1 learning/fresh-session review is not yet due/completed. Final documentation diff review and exact-version verification remain to run. No acceptance, commit or push is implied.
+
+### 2026-09-28 22:16:11 +08:00 — COMPLETE TASK REVIEW
+
+Executed git diff --check, git status --short --untracked-files=all and git diff -- README.md docs/PLAN.md docs/STATE.md docs/DEVELOPMENT_LOG.md; all PASS/0. Reviewed the complete tracked diff alongside all five new-file diffs. Exactly nine intended files changed: game.ts, publicView.ts, shoeFixture.ts, game.test.ts, publicView.test.ts and the four task documentation files. Public-state serialization, negative-peek non-disclosure, terminal reveal, fault handling and scope were reviewed against the requirements. No unexpected changes or unresolved conflict. This is same-session task review, not the future full-M1 fresh-session review.
+
+STATE/PLAN now record M1-T06 IMPLEMENTED / VERIFIED, pending explicit acceptance and commit. Repair count remains 0/10; all prior counts are unchanged. After this status/evidence update, run the full harness plus final whitespace/status/HEAD/origin checks on the exact deliverable, verify unchanged source/test hashes and report final results in the delivery without recursive metadata updates. No commit/push or M1-T07/M1-T08 work is authorized. Proposed commit: `feat: add initial blackjack round resolution`.
