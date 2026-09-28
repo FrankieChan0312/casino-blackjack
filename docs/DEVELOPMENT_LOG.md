@@ -1140,3 +1140,17 @@ Scope/acceptance: current-seat HUMAN Hit/Stand only; one-card Hit, no-card Stand
 Extended tableGame.ts and added tableActions.test.ts (11 cases). complete means player decisions ended, while outcome may await dealer comparison. One seat bust records only that seat's loss; no shoe discard until table completion. HUMAN commands never act for computers. A required draw fault clears prior normal results across the table, retains diagnostic cards, and retires the shoe. M1 code/tests unchanged.
 
 Full child-PowerShell verify.ps1 at 00:14:30–00:14:52 PASS/0: typecheck/lint, 15 files / 195 tests. Git diff --check/status PASS/0; reviewed complete source diff and new test file. No repair: T03 0/10. Required publication follows, with actual evidence recorded at T04 baseline.
+
+## M2-T04 — Deterministic computer play / shared dealer
+
+### 2026-09-29 00:15:48 +08:00 — BASELINE / T03 PUBLICATION
+
+T03 committed/pushed 710b87d41964bca04b8114a26931f2624305e45c; push/fetch PASS/0, main=origin/main, 0/0, clean. T03 repairs 0/10. T04 starts 0/10. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED.
+
+Scope/acceptance: pure computer policy total<17 HIT / >=17 STAND using the evaluator, consecutive computer turns until HUMAN input, one shared S17 dealer loop, independent outcome comparison preserving normal naturals/busts, no dealer draws when comparison unnecessary, explicit integrity with no normal results, purity and public reveal. No strategy optimization/LLM, wagering or M3+. Global batch stop conditions apply. Step -> verification: policy + automation/dealer commands -> independent threshold/mixed/fault/repeatability tests -> full harness/diff -> checkpoint/push/parity -> T05.
+
+### 2026-09-29 00:18:23 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Added computer.ts, unit/computer.test.ts and integration/tableAutomation.test.ts; extended tableGame.ts. advanceTableAutomation is an explicit command called after deal/HUMAN action; it runs all available automation in one call and pauses without mutation on HUMAN. resolveTableDealer is independently callable only during DEALER_TURN. Shared draw loop precedes per-hand comparison, and terminal rejection prevents duplicate discard/resolution. Faults clear even earlier natural/bust results under whole-table integrity semantics while preserving cards.
+
+Full child-PowerShell verify.ps1 at 00:18:03–00:18:23 PASS/0: typecheck/lint, 17 files / 216 tests. Eight pure policy cases and thirteen integration cases added. Explicit expected sequences/results, draw spy count, frozen-input purity, two partial-fault stages, repeatability and S17 all PASS. Git diff --check/status PASS/0; four source/test paths reviewed in full. README/LAB now explicitly identify the deterministic, non-optimal M2 policy. No M1 test, dependency or tooling changes; T04 repairs 0/10.

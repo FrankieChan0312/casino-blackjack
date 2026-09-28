@@ -1388,3 +1388,8 @@ The T09 real type-error experiment independently proved overall exit 2 while lin
 Pure transitions allocate small arrays; at 312 cards this is simpler than mutation bookkeeping. readonly is a compile-time contract, not runtime deep freezing. A single dealer command avoids an animation API before a UI exists. Pure ordinaryOutcome assumes a surviving non-natural player; game commands enforce that sequencing. Fixture code is test-only and independently checks all physical IDs.
 
 The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED**. M1/T08/T09/T10 acceptance: **NOT ACCEPTED**. Planned Parts C/M2+ remain unimplemented.
+
+
+## M2 T04 learning checkpoint
+
+M1 is ACCEPTED by the M2 batch contract. M2 computer play now uses a deterministic M2 policy: evaluated total <17 means HIT, otherwise STAND. Ace handling comes from the existing evaluator. This is a simple reproducible non-LLM policy, not optimal strategy or basic-strategy compliance. The controller loops through computers until a HUMAN requires input, then later resolves the shared dealer once. Full M2 learning notes and fresh-review handoff follow at T06; M2 is not ACCEPTED.

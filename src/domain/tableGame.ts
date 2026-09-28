@@ -1,6 +1,9 @@
 import type { PhysicalCard } from './card.js';
+import { computerDecision } from './computer.js';
+import { dealerShouldHit } from './dealer.js';
 import type { ActionError, OutcomeReason, RoundOutcome, RoundPhase, RoundState } from './game.js';
 import { evaluateHand, isNaturalBlackjack } from './hand.js';
+import { ordinaryOutcome } from './outcome.js';
 import type { RandomSource } from './random.js';
 import { completeShoeRound, createShoe, drawCard, prepareShoeForNextRound, type ShoeState } from './shoe.js';
 import { configureSeats, createTable, freezeTableSeats, releaseTableSeats, type SeatState, type TableState } from './table.js';
@@ -111,7 +114,7 @@ function turnError(round: TableRoundState, phase: RoundPhase): ActionError | und
   return undefined;
 }
 
-// Internal primitive: only validated human commands (and later automation) choose a hand.
+// Internal primitive: only validated human commands and automation choose a hand.
 function applySeatAction(state: TableGameState, action: 'HIT' | 'STAND'): TableGameState {
   const round = state.round!;
   const index = round.players.findIndex((player) => player.seatNumber === round.currentSeat);
@@ -151,4 +154,42 @@ export function hitTableSeat(state: TableGameState, seatNumber: number): TableCo
 
 export function standTableSeat(state: TableGameState, seatNumber: number): TableCommandResult {
   return humanAction(state, seatNumber, 'STAND');
+}
+
+export function resolveTableDealer(state: TableGameState): TableCommandResult {
+  const round = state.round;
+  if (!round) return { ok: false, state, error: 'NO_ROUND' };
+  const error = turnError(round, 'DEALER_TURN');
+  if (error) return { ok: false, state, error };
+  let shoe = state.shoe;
+  let dealerCards = round.dealerCards;
+  let dealer = evaluateHand(dealerCards);
+  if (round.players.some((player) => player.outcome === undefined)) {
+    while (dealerShouldHit(dealer)) {
+      const draw = drawCard(shoe);
+      shoe = draw.shoe;
+      if (!draw.ok) return { ok: true, state: tableIntegrityFailure({ ...state, shoe },
+        { ...round, dealerCards }, draw.error) };
+      dealerCards = [...dealerCards, draw.card];
+      dealer = evaluateHand(dealerCards);
+    }
+  }
+  const players = round.players.map((player) => player.outcome !== undefined ? player
+    : { ...player, ...ordinaryOutcome(evaluateHand(player.cards), dealer) });
+  return { ok: true, state: completeTableRound({ ...state, shoe }, { ...round, players, dealerCards }) };
+}
+
+// Call after initial deal or a HUMAN action. One invocation runs until human input
+// is needed, or the entire table completes/fails. No timer, RNG or hidden-card policy.
+export function advanceTableAutomation(state: TableGameState): TableCommandResult {
+  if (!state.round) return { ok: false, state, error: 'NO_ROUND' };
+  if (state.round.phase === 'ROUND_COMPLETE' || state.round.phase === 'INTEGRITY_ERROR'
+    || state.round.integrityError !== undefined) return { ok: false, state, error: 'ROUND_ALREADY_TERMINAL' };
+  let next = state;
+  while (next.round!.phase === 'PLAYER_TURN') {
+    const player = next.round!.players.find((hand) => hand.seatNumber === next.round!.currentSeat)!;
+    if (player.controller === 'HUMAN') return { ok: true, state: next };
+    next = applySeatAction(next, computerDecision(evaluateHand(player.cards)));
+  }
+  return next.round!.phase === 'DEALER_TURN' ? resolveTableDealer(next) : { ok: true, state: next };
 }

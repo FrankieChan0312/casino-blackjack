@@ -2,8 +2,8 @@
 
 A portfolio-oriented Blackjack project focused on **verifiable game-engine behaviour, deterministic testing, clear domain modelling, and reproducible engineering evidence**.
 
-> **Current status:** M1 headless gameplay is implemented and local automated regression passes; see [STATE.md](docs/STATE.md) for the AC mapping and timestamped evidence.
-> Fresh-session review is NOT YET COMPLETED. M1 and T08–T10 are not ACCEPTED.
+> **Current status:** M1 is ACCEPTED. M2 table gameplay through T04 is implemented and verified locally; see [STATE.md](docs/STATE.md) for evidence.
+> M2 regression/review packaging continues. M2 fresh-session review is NOT RUN and M2 is not ACCEPTED.
 > No browser UI, deployment, or real-money functionality exists.
 
 ## Project Goal
@@ -270,3 +270,9 @@ This path and its Git repository were confirmed during M1-T01. Existing unknown 
 No repository license has been selected yet.
 
 Do not assume a license until one is explicitly added.
+
+## M2 implementation through T04
+
+Seven stable seats support EMPTY/HUMAN/COMPUTER occupancy, sitting out, at most one local human and zero-human computer-only tables. Round participation is frozen. A shared shoe deals in two ascending passes around the dealer cards; naturals and later results belong to individual seats. HUMAN Hit/Stand is routed only to the current HUMAN seat.
+
+The computer policy is deliberately deterministic and non-LLM: evaluated total below 17 Hits, otherwise Stands. It is not optimal Blackjack strategy or basic-strategy compliance. advanceTableAutomation runs consecutive computers, pauses for HUMAN input, then resolves one shared S17 dealer. Call it after startTableRound or an accepted HUMAN action when the round is still active. No betting/credits, UI, network multiplayer, production casino or deployment is implemented.
