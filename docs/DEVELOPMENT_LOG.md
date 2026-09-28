@@ -1126,3 +1126,17 @@ T02 scope/acceptance: two ascending active-seat passes around dealer upcard/hole
 Added tableGame.ts, tablePublicView.ts, tableFixture.ts and tableDeal.test.ts; shoe.ts gains optional minimumCards defaulting to M1's four. Explicit public configuration is separate from the frozen round seats so later between-round edits cannot rewrite the prior round. Initial failure preserves cards and invalidates normal results, retiring the shoe. No M1 tests or other source changed.
 
 Full child-PowerShell verify.ps1 started 00:10:55: PASS/0, typecheck/lint, 14 files / 184 tests. Eighteen new cases cover one/sparse/full deal, sit-out and active lock, all peek ranks, mixed/all naturals, redaction/detachment, minimum cards and faults after 0/1/3/5 draws. Git diff --check/status PASS/0; reviewed five source/test paths in full and the shoe-only M1 extension. No failures/repairs: T02 0/10. Publication evidence follows at T03 baseline.
+
+## M2-T03 — Seat turn sequencing / HUMAN routing
+
+### 2026-09-29 00:12:43 +08:00 — BASELINE / T02 PUBLICATION
+
+T02 committed/pushed e0f7b366c69f2980aa53283a5f37324ff89d2928; push/fetch PASS/0, main=origin/main, 0/0, clean. T02 repairs 0/10; T03 independently starts 0/10. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED.
+
+Scope/acceptance: current-seat HUMAN Hit/Stand only; one-card Hit, no-card Stand, ascending next eligible seat, skip naturals, bust/ordinary-21 completion without ending other hands, final transition to DEALER_TURN, terminal/wrong-seat/wrong-phase rejection unchanged, integrity and secrecy/accounting. No computer execution or dealer settlement. Global batch non-goals and stop conditions apply. Step -> verification: internal seat action and guarded HUMAN commands -> independent sparse/terminal/fault fixtures -> full harness/diff review -> checkpoint/push/parity -> T04.
+
+### 2026-09-29 00:14:52 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Extended tableGame.ts and added tableActions.test.ts (11 cases). complete means player decisions ended, while outcome may await dealer comparison. One seat bust records only that seat's loss; no shoe discard until table completion. HUMAN commands never act for computers. A required draw fault clears prior normal results across the table, retains diagnostic cards, and retires the shoe. M1 code/tests unchanged.
+
+Full child-PowerShell verify.ps1 at 00:14:30–00:14:52 PASS/0: typecheck/lint, 15 files / 195 tests. Git diff --check/status PASS/0; reviewed complete source diff and new test file. No repair: T03 0/10. Required publication follows, with actual evidence recorded at T04 baseline.

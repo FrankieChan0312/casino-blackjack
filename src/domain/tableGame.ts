@@ -1,6 +1,6 @@
 import type { PhysicalCard } from './card.js';
 import type { ActionError, OutcomeReason, RoundOutcome, RoundPhase, RoundState } from './game.js';
-import { isNaturalBlackjack } from './hand.js';
+import { evaluateHand, isNaturalBlackjack } from './hand.js';
 import type { RandomSource } from './random.js';
 import { completeShoeRound, createShoe, drawCard, prepareShoeForNextRound, type ShoeState } from './shoe.js';
 import { configureSeats, createTable, freezeTableSeats, releaseTableSeats, type SeatState, type TableState } from './table.js';
@@ -101,4 +101,54 @@ export function startTableRound(state: TableGameState, roundId: string,
     currentSeat: resolved.find((player) => !player.complete)?.seatNumber ?? null };
   const dealt = { table: frozen.table, shoe, round };
   return { ok: true, state: round.currentSeat === null ? completeTableRound(dealt, round) : dealt };
+}
+
+function turnError(round: TableRoundState, phase: RoundPhase): ActionError | undefined {
+  if (round.phase === 'ROUND_COMPLETE' || round.phase === 'INTEGRITY_ERROR' || round.integrityError !== undefined) {
+    return 'ROUND_ALREADY_TERMINAL';
+  }
+  if (round.phase !== phase) return 'WRONG_PHASE';
+  return undefined;
+}
+
+// Internal primitive: only validated human commands (and later automation) choose a hand.
+function applySeatAction(state: TableGameState, action: 'HIT' | 'STAND'): TableGameState {
+  const round = state.round!;
+  const index = round.players.findIndex((player) => player.seatNumber === round.currentSeat);
+  let player = round.players[index];
+  let shoe = state.shoe;
+  if (action === 'HIT') {
+    const draw = drawCard(shoe);
+    shoe = draw.shoe;
+    if (!draw.ok) return tableIntegrityFailure({ ...state, shoe }, round, draw.error);
+    const cards = [...player.cards, draw.card];
+    const evaluation = evaluateHand(cards);
+    player = { ...player, cards, complete: evaluation.isBust || evaluation.isTwentyOne };
+    if (evaluation.isBust) player = { ...player, outcome: 'DEALER_WIN', outcomeReason: 'PLAYER_BUST' };
+  } else {
+    player = { ...player, complete: true };
+  }
+  const players = round.players.map((hand, position) => position === index ? player : hand);
+  const currentSeat = players.find((hand) => !hand.complete)?.seatNumber ?? null;
+  return { ...state, shoe, round: { ...round, players, currentSeat,
+    phase: currentSeat === null ? 'DEALER_TURN' : 'PLAYER_TURN' } };
+}
+
+function humanAction(state: TableGameState, seatNumber: number, action: 'HIT' | 'STAND'): TableCommandResult {
+  const round = state.round;
+  if (!round) return { ok: false, state, error: 'NO_ROUND' };
+  const error = turnError(round, 'PLAYER_TURN');
+  if (error) return { ok: false, state, error };
+  const player = round.players.find((hand) => hand.seatNumber === seatNumber);
+  if (round.currentSeat !== seatNumber || !player || player.complete) return { ok: false, state, error: 'WRONG_SEAT' };
+  if (player.controller !== 'HUMAN') return { ok: false, state, error: 'NOT_HUMAN' };
+  return { ok: true, state: applySeatAction(state, action) };
+}
+
+export function hitTableSeat(state: TableGameState, seatNumber: number): TableCommandResult {
+  return humanAction(state, seatNumber, 'HIT');
+}
+
+export function standTableSeat(state: TableGameState, seatNumber: number): TableCommandResult {
+  return humanAction(state, seatNumber, 'STAND');
 }
