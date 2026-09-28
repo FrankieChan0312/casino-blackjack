@@ -895,3 +895,11 @@ This document may be marked **DESIGN READY FOR REPOSITORY BOOTSTRAP** only when:
 - the user has not requested a conflicting design change.
 
 That label does not mean M1 is implemented or verified.
+
+## 25. M2 approved extension (user batch contract)
+
+The sections above describe the accepted M1 API. M2 adds separate table modules while reusing card, random, shoe, hand, dealer and ordinary-outcome primitives; the M1 one-seat API remains regression protected. No generic rules/controller framework or dependency is required.
+
+T01 TableState owns seven fixed SeatState positions. Occupancy is EMPTY/HUMAN/COMPUTER; EMPTY cannot sit out or participate, occupied seats may sit out, and at most one HUMAN is configured. Atomic configuration is permitted only between rounds. freezeTableSeats copies/freezes ascending active seats; no-active-seat start is rejected. releaseTableSeats is a round-boundary primitive used by later orchestration, not an active-round player command. As with the M1 shoe primitives, direct low-level construction/misuse is outside the command API contract.
+
+The approved following tasks add TableGameState with one persistent shoe and round, one hand/result per frozen active seat, two-pass deal followed by peek/naturals, a current-seat cursor and separate HUMAN commands. Computer policy consumes only its evaluated public hand total (<17 HIT, otherwise STAND); automation runs until HUMAN input or terminal state, resolving one shared S17 dealer when decisions end. Public projection explicitly copies visible fields and preserves M1 reveal timing. Non-financial integrity errors retire the shoe and clear normal table results while retaining diagnostic cards. Wagers and refunds remain M3 scope. This paragraph records approved design, not completed functionality; PLAN/STATE own delivery status.

@@ -1,119 +1,22 @@
 # Casino Blackjack — Project State
 
-Document date: 2026-09-28
-Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`
-Milestone: M1 — Headless Blackjack Core
-Current task: M1-T10 — Review Repair #1, stale evidence reference
+## Current truth: M2-T01
 
-## Current truth
+M1 at d1d8966fe55af1bc2b9348e305135952b7723b70 is ACCEPTED by the explicit M2 batch contract. Earlier pending M1 review/acceptance statements in historical notes are superseded; no new independent review was performed here. Baseline at 2026-09-28 23:57:30 +08:00: main=origin/main, 0/0, clean. Origin is the authorized FrankieChan0312/casino-blackjack repository.
 
-Fresh-session review of main at `b816c393d22f1c4d0acb842ee82bc60985badd5c` completed with one LOW finding: PLAN.md's M1-T02 evidence pointer names an M1-T03 baseline no longer retained in STATE.md. AC-M1-001 through AC-M1-019 and REG-M1-001 through REG-M1-024 passed; AC-M1-020 remains FAIL pending reviewer recheck of the repaired HEAD. The finding is not closed and M1 is NOT ACCEPTED. Actual model and reasoning/effort: NOT VERIFIED; recommended GPT-6 Astra / High.
+M2-T01 is IMPLEMENTED / VERIFIED locally: seven stable seats, atomic configuration, active participation snapshot. Full verify.ps1 PASS/0, typecheck/lint and 13 files / 166 tests at 23:59:53–00:00:11 +08:00. Git review/publication pending. No new dependencies. Recommended model/effort GPT-6 Astra / High; actual model NOT VERIFIED; actual reasoning/effort NOT VERIFIED.
 
-Review Repair #1 baseline at 2026-09-28 23:35:03 +08:00: main, HEAD=origin/main=`b816c393d22f1c4d0acb842ee82bc60985badd5c`, ahead/behind 0/0, clean. Cause hypothesis: historical evidence was compacted from STATE.md but PLAN.md retained the old pointer. Targeted fix at 23:35:30 +08:00: change only that pointer to DEVELOPMENT_LOG.md, whose M1-T03 baseline at 2026-09-28 20:53:02 +08:00 preserves the evidence. T10 repair cycle is 1/10; all other task counts are unchanged. Repair validation: PASS/0 at 23:36:50–23:37:00 +08:00, full verify.ps1 with typecheck/lint and 12 files / 155 tests. Complete three-file diff, git diff --check and status review PASS/0 at 23:37:19 +08:00. Only PLAN.md and the required STATE/DEVELOPMENT_LOG repair records change; final pre-commit checks follow this evidence update.
-
-The user authorizes this verified repair's commit and push to origin/main, followed by fetch/parity/clean-tree checks. Stop afterwards for reviewer recheck; do not mark AC-M1-020 PASS, close the finding or accept M1. This repair record supersedes pre-repair pending-review and next-action wording retained below as checkpoint history. The repair commit hash and actual push/parity result will be reported in the final handoff and Git history, avoiding a self-referential metadata commit.
-
-Batch entry baseline at 2026-09-28 22:53:54 +08:00: main, HEAD and origin/main both `1f1e8fabd0d978e1b8b706e9009e4ceaa501eed5`, ahead/behind 0/0, working tree clean. Public `git ls-remote origin refs/heads/main` independently confirmed that same SHA before implementation. Origin: `https://github.com/FrankieChan0312/casino-blackjack.git`.
-
-M1-T07 was explicitly ACCEPTED, committed at 2026-09-28 22:47:17 +08:00 as `feat: add blackjack player actions`, and published as verified by this entry baseline. Its committed documents describe the earlier pre-acceptance snapshot; this entry supersedes that stale status without a separate metadata commit.
-
-The user authorizes separate verified T08, T09 and T10 commits and pushes to origin/main, with parity and clean-tree checks between tasks. No task becomes ACCEPTED from a push. Stop after T10 for a genuinely new-session review. No M2+, history rewrite, deployment, visibility change, paid resource or credential handling is authorized.
-
-## Implemented scope
-
-- Physical cards, six-deck inventory, injected shuffle/cut selection and persistent shoe accounting.
-- Pure Ace-aware hand evaluation and explicit original-hand natural eligibility.
-- Initial deal/peek/naturals, public redaction, Hit/Stand and terminal protection.
-- T08: pure S17 policy, ordinary outcome helper and resolveDealer command. Dealer draws below 17, stands on soft/hard 17+, completes discard exactly once, and preserves partial dealer cards on integrity failure.
-- Public reveal remains authorized at DEALER_TURN and ROUND_COMPLETE per DESIGN section 12; errors do not expose additional secret data.
-- No wagers, seats/bots, advanced actions, UI, transport, persistence, replay product or deployment.
-
-## Task ledger
-
-| Task | Repairs used / limit | Delivery state |
+| M2 task | Repair count | Status |
 | --- | --- | --- |
-| M1-T01 | 2/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T02 | 1/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T03 | 0/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T04 | 0/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T05 | 1/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T06 | 0/10 | VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T07 | 1/10 | IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED |
-| M1-T08 | 0/10 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; not ACCEPTED |
-| M1-T09 | 0/10 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; not ACCEPTED |
-| M1-T10 | 1/10 | Review Repair #1 IMPLEMENTED / VERIFIED locally; reviewer recheck pending; not ACCEPTED |
+| T01 | 1/10 | IMPLEMENTED / VERIFIED; checkpoint pending |
+| T02 | 0/10 | NOT STARTED |
+| T03 | 0/10 | NOT STARTED |
+| T04 | 0/10 | NOT STARTED |
+| T05 | 0/10 | NOT STARTED |
+| T06 | 0/10 | NOT STARTED |
 
-No repair count is reset or transferred. Full historical timestamps, checkpoints, failures and repair hypotheses remain in DEVELOPMENT_LOG.md and Git history; this current-state summary replaces obsolete bootstrap/pending-action prose.
+M1 repair ledger T01..T10: **2,1,0,0,1,0,1,0,0,1**, each /10. Historical verification/AC mapping is preserved in Git at the accepted M1 SHA and DEVELOPMENT_LOG.md; no count is reset.
 
-## Verification evidence
+M2 scope: seven seats, zero/one human, computers, sitting out, frozen participation, shared shoe/dealer, deal/turn ordering, Hit/Stand, independent outcomes, public redaction and deterministic computer total<17 HIT / >=17 STAND. No wager/credit/advanced action/UI/network/server/replay product or casino-certification claim. T01 does not yet implement M2 gameplay. Required checks for every task: full verify.ps1, diff --check, complete task diff and status; commit/push/fetch only on PASS. No known implementation blocker.
 
-| Check | Result | Evidence |
-| --- | --- | --- |
-| T08 first full harness | PASS | 2026-09-28 22:57:33–22:57:40 +08:00; exit 0 |
-| Typecheck / lint | PASS | npm run typecheck; npm run lint |
-| Unit / integration tests | PASS | T10 run at 2026-09-28 23:13:01–23:13:11 +08:00: typecheck/lint and 12 files / 155 tests PASS/0 |
-| T08 new cases | PASS | 7 pure policy/comparison cases; 13 dealer-resolution integration cases |
-| Complete task diff / whitespace | PASS | Reviewed 2026-09-28 23:00:12 +08:00; nine intended paths only |
-| T09 first full harness / AC mapping | PASS | 2026-09-28 23:04:17–23:04:32 +08:00; typecheck/lint, 12 files / 155 tests |
-| T09 failure propagation | PASS | 23:04:56–23:05:07 +08:00 real type error returned exit 2; temporary probe removed; five wrapper fault tests also PASS |
-| T09 complete diff / whitespace | PASS | 2026-09-28 23:07:06 +08:00; six intended paths, no production change |
-| T10 local documentation/diff review | PASS | Five documentation files only; complete diff at 23:12:51 +08:00; final source/history rechecked |
-| Fresh-session milestone review | FAIL | Reviewed b816c393d22f1c4d0acb842ee82bc60985badd5c; one LOW evidence-pointer finding; repair recheck NOT RUN |
-| Browser/E2E | NOT APPLICABLE | M1 has no browser UI |
-
-T08 tests cover hard/soft 16 and 17, repeated dealer draws, bust, explicit higher/lower/equal outcomes, ordinary 21, no unnecessary draws after terminal outcomes, all-command terminal rejection, partial dealer exhaustion, accounting, public reveal and input purity. No requirement or assertion was weakened.
-
-## Git / next action
-
-T09 baseline at 2026-09-28 23:01:45 +08:00: T08 commit `a02e0135098f7f398f0bcac607e6eb4dd0e73334` pushed to origin/main; fetch succeeded, main=origin/main, ahead/behind 0/0, clean. T08 final harness at 23:00:40–23:00:46 passed 139 tests. T09 was then verified, committed and pushed as recorded below. No gameplay source change was needed in T09.
-
-T10 baseline at 2026-09-28 23:08:58 +08:00: main HEAD=origin/main=`e22ba7d3a512dec9d3e1f6992907660ad3c1d825`, ahead/behind 0/0, working tree clean after T09 push/fetch. Restored T09 full harness at 23:07:32–23:07:42 +08:00 PASS/0: typecheck, lint, 12 files / 155 tests. T10 changes only README, LAB_MANUAL, PLAN, STATE and DEVELOPMENT_LOG.
-
-The version under final review is the T10 commit named `docs: prepare M1 verification and review package`, directly after the T09 SHA above. Its own hash cannot be embedded in its content; resolve it with git rev-parse HEAD after publication and use the final handoff hash. Final T10 push/parity evidence is reported in delivery, avoiding a self-referential metadata commit. STOP after that clean published checkpoint.
-
-## Limitations / blockers
-
-No implementation blocker is known. M1 acceptance and fresh review remain outstanding. Public projection is a local correctness boundary, not server security. Production randomness adapts Math.random and makes no cryptographic/casino-certification claim. Browser/E2E, deployment and financial settlement do not apply to M1. Separate clean-machine npm ci reproduction has not run.
-
-## M1 acceptance and regression evidence (T09)
-
-Rows 001–019 below retain the executed T09 evidence, corroborated by fresh-session review. Paths are relative to tests/. Fresh review found AC-M1-020 FAIL only for the LOW evidence pointer; it remains FAIL until the reviewer checks the repaired HEAD. M1 is not ACCEPTED. SPEC requirements are unchanged.
-
-| AC-M1 | Local result | Executed evidence / independently asserted facts | REG-M1 |
-| --- | --- | --- | --- |
-| 001 | PASS | unit/card.test.ts: exact 312 IDs, explicit rank/suit sets and six copies | 001 |
-| 002 | PASS | unit/shoe.test.ts, helpers/shoeFixture.ts independent IDs; integration roundLifecycle and dealerResolution check every transition/discard | 005, 006 |
-| 003 | PASS | unit/random.test.ts scripted exact permutation; roundLifecycle repeated creation/deal asserts explicit IDs and cut 249 | 024 |
-| 004 | PASS | random.test.ts both endpoints/all 31 outputs/invalid offsets; roundLifecycle both endpoint lifetimes | 002, 003, 004 |
-| 005 | PASS | roundLifecycle: Hit reaches 219/249, dealer completes with same shoe/cut, next start replaces | 005 |
-| 006 | PASS | roundLifecycle parameterized 0/1/2/3 replace before dealing; 4 starts using same shoe | 007 |
-| 007 | PASS | game.test.ts failure after 0..3 initial draws; playerActions empty Hit; dealerResolution failure after 0/1 dealer draws and roundLifecycle recovery | 008 |
-| 008 | PASS | unit/hand.test.ts explicit totals/soft/bust/21, all ranks and multiple Aces | 009, 010, 011 |
-| 009 | PASS | hand.test.ts A+10/J/Q/K original eligibility, three-card ordinary 21 and false eligibility | 012, 013 |
-| 010 | PASS | game.test.ts explicit P/up/P/hole IDs; publicView.test.ts serialization, substituted hidden cards, no IDs/shoe/hidden totals | 023 |
-| 011 | PASS | game.test.ts natural matrix and all peek/no-peek upcards; terminal actions rejected | 016 |
-| 012 | PASS | playerActions.test.ts 15+3=18, repeated Hit, 15+6=21, 18+7 bust with no dealer draw | 021 |
-| 013 | PASS | playerActions Stand only phase changes; wrong-phase actions reject unchanged | 022 |
-| 014 | PASS | unit/dealer.test.ts explicit threshold facts; dealerResolution hard/soft 16 Hit, hard/soft 17 Stand | 014, 015 |
-| 015 | PASS | dealer.test.ts and dealerResolution: 20/19, 19/20, 20/20 and dealer bust | 018, 019, 020 |
-| 016 | PASS | roundLifecycle natural result retained when next dealer card would make 7+7+7=21; no unnecessary draw | 017 |
-| 017 | PASS | playerActions and dealerResolution reject Hit/Stand/resolveDealer with original reference and unchanged complete snapshots | 022 |
-| 018 | PASS | roundLifecycle two complete ordinary rounds reuse shoe/cut and consume later cards; previous terminal snapshot intact | 006 |
-| 019 | PASS | scripts/verify.ps1 full runs; verifyHarness.test.ts isolated actual wrapper with all success, each required failure and unavailable npm; real type-error probe exit 2 | harness |
-| 020 | FAIL | Fresh review: LOW stale PLAN.md evidence pointer; T10 repair cycle 1/10 implemented; reviewer recheck of repaired HEAD pending | documentation |
-
-REG-M1-017 is checked as precedence without creating an illegal engine flow: initial player natural ends the round before a third dealer card. The fixture independently proves that the next card would form ordinary 21 and verifies that resolution cannot consume it or overwrite PLAYER_BLACKJACK. Ordinary 21 versus ordinary 21 is separately tested as PUSH. No product replay or impossible extra natural-dealer draw is implemented.
-
-## Mandatory fresh-session review handoff
-
-Start a genuinely NEW Codex session at this repository and the final published T10 HEAD. This implementation session has NOT performed that review. Review findings first; do not edit code/docs, commit, push or begin M2 unless assigned a separate repair task.
-
-Reviewer must:
-
-1. Read AGENTS.md and SKILL.md, then RULES.md, SPEC.md, DESIGN.md, PLAN.md, STATE.md, DEVELOPMENT_LOG.md, README.md and LAB_MANUAL.md.
-2. Capture actual timestamp, main branch, HEAD, origin/main, clean status and ahead/behind; compare with the final handoff SHA. Actual model/effort only if verifiable, otherwise NOT VERIFIED.
-3. Inspect final src/domain, all tests/helpers, scripts/verify.ps1, toolchain configuration and Git history. Review full M1 implementation plus `git diff 1f1e8fabd0d978e1b8b706e9009e4ceaa501eed5..HEAD -- src tests scripts docs README.md` for the final batch.
-4. Independently check every AC-M1-001..020 and REG-M1-001..024 against real behavior, not just this mapping. Review natural precedence/no extra dealer draw, S17, accounting, 0..4 guard, both cut boundaries and next-round replacement, public secrecy/reveal, exhaustion, terminal immutability, harness exit propagation and README/LAB accuracy. Fresh review now owns the previously pending AC020 review portion.
-5. Run .\scripts\verify.ps1 (or the documented child-PowerShell equivalent), git diff --check and git status --short --untracked-files=all; report executed results and exact version. Expected current suite: 12 files / 155 tests. Do not weaken a check or infer a PASS from previous records.
-6. Report findings first with severity, path/line, violated AC/rule, reproduction and impact; report no findings explicitly if none, with remaining limitations. Do not silently fix. Any existing-AC defect must retain the appropriate original task count or a clearly linked review-repair record. Counts T01–T10: 2,1,0,0,1,0,1,0,0,0 out of 10 each.
-7. Distinguish reviewed/verified from ACCEPTED; only explicit human acceptance may mark M1 ACCEPTED. No merge/release/deployment or M2 implementation is authorized by this handoff.
+Next: publish T01 checkpoint then automatically begin T02. Final M2 fresh-session review NOT RUN; M2 and every M2 task NOT ACCEPTED. Stop after T06 for a genuinely new findings-first reviewer, who reruns the harness and inspects M1 preservation without editing unless separately authorized. Browser/E2E NOT APPLICABLE: no UI. Deployment NOT RUN and not authorized. Clean-machine npm ci reproduction NOT RUN.

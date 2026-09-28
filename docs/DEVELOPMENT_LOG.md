@@ -1088,3 +1088,27 @@ T10 cumulative repair count is now 1/10. Prior counts remain T01 2/10, T02 1/10,
 Executed `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` at 23:36:50–23:37:00 +08:00: PASS, exit 0; typecheck PASS/0, lint PASS/0, 12 test files / 155 tests PASS/0. At 23:37:19 +08:00, `git diff --check`, `git status --short --untracked-files=all` and the complete three-file repair diff each exited 0. Only docs/PLAN.md, docs/STATE.md and docs/DEVELOPMENT_LOG.md changed. PLAN has exactly one destination replacement; the two records persist only the finding, hypothesis, repair count, evidence and pending recheck. No gameplay/test/tooling or other-document change. Git emitted only its existing LF-to-CRLF warning; no whitespace error or configuration change.
 
 Repair #1 is VERIFIED locally with T10 still 1/10; no additional repair cycle was needed. AC-M1-020 remains FAIL, the finding remains open, and fresh-review recheck of the repaired HEAD remains required. M1 remains NOT ACCEPTED. Run final exact-version verification and staged diff/whitespace checks after this evidence-only update, then perform the authorized commit/push/fetch and report actual HEAD/origin/main parity and clean status. No M2 work is authorized.
+
+## M2 batch contract and T01 baseline
+
+### 2026-09-28 23:57:30 +08:00 — BASELINE / USER_ACCEPTANCE
+
+Entry gate PASS/0: main, HEAD=origin/main=d1d8966fe55af1bc2b9348e305135952b7723b70, behind/ahead 0/0, clean; origin is https://github.com/FrankieChan0312/casino-blackjack.git. Get-Location confirmed this repository. Initial sandbox Git inspection was BLOCKED by ownership; approved owning-user read succeeded without changing Git configuration. No unknown changes. Recommended GPT-6 Astra / High; actual model and reasoning/effort NOT VERIFIED.
+
+The user explicitly accepts the final reviewed M1 milestone at this SHA through the M2 execution contract. M1 is ACCEPTED; earlier pending-review/acceptance wording is historical and superseded. This does not claim a new review in this session. M1 repair ledger T01..T10 remains 2,1,0,0,1,0,1,0,0,1 (each /10).
+
+M2 tasks run T01 -> T02 -> T03 -> T04 -> T05 -> T06, each with its own 0/10 counter. Verified checkpoints may be committed/pushed to origin/main automatically. No M2 acceptance or independent review occurs here. Mandatory stop after T06; no M3, wagers/credits, advanced actions, UI/networking, dependency unless justified, credentials, paid resources, destructive Git, merge/release/deployment. Stop also for authoritative conflicts, unknown overlap, unavailable verification, ambiguity or repair limit.
+
+T01 scope/acceptance: seven stable ordered positions, validated atomic occupancy/sit-out updates, at most one human (zero allowed), ascending active seats, no empty/sit-out participation, detached frozen active snapshot and configuration rejection during a round. No dealing/actions/bots/dealer orchestration. Step -> verification: minimal table model -> explicit invariant/configuration/snapshot tests -> full verify.ps1 -> complete diff/status review -> commit/push/fetch parity -> T02. The user contract supplies the approved M2 domain decisions; no rules conflict is found. R02 funded participation is deferred to M3 per SPEC, with occupied non-sitting-out participation in M2.
+
+### 2026-09-29 00:00:11 +08:00 — IMPLEMENTATION / VALIDATION
+
+Added src/domain/table.ts and tests/unit/table.test.ts. Eleven cases cover stable positions, sparse sorting, zero/one human, sitting out, invalid numbers/duplicates/runtime values, atomic rejection, copied inputs, runtime-frozen participation and round locks. M1 modules/tests unchanged. No dependency installed. Full child-PowerShell verify.ps1 started 2026-09-28 23:59:53 +08:00: PASS/0, typecheck/lint, 13 files / 166 tests. First implementation/validation required no repair: T01 0/10. Task diff review follows before publication.
+
+### 2026-09-29 00:07:04 +08:00 — T01 TASK REVIEW
+
+Complete intended six-file content reviewed; Git diff --check/status PASS/0. No unexpected paths, dependency change or M1 code/test edits. T01 remains VERIFIED, repairs 0/10. Checkpoint publication results will be recorded at the T02 baseline to avoid a metadata-only commit.
+
+### 2026-09-29 00:07:22 +08:00 — T01 REPAIR 1/10
+
+Staged diff --check FAIL/2: extra blank line at EOF in this log; commit/push did not run. Hypothesis: Add-Content appended its own newline after an already newline-terminated entry. Removed only excess terminal whitespace and use one terminating newline. No executable change. Reverification: staged whitespace/full harness follow; no tests weakened.
