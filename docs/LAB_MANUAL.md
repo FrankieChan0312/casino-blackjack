@@ -5,7 +5,7 @@ Document task: LAB-1.0
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
-Status: learning manual prepared before implementation. Planned material is not evidence of implementation or verification.
+Status: M1 implementation learning notes updated at T10; local regression evidence is in STATE.md. Fresh-session review and user acceptance remain outstanding. Parts C and later-milestone examples are planned, not implemented.
 
 ## 1. Purpose
 
@@ -51,7 +51,7 @@ Do not memorize implementation details blindly. Be able to explain the flow in p
 
 The long-term target is a simulated-credit Blackjack table that grows from a verified headless engine into a multi-seat casino-style system.
 
-Planned capabilities across later milestones include:
+Capabilities across M1 and later milestones include (see STATE.md for implemented scope):
 
 - six-deck persistent shoe;
 - American hole-card Blackjack;
@@ -1320,7 +1320,7 @@ The user's understanding does not make a failing test pass.
 
 ## 26. Current learning state
 
-Before M1-T01 execution:
+Historical learning baseline before M1-T01 execution:
 
 - House Rules v1.1: discussed and defined.
 - M1 scope: defined.
@@ -1330,6 +1330,61 @@ Before M1-T01 execution:
 - M1 code: not implemented.
 - Automated verification: not run.
 
-The first hands-on lab is:
+The first hands-on lab at that historical baseline was:
 
 `M1-T01 — Repository Bootstrap and Engineering Harness`
+
+## 27. M1 — Implemented Learning Summary (T10)
+
+### What was built
+
+A one-seat, no-wager TypeScript engine now implements all M1 gameplay: physical inventory, persistent shoe, deterministic randomness boundary, scoring, initial naturals, player decisions, S17 and outcomes. The executable API is in src/domain/game.ts and publicView.ts. There is no UI, interactive CLI, persistence or financial settlement. These notes explain implemented behavior; they do not claim that the user has personally mastered it.
+
+### Physical identity, randomness and shoe lifecycle
+
+Each PhysicalCard has readonly id/deckIndex/suit/rank. `1:spades:Q` and `2:spades:Q` are separate physical cards of the same visible value. IDs are unique within one 312-card inventory, not globally across shoes; shoeId distinguishes successive shoes. The inventory is deterministic and shuffle copies its array while preserving card identities.
+
+RandomSource exposes only nextInt(maxExclusive). Fisher–Yates consumes injected integers, and cut selection is exactly `219 + nextInt(31)`. The production adapter is the sole Math.random caller. Test fixtures control the next-draw order without a product seed/replay system. Both endpoints and every legal offset are tested; no random retry loop is needed.
+
+Shoe.available, inPlay and discarded are disjoint and together contain all 312 original IDs. The top is available[0]. Draw moves one physical card into inPlay; normal round completion moves all inPlay cards to discarded once. Consumption is derived as `312 - available.length`, so no extra mutable counter can drift. The cut remains fixed for a shoe. Crossing it makes reshufflePending sticky but lets the current round finish. Only the next start prepares a replacement for pending/retired/<4 cards; a healthy shoe and its cut are otherwise reused. A different replacement shoeId is required. Four cards permit the initial deal, not a guarantee against later exhaustion.
+
+### Ace evaluation and natural precedence
+
+The evaluator starts Aces at 11 and subtracts 10 per Ace while needed. A remaining high Ace makes the hand soft. A,9,5 is hard 15; A,A,9 is soft 21; A,A,9,9 is hard 20. If every legal total busts, the minimum total is reported. Derived totals are returned, never stored as mutable hand state.
+
+`isNaturalBlackjack(cards, originalHandEligible)` requires explicit eligibility and exactly Ace plus 10/J/Q/K. Original A,K is natural; A,5,5 is ordinary 21; ineligible A,K is not natural. Initial natural resolution happens before player decisions and before ordinary comparison. A player natural stays PLAYER_BLACKJACK even if an unnecessary hypothetical third dealer card would make ordinary 21; the engine rejects that later dealer action rather than drawing it.
+
+### Internal/public state and command flow
+
+GameState contains shoe and optional round. Internally dealerCards[0] is upcard and [1] is hole. PublicView constructs copied rank/suit fields explicitly; it excludes physical IDs, future shoe order, cut and hidden totals. The hole is hidden during PLAYER_TURN and INTEGRITY_ERROR, visible during DEALER_TURN and ROUND_COMPLETE per DESIGN. A negative peek does not identify the hole. Local process memory is not claimed to be secure against its owner.
+
+startRound prepares/reuses a shoe, deals player/upcard/player/hole, peeks only for A/10/J/Q/K, then resolves naturals or enters PLAYER_TURN. Hit draws exactly one player card: below 21 continues, ordinary 21 enters DEALER_TURN, bust ends immediately as DEALER_WIN without dealer drawing. Stand changes only phase. resolveDealer evaluates/draws in one call until S17 stops; soft 17 stands just like hard 17. It never chases the player total.
+
+For a surviving ordinary player, dealer bust gives PLAYER_WIN; otherwise higher/lower/equal totals give PLAYER_WIN/DEALER_WIN/PUSH. Result reasons distinguish natural, player/dealer bust and comparisons. Normal completion discards cards; earlier terminal results reject later gameplay commands unchanged. Starting another round returns a new state without mutating the old terminal snapshot.
+
+CommandResult ok=false means an illegal request with the original gameplay state. ok=true means accepted, not necessarily a healthy round: an accepted required draw may enter INTEGRITY_ERROR. Unexpected exhaustion produces no ordinary outcome, preserves diagnostic hands/inPlay, retires the shoe and blocks gameplay actions. A later start must replace the shoe. M1 has no financial VOID/refund implementation.
+
+### Concrete regression lessons
+
+| Test group / file | Executed fact | Concrete bug caught |
+| --- | --- | --- |
+| unit/card.test.ts | Explicit 312 IDs, 52 combinations per deck, six copies | Reusing rank/suit as ID collapses six cards into one |
+| unit/random.test.ts | Exact scripted permutation, input preserved, all 31 cuts | Off-by-one cut selects 250, or shuffle duplicates/drops a card |
+| unit/shoe.test.ts | Every draw/discard accounts for the same full ID set | A drawn card remains available or is discarded twice |
+| unit/hand.test.ts | A,9,5=15; multiple Aces; natural eligibility | Always counting Ace as 11 causes a false bust; total==21 causes false natural |
+| unit/game.test.ts | P/up/P/hole, gated peek, natural matrix, partial-deal faults | Dealing P/P/D/D or continuing after initial dealer natural |
+| unit/publicView.test.ts | Serialized redaction and detached public objects | Hidden card survives inside a nested field or is revealed after negative peek |
+| unit/playerActions.test.ts | Exact one-card Hit, no-card Stand, terminal snapshots | Stand consumes a card; bust still allows another Hit |
+| unit/dealer.test.ts | S17 threshold and explicit total comparisons | Accidentally using H17 or treating equal totals as a loss |
+| integration/dealerResolution.test.ts | Exact dealer sequences, discard, terminal rejection, partial faults | Dealer chases player 20 instead of standing at 17; failure fabricates a winner |
+| integration/roundLifecycle.test.ts | Two ordinary rounds, both cuts, minimum guard, recovery | startRound reshuffles every round; cut crossing replaces mid-round; retired shoe reused |
+| verifyHarness.test.ts | Each required failure and missing npm produces nonzero | Later passing tests overwrite an earlier typecheck/lint failure |
+| harness.test.ts | Required documents and SKILL reference exist | A transferred repository loses its engineering entry instructions |
+
+The T09 real type-error experiment independently proved overall exit 2 while lint/tests passed. The temporary file was removed and all 155 tests passed again. Expected fault injections are successful negative tests, not excuses to weaken checks.
+
+### Tradeoffs and remaining review
+
+Pure transitions allocate small arrays; at 312 cards this is simpler than mutation bookkeeping. readonly is a compile-time contract, not runtime deep freezing. A single dealer command avoids an animation API before a UI exists. Pure ordinaryOutcome assumes a surviving non-natural player; game commands enforce that sequencing. Fixture code is test-only and independently checks all physical IDs.
+
+The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED**. M1/T08/T09/T10 acceptance: **NOT ACCEPTED**. Planned Parts C/M2+ remain unimplemented.

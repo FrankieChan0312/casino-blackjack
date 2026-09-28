@@ -2,8 +2,8 @@
 
 A portfolio-oriented Blackjack project focused on **verifiable game-engine behaviour, deterministic testing, clear domain modelling, and reproducible engineering evidence**.
 
-> **Current status:** M1-T08 dealer S17 and ordinary outcomes implemented; see [STATE.md](docs/STATE.md) for verification evidence.
-> M1 regression mapping is complete; the final documentation package and fresh-session review are pending.
+> **Current status:** M1 headless gameplay is implemented and local automated regression passes; see [STATE.md](docs/STATE.md) for the AC mapping and timestamped evidence.
+> Fresh-session review is NOT YET COMPLETED. M1 and T08–T10 are not ACCEPTED.
 > No browser UI, deployment, or real-money functionality exists.
 
 ## Project Goal
@@ -132,6 +132,10 @@ The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks
 
 The toolchain uses TypeScript, ESLint with typescript-eslint, and Vitest in its default Node environment. Vite is a Vitest development dependency; no browser application or server is implemented. Exact versions are in package.json and package-lock.json. No production dependencies or build output are needed for this checkpoint.
 
+The final local suite contains **12 test files / 155 tests**. `tests/verifyHarness.test.ts` executes the actual PowerShell wrapper in temporary directories with controlled command failures and a missing-tool case. These tests require Windows PowerShell; portability to other operating systems and a separate clean-machine install have not been verified. The real T09 type-error self-test also returned overall exit 2 before restoration and a passing full run.
+
+M1 is an in-memory library exercised by tests, with no interactive CLI or browser app. Callers supply stable round/shoe IDs and retain each returned state. TypeScript readonly declarations and pure transitions protect the engine contract; they do not freeze arbitrary caller-owned data at runtime. Public projection prevents accidental disclosure through the supported view, not inspection of local process memory. Math.random is used only in the simulation adapter and is not a security or casino-certification claim.
+
 A required check that fails or cannot run means the milestone is **not verified**.
 
 Verification states are recorded explicitly as:
@@ -216,7 +220,7 @@ See [`docs/RULES.md`](docs/RULES.md) for the complete approved rule set.
 
 ## Portfolio Integrity
 
-This project uses **simulation credits only**.
+The project permits **simulation credits only** in later wagering milestones; M1 has no credit or wager state.
 
 It does not include:
 
@@ -240,16 +244,16 @@ Specification:         prepared
 M1 design:             prepared
 Engineering plan:      prepared
 Repository bootstrap:  engineering harness implemented
-Blackjack source code: inventory, shoe, scoring, initial rounds, player actions, public view
+Blackjack source code: complete one-seat M1 flow, S17/outcomes and public view
 Automated verification:see docs/STATE.md
-GitHub push:            M1-T08 published; M1-T09 checkpoint pending
+GitHub checkpoint:      T09 published; T10 review-package version is identified by Git history
 Browser UI:             not implemented
 Deployment:             not applicable to M1
 ```
 
-The current executable task is:
+The next required step after the T10 checkpoint is:
 
-`M1-T09 — Full M1 Regression and Harness Completion`
+**A genuinely new Codex session performs findings-first M1 review.** See the review handoff in STATE.md. No M2 work or automatic acceptance is authorized.
 
 ## Local Repository Target
 

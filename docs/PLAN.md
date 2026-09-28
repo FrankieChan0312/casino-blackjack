@@ -7,7 +7,7 @@ Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`
 Rules baseline: `docs/RULES.md` — Blackjack House Rules v1.1  
 Specification baseline: `docs/SPEC.md` — SPEC-1.0  
 Design baseline: `docs/DESIGN.md` — DESIGN-1.0  
-Status: planning document; not evidence of implementation, verification, acceptance, commit, push, or deployment.
+Status: task plan with checkpoint statuses; execution evidence is in STATE.md, DEVELOPMENT_LOG.md and Git. Fresh-session M1 review is NOT YET COMPLETED; M1 is not ACCEPTED.
 
 ## 1. Purpose
 
@@ -113,7 +113,7 @@ M1 does not implement:
 
 ## M1-T01 — Repository Bootstrap and Engineering Harness
 
-**Status:** `VERIFIED` / `ACCEPTED` — prerequisite committed and published; repair cycles 2/10. See the M1-T02 baseline in STATE.md and DEVELOPMENT_LOG.md.
+**Status:** `VERIFIED` / `ACCEPTED` — prerequisite committed and published; repair cycles 2/10. See the M1-T02 baseline in DEVELOPMENT_LOG.md.
 
 ### Scope
 
@@ -242,7 +242,7 @@ Stop on any disagreement between card identity design and `DESIGN.md`.
 
 ## M1-T03 — Randomness Boundary, Shuffle, and Cut Position
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T04 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T04 baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -272,7 +272,7 @@ Do not add seeded replay as a product feature.
 
 ## M1-T04 — Shoe Accounting and Lifecycle
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T05 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T05 baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T03 VERIFIED`
 
 ### Scope
@@ -303,7 +303,7 @@ Use invariant tests and controlled fault injection.
 
 ## M1-T05 — Hand Evaluation and Natural Blackjack
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T06 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T06 baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -338,7 +338,7 @@ Expected values are explicit test facts, not calculated by reusing the productio
 
 ## M1-T06 — Round State, Initial Deal, Public View, and Natural Resolution
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T07 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T07 baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T04 VERIFIED`, `M1-T05 VERIFIED`
 
 ### Scope
@@ -447,7 +447,7 @@ Include deterministic dealer sequences for:
 
 ## M1-T09 — M1 Integration Regression and Harness Completion
 
-**Status:** `VERIFIED` — 155 tests, failure propagation and full task review PASS; not ACCEPTED; repairs 0/10.
+**Status:** `VERIFIED` — committed/pushed; 155 tests and failure propagation PASS; not ACCEPTED; repairs 0/10. See T10 baseline in STATE.md.
 **Depends on:** `M1-T08 VERIFIED`
 
 ### Scope
@@ -491,7 +491,7 @@ All applicable M1 acceptance criteria must be `PASS`.
 
 ## M1-T10 — M1 Documentation, Fresh Review, and Acceptance Package
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — local documentation/package checks PASS; fresh-session review NOT YET COMPLETED; not ACCEPTED; repairs 0/10.
 **Depends on:** `M1-T09 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-M1-T09 is VERIFIED; commit/push and confirm parity before T10. T08 is VERIFIED / COMMITTED / PUSHED, not ACCEPTED. Stop after T10 for a new-session review; no automatic acceptance or M2 work.
+T10 local documentation package is VERIFIED. Complete its authorized checkpoint/push, then STOP for a genuinely new Codex-session review using STATE.md handoff. T08/T09 are VERIFIED / COMMITTED / PUSHED, not ACCEPTED. No M1 acceptance, M2 implementation, merge, release or deployment is implied.
