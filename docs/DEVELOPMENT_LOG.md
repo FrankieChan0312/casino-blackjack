@@ -1,0 +1,657 @@
+# Casino Blackjack — Development Log
+
+Document date: 2026-09-28  
+Document task: DEVLOG-1.0  
+Intended repository location: `docs/DEVELOPMENT_LOG.md`  
+Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
+Status: timestamped repository execution evidence; earlier preparation records are retained as history.
+
+## 1. Purpose
+
+This file is the timestamped engineering evidence log for the Casino Blackjack repository.
+
+It records what actually happened during implementation and verification. It is not a substitute for:
+
+- `docs/STATE.md`, which records the current truth;
+- `docs/PLAN.md`, which records planned tasks;
+- Git history, which records committed snapshots;
+- test output, which records mechanical verification;
+- user acceptance, which must be explicit.
+
+Do not rewrite this log to make development appear cleaner than it was.
+
+## 2. Timestamp source
+
+Use the execution environment's real local timestamp.
+
+On Windows PowerShell:
+
+```powershell
+Get-Date -Format "yyyy-MM-dd HH:mm:ss K"
+```
+
+Example format only:
+
+```text
+2026-09-28 15:30:12 +08:00
+```
+
+Do not copy example timestamps into real entries.
+
+Every execution entry must include an explicit timezone offset.
+
+## 3. Event types
+
+Use one of these event types:
+
+- `TASK_START`
+- `BASELINE`
+- `ASSUMPTION`
+- `DECISION`
+- `IMPLEMENTATION`
+- `VALIDATION`
+- `FAILURE`
+- `REPAIR`
+- `REVIEW`
+- `DOCUMENTATION`
+- `COMMIT`
+- `PUSH`
+- `BLOCKER`
+- `TASK_END`
+- `MILESTONE_REVIEW`
+- `USER_ACCEPTANCE`
+
+Do not create an event merely because a command was typed. Record events that materially change understanding, repository state, validation state, or delivery status.
+
+## 4. Validation status vocabulary
+
+Use these values exactly:
+
+- `PASS`
+- `FAIL`
+- `NOT RUN`
+- `BLOCKED`
+- `NOT APPLICABLE`
+
+A command that was not executed is never `PASS`.
+
+A required command that cannot run is `BLOCKED`, not `NOT APPLICABLE`.
+
+## 5. Standard task entry
+
+Use the following structure for each task.
+
+```markdown
+## <TASK-ID> — <Task name>
+
+### <timestamp> — TASK_START
+
+**Milestone:** <milestone>  
+**Branch:** <actual branch or UNKNOWN>  
+**Base commit:** <actual hash, NO COMMIT, or UNKNOWN>  
+**Working tree:** <clean / modified / unknown>  
+**Recommended model:** <recommended setting>  
+**Recommended reasoning/effort:** <recommended setting>  
+**Actual runtime model:** <confirmed value or NOT VERIFIED>  
+**Actual runtime reasoning/effort:** <confirmed value or NOT VERIFIED>
+
+**Scope**
+- ...
+
+**Non-goals**
+- ...
+
+**Acceptance criteria**
+- ...
+
+**Required verification**
+- ...
+
+**Stop conditions**
+- ...
+
+### <timestamp> — BASELINE
+
+**Commands**
+```powershell
+...
+```
+
+**Observed result**
+```text
+...
+```
+
+**Pre-existing failures**
+- None observed / list them.
+
+**Unknown or overlapping changes**
+- None observed / list them.
+
+### <timestamp> — IMPLEMENTATION
+
+**Files changed**
+- ...
+
+**Change summary**
+- ...
+
+**Reason**
+- ...
+
+### <timestamp> — VALIDATION
+
+**Command**
+```powershell
+...
+```
+
+**Status:** `PASS | FAIL | BLOCKED`
+
+**Observed result**
+```text
+...
+```
+
+**Evidence**
+- file/path/output reference
+
+### <timestamp> — FAILURE
+
+**Observed failure**
+- ...
+
+**Affected acceptance criterion**
+- ...
+
+**Initial evidence**
+- ...
+
+### <timestamp> — REPAIR
+
+**Repair cycle:** <n>/10
+
+**Failure evidence**
+- ...
+
+**Falsifiable cause hypothesis**
+- ...
+
+**Targeted change**
+- ...
+
+**Re-verification**
+```powershell
+...
+```
+
+**Result:** `PASS | FAIL | BLOCKED`
+
+**Evidence**
+- ...
+
+### <timestamp> — REVIEW
+
+**Review type:** task diff / fresh-session / other
+
+**Reviewed version**
+- branch:
+- commit or base+diff:
+- working tree:
+
+**Findings**
+- ...
+
+**Result**
+- no blocking findings / blocking findings remain
+
+### <timestamp> — COMMIT
+
+**Commit message**
+```text
+...
+```
+
+**Commit hash**
+```text
+...
+```
+
+**Verification corresponding to this commit**
+- ...
+
+### <timestamp> — PUSH
+
+**Remote:** <actual remote>  
+**Branch:** <actual branch>  
+**Commit:** <actual hash>  
+**Result:** `PASS | FAIL | BLOCKED`
+
+**Evidence**
+```text
+...
+```
+
+### <timestamp> — TASK_END
+
+**Task state:** `IMPLEMENTED | VERIFIED | BLOCKED`
+
+**Repair cycles used:** <n>/10
+
+**Completed**
+- ...
+
+**Not completed**
+- ...
+
+**Known limitations**
+- ...
+
+**Next task**
+- ...
+```
+
+## 6. Baseline evidence requirements
+
+At the beginning of every implementation task, capture at minimum:
+
+```powershell
+Get-Date -Format "yyyy-MM-dd HH:mm:ss K"
+Get-Location
+git branch --show-current
+git rev-parse HEAD
+git status --short
+```
+
+For the first repository bootstrap, also determine whether the target path and Git repository already exist before writing files.
+
+Git commands may fail legitimately before initialization. Preserve the actual failure/output rather than replacing it with an invented branch or commit.
+
+## 7. Implementation evidence
+
+An implementation entry should explain:
+
+- which files changed;
+- what behaviour or infrastructure changed;
+- which task requirement justified each change;
+- whether any planned change was deliberately omitted;
+- whether new dependencies were introduced.
+
+Do not paste a full diff into this file when Git already preserves it. Summarize the change and point to the commit/diff.
+
+## 8. Validation evidence
+
+For each required validation command, record:
+
+- exact command;
+- whether it actually executed;
+- exit/result status;
+- relevant output or evidence location;
+- exact version/working tree being validated.
+
+Typical M1 validation categories may include:
+
+```text
+PowerShell harness
+TypeScript typecheck
+lint
+unit tests
+integration tests
+git diff --check
+```
+
+The actual command set must match the repository configuration at that time.
+
+Do not record test counts, coverage, benchmark values, or PASS results unless they were actually observed.
+
+## 9. Failure and repair evidence
+
+The first implementation and first validation do not consume a repair cycle.
+
+After the first validation failure, each repair cycle must record:
+
+1. observed failure evidence;
+2. a falsifiable hypothesis;
+3. the targeted correction;
+4. re-verification result.
+
+Repair count is cumulative for the substantive task.
+
+Do not reset the count by:
+
+- starting a new chat;
+- changing model;
+- changing agent;
+- changing branch;
+- renaming the same task;
+- splitting the same unresolved failure into a cosmetic follow-up task.
+
+Stop at 10 cycles unless the user explicitly grants additional cycles.
+
+## 10. Git evidence
+
+Commit, push, review, and verification are separate events.
+
+A `COMMIT` entry requires the real commit hash.
+
+A `PUSH` entry requires:
+
+- remote;
+- branch;
+- commit;
+- actual push result.
+
+Do not record `PUSH: PASS` merely because a local commit exists.
+
+If verification happened before the final commit and the commit changed code/tests/configuration, run the affected checks again before claiming the commit is verified.
+
+## 11. Raw AI/session records
+
+Raw AI or Codex session records may be retained separately when useful.
+
+They are not automatically safe to publish.
+
+Before any raw session record is pushed publicly:
+
+- inspect for API keys/tokens/passwords;
+- inspect for private keys;
+- inspect for personal/private data;
+- inspect for confidential employer/customer information;
+- inspect for sensitive local paths or environment details when relevant.
+
+If suspicious content is found, stop publication.
+
+A redacted public copy must be identified as redacted. Preserve the protected original separately when required.
+
+Do not delete failed reasoning or attempts merely to make the public history appear successful.
+
+## 12. Milestone review entry
+
+At an important milestone, add:
+
+```markdown
+## <MILESTONE> — Review
+
+### <timestamp> — MILESTONE_REVIEW
+
+**Version reviewed**
+- branch:
+- commit:
+- working tree:
+
+**Required checks**
+| Check | Status | Evidence |
+| --- | --- | --- |
+| ... | PASS/FAIL/BLOCKED | ... |
+
+**Fresh-session review**
+- completed / not completed
+- reviewer context:
+- findings:
+
+**Repair cycles**
+- task totals:
+
+**Milestone state**
+- IMPLEMENTED / VERIFIED / BLOCKED
+
+**Known limitations**
+- ...
+
+**Awaiting user acceptance**
+- yes / no
+```
+
+Do not mark a milestone `ACCEPTED` in this file until the user explicitly accepts it.
+
+## 13. User acceptance entry
+
+Only add this after explicit user acceptance:
+
+```markdown
+### <timestamp> — USER_ACCEPTANCE
+
+**Milestone/version accepted**
+- milestone:
+- branch:
+- commit:
+
+**User acceptance**
+- explicit acceptance received
+
+**State**
+- ACCEPTED
+```
+
+Do not infer acceptance from silence, a GitHub push, or a passing test suite.
+
+## 14. Pre-bootstrap record
+
+No repository execution event has been recorded yet.
+
+Current facts:
+
+- target repository path agreed:
+  `C:\Users\user\Documents\GitHub\casino-blackjack`
+- planning documents prepared outside the Windows repository;
+- M1 implementation has not started;
+- Windows Git baseline has not been captured;
+- no repository verification has been run;
+- no Casino Blackjack commit or push has been verified;
+- current executable task is `M1-T01 — Repository Bootstrap and Engineering Harness`.
+
+The first real execution entry must be created during M1-T01 using the actual Windows timestamp and observed repository state.
+
+## M1-T01 — Repository Bootstrap and Engineering Harness
+
+### 2026-09-28 16:03:16 +08:00 — BASELINE
+
+**Target path**
+
+```text
+C:\Users\user\Documents\GitHub\casino-blackjack
+```
+
+**Observed result**
+
+```text
+Test-Path -> False
+```
+
+The target repository directory did not exist. No existing files or repository could be overwritten at that path.
+
+### 2026-09-28 16:04:30 +08:00 — IMPLEMENTATION
+
+Created:
+
+```text
+C:\Users\user\Documents\GitHub\casino-blackjack
+C:\Users\user\Documents\GitHub\casino-blackjack\docs
+C:\Users\user\Documents\GitHub\casino-blackjack\scripts
+```
+
+Initialized a new local Git repository using branch `main`.
+
+The first attempt to inspect `HEAD` returned the normal empty-repository error because no commit existed yet. PowerShell stopped early because the shell treated the Git stderr record as terminating under the active error preference. Repository creation itself had succeeded.
+
+**Repair cycle:** `0/10`
+
+Reason: this was baseline/bootstrap observation before the task's first implementation-plus-validation cycle; no repair attempt was performed.
+
+### 2026-09-28 16:06:08 +08:00 — BASELINE
+
+Observed repository state:
+
+```text
+Git repository: true
+Branch: main
+HEAD: NO COMMIT
+Working tree: clean
+Remote: NO REMOTE
+```
+
+Observed tooling:
+
+```text
+Git: git version 2.45.1.windows.1
+Node: v24.19.0
+npm: 11.17.0
+Windows PowerShell: 5.1.26100.9444
+```
+
+Baseline command completed at:
+
+```text
+2026-09-28 16:06:09 +08:00
+```
+
+### Pre-import M1-T01 state (historical)
+
+```text
+Task state: IN PROGRESS
+Repair cycles: 0/10
+Gameplay implementation: NOT STARTED
+Repository documents copied to Windows: NOT YET
+TypeScript harness: NOT YET
+Verification: NOT RUN
+Commit: NO COMMIT
+Push: NOT RUN
+Remote: NO REMOTE
+```
+
+### 2026-09-28 16:17:19 +08:00 — TASK_START / BASELINE
+
+**Milestone:** M1 — Headless Blackjack Core  
+**Task:** M1-T01 — Repository Bootstrap and Engineering Harness  
+**Recommended model / effort:** GPT-6 Astra / High  
+**Actual runtime model / effort:** NOT VERIFIED; no client setting evidence is exposed. No setting change was made.  
+**Repair cycles:** 0/10, carried forward from the existing record.
+
+Read AGENTS.md, SKILL.md, RULES.md, SPEC.md, DESIGN.md, PLAN.md, STATE.md, and this log before implementation. The scope is document-transfer verification and the minimal TypeScript/Vitest/ESLint harness. No gameplay, UI, wagering, networking, cloud resources, or future architecture is included.
+
+Acceptance requires the correct repository and imported document paths, preserved SKILL.md and its AGENTS.md reference, working typecheck/lint/tests, a non-zero harness exit on deliberate failure, restored full verification, current evidence, and a task-only diff. Required commands are `scripts/verify.ps1`, `git diff --check`, `git status --short`, and final diff inspection. Stop on authoritative conflicts, unknown overlapping changes, unavailable required tools, destructive Git work, credentials/paid resources, unauthorized remote/push/merge/release/deployment, or the 10-cycle limit.
+
+Step -> verification plan:
+
+1. Inspect imported files and Git -> compare SHA-256 manifest and actual baseline.
+2. Establish minimal tools -> typecheck, lint, and harness tests through verify.ps1.
+3. Inject a required-check failure -> observe non-zero process exit, restore exact bytes, rerun full verification.
+4. Update evidence and inspect complete task diff -> prepare a reviewable checkpoint; human acceptance remains separate.
+
+Commands and observations:
+
+- `Get-Location`: `C:\Users\user\Documents\GitHub\casino-blackjack`.
+- `git rev-parse --show-toplevel`: same repository, exit 0.
+- `git rev-parse --is-inside-work-tree`: true, exit 0.
+- `git branch --show-current`: main, exit 0.
+- `git rev-parse HEAD`: exit 128, ambiguous HEAD because this is an unborn branch; NO COMMIT.
+- `git status --short --untracked-files=all`: exit 0; the 11 seed documents and SEED_MANIFEST.sha256 were untracked. No other files or unknown overlapping changes were found.
+- `git remote -v`: empty, exit 0; NO REMOTE.
+- `Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'`: timestamp above.
+- Versions observed at 16:16:32 +08:00: Git 2.45.1.windows.1, Node v24.19.0, npm 11.17.0, Windows PowerShell 5.1.26100.9444.
+
+The first sandbox Git inspection was BLOCKED by dubious ownership (sandbox account differs from the repository owner); HEAD/status/remote returned 128. Repeated with approved execution as the owning user, without changing global safe.directory. The initial read of .gitignore reported that it did not exist; no pre-existing ignore file was overwritten. These are baseline observations before first implementation/validation, not repair cycles.
+
+### 2026-09-28 16:17:20 +08:00 — VALIDATION
+
+**Seed transfer:** PASS. Parsed every SHA-256 entry in SEED_MANIFEST.sha256 and compared it with `Get-FileHash -Algorithm SHA256 -LiteralPath <path>`. All 11 files matched; the verification command exited 0. AGENTS.md, README.md, SKILL.md, and all eight docs files occupy the intended paths.
+
+Manifest SHA-256: `4e8670a2bc1abf3c8995335c76d33a4b932b7b14b8329c55914b246ea1589e7c`.
+
+Unchanged coding guidelines SHA-256: `6e22cc54cb02a5e98ae42d06d9d7292db0c1b43894831b32879beb0166b2aea7`.
+
+Stale pre-import STATE/README/PLAN statements are historical progress metadata to update under this task, not a rules/spec/design conflict. No conflict affecting M1-T01 was found. The transfer manifest can now be removed as requested after recording its successful use.
+
+### 2026-09-28 16:29:22 +08:00 — DECISION / IMPLEMENTATION
+
+Added .gitignore (node_modules only), package.json, tsconfig.json, eslint.config.mjs, scripts/verify.ps1, and tests/harness.test.ts. No src directory or gameplay implementation was created.
+
+The harness runs typecheck, lint, and tests, checks each native exit code, continues the remaining checks after a non-zero result, and returns the first non-zero result. Missing commands or invocation exceptions produce BLOCKED and exit 1. It resolves the repository from its script location and restores the caller's location.
+
+Two minimal TypeScript tests check the 11 document paths and AGENTS.md's SKILL.md reference. TypeScript uses strict mode, no emit, and Node types without DOM libraries. ESLint uses recommended JavaScript and TypeScript rules; warnings fail lint. Vitest uses its default Node environment and one-shot `vitest run`. No custom Vitest configuration or production placeholder module is needed.
+
+Official setup references consulted: [typescript-eslint](https://typescript-eslint.io/getting-started/) and [Vitest](https://vitest.dev/guide/). Registry `npm.cmd view` commands confirmed Node and peer compatibility. TypeScript 7.0.2 was outside typescript-eslint's supported range `>=4.8.4 <6.1.0`, so selected 6.0.3 before installation. Fixed direct dependencies: TypeScript 6.0.3, ESLint 10.11.0, @eslint/js 10.0.1, typescript-eslint 8.70.1, Vitest 5.0.2, Vite 8.3.1 (required Vitest peer), and @types/node 24.19.0. All are development dependencies. Node engine is limited to the observed Node 24 line, >=24.19.0.
+
+Sandbox registry queries returned EACCES (exit 1); approved external execution succeeded (exit 0). No credentials or global tool upgrade were used. Repair cycles remain 0/10; no implementation validation has yet required a repair.
+
+### 2026-09-28 16:29:57 +08:00 — IMPLEMENTATION
+
+`npm.cmd install --no-fund`: PASS, exit 0. Installed 129 packages, audited 130, reported 0 vulnerabilities, and generated package-lock.json. This is an installation observation, not a claim that verification has passed. Full verification and failure injection are next.
+
+### 2026-09-28 16:31:29 +08:00 — IMPLEMENTATION / VALIDATION
+
+Removed SEED_MANIFEST.sha256 only after the successful 11-file transfer check recorded above. It was a temporary transfer artifact, not product documentation. Updated README.md with the installed harness, npm ci instructions, actual prerequisites, current test scope, and truthful non-gameplay status. Updated STATE.md and only M1-T01 progress in PLAN.md.
+
+First full command: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`.
+
+**Result:** PASS, exit 0. Typecheck PASS/0, lint PASS/0, Vitest PASS/0: 1 file, 2 tests (Vitest started at 16:32:04 +08:00). No assertion, rule, or verification step was disabled. First implementation/first validation consumed no repair cycle.
+
+At `2026-09-28 16:31:50 +08:00`, `npm.cmd ls --depth=0` returned exit 0 and confirmed all seven direct package versions recorded above.
+
+### 2026-09-28 16:32:36 +08:00 — VALIDATION
+
+**Planned failure-injection self-test.** Saved tests/harness.test.ts as bytes and its SHA-256, then temporarily changed `readonly string[]` to `readonly number[]`. Ran the same full PowerShell command in a child process and inspected its process exit code.
+
+Observed: typecheck FAIL with TS2322/TS2769 and exit 2; lint PASS; both Vitest tests PASS; the harness's final result was FAIL with exit 2. The wrapper explicitly required exit 2 and itself completed successfully. Thus subsequent successful commands did not overwrite the first required failure.
+
+The finally block restored the original bytes. At `2026-09-28 16:32:41 +08:00`, the restored SHA-256 matched `098e69aa0356b55c2098f311da2fda9469a73dbb1aabcd9ad2101acd6b6fd89f`. No injected fault remains. This successful planned self-test is not a repair cycle.
+
+### 2026-09-28 16:33:03 +08:00 — VALIDATION
+
+Re-ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` after exact restoration.
+
+**Result:** PASS, exit 0. Typecheck, lint, and tests all PASS; 1 file / 2 tests (Vitest started at 16:33:07 +08:00). No code, tests, dependencies, or runtime configuration changed after this restored run.
+
+### 2026-09-28 16:33:21 +08:00 — REPAIR
+
+**Repair cycle:** 1/10 (review-command repair, conservatively counted).
+
+Evidence: a read-only `node --input-type=module -e` inspection command exited 1 with `SyntaxError: Unexpected identifier 'node'`; the displayed JavaScript had lost its double quotes through Windows PowerShell native argument passing. This was not a repository-code or harness failure.
+
+Hypothesis: inspecting the same file endings using native PowerShell file reads will eliminate the argument-quoting failure. Replaced the diagnostic command with `ReadAllText` and a regular-expression count of terminal newlines. Re-verification: PASS, exit 0; all 11 document files end with one LF. No repository file was changed to repair this command.
+
+Also executed, with approved owning-user access: `git diff --check` (PASS, exit 0), `git status --short --untracked-files=all` (PASS, exit 0; 18 intended files), and `git diff --stat` (exit 0, empty). Because HEAD is unborn and all files are untracked, ordinary Git diff does not represent these additions. Content review and explicit no-index diffs are required; an empty diff is not treated as content verification.
+
+### 2026-09-28 16:35:32 +08:00 — REPAIR
+
+**Repair cycle:** 2/10 (review-command repair, conservatively counted).
+
+Evidence at `2026-09-28 16:35:18 +08:00`: PowerShell 5.1 `ConvertFrom-Json` rejected package-lock.json's empty root package key with an invalid-name argument error. That diagnostic shell returned 0 because the cmdlet error was non-terminating; the attempted lockfile inspection was FAIL, not PASS.
+
+Hypothesis: Node's JSON parser supports the valid empty key and can independently check the lockfile. Sent a literal JavaScript here-string to Node via stdin (avoiding native inline quoting), parsed both manifests, asserted equal direct dependency objects, and required every resolved package to use the public npm registry and include an integrity hash. Re-verification: PASS, exit 0, lockfileVersion 3. No lockfile or tooling change was needed.
+
+The earlier progress message's 0/10 count was corrected to 2/10 to include both post-validation diagnostic repairs. No task count was reset. The harness implementation itself required no fixes.
+
+### 2026-09-28 16:36:03 +08:00 — REVIEW
+
+**Review type:** same-session task addition/diff review; fresh-session review NOT RUN.
+
+**Version:** main, NO COMMIT, 18 untracked deliverable files. Scope versus imported seed: seven new harness files (.gitignore, package.json, package-lock.json, tsconfig.json, eslint.config.mjs, scripts/verify.ps1, tests/harness.test.ts), four updated documents (README.md, STATE.md, DEVELOPMENT_LOG.md, PLAN.md), and removal of the verified transfer manifest. Seven other approved seed files retain their original hashes, including AGENTS.md and SKILL.md. No src directory, gameplay code, UI, network service, or deployment was added.
+
+Read the new configuration/script/test files and reviewed `git diff --no-index -- NUL <file>` for each authored harness file except the generated lockfile. Diff exit 1 indicated expected additions, not a failed check; the wrapper rejected exit codes above 1. Git warned that its existing Windows configuration may convert LF to CRLF on staging; no conversion/configuration change was made. Reviewed lockfile root versions, public registry/integrity entries, and installed dependency consistency separately. Documentation changes were inspected against the imported contents and observed evidence. Result: PASS, no blocking task findings.
+
+Verified executable snapshot (SHA-256; obtained using Get-FileHash):
+
+| File | SHA-256 |
+| --- | --- |
+| .gitignore | `4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97` |
+| package.json | `51b4c6fc2a10badc0457a9be59aaa967d13a71157fc33bfc02a24c7fe1cefa86` |
+| package-lock.json | `b053574e4554a903c29e5beba2846288b50e8442c8f6f0e915a34a6a5e0f4e79` |
+| tsconfig.json | `172d2d1c9274ba82313d4e271f90ae29182a9133713be0d04220767d6ed0ae56` |
+| eslint.config.mjs | `eb91bb974a01f5a6faabb35b0f59451e9d8382f53875cad26caa870bb0b8aec0` |
+| scripts/verify.ps1 | `d9ad1f43a3c9cb259d6abc6b8318548ce126a7aebdab3eee68a613df73aeef75` |
+| tests/harness.test.ts | `098e69aa0356b55c2098f311da2fda9469a73dbb1aabcd9ad2101acd6b6fd89f` |
+
+**Delivery:** M1-T01 VERIFIED; M1 gameplay NOT STARTED; repair cycles 2/10. Gameplay unit/integration tests NOT RUN; browser/E2E and deployment NOT APPLICABLE because this is a headless bootstrap. Clean-machine npm ci reproduction NOT RUN. Human acceptance, local commit, fresh-session milestone review, and push NOT RUN.
+
+**Proposed commit:** `chore: bootstrap M1 TypeScript verification harness`.
+
+**Next step:** present verification evidence and proposed commit for human checkpoint review before committing, as requested. No remote configuration or push is authorized. M1-T02 remains NOT STARTED.
+
+### 2026-09-28 19:12:52 +08:00 — VALIDATION / TASK_END
+
+Final full harness run after the documentation update began at `2026-09-28 16:38:05 +08:00`: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` returned PASS/0; typecheck PASS/0, lint PASS/0, and tests PASS/0 (1 file, 2 tests; Vitest started at 16:38:09 +08:00).
+
+Final approved read-only Git inspection completed at the entry timestamp: branch main (exit 0), `git rev-parse --verify HEAD` returned 128 with `Needed a single revision` (expected NO COMMIT), `git diff --check` PASS/0, `git status --short --untracked-files=all` PASS/0 with the same 18 intended additions, and `git remote -v` exit 0 with no remote. The timestamps are actual environment observations; no work is inferred during the interval between checks.
+
+Final document review confirmed STATE.md and PLAN.md reflect M1-T01 VERIFIED and cumulative repairs 2/10. No files were staged or committed; no remote was configured and no push/deployment occurred. This closing entry records evidence only and changes no executable file. Awaiting explicit human checkpoint acceptance and a local commit decision.

@@ -1,0 +1,897 @@
+# Casino Blackjack — M1 Design
+
+Document date: 2026-09-28  
+Document task: DESIGN-1.0  
+Intended repository location: `docs/DESIGN.md`  
+Rules baseline: `docs/RULES.md` — Blackjack House Rules v1.1  
+Specification baseline: `docs/SPEC.md` — SPEC-1.0  
+Status: design for M1 planning and implementation; not evidence of implementation, verification, acceptance, deployment, commit, or push.
+
+## 1. Purpose
+
+This document defines the minimum software design for **M1 — Headless Blackjack Core**.
+
+`RULES.md` remains the authority for game rules. `SPEC.md` remains the authority for milestone scope and acceptance criteria. This document explains how M1 should satisfy those requirements without changing them.
+
+If this design conflicts with `RULES.md` or `SPEC.md`, implementation must stop and the conflict must be surfaced. The design must not silently redefine the rules to make coding easier.
+
+## 2. M1 design principles
+
+M1 follows these constraints deliberately:
+
+1. **Plain TypeScript domain code.** No React, DOM, database, server, transport, or cloud dependency.
+2. **Pure state transitions where practical.** Accepted commands return a new state. Rejected commands return the unchanged state.
+3. **Small modules with one clear reason to exist.** No generic casino framework, plugin system, dependency-injection container, or speculative rules engine.
+4. **Explicit phases.** Legal actions are determined from the round phase, not inferred from UI state.
+5. **Controlled randomness.** Randomness enters only through a small injected boundary used for shuffle and cut-position selection.
+6. **Separate internal and public state.** The dealer hole card may exist internally without being exposed through the player-facing view.
+7. **Rules are independently testable.** Hand evaluation, dealer S17 policy, cut boundaries, and outcome resolution can be tested without running a browser.
+8. **Integrity failures are not gameplay losses.** Unexpected card exhaustion produces an explicit integrity state, not a fabricated winner.
+9. **M1 does not pre-build M2–M8.** Seats, wagers, Split, Double, side bets, Bet Behind, Charlie, replay products, and networking remain outside the M1 implementation.
+
+## 3. Architectural overview
+
+M1 uses one in-memory game state and a small set of domain modules.
+
+```text
+External caller / tests
+        |
+        v
++------------------------+
+|   game.ts              |
+|   state transitions    |
+|   start / hit / stand  |
+|   dealer resolution    |
++-----------+------------+
+            |
+     +------+------+-------------------+
+     |             |                   |
+     v             v                   v
++----------+  +-----------+      +-------------+
+| shoe.ts  |  | hand.ts   |      | dealer.ts   |
+| cards    |  | scoring   |      | S17 policy  |
+| cut      |  | blackjack|      +-------------+
+| lifecycle|  +-----------+
++----+-----+         |
+     |               v
+     |         +-------------+
+     |         | outcome.ts  |
+     |         | comparison  |
+     |         +-------------+
+     v
++-------------+
+| random.ts   |
+| RandomSource|
++-------------+
+
+Internal GameState
+        |
+        v
++----------------+
+| publicView.ts  |
+| redact secrets |
++----------------+
+        |
+        v
+Player-facing state
+```
+
+There is no UI/controller layer in M1. Tests call the domain API directly.
+
+## 4. Proposed M1 source layout
+
+Create files only when their implementation task begins. The target layout is:
+
+```text
+src/
+  domain/
+    card.ts
+    random.ts
+    shoe.ts
+    hand.ts
+    dealer.ts
+    outcome.ts
+    game.ts
+    publicView.ts
+  index.ts
+
+tests/
+  unit/
+  integration/
+  helpers/
+```
+
+Responsibilities:
+
+| Module | Responsibility | Must not own |
+| --- | --- | --- |
+| `card.ts` | Card/rank/suit types and six-deck physical inventory creation | shuffle, hand scoring, round state |
+| `random.ts` | `RandomSource`, production random adapter, Fisher–Yates helper | Blackjack rules or game state |
+| `shoe.ts` | shoe identity, available/in-play/discard accounting, draw, cut state, replacement lifecycle | hand totals or outcomes |
+| `hand.ts` | pure hand evaluation and natural-Blackjack classification | shoe mutation or turn sequencing |
+| `dealer.ts` | pure S17 decision from evaluated dealer hand | drawing cards itself |
+| `outcome.ts` | pure ordinary/natural outcome decisions from final hand facts | shoe lifecycle |
+| `game.ts` | M1 state machine and command orchestration | UI formatting or hidden-card serialization |
+| `publicView.ts` | explicit player-facing projection and hole-card redaction | game-rule decisions |
+| `index.ts` | intentional public exports | hidden internal helpers |
+
+Do not create `Seat`, `Wager`, `BetBehind`, `SideBet`, `SplitHandTree`, `RuleEngine`, or persistence abstractions in M1.
+
+## 5. Core domain model
+
+### 5.1 PhysicalCard
+
+Every physical card has a stable identity so six copies of the same rank/suit remain distinguishable.
+
+Conceptual shape:
+
+```ts
+interface PhysicalCard {
+  id: string;
+  deckIndex: number; // 1..6
+  suit: Suit;
+  rank: Rank;
+}
+```
+
+Requirements:
+
+- `id` is unique within a shoe.
+- `deckIndex` distinguishes physical copies but has no scoring meaning.
+- Suit/rank determine card identity for game rules.
+- No Joker type exists.
+
+The exact string format of `id` is an implementation detail, but it must be deterministic for a newly constructed unshuffled inventory and testable.
+
+### 5.2 RandomSource
+
+M1 needs one minimal randomness boundary:
+
+```ts
+interface RandomSource {
+  nextInt(maxExclusive: number): number;
+}
+```
+
+Contract:
+
+- for valid `maxExclusive > 0`, return an integer in `[0, maxExclusive)`;
+- production may adapt `Math.random()` because this portfolio has no real-money/security claim;
+- tests inject scripted values;
+- no domain module calls `Math.random()` directly except the production adapter.
+
+Uses:
+
+1. Fisher–Yates shuffle;
+2. cut-card selection: `219 + nextInt(31)`.
+
+This design deliberately does **not** add seeded replay as an M1 product feature. Later replay work may add another `RandomSource` implementation without changing Blackjack rules.
+
+### 5.3 ShoeState
+
+Conceptual state:
+
+```ts
+interface ShoeState {
+  shoeId: string;
+  available: readonly PhysicalCard[];
+  inPlay: readonly PhysicalCard[];
+  discarded: readonly PhysicalCard[];
+  cutPosition: number;          // 219..249
+  reshufflePending: boolean;
+  retired: boolean;
+}
+```
+
+Derived value:
+
+```text
+consumed = 312 - available.length
+```
+
+`consumed` is derived rather than stored independently, avoiding a second counter that can drift from card inventory.
+
+Invariant while a shoe is healthy:
+
+```text
+available ∩ inPlay = empty
+available ∩ discarded = empty
+inPlay ∩ discarded = empty
+
+available + inPlay + discarded = exactly the shoe's 312 physical cards
+```
+
+A successful draw:
+
+1. removes exactly one card from the front/top of `available` according to the chosen internal convention;
+2. appends that exact physical card to `inPlay`;
+3. recalculates whether `consumed >= cutPosition`;
+4. sets `reshufflePending = true` when the threshold is reached or crossed;
+5. never reshuffles during the active round.
+
+The chosen top-of-shoe convention must be documented in code/tests and used consistently. Scenario tests should not depend on array-direction guesswork.
+
+At normal round completion, every card used by the round is moved from `inPlay` to `discarded` exactly once.
+
+An integrity-failed shoe is marked `retired` and must not be reused for a later round.
+
+### 5.4 Hand and HandEvaluation
+
+M1 hands can be represented directly as ordered physical-card arrays. M1 does not add split-hand ancestry because Split is outside scope.
+
+Pure evaluation result:
+
+```ts
+interface HandEvaluation {
+  total: number;
+  isSoft: boolean;
+  isBust: boolean;
+  isTwentyOne: boolean;
+}
+```
+
+Evaluation algorithm:
+
+1. count every Ace initially as 11;
+2. sum all cards;
+3. while total is over 21 and an Ace is still counted as 11, reduce one Ace by 10;
+4. `isSoft` is true only if at least one Ace remains counted as 11;
+5. `isBust` is `total > 21`;
+6. `isTwentyOne` is `total === 21`.
+
+`isNaturalBlackjack(cards)` is a separate pure predicate:
+
+- exactly two cards;
+- one Ace;
+- one ten-valued card.
+
+In M1 every player/dealer initial hand is unsplit, so no speculative split-origin field is added yet. M4 must revise the natural-classification context when Split is implemented.
+
+### 5.5 RoundPhase
+
+Externally meaningful M1 phases are:
+
+```ts
+type RoundPhase =
+  | 'PLAYER_TURN'
+  | 'DEALER_TURN'
+  | 'ROUND_COMPLETE'
+  | 'INTEGRITY_ERROR';
+```
+
+Initial dealing and dealer peek occur inside `startRound()` as one controlled transition. M1 therefore does not expose half-dealt intermediate phases such as `DEALING_CARD_3`.
+
+This is intentional: no M1 caller has a valid action during the initial-deal sequence, and avoiding externally actionable partial states reduces the legal state space.
+
+### 5.6 RoundState
+
+Conceptual shape:
+
+```ts
+interface RoundState {
+  roundId: string;
+  phase: RoundPhase;
+  playerCards: readonly PhysicalCard[];
+  dealerCards: readonly PhysicalCard[];
+  outcome?: RoundOutcome;
+  outcomeReason?: OutcomeReason;
+  integrityError?: IntegrityError;
+}
+```
+
+`dealerCards` contains the true internal dealer hand, including the hole card. Secrecy is enforced by the public projection, not by deleting the card from internal truth.
+
+M1 round outcomes:
+
+```ts
+type RoundOutcome =
+  | 'PLAYER_BLACKJACK'
+  | 'PLAYER_WIN'
+  | 'DEALER_WIN'
+  | 'PUSH';
+```
+
+Illustrative reason values:
+
+```ts
+type OutcomeReason =
+  | 'PLAYER_NATURAL'
+  | 'DEALER_NATURAL'
+  | 'BOTH_NATURAL'
+  | 'PLAYER_BUST'
+  | 'DEALER_BUST'
+  | 'HIGHER_TOTAL'
+  | 'LOWER_TOTAL'
+  | 'EQUAL_TOTAL';
+```
+
+Outcome and reason remain separate. Do not create additional financial/payout outcomes in M1.
+
+### 5.7 GameState
+
+M1 requires a shoe that persists across rounds:
+
+```ts
+interface GameState {
+  shoe: ShoeState;
+  round: RoundState | null;
+}
+```
+
+State transition functions return a new `GameState`; they must not mutate the input state. Therefore a caller/test that keeps the old terminal state already has an immutable prior-round snapshot for regression checks.
+
+M1 does not maintain an unbounded round-history collection, event store, database, or persistence layer.
+
+## 6. Command result model
+
+Expected illegal user/gameplay requests are explicit rejections, not exceptions and not integrity failures.
+
+Conceptual result:
+
+```ts
+type CommandResult =
+  | { ok: true; state: GameState }
+  | { ok: false; state: GameState; error: ActionError };
+```
+
+For a rejected command:
+
+```text
+result.state === input state in gameplay meaning
+```
+
+No card, shoe position, phase, outcome, or randomness consumption may change.
+
+Example M1 action errors:
+
+```text
+NO_ROUND
+WRONG_PHASE
+ROUND_ALREADY_TERMINAL
+```
+
+Programmer-contract violations or impossible internal corruption may throw during development, but expected gameplay rejection must use the explicit result path. Unexpected draw exhaustion after the round has begun is an integrity failure recorded in round state, not a normal action error.
+
+## 7. M1 state machine
+
+```mermaid
+stateDiagram-v2
+    [*] --> NoRound
+
+    NoRound --> PlayerTurn: startRound / no initial terminal result
+    NoRound --> RoundComplete: startRound / initial natural resolved
+    NoRound --> IntegrityError: startRound / unexpected integrity fault
+
+    PlayerTurn --> PlayerTurn: hit / total < 21
+    PlayerTurn --> DealerTurn: hit / total == 21
+    PlayerTurn --> DealerTurn: stand
+    PlayerTurn --> RoundComplete: hit / player bust
+    PlayerTurn --> IntegrityError: required draw fails
+
+    DealerTurn --> RoundComplete: resolveDealer / normal result
+    DealerTurn --> IntegrityError: required draw fails
+
+    RoundComplete --> PlayerTurn: startRound / next initial deal continues
+    RoundComplete --> RoundComplete: illegal gameplay command rejected
+    RoundComplete --> IntegrityError: startRound / unexpected integrity fault
+
+    IntegrityError --> PlayerTurn: startRound / replacement shoe, valid initial deal
+    IntegrityError --> RoundComplete: startRound / replacement shoe, initial natural resolved
+```
+
+`startRound()` is permitted only when there is no active non-terminal round. A terminal previous state is not mutated; the returned game state contains the new round.
+
+## 8. `startRound()` design
+
+High-level algorithm:
+
+```text
+1. Reject if the existing round is PLAYER_TURN or DEALER_TURN.
+2. Choose the shoe for the next round:
+   a. if current shoe is retired -> create a new shoe;
+   b. else if reshufflePending -> create a new shoe;
+   c. else if fewer than 4 cards remain -> create a new shoe;
+   d. otherwise reuse the existing shoe unchanged.
+3. Deal exactly in this order:
+   player card 1
+   dealer upcard
+   player card 2
+   dealer hole card
+4. Evaluate initial naturals.
+5. If dealer upcard is Ace or ten-valued, perform internal peek.
+6. Resolve terminal natural cases if applicable.
+7. If player natural and dealer is not natural, resolve PLAYER_BLACKJACK.
+8. Otherwise enter PLAYER_TURN.
+9. If any required draw unexpectedly fails after the round starts,
+   enter INTEGRITY_ERROR and retire the affected shoe.
+```
+
+Normal terminal completion also transfers the round's cards from `inPlay` to `discarded` exactly once.
+
+When an initial natural resolves the round, the public completed-round view may reveal the dealer hole card as required by R12; no unnecessary dealer draw occurs.
+
+## 9. Player command design
+
+### 9.1 `hit(state)`
+
+Precondition:
+
+```text
+round.phase == PLAYER_TURN
+```
+
+Accepted path:
+
+1. draw exactly one card;
+2. append it to the player hand;
+3. evaluate the hand;
+4. if bust: resolve `DEALER_WIN / PLAYER_BUST`, reveal terminal dealer information, complete the round, and do not draw dealer cards;
+5. if total is exactly 21: transition to `DEALER_TURN`;
+6. otherwise remain in `PLAYER_TURN`.
+
+Rejected path:
+
+- do not draw;
+- do not consume randomness;
+- do not modify phase or cards;
+- return explicit action error.
+
+### 9.2 `stand(state)`
+
+Precondition:
+
+```text
+round.phase == PLAYER_TURN
+```
+
+Accepted path:
+
+- draw no card;
+- change only the phase needed to enter dealer resolution;
+- return `DEALER_TURN` state.
+
+Dealer cards are not drawn by `stand()` itself. This separation makes the state transition observable and keeps dealer policy independently testable.
+
+## 10. Dealer resolution design
+
+M1 uses one command:
+
+```text
+resolveDealer(state)
+```
+
+Precondition:
+
+```text
+round.phase == DEALER_TURN
+```
+
+The command resolves the entire deterministic dealer turn in one call. M1 does not create a UI-animation-oriented `dealerStep()` API.
+
+Algorithm:
+
+```text
+1. Hole card is now authorized for public reveal.
+2. Evaluate dealer hand.
+3. If dealer total < 17 -> draw one card and repeat.
+4. If dealer total >= 17 -> stop, including soft 17.
+5. If dealer busts -> PLAYER_WIN / DEALER_BUST.
+6. Otherwise compare final totals:
+      player > dealer -> PLAYER_WIN / HIGHER_TOTAL
+      player < dealer -> DEALER_WIN / LOWER_TOTAL
+      equal           -> PUSH / EQUAL_TOTAL
+7. Complete the round and move used cards to discard.
+```
+
+`dealerShouldHit(evaluation)` is a pure rule:
+
+```text
+return !evaluation.isBust && evaluation.total < 17
+```
+
+Soft/hard status is carried for testing and explanation, but under S17 no extra branch is required at total 17.
+
+## 11. Initial Blackjack resolution
+
+Initial resolution must not be implemented as ordinary total comparison.
+
+Decision order:
+
+```text
+playerNatural = isNaturalBlackjack(player initial cards)
+dealerNatural = isNaturalBlackjack(dealer initial cards)
+
+if dealer peek is required:
+    inspect dealerNatural internally
+
+if dealerNatural && playerNatural:
+    PUSH / BOTH_NATURAL
+else if dealerNatural:
+    DEALER_WIN / DEALER_NATURAL
+else if playerNatural:
+    PLAYER_BLACKJACK / PLAYER_NATURAL
+else:
+    PLAYER_TURN
+```
+
+For dealer upcards 2–9, a natural is impossible, so no separate peek action is required. Player natural can be resolved immediately.
+
+A three-card 21 must never enter the natural branch.
+
+## 12. Public-state projection and dealer secrecy
+
+Do not expose internal round state directly to a browser/UI caller in later milestones. M1 establishes an explicit projection now because AC-M1-010 requires a player-facing secrecy boundary.
+
+Conceptual output:
+
+```ts
+interface PublicRoundView {
+  phase: RoundPhase;
+  playerCards: readonly PublicCard[];
+  dealer: {
+    upcard: PublicCard;
+    holeCard: PublicCard | null;
+    visibleCards: readonly PublicCard[];
+  };
+  outcome?: RoundOutcome;
+  outcomeReason?: OutcomeReason;
+}
+```
+
+Before reveal:
+
+```text
+dealer.holeCard = null
+```
+
+The implementation must build this object field-by-field. It must **not** spread/serialize the internal `RoundState` and then try to delete the hole card afterwards.
+
+Hole-card visibility:
+
+| Internal phase/result | Public hole card |
+| --- | --- |
+| `PLAYER_TURN` | hidden |
+| `DEALER_TURN` | visible |
+| `ROUND_COMPLETE` | visible |
+| `INTEGRITY_ERROR` | do not expose unrevealed secret data merely because an error occurred |
+
+A negative dealer peek does not reveal the card identity.
+
+M1 is a local headless engine, so this projection is a correctness/privacy boundary, not a claim that a local user cannot inspect process memory.
+
+## 13. Shoe lifecycle across rounds
+
+Normal lifecycle:
+
+```text
+NEW SHOE
+   |
+   v
+shuffle + cut position
+   |
+   v
+ROUND 1 cards inPlay
+   |
+   v
+round complete -> cards discarded
+   |
+   +--> cut not reached --> ROUND 2 uses same shoe and same cut
+   |
+   +--> cut reached -----> reshufflePending
+                              |
+                              v
+                        next startRound()
+                              |
+                              v
+                         NEW SHOE
+```
+
+Important distinctions:
+
+- crossing the cut threshold does not interrupt the active round;
+- `reshufflePending` is sticky for that shoe;
+- cut position is selected once per new shoe;
+- `startRound()` does not create a new shoe unless one of the explicit replacement conditions is true;
+- replacing a shoe produces a new `shoeId`;
+- a retired/integrity-failed shoe is never reused.
+
+## 14. Integrity-error design
+
+M1 has no wagers, so R17 financial VOID handling is deferred. The non-financial integrity behaviour is still required.
+
+If a required draw fails after a round begins:
+
+1. do not fabricate a card;
+2. do not reshuffle into the same round;
+3. do not produce `PLAYER_WIN`, `DEALER_WIN`, `PUSH`, or `PLAYER_BLACKJACK` from the fault;
+4. set round phase to `INTEGRITY_ERROR`;
+5. record a machine-readable error code such as `SHOE_EXHAUSTED_DURING_ROUND`;
+6. mark the current shoe retired;
+7. preserve the existing round cards for diagnostics;
+8. require a new shoe before later play.
+
+M1 does not add a general recovery framework. The only supported next gameplay action after integrity failure is a new round using a replacement shoe.
+
+## 15. Deterministic test seams
+
+### 15.1 Randomness tests
+
+Use a scripted `RandomSource` to prove:
+
+- cut lower bound 219;
+- cut upper bound 249;
+- repeated scripted random input yields repeated shuffle/cut results;
+- production modules do not bypass the injected source.
+
+### 15.2 Scenario fixtures
+
+Most Blackjack scenario tests do not need to express hundreds of shuffle random calls. `tests/helpers/` may contain a **test-only shoe fixture builder** that:
+
+1. starts from a valid 312-card inventory;
+2. places explicitly requested physical cards at the next-draw positions;
+3. fills the remainder with the unused physical cards;
+4. sets a valid cut position;
+5. checks that no physical card is duplicated or missing.
+
+This helper is test code, not a production extensibility API.
+
+It must not call production hand/outcome functions to derive expected answers.
+
+### 15.3 Independent expected values
+
+Required regression tests must state expected totals/outcomes directly, for example:
+
+```text
+A,9,5 -> expected total 15
+A,6   -> expected dealer Stand
+A,K   -> expected natural Blackjack
+```
+
+Do not write a test that obtains the expected value by calling the same production evaluator being tested.
+
+## 16. Error and validation boundaries
+
+M1 separates three categories:
+
+### A. Expected action rejection
+
+Examples:
+
+- Hit with no active round;
+- Hit during dealer turn;
+- Stand after completion.
+
+Result: explicit `ActionError`, unchanged gameplay state.
+
+### B. Input/configuration validation
+
+Examples:
+
+- cut position 218 or 250 supplied by a controlled test constructor;
+- invalid `nextInt()` output from a test/random adapter.
+
+Result: fail fast with a clear validation error before gameplay state is accepted.
+
+### C. Runtime integrity failure
+
+Example:
+
+- required draw finds the active shoe empty unexpectedly.
+
+Result: `INTEGRITY_ERROR`, no gameplay winner, shoe retired.
+
+Do not collapse these categories into one generic `ERROR` path.
+
+## 17. Data and immutability rules
+
+M1 does not require a third-party immutable-data library.
+
+Implementation guidance:
+
+- TypeScript interfaces should use `readonly` where practical;
+- transition functions create new arrays/objects for modified state;
+- rejected commands return the original gameplay state unchanged;
+- tests retain before/after snapshots for AC-M1-017;
+- do not mutate a completed round while starting the next one.
+
+Performance optimization is explicitly not a goal for a 312-card local portfolio engine.
+
+## 18. M1 public API target
+
+Exact names may be adjusted during implementation if tests show a simpler equivalent, but the M1 capability surface should remain approximately:
+
+```ts
+createGame(randomSource): GameState
+startRound(state, randomSource): CommandResult
+hit(state): CommandResult
+stand(state): CommandResult
+resolveDealer(state): CommandResult
+getPublicView(state): PublicGameView
+```
+
+Pure helpers used by tests/domain code include approximately:
+
+```ts
+createSixDeckInventory(): readonly PhysicalCard[]
+evaluateHand(cards): HandEvaluation
+isNaturalBlackjack(cards): boolean
+dealerShouldHit(evaluation): boolean
+```
+
+Do not expose a generic command bus, rules registry, event store, or casino-game superclass in M1.
+
+## 19. M1 verification mapping
+
+| Acceptance criteria | Primary design area |
+| --- | --- |
+| AC-M1-001 | `card.ts`, six-deck inventory |
+| AC-M1-002 | `shoe.ts` accounting invariants |
+| AC-M1-003 | `random.ts`, scripted source, test fixture helper |
+| AC-M1-004 | `shoe.ts` cut selection/validation |
+| AC-M1-005 | `shoe.ts` + `game.ts` lifecycle |
+| AC-M1-006 | `startRound()` pre-deal replacement |
+| AC-M1-007 | integrity-error path |
+| AC-M1-008 | `hand.ts` |
+| AC-M1-009 | `hand.ts` natural classifier |
+| AC-M1-010 | deal order + `publicView.ts` |
+| AC-M1-011 | `startRound()` initial resolution |
+| AC-M1-012 | `hit()` |
+| AC-M1-013 | `stand()` |
+| AC-M1-014 | `dealer.ts` + `resolveDealer()` |
+| AC-M1-015 | `outcome.ts` |
+| AC-M1-016 | initial natural precedence |
+| AC-M1-017 | pure transition/rejection design |
+| AC-M1-018 | game/shoe lifecycle |
+| AC-M1-019 | repository harness, not domain architecture |
+| AC-M1-020 | documentation/evidence process |
+
+No acceptance criterion is considered satisfied merely because its design appears in this table. Executable evidence is still required.
+
+## 20. Test boundaries
+
+M1 tests should be divided by purpose, not by artificial coverage targets.
+
+### Unit tests
+
+Use for:
+
+- six-deck inventory;
+- shuffle/cut helpers;
+- hand evaluation;
+- natural classification;
+- S17 policy;
+- ordinary outcome comparison;
+- public-view redaction.
+
+### Integration/domain-flow tests
+
+Use for:
+
+- initial deal order;
+- dealer peek and natural resolution;
+- Hit/Stand transitions;
+- dealer resolution using the shoe;
+- cut crossing and deferred reshuffle;
+- same-shoe next round;
+- pre-deal replacement;
+- unexpected draw exhaustion;
+- terminal-state immutability.
+
+No browser/E2E test exists in M1. That status is `NOT APPLICABLE`, not `PASS`.
+
+## 21. Explicit M1 non-designs
+
+The following are deliberately **not** designed for implementation in M1:
+
+- seven-seat data model;
+- player accounts or balances;
+- wager reservation/settlement;
+- Double/Split/Surrender/Insurance/Even Money;
+- Perfect Pairs or 21+3;
+- Bet Behind;
+- Five-Card Charlie;
+- computer-player strategy;
+- browser components or animation;
+- REST/WebSocket interfaces;
+- database schemas;
+- authentication;
+- server-authoritative secrecy;
+- deployment architecture;
+- cryptographic RNG or gambling certification;
+- generic table-rule configuration framework.
+
+Their rules remain documented in `RULES.md` and their delivery milestones remain in `SPEC.md`. They must receive their own design revision when their milestone begins.
+
+## 22. Design decisions and tradeoffs
+
+### D-M1-001 — Pure transitions instead of a mutable engine class
+
+**Decision:** commands accept state and return new state.
+
+**Why:** makes terminal immutability and rejected-action non-mutation mechanically testable with minimal framework code.
+
+**Tradeoff:** copies small arrays/objects more often. Performance cost is irrelevant at M1 scale.
+
+### D-M1-002 — Explicit public projection
+
+**Decision:** player-facing state is constructed separately from internal state.
+
+**Why:** prevents accidental dealer-hole-card disclosure and establishes a clean future UI boundary.
+
+**Tradeoff:** some fields are mapped twice. This is preferable to exposing internal truth.
+
+### D-M1-003 — One RandomSource abstraction
+
+**Decision:** inject only integer randomness and build shuffle/cut selection on it.
+
+**Why:** enough for deterministic M1 tests without a DI framework or replay subsystem.
+
+**Tradeoff:** future replay may add another implementation, but M1 does not promise a serialized seed format.
+
+### D-M1-004 — Dealer resolves in one command
+
+**Decision:** `resolveDealer()` performs the deterministic dealer draw loop in one M1 call.
+
+**Why:** no UI animation exists yet; a per-card command would add state/API complexity without an M1 requirement.
+
+**Tradeoff:** M7 may refactor presentation timing while preserving the same dealer-policy tests and outcomes.
+
+### D-M1-005 — No split-origin field in Hand
+
+**Decision:** M1 natural classification works on original two-card hands only; no speculative Split metadata is added.
+
+**Why:** Split is M4 scope. Adding ancestry now would be unused abstraction.
+
+**Tradeoff:** M4 must extend the hand model deliberately and add regression tests proving split `A + ten-value` is not natural.
+
+### D-M1-006 — Derive consumed cards from inventory
+
+**Decision:** `consumed = 312 - available.length`; do not maintain a second mutable consumed counter.
+
+**Why:** fewer synchronized values and easier invariant checking.
+
+**Tradeoff:** assumes one fixed 312-card shoe in M1, which matches the locked rules.
+
+## 23. Implementation order after repository bootstrap
+
+The design suggests the following small implementation sequence; `PLAN.md` owns the final task IDs and status.
+
+```text
+1. Physical cards + six-deck inventory
+   -> verify inventory and identity invariants
+
+2. RandomSource + shuffle + cut selection
+   -> verify deterministic seams and boundaries
+
+3. Shoe lifecycle + accounting
+   -> verify draw/discard/cut/new-shoe invariants
+
+4. Hand evaluation + natural classification
+   -> verify Ace/soft/hard/bust regression cases
+
+5. Round start + public hole-card projection
+   -> verify deal order, peek, secrecy, initial naturals
+
+6. Hit / Stand state transitions
+   -> verify accepted and rejected actions
+
+7. Dealer S17 + outcome resolution
+   -> verify dealer cases and final comparisons
+
+8. Cross-round and integrity regression
+   -> verify same shoe, deferred reshuffle, exhaustion, terminal immutability
+
+9. Full scripts/verify.ps1 regression + fresh-session review gate
+```
+
+Each implementation task must define its own scope, acceptance subset, commands, and repair counter before code changes.
+
+## 24. Design completion status
+
+This document may be marked **DESIGN READY FOR REPOSITORY BOOTSTRAP** only when:
+
+- it is consistent with the current `RULES.md` and `SPEC.md`;
+- no unresolved M1 architecture ambiguity blocks implementation;
+- the user has not requested a conflicting design change.
+
+That label does not mean M1 is implemented or verified.
