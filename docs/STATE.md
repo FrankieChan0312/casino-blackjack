@@ -32,6 +32,10 @@ At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and 
 
 ## 2. Delivery state
 
+Initial GitHub publication was verified at `2026-09-28 19:50:22 +08:00` according to the user's publication evidence. Public repository: [FrankieChan0312/casino-blackjack](https://github.com/FrankieChan0312/casino-blackjack). Origin fetch/push URL: `https://github.com/FrankieChan0312/casino-blackjack.git`. At publication, local `main` and `origin/main` both pointed to `bf7c21a46e61784234658a21c31fdbf1cac8048e`, main tracked origin/main, and the working tree was clean.
+
+This parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. This publication-evidence checkpoint is local-only: creating it will put main one commit ahead of the published checkpoint until a separately authorized push occurs. No new push is authorized here.
+
 Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, branch `main`, committed at `2026-09-28 19:19:50 +08:00` with message `chore: bootstrap M1 TypeScript verification harness`. All 18 reviewed files were committed with byte-identical staged content. The working tree was clean immediately after that commit. This metadata and the matching DEVELOPMENT_LOG.md entries belong to a separate docs-only checkpoint; the implementation checkpoint does not contain them. Git history identifies the metadata commit without requiring a self-referential hash update.
 
 | Item | State | Evidence / note |
@@ -40,16 +44,18 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | Git repository initialized | `PASS` | Local repository initialized on `main`. |
 | Git branch | `main` | Observed during M1-T01 baseline. |
 | Implementation commit | `56020d60ff41b54d0c345068befddf2790390cea` | Local checkpoint, 2026-09-28 19:19:50 +08:00. |
-| Metadata checkpoint baseline | `modified documentation` | At 2026-09-28 19:26:25 +08:00, only STATE.md and DEVELOPMENT_LOG.md were modified. Final working-tree status is checked after the docs-only commit. |
-| Remote repository | `NO REMOTE` | `git remote -v` returned no configured remote. |
-| GitHub push | `NOT RUN` | No repository checkpoint has been pushed in this project workflow. |
+| Publication checkpoint baseline | `clean` | At 2026-09-28 19:54:10 +08:00, HEAD and origin/main both equalled bf7c21a46e61784234658a21c31fdbf1cac8048e. |
+| Remote repository | `Public` | https://github.com/FrankieChan0312/casino-blackjack; origin uses the .git URL above. |
+| Branch upstream | `origin/main` | Local main tracks origin/main; publication parity was 0 ahead / 0 behind. |
+| Initial GitHub publication | `PASS` | User verification at 2026-09-28 19:50:22 +08:00; local and public-API evidence corroborated bf7c21a46e61784234658a21c31fdbf1cac8048e. |
+| Publication-evidence commit push | `NOT RUN` | This new documentation checkpoint is local-only; no additional push authorized. |
 | M1 implementation | `NOT STARTED` | No gameplay source code implemented. |
 | M1-T01 harness | `VERIFIED` | Typecheck, lint, 2 tests, and failure-propagation self-test passed. |
 | M1 automated verification | `NOT RUN` | Gameplay tests belong to later M1 tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
 | M1 user acceptance | `NOT RUN` | User acceptance can occur only after verified delivery. |
 | M1-T01 user acceptance | `ACCEPTED` | User explicitly accepted M1-T01 for the local checkpoint commit. |
-| Local commit | `PASS` | Exact requested message; 18 intended files committed; no remote or push. |
+| Implementation commit | `PASS` | Exact requested message; 18 intended files committed. It is included in the published history. |
 | Deployment | `NOT APPLICABLE` | M1 is a headless local engine milestone. |
 
 ## 3. Approved planning baseline
@@ -152,7 +158,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is on branch `main`; the accepted implementation checkpoint is `56020d60ff41b54d0c345068befddf2790390cea`. Its metadata is recorded separately. No remote is configured.
+The repository is on branch `main`, tracking `origin/main`; the accepted implementation checkpoint remains `56020d60ff41b54d0c345068befddf2790390cea`. Its metadata checkpoint `bf7c21a46e61784234658a21c31fdbf1cac8048e` is the verified initial publication. The new publication-evidence commit is not included in that published SHA.
 
 ### Planning artifact placement
 
@@ -162,15 +168,15 @@ All approved documents are now present and their transfer hashes passed before e
 
 Observed Node v24.19.0 and npm 11.17.0. Installed direct development dependencies are TypeScript 6.0.3, Vitest 5.0.2, Vite 8.3.1, ESLint 10.11.0, @eslint/js 10.0.1, typescript-eslint 8.70.1, and @types/node 24.19.0. Registry peer/engine compatibility, `npm ls --depth=0`, and executable validation passed. package-lock.json pins the dependency tree. A separate clean-machine `npm ci` reproduction is NOT RUN.
 
-### GitHub remote uncertainty
+### GitHub publication boundary
 
-No GitHub remote, repository visibility, remote branch, or push target has been verified for this repository.
+The public repository, origin URL, upstream, and initial publication parity are verified as recorded above. The supplied publication timestamp and the later independent observation timestamps are distinct evidence.
 
-Do not create a public repository, change visibility, or push until the applicable authorization and remote target are clear.
+Do not change visibility or perform another push without authorization for that operation and commit.
 
 ## 9. Next executable task
 
-The accepted implementation checkpoint is committed. The user authorized one separate local commit for its reviewed documentation metadata, with message `docs: record M1-T01 checkpoint metadata`. No further implementation, remote configuration, or push is authorized by this checkpoint task.
+The user authorized one local documentation commit, `docs: record initial GitHub publication`, recording the publication evidence in STATE.md and DEVELOPMENT_LOG.md only. No further implementation or push is authorized by this task. M1-T02 has not started.
 
 Next implementation task after that checkpoint:
 
@@ -208,7 +214,7 @@ M1-T01 may be marked `VERIFIED` only after:
 - the task diff contains no unrelated modifications;
 - any commit/push status is recorded separately and truthfully.
 
-These M1-T01 conditions have been met. The local checkpoint is committed and explicitly accepted; push and fresh-session milestone review remain uncompleted. Repair cycles remain 2/10.
+These M1-T01 conditions have been met. M1-T01 remains VERIFIED and ACCEPTED, and the initial publication at bf7c21a46e61784234658a21c31fdbf1cac8048e is verified. The new publication-evidence commit is not pushed; fresh-session milestone review remains uncompleted. Repair cycles remain 2/10.
 
 ## 11. Completion vocabulary
 

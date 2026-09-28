@@ -704,3 +704,33 @@ The metadata commit's own hash and timestamp are recorded by Git history and rep
 ### 2026-09-28 19:27:33 +08:00 — VALIDATION
 
 Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` after the metadata review edits: PASS, exit 0. Typecheck and lint passed; Vitest passed 1 test file and 2 tests (started at 19:27:37 +08:00). No implementation, tooling, dependency, configuration, or test file changed, and no repair cycle was needed. This entry records that executed run. The exact final documentation version is also subject to the required pre-commit harness run, whitespace check, status check, and diff inspection; actual commit/post-commit results are reported in the delivery and Git history without further document edits.
+
+### 2026-09-28 19:50:22 +08:00 — PUSH / PUBLICATION EVIDENCE
+
+**Source:** user-supplied publication verification, subsequently corroborated below. This timestamp is the user's observed publication-verification time, not a newly executed push command or an inferred push start time. The assistant did not execute the original push in this task; its raw command output/exit code was not supplied.
+
+**Repository:** https://github.com/FrankieChan0312/casino-blackjack (Public).
+
+**Origin:** `https://github.com/FrankieChan0312/casino-blackjack.git`.
+
+**Published branch/commit:** main at `bf7c21a46e61784234658a21c31fdbf1cac8048e` (`docs: record M1-T01 checkpoint metadata`). The accepted implementation commit remains `56020d60ff41b54d0c345068befddf2790390cea` in its history. No history was rewritten.
+
+**Publication verification:** PASS. Local HEAD and origin/main were both bf7c21a46e61784234658a21c31fdbf1cac8048e, main tracked origin/main, and the working tree was clean after push. M1-T01 remained VERIFIED and ACCEPTED; repair cycles remained 2/10. M1-T02 had not started.
+
+### 2026-09-28 19:54:10 +08:00 — TASK_START / BASELINE
+
+Task: M1-T01 GitHub publication evidence checkpoint. Recommended model/effort: GPT-6 Astra / High; actual client settings NOT VERIFIED. Read AGENTS.md, SKILL.md, STATE.md, and DEVELOPMENT_LOG.md. Scope is only these two state/evidence documents; implementation, rules/spec/design/plan/README, tooling, tests, and dependencies remain unchanged. Acceptance requires truthful publication evidence, unchanged VERIFIED/ACCEPTED and 2/10 status, required validation, and one local commit `docs: record initial GitHub publication`. Stop on unexpected files or conflicting observed evidence; no amend, rewrite, additional push, or M1-T02 work is authorized.
+
+Actual commands: `Get-Location`, `git rev-parse --show-toplevel`, `git rev-parse HEAD`, `git branch --show-current`, `git status --short`, `git remote -v`, `git rev-parse --abbrev-ref 'main@{upstream}'`, `git rev-parse origin/main`, `git rev-list --left-right --count main...origin/main`, and `git log -3 --oneline`. All Git commands exited 0. Observed the correct repository; main; clean working tree; HEAD and origin/main both bf7c21a46e61784234658a21c31fdbf1cac8048e; origin fetch/push URL as above; upstream origin/main; ahead/behind 0/0. No unexpected files or conflicting publication evidence were found. Earlier NO REMOTE/NOT RUN records describe their historical checkpoints and are preserved in this log; STATE.md is updated to current publication truth.
+
+Step -> verification: corroborate publication -> edit only STATE.md and this log -> run verify.ps1, diff --check, exact two-file diff, and status -> commit the verified documentation locally -> inspect HEAD/history/status and divergence from origin/main. No push is part of this task.
+
+### 2026-09-28 19:54:51 +08:00 — VALIDATION
+
+The web fetch of the newly public GitHub page returned a cache miss and supplied no visibility evidence. Used unauthenticated `Invoke-RestMethod` requests to `https://api.github.com/repos/FrankieChan0312/casino-blackjack` and its `/git/ref/heads/main` endpoint instead. Command exit 0; observed html_url matching the public repository URL, visibility public, private false, default_branch main, and remote main SHA bf7c21a46e61784234658a21c31fdbf1cac8048e. This corroborates the supplied publication and local parity without credentials, fetching into local refs, or remote mutation. It is an evidence-access fallback, not an implementation repair; the cumulative count stays 2/10.
+
+Only STATE.md and this log are updated. The new evidence commit will be local-only and must not be represented as published. Its hash/time and final ahead/behind/working-tree observations are reported from Git after commit, without another recursive metadata edit.
+
+### 2026-09-28 19:56:16 +08:00 — VALIDATION
+
+Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`: PASS, exit 0. Typecheck and lint passed; Vitest passed 1 file and 2 tests (started at 19:56:20 +08:00). No repair was needed; cumulative repairs remain 2/10. After this evidence-only entry, the exact final documentation version is checked again with the required harness, whitespace, status, and two-file diff checks before the local commit. Commit and post-commit results are reported from actual Git output rather than predicted here.
