@@ -24,3 +24,7 @@ Publish verified T01 after final diff/whitespace/status checks, then automatical
 ## T02 current checkpoint (supersedes T01 next action)
 
 T01 VERIFIED / COMMITTED / PUSHED: c29ef4c15674fa2779dddd48f6e36cbff060a2a0; 2026-09-29 01:04:41 +08:00 fetch/main parity 0/0 clean PASS. T02 IMPLEMENTED / VERIFIED locally; full harness at 01:07:01 PASS/0, 20 files / 267 tests. T02 repair count 0/10. New funded betting layer requires OPEN, preserves bankroll ownership, freezes seats/wagers and deals only explicitly funded seats. Settlement not yet implemented. Next: authorized T02 publication and T03. M3 remains NOT ACCEPTED; fresh-session review NOT RUN.
+
+## T03 current checkpoint
+
+T02 VERIFIED / COMMITTED / PUSHED: 9f2e7c6d241ce9274197b7f26f59af26b4c9b5c9, 2026-09-29 01:09:20 +08:00; fetch/parity 0/0 clean PASS. T03 IMPLEMENTED / VERIFIED locally, 21 files / 276 tests, typecheck/lint PASS/0 at 01:11:07. Pending proceeds unavailable until explicit one-time COMMITTED settlement, exact integer returns and audit records. Repairs remain all zero. Next: T03 publication, then T04. M3 NOT ACCEPTED; fresh-session review NOT RUN.

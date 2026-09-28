@@ -1,5 +1,6 @@
 import { createBankroll, isCreditUnits, releaseCredits, reserveCredits, type Bankroll } from './credits.js';
 import type { RandomSource } from './random.js';
+import type { RoundOutcome } from './game.js';
 import type { SeatState } from './table.js';
 import { advanceTableAutomation, configureTableSeats, createTableGame, hitTableSeat,
   resolveTableDealer, standTableSeat, startTableRound, type TableCommandResult, type TableGameState } from './tableGame.js';
@@ -9,13 +10,22 @@ export interface MainWager {
   readonly stakeUnits: number;
 }
 
+export interface MainWagerResult extends MainWager {
+  readonly roundId: string;
+  readonly outcome: RoundOutcome;
+  readonly grossReturnUnits: number;
+  readonly netUnits: number;
+  readonly status: 'PENDING' | 'COMMITTED';
+}
+
 export interface BettingGameState {
   readonly game: TableGameState;
   // Index seatNumber - 1; ownership persists independently of seat occupancy.
   readonly bankrolls: readonly Bankroll[];
-  readonly phase: 'CONFIGURING' | 'OPEN' | 'CLOSED';
+  readonly phase: 'CONFIGURING' | 'OPEN' | 'CLOSED' | 'COMMITTED';
   readonly roundNumber: number;
   readonly wagers: readonly MainWager[];
+  readonly results: readonly MainWagerResult[];
 }
 
 export type BettingResult =
@@ -24,7 +34,7 @@ export type BettingResult =
 
 export function createBettingGame(shoeId: string, random: RandomSource): BettingGameState {
   return { game: createTableGame(shoeId, random), bankrolls: Array.from({ length: 7 }, createBankroll),
-    phase: 'CONFIGURING', roundNumber: 0, wagers: [] };
+    phase: 'CONFIGURING', roundNumber: 0, wagers: [], results: [] };
 }
 
 export function configureBettingSeats(state: BettingGameState, updates: readonly SeatState[]): BettingResult {
@@ -105,4 +115,38 @@ export function advanceFundedTable(state: BettingGameState): BettingResult {
 }
 export function resolveFundedDealer(state: BettingGameState): BettingResult {
   return play(state, resolveTableDealer);
+}
+
+// Pending results are derived from known hands; they never enter available funds.
+export function getMainWagerResults(state: BettingGameState): readonly MainWagerResult[] {
+  if (state.phase === 'COMMITTED') return state.results;
+  const round = state.game.round;
+  if (state.phase !== 'CLOSED' || !round || round.phase === 'INTEGRITY_ERROR') return [];
+  return state.wagers.flatMap((wager): MainWagerResult[] => {
+    const outcome = round.players.find((player) => player.seatNumber === wager.seatNumber)?.outcome;
+    if (outcome === undefined) return [];
+    const grossReturnUnits = outcome === 'PLAYER_BLACKJACK' ? (wager.stakeUnits / 2) * 5
+      : outcome === 'PLAYER_WIN' ? wager.stakeUnits * 2 : outcome === 'PUSH' ? wager.stakeUnits : 0;
+    return [{ ...wager, roundId: round.roundId, outcome, grossReturnUnits,
+      netUnits: grossReturnUnits - wager.stakeUnits, status: 'PENDING' }];
+  });
+}
+
+export function settleMainWagers(state: BettingGameState): BettingResult {
+  if (state.phase !== 'CLOSED' || state.game.round?.phase !== 'ROUND_COMPLETE') {
+    return { ok: false, state, error: 'SETTLEMENT_NOT_READY' };
+  }
+  const pending = getMainWagerResults(state);
+  if (pending.length !== state.wagers.length) return { ok: false, state, error: 'MISSING_OUTCOMES' };
+  // Validate the entire table before publishing any balance change.
+  if (pending.some((result) => state.bankrolls[result.seatNumber - 1].reserved !== result.stakeUnits
+    || !isCreditUnits(state.bankrolls[result.seatNumber - 1].available + result.grossReturnUnits))) {
+    return { ok: false, state, error: 'INVALID_SETTLEMENT_FUNDS' };
+  }
+  const bankrolls = state.bankrolls.map((bankroll, index) => {
+    const result = pending.find((entry) => entry.seatNumber === index + 1);
+    return result ? { available: bankroll.available + result.grossReturnUnits, reserved: 0 } : bankroll;
+  });
+  const results = Object.freeze(pending.map((result): MainWagerResult => Object.freeze({ ...result, status: 'COMMITTED' })));
+  return { ok: true, state: { ...state, phase: 'COMMITTED', bankrolls, results } };
 }

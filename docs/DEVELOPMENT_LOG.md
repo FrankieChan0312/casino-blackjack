@@ -1226,3 +1226,17 @@ Scope/acceptance: explicit OPEN betting, min/max/even increments, exact funding,
 Added bettingGame.ts, bettingFixture.ts and betting.test.ts. M2 source/tests/helpers unchanged. The internal adapter marks unfunded occupied seats inactive only for M2 deal selection, then restores the actual seat configuration in both game and round snapshot. This avoids changing accepted M2 APIs and does not expose a no-wager path in M3 commands. Gameplay wrappers enforce the funded CLOSED phase. Funds remain seat-owned.
 
 Full child-PowerShell verify.ps1 at 01:07:01: PASS/0, typecheck/lint, 20 files / 267 tests. All T02 requirements covered by 17 tests including parameterized boundaries and grouped freeze/atomicity assertions. Complete new source/helper/test contents reviewed; no blocking finding. No repair: 0/10. Final Git checks and publication follow.
+
+## M3-T03 — Main-wager settlement
+
+### 2026-09-29 01:09:20 +08:00 — BASELINE / T02 PUBLICATION
+
+T02 committed/pushed 9f2e7c6d241ce9274197b7f26f59af26b4c9b5c9; push/fetch PASS/0, main=origin/main, 0/0, clean; diff/staged whitespace PASS/0. T02 repairs 0/10; T03 begins 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: gross/net main-wager records, pending non-spendable outcomes, explicit one-time table commit after all outcomes, win/Natural/push/loss/bust, exact half-credit return, seven-seat reconciliation and duplicate rejection. No VOID/T04 or advanced wagers. Step -> verification: derive pending records and atomic settlement -> independent financial examples -> full harness/diff review -> checkpoint/push/parity. Global stop conditions apply.
+
+### 2026-09-29 01:11:49 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Extended bettingGame.ts; added settlement.test.ts (9 cases). No accepted M1/M2 source/test/helper changes. Pending proceeds are derived and unavailable; final records are frozen. Whole-table funds are checked before updating any seat. Duplicate settlement returns unchanged rejection. Reviewed complete source/test content and financial arithmetic; seven-seat expected available total is independently 14100 units (net +100 from 14000 initial), and 50-unit Natural returns exactly 125.
+
+Full child-PowerShell verify.ps1 at 01:11:07: PASS/0; typecheck/lint, 21 files / 276 tests. No repair, T03 0/10. Git diff/whitespace and publication follow. Fresh-session milestone review remains NOT RUN.

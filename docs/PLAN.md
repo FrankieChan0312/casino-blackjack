@@ -679,8 +679,8 @@ M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user 
 | Task | Scope and acceptance | Status | Repairs |
 | --- | --- | --- | --- |
 | M3-T01 | Integer half-credit units, 2000-unit bankroll, atomic reserve/release, invalid/duplicate rejection | VERIFIED / COMMITTED / PUSHED c29ef4c | 0/10 |
-| M3-T02 | OPEN betting, main wager 20..2000 even units, atomic changes/cancel, seat lock, explicit funded deal | VERIFIED; publication pending | 0/10 |
-| M3-T03 | Explicit gross/net records, exact ordinary/Natural/push/loss returns, deferred one-time table commit | NOT STARTED | 0/10 |
+| M3-T02 | OPEN betting, main wager 20..2000 even units, atomic changes/cancel, seat lock, explicit funded deal | VERIFIED / COMMITTED / PUSHED 9f2e7c6 | 0/10 |
+| M3-T03 | Explicit gross/net records, exact ordinary/Natural/push/loss returns, deferred one-time table commit | VERIFIED; publication pending | 0/10 |
 | M3-T04 | Whole-round financial VOID, actual-stake refund once, pending removal, recovery and next-round funds | NOT STARTED | 0/10 |
 | M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | NOT STARTED | 0/10 |
 | M3-T06 | Accurate documentation and findings-first new-session review package; no new features | NOT STARTED | 0/10 |
