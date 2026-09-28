@@ -7,7 +7,7 @@ Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`
 Rules baseline: `docs/RULES.md` — Blackjack House Rules v1.1  
 Specification baseline: `docs/SPEC.md` — SPEC-1.0  
 Design baseline: `docs/DESIGN.md` — DESIGN-1.0  
-Status: task plan with checkpoint statuses; execution evidence is in STATE.md, DEVELOPMENT_LOG.md and Git. Fresh-session M1 review is NOT YET COMPLETED; M1 is not ACCEPTED.
+Status: task plan with checkpoint statuses; execution evidence is in STATE.md, DEVELOPMENT_LOG.md and Git. M1 is ACCEPTED by the explicit M2 contract. M2 is mechanically verified; M2 fresh-session review is NOT RUN and M2 is not ACCEPTED.
 
 ## 1. Purpose
 
@@ -380,7 +380,7 @@ Use deterministic ordered-shoe fixtures and public-view assertions.
 
 ## M1-T07 — Player Hit/Stand and Terminal Protection
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the T08 entry baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T08 entry baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T06 VERIFIED`
 
 ### Scope
@@ -405,7 +405,7 @@ Test accepted transitions, wrong-phase rejection, bust, ordinary 21, and post-te
 
 ## M1-T08 — Dealer S17 and Outcome Resolution
 
-**Status:** `VERIFIED` — committed/pushed; not ACCEPTED; repairs 0/10. See T09 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` as part of M1 — committed/pushed; repairs 0/10. See M1-T09 baseline in DEVELOPMENT_LOG.md and M2-T01 acceptance record.
 **Depends on:** `M1-T07 VERIFIED`
 
 ### Scope
@@ -447,7 +447,7 @@ Include deterministic dealer sequences for:
 
 ## M1-T09 — M1 Integration Regression and Harness Completion
 
-**Status:** `VERIFIED` — committed/pushed; 155 tests and failure propagation PASS; not ACCEPTED; repairs 0/10. See T10 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` as part of M1 — committed/pushed; 155 tests and failure propagation PASS; repairs 0/10. See M1-T10 baseline in DEVELOPMENT_LOG.md and M2-T01 acceptance record.
 **Depends on:** `M1-T08 VERIFIED`
 
 ### Scope
@@ -491,7 +491,7 @@ All applicable M1 acceptance criteria must be `PASS`.
 
 ## M1-T10 — M1 Documentation, Fresh Review, and Acceptance Package
 
-**Status:** `VERIFIED` — local documentation/package checks PASS; fresh-session review NOT YET COMPLETED; not ACCEPTED; repairs 0/10.
+**Status:** `VERIFIED` / `ACCEPTED` as part of final M1 at d1d8966fe55af1bc2b9348e305135952b7723b70. Repairs 1/10 including the review-pointer repair. Explicit acceptance is recorded with M2-T01 in DEVELOPMENT_LOG.md; this M2 implementation session did not repeat independent M1 review.
 **Depends on:** `M1-T09 VERIFIED`
 
 ### Scope
@@ -574,7 +574,7 @@ M1-T04 -------------+--> M1-T06 Initial Round / Public View
 
 ## 7. Later milestone roadmap
 
-These milestones remain high-level until M1 is complete and the relevant rules/design are reviewed.
+M2 now follows the authorized task sequence in section 9. M3+ remain high-level, unimplemented and outside this batch.
 
 ### M2 — Multi-seat Table and Computer Seats
 
@@ -655,7 +655,7 @@ Planned themes:
 
 ## 8. Current next task
 
-T10 local documentation package is VERIFIED. Complete its authorized checkpoint/push, then STOP for a genuinely new Codex-session review using STATE.md handoff. T08/T09 are VERIFIED / COMMITTED / PUSHED, not ACCEPTED. No M1 acceptance, M2 implementation, merge, release or deployment is implied.
+M2-T06 prepares the final documentation checkpoint, then STOP at the mandatory M2 fresh-session review gate in STATE.md. T01–T05 are VERIFIED / COMMITTED / PUSHED. No M2 task is ACCEPTED. No M3, merge, release or deployment is authorized.
 
 ## 9. Authorized M2 batch (supersedes historical next-action notes)
 
@@ -667,7 +667,7 @@ M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user cont
 | M2-T02 | Shared initial deal in two ascending passes, naturals/peek per seat, public seven-seat projection and secrecy | VERIFIED / COMMITTED / PUSHED (e0f7b36), 0/10 |
 | M2-T03 | Current HUMAN Hit/Stand only; skip terminal seats; advance on bust/21/stand; unchanged rejection | VERIFIED / COMMITTED / PUSHED (710b87d), 0/10 |
 | M2-T04 | Deterministic computer <17 Hit / >=17 Stand; pause for human; one S17 dealer; independent outcomes/integrity | VERIFIED / COMMITTED / PUSHED (2d21402), 0/10 |
-| M2-T05 | Full 24-scenario M2 regression mapping, cross-round shoe/cut/accounting and unchanged M1 regressions | VERIFIED locally, 1/10 |
-| M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | NOT STARTED, 0/10 |
+| M2-T05 | Full 24-scenario M2 regression mapping, cross-round shoe/cut/accounting and unchanged M1 regressions | VERIFIED / COMMITTED / PUSHED (c61ac01), 1/10 |
+| M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | IMPLEMENTED / VERIFIED locally; final publication pending, 1/10 |
 
 For each task: implementation -> independent explicit tests -> full scripts/verify.ps1 -> diff/status review -> checkpoint commit -> push origin/main -> fetch/0-0/clean -> next task. Commit messages follow the user contract. Stop on rules/spec/design conflict, important unresolved ambiguity, unknown overlap, unavailable required validation, 10/10 repairs, credentials/paid resources/destructive history or scope expansion. No wagering, credits, advanced actions, UI, network multiplayer or M3+. No automatic acceptance. T06 ends at the mandatory fresh-session gate; this implementation session must not perform that review.

@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: `M1 — Headless Blackjack Core`  
-Status: M1 implementation learning notes updated at T10; local regression evidence is in STATE.md. Fresh-session review and user acceptance remain outstanding. Parts C and later-milestone examples are planned, not implemented.
+Current milestone: `M2 — Multi-seat Table and Computer Seats`
+Status: M1 is ACCEPTED. M2 implementation learning notes are below; mechanical verification is in STATE.md. M2 fresh-session review is NOT RUN and M2 is NOT ACCEPTED. M3+ examples remain planned.
 
 ## 1. Purpose
 
@@ -932,9 +932,9 @@ Suggested explanation:
 
 # Part C — Planned Later Milestones
 
-The following sections are learning targets only until their milestone becomes active.
+M2 is now implemented as explained in section 28. M3+ sections remain learning targets until separately authorized.
 
-## 16. M2 — Multi-seat Table
+## 16. M2 — Multi-seat Table (original learning targets; implemented summary in section 28)
 
 ### Planned concepts
 
@@ -1387,9 +1387,85 @@ The T09 real type-error experiment independently proved overall exit 2 while lin
 
 Pure transitions allocate small arrays; at 312 cards this is simpler than mutation bookkeeping. readonly is a compile-time contract, not runtime deep freezing. A single dealer command avoids an animation API before a UI exists. Pure ordinaryOutcome assumes a surviving non-natural player; game commands enforce that sequencing. Fixture code is test-only and independently checks all physical IDs.
 
-The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED**. M1/T08/T09/T10 acceptance: **NOT ACCEPTED**. Planned Parts C/M2+ remain unimplemented.
+The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED at that historical T10 checkpoint**. M1 is now **ACCEPTED** at d1d8966fe55af1bc2b9348e305135952b7723b70 under the explicit M2 contract. M2 implementation is described below; M3+ remains unimplemented.
 
 
 ## M2 T04 learning checkpoint
 
 M1 is ACCEPTED by the M2 batch contract. M2 computer play now uses a deterministic M2 policy: evaluated total <17 means HIT, otherwise STAND. Ace handling comes from the existing evaluator. This is a simple reproducible non-LLM policy, not optimal strategy or basic-strategy compliance. The controller loops through computers until a HUMAN requires input, then later resolves the shared dealer once. Full M2 learning notes and fresh-review handoff follow at T06; M2 is not ACCEPTED.
+
+## 28. M2 — Implemented Learning Summary (T06)
+
+### Table, Seat and Hand
+
+TableGameState owns one persistent shoe, seat configuration and one current round. A SeatState is a stable numbered position and its controller/participation setting. A SeatHand is that round's cards, decision-completion flag and optional outcome for an active seat. EMPTY positions have no hand. There is no account/player identity or wallet in M2; HUMAN and COMPUTER describe who chooses that seat's decisions. At most one local HUMAN may be configured, including one sitting out. A table with no HUMAN is valid, but a round needs at least one active seat.
+
+Separating these concepts prevents confusing the end of one hand with the end of the table. When a player busts, only that hand gets DEALER_WIN/PLAYER_BUST and becomes complete. Other hands still act; discard happens when the table finishes. A stood or ordinary-21 hand is complete for decisions but has no outcome until comparison.
+
+### Frozen participation and sparse deal
+
+Configuration commands are atomic and accepted only between rounds. startTableRound copies and freezes the active participant snapshot and all seven round seat settings. Subsequent configuration cannot change who received cards or rewrite the prior round's controller. getPublicTableView deliberately separates current configuration from the frozen round view.
+
+For seats 2, 5 and 7, initial order is:
+
+```text
+Seat2 card1 -> Seat5 card1 -> Seat7 card1 -> Dealer upcard
+Seat2 card2 -> Seat5 card2 -> Seat7 card2 -> Dealer hole
+```
+
+Empty/sitting-out seats consume no cards. Every active player receives both cards before a decision. The shared shoe must have at least eight cards for these three seats (`2*n+2`); that minimum alone does not guarantee later draws cannot exhaust it.
+
+### HUMAN commands and COMPUTER decisions
+
+startTableRound resolves initial naturals and chooses the first remaining eligible seat. Turns advance by ascending seat number, skipping Natural/completed hands. Hit below 21 keeps the same hand current; ordinary 21 and bust automatically advance. Stand consumes no card and advances. Commands name the seat and reject an empty, sitting-out, wrong, completed or COMPUTER seat when a HUMAN action is requested. Terminal/wrong-phase requests return the exact input state unchanged.
+
+The deterministic M2 computer policy is **total <17 -> HIT; total >=17 -> STAND**. It reads only its own evaluated public hand, not the dealer hole or future shoe. Ace/soft handling reuses evaluateHand: A,5 hits; A,6 stands; A,9,5 hits as hard 15. This reproducible teaching policy is non-LLM and is not optimal Blackjack strategy or a basic-strategy implementation.
+
+advanceTableAutomation is an explicit orchestration command, called after a non-terminal deal/HUMAN action. It handles all consecutive computers, stops at HUMAN input, and proceeds to shared dealer resolution if decisions finish. It adds no background timer or interactive UI. Retaining the returned state is the caller's responsibility.
+
+### One dealer, independent results
+
+Initial dealer Natural resolves each active player immediately: Natural pushes, ordinary hands lose. Without dealer Natural, each player Natural becomes PLAYER_BLACKJACK; it does not terminate ordinary hands elsewhere.
+
+After all decisions, one S17 loop resolves the shared dealer, then compares every unresolved surviving player separately. With a final dealer 19, player 20 wins, 19 pushes and 18 loses; prior bust stays a loss and prior Natural stays PLAYER_BLACKJACK. Dealer does not draw once per player or chase each player's total. If every player already has a result, dealer reveals at completion without unnecessary draws. A three-card dealer 21 cannot downgrade a resolved Natural.
+
+### Shared shoe, integrity and public state
+
+All table hands/dealer consume one shoe. Its available/inPlay/discarded IDs stay disjoint and account for exactly 312 cards. Normal completion discards once. Starting another round reuses the remaining shoe and cut when healthy; pending/retired/insufficient cards requires a new shoe before any deal. Cut 219 or 249 can be crossed by a computer Hit; the dealer still completes using that same shoe, and replacement waits until the next round.
+
+A required draw fault ends the table in INTEGRITY_ERROR, retires the shoe and preserves partial hands for diagnostics. All normal outcomes, including previously resolved Naturals/busts, are cleared under whole-table invalidation. No result is fabricated from the fault. No wagers or refunds exist in M2. A later start uses a replacement shoe and does not mutate the failed snapshot.
+
+Public projection explicitly copies rank/suit data and all seven round seat states. The hole is hidden during PLAYER_TURN and INTEGRITY_ERROR, visible at DEALER_TURN/ROUND_COMPLETE. Early bust does not reveal while another player still needs a decision. No physical IDs, shoe order, cut or hidden totals leak through this projection. This remains a local correctness boundary, not server security.
+
+### Concrete M2 regression lessons
+
+| Test group / case | What it establishes | Concrete bug it catches |
+| --- | --- | --- |
+| unit/table: fixed positions / atomic invalid settings | Exactly seats 1..7; <=1 HUMAN; duplicate/range rejection | Duplicate position or a second sitting-out HUMAN slips through |
+| unit/table: sparse participation / snapshot | EMPTY/sit-out excluded; copied/frozen active list | Config edit changes participants halfway through a round |
+| tableDeal: one/sparse/full exact order | Two passes and correct dealer slots | Dealing both cards to seat 2 before seat 5 shifts every hand |
+| tableDeal: dealer/mixed/all Naturals | Per-seat initial precedence | First player Natural incorrectly ends the whole table |
+| tableDeal: redaction / partial faults | No hidden fields; correct diagnostic cards | A negative peek or spread of internal state leaks the hole |
+| tableActions: Hit/Stand/21/bust | One/no card, correct next seat, other players continue | Bust finishes table; ordinary 21 permits another Hit |
+| tableActions: HUMAN routing and rejection | Wrong/controller/phase requests preserve state | Human command consumes a card for a COMPUTER seat |
+| unit/computer: hard/soft thresholds | Deterministic M2 policy and Ace handling | Treating soft 17 as a Hit or A,9,5 as bust |
+| tableAutomation: consecutive computers / human pause | Ordered progression without skipping human | Automation silently makes the HUMAN decision or acts out of turn |
+| tableAutomation: mixed outcomes / one dealer | Bust/Natural preserved; one shared comparison | Dealer redraws per player; dealer bust converts earlier player bust to win |
+| tableAutomation: no comparison / S17 | No unnecessary draw; soft/hard 17 stand | Dealer draws after all outcomes known or accidentally uses H17 |
+| tableAutomation: partial computer/dealer failure / frozen input | Diagnostic cards retained, no normal results, purity | Fault loses already-drawn cards, invents winners or mutates previous state |
+| tableLifecycle: human/computer alone / full seven seats | Complete deterministic rounds, explicit expected results | Last computer never advances to dealer or seventh seat is dropped |
+| tableLifecycle: two rounds and reconfiguration | Same shoe/cut; old snapshot survives | Each new round reshuffles or new occupancy rewrites old round |
+| tableLifecycle: both cuts and minimum guards | Deferred replacement, exact 2*n+2 boundary | Cut crossing swaps shoe mid-round or full table uses four-card guard |
+| tableLifecycle: real exhaustion / recovery / terminal rejection | Fault retirement; new shoe; immutable completed table | Retired shoe reused or repeated resolution discards twice |
+| tableLifecycle: absent financial state | No wagers/credit/advanced-action data | A future milestone's wallet or Split state enters M2 unnoticed |
+| Original M1 tests + verifyHarness | 155 unchanged tests; required failures still propagate | Multi-seat work regresses the one-seat API or masks a required check failure |
+
+### Tradeoffs, evidence and learning state
+
+M2 uses separate table orchestration to preserve the accepted M1 command API while sharing the rule primitives. Pure transitions copy small arrays; no state framework is needed at seven seats/312 cards. Participation snapshots are runtime-frozen, but arbitrary caller-owned state is not deeply frozen or validated as an import format. Low-level lifecycle functions are not permitted player commands. There is no production casino/security claim, optimal strategy claim, UI or network multiplayer.
+
+T05 found a test-hook error: returning a spy from beforeEach unintentionally registered that throwing function as cleanup. Changing only the hook to return void made the 17 new cases pass with the RNG guard and all assertions retained. This illustrates why shared failure location matters before changing domain code.
+
+Mechanical evidence: full harness 18 files / 233 tests PASS; original M1 tests/helpers unchanged and independent M1 run 12 files / 155 tests PASS. Final T06 evidence is in STATE/DEVELOPMENT_LOG. Fresh-session M2 review: NOT RUN, deliberately handed to another session. M2 and T01–T06: NOT ACCEPTED. User understanding: needs review / not assessed.
+
+Topics the user can now study/explain: table versus seat versus hand; frozen participation; sparse two-pass dealing; decisions complete versus outcome known; human/computer routing; one dealer with many outcomes; cross-round shoe lifetime; integrity versus normal loss. Open learning questions can be discussed after independent review; understanding is not inferred from passing tests.

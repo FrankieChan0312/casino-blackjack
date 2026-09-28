@@ -1,25 +1,71 @@
 # Casino Blackjack — Project State
 
-## Current truth: M2-T05
+## Current truth: M2-T06 review package
 
-M1 at d1d8966fe55af1bc2b9348e305135952b7723b70 is ACCEPTED by the explicit M2 batch contract. Earlier pending M1 review/acceptance statements in historical notes are superseded; no new independent review was performed here. Baseline at 2026-09-28 23:57:30 +08:00: main=origin/main, 0/0, clean. Origin is the authorized FrankieChan0312/casino-blackjack repository.
+M1 at `d1d8966fe55af1bc2b9348e305135952b7723b70` is ACCEPTED by the user's explicit M2 batch contract. That acceptance was recorded with substantive T01, without a metadata-only acceptance commit. Prior history remains in DEVELOPMENT_LOG.md and Git. This implementation session did not perform or claim a new independent M1/M2 review.
 
-T01 checkpoint 7824e57e792db6c83ce874d8324538ae24b281a1 pushed to origin/main with fetch 0/0 and clean at 2026-09-29 00:07:52 +08:00. T02 adds shared initial deal, per-seat naturals and public projection. Full verify.ps1 PASS/0 at 00:10:55–00:11:27 +08:00: typecheck/lint and 14 files / 184 tests; source/test diff review PASS. No new dependencies. Recommended model/effort GPT-6 Astra / High; actual model NOT VERIFIED; actual reasoning/effort NOT VERIFIED.
+M2 gameplay and the 24-scenario regression mapping are IMPLEMENTED / VERIFIED. T06 changes only README, LAB_MANUAL, PLAN, STATE and DEVELOPMENT_LOG. T06 full harness passed at 2026-09-29 00:29:54 +08:00, with typecheck/lint and 18 files / 233 tests. Complete five-document diff and whitespace/status review passed at 00:30:42; two wording issues found during review were corrected in repair 1/10. Final exact-version recheck follows this evidence update. M2 fresh-session review is NOT RUN; M2 and T01–T06 are NOT ACCEPTED. No M3 work, deployment, release or merge occurred.
 
-| M2 task | Repair count | Status |
+Recommended model: GPT-6 Astra. Recommended reasoning/effort: High. Actual model: NOT VERIFIED. Actual reasoning/effort: NOT VERIFIED; no client settings evidence is exposed.
+
+## Checkpoint and repair ledger
+
+T01–T05 checkpoints below are on main, pushed to the authorized origin https://github.com/FrankieChan0312/casino-blackjack.git. T01–T05 each had successful fetch, HEAD=origin/main, behind/ahead 0/0 and a clean working tree before the next task. No count resets/transfers occurred.
+
+| Task | Repairs | Delivery / commit | Push/parity timestamp (+08:00) |
+| --- | --- | --- | --- |
+| M2-T01 | 1/10 | VERIFIED / COMMITTED / PUSHED: 7824e57e792db6c83ce874d8324538ae24b281a1 | 2026-09-29 00:07:52; PASS, 0/0 clean |
+| M2-T02 | 0/10 | VERIFIED / COMMITTED / PUSHED: e0f7b366c69f2980aa53283a5f37324ff89d2928 | 2026-09-29 00:12:43; PASS, 0/0 clean |
+| M2-T03 | 0/10 | VERIFIED / COMMITTED / PUSHED: 710b87d41964bca04b8114a26931f2624305e45c | 2026-09-29 00:15:48; PASS, 0/0 clean |
+| M2-T04 | 0/10 | VERIFIED / COMMITTED / PUSHED: 2d214024de4263c8ce08b50cfafbfd3aa07f6969 | 2026-09-29 00:19:45; PASS, 0/0 clean |
+| M2-T05 | 1/10 | VERIFIED / COMMITTED / PUSHED: c61ac01fb9901808c7f3aaccc95b037c0000da44 | 2026-09-29 00:24:48; PASS, 0/0 clean |
+| M2-T06 | 1/10 | IMPLEMENTED / VERIFIED locally; checkpoint publication pending | Final delivery records actual publication |
+
+M1 repair ledger T01..T10: **2,1,0,0,1,0,1,0,0,1**, each /10. Accepted M1 tests/helpers remain unchanged. Historical M1 AC mapping is retained in STATE.md at the accepted M1 SHA; original execution and repair evidence is preserved in DEVELOPMENT_LOG.md.
+
+T01 repair: staged whitespace found an extra EOF blank line in the log; removed that line, reran full harness and staged checks before committing. T05 repair: new beforeEach returned a throwing RNG spy as cleanup; changed only the hook to return void, retained guard/assertions, reran all checks. T06 repair: clarified that physical IDs/shoe order remain hidden in every phase and limited already-pushed wording to T01–T05. Full evidence and failed runs remain in the log.
+
+## Latest executed verification
+
+| Check | Status | Evidence |
 | --- | --- | --- |
-| T01 | 1/10 | VERIFIED / COMMITTED / PUSHED: 7824e57; 0/0 clean |
-| T02 | 0/10 | VERIFIED / COMMITTED / PUSHED: e0f7b36; 0/0 clean |
-| T03 | 0/10 | VERIFIED / COMMITTED / PUSHED: 710b87d; 0/0 clean |
-| T04 | 0/10 | VERIFIED / COMMITTED / PUSHED: 2d21402; 0/0 clean |
-| T05 | 1/10 | IMPLEMENTED / VERIFIED; checkpoint pending |
-| T06 | 0/10 | NOT STARTED |
+| Full harness at T05 | PASS | 2026-09-29 00:22:32; exit 0; typecheck/lint and 18 files / 233 tests |
+| Original M1 test/helper preservation | PASS | git diff --exit-code from d1d8966... on all original paths, 00:23:10; exit 0 |
+| Independent original M1 run | PASS | npm.cmd test -- with original 12 files; 155 tests; 00:23:11; exit 0 |
+| T05 task diff/whitespace/status | PASS | Intended lifecycle test and three evidence documents only; staged whitespace exit 0 |
+| T06 no executable changes | PASS | 00:27:45 git diff --exit-code -- src tests scripts package.json package-lock.json; exit 0 |
+| T06 full harness/diff | PASS | 2026-09-29 00:29:54 harness exit 0, 18 files / 233 tests; 00:30:42 whitespace/status and complete five-file content review; final recheck after evidence update |
+| Independent M2 fresh-session review | NOT RUN | Mandatory next session; not performed in this implementation session |
+| Human acceptance of M2/tasks | NOT RUN | Reserved for explicit user acceptance after review |
+| Browser/E2E | NOT APPLICABLE | M2 has no UI |
+| Separate clean-machine npm ci reproduction | NOT RUN | Existing installed toolchain was used; no new M2 dependency |
+| Deployment | NOT RUN | Not authorized; headless library only |
 
-M1 repair ledger T01..T10: **2,1,0,0,1,0,1,0,0,1**, each /10. Historical verification/AC mapping is preserved in Git at the accepted M1 SHA and DEVELOPMENT_LOG.md; no count is reset.
+The unchanged harness still prints its historical M1 summary label, but runs all discovered tests: original M1 12 files / 155 tests plus M2 6 files / 78 tests = 18 files / 233 tests. No M1 assertion or required command was weakened.
 
-M2 scope: seven seats, zero/one human, computers, sitting out, frozen participation, shared shoe/dealer, deal/turn ordering, Hit/Stand, independent outcomes, public redaction and deterministic computer total<17 HIT / >=17 STAND. No wager/credit/advanced action/UI/network/server/replay product or casino-certification claim. HUMAN actions, ascending turns, deterministic computer automation and one shared S17 dealer comparison are implemented. Required checks for every task: full verify.ps1, diff --check, complete task diff and status; commit/push/fetch only on PASS. No known implementation blocker.
+## Exact M2 scope and limitations
 
-Latest baseline: main=origin/main=e0f7b366c69f2980aa53283a5f37324ff89d2928 at 2026-09-29 00:12:43 +08:00, 0/0 clean. T03 full harness PASS/0 at 00:14:30–00:14:52: 15 files / 195 tests, typecheck/lint and diff review PASS. T04 baseline at 2026-09-29 00:15:48 +08:00: main=origin/main=710b87d41964bca04b8114a26931f2624305e45c, 0/0 clean. Latest T04 full harness PASS/0 at 00:18:03–00:18:23: 17 files / 216 tests, typecheck/lint and diff review PASS. T05 baseline at 2026-09-29 00:19:45 +08:00: main=origin/main=2d214024de4263c8ce08b50cfafbfd3aa07f6969, 0/0 clean. T05 first harness failed only the new hook; repair 1 removes its accidental cleanup return without changing assertions. Final full harness at 00:22:32 PASS/0, 18 files / 233 tests; independent original M1 suite at 00:23:11 PASS/0, 12 files / 155 tests. Original M1 test/helper diff is empty. Next: publish T05 checkpoint then automatically begin T06. Final M2 fresh-session review NOT RUN; M2 and every M2 task NOT ACCEPTED. Stop after T06 for a genuinely new findings-first reviewer, who reruns the harness and inspects M1 preservation without editing unless separately authorized. Browser/E2E NOT APPLICABLE: no UI. Deployment NOT RUN and not authorized. Clean-machine npm ci reproduction NOT RUN.
+Seven stable positions 1..7; EMPTY/HUMAN/COMPUTER; occupied seats may sit out; zero/one HUMAN including sitting-out humans; at least one active seat to start. Configuration only between rounds, with frozen active participation and seven-seat round snapshots. Ascending two-pass initial deal and player turns, shared six-deck shoe/dealer, original naturals/peek, HUMAN Hit/Stand, deterministic computer total<17 HIT / >=17 STAND, one S17 dealer resolution and independent hand outcomes. Normal naturals/busts survive later ordinary comparison. Required draw failure invalidates normal table outcomes and retires the shoe, retaining diagnostic cards. Public projection hides the hole until DEALER_TURN/ROUND_COMPLETE and also hides it in INTEGRITY_ERROR. Physical IDs, future shoe order and cut position are never exposed in any phase.
+
+No betting, balances/credits/chips/wallets, financial settlement/refunds, Double, Split, Surrender, Insurance, Even Money, side bets, Bet Behind, Charlie, UI/CLI application, network multiplayer/server, accounts, database/persistence, replay product or M3+ implementation. No production casino, real-money, cryptographic RNG, AI/ML or optimal/basic-strategy claim. Automation is explicitly invoked after non-terminal deal/HUMAN commands and pauses on HUMAN. Supported commands are pure; arbitrary caller-corrupted objects are not a general validated import format. Frozen participation does not imply every object is runtime deep-frozen. Public projection is local correctness, not server security. Windows harness portability and clean-machine install remain unverified. No known implementation blocker was found in task review; independent review remains outstanding.
+
+## Mandatory M2 fresh-session review handoff
+
+**STOP after the T06 verified checkpoint is pushed and fetch/parity/clean checks pass.** Do not perform this independent review in the implementation session. Do not mark M2 or any M2 task ACCEPTED. Do not start M3, edit gameplay, merge, release or deploy.
+
+Final branch: **main**. The final review checkpoint is the commit with subject `docs: prepare M2 verification and review package`, whose parent is `c61ac01fb9901808c7f3aaccc95b037c0000da44`. Its own SHA cannot be embedded in its content. Resolve `git rev-parse HEAD` and `git rev-parse origin/main`, and compare both with the exact final delivery SHA. The final delivery reports real T06 commit/push/fetch results and clean-tree status without an extra metadata-only commit. This document's baseline is T05 at 2026-09-29 00:24:48: main=origin/main=c61ac01..., 0/0 clean; never infer final parity from this older baseline.
+
+M2 changed source: src/domain/table.ts, tableGame.ts, tablePublicView.ts, computer.ts, and shoe.ts (only optional initial minimum, default four preserved for M1). New test helper: tests/helpers/tableFixture.ts. M2 tests: tests/unit/table.test.ts, computer.test.ts; tests/integration/tableDeal.test.ts, tableActions.test.ts, tableAutomation.test.ts, tableLifecycle.test.ts. No original M1 test/helper, package, dependency, harness or other M1 source changed. DESIGN.md has the user-authorized M2 extension; RULES/SPEC remain unchanged.
+
+Fresh reviewer instructions:
+
+1. Start a genuinely new Codex session at this repository. Read AGENTS, SKILL, RULES, SPEC, DESIGN (including M2 extension), PLAN, STATE, DEVELOPMENT_LOG, README and LAB_MANUAL. The explicit M2 contract is represented by PLAN's six-task table, this scope and the 24-scenario mapping below. User acceptance remains separate from verification.
+2. Capture environment time, repository path, branch, HEAD, origin/main, ahead/behind and complete working-tree status. Confirm final handoff SHA and main parity; stop on unexpected overlapping changes. Record actual model/effort only with verifiable evidence.
+3. Inspect the full M2 diff from d1d8966fe55af1bc2b9348e305135952b7723b70 to the final HEAD, source/tests and exact verification evidence. Independently evaluate every requirement; do not treat a mapping row or generated code as proof.
+4. Review seven-seat invariants, atomic between-round changes, <=1 HUMAN, frozen participation, sparse/full initial deal, natural matrix/peek, hand-versus-table completion, human routing, deterministic computer decisions without hidden inputs, HUMAN pauses, one S17 dealer, per-seat results and no unnecessary draws.
+5. Review accounting, cut crossing/reuse/replacement including exact 2*n+2 boundaries, partial initial/HUMAN/computer/dealer faults, whole-table result invalidation, retired-shoe recovery, public secrecy/reveal, purity and terminal rejection. Inspect no-wager/no-advanced-action/no-UI/network scope and documentation accuracy.
+6. Run .\scripts\verify.ps1 (or the documented child-PowerShell equivalent), git diff --check and git status --short --untracked-files=all; check every exit. Expected suite: 18 files / 233 tests, including 155 unchanged M1 tests. Inspect original M1 preservation independently; rerun the original 12-file suite if useful. Never weaken a test or infer PASS from old evidence.
+7. Report findings first: severity, path/line, violated contract/rule, reproduction and impact. If none, say so explicitly with remaining limitations. Do not edit, commit, push or fix findings unless separately authorized. Preserve the task repair ledger; new session/model/branch does not reset it. Review completion does not constitute human acceptance.
 
 ## M2 acceptance/regression mapping (T05)
 
