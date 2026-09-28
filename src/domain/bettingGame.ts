@@ -1,4 +1,4 @@
-import { createBankroll, isCreditUnits, releaseCredits, reserveCredits, type Bankroll } from './credits.js';
+import { createBankroll, isBankroll, isCreditUnits, releaseCredits, reserveCredits, type Bankroll } from './credits.js';
 import type { RandomSource } from './random.js';
 import type { RoundOutcome } from './game.js';
 import type { SeatState } from './table.js';
@@ -12,17 +12,17 @@ export interface MainWager {
 
 export interface MainWagerResult extends MainWager {
   readonly roundId: string;
-  readonly outcome: RoundOutcome;
+  readonly outcome: RoundOutcome | 'VOID';
   readonly grossReturnUnits: number;
   readonly netUnits: number;
-  readonly status: 'PENDING' | 'COMMITTED';
+  readonly status: 'PENDING' | 'COMMITTED' | 'REFUNDED';
 }
 
 export interface BettingGameState {
   readonly game: TableGameState;
   // Index seatNumber - 1; ownership persists independently of seat occupancy.
   readonly bankrolls: readonly Bankroll[];
-  readonly phase: 'CONFIGURING' | 'OPEN' | 'CLOSED' | 'COMMITTED';
+  readonly phase: 'CONFIGURING' | 'OPEN' | 'CLOSED' | 'COMMITTED' | 'VOID';
   readonly roundNumber: number;
   readonly wagers: readonly MainWager[];
   readonly results: readonly MainWagerResult[];
@@ -119,7 +119,7 @@ export function resolveFundedDealer(state: BettingGameState): BettingResult {
 
 // Pending results are derived from known hands; they never enter available funds.
 export function getMainWagerResults(state: BettingGameState): readonly MainWagerResult[] {
-  if (state.phase === 'COMMITTED') return state.results;
+  if (state.phase === 'COMMITTED' || state.phase === 'VOID') return state.results;
   const round = state.game.round;
   if (state.phase !== 'CLOSED' || !round || round.phase === 'INTEGRITY_ERROR') return [];
   return state.wagers.flatMap((wager): MainWagerResult[] => {
@@ -149,4 +149,28 @@ export function settleMainWagers(state: BettingGameState): BettingResult {
   });
   const results = Object.freeze(pending.map((result): MainWagerResult => Object.freeze({ ...result, status: 'COMMITTED' })));
   return { ok: true, state: { ...state, phase: 'COMMITTED', bankrolls, results } };
+}
+
+export function voidFinancialRound(state: BettingGameState): BettingResult {
+  if (state.phase !== 'CLOSED' || state.game.round?.phase !== 'INTEGRITY_ERROR') {
+    return { ok: false, state, error: 'VOID_NOT_REQUIRED' };
+  }
+  if (state.bankrolls.some((bankroll) => !isBankroll(bankroll))) {
+    return { ok: false, state, error: 'INVALID_REFUND_FUNDS' };
+  }
+  const roundId = state.game.round.roundId;
+  const results = Object.freeze(state.wagers.map((wager): MainWagerResult => {
+    const actualStake = state.bankrolls[wager.seatNumber - 1].reserved;
+    return Object.freeze({ seatNumber: wager.seatNumber, roundId, stakeUnits: actualStake,
+      outcome: 'VOID', grossReturnUnits: actualStake, netUnits: 0, status: 'REFUNDED' });
+  }));
+  const bankrolls = state.bankrolls.map((bankroll) => bankroll.reserved === 0 ? bankroll
+    : { available: bankroll.available + bankroll.reserved, reserved: 0 });
+  // Diagnostic game/cards/fault and retired shoe are retained. No automatic replay.
+  return { ok: true, state: { ...state, phase: 'VOID', bankrolls, results } };
+}
+
+export function prepareNextBettingRound(state: BettingGameState): BettingResult {
+  if (state.phase !== 'COMMITTED' && state.phase !== 'VOID') return { ok: false, state, error: 'ROUND_NOT_FINALIZED' };
+  return { ok: true, state: { ...state, phase: 'CONFIGURING', wagers: [], results: [] } };
 }

@@ -28,3 +28,7 @@ T01 VERIFIED / COMMITTED / PUSHED: c29ef4c15674fa2779dddd48f6e36cbff060a2a0; 202
 ## T03 current checkpoint
 
 T02 VERIFIED / COMMITTED / PUSHED: 9f2e7c6d241ce9274197b7f26f59af26b4c9b5c9, 2026-09-29 01:09:20 +08:00; fetch/parity 0/0 clean PASS. T03 IMPLEMENTED / VERIFIED locally, 21 files / 276 tests, typecheck/lint PASS/0 at 01:11:07. Pending proceeds unavailable until explicit one-time COMMITTED settlement, exact integer returns and audit records. Repairs remain all zero. Next: T03 publication, then T04. M3 NOT ACCEPTED; fresh-session review NOT RUN.
+
+## T04 current checkpoint
+
+T03 VERIFIED / COMMITTED / PUSHED: 3647e09a6b8f2c9b4d432a39960ee66dff5cbf63 at 2026-09-29 01:13:01 +08:00, fetch/parity 0/0 clean PASS. T04 IMPLEMENTED / VERIFIED locally: full harness 01:14:56 PASS/0, 22 files / 283 tests. VOID refunds actual reserves once; pending profit/loss discarded, normal settlement/VOID exclusive, next-round bankroll and retired shoe recovery preserved. Demo reset deliberately deferred (optional under R06, not required by SPEC M3). All M3 repair counts remain 0/10. Next T04 publication -> T05 full regression. M3 NOT ACCEPTED; fresh-session review NOT RUN.

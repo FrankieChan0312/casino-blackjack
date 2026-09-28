@@ -1240,3 +1240,17 @@ Scope/acceptance: gross/net main-wager records, pending non-spendable outcomes, 
 Extended bettingGame.ts; added settlement.test.ts (9 cases). No accepted M1/M2 source/test/helper changes. Pending proceeds are derived and unavailable; final records are frozen. Whole-table funds are checked before updating any seat. Duplicate settlement returns unchanged rejection. Reviewed complete source/test content and financial arithmetic; seven-seat expected available total is independently 14100 units (net +100 from 14000 initial), and 50-unit Natural returns exactly 125.
 
 Full child-PowerShell verify.ps1 at 01:11:07: PASS/0; typecheck/lint, 21 files / 276 tests. No repair, T03 0/10. Git diff/whitespace and publication follow. Fresh-session milestone review remains NOT RUN.
+
+## M3-T04 — VOID / refund / financial lifecycle
+
+### 2026-09-29 01:13:01 +08:00 — BASELINE / T03 PUBLICATION
+
+T03 committed/pushed 3647e09a6b8f2c9b4d432a39960ee66dff5cbf63; push/fetch PASS/0, main=origin/main, 0/0 clean; diff/staged whitespace PASS/0. T03 repairs 0/10; T04 begins 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: genuine integrity-only VOID, exact actual-stake refunds, discard pending profits/losses, repeated-operation and normal-settlement mutual exclusion, preserve retired shoe evidence, next explicit funded round uses correct funds/replacement shoe. No reset required by SPEC; deliberately deferred per contract. No future wagers. Step -> verification: explicit VOID/next-round transitions -> fault/refund/ownership fixtures -> full harness/diff review -> checkpoint/push/parity. Global stop conditions apply.
+
+### 2026-09-29 01:15:45 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Extended bettingGame.ts and added financialLifecycle.test.ts (7 grouped cases). Complete source/test review confirms no voluntary cancellation of closed valid wagers, no clawback, no automatic replay, no reconfiguration replenishment, actual reserved amount used for refund, and both financial terminal states exclude the other operation. Preserved M1/M2 modules/tests/helpers.
+
+Full child-PowerShell verify.ps1 at 01:14:56 PASS/0: typecheck/lint, 22 files / 283 tests. Natural plus provisional bust loss are removed by a later computer draw failure; all funded seats recover initial balances. A real exhausted shoe is replaced only on a new funded deal and remains diagnostic in the old snapshot. No repair: T04 0/10. Git checks/publication follow.
