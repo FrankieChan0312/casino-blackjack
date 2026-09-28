@@ -113,7 +113,7 @@ M1 does not implement:
 
 ## M1-T01 — Repository Bootstrap and Engineering Harness
 
-**Status:** `VERIFIED` — harness and failure injection passed; repair cycles 2/10. Human acceptance and local commit are pending; see STATE.md and DEVELOPMENT_LOG.md.
+**Status:** `VERIFIED` / `ACCEPTED` — prerequisite committed and published; repair cycles 2/10. See the M1-T02 baseline in STATE.md and DEVELOPMENT_LOG.md.
 
 ### Scope
 
@@ -204,7 +204,7 @@ Stop if:
 
 ## M1-T02 — Physical Card Model and Six-Deck Inventory
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — inventory and harness checks passed; repair cycles 1/10. User acceptance and checkpoint commit pending.
 **Depends on:** `M1-T01 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-M1-T01 is VERIFIED and awaits human checkpoint review and a local commit decision. The next implementation task is `M1-T02 — Physical Card Model and Six-Deck Inventory`, which remains NOT STARTED. No later implementation was included in the bootstrap task.
+The current task is `M1-T02 — Physical Card Model and Six-Deck Inventory`: VERIFIED, awaiting user acceptance and checkpoint commit authorization. M1-T01's accepted/published baseline is recorded in STATE.md. M1-T03 remains NOT STARTED and is outside the current authorization.

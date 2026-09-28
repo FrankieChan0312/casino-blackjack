@@ -734,3 +734,56 @@ Only STATE.md and this log are updated. The new evidence commit will be local-on
 ### 2026-09-28 19:56:16 +08:00 — VALIDATION
 
 Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`: PASS, exit 0. Typecheck and lint passed; Vitest passed 1 file and 2 tests (started at 19:56:20 +08:00). No repair was needed; cumulative repairs remain 2/10. After this evidence-only entry, the exact final documentation version is checked again with the required harness, whitespace, status, and two-file diff checks before the local commit. Commit and post-commit results are reported from actual Git output rather than predicted here.
+
+## M1-T02 — Physical Card Model and Six-Deck Inventory
+
+### 2026-09-28 20:23:41 +08:00 — TASK_START / BASELINE
+
+**Milestone:** M1 — Headless Blackjack Core. **Recommended model/effort:** GPT-6 Astra / High. **Actual runtime model/effort:** NOT VERIFIED; client settings are not exposed. **Repair cycles:** M1-T02 starts at 0/10; M1-T01 remains 2/10.
+
+Read AGENTS.md, SKILL.md, RULES.md, SPEC.md, DESIGN.md, PLAN.md, STATE.md, and DEVELOPMENT_LOG.md before implementation. Relevant authority: R03 inventory identity; AC-M1-001 and only the inventory foundation of AC-M1-002; DESIGN sections 4, 5.1, 17, and 18; PLAN M1-T02. No rules/spec/design conflict affecting this task was found. Previously scoped progress notes do not override the current task or actual Git baseline.
+
+Executed `Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'`, `Get-Location`, `git rev-parse --show-toplevel`, `git branch --show-current`, `git rev-parse HEAD`, `git status --short`, `git rev-parse origin/main`, `git rev-parse --abbrev-ref 'main@{upstream}'`, `git rev-list --left-right --count main...origin/main`, and `git remote -v`. All Git commands exited 0. Observed the intended repository path, main, local HEAD and origin/main both `a1649501dd1b180e96ca6a766ec0fd00fab54c70`, upstream origin/main, ahead/behind 0/0, and clean working tree. Origin fetch/push URL remains `https://github.com/FrankieChan0312/casino-blackjack.git`. No unknown overlapping changes were found.
+
+The user supplied publication parity evidence at `2026-09-28 20:18:58 +08:00` for a1649501dd1b180e96ca6a766ec0fd00fab54c70. This is incorporated into the M1-T02 baseline, with the later local observation above, without a separate metadata commit. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED. No push was performed in this task.
+
+Observed Node v24.19.0 and npm 11.17.0. Baseline command at `2026-09-28 20:23:42 +08:00`: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`, PASS/0; typecheck, lint, and 2 existing harness tests passed. No known validation failure or blocker remains.
+
+**Task contract:** only Suit, Rank, PhysicalCard, and deterministic creation of six standard 52-card decks. Success means 312 cards and unique IDs, exactly 4 expected suits and 13 ranks, each combination represented six times with distinct deck indices 1..6, no Joker/extra card, and reproducible order/identities. Tests must use independent expected facts. Excluded: shuffle, RandomSource, cut cards, ShoeState, draw/deal/discard, scoring, natural detection, round/game/dealer/actions/outcomes, UI, money/seats/bots/advanced actions, networking/persistence/replay, and frameworks.
+
+**Step -> verification:** implement one small card module -> independently test inventory counts, multiplicities, deck identities and full order -> run the existing full harness and Git whitespace/status checks -> inspect tracked and new-file diffs -> report VERIFIED only after passing, then stop before commit. Stop on authority conflicts, unknown overlap, scope expansion, unavailable required tools, destructive Git, credentials/paid resources, or repair limit 10/10. No commit, push, history amendment, or M1-T03 start is authorized. Proposed later commit: `feat: add six-deck physical card inventory`.
+
+### 2026-09-28 20:26:42 +08:00 — DECISION / IMPLEMENTATION
+
+Added `src/domain/card.ts` and `tests/unit/card.test.ts`. Suit and Rank are literal unions inferred from private fixed lists; cards have readonly id/deckIndex/suit/rank fields. `createSixDeckInventory(): readonly PhysicalCard[]` allocates a new inventory, looping deck 1..6, then clubs/diamonds/hearts/spades, then A/2..10/J/Q/K. IDs are `deckIndex:suit:rank`, unique within the inventory, intentionally repeatable across independently created inventories. They do not claim cross-shoe uniqueness. Readonly is TypeScript-level protection, not runtime freezing. No input validation, generic deck configuration, extra exports/barrel, random calls, or future modules are needed.
+
+Five independent unit tests cover: 312 cards/IDs; exact rank/suit sets; all 52 combinations with six distinct IDs and deck indices 1..6; each deck's 52 distinct combinations; and two creations matching a full expected order derived with test-owned sets and index arithmetic rather than the production loops. No expected data is imported from production enumeration lists or generated by the function under test.
+
+An initial multi-file patch was rejected because a STATE.md context line was incomplete; inspection at `2026-09-28 20:25:24 +08:00` confirmed no source/test files or plan changes had been written. Reapplied the initial implementation with exact context. This happened before the first implementation-plus-validation, so M1-T02 remains 0/10; no failed implementation validation was bypassed.
+
+STATE.md and PLAN.md track this task. README requires minimal current-status/test-count corrections because an inventory module now exists. LAB_MANUAL.md is unchanged: its section 25 requires a completion summary after a milestone, and M1 is not complete. RULES/SPEC/DESIGN and all harness/configuration/dependency files remain unchanged.
+
+### 2026-09-28 20:27:41 +08:00 — VALIDATION
+
+First implementation verification: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`, PASS/0. Typecheck and lint each exited 0; Vitest passed 2 files / 7 tests (5 inventory + 2 existing harness tests), start time 20:27:46 +08:00. No source/test repair was needed. Initial implementation and validation do not consume a repair cycle.
+
+### 2026-09-28 20:32:40 +08:00 — REPAIR CYCLE 1
+
+**Evidence:** the subsequent `git diff --check` returned FAIL/2, identifying trailing whitespace on README.md line 5, the changed current-status line. The guarded command stopped before status/diff, so those checks were not reported as executed in that attempt.
+
+**Falsifiable hypothesis:** the two retained Markdown hard-break spaces on that changed line caused the whitespace failure; removing only those spaces should make git diff --check return 0 without changing runtime behavior.
+
+**Targeted fix:** removed only those two trailing spaces. **Re-verification:** at `2026-09-28 20:32:52 +08:00`, git diff --check PASS/0, git status --short PASS/0, and the exact tracked task diff PASS/0. At `2026-09-28 20:33:05 +08:00`, ran the full PowerShell verification command again: PASS/0, typecheck and lint PASS, 2 files / 7 tests PASS (Vitest start 20:33:09 +08:00). No failed check was disabled or bypassed. M1-T02 cumulative repairs are now 1/10; M1-T01 remains 2/10.
+
+### 2026-09-28 20:33:19 +08:00 — REVIEW / VERIFIED
+
+Inspected `git diff -- README.md docs/PLAN.md docs/STATE.md docs/DEVELOPMENT_LOG.md` and `git diff --no-index -- NUL` for each new source/test file. Both no-index diffs returned 1, the normal new-file difference result. Separate no-index --check calls likewise returned 1 with no whitespace diagnostics; the test-file check was run separately after the first command's exit guard stopped on that expected difference code. The tracked git diff --check returned 0 after cycle 1. Git emitted only expected LF-to-CRLF conversion warnings; repository line-ending configuration was not changed.
+
+Review found only six intended files: README.md, docs/STATE.md, docs/DEVELOPMENT_LOG.md, docs/PLAN.md, src/domain/card.ts, and tests/unit/card.test.ts. Source is limited to the physical card types and fixed deterministic inventory; tests independently establish all required counts, supported values, distinct physical copies, and complete ordering. No shuffle, ShoeState, gameplay, future module, dependency, configuration, or original harness test changed. AC-M1-001 is verified; AC-M1-002 is covered only at inventory/identity level. Full lifecycle accounting remains a later task.
+
+Executable-file SHA-256 values captured at `2026-09-28 20:29:24 +08:00` (source/tests have not changed since first verification):
+
+- src/domain/card.ts: `E67C368C3655A963086BF8E6B792CC44E0240CEF8E22FB4E7F8FABB6313B1CCF`
+- tests/unit/card.test.ts: `3906FA4CF8DEAF8471030BAC849047BF65EBC07E36C280D8AD0FD76DD2E17805`
+
+M1-T02 is VERIFIED, not ACCEPTED; repairs 1/10. This is same-session task review, not the future fresh-session milestone review. Acceptance, commit, and push are NOT RUN; M1-T03 remains NOT STARTED. Proposed commit: `feat: add six-deck physical card inventory`. After these evidence/status edits, run the full harness and final Git checks on the exact deliverable; report the executed results without creating recursive metadata edits. Stop before commit as requested.

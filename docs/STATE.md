@@ -5,10 +5,12 @@ Document task: STATE-1.0
 Intended repository location: `docs/STATE.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: `M1 — Headless Blackjack Core`  
-Current task: `M1-T01 — Repository Bootstrap and Engineering Harness`  
-Status: M1-T01 VERIFIED and explicitly ACCEPTED for the local checkpoint, committed as 56020d60ff41b54d0c345068befddf2790390cea. M1 gameplay remains NOT STARTED.
+Current task: `M1-T02 — Physical Card Model and Six-Deck Inventory`
+Status: M1-T02 VERIFIED; user acceptance and checkpoint commit pending; repair cycles 1/10. M1-T01 remains VERIFIED / ACCEPTED / COMMITTED / PUSHED, repair cycles 2/10.
 
 ## 1. Current truth
+
+M1-T02 baseline at `2026-09-28 20:23:41 +08:00`: main and origin/main both `a1649501dd1b180e96ca6a766ec0fd00fab54c70`, upstream origin/main, ahead/behind 0/0, and a clean working tree. The user supplied publication parity verification at `2026-09-28 20:18:58 +08:00`; it is recorded within this task rather than in another metadata-only commit. Baseline harness verification passed (2 existing tests). M1-T02 adds only the physical-card model and deterministic six-deck construction. Its first full verification at `2026-09-28 20:27:41 +08:00` passed typecheck, lint, and 7 tests (5 inventory + 2 harness). After one README whitespace repair, Git checks passed at 20:32:52 +08:00 and the full harness passed again at 20:33:05 +08:00. Task review completed at 20:33:19 +08:00; acceptance and commit have not occurred.
 
 The Casino Blackjack repository directory now exists on the user's Windows machine and has been initialized as a local Git repository.
 
@@ -28,13 +30,13 @@ Observed bootstrap evidence:
 
 The list above is the historical pre-import baseline. At `2026-09-28 16:17:19 +08:00`, the post-import baseline confirmed the same repository, main branch, NO COMMIT, and NO REMOTE. All 11 imported documents plus the transfer manifest were untracked; no unknown overlapping files were found. At `16:17:20 +08:00`, every imported document matched SEED_MANIFEST.sha256. See DEVELOPMENT_LOG.md for executed commands and transfer evidence.
 
-At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and two document-harness tests were installed. Initial verification passed; deliberate typecheck failure returned exit 2 while later checks passed. The fixture was restored byte-for-byte, and the full verification at `2026-09-28 16:33:03 +08:00` passed (exit 0; 1 test file, 2 tests). The task review completed at `2026-09-28 16:36:03 +08:00`. See DEVELOPMENT_LOG.md for executable-file hashes, final verification, and command-repair evidence. No Blackjack source code exists.
+At `2026-09-28 16:29:57 +08:00`, the minimal TypeScript/Vitest/ESLint setup and two document-harness tests were installed. Initial verification passed; deliberate typecheck failure returned exit 2 while later checks passed. The fixture was restored byte-for-byte, and the full verification at `2026-09-28 16:33:03 +08:00` passed (exit 0; 1 test file, 2 tests). The task review completed at `2026-09-28 16:36:03 +08:00`. See DEVELOPMENT_LOG.md for executable-file hashes, final verification, and command-repair evidence. No Blackjack source code existed at that bootstrap checkpoint.
 
 ## 2. Delivery state
 
 Initial GitHub publication was verified at `2026-09-28 19:50:22 +08:00` according to the user's publication evidence. Public repository: [FrankieChan0312/casino-blackjack](https://github.com/FrankieChan0312/casino-blackjack). Origin fetch/push URL: `https://github.com/FrankieChan0312/casino-blackjack.git`. At publication, local `main` and `origin/main` both pointed to `bf7c21a46e61784234658a21c31fdbf1cac8048e`, main tracked origin/main, and the working tree was clean.
 
-This parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. This publication-evidence checkpoint is local-only: creating it will put main one commit ahead of the published checkpoint until a separately authorized push occurs. No new push is authorized here.
+That initial parity and clean baseline were independently observed locally at `2026-09-28 19:54:10 +08:00` (ahead/behind `0/0`). An unauthenticated GitHub API check at `2026-09-28 19:54:51 +08:00` confirmed public visibility, default branch main, and the same remote main SHA. The later publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 was subsequently pushed, as reported by the user at 20:18:58 +08:00 and corroborated by the M1-T02 local baseline. No M1-T02 push is authorized.
 
 Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, branch `main`, committed at `2026-09-28 19:19:50 +08:00` with message `chore: bootstrap M1 TypeScript verification harness`. All 18 reviewed files were committed with byte-identical staged content. The working tree was clean immediately after that commit. This metadata and the matching DEVELOPMENT_LOG.md entries belong to a separate docs-only checkpoint; the implementation checkpoint does not contain them. Git history identifies the metadata commit without requiring a self-referential hash update.
 
@@ -48,10 +50,12 @@ Local implementation checkpoint: `56020d60ff41b54d0c345068befddf2790390cea`, bra
 | Remote repository | `Public` | https://github.com/FrankieChan0312/casino-blackjack; origin uses the .git URL above. |
 | Branch upstream | `origin/main` | Local main tracks origin/main; publication parity was 0 ahead / 0 behind. |
 | Initial GitHub publication | `PASS` | User verification at 2026-09-28 19:50:22 +08:00; local and public-API evidence corroborated bf7c21a46e61784234658a21c31fdbf1cac8048e. |
-| Publication-evidence commit push | `NOT RUN` | This new documentation checkpoint is local-only; no additional push authorized. |
-| M1 implementation | `NOT STARTED` | No gameplay source code implemented. |
+| Publication-evidence commit push | `PASS` | User evidence at 20:18:58 +08:00; a1649501dd1b180e96ca6a766ec0fd00fab54c70 parity confirmed at M1-T02 baseline. |
+| M1 implementation | `IN PROGRESS` | Physical-card inventory only; no gameplay operations implemented. |
+| M1-T02 inventory | `VERIFIED` | src/domain/card.ts and five inventory unit tests; full harness and task review passed. |
+| M1-T02 acceptance / commit / push | `NOT RUN` | Stop before checkpoint commit; no push authorized. |
 | M1-T01 harness | `VERIFIED` | Typecheck, lint, 2 tests, and failure-propagation self-test passed. |
-| M1 automated verification | `NOT RUN` | Gameplay tests belong to later M1 tasks. |
+| Full M1 automated verification | `NOT RUN` | Inventory and harness checks PASS; full gameplay regression belongs to later tasks. |
 | M1 fresh-session review | `NOT RUN` | Review occurs after M1 implementation/verification. |
 | M1 user acceptance | `NOT RUN` | User acceptance can occur only after verified delivery. |
 | M1-T01 user acceptance | `ACCEPTED` | User explicitly accepted M1-T01 for the local checkpoint commit. |
@@ -82,7 +86,9 @@ Current executable milestone:
 
 Current executable task:
 
-`M1-T01 — Repository Bootstrap and Engineering Harness`
+`M1-T02 — Physical Card Model and Six-Deck Inventory`
+
+Current task scope is Suit, Rank, readonly PhysicalCard fields, and fixed six-deck inventory construction. No shuffle/randomness/shoe lifecycle, scoring, gameplay, wagering, UI, or future abstractions are included. AC-M1-001 is targeted; AC-M1-002 is covered only as the inventory identity foundation, not live/in-play/discard accounting.
 
 M1 remains:
 
@@ -117,7 +123,7 @@ Repair cycles are cumulative per substantive task and do not reset across sessio
 | Task ID | Repair cycles used | Limit | Status |
 | --- | ---: | ---: | --- |
 | `M1-T01` | 2 | 10 | `VERIFIED` |
-| `M1-T02` | 0 | 10 | `NOT STARTED` |
+| `M1-T02` | 1 | 10 | `VERIFIED` |
 | `M1-T03` | 0 | 10 | `NOT STARTED` |
 | `M1-T04` | 0 | 10 | `NOT STARTED` |
 | `M1-T05` | 0 | 10 | `NOT STARTED` |
@@ -127,26 +133,26 @@ Repair cycles are cumulative per substantive task and do not reset across sessio
 | `M1-T09` | 0 | 10 | `NOT STARTED` |
 | `M1-T10` | 0 | 10 | `NOT STARTED` |
 
-Repair cycles are 2/10. Both are review-command repairs after first validation: (1) PowerShell/Node inline quoting, (2) PowerShell 5.1 ConvertFrom-Json rejecting the lockfile's empty root key. Each was corrected and re-verified; neither required a harness/configuration/test change. They are conservatively counted under the task's broad repair rule. Initial baseline access failures and the planned, successful failure-injection self-test do not consume a cycle. No count was reset.
+M1-T02 repair cycles are 1/10. The first implementation and first full validation passed; the later git diff --check failed on trailing spaces in the changed README status line. Cycle 1 removed only those spaces and re-ran the whitespace check and full harness successfully. A rejected patch before the first implementation-plus-validation wrote no files and consumed no cycle; all evidence is retained in DEVELOPMENT_LOG.md. M1-T01 remains 2/10 for its two recorded review-command repairs (PowerShell inline quoting and lockfile JSON parsing). No count was reset.
 
 ## 6. Verification state
 
-Seed-transfer verification passed for all 11 documents. M1-T01 verification is complete; this does not verify the future M1 gameplay milestone.
+M1-T01 remains verified. The current M1-T02 checks cover AC-M1-001 and the physical inventory foundation of AC-M1-002 only. Live/in-play/discard accounting and the full M1 gameplay milestone are not yet verified.
 
 | Check | State | Note |
 | --- | --- | --- |
-| `scripts/verify.ps1` | `PASS` | Final run at 2026-09-28 16:38:05 +08:00, exit 0; executable hashes in DEVELOPMENT_LOG.md. |
+| `scripts/verify.ps1` | `PASS` | M1-T02 post-repair run at 2026-09-28 20:33:05 +08:00, exit 0; 2 files / 7 tests. |
 | TypeScript typecheck | `PASS` | `npm run typecheck`, exit 0. |
 | Lint | `PASS` | `npm run lint`, exit 0. |
 | Harness tests | `PASS` | `npm run test`, exit 0; 1 file, 2 tests. |
-| Failure propagation self-test | `PASS` | Deliberate type error: typecheck FAIL/2; lint and tests PASS; overall exit 2. Original fixture hash restored. |
-| Unit tests | `NOT RUN` | No gameplay implementation/test suite exists yet. |
+| Failure propagation self-test | `PASS` | Historical M1-T01 evidence: deliberate type error returned overall exit 2; fixture restored. Harness unchanged in M1-T02. |
+| Inventory unit tests | `PASS` | 5 tests: 312 cards/IDs, exact ranks/suits, six copies, six complete decks, and deterministic full order. |
 | Integration tests | `NOT RUN` | No implementation/test suite exists yet. |
 | Browser/E2E tests | `NOT APPLICABLE` | M1 has no browser UI. |
-| `git diff --check` | `PASS` | Final Git inspection at 2026-09-28 19:12:52 +08:00, exit 0; unborn repository has untracked files, so this alone does not check their contents. |
-| Final task addition review | `PASS` | Read new files, inspected no-index diffs, checked lockfile consistency and unchanged seed hashes. No unrelated implementation found. |
+| M1-T02 `git diff --check` | `PASS` | Exit 0 at 20:32:52 +08:00 after cycle 1; new files also inspected with no-index checks. |
+| M1-T02 final task review | `PASS` | Completed at 20:33:19 +08:00: exact tracked diff and both new-file diffs inspected; only six intended files. |
 
-Gameplay unit/integration checks remain NOT RUN. Fresh-session milestone review is NOT RUN; the same-session task review is not independent review.
+Gameplay-flow integration checks remain NOT RUN. Fresh-session milestone review is NOT RUN; same-session task review is not independent review.
 
 ## 7. Known blockers
 
@@ -158,7 +164,7 @@ However, M1-T01 must inspect the actual Windows target directory before modifica
 
 ### Repository-state uncertainty
 
-The repository is on branch `main`, tracking `origin/main`; the accepted implementation checkpoint remains `56020d60ff41b54d0c345068befddf2790390cea`. Its metadata checkpoint `bf7c21a46e61784234658a21c31fdbf1cac8048e` is the verified initial publication. The new publication-evidence commit is not included in that published SHA.
+The repository is on branch `main`, tracking `origin/main`, both at a1649501dd1b180e96ca6a766ec0fd00fab54c70 at the M1-T02 baseline. The original accepted implementation checkpoint remains 56020d60ff41b54d0c345068befddf2790390cea. M1-T02 work is uncommitted and has not been pushed.
 
 ### Planning artifact placement
 
@@ -176,11 +182,11 @@ Do not change visibility or perform another push without authorization for that 
 
 ## 9. Next executable task
 
-The user authorized one local documentation commit, `docs: record initial GitHub publication`, recording the publication evidence in STATE.md and DEVELOPMENT_LOG.md only. No further implementation or push is authorized by this task. M1-T02 has not started.
+M1-T02 is VERIFIED and stopped before the checkpoint commit. Await explicit user acceptance and local commit authorization. Proposed commit: `feat: add six-deck physical card inventory`. No M1-T02 push or M1-T03 implementation is authorized.
 
 Next implementation task after that checkpoint:
 
-`M1-T02 — Physical Card Model and Six-Deck Inventory` (NOT STARTED).
+`M1-T03 — Randomness Boundary, Shuffle, and Cut Position` (NOT STARTED; separate authorization required).
 
 Completed baseline actions (historical):
 
@@ -214,7 +220,7 @@ M1-T01 may be marked `VERIFIED` only after:
 - the task diff contains no unrelated modifications;
 - any commit/push status is recorded separately and truthfully.
 
-These M1-T01 conditions have been met. M1-T01 remains VERIFIED and ACCEPTED, and the initial publication at bf7c21a46e61784234658a21c31fdbf1cac8048e is verified. The new publication-evidence commit is not pushed; fresh-session milestone review remains uncompleted. Repair cycles remain 2/10.
+These M1-T01 conditions have been met. M1-T01 remains VERIFIED and ACCEPTED, with its publication-evidence commit a1649501dd1b180e96ca6a766ec0fd00fab54c70 pushed as recorded in the M1-T02 baseline. Fresh-session milestone review remains uncompleted. M1-T01 repair cycles remain 2/10; M1-T02 is tracked separately.
 
 ## 11. Completion vocabulary
 
