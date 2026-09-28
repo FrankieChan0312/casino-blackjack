@@ -671,3 +671,18 @@ M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user cont
 | M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | IMPLEMENTED / VERIFIED locally; final publication pending, 1/10 |
 
 For each task: implementation -> independent explicit tests -> full scripts/verify.ps1 -> diff/status review -> checkpoint commit -> push origin/main -> fetch/0-0/clean -> next task. Commit messages follow the user contract. Stop on rules/spec/design conflict, important unresolved ambiguity, unknown overlap, unavailable required validation, 10/10 repairs, credentials/paid resources/destructive history or scope expansion. No wagering, credits, advanced actions, UI, network multiplayer or M3+. No automatic acceptance. T06 ends at the mandatory fresh-session gate; this implementation session must not perform that review.
+
+## 10. Authorized M3 batch (supersedes prior milestone next-action notes)
+
+M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user contract. No independent review is claimed by this implementation session. M3 tasks are not automatically accepted. Recommended settings for every task: GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+| Task | Scope and acceptance | Status | Repairs |
+| --- | --- | --- | --- |
+| M3-T01 | Integer half-credit units, 2000-unit bankroll, atomic reserve/release, invalid/duplicate rejection | VERIFIED; publication pending | 0/10 |
+| M3-T02 | OPEN betting, main wager 20..2000 even units, atomic changes/cancel, seat lock, explicit funded deal | NOT STARTED | 0/10 |
+| M3-T03 | Explicit gross/net records, exact ordinary/Natural/push/loss returns, deferred one-time table commit | NOT STARTED | 0/10 |
+| M3-T04 | Whole-round financial VOID, actual-stake refund once, pending removal, recovery and next-round funds | NOT STARTED | 0/10 |
+| M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | NOT STARTED | 0/10 |
+| M3-T06 | Accurate documentation and findings-first new-session review package; no new features | NOT STARTED | 0/10 |
+
+Each task: scope implementation -> explicit independent tests -> full scripts/verify.ps1 and checked exits -> diff/status review -> authorized commit/push to origin/main -> fetch, 0/0 and clean -> next task. Stop for authority conflict, ownership ambiguity, unknown overlap, unavailable required validation, 10 repairs or stalled repair, destructive Git, credentials, paid resources, prohibited future scope or external publication outside authorization. No advanced actions, side bets, Bet Behind, UI/network multiplayer, real money, merge/release/deployment or M4 work. T06 must stop before genuinely fresh-session independent review.

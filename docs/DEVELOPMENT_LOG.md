@@ -1196,3 +1196,19 @@ Git history and git diff --name-only from the accepted M1 SHA confirm five M2 so
 Full child-PowerShell verify.ps1 started 2026-09-29 00:29:54 +08:00: PASS/0, typecheck/lint and 18 files / 233 tests. At 00:30:42 git diff --check, full status and diff inspection returned 0; exactly the five authorized documents changed. Complete README/LAB and PLAN/STATE/log diffs were read against the implemented API/tests. No gameplay requirement gap was exposed and no executable file changed.
 
 Same-session task review found two LOW documentation wording issues: STATE's combined redaction sentence could imply physical IDs/shoe order become visible on reveal, and its all-checkpoints-pushed lead-in could include still-pending T06. Hypothesis: separating hole-card reveal from permanently hidden fields and naming T01–T05 explicitly removes both ambiguities without changing implementation. Targeted correction applied only to STATE; PLAN/log record cumulative T06 1/10. No independent milestone review is claimed. Final full harness and final staged diff/whitespace/status recheck are required after these evidence updates. On PASS, commit only the five documents with the authorized T06 message, push/fetch/parity, report exact final SHA and STOP; M2/tasks remain NOT ACCEPTED.
+
+## M3-T01 — Credit units / funding primitives
+
+### 2026-09-29 00:58:54 +08:00 — BASELINE / USER_ACCEPTANCE
+
+Required gate PASS: correct repository, main, HEAD=origin/main=c9f7f35bf874a0e7673505cbbea745ce035ac695, 0/0, clean, authorized origin URL unchanged. Each successful Git check returned 0. First sandbox attempt was BLOCKED by dubious ownership; approved owning-user read succeeded without changing global safe.directory. An exploratory src/index.ts read found no barrel; actual M2 imports use domain files. No unknown changes or authority conflict identified.
+
+M2 is explicitly ACCEPTED by the user at this baseline. M2 T06 publication is confirmed by this clean main/origin parity. Prior pending-acceptance/publication/next-action notes are historical. M2 repairs remain 1,0,0,0,1,1; M1 repairs remain 2,1,0,0,1,0,1,0,0,1. No new independent review claimed. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+T01 contract: only integer half-credit primitives, 2000-unit starting bankroll, available/reserved invariants, atomic reserve/release and M3 ownership design. No betting or T02 implementation. Acceptance includes exact funds, one-unit-short failure, zero/negative/noninteger/nonfinite rejection, duplicate reserve/release and input preservation. Step -> verification: minimal pure module -> independent unit cases -> full verify.ps1 -> complete task diff/whitespace/status -> authorized checkpoint/push/fetch/clean -> T02. Global M3 stop conditions and exclusions in PLAN section 10 apply. No unresolved ownership ambiguity: fixed-seat bankroll is sufficient and reconfiguration must retain it.
+
+### 2026-09-29 01:01:56 +08:00 — IMPLEMENTATION / VALIDATION
+
+Added credits.ts and credits.test.ts; extended DESIGN/PLAN/STATE with the authorized M3 scope and acceptance. Pure funding has no card/game/RNG access. Safe integers additionally reject unsupported fractional-unit values and unsafe arithmetic. Pending state is deferred until settlement needs it. No dependency or M1/M2 edit.
+
+Full command powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1: PASS/0; typecheck/lint PASS, 19 files / 250 tests PASS. First implementation/validation required no correction: T01 0/10. Reviewed all new source/test contents; final Git review follows before publication.
