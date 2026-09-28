@@ -272,7 +272,7 @@ Do not add seeded replay as a product feature.
 
 ## M1-T04 — Shoe Accounting and Lifecycle
 
-**Status:** `VERIFIED` — full verification and task review passed; awaiting user acceptance and checkpoint commit; repair cycles 0/10.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 0/10. See the M1-T05 baseline in STATE.md.
 **Depends on:** `M1-T03 VERIFIED`
 
 ### Scope
@@ -303,7 +303,7 @@ Use invariant tests and controlled fault injection.
 
 ## M1-T05 — Hand Evaluation and Natural Blackjack
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — full harness and task review passed; awaiting user acceptance and checkpoint commit; repair cycles 1/10.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-The current task is `M1-T04 — Shoe Accounting and Lifecycle`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. This task provides shoe-level operations; Round/Game orchestration remains later scope. M1-T03's accepted/published baseline is recorded in STATE.md. M1-T05/M1-T06 remain NOT STARTED and outside the current authorization.
+The current task is `M1-T05 — Hand Evaluation and Natural Blackjack`: IMPLEMENTED / VERIFIED, awaiting user acceptance and checkpoint commit. This task provides pure scoring and explicit original-hand eligibility only. M1-T04's accepted/published baseline is recorded in STATE.md. M1-T06 remains NOT STARTED and outside the current authorization.

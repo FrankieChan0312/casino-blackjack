@@ -880,3 +880,46 @@ Review checked independent accounting expectations, frozen input ownership, exac
 STATE/PLAN record M1-T04 IMPLEMENTED / VERIFIED, pending explicit acceptance and commit. STATE also reconciles stale M1-T03 acceptance/publication wording with the verified baseline. Repair counts remain M1-T04 0/10, M1-T03 0/10, M1-T02 1/10 and M1-T01 2/10. This is same-session task review; full-M1 fresh-session review is NOT RUN. M1-T05/M1-T06 remain NOT STARTED.
 
 After these evidence updates, run the full harness and final whitespace/status/diff/new-file checks on the exact deliverable, confirm unchanged HEAD/origin parity, and report actual results in the delivery without a recursive metadata update. Stop before the checkpoint commit, proposed message `feat: add shoe accounting and lifecycle`. No acceptance, commit or push is implied by VERIFIED.
+
+## M1-T05 — Hand Evaluation and Natural Blackjack
+
+### 2026-09-28 21:41:40 +08:00 — TASK_START / BASELINE
+
+Read AGENTS.md, SKILL.md, RULES.md, SPEC.md, DESIGN.md, PLAN.md, STATE.md, DEVELOPMENT_LOG.md and the card/random/shoe modules and existing tests. Relevant authority is R05, AC-M1-008/009, DESIGN section 5.4 and D-M1-005, and PLAN M1-T05. Recommended model: GPT-6 Astra; effort: High. Actual model: NOT VERIFIED; actual reasoning/effort: NOT VERIFIED (client settings not exposed).
+
+Executed Get-Date, Get-Location, git branch --show-current, git rev-parse HEAD, git rev-parse origin/main, git status --short and git rev-list --left-right --count origin/main...HEAD. Git commands passed/0: main, HEAD and origin/main both `4a25516854399587ec4f5dd47f8d8e5fc0096098`, clean working tree, behind/ahead 0/0. M1-T04 was explicitly accepted and committed at 21:36:17 +08:00 as `feat: add shoe accounting and lifecycle`; the user supplied push/parity evidence at 21:38:53 +08:00, corroborated by this fresh local baseline. No separate metadata-only commit is created. M1-T04 remains 0/10, M1-T03 0/10, M1-T02 1/10 and M1-T01 2/10; M1-T05 starts at 0/10.
+
+Task contract: implement only pure hand evaluation, numeric/face values, Ace adjustment, hard/soft/21/bust flags and natural classification with explicit original-unsplit eligibility. Exclude Round/Game/dealer/outcome/initial-deal/public-view/action logic, shoe changes, Split implementation, wagering, seats, UI, persistence/network/cloud and M1-T06. Stop on authority conflicts, unknown overlap, required future scope, unavailable tooling, destructive Git, credentials/paid resources or 10 repairs. No commit, push or history rewrite. Proposed commit: `feat: add blackjack hand evaluation`.
+
+Step -> verification: implement minimal hand.ts -> explicit rank/total/flag and natural eligibility cases plus frozen input/shoe purity -> full verify.ps1 and Git checks -> inspect tracked/new-file diffs -> persist evidence and stop before commit. Design keeps evaluation and natural predicate separate. Required originalHandEligible is a function argument, not a Hand field or split ancestry: it makes the task's eligibility requirement explicit while preserving DESIGN's no-split-metadata decision. No authority change or rules conflict is needed. Empty input is explicitly defined/tested as total 0 with all flags false and not natural; callers supply valid typed PhysicalCards.
+
+### 2026-09-28 21:43:22–21:43:27 +08:00 — FIRST VALIDATION
+
+Added only src/domain/hand.ts and tests/unit/hand.test.ts. evaluateHand returns readonly total/isSoft/isBust/isTwentyOne; Aces start at 11 and decrease by 10 until non-busting or all counted at 1. isSoft means an Ace still counts as 11 after adjustment. isNaturalBlackjack(cards, originalHandEligible) has a required boolean (no permissive default) and explicitly checks two cards plus Ace/10-value in either order. No derived mutable state or changes to card/random/shoe were needed.
+
+Executed `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`: PASS/0. Typecheck and lint each PASS/0; Vitest passed 5 files / 66 tests, start 21:43:26 +08:00. The 37 new cases cover all 13 rank values, 21 explicit evaluation rows in both orders (including empty, all requested Ace/soft/hard/bust/21 examples and multiple-Ace bust), four natural rank cases with both orderings and both eligibility values, ten non-natural hands, and frozen input/card-reference/shoe-state preservation. Expected totals/flags are explicit facts, never derived from production evaluation. First implementation and first validation consume no repair cycle.
+
+### 2026-09-28 21:43:55–21:44:43 +08:00 — REPAIR CYCLE 1 / REVIEW COMMAND
+
+Evidence: the review command printed both complete new-file diffs successfully, then stopped with exit 1 at the first git diff --no-index --check. Only the expected LF-to-CRLF warning appeared; no whitespace-error diagnostic was emitted. The command had incorrectly required exit 0 for no-index comparison against NUL, preventing the remaining checks from running.
+
+Falsifiable hypothesis: exit 1 indicates the expected new-file difference; an actual whitespace/error condition would produce diagnostics and an error code above 1. Targeted correction: handle the no-index difference status separately, print each status, fail for error statuses and inspect output for whitespace diagnostics. Do not change files, assertions or the verification harness.
+
+Re-verification at 21:44:43 +08:00: both new-file checks returned 1 with no whitespace diagnostics; git diff --check and git status --short --untracked-files=all passed/0. Only hand.ts and hand.test.ts were untracked at this point. Corrected command completed with exit 0. The command repair consumes one cycle, consistent with earlier task review-command accounting. Cumulative M1-T05 is 1/10; all previous task counts unchanged. No source/test failure occurred and no check was weakened.
+
+### 2026-09-28 21:44:58 +08:00 — SOURCE REVIEW EVIDENCE
+
+The complete 42-line hand.ts and 93-line hand.test.ts additions were reviewed. No randomness, mutable state, turn sequencing, dealer/outcome logic or new infrastructure appears in the evaluator. No required test expectation depends on the evaluator. Source/test SHA-256 captured after review, unchanged since first validation:
+
+- src/domain/hand.ts: `4D479A3A8D2317866319E84009636100F4D7BED4CA264644BE6D33A2C23E9372`
+- tests/unit/hand.test.ts: `CD644BE236C9DB6EB5983E75CEB1A68A5E6CE72638C4CD9C5BFB1FEAAC754D3F`
+
+STATE/PLAN/README now track the M1-T05 task and the accepted/published M1-T04 prerequisite. README changes only actual implemented capability/status. Full task diff/documentation review and final exact-version harness remain to run after these updates. LAB_MANUAL is unchanged: this is a task checkpoint, not the completed-M1 learning checkpoint. RULES/SPEC/DESIGN, all existing source/tests, configuration and dependencies remain unchanged. M1-T06 is NOT STARTED; acceptance, commit and push are NOT RUN.
+
+### 2026-09-28 21:49:20 +08:00 — COMPLETE TASK DIFF REVIEW
+
+Executed git diff --check, git status --short --untracked-files=all and git diff -- README.md docs/PLAN.md docs/STATE.md docs/DEVELOPMENT_LOG.md; all PASS/0. Reviewed the full tracked diff in addition to both new-file diffs above. Only six intended files are changed: hand.ts, hand.test.ts, README.md, PLAN.md, STATE.md and DEVELOPMENT_LOG.md. Scope and evidence agree with R05 and AC-M1-008/009; no M1-T06 implementation or unrelated changes were found. Stale M1-T04 acceptance/publication wording is reconciled with the current baseline; historical log entries remain intact.
+
+STATE/PLAN now record M1-T05 IMPLEMENTED / VERIFIED. Repair cycles remain 1/10; M1-T04 0/10, M1-T03 0/10, M1-T02 1/10 and M1-T01 2/10 are unchanged. Review is same-session only; the full-M1 fresh-session milestone review remains NOT RUN. Acceptance, commit and push remain NOT RUN.
+
+After this evidence/status update, run the full harness and final Git whitespace/status/parity checks on the exact deliverable, confirm source/test hashes unchanged, and report actual final results in the delivery without recursive metadata updates. Stop before the proposed checkpoint commit `feat: add blackjack hand evaluation`; do not start M1-T06.
