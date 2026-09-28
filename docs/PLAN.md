@@ -204,7 +204,7 @@ Stop if:
 
 ## M1-T02 — Physical Card Model and Six-Deck Inventory
 
-**Status:** `VERIFIED` — inventory and harness checks passed; repair cycles 1/10. User acceptance and checkpoint commit pending.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T03 baseline in STATE.md.
 **Depends on:** `M1-T01 VERIFIED`
 
 ### Scope
@@ -242,7 +242,7 @@ Stop on any disagreement between card identity design and `DESIGN.md`.
 
 ## M1-T03 — Randomness Boundary, Shuffle, and Cut Position
 
-**Status:** `NOT STARTED`  
+**Status:** `VERIFIED` — deterministic shuffle/cut checks and full harness passed; repair cycles 0/10. Acceptance and checkpoint commit pending.
 **Depends on:** `M1-T02 VERIFIED`
 
 ### Scope
@@ -655,4 +655,4 @@ Planned themes:
 
 ## 8. Current next task
 
-The current task is `M1-T02 — Physical Card Model and Six-Deck Inventory`: VERIFIED, awaiting user acceptance and checkpoint commit authorization. M1-T01's accepted/published baseline is recorded in STATE.md. M1-T03 remains NOT STARTED and is outside the current authorization.
+The current task is `M1-T03 — Randomness Boundary, Shuffle, and Cut Position`: VERIFIED, awaiting user acceptance and checkpoint commit authorization. This task verifies selection only; fixed cut storage and lifetime checks remain M1-T04 scope under the user's task contract. M1-T02's accepted/published baseline is recorded in STATE.md. M1-T04 remains NOT STARTED and is outside the current authorization.

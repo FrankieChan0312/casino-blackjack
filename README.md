@@ -2,7 +2,7 @@
 
 A portfolio-oriented Blackjack project focused on **verifiable game-engine behaviour, deterministic testing, clear domain modelling, and reproducible engineering evidence**.
 
-> **Current status:** M1-T02 physical-card inventory implemented; see [STATE.md](docs/STATE.md) for verification evidence.
+> **Current status:** M1-T03 randomness, shuffle and cut selection implemented; see [STATE.md](docs/STATE.md) for verification evidence.
 > No Blackjack gameplay implementation has been verified yet.  
 > No browser UI, deployment, or real-money functionality exists.
 
@@ -36,7 +36,7 @@ The full product is intentionally split into milestones. Features described in t
 
 M1 is intentionally small and focused.
 
-Implemented so far: `src/domain/card.ts` defines card types and creates an unshuffled inventory of 312 distinct physical cards (six copies of each rank/suit). IDs use `deckIndex:suit:rank`; order is deck 1–6, clubs/diamonds/hearts/spades, then A/2–10/J/Q/K. Shuffle, shoe lifecycle, and gameplay remain planned.
+Implemented so far: `src/domain/card.ts` defines card types and creates an unshuffled inventory of 312 distinct physical cards (six copies of each rank/suit). IDs use `deckIndex:suit:rank`; order is deck 1–6, clubs/diamonds/hearts/spades, then A/2–10/J/Q/K. `random.ts` provides injected integer randomness, a Math.random adapter for simulation, and Fisher-Yates shuffle that returns a new array preserving the original card objects. `shoe.ts` currently selects only a cut position using `219 + nextInt(31)`. Shoe lifecycle, cut lifetime storage, and gameplay remain planned.
 
 It will implement a one-seat, no-wager, headless Blackjack engine with:
 
@@ -122,7 +122,7 @@ If local script execution is restricted, invoke it in a child process:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
 ```
 
-The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite has two harness-level document checks and five inventory unit tests for card counts, identity, rank/suit membership, deck composition, and deterministic order. Gameplay-flow integration tests have not been implemented. Browser/E2E checks are NOT APPLICABLE to M1.
+The harness runs `npm run typecheck`, `npm run lint`, and `npm run test`, checks each exit code, and returns non-zero on failure or an unavailable command. It runs from its own repository root regardless of the caller's directory. The current suite covers the document harness, physical inventory, production random adapter, scripted shuffle, input preservation, invalid random outputs, and all 31 cut positions. Gameplay-flow integration tests have not been implemented. Browser/E2E checks are NOT APPLICABLE to M1.
 
 The toolchain uses TypeScript, ESLint with typescript-eslint, and Vitest in its default Node environment. Vite is a Vitest development dependency; no browser application or server is implemented. Exact versions are in package.json and package-lock.json. No production dependencies or build output are needed for this checkpoint.
 
@@ -234,16 +234,16 @@ Specification:         prepared
 M1 design:             prepared
 Engineering plan:      prepared
 Repository bootstrap:  engineering harness implemented
-Blackjack source code: physical-card inventory only
+Blackjack source code: inventory, randomness, shuffle, cut selection
 Automated verification:see docs/STATE.md
-GitHub push:            M1-T01 published; M1-T02 not committed/pushed
+GitHub push:            M1-T02 published; M1-T03 not committed/pushed
 Browser UI:             not implemented
 Deployment:             not applicable to M1
 ```
 
 The current executable task is:
 
-`M1-T02 — Physical Card Model and Six-Deck Inventory`
+`M1-T03 — Randomness Boundary, Shuffle, and Cut Position`
 
 ## Local Repository Target
 

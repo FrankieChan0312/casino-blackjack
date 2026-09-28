@@ -803,3 +803,43 @@ The metadata commit's own hash/time and final working-tree/divergence results wi
 ### 2026-09-28 20:44:09 +08:00 — VALIDATION
 
 Ran `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`: PASS/0; typecheck, lint, and 2 test files / 7 tests passed (Vitest started at 20:44:14 +08:00). Also ran git diff --check, git diff -- docs/STATE.md docs/DEVELOPMENT_LOG.md, and git status --short: all exited 0. Reviewed the exact diff; only these two intended metadata files changed. No repair was needed: M1-T02 remains 1/10 and M1-T01 remains 2/10. The evidence-only updates in this entry and STATE.md are followed by the same full verification and final staged diff/whitespace checks before commit; their results are reported in the delivery without further post-commit metadata edits.
+
+## M1-T03 — Randomness Boundary, Shuffle, and Cut Position
+
+### 2026-09-28 20:53:02 +08:00 — TASK_START / BASELINE
+
+Read AGENTS.md, SKILL.md, RULES.md, SPEC.md, DESIGN.md, PLAN.md, STATE.md, DEVELOPMENT_LOG.md, and the M1-T02 card source/tests. Relevant authority: R03/R04, AC-M1-003/004, DESIGN sections 4, 5.2, 15, 16, 17 and 19, and PLAN M1-T03. Recommended model: GPT-6 Astra; effort: High. Actual model: NOT VERIFIED; actual reasoning/effort: NOT VERIFIED (client settings not exposed).
+
+Executed Get-Date, Get-Location, git rev-parse --show-toplevel, git branch --show-current, git rev-parse HEAD, git rev-parse origin/main, git status --short, and git rev-list --left-right --count origin/main...HEAD. Git commands all exited 0: correct repository, main, HEAD and origin/main both `a424ba5ca4de7ae28416b8d44420f7911d0fab75`, clean working tree, behind/ahead 0/0. No overlapping changes. The user supplied push/parity evidence at `2026-09-28 20:49:10 +08:00`; recorded here without another metadata-only commit. M1-T02 is IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED, with accepted implementation 28bf85d5f172221efef9bc1e428ff73e88b6d98e and acceptance metadata a424ba5ca4de7ae28416b8d44420f7911d0fab75. No push was performed by this task.
+
+Baseline harness started at `2026-09-28 20:53:01 +08:00`: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`, PASS/0; typecheck/lint and 2 files / 7 tests passed. An exploratory read of eslint.config.js returned file-not-found; rg located the actual eslint.config.mjs and it was read. The installed lint tool was available and passed. This pre-implementation lookup consumes no repair cycle. M1-T03 starts at 0/10; M1-T02 stays 1/10; M1-T01 stays 2/10.
+
+Task contract: implement only the integer RandomSource boundary, production adapter, test-only scripted source, Fisher-Yates shuffle for physical cards, and inclusive 219..249 cut selection. Required evidence: explicit small permutation and repeated scripted result, complete 312-card identity preservation, unchanged input/fresh inventory, all 31 cut mappings, invalid source rejection, and existing harness/inventory regressions. No ShoeState, accounting/draw/replacement lifecycle, scoring/gameplay, replay product, money/seats/UI/networking/persistence/cloud, or M1-T04 work. Stop on authority conflicts, unknown overlap, required scope expansion, missing tools, destructive Git, credentials/paid resources, or 10 repair cycles. Stop before commit; no push/history rewrite. Proposed commit: `feat: add deterministic shuffle and cut selection`.
+
+Step -> verification: implement the minimal modules -> scripted independent unit checks -> full verify.ps1, git diff --check and status -> inspect tracked and untracked diffs -> persist actual evidence and stop for human acceptance. AC-M1-003 is verified here only at shuffle/cut level, not initial deal. AC-M1-004 is verified here only at selection level, not shoe-lifetime storage. The user's explicit task boundary assigns that lifetime requirement in PLAN to M1-T04; no rules/spec/design conflict requires changing authority files.
+
+### 2026-09-28 20:56:21 +08:00 — DECISION / IMPLEMENTATION
+
+Added src/domain/random.ts (RandomSource, mathRandomSource, shuffleCards), src/domain/shoe.ts (only selectCutPosition), and tests/unit/random.test.ts (10 tests, with a local scripted helper). DESIGN sections 4/19 place cut rules in shoe.ts and forbid Blackjack rules in random.ts; adding just the working cut function honors that separation without implementing ShoeState or M1-T04. No generic random/collection framework, seed, replay, or empty future module was added. Existing card source/tests and all dependencies/configuration remain unchanged.
+
+RandomSource accepts positive safe-integer bounds; the Math.random adapter checks that precondition. Shuffle copies the array, uses descending Fisher-Yates with bounds n..2, retains card object references, and rejects non-integer/out-of-range source results. Cut selection consumes exactly one nextInt(31), validates its offset, and returns 219 + offset. Invalid adapter outputs fail fast under DESIGN section 16 rather than being clamped, retried, or silently accepted. Small guards are local to each consumer; no validation framework is needed.
+
+Tests explicitly expect the small ABCD -> CDAB permutation for [1,0,1], then cut 249 for the next scripted value 30; repeat with a fresh script. Further checks cover copied empty/single arrays, frozen 312-card input with exact identity/object preservation, partial-shuffle failure without input mutation, both cut endpoints, all 31 explicit expected cut positions, invalid offsets including -1/31, and controlled production adapter bounds. Math.random is blocked in tests except when deliberately stubbed for the adapter; there are no random retry/statistical loops. STATE/PLAN record the current task; README materially changes to describe newly implemented shuffle/cut capability. LAB_MANUAL remains unchanged because M1 is not at its milestone learning checkpoint.
+
+### 2026-09-28 20:57:13 +08:00 — VALIDATION
+
+First implementation verification: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`, PASS/0. Typecheck and lint each PASS/0; Vitest passed 3 files / 17 tests (10 new, 7 existing), starting at 20:57:18 +08:00. No source/test correction was required. First implementation and first validation consume no repair cycle; cumulative M1-T03 count remains 0/10.
+
+### 2026-09-28 20:59:57 +08:00 — REVIEW / VERIFIED
+
+Git review at `2026-09-28 20:58:32 +08:00`: git diff --check PASS/0, git status --short --untracked-files=all PASS/0, and exact tracked git diff PASS/0. Reviewed the three new files using git diff --no-index -- NUL <path>; each returned 1 for the expected new-file difference, with no execution error. Scope is exactly seven files: src/domain/random.ts, src/domain/shoe.ts, tests/unit/random.test.ts, README.md, docs/PLAN.md, docs/STATE.md, and docs/DEVELOPMENT_LOG.md. No existing code/test/configuration/dependency or rules/spec/design changes. Inspected the complete source/test additions, deterministic expectations, bounds, and ownership behavior. rg -n 'Math\.random|ShoeState|reshufflePending' src found only the production adapter's Math.random call. No ShoeState or shoe lifecycle exists.
+
+New executable-file SHA-256 values captured during review (unchanged since first verification):
+
+- src/domain/random.ts: `60F1409C9385A1C43FF58C9CB1E802DE18EBFD7D4906B821C0BADD796EF1F219`
+- src/domain/shoe.ts: `F45CDF2F96F72C3BE59F50BA012C5BEDA08D6A88FAACD481FF2548CF09E77493`
+- tests/unit/random.test.ts: `547225C5FE313E45D3471A5440AAB83BE3841A26147C093FFFF0CE3D6670C48E`
+
+STATE/PLAN now record M1-T03 VERIFIED and pending acceptance/commit; M1-T04 stays NOT STARTED. STATE also updates prior M1-T02 push wording to the supplied publication evidence and fresh parity baseline. Repair counts remain M1-T03 0/10, M1-T02 1/10, M1-T01 2/10. This is same-session task review; the future full-M1 fresh-session review is NOT RUN. Cut lifetime and deterministic initial-deal verification remain later work and are not claimed here.
+
+After these evidence/status updates, run the full harness on the exact final version, final whitespace/status/diff checks, new-file whitespace checks, and HEAD/origin parity checks; report those actual results in the delivery without a recursive documentation-only checkpoint. Stop before commit with proposed message `feat: add deterministic shuffle and cut selection`. No acceptance, commit, push, or M1-T04 work is implied by VERIFIED.
