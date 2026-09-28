@@ -666,8 +666,8 @@ M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user cont
 | M2-T01 | Seven positions; atomic validated occupancy/sit-out; <=1 human; ascending frozen participation; between-round configuration | VERIFIED / COMMITTED / PUSHED (7824e57), 1/10 |
 | M2-T02 | Shared initial deal in two ascending passes, naturals/peek per seat, public seven-seat projection and secrecy | VERIFIED / COMMITTED / PUSHED (e0f7b36), 0/10 |
 | M2-T03 | Current HUMAN Hit/Stand only; skip terminal seats; advance on bust/21/stand; unchanged rejection | VERIFIED / COMMITTED / PUSHED (710b87d), 0/10 |
-| M2-T04 | Deterministic computer <17 Hit / >=17 Stand; pause for human; one S17 dealer; independent outcomes/integrity | VERIFIED locally, 0/10 |
-| M2-T05 | Full 24-scenario M2 regression mapping, cross-round shoe/cut/accounting and unchanged M1 regressions | NOT STARTED, 0/10 |
+| M2-T04 | Deterministic computer <17 Hit / >=17 Stand; pause for human; one S17 dealer; independent outcomes/integrity | VERIFIED / COMMITTED / PUSHED (2d21402), 0/10 |
+| M2-T05 | Full 24-scenario M2 regression mapping, cross-round shoe/cut/accounting and unchanged M1 regressions | VERIFIED locally, 1/10 |
 | M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | NOT STARTED, 0/10 |
 
 For each task: implementation -> independent explicit tests -> full scripts/verify.ps1 -> diff/status review -> checkpoint commit -> push origin/main -> fetch/0-0/clean -> next task. Commit messages follow the user contract. Stop on rules/spec/design conflict, important unresolved ambiguity, unknown overlap, unavailable required validation, 10/10 repairs, credentials/paid resources/destructive history or scope expansion. No wagering, credits, advanced actions, UI, network multiplayer or M3+. No automatic acceptance. T06 ends at the mandatory fresh-session gate; this implementation session must not perform that review.

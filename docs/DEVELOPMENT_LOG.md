@@ -1154,3 +1154,25 @@ Scope/acceptance: pure computer policy total<17 HIT / >=17 STAND using the evalu
 Added computer.ts, unit/computer.test.ts and integration/tableAutomation.test.ts; extended tableGame.ts. advanceTableAutomation is an explicit command called after deal/HUMAN action; it runs all available automation in one call and pauses without mutation on HUMAN. resolveTableDealer is independently callable only during DEALER_TURN. Shared draw loop precedes per-hand comparison, and terminal rejection prevents duplicate discard/resolution. Faults clear even earlier natural/bust results under whole-table integrity semantics while preserving cards.
 
 Full child-PowerShell verify.ps1 at 00:18:03–00:18:23 PASS/0: typecheck/lint, 17 files / 216 tests. Eight pure policy cases and thirteen integration cases added. Explicit expected sequences/results, draw spy count, frozen-input purity, two partial-fault stages, repeatability and S17 all PASS. Git diff --check/status PASS/0; four source/test paths reviewed in full. README/LAB now explicitly identify the deterministic, non-optimal M2 policy. No M1 test, dependency or tooling changes; T04 repairs 0/10.
+
+## M2-T05 — Full regression / harness
+
+### 2026-09-29 00:19:45 +08:00 — BASELINE / T04 PUBLICATION
+
+T04 committed/pushed 2d214024de4263c8ce08b50cfafbfd3aa07f6969; push/fetch PASS/0, main=origin/main, 0/0, clean. T04 repairs 0/10; T05 starts independently 0/10. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED.
+
+Scope/acceptance: review all 24 user-required integration scenarios, add missing full lifecycle/guard/cut/terminal coverage, preserve and independently inspect M1 regression, run full harness and create explicit mapping in STATE. No speculative feature or gameplay repair was identified during this review. Global non-goals/stop conditions apply. Step -> verification: inspect actual code/tests against contract -> add deterministic lifecycle cases -> full harness and M1 preservation check -> 24-row mapping/diff review -> checkpoint/push/parity -> T06.
+
+### 2026-09-29 00:22:04 +08:00 — FIRST VALIDATION / FAILURE
+
+Added tests/integration/tableLifecycle.test.ts with 17 cases; no production/harness/dependency change. Full child-PowerShell verify.ps1: typecheck/lint PASS, test FAIL/1, 216 prior tests PASS and all 17 new cases FAIL with Uncontrolled RNG at line 9. No assertion disabled.
+
+### 2026-09-29 00:22:32 +08:00 — REPAIR 1/10
+
+Falsifiable hypothesis: expression-bodied beforeEach returns the Math.random spy, so the test runner calls that returned function as cleanup, raising the intentional RNG error after each case. Existing M1 hooks use a void block body. Targeted fix: add braces/semicolon so the hook returns no function; keep the exact throwing RNG guard and every test assertion. Reran full verify.ps1: PASS/0, typecheck/lint, 18 files / 233 tests (test start 00:22:37). No production changes. T05 cumulative repairs 1/10; all other counts unchanged.
+
+### 2026-09-29 00:23:10 +08:00 — M1 PRESERVATION / REVIEW
+
+Git diff --check/status PASS/0, only the intended new lifecycle file before evidence updates. Enumerated original test/helper paths with git ls-tree at accepted M1 d1d8966fe55af1bc2b9348e305135952b7723b70; git diff --exit-code against all those paths PASS/0 (unchanged). Independently ran npm.cmd test -- with exactly its 12 original test files: PASS/0, 155 tests, test start 00:23:11. The unchanged harness discovers all M2 tests; its historical output label still says M1, but the full executed count is 233. No harness assertion or prior test was weakened.
+
+Reviewed new lifecycle file and M2 code against all 24 contract scenarios. Added full seven-computer completion, human/computer alone, two-round reconfiguration and snapshot preservation, both cut endpoints crossed during automation with deferred replacement, exact pre-deal boundaries for 1/3/7 seats, real exhaustion/recovery, repeated terminal rejection, dealer-phase configuration lock, no financial/advanced state, invalid minimum validation. Existing T01–T04 tests supply the remaining mapping in STATE. No new implementation issue found; this is task review, not the mandatory fresh-session review.
