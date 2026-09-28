@@ -20,3 +20,7 @@ No ledger resets. M1/M2 source/tests/helpers unchanged in T01.
 ## Next action
 
 Publish verified T01 after final diff/whitespace/status checks, then automatically start T02. Stop at T06 fresh-session review gate. Per-task publication evidence is incorporated into the following substantive checkpoint; final checkpoint identity/push/parity is reported from actual Git output without a recursive metadata commit.
+
+## T02 current checkpoint (supersedes T01 next action)
+
+T01 VERIFIED / COMMITTED / PUSHED: c29ef4c15674fa2779dddd48f6e36cbff060a2a0; 2026-09-29 01:04:41 +08:00 fetch/main parity 0/0 clean PASS. T02 IMPLEMENTED / VERIFIED locally; full harness at 01:07:01 PASS/0, 20 files / 267 tests. T02 repair count 0/10. New funded betting layer requires OPEN, preserves bankroll ownership, freezes seats/wagers and deals only explicitly funded seats. Settlement not yet implemented. Next: authorized T02 publication and T03. M3 remains NOT ACCEPTED; fresh-session review NOT RUN.

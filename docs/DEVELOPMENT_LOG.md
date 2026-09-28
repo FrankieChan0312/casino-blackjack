@@ -1212,3 +1212,17 @@ T01 contract: only integer half-credit primitives, 2000-unit starting bankroll, 
 Added credits.ts and credits.test.ts; extended DESIGN/PLAN/STATE with the authorized M3 scope and acceptance. Pure funding has no card/game/RNG access. Safe integers additionally reject unsupported fractional-unit values and unsafe arithmetic. Pending state is deferred until settlement needs it. No dependency or M1/M2 edit.
 
 Full command powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1: PASS/0; typecheck/lint PASS, 19 files / 250 tests PASS. First implementation/validation required no correction: T01 0/10. Reviewed all new source/test contents; final Git review follows before publication.
+
+## M3-T02 — Betting window / funded participation
+
+### 2026-09-29 01:04:41 +08:00 — BASELINE / T01 PUBLICATION
+
+T01 committed/pushed c29ef4c15674fa2779dddd48f6e36cbff060a2a0; push/fetch PASS/0, main=origin/main, 0/0, clean. Staged whitespace PASS/0. T01 repairs 0/10. T02 begins 0/10; recommended GPT-6 Astra / High, actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: explicit OPEN betting, min/max/even increments, exact funding, delta increases/decreases, cancellation, atomic rejection, frozen seats and wagers, no automatic computer bets, sparse funded-only dealing, no-funded rejection. No settlement/T03 or future financial actions. Step -> verification: thin M3 orchestration -> deterministic boundary/funding/lifecycle cases -> full harness -> task diff -> commit/push/parity -> T03. Global contract stop conditions apply.
+
+### 2026-09-29 01:07:49 +08:00 — IMPLEMENTATION / VALIDATION / REVIEW
+
+Added bettingGame.ts, bettingFixture.ts and betting.test.ts. M2 source/tests/helpers unchanged. The internal adapter marks unfunded occupied seats inactive only for M2 deal selection, then restores the actual seat configuration in both game and round snapshot. This avoids changing accepted M2 APIs and does not expose a no-wager path in M3 commands. Gameplay wrappers enforce the funded CLOSED phase. Funds remain seat-owned.
+
+Full child-PowerShell verify.ps1 at 01:07:01: PASS/0, typecheck/lint, 20 files / 267 tests. All T02 requirements covered by 17 tests including parameterized boundaries and grouped freeze/atomicity assertions. Complete new source/helper/test contents reviewed; no blocking finding. No repair: 0/10. Final Git checks and publication follow.
