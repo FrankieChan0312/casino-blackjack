@@ -681,8 +681,8 @@ M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user 
 | M3-T01 | Integer half-credit units, 2000-unit bankroll, atomic reserve/release, invalid/duplicate rejection | VERIFIED / COMMITTED / PUSHED c29ef4c | 0/10 |
 | M3-T02 | OPEN betting, main wager 20..2000 even units, atomic changes/cancel, seat lock, explicit funded deal | VERIFIED / COMMITTED / PUSHED 9f2e7c6 | 0/10 |
 | M3-T03 | Explicit gross/net records, exact ordinary/Natural/push/loss returns, deferred one-time table commit | VERIFIED / COMMITTED / PUSHED 3647e09 | 0/10 |
-| M3-T04 | Whole-round financial VOID, actual-stake refund once, pending removal, recovery and next-round funds | VERIFIED; publication pending | 0/10 |
-| M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | NOT STARTED | 0/10 |
+| M3-T04 | Whole-round financial VOID, actual-stake refund once, pending removal, recovery and next-round funds | VERIFIED / COMMITTED / PUSHED 5a492e8 | 0/10 |
+| M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | VERIFIED; publication pending | 0/10 |
 | M3-T06 | Accurate documentation and findings-first new-session review package; no new features | NOT STARTED | 0/10 |
 
 Each task: scope implementation -> explicit independent tests -> full scripts/verify.ps1 and checked exits -> diff/status review -> authorized commit/push to origin/main -> fetch, 0/0 and clean -> next task. Stop for authority conflict, ownership ambiguity, unknown overlap, unavailable required validation, 10 repairs or stalled repair, destructive Git, credentials, paid resources, prohibited future scope or external publication outside authorization. No advanced actions, side bets, Bet Behind, UI/network multiplayer, real money, merge/release/deployment or M4 work. T06 must stop before genuinely fresh-session independent review.

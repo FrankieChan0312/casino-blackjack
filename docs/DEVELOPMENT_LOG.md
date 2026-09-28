@@ -1254,3 +1254,19 @@ Scope/acceptance: genuine integrity-only VOID, exact actual-stake refunds, disca
 Extended bettingGame.ts and added financialLifecycle.test.ts (7 grouped cases). Complete source/test review confirms no voluntary cancellation of closed valid wagers, no clawback, no automatic replay, no reconfiguration replenishment, actual reserved amount used for refund, and both financial terminal states exclude the other operation. Preserved M1/M2 modules/tests/helpers.
 
 Full child-PowerShell verify.ps1 at 01:14:56 PASS/0: typecheck/lint, 22 files / 283 tests. Natural plus provisional bust loss are removed by a later computer draw failure; all funded seats recover initial balances. A real exhausted shoe is replaced only on a new funded deal and remains diagnostic in the old snapshot. No repair: T04 0/10. Git checks/publication follow.
+
+## M3-T05 — Full regression / harness
+
+### 2026-09-29 01:17:29 +08:00 — BASELINE / T04 PUBLICATION
+
+T04 committed/pushed 5a492e865a49036a66922fa61a5a606f831a9616; push/fetch PASS/0, main=origin/main, 0/0 clean, diff/staged whitespace PASS/0. T04 repairs 0/10; T05 starts 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: 40-case R06/R07/R13/financial-R17 mapping, missing funded gameplay regression, original M1/M2 preservation and independent runs, full harness. No feature implementation. Step -> verification: inspect requirements versus tests -> add missing funded regression -> full harness plus original-suite preservation/runs -> mapping/diff -> checkpoint/push/parity. Global stop conditions apply.
+
+### 2026-09-29 01:20:39 +08:00 — VALIDATION / REGRESSION REVIEW
+
+Added fundedRegression.test.ts (22 tests). No production code, prior test/helper, dependency or harness change. Cases independently expect ordinary 21 payouts, HUMAN pause/resume, all dealer Natural peek ranks, S17, both cut boundaries, same-shoe next-round balances including half-credit residue, initial and dealer faults, phase guards and absence of advanced financial action state. Full 40-row acceptance map is in STATE.
+
+Full child-PowerShell verify.ps1 started 01:19:34: PASS/0; typecheck/lint and 23 files / 305 tests. T05 repair count 0/10. The existing harness discovers all suites; its historical M1 output label is unchanged.
+
+At 01:20:31 git ls-tree enumerated accepted M2 src/tests/scripts/package paths and git diff --exit-code c9f7f35... -- those exact original paths PASS/0: no original executable/test/helper/dependency/harness change. Independent npm.cmd test -- original M1 paths (enumerated from d1d8966...) PASS/0, 12 files / 155 tests. At 01:20:37 independent M2-only suite (six additional original test paths) PASS/0, 6 files / 78 tests. No assertion weakened. Original M1 direct-baseline helper/test comparison and final task Git checks follow before publication. Same-session task regression review only; mandatory independent milestone review NOT RUN.
