@@ -7,7 +7,7 @@ Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`
 Rules baseline: `docs/RULES.md` — Blackjack House Rules v1.1  
 Specification baseline: `docs/SPEC.md` — SPEC-1.0  
 Design baseline: `docs/DESIGN.md` — DESIGN-1.0  
-Status: task plan with checkpoint statuses; execution evidence is in STATE.md, DEVELOPMENT_LOG.md and Git. M1 is ACCEPTED by the explicit M2 contract. M2 is mechanically verified; M2 fresh-session review is NOT RUN and M2 is not ACCEPTED.
+Status: task plan with checkpoint statuses; execution evidence is in STATE.md, DEVELOPMENT_LOG.md and Git. M1 is ACCEPTED by the explicit M2 contract. M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695 by the explicit M3 contract. M3 checkpoints and the mandatory fresh-review gate are in section 10.
 
 ## 1. Purpose
 
@@ -574,7 +574,7 @@ M1-T04 -------------+--> M1-T06 Initial Round / Public View
 
 ## 7. Later milestone roadmap
 
-M2 now follows the authorized task sequence in section 9. M3+ remain high-level, unimplemented and outside this batch.
+M2 is accepted. M3 follows section 10; M4+ remain unimplemented and outside this batch.
 
 ### M2 — Multi-seat Table and Computer Seats
 
@@ -655,9 +655,9 @@ Planned themes:
 
 ## 8. Current next task
 
-M2-T06 prepares the final documentation checkpoint, then STOP at the mandatory M2 fresh-session review gate in STATE.md. T01–T05 are VERIFIED / COMMITTED / PUSHED. No M2 task is ACCEPTED. No M3, merge, release or deployment is authorized.
+M3-T06 prepares the final verified documentation checkpoint, then STOP at the mandatory M3 fresh-session review gate in STATE.md. T01–T05 are VERIFIED / COMMITTED / PUSHED. No M3 task is ACCEPTED. No M4, merge, release or deployment is authorized.
 
-## 9. Authorized M2 batch (supersedes historical next-action notes)
+## 9. Historical M2 batch (accepted by M3 contract)
 
 M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user contract. Preserve M1 repair counts in STATE and log; M1-T10 is 1/10 including its review repair. Recommended settings for every M2 task: GPT-6 Astra / High. Actual model/effort NOT VERIFIED.
 
@@ -668,7 +668,7 @@ M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user cont
 | M2-T03 | Current HUMAN Hit/Stand only; skip terminal seats; advance on bust/21/stand; unchanged rejection | VERIFIED / COMMITTED / PUSHED (710b87d), 0/10 |
 | M2-T04 | Deterministic computer <17 Hit / >=17 Stand; pause for human; one S17 dealer; independent outcomes/integrity | VERIFIED / COMMITTED / PUSHED (2d21402), 0/10 |
 | M2-T05 | Full 24-scenario M2 regression mapping, cross-round shoe/cut/accounting and unchanged M1 regressions | VERIFIED / COMMITTED / PUSHED (c61ac01), 1/10 |
-| M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | IMPLEMENTED / VERIFIED locally; final publication pending, 1/10 |
+| M2-T06 | README/LAB/PLAN/STATE/log and findings-first fresh-session handoff | VERIFIED / COMMITTED / PUSHED c9f7f35; M2 ACCEPTED by M3 contract, 1/10 |
 
 For each task: implementation -> independent explicit tests -> full scripts/verify.ps1 -> diff/status review -> checkpoint commit -> push origin/main -> fetch/0-0/clean -> next task. Commit messages follow the user contract. Stop on rules/spec/design conflict, important unresolved ambiguity, unknown overlap, unavailable required validation, 10/10 repairs, credentials/paid resources/destructive history or scope expansion. No wagering, credits, advanced actions, UI, network multiplayer or M3+. No automatic acceptance. T06 ends at the mandatory fresh-session gate; this implementation session must not perform that review.
 
@@ -682,7 +682,7 @@ M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user 
 | M3-T02 | OPEN betting, main wager 20..2000 even units, atomic changes/cancel, seat lock, explicit funded deal | VERIFIED / COMMITTED / PUSHED 9f2e7c6 | 0/10 |
 | M3-T03 | Explicit gross/net records, exact ordinary/Natural/push/loss returns, deferred one-time table commit | VERIFIED / COMMITTED / PUSHED 3647e09 | 0/10 |
 | M3-T04 | Whole-round financial VOID, actual-stake refund once, pending removal, recovery and next-round funds | VERIFIED / COMMITTED / PUSHED 5a492e8 | 0/10 |
-| M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | VERIFIED; publication pending | 0/10 |
-| M3-T06 | Accurate documentation and findings-first new-session review package; no new features | NOT STARTED | 0/10 |
+| M3-T05 | Complete 40-case M3 mapping, full harness, independent M1/M2 preservation | VERIFIED / COMMITTED / PUSHED e1fb8f4 | 0/10 |
+| M3-T06 | Accurate documentation and findings-first new-session review package; no new features | IMPLEMENTED / VERIFIED locally; final publication pending | 1/10 |
 
 Each task: scope implementation -> explicit independent tests -> full scripts/verify.ps1 and checked exits -> diff/status review -> authorized commit/push to origin/main -> fetch, 0/0 and clean -> next task. Stop for authority conflict, ownership ambiguity, unknown overlap, unavailable required validation, 10 repairs or stalled repair, destructive Git, credentials, paid resources, prohibited future scope or external publication outside authorization. No advanced actions, side bets, Bet Behind, UI/network multiplayer, real money, merge/release/deployment or M4 work. T06 must stop before genuinely fresh-session independent review.

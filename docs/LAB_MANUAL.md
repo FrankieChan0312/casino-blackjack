@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: `M2 — Multi-seat Table and Computer Seats`
-Status: M1 is ACCEPTED. M2 implementation learning notes are below; mechanical verification is in STATE.md. M2 fresh-session review is NOT RUN and M2 is NOT ACCEPTED. M3+ examples remain planned.
+Current milestone: `M3 — Credits, Main Betting, and Settlement`
+Status: M1 and M2 are ACCEPTED. M3 is implemented and mechanically verified; independent review is NOT RUN and M3 is NOT ACCEPTED. Current M3 learning notes are in section 29; M4+ remains planned.
 
 ## 1. Purpose
 
@@ -932,7 +932,7 @@ Suggested explanation:
 
 # Part C — Planned Later Milestones
 
-M2 is now implemented as explained in section 28. M3+ sections remain learning targets until separately authorized.
+M2 and M3 are implemented as explained in sections 28 and 29. The original targets below are retained for learning context; M4+ remains planned.
 
 ## 16. M2 — Multi-seat Table (original learning targets; implemented summary in section 28)
 
@@ -1466,6 +1466,58 @@ M2 uses separate table orchestration to preserve the accepted M1 command API whi
 
 T05 found a test-hook error: returning a spy from beforeEach unintentionally registered that throwing function as cleanup. Changing only the hook to return void made the 17 new cases pass with the RNG guard and all assertions retained. This illustrates why shared failure location matters before changing domain code.
 
-Mechanical evidence: full harness 18 files / 233 tests PASS; original M1 tests/helpers unchanged and independent M1 run 12 files / 155 tests PASS. Final T06 evidence is in STATE/DEVELOPMENT_LOG. Fresh-session M2 review: NOT RUN, deliberately handed to another session. M2 and T01–T06: NOT ACCEPTED. User understanding: needs review / not assessed.
+Mechanical evidence: full harness 18 files / 233 tests PASS; original M1 tests/helpers unchanged and independent M1 run 12 files / 155 tests PASS. Final T06 evidence is in STATE/DEVELOPMENT_LOG. At the historical M2 handoff, fresh-session review was NOT RUN and M2 was NOT ACCEPTED. The explicit M3 contract subsequently ACCEPTED M2 at c9f7f35; no new independent M2 review is claimed here. User understanding: needs review / not assessed.
 
 Topics the user can now study/explain: table versus seat versus hand; frozen participation; sparse two-pass dealing; decisions complete versus outcome known; human/computer routing; one dealer with many outcomes; cross-round shoe lifetime; integrity versus normal loss. Open learning questions can be discussed after independent review; understanding is not inferred from passing tests.
+
+## 29. M3 — Implemented Credits and Settlement Learning Summary
+
+### Units and ownership
+
+One unit is half a credit. The initial 1000 credits are stored as 2000 units, not 1000.0. Every amount is a safe integer; original main stakes must be even, between 20 and 2000 units. The numeric type alias is descriptive, while runtime validation enforces the boundary. Never silently round an amount. This represents half-credit payouts exactly without decimal-money arithmetic.
+
+Each of seven stable seats owns its bankroll for this local session. A controller label is not an account. Emptying/rejoining a seat or switching HUMAN/COMPUTER retains the same funds. A new session initializes bankrolls; no existing-session reset or transfer API is implemented. R06 allows a deliberate recorded between-round reset, but it is optional and deferred. This avoids introducing M6 spectator/account architecture.
+
+### Available, reserved and pending
+
+A 100-credit bet moves 200 units from available to reserved: 2000/0 becomes 1800/200. Only available can fund a new commitment. Pending is a calculated financial result, not spendable credit. If seat 1 has a Natural while seat 2 still plays, seat 1's gross return can be displayed but its available funds stay unchanged. Otherwise action order could allow early winners to spend current-round proceeds, and a later table VOID would require clawback.
+
+Funding validates before returning a changed state. Reserving exact available funds is valid. An unaffordable request returns the same state reference with an explicit error; funds, cards, shoe, turn and RNG remain unchanged. Setting a target stake makes a repeated request harmless: 200 -> 200 changes nothing, 200 -> 300 reserves an additional 100, and 300 -> 200 releases 100. Cancellation is distinct from a zero-valued bet and is allowed only while OPEN.
+
+### Betting and table lifecycle
+
+CONFIGURING -> OPEN -> CLOSED -> COMMITTED or VOID -> CONFIGURING. Seat configuration freezes when betting opens; main wagers remain editable until betting closes. An occupied seat is not necessarily a funded participant. Both HUMAN and COMPUTER require explicit valid main wagers; an unfunded occupied seat gets no cards. Closing freezes the ordered funded set and stakes.
+
+The thin financial layer calls the preserved M2 gameplay engine. It adapts participation internally while keeping the real seven-seat snapshot. M2 ROUND_COMPLETE means card play and discard are complete, while M3 CLOSED still locks the financial cycle until settlement. The caller invokes automation after deal/human decisions and explicitly invokes final settlement or VOID, then explicitly prepares another round. No automatic betting, replay or credit refill exists.
+
+### Gross returns and one-time commit
+
+Ratios describe profit, while gross includes returned stake. A 1:1 ordinary win returns 2*stake gross. A 3:2 Natural returns 5*(stake/2) gross. For stake 200 units: ordinary gross=400, Natural gross=500, push gross=200, loss gross=0. Starting from 2000 units, final available is respectively 2200, 2300, 2000 or 1800. Do not deduct the stake twice on a loss or return it twice on a win.
+
+For a 25-credit bet, stake=50 units. Natural gross=125 units (62.5 credits), net=75 units (37.5 credits), and final available=2075 units. All intermediate stored values remain integers. A later whole-credit wager can leave one half-credit unit available without rounding it away.
+
+settleMainWagers waits until the entire table is gameplay-complete, validates all participating reservations/results, then returns all updated bankrolls and frozen COMMITTED records together. A record identifies round and seat (one main wager/hand per seat), stake, hand outcome, gross return, net and status. Pending records are derived rather than stored twice. Explicit COMMITTED state rejects another settlement so there is no second credit or second record.
+
+### VOID, idempotency and preservation
+
+A normal loss consumes its stake with zero return. A genuine required-draw failure creates INTEGRITY_ERROR, clears normal hand outcomes and retires the shoe. Only that condition allows financial VOID: refund actual reserved stakes, with zero net, irrespective of apparent Natural/win/loss. No provisional proceeds became available, so no clawback is necessary. Repeated VOID and normal settlement after VOID reject unchanged; VOID cannot reverse a committed valid settlement. This is idempotency through explicit rejection.
+
+The failed game/cards/fault remain diagnostic evidence. Preparing the next round preserves balances and shoe history; the retired shoe is replaced only at the next explicit funded deal. Callers retain prior immutable snapshots. This in-memory pure API requires the latest returned state; it is not a network transaction service protecting against concurrent or stale externally stored requests.
+
+### Major regression groups and concrete bugs they detect
+
+| Group | Evidence | Concrete bug detected if introduced |
+| --- | --- | --- |
+| Credit units / primitives | credits.test.ts: 2000 start, exact funds, one-unit-short, invalid units, repeated release | 1000 stored as units; rejecting exact funds by using >= instead of >; fractional units accepted; duplicate refund |
+| Main betting | betting.test.ts: min/max/even increments, target changes, cancellation and snapshots | Accepting 21 units as an original stake; charging full 300 again on 200 -> 300; releasing funds on rejected increase |
+| Funded participation / freeze | betting.test.ts: sparse 2/5/7, unfunded occupied skips, no-funded RNG guard | Auto-betting a computer; dealing to unfunded seat; reconfiguring a controller after OPEN |
+| Pending / payout / commit | settlement.test.ts: early Natural, 50 -> 125, mixed seven-seat totals, duplicate commit | Crediting Natural mid-round; rounding away half a credit; paying 3:2 as gross rather than profit; deducting stake twice |
+| VOID / ownership / recovery | financialLifecycle.test.ts: Natural plus bust then fault, exact refund, next shoe, leave/rejoin | Retaining provisional loss on VOID; refund plus normal payout; reusing retired shoe; minting a new bankroll on controller change |
+| Funded M2 regression | fundedRegression.test.ts: HUMAN pause, all peek ranks, S17, cut boundaries, partial faults | Wrapper bypasses HUMAN input; cut replaces a shoe before completion; only partly dealt wagers are refunded |
+| Original suites / harness | unchanged M1 155 and M2 78 tests, independently executed | Financial integration changes prior scoring/deal/secrecy or masks a required harness failure |
+
+These are concrete regression failure modes, not fabricated reports of observed production defects. No M3 implementation/test failure required repair in T01–T05. Actual run evidence and cumulative ledgers are in STATE/DEVELOPMENT_LOG. The baseline sandbox ownership block was an execution-permission issue, not a gameplay bug.
+
+### Learning and delivery state
+
+Topics now available to study: exact unit accounting, occupied versus funded seats, delta reservation, all-or-nothing rejection, pending versus spendable returns, profit versus gross, table-level settlement, integrity versus normal loss, and idempotency. User understanding remains needs review / not assessed. M3 is IMPLEMENTED / mechanically VERIFIED; independent fresh-session review is NOT RUN; M3 is NOT ACCEPTED or DEPLOYED. Full suite has 23 files / 305 tests; the 40-case mapping is in STATE. No optimal computer-strategy or production security claim.
