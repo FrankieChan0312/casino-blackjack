@@ -3,11 +3,15 @@
 Document date: 2026-09-28
 Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`
 Milestone: M1 — Headless Blackjack Core
-Current task: M1-T10 — Documentation / Final Review Package
+Current task: M1-T10 — Review Repair #1, stale evidence reference
 
 ## Current truth
 
-M1-T08 and M1-T09 are IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M1-T10 documentation/package is IMPLEMENTED / VERIFIED locally; mandatory fresh-session gate remains pending. M1 is not ACCEPTED and fresh-session review is NOT YET COMPLETED. Actual model: NOT VERIFIED. Actual reasoning/effort: NOT VERIFIED; recommended GPT-6 Astra / High.
+Fresh-session review of main at `b816c393d22f1c4d0acb842ee82bc60985badd5c` completed with one LOW finding: PLAN.md's M1-T02 evidence pointer names an M1-T03 baseline no longer retained in STATE.md. AC-M1-001 through AC-M1-019 and REG-M1-001 through REG-M1-024 passed; AC-M1-020 remains FAIL pending reviewer recheck of the repaired HEAD. The finding is not closed and M1 is NOT ACCEPTED. Actual model and reasoning/effort: NOT VERIFIED; recommended GPT-6 Astra / High.
+
+Review Repair #1 baseline at 2026-09-28 23:35:03 +08:00: main, HEAD=origin/main=`b816c393d22f1c4d0acb842ee82bc60985badd5c`, ahead/behind 0/0, clean. Cause hypothesis: historical evidence was compacted from STATE.md but PLAN.md retained the old pointer. Targeted fix at 23:35:30 +08:00: change only that pointer to DEVELOPMENT_LOG.md, whose M1-T03 baseline at 2026-09-28 20:53:02 +08:00 preserves the evidence. T10 repair cycle is 1/10; all other task counts are unchanged. Repair validation: PASS/0 at 23:36:50–23:37:00 +08:00, full verify.ps1 with typecheck/lint and 12 files / 155 tests. Complete three-file diff, git diff --check and status review PASS/0 at 23:37:19 +08:00. Only PLAN.md and the required STATE/DEVELOPMENT_LOG repair records change; final pre-commit checks follow this evidence update.
+
+The user authorizes this verified repair's commit and push to origin/main, followed by fetch/parity/clean-tree checks. Stop afterwards for reviewer recheck; do not mark AC-M1-020 PASS, close the finding or accept M1. This repair record supersedes pre-repair pending-review and next-action wording retained below as checkpoint history. The repair commit hash and actual push/parity result will be reported in the final handoff and Git history, avoiding a self-referential metadata commit.
 
 Batch entry baseline at 2026-09-28 22:53:54 +08:00: main, HEAD and origin/main both `1f1e8fabd0d978e1b8b706e9009e4ceaa501eed5`, ahead/behind 0/0, working tree clean. Public `git ls-remote origin refs/heads/main` independently confirmed that same SHA before implementation. Origin: `https://github.com/FrankieChan0312/casino-blackjack.git`.
 
@@ -37,7 +41,7 @@ The user authorizes separate verified T08, T09 and T10 commits and pushes to ori
 | M1-T07 | 1/10 | IMPLEMENTED / VERIFIED / ACCEPTED / COMMITTED / PUSHED |
 | M1-T08 | 0/10 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; not ACCEPTED |
 | M1-T09 | 0/10 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; not ACCEPTED |
-| M1-T10 | 0/10 | IMPLEMENTED / VERIFIED documentation checkpoint; not ACCEPTED; publication recorded in final handoff |
+| M1-T10 | 1/10 | Review Repair #1 IMPLEMENTED / VERIFIED locally; reviewer recheck pending; not ACCEPTED |
 
 No repair count is reset or transferred. Full historical timestamps, checkpoints, failures and repair hypotheses remain in DEVELOPMENT_LOG.md and Git history; this current-state summary replaces obsolete bootstrap/pending-action prose.
 
@@ -54,7 +58,7 @@ No repair count is reset or transferred. Full historical timestamps, checkpoints
 | T09 failure propagation | PASS | 23:04:56–23:05:07 +08:00 real type error returned exit 2; temporary probe removed; five wrapper fault tests also PASS |
 | T09 complete diff / whitespace | PASS | 2026-09-28 23:07:06 +08:00; six intended paths, no production change |
 | T10 local documentation/diff review | PASS | Five documentation files only; complete diff at 23:12:51 +08:00; final source/history rechecked |
-| Fresh-session milestone review | NOT RUN | NOT YET COMPLETED; mandatory after T10 push |
+| Fresh-session milestone review | FAIL | Reviewed b816c393d22f1c4d0acb842ee82bc60985badd5c; one LOW evidence-pointer finding; repair recheck NOT RUN |
 | Browser/E2E | NOT APPLICABLE | M1 has no browser UI |
 
 T08 tests cover hard/soft 16 and 17, repeated dealer draws, bust, explicit higher/lower/equal outcomes, ordinary 21, no unnecessary draws after terminal outcomes, all-command terminal rejection, partial dealer exhaustion, accounting, public reveal and input purity. No requirement or assertion was weakened.
@@ -73,7 +77,7 @@ No implementation blocker is known. M1 acceptance and fresh review remain outsta
 
 ## M1 acceptance and regression evidence (T09)
 
-All rows below are executed local checks, not model confidence. Paths are relative to tests/. AC-M1-020 local documentation/evidence review is PASS; the separate mandatory fresh-session gate remains NOT YET COMPLETED. M1 is not represented as fully reviewed or ACCEPTED. SPEC requirements are unchanged.
+Rows 001–019 below retain the executed T09 evidence, corroborated by fresh-session review. Paths are relative to tests/. Fresh review found AC-M1-020 FAIL only for the LOW evidence pointer; it remains FAIL until the reviewer checks the repaired HEAD. M1 is not ACCEPTED. SPEC requirements are unchanged.
 
 | AC-M1 | Local result | Executed evidence / independently asserted facts | REG-M1 |
 | --- | --- | --- | --- |
@@ -96,7 +100,7 @@ All rows below are executed local checks, not model confidence. Paths are relati
 | 017 | PASS | playerActions and dealerResolution reject Hit/Stand/resolveDealer with original reference and unchanged complete snapshots | 022 |
 | 018 | PASS | roundLifecycle two complete ordinary rounds reuse shoe/cut and consume later cards; previous terminal snapshot intact | 006 |
 | 019 | PASS | scripts/verify.ps1 full runs; verifyHarness.test.ts isolated actual wrapper with all success, each required failure and unavailable npm; real type-error probe exit 2 | harness |
-| 020 | PASS (local review) | Authority/source/test/doc diff review and timestamped log; fresh-session portion deliberately deferred to mandatory post-T10 gate | documentation |
+| 020 | FAIL | Fresh review: LOW stale PLAN.md evidence pointer; T10 repair cycle 1/10 implemented; reviewer recheck of repaired HEAD pending | documentation |
 
 REG-M1-017 is checked as precedence without creating an illegal engine flow: initial player natural ends the round before a third dealer card. The fixture independently proves that the next card would form ordinary 21 and verifies that resolution cannot consume it or overwrite PLAYER_BLACKJACK. Ordinary 21 versus ordinary 21 is separately tested as PUSH. No product replay or impossible extra natural-dealer draw is implemented.
 

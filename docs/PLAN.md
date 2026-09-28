@@ -204,7 +204,7 @@ Stop if:
 
 ## M1-T02 — Physical Card Model and Six-Deck Inventory
 
-**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T03 baseline in STATE.md.
+**Status:** `VERIFIED` / `ACCEPTED` — committed and pushed; repair cycles 1/10. See the M1-T03 baseline in DEVELOPMENT_LOG.md.
 **Depends on:** `M1-T01 VERIFIED`
 
 ### Scope
