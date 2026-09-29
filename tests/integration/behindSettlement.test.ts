@@ -26,7 +26,7 @@ it.each(['ADD', 'NO_ADD'] as const)('Split %s settles funded children independen
   expect(game.settleBehindWagers(state).state).toBe(state);
   expect(game.voidBehindRound(state).state).toBe(state);
 });
-it('re-split ADD and NO_ADD settle only three actual descendant exposures', () => {
+it('re-split ADD settles only three actual descendant exposures', () => {
   let state = accepted(beginControllerSplit(backedGame(['8', '9', '8', '8', '8', '10', '2', '9']), 'computer-1', root));
   state = accepted(decideSplitFollow(state, root, 'ADD'));
   state = accepted(beginControllerSplit(state, 'computer-1', `${root}.1`));

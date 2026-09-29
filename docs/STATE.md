@@ -1,5 +1,13 @@
 # Casino Blackjack — Project State
 
+## Current truth: M6-T07 regression and preservation
+
+T06 publication PASS/0 at 2026-09-29 23:57:52 +08:00, main=origin/main=5b7eaad88eadd7c476c1b9ac8f8f47e274b59602, 0/0 clean. T07 adds behindRegression.test.ts (95 individually registered requirement tests + exact completeness) and behindIntegrity.test.ts (8 tests); corrects only an M6 settlement test title to describe its ADD scenario accurately. No production changes. Targeted REG first PASS 1/96 at 2026-09-30 00:02:34; final targeted REG/integrity/settlement PASS/0 3/113 at 00:04:10. Full verify.ps1 PASS/0 typecheck/lint/tests **47 files / 825 tests**, test start 00:04:17.
+
+T07 repair 1/10: preservation command initially compared all M1 source directly to current and failed at 00:04:45 on shoe.ts's accepted M2 minimumCards extension. Verified the exact diff already exists between accepted M1 and accepted M5. Correct comparison: enumerate accepted M5 executable paths and compare current unchanged, except the explicitly reviewed compatible optionalGame.ts seam; separately compare/rerun each milestone's original test set. No production/test assertion was weakened or changed to pass. Re-verification at 00:05:26-00:05:34 PASS/0: original executable preservation, M1 **12/155** (00:05:27), M2 **6/78** (00:05:30), M3 **5/72** (00:05:31), M4 **7/171** (00:05:32), M5 **8/168** (00:05:33). Every original test file in its own milestone set matches its historical accepted version; all 644 prior assertions pass independently. optionalGame.ts exact exception diff inspected.
+
+T07 VERIFIED, publication next. M6 T01-T08 ledger **1,0,0,0,0,0,1,0**. Prior ledgers unchanged. M6 fresh review NOT RUN; ACCEPTED NO; M7 NOT STARTED. These are same-session mechanical preservation checks, not an independent milestone review. Earlier checkpoint sections below are historical. T08 is documentation only.
+
 ## Current truth: M6-T06 follower finance complete
 
 T05 publication PASS/0 at 2026-09-29 23:50:54 +08:00: main=origin/main=d4b455dd6547b9d16bb9b509c15b8e44a3f45433, 0/0 clean. T06 targeted behindInsurance/behindSettlement PASS/0 2 files / 19 tests at 23:55:50; full verify.ps1 PASS/0 typecheck/lint/tests 45 files / 721 tests at 23:56:05. T06 VERIFIED 0/10; publication next. Actual hole evaluation count confirms 0 before all decisions and 1 at closure, with negative-peek secrecy. Independent Insurance/Even Money, odd exact stakes, exposure settlement, Split mixed results, rejected additions and actual-reserve VOID pass. M6 repair ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. Fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED.

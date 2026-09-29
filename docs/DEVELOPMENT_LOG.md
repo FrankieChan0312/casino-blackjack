@@ -1,5 +1,15 @@
 # Casino Blackjack — Development Log
 
+## M6-T07 — Executable mapping and historical preservation
+
+### 2026-09-30 00:05:26 +08:00 — VERIFICATION / REPAIR 1
+
+T06 publication PASS/0 at 2026-09-29 23:57:52, 5b7eaad88eadd7c476c1b9ac8f8f47e274b59602, main=origin/main 0/0 clean. T07 scope/steps in PLAN; recommended GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED; same non-goals and stop conditions. Added 95 individually executable REG-M6 requirements and exact unique 001..095 assertion, plus partial initial-deal fault/refund, post-VOID recovery, both cut boundaries, controlled opposite Even Money election, Re-split NO_ADD settlement, deferred-Ace seam guards and integrity secrecy. Existing M6 settlement test title corrected; no production or prior milestone test change.
+
+REG first targeted PASS/0 1/96 at 00:02:34; final targeted three suites PASS/0 3/113 at 00:04:10; full verify.ps1 PASS/0 typecheck/lint/tests **47/825** at 00:04:17. First preservation command at 00:04:45 failed with exit 1 before running historical tests: comparing M1 source directly to current found shoe.ts minimumCards, an already accepted M2 extension. Hypothesis: the comparator incorrectly treats prior accepted milestone evolution as an M6 regression. Verified identical M1-to-accepted-M5 diff. Repair 1 adjusts comparison to accepted M5 original executable paths (only documented optionalGame.ts seam excluded), while each historical test suite still compares against its own accepted revision and runs separately. No assertion weakened or source change; T07 ledger 1/10 conservatively counts the verification-procedure correction.
+
+Re-verification PASS/0: accepted-M5 executable preservation; separately enumerated historical test paths using git ls-tree and executed npm.cmd test -- selected original paths. M1 12/155 start 00:05:27; M2 6/78 start 00:05:30; M3 5/72 start 00:05:31; M4 7/171 start 00:05:32; M5 8/168 start 00:05:33. Original test-file diffs empty. Inspected exact compatible optionalGame.ts diff; all other original src/tests/helpers/harness/config/dependency paths unchanged. This is mechanical preservation in the implementation session, not fresh review. Full task diff inspection follows before normal authorized publication. No M6 acceptance or M7.
+
 ## M6-T06 — Insurance/Even Money/settlement/VOID
 
 ### 2026-09-29 23:56:19 +08:00 — T05 PUBLICATION / T06 VERIFICATION
