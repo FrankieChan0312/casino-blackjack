@@ -121,7 +121,8 @@ export function cancelOptionalMainWager(state: OptionalGameState, seatNumber: nu
     wagers: state.wagers.filter((entry) => entry !== main),
     sideWagers: state.sideWagers.filter((entry) => entry.seatNumber !== seatNumber) } };
 }
-export function closeOptionalBetting(state: OptionalGameState, replacementShoeId: string, random: RandomSource): OptionalResult {
+export function closeOptionalBetting(state: OptionalGameState, replacementShoeId: string, random: RandomSource,
+  deferAceForBackBettors = false): OptionalResult {
   if (state.phase !== 'OPEN') return { ok: false, state, error: 'BETTING_NOT_OPEN' };
   if (state.wagers.length === 0) return { ok: false, state, error: 'NO_FUNDED_SEATS' };
   const seats = state.game.table.seats;
@@ -173,9 +174,18 @@ export function closeOptionalBetting(state: OptionalGameState, replacementShoeId
   if (dealerCards[0].rank === 'A') {
     next = { ...next, decisionPhase: 'INSURANCE', insuranceDecisions: players.map((hand) => ({
       seatNumber: hand.seatNumber, choice: hand.controller === 'COMPUTER' ? 'DECLINE' : 'PENDING', stakeUnits: 0 })) };
-    if (next.insuranceDecisions.some((entry) => entry.choice === 'PENDING')) return { ok: true, state: next };
+    if (deferAceForBackBettors || next.insuranceDecisions.some((entry) => entry.choice === 'PENDING')) return { ok: true, state: next };
   }
   return { ok: true, state: resolveInitialDecisions(next) };
+}
+
+// Additive M6 orchestration seam; original three-argument close behaviour is unchanged.
+export function closeDeferredAceDecisions(state: OptionalGameState): OptionalResult {
+  if (state.phase !== 'CLOSED' || state.decisionPhase !== 'INSURANCE' || state.peekPerformed
+    || state.insuranceDecisions.some((entry) => entry.choice === 'PENDING')) {
+    return { ok: false, state, error: 'INSURANCE_NOT_READY' };
+  }
+  return { ok: true, state: resolveInitialDecisions(state) };
 }
 
 // Called once, only after every Ace decision is closed (or directly for non-Ace).

@@ -3,6 +3,7 @@ import { createBankroll, isBankroll, isCreditUnits, type Bankroll } from './cred
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
 import { isMainWager } from './bettingGame.js';
+import { isNaturalBlackjack } from './hand.js';
 
 export interface HumanParticipant {
   readonly participantId: 'local-human';
@@ -22,17 +23,25 @@ export interface BehindGameState {
   readonly backWagers: readonly BackWager[];
   readonly backExposures: readonly BackExposure[];
   readonly backResults: readonly BackResult[];
+  readonly backInsurance: readonly BackInsuranceDecision[];
   readonly followWindow: { readonly kind: 'DOUBLE' | 'SPLIT'; readonly handId: string; readonly targetSeat: number;
     readonly wagerId: string } | null;
   readonly followDecisions: readonly { readonly handId: string; readonly kind: 'DOUBLE' | 'SPLIT'; readonly choice: 'ADD' | 'NO_ADD';
     readonly fundingError?: 'INSUFFICIENT_FUNDS' }[];
+}
+export interface BackInsuranceDecision {
+  readonly wagerId: string;
+  readonly targetSeat: number;
+  readonly choice: 'PENDING' | 'DECLINE' | 'INSURANCE' | 'EVEN_MONEY';
+  readonly stakeUnits: number;
+  readonly outcome?: 'WIN' | 'LOSS';
 }
 export interface BackExposure extends BackWager {
   readonly parentHandId: string | null;
 }
 export interface BackResult extends BackExposure {
   readonly roundId: string;
-  readonly outcome: 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH' | 'PLAYER_BLACKJACK' | 'SURRENDERED' | 'VOID' | 'EVEN_MONEY';
+  readonly outcome: 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH' | 'PLAYER_BLACKJACK' | 'SURRENDERED' | 'VOID' | 'EVEN_MONEY' | 'WIN' | 'LOSS';
   readonly grossReturnUnits: number;
   readonly netUnits: number;
   readonly status: 'PENDING' | 'COMMITTED' | 'REFUNDED';
@@ -50,7 +59,7 @@ export type BehindResult =
 
 export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true): BehindGameState {
   const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random);
-  return { table, backWagers: [], backExposures: [], backResults: [], followWindow: null, followDecisions: [],
+  return { table, backWagers: [], backExposures: [], backResults: [], backInsurance: [], followWindow: null, followDecisions: [],
     human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
     computers: bankrolls.map((bankroll, index) => ({ participantId: `computer-${index + 1}`,
       seatNumber: index + 1, bankroll })) };
@@ -72,7 +81,8 @@ function engine(state: BehindGameState): optional.OptionalGameState {
 function backReserve(state: BehindGameState): number {
   if (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID') return 0;
   return (state.table.phase === 'CLOSED' ? state.backExposures : state.backWagers)
-    .reduce((sum, wager) => sum + wager.stakeUnits, 0);
+    .reduce((sum, wager) => sum + wager.stakeUnits, 0)
+    + state.backInsurance.reduce((sum, decision) => sum + decision.stakeUnits, 0);
 }
 function run(state: BehindGameState, command: (entry: optional.OptionalGameState) => optional.OptionalResult): BehindResult {
   const input = engine(state);
@@ -83,6 +93,8 @@ function run(state: BehindGameState, command: (entry: optional.OptionalGameState
   // Attribute funds using the input owner, including when configuration changes.
   const humanSeat = controlledSeat(state);
   return { ok: true, state: { ...state, table,
+    backInsurance: table.game.round?.phase === 'INTEGRITY_ERROR'
+      ? state.backInsurance.map((entry) => ({ ...entry, outcome: undefined })) : state.backInsurance,
     human: state.human && humanSeat !== null ? { ...state.human, bankroll: {
       ...bankrolls[humanSeat - 1], reserved: bankrolls[humanSeat - 1].reserved + backReserve(state) } } : state.human,
     computers: state.computers.map((entry) => entry.seatNumber === humanSeat ? entry
@@ -159,21 +171,61 @@ export function closeBehindBetting(state: BehindGameState, replacementShoeId: st
   for (const wager of state.backWagers) {
     if (!qualifyingTarget(state, wager.targetSeat)) eligible = removeBackWager(eligible, wager);
   }
-  const result = run(eligible, (entry) => optional.closeOptionalBetting(entry, replacementShoeId, random));
+  const result = run(eligible, (entry) => optional.closeOptionalBetting(entry, replacementShoeId, random,
+    eligible.backWagers.length > 0));
   if (!result.ok) return { ok: false, state, error: result.error };
   return { ok: true, state: { ...result.state,
+    backInsurance: result.state.table.decisionPhase === 'INSURANCE'
+      ? result.state.backWagers.map((wager) => ({ wagerId: wager.wagerId, targetSeat: wager.targetSeat,
+        choice: 'PENDING', stakeUnits: 0 })) : [],
     backExposures: Object.freeze(result.state.backWagers.map((wager) => Object.freeze({ ...wager, parentHandId: null }))),
     backWagers: Object.freeze(result.state.backWagers.map((wager) => Object.freeze({ ...wager }))) } };
 }
 export function decideBehindMainInsurance(state: BehindGameState, purchase: boolean): BehindResult {
-  const seat = controlledSeat(state);
-  if (seat === null) return { ok: false, state, error: 'NOT_SEATED' };
-  return run(state, (entry) => optional.decideInsurance(entry, seat, purchase));
+  return chooseMainAce(state, purchase ? 'INSURANCE' : 'DECLINE');
 }
 export function electBehindMainEvenMoney(state: BehindGameState): BehindResult {
+  return chooseMainAce(state, 'EVEN_MONEY');
+}
+function finishAce(state: BehindGameState): BehindResult {
+  if (state.table.insuranceDecisions.some((entry) => entry.choice === 'PENDING')
+    || state.backInsurance.some((entry) => entry.choice === 'PENDING')) return { ok: true, state };
+  const result = run(state, optional.closeDeferredAceDecisions);
+  if (!result.ok) return result;
+  return { ok: true, state: { ...result.state, backInsurance: result.state.backInsurance.map((entry) => entry.choice === 'INSURANCE'
+    ? { ...entry, outcome: result.state.table.game.round!.dealerNaturalExcluded ? 'LOSS' : 'WIN' } : entry) } };
+}
+function aceOpen(state: BehindGameState): boolean {
+  return state.table.phase === 'CLOSED' && state.table.decisionPhase === 'INSURANCE' && !state.table.peekPerformed;
+}
+function chooseMainAce(state: BehindGameState, choice: 'INSURANCE' | 'EVEN_MONEY' | 'DECLINE'): BehindResult {
   const seat = controlledSeat(state);
   if (seat === null) return { ok: false, state, error: 'NOT_SEATED' };
-  return run(state, (entry) => optional.electEvenMoney(entry, seat));
+  const decision = state.table.insuranceDecisions.find((entry) => entry.seatNumber === seat);
+  if (!aceOpen(state) || decision?.choice !== 'PENDING') return { ok: false, state, error: 'DECISION_CLOSED' };
+  const hand = state.table.game.round!.players.find((entry) => entry.seatNumber === seat)!;
+  if (choice === 'EVEN_MONEY' && !isNaturalBlackjack(hand.originalCards, true)) return { ok: false, state, error: 'EVEN_MONEY_NOT_ALLOWED' };
+  const stakeUnits = choice === 'INSURANCE' ? state.table.wagers.find((entry) => entry.seatNumber === seat)!.stakeUnits / 2 : 0;
+  if (stakeUnits > state.human!.bankroll.available) return { ok: false, state, error: 'INSUFFICIENT_FUNDS' };
+  const funded = moveBackReserve(state, stakeUnits);
+  return finishAce({ ...funded, table: { ...funded.table, insuranceDecisions: state.table.insuranceDecisions
+    .map((entry) => entry === decision ? { seatNumber: seat, choice, stakeUnits } : entry) } });
+}
+export function decideBackInsurance(state: BehindGameState, targetSeat: number,
+  choice: 'INSURANCE' | 'EVEN_MONEY' | 'DECLINE'): BehindResult {
+  if (!aceOpen(state)) return { ok: false, state, error: 'INSURANCE_NOT_OPEN' };
+  if (!['INSURANCE', 'EVEN_MONEY', 'DECLINE'].includes(choice)) return { ok: false, state, error: 'INVALID_CHOICE' };
+  if (state.table.insuranceDecisions.some((entry) => entry.choice === 'PENDING')) return { ok: false, state, error: 'MAIN_DECISION_PENDING' };
+  const decision = state.backInsurance.find((entry) => entry.choice === 'PENDING');
+  if (!decision || decision.targetSeat !== targetSeat) return { ok: false, state, error: 'WRONG_BACK_DECISION' };
+  const wager = state.backWagers.find((entry) => entry.wagerId === decision.wagerId)!;
+  const hand = state.table.game.round!.players.find((entry) => entry.handId === wager.handId)!;
+  if (choice === 'EVEN_MONEY' && !isNaturalBlackjack(hand.originalCards, true)) return { ok: false, state, error: 'EVEN_MONEY_NOT_ALLOWED' };
+  const stakeUnits = choice === 'INSURANCE' ? wager.stakeUnits / 2 : 0;
+  if (stakeUnits > state.human!.bankroll.available) return { ok: false, state, error: 'INSUFFICIENT_FUNDS' };
+  const funded = moveBackReserve(state, stakeUnits);
+  return finishAce({ ...funded, backInsurance: state.backInsurance.map((entry) => entry === decision
+    ? { ...decision, choice, stakeUnits } : entry) });
 }
 export function actBehindHand(state: BehindGameState, handId: string,
   action: 'HIT' | 'STAND' | 'DOUBLE' | 'SPLIT' | 'SURRENDER'): BehindResult {
@@ -192,7 +244,8 @@ export function advanceBehindTable(state: BehindGameState): BehindResult {
 export function settleBehindWagers(state: BehindGameState): BehindResult {
   if (state.followWindow) return { ok: false, state, error: 'FOLLOW_PENDING' };
   const records = getBackResults(state);
-  if (state.table.phase !== 'CLOSED' || records.length !== state.backExposures.length) {
+  if (state.table.phase !== 'CLOSED' || records.length !== state.backExposures.length
+    + state.backInsurance.filter((entry) => entry.choice === 'INSURANCE').length) {
     return { ok: false, state, error: 'SETTLEMENT_NOT_READY' };
   }
   const main = run(state, optional.settleOptionalWagers);
@@ -201,7 +254,7 @@ export function settleBehindWagers(state: BehindGameState): BehindResult {
   const gross = records.reduce((sum, record) => sum + record.grossReturnUnits, 0);
   if (human && (!isBankroll(human.bankroll) || human.bankroll.reserved !== backReserve(state)
     || !isCreditUnits(human.bankroll.available + gross))) return { ok: false, state, error: 'INVALID_BACK_SETTLEMENT' };
-  return { ok: true, state: { ...main.state,
+  return { ok: true, state: { ...main.state, backInsurance: main.state.backInsurance.map((entry) => ({ ...entry, outcome: undefined })),
     human: human ? { ...human, bankroll: { available: human.bankroll.available + gross, reserved: 0 } } : null,
     backResults: Object.freeze(records.map((record) => Object.freeze({ ...record, status: 'COMMITTED' as const }))) } };
 }
@@ -210,22 +263,46 @@ export function getBackResults(state: BehindGameState): readonly BackResult[] {
   const round = state.table.game.round;
   if (state.table.phase !== 'CLOSED' || !round || round.phase === 'INTEGRITY_ERROR'
     || state.table.decisionPhase !== 'NONE') return [];
-  return state.backExposures.flatMap((exposure): BackResult[] => {
-    const outcome = round.players.find((hand) => hand.handId === exposure.handId)?.outcome;
+  const main = state.backExposures.flatMap((exposure): BackResult[] => {
+    const elected = state.backInsurance.some((entry) => entry.wagerId === exposure.wagerId && entry.choice === 'EVEN_MONEY');
+    const outcome = elected ? 'EVEN_MONEY' : round.players.find((hand) => hand.handId === exposure.handId)?.outcome;
     if (!outcome) return [];
     const stake = exposure.stakeUnits;
-    const gross = outcome === 'PLAYER_BLACKJACK' ? stake / 2 * 5 : outcome === 'PLAYER_WIN' ? stake * 2
+    const gross = outcome === 'PLAYER_BLACKJACK' ? stake / 2 * 5 : outcome === 'PLAYER_WIN' || outcome === 'EVEN_MONEY' ? stake * 2
       : outcome === 'PUSH' ? stake : outcome === 'SURRENDERED' ? stake / 2 : 0;
     return [{ ...exposure, roundId: round.roundId, outcome, grossReturnUnits: gross,
       netUnits: gross - stake, status: 'PENDING' }];
   });
+  const insurance = state.backInsurance.flatMap((entry): BackResult[] => {
+    if (entry.choice !== 'INSURANCE' || !entry.outcome) return [];
+    const wager = state.backWagers.find((wager) => wager.wagerId === entry.wagerId)!;
+    const gross = entry.outcome === 'WIN' ? entry.stakeUnits * 3 : 0;
+    return [{ ...wager, wagerId: `${wager.wagerId}/INSURANCE`, parentHandId: null,
+      roundId: round.roundId, stakeUnits: entry.stakeUnits, outcome: entry.outcome,
+      grossReturnUnits: gross, netUnits: gross - entry.stakeUnits, status: 'PENDING' }];
+  });
+  return [...main, ...insurance];
 }
 export function voidBehindRound(state: BehindGameState): BehindResult {
-  if (state.backWagers.length) return { ok: false, state, error: 'BACK_SETTLEMENT_NOT_IMPLEMENTED' };
-  return run(state, optional.voidOptionalRound);
+  const main = run(state, optional.voidOptionalRound);
+  if (!main.ok) return main;
+  const stakes = [...state.backExposures, ...state.backInsurance.filter((entry) => entry.choice === 'INSURANCE').map((entry) => {
+    const wager = state.backWagers.find((wager) => wager.wagerId === entry.wagerId)!;
+    return { ...wager, wagerId: `${wager.wagerId}/INSURANCE`, parentHandId: null, stakeUnits: entry.stakeUnits };
+  })];
+  const refund = stakes.reduce((sum, entry) => sum + entry.stakeUnits, 0);
+  const human = main.state.human;
+  if (human && (!isBankroll(human.bankroll) || human.bankroll.reserved !== refund
+    || !isCreditUnits(human.bankroll.available + refund))) return { ok: false, state, error: 'INVALID_BACK_REFUND' };
+  return { ok: true, state: { ...main.state, followWindow: null,
+    human: human ? { ...human, bankroll: { available: human.bankroll.available + refund, reserved: 0 } } : null,
+    backInsurance: state.backInsurance.map((entry) => ({ ...entry, outcome: undefined })),
+    backResults: Object.freeze(stakes.map((entry): BackResult => Object.freeze({ ...entry,
+      roundId: state.table.game.round!.roundId, outcome: 'VOID', grossReturnUnits: entry.stakeUnits,
+      netUnits: 0, status: 'REFUNDED' }))) } };
 }
 export function prepareNextBehindRound(state: BehindGameState): BehindResult {
   const result = run(state, optional.prepareNextOptionalRound);
   return result.ok ? { ok: true, state: { ...result.state, backWagers: [], backExposures: [], backResults: [],
-    followWindow: null, followDecisions: [] } } : result;
+    backInsurance: [], followWindow: null, followDecisions: [] } } : result;
 }

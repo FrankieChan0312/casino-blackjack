@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M6-T06 — Insurance/Even Money/settlement/VOID
+
+### 2026-09-29 23:56:19 +08:00 — T05 PUBLICATION / T06 VERIFICATION
+
+T05 publication PASS/0 at 23:50:54, d4b455dd6547b9d16bb9b509c15b8e44a3f45433, main=origin/main 0/0 clean. T06 uses PLAN contract and global limits, recommended GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED. Compatible optionalGame.ts seam (default-false fourth close argument plus guarded closeDeferredAceDecisions) permits reuse of initial dealing/peek; original API behavior remains protected. M6 owns ordered participant decisions and actual reserves, independent back Insurance/Even Money, atomic combined settlement and actual-fault refund. Integrity clears pending back Insurance outcomes. Added behindInsurance/behindSettlement suites; all prior tests unchanged.
+
+Targeted PASS/0 2/19 at 23:55:50; full verify.ps1 PASS/0 45/721 at 23:56:05, typecheck/lint/tests. Spy on actual hole-containing Natural evaluation proves no early peek and exactly one final peek; pending-fund/independent stake and real exhausted-shoe tests verify refunds/rejection/duplicate finalization. T06 first validation passed, 0/10. Full diff review before publication. M6 fresh review NOT RUN, acceptance NO, M7 NOT STARTED. No browser/network/auth/cloud/real money work.
+
 ## M6-T05 — Split/Re-split following
 
 ### 2026-09-29 23:49:38 +08:00 — T04 PUBLICATION / T05 VERIFICATION

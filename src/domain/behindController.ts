@@ -13,7 +13,8 @@ function replace(state: BehindGameState, hand: AdvancedHand): BehindGameState {
     players: state.table.game.round!.players.map((entry) => entry.handId === hand.handId ? hand : entry) } } } };
 }
 function integrity(state: BehindGameState): BehindGameState {
-  return { ...state, followWindow: null, table: { ...state.table, sideResults: [],
+  return { ...state, followWindow: null, backInsurance: state.backInsurance.map((entry) => ({ ...entry, outcome: undefined })),
+    table: { ...state.table, sideResults: [],
     insuranceDecisions: state.table.insuranceDecisions.map((entry) => ({ ...entry, outcome: undefined })),
     game: { ...state.table.game, table: releaseTableSeats(state.table.game.table),
       shoe: { ...state.table.game.shoe, retired: true }, round: { ...state.table.game.round!, phase: 'INTEGRITY_ERROR',

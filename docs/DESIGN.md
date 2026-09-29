@@ -24,6 +24,12 @@ The owner-checked Split primitive checks controller first-decision/equal-value/f
 
 ## M5 additive optional-wager orchestration
 
+### M6-T06 Ace decisions and finalization
+
+The one deliberate compatible extension to an accepted executable is optionalGame.ts: closeOptionalBetting accepts a default-false fourth deferAceForBackBettors argument, and closeDeferredAceDecisions validates the pending Ace phase/closed MAIN choices before invoking the existing initial resolver. Every historical three-argument caller retains its behavior. M6 requests deferral only when original back wagers exist, then resolves HUMAN own MAIN first and back decisions by ascending target seat. Computers still decline. No hole evaluation occurs before all decisions close; negative peek preserves secrecy. M6 chooses own MAIN through its wrapper so a final MAIN decision cannot bypass pending followers.
+
+Each original back choice is independent. Insurance reserves exactly half original stake, including odd units, from the same participant available pool; insufficient funding rejects unchanged and the caller can decline. Eligible original Natural Even Money requires no new reserve, excludes Insurance and fixes 2x original gross. Results remain pending. Follow/Insurance reserves are excluded from the transient M5 seat reserve, never restored to available. One M6 finalization validates M5 seat settlement and follower actual-reserve reconciliation before publishing the combined state. Back Insurance records use original wager ID plus /INSURANCE. Whole-round VOID requires a real integrity failure, discards all normal/Even Money/Insurance outcomes and refunds actual leaf exposures plus purchased Insurance once; rejected/no-add attempts add nothing. Opposite/repeated finalization rejects, and next-round preparation preserves funds and clears the previous decisions.
+
 The authorized M5 batch adds optionalGame.ts. Accepted M1-M4 source/APIs/tests remain unchanged. Ownership stays with the existing seven seat bankrolls: no separate bettor, spectator or follower model. T01 supports one PAIR and one THREE_CARD target per own active funded seat, 2..200 even units. Main changes use their own stake rather than total reservation; side changes move only the delta. Main cancellation releases main plus both dependent stakes atomically. Close freezes copied wager objects. No automatic computer wagers. Evaluation and the separate Ace-decision flow belong to the following tasks, not T01.
 
 ## M4 additive hand orchestration (authorized batch)

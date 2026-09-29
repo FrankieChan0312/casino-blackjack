@@ -2,6 +2,8 @@
 
 ## Current M6 batch contract
 
+T06 checkpoint: independent original follower Insurance/Even Money, deterministic own-MAIN/ascending-target order and delayed peek, actual exposure settlement/attribution, atomic unified table finalization and whole-round VOID -> behindInsurance/behindSettlement plus all earlier M6 tests -> full harness -> complete diff/status/whitespace -> normal authorized publication. No new UI/network/strategy or M7; same recommendation and stop conditions. T05 published d4b455dd6547b9d16bb9b509c15b8e44a3f45433; T06 VERIFIED 0/10; T07-T08 NOT STARTED. This supersedes earlier status paragraphs.
+
 T05 checkpoint: controller-funded Split/Re-split before child cards, ADD/NO_ADD first-child mapping, exact/insufficient follower funding, tracked/untracked descendants, depth-first physical order, Split Aces and four-leaf preservation -> behindSplit suite -> full harness -> full diff/whitespace/status -> normal publication. No follower optional decisions/VOID yet; same recommendation/non-goals/stop conditions. T04 published bfe9f0989748d16b2de4aa0669b56db80ea12b35; T05 VERIFIED 0/10; T06-T08 NOT STARTED. This supersedes earlier status text.
 
 T04 checkpoint: owner-checked funded controller Double, follower pre-card ADD/NO_ADD window, atomic rejected funding with recorded safe fallback, exact exposure, irreversible decision, pending-funds protection and independent settlement -> behindDouble targeted assertions -> full harness -> complete diff/whitespace/status -> authorized publication. No Split-follow/follower Insurance/VOID yet. Same recommendation/non-goals/stop conditions. T03 published 91ba66c9034716b1b46dcdc3976e36d36be3835e; T04 VERIFIED 0/10; T05-T08 NOT STARTED. This supersedes earlier status paragraphs.

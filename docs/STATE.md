@@ -1,5 +1,11 @@
 # Casino Blackjack — Project State
 
+## Current truth: M6-T06 follower finance complete
+
+T05 publication PASS/0 at 2026-09-29 23:50:54 +08:00: main=origin/main=d4b455dd6547b9d16bb9b509c15b8e44a3f45433, 0/0 clean. T06 targeted behindInsurance/behindSettlement PASS/0 2 files / 19 tests at 23:55:50; full verify.ps1 PASS/0 typecheck/lint/tests 45 files / 721 tests at 23:56:05. T06 VERIFIED 0/10; publication next. Actual hole evaluation count confirms 0 before all decisions and 1 at closure, with negative-peek secrecy. Independent Insurance/Even Money, odd exact stakes, exposure settlement, Split mixed results, rejected additions and actual-reserve VOID pass. M6 repair ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. Fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED.
+
+Accepted source preservation exception: optionalGame.ts receives only a default-false optional close parameter and guarded deferred-Ace closure function, needed to reuse verified initial dealing while waiting for followers. Original M5 callers and tests are unchanged; no incompatible contract rewrite. T07 will independently rerun each historical suite and inspect this exact allowed diff. All other changes remain M6 source and two new suites. No unimplemented back-finalization error remains. Earlier intermediate statuses below are historical.
+
 ## Current truth: M6-T05 Split/Re-split following
 
 T04 publication PASS/0 at 2026-09-29 23:46:35 +08:00, main=origin/main=bfe9f0989748d16b2de4aa0669b56db80ea12b35, 0/0 clean. T05 changes only M6 controller/state/helper and adds behindSplit.test.ts. Targeted PASS/0 1/10 at 23:49:17; full verify.ps1 PASS/0 typecheck/lint/tests 43 files / 702 tests at 23:49:24. T05 VERIFIED 0/10, publication next. Before-card first/second physical ownership, ADD/NO_ADD/insufficient fallback, re-split descendant exposure, untracked skip, depth-first order, four-leaf cap, Split Aces and DAS continuation verified. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections are historical.
