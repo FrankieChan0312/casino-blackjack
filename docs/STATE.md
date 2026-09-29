@@ -187,3 +187,7 @@ All rows execute in tests/integration/advancedRegression.test.ts as REG-M4-NNN (
 | 060 | M5/M6/Charlie functionality absent |
 
 Further advancedIntegrity cases cover later-child and second-Ace-child failures, partial dealer draws, 4 doubled leaves, no hypothetical refund after funding rejection, invalidation of pending Natural/surrender/bust, partial initial faults, cut 219/249 and next explicit funded recovery. Surrendered split leaves cannot be produced by legal M4 commands; the cap counts all leaves without filtering result/completion state.
+
+## M5-T02 checkpoint - 2026-09-29 21:28:37 +08:00
+
+T02 VERIFIED locally. Full harness PASS/0, 33 files / 530 tests, test start 21:27:51. sideBets.ts pure rank/colour/straight classification and exact gross; frozen once-only initial sideResults in optionalGame.ts. New sideBets.test.ts and optionalEvaluation.test.ts cover all categories, priority, physical copies, original-only inputs, pending funds and main independence. T01/T02 repairs 0/10; T03-T07 NOT STARTED. No publication yet. This checkpoint supersedes the earlier T01-only functionality note.

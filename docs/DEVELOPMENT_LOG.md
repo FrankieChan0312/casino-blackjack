@@ -1468,3 +1468,9 @@ T01 scope/acceptance: OPEN own-seat Pair/three-card target wagers, funded MAIN p
 ### 2026-09-29 21:24:57 +08:00 - T01 VERIFIED
 
 Full harness PASS/0: typecheck, lint, 31 files / 506 tests, test start 21:23:32. Complete new source/helper/test and four-document diff inspected; git diff --check/status PASS/0, exactly seven intended files. No repair, 0/10. No independent milestone review claimed. Publication awaits explicit authorization under the user contract and AGENTS section 12.
+
+## M5-T02 - Pure evaluation
+
+### 2026-09-29 21:28:37 +08:00 - VERIFIED
+
+Contract: all Pair and three-card categories/priority, A23/QKA/KA2, original physical cards only, exact gross and pending-unspendable independent returns. No Insurance/Even Money or settlement. Step: pure classification plus once-only deal calculation -> independent category/gross fixtures and advanced-action preservation -> full harness/diff. Global stop conditions and GPT-6 Astra/High recommendation apply; actual NOT VERIFIED/NOT VERIFIED. First harness at 21:27:30 PASS/0, typecheck/lint and 33/530 (test start 21:27:51). Source/test changes reviewed; no failure/repair (0/10). T01 preserved separately in a temporary checkpoint while publication authorization remains pending. Accepted M1-M4 executable files unchanged.

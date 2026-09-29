@@ -3,6 +3,7 @@ import { isMainWager } from './bettingGame.js';
 import { isCreditUnits } from './credits.js';
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
+import { classifyPair, classifyThreeCard, sideGross, type PairCategory, type ThreeCardCategory } from './sideBets.js';
 
 export type SideWagerType = 'PAIR' | 'THREE_CARD';
 export interface SideWager {
@@ -12,13 +13,21 @@ export interface SideWager {
 }
 export interface OptionalGameState extends advanced.AdvancedGameState {
   readonly sideWagers: readonly SideWager[];
+  readonly sideResults: readonly SideResult[];
+}
+export interface SideResult extends SideWager {
+  readonly roundId: string;
+  readonly category: PairCategory | ThreeCardCategory;
+  readonly grossReturnUnits: number;
+  readonly netUnits: number;
+  readonly status: 'PENDING';
 }
 export type OptionalResult =
   | { readonly ok: true; readonly state: OptionalGameState }
   | { readonly ok: false; readonly state: OptionalGameState; readonly error: string };
 
 export function createOptionalGame(shoeId: string, random: RandomSource): OptionalGameState {
-  return { ...advanced.createAdvancedGame(shoeId, random), sideWagers: [] };
+  return { ...advanced.createAdvancedGame(shoeId, random), sideWagers: [], sideResults: [] };
 }
 function adapt(state: OptionalGameState, result: advanced.AdvancedResult): OptionalResult {
   if (!result.ok) return { ok: false, state, error: result.error };
@@ -86,6 +95,16 @@ export function cancelOptionalMainWager(state: OptionalGameState, seatNumber: nu
 }
 export function closeOptionalBetting(state: OptionalGameState, replacementShoeId: string, random: RandomSource): OptionalResult {
   const result = adapt(state, advanced.closeAdvancedBetting(state, replacementShoeId, random));
-  return result.ok ? { ok: true, state: { ...result.state,
-    sideWagers: Object.freeze(state.sideWagers.map((entry) => Object.freeze({ ...entry }))) } } : result;
+  if (!result.ok) return result;
+  const round = result.state.game.round!;
+  const sideResults = round.phase === 'INTEGRITY_ERROR' ? [] : state.sideWagers.map((wager): SideResult => {
+    const original = round.players.find((hand) => hand.seatNumber === wager.seatNumber)!.originalCards;
+    const category = wager.type === 'PAIR' ? classifyPair(original)
+      : classifyThreeCard([...original, round.dealerCards[0]]);
+    const grossReturnUnits = sideGross(wager.stakeUnits, category);
+    return Object.freeze({ ...wager, roundId: round.roundId, category, grossReturnUnits,
+      netUnits: grossReturnUnits - wager.stakeUnits, status: 'PENDING' });
+  });
+  return { ok: true, state: { ...result.state, sideResults: Object.freeze(sideResults),
+    sideWagers: Object.freeze(state.sideWagers.map((entry) => Object.freeze({ ...entry }))) } };
 }

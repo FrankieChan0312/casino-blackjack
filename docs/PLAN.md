@@ -11,7 +11,7 @@ Each task uses its user-supplied acceptance cases: smallest additive implementat
 | Task | Status | Repairs |
 | --- | --- | --- |
 | M5-T01 | VERIFIED locally; publication pending | 0/10 |
-| M5-T02 | NOT STARTED | 0/10 |
+| M5-T02 | VERIFIED locally; publication pending | 0/10 |
 | M5-T03 | NOT STARTED | 0/10 |
 | M5-T04 | NOT STARTED | 0/10 |
 | M5-T05 | NOT STARTED | 0/10 |

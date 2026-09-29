@@ -945,3 +945,7 @@ Split accepts an active first-decision two-card HUMAN hand of equal Blackjack va
 ### M4-T05 implementation
 
 The completed initial deal establishes dealerNaturalExcluded: a 2..9 upcard makes Natural impossible; the reused M3 Ace/ten peek excludes it before PLAYER_TURN. No Insurance window exists. Late Surrender checks this fact plus ORIGINAL/no-parent, two cards, no first decision, non-Natural and no split-Ace restriction. It draws/reserves nothing, records SURRENDERED/LATE_SURRENDER and ends the hand. Per-leaf gross is stake/2; original even units make this exact. All leaf results identify round/seat/hand/stake/outcome/gross/net/status. Final commit checks the sum of leaf stakes against each seat's reservation and credits all gross returns once. Parents never settle. Ordinary split-Ace hands require comparison; Natural, bust and surrender outcomes need no dealer draw when nothing else remains.
+
+### M5-T02 evaluation
+
+sideBets.ts accepts distinct physical originals, classifies same rank before suit/colour for Pair and highest of suited trips/straight flush/trips/straight/flush for three-card. A23 and QKA are straight; KA2 is not. Close evaluates each placed wager once from immutable original player cards plus only dealer upcard. Frozen category/gross/net PENDING records never credit available funds. Advanced play preserves their values; no cards drawn for evaluation.
