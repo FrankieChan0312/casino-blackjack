@@ -1486,3 +1486,9 @@ Scope: independent M5 initial deal, explicit Ace decision state, own original wa
 ### 2026-09-29 21:37:56 +08:00 - VERIFIED
 
 Scope/acceptance: original Ace-up Natural eligibility, no reserve, irreversible mutual exclusion, 1:1 main return for either peek outcome, unchanged unconverted Natural 3:2/push, terminal dealer Natural, independent side results and preserved Surrender. No final financial commit yet. Step -> minimal choice/result extension -> independent exact 400 versus 500/200 assertions and illegal actions -> full harness/diff. Full harness launched 21:37:05 PASS/0 typecheck/lint 35/557 (21:37:15 test start). Source/test review complete, no failure/repair (0/10). Same global stop conditions; actual model/effort NOT VERIFIED. Publication remains pending.
+
+## M5-T05 - Unified settlement and VOID
+
+### 2026-09-29 21:43:06 +08:00 - VERIFIED
+
+Scope: all M5 and advanced MAIN leaf financial records, exact gross/net, pending unavailable, single table commit, actual exposure VOID, duplicate/exclusive finalization and next-round boundary. Step -> reconciliation before all-seat update -> explicit independent bankroll/record fixtures and real draw exhaustion -> full harness/diff. First harness launched 21:42:19 PASS/0 typecheck/lint and 36/569 (21:42:43 test start). Reviewed record attribution, reserve sums and one-time guards; no failure/repair (0/10). No prior source/tests changed. Same global stop conditions and recommended settings; actual NOT VERIFIED. Publication still pending.

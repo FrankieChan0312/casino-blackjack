@@ -1,6 +1,6 @@
 import * as advanced from './advancedGame.js';
 import { isMainWager } from './bettingGame.js';
-import { isCreditUnits } from './credits.js';
+import { isBankroll, isCreditUnits } from './credits.js';
 import type { RandomSource } from './random.js';
 import { freezeTableSeats, releaseTableSeats, type SeatState } from './table.js';
 import { classifyPair, classifyThreeCard, sideGross, type PairCategory, type ThreeCardCategory } from './sideBets.js';
@@ -20,7 +20,22 @@ export interface OptionalGameState extends advanced.AdvancedGameState {
   readonly decisionPhase: 'NONE' | 'INSURANCE';
   readonly insuranceDecisions: readonly InsuranceDecision[];
   readonly peekPerformed: boolean;
+  readonly wagerResults: readonly OptionalWagerResult[];
 }
+interface WagerRecord {
+  readonly roundId: string;
+  readonly seatNumber: number;
+  readonly wagerId: string;
+  readonly stakeUnits: number;
+  readonly grossReturnUnits: number;
+  readonly netUnits: number;
+  readonly status: 'PENDING' | 'COMMITTED' | 'REFUNDED';
+}
+export type OptionalWagerResult = WagerRecord & (
+  | { readonly type: 'MAIN'; readonly handId: string; readonly outcome: OptionalMainResult['outcome'] }
+  | { readonly type: SideWagerType; readonly handId: null; readonly outcome: PairCategory | ThreeCardCategory | 'VOID' }
+  | { readonly type: 'INSURANCE'; readonly handId: null; readonly outcome: 'WIN' | 'LOSS' | 'VOID' }
+);
 export interface InsuranceDecision {
   readonly seatNumber: number;
   readonly choice: 'PENDING' | 'DECLINE' | 'INSURANCE' | 'EVEN_MONEY';
@@ -40,7 +55,7 @@ export type OptionalResult =
 
 export function createOptionalGame(shoeId: string, random: RandomSource): OptionalGameState {
   return { ...advanced.createAdvancedGame(shoeId, random), sideWagers: [], sideResults: [],
-    decisionPhase: 'NONE', insuranceDecisions: [], peekPerformed: false };
+    decisionPhase: 'NONE', insuranceDecisions: [], peekPerformed: false, wagerResults: [] };
 }
 function adapt(state: OptionalGameState, result: advanced.AdvancedResult): OptionalResult {
   if (!result.ok) return { ok: false, state, error: result.error };
@@ -216,6 +231,9 @@ export interface OptionalMainResult extends Omit<advanced.HandWagerResult, 'outc
   readonly outcome: advanced.HandWagerResult['outcome'] | 'EVEN_MONEY';
 }
 export function getOptionalMainResults(state: OptionalGameState): readonly OptionalMainResult[] {
+  if (state.phase === 'COMMITTED' || state.phase === 'VOID') {
+    return state.wagerResults.flatMap((entry) => entry.type === 'MAIN' ? [entry] : []);
+  }
   if (state.decisionPhase === 'INSURANCE') return [];
   return advanced.getAdvancedResults(state).map((entry) => {
     const elected = state.insuranceDecisions.some((decision) => decision.seatNumber === entry.seatNumber
@@ -252,4 +270,69 @@ export function advanceOptionalTable(state: OptionalGameState): OptionalResult {
 }
 export function resolveOptionalDealer(state: OptionalGameState): OptionalResult {
   return play(state, advanced.resolveAdvancedDealer);
+}
+
+export function getOptionalWagerResults(state: OptionalGameState): readonly OptionalWagerResult[] {
+  if (state.phase === 'COMMITTED' || state.phase === 'VOID') return state.wagerResults;
+  const round = state.game.round;
+  if (state.phase !== 'CLOSED' || !round || round.phase === 'INTEGRITY_ERROR') return [];
+  const main = getOptionalMainResults(state).map((entry): OptionalWagerResult => ({ ...entry,
+    type: 'MAIN', wagerId: `${entry.handId}/MAIN` }));
+  const sides = state.sideResults.map((entry): OptionalWagerResult => ({ roundId: round.roundId,
+    seatNumber: entry.seatNumber, wagerId: `${round.roundId}/seat-${entry.seatNumber}/${entry.type}`,
+    type: entry.type, handId: null, stakeUnits: entry.stakeUnits, outcome: entry.category,
+    grossReturnUnits: entry.grossReturnUnits, netUnits: entry.netUnits, status: 'PENDING' }));
+  const insurance = state.insuranceDecisions.flatMap((entry): OptionalWagerResult[] => {
+    if (entry.choice !== 'INSURANCE' || entry.outcome === undefined) return [];
+    const gross = entry.outcome === 'WIN' ? entry.stakeUnits * 3 : 0;
+    return [{ roundId: round.roundId, seatNumber: entry.seatNumber,
+      wagerId: `${round.roundId}/seat-${entry.seatNumber}/INSURANCE`, type: 'INSURANCE', handId: null,
+      stakeUnits: entry.stakeUnits, outcome: entry.outcome, grossReturnUnits: gross,
+      netUnits: gross - entry.stakeUnits, status: 'PENDING' }];
+  });
+  return [...main, ...sides, ...insurance];
+}
+function commitRecords(state: OptionalGameState, records: readonly OptionalWagerResult[],
+  phase: 'COMMITTED' | 'VOID'): OptionalResult {
+  const bankrolls = state.bankrolls.map((bankroll, index) => {
+    const own = records.filter((entry) => entry.seatNumber === index + 1);
+    const stake = own.reduce((sum, entry) => sum + entry.stakeUnits, 0);
+    const gross = own.reduce((sum, entry) => sum + entry.grossReturnUnits, 0);
+    if (!isBankroll(bankroll) || bankroll.reserved !== stake || !isCreditUnits(bankroll.available + gross)) return null;
+    return { available: bankroll.available + gross, reserved: 0 };
+  });
+  if (bankrolls.some((entry) => entry === null)) return { ok: false, state, error: 'INVALID_SETTLEMENT_FUNDS' };
+  return { ok: true, state: { ...state, phase, bankrolls: bankrolls.map((entry) => entry!),
+    sideResults: [], insuranceDecisions: state.insuranceDecisions.map((entry) => ({ ...entry, outcome: undefined })),
+    wagerResults: Object.freeze(records.map((entry) => Object.freeze({ ...entry,
+      status: phase === 'VOID' ? 'REFUNDED' as const : 'COMMITTED' as const }))) } };
+}
+export function settleOptionalWagers(state: OptionalGameState): OptionalResult {
+  if (state.phase !== 'CLOSED' || state.decisionPhase !== 'NONE' || state.game.round?.phase !== 'ROUND_COMPLETE') {
+    return { ok: false, state, error: 'SETTLEMENT_NOT_READY' };
+  }
+  const pending = getOptionalWagerResults(state);
+  const expectedCount = state.game.round.players.length + state.sideWagers.length
+    + state.insuranceDecisions.filter((entry) => entry.choice === 'INSURANCE').length;
+  if (pending.length !== expectedCount) return { ok: false, state, error: 'MISSING_OUTCOMES' };
+  return commitRecords(state, pending, 'COMMITTED');
+}
+export function voidOptionalRound(state: OptionalGameState): OptionalResult {
+  const round = state.game.round;
+  if (state.phase !== 'CLOSED' || !round || round.phase !== 'INTEGRITY_ERROR') return { ok: false, state, error: 'VOID_NOT_REQUIRED' };
+  const record = (seatNumber: number, stakeUnits: number) => ({ roundId: round.roundId, seatNumber,
+    stakeUnits, grossReturnUnits: stakeUnits, netUnits: 0, status: 'REFUNDED' as const, outcome: 'VOID' as const });
+  const main = round.players.map((hand): OptionalWagerResult => ({ ...record(hand.seatNumber, hand.stakeUnits),
+    handId: hand.handId, type: 'MAIN', wagerId: `${hand.handId}/MAIN` }));
+  const sides = state.sideWagers.map((wager): OptionalWagerResult => ({ ...record(wager.seatNumber, wager.stakeUnits),
+    handId: null, type: wager.type, wagerId: `${round.roundId}/seat-${wager.seatNumber}/${wager.type}` }));
+  const insurance = state.insuranceDecisions.filter((entry) => entry.choice === 'INSURANCE')
+    .map((entry): OptionalWagerResult => ({ ...record(entry.seatNumber, entry.stakeUnits), handId: null,
+      type: 'INSURANCE', wagerId: `${round.roundId}/seat-${entry.seatNumber}/INSURANCE` }));
+  return commitRecords(state, [...main, ...sides, ...insurance], 'VOID');
+}
+export function prepareNextOptionalRound(state: OptionalGameState): OptionalResult {
+  if (state.phase !== 'COMMITTED' && state.phase !== 'VOID') return { ok: false, state, error: 'ROUND_NOT_FINALIZED' };
+  return { ok: true, state: { ...state, phase: 'CONFIGURING', wagers: [], sideWagers: [], sideResults: [],
+    results: [], wagerResults: [], insuranceDecisions: [], decisionPhase: 'NONE', peekPerformed: false } };
 }

@@ -199,3 +199,7 @@ T03 VERIFIED locally, full harness PASS/0 34/549 (21:34:16 test start). Explicit
 ## M5-T04 checkpoint - 2026-09-29 21:37:56 +08:00
 
 T04 VERIFIED locally; full harness PASS/0 35/557, test start 21:37:15. Added electEvenMoney and getOptionalMainResults, no-reserve irreversible election, Insurance exclusion, gross=2*original and normal Natural precedence. optionalEvenMoney.test.ts covers eligibility, dealer Natural/non-Natural, no stacking, no funds required, terminal gameplay and computer decline. Repairs T01-T04 0/10. T05-T07 NOT STARTED. Publication pending.
+
+## M5-T05 checkpoint - 2026-09-29 21:43:06 +08:00
+
+T05 VERIFIED locally, full harness PASS/0 36/569, test start 21:42:43. getOptionalWagerResults exposes pending/final MAIN leaf, PAIR, THREE_CARD, INSURANCE records; settleOptionalWagers reconciles every seat before one immutable table commit. voidOptionalRound reconciles actual leaf/side/Insurance exposure and refunds once; Even Money adds no exposure. All fault pending returns vanish. Next-round preparation retains bankroll/shoe. Added optionalSettlement.test.ts with 12 integration cases. T01-T05 repairs 0/10; T06-T07 NOT STARTED; publication pending.
