@@ -195,3 +195,7 @@ T02 VERIFIED locally. Full harness PASS/0, 33 files / 530 tests, test start 21:2
 ## M5-T03 checkpoint - 2026-09-29 21:34:51 +08:00
 
 T03 VERIFIED locally, full harness PASS/0 34/549 (21:34:16 test start). Explicit decisionPhase INSURANCE keeps M4 gameplay dormant/currentHandId null; close deals independently, evaluates originals, waits for all human decisions before one peek. Computer declines automatically. Half-original available-only stake including odd units, pending win/loss, no ten/2..9 window, negative-peek secrecy and preserved Surrender verified. Added optionalPublicView.ts and optionalInsurance.test.ts; migrated M5 evaluation tests to M5 commands and explicit Ace decline. M1-M4 files unchanged. T01-T03 repairs 0/10. T04-T07 NOT STARTED. Publication pending.
+
+## M5-T04 checkpoint - 2026-09-29 21:37:56 +08:00
+
+T04 VERIFIED locally; full harness PASS/0 35/557, test start 21:37:15. Added electEvenMoney and getOptionalMainResults, no-reserve irreversible election, Insurance exclusion, gross=2*original and normal Natural precedence. optionalEvenMoney.test.ts covers eligibility, dealer Natural/non-Natural, no stacking, no funds required, terminal gameplay and computer decline. Repairs T01-T04 0/10. T05-T07 NOT STARTED. Publication pending.

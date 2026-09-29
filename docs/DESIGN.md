@@ -953,3 +953,7 @@ sideBets.ts accepts distinct physical originals, classifies same rank before sui
 ### M5-T03 delayed peek
 
 M5 now owns initial two-pass dealing through preserved shoe/table primitives. It allocates every funded original hand before drawing, retaining all exposure on partial-deal failure. decisionPhase INSURANCE is the explicit outer decision state; M4 round gameplay is dormant with no current hand. All M5 gameplay wrappers block it. Computer choices close as DECLINE, human decisions wait without timer. Only closure calls resolveInitialDecisions; Ace/ten performs one peek, 2..9 none. No hole inspection occurs on the Ace pending path. Natural resolution then establishes normal M4 hands and dealerNaturalExcluded, preserving first-decision Surrender. Public projection uses an allowlist and labels this phase INSURANCE. Raw internal/legacy APIs are not the M5 player boundary.
+
+### M5-T04 Even Money
+
+EVEN_MONEY is a decision on the same original main wager, not a second reserve. Only an original Natural with a PENDING Ace choice may elect it; the shared decision record prevents Insurance coexistence or reversal. Lower-level M4 hand outcomes retain their card meaning; getOptionalMainResults overrides elected financial outcome to EVEN_MONEY/gross 2*stake without ordinary 3:2 stacking. The computer always declines both.

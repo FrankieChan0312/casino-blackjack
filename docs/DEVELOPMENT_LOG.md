@@ -1480,3 +1480,9 @@ Contract: all Pair and three-card categories/priority, A23/QKA/KA2, original phy
 ### 2026-09-29 21:34:51 +08:00 - VERIFIED
 
 Scope: independent M5 initial deal, explicit Ace decision state, own original wager half-stake funding, automated computer decline, delayed exactly-once internal peek, secrecy, pending Insurance win/loss and M4 action reuse. No Even Money or settlement yet. Step -> controlled card/funds/phase fixtures -> full harness -> source/test/diff inspection. Same global stop conditions/model recommendation; actual settings NOT VERIFIED. Harness launched 21:33:53; PASS/0 typecheck/lint and 34/549, test start 21:34:16. Reviewed added flow and M5 evaluation-test migration; no prior assertions weakened. T03 repairs 0/10. Publication authorization still pending.
+
+## M5-T04 - Even Money
+
+### 2026-09-29 21:37:56 +08:00 - VERIFIED
+
+Scope/acceptance: original Ace-up Natural eligibility, no reserve, irreversible mutual exclusion, 1:1 main return for either peek outcome, unchanged unconverted Natural 3:2/push, terminal dealer Natural, independent side results and preserved Surrender. No final financial commit yet. Step -> minimal choice/result extension -> independent exact 400 versus 500/200 assertions and illegal actions -> full harness/diff. Full harness launched 21:37:05 PASS/0 typecheck/lint 35/557 (21:37:15 test start). Source/test review complete, no failure/repair (0/10). Same global stop conditions; actual model/effort NOT VERIFIED. Publication remains pending.

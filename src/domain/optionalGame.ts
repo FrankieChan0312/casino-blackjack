@@ -23,7 +23,7 @@ export interface OptionalGameState extends advanced.AdvancedGameState {
 }
 export interface InsuranceDecision {
   readonly seatNumber: number;
-  readonly choice: 'PENDING' | 'DECLINE' | 'INSURANCE';
+  readonly choice: 'PENDING' | 'DECLINE' | 'INSURANCE' | 'EVEN_MONEY';
   readonly stakeUnits: number;
   readonly outcome?: 'WIN' | 'LOSS';
 }
@@ -197,6 +197,32 @@ export function decideInsurance(state: OptionalGameState, seatNumber: number, pu
       ? { seatNumber, choice: purchase ? 'INSURANCE' : 'DECLINE', stakeUnits } : entry) };
   return { ok: true, state: next.insuranceDecisions.some((entry) => entry.choice === 'PENDING')
     ? next : resolveInitialDecisions(next) };
+}
+export function electEvenMoney(state: OptionalGameState, seatNumber: number): OptionalResult {
+  if (state.phase !== 'CLOSED' || state.decisionPhase !== 'INSURANCE' || state.peekPerformed) {
+    return { ok: false, state, error: 'EVEN_MONEY_NOT_OPEN' };
+  }
+  const decision = state.insuranceDecisions.find((entry) => entry.seatNumber === seatNumber);
+  const hand = state.game.round!.players.find((entry) => entry.seatNumber === seatNumber);
+  if (!decision || decision.choice !== 'PENDING' || !hand || !advanced.isAdvancedNatural(hand)) {
+    return { ok: false, state, error: 'EVEN_MONEY_NOT_ALLOWED' };
+  }
+  const next: OptionalGameState = { ...state, insuranceDecisions: state.insuranceDecisions.map((entry) => entry === decision
+    ? { seatNumber, choice: 'EVEN_MONEY', stakeUnits: 0 } : entry) };
+  return { ok: true, state: next.insuranceDecisions.some((entry) => entry.choice === 'PENDING')
+    ? next : resolveInitialDecisions(next) };
+}
+export interface OptionalMainResult extends Omit<advanced.HandWagerResult, 'outcome'> {
+  readonly outcome: advanced.HandWagerResult['outcome'] | 'EVEN_MONEY';
+}
+export function getOptionalMainResults(state: OptionalGameState): readonly OptionalMainResult[] {
+  if (state.decisionPhase === 'INSURANCE') return [];
+  return advanced.getAdvancedResults(state).map((entry) => {
+    const elected = state.insuranceDecisions.some((decision) => decision.seatNumber === entry.seatNumber
+      && decision.choice === 'EVEN_MONEY');
+    return elected && entry.outcome !== 'VOID' ? { ...entry, outcome: 'EVEN_MONEY' as const,
+      grossReturnUnits: 2 * entry.stakeUnits, netUnits: entry.stakeUnits } : entry;
+  });
 }
 function play(state: OptionalGameState, command: (state: advanced.AdvancedGameState) => advanced.AdvancedResult): OptionalResult {
   if (state.decisionPhase === 'INSURANCE') return { ok: false, state, error: 'INSURANCE_PENDING' };
