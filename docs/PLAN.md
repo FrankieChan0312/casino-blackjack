@@ -1,5 +1,15 @@
 # Casino Blackjack — Engineering Plan
 
+## Current M6 batch contract
+
+The user explicitly HUMAN ACCEPTED M5 at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after a genuinely independent recheck reported NO FINDINGS, LOW-01 CLOSED, regression sufficiency/documentation/requirements/REG-M5-001..072/M1-M4 preservation PASS. This supersedes historical M5 pending-review/acceptance statements below.
+
+Execute T01 ownership -> T02 original back wagers -> T03 ordinary following -> T04 Double follow -> T05 Split/Re-split follow -> T06 Insurance/Even Money/settlement/VOID -> T07 explicit regression and prior preservation -> T08 documentation-only fresh-review package. Normal verified checkpoint commit/push origin main/fetch/parity/clean and continuation are pre-authorized. Recommended every task: GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+T01 scope/acceptance: stable zero-or-one HUMAN, spectator/seated modes, available/reserved ownership, persistent funds through finalized-round seat moves, max one controlled seat, explicit independent computers, no duplicate spendable funds, active configuration rejection and public privacy. Additive source/helper/tests only; no back wagers yet. Steps -> verification: ownership adapter -> deterministic complete-round and rejection assertions -> targeted suite/full verify.ps1 -> full diff/whitespace/status -> normal verified checkpoint publication. Full batch non-goals: UI/React/browser E2E/network/accounts/database/payments/Charlie/M7+, credentials/paid resources/deployment. Stop for authority conflict, unresolved ownership/control policy, unknown overlapping changes, unavailable checks, incompatible broad rewrite, destructive Git, 10 repairs or stalled repair, or the final independent-review boundary.
+
+T01 VERIFIED, repairs 1/10; publication next. T02-T08 NOT STARTED, each 0/10. M6 independent fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Advanced-follow reachability clarification is pending as recorded in DESIGN/STATE; no policy change is inferred.
+
 ## Current M5 batch contract
 
 The user HUMAN ACCEPTED M4 at a5c6a22dd833867a6a1eff357a7462bd06fe4e0b after fresh review NO FINDINGS, requirements PASS, REG-M4-001..060 PASS, M1-M3 preservation PASS and documentation PASS. This supersedes historical M4 gate/acceptance statements below.

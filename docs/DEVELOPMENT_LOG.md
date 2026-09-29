@@ -1,5 +1,21 @@
 # Casino Blackjack — Development Log
 
+## M6-T01 — Ownership foundation
+
+### 2026-09-29 23:28:04 +08:00 — REPAIR 1 / REVERIFICATION
+
+First full harness FAIL/2: typecheck TS2345 at new ownership tests lines 52/71 because historical seat() fixture accepts only HUMAN/COMPUTER. Lint PASS and tests PASS 39/652 at 23:27:45 do not override failed typecheck. Hypothesis: explicit typed EMPTY seat objects remove helper misuse without changing production or historical fixture contracts. Replaced only those two calls; targeted rerun PASS/0 1/8 at 23:28:14 and full verify.ps1 PASS/0 typecheck/lint/tests, 39/652 at 23:28:20. T01 repair 1/10. A documentation patch anchor failed without writing and was corrected within this repair record update; no additional validation failure or code repair. Task document diff/whitespace/status inspected, remote URL matches authorization; source/test additions reviewed before staging. No independent milestone review claimed. Only factual documentation updates follow executable verification.
+
+### 2026-09-29 23:26:29 +08:00 — BASELINE / ACCEPTANCE / IMPLEMENTATION
+
+Entry Git gate at 23:21:59: repository main, HEAD and origin/main f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d, 0/0, clean, checked exit 0. Initial sandbox Git ownership failure at 23:21:47 was retried with owner permissions; no safe.directory/global configuration change. Baseline verify.ps1 PASS/0: typecheck/lint/tests, 38 files / 644 tests, test start 23:23:43. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+The user explicitly accepted M5 at the repaired baseline after independent recheck NO FINDINGS, LOW-01 CLOSED, regression sufficiency/documentation/M5 requirements/REG-M5-001..072/M1-M4 preservation PASS. This records supplied human acceptance with substantive T01 evidence, not a new review or metadata-only commit.
+
+T01 contract and verification plan are in PLAN. Added behindGame.ts/behindPublicView.ts, behindFixture.ts/behindOwnership.test.ts. Participant-owned HUMAN funds are stored once; engine bankrolls exist only during a transition. Input ownership determines attribution even when configuration changes. Stable computer-N funds remain separate while inactive. Own-seat gameplay/side/Insurance commands reuse M5; no back wager or alternative computer policy. Tests cover complete paid round, seat move, spectator/rejoin, no duplication, one-HUMAN limit, computer persistence, configuration freeze, M5 Insurance/side settlement, duplicate finalization and public privacy. Targeted test PASS/0 at 23:26:29, 1 file / 8 tests; first implementation/validation, no repair.
+
+Raised advanced-follow reachability clarification: legal local back targets are all COMPUTER, and required policy never chooses advanced actions. Proposed domain-mechanics testing with unchanged local automation; affected later work is pending user clarification. T01 remains independent. No new policy inferred. Next: full harness and entire diff review, then authorized verified commit/push/fetch/parity. M6 ledger all 0/10; prior ledgers in STATE unchanged. No independent M6 review or acceptance; M7 NOT STARTED.
+
 Document date: 2026-09-28  
 Document task: DEVLOG-1.0  
 Intended repository location: `docs/DEVELOPMENT_LOG.md`  

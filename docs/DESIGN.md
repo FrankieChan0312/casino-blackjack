@@ -1,5 +1,13 @@
 # Casino Blackjack — M1 Design
 
+## M6 participant ownership foundation (authorized batch)
+
+M6 adds behindGame.ts above the preserved M1-M5 APIs. Its local session has zero or one stable local-human participant, optionally controlling one seat or remaining a spectator. Human funds start at 2000 units and persist independently of seat selection. Seven explicit computer-N identities are bound to seat positions; their funds persist while their seat is empty or HUMAN-controlled. Taking a seat never transfers its computer's money to the human. Dormant computer funds are not spendable by the human.
+
+The embedded table omits bankrolls entirely. Each command constructs a transient M5 financial adapter, maps changes back to the input owners, and discards the adapter. No second spendable seat-bankroll copy exists in M6 state. Configuration remains CONFIGURING-only, before OPEN; the accepted max-one-HUMAN validation remains authoritative. The local action entry point derives the controlled seat from the participant, rather than accepting a follower-selected seat. Own-seat side/Insurance/Even Money and existing M5 financial finalization use the same adapter. Public projection allows only local funds, controller identities and the established redacted game view. T01 introduces no back wager, account infrastructure or network participant.
+
+The full batch's advanced-follow reachability needs clarification: under the required one-HUMAN and computer Hit/Stand-only policy, every legal back target is COMPUTER and therefore cannot naturally initiate Double/Split/Surrender. The proposed separation is tested domain controller mechanics versus unchanged local computer policy; no such alternate controller entry point is implemented in T01 pending clarification.
+
 ## M5 additive optional-wager orchestration
 
 The authorized M5 batch adds optionalGame.ts. Accepted M1-M4 source/APIs/tests remain unchanged. Ownership stays with the existing seven seat bankrolls: no separate bettor, spectator or follower model. T01 supports one PAIR and one THREE_CARD target per own active funded seat, 2..200 even units. Main changes use their own stake rather than total reservation; side changes move only the delta. Main cancellation releases main plus both dependent stakes atomically. Close freezes copied wager objects. No automatic computer wagers. Evaluation and the separate Ace-decision flow belong to the following tasks, not T01.
