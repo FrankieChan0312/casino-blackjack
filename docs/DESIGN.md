@@ -1,5 +1,15 @@
 # Casino Blackjack — M1 Design
 
+## M4 additive hand orchestration (authorized batch)
+
+M4 adds advancedGame.ts and advancedPublicView.ts while preserving accepted M1-M3 modules/APIs/tests. Pre-deal configuration, main-wager validation and initial dealing delegate to M3 through a CONFIGURING/OPEN-only adapter. Archived M4 rounds are preserved and never routed through the single-hand M2 engine. There is one authoritative M4 round.
+
+T01 stores ordered leaves in round.players: every hand for one seat precedes the next seat. Each hand has a round-local path ID, root/parent identity, ORIGINAL/SPLIT origin, immutable original-card snapshot, current cards/stake, first-decision flag, split-Ace context, decision completion and optional gameplay result. Current seat/hand selects the first unfinished leaf. Stand/ordinary 21 end decisions but still need comparison. Natural eligibility requires original origin and no parent. Public projection groups leaves by seat, explicitly copying visible fields without physical IDs, shoe/cut or hidden dealer data.
+
+Hit/Stand, unchanged computerDecision and S17 supply compatibility and fixture-level multi-hand sequencing. Per-leaf result attribution and sum-per-seat settlement/refund plumbing preserve a complete lifecycle; T01 adds no Double/Split/Surrender command. Proceeds remain pending until one table commit. Integrity clears every normal result and preserves cards/stakes. Local callers retain the latest returned state; this is not a concurrent request service.
+
+Following tasks add available-only matching reserve before Double/Split, depth-first child activation, four-leaf cap, one-card Split Aces and Late Surrender after initial natural exclusion. No future wager/follower window or bot-strategy change. Split-Ace completion ends decisions; surviving ordinary totals still require dealer comparison under R12. Only determined outcomes permit skipping dealer draws. Historical milestone designs below remain the preserved contracts of their APIs.
+
 Document date: 2026-09-28  
 Document task: DESIGN-1.0  
 Intended repository location: `docs/DESIGN.md`  

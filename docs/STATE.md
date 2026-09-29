@@ -1,5 +1,15 @@
 # Casino Blackjack — Project State
 
+## Current truth: M4-T01
+
+The explicit M4 contract HUMAN ACCEPTED M3 at cca40d2bed3b3964a9bfb47329d49bb553fe610e after M3-T06 repair 2. This supersedes historical acceptance/next-action notes below, without inventing a repaired-HEAD independent recheck or closing the finding on behalf of a reviewer. Acceptance is recorded with substantive T01 work; no acceptance-only commit.
+
+Entry at 2026-09-29 09:27:18 +08:00: main, HEAD=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, 0/0 clean. Fetch at 09:31:15 confirmed the same authorized remote/HEAD. Baseline harness PASS/0, 23 files / 305 tests (test start 09:32:10). Initial sandbox ownership failure resolved by owning-user execution without configuration changes. No unknown edits.
+
+T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T02-T07 NOT STARTED. M4 repairs T01..T07: **1,0,0,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
+
+The M3 records below are retained historical context. The current M4 contract governs next actions.
+
 ## Current truth: M3-T06 review repair 2
 
 M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70. M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695 by the user's explicit M3 batch contract; that acceptance was recorded with substantive M3-T01, without a standalone acceptance commit. Prior M1/M2 mappings and execution records remain in Git at those SHAs and DEVELOPMENT_LOG.md. No new independent M1/M2 review is claimed in this session.

@@ -1314,3 +1314,23 @@ At 08:35:47, rg -n 'M3\+ remains unimplemented' docs/LAB_MANUAL.md returned exit
 At 08:36:12, git diff --check, git status --short --untracked-files=all, the complete three-document diff and git diff --exit-code d0d0a08de8839215875e4920547334ca680b91ab -- src tests scripts package.json package-lock.json all exited 0. Only docs/LAB_MANUAL.md, docs/STATE.md and docs/DEVELOPMENT_LOG.md changed; LAB has exactly one M3+ -> M4+ replacement. Executable source/tests/harness/dependencies are unchanged. Existing LF/CRLF warnings are not whitespace failures. Reviewed the complete repair diff; no unrelated changes or broader correction is needed.
 
 Repair 2 is locally VERIFIED, with T06 still 2/10. This validates the targeted repair, not closure of the independent review finding: documentation review remains FAIL and the same independent reviewer must recheck the repaired HEAD. M3 remains NOT ACCEPTED; M4 remains NOT STARTED. After this evidence-only update, final exact-version harness, staged scope/whitespace and unchanged-executable guards precede the authorized commit/push/fetch. Actual SHA, exits, parity and clean-tree state are reported in delivery without additional file edits.
+
+## M4-T01 — Multi-hand foundation
+
+### 2026-09-29 09:27:18 +08:00 — BASELINE / HUMAN ACCEPTANCE
+
+main=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, 0/0 clean, correct repository. Initial sandbox Git reads failed ownership checks; approved owning-user checks passed without global safe.directory changes. Fetch/remote checks at 09:31:15 confirmed the same authorized GitHub repository and parity. Baseline child-PowerShell harness PASS/0, 23 files / 305 tests (09:32:10 test start). No unknown changes. Read required documents, relevant UX secrecy, existing source/tests/helpers and historical evidence.
+
+The user explicitly HUMAN ACCEPTED M3 at this repaired HEAD after M3-T06 repair 2. No recorded post-repair independent recheck is claimed. Prior M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1 remain unchanged. Acceptance accompanies substantive T01, without a metadata-only commit. Recommended GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Contract: minimum additive stable hand/lineage/stake/result model, ordered seat-local sequencing and public multi-hand projection, no Double/Split/Surrender implementation. Acceptance includes one-hand compatibility, stable IDs/current-hand routing, finished-hand skipping before next seat, split-origin natural exclusion, secrecy and preserved prior suites. Step -> verification: additive orchestration reusing M3 pre-deal and M1/M2 primitives -> deterministic explicit tests -> full harness/diff review -> authorized commit/push/fetch/parity/clean -> T02. All batch non-goals/stop conditions in PLAN apply. No incompatible rewrite or authority conflict identified.
+
+### 2026-09-29 09:40:09 +08:00 — IMPLEMENTATION / VALIDATION / REPAIR 1
+
+Added advancedGame.ts, advancedPublicView.ts, advancedFixture.ts and advancedFoundation.test.ts. Existing M1-M3 source/tests unchanged. Normal per-leaf settlement and integrity/refund plumbing support the compatible full lifecycle; no advanced action command yet. Explicit seat+hand IDs reject a stale prior-hand request before affecting the next hand. Public fields are allowlisted. Original-card lineage is preserved independently of current cards.
+
+First full verify.ps1 at 09:39:41 PASS/0: typecheck/lint and 24 files / 312 tests. No source/test failure. Documentation patch failed context matching because its copied final DESIGN paragraph omitted the existing replay sentence; no documents were written by that failed patch. Conservative command-repair count 1/10: reread actual tail, use exact document heading context and preserve the original text. Corrected documentation patch succeeded. Reverification is full harness plus task/staged whitespace and complete diff inspection before publication. No check weakened. Commit/push result will be recorded with T02, avoiding recursive metadata-only commits.
+
+### 2026-09-29 18:56:10 +08:00 — REPAIR REVERIFICATION / TASK REVIEW
+
+Full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 24 files / 312 tests (18:56:23 test start). Working/staged whitespace PASS/0; complete staged eight-file diff inspected, no unrelated changes. T01 repair 1/10 verified, no gameplay fix. Environment timestamps have a gap from the earlier run; no work is inferred during that interval. Authorized checkpoint publication follows; T02 records actual SHA/push/parity.
