@@ -1,5 +1,9 @@
 # Casino Blackjack — M1 Design
 
+## M5 additive optional-wager orchestration
+
+The authorized M5 batch adds optionalGame.ts. Accepted M1-M4 source/APIs/tests remain unchanged. Ownership stays with the existing seven seat bankrolls: no separate bettor, spectator or follower model. T01 supports one PAIR and one THREE_CARD target per own active funded seat, 2..200 even units. Main changes use their own stake rather than total reservation; side changes move only the delta. Main cancellation releases main plus both dependent stakes atomically. Close freezes copied wager objects. No automatic computer wagers. Evaluation and the separate Ace-decision flow belong to the following tasks, not T01.
+
 ## M4 additive hand orchestration (authorized batch)
 
 M4 adds advancedGame.ts and advancedPublicView.ts while preserving accepted M1-M3 modules/APIs/tests. Pre-deal configuration, main-wager validation and initial dealing delegate to M3 through a CONFIGURING/OPEN-only adapter. Archived M4 rounds are preserved and never routed through the single-hand M2 engine. There is one authoritative M4 round.

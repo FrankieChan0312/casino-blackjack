@@ -1,5 +1,23 @@
 # Casino Blackjack — Engineering Plan
 
+## Current M5 batch contract
+
+The user HUMAN ACCEPTED M4 at a5c6a22dd833867a6a1eff357a7462bd06fe4e0b after fresh review NO FINDINGS, requirements PASS, REG-M4-001..060 PASS, M1-M3 preservation PASS and documentation PASS. This supersedes historical M4 gate/acceptance statements below.
+
+M5 tasks run sequentially: T01 side wagering/reservation; T02 pure initial-card evaluation; T03 deferred Ace peek/Insurance; T04 Even Money; T05 unified settlement/VOID; T06 72-case executable regression and M1-M4 preservation; T07 documentation-only fresh-review package. Recommended model/effort for every task: GPT-6 Astra / High. Actual model/effort: NOT VERIFIED / NOT VERIFIED.
+
+Each task uses its user-supplied acceptance cases: smallest additive implementation -> deterministic independent assertions -> full verify.ps1 with checked exit -> complete task diff/whitespace review -> checkpoint. Publication requires valid authorization; the present contract authorizes implementation/local verification but does not itself grant blanket publication permission. No destructive Git, deployment, M6, Bet Behind, Charlie, UI, network, credentials, paid resources or real money. Stop on conflicts, unknown overlapping edits, unavailable validation, broad incompatible rewrite, ambiguous ownership, repair cap (10), or fresh-session gate. Do not independently review M5 here or mark it ACCEPTED.
+
+| Task | Status | Repairs |
+| --- | --- | --- |
+| M5-T01 | VERIFIED locally; publication pending | 0/10 |
+| M5-T02 | NOT STARTED | 0/10 |
+| M5-T03 | NOT STARTED | 0/10 |
+| M5-T04 | NOT STARTED | 0/10 |
+| M5-T05 | NOT STARTED | 0/10 |
+| M5-T06 | NOT STARTED | 0/10 |
+| M5-T07 | NOT STARTED | 0/10 |
+
 ## Current authorized M4 batch (supersedes historical next-action notes)
 
 M3 is HUMAN ACCEPTED by the explicit M4 contract at cca40d2bed3b3964a9bfb47329d49bb553fe610e after M3-T06 repair 2. No post-repair independent-review result is claimed. M4 tasks are not automatically ACCEPTED. Every task recommends GPT-6 Astra / High; actual runtime NOT VERIFIED / NOT VERIFIED.

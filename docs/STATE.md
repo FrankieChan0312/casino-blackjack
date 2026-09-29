@@ -1,5 +1,15 @@
 # Casino Blackjack — Project State
 
+## Current M5 execution (supersedes historical M4 handoff below)
+
+Entry 2026-09-29 21:19:38 +08:00: main, HEAD=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, ahead/behind 0/0, clean. Git owner-account read succeeded after sandbox ownership rejection; no Git configuration change. Baseline full verify.ps1 PASS/0, 30 files / 476 tests (21:21:14 test start).
+
+M4 HUMAN ACCEPTED by the M5 user contract at that exact SHA. Reported fresh review: NO FINDINGS; requirements PASS; REG-M4-001..060 PASS; M1-M3 preservation PASS; documentation PASS. Recorded together with substantive M5-T01 implementation, not a metadata-only acceptance commit.
+
+M5-T01 VERIFIED locally: optionalGame.ts adds own-seat main/side reservation commands; optionalFixture.ts and optionalBetting.test.ts verify boundaries, available-only delta funding, cascade cancellation, freeze and absence of automatic wagers. No evaluation/Insurance/Even Money/settlement yet. T02-T07 NOT STARTED. M5 fresh review NOT RUN; M5 NOT ACCEPTED; M6 NOT STARTED. Publication NOT RUN pending authorization.
+
+Recommended model/effort GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED. M5 ledger T01-T07: 0,0,0,0,0,0,0. Preserved M4: 1,0,1,0,0,0,1; M3: 0,0,0,0,0,2; M2: 1,0,0,0,1,1; M1: 2,1,0,0,1,0,1,0,0,1 (each /10).
+
 ## Current truth: M4 review package
 
 M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70; M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695. The user explicitly HUMAN ACCEPTED M3 at **cca40d2bed3b3964a9bfb47329d49bb553fe610e**, after M3-T06 review repair 2. That acceptance was recorded with substantive M4-T01, not a metadata-only commit.

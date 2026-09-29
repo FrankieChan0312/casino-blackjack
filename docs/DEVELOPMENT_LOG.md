@@ -1454,3 +1454,17 @@ git diff --check PASS/0. git status --short --untracked-files=all showed exactly
 ### 2026-09-29 20:24:21 +08:00 - COMPLETE TASK-DIFF REVIEW
 
 Inspected the entire T07 Git diff in three complete groups: README/DESIGN/PLAN, STATE, and LAB_MANUAL/DEVELOPMENT_LOG; every Git command exited 0. Confirmed the retained STATE REG-M4-001..060 mapping and current statuses. Same-session documentation task review found no additional blocking issue. No executable change followed the passed 20:15:05 harness. Only final evidence text was appended; final staged whitespace/scope and normal publication follow. This task-diff review is not the mandatory independent M4 review. Stop after publication; the final report supplies the actual final SHA and remote parity.
+
+## M5-T01 - Side-wager reservation foundation
+
+### 2026-09-29 21:19:38 +08:00 - ENTRY / M4 ACCEPTANCE
+
+Authorized repo main=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, 0/0 clean. Sandbox read initially failed dubious ownership at 21:19:18; owner-account read-only retry passed without configuration changes. M4 HUMAN ACCEPTED at this SHA by the explicit user contract after NO FINDINGS and all requirements/REG-M4-001..060/M1-M3 preservation/documentation PASS. This record accompanies actual T01 source/tests. Required documents and accepted source/test patterns inspected. Baseline verify.ps1 PASS/0, 30/476, test start 21:21:14. Recommended GPT-6 Astra / High, actual NOT VERIFIED / NOT VERIFIED.
+
+### 2026-09-29 21:23:05 +08:00 - IMPLEMENTATION / FIRST VERIFICATION
+
+T01 scope/acceptance: OPEN own-seat Pair/three-card target wagers, funded MAIN prerequisite, exact even 2..200 units, delta reservation, atomic insufficient rejection, cancellation/cascade, frozen close, no cards/RNG/automatic computer bet. Excludes evaluation and future tasks. Step -> deterministic boundary/funding tests -> full harness -> complete diff/whitespace review. Global PLAN stop conditions apply. Added optionalGame.ts, optionalFixture.ts and optionalBetting.test.ts; accepted executable files untouched. Full verify.ps1 launched. T01 first implementation/validation, repair count 0/10. Publication not yet authorized for this batch.
+
+### 2026-09-29 21:24:57 +08:00 - T01 VERIFIED
+
+Full harness PASS/0: typecheck, lint, 31 files / 506 tests, test start 21:23:32. Complete new source/helper/test and four-document diff inspected; git diff --check/status PASS/0, exactly seven intended files. No repair, 0/10. No independent milestone review claimed. Publication awaits explicit authorization under the user contract and AGENTS section 12.
