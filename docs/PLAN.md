@@ -10,8 +10,8 @@ M3 is HUMAN ACCEPTED by the explicit M4 contract at cca40d2bed3b3964a9bfb47329d4
 | M4-T02 | Available-only matching Double, forced one card, terminal decisions, eligible DAS, atomic rejection and doubled payout | VERIFIED / PUSHED fbae61c | 0/10 |
 | M4-T03 | Equal-value funded Split, ordered ownership, depth-first play, no parent settlement or split Natural | VERIFIED / PUSHED 5b4df25 | 1/10 |
 | M4-T04 | Re-split, four-leaf cap including ended leaves, once-only Split Aces and one card each | VERIFIED / PUSHED b119448 | 0/10 |
-| M4-T05 | Original first-decision Late Surrender after natural exclusion, exact half return, mixed leaf settlement | VERIFIED locally | 0/10 |
-| M4-T06 | Advanced draw faults/VOID, actual refunds once, 60-case map, independent M1/M2/M3 preservation | NOT STARTED | 0/10 |
+| M4-T05 | Original first-decision Late Surrender after natural exclusion, exact half return, mixed leaf settlement | VERIFIED / PUSHED dcf3076 | 0/10 |
+| M4-T06 | Advanced draw faults/VOID, actual refunds once, 60-case map, independent M1/M2/M3 preservation | VERIFIED locally | 0/10 |
 | M4-T07 | Accurate docs and findings-first genuinely new-session handoff; no new features | NOT STARTED | 0/10 |
 
 Each task: scope -> independent deterministic assertions -> full scripts/verify.ps1 with exit checks -> complete diff/whitespace/status review -> normal commit/push origin/main -> fetch/parity/clean -> next task. Exclude M5+, Insurance/Even Money/side bets/Bet Behind/Charlie, UI/network/authentication, real money and deployment. Computer remains <17 HIT / >=17 STAND. Stop on authority conflict, important ambiguity, broad incompatible redesign, unknown overlap, unavailable validation, destructive history, credentials/paid resources, 10 repairs or no repair progress. STOP after T07: independent review NOT RUN, M4 NOT ACCEPTED, M5 NOT STARTED.

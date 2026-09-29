@@ -1,12 +1,12 @@
 # Casino Blackjack — Project State
 
-## Current truth: M4-T05
+## Current truth: M4-T06
 
 The explicit M4 contract HUMAN ACCEPTED M3 at cca40d2bed3b3964a9bfb47329d49bb553fe610e after M3-T06 repair 2. This supersedes historical acceptance/next-action notes below, without inventing a repaired-HEAD independent recheck or closing the finding on behalf of a reviewer. Acceptance is recorded with substantive T01 work; no acceptance-only commit.
 
 Entry at 2026-09-29 09:27:18 +08:00: main, HEAD=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, 0/0 clean. Fetch at 09:31:15 confirmed the same authorized remote/HEAD. Baseline harness PASS/0, 23 files / 305 tests (test start 09:32:10). Initial sandbox ownership failure resolved by owning-user execution without configuration changes. No unknown edits.
 
-T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T01 is COMMITTED / PUSHED cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb on main; 18:57:14 push/fetch/parity PASS, 0/0 clean. T02 Double/DAS is IMPLEMENTED / VERIFIED locally: first full harness at 18:59:08 PASS/0, 25 files / 327 tests, 0/10 repairs. T02 COMMITTED / PUSHED fbae61cf248492c18dbd0e7a47902b6495eea14f; 19:01:17 main=origin/main, 0/0 clean. T03 Split IMPLEMENTED / VERIFIED locally after lint-only repair 1/10; 19:04:16 full harness PASS/0, 26 files / 361 tests. T03 COMMITTED / PUSHED 5b4df25519011b0745676c19b8fb782743c87f5d; 19:07:11 main=origin/main, 0/0 clean. T04 re-split/cap/Split-Ace verification PASS/0 at 19:08:51, 27 files / 371 tests, repairs 0/10. T04 COMMITTED / PUSHED b1194483fb67b8f73459d0b6092be0d0da4baf09; 19:13:36 main=origin/main, 0/0 clean. T05 Late Surrender/multi-leaf settlement full harness PASS/0 at 19:15:45, 28 files / 399 tests, repairs 0/10. T06-T07 NOT STARTED. M4 repairs T01..T07: **1,0,1,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
+T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T01 is COMMITTED / PUSHED cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb on main; 18:57:14 push/fetch/parity PASS, 0/0 clean. T02 Double/DAS is IMPLEMENTED / VERIFIED locally: first full harness at 18:59:08 PASS/0, 25 files / 327 tests, 0/10 repairs. T02 COMMITTED / PUSHED fbae61cf248492c18dbd0e7a47902b6495eea14f; 19:01:17 main=origin/main, 0/0 clean. T03 Split IMPLEMENTED / VERIFIED locally after lint-only repair 1/10; 19:04:16 full harness PASS/0, 26 files / 361 tests. T03 COMMITTED / PUSHED 5b4df25519011b0745676c19b8fb782743c87f5d; 19:07:11 main=origin/main, 0/0 clean. T04 re-split/cap/Split-Ace verification PASS/0 at 19:08:51, 27 files / 371 tests, repairs 0/10. T04 COMMITTED / PUSHED b1194483fb67b8f73459d0b6092be0d0da4baf09; 19:13:36 main=origin/main, 0/0 clean. T05 Late Surrender/multi-leaf settlement full harness PASS/0 at 19:15:45, 28 files / 399 tests, repairs 0/10. T05 COMMITTED / PUSHED dcf307633a7a28ec50b0302281f497426534bbec; 19:19:05 main=origin/main, 0/0 clean. T06 full harness PASS/0 at 19:30:10, 30 files / 476 tests, repairs 0/10. Independent original M1 12/155, M2 6/78, M3 5/72 reruns PASS/0 at 19:31:02-19:31:09; original tests/helpers and full M3 baseline executable paths unchanged. T07 NOT STARTED. M4 repairs T01..T07: **1,0,1,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
 
 The M3 records below are retained historical context. The current M4 contract governs next actions.
 
@@ -150,3 +150,72 @@ All 40 rows PASS in the executed T05 full harness: 23 files / 305 tests (72 M3, 
 | 40 | M3 scope excludes M4/M5/M6 | fundedRegression recursively inspects keys and API exports for absent advanced actions |
 
 Additional funded M2 regressions: HUMAN/computer alone ordinary 21, pause/resume, every dealer peek rank, hard/soft S17, both 219/249 cut thresholds, healthy-shoe reuse, exact card/discard accounting, initial faults after 0/1/3/5 draws and partial dealer fault. Existing M1/M2 assertions/helpers are preserved; no regression was disabled.
+
+## M4 executable regression mapping
+
+All rows execute in tests/integration/advancedRegression.test.ts as REG-M4-NNN (zero-padded ID). Each ID runs actual gameplay/funding assertions. A separate test rejects missing/duplicate IDs. T06 full harness PASS: 60 mapped cases plus mapping integrity, with additional detailed foundation/Double/Split/re-split/settlement/integrity suites. These results do not imply independent review or acceptance.
+
+| ID | Contract case |
+| --- | --- |
+| 001 | Original Double legal |
+| 002 | Double exact funds |
+| 003 | Double insufficient funds |
+| 004 | Double after Hit rejects |
+| 005 | Double on 21 rejects |
+| 006 | Double draws exactly one card for that hand |
+| 007 | Doubled settling stake |
+| 008 | Doubled win |
+| 009 | Doubled loss |
+| 010 | Doubled push |
+| 011 | DAS |
+| 012 | Split-Aces Double rejects |
+| 013 | 10/K Split |
+| 014 | J/Q Split |
+| 015 | Normal pair Split |
+| 016 | Unequal Split rejects |
+| 017 | Split exact funds |
+| 018 | Split insufficient funds |
+| 019 | First-child physical ownership |
+| 020 | Second-child physical ownership |
+| 021 | Depth-first child play |
+| 022 | Split Natural suppression |
+| 023 | Re-split |
+| 024 | Four-leaf maximum |
+| 025 | Fifth-leaf rejection despite funds |
+| 026 | Finished leaf counts toward cap |
+| 027 | Busted leaf counts toward cap |
+| 028 | Re-split insufficient funds below cap |
+| 029 | Split Aces exactly one added card per child |
+| 030 | Split Aces no Hit |
+| 031 | Split Aces no Double |
+| 032 | Split Aces no Surrender |
+| 033 | Split Aces no re-split when another Ace arrives |
+| 034 | Split-Ace A+ten ordinary 21/1:1 win only |
+| 035 | Current seat completes all hands before next seat |
+| 036 | COMPUTER still only Hit/Stand |
+| 037 | Original Late Surrender |
+| 038 | Surrender vs every upcard 2..9 |
+| 039 | Surrender after negative ten/Ace peek |
+| 040 | Surrender after Hit rejects |
+| 041 | Surrender after Double rejects |
+| 042 | Surrender after Split rejects |
+| 043 | Split child surrender rejects |
+| 044 | Natural surrender rejects |
+| 045 | Exact integer half-return |
+| 046 | Surrender no extra reserve/draw |
+| 047 | Independent leaf settlement |
+| 048 | Doubled leaf settlement |
+| 049 | No parent double settlement |
+| 050 | Advanced returns unavailable before commit |
+| 051 | Double funding rejection preserves complete state/RNG |
+| 052 | Split funding rejection preserves complete state/RNG |
+| 053 | Double exhaustion -> integrity/VOID |
+| 054 | Split exhaustion -> integrity/VOID |
+| 055 | Re-split exhaustion -> integrity/VOID |
+| 056 | Actual advanced reserved exposure refunded once |
+| 057 | Duplicate settlement has no financial effect |
+| 058 | Duplicate VOID has no financial effect |
+| 059 | Public multi-hand secrecy |
+| 060 | M5/M6/Charlie functionality absent |
+
+Further advancedIntegrity cases cover later-child and second-Ace-child failures, partial dealer draws, 4 doubled leaves, no hypothetical refund after funding rejection, invalidation of pending Natural/surrender/bust, partial initial faults, cut 219/249 and next explicit funded recovery. Surrendered split leaves cannot be produced by legal M4 commands; the cap counts all leaves without filtering result/completion state.

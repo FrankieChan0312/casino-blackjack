@@ -1400,3 +1400,23 @@ Extended M4 hand/result outcome types only, added dealerNaturalExcluded establis
 ### 2026-09-29 19:17:08 +08:00 - VALIDATION / REVIEW
 
 T05 first full verify.ps1 PASS/0: typecheck/lint, 28 files / 399 tests, test start 19:15:51. Repairs 0/10. Explicit 50-unit surrender returns 25 units; mixed split and doubled-leaf result tuples/reconciliation pass; dealer Natural and all post-action exclusions pass. Reviewed targeted implementation and new cases; no blocking finding. Complete Git diff and whitespace/status checks precede publication.
+
+## M4-T06 — Integrity / executable regression map
+
+### 2026-09-29 19:19:05 +08:00 — BASELINE / T05 PUBLICATION
+
+T05 committed/pushed dcf307633a7a28ec50b0302281f497426534bbec; push/fetch/Git PASS/0, main=origin/main, 0/0 clean. Full six-file staged diff and whitespace reviewed, no blocking finding. T05 repairs 0/10. T06 begins 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED. Prior ledgers unchanged.
+
+Scope/acceptance: Double/first/later split-child/re-split/dealer required-draw failure, diagnostic preservation, no fabricated card or mid-round shuffle, shoe retirement, invalidated pending outcomes, actual additional exposure refunded once, rejected funding never refunded hypothetically, executable 60-case map, independent M1/M2/M3 preservation. No new feature unless failure evidence requires repair. Step -> verification: explicit fault scenarios and numbered executable regression -> full harness -> original-file comparisons and separate baseline suites -> mapping/diff -> authorized checkpoint/push/parity. Global stop conditions apply; independent M4 review remains a genuinely new-session task after T07.
+
+### 2026-09-29 19:30:10 +08:00 — FIRST VALIDATION
+
+Added only advancedRegression.test.ts and advancedIntegrity.test.ts. Each REG-M4-001..060 registers a real executable scenario, not a check that a document/test filename exists; related IDs share independently asserted fixtures. A separate mapping assertion ensures exactly 60 distinct IDs. Additional faults use actual drawCard exhaustion with accounting-preserving fixtures: Double, first/later child, re-split, second Ace child, partial dealer, four doubled leaves, rejected funding, pending Natural/surrender/bust invalidation, initial partial faults and next-round recovery. Both cut thresholds are exercised through advanced actions. No production change or old test weakening.
+
+Full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 30 files / 476 tests (19:30:16 test start). First implementation/validation required no repair: T06 0/10. The 60 executable mapping scenarios and uniqueness test all passed. M4 adds 7 files / 171 tests to the preserved 23 files / 305 tests; this count is observed, not predicted.
+
+### 2026-09-29 19:31:02 +08:00 — INDEPENDENT BASELINE PRESERVATION
+
+Enumerated original paths using git ls-tree -r --name-only at accepted M1 d1d8966fe55af1bc2b9348e305135952b7723b70, M2 c9f7f35bf874a0e7673505cbbea745ce035ac695 and M3 cca40d2bed3b3964a9bfb47329d49bb553fe610e. All commands exited 0. git diff --exit-code against M1 tests/helpers and M2 tests/helpers PASS/0. Comparing every original M3 src/tests/scripts/package.json/package-lock.json/tsconfig.json/eslint.config.mjs path PASS/0: no changes. Newly added M4 paths are not falsely included in the preservation comparison.
+
+Ran npm.cmd test -- with the enumerated original M1 test files: PASS/0, 12 files / 155 tests (19:31:03). Separately ran the six M2-only original files: PASS/0, 6 files / 78 tests (19:31:07). Separately ran the five M3-only original files: PASS/0, 5 files / 72 tests (19:31:09). Final status showed only the two intended new T06 suites before evidence updates. These independent suite reruns are same-session validation, not a fresh independent review. Complete task diff/whitespace review follows; publication evidence is recorded with T07.
