@@ -1,5 +1,5 @@
 import * as optional from './optionalGame.js';
-import { createBankroll, type Bankroll } from './credits.js';
+import { createBankroll, isBankroll, isCreditUnits, type Bankroll } from './credits.js';
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
 import { isMainWager } from './bettingGame.js';
@@ -20,6 +20,18 @@ export interface BehindGameState {
   // Stable seat-bound computer identities retain funds while unoccupied.
   readonly computers: readonly ComputerParticipant[];
   readonly backWagers: readonly BackWager[];
+  readonly backExposures: readonly BackExposure[];
+  readonly backResults: readonly BackResult[];
+}
+export interface BackExposure extends BackWager {
+  readonly parentHandId: string | null;
+}
+export interface BackResult extends BackExposure {
+  readonly roundId: string;
+  readonly outcome: 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH' | 'PLAYER_BLACKJACK' | 'SURRENDERED' | 'VOID' | 'EVEN_MONEY';
+  readonly grossReturnUnits: number;
+  readonly netUnits: number;
+  readonly status: 'PENDING' | 'COMMITTED' | 'REFUNDED';
 }
 export interface BackWager {
   readonly participantId: 'local-human';
@@ -34,7 +46,8 @@ export type BehindResult =
 
 export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true): BehindGameState {
   const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random);
-  return { table, backWagers: [], human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
+  return { table, backWagers: [], backExposures: [], backResults: [],
+    human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
     computers: bankrolls.map((bankroll, index) => ({ participantId: `computer-${index + 1}`,
       seatNumber: index + 1, bankroll })) };
 }
@@ -53,7 +66,9 @@ function engine(state: BehindGameState): optional.OptionalGameState {
     ? { ...state.human!.bankroll, reserved: state.human!.bankroll.reserved - backReserve(state) } : entry.bankroll) };
 }
 function backReserve(state: BehindGameState): number {
-  return state.backWagers.reduce((sum, wager) => sum + wager.stakeUnits, 0);
+  if (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID') return 0;
+  return (state.table.phase === 'CLOSED' ? state.backExposures : state.backWagers)
+    .reduce((sum, wager) => sum + wager.stakeUnits, 0);
 }
 function run(state: BehindGameState, command: (entry: optional.OptionalGameState) => optional.OptionalResult): BehindResult {
   const input = engine(state);
@@ -143,6 +158,7 @@ export function closeBehindBetting(state: BehindGameState, replacementShoeId: st
   const result = run(eligible, (entry) => optional.closeOptionalBetting(entry, replacementShoeId, random));
   if (!result.ok) return { ok: false, state, error: result.error };
   return { ok: true, state: { ...result.state,
+    backExposures: Object.freeze(result.state.backWagers.map((wager) => Object.freeze({ ...wager, parentHandId: null }))),
     backWagers: Object.freeze(result.state.backWagers.map((wager) => Object.freeze({ ...wager }))) } };
 }
 export function decideBehindMainInsurance(state: BehindGameState, purchase: boolean): BehindResult {
@@ -168,13 +184,40 @@ export function advanceBehindTable(state: BehindGameState): BehindResult {
   return run(state, optional.advanceOptionalTable);
 }
 export function settleBehindWagers(state: BehindGameState): BehindResult {
-  if (state.backWagers.length) return { ok: false, state, error: 'BACK_SETTLEMENT_NOT_IMPLEMENTED' };
-  return run(state, optional.settleOptionalWagers);
+  const records = getBackResults(state);
+  if (state.table.phase !== 'CLOSED' || records.length !== state.backExposures.length) {
+    return { ok: false, state, error: 'SETTLEMENT_NOT_READY' };
+  }
+  const main = run(state, optional.settleOptionalWagers);
+  if (!main.ok) return main;
+  const human = main.state.human;
+  const gross = records.reduce((sum, record) => sum + record.grossReturnUnits, 0);
+  if (human && (!isBankroll(human.bankroll) || human.bankroll.reserved !== backReserve(state)
+    || !isCreditUnits(human.bankroll.available + gross))) return { ok: false, state, error: 'INVALID_BACK_SETTLEMENT' };
+  return { ok: true, state: { ...main.state,
+    human: human ? { ...human, bankroll: { available: human.bankroll.available + gross, reserved: 0 } } : null,
+    backResults: Object.freeze(records.map((record) => Object.freeze({ ...record, status: 'COMMITTED' as const }))) } };
+}
+export function getBackResults(state: BehindGameState): readonly BackResult[] {
+  if (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID') return state.backResults;
+  const round = state.table.game.round;
+  if (state.table.phase !== 'CLOSED' || !round || round.phase === 'INTEGRITY_ERROR'
+    || state.table.decisionPhase !== 'NONE') return [];
+  return state.backExposures.flatMap((exposure): BackResult[] => {
+    const outcome = round.players.find((hand) => hand.handId === exposure.handId)?.outcome;
+    if (!outcome) return [];
+    const stake = exposure.stakeUnits;
+    const gross = outcome === 'PLAYER_BLACKJACK' ? stake / 2 * 5 : outcome === 'PLAYER_WIN' ? stake * 2
+      : outcome === 'PUSH' ? stake : outcome === 'SURRENDERED' ? stake / 2 : 0;
+    return [{ ...exposure, roundId: round.roundId, outcome, grossReturnUnits: gross,
+      netUnits: gross - stake, status: 'PENDING' }];
+  });
 }
 export function voidBehindRound(state: BehindGameState): BehindResult {
   if (state.backWagers.length) return { ok: false, state, error: 'BACK_SETTLEMENT_NOT_IMPLEMENTED' };
   return run(state, optional.voidOptionalRound);
 }
 export function prepareNextBehindRound(state: BehindGameState): BehindResult {
-  return run(state, optional.prepareNextOptionalRound);
+  const result = run(state, optional.prepareNextOptionalRound);
+  return result.ok ? { ok: true, state: { ...result.state, backWagers: [], backExposures: [], backResults: [] } } : result;
 }

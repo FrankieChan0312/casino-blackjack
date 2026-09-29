@@ -2,6 +2,8 @@
 
 ## Current M6 batch contract
 
+T03 checkpoint: ordinary follower outcomes/actual-stake pending and final records, no follower control, independent multiple targets and pending-funds rejection -> behindOutcomes targeted assertions -> full verify.ps1 -> full diff/whitespace/status -> authorized checkpoint publication. No advanced follow/Insurance/Even Money/VOID yet. Same model, non-goals and stop conditions. T02 published be07af97a47d3477af9d4640905dc02c3b70e719, 0/10; T03 VERIFIED 0/10; T04-T08 NOT STARTED. This supersedes earlier task status text below.
+
 The user explicitly HUMAN ACCEPTED M5 at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after a genuinely independent recheck reported NO FINDINGS, LOW-01 CLOSED, regression sufficiency/documentation/requirements/REG-M5-001..072/M1-M4 preservation PASS. This supersedes historical M5 pending-review/acceptance statements below.
 
 Execute T01 ownership -> T02 original back wagers -> T03 ordinary following -> T04 Double follow -> T05 Split/Re-split follow -> T06 Insurance/Even Money/settlement/VOID -> T07 explicit regression and prior preservation -> T08 documentation-only fresh-review package. Normal verified checkpoint commit/push origin main/fetch/parity/clean and continuation are pre-authorized. Recommended every task: GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.

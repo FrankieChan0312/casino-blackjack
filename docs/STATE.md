@@ -1,5 +1,11 @@
 # Casino Blackjack — Project State
 
+## Current truth: M6-T03 ordinary following
+
+T02 committed/pushed/fetched be07af97a47d3477af9d4640905dc02c3b70e719, main=origin/main 0/0 clean at 2026-09-29 23:35:58 +08:00, all exits 0. T03 adds back exposure/result attribution and actual-stake ordinary/Natural/push/bust/Surrender settlement, using one table finalization and preserving controller money. Local follower commands cannot control target hands. Targeted behindOutcomes PASS/0 1 file / 10 tests at 23:37:54; full verify.ps1 PASS/0 typecheck/lint/tests 41 files / 682 tests, test start 23:38:00. T03 VERIFIED 0/10; publication next. T04-T08 NOT STARTED. Source change confined to behindGame.ts; new behindOutcomes.test.ts. Historical source/tests unchanged.
+
+M6 ledger 1,0,0,0,0,0,0,0; prior ledgers below unchanged. M6 fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Earlier T01/T02 intermediate implementation/status records below are historical. Recommended GPT-6 Astra/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
 ## Current truth: M6-T02 original wagering
 
 T01 published 0c87dcd938a45c1e9fdbe9aa9f8690c51f6fd8fa on main at 2026-09-29 23:31:06 +08:00; commit/push/fetch PASS/0, HEAD=origin/main, 0/0, clean. T02 then adds original wagering and public back records; targeted behindBetting PASS 1/20 at 23:33:41. Full verify.ps1 PASS/0 typecheck/lint/tests 40 files / 672 tests, test start 23:33:48. T02 VERIFIED, repairs 0/10; publication next. T03-T08 NOT STARTED. T02 intentionally rejects back financial finalization until following tasks supply outcomes/VOID.

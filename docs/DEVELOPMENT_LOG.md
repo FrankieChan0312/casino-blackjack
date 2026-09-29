@@ -1,5 +1,11 @@
 # Casino Blackjack — Development Log
 
+## M6-T03 — Ordinary following
+
+### 2026-09-29 23:37:53 +08:00 — T02 PUBLICATION / T03 VERIFICATION
+
+T02 publication PASS/0, be07af97a47d3477af9d4640905dc02c3b70e719, main=origin/main 0/0 clean at 23:35:58. T03 scope/steps and global limits in PLAN; recommendation GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED. Extended behindGame.ts and added behindOutcomes.test.ts. Pending results follow controller hand facts on actual separate exposure; own-seat and follower financial updates publish together only on completed table. Tested explicit win/loss/push/bust/Natural/Dealer-Natural/Surrender amounts, no follower action authority, multiple-target attribution and unspendable pending proceeds. Surrender uses a labelled test-only controller fixture because supported computers do not select it. Targeted PASS/0 1/10 at 23:37:54; full verify.ps1 PASS/0 41/682 at 23:38:00. First validation passed, T03 0/10. No original executable change. Full diff review/whitespace/status before normal authorized publication; no independent review/acceptance/M7.
+
 ## M6-T02 — Original Bet Behind wagering
 
 ### 2026-09-29 23:33:41 +08:00 — T01 PUBLICATION / T02 VERIFICATION
