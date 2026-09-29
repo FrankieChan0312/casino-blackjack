@@ -203,3 +203,7 @@ T04 VERIFIED locally; full harness PASS/0 35/557, test start 21:37:15. Added ele
 ## M5-T05 checkpoint - 2026-09-29 21:43:06 +08:00
 
 T05 VERIFIED locally, full harness PASS/0 36/569, test start 21:42:43. getOptionalWagerResults exposes pending/final MAIN leaf, PAIR, THREE_CARD, INSURANCE records; settleOptionalWagers reconciles every seat before one immutable table commit. voidOptionalRound reconciles actual leaf/side/Insurance exposure and refunds once; Even Money adds no exposure. All fault pending returns vanish. Next-round preparation retains bankroll/shoe. Added optionalSettlement.test.ts with 12 integration cases. T01-T05 repairs 0/10; T06-T07 NOT STARTED; publication pending.
+
+## M5-T06 checkpoint - 2026-09-29 21:50:12 +08:00
+
+T06 VERIFIED locally, full harness PASS/0 38/644, test start 21:49:11. REG-M5-001..072 plus exact-unique completeness PASS in optionalRegression.test.ts. optionalIntegrity.test.ts adds partial-deal exposure and rejected-Insurance/no-hypothetical-refund recovery. Independent original suites PASS/0: M1 12/155 at 21:49:56; M2 6/78 at 21:50:00; M3 5/72 at 21:50:01; M4 7/171 at 21:50:02. git ls-tree enumerated original paths and git diff --exit-code against all accepted M4 src/tests/scripts/dependencies/config PASS/0 unchanged. git diff --check PASS/0. T01-T06 repairs 0/10. T07 NOT STARTED. Fresh independent review NOT RUN, M5 NOT ACCEPTED, M6 NOT STARTED; publication pending.

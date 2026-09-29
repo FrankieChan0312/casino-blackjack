@@ -1492,3 +1492,11 @@ Scope/acceptance: original Ace-up Natural eligibility, no reserve, irreversible 
 ### 2026-09-29 21:43:06 +08:00 - VERIFIED
 
 Scope: all M5 and advanced MAIN leaf financial records, exact gross/net, pending unavailable, single table commit, actual exposure VOID, duplicate/exclusive finalization and next-round boundary. Step -> reconciliation before all-seat update -> explicit independent bankroll/record fixtures and real draw exhaustion -> full harness/diff. First harness launched 21:42:19 PASS/0 typecheck/lint and 36/569 (21:42:43 test start). Reviewed record attribution, reserve sums and one-time guards; no failure/repair (0/10). No prior source/tests changed. Same global stop conditions and recommended settings; actual NOT VERIFIED. Publication still pending.
+
+## M5-T06 - Regression and preservation
+
+### 2026-09-29 21:50:12 +08:00 - VERIFIED
+
+Contract: executable exact unique REG-M5-001..072 mapping, all user regression families and independent preservation of M1-M4. No feature changes. Added optionalRegression.test.ts (72 scenarios plus ID completeness) and optionalIntegrity.test.ts (2 additional actual-fault/recovery scenarios). Independent oracles use explicit cards/gross/net/balances; rejection freezes input and observes no draw/RNG; peek test spies on actual hole-containing evaluator calls, zero before decision/one after. Related IDs share full scenarios as in existing M4 mapping, with every ID registered once. First full harness launched 21:48:51 PASS/0 typecheck/lint and 38/644 (test start 21:49:11).
+
+Enumerated accepted milestone test paths via git ls-tree, then separately ran npm.cmd test -- with each incremental file set. PASS/0: M1 12/155 21:49:56; M2 6/78 21:50:00; M3 5/72 21:50:01; M4 7/171 21:50:02. Compared every original accepted M4 src/tests/scripts/package/config path: git diff --exit-code PASS/0 unchanged. git diff --check PASS/0. Reviewed entire new mapping and fault cases, no failure/repair (0/10). Same global stop conditions/recommended settings, actual NOT VERIFIED. These are same-session mechanical checks, not independent milestone review. Publication pending.

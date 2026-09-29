@@ -15,7 +15,7 @@ Each task uses its user-supplied acceptance cases: smallest additive implementat
 | M5-T03 | VERIFIED locally; publication pending | 0/10 |
 | M5-T04 | VERIFIED locally; publication pending | 0/10 |
 | M5-T05 | VERIFIED locally; publication pending | 0/10 |
-| M5-T06 | NOT STARTED | 0/10 |
+| M5-T06 | VERIFIED locally; publication pending | 0/10 |
 | M5-T07 | NOT STARTED | 0/10 |
 
 ## Current authorized M4 batch (supersedes historical next-action notes)
