@@ -1,268 +1,134 @@
 # Casino Blackjack — Project State
 
-## Current truth: M6-T07 regression and preservation
+## Current delivery: M6 fresh-session review gate
 
-T06 publication PASS/0 at 2026-09-29 23:57:52 +08:00, main=origin/main=5b7eaad88eadd7c476c1b9ac8f8f47e274b59602, 0/0 clean. T07 adds behindRegression.test.ts (95 individually registered requirement tests + exact completeness) and behindIntegrity.test.ts (8 tests); corrects only an M6 settlement test title to describe its ADD scenario accurately. No production changes. Targeted REG first PASS 1/96 at 2026-09-30 00:02:34; final targeted REG/integrity/settlement PASS/0 3/113 at 00:04:10. Full verify.ps1 PASS/0 typecheck/lint/tests **47 files / 825 tests**, test start 00:04:17.
+M1-M5 are HUMAN ACCEPTED. M6 T01-T07 are IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. T08 is the VERIFIED documentation-only review package; final validation/publication evidence is recorded below and in the delivery report. M6 fresh independent review: **NOT RUN**. M6 ACCEPTED: **NO**. M7: **NOT STARTED**. Deployment: **NOT RUN**.
 
-T07 repair 1/10: preservation command initially compared all M1 source directly to current and failed at 00:04:45 on shoe.ts's accepted M2 minimumCards extension. Verified the exact diff already exists between accepted M1 and accepted M5. Correct comparison: enumerate accepted M5 executable paths and compare current unchanged, except the explicitly reviewed compatible optionalGame.ts seam; separately compare/rerun each milestone's original test set. No production/test assertion was weakened or changed to pass. Re-verification at 00:05:26-00:05:34 PASS/0: original executable preservation, M1 **12/155** (00:05:27), M2 **6/78** (00:05:30), M3 **5/72** (00:05:31), M4 **7/171** (00:05:32), M5 **8/168** (00:05:33). Every original test file in its own milestone set matches its historical accepted version; all 644 prior assertions pass independently. optionalGame.ts exact exception diff inspected.
+Repository: C:\Users\user\Documents\GitHub\casino-blackjack. Authorized remote: https://github.com/FrankieChan0312/casino-blackjack.git. Branch: main.
+Entry at 2026-09-29 23:21:59 +08:00: HEAD=origin/main=f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d, ahead/behind 0/0, clean. Baseline full harness PASS/0, 38 files / 644 tests at 23:23:43. Sandbox Git owner mismatch was resolved by authorized owner-account execution, without configuration changes.
 
-T07 VERIFIED, publication next. M6 T01-T08 ledger **1,0,0,0,0,0,1,0**. Prior ledgers unchanged. M6 fresh review NOT RUN; ACCEPTED NO; M7 NOT STARTED. These are same-session mechanical preservation checks, not an independent milestone review. Earlier checkpoint sections below are historical. T08 is documentation only.
+T07 published at 2026-09-30 00:12:00 +08:00: HEAD=origin/main=63deee6d8940c16a72bab8fab6b27bf8f7f66133, ahead/behind 0/0, clean; push/fetch exit 0. This is the T08 starting baseline. The T08 commit cannot embed its own SHA; final HEAD, origin/main, parity and clean state must be taken from the final delivery and independently re-read from Git. No recursive metadata-only commit is planned.
 
-## Current truth: M6-T06 follower finance complete
+Recommended settings for every task: GPT-6 Astra / High. Actual model: **NOT VERIFIED**. Actual reasoning/effort: **NOT VERIFIED**.
 
-T05 publication PASS/0 at 2026-09-29 23:50:54 +08:00: main=origin/main=d4b455dd6547b9d16bb9b509c15b8e44a3f45433, 0/0 clean. T06 targeted behindInsurance/behindSettlement PASS/0 2 files / 19 tests at 23:55:50; full verify.ps1 PASS/0 typecheck/lint/tests 45 files / 721 tests at 23:56:05. T06 VERIFIED 0/10; publication next. Actual hole evaluation count confirms 0 before all decisions and 1 at closure, with negative-peek secrecy. Independent Insurance/Even Money, odd exact stakes, exposure settlement, Split mixed results, rejected additions and actual-reserve VOID pass. M6 repair ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. Fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED.
+## M5 human acceptance
 
-Accepted source preservation exception: optionalGame.ts receives only a default-false optional close parameter and guarded deferred-Ace closure function, needed to reuse verified initial dealing while waiting for followers. Original M5 callers and tests are unchanged; no incompatible contract rewrite. T07 will independently rerun each historical suite and inspect this exact allowed diff. All other changes remain M6 source and two new suites. No unimplemented back-finalization error remains. Earlier intermediate statuses below are historical.
+The user explicitly stated "I accept M5." Accepted HEAD: f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d. The user-supplied genuinely independent recheck reported NO FINDINGS; previous LOW-01 CLOSED; regression verification sufficiency PASS; documentation accuracy PASS; M5 requirements PASS; REG-M5-001..072 PASS; M1-M4 preservation PASS. This was recorded together with substantive M6-T01 implementation/evidence. This conversation did not perform that fresh recheck.
 
-## Current truth: M6-T05 Split/Re-split following
+## M6 checkpoints
 
-T04 publication PASS/0 at 2026-09-29 23:46:35 +08:00, main=origin/main=bfe9f0989748d16b2de4aa0669b56db80ea12b35, 0/0 clean. T05 changes only M6 controller/state/helper and adds behindSplit.test.ts. Targeted PASS/0 1/10 at 23:49:17; full verify.ps1 PASS/0 typecheck/lint/tests 43 files / 702 tests at 23:49:24. T05 VERIFIED 0/10, publication next. Before-card first/second physical ownership, ADD/NO_ADD/insufficient fallback, re-split descendant exposure, untracked skip, depth-first order, four-leaf cap, Split Aces and DAS continuation verified. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections are historical.
+All T01-T07 pushes/fetches passed with exit 0, main=origin/main, 0/0 and a clean tree at each checkpoint. Times below are +08:00; T01-T06 on 2026-09-29, T07 on 2026-09-30.
 
-## Current truth: M6-T04 Double following
+| Task | Scope | Commit | Repairs /10 | Full harness files/tests | Published |
+| --- | --- | --- | --- | --- | --- |
+| T01 | Participant ownership | 0c87dcd938a45c1e9fdbe9aa9f8690c51f6fd8fa | 1 | PASS 39/652 | 23:31:06 |
+| T02 | Original back wagering | be07af97a47d3477af9d4640905dc02c3b70e719 | 0 | PASS 40/672 | 23:35:58 |
+| T03 | Ordinary outcomes | 91ba66c9034716b1b46dcdc3976e36d36be3835e | 0 | PASS 41/682 | 23:41:15 |
+| T04 | Double follow | bfe9f0989748d16b2de4aa0669b56db80ea12b35 | 0 | PASS 42/692 | 23:46:35 |
+| T05 | Split/Re-split follow | d4b455dd6547b9d16bb9b509c15b8e44a3f45433 | 0 | PASS 43/702 | 23:50:54 |
+| T06 | Insurance/Even Money/settlement/VOID | 5b7eaad88eadd7c476c1b9ac8f8f47e274b59602 | 0 | PASS 45/721 | 23:57:52 |
+| T07 | Executable regression/preservation | 63deee6d8940c16a72bab8fab6b27bf8f7f66133 | 1 | PASS 47/825 | 00:12:00 |
+| T08 | Documentation and fresh-review handoff | This documentation checkpoint; resolve SHA from delivery/Git | 0 | PASS 47/825; VERIFIED | Final delivery |
 
-T03 publication PASS/0 at 2026-09-29 23:41:15 +08:00, main=origin/main=91ba66c9034716b1b46dcdc3976e36d36be3835e, 0/0 clean. T04 adds behindController.ts, behindDouble.test.ts, follow state/gates and public local choices. Controller funds are accepted first; no draw before follower resolution; rejected ADD records funding failure and NO_ADD with no phantom stake. Explicit owner check rejects local-human as controller of a backed computer seat. No local computer policy change. Targeted final PASS/0 1/10 at 23:44:38; full final verify.ps1 PASS/0 typecheck/lint/tests 42 files / 692 tests, test start 23:44:45. T04 VERIFIED 0/10; publication next. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 fresh review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections below are historical.
+Repair ledgers (each entry /10):
 
-## Current truth: M6-T03 ordinary following
+- M6 T01-T08: **1,0,0,0,0,0,1,0**.
+- M5: **0,0,0,0,0,1,0**.
+- M4: **1,0,1,0,0,0,1**.
+- M3: **0,0,0,0,0,2**.
+- M2: **1,0,0,0,1,1**.
+- M1: **2,1,0,0,1,0,1,0,0,1**.
 
-T02 committed/pushed/fetched be07af97a47d3477af9d4640905dc02c3b70e719, main=origin/main 0/0 clean at 2026-09-29 23:35:58 +08:00, all exits 0. T03 adds back exposure/result attribution and actual-stake ordinary/Natural/push/bust/Surrender settlement, using one table finalization and preserving controller money. Local follower commands cannot control target hands. Targeted behindOutcomes PASS/0 1 file / 10 tests at 23:37:54; full verify.ps1 PASS/0 typecheck/lint/tests 41 files / 682 tests, test start 23:38:00. T03 VERIFIED 0/10; publication next. T04-T08 NOT STARTED. Source change confined to behindGame.ts; new behindOutcomes.test.ts. Historical source/tests unchanged.
+T01 repair 1: first full harness failed typecheck because two new tests passed EMPTY to a HUMAN/COMPUTER-only fixture helper; targeted fix used explicit EMPTY objects. Targeted PASS 1/8 at 23:28:14; full PASS/0 39/652 at 23:28:20. No prior test changed.
 
-M6 ledger 1,0,0,0,0,0,0,0; prior ledgers below unchanged. M6 fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Earlier T01/T02 intermediate implementation/status records below are historical. Recommended GPT-6 Astra/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+T07 repair 1: first preservation command at 00:04:45 failed exit 1 by comparing M1 source directly to current, thereby counting the accepted M2 shoe minimumCards extension as M6 change. Confirmed the identical extension already exists at accepted M5. Corrected the procedure to compare accepted-M5 executable paths (except the documented compatible optionalGame seam), and compare each milestone's tests against its own accepted revision. No production change or weakened assertion. The repair counts conservatively include this procedure correction. Full failed-attempt history and intermediate evidence remain in DEVELOPMENT_LOG and checkpoint Git history.
 
-## Current truth: M6-T02 original wagering
+## Executed verification and mapping
 
-T01 published 0c87dcd938a45c1e9fdbe9aa9f8690c51f6fd8fa on main at 2026-09-29 23:31:06 +08:00; commit/push/fetch PASS/0, HEAD=origin/main, 0/0, clean. T02 then adds original wagering and public back records; targeted behindBetting PASS 1/20 at 23:33:41. Full verify.ps1 PASS/0 typecheck/lint/tests 40 files / 672 tests, test start 23:33:48. T02 VERIFIED, repairs 0/10; publication next. T03-T08 NOT STARTED. T02 intentionally rejects back financial finalization until following tasks supply outcomes/VOID.
+T07 targeted REG/integrity/settlement PASS/0, 3 files / 113 tests at 2026-09-30 00:04:10. Full verify.ps1 PASS/0 (typecheck, lint, tests), **47 files / 825 tests**, test start 00:04:17. Historical preservation reruns below all PASS/0; this is mechanical verification in the implementation session, not fresh review.
 
-Entry 2026-09-29 23:21:59 +08:00: main, HEAD=origin/main=f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d, 0/0, clean; owner-account Git reads PASS/0 after sandbox owner mismatch, without Git configuration changes. Baseline full verify.ps1 PASS/0, 38 files / 644 tests, test start 23:23:43. Recommended GPT-6 Astra / High; actual model and reasoning/effort both NOT VERIFIED.
+[behindRegression.test.ts](../tests/integration/behindRegression.test.ts) registers exactly **REG-M6-001..095**, one executable requirement per ID plus one exact completeness test (96 tests). Completeness asserts count 95, uniqueness 95 and exact contiguous ID set; no missing/duplicate IDs. The ID titles are the exact executable mapping:
 
-M5 is HUMAN ACCEPTED at that exact repaired HEAD by this user's explicit batch contract and statement "I accept M5." User-supplied independent recheck: NO FINDINGS; LOW-01 CLOSED; regression verification sufficiency PASS; documentation accuracy PASS; M5 requirements PASS; REG-M5-001..072 PASS; M1-M4 preservation PASS. This is an acceptance record, not a review performed by this implementation conversation. It accompanies substantive T01 source/tests; no metadata-only acceptance commit is made.
+- 001..005 participant ownership/persistence.
+- 006..021 original wagering, eligibility, shared funds and freeze.
+- 022..030 ordinary outcomes, no follower control and pending funds.
+- 031..044 Double funding, timing, exposure and outcomes.
+- 045..061 Split/Re-split, physical order, Aces and cap.
+- 062..074 Ace decisions, independence and secrecy.
+- 075..085 settlement, actual stakes, idempotency and attribution.
+- 086..094 actual-exposure VOID, exclusion, multiple targets and public secrecy.
+- 095 M7 browser implementation absent.
 
-T01 IMPLEMENTED / VERIFIED / PUSHED. New files: src/domain/behindGame.ts, src/domain/behindPublicView.ts, tests/helpers/behindFixture.ts, tests/integration/behindOwnership.test.ts. HUMAN funds live once in the participant; the embedded table contains no bankrolls. Transient adapters retain M5 financial semantics, computer identities retain separate funds, seat movement never refills/transfers funds. Targeted ownership suite PASS/0 at 23:26:29, 1 file / 8 tests. First full validation failed typecheck (test helper disallows EMPTY), while lint/tests passed 39/652. Repair 1 uses explicit EMPTY objects in new tests only. Targeted rerun PASS/0 1/8 at 23:28:14; full verify.ps1 PASS/0 typecheck/lint/tests 39 files / 652 tests, test start 23:28:20. No accepted executable file changed at T01; subsequent status is recorded above.
+Nine M6 suites add 181 tests to the preserved 38 files / 644 tests.
 
-Control-policy boundary: one HUMAN can back only COMPUTER seats, whose accepted policy never chooses Double/Split/Surrender. Thus advanced follower windows cannot occur through normal supported local play. An optional clarification was asked; absent a reply, the conservative implementation assumption is to test required domain mechanics using explicitly labelled controlled fixtures while preserving all local restrictions. This does not treat silence as approval for any policy change. No additional HUMAN, alternate bot policy or follower gameplay authority is introduced.
-
-M6 repair ledger T01-T08: 1,0,0,0,0,0,0,0 (each /10). Preserved M5 0,0,0,0,0,1,0; M4 1,0,1,0,0,0,1; M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1. M6 fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Historical M5 records below are superseded by this section.
-
-## Current truth: M5-T06 review repair 1
-
-Entry 2026-09-29 22:41:15 +08:00: main, HEAD=origin/main=7d70c2e243937012cd62d30bedb900db8b872cba, ahead/behind 0/0, clean. Fresh independent review found LOW-01: optionalEvaluation asserted the pre-Hit sideResults instead of the returned Hit state. No current gameplay defect was found; the reviewer reported that an in-memory successful-Hit sideResults=[] mutation escaped all 8 M5 files / 168 tests.
-
-At 2026-09-29 22:43:53 +08:00 the exact assertion defect was independently confirmed before editing. M5-T06 repair cycle **1/10** targets returned-state identity and explicit PAIR/MIXED_PAIR/140 and THREE_CARD/NONE/0 pending results. REG-M5-028's shared 028-030 scenario also receives a successful Hit and checks its returned state. LAB_MANUAL's Hit-preservation claim is retained, subject to the repaired executable evidence. Production, rules and prior milestone files are outside the repair scope.
-
-Repair is **IMPLEMENTED / VERIFIED locally**. Targeted optionalEvaluation PASS (1 file / 5 tests, 22:45:15-22:45:16 +08:00, exit 0); optionalRegression PASS (1 file / 73 tests, 22:45:22-22:45:23, exit 0), including the exact unique REG-M5-001..072 mapping assertion. At 22:45:41-22:45:42 an in-memory successful-Hit sideResults=[] mutation caused exactly the repaired evaluation test and REG-028/029/030 to fail (4 failed / 74 passed, expected exit 1). The transform applied once and wrote no repository files. Fault sensitivity PASS; this deliberate negative probe is not a production validation failure or an additional repair cycle.
-
-Full verify.ps1 PASS at 22:46:00-22:46:12 +08:00: typecheck/lint/tests exit 0, **38 files / 644 tests** (test start 22:46:06). At 22:46:08 git diff --check and production-path diff against reviewed HEAD (src, scripts, package.json, package-lock.json) both PASS/0. Complete test diff inspected; exactly two tests and STATE/DEVELOPMENT_LOG changed. LAB_MANUAL remains unchanged because the repaired evidence now substantiates its Hit-preservation wording. No production defect was exposed.
-
-LOW-01 remains **OPEN pending independent reviewer recheck**. M5 review/documentation approval is not claimed. **M5 remains NOT ACCEPTED; M6 remains NOT STARTED.** The user authorized normal commit/push/fetch after verification. Final publication SHA/results/parity/clean will be reported in delivery and Git history, following the existing convention that a commit cannot embed its own SHA; no recursive metadata-only commit is planned.
-
-Current M5 T01-T07 repair ledger: **0,0,0,0,0,1,0**. Prior ledgers remain unchanged: M4 **1,0,1,0,0,0,1**; M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Reviewer probe fixture corrections and environment issues are not repair cycles.
-
-## Historical M5 publication package
-
-The following retained checkpoint records describe the original T01-T07 publication, before the independent review and repair above; their review status and zero M5 repair counts are historical, not current.
-
-M1, M2, M3 and M4 are HUMAN ACCEPTED. Accepted SHAs: M1 d1d8966fe55af1bc2b9348e305135952b7723b70; M2 c9f7f35bf874a0e7673505cbbea745ce035ac695; M3 cca40d2bed3b3964a9bfb47329d49bb553fe610e; M4 **a5c6a22dd833867a6a1eff357a7462bd06fe4e0b**.
-
-The user explicitly accepted M4 in the M5 batch contract after a fresh-session review reported **NO FINDINGS**, requirements PASS, REG-M4-001..060 PASS, M1-M3 preservation PASS and documentation PASS. That acceptance was recorded with substantive M5-T01 source/test evidence, not a standalone acceptance commit. Historical accuracy: M3 acceptance followed review repair 2; no unrecorded repaired-HEAD reviewer recheck is claimed. Historical logs are retained in DEVELOPMENT_LOG and Git.
-
-M5 T01-T07 are IMPLEMENTED / VERIFIED locally. T07 is documentation-only; its full harness passed at 22:00:57 (+08:00 test start). **M5 fresh-session review: NOT RUN. M5 ACCEPTED: NOT RUN. M6: NOT STARTED. Deployment: NOT RUN.** No other agent or this implementation session performs the mandatory independent M5 review.
-
-Publication was explicitly authorized by the user for normal T01-T07 commits, push/fetch origin main, parity and clean verification. No amend/rebase/reset/force-push/history rewrite/merge/release/deployment/M6 is authorized.
-
-Publication entry 2026-09-29 22:07:27 +08:00: main, HEAD=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, 0/0, exactly the known 18 M5 files and an empty index. Remote URL matched the authorized GitHub repository. Fetch confirmed unchanged remote baseline. All 18 current files and the final saved snapshot matched the previously delivered SHA-256 manifest 373836CE208BF7B6852314C2DB30A23175CA552D814E5919144B332CD5F3D1D0. All seven snapshot boundaries were available and matched their task scopes; none was guessed.
-
-T01-T06 are now COMMITTED / PUSHED. Each staged blob exactly matched its preserved checkpoint, and every normal push/fetch returned exit 0 with HEAD=origin/main and 0/0. Later-task working files were retained during intermediate publications, so intermediate clean state is not claimed. T07 is this documentation-only checkpoint, with only factual publication finalization added to its preserved six-document scope. Its own SHA cannot be embedded in its own content; final SHA/push/fetch/parity/clean are recorded in the delivery report and Git history without a recursive metadata-only commit.
-
-| Task | Commit | Push/fetch/parity | Published at (+08:00) |
-| --- | --- | --- | --- |
-| M5-T01 | 343140e5bf28ed18fee1cc5c42b4420e1a4b8101 | PASS / PASS / 0/0 | 2026-09-29 22:10:53 +08:00 |
-| M5-T02 | 2e5b152f9a83165ef5257392bd3d707542ec5df1 | PASS / PASS / 0/0 | 2026-09-29 22:11:58 +08:00 |
-| M5-T03 | cadb21659584213e927e31e80d2440399b55799e | PASS / PASS / 0/0 | 2026-09-29 22:13:11 +08:00 |
-| M5-T04 | 751ba5cd7279f3aba65bad95418fccf099499eb4 | PASS / PASS / 0/0 | 2026-09-29 22:13:44 +08:00 |
-| M5-T05 | 5cc4a1f032528920455c9a426fe3407322b51e23 | PASS / PASS / 0/0 | 2026-09-29 22:14:02 +08:00 |
-| M5-T06 | fe078fd50ba7b75d5288d807e85519729890bdc2 | PASS / PASS / 0/0 | 2026-09-29 22:14:28 +08:00 |
-| M5-T07 | This documentation commit; resolve final HEAD from delivery/Git | Final result recorded in delivery | After this record |
-
-## Baseline and runtime evidence
-
-Repository: C:\Users\user\Documents\GitHub\casino-blackjack. Intended remote: https://github.com/FrankieChan0312/casino-blackjack.git. Branch: main.
-
-Entry 2026-09-29 21:19:38 +08:00: HEAD=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, ahead/behind 0/0, clean. Initial sandbox Git reads were blocked by owner mismatch; authorized owner-account reads passed without safe.directory changes. No unknown user edits existed. Baseline verify.ps1 PASS/0, 30 files / 476 tests, test start 21:21:14. No fetch/publication is claimed for this batch before authorization.
-
-Recommended model/effort: GPT-6 Astra / High. Actual model: **NOT VERIFIED**. Actual reasoning/effort: **NOT VERIFIED**. No verifiable client setting evidence is available. Model selection is not validation evidence.
-
-## Checkpoints and repair ledgers
-
-Every M5 checkpoint uses the user contract acceptance cases, same global non-goals/stop conditions and full verify.ps1. Publication SHAs and actual results are recorded above. Publication reused verified snapshots; no completed task or test suite was rerun merely because publication was deferred.
-
-| Task | Scope | State | Repairs | Full harness files/tests (test start, +08:00 on 2026-09-29) |
+| Milestone | Accepted revision | Original suites rerun | Result | Test start 2026-09-30 +08:00 |
 | --- | --- | --- | --- | --- |
-| M5-T01 | OPEN side wagering/reservation/cascade | VERIFIED / PUSHED | 0/10 | PASS 31/506, 21:23:32 |
-| M5-T02 | Pure Pair/three-card initial evaluation | VERIFIED / PUSHED | 0/10 | PASS 33/530, 21:27:51 |
-| M5-T03 | Insurance, deferred Ace peek, secrecy | VERIFIED / PUSHED | 0/10 | PASS 34/549, 21:34:16 |
-| M5-T04 | Even Money, natural precedence | VERIFIED / PUSHED | 0/10 | PASS 35/557, 21:37:15 |
-| M5-T05 | Unified settlement/actual-stake VOID | VERIFIED / PUSHED | 0/10 | PASS 36/569, 21:42:43 |
-| M5-T06 | 72-case regression and M1-M4 preservation | VERIFIED / PUSHED | 0/10 | PASS 38/644, 21:49:11 |
-| M5-T07 | Documentation and fresh-review package | VERIFIED locally | 0/10 | PASS 38/644, 22:00:57 |
+| M1 | d1d8966fe55af1bc2b9348e305135952b7723b70 | 12 files / 155 tests | PASS/0 | 00:05:27 |
+| M2 | c9f7f35bf874a0e7673505cbbea745ce035ac695 | 6 / 78 | PASS/0 | 00:05:30 |
+| M3 | cca40d2bed3b3964a9bfb47329d49bb553fe610e | 5 / 72 | PASS/0 | 00:05:31 |
+| M4 | a5c6a22dd833867a6a1eff357a7462bd06fe4e0b | 7 / 171 | PASS/0 | 00:05:32 |
+| M5 | f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d | 8 / 168 | PASS/0 | 00:05:33 |
 
-M5 T01-T07 ledger: **0,0,0,0,0,0,0**. No failed implementation validation or repair cycle occurred through T07. Initial sandbox ownership restriction is environmental, not a code repair.
+Each suite's original files match its accepted revision. All accepted M5 executable/config/dependency/helper paths are unchanged except src/domain/optionalGame.ts: default-false optional fourth close parameter and guarded closeDeferredAceDecisions allow followers to finish before peek. Original three-argument behavior and tests remain unchanged. No broad incompatible rewrite, dependency addition or prior assertion weakening.
 
-Preserved prior ledgers, every entry /10:
+## Actual participant and Bet Behind model
 
-- M4 T01-T07: **1,0,1,0,0,0,1**
-- M3 T01-T06: **0,0,0,0,0,2**
-- M2 T01-T06: **1,0,0,0,1,1**
-- M1 T01-T10: **2,1,0,0,1,0,1,0,0,1**
+behindGame.ts owns one optional stable local-human participant, seated at most once or spectator, and seven explicit seat-bound computer-N owners. New balances are 2000 integer half-credit units. HUMAN money follows the participant across finalized-round moves/leave/rejoin; dormant computer balances never transfer to HUMAN. The embedded table omits bankrolls. A transient M5 adapter maps funds back to owners and excludes actual follower reservation from its own-seat reconciliation without making it available.
 
-## Executed verification
+One original back wager per other qualifying funded active seat, 20..2000 even units, OPEN only. Spectators need no own MAIN. Own MAIN/sides and all backed targets share one available pool. Delta changes, cancellation and dependent refund on target MAIN cancellation are atomic. Close removes stale ineligible back targets, freezes originals and draws no extra cards. Pair/THREE_CARD remain own-seat only. Computers never auto-bet or follow.
 
-| Check | Status | Evidence |
-| --- | --- | --- |
-| T06 full harness | PASS | typecheck/lint/tests, exit 0; 38 files / 644 tests |
-| REG-M5-001..072 | PASS | 72 executable cases and exact unique ID completeness |
-| Separate M1 suite | PASS | 12 files / 155 tests, 21:49:56, exit 0 |
-| Separate M2 suite | PASS | 6 files / 78 tests, 21:50:00, exit 0 |
-| Separate M3 suite | PASS | 5 files / 72 tests, 21:50:01, exit 0 |
-| Separate M4 suite | PASS | 7 files / 171 tests, 21:50:02, exit 0 |
-| Accepted executable preservation | PASS | git ls-tree enumerated original paths; git diff --exit-code a5c6a22 -- all original src/tests/scripts/package/config paths, exit 0 |
-| T06 whitespace | PASS | git diff --check, exit 0 |
-| Final T07 harness/diff/preservation | PASS | Full harness 38/644 exit 0; entire six-document diff inspected; all 12 new executable hashes equal T06 |
-| M5 independent fresh-session review | NOT RUN | Requires genuinely new conversation after package publication |
-| M5 human acceptance | NOT RUN | Only explicit human acceptance may change this |
-| Browser/E2E | NOT APPLICABLE | No UI implemented |
-| Clean-machine npm ci/cross-platform portability | NOT RUN | Existing Windows toolchain; no dependency changes |
-| T01-T06 commit/push/fetch/parity | PASS | Actual SHAs/timestamps above, exit 0 and 0/0 each |
-| Deployment | NOT RUN | Outside scope |
+Controller owns cards/actions; follower owns stake and funding/optional choices. Local HUMAN action routing derives its own controlled seat. A follower cannot act on another hand or veto Surrender; controller Surrender returns half its attached follower stake. Normal/Natural outcomes track the same cards and use each follower's actual stake.
 
-Independent suite reruns above are same-session mechanical preservation checks, not the mandatory independent milestone review. All original 30 suites / 476 tests remain unchanged. Eight new M5 suites bring the executed full suite to 38 / 644. No prior assertions, checks, dependencies or runtime settings changed.
+Controller matching reserve is accepted before Double/Split follow windows. No forced Double card or new child card appears until ADD/NO_ADD resolves. Insufficient ADD records INSUFFICIENT_FUNDS and final NO_ADD, leaving follower funds unchanged while continuing the accepted controller action. Double ADD doubles follower stake; NO_ADD keeps original stake. Split ADD funds equal ordered children; NO_ADD follows only the earlier-dealt-card child. Tracked re-splits open a new decision; untracked descendants do not. Decisions are irreversible before exposure; depth-first order, Split-Ace restrictions and four-leaf cap remain.
 
-## Implemented M5 contract
+Against Ace, HUMAN own MAIN decision precedes back decisions in ascending target-seat order, then peek. Each original back wager independently chooses decline, half-original Insurance (odd units legal), or eligible Natural Even Money. Insurance needs available funds; insufficient purchase rejects unchanged and can be declined. Even Money reserves nothing, excludes Insurance/3:2 and fixes gross 2x. Computers decline. No later Insurance window exists; negative peek hides the hole card.
 
-- OPEN side wagers: one PAIR and one THREE_CARD per own occupied, non-sitting-out, funded MAIN seat. 2..200 even units; same target is no-op; changes reserve/release delta only; cancellation once. Cancelling MAIN releases both dependent sides atomically. Closed original wagers freeze. No automatic computer wagers or M6 ownership.
-- Initial side evaluation occurs once, using immutable original player cards plus only dealer upcard for three-card. Categories and exact gross/net remain PENDING, unaffected by subsequent hands/results. Distinct physical copies are required. Split/Double never duplicate or enlarge sides.
-- Pair ranks must match, not just Blackjack values. Perfect same-suit gross 26x; coloured same-colour/different-suit 13x; mixed opposite-colour 7x; NONE 0. Clubs/spades black, diamonds/hearts red.
-- Three-card priority: suited trips 101x; straight flush 41x; trips 31x; straight 11x; flush 6x; NONE 0. A23 and QKA straights; no KA2 wraparound, with same-suit KA2 flush fallback. No stacked categories.
-- M5 owns the initial two-pass deal. Ace opens outer decisionPhase INSURANCE with embedded M4 gameplay dormant, no current hand and no dealer Natural evaluation yet. Each eligible HUMAN chooses purchase/decline/eligible Even Money. COMPUTER choices auto-decline, automation stops for HUMAN and no timer exists.
-- Insurance reserves exactly half original MAIN from available funds, including odd units. Exact funds pass; insufficient requests reject without cards/RNG/turn/peek effects. One decision per original wager. When all close, one internal Ace peek; ten-value upcards immediately peek without Insurance, 2..9 do not peek. Negative peek keeps hole secret. Insurance wins 3x gross only for dealer Natural; later dealer 21 does not win it.
-- Even Money is an irreversible original-Natural MAIN election before Ace peek, no separate stake/reserve. It excludes Insurance and fixes MAIN gross 2x original regardless of dealer Natural, without 3:2 stacking. Unconverted Natural pushes dealer Natural or receives 2.5x gross on negative peek. Dealer Natural ends all gameplay. Initial sides retain independent results.
-- Insurance decisions do not consume the first gameplay action. Following negative peek, eligible ordinary original hands retain Late Surrender. Advanced actions reuse unchanged M4 primitives; M5 wrappers guard the Insurance window.
-- MAIN leaf, Insurance and side returns all remain unavailable until one table-level reconciliation/commit. Result records identify round/seat/wager/type/hand when applicable/stake/outcome or category/gross/net/status. All reservations reconcile before any balance update. Repeated finalization rejects unchanged.
-- Actual required-draw fault clears pending returns and retires the shoe. Whole-round VOID refunds actual main leaf exposure (including accepted Double/Split/re-split), sides and accepted Insurance once; Even Money adds no exposure. No hypothetical rejected wager refund. Normal commit and VOID exclude each other.
-- Public projection uses an explicit allowlist; no physical IDs, shoe order/cut or hidden hole data. Legacy/raw internal APIs are not the M5 public command boundary. COMPUTER gameplay remains total <17 HIT / >=17 STAND, not basic/optimal strategy.
+One final table transaction commits all controller/follower records. Ordinary win gross=2x actual stake, push=stake, loss/bust=0, Surrender=half, original Natural=2.5x unless Even Money=2x. Insurance win gross=3x insurance stake, loss=0. Results attribute round/participant/target/hand/wager/parent, actual stake, result, gross, net and status. Pending proceeds are unspendable. Integrity VOID replaces all pending outcomes and refunds original/accepted follow/Insurance exposure exactly once. NO_ADD/rejected ADD/Even Money add no hypothetical refund. Normal commit and VOID exclude each other.
 
-## Exact source/test additions
+## Exact M6 executable inventory
 
-All are additions against accepted M4 a5c6a22; no accepted executable file was edited:
+New production:
 
-- src/domain/optionalGame.ts
-- src/domain/optionalPublicView.ts
-- src/domain/sideBets.ts
-- tests/helpers/optionalFixture.ts
-- tests/unit/sideBets.test.ts
-- tests/integration/optionalBetting.test.ts
-- tests/integration/optionalEvaluation.test.ts
-- tests/integration/optionalInsurance.test.ts
-- tests/integration/optionalEvenMoney.test.ts
-- tests/integration/optionalSettlement.test.ts
-- tests/integration/optionalRegression.test.ts
-- tests/integration/optionalIntegrity.test.ts
+- src/domain/behindGame.ts
+- src/domain/behindController.ts
+- src/domain/behindPublicView.ts
 
-Documentation changes: README.md, docs/DESIGN.md, docs/PLAN.md, docs/STATE.md, docs/DEVELOPMENT_LOG.md, docs/LAB_MANUAL.md. T07 changes only these documents relative to the T06 snapshot. RULES/SPEC/UX_UI, harness, dependencies and runtime configuration remain unchanged.
+Compatible extension: src/domain/optionalGame.ts only.
 
-## Known limitations
+New helper: tests/helpers/behindFixture.ts.
 
-Local headless in-memory library, one HUMAN maximum, seat-scoped session funds. Callers retain latest returned state; old snapshots can branch computation. No validated arbitrary state import, database, persistence, concurrent transaction service, authentication, account transfer/reset, event store or replay product. The original-card arrays and financial records are frozen; the entire state is not a deep-frozen security boundary. Public projection does not protect secrets from the process owner.
+New suites under tests/integration:
 
-No Bet Behind/followers, Charlie, UI, network, real money or deployment. The computer policy is deliberately simple. No unresolved mechanical failure is known at T07; the fresh reviewer has not assessed M5. T07 final publication/clean status is established by the actual delivery report, not inferred from this pre-commit document.
+- behindOwnership.test.ts (8)
+- behindBetting.test.ts (20)
+- behindOutcomes.test.ts (10)
+- behindDouble.test.ts (10)
+- behindSplit.test.ts (10)
+- behindInsurance.test.ts (10)
+- behindSettlement.test.ts (9)
+- behindRegression.test.ts (96)
+- behindIntegrity.test.ts (8)
 
-## Mandatory M5 fresh-session review handoff
+Documentation: README.md, docs/DESIGN.md, docs/PLAN.md, docs/STATE.md, docs/DEVELOPMENT_LOG.md, docs/LAB_MANUAL.md. T08 must change only these six documents relative to T07.
 
-After T07 is VERIFIED and authorized publication completes, STOP. Do not independently review M5 in the implementation conversation. Do not mark M5 ACCEPTED or start M6.
+## Limitations requiring honest review
 
-The delivery report supplies each checkpoint SHA, final main HEAD/origin/main, checked push/fetch parity and clean status. T07 has no executable change relative to T06 fe078fd50ba7b75d5288d807e85519729890bdc2. A genuinely new Codex conversation must:
+The supported local session has zero/one HUMAN. Every legal local backed seat is COMPUTER; accepted computer policy remains total <17 HIT, >=17 STAND, no advanced actions, Insurance/Even Money or following. Consequently Double/Split/Surrender following cannot arise through normal local computer play. Required advanced-follow domain mechanics are exercised with explicitly labelled owner-checked controlled fixtures; behindController is a domain primitive, not an alternate bot policy or multiplayer product. The optional clarification received no policy authorization; silence was not treated as permission. The fresh reviewer must assess this documented reachability boundary against the batch contract.
 
-1. Read AGENTS, SKILL, RULES, SPEC, DESIGN, PLAN, STATE, DEVELOPMENT_LOG, README and LAB plus the user's full M5 contract. Independently check R06/R07/R08/R09/R13/R14/R17 and M5 non-goals.
-2. Capture runtime timestamp, repository, branch, HEAD, origin/main, ahead/behind and full status. Require delivered final SHA on main and clean 0/0; report mismatch before affected work. Fetch only within valid authorization.
-3. Inspect full accepted-M4-to-final diff and every source/test listed above, independent expected values, REG mapping and actual logs. Require T07 no executable changes versus T06 checkpoint.
-4. Run powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 with exit check. Observed local full count is 38 files / 644 tests. Independently rerun M1 12/155, M2 6/78, M3 5/72 and M4 7/171 using original historical file lists, and compare original executable paths.
-5. Review all REG-M5-001..072 and additional fixtures, especially no Ace peek before decisions, exactly-once negative-peek secrecy, no funds/3:2 stacking for Even Money, fixed initial side inputs, all pending unavailable, reconciliation and actual-reservation VOID, including partial initial deal and advanced exposure. M6 must remain absent.
-6. Report findings first: severity, file/line, concrete evidence and impact. Then requirements, regression, preservation, documentation and limitations. Counts/model confidence do not substitute for findings-first review.
-7. Make no edits without separate authorization. Mark missing execution NOT RUN/BLOCKED accurately. Leave M5 acceptance to the human; no M6, merge, release or deployment.
+Owner IDs are local correctness routing, not authentication. This is in-memory simulated-credit code, with no account service, persistence, concurrency protection or validated arbitrary-state import. Callers retain latest returned state; old snapshots can branch computation. Raw internal state is not a public projection. No UI, React, browser E2E, network, payments, Charlie, M7/M8 or deployment. Browser E2E: NOT APPLICABLE because no UI. Clean-machine npm ci and cross-platform reproduction: NOT RUN. M6 acceptance and user understanding are not inferred from tests.
 
-## REG-M5 executable mapping
+## Mandatory M6 fresh-session review handoff
 
-Every number is registered once in tests/integration/optionalRegression.test.ts as REG-M5-NNN. Related IDs share a scenario containing all relevant independent assertions; a separate test requires exactly 001..072 with no duplicates. T06 full harness PASS. Detailed suites add boundary/category/funding/secrecy/fault coverage.
+Use a **genuinely new Codex conversation**, not this implementation conversation or a sub-agent with its history. Reviewer must report **findings FIRST**, with severity, file/line, reproducible evidence and impact; then requirements/regression/documentation/preservation conclusions. Make **no edits without separate authorization**.
 
-| ID | Required coverage |
-| --- | --- |
-| 001 | Pair minimum |
-| 002 | Pair maximum |
-| 003 | Pair increment/range rejection |
-| 004 | Three-card minimum |
-| 005 | Three-card maximum |
-| 006 | Three-card increment/range rejection |
-| 007 | Own active funded MAIN prerequisite |
-| 008 | Exact side funding |
-| 009 | Insufficient side funding atomic |
-| 010 | Side increase/decrease/duplicate target |
-| 011 | Side cancellation once |
-| 012 | MAIN cancellation cascades refund |
-| 013 | Betting close freezes wagers |
-| 014 | Perfect Pair |
-| 015 | Coloured Pair |
-| 016 | Mixed Pair |
-| 017 | Equal-value 10/J and K/Q lose |
-| 018 | Highest category/no stacking |
-| 019 | Suited trips |
-| 020 | Straight flush |
-| 021 | Three of a kind |
-| 022 | Straight |
-| 023 | Flush |
-| 024 | A23 straight |
-| 025 | QKA straight |
-| 026 | KA2 not straight |
-| 027 | Suited KA2 flush fallback |
-| 028 | Immutable original cards only |
-| 029 | Split does not duplicate sides |
-| 030 | Double does not increase sides |
-| 031 | Side independent from main |
-| 032 | Side pending unspendable |
-| 033 | Ace decision window before actual peek |
-| 034 | Hidden hole during window |
-| 035 | Exact half Insurance |
-| 036 | Odd-unit Insurance |
-| 037 | Exact Insurance funds |
-| 038 | Insufficient Insurance atomic |
-| 039 | Computer declines; HUMAN pause |
-| 040 | Insurance once |
-| 041 | No Insurance after peek/action |
-| 042 | Ten-value immediate peek/no window |
-| 043 | 2..9 no window/no peek |
-| 044 | Dealer Natural Insurance win |
-| 045 | Negative peek Insurance loss |
-| 046 | Later three-card 21 not Insurance win |
-| 047 | Original Natural Even Money eligibility |
-| 048 | Even Money no reserve |
-| 049 | Mutual exclusion and irreversibility |
-| 050 | Even Money dealer Natural |
-| 051 | Even Money dealer non-Natural |
-| 052 | No Even Money/3:2 stacking |
-| 053 | Declined Natural 3:2 |
-| 054 | Natural push vs dealer Natural |
-| 055 | Dealer Natural terminates actions |
-| 056 | Side bets survive dealer Natural |
-| 057 | Insurance does not consume gameplay action |
-| 058 | Late Surrender after negative peek |
-| 059 | Unified settlement |
-| 060 | Insurance exact once |
-| 061 | Pair exact payout |
-| 062 | Three-card exact payout |
-| 063 | Pending cannot fund M4 action |
-| 064 | VOID side refund |
-| 065 | VOID Insurance refund |
-| 066 | VOID clears side pending profits |
-| 067 | VOID clears Insurance/Even Money results |
-| 068 | Advanced plus M5 actual exposure refund |
-| 069 | Duplicate settlement/opposite VOID no effect |
-| 070 | Duplicate VOID/opposite settlement no effect |
-| 071 | Peek/Insurance public secrecy |
-| 072 | M6 absent/no auto computer side bet |
+1. Read AGENTS, SKILL, RULES (R06/R07/R08/R09/R10/R11/R13/R15/R17), SPEC M6, DESIGN, PLAN, STATE, DEVELOPMENT_LOG, README and LAB. Confirm local participant/non-goal constraints.
+2. Independently capture timestamp, main, HEAD, origin/main, 0/0 and clean state. Resolve final T08 SHA from delivery/Git. Inspect complete f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d..HEAD diff, especially the compatible optionalGame seam and controller fixture reachability.
+3. Inspect each executable REG-M6-001..095 assertion and exact completeness test; verify assertions use explicit outcomes and actual returned states. Inspect all nine M6 suites, not merely names/counts.
+4. Rerun powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 and git diff --check, checking exit codes. Expected current count 47/825; treat executed evidence as authoritative.
+5. Independently enumerate historical test files with git ls-tree at each accepted SHA, subtract files belonging to earlier milestones, compare each set to its own revision, and rerun npm.cmd test -- <selected paths>. Expected M1..M5: 12/155, 6/78, 5/72, 7/171, 8/168. Compare accepted M5 original executable paths; inspect optionalGame.ts exception explicitly. Do not mistake already accepted milestone evolution for M6 changes.
+6. Examine ownership/nonduplication, shared available funds, controller legality before follow windows, physical card timing/order, no-add fallback, independent Ace choices/peek, actual-exposure result/VOID attribution and once-only finalization.
+7. Report limitations and review results without marking M6 ACCEPTED. Human acceptance is a separate event. M7 remains NOT STARTED; no merge/release/deployment.
+
+## T08 final execution evidence
+
+Documentation preparation began from the verified T07 baseline at 2026-09-30 00:12:15 +08:00. Final powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 ran at 00:17:47, test start 00:17:53: typecheck/lint/tests PASS, 47 files / 825 tests, exit 0. Targeted document/scope verification at 00:18:24 PASS/0: exactly the six authorized documents, no executable changes relative to T07, README/STATE relative file links resolve. Complete six-document diff inspected, including all removed superseded STATE records (preserved in DEVELOPMENT_LOG/Git); whitespace and full status checks PASS. T08 VERIFIED, repairs 0/10. Only these factual evidence/status additions followed harness execution; no executable/config/dependency change. Normal commit/push/fetch and final main parity/clean are the remaining publication steps, with actual final SHA/results recorded in delivery and Git. Fresh independent review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED.

@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: `M5 — Insurance, Even Money, and Initial-card Side Bets`
-Status: M1-M4 are HUMAN ACCEPTED. M4 was accepted at a5c6a22 after fresh review NO FINDINGS and requirements/regression/preservation/documentation PASS. M5 is implemented and mechanically verified locally; independent fresh review is NOT RUN and M5 is NOT ACCEPTED. M5 learning notes are in section 31. M6+ remains unimplemented. Historical milestone notes below retain their original delivery context.
+Current milestone: M6 — Bet Behind
+Status: M1-M5 HUMAN ACCEPTED. M6 implemented and mechanically verified; fresh independent review NOT RUN, M6 ACCEPTED NO, M7 NOT STARTED. Current M6 learning notes are in section 32. Earlier learning/delivery statements retain their historical checkpoint context and are superseded by STATE for current status.
 
 ## 1. Purpose
 
@@ -1102,7 +1102,7 @@ Perfect Pair should still retain its own winning result.
 
 ---
 
-## 20. M6 — Bet Behind
+## 20. M6 — Bet Behind (original learning targets; implemented summary in section 32)
 
 ### Planned concepts
 
@@ -1636,3 +1636,63 @@ These are concrete defects the tests detect if introduced, not fabricated report
 ### Delivery and understanding
 
 M4 was explicitly HUMAN ACCEPTED at a5c6a22dd833867a6a1eff357a7462bd06fe4e0b after NO FINDINGS and requirements/REG-M4/preservation/documentation PASS. M5 is implemented and mechanically verified locally, with publication and final documentation gate recorded in STATE. Fresh M5 review is NOT RUN, M5 is NOT ACCEPTED, M6 NOT STARTED. No UI/network/real money/deployment. User understanding remains needs review / not assessed; explaining the examples above is a learning exercise, not something inferred from tests.
+
+## 32. M6 — Participant-owned Bet Behind learning checkpoint
+
+### Controller, bettor and follower
+
+A controller decides how the cards are played. A bettor owns the money committed to a wager. A follower is a bettor attached to another controller's hand. These roles must not collapse into a seat number: moving a HUMAN from seat 1 to seat 3 must not create a fresh 2000-unit balance or transfer the dormant computer's balance. M6 stores available/reserved funds once on the participant, and uses a temporary adapter to preserve older seat-based APIs. A spectator is a HUMAN participant controlling no seat; it can still back qualifying funded seats.
+
+One original back wager creates financial exposure to existing cards, not another hand or another draw. If a controller Hits, both MAIN and follower observe that same result. A follower cannot Hit/Stand/Double/Split/Surrender for the target. Pair/THREE_CARD still use only an own-seat MAIN, so no side-bet-behind path exists.
+
+### One available pool across targets
+
+New participant bankroll is 2000 units (1000 credits). Backing seat 1 for 1200 and seat 2 for 800 leaves available 0/reserved 2000. Another paid decision must fail even if one target already has a pending win. Increasing a target reserves only the delta; reducing/cancelling releases only the actual reduction. Cancelling target MAIN returns its dependent back wager in the same transition. Close freezes eligibility/stakes, so a follower cannot wait to see cards before adding an original wager.
+
+### Double follow ADD and NO_ADD
+
+Controller legality and its matching reserve are decided first. Then the follower chooses before the forced card exists. For 200 units attached: ADD costs another 200, making 400 exposure; NO_ADD costs zero and retains 200. On a doubled winning hand these pay gross 800 and 400 respectively. Controller Double does not grant a free doubled follower payout.
+
+An unaffordable ADD cannot veto the controller. The funding subrequest rejects atomically and records an explicit error, while the decision transition applies NO_ADD and completes the already accepted Double. The card is exposed only after that final choice. This separates controller action success from follower purchase failure. Pending Natural/other proceeds remain unavailable.
+
+### Split first-child fallback and depth-first timing
+
+For 100 attached units, ADD reserves another 100 and creates 100 on each ordered child. NO_ADD follows only child 1, which retains the earlier-dealt parent card; child 2 gets zero exposure. A follower cannot later move the stake to the winning child.
+
+Children are created with one original card each before the follow decision. Only afterward does child 1 receive its next card; it is fully played before child 2 receives its next card. Re-splitting a tracked child opens a new decision using that child's actual attached stake. Re-splitting an untracked child opens no follower decision. Lineage references distinguish descendants of the same original wager. Split Aces and the controller's four-leaf limit remain gameplay restrictions; follower funds cannot change them.
+
+### Surrender, Insurance and Even Money independence
+
+Controller Late Surrender returns half of the attached follower stake; there is no independent follower Surrender or veto. It reserves no additional money.
+
+Against dealer Ace, the local HUMAN's own MAIN decision (if any) comes first, followed by original back decisions sorted by target seat. Only then may the dealer peek. Computers decline automatically. A 50-unit original back stake buys exactly 25 units of Insurance; odd insurance units are valid because all accounting uses integer half-credit units. Insurance draws on the shared available pool, independently of controller choice. A backed original Natural can instead elect Even Money with no additional reserve and gross 2x, whether the controller elects it or not. The choice excludes Insurance and the 3:2 return. No descendant/new Insurance window appears after Split. Negative peek does not expose the hole card.
+
+### Actual exposure, independent settlement and VOID
+
+Settlement pays the actual funded leaf: ordinary win 2x, push 1x, loss/bust zero, Surrender half, original Natural 2.5x unless elected Even Money 2x. Double NO_ADD still settles only its unchanged stake; Split NO_ADD only its first-child descendants. Insurance gross is 3x its own stake on dealer Natural. Each record identifies participant, round, target, hand, original wager/parent lineage, actual stake, result, gross, net and status. All controller/follower returns stay pending until one table commit validates every reservation.
+
+Integrity VOID replaces all pending normal/Insurance/Even Money outcomes with refunds of actual original, accepted ADD and purchased Insurance exposure. Rejected ADD and NO_ADD create no extra refundable money. Even Money adds no reserve. Repeated VOID, settlement after VOID and VOID after committed settlement cannot credit again. Partial initial-deal failure still refunds backed funded targets whose cards were not reached.
+
+### Major M6 suites and concrete regression bugs
+
+| Suite | Concrete bug its assertions detect |
+| --- | --- |
+| behindOwnership | Moving/leaving/rejoining HUMAN resets funds, copies spendable seat funds, permits two seats, or changes controllers during a round |
+| behindBetting | Target increase charges the full amount twice, combined targets overspend, MAIN cancellation strands follower funds, or backing consumes extra cards/RNG |
+| behindOutcomes | Follower uses controller stake instead of its own, misses Natural/Surrender, controls the target, or spends a pending return |
+| behindDouble | Forced card appears before choice, NO_ADD gets a free doubled payout, unaffordable ADD blocks controller, or pending Natural finances ADD |
+| behindSplit | NO_ADD follows the later/winning child, second child's card appears early, an untracked re-split asks for funding, or follower money bypasses leaf/Ace restrictions |
+| behindInsurance | Dealer evaluates its hole card before final back choice, choices couple to controller, odd half-stake rejects, or a negative peek leaks |
+| behindSettlement | Mixed child returns collapse together, accepted follow stakes vanish from refunds, rejected ADD generates phantom money, or finalization credits twice |
+| behindIntegrity | Partial initial deal loses undealt target refunds, committed outcome survives VOID, next-round recovery fails, cut boundaries change, or opposite independent Even Money choices couple |
+| behindRegression | A specific REG-M6 requirement fails; exact 001..095 completeness detects missing/duplicate registrations rather than trusting a documentation count |
+
+The mapping suite has 95 requirement tests plus one completeness assertion. Nine M6 files contribute 181 tests; all 38 prior files / 644 tests remain unchanged and were rerun by milestone. Full current harness: 47 files / 825 tests, PASS. Expected financial results are explicit fixture numbers, not derived only from production payout helpers.
+
+### Reachability, preservation and delivery
+
+One local HUMAN may back only computer seats, and the preserved policy is <17 HIT / >=17 STAND. Computers never choose advanced actions, buy Insurance/Even Money or follow. Thus advanced-follow rules are exercised by explicitly controlled owner-checked domain fixtures, not naturally by local computer play. They are not evidence of multiplayer or alternate bot strategy. This reachability boundary is a required fresh-review topic.
+
+The optionalGame compatible seam delays Ace resolution only when M6 asks; default historical callers remain unchanged. A preservation check initially compared M1 source directly with current and found an already accepted M2 shoe extension. The corrected check compares current original executables to accepted M5, separately comparing each historical test set with its own milestone revision. This teaches why an accepted baseline and a historical learning snapshot serve different verification purposes. T07 repair 1 records that procedure correction; T01 repair 1 records the new fixture typing fix. Failed attempts remain in DEVELOPMENT_LOG.
+
+M5 is HUMAN ACCEPTED at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after the reported fresh recheck closed LOW-01. M6 implementation/mechanical verification does not imply fresh review or acceptance: fresh review NOT RUN, M6 ACCEPTED NO, M7 NOT STARTED. User understanding is not tested or inferred by this document. Next step is findings-first review in a genuinely new Codex conversation, with no edits absent separate authorization.

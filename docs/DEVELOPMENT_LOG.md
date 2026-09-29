@@ -1,5 +1,19 @@
 # Casino Blackjack — Development Log
 
+## M6-T08 — Documentation and fresh-session review package
+
+### 2026-09-30 00:12:15 +08:00 — START / BASELINE
+
+T07 publication at 00:12:00 PASS/0: main=origin/main=63deee6d8940c16a72bab8fab6b27bf8f7f66133, ahead/behind 0/0, clean. T08 is documentation-only, recommended GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED. Scope/acceptance/step-to-verification/non-goals/stops are in PLAN. This task must end after verified normal publication; no independent review or M7 in this conversation.
+
+### 2026-09-30 00:16:58 +08:00 — DOCUMENTATION PREPARED
+
+Updated README, DESIGN, PLAN, STATE and LAB_MANUAL; this log is the sixth document. Consolidated current status, preserving failed-attempt evidence here and checkpoint history. Recorded M5 human acceptance and supplied recheck, M6 ownership/shared funds/spectator/seated mode, before-card Double/Split decisions and first-child fallback, independent Ace choices, actual-stake settlement/VOID, 95-case map, exact source/test inventory, historical suite results and all ledgers. LAB explains concrete bugs covered by each major M6 suite. Explicitly documented the single-HUMAN/computer-Hit-Stand reachability limitation of advanced-follow fixtures; no new policy authorization is inferred. Fresh handoff requires findings first, independent requirements/mapping/harness/prior-preservation checks and no edits without separate authorization. T08 repair count 0/10. Final checks follow; no executable edit is authorized in T08.
+
+### 2026-09-30 00:18:24 +08:00 — FINAL VERIFICATION / TASK DIFF INSPECTION
+
+Final harness started 00:17:47 (test start 00:17:53), PASS/0 typecheck/lint/tests **47 files / 825 tests**. Targeted documentation verification PASS/0 at 00:18:24: exactly README/DESIGN/PLAN/STATE/DEVELOPMENT_LOG/LAB, no executable difference from T07 63deee6d8940c16a72bab8fab6b27bf8f7f66133, valid README/STATE relative file links. Full six-document diff inspected; whitespace and status checked. Removed STATE text was superseded checkpoint material retained in this log/Git, not discarded failed evidence. T08 VERIFIED 0/10. No source/test/config/dependency changes after verification; only factual evidence/status records added. Publication follows the user-authorized normal commit/push/fetch with final 0/0/clean gate. The final commit cannot contain its own hash: final SHA/publication evidence is recorded in delivery and Git without recursive metadata-only commits. STOP after publication; no fresh review in this conversation, no M6 acceptance and no M7.
+
 ## M6-T07 — Executable mapping and historical preservation
 
 ### 2026-09-30 00:05:26 +08:00 — VERIFICATION / REPAIR 1
