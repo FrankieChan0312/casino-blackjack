@@ -6,8 +6,8 @@ M3 is HUMAN ACCEPTED by the explicit M4 contract at cca40d2bed3b3964a9bfb47329d4
 
 | Task | Scope / acceptance | State | Repairs |
 | --- | --- | --- | --- |
-| M4-T01 | Stable hand/lineage/stake model, ordered seat-local hands, routing, natural context, public secrecy, one-hand compatibility | VERIFIED locally | 1/10 |
-| M4-T02 | Available-only matching Double, forced one card, terminal decisions, eligible DAS, atomic rejection and doubled payout | NOT STARTED | 0/10 |
+| M4-T01 | Stable hand/lineage/stake model, ordered seat-local hands, routing, natural context, public secrecy, one-hand compatibility | VERIFIED / PUSHED cd2d8cc | 1/10 |
+| M4-T02 | Available-only matching Double, forced one card, terminal decisions, eligible DAS, atomic rejection and doubled payout | VERIFIED locally | 0/10 |
 | M4-T03 | Equal-value funded Split, ordered ownership, depth-first play, no parent settlement or split Natural | NOT STARTED | 0/10 |
 | M4-T04 | Re-split, four-leaf cap including ended leaves, once-only Split Aces and one card each | NOT STARTED | 0/10 |
 | M4-T05 | Original first-decision Late Surrender after natural exclusion, exact half return, mixed leaf settlement | NOT STARTED | 0/10 |

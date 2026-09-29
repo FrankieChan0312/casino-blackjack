@@ -131,16 +131,17 @@ function integrityFailure(state: AdvancedGameState,
       integrityError: error, currentSeat: null, currentHandId: null,
       players: round.players.map((hand) => ({ ...hand, complete: true, outcome: undefined, outcomeReason: undefined })) } } };
 }
-function applyAction(state: AdvancedGameState, action: 'HIT' | 'STAND'): AdvancedGameState {
+function applyAction(state: AdvancedGameState, action: 'HIT' | 'STAND' | 'DOUBLE'): AdvancedGameState {
   let hand = state.game.round!.players.find((entry) => entry.handId === state.game.round!.currentHandId)!;
   let next = state;
-  if (action === 'HIT') {
+  if (action !== 'STAND') {
     const draw = drawCard(state.game.shoe);
     next = { ...state, game: { ...state.game, shoe: draw.shoe } };
     if (!draw.ok) return integrityFailure(next, draw.error);
     const cards = [...hand.cards, draw.card];
     const evaluation = evaluateHand(cards);
-    hand = { ...hand, cards, decisionTaken: true, complete: evaluation.isBust || evaluation.isTwentyOne };
+    hand = { ...hand, cards, decisionTaken: true,
+      complete: action === 'DOUBLE' || evaluation.isBust || evaluation.isTwentyOne };
     if (evaluation.isBust) hand = { ...hand, outcome: 'DEALER_WIN', outcomeReason: 'PLAYER_BUST' };
   } else hand = { ...hand, decisionTaken: true, complete: true };
   return selectNextHand(replaceHand(next, hand));
@@ -152,6 +153,29 @@ export function hitAdvancedHand(state: AdvancedGameState, seatNumber: number, ha
 export function standAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
   const error = humanError(state, seatNumber, handId);
   return error ? { ok: false, state, error } : { ok: true, state: applyAction(state, 'STAND') };
+}
+function additionalFundingError(state: AdvancedGameState, hand: AdvancedHand): string | undefined {
+  const bankroll = state.bankrolls[hand.seatNumber - 1];
+  if (!isBankroll(bankroll) || !isCreditUnits(hand.stakeUnits) || hand.stakeUnits === 0
+    || !isCreditUnits(bankroll.reserved + hand.stakeUnits)) return 'INVALID_FUNDING';
+  if (bankroll.available < hand.stakeUnits) return 'INSUFFICIENT_FUNDS';
+  return undefined;
+}
+function reserveAdditional(state: AdvancedGameState, hand: AdvancedHand): AdvancedGameState {
+  return { ...state, bankrolls: state.bankrolls.map((entry, index) => index === hand.seatNumber - 1
+    ? { available: entry.available - hand.stakeUnits, reserved: entry.reserved + hand.stakeUnits } : entry) };
+}
+export function doubleAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
+  const error = humanError(state, seatNumber, handId);
+  if (error) return { ok: false, state, error };
+  const hand = state.game.round!.players.find((entry) => entry.handId === handId)!;
+  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || evaluateHand(hand.cards).total >= 21) {
+    return { ok: false, state, error: 'DOUBLE_NOT_ALLOWED' };
+  }
+  const fundingError = additionalFundingError(state, hand);
+  if (fundingError) return { ok: false, state, error: fundingError };
+  const funded = replaceHand(reserveAdditional(state, hand), { ...hand, stakeUnits: hand.stakeUnits * 2 });
+  return { ok: true, state: applyAction(funded, 'DOUBLE') };
 }
 export function resolveAdvancedDealer(state: AdvancedGameState): AdvancedResult {
   const error = phaseError(state, 'DEALER_TURN');

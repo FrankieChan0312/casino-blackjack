@@ -1334,3 +1334,19 @@ First full verify.ps1 at 09:39:41 PASS/0: typecheck/lint and 24 files / 312 test
 ### 2026-09-29 18:56:10 +08:00 — REPAIR REVERIFICATION / TASK REVIEW
 
 Full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 24 files / 312 tests (18:56:23 test start). Working/staged whitespace PASS/0; complete staged eight-file diff inspected, no unrelated changes. T01 repair 1/10 verified, no gameplay fix. Environment timestamps have a gap from the earlier run; no work is inferred during that interval. Authorized checkpoint publication follows; T02 records actual SHA/push/parity.
+
+## M4-T02 — Funded Double / DAS
+
+### 2026-09-29 18:57:14 +08:00 — BASELINE / T01 PUBLICATION
+
+T01 committed/pushed cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb. Push/fetch and all Git checks PASS/0: main=origin/main, 0/0 clean. T01 1/10. T02 starts 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED. Prior ledgers unchanged.
+
+Scope/acceptance: current HUMAN first-decision two-card <21 Double, full matching available-only reserve, exact funds, atomic shortfall rejection, forced one card, no later decisions, eligible non-Ace DAS, Split-Ace rejection and full doubled payout. Original main maximum does not cap exposure. No Split/Surrender implementation yet. Step -> verification: targeted M4 action/funding extension -> explicit deterministic boundary/result/fixture cases -> full harness and complete diff -> authorized commit/push/fetch/parity/clean -> T03. Global PLAN stop conditions/non-goals apply; no required ambiguity/conflict or old API change.
+
+### 2026-09-29 18:59:08 +08:00 — IMPLEMENTATION / FIRST VALIDATION START
+
+Modified only advancedGame.ts gameplay, added advancedDouble.test.ts. All rejection checks precede reserve/draw; no RNG dependency exists in player actions. Accepted funding precedes required draw so a genuine draw fault retains actual exposure for VOID. Shared action primitive now supports forced completion after one Double draw. Baseline accepted source/tests remain unchanged. Full child-PowerShell harness launched; result recorded below after completion.
+
+### 2026-09-29 19:00:41 +08:00 - VALIDATION / TASK REVIEW
+
+T02 full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 25 files / 327 tests (18:59:40 test start). No failure or repair: 0/10. Reviewed source and new test logic: forced below-21 completion, exact funding, ordinary payout, Split-origin eligibility and explicit unchanged rejection. No accepted M1-M3 executable file changed. Complete Git diff/whitespace/status checks precede publication; actual SHA/parity will be recorded with T03.
