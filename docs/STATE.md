@@ -1,5 +1,9 @@
 # Casino Blackjack — Project State
 
+## Current truth: M6-T04 Double following
+
+T03 publication PASS/0 at 2026-09-29 23:41:15 +08:00, main=origin/main=91ba66c9034716b1b46dcdc3976e36d36be3835e, 0/0 clean. T04 adds behindController.ts, behindDouble.test.ts, follow state/gates and public local choices. Controller funds are accepted first; no draw before follower resolution; rejected ADD records funding failure and NO_ADD with no phantom stake. Explicit owner check rejects local-human as controller of a backed computer seat. No local computer policy change. Targeted final PASS/0 1/10 at 23:44:38; full final verify.ps1 PASS/0 typecheck/lint/tests 42 files / 692 tests, test start 23:44:45. T04 VERIFIED 0/10; publication next. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 fresh review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections below are historical.
+
 ## Current truth: M6-T03 ordinary following
 
 T02 committed/pushed/fetched be07af97a47d3477af9d4640905dc02c3b70e719, main=origin/main 0/0 clean at 2026-09-29 23:35:58 +08:00, all exits 0. T03 adds back exposure/result attribution and actual-stake ordinary/Natural/push/bust/Surrender settlement, using one table finalization and preserving controller money. Local follower commands cannot control target hands. Targeted behindOutcomes PASS/0 1 file / 10 tests at 23:37:54; full verify.ps1 PASS/0 typecheck/lint/tests 41 files / 682 tests, test start 23:38:00. T03 VERIFIED 0/10; publication next. T04-T08 NOT STARTED. Source change confined to behindGame.ts; new behindOutcomes.test.ts. Historical source/tests unchanged.

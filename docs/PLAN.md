@@ -2,6 +2,8 @@
 
 ## Current M6 batch contract
 
+T04 checkpoint: owner-checked funded controller Double, follower pre-card ADD/NO_ADD window, atomic rejected funding with recorded safe fallback, exact exposure, irreversible decision, pending-funds protection and independent settlement -> behindDouble targeted assertions -> full harness -> complete diff/whitespace/status -> authorized publication. No Split-follow/follower Insurance/VOID yet. Same recommendation/non-goals/stop conditions. T03 published 91ba66c9034716b1b46dcdc3976e36d36be3835e; T04 VERIFIED 0/10; T05-T08 NOT STARTED. This supersedes earlier status paragraphs.
+
 T03 checkpoint: ordinary follower outcomes/actual-stake pending and final records, no follower control, independent multiple targets and pending-funds rejection -> behindOutcomes targeted assertions -> full verify.ps1 -> full diff/whitespace/status -> authorized checkpoint publication. No advanced follow/Insurance/Even Money/VOID yet. Same model, non-goals and stop conditions. T02 published be07af97a47d3477af9d4640905dc02c3b70e719, 0/10; T03 VERIFIED 0/10; T04-T08 NOT STARTED. This supersedes earlier task status text below.
 
 The user explicitly HUMAN ACCEPTED M5 at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after a genuinely independent recheck reported NO FINDINGS, LOW-01 CLOSED, regression sufficiency/documentation/requirements/REG-M5-001..072/M1-M4 preservation PASS. This supersedes historical M5 pending-review/acceptance statements below.

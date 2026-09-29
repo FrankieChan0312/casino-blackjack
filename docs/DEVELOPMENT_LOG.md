@@ -1,5 +1,11 @@
 # Casino Blackjack — Development Log
 
+## M6-T04 — Double follow decisions
+
+### 2026-09-29 23:44:00 +08:00 — T03 PUBLICATION / T04 VERIFICATION
+
+T03 commit/push/fetch/parity/clean PASS/0 at 23:41:15, 91ba66c9034716b1b46dcdc3976e36d36be3835e. T04 uses PLAN contract, same recommendation GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED and global stop conditions. New behindController.ts/behindDouble.test.ts and M6 state/projection extensions only. Domain controller identity check and complete reserve precede follow window; zero draw until ADD/NO_ADD recorded. Insufficient ADD leaves money/exposure intact and records explicit rejected-funding fallback. No local follower action or bot-policy expansion. First targeted 1/9 and full 42/691 PASS/0 at 23:44:01/23:44:07. Added required pending-Natural funding case before checkpoint; final targeted 1/10 PASS/0 at 23:44:38 and full 42/692 PASS/0 at 23:44:45. This coverage completion is not a failed validation repair; T04 0/10. Full diff review follows before normal authorized publication. Prior executable files unchanged.
+
 ## M6-T03 — Ordinary following
 
 ### 2026-09-29 23:37:53 +08:00 — T02 PUBLICATION / T03 VERIFICATION

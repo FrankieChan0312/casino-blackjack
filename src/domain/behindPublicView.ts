@@ -5,6 +5,8 @@ export function getPublicBehindView(state: BehindGameState) {
   // The legacy projection reads cards/decisions only; no financial state is supplied.
   const view = getPublicOptionalView({ ...state.table, bankrolls: [] });
   return { phase: state.table.phase,
+    follow: state.followWindow ? { kind: state.followWindow.kind, handId: state.followWindow.handId,
+      targetSeat: state.followWindow.targetSeat, choices: ['ADD', 'NO_ADD'] } : null,
     backWagers: state.backWagers.map((wager) => ({ wagerId: wager.wagerId, targetSeat: wager.targetSeat,
       handId: wager.handId, stakeUnits: wager.stakeUnits })),
     configuration: view.configuration.map((seat) => ({ ...seat, controllerId: controllerId(state, seat.seatNumber) })),

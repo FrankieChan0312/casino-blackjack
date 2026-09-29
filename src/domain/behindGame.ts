@@ -22,6 +22,10 @@ export interface BehindGameState {
   readonly backWagers: readonly BackWager[];
   readonly backExposures: readonly BackExposure[];
   readonly backResults: readonly BackResult[];
+  readonly followWindow: { readonly kind: 'DOUBLE'; readonly handId: string; readonly targetSeat: number;
+    readonly wagerId: string } | null;
+  readonly followDecisions: readonly { readonly handId: string; readonly kind: 'DOUBLE'; readonly choice: 'ADD' | 'NO_ADD';
+    readonly fundingError?: 'INSUFFICIENT_FUNDS' }[];
 }
 export interface BackExposure extends BackWager {
   readonly parentHandId: string | null;
@@ -46,7 +50,7 @@ export type BehindResult =
 
 export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true): BehindGameState {
   const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random);
-  return { table, backWagers: [], backExposures: [], backResults: [],
+  return { table, backWagers: [], backExposures: [], backResults: [], followWindow: null, followDecisions: [],
     human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
     computers: bankrolls.map((bankroll, index) => ({ participantId: `computer-${index + 1}`,
       seatNumber: index + 1, bankroll })) };
@@ -173,6 +177,7 @@ export function electBehindMainEvenMoney(state: BehindGameState): BehindResult {
 }
 export function actBehindHand(state: BehindGameState, handId: string,
   action: 'HIT' | 'STAND' | 'DOUBLE' | 'SPLIT' | 'SURRENDER'): BehindResult {
+  if (state.followWindow) return { ok: false, state, error: 'FOLLOW_PENDING' };
   const seat = controlledSeat(state);
   if (seat === null) return { ok: false, state, error: 'NOT_SEATED' };
   const commands = { HIT: optional.hitOptionalHand, STAND: optional.standOptionalHand,
@@ -181,9 +186,11 @@ export function actBehindHand(state: BehindGameState, handId: string,
   return run(state, (entry) => commands[action](entry, seat, handId));
 }
 export function advanceBehindTable(state: BehindGameState): BehindResult {
+  if (state.followWindow) return { ok: true, state };
   return run(state, optional.advanceOptionalTable);
 }
 export function settleBehindWagers(state: BehindGameState): BehindResult {
+  if (state.followWindow) return { ok: false, state, error: 'FOLLOW_PENDING' };
   const records = getBackResults(state);
   if (state.table.phase !== 'CLOSED' || records.length !== state.backExposures.length) {
     return { ok: false, state, error: 'SETTLEMENT_NOT_READY' };
@@ -219,5 +226,6 @@ export function voidBehindRound(state: BehindGameState): BehindResult {
 }
 export function prepareNextBehindRound(state: BehindGameState): BehindResult {
   const result = run(state, optional.prepareNextOptionalRound);
-  return result.ok ? { ok: true, state: { ...result.state, backWagers: [], backExposures: [], backResults: [] } } : result;
+  return result.ok ? { ok: true, state: { ...result.state, backWagers: [], backExposures: [], backResults: [],
+    followWindow: null, followDecisions: [] } } : result;
 }
