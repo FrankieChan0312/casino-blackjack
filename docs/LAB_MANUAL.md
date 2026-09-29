@@ -1387,7 +1387,7 @@ The T09 real type-error experiment independently proved overall exit 2 while lin
 
 Pure transitions allocate small arrays; at 312 cards this is simpler than mutation bookkeeping. readonly is a compile-time contract, not runtime deep freezing. A single dealer command avoids an animation API before a UI exists. Pure ordinaryOutcome assumes a surviving non-natural player; game commands enforce that sequencing. Fixture code is test-only and independently checks all physical IDs.
 
-The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED at that historical T10 checkpoint**. M1 is now **ACCEPTED** at d1d8966fe55af1bc2b9348e305135952b7723b70 under the explicit M2 contract. M2 implementation is described below; M3+ remains unimplemented.
+The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED at that historical T10 checkpoint**. M1 is now **ACCEPTED** at d1d8966fe55af1bc2b9348e305135952b7723b70 under the explicit M2 contract. M2 implementation is described below; M4+ remains unimplemented.
 
 
 ## M2 T04 learning checkpoint

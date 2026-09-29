@@ -1292,3 +1292,25 @@ Same-session documentation review found one LOW explanation error in LAB's credi
 ### 2026-09-29 01:29:24 +08:00 — REPAIR RE-VERIFICATION / FINAL CHECKPOINT PREPARATION
 
 Repair 1 re-verification: full child-PowerShell verify.ps1 started 01:28:48, test start 01:29:03; PASS/0, typecheck/lint and 23 files / 305 tests. The targeted LAB explanation now correctly names exact-funds false rejection. No source/test/dependency/runtime change. Final five-file scope, git diff --check and unchanged-executable checks at 01:29:24 PASS/0. T06 repair count remains 1/10; no new repair. This final evidence-only record changes no behaviour or required check. One final harness/staged scope/whitespace guard precedes the authorized commit; actual final publication and parity are reported in delivery without further file edits. M3 independent review NOT RUN, M3 NOT ACCEPTED, M4 NOT STARTED.
+
+## M3-T06 - Review Repair #2: Correct stale M3 status wording
+
+### 2026-09-29 08:34:13 +08:00 - BASELINE / REPAIR CONTRACT
+
+Task M3-T06, repair cycle 2/10. Recommended model/effort: GPT-6 Astra / High; actual model/effort: NOT VERIFIED / NOT VERIFIED. Read AGENTS.md, SKILL.md, the relevant LAB section, STATE and DEVELOPMENT_LOG; relevant SPEC/DESIGN/PLAN scope remains unchanged. Entry Git checks all exited 0: correct repository, main, HEAD=origin/main=d0d0a08de8839215875e4920547334ca680b91ab, ahead/behind 0/0, clean. Origin is https://github.com/FrankieChan0312/casino-blackjack.git. No unknown changes or authority conflict observed.
+
+Scope: one LAB wording replacement and only the required STATE/log repair records. Acceptance: stale sentence corrected, full harness and whitespace/status checks pass, executable diff is empty and only those three documents change. Step -> verification: reproduce finding -> targeted correction and ledger -> full verify.ps1 / exact diff review -> authorized commit "docs: fix stale M3 learning status" -> push origin main, fetch, verify exact parity and clean tree -> STOP for the same independent reviewer to recheck. Stop on unreproducible finding, unknown overlap, broader redesign, authority conflict, validation failure beyond this targeted cycle, destructive Git or M4 scope. No amend/rewrite, acceptance or finding closure is authorized.
+
+### 2026-09-29 08:34:30 +08:00 - FINDING / REPAIR CYCLE 2
+
+rg -n 'M3\+ remains unimplemented' docs/LAB_MANUAL.md reproduced the LOW finding at line 1390 (exit 0). The exact stale wording "M3+ remains unimplemented" conflicts with the current implemented M3 statements at lines 8/935. Affected requirements: AGENTS.md section 11 and M3-T06 accurate documentation. Hypothesis: this milestone wording was not updated when M3 became implemented. Targeted correction: replace it with "M4+ remains unimplemented", without rewriting the paragraph. STATE records this open finding and cumulative T06 repairs 2/10.
+
+The fresh review of d0d0a08 reported no BLOCKER/HIGH/MEDIUM findings; M3 functional requirements, all 40 scenarios, M1 preservation (12/155), M2 preservation (6/78) and the full harness (23/305) passed. This repair does not replace that review or close its LOW finding. Documentation review remains FAIL; independent repaired-HEAD recheck is NOT RUN. M3 remains NOT ACCEPTED; M4 remains NOT STARTED. Other repair counts remain M3 T01-T05 0,0,0,0,0; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1, each /10. Repair validation follows. Final commit/push/parity evidence will be reported from Git in delivery without a recursive metadata-only commit.
+
+### 2026-09-29 08:36:12 +08:00 - VALIDATION / REPAIR DIFF REVIEW
+
+At 08:35:47, rg -n 'M3\+ remains unimplemented' docs/LAB_MANUAL.md returned exit 1 with no matches, the expected PASS result. powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 ran 08:35:47-08:35:59: PASS/0; typecheck PASS, lint PASS, 23 test files / 305 tests PASS. No repair beyond cycle 2 was required.
+
+At 08:36:12, git diff --check, git status --short --untracked-files=all, the complete three-document diff and git diff --exit-code d0d0a08de8839215875e4920547334ca680b91ab -- src tests scripts package.json package-lock.json all exited 0. Only docs/LAB_MANUAL.md, docs/STATE.md and docs/DEVELOPMENT_LOG.md changed; LAB has exactly one M3+ -> M4+ replacement. Executable source/tests/harness/dependencies are unchanged. Existing LF/CRLF warnings are not whitespace failures. Reviewed the complete repair diff; no unrelated changes or broader correction is needed.
+
+Repair 2 is locally VERIFIED, with T06 still 2/10. This validates the targeted repair, not closure of the independent review finding: documentation review remains FAIL and the same independent reviewer must recheck the repaired HEAD. M3 remains NOT ACCEPTED; M4 remains NOT STARTED. After this evidence-only update, final exact-version harness, staged scope/whitespace and unchanged-executable guards precede the authorized commit/push/fetch. Actual SHA, exits, parity and clean-tree state are reported in delivery without additional file edits.

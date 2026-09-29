@@ -1,16 +1,16 @@
 # Casino Blackjack — Project State
 
-## Current truth: M3 review package
+## Current truth: M3-T06 review repair 2
 
 M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70. M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695 by the user's explicit M3 batch contract; that acceptance was recorded with substantive M3-T01, without a standalone acceptance commit. Prior M1/M2 mappings and execution records remain in Git at those SHAs and DEVELOPMENT_LOG.md. No new independent M1/M2 review is claimed in this session.
 
-M3 financial functionality and all 40 regression mappings are IMPLEMENTED / VERIFIED at T05. T06 is a documentation-only review package. Its full harness passed at 01:27:10; complete five-file review found one wording error, corrected in repair 1/10. Repair recheck at 01:28:48 passed the full harness (23 files / 305 tests), with final five-document scope/whitespace review at 01:29:24. Publication follows the final staged checks. M3 and every M3 task are NOT ACCEPTED. Independent M3 fresh-session review is NOT RUN and must occur in a genuinely new session. No M4 work, merge, release or deployment.
+M3 financial functionality and all 40 regression mappings are IMPLEMENTED / VERIFIED at T05. T06 is a documentation-only review package. Its full harness passed at 01:27:10; complete five-file review found one wording error, corrected in repair 1/10. Repair recheck at 01:28:48 passed the full harness (23 files / 305 tests), with final five-document scope/whitespace review at 01:29:24. The review package was published as d0d0a08de8839215875e4920547334ca680b91ab. Fresh-session review of that HEAD found one LOW stale LAB status sentence; functional requirements, all 40 scenarios and M1/M2 preservation passed. Repair 2/10 corrects that sentence and is locally VERIFIED; independent reviewer recheck is pending. The finding remains open and documentation review remains FAIL until the independent reviewer checks the repaired HEAD. M3 and every M3 task remain NOT ACCEPTED. M4 is NOT STARTED; no merge, release or deployment.
 
 Recommended model / reasoning: GPT-6 Astra / High. Actual runtime model / reasoning: NOT VERIFIED / NOT VERIFIED; no verifiable client-settings evidence is exposed.
 
 ## Checkpoint and repair ledger
 
-All T01–T05 checkpoints below were pushed to origin/main at https://github.com/FrankieChan0312/casino-blackjack.git. Every publication included successful fetch, local HEAD=origin/main, ahead/behind 0/0 and clean working tree. T06 final publication is reported from actual Git output in the final delivery; it is not inferred from the T05 baseline.
+All T01–T05 checkpoints below were pushed to origin/main at https://github.com/FrankieChan0312/casino-blackjack.git. Every publication included successful fetch, local HEAD=origin/main, ahead/behind 0/0 and clean working tree. The repair entry gate confirmed T06 publication at d0d0a08de8839215875e4920547334ca680b91ab on main/origin/main, 0/0 and clean at 2026-09-29 08:34:13 +08:00. The repair commit/push results will be reported from actual Git output in delivery, without a recursive metadata-only commit.
 
 | Task | Repairs | Delivery / commit | Push/parity timestamp (+08:00) |
 | --- | --- | --- | --- |
@@ -19,11 +19,17 @@ All T01–T05 checkpoints below were pushed to origin/main at https://github.com
 | M3-T03 | 0/10 | VERIFIED / COMMITTED / PUSHED 3647e09a6b8f2c9b4d432a39960ee66dff5cbf63 | 2026-09-29 01:13:01; PASS 0/0 clean |
 | M3-T04 | 0/10 | VERIFIED / COMMITTED / PUSHED 5a492e865a49036a66922fa61a5a606f831a9616 | 2026-09-29 01:17:29; PASS 0/0 clean |
 | M3-T05 | 0/10 | VERIFIED / COMMITTED / PUSHED e1fb8f49623f84026f723e0760973a70934d684d | 2026-09-29 01:22:40; PASS 0/0 clean |
-| M3-T06 | 1/10 | IMPLEMENTED / VERIFIED locally; final checkpoint publication pending | See final execution entry and delivery |
+| M3-T06 | 2/10 | Review package COMMITTED / PUSHED d0d0a08; repair 2 IMPLEMENTED / VERIFIED locally | Entry gate 2026-09-29 08:34:13; 0/0 clean; independent recheck required |
 
 M1 T01..T10 repair ledger: **2,1,0,0,1,0,1,0,0,1**, each /10.
 M2 T01..T06 repair ledger: **1,0,0,0,1,1**, each /10.
 No counter was reset by task/session/branch/model. M3 T01–T05 required no repair. T06 repair 1/10 corrected a LAB explanation: >= would incorrectly reject exact funds, not cause overdraft; no executable change. The initial Git sandbox ownership block was resolved via approved owning-user execution without changing global safe.directory. Historical failed attempts remain in DEVELOPMENT_LOG.
+
+## M3-T06 review repair 2/10
+
+Finding: LOW at LAB_MANUAL.md:1390, violating AGENTS.md section 11 and the M3-T06 accurate-documentation contract. At 2026-09-29 08:34:30 +08:00, rg reproduced the stale wording "M3+ remains unimplemented" (exit 0), inconsistent with the current M3 status at LAB lines 8/935. Hypothesis: the milestone wording was not updated when M3 became implemented. Targeted correction: only "M3+" -> "M4+" in that sentence; only STATE and DEVELOPMENT_LOG record the repair. No README, PLAN, rules/spec/design, executable or test changes are authorized.
+
+Fresh review of d0d0a08 otherwise passed M3 requirements, all 40 scenarios, original M1 12 files / 155 tests, original M2 6 files / 78 tests and the full harness 23 files / 305 tests; no BLOCKER/HIGH/MEDIUM findings. These are prior review results, not this repair's validation. Repair validation PASS: at 08:35:47 the stale-wording search returned 1 (expected no matches); full verify.ps1 ran 08:35:47-08:35:59 with exit 0, typecheck/lint and 23 files / 305 tests PASS. At 08:36:12 git diff --check, status, full three-document diff and the executable diff against d0d0a08 all passed/0. Only LAB_MANUAL, STATE and DEVELOPMENT_LOG changed. Final staged checks and publication follow this evidence-only update; actual results belong in delivery. The same independent reviewer must recheck the repaired HEAD; finding closure, documentation-review PASS and M3 acceptance are not claimed. All other task repair counts remain unchanged.
 
 ## Executed verification
 
@@ -40,7 +46,7 @@ No counter was reset by task/session/branch/model. M3 T01–T05 required no repa
 | Direct M1 original tests/helpers comparison | PASS | 01:22:17; git diff --exit-code d1d8966... -- original test/helper paths, exit 0 |
 | T05 task diff/status/whitespace | PASS | 01:22:17 plus staged check before commit; only new regression test and PLAN/STATE/log |
 | T06 full harness / diff | PASS | 01:27:10 harness exit 0, 23 files / 305 tests; 01:27:42 and 01:28:05 full five-file diff/status/whitespace and unchanged executables PASS; repair recheck 01:28:48 PASS/0, 23/305; final scope/whitespace 01:29:24 PASS/0 |
-| M3 independent fresh-session review | NOT RUN | Mandatory next session, prohibited in this implementation session |
+| M3 independent fresh-session review | FAIL | Review of d0d0a08 completed: one LOW documentation finding; functional/regression checks PASS; repaired-HEAD recheck NOT RUN |
 | M3 human acceptance | NOT RUN | No user acceptance of M3 or individual M3 tasks |
 | Browser/E2E | NOT APPLICABLE | No UI |
 | Separate clean-machine npm ci / cross-platform portability | NOT RUN | Existing Windows toolchain used, no new dependency |
@@ -64,9 +70,11 @@ All timestamps in this table are 2026-09-29 +08:00. The unchanged harness prints
 
 In-memory local TypeScript library only. Callers must retain the latest returned state; old snapshots branch computation and are not a concurrent/stale external-request protection service. No unbounded history, timestamped action-event store, persistence, authentication or general corrupted-object import validation. Broader R17 action-event/replay infrastructure remains M8; M3 supplies minimal round/seat main-wager financial records. Physical public projection is a correctness boundary, not server security. Some snapshots are runtime frozen; the entire state is not deep-frozen.
 
-Demo reset is deliberately deferred (R06 permits it, SPEC M3 does not require it). No Double/Split/Re-split/Surrender/Insurance/Even Money/side bets/Bet Behind/Charlie, UI/CLI app/network multiplayer, real money, paid resources or deployment. Computer policy remains deterministic/non-optimal. Math.random is only a simulation adapter. No known blocking finding in same-session task reviews; independent review remains outstanding.
+Demo reset is deliberately deferred (R06 permits it, SPEC M3 does not require it). No Double/Split/Re-split/Surrender/Insurance/Even Money/side bets/Bet Behind/Charlie, UI/CLI app/network multiplayer, real money, paid resources or deployment. Computer policy remains deterministic/non-optimal. Math.random is only a simulation adapter. One LOW documentation finding remains open pending independent recheck of repair 2; no blocking functional finding was reported.
 
 ## Mandatory M3 fresh-session review handoff
+
+The original handoff below is retained as historical context. The repair-2 recheck instructions above are current.
 
 **STOP after T06 commit/push/fetch/parity/clean. Do not perform the independent review in this implementation session, mark any M3 task ACCEPTED, or start M4.**
 
