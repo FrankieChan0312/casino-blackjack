@@ -1474,3 +1474,9 @@ Full harness PASS/0: typecheck, lint, 31 files / 506 tests, test start 21:23:32.
 ### 2026-09-29 21:28:37 +08:00 - VERIFIED
 
 Contract: all Pair and three-card categories/priority, A23/QKA/KA2, original physical cards only, exact gross and pending-unspendable independent returns. No Insurance/Even Money or settlement. Step: pure classification plus once-only deal calculation -> independent category/gross fixtures and advanced-action preservation -> full harness/diff. Global stop conditions and GPT-6 Astra/High recommendation apply; actual NOT VERIFIED/NOT VERIFIED. First harness at 21:27:30 PASS/0, typecheck/lint and 33/530 (test start 21:27:51). Source/test changes reviewed; no failure/repair (0/10). T01 preserved separately in a temporary checkpoint while publication authorization remains pending. Accepted M1-M4 executable files unchanged.
+
+## M5-T03 - Insurance window
+
+### 2026-09-29 21:34:51 +08:00 - VERIFIED
+
+Scope: independent M5 initial deal, explicit Ace decision state, own original wager half-stake funding, automated computer decline, delayed exactly-once internal peek, secrecy, pending Insurance win/loss and M4 action reuse. No Even Money or settlement yet. Step -> controlled card/funds/phase fixtures -> full harness -> source/test/diff inspection. Same global stop conditions/model recommendation; actual settings NOT VERIFIED. Harness launched 21:33:53; PASS/0 typecheck/lint and 34/549, test start 21:34:16. Reviewed added flow and M5 evaluation-test migration; no prior assertions weakened. T03 repairs 0/10. Publication authorization still pending.

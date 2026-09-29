@@ -949,3 +949,7 @@ The completed initial deal establishes dealerNaturalExcluded: a 2..9 upcard make
 ### M5-T02 evaluation
 
 sideBets.ts accepts distinct physical originals, classifies same rank before suit/colour for Pair and highest of suited trips/straight flush/trips/straight/flush for three-card. A23 and QKA are straight; KA2 is not. Close evaluates each placed wager once from immutable original player cards plus only dealer upcard. Frozen category/gross/net PENDING records never credit available funds. Advanced play preserves their values; no cards drawn for evaluation.
+
+### M5-T03 delayed peek
+
+M5 now owns initial two-pass dealing through preserved shoe/table primitives. It allocates every funded original hand before drawing, retaining all exposure on partial-deal failure. decisionPhase INSURANCE is the explicit outer decision state; M4 round gameplay is dormant with no current hand. All M5 gameplay wrappers block it. Computer choices close as DECLINE, human decisions wait without timer. Only closure calls resolveInitialDecisions; Ace/ten performs one peek, 2..9 none. No hole inspection occurs on the Ace pending path. Natural resolution then establishes normal M4 hands and dealerNaturalExcluded, preserving first-decision Surrender. Public projection uses an allowlist and labels this phase INSURANCE. Raw internal/legacy APIs are not the M5 player boundary.

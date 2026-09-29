@@ -191,3 +191,7 @@ Further advancedIntegrity cases cover later-child and second-Ace-child failures,
 ## M5-T02 checkpoint - 2026-09-29 21:28:37 +08:00
 
 T02 VERIFIED locally. Full harness PASS/0, 33 files / 530 tests, test start 21:27:51. sideBets.ts pure rank/colour/straight classification and exact gross; frozen once-only initial sideResults in optionalGame.ts. New sideBets.test.ts and optionalEvaluation.test.ts cover all categories, priority, physical copies, original-only inputs, pending funds and main independence. T01/T02 repairs 0/10; T03-T07 NOT STARTED. No publication yet. This checkpoint supersedes the earlier T01-only functionality note.
+
+## M5-T03 checkpoint - 2026-09-29 21:34:51 +08:00
+
+T03 VERIFIED locally, full harness PASS/0 34/549 (21:34:16 test start). Explicit decisionPhase INSURANCE keeps M4 gameplay dormant/currentHandId null; close deals independently, evaluates originals, waits for all human decisions before one peek. Computer declines automatically. Half-original available-only stake including odd units, pending win/loss, no ten/2..9 window, negative-peek secrecy and preserved Surrender verified. Added optionalPublicView.ts and optionalInsurance.test.ts; migrated M5 evaluation tests to M5 commands and explicit Ace decline. M1-M4 files unchanged. T01-T03 repairs 0/10. T04-T07 NOT STARTED. Publication pending.
