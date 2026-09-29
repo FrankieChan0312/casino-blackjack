@@ -24,17 +24,19 @@ export interface AdvancedHand {
   readonly stakeUnits: number;
   readonly decisionTaken: boolean;
   readonly complete: boolean;
-  readonly outcome?: RoundOutcome;
-  readonly outcomeReason?: OutcomeReason;
+  readonly outcome?: RoundOutcome | 'SURRENDERED';
+  readonly outcomeReason?: OutcomeReason | 'LATE_SURRENDER';
 }
 
 export interface AdvancedRound extends Omit<TableRoundState, 'players'> {
   // Ordered leaves only: all hands for one seat precede the next seat.
   readonly players: readonly AdvancedHand[];
   readonly currentHandId: string | null;
+  readonly dealerNaturalExcluded: boolean;
 }
-export interface HandWagerResult extends betting.MainWagerResult {
+export interface HandWagerResult extends Omit<betting.MainWagerResult, 'outcome'> {
   readonly handId: string;
+  readonly outcome: RoundOutcome | 'SURRENDERED' | 'VOID';
 }
 export interface AdvancedGameState extends Omit<betting.BettingGameState, 'game' | 'results'> {
   readonly game: Omit<TableGameState, 'round'> & { readonly round: AdvancedRound | null };
@@ -86,7 +88,9 @@ export function closeAdvancedBetting(state: AdvancedGameState, replacementShoeId
       stakeUnits: state.wagers.find((wager) => wager.seatNumber === player.seatNumber)!.stakeUnits };
   });
   return { ok: true, state: { ...dealt.state, results: [], game: { ...dealt.state.game,
-    round: { ...round, players, currentHandId: players.find((hand) => !hand.complete)?.handId ?? null } } } };
+    round: { ...round, players, currentHandId: players.find((hand) => !hand.complete)?.handId ?? null,
+      // M3 initial dealing already performs immediate Ace/ten peek, without Insurance.
+      dealerNaturalExcluded: round.phase !== 'INTEGRITY_ERROR' && !isNaturalBlackjack(round.dealerCards, true) } } } };
 }
 
 export function isAdvancedNatural(hand: AdvancedHand): boolean {
@@ -212,6 +216,18 @@ export function splitAdvancedHand(state: AdvancedGameState, seatNumber: number, 
   return { ok: true, state: selectNextHand({ ...funded, game: { ...funded.game, round: { ...round,
     players: round.players.flatMap((entry) => entry.handId === handId ? children : [entry]) } } }) };
 }
+export function surrenderAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
+  const error = humanError(state, seatNumber, handId);
+  if (error) return { ok: false, state, error };
+  const round = state.game.round!;
+  const hand = round.players.find((entry) => entry.handId === handId)!;
+  if (!round.dealerNaturalExcluded || hand.origin !== 'ORIGINAL' || hand.parentHandId !== null
+    || hand.splitAces || hand.cards.length !== 2 || hand.decisionTaken || isAdvancedNatural(hand)) {
+    return { ok: false, state, error: 'SURRENDER_NOT_ALLOWED' };
+  }
+  return { ok: true, state: selectNextHand(replaceHand(state, { ...hand,
+    decisionTaken: true, complete: true, outcome: 'SURRENDERED', outcomeReason: 'LATE_SURRENDER' })) };
+}
 export function resolveAdvancedDealer(state: AdvancedGameState): AdvancedResult {
   const error = phaseError(state, 'DEALER_TURN');
   if (error) return { ok: false, state, error };
@@ -253,7 +269,7 @@ export function getAdvancedResults(state: AdvancedGameState): readonly HandWager
   return round.players.flatMap((hand): HandWagerResult[] => {
     if (hand.outcome === undefined) return [];
     const stake = hand.stakeUnits;
-    const gross = hand.outcome === 'PLAYER_BLACKJACK' ? (stake / 2) * 5
+    const gross = hand.outcome === 'SURRENDERED' ? stake / 2 : hand.outcome === 'PLAYER_BLACKJACK' ? (stake / 2) * 5
       : hand.outcome === 'PLAYER_WIN' ? stake * 2 : hand.outcome === 'PUSH' ? stake : 0;
     return [{ roundId: round.roundId, seatNumber: hand.seatNumber, handId: hand.handId, stakeUnits: stake,
       outcome: hand.outcome, grossReturnUnits: gross, netUnits: gross - stake, status: 'PENDING' }];

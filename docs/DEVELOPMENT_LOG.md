@@ -1384,3 +1384,19 @@ Changed advancedGame.ts only to permit eligible split-origin hands and reject ro
 ### 2026-09-29 19:10:03 +08:00 - VALIDATION / REVIEW
 
 Full verify.ps1 PASS/0, typecheck/lint and 27 files / 371 tests, test start 19:08:57. T04 first implementation/validation requires no repair: 0/10. Reviewed minimal source change and independent expected card paths/funds/results; no blocking finding. Complete Git diff and whitespace/status checks precede publication.
+
+## M4-T05 — Late Surrender / leaf settlement
+
+### 2026-09-29 19:13:36 +08:00 — BASELINE / T04 PUBLICATION
+
+T04 committed/pushed b1194483fb67b8f73459d0b6092be0d0da4baf09; push/fetch/Git PASS/0, main=origin/main, 0/0 clean. Complete six-file staged diff and whitespace reviewed, no blocking finding. T04 repairs 0/10. T05 begins 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: original unsplit non-Natural two-card first-decision Late Surrender after dealer Natural exclusion, no draw/additional reserve, exact half-stake gross; all post-action/split/Natural/dealer-Natural rejections; mixed leaf wins/losses/push/doubled exposure, pending proceeds and once-only commit; no unnecessary dealer draw for determined outcomes. No Insurance window or M5+. Step -> verification: explicit exclusion fact plus SURRENDERED result -> independent all-upcard/illegal/mixed financial cases -> full harness/diff -> authorized commit/push/parity. Global stop conditions apply.
+
+### 2026-09-29 19:15:45 +08:00 — IMPLEMENTATION / FIRST VALIDATION START
+
+Extended M4 hand/result outcome types only, added dealerNaturalExcluded established after the existing immediate M3 deal/peek, surrenderAdvancedHand and exact stake/2 result. Added advancedSettlement.test.ts. No accepted M1-M3 module/test was changed. No later hidden-card re-peek or Insurance choice is introduced. All original main stakes remain even, so integer half-return is exact. Dealer comparison preserves surrendered outcomes and only draws if an unresolved ordinary leaf exists. Full harness launched.
+
+### 2026-09-29 19:17:08 +08:00 - VALIDATION / REVIEW
+
+T05 first full verify.ps1 PASS/0: typecheck/lint, 28 files / 399 tests, test start 19:15:51. Repairs 0/10. Explicit 50-unit surrender returns 25 units; mixed split and doubled-leaf result tuples/reconciliation pass; dealer Natural and all post-action exclusions pass. Reviewed targeted implementation and new cases; no blocking finding. Complete Git diff and whitespace/status checks precede publication.
