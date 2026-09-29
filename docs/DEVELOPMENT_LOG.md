@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M6-T02 — Original Bet Behind wagering
+
+### 2026-09-29 23:33:41 +08:00 — T01 PUBLICATION / T02 VERIFICATION
+
+T01 normal commit/push/fetch PASS/0 at 23:31:06, SHA 0c87dcd938a45c1e9fdbe9aa9f8690c51f6fd8fa, main=origin/main, 0/0, clean. T02 contract: OPEN eligibility/limits/delta/cascade/freeze, shared participant funds and no card/RNG change; no outcome/follow implementation yet. Same recommendation GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED, global non-goals/stop conditions. Added behindBetting.test.ts and extended only M6 source/projection. Targeted PASS/0 1/20 at 23:33:41; full harness PASS/0 typecheck/lint/tests 40/672, test start 23:33:48. T02 first implementation/validation, repairs 0/10. No accepted source/test changes or weakened tests. Full task diff review precedes publication.
+
+The optional control-policy question has no reply. After considering the authorized required domain tests, use controlled domain fixtures for advanced-follow mechanics and explicitly document local unreachability; preserve the one-HUMAN/Hit-Stand-only local entry point. This is an implementation/testing assumption within the requested domain scope, not inferred authorization to change policy. No network or second-human feature is planned.
+
 ## M6-T01 — Ownership foundation
 
 ### 2026-09-29 23:28:04 +08:00 — REPAIR 1 / REVERIFICATION

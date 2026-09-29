@@ -8,7 +8,9 @@ Execute T01 ownership -> T02 original back wagers -> T03 ordinary following -> T
 
 T01 scope/acceptance: stable zero-or-one HUMAN, spectator/seated modes, available/reserved ownership, persistent funds through finalized-round seat moves, max one controlled seat, explicit independent computers, no duplicate spendable funds, active configuration rejection and public privacy. Additive source/helper/tests only; no back wagers yet. Steps -> verification: ownership adapter -> deterministic complete-round and rejection assertions -> targeted suite/full verify.ps1 -> full diff/whitespace/status -> normal verified checkpoint publication. Full batch non-goals: UI/React/browser E2E/network/accounts/database/payments/Charlie/M7+, credentials/paid resources/deployment. Stop for authority conflict, unresolved ownership/control policy, unknown overlapping changes, unavailable checks, incompatible broad rewrite, destructive Git, 10 repairs or stalled repair, or the final independent-review boundary.
 
-T01 VERIFIED, repairs 1/10; publication next. T02-T08 NOT STARTED, each 0/10. M6 independent fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Advanced-follow reachability clarification is pending as recorded in DESIGN/STATE; no policy change is inferred.
+T01 VERIFIED / PUSHED 0c87dcd938a45c1e9fdbe9aa9f8690c51f6fd8fa, repairs 1/10. T02 VERIFIED, repairs 0/10; publication next. T03-T08 NOT STARTED, each 0/10. M6 independent fresh review NOT RUN; M6 ACCEPTED NO; M7 NOT STARTED. Advanced-follow coverage uses controlled domain fixtures with unchanged local policy, as recorded in DESIGN; no policy change is inferred.
+
+T02 scope/acceptance: OPEN original back target eligibility, inclusive even-unit limits, exact/shared funds and atomic rejection, delta changes/cancellation, target MAIN cascade, close freeze and zero extra cards/RNG. No follower outcomes or advanced follow yet. Steps -> targeted behindBetting assertions -> full verify.ps1 -> complete diff/status/whitespace -> authorized normal checkpoint. Same model recommendation, non-goals and stop conditions as T01.
 
 ## Current M5 batch contract
 

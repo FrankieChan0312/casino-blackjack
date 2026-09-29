@@ -2,6 +2,7 @@ import * as optional from './optionalGame.js';
 import { createBankroll, type Bankroll } from './credits.js';
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
+import { isMainWager } from './bettingGame.js';
 
 export interface HumanParticipant {
   readonly participantId: 'local-human';
@@ -18,6 +19,14 @@ export interface BehindGameState {
   readonly human: HumanParticipant | null;
   // Stable seat-bound computer identities retain funds while unoccupied.
   readonly computers: readonly ComputerParticipant[];
+  readonly backWagers: readonly BackWager[];
+}
+export interface BackWager {
+  readonly participantId: 'local-human';
+  readonly wagerId: string;
+  readonly targetSeat: number;
+  readonly handId: string;
+  readonly stakeUnits: number;
 }
 export type BehindResult =
   | { readonly ok: true; readonly state: BehindGameState }
@@ -25,7 +34,7 @@ export type BehindResult =
 
 export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true): BehindGameState {
   const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random);
-  return { table, human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
+  return { table, backWagers: [], human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
     computers: bankrolls.map((bankroll, index) => ({ participantId: `computer-${index + 1}`,
       seatNumber: index + 1, bankroll })) };
 }
@@ -41,7 +50,10 @@ export function controllerId(state: BehindGameState, seatNumber: number): string
 function engine(state: BehindGameState): optional.OptionalGameState {
   const humanSeat = controlledSeat(state);
   return { ...state.table, bankrolls: state.computers.map((entry) => entry.seatNumber === humanSeat
-    ? state.human!.bankroll : entry.bankroll) };
+    ? { ...state.human!.bankroll, reserved: state.human!.bankroll.reserved - backReserve(state) } : entry.bankroll) };
+}
+function backReserve(state: BehindGameState): number {
+  return state.backWagers.reduce((sum, wager) => sum + wager.stakeUnits, 0);
 }
 function run(state: BehindGameState, command: (entry: optional.OptionalGameState) => optional.OptionalResult): BehindResult {
   const input = engine(state);
@@ -52,7 +64,8 @@ function run(state: BehindGameState, command: (entry: optional.OptionalGameState
   // Attribute funds using the input owner, including when configuration changes.
   const humanSeat = controlledSeat(state);
   return { ok: true, state: { ...state, table,
-    human: state.human && humanSeat !== null ? { ...state.human, bankroll: bankrolls[humanSeat - 1] } : state.human,
+    human: state.human && humanSeat !== null ? { ...state.human, bankroll: {
+      ...bankrolls[humanSeat - 1], reserved: bankrolls[humanSeat - 1].reserved + backReserve(state) } } : state.human,
     computers: state.computers.map((entry) => entry.seatNumber === humanSeat ? entry
       : { ...entry, bankroll: bankrolls[entry.seatNumber - 1] }) } };
 }
@@ -70,7 +83,47 @@ export function setBehindMainWager(state: BehindGameState, seatNumber: number, s
   return run(state, (entry) => optional.setOptionalMainWager(entry, seatNumber, stakeUnits));
 }
 export function cancelBehindMainWager(state: BehindGameState, seatNumber: number): BehindResult {
-  return run(state, (entry) => optional.cancelOptionalMainWager(entry, seatNumber));
+  const result = run(state, (entry) => optional.cancelOptionalMainWager(entry, seatNumber));
+  if (!result.ok) return result;
+  const dependent = result.state.backWagers.find((wager) => wager.targetSeat === seatNumber);
+  return dependent ? { ok: true, state: removeBackWager(result.state, dependent) } : result;
+}
+function moveBackReserve(state: BehindGameState, delta: number): BehindGameState {
+  const human = state.human!;
+  return { ...state, human: { ...human, bankroll: { available: human.bankroll.available - delta,
+    reserved: human.bankroll.reserved + delta } } };
+}
+function removeBackWager(state: BehindGameState, wager: BackWager): BehindGameState {
+  return { ...moveBackReserve(state, -wager.stakeUnits), backWagers: state.backWagers.filter((entry) => entry !== wager) };
+}
+function qualifyingTarget(state: BehindGameState, targetSeat: number): boolean {
+  const seat = state.table.game.table.seats.find((entry) => entry.seatNumber === targetSeat);
+  const wager = state.table.wagers.find((entry) => entry.seatNumber === targetSeat);
+  return !!seat && seat.occupancy !== 'EMPTY' && !seat.sittingOut && targetSeat !== controlledSeat(state)
+    && !!wager && isMainWager(wager.stakeUnits)
+    && state.computers[targetSeat - 1].bankroll.reserved >= wager.stakeUnits;
+}
+// Target-stake semantics: a repeated same-target request never creates a second wager.
+export function setBackWager(state: BehindGameState, targetSeat: number, stakeUnits: number): BehindResult {
+  if (state.table.phase !== 'OPEN') return { ok: false, state, error: 'BETTING_NOT_OPEN' };
+  if (!state.human) return { ok: false, state, error: 'NO_HUMAN_PARTICIPANT' };
+  if (!qualifyingTarget(state, targetSeat)) return { ok: false, state, error: 'INELIGIBLE_BACK_TARGET' };
+  if (!isMainWager(stakeUnits)) return { ok: false, state, error: 'INVALID_BACK_WAGER' };
+  const existing = state.backWagers.find((entry) => entry.targetSeat === targetSeat);
+  const delta = stakeUnits - (existing?.stakeUnits ?? 0);
+  if (delta > state.human.bankroll.available) return { ok: false, state, error: 'INSUFFICIENT_FUNDS' };
+  if (delta === 0) return { ok: true, state };
+  const handId = `round-${state.table.roundNumber}/seat-${targetSeat}`;
+  const wager: BackWager = { participantId: state.human.participantId, targetSeat, handId,
+    wagerId: `${handId}/BACK/${state.human.participantId}`, stakeUnits };
+  return { ok: true, state: { ...moveBackReserve(state, delta),
+    backWagers: [...state.backWagers.filter((entry) => entry !== existing), wager]
+      .sort((left, right) => left.targetSeat - right.targetSeat) } };
+}
+export function cancelBackWager(state: BehindGameState, targetSeat: number): BehindResult {
+  if (state.table.phase !== 'OPEN') return { ok: false, state, error: 'BETTING_NOT_OPEN' };
+  const wager = state.backWagers.find((entry) => entry.targetSeat === targetSeat);
+  return wager ? { ok: true, state: removeBackWager(state, wager) } : { ok: false, state, error: 'NO_BACK_WAGER' };
 }
 export function setBehindSideWager(state: BehindGameState, seatNumber: number,
   type: optional.SideWagerType, stakeUnits: number): BehindResult {
@@ -82,7 +135,15 @@ export function cancelBehindSideWager(state: BehindGameState, seatNumber: number
   return run(state, (entry) => optional.cancelSideWager(entry, seatNumber, type));
 }
 export function closeBehindBetting(state: BehindGameState, replacementShoeId: string, random: RandomSource): BehindResult {
-  return run(state, (entry) => optional.closeOptionalBetting(entry, replacementShoeId, random));
+  if (state.table.phase !== 'OPEN') return { ok: false, state, error: 'BETTING_NOT_OPEN' };
+  let eligible = state;
+  for (const wager of state.backWagers) {
+    if (!qualifyingTarget(state, wager.targetSeat)) eligible = removeBackWager(eligible, wager);
+  }
+  const result = run(eligible, (entry) => optional.closeOptionalBetting(entry, replacementShoeId, random));
+  if (!result.ok) return { ok: false, state, error: result.error };
+  return { ok: true, state: { ...result.state,
+    backWagers: Object.freeze(result.state.backWagers.map((wager) => Object.freeze({ ...wager }))) } };
 }
 export function decideBehindMainInsurance(state: BehindGameState, purchase: boolean): BehindResult {
   const seat = controlledSeat(state);
@@ -107,9 +168,11 @@ export function advanceBehindTable(state: BehindGameState): BehindResult {
   return run(state, optional.advanceOptionalTable);
 }
 export function settleBehindWagers(state: BehindGameState): BehindResult {
+  if (state.backWagers.length) return { ok: false, state, error: 'BACK_SETTLEMENT_NOT_IMPLEMENTED' };
   return run(state, optional.settleOptionalWagers);
 }
 export function voidBehindRound(state: BehindGameState): BehindResult {
+  if (state.backWagers.length) return { ok: false, state, error: 'BACK_SETTLEMENT_NOT_IMPLEMENTED' };
   return run(state, optional.voidOptionalRound);
 }
 export function prepareNextBehindRound(state: BehindGameState): BehindResult {
