@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: `M3 — Credits, Main Betting, and Settlement`
-Status: M1 and M2 are ACCEPTED. M3 is implemented and mechanically verified; independent review is NOT RUN and M3 is NOT ACCEPTED. Current M3 learning notes are in section 29; M4+ remains planned.
+Current milestone: `M4 — Double, Split, Re-split, and Late Surrender`
+Status: M1-M3 are ACCEPTED. M3 was explicitly accepted at cca40d2 after review repair 2; no repaired-HEAD independent-review conclusion is claimed. M4 is implemented and mechanically verified, but independent review is NOT RUN and M4 is NOT ACCEPTED. M4 learning notes are in section 30; M5+ remains unimplemented.
 
 ## 1. Purpose
 
@@ -932,7 +932,7 @@ Suggested explanation:
 
 # Part C — Planned Later Milestones
 
-M2 and M3 are implemented as explained in sections 28 and 29. The original targets below are retained for learning context; M4+ remains planned.
+M2, M3 and M4 are implemented as explained in sections 28, 29 and 30. The original targets below are retained for learning context; M5+ remains unimplemented.
 
 ## 16. M2 — Multi-seat Table (original learning targets; implemented summary in section 28)
 
@@ -1387,7 +1387,7 @@ The T09 real type-error experiment independently proved overall exit 2 while lin
 
 Pure transitions allocate small arrays; at 312 cards this is simpler than mutation bookkeeping. readonly is a compile-time contract, not runtime deep freezing. A single dealer command avoids an animation API before a UI exists. Pure ordinaryOutcome assumes a surviving non-natural player; game commands enforce that sequencing. Fixture code is test-only and independently checks all physical IDs.
 
-The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED at that historical T10 checkpoint**. M1 is now **ACCEPTED** at d1d8966fe55af1bc2b9348e305135952b7723b70 under the explicit M2 contract. M2 implementation is described below; M4+ remains unimplemented.
+The user can now review/explain identity versus value, shoe versus round lifetime, injected randomness, natural precedence, visibility, legal transitions and integrity versus gameplay outcomes. User understanding: **needs review / not assessed**. Mechanical verification: 12 files / 155 tests PASS at the T09 checkpoint, with final T10 verification recorded in STATE/DEVELOPMENT_LOG. Fresh-session review: **NOT YET COMPLETED at that historical T10 checkpoint**. M1 is now **ACCEPTED** at d1d8966fe55af1bc2b9348e305135952b7723b70 under the explicit M2 contract. M2-M4 implementation is described below; M5+ remains unimplemented.
 
 
 ## M2 T04 learning checkpoint
@@ -1520,4 +1520,64 @@ These are concrete regression failure modes, not fabricated reports of observed 
 
 ### Learning and delivery state
 
-Topics now available to study: exact unit accounting, occupied versus funded seats, delta reservation, all-or-nothing rejection, pending versus spendable returns, profit versus gross, table-level settlement, integrity versus normal loss, and idempotency. User understanding remains needs review / not assessed. M3 is IMPLEMENTED / mechanically VERIFIED; independent fresh-session review is NOT RUN; M3 is NOT ACCEPTED or DEPLOYED. Full suite has 23 files / 305 tests; the 40-case mapping is in STATE. No optimal computer-strategy or production security claim.
+Topics now available to study: exact unit accounting, occupied versus funded seats, delta reservation, all-or-nothing rejection, pending versus spendable returns, profit versus gross, table-level settlement, integrity versus normal loss, and idempotency. User understanding remains needs review / not assessed. The historical M3 suite had 23 files / 305 tests; its 40-case mapping remains in STATE at cca40d2. Independent review of d0d0a08 found a LOW stale status sentence, fixed by repair 2 at cca40d2. The user subsequently ACCEPTED M3 at that repaired HEAD. No unrecorded repaired-HEAD reviewer recheck or deployment is claimed. Current M4 evidence follows; no optimal computer-strategy or production security claim.
+
+## 30. M4 implementation and learning checkpoint
+
+### Seat, hand and wager lineage
+
+A seat owns the session bankroll and controller. A hand owns cards, decisions, stake and its own result. One seat can have several ordered hands after Split, so a seat number alone is insufficient to identify a command target. M4 also requires the current stable hand ID. A stale command for a completed child cannot silently act on its sibling.
+
+An original hand starts as a leaf. Split replaces it with two children: the parent supplies ancestry but no longer appears among settling leaves. IDs extend the parent path with .1/.2; root identity and original-card context remain available. Re-splitting replaces one leaf with two, increasing the leaf count by one. Settlement must iterate leaves because each can independently win, push or lose. Counting the removed parent would create an extra payout without matching reserved money.
+
+For a 100-credit original wager split into two 100-credit leaves, win/loss produces gross 200+0 credits against 200 credits total reserved: net zero. If the winning leaf first Doubles to 200 credits, win/loss instead produces gross 400+0 against 300 reserved: net +100. Financial records identify round, seat and hand, so these outcomes remain attributable.
+
+### Depth-first dealing and split value
+
+Split first creates children retaining the first and second original physical cards respectively. Deal the first child's required second card, finish that child completely, then deal the second child's required second card. A re-split continues down the current branch before returning to its sibling. Every leaf for this seat finishes decisions before another seat acts.
+
+Example: 8/8 splits; the next shoe cards are 2,3,4. Child 1 receives 2, Hits and receives 3, then Stands. Only then does child 2 receive 4. Pre-dealing both children would incorrectly give 3 to child 2 and 4 to child 1. Stable physical-card assertions detect that error even if both resulting totals happen to be legal.
+
+Rank and splitting value differ. 10/J/Q/K are different ranks but all have splitting value ten: 10/K and J/Q may split. Numeric 2..9 require identical ranks; Ace pairs only with Ace. An A+K child is ordinary 21 because it came from a Split; two cards totaling 21 alone are insufficient to establish original Natural eligibility. It pays at most the ordinary 1:1 win, never 3:2.
+
+### Double, DAS and atomic additional funding
+
+Double is an eligible HUMAN hand's first decision with exactly two cards totaling below 21. It must reserve one full matching current wager from AVAILABLE funds, then double the settling stake, give that hand exactly one card and finish its decisions. A low resulting total cannot Hit again. Double After Split (DAS) uses the same rule on eligible non-Ace children. Split-Ace children are excluded.
+
+Funding is checked before any card or turn effect. Available 200 units funds a matching 200-unit addition; 199 does not. Existing reserved stakes and pending wins are unavailable. A failed request returns the original state with no changed cards, shoe, RNG, current hand/seat or money. Original main-bet limits govern the initial bet, not the exposure after an accepted Double. Advancing after Double may also deal a waiting sibling's required second card, but the doubled hand itself gets exactly one.
+
+### Four-leaf cap and Split Aces
+
+One original seat may end with at most four leaves: three successful splits. Completed and busted leaves remain in that count. Otherwise finishing or busting a hand could incorrectly reopen capacity and allow a fifth leaf. The cap and funding are separate checks: ample funds do not bypass the cap, and remaining capacity does not supply funds.
+
+Ace pairs split once into two ordered children. Each receives one additional card and immediately finishes decisions; no Hit, Double, Surrender or re-split is permitted, even if another Ace arrives. A+K is ordinary 21. Decision completion is distinct from a determined result: surviving Split-Ace totals still need comparison with the shared S17 dealer. Dealer draws can be skipped only when every outcome is already known, such as Natural, bust or surrender.
+
+### Late versus Early Surrender
+
+Late Surrender becomes possible only after dealer Natural is excluded. A 2..9 upcard makes Natural impossible; an Ace or ten-valued upcard requires the existing negative peek. Early Surrender would allow giving up before that exclusion and is not implemented. M4's immediate peek flow has no Insurance or Even Money window.
+
+Only an original, unsplit, non-Natural two-card hand before Hit/Stand/Double/Split may surrender. It ends the hand without drawing or reserving more funds and returns half the original stake. A 50-unit original wager returns exactly 25 units, losing 25. Original wagers are even integer half-credit units, so no fractional-unit rounding is needed. A known dealer Natural prevents this choice.
+
+### Pending settlement and advanced VOID
+
+Gameplay completion and financial commit are separate. Each leaf's result can become known while other seats still play, but its return cannot fund another action. One final table commit validates leaf stakes against reserved money, adds gross returns and clears reservations once. Repeated commit rejects unchanged.
+
+If a required Double, first/later split-child, re-split or dealer draw exhausts the shoe, the round enters integrity failure without inventing a card or shuffling mid-round. Normal pending outcomes are invalidated; diagnostic cards and the retired shoe remain. VOID refunds all ACTUAL reserved exposure once, including accepted additional actions. An unfunded rejected Split creates no extra refund. A later explicit funded round can replace the retired shoe; there is no automatic replay. Refund and normal settlement cannot both pay the same round.
+
+### Regression groups and concrete defects they detect
+
+| Group | Independent evidence | Concrete defect caught if introduced |
+| --- | --- | --- |
+| advancedFoundation | Stable IDs, current-hand routing, original eligibility context, public allowlist | Routing a completed child's command to its sibling; leaking physical IDs or hidden dealer data |
+| advancedDouble | Exact/short funds, one-card change, forced completion and explicit win/loss/push amounts | Spending reserved money; rejecting equality; drawing twice; paying only the undoubled stake |
+| advancedSplit | All ordered ten-value pairs, original card references, depth-first shoe sequence | Comparing ranks only; swapping original cards; pre-dealing a sibling; classifying split 21 as Natural |
+| advancedResplit | Four leaves, completed/busted count, ordered Ace additions and restrictions | Allowing a fifth leaf after bust; re-splitting a new Ace; allowing Double on restricted Aces |
+| advancedSettlement | Every upcard class, post-action exclusions, exact half return and mixed leaf payouts | Surrender before Natural exclusion; surrendering split cards; paying removed parent; releasing pending funds early |
+| advancedIntegrity | Real exhausted-shoe fixtures with 312-card accounting; first/later child and partial dealer faults | Mid-round replacement; retaining provisional winnings on VOID; refunding only original exposure or refunding rejected actions |
+| advancedRegression | Executable REG-M4-001..060 and exact unique-ID assertion | Missing a required acceptance case; modifying the bot to choose advanced actions; duplicate payout/refund |
+
+These are failure modes protected by executed assertions, not fabricated reports of observed gameplay failures. Actual M4 repairs were a T01 documentation patch-context mismatch, a T03 test-format lint error, and the T07 recovered STATE heading encoding substitution. None changed gameplay semantics. The interruption itself is not a defect or repair.
+
+Observed full suite: 30 files / 476 tests. Separately rerun original M1 12/155, M2 6/78 and M3 5/72 all passed; their original files remain unchanged. M4 adds seven files / 171 tests including 60 mapped scenarios. Full evidence and cumulative repair counts are in STATE/DEVELOPMENT_LOG. COMPUTER remains <17 HIT / >=17 STAND, not basic/optimal strategy. Insurance, Even Money, Pair/21+3 side bets, Bet Behind, Charlie, UI/network, real money and deployment remain absent.
+
+User understanding: needs review / not assessed. M4 mechanical verification does not establish independent review or human acceptance. The next step is a genuinely new Codex conversation with findings-first review and no edits without separate authorization; M4 is NOT ACCEPTED and M5 NOT STARTED.

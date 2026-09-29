@@ -1420,3 +1420,37 @@ Full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 30 files / 476 tests
 Enumerated original paths using git ls-tree -r --name-only at accepted M1 d1d8966fe55af1bc2b9348e305135952b7723b70, M2 c9f7f35bf874a0e7673505cbbea745ce035ac695 and M3 cca40d2bed3b3964a9bfb47329d49bb553fe610e. All commands exited 0. git diff --exit-code against M1 tests/helpers and M2 tests/helpers PASS/0. Comparing every original M3 src/tests/scripts/package.json/package-lock.json/tsconfig.json/eslint.config.mjs path PASS/0: no changes. Newly added M4 paths are not falsely included in the preservation comparison.
 
 Ran npm.cmd test -- with the enumerated original M1 test files: PASS/0, 12 files / 155 tests (19:31:03). Separately ran the six M2-only original files: PASS/0, 6 files / 78 tests (19:31:07). Separately ran the five M3-only original files: PASS/0, 5 files / 72 tests (19:31:09). Final status showed only the two intended new T06 suites before evidence updates. These independent suite reruns are same-session validation, not a fresh independent review. Complete task diff/whitespace review follows; publication evidence is recorded with T07.
+
+## M4-T07 - Documentation / fresh-review package and interruption recovery
+
+### 2026-09-29 19:43:23 +08:00 - T06 PUBLICATION / T07 BASELINE
+
+T06 complete five-file staged diff and whitespace checks PASS; no blocking same-session task-diff finding. Committed/pushed 6c20d6938250d88085bbcabeb2f29637a26c2607, subject test: complete M4 advanced-action regression coverage. Push/fetch/Git exit 0; main=origin/main, ahead/behind 0/0, clean. T06 repairs 0/10. T07 recommended GPT-6 Astra / High; actual runtime NOT VERIFIED / NOT VERIFIED.
+
+T07 scope: accurate README/DESIGN/PLAN/STATE/DEVELOPMENT_LOG/LAB only, actual API/funding/sequencing/VOID, M3 explicit acceptance without fabricated repaired-HEAD reviewer result, exact changed-path inventory, regression mapping, prior preservation evidence, learning notes and findings-first fresh-session handoff. No gameplay/source/test/dependency changes, independent review, acceptance, M5 or deployment. Step -> verification: preserve/review existing documentation and fill missing sections -> full verify.ps1 and no-executable-diff check -> entire task diff/whitespace/status -> one normal authorized commit/push/fetch/parity -> STOP. Global conflict/unknown-change/tool/repair-cap/destructive-history/sensitive-scope stop conditions apply.
+
+### 2026-09-29 20:11:10 +08:00 - RECOVERY READ ATTEMPT
+
+The conversation was interrupted after README and STATE edits, before the other T07 documents were completed. Recovery first attempted timestamp/location/Git inspection without writes. Sandbox Git returned exit 128, dubious ownership (sandbox identity differs from repository owner). Retried the same read-only inspection as the owning user, without changing safe.directory or repository configuration. This environment permission issue and the interruption are not repair cycles.
+
+### 2026-09-29 20:11:38 +08:00 - RECOVERED CASE A
+
+Get-Location confirmed the authorized repository. main HEAD=origin/main=6c20d6938250d88085bbcabeb2f29637a26c2607; 0/0. git status showed exactly README.md and docs/STATE.md modified, no untracked files. git log showed only known M4 checkpoints, no local T07 commit. Read git diff --stat, git diff -- README.md docs and git diff -- src tests scripts package.json package-lock.json, all exit 0; executable diff empty. Subsequent authorized fetch confirmed unchanged origin/main; cached diff empty. No writes preceded understanding this state. Existing README/API and STATE/handoff/mapping work was retained; no reset/checkout/restore or T01-T06 reimplementation/re-execution occurred.
+
+### 2026-09-29 20:12:51 +08:00 - T07 REPAIR 1 / DOCUMENT COMPLETION
+
+Recovery inspection exposed an actual T07 defect: STATE's first line contained literal '# Casino Blackjack ? Project State', where the original em dash had been substituted. Hypothesis: piping non-ASCII script text through Windows PowerShell's native input encoding replaced the character before Node wrote UTF-8. Targeted correction uses apply_patch to restore the em dash; UTF-8 codepoint verification will distinguish literal U+2014 from question mark. This actual document repair increments T07 to 1/10, not because of reconnection. Other recovered text is preserved; added blank lines make its lists explicit Markdown blocks.
+
+Completed previously unfinished DESIGN current implementation/VOID wording, PLAN checkpoint/next action, and LAB section 30 plus current status. LAB explains seat/hand, parent/leaf, depth-first physical order, rank/split value, Natural suppression, Double/DAS, completed-leaf cap, Split Aces, Late versus Early Surrender/negative peek, available-only funding, pending settlement, actual-exposure VOID and concrete regression failure modes. Historical M3 acceptance is distinguished from unavailable repaired-HEAD reviewer recheck. No gameplay defect is invented and no independent M4 review is claimed. M4 repair ledger now 1,0,1,0,0,0,1; prior M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1.
+
+### 2026-09-29 20:15:05 +08:00 - REPAIR RECHECK / FINAL FULL HARNESS
+
+Node UTF-8 first-line assertion verified literal U+2014 in STATE, PASS/0. Ran powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1. Actual result PASS/0: typecheck, lint and 30 files / 476 tests; test start 20:15:11. All 60 M4 mapped scenarios plus completeness and the original M1/M2/M3 tests were included. T07 remains 1/10; no gameplay/executable repair. Separate M1 12/155, M2 6/78, M3 5/72 runs remain the actual T06 evidence above, not falsely reported as new separate recovery runs.
+
+### 2026-09-29 20:15:27 +08:00 - REQUIRED GIT VALIDATION
+
+git diff --check PASS/0. git status --short --untracked-files=all showed exactly README plus DESIGN/DEVELOPMENT_LOG/LAB_MANUAL/PLAN/STATE; no unexpected files. git diff --exit-code 6c20d6938250d88085bbcabeb2f29637a26c2607 -- src tests scripts package.json package-lock.json PASS/0, empty. Baseline-to-working executable inventory against cca40d2 showed exactly the ten new M4 source/helper/suite paths listed in STATE, no modified prior executable paths. The full T07 diff is inspected before the authorized normal commit; final staged checks and actual publication results follow. As with prior documentation checkpoints, its own SHA cannot be embedded in its own content: final delivery and Git history record the final commit/push/fetch/parity without a duplicate metadata-only commit. Fresh M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
+
+### 2026-09-29 20:24:21 +08:00 - COMPLETE TASK-DIFF REVIEW
+
+Inspected the entire T07 Git diff in three complete groups: README/DESIGN/PLAN, STATE, and LAB_MANUAL/DEVELOPMENT_LOG; every Git command exited 0. Confirmed the retained STATE REG-M4-001..060 mapping and current statuses. Same-session documentation task review found no additional blocking issue. No executable change followed the passed 20:15:05 harness. Only final evidence text was appended; final staged whitespace/scope and normal publication follow. This task-diff review is not the mandatory independent M4 review. Stop after publication; the final report supplies the actual final SHA and remote parity.

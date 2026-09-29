@@ -1,155 +1,113 @@
 # Casino Blackjack — Project State
 
-## Current truth: M4-T06
+## Current truth: M4 review package
 
-The explicit M4 contract HUMAN ACCEPTED M3 at cca40d2bed3b3964a9bfb47329d49bb553fe610e after M3-T06 repair 2. This supersedes historical acceptance/next-action notes below, without inventing a repaired-HEAD independent recheck or closing the finding on behalf of a reviewer. Acceptance is recorded with substantive T01 work; no acceptance-only commit.
+M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70; M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695. The user explicitly HUMAN ACCEPTED M3 at **cca40d2bed3b3964a9bfb47329d49bb553fe610e**, after M3-T06 review repair 2. That acceptance was recorded with substantive M4-T01, not a metadata-only commit.
 
-Entry at 2026-09-29 09:27:18 +08:00: main, HEAD=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, 0/0 clean. Fetch at 09:31:15 confirmed the same authorized remote/HEAD. Baseline harness PASS/0, 23 files / 305 tests (test start 09:32:10). Initial sandbox ownership failure resolved by owning-user execution without configuration changes. No unknown edits.
+Historical accuracy: the independent review of M3 d0d0a08 found one LOW stale LAB sentence; repair 2 corrected it at cca40d2. No post-repair independent-review conclusion or reviewer finding closure is recorded or claimed. Explicit human acceptance and independent reviewer recheck are separate events. Original M3 records/mapping remain in Git at cca40d2 and the unchanged historical DEVELOPMENT_LOG.
 
-T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T01 is COMMITTED / PUSHED cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb on main; 18:57:14 push/fetch/parity PASS, 0/0 clean. T02 Double/DAS is IMPLEMENTED / VERIFIED locally: first full harness at 18:59:08 PASS/0, 25 files / 327 tests, 0/10 repairs. T02 COMMITTED / PUSHED fbae61cf248492c18dbd0e7a47902b6495eea14f; 19:01:17 main=origin/main, 0/0 clean. T03 Split IMPLEMENTED / VERIFIED locally after lint-only repair 1/10; 19:04:16 full harness PASS/0, 26 files / 361 tests. T03 COMMITTED / PUSHED 5b4df25519011b0745676c19b8fb782743c87f5d; 19:07:11 main=origin/main, 0/0 clean. T04 re-split/cap/Split-Ace verification PASS/0 at 19:08:51, 27 files / 371 tests, repairs 0/10. T04 COMMITTED / PUSHED b1194483fb67b8f73459d0b6092be0d0da4baf09; 19:13:36 main=origin/main, 0/0 clean. T05 Late Surrender/multi-leaf settlement full harness PASS/0 at 19:15:45, 28 files / 399 tests, repairs 0/10. T05 COMMITTED / PUSHED dcf307633a7a28ec50b0302281f497426534bbec; 19:19:05 main=origin/main, 0/0 clean. T06 full harness PASS/0 at 19:30:10, 30 files / 476 tests, repairs 0/10. Independent original M1 12/155, M2 6/78, M3 5/72 reruns PASS/0 at 19:31:02-19:31:09; original tests/helpers and full M3 baseline executable paths unchanged. T07 NOT STARTED. M4 repairs T01..T07: **1,0,1,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
+M4 T01..T06 are IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. T07 is the IMPLEMENTED / VERIFIED documentation-only handoff, awaiting its authorized publication. **M4 and its tasks are NOT ACCEPTED. M4 independent fresh-session review: NOT RUN. M5: NOT STARTED. Deployment: NOT RUN.** No review is being performed by another agent in this implementation conversation.
 
-The M3 records below are retained historical context. The current M4 contract governs next actions.
+Authorized repository: C:\Users\user\Documents\GitHub\casino-blackjack. Remote: https://github.com/FrankieChan0312/casino-blackjack.git. Branch: main. Entry 2026-09-29 09:27:18 +08:00: HEAD=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, ahead/behind 0/0, clean; fetch at 09:31:15 confirmed it. No unknown user changes.
 
-## Current truth: M3-T06 review repair 2
+Recommended model / effort: GPT-6 Astra / High. Actual runtime model / effort: **NOT VERIFIED / NOT VERIFIED**. Client setting evidence is unavailable; model choice is not validation.
 
-M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70. M2 is ACCEPTED at c9f7f35bf874a0e7673505cbbea745ce035ac695 by the user's explicit M3 batch contract; that acceptance was recorded with substantive M3-T01, without a standalone acceptance commit. Prior M1/M2 mappings and execution records remain in Git at those SHAs and DEVELOPMENT_LOG.md. No new independent M1/M2 review is claimed in this session.
+## Checkpoints and repair ledgers
 
-M3 financial functionality and all 40 regression mappings are IMPLEMENTED / VERIFIED at T05. T06 is a documentation-only review package. Its full harness passed at 01:27:10; complete five-file review found one wording error, corrected in repair 1/10. Repair recheck at 01:28:48 passed the full harness (23 files / 305 tests), with final five-document scope/whitespace review at 01:29:24. The review package was published as d0d0a08de8839215875e4920547334ca680b91ab. Fresh-session review of that HEAD found one LOW stale LAB status sentence; functional requirements, all 40 scenarios and M1/M2 preservation passed. Repair 2/10 corrects that sentence and is locally VERIFIED; independent reviewer recheck is pending. The finding remains open and documentation review remains FAIL until the independent reviewer checks the repaired HEAD. M3 and every M3 task remain NOT ACCEPTED. M4 is NOT STARTED; no merge, release or deployment.
+Every published checkpoint below passed its required full harness, complete task diff/whitespace review, normal commit/push and fetch/parity/clean checks. Dates are 2026-09-29, timezone +08:00.
 
-Recommended model / reasoning: GPT-6 Astra / High. Actual runtime model / reasoning: NOT VERIFIED / NOT VERIFIED; no verifiable client-settings evidence is exposed.
+| Task | Repairs | Commit | Full harness files/tests | Push/parity evidence |
+| --- | --- | --- | --- | --- |
+| M4-T01 | 1/10 | cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb | PASS 24/312 | 18:57:14; 0/0 clean |
+| M4-T02 | 0/10 | fbae61cf248492c18dbd0e7a47902b6495eea14f | PASS 25/327 | 19:01:17; 0/0 clean |
+| M4-T03 | 1/10 | 5b4df25519011b0745676c19b8fb782743c87f5d | PASS 26/361 | 19:07:11; 0/0 clean |
+| M4-T04 | 0/10 | b1194483fb67b8f73459d0b6092be0d0da4baf09 | PASS 27/371 | 19:13:36; 0/0 clean |
+| M4-T05 | 0/10 | dcf307633a7a28ec50b0302281f497426534bbec | PASS 28/399 | 19:19:05; 0/0 clean |
+| M4-T06 | 0/10 | 6c20d6938250d88085bbcabeb2f29637a26c2607 | PASS 30/476 | 19:43:23; 0/0 clean |
+| M4-T07 | 1/10 | Final commit subject: docs: prepare M4 verification and review package | PASS 30/476 at 20:15:05 | Publication pending; actual result in final delivery |
 
-## Checkpoint and repair ledger
+T01 repair 1 corrected a failed documentation patch context; no gameplay repair. T03 repair 1 fixed lint no-unexpected-multiline in a new parameterized test; the first test run had already passed. T07 repair 1 corrects the recovered STATE heading's encoding substitution (an em dash became a question mark); the interruption itself is not a repair. No observed gameplay regression failure was repaired. Failed attempts and timestamps remain in DEVELOPMENT_LOG.
 
-All T01–T05 checkpoints below were pushed to origin/main at https://github.com/FrankieChan0312/casino-blackjack.git. Every publication included successful fetch, local HEAD=origin/main, ahead/behind 0/0 and clean working tree. The repair entry gate confirmed T06 publication at d0d0a08de8839215875e4920547334ca680b91ab on main/origin/main, 0/0 and clean at 2026-09-29 08:34:13 +08:00. The repair commit/push results will be reported from actual Git output in delivery, without a recursive metadata-only commit.
+Preserved prior ledgers, each entry /10:
 
-| Task | Repairs | Delivery / commit | Push/parity timestamp (+08:00) |
-| --- | --- | --- | --- |
-| M3-T01 | 0/10 | VERIFIED / COMMITTED / PUSHED c29ef4c15674fa2779dddd48f6e36cbff060a2a0 | 2026-09-29 01:04:41; PASS 0/0 clean |
-| M3-T02 | 0/10 | VERIFIED / COMMITTED / PUSHED 9f2e7c6d241ce9274197b7f26f59af26b4c9b5c9 | 2026-09-29 01:09:20; PASS 0/0 clean |
-| M3-T03 | 0/10 | VERIFIED / COMMITTED / PUSHED 3647e09a6b8f2c9b4d432a39960ee66dff5cbf63 | 2026-09-29 01:13:01; PASS 0/0 clean |
-| M3-T04 | 0/10 | VERIFIED / COMMITTED / PUSHED 5a492e865a49036a66922fa61a5a606f831a9616 | 2026-09-29 01:17:29; PASS 0/0 clean |
-| M3-T05 | 0/10 | VERIFIED / COMMITTED / PUSHED e1fb8f49623f84026f723e0760973a70934d684d | 2026-09-29 01:22:40; PASS 0/0 clean |
-| M3-T06 | 2/10 | Review package COMMITTED / PUSHED d0d0a08; repair 2 IMPLEMENTED / VERIFIED locally | Entry gate 2026-09-29 08:34:13; 0/0 clean; independent recheck required |
+- M3 T01..T06: **0,0,0,0,0,2**
+- M2 T01..T06: **1,0,0,0,1,1**
+- M1 T01..T10: **2,1,0,0,1,0,1,0,0,1**
 
-M1 T01..T10 repair ledger: **2,1,0,0,1,0,1,0,0,1**, each /10.
-M2 T01..T06 repair ledger: **1,0,0,0,1,1**, each /10.
-No counter was reset by task/session/branch/model. M3 T01–T05 required no repair. T06 repair 1/10 corrected a LAB explanation: >= would incorrectly reject exact funds, not cause overdraft; no executable change. The initial Git sandbox ownership block was resolved via approved owning-user execution without changing global safe.directory. Historical failed attempts remain in DEVELOPMENT_LOG.
+T07's own hash cannot be embedded in its own commit. Its actual final HEAD/origin/main/push/parity result belongs in the delivery report and Git history, without a recursive metadata-only commit. The immediate parent is 6c20d6938250d88085bbcabeb2f29637a26c2607. Review must resolve the final documentation commit and compare it with the delivered full SHA before proceeding.
 
-## M3-T06 review repair 2/10
+Recovery at 20:11:38 confirmed Case A: main=origin/main=6c20d693..., 0/0, exactly README and STATE documentation edits, no staged work or executable edits, and no local T07 commit. Fetch confirmed the same remote HEAD. Those edits were retained, and only unfinished T07 documentation was completed. T01-T06 were not reimplemented or separately rerun; the required final full harness was executed. Heading repair recheck passed U+2014 inspection. Interruption/reconnection adds no repair. Current M4 ledger: **1,0,1,0,0,0,1**.
 
-Finding: LOW at LAB_MANUAL.md:1390, violating AGENTS.md section 11 and the M3-T06 accurate-documentation contract. At 2026-09-29 08:34:30 +08:00, rg reproduced the stale wording "M3+ remains unimplemented" (exit 0), inconsistent with the current M3 status at LAB lines 8/935. Hypothesis: the milestone wording was not updated when M3 became implemented. Targeted correction: only "M3+" -> "M4+" in that sentence; only STATE and DEVELOPMENT_LOG record the repair. No README, PLAN, rules/spec/design, executable or test changes are authorized.
+## Executed evidence
 
-Fresh review of d0d0a08 otherwise passed M3 requirements, all 40 scenarios, original M1 12 files / 155 tests, original M2 6 files / 78 tests and the full harness 23 files / 305 tests; no BLOCKER/HIGH/MEDIUM findings. These are prior review results, not this repair's validation. Repair validation PASS: at 08:35:47 the stale-wording search returned 1 (expected no matches); full verify.ps1 ran 08:35:47-08:35:59 with exit 0, typecheck/lint and 23 files / 305 tests PASS. At 08:36:12 git diff --check, status, full three-document diff and the executable diff against d0d0a08 all passed/0. Only LAB_MANUAL, STATE and DEVELOPMENT_LOG changed. Final staged checks and publication follow this evidence-only update; actual results belong in delivery. The same independent reviewer must recheck the repaired HEAD; finding closure, documentation-review PASS and M3 acceptance are not claimed. All other task repair counts remain unchanged.
-
-## Executed verification
-
-| Check | Status | Actual evidence |
+| Check | Status | Evidence |
 | --- | --- | --- |
-| T01 full harness | PASS | 01:01:07; exit 0; typecheck/lint; 19 files / 250 tests |
-| T02 full harness | PASS | 01:07:01; exit 0; 20 files / 267 tests |
-| T03 full harness | PASS | 01:11:07; exit 0; 21 files / 276 tests |
-| T04 full harness | PASS | 01:14:56; exit 0; 22 files / 283 tests |
-| T05 full harness | PASS | 01:19:34; exit 0; 23 files / 305 tests |
-| Original M2-baseline source/tests/helpers/harness/dependencies | PASS | 01:20:31; git ls-tree original paths then git diff --exit-code c9f7f35... -- paths; no differences |
-| Independent M1 suite | PASS | 01:20:31–01:20:37; npm.cmd test -- original 12 files, 155 tests, exit 0 |
-| Independent M2-only suite | PASS | 01:20:37–01:20:39; npm.cmd test -- original six additional files, 78 tests, exit 0 |
-| Direct M1 original tests/helpers comparison | PASS | 01:22:17; git diff --exit-code d1d8966... -- original test/helper paths, exit 0 |
-| T05 task diff/status/whitespace | PASS | 01:22:17 plus staged check before commit; only new regression test and PLAN/STATE/log |
-| T06 full harness / diff | PASS | 01:27:10 harness exit 0, 23 files / 305 tests; 01:27:42 and 01:28:05 full five-file diff/status/whitespace and unchanged executables PASS; repair recheck 01:28:48 PASS/0, 23/305; final scope/whitespace 01:29:24 PASS/0 |
-| M3 independent fresh-session review | FAIL | Review of d0d0a08 completed: one LOW documentation finding; functional/regression checks PASS; repaired-HEAD recheck NOT RUN |
-| M3 human acceptance | NOT RUN | No user acceptance of M3 or individual M3 tasks |
+| Entry baseline harness | PASS | 09:32:10 test start; 23 files / 305 tests, exit 0 |
+| M4-T06 full harness | PASS | Launched 19:30:10; typecheck/lint; test start 19:30:16; 30 files / 476 tests, exit 0 |
+| M4-T07 final full harness | PASS | Launched 20:15:05; typecheck/lint; test start 20:15:11; 30 files / 476 tests, exit 0 |
+| T07 scope/whitespace/executable preservation | PASS | 20:15:27; diff --check and status; exactly six documents; diff --exit-code 6c20d693... -- src tests scripts package.json package-lock.json, exit 0 |
+| Executable M4 REG-M4-001..060 plus completeness | PASS | All 60 scenarios and exact unique ID coverage executed |
+| Separate original M1 suite | PASS | 19:31:03; 12 files / 155 tests, exit 0 |
+| Separate M2-only original suite | PASS | 19:31:07; 6 files / 78 tests, exit 0 |
+| Separate M3-only original suite | PASS | 19:31:09; 5 files / 72 tests, exit 0 |
+| M1/M2 original tests/helpers | PASS | 19:31:02; git ls-tree at accepted SHAs, git diff --exit-code on original paths, no changes |
+| All original M3 executable/config paths | PASS | Same comparison at cca40d2: src, tests, scripts, package.json, package-lock.json, tsconfig.json, eslint.config.mjs; unchanged |
+| M4 fresh-session independent review | NOT RUN | Must use a genuinely new Codex conversation |
+| M4 human acceptance | NOT RUN | Not granted by this implementation contract |
 | Browser/E2E | NOT APPLICABLE | No UI |
-| Separate clean-machine npm ci / cross-platform portability | NOT RUN | Existing Windows toolchain used, no new dependency |
-| Deployment | NOT RUN | Not authorized |
+| Clean-machine npm ci and cross-platform portability | NOT RUN | Existing Windows toolchain, no new dependencies |
+| Deployment | NOT RUN | Outside authorization |
 
-All timestamps in this table are 2026-09-29 +08:00. The unchanged harness prints its historical M1 label while discovering all suites. Breakdown is 12 files / 155 M1 tests + 6 files / 78 M2 tests + 5 files / 72 M3 tests = 23 files / 305 tests. No tests/assertions/checks were weakened or disabled.
+Separate baseline suite runs are same-session mechanical preservation evidence, not fresh independent review. M4 adds seven suites / 171 tests to the unchanged 23 suites / 305 tests. No assertions or harness checks were weakened. The unchanged verify.ps1 final label still says M1; test discovery includes M1-M4.
 
-## Financial design and exact invariants
+## Implemented financial and sequencing contract
 
-- Every financial value is a safe integer in half-credit units; starting available=2000 and reserved=0 per fixed seat. Generic reserve amounts must be positive; original main stakes must be even, 20..2000 units. No rounding.
-- Each stable seat owns its bankroll for the session. Seat/controller/sit-out changes preserve funds. No account/transfer architecture, automatic credit refill or demo reset API.
-- Accepted reservation moves available to reserved. Equality is affordable. A target-stake change transfers only its delta. Invalid/unfunded requests return the original state before card/turn/RNG changes. Duplicate target stakes have no effect; cancellation releases once.
-- CONFIGURING permits seat changes. OPEN locks seats and permits main-wager edits. Closing freezes stakes and ascending occupied/non-sitting-out/funded participants. No free/automatic COMPUTER bets; no-funded close rejects unchanged.
-- M3 uses a thin wrapper over unchanged M2. The supported M3 API cannot start unfunded play. M1/M2 APIs remain low-level historical primitives, outside the funded workflow.
-- Pending results are derived from known hand outcomes and never counted as available. Gross is 2*stake for win, 5*(stake/2) for Natural, stake for push, 0 for loss/bust; net=gross-stake. A 50-unit Natural returns exactly 125 units.
-- The nested M2 ROUND_COMPLETE means gameplay/discard is complete. M3 remains CLOSED until settleMainWagers commits all results/bankrolls together, clearing reservations and adding gross once. Final records are frozen and attributable by session-local round ID plus seat (one main wager/hand each). COMMITTED rejects repeat settlement.
-- Genuine INTEGRITY_ERROR permits VOID. It returns actual reserved stakes once, removes pending profit/loss, records zero-net REFUNDED results, preserves diagnostic cards/fault and keeps the failed shoe retired. VOID and normal COMMITTED settlement exclude each other.
-- A new cycle requires explicit prepareNextBettingRound after finalization and explicit new wagers. Funds persist; healthy shoe reuses remaining cards, retired/pending/short shoe replaces only at next deal. Old snapshots remain unchanged.
+- Additive M4 orchestration preserves M1-M3 APIs. One current round owns ordered leaf hands with stable root/parent IDs, original-card context, origin, stake, decision completion and result.
+- Finish all leaves of the current seat first. Split replaces the parent in place; first child's next card and complete play precede dealing the second child's next card. Re-split preserves depth-first order.
+- Matching additional funding uses available funds only, exact equality allowed. Rejection preserves the input reference, available/reserved funds, cards/shoe/RNG, current seat/hand and phase.
+- Double: first decision, two cards, total below 21, HUMAN and not restricted Aces; matching reserve, doubled stake, exactly one card to that hand and forced decision completion. Non-Ace DAS allowed. Main-wager maximum does not cap doubled exposure.
+- Split: equal Blackjack value (any ten-valued ranks), matching reserve, no parent settlement. Non-Ace re-split stops at four leaves including completed/busted leaves. Split Aces once, two ordered one-card additions, no further decisions or re-split.
+- Split A+K is ordinary 21. Decision completion does not itself imply a known financial outcome; ordinary Split-Ace totals still require dealer comparison.
+- Late Surrender: original unsplit non-Natural two-card first decision, dealer Natural excluded by 2..9 upcard or negative Ace/ten peek. No Insurance window. No draw/additional reserve; gross=half original even-unit stake.
+- Per-leaf settlement uses full doubled stake and records round/seat/hand/stake/outcome/gross/net/status. All gross returns remain pending until one reconciled table commit. Parent plus child double counting is impossible in leaf iteration.
+- Required-draw failure clears normal results, retires shoe and keeps diagnostics. VOID reconciles/refunds every actual reservation once, including advanced exposure, with zero net. Rejected funding creates no refundable exposure.
+- COMPUTER policy remains evaluated total <17 HIT / >=17 STAND only. Shared dealer S17, no draw when all outcomes are already determined.
+- Public projection groups hands by seat and excludes physical identity, internal original-card snapshots, shoe/cut and hidden dealer data.
+
+## Exact M4 source/test change inventory
+
+Against accepted M3 cca40d2, these executable paths are additions only:
+
+- src/domain/advancedGame.ts
+- src/domain/advancedPublicView.ts
+- tests/helpers/advancedFixture.ts
+- tests/integration/advancedFoundation.test.ts
+- tests/integration/advancedDouble.test.ts
+- tests/integration/advancedSplit.test.ts
+- tests/integration/advancedResplit.test.ts
+- tests/integration/advancedSettlement.test.ts
+- tests/integration/advancedRegression.test.ts
+- tests/integration/advancedIntegrity.test.ts
+
+Documentation changes: README.md, docs/DESIGN.md, docs/PLAN.md, docs/STATE.md, docs/DEVELOPMENT_LOG.md, docs/LAB_MANUAL.md. RULES, SPEC, UX_UI, accepted sources/tests/helpers, harness, dependencies and runtime settings are unchanged. T07 itself changes only those six documentation files.
 
 ## Known limitations
 
-In-memory local TypeScript library only. Callers must retain the latest returned state; old snapshots branch computation and are not a concurrent/stale external-request protection service. No unbounded history, timestamped action-event store, persistence, authentication or general corrupted-object import validation. Broader R17 action-event/replay infrastructure remains M8; M3 supplies minimal round/seat main-wager financial records. Physical public projection is a correctness boundary, not server security. Some snapshots are runtime frozen; the entire state is not deep-frozen.
+Local in-memory library only; callers retain the latest state. Old snapshots can branch computation, and arbitrary corrupt caller objects are not a validated import format. No persistence, network concurrency protection, authentication, account transfer, event store or reset API. No UI, optimal bot, production gambling security claim, real money or deployment. Insurance, Even Money, Pair/three-card side bets, Bet Behind, Charlie and all M5+ features remain unimplemented. No unresolved mechanical verification failure is known; independent review has not yet assessed M4.
 
-Demo reset is deliberately deferred (R06 permits it, SPEC M3 does not require it). No Double/Split/Re-split/Surrender/Insurance/Even Money/side bets/Bet Behind/Charlie, UI/CLI app/network multiplayer, real money, paid resources or deployment. Computer policy remains deterministic/non-optimal. Math.random is only a simulation adapter. One LOW documentation finding remains open pending independent recheck of repair 2; no blocking functional finding was reported.
+## Mandatory M4 fresh-session review handoff
 
-## Mandatory M3 fresh-session review handoff
+STOP after T07 publication. Do not review independently in this implementation conversation, mark any M4 task ACCEPTED, start M5, merge, release or deploy.
 
-The original handoff below is retained as historical context. The repair-2 recheck instructions above are current.
+In a genuinely new Codex conversation:
 
-**STOP after T06 commit/push/fetch/parity/clean. Do not perform the independent review in this implementation session, mark any M3 task ACCEPTED, or start M4.**
-
-Final branch: **main**. The final review checkpoint is the commit with subject `docs: prepare M3 verification and review package`, whose parent is `e1fb8f49623f84026f723e0760973a70934d684d`. Its own SHA cannot be embedded in its content. Resolve HEAD and origin/main and compare both against the exact final delivery SHA. Final delivery records the real commit/push/fetch and working-tree checks without a recursive metadata-only commit. The last baseline established here is T05 at 01:22:40: main=origin/main=e1fb8f4..., 0/0 clean; do not infer final parity from that older baseline.
-
-M3 source additions: src/domain/credits.ts and bettingGame.ts. New helper: tests/helpers/bettingFixture.ts. New suites: tests/unit/credits.test.ts; tests/integration/betting.test.ts, settlement.test.ts, financialLifecycle.test.ts and fundedRegression.test.ts. All original source/tests/helpers and runtime/dependency/harness files remain unchanged from accepted M2. RULES/SPEC are unchanged; DESIGN has the authorized financial extension. T06 changes documentation only.
-
-Exact findings-first reviewer instructions:
-
-1. Start a genuinely new Codex session in this repository. Read AGENTS.md, SKILL.md, RULES, SPEC, DESIGN, PLAN, STATE, DEVELOPMENT_LOG, README and LAB_MANUAL. Read the M3 batch contract and all 40 mapping rows below. Recommended GPT-6 Astra / High; record actual settings only when verifiable.
-2. Capture Get-Date with offset, Get-Location, branch, HEAD, origin/main, ahead/behind and full working-tree status. Confirm main, exact final delivered SHA, 0/0 and clean; stop on unexpected changes. Fetch/parity is read-only verification, not permission to modify code.
-3. Independently inspect the full M3 diff from c9f7f35bf874a0e7673505cbbea745ce035ac695 to final HEAD, source/tests/helpers, Git history and executed evidence. Do not trust generated code, mappings or historical PASS as proof. Re-evaluate R06/R07/R13/financial-R17 and R02/R08 funded participation.
-4. Inspect unit precision/limits, seat-owned balances across controller changes, atomic requests including RNG/cards/turn, OPEN/close locks, sparse funded participants, computer funding, frozen wagers, pending Natural availability, exact gross/net audit records, one-time table commit and accounting reconciliation.
-5. Inspect whole-round faults at initial/HUMAN/computer/dealer stages, pending win/loss removal, actual-stake refunds, duplicate operations, settlement/VOID mutual exclusion, retired shoe recovery and next-round bankrolls. Check that no M4/M5/M6 state/API or prohibited functionality exists. Review public secrecy through the reused table projection and honest local-state limitations.
-6. Run .\scripts\verify.ps1 (or the documented child-PowerShell equivalent), git diff --check and git status --short --untracked-files=all, checking every exit. Expected current suite: 23 files / 305 tests. Independently enumerate original paths from accepted M1/M2 commits; inspect test/helper diffs and original M2 source preservation. Rerun original 12-file M1 (155 tests) and six-file M2 (78 tests) suites separately. Verify funded equivalents rather than assuming unchanged M2 tests prove the wrapper.
-7. Report findings FIRST: severity, file/line, violated requirement, reproducible steps and impact. If none, explicitly say no findings and list remaining limitations. Include actual checks, counts, Git identity and all cumulative repair ledgers. Do not edit, fix, commit or push until separately authorized. Review completion is not human acceptance; M3 remains NOT ACCEPTED until explicit user acceptance. Do not begin M4, merge, release or deploy.
-
-## M3 acceptance/regression mapping
-
-All 40 rows PASS in the executed T05 full harness: 23 files / 305 tests (72 M3, 233 preserved M1/M2). Paths below are under tests; each group uses explicit expected values, controlled card fixtures and/or independent accounting. This mapping is mechanical evidence, not independent review or human acceptance.
-
-| ID | Rule / requirement | Executable evidence |
-| --- | --- | --- |
-| 01 | R06 starting 1000 credits | unit/credits: starts with 2000 available, zero reserved |
-| 02 | R06 integer half-credit units | unit/credits single unit valid; settlement 50 -> 125 gross |
-| 03 | R06 no fractional financial state | unit/credits rejects fractional/unsafe units; fundedRegression integer monetary fields |
-| 04 | R06 main minimum | betting valid 20, rejects 18 |
-| 05 | R06 main maximum | betting valid 2000, rejects 2002 |
-| 06 | R06 whole-credit main increment | betting rejects 21 and 20.5 units |
-| 07 | R07 exact funds | credits reserve 200/200; betting 2000 leaves zero |
-| 08 | R07 insufficient funds | credits/betting 199 cannot fund 200; fundedRegression 75 cannot fund 76 |
-| 09 | R07 atomic rejection | betting snapshots/reference/game equality; no-funded RNG spy; credits frozen input |
-| 10 | R07 wager increase | betting 200 -> 300 available 1700; unaffordable increase unchanged |
-| 11 | R07 wager decrease | betting 300 -> 200 available 1800 |
-| 12 | R08 cancellation | betting releases actual 200 once, duplicate NO_WAGER |
-| 13 | R08 OPEN timing | betting before-open/after-close rejection; fundedRegression gameplay phase guards |
-| 14 | R02 seat freeze | betting rejects join/leave/controller/sit-out during OPEN and after close |
-| 15 | R02 unfunded skipped | betting occupied seats 1/4 skipped despite not sitting out |
-| 16 | R08 sparse funded deal | betting exact seat 2/5/7 card ranks and dealer order, 312-ID accounting |
-| 17 | R02 explicit computer funds | betting no automatic computer wagers; fundedRegression explicit computer flow |
-| 18 | R02 no funded start | betting NO_FUNDED_SEATS before RNG; lifecycle next round also requires new wager |
-| 19 | R08 frozen wagers | betting frozen detached wager array/entries and unchanged late commands |
-| 20 | R07 pending Natural unavailable | settlement full-bankroll Natural leaves available zero during other HUMAN turn |
-| 21 | R13 ordinary win | settlement 200 stake -> 400 gross -> 2200 final |
-| 22 | R13 Natural 3:2 | settlement 200 -> 500 gross -> 2300 final |
-| 23 | R13 half-credit exactness | settlement 50 -> 125 gross -> 2075 final |
-| 24 | R13 push | settlement 200 returned -> 2000 final; fundedRegression dealer Natural pushes player Natural |
-| 25 | R13 loss | settlement 0 gross -> 1800 final |
-| 26 | R13 bust loss | settlement HUMAN bust, 0 gross, stake not deducted again |
-| 27 | R13 seven mixed outcomes | settlement seven-seat explicit result tuples and balances, shared dealer 19 |
-| 28 | R13 table settlement once | settlement COMMITTED only after ROUND_COMPLETE; dealer phase still rejected |
-| 29 | R13 duplicate settlement | settlement repeated unchanged rejection, no duplicate records |
-| 30 | R13 no double deduction | settlement available remains 1800 before commit; loss ends 1800 |
-| 31 | R13 audit and reconciliation | settlement exact round/seat/stake/outcome/gross/net/status; total 14100 = 14000 + 100 |
-| 32 | R17 whole-round VOID | financialLifecycle human fault/refund, diagnostics and retired shoe retained |
-| 33 | R17 multi-seat VOID | financialLifecycle three seats 200/50/2000 all restored |
-| 34 | R17 pending win discarded | financialLifecycle Natural then computer fault; fundedRegression Natural then dealer fault |
-| 35 | R17 pending loss discarded | financialLifecycle HUMAN bust then later computer fault, all net zero |
-| 36 | R17 refund once | financialLifecycle repeated VOID rejected and reserved all zero |
-| 37 | R13/R17 mutual exclusion | financialLifecycle settlement after VOID and VOID after normal commit unchanged |
-| 38 | R17 retired shoe recovery | financialLifecycle real exhaustion; replacement on next funded deal only |
-| 39 | R06 next-round bankroll | financialLifecycle controller/leave/rejoin retains 2075; fundedRegression two-round 2075 -> 75 |
-| 40 | M3 scope excludes M4/M5/M6 | fundedRegression recursively inspects keys and API exports for absent advanced actions |
-
-Additional funded M2 regressions: HUMAN/computer alone ordinary 21, pause/resume, every dealer peek rank, hard/soft S17, both 219/249 cut thresholds, healthy-shoe reuse, exact card/discard accounting, initial faults after 0/1/3/5 draws and partial dealer fault. Existing M1/M2 assertions/helpers are preserved; no regression was disabled.
+1. Read AGENTS, SKILL, RULES, SPEC, DESIGN, PLAN, STATE, DEVELOPMENT_LOG, README and LAB plus the user's full M4 contract. Review R07/R10/R11/R12/R13/R17 and the M4 boundary independently.
+2. Capture timestamp, main branch, HEAD, origin/main, ahead/behind and full status; fetch the authorized remote. Require the delivered final SHA, 0/0 and clean. Report any mismatch before affected work.
+3. Inspect the complete baseline-to-final diff: git diff cca40d2bed3b3964a9bfb47329d49bb553fe610e..HEAD. Inspect each source/test listed above, test oracles, mapping and actual logs; model confidence or counts alone are not proof.
+4. Run powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 and check exit code. Independently rerun original M1/M2/M3 suites from their historical file lists and compare original paths, preserving all prior tests. Expected current observed count: 30 files / 476 tests.
+5. Inspect every REG-M4-001..060 executable case below and additional fault boundaries. Pay particular attention to depth-first physical card order, matching available-only funding, Natural suppression, completed leaf cap, pending money, once-only actual-exposure VOID and hidden data.
+6. Report findings first, severity + file/line + concrete evidence + impact, then verification and open limitations. Distinguish the historical M3 review from its explicit human acceptance. Do not invent a repaired-HEAD reviewer conclusion.
+7. Make no edits without separate authorization. Leave M4 acceptance to the human; report NOT RUN/BLOCKED accurately when relevant.
 
 ## M4 executable regression mapping
 

@@ -11,8 +11,8 @@ M3 is HUMAN ACCEPTED by the explicit M4 contract at cca40d2bed3b3964a9bfb47329d4
 | M4-T03 | Equal-value funded Split, ordered ownership, depth-first play, no parent settlement or split Natural | VERIFIED / PUSHED 5b4df25 | 1/10 |
 | M4-T04 | Re-split, four-leaf cap including ended leaves, once-only Split Aces and one card each | VERIFIED / PUSHED b119448 | 0/10 |
 | M4-T05 | Original first-decision Late Surrender after natural exclusion, exact half return, mixed leaf settlement | VERIFIED / PUSHED dcf3076 | 0/10 |
-| M4-T06 | Advanced draw faults/VOID, actual refunds once, 60-case map, independent M1/M2/M3 preservation | VERIFIED locally | 0/10 |
-| M4-T07 | Accurate docs and findings-first genuinely new-session handoff; no new features | NOT STARTED | 0/10 |
+| M4-T06 | Advanced draw faults/VOID, actual refunds once, 60-case map, independent M1/M2/M3 preservation | VERIFIED / PUSHED 6c20d69 | 0/10 |
+| M4-T07 | Accurate docs and findings-first genuinely new-session handoff; no new features | IMPLEMENTED / VERIFIED; publication pending (final delivery records actual SHA/parity) | 1/10 |
 
 Each task: scope -> independent deterministic assertions -> full scripts/verify.ps1 with exit checks -> complete diff/whitespace/status review -> normal commit/push origin/main -> fetch/parity/clean -> next task. Exclude M5+, Insurance/Even Money/side bets/Bet Behind/Charlie, UI/network/authentication, real money and deployment. Computer remains <17 HIT / >=17 STAND. Stop on authority conflict, important ambiguity, broad incompatible redesign, unknown overlap, unavailable validation, destructive history, credentials/paid resources, 10 repairs or no repair progress. STOP after T07: independent review NOT RUN, M4 NOT ACCEPTED, M5 NOT STARTED.
 
@@ -590,7 +590,7 @@ M1-T04 -------------+--> M1-T06 Initial Round / Public View
 
 ## 7. Later milestone roadmap
 
-M2 is accepted. M3 follows section 10; M4+ remain unimplemented and outside this batch.
+Historical M2 planning boundary: M3 followed section 10. Current M1-M3 acceptance and M4 implementation status are recorded in the opening table and STATE; M5+ remain unimplemented.
 
 ### M2 — Multi-seat Table and Computer Seats
 
@@ -671,7 +671,7 @@ Planned themes:
 
 ## 8. Current next task
 
-M3-T06 prepares the final verified documentation checkpoint, then STOP at the mandatory M3 fresh-session review gate in STATE.md. T01–T05 are VERIFIED / COMMITTED / PUSHED. No M3 task is ACCEPTED. No M4, merge, release or deployment is authorized.
+Finish M4-T07 documentation verification/publication, then STOP at the mandatory M4 fresh-session review gate in STATE.md. M3 is explicitly HUMAN ACCEPTED at cca40d2 after review repair 2; no unrecorded reviewer recheck is claimed. No M4 task is automatically ACCEPTED. No M5, merge, release or deployment is authorized.
 
 ## 9. Historical M2 batch (accepted by M3 contract)
 
@@ -688,7 +688,7 @@ M1 is ACCEPTED at d1d8966fe55af1bc2b9348e305135952b7723b70 by explicit user cont
 
 For each task: implementation -> independent explicit tests -> full scripts/verify.ps1 -> diff/status review -> checkpoint commit -> push origin/main -> fetch/0-0/clean -> next task. Commit messages follow the user contract. Stop on rules/spec/design conflict, important unresolved ambiguity, unknown overlap, unavailable required validation, 10/10 repairs, credentials/paid resources/destructive history or scope expansion. No wagering, credits, advanced actions, UI, network multiplayer or M3+. No automatic acceptance. T06 ends at the mandatory fresh-session gate; this implementation session must not perform that review.
 
-## 10. Authorized M3 batch (supersedes prior milestone next-action notes)
+## 10. Historical authorized M3 batch (completed; current status above)
 
 M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user contract. No independent review is claimed by this implementation session. M3 tasks are not automatically accepted. Recommended settings for every task: GPT-6 Astra / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
 
