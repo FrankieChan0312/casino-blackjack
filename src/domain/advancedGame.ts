@@ -192,13 +192,16 @@ export function splitAdvancedHand(state: AdvancedGameState, seatNumber: number, 
   if (error) return { ok: false, state, error };
   const round = state.game.round!;
   const hand = round.players.find((entry) => entry.handId === handId)!;
-  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || hand.origin !== 'ORIGINAL') {
+  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces) {
     return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
   }
   const [first, second] = hand.cards;
   const tenValues = ['10', 'J', 'Q', 'K'];
   if (first.rank !== second.rank && !(tenValues.includes(first.rank) && tenValues.includes(second.rank))) {
     return { ok: false, state, error: 'UNEQUAL_SPLIT_VALUE' };
+  }
+  if (round.players.filter((entry) => entry.rootHandId === hand.rootHandId).length >= 4) {
+    return { ok: false, state, error: 'HAND_LIMIT_REACHED' };
   }
   const fundingError = additionalFundingError(state, hand);
   if (fundingError) return { ok: false, state, error: fundingError };

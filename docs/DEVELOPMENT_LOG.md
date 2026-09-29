@@ -1368,3 +1368,19 @@ First harness at 19:03:16: typecheck PASS; tests PASS, 26 files / 361 tests; lin
 ### 2026-09-29 19:05:03 +08:00 - REPAIR REVERIFICATION / REVIEW
 
 T03 repair 1 full harness at 19:04:16 PASS/0: typecheck/lint, 26 files / 361 tests. All 16 ordered ten-value combinations and 2..9 numeric pairs pass; exact/short funding, physical ownership, delayed second child, DAS, A+K ordinary settlement and stale-parent rejection pass. Source/new-test review found no additional issue; Git complete task diff/whitespace checks follow before publication. T03 remains 1/10.
+
+## M4-T04 — Re-split cap / Split Aces
+
+### 2026-09-29 19:07:11 +08:00 — BASELINE / T03 PUBLICATION
+
+T03 committed/pushed 5b4df25519011b0745676c19b8fb782743c87f5d; push/fetch/Git PASS/0, main=origin/main, 0/0 clean. Full six-file staged diff/whitespace reviewed before commit, no additional finding. T03 repairs 1/10. T04 starts 0/10. Recommended GPT-6 Astra / High; actual NOT VERIFIED / NOT VERIFIED. Prior ledgers unchanged.
+
+Scope/acceptance: eligible non-Ace re-split through three successful splits/four leaves, depth-first order, exact matching reserve, completed/busted leaves count, funds and cap independent, Split Aces exactly one added card each and no later decisions, ordinary A+K payout/comparison. No Late Surrender implementation (T05 will directly test its Split-Ace rejection). Step -> verification: minimal remove-original-only restriction plus root leaf count -> deterministic ancestry/cap/funding/Ace cases -> full harness/diff -> authorized commit/push/parity. Global non-goals/stop conditions apply.
+
+### 2026-09-29 19:08:51 +08:00 — IMPLEMENTATION / VALIDATION START
+
+Changed advancedGame.ts only to permit eligible split-origin hands and reject root leaf count >=4. All leaves remain present so terminal hands cannot free a slot. Added advancedResplit.test.ts with exact second/third split, later-child re-split, cap/funds atomicity, completed/busted count, ordered Ace additions, post-Ace action rejection and ordinary win/push comparison. T03 activation already supplies correct Split-Ace behavior; no duplicate Ace algorithm. No accepted earlier source/test changes. Full harness launched.
+
+### 2026-09-29 19:10:03 +08:00 - VALIDATION / REVIEW
+
+Full verify.ps1 PASS/0, typecheck/lint and 27 files / 371 tests, test start 19:08:57. T04 first implementation/validation requires no repair: 0/10. Reviewed minimal source change and independent expected card paths/funds/results; no blocking finding. Complete Git diff and whitespace/status checks precede publication.
