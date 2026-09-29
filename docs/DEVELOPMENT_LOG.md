@@ -1540,3 +1540,35 @@ Before final commit, compare entire T07 staged scope and executable tree to T06,
 ### 2026-09-29 22:16:52 +08:00 - T07 PUBLICATION GUARDS PASS
 
 Inspected the publication-only README/PLAN/STATE/log diff. Staged scope is exactly the preserved six T07 documents. git diff --cached --check PASS/0; cached executable diff versus T06 fe078fd50ba7b75d5288d807e85519729890bdc2 PASS/0 empty; unstaged diff PASS/0 empty; untracked-file list empty. No repair or gameplay change. Final normal commit/push/fetch and clean verification follow; actual own SHA is reported in delivery.
+
+## M5-T06 - Review repair 1: returned Hit side-result evidence
+
+### 2026-09-29 22:43:53 +08:00 - LOW-01 REPRODUCED BEFORE EDITING
+
+Entry at 22:41:15 +08:00: correct repository, main, HEAD=origin/main=7d70c2e243937012cd62d30bedb900db8b872cba, 0/0, clean, Git commands exit 0. Recommended model/effort: GPT-6 Astra / High. Actual model: NOT VERIFIED. Actual reasoning/effort: NOT VERIFIED. Read AGENTS, SKILL, relevant R14/spec/design/plan, affected tests and M5 documentation.
+
+Failure evidence: optionalEvaluation captures input sideResults, performs successful Hit, but asserts state.sideResults rather than hit.state.sideResults. The independent reviewer reported an in-memory mutation returning sideResults=[] after successful Hit still passed all 8 M5 files / 168 tests. No production gameplay defect was found. Hypothesis: checking the original immutable input cannot detect result loss in the newly returned state. This weakens R14/M5 side-result regression evidence and the LAB_MANUAL coverage claim.
+
+Authorized scope: optionalEvaluation, optionalRegression, STATE and this log. Repair the returned-state assertion with independent type/category/gross/status expectations; extend the existing REG-028/029/030 scenario through a successful Hit without adding duplicate mappings. Retain LAB_MANUAL wording if the repaired tests substantiate it. No production/rules/Insurance/Even Money/settlement/VOID/M1-M4/M6 changes.
+
+Step -> verification: targeted evaluation and regression tests -> in-memory Hit-result fault sensitivity -> full verify.ps1 -> mapping, entire test diff, whitespace and unchanged production-path diff -> normal commit/push/fetch and parity/clean under explicit user authorization. Stop on production failure, broader validation failure, unknown changes or expanded scope. LOW-01 stays OPEN pending independent reviewer recheck; no M5 review/documentation approval, acceptance or M6 work is claimed.
+
+M5-T06 repair cycle 1/10; cumulative M5 ledger 0,0,0,0,0,1,0. Preserved M4 1,0,1,0,0,0,1; M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1. Reviewer fixture mistakes and environmental issues do not count as repairs. Validation and publication results follow when executed.
+
+### 2026-09-29 22:46:19 +08:00 - TARGETED REPAIR VERIFIED; RECHECK STILL REQUIRED
+
+Replaced the input assertion with hit.state.sideResults identity and explicit PAIR/MIXED_PAIR/140/PENDING and THREE_CARD/NONE/0/PENDING expectations. The shared REG-028/029/030 scenario now performs Split, Double, then a successful normal Hit on the second child (8,2,2), checks returned side results immediately, and retains the original immutable-card/dealer-resolution assertions. No new mapping ID or large duplicate scenario. LAB_MANUAL's existing Hit/Split/Double/dealer identity claim is now supported and remains unchanged.
+
+| Executed check | Timestamp on 2026-09-29 (+08:00) | Actual result |
+| --- | --- | --- |
+| npm.cmd test -- tests/integration/optionalEvaluation.test.ts | 22:45:15-22:45:16 | PASS, exit 0; 1 file / 5 tests |
+| npm.cmd test -- tests/integration/optionalRegression.test.ts | 22:45:22-22:45:23 | PASS, exit 0; 1 file / 73 tests; includes exact unique 001..072 mapping |
+| Memory-only successful-Hit sideResults=[] fault probe | 22:45:41-22:45:42 | Expected exit 1: exactly evaluation and REG-028/029/030 assertions fail; 4 failed / 74 passed across 2 files |
+| powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 | 22:46:00-22:46:12; test start 22:46:06 | PASS, exit 0; typecheck/lint/tests; 38 files / 644 tests |
+| git diff --check | 22:46:08 | PASS, exit 0 |
+| git diff --exit-code 7d70c2e243937012cd62d30bedb900db8b872cba -- src scripts package.json package-lock.json | 22:46:08 | PASS, exit 0; empty production diff |
+| Complete test diff, status and origin URL inspection | 22:46:08 | Only the authorized four files changed; origin matches authorized GitHub repository |
+
+Probe method: node --input-type=module piped source called Vitest with an in-memory Vite pre-transform replacing only hitOptionalHand's successful return to clear sideResults. The original source anchor was required and exactly one transform was confirmed. Failures were at the repaired identity assertions (evaluation line 20, regression line 145), not tooling errors. No repository mutation/instrumentation was written, so no file restoration was necessary. The unmodified production source passed the subsequent full harness. This expected negative probe validates fault sensitivity and adds no repair cycle.
+
+Repair VERIFIED locally; LOW-01 remains OPEN until an independent reviewer rechecks and closes it. M5 review/documentation fully PASS is not claimed; M5 NOT ACCEPTED; M6 NOT STARTED. Ledgers remain as recorded above. Only factual documentation updates follow verification, then final whitespace/staged scope checks and authorized normal commit/push/fetch. The repair commit's own SHA and publication result will be recorded in delivery/Git history, without a recursive metadata-only commit.

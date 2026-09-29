@@ -134,12 +134,17 @@ for (const [caseId, a, b, c, category, gross] of [
   expect(actual).toBe(category);
   expect(sideGross(20, actual)).toBe(gross);
 });
-reg([28, 29, 30], 'immutable originals, split/double do not re-evaluate or duplicate side wagers', () => {
-  let state = sides(['8', '6', '8', '10', '3', '10', '2', '10']);
+reg([28, 29, 30], 'immutable originals, split/double/hit do not re-evaluate or duplicate side wagers', () => {
+  let state = sides(['8', '6', '8', '10', '3', '10', '2', '2', '10']);
   const results = state.sideResults;
   const originals = state.game.round!.players[0].originalCards;
   state = accepted(g.splitOptionalHand(state, 1, id(state)));
   state = accepted(g.doubleOptionalHand(state, 1, id(state)));
+  state = accepted(g.hitOptionalHand(state, 1, id(state)));
+  expect(state.game.round!.players[1].cards.map((entry) => entry.rank)).toEqual(['8', '2', '2']);
+  expect(state.sideResults).toBe(results);
+  expect(state.sideResults.map((entry) => [entry.type, entry.category, entry.grossReturnUnits, entry.status]))
+    .toEqual([['PAIR', 'MIXED_PAIR', 140, 'PENDING'], ['THREE_CARD', 'NONE', 0, 'PENDING']]);
   state = finish(state);
   expect(state.sideResults).toBe(results);
   expect(state.sideWagers.map((entry) => entry.stakeUnits)).toEqual([20, 20]);

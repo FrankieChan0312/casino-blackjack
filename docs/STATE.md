@@ -1,6 +1,22 @@
 # Casino Blackjack — Project State
 
-## Current truth: M5 review package
+## Current truth: M5-T06 review repair 1
+
+Entry 2026-09-29 22:41:15 +08:00: main, HEAD=origin/main=7d70c2e243937012cd62d30bedb900db8b872cba, ahead/behind 0/0, clean. Fresh independent review found LOW-01: optionalEvaluation asserted the pre-Hit sideResults instead of the returned Hit state. No current gameplay defect was found; the reviewer reported that an in-memory successful-Hit sideResults=[] mutation escaped all 8 M5 files / 168 tests.
+
+At 2026-09-29 22:43:53 +08:00 the exact assertion defect was independently confirmed before editing. M5-T06 repair cycle **1/10** targets returned-state identity and explicit PAIR/MIXED_PAIR/140 and THREE_CARD/NONE/0 pending results. REG-M5-028's shared 028-030 scenario also receives a successful Hit and checks its returned state. LAB_MANUAL's Hit-preservation claim is retained, subject to the repaired executable evidence. Production, rules and prior milestone files are outside the repair scope.
+
+Repair is **IMPLEMENTED / VERIFIED locally**. Targeted optionalEvaluation PASS (1 file / 5 tests, 22:45:15-22:45:16 +08:00, exit 0); optionalRegression PASS (1 file / 73 tests, 22:45:22-22:45:23, exit 0), including the exact unique REG-M5-001..072 mapping assertion. At 22:45:41-22:45:42 an in-memory successful-Hit sideResults=[] mutation caused exactly the repaired evaluation test and REG-028/029/030 to fail (4 failed / 74 passed, expected exit 1). The transform applied once and wrote no repository files. Fault sensitivity PASS; this deliberate negative probe is not a production validation failure or an additional repair cycle.
+
+Full verify.ps1 PASS at 22:46:00-22:46:12 +08:00: typecheck/lint/tests exit 0, **38 files / 644 tests** (test start 22:46:06). At 22:46:08 git diff --check and production-path diff against reviewed HEAD (src, scripts, package.json, package-lock.json) both PASS/0. Complete test diff inspected; exactly two tests and STATE/DEVELOPMENT_LOG changed. LAB_MANUAL remains unchanged because the repaired evidence now substantiates its Hit-preservation wording. No production defect was exposed.
+
+LOW-01 remains **OPEN pending independent reviewer recheck**. M5 review/documentation approval is not claimed. **M5 remains NOT ACCEPTED; M6 remains NOT STARTED.** The user authorized normal commit/push/fetch after verification. Final publication SHA/results/parity/clean will be reported in delivery and Git history, following the existing convention that a commit cannot embed its own SHA; no recursive metadata-only commit is planned.
+
+Current M5 T01-T07 repair ledger: **0,0,0,0,0,1,0**. Prior ledgers remain unchanged: M4 **1,0,1,0,0,0,1**; M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Reviewer probe fixture corrections and environment issues are not repair cycles.
+
+## Historical M5 publication package
+
+The following retained checkpoint records describe the original T01-T07 publication, before the independent review and repair above; their review status and zero M5 repair counts are historical, not current.
 
 M1, M2, M3 and M4 are HUMAN ACCEPTED. Accepted SHAs: M1 d1d8966fe55af1bc2b9348e305135952b7723b70; M2 c9f7f35bf874a0e7673505cbbea745ce035ac695; M3 cca40d2bed3b3964a9bfb47329d49bb553fe610e; M4 **a5c6a22dd833867a6a1eff357a7462bd06fe4e0b**.
 

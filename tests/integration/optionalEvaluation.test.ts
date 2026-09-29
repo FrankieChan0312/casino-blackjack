@@ -17,7 +17,9 @@ it('evaluates only original cards once; pending does not alter available and dra
   const hit = game.hitOptionalHand(state, 1, state.game.round!.currentHandId!);
   expect(hit.ok).toBe(true);
   expect(hit.state.game.round!.players[0].outcome).toBe('DEALER_WIN');
-  expect(state.sideResults).toBe(results);
+  expect(hit.state.sideResults).toBe(results);
+  expect(hit.state.sideResults.map((entry) => [entry.type, entry.category, entry.grossReturnUnits, entry.status]))
+    .toEqual([['PAIR', 'MIXED_PAIR', 140, 'PENDING'], ['THREE_CARD', 'NONE', 0, 'PENDING']]);
   expect(hit.state.bankrolls[0]).toEqual({ available: 1760, reserved: 240 });
 });
 it.each(['SPLIT', 'DOUBLE'] as const)('%s cannot increase/duplicate original side stakes/results', (action) => {
