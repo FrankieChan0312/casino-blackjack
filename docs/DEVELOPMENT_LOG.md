@@ -1500,3 +1500,43 @@ Scope: all M5 and advanced MAIN leaf financial records, exact gross/net, pending
 Contract: executable exact unique REG-M5-001..072 mapping, all user regression families and independent preservation of M1-M4. No feature changes. Added optionalRegression.test.ts (72 scenarios plus ID completeness) and optionalIntegrity.test.ts (2 additional actual-fault/recovery scenarios). Independent oracles use explicit cards/gross/net/balances; rejection freezes input and observes no draw/RNG; peek test spies on actual hole-containing evaluator calls, zero before decision/one after. Related IDs share full scenarios as in existing M4 mapping, with every ID registered once. First full harness launched 21:48:51 PASS/0 typecheck/lint and 38/644 (test start 21:49:11).
 
 Enumerated accepted milestone test paths via git ls-tree, then separately ran npm.cmd test -- with each incremental file set. PASS/0: M1 12/155 21:49:56; M2 6/78 21:50:00; M3 5/72 21:50:01; M4 7/171 21:50:02. Compared every original accepted M4 src/tests/scripts/package/config path: git diff --exit-code PASS/0 unchanged. git diff --check PASS/0. Reviewed entire new mapping and fault cases, no failure/repair (0/10). Same global stop conditions/recommended settings, actual NOT VERIFIED. These are same-session mechanical checks, not independent milestone review. Publication pending.
+
+## M5-T07 - Documentation and fresh-review package
+
+### 2026-09-29 21:56:08 +08:00 - IMPLEMENTED
+
+Scope: README/DESIGN/PLAN/STATE/DEVELOPMENT_LOG/LAB only. Record actual M4 accepted review, M5 command/funding/peek/election/side paytables/pending/VOID, 72-case map, exact added inventory, prior ledgers/preservation, limitations and findings-first new-conversation handoff. No gameplay feature or executable change. Step -> six-document update -> entire T07 diff and T06 executable hashes -> final full verify.ps1 plus whitespace/status -> request concrete publication authorization -> only then normal checkpoints/push/fetch/parity/clean -> STOP before independent review. Publication remains pending; no user reply to T01 request. Same global stop conditions/GPT-6 Astra High recommendation, actual NOT VERIFIED/NOT VERIFIED. T07 repairs 0/10.
+
+### 2026-09-29 21:56:42 +08:00 - FINAL T07 VERIFICATION
+
+All 12 new src/test file SHA-256 hashes match the saved T06 checkpoint, PASS. No executable changes in T07. Full verify.ps1 launched 21:56:42, typecheck/lint/tests PASS/0, 38 files / 644 tests (21:56:48 test start). Inspected the complete T07 diff: README/LAB against HEAD and DESIGN/PLAN/STATE/log against T06 snapshot, all git commands completed successfully (no-index exit 1 means expected documented differences). Completed first-pass README spacing and clarified unconverted Natural/opposite-colour example; no changed gameplay or validation failure. T07 repair count 0/10. All seven checkpoints VERIFIED locally. Final whitespace/status and content identity follow; publication remains NOT RUN pending authorization. M5 independent review NOT RUN, M5 NOT ACCEPTED, M6 NOT STARTED.
+
+### 2026-09-29 22:01:24 +08:00 - FINAL LOCAL DELIVERY STATE
+
+Final exact executable/full-document harness launched 22:00:51: PASS/0, typecheck/lint and 38/644, test start 22:00:57. At 22:01:03 git diff --check PASS/0; main HEAD=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, tracking 0/0. Working tree contains exactly six modified documents and twelve new executable/test files, no staged or unknown changes. Explicit trailing-whitespace check of all 12 untracked executable files PASS at 22:01:24. Only this factual delivery record and STATE status update follow; no executable change. Complete T07 diff inspected, no blocking task-diff finding; this is not an independent M5 review. T01-T07 repairs remain 0,0,0,0,0,0,0. No commit/push/fetch performed. Next action requires explicit authorization for ordinary checkpoint commits and push to the supplied repository main; then stop for genuinely fresh findings-first review.
+
+## M5 publication authorization and execution
+
+### 2026-09-29 22:16:12 +08:00 - T01-T06 PUBLISHED / T07 FINALIZATION
+
+The user explicitly authorized normal git add/commit per preserved T01-T07 checkpoint, push origin main, fetch and final parity/clean. Entry at 22:07:27: correct repository/remote/main, HEAD=origin/main=a5c6a22dd833867a6a1eff357a7462bd06fe4e0b, 0/0, known 18 files, empty index. Initial fetch confirmed baseline. At 22:08:15 all final saved/current files matched the prior SHA-256 manifest 373836CE208BF7B6852314C2DB30A23175CA552D814E5919144B332CD5F3D1D0; seven checkpoints contained 7/10/12/13/14/16/18 files and exact expected adjacent boundaries. No guessing or reimplementation.
+
+For T01-T06, copied only known checkpoint paths after verifying no intervening working-file changes. git add plus hash-object/rev-parse comparisons proved every staged blob matched the exact saved verified content. Staged whitespace/scope checks PASS. Every normal commit/push/fetch/parity command PASS/0. Actual records:
+
+| Task | Commit | Push/fetch/parity | Published at (+08:00) |
+| --- | --- | --- | --- |
+| M5-T01 | 343140e5bf28ed18fee1cc5c42b4420e1a4b8101 | PASS / PASS / 0/0 | 2026-09-29 22:10:53 +08:00 |
+| M5-T02 | 2e5b152f9a83165ef5257392bd3d707542ec5df1 | PASS / PASS / 0/0 | 2026-09-29 22:11:58 +08:00 |
+| M5-T03 | cadb21659584213e927e31e80d2440399b55799e | PASS / PASS / 0/0 | 2026-09-29 22:13:11 +08:00 |
+| M5-T04 | 751ba5cd7279f3aba65bad95418fccf099499eb4 | PASS / PASS / 0/0 | 2026-09-29 22:13:44 +08:00 |
+| M5-T05 | 5cc4a1f032528920455c9a426fe3407322b51e23 | PASS / PASS / 0/0 | 2026-09-29 22:14:02 +08:00 |
+| M5-T06 | fe078fd50ba7b75d5288d807e85519729890bdc2 | PASS / PASS / 0/0 | 2026-09-29 22:14:28 +08:00 |
+| M5-T07 | This documentation commit; resolve final HEAD from delivery/Git | Final result recorded in delivery | After this record |
+
+At 22:15:06 T07's exact original snapshot staged only README/DESIGN/PLAN/STATE/DEVELOPMENT_LOG/LAB. Finalization updates only publication authorization, real T01-T06 SHAs/results and next-action wording within that same document boundary. No executable/dependency/runtime changes; no completed tasks or test suites rerun merely due to publication deferral. Prior final full harness remains PASS 38/644 at 22:00:57, REG-M5 001..072 PASS and independent M1/M2/M3/M4 preservation 155/78/72/171 PASS. All repair counts unchanged at 0/10. Recommended GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED.
+
+Before final commit, compare entire T07 staged scope and executable tree to T06, inspect publication-only text additions and run whitespace checks. T07's own commit hash and post-push checks cannot self-embed; record actual final HEAD/origin/main/parity/clean in delivery and Git history. No extra metadata-only commit, independent review, acceptance or M6. STOP at the fresh-session review gate after final publication checks.
+
+### 2026-09-29 22:16:52 +08:00 - T07 PUBLICATION GUARDS PASS
+
+Inspected the publication-only README/PLAN/STATE/log diff. Staged scope is exactly the preserved six T07 documents. git diff --cached --check PASS/0; cached executable diff versus T06 fe078fd50ba7b75d5288d807e85519729890bdc2 PASS/0 empty; unstaged diff PASS/0 empty; untracked-file list empty. No repair or gameplay change. Final normal commit/push/fetch and clean verification follow; actual own SHA is reported in delivery.

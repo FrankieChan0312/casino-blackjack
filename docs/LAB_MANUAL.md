@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: `M4 — Double, Split, Re-split, and Late Surrender`
-Status: M1-M3 are ACCEPTED. M3 was explicitly accepted at cca40d2 after review repair 2; no repaired-HEAD independent-review conclusion is claimed. M4 is implemented and mechanically verified, but independent review is NOT RUN and M4 is NOT ACCEPTED. M4 learning notes are in section 30; M5+ remains unimplemented.
+Current milestone: `M5 — Insurance, Even Money, and Initial-card Side Bets`
+Status: M1-M4 are HUMAN ACCEPTED. M4 was accepted at a5c6a22 after fresh review NO FINDINGS and requirements/regression/preservation/documentation PASS. M5 is implemented and mechanically verified locally; independent fresh review is NOT RUN and M5 is NOT ACCEPTED. M5 learning notes are in section 31. M6+ remains unimplemented. Historical milestone notes below retain their original delivery context.
 
 ## 1. Purpose
 
@@ -1580,4 +1580,59 @@ These are failure modes protected by executed assertions, not fabricated reports
 
 Observed full suite: 30 files / 476 tests. Separately rerun original M1 12/155, M2 6/78 and M3 5/72 all passed; their original files remain unchanged. M4 adds seven files / 171 tests including 60 mapped scenarios. Full evidence and cumulative repair counts are in STATE/DEVELOPMENT_LOG. COMPUTER remains <17 HIT / >=17 STAND, not basic/optimal strategy. Insurance, Even Money, Pair/21+3 side bets, Bet Behind, Charlie, UI/network, real money and deployment remain absent.
 
-User understanding: needs review / not assessed. M4 mechanical verification does not establish independent review or human acceptance. The next step is a genuinely new Codex conversation with findings-first review and no edits without separate authorization; M4 is NOT ACCEPTED and M5 NOT STARTED.
+At the historical M4 handoff, independent review was NOT RUN and M4 was NOT ACCEPTED. The explicit M5 contract subsequently records M4 fresh review NO FINDINGS and HUMAN ACCEPTED at a5c6a22dd833867a6a1eff357a7462bd06fe4e0b. Current M5 evidence follows; user understanding remains needs review / not assessed.
+
+## 31. M5 implementation and learning checkpoint
+
+### Why Ace timing changes
+
+M4 has no Insurance decision, so its accepted API peeks immediately after dealing. M5 must wait: accepting Insurance after checking the hole card would allow a wager after its result was known. M5 therefore owns initial dealing and exposes decisionPhase INSURANCE, leaving embedded M4 gameplay dormant. HUMAN must purchase, decline or elect eligible Even Money; COMPUTER deterministically declines both. Only all-closed decisions trigger one peek. Ten-value upcards still peek immediately without Insurance; 2..9 cannot be Natural and need no peek. A negative peek reveals only that Natural is excluded, never the hole card identity.
+
+### Insurance stake, profit and gross
+
+Insurance is a separately funded wager equal to half the original MAIN, not half a later doubled or split total. MAIN 200 units means Insurance 100 units; MAIN 50 means Insurance 25. Units are half credits, so 25 units is valid and exact, with no rounding. Equality of available and required funds is affordable. Failed funding neither closes the decision nor reveals cards, draws, changes turn or changes the main stake.
+
+Ratios describe profit. Winning Insurance 2:1 returns 3*stake gross: a 100-unit Insurance stake returns 300, net +200. Losing Insurance returns zero, net -100. It wins only on dealer two-card Natural, never a later three-card 21. The main result is independent. Purchasing/declining Insurance is not a gameplay action; eligible Late Surrender remains possible after a negative peek.
+
+### Even Money is an election, not a second wager
+
+An original unsplit Natural against Ace may select Even Money before peek. It needs no extra funds and fixes MAIN gross to 2*original stake. MAIN 200 returns 400 whether dealer is Natural or not. Ordinary declined Natural instead returns 200 on dealer Natural push or 500 on negative peek (3:2 profit). One closed decision makes Even Money and Insurance mutually exclusive and irreversible. There is no separate Even Money reserve or refund, and no additional 3:2 award. A computer Natural simply declines, following the explicit portfolio policy rather than any claim of optimal/basic strategy.
+
+### Original snapshots and Pair rank/colour
+
+Each side evaluates once using the player's original first two physical cards; three-card adds only dealer upcard. Later Hit, Split children, Double card, hole card and dealer Hit cards cannot replace those inputs. Frozen original arrays and fixed pending results make this invariant testable even after a parent becomes split leaves. Side stakes are never duplicated or doubled.
+
+Pair requires equal ranks. K/Q and 10/J can Split under Blackjack value rules but lose the Pair wager. Same rank and suit from distinct physical deck copies is Perfect Pair, 25:1 profit/26x gross. Same rank/colour but different suits is Coloured Pair, 12:1/13x. Opposite colours is Mixed Pair, 6:1/7x. Clubs/spades are black; diamonds/hearts red. A repeated physical ID is invalid input, not a perfect pair.
+
+### Three-card priority and Ace semantics
+
+Pay only the first applicable category: suited trips (100:1 profit, 101x gross), straight flush (40:1, 41x), trips (30:1, 31x), straight (10:1, 11x), flush (5:1, 6x), or NONE (zero). Suited trips cannot also collect trips/flush; straight flush cannot collect straight/flush again. J/Q/K remain distinct ranks. A23 is Ace-low and QKA Ace-high; KA2 is neither and cannot wrap around, though all-same-suit KA2 still qualifies as flush.
+
+### Pending and independent outcomes
+
+Main losing, pushing, surrendering or facing dealer Natural does not invalidate an initial side winner. Example: MAIN 200 plus Pair 20 plus three-card 20, with opposite-colour player 8/8 and dealer upcard 8/hole 10. Mixed Pair gross=140 and trips gross=620; main 16 loses to 18. From initial 2000, available stays 1760 throughout play. Only final settlement changes it to 2520. Net records are main -200, Pair +120, three-card +600.
+
+A pending 6200-unit trips return with currently zero available still cannot fund a Split/Double. Otherwise action order would create spendable early profits and VOID would need clawbacks. MAIN leaf, Surrender, Natural, Even Money, Insurance and sides all join one final table commit. Per-seat sum of actual record stakes must equal reserved, and safe-integer available+gross must validate for every seat before any update. Stable round/seat/hand/wager IDs preserve attribution without a database or event store.
+
+### M5 whole-round VOID
+
+A genuine required-draw fault invalidates every pending outcome and retires the shoe. Refund actual MAIN leaves including accepted Double/Split/re-split, plus accepted side and Insurance stakes, once. Even Money contributes zero additional exposure. Example: doubled leaf 400, sibling 200, Pair 20, three-card 20 and Insurance 100 -> actual refund 740, zero net on every record. Rejected funding contributes nothing. A partial initial-deal fault still refunds funded seats that have not received cards. Repeated VOID/settlement or normal settlement after VOID cannot credit again. Next round is explicit and retains funds; a retired shoe is replaced only when the next funded deal starts.
+
+### Regression families and concrete bugs they detect
+
+| Family | Executed evidence | Concrete regression detected if introduced |
+| --- | --- | --- |
+| optionalBetting / REG 001-013 | Explicit min/max/even units, exact funds, delta, cascade and frozen close | Treating total reserved as MAIN stake; charging full target twice; accepting late side edit; failing to refund a dependent side |
+| sideBets / REG 014-027 | Explicit rank/suit/category and gross examples | Treating 10/J as Pair; mixing red/black suits; adding lower categories; permitting KA2 wraparound; paying profit as gross |
+| optionalEvaluation / REG 028-032 | Initial result identity retained across Hit/Split/Double/dealer cards | Re-evaluating side from child/hit/hole cards; duplicating side stake; suppressing side win when main loses |
+| optionalInsurance / REG 033-046,071 | Actual hole-containing evaluator call count, frozen rejection, odd units and public allowlist | Peeking before purchase; using doubled exposure; rounding half stake; leaking negative peek; winning Insurance on later dealer 21 |
+| optionalEvenMoney / REG 047-058 | Explicit 400 versus 500/200 results, no reserve and illegal follow-up decisions | Funding an unnecessary second bet; stacking 1:1 and 3:2; accepting Insurance after election; losing Late Surrender eligibility |
+| optionalSettlement / REG 059-070 | Exact bankroll/record sums, large pending return, real exhausted-shoe fixtures | Paying side proceeds early; settling removed split parent; refunding only original MAIN; retaining Even Money profit on VOID; double credit |
+| optionalIntegrity | Partial deal, rejected Insurance, replacement shoe and 312-card accounting | Forgetting undealt funded seat; refunding hypothetical Insurance; reusing retired shoe or silently replaying |
+| original M1-M4 suites / mapping completeness | Separate 155/78/72/171 tests, unchanged paths, exact unique 72 IDs | A new layer silently breaking accepted contracts or omitting a promised regression case |
+
+These are concrete defects the tests detect if introduced, not fabricated reports of observed failures. No M5 implementation repair occurred through T06. Actual commands, dates and final document verification are in STATE/DEVELOPMENT_LOG. Full observed suite: 38 files / 644 tests. Passing counts do not establish independent review, human acceptance or user understanding.
+
+### Delivery and understanding
+
+M4 was explicitly HUMAN ACCEPTED at a5c6a22dd833867a6a1eff357a7462bd06fe4e0b after NO FINDINGS and requirements/REG-M4/preservation/documentation PASS. M5 is implemented and mechanically verified locally, with publication and final documentation gate recorded in STATE. Fresh M5 review is NOT RUN, M5 is NOT ACCEPTED, M6 NOT STARTED. No UI/network/real money/deployment. User understanding remains needs review / not assessed; explaining the examples above is a learning exercise, not something inferred from tests.

@@ -961,3 +961,7 @@ EVEN_MONEY is a decision on the same original main wager, not a second reserve. 
 ### M5-T05 one financial commit
 
 OptionalWagerResult identifies round/seat/wager/type, hand for MAIN, actual stake, outcome/category, gross/net and status. MAIN records adapt M4 leaf results with the Even Money override; original side results and peek-determined Insurance join them. No return is available early. Settlement requires ROUND_COMPLETE and every expected record, reconciles all seat reservations and safe integer sums before publishing balances and frozen COMMITTED records. VOID requires actual INTEGRITY_ERROR; it constructs zero-net actual-stake records for leaves/sides/accepted Insurance, reconciles and refunds in one operation. Repeated/opposite finalization rejects unchanged. prepareNextOptionalRound explicitly clears wager decisions/results while preserving balances and shoe diagnostics/history.
+
+### M5 command boundary and delivery status
+
+The implemented current API is optionalGame.ts plus optionalPublicView.ts. Internal AdvancedGameState remains embedded to reuse accepted gameplay unchanged; its raw functions must not be called as M5 commands during the Insurance phase or for M5 settlement. Outer decisionPhase plus the M5 wrapper gates are the supported control boundary. Original-card arrays and final records are frozen, but arbitrary caller-object mutation/import is not validated. Independent fresh-session review and human acceptance remain separate from the executed M5 harness. T07 changes documentation only.
