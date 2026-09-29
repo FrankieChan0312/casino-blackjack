@@ -14,11 +14,15 @@ T02 original back wagers belong to local-human and target another funded active 
 
 Close attaches each back original to its stable hand ID. Pending follower records use the controller's card outcome and the follower's own stake, with round/participant/target/hand/wager attribution and parent reference. No follower cards or gameplay commands exist. Normal table settlement validates all own-seat records through M5 and all follower reserves before publishing either result; pending returns never enter available. Repeated finalization rejects, and next-round preparation clears exposures while retaining funds. Whole-round back VOID and optional follower decisions are subsequent T06 work. Controlled surrender fixtures exercise the accepted controller rule separately because local bots never surrender; they do not add a local control path.
 
-## M5 additive optional-wager orchestration
-
 ### M6-T04 Double timing boundary
 
 behindController.ts supplies owner-checked domain primitives, separate from local participant commands and deterministic computer policy. Tests explicitly drive computer-N as a controller to exercise otherwise unreachable local advanced-follow rules; local-human cannot issue that controller request. Legal full controller reserve occurs before a DOUBLE followWindow and before draw. One local follower chooses ADD/NO_ADD; insufficient ADD records fundingError INSUFFICIENT_FUNDS and resolves NO_ADD, preserving follower funds/exposure before completing the already accepted controller action. The outer decision transition succeeds while its funding subrequest is explicitly rejected. No automatic paid follow. Local gameplay/automation/finalization cannot bypass the window. The closed decision is recorded before the forced single card. Existing M1-M5 source remains unchanged; the narrow M6 primitive reuses card/funding/hand utilities and preserves their rules.
+
+### M6-T05 Split/Re-split
+
+The owner-checked Split primitive checks controller first-decision/equal-value/funds/four-leaf limits before replacing a parent with ordered children. Both retain exactly their original physical card while the follower window is pending. ADD reserves the attached parent stake once and replaces exposure with equal first/second children; NO_ADD or failed funding replaces it only with the first child. Wager identity remains original, hand and parent IDs identify the actual leaf. Each tracked re-split opens a new window; an untracked descendant skips it. Activation draws the first child's next card, fully plays it, then advances depth-first. Split-Ace children get one added card each, automatically end decisions, never Natural, and cannot re-split/Double. Double completion can activate a waiting sibling only after the follow decision. Controlled domain Stand supports ordered fixture progression; local computer automation is unchanged.
+
+## M5 additive optional-wager orchestration
 
 The authorized M5 batch adds optionalGame.ts. Accepted M1-M4 source/APIs/tests remain unchanged. Ownership stays with the existing seven seat bankrolls: no separate bettor, spectator or follower model. T01 supports one PAIR and one THREE_CARD target per own active funded seat, 2..200 even units. Main changes use their own stake rather than total reservation; side changes move only the delta. Main cancellation releases main plus both dependent stakes atomically. Close freezes copied wager objects. No automatic computer wagers. Evaluation and the separate Ace-decision flow belong to the following tasks, not T01.
 

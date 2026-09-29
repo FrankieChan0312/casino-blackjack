@@ -22,9 +22,9 @@ export interface BehindGameState {
   readonly backWagers: readonly BackWager[];
   readonly backExposures: readonly BackExposure[];
   readonly backResults: readonly BackResult[];
-  readonly followWindow: { readonly kind: 'DOUBLE'; readonly handId: string; readonly targetSeat: number;
+  readonly followWindow: { readonly kind: 'DOUBLE' | 'SPLIT'; readonly handId: string; readonly targetSeat: number;
     readonly wagerId: string } | null;
-  readonly followDecisions: readonly { readonly handId: string; readonly kind: 'DOUBLE'; readonly choice: 'ADD' | 'NO_ADD';
+  readonly followDecisions: readonly { readonly handId: string; readonly kind: 'DOUBLE' | 'SPLIT'; readonly choice: 'ADD' | 'NO_ADD';
     readonly fundingError?: 'INSUFFICIENT_FUNDS' }[];
 }
 export interface BackExposure extends BackWager {

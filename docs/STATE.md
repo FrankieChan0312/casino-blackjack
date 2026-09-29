@@ -1,5 +1,9 @@
 # Casino Blackjack — Project State
 
+## Current truth: M6-T05 Split/Re-split following
+
+T04 publication PASS/0 at 2026-09-29 23:46:35 +08:00, main=origin/main=bfe9f0989748d16b2de4aa0669b56db80ea12b35, 0/0 clean. T05 changes only M6 controller/state/helper and adds behindSplit.test.ts. Targeted PASS/0 1/10 at 23:49:17; full verify.ps1 PASS/0 typecheck/lint/tests 43 files / 702 tests at 23:49:24. T05 VERIFIED 0/10, publication next. Before-card first/second physical ownership, ADD/NO_ADD/insufficient fallback, re-split descendant exposure, untracked skip, depth-first order, four-leaf cap, Split Aces and DAS continuation verified. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections are historical.
+
 ## Current truth: M6-T04 Double following
 
 T03 publication PASS/0 at 2026-09-29 23:41:15 +08:00, main=origin/main=91ba66c9034716b1b46dcdc3976e36d36be3835e, 0/0 clean. T04 adds behindController.ts, behindDouble.test.ts, follow state/gates and public local choices. Controller funds are accepted first; no draw before follower resolution; rejected ADD records funding failure and NO_ADD with no phantom stake. Explicit owner check rejects local-human as controller of a backed computer seat. No local computer policy change. Targeted final PASS/0 1/10 at 23:44:38; full final verify.ps1 PASS/0 typecheck/lint/tests 42 files / 692 tests, test start 23:44:45. T04 VERIFIED 0/10; publication next. M6 ledger 1,0,0,0,0,0,0,0; prior ledgers unchanged. M6 fresh review NOT RUN; ACCEPTED NO; M7 NOT STARTED. Older checkpoint sections below are historical.

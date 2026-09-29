@@ -1,5 +1,11 @@
 # Casino Blackjack — Development Log
 
+## M6-T05 — Split/Re-split following
+
+### 2026-09-29 23:49:38 +08:00 — T04 PUBLICATION / T05 VERIFICATION
+
+T04 normal publication PASS/0 at 23:46:35, bfe9f0989748d16b2de4aa0669b56db80ea12b35, main=origin/main 0/0 clean. T05 contract in PLAN; recommendation GPT-6 Astra/High, actual NOT VERIFIED/NOT VERIFIED, same stop/non-goal boundaries. Added Split/Re-split owner-checked acceptance and pre-child-card follow resolution to M6 only, descendant exposure lineage, first-child-only fallback and depth-first activation including Split Aces/DAS; added helper backedGame and behindSplit.test.ts. Targeted PASS/0 1/10 at 23:49:17; full harness PASS/0 43/702 at 23:49:24. T05 first validation passed, repairs 0/10. Complete task diff review before authorized publication. Prior accepted executable paths unchanged. No independent M6 review, acceptance or M7.
+
 ## M6-T04 — Double follow decisions
 
 ### 2026-09-29 23:44:00 +08:00 — T03 PUBLICATION / T04 VERIFICATION
