@@ -1,12 +1,12 @@
 # Casino Blackjack — Project State
 
-## Current truth: M4-T02
+## Current truth: M4-T03
 
 The explicit M4 contract HUMAN ACCEPTED M3 at cca40d2bed3b3964a9bfb47329d49bb553fe610e after M3-T06 repair 2. This supersedes historical acceptance/next-action notes below, without inventing a repaired-HEAD independent recheck or closing the finding on behalf of a reviewer. Acceptance is recorded with substantive T01 work; no acceptance-only commit.
 
 Entry at 2026-09-29 09:27:18 +08:00: main, HEAD=origin/main=cca40d2bed3b3964a9bfb47329d49bb553fe610e, 0/0 clean. Fetch at 09:31:15 confirmed the same authorized remote/HEAD. Baseline harness PASS/0, 23 files / 305 tests (test start 09:32:10). Initial sandbox ownership failure resolved by owning-user execution without configuration changes. No unknown edits.
 
-T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T01 is COMMITTED / PUSHED cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb on main; 18:57:14 push/fetch/parity PASS, 0/0 clean. T02 Double/DAS is IMPLEMENTED / VERIFIED locally: first full harness at 18:59:08 PASS/0, 25 files / 327 tests, 0/10 repairs. T03-T07 NOT STARTED. M4 repairs T01..T07: **1,0,0,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
+T01 additive foundation IMPLEMENTED / VERIFIED locally: full child-PowerShell verify.ps1 at 09:39:41 PASS/0, typecheck/lint and 24 files / 312 tests. Complete task diff/publication checks follow. One documentation patch-context repair (1/10), no source/test correction; see log. T01 is COMMITTED / PUSHED cd2d8ccb87d4389e39348c43ed7e2d0e7adf50fb on main; 18:57:14 push/fetch/parity PASS, 0/0 clean. T02 Double/DAS is IMPLEMENTED / VERIFIED locally: first full harness at 18:59:08 PASS/0, 25 files / 327 tests, 0/10 repairs. T02 COMMITTED / PUSHED fbae61cf248492c18dbd0e7a47902b6495eea14f; 19:01:17 main=origin/main, 0/0 clean. T03 Split IMPLEMENTED / VERIFIED locally after lint-only repair 1/10; 19:04:16 full harness PASS/0, 26 files / 361 tests. T04-T07 NOT STARTED. M4 repairs T01..T07: **1,0,1,0,0,0,0**, each /10. Prior ledgers: M3 **0,0,0,0,0,2**; M2 **1,0,0,0,1,1**; M1 **2,1,0,0,1,0,1,0,0,1**. Recommended GPT-6 Astra / High; actual model/effort **NOT VERIFIED / NOT VERIFIED**. M4 review NOT RUN; M4 NOT ACCEPTED; M5 NOT STARTED.
 
 The M3 records below are retained historical context. The current M4 contract governs next actions.
 

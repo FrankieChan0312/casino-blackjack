@@ -931,3 +931,7 @@ T04 voidFinancialRound requires CLOSED plus an actual M2 INTEGRITY_ERROR. Illega
 ### M4-T02 implementation
 
 Double validates the current HUMAN seat and hand ID, two cards, unused first decision, total below 21 and no split-Ace restriction. additionalFundingError checks safe-integer funds and only available >= current stake. reserveAdditional transfers the matching amount before the single required draw; stake doubles and decisions end regardless of the card total. No Double-for-less or original-limit cap. Eligible non-Ace split-origin fixtures use the same handler. Rejection retains the input reference; accepted draw failure retains the added reserve for whole-round VOID.
+
+### M4-T03 implementation
+
+Split accepts an original active first-decision two-card HUMAN hand of equal Blackjack value. Ten ranks share value 10; Ace pairs only with Ace. Full matching reserve precedes parent replacement; each child retains its corresponding original physical card and stake. Parent is absent from leaves/results. IDs append .1/.2 to the parent. selectNextHand supplies the second card only when a one-card split child becomes first unfinished; it recursively skips automatic terminal decisions, preserving depth-first order. Split-Ace children and ordinary 21 end decisions but never gain Natural status. Re-split is not exposed until T04.

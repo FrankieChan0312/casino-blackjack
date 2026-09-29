@@ -1350,3 +1350,21 @@ Modified only advancedGame.ts gameplay, added advancedDouble.test.ts. All reject
 ### 2026-09-29 19:00:41 +08:00 - VALIDATION / TASK REVIEW
 
 T02 full child-PowerShell verify.ps1 PASS/0: typecheck/lint and 25 files / 327 tests (18:59:40 test start). No failure or repair: 0/10. Reviewed source and new test logic: forced below-21 completion, exact funding, ordinary payout, Split-origin eligibility and explicit unchanged rejection. No accepted M1-M3 executable file changed. Complete Git diff/whitespace/status checks precede publication; actual SHA/parity will be recorded with T03.
+
+## M4-T03 — Funded Split / ordered children
+
+### 2026-09-29 19:01:17 +08:00 — BASELINE / T02 PUBLICATION
+
+T02 committed/pushed fbae61cf248492c18dbd0e7a47902b6495eea14f, main=origin/main, 0/0 clean; push/fetch/Git checks PASS/0. Complete six-file T02 staged diff and whitespace reviewed before commit; no blocking finding. T02 repairs 0/10. T03 begins 0/10; recommended GPT-6 Astra / High, actual NOT VERIFIED / NOT VERIFIED.
+
+Scope/acceptance: one original funded Split, all ten-valued pairs and same-rank 2..9/Aces, independent availability check, parent replaced by two ordered children, physical ownership, first child fully played before second-child card, no split Natural or parent payout. No re-split yet. Minimal Split-Ace forced completion is included because T03 already requires legal A/A and ordinary split A+K; exposing an illegal intermediate Hit rule would violate R10. T04 completes re-split/cap and Split-Ace regression. Step -> verification: targeted child creation/activation -> explicit ordered fixtures and exact card/fund counts -> full harness/diff -> authorized commit/push/parity. Global stop conditions apply.
+
+### 2026-09-29 19:03:38 +08:00 — FIRST VALIDATION / REPAIR 1
+
+Added advancedSplit.test.ts and extended only M4 advancedGame.ts. Parent IDs become .1/.2, origin/ancestry persist, first child's required card is drawn on activation. Completing a hand may activate/draw the next child; Double still draws exactly one card for the doubled hand. Original snapshots remain detached. All M1-M3 source/tests remain unchanged.
+
+First harness at 19:03:16: typecheck PASS; tests PASS, 26 files / 361 tests; lint FAIL/1, no-unexpected-multiline at advancedSplit.test.ts:15. Overall FAIL/1 correctly propagated. Hypothesis: separating it.each(...) and its returned-function call onto adjacent lines triggers lint's ambiguous-newline rule. Repair 1/10 joins the call opening to the preceding line, retaining all test cases/assertions. No gameplay fix, lint suppression or weakened assertion. Full re-verification follows.
+
+### 2026-09-29 19:05:03 +08:00 - REPAIR REVERIFICATION / REVIEW
+
+T03 repair 1 full harness at 19:04:16 PASS/0: typecheck/lint, 26 files / 361 tests. All 16 ordered ten-value combinations and 2..9 numeric pairs pass; exact/short funding, physical ownership, delayed second child, DAS, A+K ordinary settlement and stale-parent rejection pass. Source/new-test review found no additional issue; Git complete task diff/whitespace checks follow before publication. T03 remains 1/10.

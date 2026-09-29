@@ -119,6 +119,16 @@ function replaceHand(state: AdvancedGameState, hand: AdvancedHand): AdvancedGame
 function selectNextHand(state: AdvancedGameState): AdvancedGameState {
   const round = state.game.round!;
   const current = round.players.find((hand) => !hand.complete);
+  if (current?.origin === 'SPLIT' && current.cards.length === 1) {
+    const draw = drawCard(state.game.shoe);
+    const next = { ...state, game: { ...state.game, shoe: draw.shoe } };
+    if (!draw.ok) return integrityFailure(next, draw.error);
+    const cards = [...current.cards, draw.card];
+    // Activate one child at a time. Split Aces/ordinary 21 end decisions,
+    // but remain ordinary hands requiring shared dealer comparison.
+    return selectNextHand(replaceHand(next, { ...current, cards,
+      complete: current.splitAces || evaluateHand(cards).isTwentyOne }));
+  }
   return { ...state, game: { ...state.game, round: { ...round,
     currentSeat: current?.seatNumber ?? null, currentHandId: current?.handId ?? null,
     phase: current ? 'PLAYER_TURN' : 'DEALER_TURN' } } };
@@ -176,6 +186,28 @@ export function doubleAdvancedHand(state: AdvancedGameState, seatNumber: number,
   if (fundingError) return { ok: false, state, error: fundingError };
   const funded = replaceHand(reserveAdditional(state, hand), { ...hand, stakeUnits: hand.stakeUnits * 2 });
   return { ok: true, state: applyAction(funded, 'DOUBLE') };
+}
+export function splitAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
+  const error = humanError(state, seatNumber, handId);
+  if (error) return { ok: false, state, error };
+  const round = state.game.round!;
+  const hand = round.players.find((entry) => entry.handId === handId)!;
+  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || hand.origin !== 'ORIGINAL') {
+    return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
+  }
+  const [first, second] = hand.cards;
+  const tenValues = ['10', 'J', 'Q', 'K'];
+  if (first.rank !== second.rank && !(tenValues.includes(first.rank) && tenValues.includes(second.rank))) {
+    return { ok: false, state, error: 'UNEQUAL_SPLIT_VALUE' };
+  }
+  const fundingError = additionalFundingError(state, hand);
+  if (fundingError) return { ok: false, state, error: fundingError };
+  const funded = reserveAdditional(state, hand);
+  const children = hand.cards.map((card, index): AdvancedHand => ({ ...hand,
+    handId: `${hand.handId}.${index + 1}`, parentHandId: hand.handId, origin: 'SPLIT', cards: [card],
+    splitAces: first.rank === 'A', decisionTaken: false, complete: false, outcome: undefined, outcomeReason: undefined }));
+  return { ok: true, state: selectNextHand({ ...funded, game: { ...funded.game, round: { ...round,
+    players: round.players.flatMap((entry) => entry.handId === handId ? children : [entry]) } } }) };
 }
 export function resolveAdvancedDealer(state: AdvancedGameState): AdvancedResult {
   const error = phaseError(state, 'DEALER_TURN');
