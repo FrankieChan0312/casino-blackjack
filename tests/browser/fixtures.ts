@@ -59,5 +59,5 @@ export function createFixtureController(name: string | null) {
         available: [], discarded: [...shoe.discarded, ...shoe.available] } } } };
     }
   }
-  return createBrowserController({ factory: () => state, random: fixtureRandom });
+  return createBrowserController({ factory: () => state, random: fixtureRandom, clock: () => '2026-01-01T00:00:00.000Z' });
 }

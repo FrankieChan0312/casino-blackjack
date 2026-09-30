@@ -12,8 +12,8 @@ M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending s
 | M8-T04 | Immutable attributable sequence/UTC events; public secrecy | VERIFIED / PUSHED 1e57736780cf5146581210759a642803fcafa5dd | 1 |
 | M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | VERIFIED / PUSHED ecf9dcb961e15378145682517401002cffaaf5d7 | 1 |
 | M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | VERIFIED / PUSHED adc289ce86a9dcc14497ec4547c01efdd01aaf8b | 1 |
-| M8-T07 | Exact unique REG-M8 map; independent M1-M7 preservation | VERIFIED; publication follows | 0 |
-| M8-T08 | Accurate concise portfolio README/diagram/demo | NOT STARTED | 0 |
+| M8-T07 | Exact unique REG-M8 map; independent M1-M7 preservation | VERIFIED / PUSHED c1262d469c93f06cddd272781ebcb877e9090e6e | 0 |
+| M8-T08 | Accurate concise portfolio README/diagram/demo | VERIFIED; publication follows | 1 |
 | M8-T09 | Final documentation/full harness/fresh-session handoff | NOT STARTED | 0 |
 
 Each step -> targeted tests -> full verify.ps1 with checked exits -> complete diff/check/status -> timestamped evidence -> commit/push origin main -> fetch/0-0/clean -> continue. Detailed acceptance is the user's M8 batch contract and R16/R17. No speculative variants/RTP claims/persistence/auth/network/real money/paid services/deployment. Stop on authority conflict, unknown overlap, unavailable validation, unsafe secrets/replay imports, destructive history, credentials/paid work, 10 repairs or final review boundary. T09 stops VERIFIED/COMMITTED/PUSHED; fresh review NOT RUN, ACCEPTED NO.
