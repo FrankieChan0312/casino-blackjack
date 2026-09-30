@@ -2,13 +2,14 @@ import { expect } from 'vitest';
 import { createReplaySession } from '../../src/domain/replay.js';
 import { CLASSIC, type ProfileId } from '../../src/domain/profile.js';
 import type { SessionCommand } from '../../src/domain/sessionCommand.js';
+import type { Clock } from '../../src/domain/audit.js';
 export type DemoSession = ReturnType<typeof createReplaySession>;
 export function send(s: DemoSession, command: SessionCommand) {
   const result = s.dispatch(command);
   expect(result.ok, 'error' in result ? result.error : undefined).toBe(true);
 }
-export function startSession(seed = 0, profileId: ProfileId = CLASSIC, spectator = false, demoFaults = false) {
-  const s = createReplaySession(seed, profileId, { demoFaults });
+export function startSession(seed = 0, profileId: ProfileId = CLASSIC, spectator = false, demoFaults = false, clock?: Clock) {
+  const s = createReplaySession(seed, profileId, { demoFaults, clock });
   send(s, { type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: spectator ? 'COMPUTER' : 'HUMAN', sittingOut: false }] });
   send(s, { type: 'OPEN' }); send(s, { type: 'MAIN', seat: 1, amount: 200 });
   if (spectator) send(s, { type: 'BACK', seat: 1, amount: 50 });

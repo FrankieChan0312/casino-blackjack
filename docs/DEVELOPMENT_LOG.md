@@ -1,3 +1,13 @@
+### 2026-09-30 12:51:51 +08:00 - M8-T04 VERIFIED, repair 1/10
+
+Targeted audit/replay 35/35 PASS/0, typecheck/lint/domain compile PASS/0. Full verify.ps1 PASS/0: 60 files/927 Vitest (12:51:02), Chromium 1 project/24 tests, production build fixture exclusion and all required checks PASS. Clock variation leaves replay outcome/package identical; frozen prior events and next-round sequence preserved; schema contains no card/shoe/seed fields. Entire source/helper/test/schema-doc and tracked docs reviewed; whitespace/status PASS. Publication follows.
+
+### 2026-09-30 12:50:41 +08:00 - M8-T04 initial validation; repair 1/10
+
+T03 published 13068815bb88c44e6088d107c1488796fa109add at 12:46:37, main/push/fetch/0-0/clean PASS. T04 observation-only public audit scope: sequence/UTC injected clock, actor/round/seat/hand/wager/command, actual amounts/results/rejections, bot/dealer/Charlie/settlement/VOID/archive and secrecy. No event-sourced state or raw card/seed fields. Recommended Sol 6.1/High, actual NOT VERIFIED/NOT VERIFIED; usual stop conditions.
+
+Initial audit/replay 34 PASS/1 FAIL: seed 0 has equal ten values and legal Split, so test expectation of unequal rejection was wrong. Hypothesis: explicitly invalid hand ID makes direct refusal deterministic while retaining state-identity assertion. Correct that test, and strengthen Insurance ID equality after source review showed actual MAIN Insurance record ends /seat-1/INSURANCE rather than /MAIN/INSURANCE. Repair 1 targeted fix and re-verification follows.
+
 ## M8-T03 - Deterministic replay
 
 ### 2026-09-30 12:46:09 +08:00 - VERIFIED, repair 1/10

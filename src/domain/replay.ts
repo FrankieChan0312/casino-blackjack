@@ -3,6 +3,7 @@ import { getPublicBehindView } from './behindPublicView.js';
 import { CLASSIC, getProfile, type ProfileId } from './profile.js';
 import { createSeededRandom, isSeed, SEEDED_ALGORITHM } from './random.js';
 import { applySessionCommand, type SessionCommand } from './sessionCommand.js';
+import { createAuditTrail, type Clock } from './audit.js';
 
 export const REPLAY_VERSION = 1;
 export interface ReplayConfiguration {
@@ -109,18 +110,20 @@ function freeze<T>(value: T): T {
   return value;
 }
 export function createReplaySession(seed: number, profileId: ProfileId = CLASSIC,
-  options: { withHuman?: boolean; demoFaults?: boolean } = {}) {
+  options: { withHuman?: boolean; demoFaults?: boolean; clock?: Clock } = {}) {
   const config: ReplayConfiguration = { seed, profileId, randomAlgorithm: SEEDED_ALGORITHM,
     initialCreditUnits: 2000, withHuman: options.withHuman ?? true, demoFaults: options.demoFaults ?? false };
   configuration(config);
   const random = createSeededRandom(seed);
   let state = createBehindGame('local-shoe-1', random, config.withHuman, profileId);
+  const audit = createAuditTrail(state, options.clock);
   const entries: ReplayEntry[] = [];
   const outcomes: ReturnType<typeof terminalOutcome>[] = [];
   function dispatch(input: SessionCommand) {
     const command = validateCommand(input);
     const before = state;
     const result = applySessionCommand(state, command, random, config.demoFaults);
+    audit.record(before, result, command);
     if (result.ok) {
       state = result.state;
       entries.push(freeze({ sequence: entries.length + 1, command }));
@@ -134,7 +137,7 @@ export function createReplaySession(seed: number, profileId: ProfileId = CLASSIC
     if (state.table.phase !== 'COMMITTED' && state.table.phase !== 'VOID') throw new ReplayError('Replay export requires finalized round');
     return freeze({ replayVersion: 1, configuration: { ...config }, commands: [...entries], outcomeDigest: outcomeDigest(outcomes) });
   }
-  return { dispatch, exportPackage, getPublic: () => getPublicBehindView(state),
+  return { dispatch, exportPackage, getPublic: () => getPublicBehindView(state), getAudit: audit.getPublic,
     // Explicit internal/developer boundary. Never hand this object to React.
     getState: () => state, getOutcomes: () => [...outcomes] };
 }
