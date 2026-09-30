@@ -1,3 +1,13 @@
+### 2026-09-30 13:06:29 +08:00 - M8-T05 VERIFIED, repair 1/10
+
+Targeted controller/shell/map/demo 4 files/15 tests PASS/0, typecheck PASS/0. Targeted real Chromium M8 13/13 PASS/0. Final full verify.ps1 PASS/0: Vitest 61 files/934 (13:04:46), Chromium 1 project/37 tests zero retries, typecheck/lint/domain isolation/build fixture exclusion PASS. M7 24 browser tests remain current and passing, including Classic five-card no-Charlie, hidden-card DOM/ARIA/attributes, keyboard and 320px. New checks cover profile locking, seeded equality, terminal export/JSON removal on NEXT, replay mark/original preservation, public audit order/actor/secrecy, active DOM/ARIA seed absence, mobile/keyboard tools. Normal random mode remains. Only two authorized historical M7 absence assertions changed; all other accepted assertions retained. Complete source/tests/UX/docs diff and newly added files reviewed, whitespace/status PASS. Publication follows.
+
+### 2026-09-30 13:02:56 +08:00 - M8-T05 initial verification; repair 1/10
+
+T04 published 1e57736780cf5146581210759a642803fcafa5dd at 12:58:01, push/fetch/main=origin/0-0/clean PASS. T05 connects profile/seed/session reset, terminal export/replay, observational public audit and secondary accessible controls. Current pre-terminal snapshots contain no seed/state/shoe; reset is eligible only fresh configuring or COMMITTED/VOID. Recommended Sol 6.1/High, actual NOT VERIFIED/NOT VERIFIED; full user stop conditions retained.
+
+Initial typecheck PASS/0; controller/shell/mapping 7 PASS/1 FAIL: accepted REG-M7-003 asserts an exact four-method API and excludes newly authorized M8 methods. User explicitly permits historical milestone absence assertions anchored to accepted commits (REG-M6-095 precedent). Hypothesis: anchor only historical API inventory via accepted-M7 TypeScript AST while retaining all current raw-state/disclosure assertions; add M8 current API/secrecy tests. REG-M7-002 absence is likewise anchored to accepted M7 App; no gameplay assertion changed. Classic active UI omits variant options/text while locked, preserving REG-M7-056 current five-card no-Charlie assertion. Repair 1/10.
+
 ### 2026-09-30 12:51:51 +08:00 - M8-T04 VERIFIED, repair 1/10
 
 Targeted audit/replay 35/35 PASS/0, typecheck/lint/domain compile PASS/0. Full verify.ps1 PASS/0: 60 files/927 Vitest (12:51:02), Chromium 1 project/24 tests, production build fixture exclusion and all required checks PASS. Clock variation leaves replay outcome/package identical; frozen prior events and next-round sequence preserved; schema contains no card/shoe/seed fields. Entire source/helper/test/schema-doc and tracked docs reviewed; whitespace/status PASS. Publication follows.

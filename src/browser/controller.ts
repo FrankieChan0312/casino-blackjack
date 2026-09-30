@@ -1,11 +1,14 @@
 import * as game from '../domain/behindGame.js';
-import { decideDoubleFollow, decideSplitFollow } from '../domain/behindController.js';
 import { getPublicBehindView } from '../domain/behindPublicView.js';
-import { mathRandomSource, type RandomSource } from '../domain/random.js';
+import { isSeed, mathRandomSource, type RandomSource } from '../domain/random.js';
 import type { SeatState } from '../domain/table.js';
 import type { PlayerAction } from '../domain/advancedGame.js';
 import type { SideWagerType } from '../domain/optionalGame.js';
 import { evaluateHand } from '../domain/hand.js';
+import { CLASSIC, getProfile, type ProfileId } from '../domain/profile.js';
+import { createReplaySession, replay, type ReplayPackage } from '../domain/replay.js';
+import { applySessionCommand, type SessionCommand } from '../domain/sessionCommand.js';
+import { createAuditTrail, type Clock } from '../domain/audit.js';
 
 export type BrowserCommand =
   | { type: 'CONFIGURE'; seats: readonly SeatState[] }
@@ -30,9 +33,14 @@ const reasons: Record<string, string> = {
 };
 export function explainReason(reason: string | undefined) { return reason ? reasons[reason] ?? 'This command is unavailable in the current state.' : ''; }
 
-export function createBrowserController(options: { factory?: () => game.BehindGameState; random?: RandomSource } = {}) {
+export function createBrowserController(options: { factory?: () => game.BehindGameState; random?: RandomSource;
+  profileId?: ProfileId; seed?: number; clock?: Clock } = {}) {
   const random = options.random ?? mathRandomSource;
-  let state = options.factory?.() ?? game.createBehindGame('local-shoe-1', random);
+  if (options.factory && options.seed !== undefined) throw new Error('Seeded replay cannot start from a state factory');
+  let session = options.seed !== undefined ? createReplaySession(options.seed, options.profileId ?? CLASSIC, { clock: options.clock }) : null;
+  let state = session?.getState() ?? options.factory?.() ?? game.createBehindGame('local-shoe-1', random, true, options.profileId ?? CLASSIC);
+  let audit = createAuditTrail(state, options.clock);
+  let replayResult: ReturnType<typeof replay> | null = null;
   let feedback = '';
   let shoeMessage = '6-deck persistent shoe';
   function project() {
@@ -48,7 +56,11 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       dealer: { ...view.round.dealer, total: evaluateHand(state.table.game.round!.dealerCards.slice(0, view.round.dealer.visibleCards.length)).total },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
-    return { configuration: view.configuration, round, human: view.human,
+    return { profileId: state.table.profileId, seeded: session !== null,
+      canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
+        || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0),
+      replayAvailable: !!session && (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'),
+      replayResult, audit: audit.getPublic(), configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),
       trackedBack: state.backExposures.map((entry) => ({ seat: entry.targetSeat, handId: entry.handId, amount: entry.stakeUnits })),
       lastFollow: state.followDecisions.length ? { kind: state.followDecisions.at(-1)!.kind, choice: state.followDecisions.at(-1)!.choice } : null,
@@ -61,50 +73,53 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   }
   let snapshot = project();
   const listeners = new Set<() => void>();
+  function publish() { snapshot = project(); listeners.forEach((listener) => listener()); }
+  function invoke(command: SessionCommand) {
+    const before = state;
+    const result = session ? session.dispatch(command) : applySessionCommand(state, command, random);
+    audit.record(before, result, command);
+    if (result.ok) state = result.state;
+    return result;
+  }
   function dispatch(command: BrowserCommand) {
-    const seat = game.controlledSeat(state);
-    let result: game.BehindResult;
-    switch (command.type) {
-      case 'CONFIGURE': result = game.configureBehindSeats(state, command.seats); break;
-      case 'OPEN': result = game.openBehindBetting(state); break;
-      case 'MAIN': result = command.amount === 0 ? game.cancelBehindMainWager(state, command.seat) : game.setBehindMainWager(state, command.seat, command.amount); break;
-      case 'SIDE': result = command.amount === 0 ? game.cancelBehindSideWager(state, seat ?? 0, command.kind) : game.setBehindSideWager(state, seat ?? 0, command.kind, command.amount); break;
-      case 'BACK': result = command.amount === 0 ? game.cancelBackWager(state, command.seat) : game.setBackWager(state, command.seat, command.amount); break;
-      case 'CLOSE': result = game.closeBehindBetting(state, `local-shoe-${state.table.roundNumber + 1}`, random); break;
-      case 'ACT': result = game.actBehindHand(state, command.handId, command.action); break;
-      case 'ADVANCE': result = game.advanceBehindTable(state); break;
-      case 'NEXT': result = game.prepareNextBehindRound(state); break;
-      case 'ACE': {
-        const choice = snapshot.interaction.insurance;
-        result = choice?.role === 'BACK' ? game.decideBackInsurance(state, choice.targetSeat, command.choice)
-          : command.choice === 'EVEN_MONEY' ? game.electBehindMainEvenMoney(state) : game.decideBehindMainInsurance(state, command.choice === 'INSURANCE');
-        break;
-      }
-      case 'FOLLOW': result = state.followWindow?.kind === 'DOUBLE'
-        ? decideDoubleFollow(state, state.followWindow.handId, command.choice)
-        : decideSplitFollow(state, state.followWindow?.handId ?? '', command.choice); break;
-    }
+    const previousShoe = state.table.game.shoe.shoeId;
+    const result = invoke(command);
     if (result.ok) {
-      const previousShoe = state.table.game.shoe.shoeId;
-      state = result.state;
+      replayResult = null;
       if (command.type === 'CLOSE') shoeMessage = previousShoe === state.table.game.shoe.shoeId ? 'Existing 6-deck shoe continues' : 'New 6-deck shoe shuffled';
       feedback = command.type === 'FOLLOW' && state.followDecisions.at(-1)?.fundingError ? explainReason('INSUFFICIENT_FUNDS') : '';
       if (state.table.phase === 'CLOSED' && state.table.game.round?.phase === 'ROUND_COMPLETE') {
-        const settled = game.settleBehindWagers(state);
-        if (settled.ok) state = settled.state;
-        else feedback = explainReason(settled.error);
+        const settled = invoke({ type: 'SETTLE' });
+        if (!settled.ok) feedback = explainReason(settled.error);
       }
       if (state.table.phase === 'CLOSED' && state.table.game.round?.phase === 'INTEGRITY_ERROR') {
-        const voided = game.voidBehindRound(state);
-        if (voided.ok) state = voided.state;
-        else feedback = explainReason(voided.error);
+        const voided = invoke({ type: 'VOID' });
+        if (!voided.ok) feedback = explainReason(voided.error);
       }
     } else feedback = explainReason(result.error);
-    snapshot = project();
-    listeners.forEach((listener) => listener());
+    publish();
     return result.ok;
   }
+  function startDemo(profileId: ProfileId, seed?: number) {
+    if (!snapshot.canStartDemo) { feedback = 'Start a new demo only before play or after final settlement.'; publish(); return false; }
+    try { getProfile(profileId); }
+    catch { feedback = 'Choose a valid profile.'; publish(); return false; }
+    if (seed !== undefined && !isSeed(seed)) { feedback = 'Choose an unsigned 32-bit integer seed.'; publish(); return false; }
+    const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
+    const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
+    session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
+    replayResult = null; feedback = ''; shoeMessage = 'New demo session: starting credits restored'; publish(); return true;
+  }
+  function exportReplay(): ReplayPackage | null {
+    return snapshot.replayAvailable && session ? session.exportPackage() : null;
+  }
+  function replayCompleted() {
+    const p = exportReplay(); if (!p) return false;
+    audit.recordReplay(state, false);
+    replayResult = replay(p); audit.recordReplay(state, true); publish(); return true;
+  }
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
+    startDemo, exportReplay, replayCompleted,
     queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };
 }
 export type BrowserController = ReturnType<typeof createBrowserController>;

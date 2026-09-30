@@ -5,6 +5,7 @@ import { credits, roundStatus } from './presentation.js';
 import { Setup, Betting } from './Betting.js';
 import { Actions } from './Actions.js';
 import { Decisions, Results } from './Decisions.js';
+import { DemoTools } from './DemoTools.js';
 
 export function App({ controller }: { controller: BrowserController }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
@@ -24,5 +25,6 @@ export function App({ controller }: { controller: BrowserController }) {
     <Decisions view={view} controller={controller} />
     <Table view={view} />
     <Results view={view} controller={controller} />
+    <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
   </main>;
 }

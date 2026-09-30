@@ -105,5 +105,6 @@ export function createAuditTrail(initial: BehindGameState, clock: Clock = utcClo
     }
   }
   return { record, getPublic: () => Object.freeze([...events]),
+    recordReset: (state: BehindGameState) => append(state, { type: 'SESSION_RESET', amountUnits: 2000 }),
     recordReplay: (state: BehindGameState, completed: boolean) => append(state, { type: completed ? 'REPLAY_COMPLETE' : 'REPLAY_START' }) };
 }

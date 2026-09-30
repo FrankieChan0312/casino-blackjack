@@ -44,6 +44,13 @@ form { min-width: 0; padding-bottom: 16px; border-bottom: 1px solid #527178; }
 .interruption { border: 2px solid #e8bca1; }
 header p { max-width: 70ch; }
 section, article { overflow-wrap: anywhere; min-width: 0; }
+.demo-tools { background: #192d35; }
+summary { cursor: pointer; min-height: 44px; padding: 12px 0; }
+textarea { width: 100%; max-width: 100%; background: #10262e; color: #fff; border: 1px solid #799299; border-radius: 7px; padding: 8px; font: .8rem monospace; }
+.audit-list { max-height: 360px; overflow-y: auto; padding-left: 28px; }
+.audit-list li { padding: 10px 0; border-bottom: 1px solid #527178; }
+.audit-list span, .audit-list time { display: block; font-size: .85rem; }
+.replay-result { border-left: 3px solid #b8dbcb; padding-left: 12px; }
 button { max-width: 100%; }
 @media (min-width: 1000px) { .dealer { max-width: 640px; margin: 24px auto 0; } }
 @media (max-width: 850px) { .seats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

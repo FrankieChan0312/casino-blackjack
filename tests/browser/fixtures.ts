@@ -3,6 +3,7 @@ import * as game from '../../src/domain/behindGame.js';
 import { createSixDeckInventory, type Rank } from '../../src/domain/card.js';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { beginControllerDouble, beginControllerSplit } from '../../src/domain/behindController.js';
+import { CHARLIE } from '../../src/domain/profile.js';
 
 export const fixtureRandom = { nextInt: (max: number) => max - 1 };
 export function requireAccepted(result: game.BehindResult) {
@@ -32,11 +33,13 @@ export function createFixtureController(name: string | null) {
     spectator: ['5', '9', '6', '8', '9'], 'follow-double': ['5', '9', '6', '8', '9'],
     'follow-split': ['8', '9', '8', '8', '3', '4'], 'poor-follow': ['5', '9', '6', '8', '9'],
     five: ['2', '9', '2', '8', '2', '2', '2'], void: ['5', '9', '6', '8'],
+    charlie: ['2','9','2','8','4','5','7'], charlie21: ['2','9','2','8','4','5','8'],
     'back-insurance': ['A', 'A', 'K', '9'], 'poor-insurance': ['5', 'A', '6', '9'],
   };
   const ranks = scenarios[name];
   if (!ranks) throw new Error('Unknown controlled fixture');
   let state = fixtureState(ranks);
+  if (name === 'charlie' || name === 'charlie21') state = { ...state, table: { ...state.table, profileId: CHARLIE } };
   const spectator = ['spectator', 'follow-double', 'follow-split', 'poor-follow', 'back-insurance'].includes(name);
   if (name !== 'setup') {
     state = requireAccepted(game.configureBehindSeats(state, [{ seatNumber: 1, occupancy: spectator ? 'COMPUTER' : 'HUMAN', sittingOut: false },

@@ -9,6 +9,14 @@ Status: UX authority. M7 browser implementation and executable mappings now exis
 
 ## 1. Purpose
 
+### M8 authorized demo extension
+
+The secondary Demo and audit tools panel follows primary gameplay/results. A new demo session can select Classic Blackjack or Five-Card Charlie Demo before initial betting, or after financial COMMITTED/VOID. This explicitly restores 1000 simulation credits and records a session reset. No silent in-round profile change. Five-Card Charlie is labelled a custom demonstration profile, with normal 1:1 return and Charlie Win (including fifth-card 21), never a Natural award.
+
+Optional uint32 seed is for reproducible portfolio demonstrations. Input is removed while play is active; no seed/PRNG state or prediction controls enter the active public snapshot. Normal blank-seed sessions keep existing randomness. Seeded sessions alone offer completed-session package view/copy and Replay completed session after COMMITTED/VOID. NEXT removes package/result display and export availability. Replay mode is a separate labelled result panel; original results/balances remain unchanged. Clipboard refusal gives keyboard-copy guidance.
+
+Public audit history is collapsible and secondary: ordered sequence, actor/action/status, UTC time, round/seat/hand, affected amount/result. It never renders cards, physical IDs, shoe order, seed or developer stack traces. Native summary/select/input/buttons retain keyboard focus indicators; wrapped text and bounded textarea/list keep 320px usable. Domain/controller enforcement still guards every command and restart/export boundary. Historical M7 absence checks are anchored to accepted M7 only where explicitly authorized; active Classic and secrecy assertions still run against current UI.
+
 This document defines how the Casino Blackjack project should present game state and player interaction in the browser.
 
 It is not the source of truth for Blackjack rules.

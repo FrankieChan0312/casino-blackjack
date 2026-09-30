@@ -1,5 +1,7 @@
 import { expect, it } from 'vitest';
 import { createBrowserController } from '../../src/browser/controller.js';
+import { execFileSync } from 'node:child_process';
+import ts from 'typescript';
 import { behindFixture } from '../helpers/behindFixture.js';
 import { noRandom } from '../helpers/tableFixture.js';
 
@@ -10,7 +12,21 @@ it('[REG-M7-003] normal bootstrap exposes a seven-seat public session without ra
   expect(c.getSnapshot().configuration).toHaveLength(7);
   expect(c.getSnapshot().human?.available).toBe(2000);
   for (const field of ['shoe', 'computers', 'bankrolls', 'originalCards', 'deckIndex']) expect(JSON.stringify(c.getSnapshot())).not.toContain(`"${field}"`);
-  expect(Object.keys(c).sort()).toEqual(['dispatch', 'getSnapshot', 'queryWager', 'subscribe']);
+  // M8 intentionally extends the method inventory. Preserve M7's historical
+  // absence assertion at accepted M7; current raw-state secrecy above still runs.
+  const acceptedSource = execFileSync('git', ['-c', 'safe.directory=C:/Users/user/Documents/GitHub/casino-blackjack',
+    'show', 'da6f068ffd27713848ed48f023c17ed388b8b44e:src/browser/controller.ts'], { encoding: 'utf8' });
+  const historical = ts.createSourceFile('controller.ts', acceptedSource, ts.ScriptTarget.Latest, true);
+  const publicKeys: string[] = [];
+  function visit(node: ts.Node) {
+    if (ts.isReturnStatement(node) && node.expression && ts.isObjectLiteralExpression(node.expression)
+      && node.expression.properties.some(p => p.name?.getText(historical) === 'getSnapshot')) {
+      publicKeys.push(...node.expression.properties.map(p => p.name!.getText(historical)));
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(historical);
+  expect(publicKeys.sort()).toEqual(['dispatch', 'getSnapshot', 'queryWager', 'subscribe']);
 });
 it('[REG-M7-004] injected real-domain bootstrap has exact public cards and hides known hole identity', () => {
   const c = dealt(); const v = c.getSnapshot();
