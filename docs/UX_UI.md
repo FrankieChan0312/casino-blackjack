@@ -797,6 +797,10 @@ Unless a future UX revision explicitly adds them:
 - no unnecessary 3D engine;
 - no mobile native app.
 
+## M8 human manual feedback: visual polish
+
+The owner found functionality acceptable but the UI visually boring. The authorized presentation repair uses a restrained CSS felt/rail, top-center Dealer, horseshoe seats with lower-center local priority, light playing cards and original card backs, active/result labels and larger action controls. On mobile, current public cards/actions precede compact seats while Dealer remains visible. Available, Reserved and Pending are compact and distinct; chip amounts select inputs before explicit Set. Action guidance is expandable with disabled-reason ARIA links; secondary settings/history stay below gameplay. Insurance/follower choices retain their ownership, amounts and consequences. Motion is presentation-only, disabled under reduced motion. No sound, asset dependency or gameplay-rule changes. The [manual game-feel checklist](M8_VISUAL_CHECKLIST.md) is pending owner evaluation; automated checks do not approve visual quality or make M8 ACCEPTED.
+
 ## 36. Current implementation status
 
 M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.

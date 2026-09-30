@@ -4,7 +4,7 @@ import { isSeed, mathRandomSource, type RandomSource } from '../domain/random.js
 import type { SeatState } from '../domain/table.js';
 import type { PlayerAction } from '../domain/advancedGame.js';
 import type { SideWagerType } from '../domain/optionalGame.js';
-import { evaluateHand } from '../domain/hand.js';
+import { evaluateHand, isNaturalBlackjack } from '../domain/hand.js';
 import { CLASSIC, getProfile, type ProfileId } from '../domain/profile.js';
 import { createReplaySession, replay, ReplayError, type ReplayPackage } from '../domain/replay.js';
 import { applySessionCommand, type SessionCommand } from '../domain/sessionCommand.js';
@@ -55,7 +55,11 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       returned: entry.grossReturnUnits, status: entry.status }));
     // Explicit safe fields only. No raw state, shoe order, card IDs or lineage.
     const round = view.round ? { ...view.round,
-      dealer: { ...view.round.dealer, total: evaluateHand(state.table.game.round!.dealerCards.slice(0, view.round.dealer.visibleCards.length)).total },
+      dealer: { ...view.round.dealer, total: evaluateHand(state.table.game.round!.dealerCards.slice(0, view.round.dealer.visibleCards.length)).total,
+        status: !view.round.dealer.holeCard ? 'Hole card hidden'
+          : evaluateHand(state.table.game.round!.dealerCards).isBust ? 'Bust'
+          : isNaturalBlackjack(state.table.game.round!.dealerCards, true) ? 'Blackjack'
+          : view.round.phase === 'ROUND_COMPLETE' ? 'Dealer complete' : 'Revealed' },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
     return { profileId: state.table.profileId, seeded: session !== null,

@@ -1,5 +1,9 @@
 # Casino Blackjack - Engineering Plan
 
+## M8-T08 — Human Manual Feedback: Visual Polish / Game Feel
+
+VERIFIED, cumulative repair5/10 (prior actual2/10; visual repairs3,4,5), under the explicit human-feedback contract. Targeted22 Vitest and6 Chromium PASS; official verify.ps1 PASS/0 inspected2026-10-01 01:11:59 +08:00,66/956 Vitest,43 Chromium, all M1-M7 preservation including24 original browser tests and96 REG-M8 owners PASS. UI/CSS and reveal-gated Dealer presentation only; domain diff empty. Separate normal UI and polished portfolio/documentation publications -> final parity/clean -> STOP for independent recheck and human visual acceptance. No M8-T10. Recommended GPT Sol6.1/High; actual NOT VERIFIED/NOT VERIFIED. Scope, acceptance and stop conditions: STATE. All other task/historical ledgers and finding statuses preserved; M8 NOT ACCEPTED, deployment NOT RUN.
+
 ## Current M8 review status
 
 Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).

@@ -48,7 +48,7 @@ export function Results({ view, controller }: { view: BrowserView; controller: B
       {groups.filter((group) => group.records.length).map((group) => <section key={group.name} aria-label={group.name}><h3>{group.name}</h3>
         {group.records.map((entry, index) => <article key={index} className="result">
           <p>{entry.type === 'BACK_INSURANCE' ? 'Bet Behind Insurance' : entry.type}{'seat' in entry && ` · Seat ${entry.seat}`}{entry.handId && ` · ${handLabel(entry.handId)}`}</p>
-          <strong>{resultLabel(entry.outcome)}</strong><p>Stake: {credits(entry.stake)} · Returned: {credits(entry.returned)} · Net: {credits(entry.returned - entry.stake)}</p>
+          <strong className={`result-badge ${entry.outcome === 'CHARLIE' ? 'charlie' : ''}`} data-result={entry.outcome}>{resultLabel(entry.outcome)}</strong><p>Stake: {credits(entry.stake)} · Returned: {credits(entry.returned)} · Net: {credits(entry.returned - entry.stake)}</p>
           <p>{entry.status === 'PENDING' ? 'Pending return' : entry.status === 'REFUNDED' ? 'Refunded' : 'Settled'}</p>
         </article>)}</section>)}
     </section>}

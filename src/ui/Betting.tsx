@@ -33,7 +33,8 @@ function WagerForm({ controller, label, query, current, min, max }: {
   const reason = controller.queryWager(command);
   return <form onSubmit={(event) => { event.preventDefault(); controller.dispatch(command); }}>
     <label>{label}<input type="number" min={min} max={max} step={1} required value={amount} onChange={(event) => setAmount(event.target.value)} /></label>
-    <p>Current: {credits(current)} credits · Range: {min}–{max}</p>
+    <div className="button-row wager-presets">{[min, min === 10 ? 25 : 5, min === 10 ? 100 : 10].map(value => <button type="button" key={value} aria-label={`${label}: choose ${value} credits`} aria-pressed={amount === String(value)} onClick={() => setAmount(String(value))}>{value}</button>)}</div>
+    <p><span className="wager-chip">Current: {credits(current)} credits</span> · Range: {min}–{max}</p>
     <div className="button-row"><button disabled={!!reason}>Set {label}</button>
       <button type="button" disabled={current === 0 || !!controller.queryWager({ ...query, amount: 0 })} onClick={() => controller.dispatch({ ...query, amount: 0 })}>Cancel {label}</button></div>
     {reason && <p className="reason">{reason}</p>}

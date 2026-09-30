@@ -1,5 +1,15 @@
 # Casino Blackjack - Project State
 
+## M8-T08 — Human Manual Feedback: Visual Polish / Game Feel
+
+Entry baseline 2026-09-30 17:52:06 +08:00: main=HEAD=origin/main=e7f174f7c5c4d70e6023d195f2ffad51d71a7b34, ahead/behind 0/0, clean including untracked files. Owner reported acceptable functionality but a boring dashboard-like interface. Historical reviewed T08=1/10; batch1 actually advanced T08 to2/10 at5c9f071. Human-feedback repair3 corrected initial desktop/mobile positioning; repair4 corrected persistent desktop height; repair5 corrected the stronger full-Dealer mobile invariant. **T08 cumulative5/10 VERIFIED**; M8 ledger **0,2,3,2,2,1,1,5,3**. No new T10 and no historical ledger reset. Recommended GPT Sol6.1/High; actual client model/effort NOT VERIFIED/NOT VERIFIED.
+
+Scope: CSS table/rail, centered Dealer, seven-seat horseshoe with local lower-center priority, light playing cards and original CSS back, active/result markers, larger action hierarchy, amount-selection chips, compact distinct credits, decision panels and secondary tools; controller adds only a reveal-gated Dealer status from existing domain evaluators. No domain/rules/RNG/wager/settlement/replay/audit/policy/dependency changes. Acceptance: desktop1280x900 and mobile320x720 readable without horizontal overflow; immediate authoritative actions, secret-free DOM/ARIA, preserved keyboard/44px targets, reduced-motion parity, Charlie exact wording/results and reproducible public screenshots. Steps -> targeted semantic/layout/preservation E2E -> visual inspection -> official full verify.ps1 -> exact diff/domain guard -> normal commit/push/fetch/parity/clean. Stop for authority conflict, unknown changes, unavailable required tools, domain-rule change, unsafe publication or cumulative10 repairs.
+
+Official verify.ps1 PASS/0 inspected2026-10-01 01:11:59 +08:00: typecheck/lint/domain isolation/production build/fixture exclusion;66 Vitest files/956 tests (start01:09:41);43 Chromium/45.6s; independent M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870 plus24 Chromium/22.0s. Exact REG-M8-001..096 mapping and current secrecy PASS, accepted test assertions unchanged. Targeted5 Vitest suites/22 tests PASS/0 at01:09:01; targeted polish/portfolio6 Chromium PASS/0 before final harness. src/domain diff EMPTY. Four public screenshots regenerated; final repeated hashes in PORTFOLIO/log. No executable changes after this full harness. Same-session task-diff review completed; genuinely independent recheck NOT RUN here. Normal UI checkpoint and separate portfolio/documentation publication follow; exact branch/commit/push receipt is recorded after the UI push, with final documentation SHA/parity in delivery/Git.
+
+Human visual acceptance PENDING; independent recheck of the final combined HEAD PENDING. MEDIUM-04 and LOW-03 remain OPEN with repairs VERIFIED; prior five closures remain unchanged. M8 IMPLEMENTED / VERIFIED; M8 ACCEPTED = NO. Deployment NOT RUN.
+
 ## Current M8 review status
 
 Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).

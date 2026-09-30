@@ -18,6 +18,10 @@ LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
 Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
+## M8 human-feedback visual checkpoint
+
+CSS can improve game feel without moving rules into React: the controller continues to supply safe cards, legal actions and funded decisions. Chip presets change only form state; dispatch remains explicit. Local-seat geometry is a presentation mapping independent of ascending domain turn order. Native details reduce first-screen text while disabled buttons retain aria-describedby reasons. CSS animations reflect immediate state and never delay a command; reduced motion removes them. Semantic bounding-box tests caught real first-screen defects that passing gameplay tests did not detect. Portfolio hashes demonstrate reproducible captures, while human visual acceptance remains a separate decision. See [manual checklist](M8_VISUAL_CHECKLIST.md) and STATE/log for cumulative repair evidence.
+
 ## 1. Purpose
 
 This manual is for learning, review, and interview preparation.

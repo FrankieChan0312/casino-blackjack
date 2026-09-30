@@ -1,5 +1,11 @@
 # Casino Blackjack - Design
 
+## M8-T08 human-feedback presentation polish
+
+The authorized visual repair replaces the dashboard composition with CSS felt/rail and a seven-seat horseshoe, anchoring Dealer above a lower-center local seat regardless of seat number. Secondary seats are quieter. Desktop current cards live on the table; mobile duplicates the public current-hand presentation above secondary seats to preserve accepted primary-action priority. Completed split children remain visible with their stable labels. Controls keep authoritative enablement/commands and 44px targets; optional action guidance retains disabled-reason ARIA references. Chip buttons select input values, never place wagers automatically. Available/reserved/pending stay separate.
+
+Playing cards use text suit/rank labels, original CSS backs and no runtime assets. The controller adds reveal-gated Dealer status using existing domain evaluators; unrevealed status is always Hole card hidden. CSS entry/reveal/result/press/emphasis motion lasts150–200ms, runs after immediate state projection, and is disabled by prefers-reduced-motion. No sound, domain-rule or replay/audit changes. Settings/history remain collapsed below gameplay. Semantic/layout tests supplement unchanged accepted browser tests; portfolio capture disables motion only to stabilize image generation. Owner visual approval and the same independent reviewer's final combined-HEAD recheck remain pending.
+
 ## Implemented M8 extension (user batch contract)
 
 Two immutable profiles vary only Five-Card Charlie: CLASSIC_6D_S17_V1_1 (OFF) and CHARLIE5_6D_S17_V1_1 (ON). Selected at current M4-M6 session creation, retained across commands/rounds; historical M1-M3 stay Classic. T01 introduced identity; T02 activates precedence for a legal Hit producing exactly five total cards at <=21 and explicit CHARLIE/FIVE_CARD_CHARLIE outcome. No arbitrary rule configuration.
