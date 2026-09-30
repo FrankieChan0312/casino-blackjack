@@ -22,5 +22,18 @@ h3 { font-size: .95rem; }
 dl { display: flex; flex-wrap: wrap; gap: 24px; margin: 0; }
 dt { color: #c4d3d9; font-size: .85rem; }
 dd { margin: 4px 0 0; font-weight: 700; font-size: 1.3rem; }
+button, input, select { font: inherit; min-height: 44px; border-radius: 7px; }
+button { background: #c3dfce; color: #102820; border: 1px solid #c3dfce; padding: 10px 16px; cursor: pointer; font-weight: 600; }
+button:disabled { background: #354750; color: #c8d1d5; border-color: #60737a; cursor: default; }
+input, select { background: #10262e; color: #fff; border: 1px solid #799299; padding: 8px; max-width: 100%; }
+label { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+input[type="number"], select { width: 100%; }
+input[type="checkbox"] { width: 20px; min-height: 20px; }
+fieldset { border: 1px solid #607d84; border-radius: 8px; min-width: 0; }
+.button-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.betting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; }
+form { min-width: 0; padding-bottom: 16px; border-bottom: 1px solid #527178; }
+.reason { color: #e4ccab; font-size: .9rem; }
+.feedback { background: #43372d; border-left: 3px solid #f1cd9c; padding: 12px; }
 @media (max-width: 850px) { .seats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { main { padding: 12px; } .seats { grid-template-columns: minmax(0, 1fr); } }

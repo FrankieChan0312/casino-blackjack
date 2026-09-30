@@ -10,7 +10,7 @@ it('normal bootstrap exposes a seven-seat public session without raw state', () 
   expect(c.getSnapshot().configuration).toHaveLength(7);
   expect(c.getSnapshot().human?.available).toBe(2000);
   for (const field of ['shoe', 'computers', 'bankrolls', 'originalCards', 'deckIndex']) expect(JSON.stringify(c.getSnapshot())).not.toContain(`"${field}"`);
-  expect(Object.keys(c).sort()).toEqual(['dispatch', 'getSnapshot', 'subscribe']);
+  expect(Object.keys(c).sort()).toEqual(['dispatch', 'getSnapshot', 'queryWager', 'subscribe']);
 });
 it('injected real-domain bootstrap has exact public cards and hides known hole identity', () => {
   const c = dealt(); const v = c.getSnapshot();

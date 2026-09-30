@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M7-T04 — Setup/betting/credit/side/Bet Behind
+
+### 2026-09-30 11:05:02 +08:00 — Repair 1 VERIFIED
+
+Clean baseline 275602a623c41ebb6481400d76ca856eeb92496e; T03 push/fetch/0-0/clean PASS at 10:59:17. Scope/acceptance: local seat/spectator/sit-out/computer setup, explicitly funded computer mains, own MAIN/Pair/THREE_CARD, back target/role/amount, change/cancel/close, separate available/reserved/pending, .5 formatting and atomic concise rejections. No auto wagers, side bets behind, rules or M8 changes. Recommended GPT Sol 6.1/High, actual NOT VERIFIED/NOT VERIFIED.
+
+Added Betting.tsx and read-only getBehindWagerError: reuses immutable non-drawing command validation; discards proposed state, no RNG/external effect. Eight targeted tests PASS/0 at 11:03:16. First full harness: typecheck/domain FAIL/2 TS2339 because MAIN/BACK shared a union member; 53/848 tests/lint/build PASS. Hypothesis: distinct discriminants permit correct SIDE narrowing. Repair 1 separates MAIN and BACK type members only. Direct typecheck/domain PASS/0; final full verify.ps1 PASS/0 (test start 11:04:37), **53/848**, all required checks. Complete changed/new files inspected; diff --check/status PASS at 11:05:02. Other M1-M6 assertions unchanged. T04 VERIFIED 1/10; publication follows.
+
 ## M7-T03 — Table presentation
 
 ### 2026-09-30 10:58:19 +08:00 — VERIFIED

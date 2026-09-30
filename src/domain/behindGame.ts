@@ -338,3 +338,15 @@ export function getBehindOwnResults(state: BehindGameState) {
   const seat = controlledSeat(state);
   return optional.getOptionalWagerResults(engine(state)).filter((entry) => entry.seatNumber === seat);
 }
+export type WagerQuery = { type: 'MAIN'; seat: number; amount: number }
+  | { type: 'BACK'; seat: number; amount: number }
+  | { type: 'SIDE'; kind: optional.SideWagerType; amount: number };
+export function getBehindWagerError(state: BehindGameState, query: WagerQuery): string | undefined {
+  // Immutable, non-drawing wager handlers are the validation authority. Their
+  // proposed state is discarded; no RNG or external effect exists here.
+  const seat = controlledSeat(state) ?? 0;
+  const result = query.type === 'MAIN' ? query.amount === 0 ? cancelBehindMainWager(state, query.seat) : setBehindMainWager(state, query.seat, query.amount)
+    : query.type === 'BACK' ? query.amount === 0 ? cancelBackWager(state, query.seat) : setBackWager(state, query.seat, query.amount)
+    : query.amount === 0 ? cancelBehindSideWager(state, seat, query.kind) : setBehindSideWager(state, seat, query.kind, query.amount);
+  return result.ok ? undefined : result.error;
+}

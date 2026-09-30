@@ -102,7 +102,8 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     listeners.forEach((listener) => listener());
     return result.ok;
   }
-  return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch };
+  return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
+    queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };
 }
 export type BrowserController = ReturnType<typeof createBrowserController>;
 export type BrowserView = ReturnType<BrowserController['getSnapshot']>;
