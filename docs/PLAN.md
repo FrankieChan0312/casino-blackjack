@@ -6,7 +6,7 @@ M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplie
 
 Every M7 task recommends GPT Sol 6.1 / High; actual NOT VERIFIED / NOT VERIFIED. Each step -> targeted independent tests -> all introduced checks in verify.ps1 -> complete diff/whitespace/status -> timestamp evidence -> authorized publication. The user's full contract defines acceptance and stop conditions; scopes are shell, public controller, table, betting, hands, decisions/results, accessibility/responsive, E2E/mappings/preservation, documentation-only handoff. No accepted gameplay rule changes. T01 historical REG-M6-095 clarification is explicitly authorized and counts as no repair; other M6 assertions unchanged. Current domain isolation must compile without DOM/React ambient types and have no UI/framework imports.
 
-T01 VERIFIED; T02-T09 NOT STARTED. Repairs 1,0,0,0,0,0,0,0,0. Executed evidence in STATE and DEVELOPMENT_LOG. T01 publication follows.
+T01 VERIFIED/PUSHED 1299ece6745584681fffec4646ee02fc160a8c63; T02 VERIFIED, publication follows; T03-T09 NOT STARTED. Repairs 1,0,0,0,0,0,0,0,0. Executed evidence in STATE and DEVELOPMENT_LOG.
 
 ## Current M6 batch contract
 

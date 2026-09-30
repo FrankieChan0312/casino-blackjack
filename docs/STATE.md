@@ -2,6 +2,8 @@
 
 ## Current delivery: M7 IN PROGRESS (supersedes historical gate below)
 
+Latest checkpoint T02 VERIFIED, repairs 0/10. T01 published 1299ece6745584681fffec4646ee02fc160a8c63 at 2026-09-30 10:36:31 +08:00: commit/push/fetch PASS/0, main=origin/main, 0/0, clean. T02 baseline is that clean revision. At 10:40:36 controller targeted PASS/0 1/6; full harness test start 10:40:49 PASS/0 **51/836**, typecheck/lint/domain/build PASS. Complete diff/whitespace/status inspected 10:41:11. Added browser controller and safe read-only interaction/own-result queries; extracted existing Double/Split/Surrender checks without rule changes. React consumes public snapshots; factory injection is test-only infrastructure, not replay. T02 publication follows. T03-T09 NOT STARTED; ledgers unchanged.
+
 M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5: user explicitly stated "I accept M6." User-supplied genuinely fresh independent review reported NO FINDINGS, requirements/REG-M6-001..095/M1-M5 preservation/documentation PASS. This implementation conversation did not conduct that review. Acceptance is recorded with substantive M7-T01 work, not a metadata-only commit.
 
 Re-entry 2026-09-30 10:15:46 +08:00: main, HEAD=origin/main=681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5, 0/0, clean. Initial entry at 10:08:15 had the same baseline. Initial harness PASS/0: 47 files / 825 tests (test start 10:10:47).

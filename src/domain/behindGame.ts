@@ -4,6 +4,7 @@ import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
 import { isMainWager } from './bettingGame.js';
 import { isNaturalBlackjack } from './hand.js';
+import { getAdvancedActionError, type PlayerAction } from './advancedGame.js';
 
 export interface HumanParticipant {
   readonly participantId: 'local-human';
@@ -305,4 +306,35 @@ export function prepareNextBehindRound(state: BehindGameState): BehindResult {
   const result = run(state, optional.prepareNextOptionalRound);
   return result.ok ? { ok: true, state: { ...result.state, backWagers: [], backExposures: [], backResults: [],
     backInsurance: [], followWindow: null, followDecisions: [] } } : result;
+}
+
+export function getBehindInteraction(state: BehindGameState) {
+  const seat = controlledSeat(state);
+  const handId = state.table.game.round?.currentHandId ?? '';
+  const actions = (['HIT', 'STAND', 'DOUBLE', 'SPLIT', 'SURRENDER'] as const).map((action: PlayerAction) => {
+    const reason = state.followWindow ? 'FOLLOW_PENDING' : seat === null ? 'NOT_SEATED'
+      : state.table.decisionPhase === 'INSURANCE' ? 'INSURANCE_PENDING'
+      : getAdvancedActionError(engine(state), seat, handId, action);
+    return { action, enabled: reason === undefined, reason };
+  });
+  const mainDecision = state.table.insuranceDecisions.find((entry) => entry.seatNumber === seat && entry.choice === 'PENDING');
+  const backDecision = mainDecision ? undefined : state.backInsurance.find((entry) => entry.choice === 'PENDING');
+  const targetSeat = mainDecision ? seat : backDecision?.targetSeat;
+  const original = state.table.game.round?.players.find((entry) => entry.seatNumber === targetSeat);
+  const originalStake = mainDecision ? state.table.wagers.find((entry) => entry.seatNumber === seat)?.stakeUnits
+    : state.backWagers.find((entry) => entry.targetSeat === targetSeat)?.stakeUnits;
+  const insurance = aceOpen(state) && targetSeat != null && original && originalStake != null ? {
+    role: mainDecision ? 'MAIN' as const : 'BACK' as const, targetSeat,
+    amount: originalStake / 2, affordable: (state.human?.bankroll.available ?? 0) >= originalStake / 2,
+    evenMoney: isNaturalBlackjack(original.originalCards, true),
+  } : null;
+  const followStake = state.backExposures.find((entry) => entry.handId === state.followWindow?.handId)?.stakeUnits ?? 0;
+  return { actions, handId, configuring: state.table.phase === 'CONFIGURING', betting: state.table.phase === 'OPEN',
+    backTargets: state.table.game.table.seats.filter((entry) => qualifyingTarget(state, entry.seatNumber)).map((entry) => entry.seatNumber),
+    insurance, followAmount: followStake, followAffordable: (state.human?.bankroll.available ?? 0) >= followStake,
+    nextRound: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID' };
+}
+export function getBehindOwnResults(state: BehindGameState) {
+  const seat = controlledSeat(state);
+  return optional.getOptionalWagerResults(engine(state)).filter((entry) => entry.seatNumber === seat);
 }

@@ -179,36 +179,43 @@ function reserveAdditional(state: AdvancedGameState, hand: AdvancedHand): Advanc
   return { ...state, bankrolls: state.bankrolls.map((entry, index) => index === hand.seatNumber - 1
     ? { available: entry.available - hand.stakeUnits, reserved: entry.reserved + hand.stakeUnits } : entry) };
 }
-export function doubleAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
+export type PlayerAction = 'HIT' | 'STAND' | 'DOUBLE' | 'SPLIT' | 'SURRENDER';
+// Read-only validation shared by queries and authoritative action handlers.
+export function getAdvancedActionError(state: AdvancedGameState, seatNumber: number, handId: string,
+  action: PlayerAction): string | undefined {
   const error = humanError(state, seatNumber, handId);
+  if (error) return error;
+  const round = state.game.round!;
+  const hand = round.players.find((entry) => entry.handId === handId)!;
+  if (action === 'DOUBLE') {
+    if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || evaluateHand(hand.cards).total >= 21) return 'DOUBLE_NOT_ALLOWED';
+    return additionalFundingError(state, hand);
+  }
+  if (action === 'SPLIT') {
+    if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces) return 'SPLIT_NOT_ALLOWED';
+    const [first, second] = hand.cards;
+    const tens = ['10', 'J', 'Q', 'K'];
+    if (first.rank !== second.rank && !(tens.includes(first.rank) && tens.includes(second.rank))) return 'UNEQUAL_SPLIT_VALUE';
+    if (round.players.filter((entry) => entry.rootHandId === hand.rootHandId).length >= 4) return 'HAND_LIMIT_REACHED';
+    return additionalFundingError(state, hand);
+  }
+  if (action === 'SURRENDER' && (!round.dealerNaturalExcluded || hand.origin !== 'ORIGINAL' || hand.parentHandId !== null
+    || hand.splitAces || hand.cards.length !== 2 || hand.decisionTaken || isAdvancedNatural(hand))) return 'SURRENDER_NOT_ALLOWED';
+  return undefined;
+}
+export function doubleAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
+  const error = getAdvancedActionError(state, seatNumber, handId, 'DOUBLE');
   if (error) return { ok: false, state, error };
   const hand = state.game.round!.players.find((entry) => entry.handId === handId)!;
-  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || evaluateHand(hand.cards).total >= 21) {
-    return { ok: false, state, error: 'DOUBLE_NOT_ALLOWED' };
-  }
-  const fundingError = additionalFundingError(state, hand);
-  if (fundingError) return { ok: false, state, error: fundingError };
   const funded = replaceHand(reserveAdditional(state, hand), { ...hand, stakeUnits: hand.stakeUnits * 2 });
   return { ok: true, state: applyAction(funded, 'DOUBLE') };
 }
 export function splitAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
-  const error = humanError(state, seatNumber, handId);
+  const error = getAdvancedActionError(state, seatNumber, handId, 'SPLIT');
   if (error) return { ok: false, state, error };
   const round = state.game.round!;
   const hand = round.players.find((entry) => entry.handId === handId)!;
-  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces) {
-    return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
-  }
-  const [first, second] = hand.cards;
-  const tenValues = ['10', 'J', 'Q', 'K'];
-  if (first.rank !== second.rank && !(tenValues.includes(first.rank) && tenValues.includes(second.rank))) {
-    return { ok: false, state, error: 'UNEQUAL_SPLIT_VALUE' };
-  }
-  if (round.players.filter((entry) => entry.rootHandId === hand.rootHandId).length >= 4) {
-    return { ok: false, state, error: 'HAND_LIMIT_REACHED' };
-  }
-  const fundingError = additionalFundingError(state, hand);
-  if (fundingError) return { ok: false, state, error: fundingError };
+  const [first] = hand.cards;
   const funded = reserveAdditional(state, hand);
   const children = hand.cards.map((card, index): AdvancedHand => ({ ...hand,
     handId: `${hand.handId}.${index + 1}`, parentHandId: hand.handId, origin: 'SPLIT', cards: [card],
@@ -217,14 +224,10 @@ export function splitAdvancedHand(state: AdvancedGameState, seatNumber: number, 
     players: round.players.flatMap((entry) => entry.handId === handId ? children : [entry]) } } }) };
 }
 export function surrenderAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
-  const error = humanError(state, seatNumber, handId);
+  const error = getAdvancedActionError(state, seatNumber, handId, 'SURRENDER');
   if (error) return { ok: false, state, error };
   const round = state.game.round!;
   const hand = round.players.find((entry) => entry.handId === handId)!;
-  if (!round.dealerNaturalExcluded || hand.origin !== 'ORIGINAL' || hand.parentHandId !== null
-    || hand.splitAces || hand.cards.length !== 2 || hand.decisionTaken || isAdvancedNatural(hand)) {
-    return { ok: false, state, error: 'SURRENDER_NOT_ALLOWED' };
-  }
   return { ok: true, state: selectNextHand(replaceHand(state, { ...hand,
     decisionTaken: true, complete: true, outcome: 'SURRENDERED', outcomeReason: 'LATE_SURRENDER' })) };
 }

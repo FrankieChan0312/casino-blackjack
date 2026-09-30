@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M7-T02 — Browser controller/public boundary
+
+### 2026-09-30 10:41:11 +08:00 — VERIFIED
+
+Baseline T01 1299ece6745584681fffec4646ee02fc160a8c63 published at 10:36:31: commit/push/fetch exit 0, main=origin/main, 0/0, clean. T02 scope/acceptance: latest-state controller, safe projection, deterministic factory injection, rejection feedback, read-only legal actions reusing authoritative validation. Recommended GPT Sol 6.1/High, actual NOT VERIFIED/NOT VERIFIED. No rule changes, second HUMAN, alternate bots or M8.
+
+Controller retains closure-private domain state and publishes cached allowlisted snapshots; subscriptions never deliver raw state. Commands always use latest returned state. Explicit ADVANCE runs accepted computer/dealer policy; completed/integrity rounds finalize through authoritative settlement/VOID. Added getAdvancedActionError shared by advanced handlers, getBehindInteraction and getBehindOwnResults through the established transient adapter. Queries draw no cards/use no RNG. Tested normal/injected bootstrap, exact cards/redaction, atomic rejection, two sequential Hits, query consistency, subscription/unsubscribe. Targeted PASS/0 1/6 at 10:40:36; full verify.ps1 PASS/0 **51/836**, test start 10:40:49, typecheck/lint/tests/domain/build all PASS. Complete diff/check/status inspected. Repairs 0/10; all prior assertions unchanged apart from explicitly authorized REG-095. Normal checkpoint publication follows.
+
 ## M7-T01 — Browser toolchain and application shell
 
 ### 2026-09-30 10:28:42 +08:00 — Repair 1 verified after interruption recovery
