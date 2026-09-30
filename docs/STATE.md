@@ -10,6 +10,8 @@ Official verify.ps1 PASS/0 inspected2026-10-01 01:11:59 +08:00: typecheck/lint/d
 
 Human visual acceptance PENDING; independent recheck of the final combined HEAD PENDING. MEDIUM-04 and LOW-03 remain OPEN with repairs VERIFIED; prior five closures remain unchanged. M8 IMPLEMENTED / VERIFIED; M8 ACCEPTED = NO. Deployment NOT RUN.
 
+UI publication receipt2026-10-01 01:18:17 +08:00: branch main, commit **8769d506a6360b8a96824f939768a39e240d8593**, subject feat: polish blackjack table game feel. Commit/push origin main/fetch origin main exited0; HEAD=origin/main,0/0. Exactly7 intentional portfolio/handoff/image changes remained for the authorized second coherent documentation checkpoint; no unknown files. Runtime/test/dependency tree unchanged after full verification. Final docs/screenshots publication follows; its own SHA and final clean parity are reported in delivery/Git to avoid self-reference.
+
 ## Current M8 review status
 
 Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).

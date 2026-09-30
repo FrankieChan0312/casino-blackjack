@@ -1,6 +1,8 @@
 # Portfolio walkthrough
 
-Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples and invariants, and real Playwright Chromium checks. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.
+Casino Blackjack is a modern browser Blackjack demo with a responsive felt table, accessible keyboard controls and domain-backed actions. It demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples/invariants and Playwright E2E. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.
+
+Human manual feedback identified a visually boring dashboard. M8-T08 polish uses project-owned CSS for a table rail, horseshoe seats, local-hand priority, playing cards, chips, active/result markers and restrained reduced-motion-aware transitions. Gameplay rules remain in the domain. [Owner manual checklist](M8_VISUAL_CHECKLIST.md); visual acceptance is pending.
 
 ## Current M8 review status
 
@@ -34,17 +36,18 @@ M8 NOT ACCEPTED. Deployment NOT RUN.
 
 [Charlie result](images/charlie-result.png) and [replay/audit](images/replay-audit.png) are reproducible screenshots from `tests/browser/portfolio.spec.ts`, with fixed audit time and controlled real-domain commands. They contain public UI only; test factories are excluded from normal production builds. Screenshots are demonstration fixtures, not randomness/fairness evidence.
 
-Review repair regeneration runs the same three-image workflow. Classic and Charlie remain byte-identical because their audit/settings panels are collapsed; Replay/Audit now shows pre-round seat/occupancy correctly. Repeated generation on 2026-09-30 matched these SHA-256 values; equality proves reproducibility only. All three images were visually inspected: no private paths, hidden card state, physical card IDs or proprietary casino artwork.
+The polished screenshots replace the historical dashboard images. Portfolio screenshots disable CSS animation only for capture, use fixed audit UTC and real-domain deterministic commands; runtime motion and reduced-motion behavior are tested separately. The optional [320px mobile view](images/mobile-table.png) comes from the reduced-motion polish test. Same-session visual inspection checks public-only content and clipping; the owner judges game feel. Full-harness hashes captured2026-10-01 01:11:11 +08:00 matched all4 repeated captures at01:14:15 (targeted6 Chromium PASS/0,9.1s). Hashes prove byte reproducibility, not visual quality.
 
 | Public image | SHA-256 |
 | --- | --- |
-| Classic | `0176BC5146D8E35554886B0245334F3B73368DD2A845E7436E3176F410572394` |
-| Charlie | `5FC9E2A852C90DF27DD986748B3E8E5146A95F2A7532CBCD877324FD4598DCE7` |
-| Replay/Audit | `6B07924F1D413170282EFF8D82EB0D73367ED09B9159F9D937A2F22B35B9D892` |
+| Classic | `7CBDD12356121F02023D1A89BFC055DE9C2CA3323B7573D39F50B52EB7CB9DC5` |
+| Charlie | `453383554002E4E9CCFF95F00E1AD85A5E76997DC0CA00E092B90E8F0F0CC90B` |
+| Replay/Audit | `3D0EEC844087BE1E201F798FFF12BA4C9E551808D9CD45E63C16E23DC4CDDE51` |
+| Mobile | `3B28FF54BE05EB265C71670AEB1639411ED63F57318A2E4B8FC25A7DF462DE57` |
 
-Regenerate with `npm.cmd run test:e2e -- tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
+Regenerate with `npm.cmd run test:e2e -- tests/browser/polish.spec.ts tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
 
-Expanded current inventory: 66 Vitest files/956 tests, 38 Chromium tests, [96 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked execution status, counts, timestamps, failures and checkpoint publication evidence.
+Final visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five new semantic/layout polish checks cover desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain the actual checked counts, timestamps, failures and publication evidence.
 
 ## Honest boundaries
 

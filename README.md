@@ -1,8 +1,12 @@
 # Casino Blackjack
 
-A TypeScript Blackjack portfolio: a headless rules engine, a responsive React table, deterministic command replay and a player-safe audit trail. Built with React, Vite, Vitest and Playwright.
+A modern browser Blackjack demo: a responsive felt table, accessible keyboard controls, domain-backed actions, deterministic command replay and a player-safe audit trail. Built with TypeScript, React, Vite, Vitest and Playwright E2E.
 
 **Simulated credits only, with no redemption value.** M1-M7 are HUMAN ACCEPTED.
+
+![Classic table with a hidden dealer card](docs/images/classic-table.png)
+
+The visual polish follows human manual feedback: centered Dealer, seven seats around a restrained table rail, lower-center local hand, readable playing cards and clear game controls. Wager chips select amounts before an explicit Set command; Available, Reserved and Pending remain separate. Motion respects reduced-motion preferences; audit/settings stay below gameplay and closed by default. [Manual game-feel acceptance checklist](docs/M8_VISUAL_CHECKLIST.md). Owner visual acceptance is pending.
 
 ## Current M8 review status
 
@@ -14,8 +18,6 @@ MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
 LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
 Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
 M8 NOT ACCEPTED. Deployment NOT RUN.
-
-![Classic table with a hidden dealer card](docs/images/classic-table.png)
 
 ## Features
 

@@ -1,5 +1,9 @@
 # M8 repair batch 2 — independent recheck #2 handoff
 
+## Additional final-HEAD visual-polish recheck
+
+M8-T08 human-feedback polish follows the published batch2 replay/document repairs. Recheck the final combined published HEAD, including table composition, cards/back secrecy, local/current-hand priority, explicit wager chips, compact credits, decisions/results, secondary tools, keyboard/320px layout and reduced-motion evidence. Domain diff for polish must be empty; accepted tests, replay/audit semantics and prior repair bodies must be preserved. STATE/log provide the actual cumulative T08 count and full harness. [Owner visual checklist](M8_VISUAL_CHECKLIST.md) remains pending. MEDIUM-04/LOW-03 stay OPEN with repairs VERIFIED until this same independent reviewer decides closure; prior five closures are preserved. Do not mark M8 ACCEPTED from automated tests or screenshot inspection.
+
 ## Current M8 review status
 
 Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
