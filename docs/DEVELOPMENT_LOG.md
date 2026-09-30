@@ -1,5 +1,16 @@
 # Casino Blackjack — Development Log
 
+## M7-T09 - Documentation-only fresh-review package
+
+### 2026-09-30 12:04:03 +08:00 - Final complete harness VERIFIED
+
+Final owner-context verify.ps1 PASS/0: typecheck/lint/Vitest 56 files/870 tests (start 12:03:05)/ES2023-only domain compile/production browser build 42 modules with fixture-exclusion PASS/1 Chromium project 24 tests all PASS, zero retries. Targeted factual documentation check PASS/0: no control characters, relative links resolve, package-lock installed versions match, changed paths exclusively the eight intended documents. Complete tracked/new handoff diff inspected, including removed historical STATE context retained in DEVELOPMENT_LOG/Git. T09 repair 0/10; only factual evidence/status edits after harness, no code/test/config/dependency/runtime changes. Whitespace/status and normal commit/push/fetch/0-0/clean follow; final SHA and publication results in delivery/Git. STOP thereafter. M7 fresh independent review NOT RUN, ACCEPTED NO, M8 NOT STARTED, deployment NOT RUN.
+
+### 2026-09-30 11:59:07 +08:00 - Draft documentation inspected
+
+T08 published 076d0d2a25c7d152e43c9b6d7c547e25e7609599 at 11:51:45: commit/push/fetch PASS/0, main=origin/main, 0/0, clean. T09 entry at 11:52:22 confirmed clean baseline. Scope: README/DESIGN/PLAN/STATE/log/LAB, factual UX_UI status and new M7_REVIEW_HANDOFF only. No feature code/test/dependency/runtime changes. Consolidate current truth rather than leave superseded statuses looking current; historical failed attempts and earlier recommendations remain in log/Git. Record M6 explicit acceptance, controller/public/selector boundaries, exact dependencies/source inventory, test seam/reachability limits, UI/financial/VOID/accessibility/responsive evidence, exact mappings/preservation and findings-first fresh review requirements. Initial draft inspection found escaped command slashes rendered as control characters; corrected to PowerShell-compatible forward slash paths before first verification (not a failed implementation repair). Repair count T09 0/10. Step -> factual docs/links/inventory check -> documentation-only complete diff -> final full harness -> whitespace/status -> normal publication/parity/clean -> STOP. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. Stop conditions unchanged; no independent review/acceptance/M8/deployment.
+
+
 ## M7-T08 ? Real Chromium scenarios, exact mapping and preservation
 
 ### 2026-09-30 11:50:22 +08:00 ? VERIFIED after evidence-based repairs

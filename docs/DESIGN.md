@@ -1,4 +1,43 @@
-# Casino Blackjack — M1 Design
+# Casino Blackjack - Design
+
+## Implemented M7 browser architecture
+
+This section records the authorized M7 implementation. Historical milestone designs below retain their original scope; RULES/SPEC/UX_UI remain authoritative.
+
+```text
+Authoritative domain state/commands (src/domain)
+    -> browser controller closure
+    -> explicit redacted/public snapshot + read-only interaction model
+    -> React components
+
+React event -> controller -> domain command
+    -> latest returned immutable state -> fresh public snapshot
+```
+
+React stores only form inputs/seat selections and subscribes through useSyncExternalStore; it does not enforce Blackjack rules, keep a copy of authoritative cards or receive raw state. controller.ts owns the latest M6 BehindGameState and passes commands to matching production orchestration. Rejected commands keep the state and translate safe reasons. Commands cannot overwrite state with an old render snapshot. ADVANCE explicitly runs the existing deterministic computer/dealer logic; completed/integrity rounds are settled/voided by authoritative commands. No autoplay loop.
+
+The snapshot starts from getPublicBehindView and copies safe configuration/local funds, visible hands, public follow metadata, stake/result fields and status. Public totals use domain evaluation of player cards and only visible dealer cards. Hidden hole identity, physical IDs, future order/cut/RNG and original-card lineage objects are excluded before React. Stable public hand IDs support ordered labels A/B and A.1/A.2/B on re-split; they do not expose physical-card identities.
+
+getAdvancedActionError extracts the accepted Double/Split/Surrender validation order and is shared by handlers. Hit/Stand query uses the existing routing/terminal checks. getBehindInteraction uses the established M6-to-M5 adapter to return local action enablement/reasons, decision owner, Insurance/Even Money eligibility/amounts, follower affordability, legal back targets and advance/next availability. getBehindWagerError reuses the immutable non-drawing wager handlers and discards their proposed state. This is a read-only query with no RNG/card draw; it does not execute speculative Hit/Split/Double. Handlers still reject illegal direct calls. No accepted rule tables moved to React.
+
+Domain isolation has two independent checks: TypeScript AST imports/exports must stay domain-local, without dynamic imports/require or JSX/TSX/rendering files; tsconfig.domain.json compiles with ES2023 and empty ambient types, excluding DOM/React/Node UI globals. Browser imports domain; domain never imports browser/UI. Historical REG-M6-095 reads accepted-M6 Git objects, as explicitly authorized, while current isolation is tested separately. Other accepted regression assertions remain unchanged.
+
+### UI and lifecycle
+
+Plain React 19.3.0/React DOM 19.3.0 with Vite 8.3.1/plugin-react 6.1.1 and CSS. App composes Setup/Betting, credits, Actions, Decisions, Table and Results. Seven seats show explicit participant/sit-out/current/terminal text; local You does not depend on colour. Dealer has a semantic Hidden dealer card back before domain reveal. Form controls query authority for timing/ranges/funds and show concise reasons; MAIN/back 10-1000 credits, own-side 1-100, whole increments. Integer half-credit units format exact .5 values. Available/reserved/pending stay separate.
+
+Insurance is before peek; eligible Even Money is distinct. Follow windows show target, affected hand, existing/matching stake, ADD/NO ADD and explicit follower non-control. Split NO ADD explains/tracks first ordered child only. Main/side/Insurance/Bet Behind settle in separate groups. Integrity is interruption/VOID with actual-stake refund, never normal loss/winner. Next round preserves participant balances and shoe; status distinguishes existing continuation from actual replacement at a funded deal.
+
+Local hand/actions precede secondary seats, with a keyboard skip link, semantic buttons/labels, live status and visible focus. CSS uses restrained dark surfaces/high-contrast cards, wrapping grids (4/2/1 seat columns), min-width zero and readable text. Chromium checks desktop1280x900/tablet768x1024/mobile320x720 overflow and primary touch targets. No animation/sound; reduced-motion still works.
+
+### Deterministic browser validation boundary
+
+Production main.tsx always creates the normal random M6 session. Only build-time MODE=e2e dynamically imports tests/browser/fixtures.ts and reads a named fixture. Playwright 1.63.0 starts a local Vite e2e server; one Chromium project, one worker, zero retries. Factories retain six-deck physical inventory and use real configure/fund/deal/action/settlement logic. Controlled computer Double/Split primitives exercise follower windows that accepted Hit/Stand bots cannot naturally open. Accounted card-exhaustion injection tests real integrity/VOID handling. No second HUMAN/alternate production policy, general seed/replay or debug globals.
+
+Normal Vite production build strips the fixture branch; scripts/check-browser-build.mjs rejects known fixture factories/markers/query dispatch in emitted browser code. DOM/attributes/text/ARIA snapshots independently check a known K of spades/physical ID is absent until reveal. Forty controller/component/architecture checks plus 24 Chromium scenarios map REG-M7-001..064; exact unique UX-01..14/E2E-01..15 mapping is in M7_MAPPING. Domain tests remain the enforcement evidence and browser E2E covers wiring/interaction/render/accessibility/layout.
+
+Known limits: one local HUMAN; memory only; manual computer wagers and Continue table; Chromium-only browser matrix; no full assistive-technology audit/WCAG certification. M8, server/auth/database/network multiplayer/real money/cloud/deployment remain out of scope. M7 requires genuinely fresh review and explicit human acceptance after implementation evidence.
+
 
 ## M6 participant ownership foundation (authorized batch)
 

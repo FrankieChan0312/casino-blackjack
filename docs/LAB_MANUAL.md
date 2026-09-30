@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: M6 — Bet Behind
-Status: M1-M5 HUMAN ACCEPTED. M6 implemented and mechanically verified; fresh independent review NOT RUN, M6 ACCEPTED NO, M7 NOT STARTED. Current M6 learning notes are in section 32. Earlier learning/delivery statements retain their historical checkpoint context and are superseded by STATE for current status.
+Current milestone: M7 - Browser UX/UI and end-to-end validation
+Status: M1-M6 HUMAN ACCEPTED. M7 T01-T08 mechanically verified/pushed; T09 final documentation/full validation VERIFIED, normal publication follows. Fresh M7 review NOT RUN; ACCEPTED NO; M8 NOT STARTED. Current browser notes are section 33. Earlier learning/delivery statements are historical snapshots, superseded by STATE.
 
 ## 1. Purpose
 
@@ -1696,3 +1696,44 @@ One local HUMAN may back only computer seats, and the preserved policy is <17 HI
 The optionalGame compatible seam delays Ace resolution only when M6 asks; default historical callers remain unchanged. A preservation check initially compared M1 source directly with current and found an already accepted M2 shoe extension. The corrected check compares current original executables to accepted M5, separately comparing each historical test set with its own milestone revision. This teaches why an accepted baseline and a historical learning snapshot serve different verification purposes. T07 repair 1 records that procedure correction; T01 repair 1 records the new fixture typing fix. Failed attempts remain in DEVELOPMENT_LOG.
 
 M5 is HUMAN ACCEPTED at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after the reported fresh recheck closed LOW-01. M6 implementation/mechanical verification does not imply fresh review or acceptance: fresh review NOT RUN, M6 ACCEPTED NO, M7 NOT STARTED. User understanding is not tested or inferred by this document. Next step is findings-first review in a genuinely new Codex conversation, with no edits absent separate authorization.
+
+
+## 33. M7 browser boundary, accessibility and E2E learning
+
+### Why React does not own rules
+
+A button's disabled state can be bypassed by direct calls or stale UI. The domain therefore owns legal timing, routing, matching funding, split restrictions and settlement. React stores only form values and sends a command. The browser controller keeps the latest returned immutable domain state, projects a fresh safe snapshot and notifies subscribers. Two rapid Hits must use two successive states; browserController tests catch stale-snapshot overwrite by expecting four exact cards.
+
+Raw state contains the shoe, physical card identities, original-card lineage and dealer hole card. Public state has only visible rank/suit, safe status/amounts and stable public hand identity. Hiding raw secrets with CSS still puts them in DOM/ARIA/attributes or debugging output. The hole must be removed before data reaches React. The K-of-spades fixture verifies page content, all attributes, text and ARIA snapshot, then confirms the card appears only after authorized reveal. A card back has the accessible name Hidden dealer card without rank/suit.
+
+An action selector explains why an action is currently available, while the handler enforces that rule at dispatch. Shared getAdvancedActionError prevents two drifting rule tables. Wager queries reuse non-drawing immutable handlers and discard their proposed states; they never probe card actions or consume RNG. Direct illegal Split/Double/wager tests confirm rejection leaves cards/funds unchanged. ES2023-only domain compilation plus AST import checks prevent accidental React/window/document dependencies from silently entering the engine.
+
+### Determinism without a replay product
+
+Random retries make browser tests unreliable and can mask unreachable screens. E2E-only named factories create real production-domain states with known inventory/commands. Normal browser mode creates a normal random session; production build strips test fixtures. Double/Split follower windows use real owner-checked computer controller primitives because the accepted automatic Hit/Stand policy never initiates those actions. The fixture tests domain timing/funding, not invented UI results. It is not a user-facing seed/replay tool, and does not authorize M8.
+
+The VOID fixture moves remaining cards to accounted discard, then a real Hit reaches required-draw exhaustion. The controller invokes domain VOID and the screen shows interruption/refunds rather than Loss. This catches accidental normal-winner rendering after integrity failure.
+
+### Usable controls and browser regressions
+
+Native buttons/inputs/selects provide keyboard activation and focus order. Explicit label/id associations make Your seat and Bet Behind target unambiguous. During T08, exact label lookup failed although Chromium's role name was correct: wrapped select options enlarged the DOM label text. A targeted fix plus actual spectator flow caught the distinction between an accessible role snapshot and locator behaviour. Visible gold focus, a skip link and live status support the primary workflow; text identifies You/current/completed/results without relying on colour.
+
+Playwright presses Tab/Enter through setup, wager, deal, Hit, Stand and Continue table, checking actual focus. It measures desktop/tablet/320px document width, local priority and mobile action targets >=44x44, and inspects reduced-motion mode. Screenshot inspection complements measurements: overflow checks cannot alone establish readable hierarchy or a complete accessibility audit. No animation/sound is necessary to understand the state.
+
+### Evidence map and what tests catch
+
+| Evidence | Concrete regression |
+| --- | --- |
+| REG-M7-001 plus domain compile | UI/framework/DOM dependencies enter authoritative domain |
+| 004/010/031/044/046 | Hidden hole rank/suit/ID enters public snapshot, markup or accessibility |
+| 006/007/021/024/025 | Stale state, duplicated legality, unfunded/terminal card mutation |
+| 017/018/020 | Reserved/pending look spendable, query mutates funds, late wagers remain enabled |
+| 026..030/049/050/064 | Split order/identity/independent stakes/Aces restrictions regress |
+| 031..037/052/058..061 | Peek timing, optional choices, follower control/funding/first-child routing drift |
+| 038/057/062 | Integrity treated as loss or next round falsely replaces/replenishes |
+| 041..044 | Keyboard/focus, clipping/overflow/touch or secret accessible names break |
+| Mapping completeness | A required UX/REG/E2E owner is missing, duplicated or skipped |
+
+M7_MAPPING holds exact file/title ownership: 64 REG checks (40 Vitest +24 Chromium), 14 unique UX IDs and 15 required E2E scenario IDs. REG001..094 of M6 remain unchanged; 095 is historical accepted-M6 browser-absence evidence with separately verified current domain independence. Historical preservation runs each milestone's original suites independently.
+
+Browser E2E complements domain tests: it catches event wiring, rendered controls/results, labels/focus and CSS overflow that pure domain tests cannot observe. Domain suites exercise financial/gameplay/secrecy/integrity invariants beyond the 24 browser scenarios. Passing one layer does not replace the other, fresh independent review or human acceptance. Current evidence counts/versions/timestamps/ledgers live in STATE and DEVELOPMENT_LOG; M7 is not accepted and no deployment/M8 is implied.

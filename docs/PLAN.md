@@ -1,14 +1,28 @@
-# Casino Blackjack — Engineering Plan
+# Casino Blackjack - Engineering Plan
 
-## Current M7 authorized batch (supersedes historical contracts below)
+## M7 authorized batch and final gate
 
-M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplied fresh independent NO FINDINGS review. Execute M7-T01 through T09 sequentially with verified checkpoint commit/push origin main/fetch/0-0/clean, then STOP for genuinely fresh-session findings-first review. No automatic acceptance, M8 or deployment.
+M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplied fresh NO FINDINGS review. M7 T01-T08 VERIFIED/PUSHED; T09 documentation VERIFIED, normal publication follows; final SHA/parity/clean are recorded in delivery/Git. Each task recommends GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. User preference supersedes earlier Astra recommendations, whose historical records remain unchanged.
 
-Every M7 task recommends GPT Sol 6.1 / High; actual NOT VERIFIED / NOT VERIFIED. Each step -> targeted independent tests -> all introduced checks in verify.ps1 -> complete diff/whitespace/status -> timestamp evidence -> authorized publication. The user's full contract defines acceptance and stop conditions; scopes are shell, public controller, table, betting, hands, decisions/results, accessibility/responsive, E2E/mappings/preservation, documentation-only handoff. No accepted gameplay rule changes. T01 historical REG-M6-095 clarification is explicitly authorized and counts as no repair; other M6 assertions unchanged. Current domain isolation must compile without DOM/React ambient types and have no UI/framework imports.
+| Task | Scope and acceptance | State / commit | Repairs /10 |
+| --- | --- | --- | --- |
+| M7-T01 | Browser shell; user's task acceptance contract | VERIFIED / PUSHED 1299ece6745584681fffec4646ee02fc160a8c63 | 1 |
+| M7-T02 | Controller/public boundary; user's task acceptance contract | VERIFIED / PUSHED c4c065fa7192a9f318a3915e672bb4f52793e1a8 | 0 |
+| M7-T03 | Table/seats/status; user's task acceptance contract | VERIFIED / PUSHED 275602a623c41ebb6481400d76ca856eeb92496e | 0 |
+| M7-T04 | Betting/credits; user's task acceptance contract | VERIFIED / PUSHED 50480e705bb1768ce93f8c8b311da443ef12b640 | 1 |
+| M7-T05 | Actions/multi-hand; user's task acceptance contract | VERIFIED / PUSHED 483c395754abd50b3e65e9170311cf928c9b0c4f | 0 |
+| M7-T06 | Decisions/results/VOID; user's task acceptance contract | VERIFIED / PUSHED 903f907c114687cf8ccc58ef54274f609d698714 | 0 |
+| M7-T07 | Accessibility/responsive; user's task acceptance contract | VERIFIED / PUSHED 50fb66d3d8ad69a12047f7d5351b9a961af94345 | 1 |
+| M7-T08 | Chromium/mapping/preservation; user's task acceptance contract | VERIFIED / PUSHED 076d0d2a25c7d152e43c9b6d7c547e25e7609599 | 2 |
+| M7-T09 | Accurate docs, final full harness, documentation-only diff, fresh-session handoff | VERIFIED; PASS 56/870 +24 Chromium; final publication in delivery/Git | 0 |
 
-T01-T07 VERIFIED/PUSHED (1299ece, c4c065f, 275602a, 50480e7, 483c395, 903f907, 50fb66d); T08 VERIFIED, publication follows; T09 NOT STARTED. Repairs 1,0,0,1,0,0,1,2,0. Evidence in STATE and DEVELOPMENT_LOG.
+Every step -> targeted checks -> all introduced full harness checks with exits inspected -> complete tracked/new-file diff, whitespace and status -> real timestamped evidence -> authorized normal commit/push origin main -> fetch/0-0/clean. Full harness is typecheck/lint/Vitest/domain compile/production build/Chromium; T08 separately reruns accepted M1-M6 suites and mappings. T09 performs no feature work. A real issue exposed by documentation is a repair requiring re-verification.
 
-## Current M6 batch contract
+Scope follows SPEC/UX_UI and the user's T01-T09 contract. Domain enforces rules; React only consumes safe public snapshots/interaction data. Authorized historical REG-M6-095 boundary preserves accepted-M6 absence evidence and current domain isolation separately, with 001..094 unchanged. No accepted gameplay-rule changes, no M8/deployment/server/account/real-money/paid cloud. Stop for authority conflict, unknown overlap, unavailable validation, broader architecture requirement, destructive Git/secrets/paid resources, repair limit or mandatory review gate.
+
+After VERIFIED/COMMITTED/PUSHED T09: **STOP**. M7 fresh independent review NOT RUN, M7 ACCEPTED NO, M8 NOT STARTED, deployment NOT RUN. Exact next action: genuinely fresh session, findings-first independent review using M7_REVIEW_HANDOFF and final delivery SHA. No reviewer edits without separate authorization.
+
+## Historical M6 batch contract (superseded by accepted M6 and M7 above)
 
 M5 is HUMAN ACCEPTED at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after the user's fresh recheck reported NO FINDINGS, LOW-01 CLOSED and regression sufficiency/documentation/requirements/REG-M5-001..072/M1-M4 preservation PASS. Acceptance was recorded with substantive M6-T01 work. Historical pending M5 acceptance statements below are superseded.
 

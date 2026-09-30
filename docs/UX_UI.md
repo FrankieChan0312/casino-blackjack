@@ -5,7 +5,7 @@ Document task: UXUI-1.0
 Intended repository location: `docs/UX_UI.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Primary implementation milestone: `M7 — Browser UX/UI and E2E`  
-Status: forward UX/UI specification. It does not mean the browser UI is implemented, verified, accepted, or deployed.
+Status: UX authority. M7 browser implementation and executable mappings now exist; actual verification/delivery is recorded in STATE. Mechanical PASS is not acceptance or deployment.
 
 ## 1. Purpose
 
@@ -758,7 +758,7 @@ When M7 becomes active, Playwright or the agreed browser-test tool should cover 
 14. Classic table does not display Charlie result for a five-card hand.
 15. Integrity error is shown as interruption/void, not a player loss.
 
-These are planned scenarios until M7 is formally scoped and implemented.
+M7 now implements these scenarios with unique E2E-01..15 tags; executable ownership is in M7_MAPPING.md and executed results in STATE. The scenario requirements above are unchanged.
 
 ## 35. Non-goals for UI v1
 
@@ -780,13 +780,6 @@ Unless a future UX revision explicitly adds them:
 
 ## 36. Current implementation status
 
-At the time this document is prepared:
+M1-M6 are HUMAN ACCEPTED. M7 browser UI/controller/toolchain and real Chromium E2E are implemented; T01-T08 are VERIFIED/PUSHED. T09 documentation and final full validation are VERIFIED; exact publication is recorded in final delivery/Git. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned scenarios actually ran. This factual status does not revise any UX/gameplay requirement.
 
-- M1 implementation: not started;
-- browser UI: not implemented;
-- M7: not started;
-- Playwright/E2E: not run;
-- visual design: directional only;
-- no UX acceptance criterion has been mechanically verified.
-
-This file is a forward specification only.
+M7 fresh independent review: NOT RUN. M7 ACCEPTED: NO. M8: NOT STARTED. Deployment: NOT RUN. Refer to STATE/DEVELOPMENT_LOG and the final delivery for current counts, version, SHA/parity and exact next action.
