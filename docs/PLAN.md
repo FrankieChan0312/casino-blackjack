@@ -1,5 +1,13 @@
 # Casino Blackjack — Engineering Plan
 
+## Current M7 authorized batch (supersedes historical contracts below)
+
+M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplied fresh independent NO FINDINGS review. Execute M7-T01 through T09 sequentially with verified checkpoint commit/push origin main/fetch/0-0/clean, then STOP for genuinely fresh-session findings-first review. No automatic acceptance, M8 or deployment.
+
+Every M7 task recommends GPT Sol 6.1 / High; actual NOT VERIFIED / NOT VERIFIED. Each step -> targeted independent tests -> all introduced checks in verify.ps1 -> complete diff/whitespace/status -> timestamp evidence -> authorized publication. The user's full contract defines acceptance and stop conditions; scopes are shell, public controller, table, betting, hands, decisions/results, accessibility/responsive, E2E/mappings/preservation, documentation-only handoff. No accepted gameplay rule changes. T01 historical REG-M6-095 clarification is explicitly authorized and counts as no repair; other M6 assertions unchanged. Current domain isolation must compile without DOM/React ambient types and have no UI/framework imports.
+
+T01 VERIFIED; T02-T09 NOT STARTED. Repairs 1,0,0,0,0,0,0,0,0. Executed evidence in STATE and DEVELOPMENT_LOG. T01 publication follows.
+
 ## Current M6 batch contract
 
 M5 is HUMAN ACCEPTED at f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d after the user's fresh recheck reported NO FINDINGS, LOW-01 CLOSED and regression sufficiency/documentation/requirements/REG-M5-001..072/M1-M4 preservation PASS. Acceptance was recorded with substantive M6-T01 work. Historical pending M5 acceptance statements below are superseded.

@@ -1,5 +1,19 @@
 # Casino Blackjack — Project State
 
+## Current delivery: M7 IN PROGRESS (supersedes historical gate below)
+
+M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5: user explicitly stated "I accept M6." User-supplied genuinely fresh independent review reported NO FINDINGS, requirements/REG-M6-001..095/M1-M5 preservation/documentation PASS. This implementation conversation did not conduct that review. Acceptance is recorded with substantive M7-T01 work, not a metadata-only commit.
+
+Re-entry 2026-09-30 10:15:46 +08:00: main, HEAD=origin/main=681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5, 0/0, clean. Initial entry at 10:08:15 had the same baseline. Initial harness PASS/0: 47 files / 825 tests (test start 10:10:47).
+
+T01 initially BLOCKED before modification: REG-M6-095 required no React/browser files in the current tree, conflicting with authorized M7. No files changed before explicit user authorization. The user authorized anchoring that milestone absence assertion to accepted M6 Git objects and adding current domain isolation evidence. REG-M6-001..094 unchanged; 095 preserved; history unchanged. This is a contract clarification, not an M6 repair or M7 implementation repair. At 10:16:38 targeted historical/completeness/current-domain checks PASS/0, 2 files / 97 tests; ES2023-only, types-empty domain compilation PASS/0. Domain imports are structurally restricted to domain-local modules; the separate compile excludes browser globals and React ambient types.
+
+Every M7 task recommends GPT Sol 6.1 / High. Actual model/effort: NOT VERIFIED / NOT VERIFIED. Scope/acceptance/verification follow the explicit M7 T01-T09 contract: shell/build -> public controller -> table -> betting -> hands -> decisions/results -> accessibility/responsive -> Chromium E2E/mappings/preservation -> documentation-only handoff. Non-goals: M8, server, accounts, real money, cloud, deployment, alternate bot policy, second HUMAN. Stop on authority conflicts, unknown overlap, unavailable tooling, secrets/paid resources/destructive Git, repair limit or final fresh-review gate.
+
+M7 repairs T01-T09: **1,0,0,0,0,0,0,0,0** (each /10). M6 ledger unchanged: **1,0,0,0,0,0,1,0**. M1-M5 ledgers below preserved. T01 VERIFIED; T02-T09 NOT STARTED. Browser E2E NOT RUN. M7 fresh review NOT RUN; M7 ACCEPTED NO; M8 NOT STARTED; deployment NOT RUN.
+
+T01 repair 1: first harness failed CSS import typing (exit 2) and five isolated historical harness assertions. Added vite/client types and project-aware required checks without changing historical tests. Conversation interruption did not add a repair; recovery inspected actual files at 10:27:42 before continuing. Targeted at 10:27:56 PASS/0, 4/105; direct typecheck/domain/build PASS/0. Full harness test start 10:28:28 PASS/0, **50 files / 830 tests**, all five required checks. Complete diff/whitespace inspection PASS at 10:28:42; production domain and historical harness tests unchanged. React/React DOM/types 19.3.0; plugin-react 6.1.1; Vite preserved 8.3.1. Checkpoint publication follows; own SHA cannot self-embed and is recorded in the next substantive checkpoint/delivery.
+
 ## Current delivery: M6 fresh-session review gate
 
 M1-M5 are HUMAN ACCEPTED. M6 T01-T07 are IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. T08 is the VERIFIED documentation-only review package; final validation/publication evidence is recorded below and in the delivery report. M6 fresh independent review: **NOT RUN**. M6 ACCEPTED: **NO**. M7: **NOT STARTED**. Deployment: **NOT RUN**.

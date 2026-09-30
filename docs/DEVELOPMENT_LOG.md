@@ -1,5 +1,25 @@
 # Casino Blackjack — Development Log
 
+## M7-T01 — Browser toolchain and application shell
+
+### 2026-09-30 10:28:42 +08:00 — Repair 1 verified after interruption recovery
+
+Dependency install initially BLOCKED by sandbox registry EACCES; authorized owner-context retry PASS/0. Exact additions React/react-dom/@types/react/@types/react-dom 19.3.0, @vitejs/plugin-react 6.1.1; Vite remains 8.3.1. No prerequisite package upgraded, npm audit reported zero vulnerabilities.
+
+First full validation at 10:22:14 failed CSS import types (typecheck exit 2) and five existing harness fixture tests; build PASS. Hypothesis: Vite ambient types cover CSS; minimal fixture lacks project package.json and must preserve old three-check mechanics, while full project adds required domain/build. Repair 1 added vite/client, context-based checks without opt-outs, and three independent added-check/exit tests. Existing verifyHarness assertions unchanged. Interrupted after edits started; recovery at 10:27:42 read actual tree, confirmed all edits present, no blind replay/no additional repair.
+
+Targeted npm.cmd test -- tests/verifyHarness.test.ts tests/unit/browserHarness.test.ts tests/unit/domainBoundary.test.ts tests/integration/behindRegression.test.ts PASS/0, 4/105, test start 10:27:56. npm.cmd run typecheck, typecheck:domain, build each PASS/0. Final full verify.ps1 PASS/0, test start 10:28:28, **50/830**; typecheck/lint/tests/domain compile/production build PASS. Complete tracked and untracked T01 diff inspected; git diff --check PASS/0; src/domain and historical harness test diff empty. M7-T01 VERIFIED, repair 1/10. No gameplay changes. Normal checkpoint commit/push/fetch follows; own SHA in next substantive evidence/Git/delivery, no metadata-only commit.
+
+### 2026-09-30 10:15:46 +08:00 — Re-entry and authorized boundary clarification
+
+Initial entry 10:08:15 and re-entry: main, HEAD=origin/main=681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5, 0/0, clean. Per-command safe.directory is restricted to this repository; no global setting changed. Initial full harness PASS/0, 47/825, test start 10:10:47. T01 BLOCKED before any modification because REG-M6-095 required current-tree browser/React absence. User explicitly authorized historical anchoring plus current domain isolation; this is no repair. M7 repairs all 0/10; M6 remains 1,0,0,0,0,0,1,0. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED.
+
+M6 HUMAN ACCEPTED at the entry SHA: user "I accept M6." User-supplied genuinely fresh independent review NO FINDINGS, requirements/REG-M6/preservation/documentation PASS. No new review claimed here. Recorded together with substantive T01 changes.
+
+At 10:16:38 npm.cmd test -- tests/integration/behindRegression.test.ts tests/unit/domainBoundary.test.ts PASS/0, 2/97 including exact 001..095 uniqueness/completeness. node node_modules/typescript/bin/tsc -p tsconfig.domain.json PASS/0. REG-095 reads accepted-M6 Git objects; only its imports/assertion changed, no other M6 assertions or history. Current TypeScript AST dependency check permits only domain-local modules and no rendering files; ES2023-only compile excludes DOM/React ambient types. Node v24.19.0 / npm 11.17.0 confirmed at 10:17:18.
+
+T01 scope: minimal React entry/shell, simulation-credit disclosure, Vite build/scripts, TSX typing/lint adaptation and full harness build/domain compile. No gameplay UI, rule changes, M8 or deployment. Steps -> targeted boundary checks -> shell build/full existing tests -> complete diff/check/status -> checkpoint publication. Stop per user batch contract; T09 ends before fresh review. Required browser E2E NOT RUN at T01.
+
 ## M6-T08 — Documentation and fresh-session review package
 
 ### 2026-09-30 00:12:15 +08:00 — START / BASELINE

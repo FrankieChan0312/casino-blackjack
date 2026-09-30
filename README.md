@@ -1,5 +1,7 @@
 # Casino Blackjack
 
+**Current M7 checkpoint:** M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5. M7-T01 adds a verified React/Vite browser shell; gameplay UI is not connected yet. Historical delivery descriptions below are superseded by this checkpoint and STATE. Run `npm ci`, then `npm run dev` for the local shell; `npm run build` creates the production browser bundle. Full local verification: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1`. No deployment or browser E2E is claimed.
+
 A headless TypeScript Blackjack portfolio project with deterministic tests, explicit state transitions and reproducible execution evidence.
 
 **Simulation credits only: no real money, purchases, deposits, withdrawals, transfers or redemption.** M1-M5 are HUMAN ACCEPTED. M5 was accepted at `f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d` after the fresh recheck reported NO FINDINGS, LOW-01 CLOSED and requirements/regression/documentation/prior-preservation PASS. M6 T01-T08 form the mechanically verified Bet Behind implementation/review package. **M6 fresh independent review is NOT RUN; M6 is NOT ACCEPTED.** See [STATE](docs/STATE.md) for exact verification, checkpoint/publication evidence and the fresh-session handoff.

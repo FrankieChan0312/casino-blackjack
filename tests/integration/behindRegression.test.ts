@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import { readFileSync, readdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import * as g from '../../src/domain/behindGame.js';
 import * as c from '../../src/domain/behindController.js';
 import { getPublicBehindView } from '../../src/domain/behindPublicView.js';
@@ -164,7 +164,16 @@ reg(91, 'duplicate VOID no second effect', () => { const s = ok(g.voidBehindRoun
 reg(92, 'VOID and normal settlement exclude each other', () => { const v = ok(g.voidBehindRound(faultDouble('ADD'))); expect(g.settleBehindWagers(v).state).toBe(v); const p = paid(['10', '9', '10', '8']); expect(g.voidBehindRound(p).state).toBe(p); });
 reg(93, 'multiple targets settle independently', () => { let s = ok(g.setBackWager(open(), 1, 200)); s = ok(g.setBackWager(s, 2, 50)); s = ok(g.closeBehindBetting(s, 'unused', noRandom)); s = ok(g.settleBehindWagers(finish(s))); expect(s.backResults.map((e) => [e.targetSeat, e.stakeUnits, e.grossReturnUnits])).toEqual([[1, 200, 400], [2, 50, 100]]); expect(s.human!.bankroll.available).toBe(2250); });
 reg(94, 'public projection secrecy and no private controls', () => { const s = ace(); const v = getPublicBehindView(s); expect(v.round!.dealer.visibleCards).toHaveLength(1); const json = JSON.stringify(v); for (const secret of ['computers', 'bankrolls', 'cutPosition', 'deckIndex', 'originalCards', 'ownerId']) expect(json).not.toContain(`"${secret}"`); });
-reg(95, 'M7 browser implementation absent', () => { const files = readdirSync('src', { recursive: true }).map(String); expect(files.some((file) => /\.(tsx|jsx|html)$/.test(file))).toBe(false); const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as { dependencies?: object; devDependencies: object }; expect({ ...pkg.dependencies, ...pkg.devDependencies }).not.toHaveProperty('react'); expect(files.every((file) => !/app|pages|components/.test(file))).toBe(true); });
+reg(95, 'M7 browser implementation absent at accepted M6 baseline', () => {
+  const acceptedM6 = '681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5';
+  const git = (...args: string[]) => execFileSync('git', ['-c', `safe.directory=${process.cwd().replaceAll('\\', '/')}`, ...args], { encoding: 'utf8' });
+  const files = git('ls-tree', '-r', '--name-only', acceptedM6, '--', 'src').trim().split('\n');
+  expect(files.some((file) => /\.(tsx|jsx|html)$/.test(file))).toBe(false);
+  expect(files.every((file) => !/app|pages|components/.test(file))).toBe(true);
+  const pkg = JSON.parse(git('show', `${acceptedM6}:package.json`)) as { dependencies?: object; devDependencies: object };
+  expect({ ...pkg.dependencies, ...pkg.devDependencies }).not.toHaveProperty('react');
+  expect(git('show', `${acceptedM6}:docs/STATE.md`)).toContain('M7: **NOT STARTED**');
+});
 
 it('REG-M6 completeness: exactly 001..095, no missing or duplicate IDs', () => {
   expect(registered).toHaveLength(95);

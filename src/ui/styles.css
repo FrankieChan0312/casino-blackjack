@@ -1,0 +1,9 @@
+:root { font-family: Inter, "Segoe UI", sans-serif; color: #eff5f7; background: #101c24; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1280px; margin: auto; padding: 24px; }
+h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 8px 0; }
+h2 { font-size: 1.2rem; }
+p { line-height: 1.5; }
+.eyebrow { color: #bdd3cf; font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; }
+.panel { background: #1c333b; border: 1px solid #527178; border-radius: 16px; padding: 20px; margin-top: 20px; }
