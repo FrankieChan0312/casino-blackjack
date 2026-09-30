@@ -1,5 +1,5 @@
 import { expect, it, vi } from 'vitest';
-import { profiles, CLASSIC, CHARLIE, getProfile } from '../../src/domain/profile.js';
+import { profiles, CLASSIC, CHARLIE, getProfile, isProfileId } from '../../src/domain/profile.js';
 import { createSeededRandom, mathRandomSource, shuffleCards } from '../../src/domain/random.js';
 import { createShoe, selectCutPosition } from '../../src/domain/shoe.js';
 import { createSixDeckInventory } from '../../src/domain/card.js';
@@ -12,6 +12,13 @@ it('[REG-M8-001] two immutable narrow profiles identify Classic OFF and Charlie 
   expect(Object.isFrozen(profiles)).toBe(true);
   expect(Object.isFrozen(profiles[CHARLIE])).toBe(true);
   expect(() => getProfile('unknown' as typeof CLASSIC)).toThrow('Unknown');
+  expect(isProfileId(CLASSIC)).toBe(true);
+  expect(isProfileId(CHARLIE)).toBe(true);
+  for (const value of [[CLASSIC], {}, 1, true, false, null, new String(CLASSIC),
+    { toString: () => CLASSIC }, 'UNKNOWN', undefined]) {
+    expect(isProfileId(value)).toBe(false);
+    expect(() => getProfile(value)).toThrow('Unknown');
+  }
 });
 it('[REG-M8-002] default Classic and explicit Classic create identical sessions', () => {
   expect(createBehindGame('s', createSeededRandom(7))).toEqual(createBehindGame('s', createSeededRandom(7), true, CLASSIC));

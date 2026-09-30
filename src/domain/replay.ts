@@ -1,6 +1,6 @@
 import { createBehindGame, type BehindGameState } from './behindGame.js';
 import { getPublicBehindView } from './behindPublicView.js';
-import { CLASSIC, getProfile, type ProfileId } from './profile.js';
+import { CLASSIC, isProfileId, type ProfileId } from './profile.js';
 import { createSeededRandom, isSeed, SEEDED_ALGORITHM } from './random.js';
 import { applySessionCommand, type SessionCommand } from './sessionCommand.js';
 import { createAuditTrail, type Clock } from './audit.js';
@@ -63,8 +63,9 @@ function configuration(value: unknown): ReplayConfiguration {
   keys(c, ['profileId','seed','randomAlgorithm','initialCreditUnits','withHuman','demoFaults']);
   if (!isSeed(c.seed) || c.randomAlgorithm !== SEEDED_ALGORITHM || c.initialCreditUnits !== 2000
     || typeof c.withHuman !== 'boolean' || typeof c.demoFaults !== 'boolean') throw new ReplayError('Invalid configuration');
-  try { getProfile(c.profileId as ProfileId); } catch { throw new ReplayError('Invalid profile'); }
-  return { ...c } as unknown as ReplayConfiguration;
+  if (!isProfileId(c.profileId)) throw new ReplayError('Invalid profile');
+  return { profileId: c.profileId, seed: c.seed, randomAlgorithm: c.randomAlgorithm,
+    initialCreditUnits: c.initialCreditUnits, withHuman: c.withHuman, demoFaults: c.demoFaults };
 }
 export function parseReplay(value: unknown): ReplayPackage {
   let decoded = value;

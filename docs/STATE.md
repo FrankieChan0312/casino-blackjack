@@ -1,6 +1,12 @@
 # Casino Blackjack - Project State
 
-## Current delivery: M8 VERIFIED; final fresh-review gate
+## Current delivery: M8 review repair batch 1 in progress
+
+Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found 0 BLOCKER, 0 HIGH, 3 MEDIUM and 3 LOW findings. All remain OPEN pending the independent reviewer's recheck. M8 ACCEPTED NO; deployment NOT RUN. The implementation evidence below is the historical pre-review snapshot, superseded by this repair record.
+
+Authorized baseline 2026-09-30 14:34:10 +08:00: main=HEAD=origin/main=eb85032604b03031b5b934818fda773ea9aae666, 0/0, clean. Recommended GPT Sol 6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED. Four coherent checkpoints: T03 strict profile decoding; T04 actual action observation/cascade refund audit with T07 REG-092; T05 readable configuration/Charlie copy with T08 README/screenshots; T09 current documentation/recheck handoff. Scope is the six findings only. Required checks: affected suites, exact mappings, full verify.ps1, diff/check/status, normal commit/push/fetch/parity/clean. Stop on authority conflict, unknown overlap, unavailable checks, unsafe publication or repair cap. No gameplay/RNG/digest/policy/persistence/network/deployment changes.
+
+Current M8 ledger: **0,2,2,1,1,1,0,1,1**. T03 review repair 2 VERIFIED at 2026-09-30 14:38:57 +08:00: targeted replay/profile 2 files/25 tests and full verify.ps1 PASS/0, 66/951 Vitest, 38 Chromium, all accepted M1-M7 preservation. Strict string guard and normalized configuration reject the reviewer's array package before handlers. Complete task diff and diff --check PASS; normal publication follows. M1-M7 ledgers remain unchanged. Findings MEDIUM-01..03 and LOW-01..03 are not CLOSED by implementation verification.
 
 M1-M7 are HUMAN ACCEPTED. M7 was explicitly accepted by the user ("I accept M7.") at **da6f068ffd27713848ed48f023c17ed388b8b44e**. User-supplied genuinely fresh review reported no BLOCKER/HIGH/MEDIUM/LOW findings, review/harness/56 files-870 tests/24 Chromium/UX-01..14/REG-M7-001..064/E2E-01..15/preservation/documentation PASS. This implementation conversation did not perform that independent review. Acceptance was recorded with substantive M8-T01 work.
 

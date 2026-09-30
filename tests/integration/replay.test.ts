@@ -76,11 +76,20 @@ it('[REG-M8-035] unsupported replay version is explicitly rejected', () => {
   const p = finishSession(startSession()); expect(() => replay({ ...p, replayVersion: 2 })).toThrow('Unsupported replay version');
 });
 it('[REG-M8-036] malformed JSON, missing schema, unsafe snapshot keys and invalid seed reject', () => {
-  const p = finishSession(startSession());
+  const s = startSession(); const p = finishSession(s);
   for (const value of ['{', null, [], { ...p, state: {} }, { ...p, commands: [] },
     { ...p, configuration: { ...p.configuration, seed: -1 } }, { ...p, configuration: { ...p.configuration, randomAlgorithm: 'unknown' } }]) {
     expect(() => replay(value)).toThrow();
   }
+  for (const profileId of [[CLASSIC], {}, 1, true, false, null, new String(CLASSIC),
+    { toString: () => CLASSIC }, 'UNKNOWN']) {
+    const malformed = { ...p, configuration: { ...p.configuration, profileId } };
+    expect(() => parseReplay(malformed)).toThrow('Invalid profile');
+    expect(() => replay(malformed)).toThrow('Invalid profile');
+  }
+  const reviewerPackage = { ...p, configuration: { ...p.configuration, profileId: [CLASSIC] },
+    outcomeDigest: outcomeDigest(s.getOutcomes().map(o => ({ ...o, profileId: [CLASSIC] }))) };
+  expect(() => replay(JSON.stringify(reviewerPackage))).toThrow('Invalid profile');
 });
 it('[REG-M8-037] unknown command rejects at exact sequence', () => {
   const p = finishSession(startSession());
