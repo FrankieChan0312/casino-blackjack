@@ -10,8 +10,8 @@ M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending s
 | M8-T02 | Exact R16 Charlie precedence, split/follower/VOID; Classic preservation | VERIFIED / PUSHED 70e0e977e2448fd1a7a402797bcdce2a0365465e | 2 |
 | M8-T03 | Strict real-command seeded replay/version/digest; terminal export | VERIFIED / PUSHED 13068815bb88c44e6088d107c1488796fa109add | 1 |
 | M8-T04 | Immutable attributable sequence/UTC events; public secrecy | VERIFIED / PUSHED 1e57736780cf5146581210759a642803fcafa5dd | 1 |
-| M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | VERIFIED; publication follows | 1 |
-| M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | NOT STARTED | 0 |
+| M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | VERIFIED / PUSHED ecf9dcb961e15378145682517401002cffaaf5d7 | 1 |
+| M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | VERIFIED; publication follows | 1 |
 | M8-T07 | Exact unique REG-M8 map; independent M1-M7 preservation | NOT STARTED | 0 |
 | M8-T08 | Accurate concise portfolio README/diagram/demo | NOT STARTED | 0 |
 | M8-T09 | Final documentation/full harness/fresh-session handoff | NOT STARTED | 0 |
