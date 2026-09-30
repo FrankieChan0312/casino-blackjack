@@ -50,6 +50,8 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
     return { configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),
+      trackedBack: state.backExposures.map((entry) => ({ seat: entry.targetSeat, handId: entry.handId, amount: entry.stakeUnits })),
+      lastFollow: state.followDecisions.length ? { kind: state.followDecisions.at(-1)!.kind, choice: state.followDecisions.at(-1)!.choice } : null,
       mainWagers: state.table.wagers.map((entry) => ({ seat: entry.seatNumber, amount: entry.stakeUnits })),
       sideWagers: state.table.sideWagers.map((entry) => ({ type: entry.type, amount: entry.stakeUnits })),
       follow: view.follow ? { kind: view.follow.kind, targetSeat: view.follow.targetSeat, handId: view.follow.handId } : null,

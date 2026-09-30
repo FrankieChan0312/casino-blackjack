@@ -4,6 +4,7 @@ import { Table } from './Table.js';
 import { credits, roundStatus } from './presentation.js';
 import { Setup, Betting } from './Betting.js';
 import { Actions } from './Actions.js';
+import { Decisions, Results } from './Decisions.js';
 
 export function App({ controller }: { controller: BrowserController }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
@@ -20,5 +21,7 @@ export function App({ controller }: { controller: BrowserController }) {
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div></dl></section>
     <Table view={view} />
     <Actions view={view} controller={controller} />
+    <Decisions view={view} controller={controller} />
+    <Results view={view} controller={controller} />
   </main>;
 }

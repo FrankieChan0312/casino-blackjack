@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M7-T06 — Decisions/results/VOID/next round
+
+### 2026-09-30 11:14:24 +08:00 — VERIFIED
+
+Baseline 483c395754abd50b3e65e9170311cf928c9b0c4f, T05 publication 11:10:23 push/fetch/0-0/clean PASS. Scope/acceptance: dedicated Ace choices before peek, distinct funded Insurance and eligible unfunded Even Money, follower own financial choices without card control, real controlled Double/Split windows, first-child NO ADD, independent main/side/Insurance/back results, actual integrity VOID/refund and explicit next-round persistent-shoe transition. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. No second HUMAN/alternate computer policy, no Charlie/replay/deployment.
+
+Added Decisions/Results; controller projects safe tracked back leaf/amount and last follow kind/choice. Ten targeted tests PASS/0 11:13:49, including genuine required-draw exhaustion with accounted discarded cards and refund; no fake UI result or normal loss. Controlled advanced fixtures invoke production behindController as computer owner; normal automation unchanged. Full verify.ps1 PASS/0 **55/868**, test start 11:14:01, typecheck/lint/domain/build PASS. Whole diff/added files and whitespace/status inspected 11:14:24. Repairs 0/10. Publication follows; full real Chromium interaction comes next.
+
 ## M7-T05 — Local actions/multi-hand
 
 ### 2026-09-30 11:09:33 +08:00 — VERIFIED
