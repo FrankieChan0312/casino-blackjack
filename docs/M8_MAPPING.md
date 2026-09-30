@@ -4,7 +4,7 @@ REG-M8-001..091: 78 Vitest requirements and 13 real Chromium scenarios. Every ID
 
 Profiles/RNG 001..007; Charlie 008..024; replay 025..042; audit 043..059; browser controller 060..066; seeded invariants 067..073; contracts 074..076; harness failure propagation 077..078; browser UX/secrecy/keyboard/mobile 079..091.
 
-Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. Portfolio validation is extended at T08 without manufacturing new duplicate REG owners.
+Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. T08 adds separate portfolio links/command/privacy tests and reproducible public screenshot generation without manufacturing duplicate REG owners. Current total: 66 Vitest files/951 tests and 38 Chromium (including 24 accepted M7, 13 M8, 1 portfolio scenario). Final review is a separate genuinely fresh-session gate in M8_REVIEW_HANDOFF.md.
 
 | ID | Executable file | Exact test title |
 | --- | --- | --- |

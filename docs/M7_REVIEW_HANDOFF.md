@@ -1,3 +1,5 @@
+> Historical M7 handoff snapshot: M7 was subsequently HUMAN ACCEPTED at da6f068ffd27713848ed48f023c17ed388b8b44e by explicit user acceptance. The pending statuses below are preserved historical evidence. Current M8 review uses [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md).
+
 # M7 fresh-session reviewer handoff
 
 Review is **NOT RUN**. M7 is **NOT ACCEPTED**. M8 is **NOT STARTED**. Deployment is **NOT RUN**. This document supplies implementation evidence; it does not supply independent review findings.

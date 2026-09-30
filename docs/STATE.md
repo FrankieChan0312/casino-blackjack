@@ -1,48 +1,35 @@
 # Casino Blackjack - Project State
 
-## Current M8 batch (supersedes historical delivery below)
+## Current delivery: M8 VERIFIED; final fresh-review gate
 
-M7 HUMAN ACCEPTED at da6f068ffd27713848ed48f023c17ed388b8b44e: user explicitly stated "I accept M7." User-supplied genuinely fresh review reported no findings at any severity and review/harness/mappings/preservation/documentation PASS. This conversation did not perform that review.
+M1-M7 are HUMAN ACCEPTED. M7 was explicitly accepted by the user ("I accept M7.") at **da6f068ffd27713848ed48f023c17ed388b8b44e**. User-supplied genuinely fresh review reported no BLOCKER/HIGH/MEDIUM/LOW findings, review/harness/56 files-870 tests/24 Chromium/UX-01..14/REG-M7-001..064/E2E-01..15/preservation/documentation PASS. This implementation conversation did not perform that independent review. Acceptance was recorded with substantive M8-T01 work.
 
-Entry 2026-09-30 12:30:42 +08:00: main, HEAD=origin/main=accepted M7, 0/0, clean. Initial sandbox ownership read failed; owner-context retry PASS/0, no Git config change. M8-T01 VERIFIED / PUSHED 725855d36123122bda3280e4adc5c7aec9aa7940 (main, push/fetch/parity/clean PASS); T02 VERIFIED, repair 1/10 (58/892 Vitest, 24 Chromium, full harness PASS/0); T02 published 70e0e977e2448fd1a7a402797bcdce2a0365465e, push/fetch/0-0/clean PASS; whitespace repair 2 correction in T03. T03 VERIFIED, repair 1/10 (59/910 Vitest, 24 Chromium, full harness PASS/0); T03 published 13068815bb88c44e6088d107c1488796fa109add (main, push/fetch/0-0/clean PASS). T04 VERIFIED, repair 1/10 (60/927 Vitest, 24 Chromium, full harness PASS/0); T04 published 1e57736780cf5146581210759a642803fcafa5dd (main, push/fetch/0-0/clean PASS). T05 VERIFIED, repair 1/10 (61/934 Vitest, 37 Chromium, full harness PASS/0); T05 published ecf9dcb961e15378145682517401002cffaaf5d7 (main, push/fetch/0-0/clean PASS). T06 VERIFIED, repair 1/10 (62/941 Vitest, 37 Chromium, 256-seed invariants PASS/0); T06 published adc289ce86a9dcc14497ec4547c01efdd01aaf8b (13:10:53, main/push/fetch/0-0/clean PASS). T07 VERIFIED, repair 0/10 (65/949 Vitest, 37 Chromium, independent M1-M7 preservation PASS); T07 published c1262d469c93f06cddd272781ebcb877e9090e6e (13:18:29, main/push/fetch/0-0/clean PASS). T08 VERIFIED, repair 1/10 (66/951 Vitest, 38 Chromium, all preservation PASS; three reproducible public screenshots and portfolio docs). T09 NOT STARTED. M8 fresh review NOT RUN; ACCEPTED NO; deployment NOT RUN.
+M8-T01..T08 are VERIFIED / COMMITTED / PUSHED. M8-T09 VERIFIED after the final complete harness; normal checkpoint publication follows, with exact SHA/parity/clean recorded in delivery/Git. **M8 fresh independent review NOT RUN; M8 ACCEPTED NO; deployment NOT RUN.** Stop after verified T09 publication and use [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) in a genuinely fresh session. Verification is not acceptance.
 
-Recommended every M8 task GPT Sol 6.1 / High; actual model and reasoning/effort NOT VERIFIED / NOT VERIFIED. Repair ledger T01-T09 0,2,1,1,1,1,0,1,0 (each /10); historical ledgers below unchanged. T01 profiles/uint32 source/vectors/shuffle/cut/secrecy tests PASS 7/7 and typecheck PASS/0; full harness evidence and publication in DEVELOPMENT_LOG. Charlie gameplay not activated until T02.
+Repository: casino-blackjack; remote https://github.com/FrankieChan0312/casino-blackjack.git; authorized branch main. Entry 2026-09-30 12:30:42 +08:00: HEAD=origin/main=accepted M7, 0/0, clean. Initial sandbox ownership read failed; owner-context retry passed without changing Git config. T09 entry **2026-09-30 13:56:48 +08:00**: main, HEAD=origin/main=49025a05dcd81eabf6a94fdd5e8859b51ec178d6, 0/0, clean. Final T09 SHA cannot embed itself in its own commit; exact final SHA/push/fetch/parity/clean are recorded in delivery and independently readable from Git.
 
-## Current delivery: M7 VERIFIED - fresh-session review gate
+Recommended every M8 task: **GPT Sol 6.1 / High**. Actual model: **NOT VERIFIED**. Actual reasoning/effort: **NOT VERIFIED**. Historical Astra recommendations are retained in the development log/learning history; no recommendation is validation evidence.
 
-M1-M6 HUMAN ACCEPTED. M7-T01..T08 are VERIFIED / COMMITTED / PUSHED. T09 is VERIFIED (documentation only); normal checkpoint publication follows, with exact SHA/parity/clean recorded in final delivery and independently readable from Git. M7 fresh independent review **NOT RUN**, M7 ACCEPTED **NO**, M8 **NOT STARTED**, deployment **NOT RUN**. T09 must stop after verified publication for a genuinely fresh session.
+## M8 checkpoints
 
-Repository: C:\Users\user\Documents\GitHub\casino-blackjack. Remote: https://github.com/FrankieChan0312/casino-blackjack.git. Branch main. T09 baseline at 2026-09-30 11:52:22 +08:00: HEAD=origin/main=076d0d2a25c7d152e43c9b6d7c547e25e7609599, 0/0, clean (T08 publication at 11:51:45).
+Every published checkpoint below had checked commit/push/fetch exits 0, main=origin/main, ahead/behind 0/0 and clean status. Times are 2026-09-30 +08:00. Per-task full harness counts are actual executed evidence.
 
-Recommended each M7 task: GPT Sol 6.1 / High. Actual model/reasoning: **NOT VERIFIED / NOT VERIFIED**. Runtime model labels were not independently confirmed; recommendations are not evidence.
-
-## M6 acceptance and T01 recovery
-
-User explicitly stated **"I accept M6."** at accepted revision 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5. User-supplied genuinely fresh independent review reported NO FINDINGS, M6 requirements/REG-M6-001..095/M1-M5 preservation/documentation PASS. This conversation did not conduct that independent review. Acceptance was recorded with substantive T01 browser work, not a metadata-only commit.
-
-Initial clean accepted-M6 entry 2026-09-30 10:08:15; re-entry 10:15:46 confirmed main=origin, 0/0, clean. T01 initially BLOCKED before modification: REG-M6-095 current-tree React/browser absence conflicted with authorized M7. No code changed before the user's explicit clarification. REG-095 now checks accepted-M6 Git objects for no React/browser TSX/JSX and M7 NOT STARTED; history is immutable. REG001..094 unchanged and exact 95-ID completeness retained. Current domain independence is separately compiled/tested. Clarification was not an M6 repair or M7 implementation repair.
-
-T01 repair 1 fixed Vite CSS typings and project-aware full verification while preserving isolated historical three-check harness tests. Interruption occurred after edits; recovery at 10:27:42 inspected actual files before continuing, no blind replay and no extra repair. Every real-project required check remains mandatory and tested for failure propagation.
-
-## Published checkpoints
-
-All T01-T08 commits/pushes/fetches exited 0; each checkpoint was main=origin/main, 0/0, clean. Times on 2026-09-30 +08:00. Full counts are the executed checks at that checkpoint, not an acceptance claim.
-
-| Task | Scope | Commit | Repairs | Full Vitest files/tests (+Chromium) | Published |
+| Task | Scope | Commit | Repairs /10 | Vitest files/tests; Chromium | Publication |
 | --- | --- | --- | --- | --- | --- |
-| M7-T01 | Browser shell | 1299ece6745584681fffec4646ee02fc160a8c63 | 1/10 | 50/830 | 10:36:31 |
-| M7-T02 | Controller/public boundary | c4c065fa7192a9f318a3915e672bb4f52793e1a8 | 0/10 | 51/836 | 10:49:06 |
-| M7-T03 | Table/seats/status | 275602a623c41ebb6481400d76ca856eeb92496e | 0/10 | 52/840 | 10:59:17 |
-| M7-T04 | Betting/credits | 50480e705bb1768ce93f8c8b311da443ef12b640 | 1/10 | 53/848 | 11:06:01 |
-| M7-T05 | Actions/multi-hand | 483c395754abd50b3e65e9170311cf928c9b0c4f | 0/10 | 54/858 | 11:10:23 |
-| M7-T06 | Decisions/results/VOID | 903f907c114687cf8ccc58ef54274f609d698714 | 0/10 | 55/868 | 11:15:16 |
-| M7-T07 | Accessibility/responsive | 50fb66d3d8ad69a12047f7d5351b9a961af94345 | 1/10 | 55/869 + 4 E2E | 11:27:35 |
-| M7-T08 | Chromium/mapping/preservation | 076d0d2a25c7d152e43c9b6d7c547e25e7609599 | 2/10 | 56/870 + 24 E2E | 11:51:45 |
-| M7-T09 | Documentation/fresh-review handoff | Resolve final SHA from delivery/Git after publication | 0/10 | PASS 56/870 + 24 E2E | Final delivery |
+| M8-T01 | Profiles / seeded source; M7 acceptance | 725855d36123122bda3280e4adc5c7aec9aa7940 | 0 | 57/877; 24 | 12:35:37 |
+| M8-T02 | Exact Five-Card Charlie | 70e0e977e2448fd1a7a402797bcdce2a0365465e | 2 | 58/892; 24 | 12:39:56 |
+| M8-T03 | Versioned real-command replay | 13068815bb88c44e6088d107c1488796fa109add | 1 | 59/910; 24 | 12:46:37 |
+| M8-T04 | Public immutable audit | 1e57736780cf5146581210759a642803fcafa5dd | 1 | 60/927; 24 | 12:58:01 |
+| M8-T05 | Browser variant / replay / audit | ecf9dcb961e15378145682517401002cffaaf5d7 | 1 | 61/934; 37 | 13:06:55 |
+| M8-T06 | 256-seed invariants | adc289ce86a9dcc14497ec4547c01efdd01aaf8b | 1 | 62/941; 37 | 13:10:53 |
+| M8-T07 | 91 exact mappings / M1-M7 preservation | c1262d469c93f06cddd272781ebcb877e9090e6e | 0 | 65/949; 37 | 13:18:29 |
+| M8-T08 | Portfolio / reproducible screenshots | 49025a05dcd81eabf6a94fdd5e8859b51ec178d6 | 1 | 66/951; 38 | 13:56:36 |
+| M8-T09 | Documentation / final harness / handoff | This checkpoint; final delivery/Git SHA | 1 | PASS 66/951; 38 | Final delivery |
 
-## Repair ledgers and evidence
+## Repair ledgers and retained failures
 
-- M7 T01-T09: **1,0,0,1,0,0,1,2,0** (each /10).
+- M8 T01-T09: **0,2,1,1,1,1,0,1,1** (each /10).
+- M7: **1,0,0,1,0,0,1,2,0**.
 - M6: **1,0,0,0,0,0,1,0**.
 - M5: **0,0,0,0,0,1,0**.
 - M4: **1,0,1,0,0,0,1**.
@@ -50,47 +37,60 @@ All T01-T08 commits/pushes/fetches exited 0; each checkpoint was main=origin/mai
 - M2: **1,0,0,0,1,1**.
 - M1: **2,1,0,0,1,0,1,0,0,1**.
 
-T04 repair 1 split an imprecise MAIN/BACK TypeScript union into separate discriminated members; no runtime rule change. T07 repair 1 added explicit readonly BehindGameState factory return typing. A sandbox E2E shutdown hang exited 1 after interruption; owner-context rerun exited 0, and the failed attempt is retained in DEVELOPMENT_LOG.
+T02 repair 1 corrected optional-property assertions without weakening expected no-outcome behaviour. Repair 2 records a real publication mistake: diff --check exited 2 for EOF whitespace but publication proceeded; corrected with substantive T03, without amend/history rewrite. T03 repair 1 replaced a Split fixture that actually reached Dealer Natural. T04 repair 1 used an invalid hand to exercise rejection and exact Insurance IDs. T05 repair 1 anchored only authorized historical M7 absence assertions at accepted M7. T06 repair 1 used an actual bot-reachable follower Charlie seed. T08 repair 1 removed a nonexistent Insurance Decline step from the seed-21 portfolio recipe. T09 repair 1 corrects a documentation-bookkeeping PowerShell variable delimiter error before any file write; no executable change. All hypotheses/failures/reverification remain in [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md).
 
-T08 repair 1: first Chromium run 23 PASS/1 FAIL exact getByLabel lookup (label also contained select options); explicit label/id associations for Your seat and Bet Behind target fixed it. Chromium accessible role name was already correct; the explicit labels make DOM lookup unambiguous. Targeted spectator rerun PASS/0. Repair 2: full harness Vitest/Chromium/build passed but lint failed Node console ambient; explicit node:console import fixed it. Final T08 full harness PASS/0, Vitest start 11:49:28: **56 files/870 tests**, **1 Chromium project/24 tests**, typecheck/lint/domain/build PASS. Diff/whitespace/status inspected at 11:50:22. No further repair.
+T08 sandbox Chromium installation check had no response and was interrupted (exit 1); the same owner-context command passed/0. Required verification was available. No package/lock changes. A normal dev server was intentionally stopped after successful HTTP200 validation. These environmental results are retained rather than hidden.
 
-## Actual architecture and UI
+## Implemented profiles and Charlie
 
-Domain -> safe browser controller projection -> React snapshot/components. Events -> controller -> authoritative domain command -> retained latest immutable state -> new public snapshot. Components never receive raw game state. Physical card IDs, future shoe order, original-card lineage and hidden dealer identity are excluded. Dealer total uses only public visible cards until reveal. AST imports and an ES2023/types-empty domain compile reject framework/DOM dependencies.
+`CLASSIC_6D_S17_V1_1`: Charlie OFF. `CHARLIE5_6D_S17_V1_1`: Charlie ON. The frozen narrow model contains only ID/Charlie flag; fixed rules remain fixed. Default Classic preserves accepted M1-M7 behaviour. Historical M1-M3 APIs remain Classic; M4-M6 carry the selected profile immutably across rounds.
 
-getAdvancedActionError shares existing advanced validation with handlers. getBehindInteraction supplies safe legal actions, decision eligibility/amounts, follow affordability, targets, owner/phase and next/advance availability. Wager queries reuse immutable non-drawing handlers and discard proposed state; no card/RNG probing. Rejections still leave authoritative state unchanged.
+Exactly the fifth card from a legal Hit, total <=21, fixes terminal **CHARLIE / FIVE_CARD_CHARLIE** with 1:1 profit, gross 2*actual stake. Bust precedes Charlie; fifth-card 21 is Charlie only. Three/four-card 21 stops, Dealer Natural resolves before Hit, split children settle independently and parents never settle. Split Aces/Double restrictions remain. Followers receive valid Charlie on their actual funded exposure, including split ADD/NO_ADD. Side/Insurance/Even Money tables are unchanged. Whole-round VOID overrides Charlie and refunds once.
 
-Seven seats, explicit You/Computer/Empty/Sitting Out, exact half-credit formatting, separated spendable/reserved/pending amounts, seated/spectator betting and Bet Behind, own side wagers, full local actions and ordered stable split labels, pre-peek Insurance/Even Money, follow ADD/NO ADD/non-control, four result groups, interruption/VOID/refund and next-round persistent-shoe messages are implemented. Continue table explicitly advances the unchanged computer/dealer policy; completed/faulted rounds automatically settle/refund through domain commands.
+Charlie integration: 17 tests; additional replay/audit/browser/invariant cases cover explicit results and precedence. Current Classic five-card browser cases remain executable and never show Charlie.
 
-Semantic labels/buttons, focus/skip link/live status and explicit text indications support keyboard flow. Dark restrained CSS reflows seats 4/2/1 columns; desktop 1280x900, tablet 768x1024 and mobile 320x720 pass page overflow checks. Mobile primary actions precede the secondary table and primary buttons meet 44x44. Reduced-motion works because there is no animation; no sound.
+## Seed, replay and audit contracts
 
-## Executable mapping and historical preservation
+Seeded algorithm **MULBERRY32_REJECTION_V1**: uint32 0..4294967295; explicit modulo32 addition, shifts/Math.imul, rejection-sampled bounded integers, descending Fisher-Yates then cut. Known seed 1 uint32 vector: 2693262067, 11749833, 2265367787, 4213581821, 4159151403. Private mutable PRNG state stays in its closure; seed is not current state. No string hashing, Math.random fallback or cryptographic/certification claim. Normal unseeded browser randomness remains available.
 
-[Exact mapping](M7_MAPPING.md): REG-M7-001..064 = 40 architecture/controller/component tests + 24 Chromium tests. UX-01..14 and E2E-01..15 each has exactly one tagged executable owner. TypeScript AST completeness verifies count/uniqueness/range and document rows. This is mechanical implementation evidence, not fresh independent review.
+Replay **replayVersion=1** contains explicit configuration (profile, seed, algorithm, starting 2000 half-credit units, HUMAN presence, developer-fault permission), contiguous ordered intents and outcomeDigest. Strict parsing rejects unsupported versions/algorithm, unknown keys/commands, malformed input and invalid handler sequences with sequence/reason. Real handlers reconstruct all supported rounds; no arbitrary state snapshot import. Maximum 10000 commands. Selected terminal public/results/funds data use canonical sorted keys and **fnv1a32-v1** over UTF-16 code units; no clocks/timestamps. Digest is non-cryptographic comparison evidence. Classic/Charlie/Split/Insurance/Bet Behind/follower/VOID/multiple-round/source-immutability/digest checks pass (18 replay tests).
 
-| Milestone | Accepted revision | Independent current-suite rerun | Test start (2026-09-30 +08:00) |
-| --- | --- | --- | --- |
-| M1 | d1d8966fe55af1bc2b9348e305135952b7723b70 | PASS/0 12 files /155 tests | 11:47:48 |
-| M2 | c9f7f35bf874a0e7673505cbbea745ce035ac695 | PASS/0 6/78 | 11:47:54 |
-| M3 | cca40d2bed3b3964a9bfb47329d49bb553fe610e | PASS/0 5/72 | 11:47:56 |
-| M4 | a5c6a22dd833867a6a1eff357a7462bd06fe4e0b | PASS/0 7/171 | 11:47:57 |
-| M5 | f4c564e8c7bebcdd546d95bd7a8718a9bc3a6a1d | PASS/0 8/168 | 11:47:59 |
-| M6 | 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 | PASS/0 9/181 | 11:48:01 |
+Developer-only owner-checked CONTROLLER intents exercise advanced follower paths without changing bot policy. Explicit demoFaults=true permits accounted next-draw fault evidence; a real required-draw handler must fail before VOID. Neither command is a player control. Replay getState is internal/developer only.
 
-verify-preservation.ps1 independently enumerates accepted incremental test sets and compares original test files with their own accepted revision. Only behindRegression's authorized historical 095 boundary differs; 001..094 registrations are checked unchanged and exact completeness executes. No prior gameplay/financial/secrecy/integrity assertion weakened.
+Audit **auditVersion=1**: frozen primitive events/snapshots, contiguous authoritative sequence, injected ISO UTC clock, type/profile/round/actor/seat/hand/wager/command/stake/gross/outcome/status/reason. Runtime uses Date.toISOString; identical timestamps do not imply identical events. Rejections are observed without gameplay mutation and excluded from the successful replay journal. Human/computer/follower/system/dealer attribution, split child events, optional decisions, Charlie, settlement/VOID, archive immutability and secrecy pass (17 audit tests). Audit observes transitions; it is not an event-sourced persistence system. Schema detail: [REPLAY](REPLAY.md), [AUDIT](AUDIT.md).
 
-## Tooling and deterministic seam
+## Secrecy and browser behaviour
 
-Node 24.19.0/npm 11.17.0 confirmed. React/React DOM/types 19.3.0, plugin-react 6.1.1; existing Vite 8.3.1 retained. Playwright 1.63.0 (test/playwright/core), Chromium 153.0.8010.12 revision 1243, local Windows browser cache. No prerequisite package upgraded and no large UI framework. Lockfile records exact transitive additions.
+React receives only safe snapshots/interactions/public audit. No unrevealed dealer hole identity, future shoe order, physical card IDs, original-card ownership, active seed or PRNG state. Terminal **COMMITTED/VOID** is required for full deterministic package export; active UI has no package view/copy or seed input. NEXT clears replay result/package availability. Previously exported completed evidence can reconstruct deterministic information; it is deliberately separate from public audit and not a production recovery mechanism.
 
-Production bootstrap creates the normal random M6 session. Dependency-injected factory and e2e-mode-only test import build controlled real-domain sessions; fixture order never becomes DOM/debug output. Full physical inventory is retained; VOID fixture injects accounted draw failure. Normal production build excludes fixture factories/query branch and checks exclusion automatically. No general seed/replay UI.
+Secondary Demo and audit tools permit explicit profile/optional-seed session start only fresh before betting or after finalization. Reset explicitly restores 1000 simulated credits. Charlie Win includes fifth-card 21. Replay mode preserves original results/balances. Collapsible public history shows actor/action/UTC/amount/result, without developer stack traces. Existing gameplay keyboard/focus/live status/colour-independent text and 320px layout remain; M8 adds keyboard/profile locking/mobile export/audit checks. Chromium-only, no formal accessibility certification.
 
-## T09 final execution evidence
+## Invariants, mappings and preservation
 
-At 2026-09-30 12:04:03 +08:00 final full harness completion inspected: PASS/0 typecheck, lint, Vitest **56/870** (start 12:03:05), domain isolation compile, production browser build (42 modules, fixture-exclusion PASS) and **1 Chromium project/24 tests** (zero retries). All 14 UX/64 REG/15 required scenario owners and M6 historical/completeness tests passed. Targeted document controls/relative links/exact package-lock versions/documentation-only scope PASS/0. Complete T09 diff inspected, including removed superseded STATE text preserved in log/Git. Only factual verification/status updates follow the harness; no executable changes. T09 repair **0/10**. Publication is the remaining normal authorized step; final own SHA cannot self-embed and is in delivery/Git. STOP at the fresh-session gate afterward.
+256 fixed seeds: exactly 312 unique physical IDs, unique complete draws, cut 219..249, same seed same shoe, card conservation, sticky cut and no mid-round replacement; three-round multi-seat sessions reconcile actual 80-unit reserves, records/nonnegative balances/total funds, one-time settlement and replay equality. The fault batch has 256 attempts: already initial-terminal rounds finalize normally; playable contexts exercise actual unavailable draw, whole-round VOID/refund once and replay. Controlled Charlie/follower cases compare exact payouts. Gross output sanity checks only distinguish collapsed/identical results; no RTP/house-edge/randomness certification.
 
-## Known limits and next action
+Targeted seven invariants took about 3.85 seconds; T08 full Vitest about 11.64 seconds, Chromium 30.6 seconds plus historical reruns. Runtime is approximate and environment-dependent. [REG-M8-001..091](M8_MAPPING.md): **91 unique owners =78 Vitest +13 Chromium**; AST completeness rejects duplicate/missing/skipped IDs and mismatched documentation. Portfolio tests and mapping-completeness checks are additional unnumbered evidence.
 
-One local HUMAN, local memory only, refresh resets session. No accounts/server/database/multiplayer/cloud/real money/deployment. Normal COMPUTER policy is <17 HIT / >=17 STAND and declines optional choices; advanced follower windows require controlled domain fixtures, not changed policy/second HUMAN. Browser matrix is Chromium only. Keyboard/focus/names/ARIA secrecy and viewport checks are not formal WCAG certification or a full screen-reader audit. No M8 Charlie/replay/audit product.
+| Accepted suite | Independent preservation |
+| --- | --- |
+| M1 | PASS/0 12 files /155 tests |
+| M2 | PASS/0 6/78 |
+| M3 | PASS/0 5/72 |
+| M4 | PASS/0 7/171 |
+| M5 | PASS/0 8/168 |
+| M6 | PASS/0 9/181 |
+| M7 | PASS/0 all 56/870 and 1 Chromium project/24 tests; UX-01..14/REG-M7-001..064/E2E-01..15 |
 
-After T09 final verification/publication, STOP. A genuinely fresh conversation must read [M7_REVIEW_HANDOFF](M7_REVIEW_HANDOFF.md), independently re-read final Git state and verify all specified boundaries/mappings/evidence. Findings FIRST, no reviewer edits without separate authorization. Do not mark ACCEPTED or start M8. Prior checkpoint history and failed attempts remain in DEVELOPMENT_LOG and Git.
+verify-preservation.ps1 selects accepted Git inventories, compares original assertions and independently runs them. Authorized historical REG-M6-095 and M7 REG-002/003 absence anchors preserve past milestone boundaries; no current gameplay assertion is weakened. The unified harness makes preservation mandatory and tests missing-tool/failure propagation. Current full evidence through T08: **66 files/951 tests and 38 Chromium**, typecheck/lint/domain/build/fixture exclusion PASS. T09 final full harness PASS/0 inspected at 2026-09-30 14:04:58 +08:00; Vitest 66/951 (14:02:01, 11.73 seconds), Chromium 38 (31.0 seconds), independent M1-M7 and accepted M7 24 Chromium PASS. Exact evidence is in the execution log and delivery.
+
+## Portfolio and exact dependencies
+
+README is portfolio-first with Mermaid architecture, reproducible seed-21 recipe, honest limits and links. PORTFOLIO provides an interviewer walkthrough. Three public-only PNGs are generated by tests/browser/portfolio.spec.ts: Classic, Charlie and completed replay/audit. Fixed UTC lives only in E2E factories. Repeat generation was byte-identical; images were visually inspected. No private path/proprietary art/secrets. Production fixture exclusion remains mandatory.
+
+Node 24.19.0/npm 11.17.0 confirmed. Production React/react-dom 19.3.0. Direct development versions: @eslint/js 10.0.1; @playwright/test 1.63.0; @types/node 24.19.0; @types/react 19.3.0; @types/react-dom 19.3.0; @vitejs/plugin-react 6.1.1; eslint 10.11.0; typescript 6.0.3; typescript-eslint 8.70.1; vite 8.3.1; vitest 5.0.2. Chromium 153.0.8010.12 revision 1243. Package/lock unchanged by M8. npm ci, Chromium install, normal dev HTTP200, build and harness commands actually ran.
+
+## Limitations and exact next action
+
+One local HUMAN; memory resets on refresh; no arbitrary browser replay import/save/load, server/database/auth/network multiplayer/cloud/real money/payments/deployment. Bots retain Hit<17/Stand>=17 and decline optional decisions; advanced followers use isolated domain fixtures. Seeded source and fingerprint are not cryptographic/authenticity evidence. No RTP/house-edge/certified fairness/optimal strategy claims. Accessibility and browser matrix are bounded to actual checks.
+
+After final VERIFIED/COMMITTED/PUSHED T09: **STOP**. Start a genuinely fresh session at the final delivery SHA, read [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md), independently inspect R16/R17, complete diff, tests, secrets/claims/docs and rerun full harness. Findings FIRST; reviewer makes no edits without separate authorization. M8 remains NOT ACCEPTED until explicit human acceptance. Deployment NOT RUN.

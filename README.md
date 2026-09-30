@@ -95,4 +95,4 @@ Local memory only: no accounts, persistence/database, cloud sync, network multip
 
 ## Documentation
 
-[Rules](docs/RULES.md) · [Scope](docs/SPEC.md) · [UX](docs/UX_UI.md) · [Plan](docs/PLAN.md) · [Learning notes](docs/LAB_MANUAL.md) · [Portfolio walkthrough](docs/PORTFOLIO.md). Current review status and the final fresh-session handoff are recorded in STATE.
+[Rules](docs/RULES.md) · [Scope](docs/SPEC.md) · [UX](docs/UX_UI.md) · [Plan](docs/PLAN.md) · [Learning notes](docs/LAB_MANUAL.md) · [Portfolio walkthrough](docs/PORTFOLIO.md) · [Fresh-session review handoff](docs/M8_REVIEW_HANDOFF.md). Current delivery evidence is recorded in STATE.

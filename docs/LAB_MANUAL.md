@@ -4,8 +4,8 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: M7 - Browser UX/UI and end-to-end validation
-Status: M1-M6 HUMAN ACCEPTED. M7 T01-T08 mechanically verified/pushed; T09 final documentation/full validation VERIFIED, normal publication follows. Fresh M7 review NOT RUN; ACCEPTED NO; M8 NOT STARTED. Current browser notes are section 33. Earlier learning/delivery statements are historical snapshots, superseded by STATE.
+Current milestone: M8 - Variant, replay, audit and portfolio polish
+Status: M1-M7 HUMAN ACCEPTED; M8 T01-T08 VERIFIED/pushed, T09 final documentation/full harness VERIFIED; checkpoint publication in delivery/Git. M8 fresh review NOT RUN; ACCEPTED NO; deployment NOT RUN. Current M8 notes are section 34; accepted browser notes are section 33. Earlier learning/delivery statements are historical snapshots, superseded by STATE.
 
 ## 1. Purpose
 
@@ -1737,3 +1737,51 @@ Playwright presses Tab/Enter through setup, wager, deal, Hit, Stand and Continue
 M7_MAPPING holds exact file/title ownership: 64 REG checks (40 Vitest +24 Chromium), 14 unique UX IDs and 15 required E2E scenario IDs. REG001..094 of M6 remain unchanged; 095 is historical accepted-M6 browser-absence evidence with separately verified current domain independence. Historical preservation runs each milestone's original suites independently.
 
 Browser E2E complements domain tests: it catches event wiring, rendered controls/results, labels/focus and CSS overflow that pure domain tests cannot observe. Domain suites exercise financial/gameplay/secrecy/integrity invariants beyond the 24 browser scenarios. Passing one layer does not replace the other, fresh independent review or human acceptance. Current evidence counts/versions/timestamps/ledgers live in STATE and DEVELOPMENT_LOG; M7 is not accepted and no deployment/M8 is implied.
+
+## 34. M8 - Profiles, deterministic replay, public audit and portfolio evidence
+
+### Narrow profiles and Charlie precedence
+
+A generic configurable casino-rules engine would hide fixed assumptions and expand the verification surface. These two frozen profiles vary only ID and Charlie flag: CLASSIC_6D_S17_V1_1 OFF and CHARLIE5_6D_S17_V1_1 ON. S17, six decks, side tables and accepted restrictions remain fixed. Select a new profile only at an explicit eligible session start; it never silently changes during play.
+
+R16 awards exactly five total cards from a legal Hit at <=21, with normal 1:1 profit. Bust is checked first; fifth-card 21 is only Charlie, not Natural or a stacked award. Third/fourth-card 21 already auto-stops. Dealer Natural is resolved before Hit, and whole-round VOID has final precedence. Non-Ace split leaves qualify independently on actual child stakes; parents never settle. Split Aces cannot Hit; Double draws once and ends. Followers settle only tracked actual exposure, including ADD/NO_ADD. Pair/THREE_CARD/Insurance/Even Money remain independent.
+
+A regression example: a card-count check placed before bust could award five-card 22. Explicit Charlie tests expect PLAYER_BUST/zero gross. Split follower tests independently expect first-child 50 stake/100 gross and second-child bust, or only the first leaf under NO_ADD. Classic five-card 20 remains playable and the current Classic browser never labels it Charlie.
+
+### PRNG, seed and private state
+
+MULBERRY32_REJECTION_V1 accepts unsigned 32-bit seeds only. Each call advances private state by 0x6d2b79f5 modulo 2^32, mixes with specified XOR shifts and Math.imul, then produces a uint32 sample. To choose bound n, reject samples >=floor(2^32/n)*n, return sample%n. Rejection sampling avoids simple modulo bias; it is an implementation choice, not security/fairness certification. Descending Fisher-Yates consumes the source, followed by the cut choice 219..249. Normal unseeded mode still uses its original adapter.
+
+Seed initializes a sequence; current PRNG state is the changing position within it. Neither belongs in the active public projection. Known seed 1 uint32 vector is 2693262067,11749833,2265367787,4213581821,4159151403. Explicit vector/shuffle/cut tests catch a changed constant, integer truncation or consumption order; a throwing Math.random spy proves seeded mode has no random fallback. String seeds are deliberately unsupported to avoid undocumented hashing.
+
+### Commands versus snapshots, versioning and digest
+
+Replay v1 starts from explicit profile/seed/algorithm/2000-unit funds/HUMAN/fault permission and contiguous ordered intents. It configures seats, wagers and choices, then uses actual command handlers for Hit/Split/follow/settlement/NEXT. Loading a trusted mutated state would bypass eligibility, funding and integrity rules; no such restore exists. Developer owner-checked CONTROLLER commands demonstrate advanced follower paths without changing normal bot policy. The optional accounted draw-fault command requires explicit permission and a real subsequent unavailable draw before VOID, never automatic fault recovery.
+
+Strict schema/version parsing rejects unknown fields/commands, malformed seeds, unsupported algorithm/version, non-contiguous sequences and illegal handler order. Failure identifies sequence/reason; it never silently skips. The package source is not mutated. Multi-round outcome archives and all own/follower result records participate in comparison.
+
+Canonical JSON sorts object keys, keeps array order and omits undefined properties. fnv1a32-v1 applies uint32 FNV-1a to UTF-16 code units of selected terminal public/results/funds data. Timestamps are excluded because wall-clock observation is not game outcome. This deterministic fingerprint is not authentication: collisions are possible and a developer can construct packages. Replay computes actual outcomes again and rejects mismatch. Tests catch changed commands/results, version acceptance, source mutation and accidental clock-dependent equality.
+
+Replay is local reconstruction, not persistence: there is no save/load service, database, cloud recovery or refresh restoration. Browser offers its own finalized session only; the domain parser is a validated developer engineering boundary. Exported seed information can reconstruct future/hidden cards, so full packages are separate from safe audit, accessible only COMMITTED/VOID through player UI. NEXT removes export/result display while a new round is active. Tests try both the controller boundary and DOM/ARIA, catching a hidden textarea/button or active seed attribute even if it is visually concealed.
+
+### Audit sequence, timestamp and redaction
+
+Audit v1 observes accepted/rejected before/result transitions; events do not drive authoritative state. A monotonically increasing sequence gives order. UTC runtime timestamps show when observed, but may be identical and cannot prove uniqueness. An injected clock makes tests deterministic. Command IDs attribute attempts; rejected commands retain original gameplay state and stay outside the accepted replay journal.
+
+Frozen events contain only primitive/null allowlisted fields: schema/sequence/time/type/profile/round/actor/seat/hand/wager/command/amount/gross/outcome/status/reason. Exact human/computer/follower/dealer/system identity matters, especially when the target controller and funding owner differ. Split events identify child hand IDs, not physical cards. Settlement uses actual funded stakes; follow amounts describe affected exposure, with final records authoritative for funding. Prior event arrays remain frozen when later commands/NEXT append new events.
+
+Redaction by constructing a small public schema is easier to verify than deleting fields from a large secret event. No ranks/suits/card objects, physical IDs, future order, hidden ownership, seed or PRNG state enter public audit. Tests independently look for a known hole identity, shoe/ID fields and seed, and retain archived arrays to detect mutation. Runtime clock validation rejects missing UTC. Audit is not an event-sourced database or a tamper-resistant compliance record.
+
+### Invariants and statistical limits
+
+Seven bounded checks use 256 fixed seeds. They count 312 unique physical IDs, unique full draws, cut range/stability, same-seed shoe equality and conserved card accounting. Three-round multi-seat sessions independently reconcile reserves, actual result stakes, nonnegative available funds, total funds/net outcomes, exactly-once finalization and replay equality. The fault batch has 256 attempts: already initial-terminal rounds settle normally; playable rounds exercise unavailable-draw VOID/refund once. Controlled profile/follower cases assert exact results separately.
+
+Gross RNG sanity only checks that outputs/cuts/shuffles do not collapse to one result. It cannot establish uniformity, fairness, cryptographic quality, certified RNG or RTP/house edge. No such claims are made. Targeted invariants took approximately 3.85 seconds; full current Vitest about 8-12 seconds, Chromium about 30 seconds plus historical preservation reruns. Timings are environment-dependent and bounded for local portfolio use.
+
+### Browser, harness and interview evidence
+
+M8 browser tests catch in-round profile changes, incorrect fifth-card 21 Blackjack labels, unreproducible seeds, active replay disclosure, original result replacement, unordered/unattributed audit, keyboard failures and 320px overflow. Portfolio fixture screenshots use a fixed UTC clock only in E2E and public UI; repeat generation was byte-identical. A first recipe incorrectly attempted Insurance Decline for seed 21/dealer 4; the executed failure corrected the recipe/test, not gameplay. README commands and links are tested; images contain no private paths or secret information.
+
+REG-M8-001..091 has 91 unique executable owners (78 Vitest/13 Chromium), verified by TypeScript AST and exact documentation rows. Unnumbered completeness/portfolio checks add evidence without inflating the mapping. Full harness includes current typecheck/lint/domain compile/build fixture exclusion/66 files / 951 tests/38 Chromium and independent accepted M1-M7 inventory/assertion preservation. Only authorized historical absence assertions are anchored to old commits; current gameplay/secrecy remains tested. Isolated harness tests inject a nonzero preservation exit or missing tool and prove no false PASS.
+
+Harness Engineering means explicit task contracts, actual checked exits, evidence-based bounded repair cycles, reproducible mappings and separate VERIFIED/ACCEPTED gates. It does not make generated code trustworthy by itself. M7 human acceptance was recorded with substantive T01 work. M8 implementation stops after T09 publication for genuinely fresh findings-first review; review NOT RUN, acceptance NO and deployment NOT RUN here. [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) defines the independent inspection; [PORTFOLIO](PORTFOLIO.md) supplies a factual walkthrough without private career material.

@@ -5,7 +5,7 @@ Document task: UXUI-1.0
 Intended repository location: `docs/UX_UI.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Primary implementation milestone: `M7 — Browser UX/UI and E2E`  
-Status: UX authority. M7 browser implementation and executable mappings now exist; actual verification/delivery is recorded in STATE. Mechanical PASS is not acceptance or deployment.
+Status: UX authority. Accepted M7 browser/mappings and implemented M8 secondary demo tools are described here; actual verification/delivery is recorded in STATE. Mechanical PASS is not acceptance or deployment.
 
 ## 1. Purpose
 

@@ -13,32 +13,14 @@ M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending s
 | M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | VERIFIED / PUSHED ecf9dcb961e15378145682517401002cffaaf5d7 | 1 |
 | M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | VERIFIED / PUSHED adc289ce86a9dcc14497ec4547c01efdd01aaf8b | 1 |
 | M8-T07 | Exact unique REG-M8 map; independent M1-M7 preservation | VERIFIED / PUSHED c1262d469c93f06cddd272781ebcb877e9090e6e | 0 |
-| M8-T08 | Accurate concise portfolio README/diagram/demo | VERIFIED; publication follows | 1 |
-| M8-T09 | Final documentation/full harness/fresh-session handoff | NOT STARTED | 0 |
+| M8-T08 | Accurate concise portfolio README/diagram/demo | VERIFIED / PUSHED 49025a05dcd81eabf6a94fdd5e8859b51ec178d6 | 1 |
+| M8-T09 | Final documentation/full harness/fresh-session handoff | VERIFIED; checkpoint publication in delivery/Git | 1 |
 
 Each step -> targeted tests -> full verify.ps1 with checked exits -> complete diff/check/status -> timestamped evidence -> commit/push origin main -> fetch/0-0/clean -> continue. Detailed acceptance is the user's M8 batch contract and R16/R17. No speculative variants/RTP claims/persistence/auth/network/real money/paid services/deployment. Stop on authority conflict, unknown overlap, unavailable validation, unsafe secrets/replay imports, destructive history, credentials/paid work, 10 repairs or final review boundary. T09 stops VERIFIED/COMMITTED/PUSHED; fresh review NOT RUN, ACCEPTED NO.
 
-## M7 authorized batch and final gate
+## Accepted M7 boundary
 
-M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplied fresh NO FINDINGS review. M7 T01-T08 VERIFIED/PUSHED; T09 documentation VERIFIED, normal publication follows; final SHA/parity/clean are recorded in delivery/Git. Each task recommends GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. User preference supersedes earlier Astra recommendations, whose historical records remain unchanged.
-
-| Task | Scope and acceptance | State / commit | Repairs /10 |
-| --- | --- | --- | --- |
-| M7-T01 | Browser shell; user's task acceptance contract | VERIFIED / PUSHED 1299ece6745584681fffec4646ee02fc160a8c63 | 1 |
-| M7-T02 | Controller/public boundary; user's task acceptance contract | VERIFIED / PUSHED c4c065fa7192a9f318a3915e672bb4f52793e1a8 | 0 |
-| M7-T03 | Table/seats/status; user's task acceptance contract | VERIFIED / PUSHED 275602a623c41ebb6481400d76ca856eeb92496e | 0 |
-| M7-T04 | Betting/credits; user's task acceptance contract | VERIFIED / PUSHED 50480e705bb1768ce93f8c8b311da443ef12b640 | 1 |
-| M7-T05 | Actions/multi-hand; user's task acceptance contract | VERIFIED / PUSHED 483c395754abd50b3e65e9170311cf928c9b0c4f | 0 |
-| M7-T06 | Decisions/results/VOID; user's task acceptance contract | VERIFIED / PUSHED 903f907c114687cf8ccc58ef54274f609d698714 | 0 |
-| M7-T07 | Accessibility/responsive; user's task acceptance contract | VERIFIED / PUSHED 50fb66d3d8ad69a12047f7d5351b9a961af94345 | 1 |
-| M7-T08 | Chromium/mapping/preservation; user's task acceptance contract | VERIFIED / PUSHED 076d0d2a25c7d152e43c9b6d7c547e25e7609599 | 2 |
-| M7-T09 | Accurate docs, final full harness, documentation-only diff, fresh-session handoff | VERIFIED; PASS 56/870 +24 Chromium; final publication in delivery/Git | 0 |
-
-Every step -> targeted checks -> all introduced full harness checks with exits inspected -> complete tracked/new-file diff, whitespace and status -> real timestamped evidence -> authorized normal commit/push origin main -> fetch/0-0/clean. Full harness is typecheck/lint/Vitest/domain compile/production build/Chromium; T08 separately reruns accepted M1-M6 suites and mappings. T09 performs no feature work. A real issue exposed by documentation is a repair requiring re-verification.
-
-Scope follows SPEC/UX_UI and the user's T01-T09 contract. Domain enforces rules; React only consumes safe public snapshots/interaction data. Authorized historical REG-M6-095 boundary preserves accepted-M6 absence evidence and current domain isolation separately, with 001..094 unchanged. No accepted gameplay-rule changes, no M8/deployment/server/account/real-money/paid cloud. Stop for authority conflict, unknown overlap, unavailable validation, broader architecture requirement, destructive Git/secrets/paid resources, repair limit or mandatory review gate.
-
-After VERIFIED/COMMITTED/PUSHED T09: **STOP**. M7 fresh independent review NOT RUN, M7 ACCEPTED NO, M8 NOT STARTED, deployment NOT RUN. Exact next action: genuinely fresh session, findings-first independent review using M7_REVIEW_HANDOFF and final delivery SHA. No reviewer edits without separate authorization.
+M7 HUMAN ACCEPTED at da6f068ffd27713848ed48f023c17ed388b8b44e after the user explicitly stated "I accept M7." The supplied fresh review reported no findings and full harness/mappings/preservation/documentation PASS. Historical implementation evidence and task ledgers remain in DEVELOPMENT_LOG and Git. M8 preserves accepted assertions, with only explicitly authorized historical absence anchors. Current final review contract is M8_REVIEW_HANDOFF; M7_REVIEW_HANDOFF is historical.
 
 ## Historical M6 batch contract (superseded by accepted M6 and M7 above)
 

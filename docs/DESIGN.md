@@ -1,16 +1,20 @@
 # Casino Blackjack - Design
 
-## M8 approved extension (user batch contract)
+## Implemented M8 extension (user batch contract)
 
-Two immutable profiles vary only Five-Card Charlie: CLASSIC_6D_S17_V1_1 (OFF) and CHARLIE5_6D_S17_V1_1 (ON). Selected at current M4-M6 session creation, retained across commands/rounds; historical M1-M3 stay Classic. T01 identifies profiles without activating Charlie. T02 adds exactly-fifth-legal-Hit precedence and explicit outcome. No arbitrary rule configuration.
+Two immutable profiles vary only Five-Card Charlie: CLASSIC_6D_S17_V1_1 (OFF) and CHARLIE5_6D_S17_V1_1 (ON). Selected at current M4-M6 session creation, retained across commands/rounds; historical M1-M3 stay Classic. T01 introduced identity; T02 activates exactly-fifth-legal-Hit precedence and explicit CHARLIE/FIVE_CARD_CHARLIE outcome. No arbitrary rule configuration.
 
 Seeded source MULBERRY32_REJECTION_V1 takes uint32 0..4294967295. Private state adds 0x6d2b79f5 modulo 2^32; Mulberry32 XOR shifts and Math.imul mix output. Integer bounds 1..2^32 use rejection sampling: reject samples >= floor(2^32/bound)*bound, return sample % bound. Descending Fisher-Yates consumes it followed by cut selection. No strings, Math.random fallback, exposed state or certification claim. Version stays stable for replay v1.
 
-Later M8 tasks introduce strict versioned real-command replay and canonical outcome fingerprint, export only at COMMITTED/VOID boundaries. A separate public audit allowlist carries immutable attributable sequence/UTC-clock metadata. Browser tools remain secondary and clearly mark replay. No event-sourced store, persistence/network recovery or hidden fault replay.
+Replay v1 records explicit configuration and contiguous accepted intents through sessionCommand.ts, then independently applies the real M6 handlers. Strict decoding rejects unsupported versions/unknown keys or commands and attributes handler failure by sequence. Canonical sorted-key terminal outcomes (public state, committed own/follower records and participant balances across rounds) use timestamp-free fnv1a32-v1 over UTF-16 code units. This is comparison evidence, not authentication. No state snapshot import. Full export requires financial COMMITTED/VOID; internal getState/developer owner/fault seams never reach React. See REPLAY.md.
 
-## Implemented M7 browser architecture
+Public audit v1 observes before/result transitions without driving gameplay. Frozen primitive events carry sequence/UTC clock, profile/round/actor/seat/hand/wager/command/stake/gross/outcome/status/reason; rejected attempts preserve state and do not enter the successful replay journal. Sequence determines order, even with identical injected times. No card/physical-ID/shoe/seed fields. NEXT preserves archived events. See AUDIT.md.
 
-This section records the authorized M7 implementation. Historical milestone designs below retain their original scope; RULES/SPEC/UX_UI remain authoritative.
+Browser controller owns private authoritative state/RNG/journal and an observational audit. Normal random sessions retain accepted M7 behaviour. Optional seeded/profile start is guarded to eligible new sessions; active snapshot includes only seeded boolean, never seed/state. Terminal replay renders a separate marked result without replacing original state; NEXT removes result/export availability. Secondary DemoTools uses native accessible controls/collapsible history. E2E fixtures remain production-excluded. 256-seed invariants, exact 91 REG mapping, mandatory historical preservation and reproducible public screenshots support the final harness. No event-sourced store, persistence/network recovery, prediction UI or hidden fault replay.
+
+## Accepted M7 architecture (historical scope, extended above by M8)
+
+This section records the accepted M7 implementation snapshot; references to M8 absence/next review describe that historical milestone boundary, not current delivery. Historical milestone designs below retain their original scope; RULES/SPEC/UX_UI remain authoritative.
 
 ```text
 Authoritative domain state/commands (src/domain)
