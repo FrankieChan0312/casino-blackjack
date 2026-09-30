@@ -2,7 +2,9 @@
 
 A TypeScript Blackjack portfolio: a headless rules engine, a responsive React table, deterministic command replay and a player-safe audit trail. Built with React, Vite, Vitest and Playwright.
 
-**Simulated credits only, with no redemption value.** M1-M7 are HUMAN ACCEPTED; M8 is mechanically verified and awaiting fresh independent review and human acceptance. No deployment is claimed.
+**Simulated credits only, with no redemption value.** M1-M7 are HUMAN ACCEPTED.
+
+Fresh M8 review found three MEDIUM and three LOW findings; targeted repairs are mechanically verified and await independent reviewer recheck. All findings remain OPEN; M8 is NOT ACCEPTED. Deployment NOT RUN.
 
 ![Classic table with a hidden dealer card](docs/images/classic-table.png)
 

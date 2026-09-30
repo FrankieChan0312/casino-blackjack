@@ -788,6 +788,6 @@ Unless a future UX revision explicitly adds them:
 
 ## 36. Current implementation status
 
-M1-M6 are HUMAN ACCEPTED. M7 browser UI/controller/toolchain and real Chromium E2E are implemented; T01-T08 are VERIFIED/PUSHED. T09 documentation and final full validation are VERIFIED; exact publication is recorded in final delivery/Git. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned scenarios actually ran. This factual status does not revise any UX/gameplay requirement.
+M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.
 
-M7 fresh independent review: NOT RUN. M7 ACCEPTED: NO. M8: NOT STARTED. Deployment: NOT RUN. Refer to STATE/DEVELOPMENT_LOG and the final delivery for current counts, version, SHA/parity and exact next action.
+M8 T01-T09 implementation exists. Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found three MEDIUM and three LOW findings. Targeted review repairs, including this current-status/documentation repair, are IMPLEMENTED / VERIFIED after the final official harness. All six findings remain OPEN until the independent reviewer rechecks the repaired HEAD. M8 independent reviewer RECHECK: PENDING. M8 ACCEPTED: NO. Deployment: NOT RUN. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) for actual counts, repairs, SHA/parity and the recheck contract.

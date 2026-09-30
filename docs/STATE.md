@@ -1,12 +1,31 @@
 # Casino Blackjack - Project State
 
-## Current delivery: M8 review repair batch 1 in progress
+## Current delivery: M8 review repair batch 1 VERIFIED; independent reviewer recheck pending
 
 Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found 0 BLOCKER, 0 HIGH, 3 MEDIUM and 3 LOW findings. All remain OPEN pending the independent reviewer's recheck. M8 ACCEPTED NO; deployment NOT RUN. The implementation evidence below is the historical pre-review snapshot, superseded by this repair record.
 
 Authorized baseline 2026-09-30 14:34:10 +08:00: main=HEAD=origin/main=eb85032604b03031b5b934818fda773ea9aae666, 0/0, clean. Recommended GPT Sol 6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED. Four coherent checkpoints: T03 strict profile decoding; T04 actual action observation/cascade refund audit with T07 REG-092; T05 readable configuration/Charlie copy with T08 README/screenshots; T09 current documentation/recheck handoff. Scope is the six findings only. Required checks: affected suites, exact mappings, full verify.ps1, diff/check/status, normal commit/push/fetch/parity/clean. Stop on authority conflict, unknown overlap, unavailable checks, unsafe publication or repair cap. No gameplay/RNG/digest/policy/persistence/network/deployment changes.
 
-Current M8 ledger: **0,2,2,2,2,1,1,2,1**. T03 review repair 2 published 0cff8522eed891aa0df5474760bed48f30575ec1 at14:40:18; T04 review repair2/T07 review repair1 published027903a08e498c2f82bd330b7eeea7dde0677031 at15:10:00 +08:00. Normal push/fetch/main parity/0-0/clean PASS at each checkpoint. Strict profile normalization, actual COMPUTER actions and cascade refunds are VERIFIED. T05/T08 review repair2 VERIFIED at15:19:58: independent seat/hand rendering, event-aware Human/Computer/Empty/Sitting Out labels, visible actual refunds, accurate five-total-card UI/README/current-document copy, regenerated public screenshots. Targeted5files/46tests and14Chromium PASS/0; full verify.ps1 PASS/0,66/952Vitest,38Chromium and accepted M1-M7 preservation. REG-M8-001..092 has92 unique owners (79Vitest/13Chromium); REG-087 retains ordering/UTC/actor/amount assertions and now checks configuration/refund presentation. All three public screenshot hashes matched repeated generation and were visually inspected; exact values in PORTFOLIO/log. T09 status/handoff update is next. M1-M7 ledgers remain unchanged. Findings MEDIUM-01..03 and LOW-01..03 are not CLOSED by implementation verification.
+Current M8 ledger: **0,2,2,2,2,1,1,2,2** (each /10). T03 repair2 published 0cff8522eed891aa0df5474760bed48f30575ec1 at14:40:18; T04 repair2/T07 repair1 published 027903a08e498c2f82bd330b7eeea7dde0677031 at15:10:00; T05/T08 repair2 published 5c9f071c576ce8c3056447f9e9c4781c5d62b987 at15:23:11 +08:00. Each normal push/fetch/main parity/0-0/clean check passed. T09 repair2 VERIFIED after the final official harness returned0, inspected2026-09-30 15:39:17 +08:00: typecheck, lint, domain isolation, production build/fixture exclusion,66 Vitest files/952 tests,1 Chromium project/38 tests, and independent M1-M7 preservation PASS. Final targeted documentation/mapping/contracts check4 files/7 tests PASS at15:37:11; no executable changes after the full harness. Final normal documentation publication and exact SHA/parity/clean are recorded in delivery/Git.
+
+REG-M8-001..092 has92 unique owners (79 Vitest/13 Chromium); REG-036/059/087 retain and strengthen their original coverage, and092 adds cascade refunds. All three public screenshots were regenerated, visually inspected and reproduced with the PORTFOLIO hashes; Classic/Charlie bytes remain unchanged and Replay/Audit changes intentionally. M1-M7 ledgers remain unchanged. All six findings remain OPEN until the same independent reviewer rechecks; implementation verification does not close findings or mark M8 ACCEPTED.
+
+## Finding repair evidence — all OPEN pending independent reviewer recheck
+
+| Finding | Contract / concrete failure | Targeted repair and executable evidence | Reviewer status |
+| --- | --- | --- | --- |
+| MEDIUM-01 / T03 repair2 | R17 strict replay configuration: array profileId coerces to a valid key | profile.ts isProfileId rejects non-primitive strings; replay.ts returns normalized typed fields. REG-036 rejects array/object/number/null/unknown/boxed/coercible values and the recomputed-digest reviewer package before handlers; profileRandom direct guard checks | OPEN; implementation VERIFIED |
+| MEDIUM-02 / T04 repair2 | R17 complete action attribution: card counts miss Stand and invent supplement HIT | advancedGame production loop observes actual policy decisions; optional/behind/session forward primitive trace to audit. REG-059 exact seed21 HIT/HIT/STAND; seed36 NO_ADD child actions exclude the supplement; terminal bust/Charlie does not invent STAND | OPEN; implementation VERIFIED |
+| MEDIUM-03 / T04 repair2; T07 repair1 | R17 financial audit: MAIN zero-sentinel obscures released stake and dependent refunds | audit before/after OPEN wagers record MAIN/PAIR/THREE_CARD/BACK_CANCEL, actual owner/seat/wager/stake/return/shared command. REG-092 human1730/270 ->2000/0; exact MAIN200,PAIR20,computer MAIN200,BACK50; THREE_CARD and duplicate no-refund assertions | OPEN; implementation VERIFIED |
+| LOW-01 / T05 repair2 | R17 / UX audit clarity: null-round config hides seat and says Awaiting result | DemoTools independent round/seat/hand, event-aware Human/Computer/Empty/Sitting Out, actual returns independent of outcome. REG-087 real UI asserts initial null-round occupancy, ordered actor/action/UTC/amount and visible cascade refunds | OPEN; implementation VERIFIED |
+| LOW-02 / T05/T08 repair2 | R16 / UX / portfolio: misleading fifth-Hit wording | UI/README/current DESIGN and mapping/test prose say legal Hit producing exactly five total cards <=21. REG-080/portfolio assert rendered rule. All three screenshots regenerated/visually inspected; repeated hashes in PORTFOLIO | OPEN; implementation VERIFIED |
+| LOW-03 / T09 repair2 | UX current truth: section36 incorrectly says M7 unaccepted and M8 unstarted | UX_UI/STATE/PLAN/log/LAB/README/PORTFOLIO/REPLAY/handoff distinguish accepted M1-M7, fresh review findings, verified targeted repairs and pending recheck | OPEN; documentation VERIFIED |
+
+T01/T02/T06 remain0/2/1. Final T09 verification is executed evidence, not inferred from a prior checkpoint. The final documentation commit's SHA cannot embed itself; final delivery/Git provide actual repaired HEAD, push/fetch/parity0/0/clean. No independent recheck is performed in this implementation session. After authorized publication, STOP for the same independent reviewer to recheck the final repaired HEAD with [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md). M8 NOT ACCEPTED; deployment NOT RUN.
+
+## Historical M8 implementation evidence at reviewed eb850326
+
+The following original implementation snapshot is historical. Its pending-review statements,91 mappings,951 tests and original M8 repair counts are superseded by the current review-repair record above; original commands/failures/publications are retained rather than rewritten.
 
 M1-M7 are HUMAN ACCEPTED. M7 was explicitly accepted by the user ("I accept M7.") at **da6f068ffd27713848ed48f023c17ed388b8b44e**. User-supplied genuinely fresh review reported no BLOCKER/HIGH/MEDIUM/LOW findings, review/harness/56 files-870 tests/24 Chromium/UX-01..14/REG-M7-001..064/E2E-01..15/preservation/documentation PASS. This implementation conversation did not perform that independent review. Acceptance was recorded with substantive M8-T01 work.
 
@@ -32,7 +51,7 @@ Every published checkpoint below had checked commit/push/fetch exits 0, main=ori
 | M8-T08 | Portfolio / reproducible screenshots | 49025a05dcd81eabf6a94fdd5e8859b51ec178d6 | 1 | 66/951; 38 | 13:56:36 |
 | M8-T09 | Documentation / final harness / handoff | This checkpoint; final delivery/Git SHA | 1 | PASS 66/951; 38 | Final delivery |
 
-## Repair ledgers and retained failures
+## Historical pre-review repair ledgers and retained failures
 
 - M8 T01-T09: **0,2,1,1,1,1,0,1,1** (each /10).
 - M7: **1,0,0,1,0,0,1,2,0**.

@@ -1,6 +1,8 @@
 # Portfolio walkthrough
 
-Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples and invariants, and real Playwright Chromium checks. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED; M8 awaits genuinely fresh independent review and human acceptance. No deployed service is claimed.
+Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples and invariants, and real Playwright Chromium checks. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.
+
+Fresh M8 review reported three MEDIUM and three LOW findings; targeted repairs are mechanically verified, while all findings remain OPEN pending independent reviewer recheck. M8 is NOT ACCEPTED. Deployment NOT RUN.
 
 ## Five-minute technical walkthrough
 

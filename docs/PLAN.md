@@ -1,6 +1,21 @@
 # Casino Blackjack - Engineering Plan
 
-## M8 authorized sequential batch (current)
+## M8 authorized review repair batch 1 (current)
+
+Fresh review at eb85032604b03031b5b934818fda773ea9aae666: 0 BLOCKER,0 HIGH,3 MEDIUM,3 LOW. All findings OPEN until the same independent reviewer rechecks. User authorized six targeted repairs, normal verification/commit/push to main and final fetch/parity/clean. No independent recheck in this implementation session, no acceptance/deployment. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
+| Originating task | Repair responsibility | Current status | Repairs /10 |
+| --- | --- | --- | --- |
+| M8-T03 | MEDIUM-01 strict primitive-string profile decoding; REG-036 | VERIFIED / PUSHED 0cff8522eed891aa0df5474760bed48f30575ec1 | 2 |
+| M8-T04 | MEDIUM-02 actual production computer actions; MEDIUM-03 attributed cascade refunds | VERIFIED / PUSHED 027903a08e498c2f82bd330b7eeea7dde0677031 | 2 |
+| M8-T05 | LOW-01 readable configuration and refund UI; LOW-02 accurate Charlie copy | VERIFIED / PUSHED 5c9f071c576ce8c3056447f9e9c4781c5d62b987 | 2 |
+| M8-T07 | New REG-092; stronger REG-036/059/087; exact contiguous92 mapping | VERIFIED / PUSHED 027903a08e498c2f82bd330b7eeea7dde0677031; presentation assertions in5c9f071 | 1 |
+| M8-T08 | LOW-02 README/current prose; repeated public screenshots/hashes | VERIFIED / PUSHED 5c9f071c576ce8c3056447f9e9c4781c5d62b987 | 2 |
+| M8-T09 | LOW-03 current UX status; final accurate repair/recheck package | VERIFIED; final documentation publication SHA in delivery/Git | 2 |
+
+Scope and stop conditions are the user repair contract and STATE. Each step -> affected checks -> complete verify.ps1 -> diff/check/status -> timestamped evidence -> normal commit/push/fetch -> parity0/0 and clean. T01/T02/T06 stay0/2/1; M1-M7 ledgers unchanged. T09 is2 after executed verification; final M8 ledger0,2,2,2,2,1,1,2,2. After final publication STOP pending independent reviewer recheck; all findings OPEN, M8 ACCEPTED NO, deployment NOT RUN.
+
+## Historical M8 implementation batch at reviewed eb850326
 
 M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending statements below superseded. Every M8 task recommends GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED.
 
