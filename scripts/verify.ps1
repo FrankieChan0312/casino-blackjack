@@ -28,6 +28,20 @@ try {
             Write-Host "PASS: $check"
         }
     }
+    # The real portfolio requires independent historical preservation. Isolated
+    # harness fixtures have no project identity or Git history.
+    if (Test-Path -LiteralPath 'package.json') {
+        $projectName = (Get-Content -LiteralPath 'package.json' -Raw | ConvertFrom-Json).PSObject.Properties['name']
+        if ($null -ne $projectName -and $projectName.Value -eq 'casino-blackjack') {
+            if (-not (Test-Path -LiteralPath 'scripts/verify-preservation.ps1')) { throw 'Required preservation tool unavailable' }
+            & (Join-Path $env:SystemRoot 'System32/WindowsPowerShell/v1.0/powershell.exe') -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1
+            $preservationExitCode = $LASTEXITCODE
+            if ($preservationExitCode -ne 0) {
+                Write-Host "FAIL: preservation (exit $preservationExitCode)"
+                if ($verificationExitCode -eq 0) { $verificationExitCode = $preservationExitCode }
+            } else { Write-Host 'PASS: preservation' }
+        }
+    }
 }
 catch {
     Write-Host "BLOCKED: $($_.Exception.Message)"

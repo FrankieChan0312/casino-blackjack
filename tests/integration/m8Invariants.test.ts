@@ -9,7 +9,7 @@ import { send, closeAce, startSession, finishSession } from '../helpers/replayFi
 
 export const INVARIANT_SEEDS = 256;
 const clock=()=> '2026-09-30T05:00:00.000Z';
-it('256 seeded shoes contain 312 distinct IDs and every draw is without replacement',()=>{
+it('[REG-M8-067] 256 seeded shoes contain 312 distinct IDs and every draw is without replacement',()=>{
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     let shoe=createShoe(`seed-${seed}`,createSeededRandom(seed));expectAccounting(shoe);const ids=new Set<string>();
     for(let n=0;n<312;n++){
@@ -19,7 +19,7 @@ it('256 seeded shoes contain 312 distinct IDs and every draw is without replacem
     expect(ids.size).toBe(312);expectAccounting(shoe);expect(shoe.available).toHaveLength(0);
   }
 });
-it('256 seeds reproduce shoe and cut, all cuts stay 219..249 and outcomes do not collapse',()=>{
+it('[REG-M8-068] 256 seeds reproduce shoe and cut, all cuts stay 219..249 and outcomes do not collapse',()=>{
   const cuts=new Set<number>();const tops=new Set<string>();const values=new Set<number>();
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     const a=createShoe('s',createSeededRandom(seed)),b=createShoe('s',createSeededRandom(seed));
@@ -28,7 +28,7 @@ it('256 seeds reproduce shoe and cut, all cuts stay 219..249 and outcomes do not
   }
   expect(cuts.size).toBeGreaterThan(1);expect(tops.size).toBeGreaterThan(1);expect(values.size).toBeGreaterThan(1);
 });
-it('cut crossing preserves shoe identity and position throughout seeded draws',()=>{
+it('[REG-M8-069] cut crossing preserves shoe identity and position throughout seeded draws',()=>{
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     let shoe=createShoe('s',createSeededRandom(seed));const cut=shoe.cutPosition;
     for(let n=1;n<=cut+5;n++){
@@ -37,7 +37,7 @@ it('cut crossing preserves shoe identity and position throughout seeded draws',(
     }
   }
 });
-it('256 three-round sessions conserve cards/funds/reservations, settle once and replay equally',()=>{
+it('[REG-M8-070] 256 three-round sessions conserve cards/funds/reservations, settle once and replay equally',()=>{
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     const profile=seed%2?CHARLIE:CLASSIC;
     const s=createReplaySession(seed,profile,{clock});let accumulatedNet=0;
@@ -76,7 +76,7 @@ it('256 three-round sessions conserve cards/funds/reservations, settle once and 
     const p=s.exportPackage();expect(replay(p).outcomes).toEqual(s.getOutcomes());expect(replay(p).digest).toBe(p.outcomeDigest);
   }
 });
-it('256 explicit fault sessions conserve actual stakes and VOID exactly once with replay equality',()=>{
+it('[REG-M8-071] 256 explicit fault sessions conserve actual stakes and VOID exactly once with replay equality',()=>{
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     const s=startSession(seed,CHARLIE,false,true,clock);closeAce(s);
     if(s.getState().table.game.round!.phase!=='PLAYER_TURN'){finishSession(s);continue;}
@@ -86,7 +86,7 @@ it('256 explicit fault sessions conserve actual stakes and VOID exactly once wit
     expect(s.dispatch({type:'VOID'})).toMatchObject({ok:false,state});expect(replay(s.exportPackage()).outcomes).toEqual(s.getOutcomes());
   }
 });
-it('controlled fifth legal Hit across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural',()=>{
+it('[REG-M8-072] controlled fifth legal Hit across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural',()=>{
   for(const profile of [CLASSIC,CHARLIE]){
     const s=startSession(21,profile);closeAce(s);
     for(let n=0;n<3;n++){
@@ -100,7 +100,7 @@ it('controlled fifth legal Hit across both profiles: exact Charlie eligibility/p
     if(profile===CHARLIE)expect(result.outcomes[0].resultRecords[0].grossReturnUnits).toBe(400);
   }
 });
-it('Charlie follower result retains actual exposure through seeded replay',()=>{
+it('[REG-M8-073] Charlie follower result retains actual exposure through seeded replay',()=>{
   const s=startSession(22,CHARLIE,true);const p=finishSession(s);const result=replay(p).outcomes[0].backRecords[0];
   expect(result).toMatchObject({outcome:'CHARLIE',stakeUnits:50,grossReturnUnits:100,netUnits:50});
 });
