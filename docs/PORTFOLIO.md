@@ -23,6 +23,16 @@ Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integratio
 
 [Charlie result](images/charlie-result.png) and [replay/audit](images/replay-audit.png) are reproducible screenshots from `tests/browser/portfolio.spec.ts`, with fixed audit time and controlled real-domain commands. They contain public UI only; test factories are excluded from normal production builds. Screenshots are demonstration fixtures, not randomness/fairness evidence.
 
+Review repair regeneration runs the same three-image workflow. Classic and Charlie remain byte-identical because their audit/settings panels are collapsed; Replay/Audit now shows pre-round seat/occupancy correctly. Repeated generation on 2026-09-30 matched these SHA-256 values; equality proves reproducibility only. All three images were visually inspected: no private paths, hidden card state, physical card IDs or proprietary casino artwork.
+
+| Public image | SHA-256 |
+| --- | --- |
+| Classic | `0176BC5146D8E35554886B0245334F3B73368DD2A845E7436E3176F410572394` |
+| Charlie | `5FC9E2A852C90DF27DD986748B3E8E5146A95F2A7532CBCD877324FD4598DCE7` |
+| Replay/Audit | `6B07924F1D413170282EFF8D82EB0D73367ED09B9159F9D937A2F22B35B9D892` |
+
+Regenerate with `npm.cmd run test:e2e -- tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
+
 Current mechanical evidence: 66 Vitest files/952 tests, 38 Chromium tests, [92 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual counts, timestamps, failures and checkpoint publication evidence.
 
 ## Honest boundaries

@@ -96,7 +96,7 @@ export function createAuditTrail(initial: BehindGameState, clock: Clock = utcClo
       actorId: controllerId(before, action.seatNumber) ?? 'system', seat: action.seatNumber,
       handId: action.handId, wagerId: `${action.handId}/MAIN`, amountUnits: action.stakeUnits, commandId });
     if (command.type === 'CONFIGURE') for (const s of command.seats) append(after, { type: 'SEAT_CONFIGURED', actorId: 'local-human',
-      seat: s.seatNumber, outcome: s.occupancy, commandId });
+      seat: s.seatNumber, outcome: s.sittingOut ? 'SITTING_OUT' : s.occupancy, commandId });
     if (command.type === 'CLOSE') append(after, { type: 'INITIAL_DEAL', commandId });
     const prior = before.table.game.round;
     const round = after.table.game.round;

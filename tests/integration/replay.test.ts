@@ -11,7 +11,7 @@ it('[REG-M8-025] Classic package repeats final public state and exact result rec
   expect(first).toEqual(replay(JSON.stringify(p)));
   expect(first.outcomes[0].resultRecords[0]).toMatchObject({ stakeUnits: 200, status: 'COMMITTED' });
 });
-it('[REG-M8-026] Charlie replay reproduces fifth legal Hit with exact 1:1 outcome', () => {
+it('[REG-M8-026] Charlie replay reproduces a legal Hit producing the fifth card with exact 1:1 outcome', () => {
   const s = startSession(21, CHARLIE); closeAce(s);
   for (let i = 0; i < 3; i++) send(s, { type: 'ACT', action: 'HIT', handId: 'round-1/seat-1' });
   const p = finishSession(s); const r = replay(p);

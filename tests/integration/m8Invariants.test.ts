@@ -86,7 +86,7 @@ it('[REG-M8-071] 256 explicit fault sessions conserve actual stakes and VOID exa
     expect(s.dispatch({type:'VOID'})).toMatchObject({ok:false,state});expect(replay(s.exportPackage()).outcomes).toEqual(s.getOutcomes());
   }
 });
-it('[REG-M8-072] controlled fifth legal Hit across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural',()=>{
+it('[REG-M8-072] controlled legal Hit producing the fifth card across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural',()=>{
   for(const profile of [CLASSIC,CHARLIE]){
     const s=startSession(21,profile);closeAce(s);
     for(let n=0;n<3;n++){

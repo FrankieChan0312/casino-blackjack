@@ -3,6 +3,10 @@ import type { BrowserController, BrowserView } from '../browser/controller.js';
 import { CLASSIC, CHARLIE, type ProfileId } from '../domain/profile.js';
 import { credits, resultLabel } from './presentation.js';
 
+const seatOccupancyLabels: Readonly<Record<string, string>> = {
+  HUMAN: 'Human', COMPUTER: 'Computer', EMPTY: 'Empty', SITTING_OUT: 'Sitting Out',
+};
+
 export function DemoTools({ controller, view }: { controller: BrowserController; view: BrowserView }) {
   const [profile, setProfile] = useState<ProfileId>(view.profileId);
   const [seed, setSeed] = useState('');
@@ -13,7 +17,7 @@ export function DemoTools({ controller, view }: { controller: BrowserController;
   return <section className="panel demo-tools" aria-label="Demo and audit tools">
     <h2>Demo and audit tools</h2><p>Profile: {label} · {view.seeded ? 'Reproducible seeded demo' : 'Normal random demo'}</p>
     <details><summary>Advanced demo settings</summary>
-      {(view.canStartDemo || view.profileId === CHARLIE) && <p>Five-Card Charlie is a custom demonstration profile. A fifth legal Hit of 21 or less wins 1:1.</p>}
+      {(view.canStartDemo || view.profileId === CHARLIE) && <p>Five-Card Charlie is a custom demonstration profile. A legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1.</p>}
       <label htmlFor="demo-profile">New session profile</label><select id="demo-profile" disabled={!view.canStartDemo} value={profile}
         onChange={e => setProfile(e.target.value as ProfileId)}>
         {view.canStartDemo ? <><option value={CLASSIC}>Classic Blackjack</option><option value={CHARLIE}>Five-Card Charlie Demo</option></>
@@ -49,9 +53,14 @@ export function DemoTools({ controller, view }: { controller: BrowserController;
       <ol className="audit-list">{view.audit.map(e => <li key={e.sequence} value={e.sequence}>
         <span>#{e.sequence} {e.actorId} · {e.type} · {e.status}</span>
         <time dateTime={e.timestamp}>{e.timestamp}</time>
-        {e.roundId && <span>{e.roundId}{e.seat && ` · Seat ${e.seat}`}{e.handId && ` · ${e.handId}`}</span>}
+        {e.roundId && <span>{e.roundId}</span>}
+        {e.seat !== null && <span>Seat {e.seat}</span>}
+        {e.handId && <span>{e.handId}</span>}
         {e.amountUnits !== null && <span>Stake / amount: {credits(e.amountUnits)}</span>}
-        {e.outcome && <span>{resultLabel(e.outcome)}{e.returnedUnits !== null && ` · Returned ${credits(e.returnedUnits)}`}</span>}
+        {e.outcome && <span>{e.type === 'SEAT_CONFIGURED'
+          ? (seatOccupancyLabels[e.outcome] ?? e.outcome)
+          : resultLabel(e.outcome)}</span>}
+        {e.returnedUnits !== null && <span>Returned {credits(e.returnedUnits)}</span>}
         {e.reason && <span>{e.status === 'REJECTED' ? 'Request unavailable' : 'Round interrupted'}</span>}
       </li>)}</ol>
     </details>

@@ -33,7 +33,7 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-023 | [tests/integration/charlie.test.ts](../tests/integration/charlie.test.ts) | split follower ADD pays Charlie on first actual child and independent second-child bust |
 | REG-M8-024 | [tests/integration/charlie.test.ts](../tests/integration/charlie.test.ts) | split follower NO_ADD receives only first-child Charlie on original actual stake |
 | REG-M8-025 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | Classic package repeats final public state and exact result records |
-| REG-M8-026 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | Charlie replay reproduces fifth legal Hit with exact 1:1 outcome |
+| REG-M8-026 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | Charlie replay reproduces a legal Hit producing the fifth card with exact 1:1 outcome |
 | REG-M8-027 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | split replay routes real handlers and preserves leaf records |
 | REG-M8-028 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | Insurance replay records real independent purchase and result |
 | REG-M8-029 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | Bet Behind replay retains separate actual follower stake |
@@ -79,7 +79,7 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-069 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | cut crossing preserves shoe identity and position throughout seeded draws |
 | REG-M8-070 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | 256 three-round sessions conserve cards/funds/reservations, settle once and replay equally |
 | REG-M8-071 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | 256 explicit fault sessions conserve actual stakes and VOID exactly once with replay equality |
-| REG-M8-072 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | controlled fifth legal Hit across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural |
+| REG-M8-072 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | controlled legal Hit producing the fifth card across both profiles: exact Charlie eligibility/payout/terminal and no stacked Natural |
 | REG-M8-073 | [tests/integration/m8Invariants.test.ts](../tests/integration/m8Invariants.test.ts) | Charlie follower result retains actual exposure through seeded replay |
 | REG-M8-074 | [tests/unit/m8Contract.test.ts](../tests/unit/m8Contract.test.ts) | M8 profile RNG replay audit and UX documentation matches implemented identifiers and safe boundary |
 | REG-M8-075 | [tests/unit/m8Contract.test.ts](../tests/unit/m8Contract.test.ts) | runtime source and package have no network persistence auth payment or deployment capability |
@@ -94,7 +94,7 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-084 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | same seeded browser run reproduces public cards and terminal return |
 | REG-M8-085 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | replay JSON is available only at finalized seeded boundary and removed on next round |
 | REG-M8-086 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | completed replay reproduces result, is clearly marked and preserves original |
-| REG-M8-087 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | public audit is ordered and shows actor action UTC time and stake |
+| REG-M8-087 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | public audit displays ordered attribution UTC amounts refunds and pre-round seat occupancy |
 | REG-M8-088 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | active audit leaks no known hole identity, physical ID, seed or future shoe |
 | REG-M8-089 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | active seeded DOM and accessible output omit seed value and replay package |
 | REG-M8-090 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | M8 tools and replay JSON remain usable at 320px without overflow |

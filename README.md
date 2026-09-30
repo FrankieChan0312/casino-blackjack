@@ -67,7 +67,7 @@ Current full harness: **66 Vitest files / 952 tests**, **1 Chromium project / 38
 | Profile ID | Behaviour |
 | --- | --- |
 | `CLASSIC_6D_S17_V1_1` | Accepted Classic rules; Charlie OFF |
-| `CHARLIE5_6D_S17_V1_1` | Custom demonstration: fifth legal Hit producing exactly five cards at <=21 wins 1:1 |
+| `CHARLIE5_6D_S17_V1_1` | Custom demonstration: a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1 |
 
 Charlie is terminal, including fifth-card 21; bust takes precedence. Three/four-card 21 already stops, Dealer Natural precedes Hit, and Split Aces/Double restrictions remain. Whole-round VOID overrides every award. Profile changes require an eligible new session.
 

@@ -14,6 +14,8 @@ test('[REG-M8-079] Classic five-card hand has no Charlie result and can continue
 });
 test('[REG-M8-080] Charlie profile is selected explicitly before seeded play',async({page})=>{
   await start(page);await expect(page.getByRole('region',{name:'Demo and audit tools'})).toContainText('Profile: Five-Card Charlie Demo');
+  await expect(page.getByRole('region',{name:'Demo and audit tools'})).toContainText('A legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1.');
+  await expect(page.getByRole('region',{name:'Demo and audit tools'})).not.toContainText('fifth legal Hit');
   await expect(page.getByLabel('New session profile')).toBeDisabled();
 });
 test('[REG-M8-081] five-card Charlie presents normal 1:1 return and ends actions',async({page})=>{
@@ -46,11 +48,37 @@ test('[REG-M8-086] completed replay reproduces result, is clearly marked and pre
   await button(page,'Replay completed session').click();await expect(page.getByRole('region',{name:'Replay result'})).toContainText('Replay mode');
   await expect(page.getByRole('region',{name:'Replay result'})).toContainText('Charlie Win');expect(await page.getByRole('region',{name:'Main hand results'}).textContent()).toBe(before);
 });
-test('[REG-M8-087] public audit is ordered and shows actor action UTC time and stake',async({page})=>{
+test('[REG-M8-087] public audit displays ordered attribution UTC amounts refunds and pre-round seat occupancy',async({page})=>{
   await start(page);await button(page,'Hit').click();await page.getByText(/Public audit history \(/).click();
   const items=page.locator('.audit-list li');const values=await items.evaluateAll(nodes=>nodes.map(n=>Number(n.getAttribute('value'))));
   expect(values).toEqual(values.map((_,i)=>i+1));await expect(page.locator('.audit-list')).toContainText('local-human · HIT · ACCEPTED');
   await expect(page.locator('.audit-list')).toContainText('Stake / amount: 10');expect(await page.locator('.audit-list time').first().getAttribute('datetime')).toMatch(/Z$/);
+  const configured=page.locator('.audit-list li').filter({hasText:'SEAT_CONFIGURED'});
+  await expect(configured.filter({hasText:'Seat 1'})).toContainText('Human');
+  await expect(configured.filter({hasText:'Seat 2'})).toContainText('Empty');
+  for(const row of await configured.all())await expect(row).not.toContainText('Awaiting result');
+  await expect(configured.filter({hasText:'Seat 1'})).not.toContainText('round-1');
+
+  await page.goto('/?fixture=setup');await page.getByLabel('Computer at Seat 2',{exact:true}).check();
+  await button(page,'Open betting').click();await page.getByText(/Public audit history \(/).click();
+  await expect(configured.filter({hasText:'Seat 2'})).toContainText('Computer');
+  await expect(configured.filter({hasText:'Seat 3'})).toContainText('Empty');
+  await button(page,'Set Your MAIN at Seat 1').click();await button(page,'Set Pair side bet').click();
+  await button(page,'Set Computer MAIN at Seat 2').click();await page.getByLabel('Bet Behind target',{exact:true}).selectOption('2');
+  await button(page,'Set Bet Behind Seat 2').click();
+  await button(page,'Cancel Your MAIN at Seat 1').click();await button(page,'Cancel Computer MAIN at Seat 2').click();
+  for(const [type,stake] of [['MAIN_CANCEL','10'],['PAIR_CANCEL','1'],['BACK_CANCEL','10']]){
+    const cancelled=page.locator('.audit-list li').filter({hasText:type});
+    for(const row of await cancelled.all()){
+      await expect(row).toContainText(`Stake / amount: ${stake}`);await expect(row).toContainText(`Returned ${stake}`);
+    }
+    expect(await cancelled.count()).toBeGreaterThan(0);
+  }
+
+  await page.goto('/?fixture=setup');await page.getByLabel('Sit out this round',{exact:true}).check();
+  await button(page,'Open betting').click();await page.getByText(/Public audit history \(/).click();
+  await expect(configured.filter({hasText:'Seat 1'})).toContainText('Sitting Out');
+  for(const row of await configured.all())await expect(row).not.toContainText('Awaiting result');
 });
 test('[REG-M8-088] active audit leaks no known hole identity, physical ID, seed or future shoe',async({page})=>{
   await page.goto('/?fixture=basic');await page.getByText(/Public audit history \(/).click();const audit=await page.locator('.audit-list').textContent();

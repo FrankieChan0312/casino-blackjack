@@ -14,4 +14,6 @@ Successful cancellations compare OPEN before/after wagers, without changing fund
 
 The public schema never accepts card objects, ranks/suits, physical card IDs, future order, discarded ownership, seed or PRNG state. Even a VOID event does not reveal a previously hidden hole. Full deterministic replay packages live behind a separate COMMITTED/VOID export boundary and must not be confused with this safe trail. Prior-round events stay immutable when NEXT starts new play; a deliberate new session/reset creates a new trail and explicitly restores simulation starting credits.
 
+SEAT_CONFIGURED has the applicable seat even before a round ID exists. Its outcome is HUMAN, COMPUTER, EMPTY or SITTING_OUT; the UI renders Human, Computer, Empty or Sitting Out separately from wager result labels. Round/seat/hand details render independently, and returnedUnits renders for cancellation/refund events even without a game outcome.
+
 Scope is local memory only. No audit authenticity, tamper resistance, certification, server authority, persistence, gambling compliance or production recovery claim.
