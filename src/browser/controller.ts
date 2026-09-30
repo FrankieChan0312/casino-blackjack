@@ -5,6 +5,7 @@ import { mathRandomSource, type RandomSource } from '../domain/random.js';
 import type { SeatState } from '../domain/table.js';
 import type { PlayerAction } from '../domain/advancedGame.js';
 import type { SideWagerType } from '../domain/optionalGame.js';
+import { evaluateHand } from '../domain/hand.js';
 
 export type BrowserCommand =
   | { type: 'CONFIGURE'; seats: readonly SeatState[] }
@@ -43,7 +44,11 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       seat: entry.targetSeat, handId: entry.handId, stake: entry.stakeUnits, outcome: entry.outcome,
       returned: entry.grossReturnUnits, status: entry.status }));
     // Explicit safe fields only. No raw state, shoe order, card IDs or lineage.
-    return { configuration: view.configuration, round: view.round, human: view.human,
+    const round = view.round ? { ...view.round,
+      dealer: { ...view.round.dealer, total: evaluateHand(state.table.game.round!.dealerCards.slice(0, view.round.dealer.visibleCards.length)).total },
+      seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
+        total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
+    return { configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),
       mainWagers: state.table.wagers.map((entry) => ({ seat: entry.seatNumber, amount: entry.stakeUnits })),
       sideWagers: state.table.sideWagers.map((entry) => ({ type: entry.type, amount: entry.stakeUnits })),

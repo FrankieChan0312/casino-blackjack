@@ -7,3 +7,20 @@ h2 { font-size: 1.2rem; }
 p { line-height: 1.5; }
 .eyebrow { color: #bdd3cf; font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; }
 .panel { background: #1c333b; border: 1px solid #527178; border-radius: 16px; padding: 20px; margin-top: 20px; }
+.round-status { font-weight: 700; font-size: 1.15rem; }
+.seats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.seat { min-width: 0; padding: 16px; }
+.dealer { text-align: center; background: #163a37; }
+.dealer .cards { display: inline-flex; vertical-align: middle; }
+.local { border: 2px solid #b8dbcb; }
+.cards { display: flex; flex-wrap: wrap; gap: 6px; }
+.card { display: inline-flex; flex-direction: column; justify-content: space-between; background: #faf9f3; color: #18242a; border-radius: 7px; padding: 7px; width: 44px; min-height: 64px; font-size: 1.1rem; border: 1px solid #c4ced0; }
+.hearts, .diamonds { color: #a31e35; }
+.card-back { background: #26495f; color: #f5f6f0; align-items: center; justify-content: center; margin-left: 6px; vertical-align: middle; }
+.active-hand { border-left: 3px solid #b8dbcb; padding-left: 8px; }
+h3 { font-size: .95rem; }
+dl { display: flex; flex-wrap: wrap; gap: 24px; margin: 0; }
+dt { color: #c4d3d9; font-size: .85rem; }
+dd { margin: 4px 0 0; font-weight: 700; font-size: 1.3rem; }
+@media (max-width: 850px) { .seats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { main { padding: 12px; } .seats { grid-template-columns: minmax(0, 1fr); } }

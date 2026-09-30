@@ -1,5 +1,11 @@
 # Casino Blackjack — Development Log
 
+## M7-T03 — Table presentation
+
+### 2026-09-30 10:58:19 +08:00 — VERIFIED
+
+Clean baseline c4c065fa7192a9f318a3915e672bb4f52793e1a8; T02 push/fetch exit 0 and 0/0/clean at 10:49:06. Scope/acceptance: seven seats, Dealer, explicit local/computer/empty/sit-out labels, public cards/totals/wagers/hand state, readable live status and local credits. No gameplay rule change. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. Added Table/presentation helpers and public totals in controller; no secret physical IDs. Targeted 1/4 PASS/0 at 10:57:01 covering DOM/accessibility labels, reveal and one bust while another plays. Full verify.ps1 PASS/0 **52/840**, test start 10:57:11; typecheck/lint/domain/build PASS. Complete diff and added files inspected; diff --check/status PASS. Repair 0/10. Publication follows; keyboard/real viewport verification remains later browser work, not claimed here.
+
 ## M7-T02 — Browser controller/public boundary
 
 ### 2026-09-30 10:41:11 +08:00 — VERIFIED
