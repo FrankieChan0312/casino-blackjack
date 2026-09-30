@@ -5,7 +5,7 @@ import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
 import { isMainWager } from './bettingGame.js';
 import { isNaturalBlackjack } from './hand.js';
-import { getAdvancedActionError, type PlayerAction } from './advancedGame.js';
+import { getAdvancedActionError, type PlayerAction, type ComputerActionObserver } from './advancedGame.js';
 
 export interface HumanParticipant {
   readonly participantId: 'local-human';
@@ -239,9 +239,9 @@ export function actBehindHand(state: BehindGameState, handId: string,
   if (!Object.hasOwn(commands, action)) return { ok: false, state, error: 'INVALID_ACTION' };
   return run(state, (entry) => commands[action](entry, seat, handId));
 }
-export function advanceBehindTable(state: BehindGameState): BehindResult {
+export function advanceBehindTable(state: BehindGameState, observe?: ComputerActionObserver): BehindResult {
   if (state.followWindow) return { ok: true, state };
-  return run(state, optional.advanceOptionalTable);
+  return run(state, entry => optional.advanceOptionalTable(entry, observe));
 }
 export function settleBehindWagers(state: BehindGameState): BehindResult {
   if (state.followWindow) return { ok: false, state, error: 'FOLLOW_PENDING' };

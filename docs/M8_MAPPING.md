@@ -1,10 +1,10 @@
 # M8 executable regression mapping
 
-REG-M8-001..091: 78 Vitest requirements and 13 real Chromium scenarios. Every ID has one literal executable owner; m8Regression verifies exact range, uniqueness, non-skipped registrations and exact document rows. Requirements with several related assertions are grouped in one meaningful scenario, not duplicated to inflate the count. Mechanical mapping is not independent review.
+REG-M8-001..092: 79 Vitest requirements and 13 real Chromium scenarios. Every ID has one literal executable owner; m8Regression verifies exact range, uniqueness, non-skipped registrations and exact document rows. REG-092 adds the previously unmapped cascade refund audit requirement. Existing owners retain their semantic coverage; REG-036 and REG-059 are strengthened. Mechanical mapping is not independent review.
 
-Profiles/RNG 001..007; Charlie 008..024; replay 025..042; audit 043..059; browser controller 060..066; seeded invariants 067..073; contracts 074..076; harness failure propagation 077..078; browser UX/secrecy/keyboard/mobile 079..091.
+Profiles/RNG 001..007; Charlie 008..024; replay 025..042; audit 043..059; browser controller 060..066; seeded invariants 067..073; contracts 074..076; harness failure propagation 077..078; browser UX/secrecy/keyboard/mobile 079..091; cascade cancellation audit 092.
 
-Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. T08 adds separate portfolio links/command/privacy tests and reproducible public screenshot generation without manufacturing duplicate REG owners. Current total: 66 Vitest files/951 tests and 38 Chromium (including 24 accepted M7, 13 M8, 1 portfolio scenario). Final review is a separate genuinely fresh-session gate in M8_REVIEW_HANDOFF.md.
+Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. T08 adds separate portfolio links/command/privacy tests and reproducible public screenshot generation without manufacturing duplicate REG owners. Current total: 66 Vitest files/952 tests and 38 Chromium (including 24 accepted M7, 13 M8, 1 portfolio scenario). Independent reviewer recheck is a separate fresh-session gate in M8_REVIEW_HANDOFF.md.
 
 | ID | Executable file | Exact test title |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-056 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | public audit includes no hole, shoe order, physical card IDs or active seed/state |
 | REG-M8-057 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | clock changes audit evidence without affecting replay digest or terminal equality |
 | REG-M8-058 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | explicit replay audit boundaries retain ordering without changing gameplay |
-| REG-M8-059 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | computer progression records bot actions and shared dealer completion |
+| REG-M8-059 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | actual computer HIT/HIT/STAND is complete and Split supplements are not HIT decisions |
 | REG-M8-060 | [tests/integration/browserDemo.test.ts](../tests/integration/browserDemo.test.ts) | new demo API exposes methods but no raw domain state or seed |
 | REG-M8-061 | [tests/integration/browserDemo.test.ts](../tests/integration/browserDemo.test.ts) | profile cannot change in active round and invalid seed rejects atomically |
 | REG-M8-062 | [tests/integration/browserDemo.test.ts](../tests/integration/browserDemo.test.ts) | full replay package is inaccessible until real final settlement |
@@ -99,3 +99,4 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-089 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | active seeded DOM and accessible output omit seed value and replay package |
 | REG-M8-090 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | M8 tools and replay JSON remain usable at 320px without overflow |
 | REG-M8-091 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | keyboard opens advanced settings, chooses profile and starts seeded session |
+| REG-M8-092 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | MAIN cancellation records actual MAIN and dependent SIDE/BACK refunds with owner wager amount and shared command attribution |

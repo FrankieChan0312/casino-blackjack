@@ -23,7 +23,7 @@ Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integratio
 
 [Charlie result](images/charlie-result.png) and [replay/audit](images/replay-audit.png) are reproducible screenshots from `tests/browser/portfolio.spec.ts`, with fixed audit time and controlled real-domain commands. They contain public UI only; test factories are excluded from normal production builds. Screenshots are demonstration fixtures, not randomness/fairness evidence.
 
-Current mechanical evidence: 66 Vitest files/951 tests, 38 Chromium tests, [91 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual counts, timestamps, failures and checkpoint publication evidence.
+Current mechanical evidence: 66 Vitest files/952 tests, 38 Chromium tests, [92 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual counts, timestamps, failures and checkpoint publication evidence.
 
 ## Honest boundaries
 

@@ -104,8 +104,62 @@ it('[REG-M8-058] explicit replay audit boundaries retain ordering without changi
   audit.recordReplay(state,false);replay(s.exportPackage());audit.recordReplay(state,true);
   expect(audit.getPublic().map(e=>e.type)).toEqual(['SESSION_START','REPLAY_START','REPLAY_COMPLETE']);expect(s.getState()).toBe(state);
 });
-it('[REG-M8-059] computer progression records bot actions and shared dealer completion', () => {
-  const s=startSession(21,CLASSIC,true);finishSession(s);
-  expect(s.getAudit().some(e=>e.type==='HIT'&&e.actorId==='computer-1')).toBe(true);
+it('[REG-M8-059] actual computer HIT/HIT/STAND is complete and Split supplements are not HIT decisions', () => {
+  const s=startSession(21,CLASSIC,true);
+  expect(s.getState().table.game.round!.players[0].cards.map(c=>c.rank)).toEqual(['4','5']);
+  finishSession(s);
+  expect(s.getState().table.game.round!.players[0].cards.map(c=>c.rank)).toEqual(['4','5','5','4']);
+  const actions = s.getAudit().filter(e=>e.type==='HIT'||e.type==='STAND');
+  expect(actions.map(e=>[e.type,e.actorId,e.seat,e.handId,e.wagerId,e.amountUnits])).toEqual([
+    ['HIT','computer-1',1,'round-1/seat-1','round-1/seat-1/MAIN',200],
+    ['HIT','computer-1',1,'round-1/seat-1','round-1/seat-1/MAIN',200],
+    ['STAND','computer-1',1,'round-1/seat-1','round-1/seat-1/MAIN',200],
+  ]);
+  expect(new Set(actions.map(e=>e.commandId)).size).toBe(1);
   expect(s.getAudit().find(e=>e.type==='DEALER_COMPLETE')).toMatchObject({actorId:'dealer',roundId:'round-1'});
+  const split=startSession(36,CLASSIC,true);closeAce(split);
+  send(split,{type:'CONTROLLER',ownerId:'computer-1',action:'SPLIT',handId:'round-1/seat-1'});
+  send(split,{type:'FOLLOW',choice:'NO_ADD'});
+  expect(split.getState().table.game.round!.players.map(h=>h.cards.map(c=>c.rank))).toEqual([['3','4'],['3']]);
+  finishSession(split);
+  expect(split.getState().table.game.round!.players.map(h=>h.cards.map(c=>c.rank))).toEqual([['3','4','A'],['3','K','K']]);
+  expect(split.getAudit().filter(e=>e.type==='HIT'||e.type==='STAND').map(e=>[e.type,e.handId])).toEqual([
+    ['HIT','round-1/seat-1.1'],['STAND','round-1/seat-1.1'],['HIT','round-1/seat-1.2'],
+  ]); // Child 2's K supplement is not HIT; its subsequent bust does not invent STAND.
+  const charlie=startSession(22,CHARLIE,true);finishSession(charlie);
+  expect(charlie.getAudit().filter(e=>e.type==='HIT'||e.type==='STAND').map(e=>e.type)).toEqual(['HIT','HIT','HIT']);
+  expect(charlie.getAudit().find(e=>e.type==='CHARLIE')).toMatchObject({actorId:'computer-1',outcome:'CHARLIE'});
+});
+it('[REG-M8-092] MAIN cancellation records actual MAIN and dependent SIDE/BACK refunds with owner wager amount and shared command attribution', () => {
+  const s=createReplaySession(1,CLASSIC,{clock:()=>time});
+  send(s,{type:'CONFIGURE',seats:[{seatNumber:1,occupancy:'HUMAN',sittingOut:false},
+    {seatNumber:2,occupancy:'COMPUTER',sittingOut:false}]});
+  send(s,{type:'OPEN'});send(s,{type:'MAIN',seat:1,amount:200});send(s,{type:'SIDE',kind:'PAIR',amount:20});
+  send(s,{type:'MAIN',seat:2,amount:200});send(s,{type:'BACK',seat:2,amount:50});
+  expect(s.getState().human!.bankroll).toEqual({available:1730,reserved:270});
+  const index=s.getAudit().length;
+  send(s,{type:'MAIN',seat:1,amount:0});send(s,{type:'MAIN',seat:2,amount:0});
+  expect(s.getState().human!.bankroll).toEqual({available:2000,reserved:0});
+  expect(s.getState().computers[1].bankroll).toEqual({available:2000,reserved:0});
+  expect(s.getState().table.sideWagers).toEqual([]);expect(s.getState().backWagers).toEqual([]);
+  const cancellations=s.getAudit().slice(index);
+  expect(cancellations.map(e=>[e.type,e.actorId,e.seat,e.wagerId,e.amountUnits,e.returnedUnits])).toEqual([
+    ['MAIN_CANCEL','local-human',1,'round-1/seat-1/MAIN',200,200],
+    ['PAIR_CANCEL','local-human',1,'round-1/seat-1/PAIR',20,20],
+    ['MAIN_CANCEL','computer-2',2,'round-1/seat-2/MAIN',200,200],
+    ['BACK_CANCEL','local-human',2,'round-1/seat-2/BACK/local-human',50,50],
+  ]);
+  expect(cancellations[0].commandId).toBe(cancellations[1].commandId);
+  expect(cancellations[2].commandId).toBe(cancellations[3].commandId);
+  expect(cancellations[0].commandId).not.toBe(cancellations[2].commandId);
+  expect(cancellations.every(e=>e.roundId==='round-1'&&e.status==='ACCEPTED')).toBe(true);
+  const count=s.getAudit().length;
+  expect(s.dispatch({type:'MAIN',seat:1,amount:0})).toMatchObject({ok:false,error:'NO_WAGER'});
+  // A rejected duplicate cancellation cannot create another refund.
+  expect(s.getAudit().slice(count).filter(e=>e.returnedUnits!==null)).toEqual([]);
+  expect(s.getState().human!.bankroll).toEqual({available:2000,reserved:0});
+  send(s,{type:'MAIN',seat:1,amount:200});send(s,{type:'SIDE',kind:'THREE_CARD',amount:10});
+  send(s,{type:'MAIN',seat:1,amount:0});
+  expect(s.getAudit().at(-1)).toMatchObject({type:'THREE_CARD_CANCEL',actorId:'local-human',seat:1,
+    wagerId:'round-1/seat-1/THREE_CARD',amountUnits:10,returnedUnits:10});
 });

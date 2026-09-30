@@ -58,9 +58,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
 
 ## Verification
 
-Current full harness: **66 Vitest files / 951 tests**, **1 Chromium project / 38 tests**. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
+Current full harness: **66 Vitest files / 952 tests**, **1 Chromium project / 38 tests**. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
 
-[REG-M8-001..091](docs/M8_MAPPING.md) has exactly 91 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
+[REG-M8-001..092](docs/M8_MAPPING.md) has exactly 92 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
 
 ## Profiles
 

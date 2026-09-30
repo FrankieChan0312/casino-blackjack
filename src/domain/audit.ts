@@ -1,5 +1,5 @@
-import { controlledSeat, controllerId, getBehindInteraction, type BehindGameState, type BehindResult } from './behindGame.js';
-import type { SessionCommand } from './sessionCommand.js';
+import { controlledSeat, controllerId, getBehindInteraction, type BehindGameState } from './behindGame.js';
+import type { SessionCommand, SessionResult } from './sessionCommand.js';
 
 export const AUDIT_VERSION = 1;
 export type Clock = () => string;
@@ -42,7 +42,7 @@ export function createAuditTrail(initial: BehindGameState, clock: Clock = utcClo
     events.push(event);
   }
   append(initial, { type: 'SESSION_START' });
-  function record(before: BehindGameState, result: BehindResult, command: SessionCommand) {
+  function record(before: BehindGameState, result: SessionResult, command: SessionCommand) {
     const after = result.state;
     const commandId = `command-${++attempt}`;
     const localSeat = controlledSeat(before);
@@ -69,12 +69,32 @@ export function createAuditTrail(initial: BehindGameState, clock: Clock = utcClo
       : command.type === 'FOLLOW' ? `FOLLOW_${command.choice}`
       : command.type === 'MAIN' || command.type === 'SIDE' || command.type === 'BACK'
         ? `${kind}_${command.amount === 0 ? 'CANCEL' : 'SET'}` : command.type;
+    const cancellations: Detail[] = [];
+    if (result.ok && before.table.phase === 'OPEN' && after.table.phase === 'OPEN') {
+      for (const w of before.table.wagers) if (!after.table.wagers.some(next => next.seatNumber === w.seatNumber)) {
+        cancellations.push({ type: 'MAIN_CANCEL', actorId: controllerId(before, w.seatNumber) ?? 'table-setup',
+          seat: w.seatNumber, wagerId: `${roundId}/seat-${w.seatNumber}/MAIN`, amountUnits: w.stakeUnits, returnedUnits: w.stakeUnits });
+      }
+      for (const w of before.table.sideWagers) if (!after.table.sideWagers.some(next => next.seatNumber === w.seatNumber && next.type === w.type)) {
+        cancellations.push({ type: `${w.type}_CANCEL`, actorId: controllerId(before, w.seatNumber) ?? 'table-setup',
+          seat: w.seatNumber, wagerId: `${roundId}/seat-${w.seatNumber}/${w.type}`, amountUnits: w.stakeUnits, returnedUnits: w.stakeUnits });
+      }
+      for (const w of before.backWagers) if (!after.backWagers.some(next => next.wagerId === w.wagerId)) {
+        cancellations.push({ type: 'BACK_CANCEL', actorId: w.participantId, seat: w.targetSeat,
+          handId: w.handId, wagerId: w.wagerId, amountUnits: w.stakeUnits, returnedUnits: w.stakeUnits });
+      }
+    }
+    const directCancellation = cancellations.find(e => e.type === type && e.seat === seat);
     append(after, { type, actorId, seat, handId, wagerId, commandId,
       amountUnits: 'amount' in command ? command.amount : command.type === 'FOLLOW' ? getBehindInteraction(before).followAmount
         : command.type === 'ACE' && command.choice === 'INSURANCE' ? insurance?.amount ?? null
         : handId ? before.table.game.round?.players.find(h => h.handId === handId)?.stakeUnits ?? null : null,
-      status: result.ok ? 'ACCEPTED' : 'REJECTED', reason: result.ok ? null : result.error });
+      ...directCancellation, status: result.ok ? 'ACCEPTED' : 'REJECTED', reason: result.ok ? null : result.error });
     if (!result.ok) return;
+    for (const cancellation of cancellations) if (cancellation !== directCancellation) append(after, { ...cancellation, commandId });
+    for (const action of result.computerActions ?? []) append(after, { type: action.action,
+      actorId: controllerId(before, action.seatNumber) ?? 'system', seat: action.seatNumber,
+      handId: action.handId, wagerId: `${action.handId}/MAIN`, amountUnits: action.stakeUnits, commandId });
     if (command.type === 'CONFIGURE') for (const s of command.seats) append(after, { type: 'SEAT_CONFIGURED', actorId: 'local-human',
       seat: s.seatNumber, outcome: s.occupancy, commandId });
     if (command.type === 'CLOSE') append(after, { type: 'INITIAL_DEAL', commandId });
@@ -86,10 +106,6 @@ export function createAuditTrail(initial: BehindGameState, clock: Clock = utcClo
         const attribution = { actorId: controllerId(after, h.seatNumber) ?? 'system', seat: h.seatNumber,
           handId: h.handId, wagerId: `${h.handId}/MAIN`, commandId, amountUnits: h.stakeUnits };
         if (!old) append(after, { ...attribution, type: 'SPLIT_CHILD' });
-        if (command.type === 'ADVANCE' && old && h.controller === 'COMPUTER' && !old.complete) {
-          for (let i = old.cards.length; i < h.cards.length; i++) append(after, { ...attribution, type: 'HIT' });
-          if (h.cards.length === old.cards.length && h.complete && round.phase !== 'INTEGRITY_ERROR') append(after, { ...attribution, type: 'STAND' });
-        }
         if (h.outcome === 'CHARLIE' && old?.outcome !== 'CHARLIE') append(after, { ...attribution, type: 'CHARLIE', outcome: 'CHARLIE', returnedUnits: 2 * h.stakeUnits });
       }
       if (round.phase === 'ROUND_COMPLETE' && prior.phase !== 'ROUND_COMPLETE') append(after, { type: 'DEALER_COMPLETE', actorId: 'dealer', commandId });

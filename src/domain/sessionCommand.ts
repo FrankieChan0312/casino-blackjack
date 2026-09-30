@@ -2,7 +2,7 @@ import * as game from './behindGame.js';
 import * as controller from './behindController.js';
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
-import type { PlayerAction } from './advancedGame.js';
+import type { PlayerAction, ComputerActionObservation } from './advancedGame.js';
 import type { SideWagerType } from './optionalGame.js';
 
 export type SessionCommand =
@@ -17,8 +17,9 @@ export type SessionCommand =
 
 // Local engineering intents, routed through the same authoritative M6 handlers.
 // CONTROLLER and DEMO_DRAW_FAULT are developer-only; never normal player controls.
+export type SessionResult = game.BehindResult & { readonly computerActions?: readonly ComputerActionObservation[] };
 export function applySessionCommand(state: game.BehindGameState, command: SessionCommand,
-  random: RandomSource, demoFaults = false): game.BehindResult {
+  random: RandomSource, demoFaults = false): SessionResult {
   const seat = game.controlledSeat(state);
   switch (command.type) {
     case 'CONFIGURE': return game.configureBehindSeats(state, command.seats);
@@ -28,7 +29,11 @@ export function applySessionCommand(state: game.BehindGameState, command: Sessio
     case 'BACK': return command.amount === 0 ? game.cancelBackWager(state, command.seat) : game.setBackWager(state, command.seat, command.amount);
     case 'CLOSE': return game.closeBehindBetting(state, `local-shoe-${state.table.roundNumber + 1}`, random);
     case 'ACT': return game.actBehindHand(state, command.handId, command.action);
-    case 'ADVANCE': return game.advanceBehindTable(state);
+    case 'ADVANCE': {
+      const actions: ComputerActionObservation[] = [];
+      const result = game.advanceBehindTable(state, action => actions.push(action));
+      return { ...result, computerActions: Object.freeze(actions) };
+    }
     case 'NEXT': return game.prepareNextBehindRound(state);
     case 'SETTLE': return game.settleBehindWagers(state);
     case 'VOID': return game.voidBehindRound(state);

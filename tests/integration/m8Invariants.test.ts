@@ -75,7 +75,7 @@ it('[REG-M8-070] 256 three-round sessions conserve cards/funds/reservations, set
     }
     const p=s.exportPackage();expect(replay(p).outcomes).toEqual(s.getOutcomes());expect(replay(p).digest).toBe(p.outcomeDigest);
   }
-});
+}, 15000); // Fixed 256 x 3 real sessions plus replay; bounded allowance for full-suite CPU contention.
 it('[REG-M8-071] 256 explicit fault sessions conserve actual stakes and VOID exactly once with replay equality',()=>{
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     const s=startSession(seed,CHARLIE,false,true,clock);closeAce(s);

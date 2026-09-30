@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 import { expect, it } from 'vitest';
-it('M8 mapping has exactly 91 unique executable owners REG-M8-001..091',()=>{
+it('M8 mapping has exactly 92 unique executable owners REG-M8-001..092',()=>{
   const files=['tests/unit/profileRandom.test.ts','tests/integration/charlie.test.ts','tests/integration/replay.test.ts',
     'tests/integration/audit.test.ts','tests/integration/browserDemo.test.ts','tests/integration/m8Invariants.test.ts',
     'tests/unit/m8Contract.test.ts','tests/unit/m8Harness.test.ts','tests/browser/m8.spec.ts'];
@@ -18,10 +18,10 @@ it('M8 mapping has exactly 91 unique executable owners REG-M8-001..091',()=>{
       ts.forEachChild(node,visit);
     }visit(source);
   }
-  expect(owners).toHaveLength(91);expect(new Set(owners.map(o=>o.id)).size).toBe(91);
-  expect(owners.map(o=>o.id).sort()).toEqual(Array.from({length:91},(_,i)=>`REG-M8-${String(i+1).padStart(3,'0')}`));
+  expect(owners).toHaveLength(92);expect(new Set(owners.map(o=>o.id)).size).toBe(92);
+  expect(owners.map(o=>o.id).sort()).toEqual(Array.from({length:92},(_,i)=>`REG-M8-${String(i+1).padStart(3,'0')}`));
   const mapping=readFileSync('docs/M8_MAPPING.md','utf8');
   for(const o of owners){const rows=mapping.split('\n').filter(line=>line.startsWith(`| ${o.id} |`));expect(rows).toHaveLength(1);
     expect(rows[0]).toContain(o.file);expect(rows[0]).toContain(o.title);}
-  expect(mapping.split('\n').filter(l=>/^\| REG-M8-\d+ \|/.test(l))).toHaveLength(91);
+  expect(mapping.split('\n').filter(l=>/^\| REG-M8-\d+ \|/.test(l))).toHaveLength(92);
 });

@@ -21,5 +21,5 @@ it('README runnable commands match package scripts and required verification too
   expect(readme).toContain('npx.cmd playwright install chromium');
   expect(existsSync('scripts/verify.ps1')).toBe(true);
   expect(existsSync('tests/browser/portfolio.spec.ts')).toBe(true);
-  expect(readme).toContain('REG-M8-001..091');
+  expect(readme).toContain('REG-M8-001..092');
 });

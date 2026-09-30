@@ -259,14 +259,24 @@ export function resolveAdvancedDealer(state: AdvancedGameState): AdvancedResult 
     shoe: completeShoeRound(next.game.shoe), round: { ...round, players, dealerCards, phase: 'ROUND_COMPLETE',
       currentSeat: null, currentHandId: null } } } };
 }
-export function advanceAdvancedTable(state: AdvancedGameState): AdvancedResult {
+export interface ComputerActionObservation {
+  readonly action: 'HIT' | 'STAND';
+  readonly seatNumber: number;
+  readonly handId: string;
+  readonly stakeUnits: number;
+}
+export type ComputerActionObserver = (action: ComputerActionObservation) => void;
+export function advanceAdvancedTable(state: AdvancedGameState, observe?: ComputerActionObserver): AdvancedResult {
   const error = phaseError(state);
   if (error) return { ok: false, state, error };
   let next = state;
   while (next.game.round!.phase === 'PLAYER_TURN') {
     const hand = next.game.round!.players.find((entry) => entry.handId === next.game.round!.currentHandId)!;
     if (hand.controller === 'HUMAN') return { ok: true, state: next };
-    next = applyAction(next, computerDecision(evaluateHand(hand.cards)));
+    const action = computerDecision(evaluateHand(hand.cards));
+    next = applyAction(next, action);
+    // Observe the actual policy decision, not automatic child supplement cards.
+    observe?.(Object.freeze({ action, seatNumber: hand.seatNumber, handId: hand.handId, stakeUnits: hand.stakeUnits }));
   }
   return next.game.round!.phase === 'DEALER_TURN' ? resolveAdvancedDealer(next) : { ok: true, state: next };
 }

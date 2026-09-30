@@ -8,6 +8,10 @@ Categories include session/profile start, seat configuration, wager target chang
 
 Amount units are half credits. Wager SET records the target stake; action amounts identify affected/existing stake (Double's matching addition); settlement/refund records contain actual funded stake and gross return. Follow amounts identify attached stake; effective funding/exposure is authoritative in final result records. No current-round pending return becomes available credit because of audit.
 
+COMPUTER actions come from a primitive observation emitted by the actual production progression loop after each HIT/STAND policy decision. The internal session result carries this ordered trace to audit; no card-count inference or copied bot policy is used. Automatic Split-child supplement cards are not HIT, and terminal Hit results do not invent STAND. Dealer completion remains separate.
+
+Successful cancellations compare OPEN before/after wagers, without changing funds. MAIN_CANCEL, PAIR_CANCEL, THREE_CARD_CANCEL and BACK_CANCEL identify the actual cancelled stake in amountUnits and released stake in returnedUnits. Dependent cancellations share the originating commandId and retain their own owner/seat/wager attribution. Rejected or absent-wager requests create no refund event.
+
 The public schema never accepts card objects, ranks/suits, physical card IDs, future order, discarded ownership, seed or PRNG state. Even a VOID event does not reveal a previously hidden hole. Full deterministic replay packages live behind a separate COMMITTED/VOID export boundary and must not be confused with this safe trail. Prior-round events stay immutable when NEXT starts new play; a deliberate new session/reset creates a new trail and explicitly restores simulation starting credits.
 
 Scope is local memory only. No audit authenticity, tamper resistance, certification, server authority, persistence, gambling compliance or production recovery claim.

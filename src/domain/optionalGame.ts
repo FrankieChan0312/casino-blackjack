@@ -275,9 +275,9 @@ export function splitOptionalHand(state: OptionalGameState, seatNumber: number, 
 export function surrenderOptionalHand(state: OptionalGameState, seatNumber: number, handId: string): OptionalResult {
   return play(state, (entry) => advanced.surrenderAdvancedHand(entry, seatNumber, handId));
 }
-export function advanceOptionalTable(state: OptionalGameState): OptionalResult {
+export function advanceOptionalTable(state: OptionalGameState, observe?: advanced.ComputerActionObserver): OptionalResult {
   if (state.phase === 'CLOSED' && state.decisionPhase === 'INSURANCE') return { ok: true, state };
-  return play(state, advanced.advanceAdvancedTable);
+  return play(state, entry => advanced.advanceAdvancedTable(entry, observe));
 }
 export function resolveOptionalDealer(state: OptionalGameState): OptionalResult {
   return play(state, advanced.resolveAdvancedDealer);
