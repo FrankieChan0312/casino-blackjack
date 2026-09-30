@@ -9,6 +9,7 @@ import { Decisions, Results } from './Decisions.js';
 export function App({ controller }: { controller: BrowserController }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
   return <main>
+    <a className="skip-link" href="#local-actions">Skip to your hand and actions</a>
     <header><p className="eyebrow">A local Blackjack simulation</p><h1>Casino Blackjack</h1>
       <p>Simulation credits only — no real-money gambling. Credits have no redemption value.</p></header>
     <p className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
@@ -19,9 +20,9 @@ export function App({ controller }: { controller: BrowserController }) {
       <dl><div><dt>Available</dt><dd>{credits(view.human?.available ?? 0)}</dd></div>
         <div><dt>Reserved / current exposure</dt><dd>{credits(view.human?.reserved ?? 0)}</dd></div>
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div></dl></section>
-    <Table view={view} />
     <Actions view={view} controller={controller} />
     <Decisions view={view} controller={controller} />
+    <Table view={view} />
     <Results view={view} controller={controller} />
   </main>;
 }

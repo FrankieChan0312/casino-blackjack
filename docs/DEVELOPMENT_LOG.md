@@ -1,5 +1,15 @@
 # Casino Blackjack — Development Log
 
+## M7-T07 — Accessible responsive presentation
+
+### 2026-09-30 11:26:17 +08:00 — Repair 1 VERIFIED
+
+Baseline 903f907c114687cf8ccc58ef54274f609d698714, T06 publication 11:15:16 push/fetch/0-0/clean PASS. Recommended GPT Sol 6.1/High, actual NOT VERIFIED/NOT VERIFIED. Scope/acceptance: semantic native keyboard flow, visible focus/skip link, live significant status, card-back accessibility, current hand before secondary seats, desktop/320px no horizontal overflow, 44px buttons, restrained readable style. No animation/sound added, no unrelated redesign.
+
+Installed exact @playwright/test 1.63.0 (playwright/core 1.63.0) and Chromium/headless shell 153.0.8010.12 revision 1243, local user cache, install exit 0; no cloud service. Introduced E2E-only factory module through build-time MODE=e2e dynamic import; normal build strips it. Fixture keeps full real physical inventory and production domain commands, no hidden-card debug globals. Added 4 Chromium tests; harness now requires test:e2e in every package-aware project, with no opt-out flag. New harness test additionally proves E2E failure exit propagation; original isolated harness unchanged.
+
+First direct typecheck failed TS2322 (exit 2): fixture return inferred mutable available array conflicts with readonly authoritative state. Hypothesis: explicit BehindGameState return fixes assignment without changing runtime. Repair 1 applies that annotation. Direct typecheck and harness tests PASS/0 (2/9 at 11:21:52). Initial sandbox browser run had all 4 assertions PASS but failed to exit during teardown; interrupted with exit 1, no full PASS claimed. Owner-context rerun exited 0 with 4 PASS, no gameplay/code repair for environment. Final full owner verify.ps1 PASS/0, test start 11:25:46, **55/869 Vitest and 1 Chromium project/4 tests**, typecheck/lint/domain/build PASS. Desktop/320px screenshots visually inspected; current controls/card backs readable and no clipping. Normal bundle marker inspection PASS, complete tracked/untracked diff/check/status inspected 11:26:17. T07 VERIFIED 1/10. Publication follows; T08 adds full mappings/scenarios/preservation.
+
 ## M7-T06 — Decisions/results/VOID/next round
 
 ### 2026-09-30 11:14:24 +08:00 — VERIFIED

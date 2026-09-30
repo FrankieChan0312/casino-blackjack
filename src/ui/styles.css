@@ -35,5 +35,16 @@ fieldset { border: 1px solid #607d84; border-radius: 8px; min-width: 0; }
 form { min-width: 0; padding-bottom: 16px; border-bottom: 1px solid #527178; }
 .reason { color: #e4ccab; font-size: .9rem; }
 .feedback { background: #43372d; border-left: 3px solid #f1cd9c; padding: 12px; }
+:focus-visible { outline: 3px solid #ffe7a2; outline-offset: 4px; }
+.skip-link { position: absolute; top: -100px; left: 12px; padding: 12px; background: #ffe7a2; color: #14252c; z-index: 1; }
+.skip-link:focus { top: 12px; }
+.local-actions { background: #24453f; }
+.decision { border: 2px solid #d7c7a8; }
+.result { padding: 12px 0; border-bottom: 1px solid #607c82; }
+.interruption { border: 2px solid #e8bca1; }
+header p { max-width: 70ch; }
+section, article { overflow-wrap: anywhere; min-width: 0; }
+button { max-width: 100%; }
+@media (min-width: 1000px) { .dealer { max-width: 640px; margin: 24px auto 0; } }
 @media (max-width: 850px) { .seats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { main { padding: 12px; } .seats { grid-template-columns: minmax(0, 1fr); } }

@@ -10,7 +10,7 @@ try {
     # Historical isolated harness fixtures have no package.json. The actual
     # browser repository requires both additional checks, without opt-out flags.
     if (Test-Path -LiteralPath 'package.json') {
-        $checks += @('typecheck:domain', 'build')
+        $checks += @('typecheck:domain', 'build', 'test:e2e')
         $verificationLabel = 'engineering verification'
     }
     foreach ($check in $checks) {
