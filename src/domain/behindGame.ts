@@ -43,7 +43,7 @@ export interface BackExposure extends BackWager {
 }
 export interface BackResult extends BackExposure {
   readonly roundId: string;
-  readonly outcome: 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH' | 'PLAYER_BLACKJACK' | 'SURRENDERED' | 'VOID' | 'EVEN_MONEY' | 'WIN' | 'LOSS';
+  readonly outcome: 'PLAYER_WIN' | 'DEALER_WIN' | 'PUSH' | 'PLAYER_BLACKJACK' | 'SURRENDERED' | 'CHARLIE' | 'VOID' | 'EVEN_MONEY' | 'WIN' | 'LOSS';
   readonly grossReturnUnits: number;
   readonly netUnits: number;
   readonly status: 'PENDING' | 'COMMITTED' | 'REFUNDED';
@@ -270,7 +270,7 @@ export function getBackResults(state: BehindGameState): readonly BackResult[] {
     const outcome = elected ? 'EVEN_MONEY' : round.players.find((hand) => hand.handId === exposure.handId)?.outcome;
     if (!outcome) return [];
     const stake = exposure.stakeUnits;
-    const gross = outcome === 'PLAYER_BLACKJACK' ? stake / 2 * 5 : outcome === 'PLAYER_WIN' || outcome === 'EVEN_MONEY' ? stake * 2
+    const gross = outcome === 'PLAYER_BLACKJACK' ? stake / 2 * 5 : outcome === 'PLAYER_WIN' || outcome === 'CHARLIE' || outcome === 'EVEN_MONEY' ? stake * 2
       : outcome === 'PUSH' ? stake : outcome === 'SURRENDERED' ? stake / 2 : 0;
     return [{ ...exposure, roundId: round.roundId, outcome, grossReturnUnits: gross,
       netUnits: gross - stake, status: 'PENDING' }];

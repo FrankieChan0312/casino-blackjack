@@ -18,7 +18,7 @@ export function roundStatus(view: BrowserView) {
 export function resultLabel(outcome: string | undefined, reason?: string) {
   if (reason === 'PLAYER_BUST') return 'Bust';
   return ({ PLAYER_BLACKJACK: 'Blackjack', PLAYER_WIN: 'Win', DEALER_WIN: 'Loss', PUSH: 'Push',
-    SURRENDERED: 'Surrendered', VOID: 'VOID / Integrity Error', EVEN_MONEY: 'Even Money', WIN: 'Win', LOSS: 'Loss',
+    SURRENDERED: 'Surrendered', CHARLIE: 'Charlie Win', VOID: 'VOID / Integrity Error', EVEN_MONEY: 'Even Money', WIN: 'Win', LOSS: 'Loss',
     PERFECT_PAIR: 'Perfect Pair', COLOURED_PAIR: 'Coloured Pair', MIXED_PAIR: 'Mixed Pair', NONE: 'No Win',
     SUITED_TRIPS: 'Suited Trips', STRAIGHT_FLUSH: 'Straight Flush', THREE_OF_A_KIND: 'Three of a Kind', STRAIGHT: 'Straight', FLUSH: 'Flush',
   } as Record<string, string>)[outcome ?? ''] ?? 'Awaiting result';

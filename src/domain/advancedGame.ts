@@ -25,8 +25,8 @@ export interface AdvancedHand {
   readonly stakeUnits: number;
   readonly decisionTaken: boolean;
   readonly complete: boolean;
-  readonly outcome?: RoundOutcome | 'SURRENDERED';
-  readonly outcomeReason?: OutcomeReason | 'LATE_SURRENDER';
+  readonly outcome?: RoundOutcome | 'SURRENDERED' | 'CHARLIE';
+  readonly outcomeReason?: OutcomeReason | 'LATE_SURRENDER' | 'FIVE_CARD_CHARLIE';
 }
 
 export interface AdvancedRound extends Omit<TableRoundState, 'players'> {
@@ -37,7 +37,7 @@ export interface AdvancedRound extends Omit<TableRoundState, 'players'> {
 }
 export interface HandWagerResult extends Omit<betting.MainWagerResult, 'outcome'> {
   readonly handId: string;
-  readonly outcome: RoundOutcome | 'SURRENDERED' | 'VOID';
+  readonly outcome: RoundOutcome | 'SURRENDERED' | 'CHARLIE' | 'VOID';
 }
 export interface AdvancedGameState extends Omit<betting.BettingGameState, 'game' | 'results'> {
   readonly profileId: ProfileId;
@@ -160,6 +160,9 @@ function applyAction(state: AdvancedGameState, action: 'HIT' | 'STAND' | 'DOUBLE
     hand = { ...hand, cards, decisionTaken: true,
       complete: action === 'DOUBLE' || evaluation.isBust || evaluation.isTwentyOne };
     if (evaluation.isBust) hand = { ...hand, outcome: 'DEALER_WIN', outcomeReason: 'PLAYER_BUST' };
+    else if (action === 'HIT' && cards.length === 5 && getProfile(state.profileId).charlie) {
+      hand = { ...hand, complete: true, outcome: 'CHARLIE', outcomeReason: 'FIVE_CARD_CHARLIE' };
+    }
   } else hand = { ...hand, decisionTaken: true, complete: true };
   return selectNextHand(replaceHand(next, hand));
 }
@@ -276,7 +279,7 @@ export function getAdvancedResults(state: AdvancedGameState): readonly HandWager
     if (hand.outcome === undefined) return [];
     const stake = hand.stakeUnits;
     const gross = hand.outcome === 'SURRENDERED' ? stake / 2 : hand.outcome === 'PLAYER_BLACKJACK' ? (stake / 2) * 5
-      : hand.outcome === 'PLAYER_WIN' ? stake * 2 : hand.outcome === 'PUSH' ? stake : 0;
+      : hand.outcome === 'PLAYER_WIN' || hand.outcome === 'CHARLIE' ? stake * 2 : hand.outcome === 'PUSH' ? stake : 0;
     return [{ roundId: round.roundId, seatNumber: hand.seatNumber, handId: hand.handId, stakeUnits: stake,
       outcome: hand.outcome, grossReturnUnits: gross, netUnits: gross - stake, status: 'PENDING' }];
   });

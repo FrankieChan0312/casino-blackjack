@@ -4,9 +4,9 @@
 
 M7 HUMAN ACCEPTED at da6f068ffd27713848ed48f023c17ed388b8b44e: user explicitly stated "I accept M7." User-supplied genuinely fresh review reported no findings at any severity and review/harness/mappings/preservation/documentation PASS. This conversation did not perform that review.
 
-Entry 2026-09-30 12:30:42 +08:00: main, HEAD=origin/main=accepted M7, 0/0, clean. Initial sandbox ownership read failed; owner-context retry PASS/0, no Git config change. M8-T01 VERIFIED; T02-T09 NOT STARTED. M8 fresh review NOT RUN; ACCEPTED NO; deployment NOT RUN.
+Entry 2026-09-30 12:30:42 +08:00: main, HEAD=origin/main=accepted M7, 0/0, clean. Initial sandbox ownership read failed; owner-context retry PASS/0, no Git config change. M8-T01 VERIFIED / PUSHED 725855d36123122bda3280e4adc5c7aec9aa7940 (main, push/fetch/parity/clean PASS); T02 VERIFIED, repair 1/10 (58/892 Vitest, 24 Chromium, full harness PASS/0); T03-T09 NOT STARTED. M8 fresh review NOT RUN; ACCEPTED NO; deployment NOT RUN.
 
-Recommended every M8 task GPT Sol 6.1 / High; actual model and reasoning/effort NOT VERIFIED / NOT VERIFIED. Repair ledger T01-T09 0,0,0,0,0,0,0,0,0 (each /10); historical ledgers below unchanged. T01 profiles/uint32 source/vectors/shuffle/cut/secrecy tests PASS 7/7 and typecheck PASS/0; full harness evidence and publication in DEVELOPMENT_LOG. Charlie gameplay not activated until T02.
+Recommended every M8 task GPT Sol 6.1 / High; actual model and reasoning/effort NOT VERIFIED / NOT VERIFIED. Repair ledger T01-T09 0,1,0,0,0,0,0,0,0 (each /10); historical ledgers below unchanged. T01 profiles/uint32 source/vectors/shuffle/cut/secrecy tests PASS 7/7 and typecheck PASS/0; full harness evidence and publication in DEVELOPMENT_LOG. Charlie gameplay not activated until T02.
 
 ## Current delivery: M7 VERIFIED - fresh-session review gate
 
