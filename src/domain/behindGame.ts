@@ -332,7 +332,9 @@ export function getBehindInteraction(state: BehindGameState) {
   return { actions, handId, configuring: state.table.phase === 'CONFIGURING', betting: state.table.phase === 'OPEN',
     backTargets: state.table.game.table.seats.filter((entry) => qualifyingTarget(state, entry.seatNumber)).map((entry) => entry.seatNumber),
     insurance, followAmount: followStake, followAffordable: (state.human?.bankroll.available ?? 0) >= followStake,
-    nextRound: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID' };
+    nextRound: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID',
+    canAdvance: state.table.phase === 'CLOSED' && state.table.decisionPhase === 'NONE' && !state.followWindow
+      && (state.table.game.round?.phase === 'DEALER_TURN' || state.table.game.round?.players.find((entry) => entry.handId === handId)?.controller === 'COMPUTER') };
 }
 export function getBehindOwnResults(state: BehindGameState) {
   const seat = controlledSeat(state);

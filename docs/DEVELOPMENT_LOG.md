@@ -1,5 +1,11 @@
 # Casino Blackjack — Development Log
 
+## M7-T05 — Local actions/multi-hand
+
+### 2026-09-30 11:09:33 +08:00 — VERIFIED
+
+Baseline 50480e705bb1768ce93f8c8b311da443ef12b640, T04 publication 11:06:01 push/fetch/0-0/clean PASS. Scope/acceptance: five domain-gated actions, additional matching wager, forced Double terminal, insufficient funds, ordered Split/re-split stable labels, Split Aces ordinary 21/restrictions, Surrender actual half return, terminal protection and multi-seat continuation. Added Actions, stable presentation labels and domain canAdvance query. No rule changes or duplicated enforcement. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. Targeted ten tests PASS/0 at 11:09:03. Full verify.ps1 PASS/0 **54/858**, test start 11:09:16; typecheck/lint/domain/build PASS. Entire diff/new files/check/status inspected 11:09:33. Repairs 0/10. Completed local actions disappear; explicit Continue table runs existing deterministic computer/dealer automation. Publication follows.
+
 ## M7-T04 — Setup/betting/credit/side/Bet Behind
 
 ### 2026-09-30 11:05:02 +08:00 — Repair 1 VERIFIED

@@ -1,5 +1,5 @@
 import type { BrowserView } from '../browser/controller.js';
-import { credits, resultLabel } from './presentation.js';
+import { credits, resultLabel, handLabel } from './presentation.js';
 
 type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
 const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
@@ -23,10 +23,12 @@ export function Table({ view }: { view: BrowserView }) {
         <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
         <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
         <p>MAIN: {credits(wager)} credits</p>
-        {hands.map((hand, index) => <article key={hand.handId} aria-label={`Hand ${String.fromCharCode(65 + index)}`} className={round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}>
-          <h3>Hand {String.fromCharCode(65 + index)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
+        {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}>
+          <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
           <Cards cards={hand.cards} /><p>Total: {hand.total} · Wager: {credits(hand.stakeUnits)}</p>
           <p>{hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : hand.cards.length === 1 ? 'Waiting for card' : 'Playing'}</p>
+          {hand.outcome === 'SURRENDERED' && view.ownResults.filter((result) => result.handId === hand.handId).map((result) =>
+            <p key={result.handId}>Returned: {credits(result.returned)} · Lost: {credits(result.stake - result.returned)}</p>)}
         </article>)}
       </section>;
     })}</div>

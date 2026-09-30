@@ -1,6 +1,10 @@
 import type { BrowserView } from '../browser/controller.js';
 
 export function credits(units: number) { return (units / 2).toLocaleString('en-US', { maximumFractionDigits: 1 }); }
+export function handLabel(handId: string) {
+  const path = handId.split('.').slice(1);
+  return path.length ? `Hand ${path[0] === '1' ? 'A' : 'B'}${path.slice(1).map((part) => '.' + part).join('')}` : 'Hand A';
+}
 export function roundStatus(view: BrowserView) {
   if (view.phase === 'VOID' || view.round?.phase === 'INTEGRITY_ERROR') return 'Round interrupted';
   if (view.interaction.configuring) return 'Choose your seat or watch as a spectator';
