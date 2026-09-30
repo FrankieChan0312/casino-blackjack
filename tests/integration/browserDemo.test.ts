@@ -1,4 +1,5 @@
-import { expect, it } from 'vitest';
+import { expect, it, vi } from 'vitest';
+import * as replayModule from '../../src/domain/replay.js';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { CLASSIC, CHARLIE } from '../../src/domain/profile.js';
 const time = () => '2026-09-30T05:00:00.000Z';
@@ -45,4 +46,47 @@ it('[REG-M8-065] seeded browser sessions reproduce cards and results; deliberate
 it('[REG-M8-066] unseeded demo keeps normal randomness and rejects early package requests', () => {
   const c=createBrowserController();expect(c.getSnapshot().seeded).toBe(false);expect(c.exportReplay()).toBeNull();
   expect(c.getSnapshot().profileId).toBe(CLASSIC);
+});
+
+it('[REG-M8-094] reviewer boundary completes at 10000 and rejects a two-intent overflow before any mutation', () => {
+  for (const wagers of [9992, 9993]) {
+    const c = createBrowserController({ seed: 21, profileId: CHARLIE, clock: time });
+    expect(c.dispatch({ type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }] })).toBe(true);
+    expect(c.dispatch({ type: 'OPEN' })).toBe(true);
+    for (let i = 0; i < wagers; i++) expect(c.dispatch({ type: 'MAIN', seat: 1, amount: i % 2 ? 202 : 200 })).toBe(true);
+    expect(c.dispatch({ type: 'CLOSE' })).toBe(true);
+    for (let i = 0; i < 3; i++) expect(c.dispatch({ type: 'ACT', action: 'HIT', handId: 'round-1/seat-1' })).toBe(true);
+    const before = c.getSnapshot();
+    expect(c.dispatch({ type: 'ADVANCE' })).toBe(wagers === 9992);
+    if (wagers === 9992) {
+      expect(c.getSnapshot().phase).toBe('COMMITTED'); expect(c.getSnapshot().replayAvailable).toBe(true);
+      const p = c.exportReplay()!; expect(p.commands).toHaveLength(10000);
+      expect(replayModule.parseReplay(p)).toEqual(p); expect(c.replayCompleted()).toBe(true);
+      const completed = c.getSnapshot();
+      expect(completed.ownResults[0]).toMatchObject({ outcome: 'CHARLIE', stake: 202, returned: 404 });
+      expect(c.dispatch({ type: 'NEXT' })).toBe(false);
+      expect(c.getSnapshot()).toEqual({ ...completed, feedback: expect.stringContaining('command limit reached') });
+      expect(c.exportReplay()).toEqual(p); expect(c.replayCompleted()).toBe(true);
+      expect(c.startDemo(CLASSIC, 0)).toBe(true); expect(c.getSnapshot().human?.available).toBe(2000);
+    } else {
+      // ADVANCE+SETTLE would make the original 10001-entry package. Nothing runs.
+      expect(c.getSnapshot()).toEqual({ ...before, feedback: expect.stringContaining('command limit reached') });
+      expect(c.dispatch({ type: 'ADVANCE' })).toBe(false);
+      expect(c.getSnapshot().audit).toEqual(before.audit); expect(c.getSnapshot().human).toEqual(before.human);
+      expect(c.exportReplay()).toBeNull(); expect(c.getSnapshot().replayAvailable).toBe(false);
+      expect(c.replayCompleted()).toBe(false); expect(c.startDemo(CLASSIC, 0)).toBe(false);
+    }
+  }
+});
+
+it('[REG-M8-095] defensive replay validation failure hides availability and preserves original finances and audit', () => {
+  const c = seeded(); finish(c); const before = c.getSnapshot();
+  const spy = vi.spyOn(replayModule, 'replay').mockImplementation(() => { throw new replayModule.ReplayError('Malformed replay'); });
+  try {
+    expect(c.replayCompleted()).toBe(false);
+    expect(c.getSnapshot()).toEqual({ ...before, replayAvailable: false, replayResult: null,
+      feedback: 'Completed replay is unavailable: replay validation failed.' });
+    expect(c.exportReplay()).toBeNull(); expect(c.replayCompleted()).toBe(false); expect(spy).toHaveBeenCalledTimes(1);
+    expect(c.startDemo(CLASSIC, 0)).toBe(true); expect(c.getSnapshot().human?.available).toBe(2000);
+  } finally { spy.mockRestore(); }
 });

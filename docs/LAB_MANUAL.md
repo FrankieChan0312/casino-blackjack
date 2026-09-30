@@ -5,7 +5,18 @@ Document task: LAB-1.0
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: M8 - Variant, replay, audit and portfolio polish
-Status: M1-M7 HUMAN ACCEPTED; M8 T01-T08 VERIFIED/pushed, T09 final documentation/full harness VERIFIED; checkpoint publication in delivery/Git. M8 fresh review NOT RUN; ACCEPTED NO; deployment NOT RUN. Current M8 notes are section 34; accepted browser notes are section 33. Earlier learning/delivery statements are historical snapshots, superseded by STATE.
+Status: M1-M7 HUMAN ACCEPTED; original M8 fresh review and independent recheck #1 COMPLETED; five original findings CLOSED BY RECHECK; MEDIUM-04 and LOW-03 OPEN — repair VERIFIED, independent recheck #2 pending. Repair batch2 VERIFIED; publication receipt in final delivery/Git. M8 NOT ACCEPTED; deployment NOT RUN. Current M8 notes are section34 and the status below; earlier learning/delivery statements are historical snapshots, superseded by STATE.
+
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## 1. Purpose
 
@@ -1782,9 +1793,9 @@ Gross RNG sanity only checks that outputs/cuts/shuffles do not collapse to one r
 
 M8 browser tests catch in-round profile changes, incorrect fifth-card 21 Blackjack labels, unreproducible seeds, active replay disclosure, original result replacement, unordered/unattributed audit, keyboard failures and 320px overflow. Portfolio fixture screenshots use a fixed UTC clock only in E2E and public UI; repeat generation was byte-identical. A first recipe incorrectly attempted Insurance Decline for seed 21/dealer 4; the executed failure corrected the recipe/test, not gameplay. README commands and links are tested; images contain no private paths or secret information.
 
-REG-M8-001..092 has92 unique executable owners (79Vitest/13Chromium), verified by TypeScript AST and exact documentation rows. Review repair adds a new meaningful REG-092 owner for cascade refunds and strengthens REG-036/059/087 without replacing their coverage. Unnumbered completeness/portfolio checks add evidence without inflating the mapping. Full harness includes current typecheck/lint/domain compile/build fixture exclusion/66files/952tests/38Chromium and independent accepted M1-M7 inventory/assertion preservation. Only authorized historical absence assertions are anchored to old commits; current gameplay/secrecy remains tested. Isolated harness tests inject a nonzero preservation exit or missing tool and prove no false PASS.
+REG-M8-001..096 has96 unique executable owners (83Vitest/13Chromium), verified by TypeScript AST and exact documentation rows. Batch1 added cascade refunds092 and strengthened036/059/087; batch2 adds exact replay cap/atomic recorder093, browser reproduction094, defensive replay095 and current-document consistency096 without replacing coverage. Unnumbered completeness/portfolio checks add evidence without inflating the mapping. Expanded full inventory is66files/956tests/38Chromium; actual execution status is in STATE/log. Independent accepted M1-M7 inventories/assertions remain preserved. Only authorized historical absence assertions are anchored to old commits; current gameplay/secrecy remains tested. Isolated harness tests inject a nonzero preservation exit or missing tool and prove no false PASS.
 
-Harness Engineering means explicit task contracts, actual checked exits, evidence-based bounded repair cycles, reproducible mappings and separate VERIFIED/ACCEPTED gates. It does not make generated code trustworthy by itself. M7 human acceptance was recorded with substantive T01 work. Fresh M8 review at eb850326 found3MEDIUM/3LOW findings. Targeted repairs are mechanically verified; all findings remain OPEN pending the same independent reviewer's recheck. This implementation session stops after repair T09 publication, without independent recheck. M8 acceptance NO and deployment NOT RUN. [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) defines the recheck; [PORTFOLIO](PORTFOLIO.md) supplies a factual walkthrough without private career material.
+Harness Engineering means explicit task contracts, actual checked exits, evidence-based bounded repair cycles, reproducible mappings and separate VERIFIED/ACCEPTED gates. It does not make generated code trustworthy by itself. M7 human acceptance was recorded with substantive T01 work. Original fresh M8 review completed at eb850326 with3MEDIUM/3LOW; batch1 completed at5218bb9. Independent recheck #1 completed, closed five original findings, retained LOW-03 and added MEDIUM-04. Current repair batch2 evidence is above and in STATE; only a genuinely fresh independent recheck #2 can close the two OPEN findings. This implementation session stops after authorized publication without independent recheck. M8 acceptance NO and deployment NOT RUN. [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) defines the recheck; [PORTFOLIO](PORTFOLIO.md) supplies a factual walkthrough without private career material.
 
 ### Lessons from M8 review repair batch 1
 
@@ -1795,3 +1806,9 @@ Audit observations must reflect actual actions. Card-count differences lose a St
 Configuration is not a wager outcome and may exist before a round. Independent seat/hand rendering and event-aware occupancy labels fix presentation without relaxing secrecy. Charlie means a legal Hit producing five total cards, usually the third Hit after the opening two cards. Current prose/test titles were corrected; the historical execution log preserves failed/incorrect wording with the repair entry explaining it. Public screenshot regeneration changed the audit image honestly; reproducibility hashes do not prove UI correctness.
 
 The fixed256-seed x3-round/full-replay workload once exceeded Vitest's default5s wall-clock budget (5482ms); the mapping review repair gives only REG-070 an explicit15s bound, retaining every seed/round/assertion. An interrupted sandbox Playwright cleanup and fixture assertion mistakes are retained in DEVELOPMENT_LOG. Actual final checked exits, not rerunning until lucky or changing expected financial results, govern publication. M1-M7 ledgers and original assertions remain unchanged.
+
+### Lessons from independent recheck #1 and repair batch 2
+
+A decoder bound is also a live-session contract. The old recorder accepted10001 commands although replay v1 decoded at most10000. MAX_REPLAY_COMMANDS now governs recorder, exporter and decoder. Rejection occurs before any authoritative handler/RNG/audit/clock mutation, retains every prior entry and never truncates. Browser intents reserve two slots because ADVANCE or another successful intent may also invoke SETTLE/VOID. At the exact supported completed boundary, the full10000-entry package replays normally; the original9993-wager reproduction rejects ADVANCE at9999 entries before dealer/fund/audit changes. A capped unfinished memory-only demo requires refresh; no forced Stand, artificial VOID or payout change is introduced. Defensive ReplayError handling preserves original finances/audit and removes replay availability instead of exposing a failing result.
+
+Current truth belongs at the document entry point as well as later sections. The stale LAB top statement fresh review NOT RUN survived batch1 despite later review evidence. REG-096 now checks all eight required current-status blocks plus LAB's top status and UX section36, separately from labelled historical records. Original review and failed attempts remain historical evidence; implementation PASS never means finding closure or human acceptance.

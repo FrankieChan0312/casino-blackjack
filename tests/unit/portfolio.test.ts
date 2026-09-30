@@ -21,7 +21,7 @@ it('README runnable commands match package scripts and required verification too
   expect(readme).toContain('npx.cmd playwright install chromium');
   expect(existsSync('scripts/verify.ps1')).toBe(true);
   expect(existsSync('tests/browser/portfolio.spec.ts')).toBe(true);
-  expect(readme).toContain('REG-M8-001..092');
+  expect(readme).toContain('REG-M8-001..096');
   expect(readme).toContain('a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1');
   expect(readme).not.toMatch(/fifth (?:legal )?Hit/);
 });

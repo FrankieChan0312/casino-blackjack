@@ -1,6 +1,28 @@
 # Casino Blackjack - Engineering Plan
 
-## M8 authorized review repair batch 1 (current)
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
+
+## Repair batch 2 task contract
+
+| Existing owner | Scoped repair | Status | Repairs /10 |
+| --- | --- | --- | --- |
+| M8-T03 | MEDIUM-04 bounded real-command replay; browser reservation/defensive handling; REG-093..095 and completeness support | VERIFIED; publication receipt in delivery/Git; finding OPEN / recheck #2 pending | 3 |
+| M8-T09 | LOW-03 current documentation truth; REG-096; final full harness/handoff | VERIFIED; publication receipt in delivery/Git; finding OPEN / recheck #2 pending | 3 |
+
+Both owners derive from the historical task scopes below; support tests/mapping do not create/reset ledgers for the same substantive failure. Prior M8 ledger0,2,2,2,2,1,1,2,2; current0,2,3,2,2,1,1,2,3 after official verify.ps1 PASS/0 inspected2026-09-30 16:58:01 +08:00 (66/956Vitest,38Chromium,96unique REG owners and all M1-M7 preservation). Maximum10 each, historical ledgers unchanged. Baseline main=origin/main=5218bb9594580090cf39bad219a0b40f268c9781,0/0,clean at2026-09-30 16:42:46 +08:00. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
+Scope/acceptance: user MEDIUM-04 ten invariants and LOW-03 truthful current status; no unrelated gameplay/RNG/digest/payout/policy/dependency/UI changes. Steps -> targeted cap/atomicity/defensive replay and current-document regressions -> exact96 mapping -> official verify.ps1 and accepted preservation -> complete diff/check/full status -> verified evidence/ledgers -> normal commit/push/fetch to main -> parity0/0/clean -> STOP. Stop on conflict/unknown overlap/unavailable required tools/unsafe publication/cumulative10 repairs. No independent closure, M8 human acceptance or deployment.
+
+## Historical authorized review repair batch 1 (superseded by current status above)
 
 Fresh review at eb85032604b03031b5b934818fda773ea9aae666: 0 BLOCKER,0 HIGH,3 MEDIUM,3 LOW. All findings OPEN until the same independent reviewer rechecks. User authorized six targeted repairs, normal verification/commit/push to main and final fetch/parity/clean. No independent recheck in this implementation session, no acceptance/deployment. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
 

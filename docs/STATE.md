@@ -1,6 +1,32 @@
 # Casino Blackjack - Project State
 
-## Current delivery: M8 review repair batch 1 VERIFIED; independent reviewer recheck pending
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
+
+## Repair batch 2 contract and ledger
+
+Baseline captured 2026-09-30 16:42:46 +08:00: main=HEAD=origin/main=5218bb9594580090cf39bad219a0b40f268c9781,0/0,clean including full untracked status. Existing PLAN scopes assign MEDIUM-04 to M8-T03 (replay contract; browser orchestration/mapping support the same defect) and LOW-03 to M8-T09 (current documentation/full harness/handoff). Prior T03=2/10,T09=2/10; now T03=3/10,T09=3/10 only after full VERIFIED evidence inspected2026-09-30 16:58:01 +08:00. Current M8 ledger: **0,2,3,2,2,1,1,2,3**. All M1-M7 historical ledgers remain unchanged. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
+Targeted replay/domain/controller tests PASS/0 at16:49:24:2files/28tests; typecheck and five affected suites PASS/0 at16:55:44 (start16:55:49,5files/35tests). REG-093 exact10000/oversized10001/raw wager limit, REG-094 original9992/9993-wager browser reproduction and atomic automatic finalization, REG-095 defensive replay validation, REG-096 current-document consistency. Official verify.ps1 PASS/0 inspected16:58:01:66files/956tests (start16:56:40,7.78s),38Chromium/28.2s, typecheck/lint/ES2023 domain compile/production fixture exclusion, exact96 unique owners (83Vitest/13Chromium). Mandatory preservation M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870+24Chromium/15.8s PASS. REG-070 and accepted assertions remain unchanged. Three regenerated public screenshot hashes match PORTFOLIO. No executable changes after this harness; final affected document checks and publication receipt are in log/delivery/Git.
+
+Scope: only bounded replay consistency and current documentation. One replay v1 maximum, rejection before gameplay/funds/RNG/audit/journal mutation, no truncation; browser reserves two entries for intent plus automatic SETTLE/VOID. Existing seeded unfinished demo at cap requires refresh; finalized sessions permit existing new-demo control. No gameplay/RNG/digest/payout/policy/dependency/UI changes. Required targeted checks -> official verify.ps1/preservation -> diff/check/full status -> verified ledgers -> normal commit/push/fetch/parity/clean -> STOP for genuinely fresh recheck #2. Stop on authority conflict, unknown overlap, unavailable tools, unsafe publication or cumulative10 repairs.
+
+| Current finding / owner | Repair and regression evidence | Status |
+| --- | --- | --- |
+| MEDIUM-04 / T03 repair3 | Single MAX_REPLAY_COMMANDS=10000 in recorder/exporter/decoder; browser preflights two slots; no mutation/audit/clock/truncation on limit; validation failure hides replay while preserving source state/audit. REG-093..095 | OPEN — repair VERIFIED; independent recheck #2 pending |
+| LOW-03 / T09 repair3 | LAB entry header/section34 and eight current documents record completed original review/batch1/recheck1, five closed/two open, batch2 verification and distinct acceptance/deployment. REG-096 checks current blocks and original stale-header location | OPEN — repair VERIFIED; independent recheck #2 pending |
+
+Publication checkpoint: fix: bound M8 replay sessions and reconcile review status. Its own SHA cannot embed itself; final delivery/Git records the exact commit, normal push/fetch and main=origin/main,0/0,clean receipt. Stop after that authorized publication; only a genuinely fresh independent reviewer makes the next closure decision.
+
+## Historical repair batch 1 delivery (superseded by current status above)
 
 Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found 0 BLOCKER, 0 HIGH, 3 MEDIUM and 3 LOW findings. All remain OPEN pending the independent reviewer's recheck. M8 ACCEPTED NO; deployment NOT RUN. The implementation evidence below is the historical pre-review snapshot, superseded by this repair record.
 
@@ -10,7 +36,7 @@ Current M8 ledger: **0,2,2,2,2,1,1,2,2** (each /10). T03 repair2 published 0cff8
 
 REG-M8-001..092 has92 unique owners (79 Vitest/13 Chromium); REG-036/059/087 retain and strengthen their original coverage, and092 adds cascade refunds. All three public screenshots were regenerated, visually inspected and reproduced with the PORTFOLIO hashes; Classic/Charlie bytes remain unchanged and Replay/Audit changes intentionally. M1-M7 ledgers remain unchanged. All six findings remain OPEN until the same independent reviewer rechecks; implementation verification does not close findings or mark M8 ACCEPTED.
 
-## Finding repair evidence — all OPEN pending independent reviewer recheck
+## Historical batch1 finding evidence — OPEN at that checkpoint, superseded above
 
 | Finding | Contract / concrete failure | Targeted repair and executable evidence | Reviewer status |
 | --- | --- | --- | --- |

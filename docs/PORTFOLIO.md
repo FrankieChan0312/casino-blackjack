@@ -2,7 +2,16 @@
 
 Casino Blackjack demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples and invariants, and real Playwright Chromium checks. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.
 
-Fresh M8 review reported three MEDIUM and three LOW findings; targeted repairs are mechanically verified, while all findings remain OPEN pending independent reviewer recheck. M8 is NOT ACCEPTED. Deployment NOT RUN.
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## Five-minute technical walkthrough
 
@@ -35,7 +44,7 @@ Review repair regeneration runs the same three-image workflow. Classic and Charl
 
 Regenerate with `npm.cmd run test:e2e -- tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
 
-Current mechanical evidence: 66 Vitest files/952 tests, 38 Chromium tests, [92 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual counts, timestamps, failures and checkpoint publication evidence.
+Expanded current inventory: 66 Vitest files/956 tests, 38 Chromium tests, [96 exact M8 regression owners](M8_MAPPING.md), and accepted M1–M7 preservation. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked execution status, counts, timestamps, failures and checkpoint publication evidence.
 
 ## Honest boundaries
 

@@ -6,7 +6,7 @@ import type { PlayerAction } from '../domain/advancedGame.js';
 import type { SideWagerType } from '../domain/optionalGame.js';
 import { evaluateHand } from '../domain/hand.js';
 import { CLASSIC, getProfile, type ProfileId } from '../domain/profile.js';
-import { createReplaySession, replay, type ReplayPackage } from '../domain/replay.js';
+import { createReplaySession, replay, ReplayError, type ReplayPackage } from '../domain/replay.js';
 import { applySessionCommand, type SessionCommand } from '../domain/sessionCommand.js';
 import { createAuditTrail, type Clock } from '../domain/audit.js';
 
@@ -21,6 +21,7 @@ export type BrowserCommand =
   | { type: 'FOLLOW'; choice: 'ADD' | 'NO_ADD' };
 
 const reasons: Record<string, string> = {
+  REPLAY_COMMAND_LIMIT: 'Replay session command limit reached. Start a new demo after settlement, or refresh to restart an unfinished demo.',
   INSUFFICIENT_FUNDS: 'Not enough available credits.', INELIGIBLE_BACK_TARGET: 'Choose another funded seat; you cannot back your own seat.',
   BETTING_NOT_OPEN: 'Betting is closed.', WRONG_PHASE: 'This action is unavailable now.',
   DOUBLE_NOT_ALLOWED: 'Double requires an eligible two-card first decision.', SPLIT_NOT_ALLOWED: 'Split requires an eligible first decision.',
@@ -41,6 +42,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   let state = session?.getState() ?? options.factory?.() ?? game.createBehindGame('local-shoe-1', random, true, options.profileId ?? CLASSIC);
   let audit = createAuditTrail(state, options.clock);
   let replayResult: ReturnType<typeof replay> | null = null;
+  let replayFailed = false;
   let feedback = '';
   let shoeMessage = '6-deck persistent shoe';
   function project() {
@@ -59,7 +61,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return { profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
         || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0),
-      replayAvailable: !!session && (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'),
+      replayAvailable: !!session && !replayFailed && (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'),
       replayResult, audit: audit.getPublic(), configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),
       trackedBack: state.backExposures.map((entry) => ({ seat: entry.targetSeat, handId: entry.handId, amount: entry.stakeUnits })),
@@ -82,10 +84,16 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return result;
   }
   function dispatch(command: BrowserCommand) {
+    // One player intent can require one automatic SETTLE or VOID. Reserve both
+    // before invoking either, so a journal limit cannot strand a half-transition.
+    if (session && !session.hasCapacity(2)) {
+      feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
+    }
     const previousShoe = state.table.game.shoe.shoeId;
     const result = invoke(command);
     if (result.ok) {
       replayResult = null;
+      replayFailed = false;
       if (command.type === 'CLOSE') shoeMessage = previousShoe === state.table.game.shoe.shoeId ? 'Existing 6-deck shoe continues' : 'New 6-deck shoe shuffled';
       feedback = command.type === 'FOLLOW' && state.followDecisions.at(-1)?.fundingError ? explainReason('INSUFFICIENT_FUNDS') : '';
       if (state.table.phase === 'CLOSED' && state.table.game.round?.phase === 'ROUND_COMPLETE') {
@@ -108,15 +116,22 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
     const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
-    replayResult = null; feedback = ''; shoeMessage = 'New demo session: starting credits restored'; publish(); return true;
+    replayResult = null; replayFailed = false; feedback = ''; shoeMessage = 'New demo session: starting credits restored'; publish(); return true;
   }
   function exportReplay(): ReplayPackage | null {
     return snapshot.replayAvailable && session ? session.exportPackage() : null;
   }
   function replayCompleted() {
     const p = exportReplay(); if (!p) return false;
+    let reconstructed: ReturnType<typeof replay>;
+    try { reconstructed = replay(p); }
+    catch (error) {
+      if (!(error instanceof ReplayError)) throw error;
+      replayResult = null; replayFailed = true;
+      feedback = 'Completed replay is unavailable: replay validation failed.'; publish(); return false;
+    }
     audit.recordReplay(state, false);
-    replayResult = replay(p); audit.recordReplay(state, true); publish(); return true;
+    replayResult = reconstructed; audit.recordReplay(state, true); publish(); return true;
   }
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
     startDemo, exportReplay, replayCompleted,

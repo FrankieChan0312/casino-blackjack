@@ -1,5 +1,16 @@
 # Casino Blackjack — UX/UI Specification
 
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
+
 Document date: 2026-09-28  
 Document task: UXUI-1.0  
 Intended repository location: `docs/UX_UI.md`  
@@ -790,4 +801,4 @@ Unless a future UX revision explicitly adds them:
 
 M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.
 
-M8 T01-T09 implementation exists. Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found three MEDIUM and three LOW findings. Targeted review repairs, including this current-status/documentation repair, are IMPLEMENTED / VERIFIED after the final official harness. All six findings remain OPEN until the independent reviewer rechecks the repaired HEAD. M8 independent reviewer RECHECK: PENDING. M8 ACCEPTED: NO. Deployment: NOT RUN. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) for actual counts, repairs, SHA/parity and the recheck contract.
+M8 T01-T09 implementation exists. The original fresh review completed with three MEDIUM and three LOW findings; repair batch1 completed at5218bb9. Independent recheck #1 completed at that HEAD: MEDIUM-01/02/03 and LOW-01/02 CLOSED BY RECHECK, LOW-03 still OPEN and new MEDIUM-04 OPEN. Repair batch2 addresses the replay-session bound and stale LAB current status; its exact verification/publication status is in the current status above and STATE. Both findings remain OPEN until genuinely fresh independent recheck #2. M8 ACCEPTED: NO. Deployment: NOT RUN. The bounded seeded demo rejects commands before mutation when fewer than two journal entries remain, reserving an automatic SETTLE/VOID; an unfinished capped demo requires refresh, while finalized sessions retain Start new demo. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md).

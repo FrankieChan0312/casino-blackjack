@@ -1,12 +1,23 @@
-# M8 review repair batch 1 — independent recheck handoff
+# M8 repair batch 2 — independent recheck #2 handoff
 
-**Findings FIRST. All six findings OPEN; independent reviewer RECHECK PENDING; M8 ACCEPTED NO; deployment NOT RUN.** Fresh independent review of eb85032604b03031b5b934818fda773ea9aae666 found0BLOCKER/0HIGH/3MEDIUM/3LOW. The user authorized targeted repair batch1, normal verification/commits/pushes and documentation. This package is repair implementation evidence; it does not close findings or perform independent recheck. The same independent reviewer must recheck the repaired HEAD in a genuinely fresh conversation, with no reliance on implementation conclusions. Reviewer makes no edits, commit, push, deployment or acceptance.
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
+
+**Findings FIRST. Two findings OPEN; genuinely fresh independent recheck #2 required; M8 ACCEPTED NO; deployment NOT RUN.** Original fresh review completed at eb850326 with3MEDIUM/3LOW. Batch1 published5218bb9594580090cf39bad219a0b40f268c9781; fresh recheck #1 completed there and closed MEDIUM-01/02/03 and LOW-01/02, retained LOW-03 and added MEDIUM-04. This batch repairs only the two OPEN findings. Implementation verification cannot close them. A genuinely fresh reviewer must inspect final repaired HEAD without relying on implementation conclusions. If fresh-session independence is unavailable, STOP and report NOT COMPLETED. Read-only review: no edits, repair, commit, push, deployment or acceptance.
 
 ## Revision and entry gate
 
 Repository: casino-blackjack; GitHub https://github.com/FrankieChan0312/casino-blackjack; authorized branch main. Accepted M7 baseline: **da6f068ffd27713848ed48f023c17ed388b8b44e**. User explicitly stated "I accept M7." after supplied fresh review reported no findings at any severity and complete harness/mappings/preservation/documentation PASS. Acceptance was recorded with substantive M8-T01.
 
-Reviewed M8 base/repair entry at2026-09-30 14:34:10 +08:00: main=HEAD=origin/main=eb85032604b03031b5b934818fda773ea9aae666,0/0,clean. Repairs published:0cff8522eed891aa0df5474760bed48f30575ec1 (strict profiles),027903a08e498c2f82bd330b7eeea7dde0677031 (actual actions/cascade refunds/REG-092),5c9f071c576ce8c3056447f9e9c4781c5d62b987 (UI/copy/public screenshot evidence), each normal push/fetch/parity0/0/clean. Final repair checkpoint title: **docs: prepare M8 review repair recheck**. Its SHA cannot embed itself; require the exact repaired HEAD/origin/main from final delivery and independently verify Git. Inspect eb850326..repairedHEAD for this batch and accepted M7 da6f068f..repairedHEAD for cumulative M8 scope. Historical failure/verification/publication evidence is retained in [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md).
+Historical batch1 entry at2026-09-30 14:34:10 +08:00 was clean main/origin eb850326; published repairs0cff8522eed891aa0df5474760bed48f30575ec1,027903a08e498c2f82bd330b7eeea7dde0677031,5c9f071c576ce8c3056447f9e9c4781c5d62b987 and final5218bb9594580090cf39bad219a0b40f268c9781. Independent recheck #1 completed at5218bb9. Batch2 entry captured2026-09-30 16:42:46 +08:00: main=HEAD=origin/main=5218bb9594580090cf39bad219a0b40f268c9781,0/0,clean/full untracked empty. Final batch2 repair checkpoint title: **fix: bound M8 replay sessions and reconcile review status**. Its SHA cannot embed itself; require exact repaired HEAD/origin/main from final delivery and independently verify Git. Inspect5218bb9..repairedHEAD for batch2, eb850326..repairedHEAD for both repair batches and accepted M7 da6f068f..repairedHEAD for cumulative M8 scope. Historical failure/verification/publication evidence is retained in [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md).
 
 Recommended GPT Sol 6.1 / High; implementation actual model and reasoning/effort NOT VERIFIED / NOT VERIFIED. Independently record reviewer runtime only if verifiable. Do not treat recommended settings as evidence.
 
@@ -16,7 +27,13 @@ Read AGENTS, SKILL, RULES (especially R16/R17), SPEC M8, DESIGN, UX_UI, PLAN, ST
 
 List BLOCKER/HIGH/MEDIUM/LOW findings first, each with file/line, reproducible evidence, rule/requirement impact and why current tests miss it. Separate verified defects from questions or coverage limitations. If there are no findings, state that explicitly by severity before the requirement/harness assessment. Do not infer PASS from implementation notes or test names; rerun and inspect outcomes. Any unavailable check is BLOCKED or NOT RUN, never PASS.
 
-## Six OPEN finding rechecks
+## Two OPEN finding rechecks and five closed-finding preservation checks
+
+MEDIUM-04 (M8-T03 repair3): independently run Charlie seed21/Human1/OPEN with9992 and9993 successful alternating MAIN200/202 wagers, CLOSE/Hit/Hit/Hit/ADVANCE. Exactly10000 total entries must complete, decode and replay; the would-be10001-entry session must reject before ADVANCE/SETTLE mutation. Inspect the single authoritative MAX_REPLAY_COMMANDS, recorder/exporter/decoder consistency and browser two-slot reservation. Prove rejection preserves gameplay, funds, RNG, journal sequences/outcomes and audit/clock; no truncation. Exercise otherwise-legal MAIN change/cancel/SIDE/CLOSE at a full raw recorder, NEXT after a full completed session, oversized external package rejection, normal replay/digest/secrecy and defensive ReplayError handling. REG-093..095 are implementation regressions; independently reproduce rather than trusting their names. A capped unfinished memory-only demo requires refresh; inspect this explicit bounded-session limitation.
+
+LOW-03 (M8-T09 repair3): independently inspect LAB top status, section34 and all eight required current documents. They must distinguish completed original review, completed batch1, completed recheck #1, five CLOSED BY RECHECK findings, two OPEN findings with repair verification/recheck #2 pending, batch2 publication, M8 NOT ACCEPTED/deployment NOT RUN. Preserve historical records; REG-096 detects stale current review status mechanically. The original LOW-03 row below is historical batch1 evidence; it did not fix the stale LAB header found by recheck #1.
+
+The following original reproductions remain required preservation inspection. MEDIUM-01/02/03 and LOW-01/02 are CLOSED BY RECHECK #1, not newly OPEN. Only LOW-03 and MEDIUM-04 await closure. Do not erase the original review result or infer closure from repair tests.
 
 | Finding / originating repair | Original evidence | Required independent reproduction |
 | --- | --- | --- |
@@ -27,7 +44,7 @@ List BLOCKER/HIGH/MEDIUM/LOW findings first, each with file/line, reproducible e
 | LOW-02 / T05/T08 repair2 | fifth-Hit wording contradicts R16 five total cards | UI/README/current prose say a legal Hit produces exactly five cards <=21. Inspect rendered copy and Charlie/fifth-card21 results. Current negative assertions/historical failure quotations are not erroneous player-facing claims. Regenerated public images/hashes in PORTFOLIO; REG-080 and portfolio |
 | LOW-03 / T09 repair2 | UX_UI current status wrongly presented M7 pre-review / M8 not started | Section36 now records M1-M7 HUMAN ACCEPTED, accepted M7 SHA, M8 T01-T09 exists, review findings/verified repairs, OPEN recheck, M8 ACCEPTEDNO/deployment NOTRUN. Verify STATE/PLAN/log/LAB/README/PORTFOLIO consistency |
 
-Only the independent reviewer may close these findings. Report each recheck outcome and any new findings first; repair verification is not closure. Final expected M8 ledger0,2,2,2,2,1,1,2,2. Preserve M7 1,0,0,1,0,0,1,2,0; M6 1,0,0,0,0,0,1,0; M5 0,0,0,0,0,1,0; M4 1,0,1,0,0,0,1; M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1.
+Only a genuinely fresh independent reviewer may close the two OPEN findings. Report both recheck outcomes, preservation of the five closed findings and any new findings first; repair verification is not closure. Prior M8 ledger0,2,2,2,2,1,1,2,2; final expected ledger0,2,3,2,2,1,1,2,3 after VERIFIED. Preserve M7 1,0,0,1,0,0,1,2,0; M6 1,0,0,0,0,0,1,0; M5 0,0,0,0,0,1,0; M4 1,0,1,0,0,0,1; M3 0,0,0,0,0,2; M2 1,0,0,0,1,1; M1 2,1,0,0,1,0,1,0,0,1.
 
 ## Required independent inspection
 
@@ -42,12 +59,12 @@ Only the independent reviewer may close these findings. Report each recheck outc
 | 7 | Authoritative replay | Commands use real handlers, no trusted state import; sequence failure attribution; Classic/Charlie/Split/Insurance/back/follower/VOID/multiple rounds |
 | 8 | Replay secrecy | Full deterministic export only COMMITTED/VOID, active snapshots/DOM/ARIA omit seed/state/order/IDs, NEXT removes package/result; developer seams never wired to players |
 | 9 | Audit attribution | Session/profile, seats, wagers, local/computer/follower/dealer/system, hands/children, optional decisions and results correctly attributed |
-| 10 | Ordering / time | Sequence authoritative, ISO UTC injected clock, timestamps not uniqueness; attempts/rejections observed without outcome mutation |
+| 10 | Ordering / time | Sequence authoritative, ISO UTC injected clock, timestamps not uniqueness; handler attempts/rejections observed without outcome mutation; session-limit preflight rejects before audit/clock/sequence mutation |
 | 11 | Public audit secrecy | Primitive frozen allowlist never carries hole cards, ranks/suits, physical IDs, future order or active seed/state; prior archives remain immutable |
 | 12 | Invariants / claims | Fixed 256-seed card/fund/settlement/VOID/replay checks are bounded gross sanity, with no RTP/house-edge/certification claim |
 | 13 | Browser M8 controls | Eligible explicit profile/start/reset; Charlie Win fifth-card 21; seeded equality; terminal view/copy/replay mode; original results preserved; secondary audit |
 | 14 | Accessibility / responsive | Keyboard focus/live status/semantic names/text status preserved; mobile 320px no horizontal primary overflow and usable M8 controls |
-| 15 | REG-M8 | Exactly92 unique literal executable owners REG-M8-001..092; AST/document completeness; preserve001..091 coverage, new cascade audit092 and strengthened036/059/087; no skipped/duplicate padding |
+| 15 | REG-M8 | Exactly96 unique literal executable owners REG-M8-001..096; AST/document completeness; preserve001..092 coverage, strengthened036/059/087, new cap/atomicity/defense/current-document093..096; no skipped/duplicate padding |
 | 16 | Historical preservation | M1-M6 accepted incremental inventories unchanged; M7 full 56/870 and 24 Chromium; UX-01..14/REG-M7-001..064/E2E-01..15; only authorized absence anchors |
 | 17 | Portfolio accuracy | README commands/recipe/versions/counts/architecture and PORTFOLIO match code; three images reproducible and public-only |
 | 18 | Prohibited claims | No production casino, certified RNG/fairness, verified RTP, optimal strategy, real-money or fabricated review/acceptance claims |
@@ -64,13 +81,13 @@ git diff --check
 git status --short --untracked-files=all
 ```
 
-Expected current **66 Vitest files /952 tests**, **1 Chromium project /38 tests**, no retries. Required typecheck/lint/ES2023-only domain compile/production build/fixture exclusion PASS; M8 mapping/schema/contracts/portfolio checks execute within Vitest. Harness runs mandatory independent preservation and rejects a missing tool/nonzero child exit. Full historical inventory: M1 12/155, M2 6/78, M3 5/72, M4 7/171, M5 8/168, M6 9/181, M7 all 56/870 plus24 Chromium. Accepted Git-object inventories and original assertions must be inspected, not just totals. Fixed256-seed x3-round/replay REG-070 has a narrow15000ms budget after a measured5482ms default5000ms timeout; all seeds/rounds/assertions are retained. Inspect this test-only allowance and the retained FAIL evidence, not only the final PASS.
+Expected current **66 Vitest files /956 tests**, **1 Chromium project /38 tests**, no retries. Required typecheck/lint/ES2023-only domain compile/production build/fixture exclusion PASS; M8 mapping/schema/contracts/portfolio checks execute within Vitest. Harness runs mandatory independent preservation and rejects a missing tool/nonzero child exit. Full historical inventory: M1 12/155, M2 6/78, M3 5/72, M4 7/171, M5 8/168, M6 9/181, M7 all 56/870 plus24 Chromium. Accepted Git-object inventories and original assertions must be inspected, not just totals. Fixed256-seed x3-round/replay REG-070 has a narrow15000ms budget after a measured5482ms default5000ms timeout; all seeds/rounds/assertions are retained. Inspect this test-only allowance and the retained FAIL evidence, not only the final PASS.
 
 Historical absence anchors: REG-M6-095 at accepted M6; M7 REG-002/003 at accepted M7. Preservation normalizes only the authorized M7 anchor blocks/imports back to their original assertions and compares the remaining file byte-for-byte. Current secrecy and gameplay tests still execute. Review these exceptions carefully.
 
 To regenerate images, run `npm.cmd run test:e2e -- tests/browser/portfolio.spec.ts`. Screenshot generation may rewrite only reproducible tracked images; inspect any actual differences and report them, do not commit/rebaseline. T08 repeat generation was byte-identical. Test factories use fixed UTC and controlled real-domain commands; normal production excludes factories. Local port 4173 must be free.
 
-Latest repair executable harness PASS/0 inspected2026-09-30 15:19:58 +08:00: typecheck/lint/domain/build fixture exclusion,66/952Vitest (15:18:00,11.40s),38Chromium/33.2s, M1-M7 preservation and24accepted M7Chromium/18.5s. Final T09 documentation/full-harness evidence is in the current STATE/log and delivery. These are implementation results only; reviewer must rerun independently. The interrupted cleanup, timeout FAIL and corrected new-fixture assertions remain in the log. Public image SHA-256/repeat-generation evidence is in PORTFOLIO; hashes prove reproducibility only.
+Historical batch1 executable harness PASS/0 inspected2026-09-30 15:19:58 +08:00:66/952Vitest,38Chromium,M1-M7 preservation and24accepted M7Chromium. Batch2 exact final harness evidence is in the current STATE/log and delivery. These are implementation results only; reviewer must rerun independently. Interrupted cleanup, timeout FAIL and corrected fixture assertions remain historical in the log; this batch also retains its failed documentation check and read/patch attempts. Public image SHA-256/repeat-generation evidence is in PORTFOLIO; hashes prove reproducibility only.
 
 ## Scope and known limits
 

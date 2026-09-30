@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import { createReplaySession, replay, parseReplay, outcomeDigest, canonical } from '../../src/domain/replay.js';
+import { createReplaySession, replay, parseReplay, outcomeDigest, canonical, MAX_REPLAY_COMMANDS } from '../../src/domain/replay.js';
 import { CLASSIC, CHARLIE } from '../../src/domain/profile.js';
 import { startSession, closeAce, finishSession, send } from '../helpers/replayFixture.js';
 import { freezeDeep } from '../helpers/advancedFixture.js';
@@ -124,4 +124,42 @@ it('[REG-M8-042] pre-terminal public state has no seed/shoe order/IDs; export re
   closeAce(active); send(active, { type: 'ACT', action: 'STAND', handId: 'round-1/seat-1' }); send(active, { type: 'ADVANCE' });
   expect(() => active.exportPackage()).toThrow('finalized');
   send(active, { type: 'SETTLE' }); expect(active.exportPackage().replayVersion).toBe(1);
+});
+
+it('[REG-M8-093] exact replay cap exports and replays without truncation and rejects excess intents atomically', () => {
+  expect(MAX_REPLAY_COMMANDS).toBe(10000); // Preserve the external replay v1 contract.
+  let clockCalls = 0;
+  const s = createReplaySession(21, CHARLIE, { clock: () => { clockCalls++; return '2026-09-30T05:00:00.000Z'; } });
+  send(s, { type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }] });
+  send(s, { type: 'OPEN' });
+  for (let i = 0; i < 9992; i++) send(s, { type: 'MAIN', seat: 1, amount: i % 2 ? 202 : 200 });
+  send(s, { type: 'CLOSE' });
+  for (let i = 0; i < 3; i++) send(s, { type: 'ACT', action: 'HIT', handId: 'round-1/seat-1' });
+  send(s, { type: 'ADVANCE' }); send(s, { type: 'SETTLE' });
+  const p = s.exportPackage(); const serialized = JSON.stringify(p);
+  expect(p.commands).toHaveLength(10000);
+  expect(p.commands.map(e => e.sequence)).toEqual(Array.from({ length: 10000 }, (_, i) => i + 1));
+  expect(p.commands.slice(-2).map(e => e.command.type)).toEqual(['ADVANCE', 'SETTLE']);
+  expect(parseReplay(p)).toEqual(p);
+  expect(replay(p)).toEqual({ publicState: s.getPublic(), outcomes: s.getOutcomes(), digest: p.outcomeDigest });
+  expect(s.getOutcomes()[0].resultRecords[0]).toMatchObject({ outcome: 'CHARLIE', stakeUnits: 202, grossReturnUnits: 404 });
+  const before = s.getState(), audit = s.getAudit(), outcomes = s.getOutcomes(), clocks = clockCalls;
+  expect(s.dispatch({ type: 'NEXT' })).toEqual({ ok: false, state: before, error: 'REPLAY_COMMAND_LIMIT' });
+  expect(s.getState()).toBe(before); expect(s.getAudit()).toEqual(audit); expect(s.getOutcomes()).toEqual(outcomes);
+  expect(clockCalls).toBe(clocks); expect(JSON.stringify(s.exportPackage())).toBe(serialized);
+  const oversized = { ...p, commands: [...p.commands, { sequence: 10001, command: { type: 'NEXT' } }] };
+  expect(() => parseReplay(oversized)).toThrow('Malformed replay'); expect(() => replay(oversized)).toThrow('Malformed replay');
+
+  // Also exercise otherwise-legal wager changes and CLOSE at the raw recorder cap.
+  const open = createReplaySession(21, CHARLIE);
+  send(open, { type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }] }); send(open, { type: 'OPEN' });
+  for (let i = 0; i < 9998; i++) send(open, { type: 'MAIN', seat: 1, amount: i % 2 ? 202 : 200 });
+  const active = open.getState(), activeBytes = JSON.stringify(active), activeAudit = open.getAudit();
+  for (const command of [{ type: 'MAIN', seat: 1, amount: 204 }, { type: 'MAIN', seat: 1, amount: 0 },
+    { type: 'SIDE', kind: 'PAIR', amount: 20 }, { type: 'CLOSE' }] as const) {
+    expect(open.dispatch(command)).toEqual({ ok: false, state: active, error: 'REPLAY_COMMAND_LIMIT' });
+  }
+  expect(open.getState()).toBe(active); expect(JSON.stringify(open.getState())).toBe(activeBytes);
+  expect(open.getAudit()).toEqual(activeAudit); expect(open.hasCapacity()).toBe(false);
+  expect(() => open.exportPackage()).toThrow('finalized');
 });

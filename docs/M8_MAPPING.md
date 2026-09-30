@@ -1,10 +1,10 @@
 # M8 executable regression mapping
 
-REG-M8-001..092: 79 Vitest requirements and 13 real Chromium scenarios. Every ID has one literal executable owner; m8Regression verifies exact range, uniqueness, non-skipped registrations and exact document rows. REG-092 adds the previously unmapped cascade refund audit requirement. Existing owners retain their semantic coverage; REG-036 and REG-059 are strengthened. Mechanical mapping is not independent review.
+REG-M8-001..096: 83 Vitest requirements and 13 real Chromium scenarios. Every ID has one literal executable owner; m8Regression verifies exact range, uniqueness, non-skipped registrations and exact document rows. REG-092 adds cascade refund audit;093..096 add bounded replay/atomic browser/defensive replay/current-document requirements. Existing owners retain their semantic coverage; REG-036 and REG-059 are strengthened. Mechanical mapping is not independent review.
 
-Profiles/RNG 001..007; Charlie 008..024; replay 025..042; audit 043..059; browser controller 060..066; seeded invariants 067..073; contracts 074..076; harness failure propagation 077..078; browser UX/secrecy/keyboard/mobile 079..091; cascade cancellation audit 092.
+Profiles/RNG 001..007; Charlie 008..024; replay 025..042; audit 043..059; browser controller 060..066; seeded invariants 067..073; contracts 074..076; harness failure propagation 077..078; browser UX/secrecy/keyboard/mobile 079..091; cascade cancellation audit092; replay cap093; browser atomic cap094; replay validation defense095; current-document consistency096.
 
-Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. T08 adds separate portfolio links/command/privacy tests and reproducible public screenshot generation without manufacturing duplicate REG owners. Current total: 66 Vitest files/952 tests and 38 Chromium (including 24 accepted M7, 13 M8, 1 portfolio scenario). Independent reviewer recheck is a separate fresh-session gate in M8_REVIEW_HANDOFF.md.
+Full harness also preserves M1-M7 independently through verify-preservation.ps1, current domain isolation and production fixture exclusion. Historical M7 REG-002/003 absence is anchored to accepted da6f068f; all current gameplay/secrecy assertions and accepted browser cases still execute. T08 adds separate portfolio links/command/privacy tests and reproducible public screenshot generation without manufacturing duplicate REG owners. Expanded current inventory: 66 Vitest files/956 tests and 38 Chromium (including 24 accepted M7, 13 M8, 1 portfolio scenario); actual checked execution status is in STATE/log. Independent reviewer recheck is a separate fresh-session gate in M8_REVIEW_HANDOFF.md.
 
 | ID | Executable file | Exact test title |
 | --- | --- | --- |
@@ -100,3 +100,7 @@ Full harness also preserves M1-M7 independently through verify-preservation.ps1,
 | REG-M8-090 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | M8 tools and replay JSON remain usable at 320px without overflow |
 | REG-M8-091 | [tests/browser/m8.spec.ts](../tests/browser/m8.spec.ts) | keyboard opens advanced settings, chooses profile and starts seeded session |
 | REG-M8-092 | [tests/integration/audit.test.ts](../tests/integration/audit.test.ts) | MAIN cancellation records actual MAIN and dependent SIDE/BACK refunds with owner wager amount and shared command attribution |
+| REG-M8-093 | [tests/integration/replay.test.ts](../tests/integration/replay.test.ts) | exact replay cap exports and replays without truncation and rejects excess intents atomically |
+| REG-M8-094 | [tests/integration/browserDemo.test.ts](../tests/integration/browserDemo.test.ts) | reviewer boundary completes at 10000 and rejects a two-intent overflow before any mutation |
+| REG-M8-095 | [tests/integration/browserDemo.test.ts](../tests/integration/browserDemo.test.ts) | defensive replay validation failure hides availability and preserves original finances and audit |
+| REG-M8-096 | [tests/unit/m8Contract.test.ts](../tests/unit/m8Contract.test.ts) | eight current documents distinguish completed reviews closed findings and pending batch2 closure |

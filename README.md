@@ -4,7 +4,16 @@ A TypeScript Blackjack portfolio: a headless rules engine, a responsive React ta
 
 **Simulated credits only, with no redemption value.** M1-M7 are HUMAN ACCEPTED.
 
-Fresh M8 review found three MEDIUM and three LOW findings; targeted repairs are mechanically verified and await independent reviewer recheck. All findings remain OPEN; M8 is NOT ACCEPTED. Deployment NOT RUN.
+## Current M8 review status
+
+Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
+MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
+LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
+Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ![Classic table with a hidden dealer card](docs/images/classic-table.png)
 
@@ -60,9 +69,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
 
 ## Verification
 
-Current full harness: **66 Vitest files / 952 tests**, **1 Chromium project / 38 tests**. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
+Expanded current harness inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 38 tests**; actual execution status is in STATE/log. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
 
-[REG-M8-001..092](docs/M8_MAPPING.md) has exactly 92 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
+[REG-M8-001..096](docs/M8_MAPPING.md) has exactly 96 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
 
 ## Profiles
 
@@ -79,7 +88,7 @@ Charlie is terminal, including fifth-card 21; bust takes precedence. Three/four-
 
 In **Advanced demo settings**, choose Five-Card Charlie Demo and seed **21**, then **Start new demo session**. This explicitly resets simulation credits to 1000. Keep Seat 1, open betting, set the default MAIN, close/deal, Hit three times and Continue table. The result is **Charlie Win**.
 
-After financial completion, **Replay completed session** shows **Replay mode** without changing original results. **View replay package** and **Copy replay JSON** are available only for finalized seeded sessions; starting the next round removes export until completion. An exported package contains its seed and can reconstruct hidden information, so share it deliberately after completion. The browser supports replay of its own completed session, not arbitrary file import.
+After financial completion, **Replay completed session** shows **Replay mode** without changing original results. **View replay package** and **Copy replay JSON** are available only for finalized seeded sessions; starting the next round removes export until completion. A seeded session is bounded to10000 accepted journal entries, including automatic settlement. The browser reserves two slots before a command; at the cap it rejects without changing play or credits. Use Start new demo after completion, or refresh to restart an unfinished capped demo. An exported package contains its seed and can reconstruct hidden information, so share it deliberately after completion. The browser supports replay of its own completed session, not arbitrary file import.
 
 **Public audit history** is secondary to gameplay and shows sequence, UTC time, actor/action, stake and result. It excludes hole identity, physical IDs, future shoe order and active seed/state. [Replay schema](docs/REPLAY.md) and [audit schema](docs/AUDIT.md) document versions and developer boundaries.
 

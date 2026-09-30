@@ -6,6 +6,8 @@ import { applySessionCommand, type SessionCommand } from './sessionCommand.js';
 import { createAuditTrail, type Clock } from './audit.js';
 
 export const REPLAY_VERSION = 1;
+// Replay v1 bounds the entire session, including automatic finalization intents.
+export const MAX_REPLAY_COMMANDS = 10000;
 export interface ReplayConfiguration {
   readonly profileId: ProfileId;
   readonly seed: number;
@@ -76,7 +78,7 @@ export function parseReplay(value: unknown): ReplayPackage {
   if (p.replayVersion !== REPLAY_VERSION) throw new ReplayError('Unsupported replay version');
   keys(p, ['replayVersion','configuration','commands','outcomeDigest']);
   const config = configuration(p.configuration);
-  if (!Array.isArray(p.commands) || !p.commands.length || p.commands.length > 10000
+  if (!Array.isArray(p.commands) || !p.commands.length || p.commands.length > MAX_REPLAY_COMMANDS
     || typeof p.outcomeDigest !== 'string' || !/^fnv1a32-v1:[0-9a-f]{8}$/.test(p.outcomeDigest)) throw new ReplayError('Malformed replay');
   const commands = p.commands.map((value, index): ReplayEntry => {
     try {
@@ -120,7 +122,10 @@ export function createReplaySession(seed: number, profileId: ProfileId = CLASSIC
   const audit = createAuditTrail(state, options.clock);
   const entries: ReplayEntry[] = [];
   const outcomes: ReturnType<typeof terminalOutcome>[] = [];
+  function hasCapacity(requiredEntries = 1) { return entries.length + requiredEntries <= MAX_REPLAY_COMMANDS; }
   function dispatch(input: SessionCommand) {
+    // Reject before handlers, RNG consumption, audit/clock or journal mutation.
+    if (!hasCapacity()) return { ok: false as const, state, error: 'REPLAY_COMMAND_LIMIT' };
     const command = validateCommand(input);
     const before = state;
     const result = applySessionCommand(state, command, random, config.demoFaults);
@@ -136,9 +141,10 @@ export function createReplaySession(seed: number, profileId: ProfileId = CLASSIC
   }
   function exportPackage(): ReplayPackage {
     if (state.table.phase !== 'COMMITTED' && state.table.phase !== 'VOID') throw new ReplayError('Replay export requires finalized round');
+    if (!entries.length || entries.length > MAX_REPLAY_COMMANDS) throw new ReplayError('Malformed replay');
     return freeze({ replayVersion: 1, configuration: { ...config }, commands: [...entries], outcomeDigest: outcomeDigest(outcomes) });
   }
-  return { dispatch, exportPackage, getPublic: () => getPublicBehindView(state), getAudit: audit.getPublic,
+  return { dispatch, exportPackage, hasCapacity, getPublic: () => getPublicBehindView(state), getAudit: audit.getPublic,
     // Explicit internal/developer boundary. Never hand this object to React.
     getState: () => state, getOutcomes: () => [...outcomes] };
 }
