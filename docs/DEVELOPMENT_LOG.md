@@ -1,5 +1,13 @@
 # Casino Blackjack — Development Log
 
+## M7-T08 ? Real Chromium scenarios, exact mapping and preservation
+
+### 2026-09-30 11:50:22 +08:00 ? VERIFIED after evidence-based repairs
+
+Latest T08 VERIFIED, repairs 2/10. T07 published 50fb66d3d8ad69a12047f7d5351b9a961af94345 at 2026-09-30 11:27:35 +08:00, push/fetch/0-0/clean PASS. T08 recovery inspection 11:36:04 confirmed only owned task changes. Added 20 real-domain Chromium gameplay scenarios, exact UX-01..14 / REG-M7-001..064 / E2E-01..15 mapping and completeness test, production fixture exclusion check and reproducible independent historical reruns. Initial Chromium 23 PASS/1 FAIL (exact label lookup); repair 1 explicit label/id association PASS/0 targeted. First full harness at 11:46:31: 56/870 Vitest and 24 Chromium PASS, lint FAIL/1 (Node console ambient). Repair 2 explicitly imports node:console; targeted lint PASS/0. Final full harness PASS/0, test start 11:49:28: typecheck/lint/domain compile/build with fixture exclusion, **56 files/870 tests and 1 Chromium project/24 tests**. Historical suites separately PASS/0: M1 12/155 11:47:48, M2 6/78 11:47:54, M3 5/72 11:47:56, M4 7/171 11:47:57, M5 8/168 11:47:59, M6 9/181 11:48:01. Original test files and M6 001..094 registrations unchanged; 095 authorized historical exception retained. Complete tracked/untracked diff inspected, whitespace/status checked at 11:50:22. No gameplay change; two dropdown label associations are the only product fix. T08 publication follows; T09 documentation only. Ledger **1,0,0,1,0,0,1,2,0**. Fresh review NOT RUN; ACCEPTED NO; M8 NOT STARTED; deployment NOT RUN.
+
+Scope: all mandatory browser scenarios, controlled real-domain advanced follower windows, strong known-hole DOM/text/all-attribute/ARIA secrecy until reveal, keyboard/focus, desktop/tablet/320px overflow and touch sizes, reduced-motion, classic no Charlie/replay. Normal bot policy unchanged; test fixture factories compile only in e2e mode. Forty architecture/controller/component checks plus 24 Chromium checks have unique REG IDs; each UX ID and E2E scenario ID has one owner (docs/M7_MAPPING.md). Completeness test parses real registrations. Historical rerun script checks each milestone incremental inventory, original test diffs and unchanged 001..094 registrations; full M6 suite still exactly 181 tests. All prior financial/gameplay assertions retained. Non-goals and stop conditions remain the batch contract. Recommended GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED.
+
 ## M7-T07 — Accessible responsive presentation
 
 ### 2026-09-30 11:26:17 +08:00 — Repair 1 VERIFIED

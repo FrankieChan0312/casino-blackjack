@@ -2,6 +2,7 @@
 import * as game from '../../src/domain/behindGame.js';
 import { createSixDeckInventory, type Rank } from '../../src/domain/card.js';
 import { createBrowserController } from '../../src/browser/controller.js';
+import { beginControllerDouble, beginControllerSplit } from '../../src/domain/behindController.js';
 
 export const fixtureRandom = { nextInt: (max: number) => max - 1 };
 export function requireAccepted(result: game.BehindResult) {
@@ -22,13 +23,38 @@ export function fixtureState(ranks: readonly Rank[]): game.BehindGameState {
 }
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController();
-  let state = fixtureState(['5', '6', '6', 'K', '2', '7']);
-  if (name !== 'setup' && name !== 'basic') throw new Error('Unknown controlled fixture');
-  if (name === 'basic') {
-    state = requireAccepted(game.configureBehindSeats(state, [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }]));
+  const scenarios: Record<string, readonly Rank[]> = {
+    setup: ['5', '6', '6', 'K', '2', '7'], basic: ['5', '6', '6', 'K', '2', '7'],
+    poor: ['5', '6', '6', 'K', '2', '7'], split: ['8', '9', '8', 'K', '3', '4', '5'],
+    resplit: ['8', '9', '8', 'K', '8', '3', '4', '5'], aces: ['A', '9', 'A', 'K', 'K', '5'],
+    surrender: ['5', '6', '6', 'K'], insurance: ['5', 'A', '6', '9', '2'], natural: ['A', 'A', 'K', '9'],
+    multi: ['10', '5', '6', '8', '6', 'K', '7', '9'], sides: ['8', '8', '8', '10'],
+    spectator: ['5', '9', '6', '8', '9'], 'follow-double': ['5', '9', '6', '8', '9'],
+    'follow-split': ['8', '9', '8', '8', '3', '4'], 'poor-follow': ['5', '9', '6', '8', '9'],
+    five: ['2', '9', '2', '8', '2', '2', '2'], void: ['5', '9', '6', '8'],
+    'back-insurance': ['A', 'A', 'K', '9'], 'poor-insurance': ['5', 'A', '6', '9'],
+  };
+  const ranks = scenarios[name];
+  if (!ranks) throw new Error('Unknown controlled fixture');
+  let state = fixtureState(ranks);
+  const spectator = ['spectator', 'follow-double', 'follow-split', 'poor-follow', 'back-insurance'].includes(name);
+  if (name !== 'setup') {
+    state = requireAccepted(game.configureBehindSeats(state, [{ seatNumber: 1, occupancy: spectator ? 'COMPUTER' : 'HUMAN', sittingOut: false },
+      ...(name === 'multi' ? [{ seatNumber: 2, occupancy: 'COMPUTER' as const, sittingOut: false }] : [])]));
     state = requireAccepted(game.openBehindBetting(state));
-    state = requireAccepted(game.setBehindMainWager(state, 1, 200));
+    state = requireAccepted(game.setBehindMainWager(state, 1, ['poor', 'poor-insurance'].includes(name) ? 2000 : 200));
+    if (name === 'multi') state = requireAccepted(game.setBehindMainWager(state, 2, 200));
+    if (spectator) state = requireAccepted(game.setBackWager(state, 1, name === 'poor-follow' ? 1200 : 200));
+    if (name === 'sides') for (const type of ['PAIR', 'THREE_CARD'] as const) state = requireAccepted(game.setBehindSideWager(state, 1, type, 20));
     state = requireAccepted(game.closeBehindBetting(state, 'unused', fixtureRandom));
+    if (name === 'follow-double' || name === 'poor-follow') state = requireAccepted(beginControllerDouble(state, 'computer-1', 'round-1/seat-1'));
+    if (name === 'follow-split') state = requireAccepted(beginControllerSplit(state, 'computer-1', 'round-1/seat-1'));
+    if (name === 'void') {
+      const shoe = state.table.game.shoe;
+      // Fault injection preserves physical accounting; the next real draw fails.
+      state = { ...state, table: { ...state.table, game: { ...state.table.game, shoe: { ...shoe,
+        available: [], discarded: [...shoe.discarded, ...shoe.available] } } } };
+    }
   }
   return createBrowserController({ factory: () => state, random: fixtureRandom });
 }

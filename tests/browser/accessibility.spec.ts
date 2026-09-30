@@ -7,7 +7,7 @@ async function tabTo(page: Page, name: string) {
   }
   throw new Error(`Keyboard could not reach ${name}`);
 }
-test('keyboard-only setup, wager, Hit/Stand and completion with visible focus', async ({ page }) => {
+test('[REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus', async ({ page }) => {
   await page.goto('/?fixture=setup');
   await tabTo(page, 'Open betting'); await page.keyboard.press('Enter');
   await tabTo(page, 'Set Your MAIN at Seat 1'); await page.keyboard.press('Enter');
@@ -19,21 +19,28 @@ test('keyboard-only setup, wager, Hit/Stand and completion with visible focus', 
   await tabTo(page, 'Continue table'); await page.keyboard.press('Enter');
   await expect(page.getByRole('status')).toHaveText('Round complete');
 });
-test('desktop has no horizontal overflow and primary controls meet touch height', async ({ page }) => {
+test('[REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height', async ({ page }) => {
   await page.goto('/?fixture=basic'); await expect(page.getByRole('button', { name: 'Hit', exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const box = await page.getByRole('button', { name: 'Hit', exact: true }).boundingBox(); expect(box!.height).toBeGreaterThanOrEqual(44);
   await page.screenshot({ path: 'test-results/desktop-table.png', fullPage: true });
+  await page.setViewportSize({ width: 768, height: 1024 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await expect(page.getByRole('button', { name: 'Hit', exact: true })).toBeVisible();
 });
-test('320px mobile prioritizes the local hand without page horizontal overflow', async ({ page }) => {
+test('[REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 720 }); await page.goto('/?fixture=basic');
   await expect(page.getByRole('button', { name: 'Hit', exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const primary = await page.getByRole('region', { name: 'Primary actions' }).boundingBox();
   const table = await page.getByRole('region', { name: 'Blackjack table' }).boundingBox(); expect(primary!.y).toBeLessThan(table!.y);
+  for (const action of ['Hit', 'Stand', 'Double', 'Split', 'Surrender']) {
+    const box = await page.getByRole('button', { name: action, exact: true }).boundingBox();
+    expect(box!.height).toBeGreaterThanOrEqual(44); expect(box!.width).toBeGreaterThanOrEqual(44);
+  }
   await page.screenshot({ path: 'test-results/mobile-table.png', fullPage: true });
 });
-test('reduced-motion still exposes controls, semantic names and secret-free card back', async ({ page }) => {
+test('[REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/?fixture=basic');
   const snapshot = await page.locator('body').ariaSnapshot(); expect(snapshot).toContain('Hidden dealer card'); expect(snapshot).not.toContain('K of spades');
   await expect(page.getByRole('button', { name: 'Stand', exact: true })).toBeEnabled();

@@ -3,7 +3,7 @@ import { resolve, sep } from 'node:path';
 import ts from 'typescript';
 import { expect, it } from 'vitest';
 
-it('current authoritative domain imports only domain modules and contains no rendering files', () => {
+it('[REG-M7-001] current authoritative domain imports only domain modules and contains no rendering files', () => {
   const root = resolve('src/domain');
   const files = readdirSync(root, { recursive: true }).map(String);
   expect(files.filter((file) => /\.(tsx|jsx|html)$/.test(file))).toEqual([]);

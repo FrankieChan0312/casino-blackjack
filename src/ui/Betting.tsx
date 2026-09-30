@@ -8,9 +8,9 @@ export function Setup({ controller, view }: { controller: BrowserController; vie
   const [computers, setComputers] = useState<number[]>(view.configuration.filter((seat) => seat.occupancy === 'COMPUTER').map((seat) => seat.seatNumber));
   const [sittingOut, setSittingOut] = useState(false);
   return <section className="panel" aria-label="Table setup"><h2>Set up your table</h2>
-    <label>Your seat<select value={localSeat} onChange={(event) => setLocalSeat(Number(event.target.value))}>
+    <label htmlFor="local-seat">Your seat</label><select id="local-seat" value={localSeat} onChange={(event) => setLocalSeat(Number(event.target.value))}>
       <option value={0}>Spectator</option>{view.configuration.map((seat) => <option key={seat.seatNumber} value={seat.seatNumber}>Seat {seat.seatNumber}</option>)}
-    </select></label>
+    </select>
     {localSeat > 0 && <label><input type="checkbox" checked={sittingOut} onChange={(event) => setSittingOut(event.target.checked)} />Sit out this round</label>}
     <fieldset><legend>Computer seats — deterministic Hit/Stand policy</legend>{view.configuration.map((seat) => <label key={seat.seatNumber}>
       <input type="checkbox" disabled={seat.seatNumber === localSeat} checked={computers.includes(seat.seatNumber) && seat.seatNumber !== localSeat}
@@ -51,9 +51,9 @@ export function Betting({ controller, view }: { controller: BrowserController; v
           current={view.sideWagers.find((entry) => entry.type === kind)?.amount ?? 0} min={1} max={100} />)}
     </div>
     <h3>Bet Behind — you are a follower</h3><p>The seat controller plays the cards. You choose only your own wagers and financial decisions.</p>
-    <label>Bet Behind target<select value={target} onChange={(event) => setTarget(Number(event.target.value))}>
+    <label htmlFor="back-target">Bet Behind target</label><select id="back-target" value={target} onChange={(event) => setTarget(Number(event.target.value))}>
       <option value={0}>Choose a funded computer seat</option>{view.interaction.backTargets.map((seat) => <option key={seat} value={seat}>Seat {seat} · Computer controller</option>)}
-    </select></label>
+    </select>
     {view.interaction.backTargets.includes(target) && <WagerForm key={`back-${target}`} controller={controller} label={`Bet Behind Seat ${target}`}
       query={{ type: 'BACK', seat: target, amount: 0 }} current={view.backWagers.find((entry) => entry.targetSeat === target)?.stakeUnits ?? 0} min={10} max={1000} />}
     {view.backWagers.map((wager) => <p key={wager.targetSeat}>You follow Seat {wager.targetSeat} · Computer controller · Back amount: {credits(wager.stakeUnits)}</p>)}

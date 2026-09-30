@@ -8,7 +8,7 @@ try {
     $npmCommand = (Get-Command npm.cmd -ErrorAction Stop).Source
     $checks = @('typecheck', 'lint', 'test')
     # Historical isolated harness fixtures have no package.json. The actual
-    # browser repository requires both additional checks, without opt-out flags.
+    # browser repository requires every additional check, without opt-out flags.
     if (Test-Path -LiteralPath 'package.json') {
         $checks += @('typecheck:domain', 'build', 'test:e2e')
         $verificationLabel = 'engineering verification'
