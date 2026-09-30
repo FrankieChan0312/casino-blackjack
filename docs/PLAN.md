@@ -7,8 +7,8 @@ M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending s
 | Task | Scope / acceptance | Status | Repairs /10 |
 | --- | --- | --- | --- |
 | M8-T01 | Immutable profiles; stable uint32 RNG/vector/shuffle/cut; Classic unchanged | VERIFIED / PUSHED 725855d36123122bda3280e4adc5c7aec9aa7940 | 0 |
-| M8-T02 | Exact R16 Charlie precedence, split/follower/VOID; Classic preservation | VERIFIED; publication follows | 1 |
-| M8-T03 | Strict real-command seeded replay/version/digest; terminal export | NOT STARTED | 0 |
+| M8-T02 | Exact R16 Charlie precedence, split/follower/VOID; Classic preservation | VERIFIED / PUSHED 70e0e977e2448fd1a7a402797bcdce2a0365465e | 2 |
+| M8-T03 | Strict real-command seeded replay/version/digest; terminal export | VERIFIED; publication follows | 1 |
 | M8-T04 | Immutable attributable sequence/UTC events; public secrecy | NOT STARTED | 0 |
 | M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | NOT STARTED | 0 |
 | M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | NOT STARTED | 0 |

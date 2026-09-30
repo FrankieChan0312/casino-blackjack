@@ -1,3 +1,11 @@
+## M8-T03 - Deterministic replay
+
+### 2026-09-30 12:46:09 +08:00 - VERIFIED, repair 1/10
+
+Scope/acceptance: version 1 strict command journal, explicit profile/uint32 seed/algorithm/funds/HUMAN configuration, real handler replay, all-round canonical outcome fingerprint and COMMITTED/VOID-only export. Developer owner-checked follower and explicit accounted next-draw fault evidence; no state snapshots, player fault button, persistence, network or recovery. Recommended Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. Stop conditions unchanged.
+
+Targeted replay 18/18 PASS/0, typecheck/domain compile/lint PASS/0. Full verify.ps1 PASS/0: 59 files/910 Vitest tests (12:45:10), 24 Chromium, build/fixture exclusion and all checks. Split seed correction repair 1 retained in log; T02 EOF whitespace correction included here (T02 repairs 2). Complete new sources/test/helper/schema-doc and tracked docs reviewed. git diff --check PASS/0 before publication; no skipped tests or snapshot restore. Publication follows.
+
 ## M8-T01 - Profiles and deterministic RNG; M7 acceptance
 
 ### 2026-09-30 12:35:29 +08:00 - VERIFIED, repair 0/10
@@ -1747,3 +1755,5 @@ T01 published 725855d36123122bda3280e4adc5c7aec9aa7940 at 12:35:37, push/fetch/0
 ### 2026-09-30 12:39:49 +08:00 - M8-T02 VERIFIED, repair 1/10
 Targeted Charlie 15/15 PASS/0 and typecheck PASS/0 after test-model repair. Full verify.ps1 PASS/0: Vitest 58 files/892 tests (12:38:57), typecheck/lint/domain isolation/production build fixture boundary/Chromium 24 all PASS. Scope: explicit CHARLIE/FIVE_CARD_CHARLIE outcome after bust test; terminal exactly fifth legal Hit; ordinary 1:1 and follower actual stake; no comparison for fixed hands; VOID clears outcomes and refunds once. Split/Aces/Double/Natural/side records preserved. Complete source/test diff reviewed, git diff --check PASS. Publication follows.
 
+### 2026-09-30 12:44:39 +08:00 - T02 publication whitespace oversight; T03 repair 1/10
+T02 published 70e0e977e2448fd1a7a402797bcdce2a0365465e at 12:39:56, push/fetch/main=origin/0-0/clean PASS. Pre-publication diff --check actually exit 2 for added EOF blank line, but publication proceeded in error. Correct EOF with substantive T03 work; no amend/history rewrite. T02 cumulative repairs 2/10. T03 initial replay tests 15 PASS/3 FAIL: Split seed 8 reaches Dealer Natural. Temporary catalog probe omitted required explicit originalHandEligible=true, so its exclusion was invalid. Actual handler probe identifies seed 36 (3,3 versus 10,2), legal PLAYER_TURN. Hypothesis: replacing only split fixtures with seed 36 fixes these failures without changing logic or weakening expected results. Targeted re-verification follows; T03 1/10. Temporary probes are removed and are not repository features.
