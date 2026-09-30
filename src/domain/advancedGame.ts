@@ -1,4 +1,5 @@
 import * as betting from './bettingGame.js';
+import { CLASSIC, getProfile, type ProfileId } from './profile.js';
 import type { PhysicalCard } from './card.js';
 import { computerDecision } from './computer.js';
 import { isBankroll, isCreditUnits } from './credits.js';
@@ -39,6 +40,7 @@ export interface HandWagerResult extends Omit<betting.MainWagerResult, 'outcome'
   readonly outcome: RoundOutcome | 'SURRENDERED' | 'VOID';
 }
 export interface AdvancedGameState extends Omit<betting.BettingGameState, 'game' | 'results'> {
+  readonly profileId: ProfileId;
   readonly game: Omit<TableGameState, 'round'> & { readonly round: AdvancedRound | null };
   readonly results: readonly HandWagerResult[];
 }
@@ -46,9 +48,10 @@ export type AdvancedResult =
   | { readonly ok: true; readonly state: AdvancedGameState }
   | { readonly ok: false; readonly state: AdvancedGameState; readonly error: string };
 
-export function createAdvancedGame(shoeId: string, random: RandomSource): AdvancedGameState {
+export function createAdvancedGame(shoeId: string, random: RandomSource, profileId: ProfileId = CLASSIC): AdvancedGameState {
+  getProfile(profileId);
   const state = betting.createBettingGame(shoeId, random);
-  return { ...state, game: { ...state.game, round: null }, results: [] };
+  return { ...state, profileId, game: { ...state.game, round: null }, results: [] };
 }
 
 // Only pre-deal commands use M3. An archived M4 round is not fed back to the
@@ -60,7 +63,7 @@ function preDeal(state: AdvancedGameState,
   const result = command(legacy);
   if (!result.ok) return { ok: false, state, error: result.error };
   if (result.state === legacy) return { ok: true, state };
-  return { ok: true, state: { ...result.state,
+  return { ok: true, state: { ...result.state, profileId: state.profileId,
     game: { ...result.state.game, round: state.game.round }, results: state.results } };
 }
 export function configureAdvancedSeats(state: AdvancedGameState, updates: readonly SeatState[]): AdvancedResult {
@@ -87,7 +90,7 @@ export function closeAdvancedBetting(state: AdvancedGameState, replacementShoeId
       originalCards: Object.freeze([...player.cards]), splitAces: false, decisionTaken: false,
       stakeUnits: state.wagers.find((wager) => wager.seatNumber === player.seatNumber)!.stakeUnits };
   });
-  return { ok: true, state: { ...dealt.state, results: [], game: { ...dealt.state.game,
+  return { ok: true, state: { ...dealt.state, profileId: state.profileId, results: [], game: { ...dealt.state.game,
     round: { ...round, players, currentHandId: players.find((hand) => !hand.complete)?.handId ?? null,
       // M3 initial dealing already performs immediate Ace/ten peek, without Insurance.
       dealerNaturalExcluded: round.phase !== 'INTEGRITY_ERROR' && !isNaturalBlackjack(round.dealerCards, true) } } } };

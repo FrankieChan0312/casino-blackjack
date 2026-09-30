@@ -284,7 +284,7 @@ Every Codex implementation task must state:
 
 Current user preference:
 
-- Recommended model: `GPT-6 Astra`
+- Recommended model: `GPT Sol 6.1`
 - Recommended reasoning/effort: `High`
 
 Confirm actual client availability at execution time. Distinguish recommended settings from confirmed runtime settings and never claim a model/effort was used without evidence.

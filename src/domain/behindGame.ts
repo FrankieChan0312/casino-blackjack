@@ -1,4 +1,5 @@
 import * as optional from './optionalGame.js';
+import { CLASSIC, type ProfileId } from './profile.js';
 import { createBankroll, isBankroll, isCreditUnits, type Bankroll } from './credits.js';
 import type { RandomSource } from './random.js';
 import type { SeatState } from './table.js';
@@ -58,8 +59,8 @@ export type BehindResult =
   | { readonly ok: true; readonly state: BehindGameState }
   | { readonly ok: false; readonly state: BehindGameState; readonly error: string };
 
-export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true): BehindGameState {
-  const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random);
+export function createBehindGame(shoeId: string, random: RandomSource, withHuman = true, profileId: ProfileId = CLASSIC): BehindGameState {
+  const { bankrolls, ...table } = optional.createOptionalGame(shoeId, random, profileId);
   return { table, backWagers: [], backExposures: [], backResults: [], backInsurance: [], followWindow: null, followDecisions: [],
     human: withHuman ? { participantId: 'local-human', bankroll: createBankroll() } : null,
     computers: bankrolls.map((bankroll, index) => ({ participantId: `computer-${index + 1}`,

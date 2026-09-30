@@ -1,5 +1,13 @@
 # Casino Blackjack - Design
 
+## M8 approved extension (user batch contract)
+
+Two immutable profiles vary only Five-Card Charlie: CLASSIC_6D_S17_V1_1 (OFF) and CHARLIE5_6D_S17_V1_1 (ON). Selected at current M4-M6 session creation, retained across commands/rounds; historical M1-M3 stay Classic. T01 identifies profiles without activating Charlie. T02 adds exactly-fifth-legal-Hit precedence and explicit outcome. No arbitrary rule configuration.
+
+Seeded source MULBERRY32_REJECTION_V1 takes uint32 0..4294967295. Private state adds 0x6d2b79f5 modulo 2^32; Mulberry32 XOR shifts and Math.imul mix output. Integer bounds 1..2^32 use rejection sampling: reject samples >= floor(2^32/bound)*bound, return sample % bound. Descending Fisher-Yates consumes it followed by cut selection. No strings, Math.random fallback, exposed state or certification claim. Version stays stable for replay v1.
+
+Later M8 tasks introduce strict versioned real-command replay and canonical outcome fingerprint, export only at COMMITTED/VOID boundaries. A separate public audit allowlist carries immutable attributable sequence/UTC-clock metadata. Browser tools remain secondary and clearly mark replay. No event-sourced store, persistence/network recovery or hidden fault replay.
+
 ## Implemented M7 browser architecture
 
 This section records the authorized M7 implementation. Historical milestone designs below retain their original scope; RULES/SPEC/UX_UI remain authoritative.

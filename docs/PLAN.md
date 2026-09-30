@@ -1,5 +1,23 @@
 # Casino Blackjack - Engineering Plan
 
+## M8 authorized sequential batch (current)
+
+M7 HUMAN ACCEPTED da6f068ffd27713848ed48f023c17ed388b8b44e; historical pending statements below superseded. Every M8 task recommends GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED.
+
+| Task | Scope / acceptance | Status | Repairs /10 |
+| --- | --- | --- | --- |
+| M8-T01 | Immutable profiles; stable uint32 RNG/vector/shuffle/cut; Classic unchanged | VERIFIED; publication follows | 0 |
+| M8-T02 | Exact R16 Charlie precedence, split/follower/VOID; Classic preservation | NOT STARTED | 0 |
+| M8-T03 | Strict real-command seeded replay/version/digest; terminal export | NOT STARTED | 0 |
+| M8-T04 | Immutable attributable sequence/UTC events; public secrecy | NOT STARTED | 0 |
+| M8-T05 | Accessible profile/seed/replay/audit browser tools and E2E | NOT STARTED | 0 |
+| M8-T06 | Bounded deterministic multi-seed accounting/financial/profile invariants | NOT STARTED | 0 |
+| M8-T07 | Exact unique REG-M8 map; independent M1-M7 preservation | NOT STARTED | 0 |
+| M8-T08 | Accurate concise portfolio README/diagram/demo | NOT STARTED | 0 |
+| M8-T09 | Final documentation/full harness/fresh-session handoff | NOT STARTED | 0 |
+
+Each step -> targeted tests -> full verify.ps1 with checked exits -> complete diff/check/status -> timestamped evidence -> commit/push origin main -> fetch/0-0/clean -> continue. Detailed acceptance is the user's M8 batch contract and R16/R17. No speculative variants/RTP claims/persistence/auth/network/real money/paid services/deployment. Stop on authority conflict, unknown overlap, unavailable validation, unsafe secrets/replay imports, destructive history, credentials/paid work, 10 repairs or final review boundary. T09 stops VERIFIED/COMMITTED/PUSHED; fresh review NOT RUN, ACCEPTED NO.
+
 ## M7 authorized batch and final gate
 
 M6 HUMAN ACCEPTED at 681edc2bb49b5fcc221a6c4cbc2b3b26d4c81fa5 after user-supplied fresh NO FINDINGS review. M7 T01-T08 VERIFIED/PUSHED; T09 documentation VERIFIED, normal publication follows; final SHA/parity/clean are recorded in delivery/Git. Each task recommends GPT Sol 6.1/High; actual NOT VERIFIED/NOT VERIFIED. User preference supersedes earlier Astra recommendations, whose historical records remain unchanged.

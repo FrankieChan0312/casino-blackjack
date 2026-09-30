@@ -1,3 +1,12 @@
+## M8-T01 - Profiles and deterministic RNG; M7 acceptance
+
+### 2026-09-30 12:35:29 +08:00 - VERIFIED, repair 0/10
+
+Entry main=HEAD=origin/main=da6f068ffd27713848ed48f023c17ed388b8b44e, 0/0, clean at 12:30:42 +08:00. M7 HUMAN ACCEPTED (user: I accept M7), user-supplied fresh review no findings at any severity; 56/870 Vitest, 24 Chromium and all mappings/preservation/documentation PASS. No independent review performed here. Initial sandbox Git ownership read failed; owner-context retry PASS/0, no config mutation.
+
+Scope: immutable two-profile identity and opt-in MULBERRY32_REJECTION_V1 uint32 source, no Charlie gameplay until T02. No arbitrary rules, secrets, network, persistence, certification or deployment. Recommended GPT Sol 6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED. Steps implemented -> known vectors/invalid seed/shuffle/cut/public secrecy tests -> full harness -> diff/check/status -> authorized publication. Stop conditions follow current PLAN/user contract.
+
+Targeted profileRandom 7/7 PASS/0 and typecheck PASS/0 (12:32:45). Full verify.ps1 PASS/0: typecheck/lint/domain compile/build with fixture exclusion, Vitest 57 files/877 tests (12:33:18), Chromium 1 project/24 tests, zero retries. Complete changed/new source/test and documentation scope reviewed; whitespace PASS. M7 acceptance recorded together with substantive T01 work, not a separate metadata commit. Task checkpoint publication follows; own SHA/parity recorded by next substantive task and Git/delivery.
 # Casino Blackjack — Development Log
 
 ## M7-T09 - Documentation-only fresh-review package

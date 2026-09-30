@@ -1,4 +1,5 @@
 import * as advanced from './advancedGame.js';
+import { CLASSIC, type ProfileId } from './profile.js';
 import { isMainWager } from './bettingGame.js';
 import { isBankroll, isCreditUnits } from './credits.js';
 import type { RandomSource } from './random.js';
@@ -53,8 +54,8 @@ export type OptionalResult =
   | { readonly ok: true; readonly state: OptionalGameState }
   | { readonly ok: false; readonly state: OptionalGameState; readonly error: string };
 
-export function createOptionalGame(shoeId: string, random: RandomSource): OptionalGameState {
-  return { ...advanced.createAdvancedGame(shoeId, random), sideWagers: [], sideResults: [],
+export function createOptionalGame(shoeId: string, random: RandomSource, profileId: ProfileId = CLASSIC): OptionalGameState {
+  return { ...advanced.createAdvancedGame(shoeId, random, profileId), sideWagers: [], sideResults: [],
     decisionPhase: 'NONE', insuranceDecisions: [], peekPerformed: false, wagerResults: [] };
 }
 function adapt(state: OptionalGameState, result: advanced.AdvancedResult): OptionalResult {
