@@ -34,8 +34,10 @@ header p { font-size: .85rem; color: #ccd8cd; }
 .local h2 { color: #f1eac8; }
 .local > p { display: inline-block; margin: 4px; }
 .local article { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4px; }
-.local article h3 { grid-column: 1 / -1; margin: 4px 0 10px; text-align: left; }
-.local article .turn-marker { position: absolute; right: 8px; top: 8px; }
+.hand-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; }
+.hand-header h3 { margin: 4px 0 10px; }
+.hand-header .turn-marker { flex-shrink: 0; margin: 0; }
+.local article .hand-header { grid-column: 1 / -1; text-align: left; }
 .local article .cards { grid-row: 2 / 4; }
 .local article:has(.card:nth-child(3)) .cards { grid-column: 1 / -1; grid-row: auto; }
 .turn-seat h2::before { content: "▸ "; }
@@ -149,8 +151,7 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .seat[data-position="local"] { grid-column: 1 / -1; order: -1; }
   .seat .cards { gap: 4px; }
   .local article { display: block; }
-  .local article h3 { text-align: center; }
-  .local article .turn-marker { position: static; }
+  .local article .hand-header { justify-content: center; text-align: center; }
   .credits { padding: 12px; }
   dl { gap: 12px; }
   dd { font-size: 1rem; }

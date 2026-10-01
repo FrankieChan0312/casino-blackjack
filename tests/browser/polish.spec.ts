@@ -1,5 +1,29 @@
 import { test, expect } from '@playwright/test';
 
+test('active hand title and ACTIVE badge occupy separate visible space on tablet desktop and mobile', async ({ page }) => {
+  for (const fixture of ['basic', 'split']) {
+    await page.goto(`/?fixture=${fixture}`);
+    if (fixture === 'split') await page.getByRole('button', { name: 'Split', exact: true }).click();
+    for (const size of [{ width: 768, height: 1024 }, { width: 1280, height: 900 }, { width: 320, height: 720 }]) {
+      await page.setViewportSize(size);
+      const hand = page.locator('.seat.local .active-hand');
+      const title = hand.getByRole('heading', { level: 3 });
+      const badge = hand.locator('.turn-marker');
+      await expect(title).toBeVisible();
+      await expect(title).toHaveText('Hand A · Current hand');
+      await expect(badge).toBeVisible();
+      await expect(badge).toHaveText('ACTIVE');
+      const titleBox = (await title.boundingBox())!;
+      const badgeBox = (await badge.boundingBox())!;
+      const intersection = titleBox.x < badgeBox.x + badgeBox.width && badgeBox.x < titleBox.x + titleBox.width
+        && titleBox.y < badgeBox.y + badgeBox.height && badgeBox.y < titleBox.y + titleBox.height;
+      console.log(JSON.stringify({ fixture, viewport: size, title: titleBox, active: badgeBox, intersection }));
+      expect(intersection).toBe(false);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    }
+  }
+});
+
 test('polished desktop anchors dealer and seven seats above visible game controls, with secondary tools closed', async ({ page }) => {
   await page.goto('/?fixture=basic');
   const dealer = await page.getByRole('region', { name: 'Dealer', exact: true }).boundingBox();

@@ -2,6 +2,8 @@
 
 ## M8-T08 human-feedback presentation polish
 
+LOW-05 uses a dedicated hand-header flex row in normal flow. The title and ACTIVE badge occupy separate layout space and wrap when needed; no hidden text, smaller type or arbitrary padding. Geometric Playwright checks cover original and Split hands at 768x1024, 1280x900 and 320x720. Domain semantics are unchanged.
+
 The authorized visual repair replaces the dashboard composition with CSS felt/rail and a seven-seat horseshoe, anchoring Dealer above a lower-center local seat regardless of seat number. Secondary seats are quieter. Desktop current cards live on the table; mobile duplicates the public current-hand presentation above secondary seats to preserve accepted primary-action priority. Completed split children remain visible with their stable labels. Controls keep authoritative enablement/commands and 44px targets; optional action guidance retains disabled-reason ARIA references. Chip buttons select input values, never place wagers automatically. Available/reserved/pending stay separate.
 
 Playing cards use text suit/rank labels, original CSS backs and no runtime assets. The controller adds reveal-gated Dealer status using existing domain evaluators; unrevealed status is always Hole card hidden. CSS entry/reveal/result/press/emphasis motion lasts150–200ms, runs after immediate state projection, and is disabled by prefers-reduced-motion. No sound, domain-rule or replay/audit changes. Settings/history remain collapsed below gameplay. Semantic/layout tests supplement unchanged accepted browser tests; portfolio capture disables motion only to stabilize image generation. Owner visual approval and the same independent reviewer's final combined-HEAD recheck remain pending.

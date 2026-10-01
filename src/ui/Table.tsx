@@ -26,8 +26,10 @@ export function Table({ view }: { view: BrowserView }) {
         <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
         <p className="wager-chip">MAIN: {credits(wager)} credits</p>
         {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}>
-          <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
-          {round?.currentHandId === hand.handId && <span className="turn-marker">ACTIVE</span>}
+          <div className="hand-header">
+            <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
+            {round?.currentHandId === hand.handId && <span className="turn-marker">ACTIVE</span>}
+          </div>
           <Cards cards={hand.cards} /><p>Total: {hand.total} · Wager: {credits(hand.stakeUnits)}</p>
           <p className={`result-badge ${hand.outcome === 'CHARLIE' ? 'charlie' : ''}`} data-result={hand.outcome}>{hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : hand.cards.length === 1 ? 'Waiting for card' : 'Playing'}</p>
           {hand.outcome === 'SURRENDERED' && view.ownResults.filter((result) => result.handId === hand.handId).map((result) =>

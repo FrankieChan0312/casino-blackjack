@@ -1,5 +1,11 @@
 # Casino Blackjack - Engineering Plan
 
+## Final two-finding repair contract (current; earlier checkpoints below are historical)
+
+Authorized baseline07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54,main/origin parity0/0,clean at2026-10-01 11:26:27 +08:00. Earlier seven M8 findings CLOSED by reconstructed review; only LOW-04/05 OPEN. A BLOCKED unchanged-HEAD recheck is not a new finding or repair cycle.
+
+M8-T08 repair6: structural wrapping hand-header, geometric no-intersection regression at768x1024 plus1280x900/320x720 and Split, preserved keyboard/focus/44px/card labels/secrecy/reduced motion; domain diff EMPTY. VERIFIED after official harness PASS/0 inspected2026-10-01 11:43:28 +08:00:66/956 Vitest,44 Chromium,96 REG owners and all M1-M7 preservation. M8-T09 repair4: actual current inventory in README/handoff/LAB and current-status documents, mechanical REG-096 consistency without REG-097, historical counts retained; next checkpoint. T08=6/10,current ledger0,2,3,2,2,1,1,6,3; expected final0,2,3,2,2,1,1,6,4 only after T09 VERIFIED. Prior M1-M7 ledgers unchanged. Task scope/verification/stop conditions and evidence: STATE/current log. Recommended GPT Sol6.1/High; actual NOT VERIFIED/NOT VERIFIED. Two authorized normal verified commits/push/fetch/parity/clean; no independent closure, acceptance or deployment.
+
 ## M8-T08 — Human Manual Feedback: Visual Polish / Game Feel
 
 VERIFIED, cumulative repair5/10 (prior actual2/10; visual repairs3,4,5), under the explicit human-feedback contract. Targeted22 Vitest and6 Chromium PASS; official verify.ps1 PASS/0 inspected2026-10-01 01:11:59 +08:00,66/956 Vitest,43 Chromium, all M1-M7 preservation including24 original browser tests and96 REG-M8 owners PASS. UI/CSS and reveal-gated Dealer presentation only; domain diff empty. Separate normal UI and polished portfolio/documentation publications -> final parity/clean -> STOP for independent recheck and human visual acceptance. No M8-T10. Recommended GPT Sol6.1/High; actual NOT VERIFIED/NOT VERIFIED. Scope, acceptance and stop conditions: STATE. All other task/historical ledgers and finding statuses preserved; M8 NOT ACCEPTED, deployment NOT RUN.

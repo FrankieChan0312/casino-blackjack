@@ -36,18 +36,18 @@ M8 NOT ACCEPTED. Deployment NOT RUN.
 
 [Charlie result](images/charlie-result.png) and [replay/audit](images/replay-audit.png) are reproducible screenshots from `tests/browser/portfolio.spec.ts`, with fixed audit time and controlled real-domain commands. They contain public UI only; test factories are excluded from normal production builds. Screenshots are demonstration fixtures, not randomness/fairness evidence.
 
-The polished screenshots replace the historical dashboard images. Portfolio screenshots disable CSS animation only for capture, use fixed audit UTC and real-domain deterministic commands; runtime motion and reduced-motion behavior are tested separately. The optional [320px mobile view](images/mobile-table.png) comes from the reduced-motion polish test. Same-session visual inspection checks public-only content and clipping; the owner judges game feel. Full-harness hashes captured2026-10-01 01:11:11 +08:00 matched all4 repeated captures at01:14:15 (targeted6 Chromium PASS/0,9.1s). Hashes prove byte reproducibility, not visual quality.
+The polished screenshots replace the historical dashboard images. Portfolio screenshots disable CSS animation only for capture, use fixed audit UTC and real-domain deterministic commands; runtime motion and reduced-motion behavior are tested separately. The optional [320px mobile view](images/mobile-table.png) comes from the reduced-motion polish test. Same-session visual inspection checks public-only content and clipping; the owner judges game feel. Historical full-harness captures2026-10-01 01:11:11 +08:00 matched all4 repeats at01:14:15 (targeted6 Chromium PASS/0,9.1s). LOW-05 regeneration at11:35:47 changed Classic/Mobile to the hashes below; both were visually inspected. Charlie/Replay remained byte-identical. Targeted7 Chromium PASS/0; final full-harness repeat evidence is in STATE/log. Hashes prove byte reproducibility, not visual quality.
 
 | Public image | SHA-256 |
 | --- | --- |
-| Classic | `7CBDD12356121F02023D1A89BFC055DE9C2CA3323B7573D39F50B52EB7CB9DC5` |
+| Classic | `B319E1B5A2731AB3EA1D647CC0E29ED5DB19E2EFC31D1D07280C2F226C67F584` |
 | Charlie | `453383554002E4E9CCFF95F00E1AD85A5E76997DC0CA00E092B90E8F0F0CC90B` |
 | Replay/Audit | `3D0EEC844087BE1E201F798FFF12BA4C9E551808D9CD45E63C16E23DC4CDDE51` |
-| Mobile | `3B28FF54BE05EB265C71670AEB1639411ED63F57318A2E4B8FC25A7DF462DE57` |
+| Mobile | `5BEC4DDC70B298480F473B876A728EBAD8998023E922F4ADF52D4612C247B9BF` |
 
 Regenerate with `npm.cmd run test:e2e -- tests/browser/polish.spec.ts tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
 
-Final visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five new semantic/layout polish checks cover desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain the actual checked counts, timestamps, failures and publication evidence.
+Historical visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five semantic/layout polish checks covered desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. LOW-05 adds a sixth geometric check; its current official harness PASS/0 inspected2026-10-01 11:43:28 +08:00 has66 Vitest files/956 tests and44 Chromium tests. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked counts, timestamps, failures and publication evidence. LOW-04/05 remain OPEN pending independent recheck; no acceptance is implied.
 
 ## Honest boundaries
 
