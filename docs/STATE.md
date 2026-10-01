@@ -12,9 +12,11 @@ Required final stability PASS: six targeted tests x3 (12:59:25-12:59:53), groupe
 
 Official harness#1 PASS/0 at13:11:00-13:12:54,wall113.177s, Vitest66/956/7.65s, Chromium44/41.0s. Official harness#2 PASS/0 at13:12:54-13:14:33,wall99.393s, Vitest66/956/7.70s, Chromium44/41.1s. Both include typecheck/lint/domain isolation/build/fixture exclusion/secrecy/96 exact REG-M8 owners and mandatory preservation M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870 plus24Chromium (19.8s/19.9s), all PASS.
 
-No executable/test/dependency/runtime changes after the successful final harness. Domain diff EMPTY; only factual evidence/status updates follow. Actual ledger0,2,3,2,2,1,2,6,4; independent recheck NOT RUN, M8 ACCEPTED NO, deployment NOT RUN. Normal authorized coherent commit/push/fetch follows; actual commit/parity receipt recorded after publication.
+No executable/test/dependency/runtime changes after the successful final harness. Domain diff EMPTY; only factual evidence/status updates follow. Actual ledger0,2,3,2,2,1,2,6,4; independent recheck NOT RUN, M8 ACCEPTED NO, deployment NOT RUN. Normal authorized repair commit/push/fetch completed; exact receipt below, final documentation SHA in delivery/Git.
 
 MEDIUM-05 OPEN - repair VERIFIED; independent recheck pending. M8 ACCEPTED = NO. Independent recheck NOT RUN here. Deployment NOT RUN.
+
+Publication receipt 2026-10-01 13:17:46 +08:00: branch main; repair commit **59035fcee5a94ce07c6a8531441ba38b09dcdf75**, subject test: stabilize final M8 verification harness. Normal commit/push origin main/fetch origin main all PASS/0; HEAD=origin/main,0/0,clean including untracked. All required repeated checks passed on this exact executable/test tree. This separate docs: record M8 harness stability evidence checkpoint records the actual receipt only; no executable/test/dependency/runtime change. Its own SHA cannot embed itself; final delivery/Git records final documentation HEAD/push/fetch/parity/clean. MEDIUM-05 OPEN - repair VERIFIED; independent recheck pending. M8 ACCEPTED NO; deployment NOT RUN. Ledger0,2,3,2,2,1,2,6,4.
 
 ## Historical LOW-04 / LOW-05 repair checkpoint (superseded by MEDIUM-05)
 
