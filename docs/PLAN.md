@@ -843,7 +843,7 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 | Task | Delivery | Repairs /10 |
 | --- | --- | --- |
 | M9-T01 | IMPLEMENTED / VERIFIED; commit/push pending | 0 |
-| M9-T02 | NOT RUN | 0 |
+| M9-T02 | VERIFIED; publication receipt in M9_EVIDENCE | 2 |
 | M9-T03 | NOT RUN | 0 |
 | M9-T04 | NOT RUN | 0 |
 | M9-T05 | NOT RUN | 0 |

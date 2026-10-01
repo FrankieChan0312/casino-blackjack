@@ -23,7 +23,7 @@ export function fixtureState(ranks: readonly Rank[]): game.BehindGameState {
     shoe: { ...initial.table.game.shoe, available: [...cards, ...remaining] } } } };
 }
 export function createFixtureController(name: string | null) {
-  if (!name) return createBrowserController();
+  if (!name) return createBrowserController({ playerMode: true });
   const scenarios: Record<string, readonly Rank[]> = {
     setup: ['5', '6', '6', 'K', '2', '7'], basic: ['5', '6', '6', 'K', '2', '7'],
     poor: ['5', '6', '6', 'K', '2', '7'], split: ['8', '9', '8', 'K', '3', '4', '5'],

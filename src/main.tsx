@@ -9,5 +9,5 @@ let controller;
 if (import.meta.env.MODE === 'e2e') {
   const { createFixtureController } = await import('../tests/browser/fixtures.js');
   controller = createFixtureController(new URLSearchParams(location.search).get('fixture'));
-} else controller = createBrowserController();
+} else controller = createBrowserController({ playerMode: true });
 createRoot(document.getElementById('root')!).render(<App controller={controller} />);

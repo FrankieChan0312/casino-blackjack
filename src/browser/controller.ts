@@ -35,7 +35,8 @@ const reasons: Record<string, string> = {
 export function explainReason(reason: string | undefined) { return reason ? reasons[reason] ?? 'This command is unavailable in the current state.' : ''; }
 
 export function createBrowserController(options: { factory?: () => game.BehindGameState; random?: RandomSource;
-  profileId?: ProfileId; seed?: number; clock?: Clock } = {}) {
+  profileId?: ProfileId; seed?: number; clock?: Clock; playerMode?: boolean } = {}) {
+  const playerMode = options.playerMode ?? false;
   const random = options.random ?? mathRandomSource;
   if (options.factory && options.seed !== undefined) throw new Error('Seeded replay cannot start from a state factory');
   let session = options.seed !== undefined ? createReplaySession(options.seed, options.profileId ?? CLASSIC, { clock: options.clock }) : null;
@@ -62,9 +63,11 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
           : view.round.phase === 'ROUND_COMPLETE' ? 'Dealer complete' : 'Revealed' },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
-    return { profileId: state.table.profileId, seeded: session !== null,
+    return { playerMode, profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
-        || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0),
+        || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0)
+        || (playerMode && state.table.phase === 'OPEN' && state.table.roundNumber === 1
+          && !state.table.game.round && state.human?.bankroll.reserved === 0),
       replayAvailable: !!session && !replayFailed && (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'),
       replayResult, audit: audit.getPublic(), configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),
@@ -120,7 +123,12 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
     const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
-    replayResult = null; replayFailed = false; feedback = ''; shoeMessage = 'New demo session: starting credits restored'; publish(); return true;
+    replayResult = null; replayFailed = false; feedback = ''; shoeMessage = 'New demo session: starting credits restored';
+    publish(); if (playerMode) preparePlayerTable(); return true;
+  }
+  function preparePlayerTable() {
+    if (!dispatch({ type: 'CONFIGURE', seats: [{ seatNumber: 4, occupancy: 'HUMAN', sittingOut: false }] })) return false;
+    return dispatch({ type: 'OPEN' });
   }
   function exportReplay(): ReplayPackage | null {
     return snapshot.replayAvailable && session ? session.exportPackage() : null;
@@ -137,6 +145,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     audit.recordReplay(state, false);
     replayResult = reconstructed; audit.recordReplay(state, true); publish(); return true;
   }
+  if (playerMode) preparePlayerTable();
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
     startDemo, exportReplay, replayCompleted,
     queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };
