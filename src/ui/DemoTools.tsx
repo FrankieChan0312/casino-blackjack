@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { BrowserController, BrowserView } from '../browser/controller.js';
-import { CLASSIC, CHARLIE, type ProfileId } from '../domain/profile.js';
+import { CLASSIC, CHARLIE, CLASSIC_V1_2, CHARLIE_V1_2, getProfile, type ProfileId } from '../domain/profile.js';
 import { credits, resultLabel } from './presentation.js';
 
 const seatOccupancyLabels: Readonly<Record<string, string>> = {
@@ -12,7 +12,7 @@ export function DemoTools({ controller, view }: { controller: BrowserController;
   const [seed, setSeed] = useState('');
   const [showPackage, setShowPackage] = useState(false);
   const [copyStatus, setCopyStatus] = useState('');
-  const label = view.profileId === CHARLIE ? 'Five-Card Charlie Demo' : 'Classic Blackjack';
+  const label = getProfile(view.profileId).charlie ? 'Five-Card Charlie Demo' : 'Classic Blackjack';
   const packageText = showPackage && view.replayAvailable ? JSON.stringify(controller.exportReplay(), null, 2) : '';
   return <section className="panel demo-tools" aria-label="Demo and audit tools">
     <h2>Demo and audit tools</h2><p>Profile: {label} · {view.seeded ? 'Reproducible seeded demo' : 'Normal random demo'}</p>
@@ -20,10 +20,11 @@ export function DemoTools({ controller, view }: { controller: BrowserController;
     <button disabled={!view.canStartDemo} onClick={() => controller.dispatch({ type: 'MODE', playerMode: !view.playerMode })}>
       {view.playerMode ? 'Open manual demo (resets credits)' : 'Return to Player Mode (resets credits)'}</button>
     <details><summary>Advanced demo settings</summary>
-      {(view.canStartDemo || view.profileId === CHARLIE) && <p>Five-Card Charlie is a custom demonstration profile. A legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1.</p>}
+      {(view.canStartDemo || getProfile(view.profileId).charlie) && <p>Five-Card Charlie is a custom demonstration profile. A legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1.</p>}
       <label htmlFor="demo-profile">New session profile</label><select id="demo-profile" disabled={!view.canStartDemo} value={profile}
         onChange={e => setProfile(e.target.value as ProfileId)}>
-        {view.canStartDemo ? <><option value={CLASSIC}>Classic Blackjack</option><option value={CHARLIE}>Five-Card Charlie Demo</option></>
+        {view.canStartDemo ? <><option value={CLASSIC_V1_2}>Classic Blackjack (v1.2 · Re-split Aces)</option><option value={CHARLIE_V1_2}>Five-Card Charlie Demo (v1.2 · Re-split Aces)</option>
+          <option value={CLASSIC}>Classic Blackjack</option><option value={CHARLIE}>Five-Card Charlie Demo</option></>
           : <option value={view.profileId}>{label}</option>}
       </select>
       {view.canStartDemo && <form onSubmit={e => { e.preventDefault();

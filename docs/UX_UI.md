@@ -397,6 +397,8 @@ When Aces are split under the approved house rule:
 - the UI should not imply that `A + K` after Split is Natural Blackjack;
 - if useful, label result as `21` rather than `Blackjack`.
 
+RA1 v1.2 adds one explicit exception to automatic completion: a current A+A with a legal funded re-split displays Split and Stand as its only enabled actions. Explain that Stand keeps Soft 12 and that Split requires the matching wager. Both choices remain native keyboard buttons with descriptive text. Hit/Double/Surrender stay disabled and authority rejects direct calls. If funds/cap prevent RSA, complete automatically with no redundant Stand. Ordered descendants remain ahead of siblings; all leaves remain visible. Normal Player Mode starts Classic V1.2; deliberate historical profiles remain supported in secondary demo settings.
+
 ## 17. Double UX
 
 When Double is available:

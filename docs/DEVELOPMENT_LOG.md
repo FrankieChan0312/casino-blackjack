@@ -2,7 +2,7 @@
 
 House Rules v1.2 amendment: [RA1 contract](RA1_CONTRACT.md), [execution evidence](RA1_EVIDENCE.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
-RA1 progress: T01 COMMITTED / PUSHED; T02 IMPLEMENTED / VERIFIED; T03..T05 pending. Repair ledger T01..T05 `2,0,0,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+RA1 progress: T01..T02 COMMITTED / PUSHED; T03 IMPLEMENTED / VERIFIED; T04..T05 pending. Repair ledger T01..T05 `2,0,1,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
 
 Historical M9/M8 records below retain their original version, inventory and review boundaries; they are not current RA1 claims.
 
@@ -2163,3 +2163,9 @@ Official final receipt harness#3 powershell.exe -NoProfile -ExecutionPolicy Bypa
 2026-10-02 00:11:24 +08:00 — T01 publication PASS/0: 68172e89db45fcdb61d04e977267cae22518a372 on main, normal push/fetch, HEAD=origin/main,0/0,clean/full untracked empty. T02 begins from this verified checkpoint; shared pure Ace eligibility and authoritative Hit/Stand/Split validation are the only domain changes. Explicit RSA-001..021 plus funding/turn examples added.
 
 2026-10-02 00:17:46 +08:00 — T02 official verify.ps1 PASS/0: 70 files/1002 Vitest tests, 55 Chromium, all typecheck/lint/domain/build and independent M1-M8 preservation PASS. 23 domain RSA tests PASS on first validation (T02 0/10). Task diff and whitespace PASS. Only advancedGame.ts behavior changed; normal publication follows.
+
+2026-10-02 00:19:06 +08:00 — T02 publication PASS/0 at 178f74322d603e1a0e8debb6d1a37b4d1b437e15, main=origin/main,0/0,clean/full untracked empty. T03 uses explicit Classic V1.2 only for normal Player Mode defaults; historical APIs/factories keep V1.1. Authorized M9-001 expected default profile changes to V1.2; all other M9 assertions remain. Native RSA guidance/actions and three Chromium workflow/layout checks added without CSS/redesign.
+
+2026-10-02 00:22:31 +08:00 — T03 repair 1/10: first Chromium run 2 PASS/1 FAIL; programmatic focus after mouse input did not request CSS focus-visible. Hypothesis: use actual Tab navigation to verify keyboard modality rather than weakening the solid-outline assertion. Targeted test change; all 3 Chromium PASS/0 after repair, including focus/Enter/Soft12, three viewports/44px/no overflow, automatic unavailable/cap completion. Typecheck and 22 affected Vitest PASS/0 before E2E. Official harness follows.
+
+2026-10-02 00:26:11 +08:00 — T03 official verify.ps1 PASS/0: 71 Vitest files/1005 tests, 58 Chromium; all required typecheck/lint/domain/build/fixture exclusion and independent M1-M8 preservation PASS. M9 flow/automatic guest wagers/progression/Repeat/Deal Again/tools/responsive/accessibility retained; intentional current profile/action availability changes only. RSA desktop/mobile screenshots visually inspected; no portfolio artifact changes. Task diff/whitespace reviewed PASS; publication follows.

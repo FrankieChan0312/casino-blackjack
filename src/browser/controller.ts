@@ -5,7 +5,7 @@ import type { SeatState } from '../domain/table.js';
 import type { PlayerAction } from '../domain/advancedGame.js';
 import type { SideWagerType } from '../domain/optionalGame.js';
 import { evaluateHand, isNaturalBlackjack } from '../domain/hand.js';
-import { CLASSIC, getProfile, type ProfileId } from '../domain/profile.js';
+import { CLASSIC, CLASSIC_V1_2, getProfile, type ProfileId } from '../domain/profile.js';
 import { createReplaySession, replay, ReplayError, type ReplayPackage } from '../domain/replay.js';
 import { applySessionCommand, type SessionCommand } from '../domain/sessionCommand.js';
 import { createAuditTrail, type Clock } from '../domain/audit.js';
@@ -28,6 +28,8 @@ const reasons: Record<string, string> = {
   INSUFFICIENT_FUNDS: 'Not enough available credits.', INELIGIBLE_BACK_TARGET: 'Choose another funded seat; you cannot back your own seat.',
   BETTING_NOT_OPEN: 'Betting is closed.', WRONG_PHASE: 'This action is unavailable now.',
   DOUBLE_NOT_ALLOWED: 'Double requires an eligible two-card first decision.', SPLIT_NOT_ALLOWED: 'Split requires an eligible first decision.',
+  HIT_NOT_ALLOWED: 'Split Aces receive one additional card; Hit is unavailable.',
+  STAND_NOT_ALLOWED: 'This Split-Ace hand has no re-split decision to decline.',
   UNEQUAL_SPLIT_VALUE: 'The two cards must have equal Blackjack values.', HAND_LIMIT_REACHED: 'The four-hand limit is reached.',
   SURRENDER_NOT_ALLOWED: 'Surrender requires an original hand before its first decision.',
   ROUND_ALREADY_TERMINAL: 'This hand or round has finished.', NOT_SEATED: 'Spectators do not control target cards.',
@@ -41,9 +43,10 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   profileId?: ProfileId; seed?: number; clock?: Clock; playerMode?: boolean } = {}) {
   let playerMode = options.playerMode ?? false;
   const random = options.random ?? mathRandomSource;
+  const profileId = options.profileId ?? (playerMode ? CLASSIC_V1_2 : CLASSIC);
   if (options.factory && options.seed !== undefined) throw new Error('Seeded replay cannot start from a state factory');
-  let session = options.seed !== undefined ? createReplaySession(options.seed, options.profileId ?? CLASSIC, { clock: options.clock }) : null;
-  let state = session?.getState() ?? options.factory?.() ?? game.createBehindGame('local-shoe-1', random, true, options.profileId ?? CLASSIC);
+  let session = options.seed !== undefined ? createReplaySession(options.seed, profileId, { clock: options.clock }) : null;
+  let state = session?.getState() ?? options.factory?.() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
   let audit = createAuditTrail(state, options.clock);
   let replayResult: ReturnType<typeof replay> | null = null;
   let replayFailed = false;

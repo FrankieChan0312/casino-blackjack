@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createElement } from 'react';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { App } from '../../src/ui/App.js';
-import { CLASSIC } from '../../src/domain/profile.js';
+import { CLASSIC, CLASSIC_V1_2 } from '../../src/domain/profile.js';
 import { accepted, behindFixture } from '../helpers/behindFixture.js';
 import * as game from '../../src/domain/behindGame.js';
 import * as replayModule from '../../src/domain/replay.js';
@@ -135,7 +135,7 @@ it('[M9-001] player shell opens own betting table; manual callers retain configu
   const v = c.getSnapshot();
   expect(v.phase).toBe('OPEN'); expect(v.human?.controlledSeat).toBe(4);
   expect(v.human?.available).toBe(2000); expect(v.human?.reserved).toBe(0);
-  expect(v.profileId).toBe(CLASSIC); expect(v.round).toBeNull();
+  expect(v.profileId).toBe(CLASSIC_V1_2); expect(v.round).toBeNull();
   const html = renderToStaticMarkup(createElement(App, { controller: c }));
   expect(html).toContain('player-mode'); expect(html).toContain('Blackjack table');
   expect(html).not.toContain('Set up your table');

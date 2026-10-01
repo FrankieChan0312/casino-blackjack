@@ -3,15 +3,15 @@ import * as game from '../../src/domain/behindGame.js';
 import { createSixDeckInventory, type Rank } from '../../src/domain/card.js';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { beginControllerDouble, beginControllerSplit } from '../../src/domain/behindController.js';
-import { CHARLIE } from '../../src/domain/profile.js';
+import { CLASSIC, CHARLIE, CLASSIC_V1_2, type ProfileId } from '../../src/domain/profile.js';
 
 export const fixtureRandom = { nextInt: (max: number) => max - 1 };
 export function requireAccepted(result: game.BehindResult) {
   if (!result.ok) throw new Error(`Fixture command rejected: ${result.error}`);
   return result.state;
 }
-export function fixtureState(ranks: readonly Rank[]): game.BehindGameState {
-  const initial = game.createBehindGame('e2e-only-controlled-shoe', fixtureRandom);
+export function fixtureState(ranks: readonly Rank[], profileId: ProfileId = CLASSIC): game.BehindGameState {
+  const initial = game.createBehindGame('e2e-only-controlled-shoe', fixtureRandom, true, profileId);
   const remaining = [...createSixDeckInventory()];
   const suits = ['clubs', 'diamonds', 'hearts', 'spades'] as const;
   const cards = ranks.map((rank, index) => {
@@ -26,12 +26,15 @@ export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   const playerScenarios: Record<string, readonly Rank[]> = {
+    'player-rsa': ['10','10','A','10','9','7','7','A','7','8','A','9','6','9'],
+    'player-rsa-cap': ['10','10','A','10','9','7','7','A','7','8','A','A','A','A','A','A'],
     'player-ace': ['10', '10', '5', '10', 'A', '7', '7', '6', '7', '9'],
     'player-split': ['10', '10', '8', '10', '10', '7', '7', '8', '7', '9', '2', '3'],
     'player-natural': ['10', '10', 'A', '10', '10', '7', '7', 'K', '7', '9'],
     'player-loss': ['10', '10', '5', '10', '10', '7', '7', '6', '7', '9'],
   };
-  if (playerScenarios[name]) return createBrowserController({ playerMode: true, factory: () => fixtureState(playerScenarios[name]),
+  if (playerScenarios[name]) return createBrowserController({ playerMode: true, factory: () => fixtureState(playerScenarios[name],
+    name.startsWith('player-rsa') ? CLASSIC_V1_2 : CLASSIC),
     random: fixtureRandom, clock: () => '2026-01-01T00:00:00.000Z' });
   const scenarios: Record<string, readonly Rank[]> = {
     setup: ['5', '6', '6', 'K', '2', '7'], basic: ['5', '6', '6', 'K', '2', '7'],
