@@ -1,3 +1,6 @@
+> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
+> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+
 ### 2026-10-01 13:17:46 +08:00 - verified repair published; factual documentation checkpoint
 
 Publication receipt 2026-10-01 13:17:46 +08:00: branch main; repair commit **59035fcee5a94ce07c6a8531441ba38b09dcdf75**, subject test: stabilize final M8 verification harness. Normal commit/push origin main/fetch origin main all PASS/0; HEAD=origin/main,0/0,clean including untracked. All required repeated checks passed on this exact executable/test tree. This separate docs: record M8 harness stability evidence checkpoint records the actual receipt only; no executable/test/dependency/runtime change. Its own SHA cannot embed itself; final delivery/Git records final documentation HEAD/push/fetch/parity/clean. MEDIUM-05 OPEN - repair VERIFIED; independent recheck pending. M8 ACCEPTED NO; deployment NOT RUN. Ledger0,2,3,2,2,1,2,6,4.
@@ -2018,3 +2021,11 @@ Targeted Charlie 15/15 PASS/0 and typecheck PASS/0 after test-model repair. Full
 
 ### 2026-09-30 12:44:39 +08:00 - T02 publication whitespace oversight; T03 repair 1/10
 T02 published 70e0e977e2448fd1a7a402797bcdce2a0365465e at 12:39:56, push/fetch/main=origin/0-0/clean PASS. Pre-publication diff --check actually exit 2 for added EOF blank line, but publication proceeded in error. Correct EOF with substantive T03 work; no amend/history rewrite. T02 cumulative repairs 2/10. T03 initial replay tests 15 PASS/3 FAIL: Split seed 8 reaches Dealer Natural. Temporary catalog probe omitted required explicit originalHandEligible=true, so its exclusion was invalid. Actual handler probe identifies seed 36 (3,3 versus 10,2), legal PLAYER_TURN. Hypothesis: replacing only split fixtures with seed 36 fixes these failures without changing logic or weakening expected results. Targeted re-verification follows; T03 1/10. Temporary probes are removed and are not repository features.
+
+### 2026-10-01 20:41:10 +08:00 ? M9-T01 start and M8 acceptance receipt
+
+Owner confirmed accepted M8 SHA8f5aca327f41f1078fc4fef20b611fd9cd494492, fresh review NO FINDINGS/all findings CLOSED and explicit acceptance. Recorded with substantive M9 contract/spec/design/UX/task plan, no metadata-only commit. Pre-entry verify.ps1 PASS/0 (66/956,44 Chromium, mandatory M1?M7); baseline fetch/main parity0/0/clean checked20:33:00. Resume same SHA/clean20:41:10. Actual model/effort NOT VERIFIED/NOT VERIFIED. T01 repair0/10. Existing M8 ledger retained. Python is unavailable; optional editing helper NOT RUN, no required validation blocked. Use native tools/Node. All earlier failed attempts remain recorded.
+
+### 2026-10-01 20:47:22 +08:00 ? T01 documentation verification PASS
+
+Two documentation suites/6 tests PASS/0. Authorized contract cross-checked R02/R06?09/R13/R15/R17, accepted design and UX. Unchanged executable tree retains entry full-harness PASS. Only scoped English docs changed. T01 VERIFIED; repair0/10. Normal main publication follows; actual SHA/receipt recorded at T02.

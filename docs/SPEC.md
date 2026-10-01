@@ -394,3 +394,7 @@ Before implementation, repository bootstrap must create the minimal documented h
 - `scripts/verify.ps1`.
 
 Do not create speculative empty subsystems merely to mirror this list. Each file should begin with the minimum useful content needed for the current task, and later tasks must update the persistent truth as implementation progresses.
+
+## M9 ? Player Experience / Casino Session Flow
+
+The authorized [M9 contract](M9_CONTRACT.md) defines AC-M9-001..015 and sequential T01..T09. M9 changes browser session orchestration and presentation only; accepted M1?M8 rules, financial/replay/audit semantics are preserved. Default Player Mode replaces configuration-first entry with prepared guests, funded automatic computer wagers/progression, near-edge own cards, central illustrated dealer and explicit repeat-round controls. All optional wagers and developer capabilities remain available. No M10 or deployment.

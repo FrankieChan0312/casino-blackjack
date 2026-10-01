@@ -1,3 +1,6 @@
+> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
+> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+
 # Portfolio walkthrough
 
 Casino Blackjack is a modern browser Blackjack demo with a responsive felt table, accessible keyboard controls and domain-backed actions. It demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples/invariants and Playwright E2E. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.

@@ -1,3 +1,6 @@
+> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
+> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+
 # Casino Blackjack — UX/UI Specification
 
 ## Current M8 review status
@@ -812,3 +815,7 @@ The owner found functionality acceptable but the UI visually boring. The authori
 M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.
 
 M8 T01-T09 implementation exists and is VERIFIED. Reconstructed independent review completed at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54 and closed MEDIUM-01..04 and LOW-01..03. The later complete-harness review at1c639cb closed LOW-04/05 and opened MEDIUM-05; stability verification and independent recheck status are recorded above and in STATE. The title and ACTIVE now use a dedicated wrapping hand-header, preserving both labels in normal flow. M8 ACCEPTED: NO. Deployment: NOT RUN. The bounded seeded demo rejects commands before mutation when fewer than two journal entries remain, reserving an automatic SETTLE/VOID; an unfinished capped demo requires refresh, while finalized sessions retain Start new demo. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md).
+
+## 37. M9 Player Mode authority
+
+The [M9 contract](M9_CONTRACT.md) supersedes the historical manual default journey for Player Mode only. Open table -> own main bet -> Deal -> explicit human decisions -> automatic guests/dealer -> per-wager results -> Deal Again or explicit Repeat Bet. Computer guests begin seated; dealer and own cards dominate. Native collapsed Developer / demo tools retain manual table setup, Profile/Seed/Replay/Audit. Optional own side/back wagers are secondary but human financial choices never auto-resolve. Responsive first-person felt composition, professional fictional vector characters, keyboard focus, 44px primary controls, public-state secrecy and reduced-motion are required.

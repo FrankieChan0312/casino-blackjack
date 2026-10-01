@@ -1,3 +1,6 @@
+> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
+> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+
 # Casino Blackjack - Project State
 
 ## MEDIUM-05 / M8-T07 Review Repair #2 (current)
@@ -195,3 +198,9 @@ Node 24.19.0/npm 11.17.0 confirmed. Production React/react-dom 19.3.0. Direct de
 One local HUMAN; memory resets on refresh; no arbitrary browser replay import/save/load, server/database/auth/network multiplayer/cloud/real money/payments/deployment. Bots retain Hit<17/Stand>=17 and decline optional decisions; advanced followers use isolated domain fixtures. Seeded source and fingerprint are not cryptographic/authenticity evidence. No RTP/house-edge/certified fairness/optimal strategy claims. Accessibility and browser matrix are bounded to actual checks.
 
 After final VERIFIED/COMMITTED/PUSHED T09: **STOP**. Start a genuinely fresh session at the final delivery SHA, read [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md), independently inspect R16/R17, complete diff, tests, secrets/claims/docs and rerun full harness. Findings FIRST; reviewer makes no edits without separate authorization. M8 remains NOT ACCEPTED until explicit human acceptance. Deployment NOT RUN.
+
+## M9 execution state
+
+M1?M8 HUMAN ACCEPTED. M9-T01 IMPLEMENTED / VERIFIED; documentation checks PASS. Remaining T02..T09 NOT RUN. M9 ledger `0,0,0,0,0,0,0,0,0`; M8 ledger unchanged. M9 ACCEPTED: NO. Fresh M9 review NOT RUN; deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. Scope, ACs, verification and stops: [M9_CONTRACT](M9_CONTRACT.md).
+
+Entry baseline verified 2026-10-01 20:33:00 +08:00: main=HEAD=origin/main=8f5aca327f41f1078fc4fef20b611fd9cd494492, parity0/0, clean including untracked; official verify.ps1 PASS/0,66/956 Vitest,44 Chromium and all M1?M7 preservation (M7 870 +24 Chromium). diff --check PASS. Resume baseline 20:41:10 unchanged/clean. The acceptance clarification was not a failed implementation or repair.

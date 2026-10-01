@@ -1054,3 +1054,7 @@ OptionalWagerResult identifies round/seat/wager/type, hand for MAIN, actual stak
 ### M5 command boundary and delivery status
 
 The implemented current API is optionalGame.ts plus optionalPublicView.ts. Internal AdvancedGameState remains embedded to reuse accepted gameplay unchanged; its raw functions must not be called as M5 commands during the Insurance phase or for M5 settlement. Outer decisionPhase plus the M5 wrapper gates are the supported control boundary. Original-card arrays and final records are frozen, but arbitrary caller-object mutation/import is not validated. Independent fresh-session review and human acceptance remain separate from the executed M5 harness. T07 changes documentation only.
+
+## M9 approved browser extension
+
+Follow [M9 contract](M9_CONTRACT.md). Player Mode is an explicit browser option; accepted manual controller behavior remains the default for legacy callers/fixtures. Production opts into Player Mode. The same closure retains state, RNG, journal and audit; preparation/automation are composed existing commands, not raw state edits. Each action preflights journal capacity before mutation. No domain source changes. React observes a public player-mode flag, not computer private bankrolls or hidden cards. Original SVG figures are presentation only. No timers on human decisions; browser progression follows current authoritative interaction enablement.

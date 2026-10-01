@@ -1,3 +1,6 @@
+> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
+> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+
 # Casino Blackjack - Engineering Plan
 
 ## MEDIUM-05 / M8-T07 Review Repair #2 (current)
@@ -832,3 +835,19 @@ M2 at c9f7f35bf874a0e7673505cbbea745ce035ac695 is ACCEPTED by the explicit user 
 | M3-T06 | Accurate documentation and findings-first new-session review package; no new features | IMPLEMENTED / VERIFIED locally; final publication pending | 1/10 |
 
 Each task: scope implementation -> explicit independent tests -> full scripts/verify.ps1 and checked exits -> diff/status review -> authorized commit/push to origin/main -> fetch, 0/0 and clean -> next task. Stop for authority conflict, ownership ambiguity, unknown overlap, unavailable required validation, 10 repairs or stalled repair, destructive Git, credentials, paid resources, prohibited future scope or external publication outside authorization. No advanced actions, side bets, Bet Behind, UI/network multiplayer, real money, merge/release/deployment or M4 work. T06 must stop before genuinely fresh-session independent review.
+
+## M9 sequential delivery ledger
+
+Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual NOT VERIFIED / NOT VERIFIED. Non-goals, AC owners, required checks and stop conditions apply to each task. No domain changes, M10 or deployment.
+
+| Task | Delivery | Repairs /10 |
+| --- | --- | --- |
+| M9-T01 | IMPLEMENTED / VERIFIED; commit/push pending | 0 |
+| M9-T02 | NOT RUN | 0 |
+| M9-T03 | NOT RUN | 0 |
+| M9-T04 | NOT RUN | 0 |
+| M9-T05 | NOT RUN | 0 |
+| M9-T06 | NOT RUN | 0 |
+| M9-T07 | NOT RUN | 0 |
+| M9-T08 | NOT RUN | 0 |
+| M9-T09 | NOT RUN | 0 |
