@@ -22,7 +22,8 @@ test('[M9-E01] first-person cards stay near player and center dealer without ove
       expect(guest!.y + guest!.height).toBeLessThanOrEqual(own!.y);
     }
     const ownCard = await local.locator('.card').first().boundingBox();
-    const guestCard = await page.getByRole('region', { name: 'Seat 1', exact: true }).locator('.card').first().boundingBox();
+    const guestCard = viewport.width === 320 ? await page.getByRole('region', { name: 'Dealer', exact: true }).locator('.card').first().boundingBox()
+      : await page.getByRole('region', { name: 'Seat 1', exact: true }).locator('.guest-desktop-hand .card').first().boundingBox();
     expect(ownCard!.width).toBeGreaterThan(guestCard!.width);
     const title = await local.locator('h3').boundingBox(); const active = await local.locator('.turn-marker').boundingBox();
     expect(title!.y + title!.height <= active!.y || title!.x + title!.width <= active!.x).toBe(true);
@@ -33,4 +34,19 @@ test('[M9-E01] first-person cards stay near player and center dealer without ove
     if (viewport.width === 1280) expect(action!.y + action!.height).toBeLessThanOrEqual(900);
     await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });
   }
+});
+
+test('[M9-E02] original characters and compact mobile public guest cards retain reduced motion and secrecy', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 720 }); await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/?fixture=player');
+  await expect(page.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'Original illustrated computer guest in evening attire', exact: true })).toHaveCount(3);
+  await deal(page); await page.evaluate(() => scrollTo(0, 0));
+  const guest = page.getByRole('region', { name: 'Seat 1', exact: true });
+  await expect(guest.locator('.guest-mobile-cards')).not.toHaveAttribute('open', '');
+  await guest.getByText('Cards · 17', { exact: true }).click();
+  await expect(guest.getByRole('img', { name: 'J of hearts', exact: true })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'Hidden dealer card', exact: true })).toBeVisible();
+  expect(await page.locator('.local .card').first().evaluate(e => getComputedStyle(e).animationName)).toBe('none');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

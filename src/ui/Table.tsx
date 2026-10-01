@@ -1,5 +1,6 @@
 import type { BrowserView } from '../browser/controller.js';
 import { credits, resultLabel, handLabel } from './presentation.js';
+import { CasinoPerson } from './CasinoPerson.js';
 
 type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
 const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
@@ -12,6 +13,7 @@ export function Table({ view }: { view: BrowserView }) {
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   return <section aria-label="Blackjack table" className="table-surface">
     <section className="dealer panel" aria-label="Dealer"><h2>Dealer</h2>
+      {view.playerMode && <CasinoPerson kind="dealer" />}
       {round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
         <p className="dealer-total">{round.dealer.holeCard ? 'Total' : 'Visible total'}: {round.dealer.total}</p>
@@ -23,11 +25,15 @@ export function Table({ view }: { view: BrowserView }) {
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
       return <section key={seat.seatNumber} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+        {view.playerMode && !local && <CasinoPerson kind={seat.seatNumber === 3 ? 'gown' : seat.seatNumber === 6 ? 'tux' : 'suit'} />}
         <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
         <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
         <p className="wager-chip">MAIN: {credits(wager)} credits</p>
         {view.playerMode && local && !hands.length && <div className="empty-hand"><div className="cards" aria-hidden="true"><span className="card card-back">♠</span><span className="card card-back">♠</span></div><p>Your cards will be dealt here.</p></div>}
-        {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}>
+        {view.playerMode && !local && <details className="guest-mobile-cards"><summary>Cards{hands[0] && ` · ${hands[0].total}`}</summary>
+          {hands.map(hand => <div key={hand.handId}><p>{handLabel(hand.handId)} · Total: {hand.total} · {hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : 'Playing'}</p><Cards cards={hand.cards} /></div>)}
+        </details>}
+        {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={`${view.playerMode && !local ? 'guest-desktop-hand ' : ''}${round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}`}>
           <div className="hand-header">
             <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
             {round?.currentHandId === hand.handId && <span className="turn-marker">ACTIVE</span>}

@@ -236,3 +236,25 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .credits dl { gap: 8px; }
   .player-mode .credits dt { font-size: .6rem; }
 }
+/* Original seated character presentation uses no external assets. */
+.player-mode .dealer { min-height: 142px; padding-left: 96px; }
+.player-mode .dealer > .casino-person { position: absolute; left: 0; top: 10px; width: 98px; height: 120px; }
+.player-mode .casino-person { filter: drop-shadow(0 4px 4px #0005); }
+.player-mode .seat:not(.local) { position: relative; }
+.player-mode .seat:not(.local) > .casino-person { position: absolute; width: 76px; height: 88px; left: 10px; top: 6px; }
+.player-mode .seat:not(.local) > h2, .player-mode .seat:not(.local) > p { margin-left: 76px; }
+.player-mode .seat:not(.local) { background: transparent; border: 0; }
+.player-mode .guest-mobile-cards { display: none; }
+@media (min-width: 601px) and (max-width: 850px) {
+  .player-mode .seat:not(.local) article { display: block; }
+}
+@media (max-width: 600px) {
+  .player-mode .dealer { padding-left: 82px; }
+  .player-mode .dealer > .casino-person { width: 80px; height: 100px; }
+  .player-mode .seat:not(.local) > .casino-person { position: static; display: block; margin: auto; width: 50px; height: 60px; }
+  .player-mode .seat:not(.local) > h2, .player-mode .seat:not(.local) > p { margin-left: 0; }
+  .player-mode .seat:not(.local) .guest-desktop-hand { display: none; }
+  .player-mode .guest-mobile-cards { display: block; }
+  .player-mode .guest-mobile-cards summary { font-size: .65rem; padding: 6px 0; min-height: 44px; }
+  .player-mode .guest-mobile-cards .cards { padding: 5px 0; }
+}

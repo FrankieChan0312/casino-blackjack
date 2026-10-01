@@ -248,3 +248,11 @@ First geometry PASS was insufficient: screenshot showed Seat6 after local becaus
 ### 2026-10-01 21:32:00 +08:00 - M9-T05 VERIFIED; repairs 3/10
 
 Final exact-version owner verify.ps1 PASS/0:67/966 Vitest,45 Chromium (accepted44 plusM9-E01), typecheck/lint/domain/build/fixture exclusion and mandatory M1-M7+24browser preservation PASS. Strong three-viewport geometry and public-only screenshots PASS; final desktop image inspected after repair3. Full App/Table/CSS/test/fixture diff reviewed; diff --check PASS; domain EMPTY. Narrow phone keeps usable full controls with vertical scrolling; compact guests next T06.
+
+### 2026-10-01 21:45:34 +08:00 - M9-T06 IMPLEMENTED; repairs 0/10
+
+Original code-native SVG dealer and three formally dressed fictional guests. Mobile public guest cards use expandable summaries. Targeted Chromium M9-E01/E02 PASS (2 tests); desktop/mobile screenshots inspected. Prior T05 published e8f3938057bbf12879d3f3088052ee361fc38c57 at 21:32:05 +08:00, main origin parity 0/0 clean. No domain changes.
+
+### 2026-10-01 21:47:51 +08:00 - M9-T06 VERIFIED; repairs 0/10
+
+Official powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 PASS/0: typecheck lint 67 Vitest files/966 tests domain isolation production build/fixture exclusion 46 Chromium plus M1-M7 preservation and 24 accepted M7 Chromium. Scoped full diff reviewed; desktop/mobile screenshots inspected; no domain diff. Fresh visual/human acceptance remains pending.
