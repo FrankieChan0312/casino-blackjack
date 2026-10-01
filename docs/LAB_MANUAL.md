@@ -1,3 +1,15 @@
+## Current RA1 delivery
+
+House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
+
+RA1-T01..T05 IMPLEMENTED / VERIFIED. T01..T03 COMMITTED / PUSHED; T04..T05 normal final checkpoint publication pending. Official final harness PASS/0 at 2026-10-02 00:47:18 +08:00; complete Vitest/Chromium and accepted M1-M8 preservation PASS. Same-session task diff reviewed; genuinely fresh independent review remains pending. RA1 repair ledger T01..T05 `2,0,2,1,1` (each /10); historical M8 `0,2,3,2,2,1,2,6,4` and M9 `0,2,1,1,3,0,2,1,5` unchanged. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+
+Current inventory: **73 Vitest files / 1020 tests**, **1 Chromium project / 58 tests**; **30 uniquely mapped RSA regressions** plus additional preservation/contract/UI checks. Inventory is not execution evidence; checked results are in RA1_EVIDENCE. Default normal Player Mode: CLASSIC_6D_S17_V1_2. Supported: CLASSIC_6D_S17_V1_1, CHARLIE5_6D_S17_V1_1 (RSA OFF), CLASSIC_6D_S17_V1_2, CHARLIE5_6D_S17_V1_2 (RSA ON). Replay schema/RNG/digest/audit versions unchanged.
+
+Records below preserve their historical versions, inventories, review boundaries and failed attempts; earlier M9 fresh-review NOT RUN statements are superseded by the supplied NO FINDINGS review at the baseline. They do not describe RA1 behavior or accept M9/RA1.
+
+<!-- END CURRENT RA1 -->
+
 ## Current M9 delivery
 
 M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
@@ -1856,3 +1868,15 @@ Key lesson: browser intent is a composite of real domain commands. Preflight mus
 A second lesson is evidence scope: accepted M8 documentation tests captured pre-acceptance text and cannot dictate future human status. Their original assertions are fixed to the accepted Git snapshot and source-compared, while new current-document tests enforce truthful acceptance, actual suite additions,15 AC links and screenshot artifacts. No original assertion was deleted, skipped or weakened. Unified preservation reruns accepted M1-M8 independently.
 
 T09 browser evidence found a genuine between-round exhausted-credit reset lock. The targeted fix extends only Player Mode unfunded OPEN with no/terminal archive; own reserved or active states remain locked. No rule change was required. [Mapping](M9_MAPPING.md), [repair evidence](M9_EVIDENCE.md), [five-minute walkthrough](PORTFOLIO.md) and [fresh-session gate](M9_REVIEW_HANDOFF.md). Casual fun, blackjack feel and interviewer readiness await the owner after fresh review.
+
+## 36. RA1 versioning and re-split Aces learning notes
+
+Rules identifiers are behavioral contracts: mutating V1.1 would change recorded Split-Ace traversal, later shoe consumption and terminal digests. Preserve old profile object shapes/constants/default low-level APIs and add V1.2. The small capability accessor explicitly returns RSA false for both V1.1 profiles. Normal Player Mode opts into Classic V1.2. Replay schema stays1 because profile strings, not a changed command schema, carry the rules difference.
+
+A Split-Ace child is restricted even while actionable. A,9/6/K becomes complete Soft20/Soft17/ordinary21; it cannot Hit, Double, Surrender or chase Charlie. A,A becomes an optional Split/Stand decision only with current ownership, funds and fewer than four leaves. Stand keeps complete Soft12; without valid RSA, automatic completion avoids unnecessary user actions. After RSA, A.1 and A.2 precede waiting B. Finished leaves still count. A,K is never Natural, including after several re-splits.
+
+A200-unit stake requires exactly200 additional units (100 credits);199 units is half a credit short. Rejection preserves the whole immutable state before reserve, draw/replacement/turn; tests freeze state and compare actual references/cards/results, not expected values derived from the same handler. Tracked RSA is another Split: follower decisions precede new supplement cards; ADD creates equal actual stakes, NO_ADD follows first child, failed ADD creates no imaginary refundable second stake. Audit keeps parent Split/ordered child identities.
+
+Real baseline fixtures at seed4689 preserve V1.1 full results/digests9ecbae88/e22e082f. V1.2 RSA has A4/A4/AK versus dealer21 and gross0/0/200, digests5c1e4984/0f67b47b. A rejected Hit plus subsequent legal RSA yields the same accepted package/result as a run without the rejection, while audit retains rejection evidence.
+
+Observed test failures were repaired from explicit evidence: MODE removes the seed, so a test requiring an active round needs a deterministic non-natural reset shoe; programmatic focus after mouse input does not test keyboard focus-visible; seed21 yields4+5+5+4+3=21, so Classic completes too, without a Charlie result. Fixed inventory/source-immutability checks require a documented historical boundary for an authorized amendment, while all original gameplay assertions still run. Mechanical PASS/publication are separate from fresh review and owner acceptance. [RA1 handoff](RA1_REVIEW_HANDOFF.md).

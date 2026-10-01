@@ -1,10 +1,12 @@
 ## Current RA1 delivery
 
-House Rules v1.2 amendment: [RA1 contract](RA1_CONTRACT.md), [execution evidence](RA1_EVIDENCE.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
+House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
-RA1 progress: T01..T03 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T03 generated artifact receipt pending; T04..T05 pending. Repair ledger T01..T05 `2,0,2,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+RA1-T01..T05 IMPLEMENTED / VERIFIED. T01..T03 COMMITTED / PUSHED; T04..T05 normal final checkpoint publication pending. Official final harness PASS/0 at 2026-10-02 00:47:18 +08:00; complete Vitest/Chromium and accepted M1-M8 preservation PASS. Same-session task diff reviewed; genuinely fresh independent review remains pending. RA1 repair ledger T01..T05 `2,0,2,1,1` (each /10); historical M8 `0,2,3,2,2,1,2,6,4` and M9 `0,2,1,1,3,0,2,1,5` unchanged. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
 
-Historical M9/M8 records below retain their original version, inventory and review boundaries; they are not current RA1 claims.
+Current inventory: **73 Vitest files / 1020 tests**, **1 Chromium project / 58 tests**; **30 uniquely mapped RSA regressions** plus additional preservation/contract/UI checks. Inventory is not execution evidence; checked results are in RA1_EVIDENCE. Default normal Player Mode: CLASSIC_6D_S17_V1_2. Supported: CLASSIC_6D_S17_V1_1, CHARLIE5_6D_S17_V1_1 (RSA OFF), CLASSIC_6D_S17_V1_2, CHARLIE5_6D_S17_V1_2 (RSA ON). Replay schema/RNG/digest/audit versions unchanged.
+
+Records below preserve their historical versions, inventories, review boundaries and failed attempts; earlier M9 fresh-review NOT RUN statements are superseded by the supplied NO FINDINGS review at the baseline. They do not describe RA1 behavior or accept M9/RA1.
 
 <!-- END CURRENT RA1 -->
 
@@ -872,3 +874,15 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 | M9-T07 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 508f3baae963c65ab62ffba1a9be5bf0851b2184 | 2 |
 | M9-T08 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 3bf59fd83df6988096f4dd70b08603046b4e330e | 1 |
 | M9-T09 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED fc5cbd687a14e0e1eb1fae0ee6830e139397fe06; final factual receipt in Git/delivery | 5 |
+
+## RA1 checkpoint ledger
+
+| Task | Current checkpoint / validation | Repairs /10 |
+| --- | --- | --- |
+| RA1-T01 | VERIFIED / COMMITTED / PUSHED 68172e89db45fcdb61d04e977267cae22518a372; official979/55 PASS | 2 |
+| RA1-T02 | VERIFIED / COMMITTED / PUSHED 178f74322d603e1a0e8debb6d1a37b4d1b437e15; official1002/55 PASS | 0 |
+| RA1-T03 | VERIFIED / COMMITTED / PUSHED 9a1ce9c029377ae52a70eccab0b6b6bdf924129d and artifact77194b84eee2294897b128e19cea9aea50cade7c; official1005/58 PASS | 2 |
+| RA1-T04 | VERIFIED; 13 targeted preservation checks and complete official harness PASS; publication pending | 1 |
+| RA1-T05 | VERIFIED; full final1020/58, mapping/docs/handoff PASS; publication pending | 1 |
+
+T04/T05 share one coherent final preservation/documentation verification checkpoint after the corrected Charlie test. Their delivery/repair identities remain separate. Evidence-only publication receipts follow without source/test/runtime changes. STOP at fresh-session review gate, with clean main parity0/0. No M10 or deployment.

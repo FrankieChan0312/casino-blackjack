@@ -2,7 +2,8 @@
 // Local COMPUTER automation never selects advanced actions. Deterministic tests
 // may drive these primitives as the target controller, never as its follower.
 import { controllerId, controlledSeat, type BehindGameState, type BehindResult } from './behindGame.js';
-import type { AdvancedHand } from './advancedGame.js';
+import { canResplitAceHand, type AdvancedHand } from './advancedGame.js';
+import { allowsResplitAces } from './profile.js';
 import { evaluateHand } from './hand.js';
 import { isBankroll, isCreditUnits } from './credits.js';
 import { drawCard } from './shoe.js';
@@ -30,7 +31,11 @@ function selectNext(state: BehindGameState): BehindGameState {
     const next = { ...state, table: { ...state.table, game: { ...state.table.game, shoe: draw.shoe } } };
     if (!draw.ok) return integrity(next);
     const cards = [...hand.cards, draw.card];
-    return selectNext(replace(next, { ...hand, cards, complete: hand.splitAces || evaluateHand(cards).isTwentyOne }));
+    const supplemented = { ...hand, cards };
+    const bankroll = controlledSeat(state) === hand.seatNumber ? state.human!.bankroll : state.computers[hand.seatNumber - 1].bankroll;
+    return selectNext(replace(next, { ...supplemented, complete: hand.splitAces
+      ? !canResplitAceHand(state.table.profileId, supplemented, round.players, bankroll)
+      : evaluateHand(cards).isTwentyOne }));
   }
   return { ...state, table: { ...state.table, game: { ...state.table.game, round: { ...round,
     currentSeat: hand?.seatNumber ?? null, currentHandId: hand?.handId ?? null,
@@ -105,6 +110,10 @@ export function standControllerHand(state: BehindGameState, ownerId: string, han
   const error = controllerError(state, ownerId, handId);
   if (error) return { ok: false, state, error };
   const hand = state.table.game.round!.players.find((entry) => entry.handId === handId)!;
+  const bankroll = controlledSeat(state) === hand.seatNumber ? state.human!.bankroll : state.computers[hand.seatNumber - 1].bankroll;
+  if (hand.splitAces && !canResplitAceHand(state.table.profileId, hand, state.table.game.round!.players, bankroll)) {
+    return { ok: false, state, error: 'STAND_NOT_ALLOWED' };
+  }
   return { ok: true, state: selectNext(replace(state, { ...hand, complete: true, decisionTaken: true })) };
 }
 export function beginControllerSplit(state: BehindGameState, ownerId: string, handId: string): BehindResult {
@@ -112,7 +121,10 @@ export function beginControllerSplit(state: BehindGameState, ownerId: string, ha
   if (error) return { ok: false, state, error };
   const round = state.table.game.round!;
   const hand = round.players.find((entry) => entry.handId === handId)!;
-  if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces) return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
+  if (hand.cards.length !== 2 || hand.decisionTaken) return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
+  if (hand.splitAces && (!allowsResplitAces(state.table.profileId) || !hand.cards.every(card => card.rank === 'A'))) {
+    return { ok: false, state, error: 'SPLIT_NOT_ALLOWED' };
+  }
   const [first, second] = hand.cards;
   const tens = ['10', 'J', 'Q', 'K'];
   if (first.rank !== second.rank && !(tens.includes(first.rank) && tens.includes(second.rank))) {
