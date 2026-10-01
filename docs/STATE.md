@@ -216,3 +216,11 @@ Whitespace check FAIL on two evidence EOF blank lines; repair2 fixed helper trim
 ### 2026-10-01 21:01:43 +08:00 - M9-T02 VERIFIED; repairs 2/10
 
 Exclusive original powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1 PASS/0:67files/958 Vitest,44 Chromium, typecheck/lint/domain isolation/build/fixture exclusion and all mandatory M1-M7 preservation including24 Chromium PASS. Source/tests unchanged since this final run. git diff --check PASS; full scoped diff reviewed; src/domain diff from accepted M8 EMPTY. Previous teardown/port failures retained; final exact version VERIFIED. No blockers; current Player Mode shell still uses interim betting/visuals until sequential T03-T08.
+
+### 2026-10-01 21:03:47 +08:00 - M9-T03 IMPLEMENTED; repairs 1/10
+
+T02 publication54394bef8eff1e2db4c9475b1b0b3273d108986c PASS normal push/fetch parity0/0 clean21:01:54. T03 prepares all7 explicit positions with Human4/Computer1,3,6; guest MAIN25 credits or affordable whole amount>=10; insufficient guests sit out, no refill. NEXT preflights7 journal slots before preparation, internal group6. First targeted5tests:2FAIL (test invented MAIN_WAGER; actual MAIN_SET; accepted NEXT retains previous round archive). Repair1 corrects audit test and hides archived cards only in player OPEN projection, no internal/archive changes. Targeted5PASS; full harness pending.
+
+### 2026-10-01 21:08:40 +08:00 - M9-T03 VERIFIED; repairs 1/10
+
+Owner-context original verify.ps1 PASS/0:67/961 Vitest,44 Chromium, typecheck/lint/domain/build and mandatory M1-M7 preservation+24Chromium PASS. Sandbox run stalled at post-test teardown and was terminated with exact taskkill25632; NOT PASS. Owner execution exited normally with no harness/test/runtime settings changes; use this context thereafter. Scoped source/test diff and diff --check reviewed/PASS. Accepted domain diff EMPTY; no blockers.

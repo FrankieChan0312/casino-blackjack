@@ -55,7 +55,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       seat: entry.targetSeat, handId: entry.handId, stake: entry.stakeUnits, outcome: entry.outcome,
       returned: entry.grossReturnUnits, status: entry.status }));
     // Explicit safe fields only. No raw state, shoe order, card IDs or lineage.
-    const round = view.round ? { ...view.round,
+    const round = view.round && !(playerMode && (view.phase === 'OPEN' || view.phase === 'CONFIGURING')) ? { ...view.round,
       dealer: { ...view.round.dealer, total: evaluateHand(state.table.game.round!.dealerCards.slice(0, view.round.dealer.visibleCards.length)).total,
         status: !view.round.dealer.holeCard ? 'Hole card hidden'
           : evaluateHand(state.table.game.round!.dealerCards).isBust ? 'Bust'
@@ -93,7 +93,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   function dispatch(command: BrowserCommand) {
     // One player intent can require one automatic SETTLE or VOID. Reserve both
     // before invoking either, so a journal limit cannot strand a half-transition.
-    if (session && !session.hasCapacity(2)) {
+    if (session && !session.hasCapacity(playerMode && command.type === 'NEXT' ? 7 : 2)) {
       feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
     }
     const previousShoe = state.table.game.shoe.shoeId;
@@ -113,6 +113,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       }
     } else feedback = explainReason(result.error);
     publish();
+    if (result.ok && playerMode && command.type === 'NEXT') return preparePlayerTable();
     return result.ok;
   }
   function startDemo(profileId: ProfileId, seed?: number) {
@@ -127,8 +128,20 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     publish(); if (playerMode) preparePlayerTable(); return true;
   }
   function preparePlayerTable() {
-    if (!dispatch({ type: 'CONFIGURE', seats: [{ seatNumber: 4, occupancy: 'HUMAN', sittingOut: false }] })) return false;
-    return dispatch({ type: 'OPEN' });
+    // CONFIGURE + OPEN + up to three guest wagers, plus finalization headroom.
+    if (session && !session.hasCapacity(6)) {
+      feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
+    }
+    const guests = [1, 3, 6];
+    const seats: SeatState[] = state.table.game.table.seats.map(seat => ({ seatNumber: seat.seatNumber,
+      occupancy: seat.seatNumber === 4 ? 'HUMAN' : guests.includes(seat.seatNumber) ? 'COMPUTER' : 'EMPTY',
+      sittingOut: guests.includes(seat.seatNumber) && state.computers[seat.seatNumber - 1].bankroll.available < 20 }));
+    if (!dispatch({ type: 'CONFIGURE', seats }) || !dispatch({ type: 'OPEN' })) return false;
+    for (const seat of seats.filter(seat => seat.occupancy === 'COMPUTER' && !seat.sittingOut)) {
+      const amount = Math.min(50, Math.floor(state.computers[seat.seatNumber - 1].bankroll.available / 2) * 2);
+      if (!dispatch({ type: 'MAIN', seat: seat.seatNumber, amount })) return false;
+    }
+    return true;
   }
   function exportReplay(): ReplayPackage | null {
     return snapshot.replayAvailable && session ? session.exportPackage() : null;
