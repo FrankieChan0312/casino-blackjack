@@ -1,7 +1,7 @@
-# Blackjack House Rules v1.1
+# Blackjack House Rules v1.2
 
-Document date: 2026-09-28  
-Document task: RULES-1.1  
+Document date: 2026-10-01
+Document task: RA1-T01
 Intended repository location: `docs/RULES.md`  
 Status: finalized rules text for planning; not an implementation, verification, acceptance, or deployment report.
 
@@ -9,11 +9,20 @@ Status: finalized rules text for planning; not an implementation, verification, 
 
 This document defines this portfolio's own simulated-credit Blackjack rules. It is not an international standard, a reproduction of one provider's complete product, a gaming certification, or evidence of licensing. External references explain selected mechanics; the explicit choices below govern this project.
 
-The target base profile is `CLASSIC_6D_S17_V1_1`. The optional, later demonstration profile is `CHARLIE5_6D_S17_V1_1`. The base profile does not award any Charlie bonus. Rules and paytables are immutable during a round and identified in its record.
+The current base profile is `CLASSIC_6D_S17_V1_2`; the optional demonstration profile is `CHARLIE5_6D_S17_V1_2`. Historical profiles remain supported with their accepted V1.1 semantics. Rules and paytables are immutable during a round and identified in its record.
+
+| Profile ID | Five-Card Charlie | Re-split Aces |
+| --- | --- | --- |
+| `CLASSIC_6D_S17_V1_1` | OFF | DISABLED |
+| `CHARLIE5_6D_S17_V1_1` | ON | DISABLED |
+| `CLASSIC_6D_S17_V1_2` | OFF | ENABLED |
+| `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
+
+RA1 authorizes only Re-split Aces and new profile selection after M9. M1-M8 are HUMAN ACCEPTED. M9 is IMPLEMENTED / VERIFIED, fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`, HUMAN ACCEPTED: NO. RA1 does not accept M9. Deployment NOT RUN.
 
 Defined functionality is not necessarily implemented. `SPEC.md` must map each milestone to the applicable rule IDs and required checks. In particular, M1 remains a headless, one-seat foundation: cards, shoe, scoring, initial Blackjack resolution, Hit/Stand, S17, and deterministic tests. Wagers, extra seats, additional actions, side bets, and variants must not be advertised or exposed before their own verification.
 
-This export has not been installed into a verified repository. Repository path, branch, commit, tests, fresh-session review, and push status have not been established by this document.
+Implementation, verification, publication and review evidence belong in STATE and DEVELOPMENT_LOG; this rules text does not establish those events.
 
 ## R02. Table, seats, and participants
 
@@ -138,9 +147,13 @@ Resolve active seats in ascending order. Finish all hands belonging to the curre
 
 Reserve the additional full wager and replace the parent with two ordered child hands, each retaining one original card. The first child retains the first-dealt card. After Bet Behind follow decisions, deal a second card to the first child and fully play it before dealing/playing the second child. Re-splitting follows this same depth-first order.
 
-Non-Ace pairs may Re-split to a maximum of four total leaf hands per original seat in the round: at most three successful Split operations. Finished, busted, or surrendered leaf hands still count toward the cap. Available funds and the hand cap are independent requirements.
+Eligible pairs may Re-split to a maximum of four total leaf hands per original seat in the round: at most three successful Split operations. Finished, busted, or surrendered leaf hands still count toward the cap. Available funds and the hand cap are independent requirements. Ace eligibility is version-dependent below.
 
-**Split Aces:** allow one split into two hands. Give each exactly one additional card, in order. Neither may Hit, Double, Surrender, or Re-split, including when another Ace arrives. `A` plus a ten-valued card after this split is ordinary 21 and pays at most 1:1 on an ordinary win.
+**Split Aces:** an original A,A may Split. Every ordered child receives exactly one supplement when it becomes current; descendants remain ahead of waiting siblings in depth-first order. A non-Ace supplement completes that hand immediately: A,9 is Soft 20; A,6 is Soft 17; A,K is ordinary 21, never Natural, and pays only an ordinary 1:1 win where applicable. Hit, Double and Surrender are forbidden on every Split-Ace descendant, including an active RSA opportunity.
+
+V1.1: every child completes after its supplement, including A,A. Re-split Aces stays DISABLED.
+
+V1.2: a current two-card A,A Split-Ace child may Re-split only with capacity below four leaves and a fully affordable matching undoubled stake. The human chooses SPLIT or STAND; STAND declines RSA and completes Soft 12 without drawing. RSA is never forced. If cap or available funds make RSA impossible, complete the hand automatically without presenting another action. Each RSA repeats the same ordered one-supplement rule and R07 atomic validation. Finished leaves count toward the cap. Tracked followers close a fresh R15 Split follow decision before any new child supplement is exposed. Charlie does not relax these restrictions.
 
 ## R11. Late Surrender
 
@@ -249,7 +262,7 @@ An unfunded attempt is rejected without changing that follower's funds or exposu
 
 ## R16. Optional Five-Card Charlie profile
 
-`CLASSIC_6D_S17_V1_1` has Charlie **OFF**. Define the separate, later `CHARLIE5_6D_S17_V1_1` demonstration profile as follows; it is not an additional M1 implementation requirement.
+Both `CLASSIC_6D_S17_V1_1` and `CLASSIC_6D_S17_V1_2` have Charlie **OFF**. Both `CHARLIE5_6D_S17_V1_1` and `CHARLIE5_6D_S17_V1_2` have Charlie **ON** under the following unchanged rule; it is not an additional M1 implementation requirement.
 
 On a legal Hit producing exactly five cards with a total of 21 or less, the hand ends with a 1:1 Charlie win, without dealer-total comparison. Five means five total cards, not five additional hits after the opening two. Five cards totalling over 21 lose; the card-count check cannot override bust.
 
@@ -287,6 +300,12 @@ These are expected cases to convert into executable checks; their presence is no
 | Four total leaf hands, including a busted hand | Further Split rejected |
 | Split `10,K` with adequate funds | Split allowed; pair side bet loses |
 | Split Aces produce `A,K` | Ordinary 21; no natural payout; no additional action |
+| V1.1 Split-Ace child A,A | Complete; RSA rejected; historical replay unchanged |
+| V1.2 Split-Ace child A,A with funds/cap | Only SPLIT or STAND; STAND retains complete Soft 12 |
+| V1.2 Split-Ace child A,A without funds/cap | Forced complete; no draw, borrowing or illegal action |
+| V1.2 RSA with exact matching funds | Accept; ordered descendants each receive one supplement |
+| V1.2 RSA one half-credit unit short | Reject before funds/cards/RNG/turn/outcomes mutate |
+| Tracked RSA descendant | Fresh ADD/NO_ADD before child cards; insufficient follower ADD uses NO_ADD |
 | Ace-up Insurance request after peek | Reject |
 | Dealer three-card 21 | Does not win Insurance |
 | Even Money accepted on an eligible natural | 1:1 profit once; no concurrent Insurance or 3:2 award |
@@ -304,7 +323,7 @@ These are expected cases to convert into executable checks; their presence is no
 
 ## R19. Explicit exclusions and document responsibilities
 
-Exclude real-money operations, paid chips, progressive jackpots, side bets beyond the two specified types, H17 tables, European no-hole-card rules, early surrender, re-splitting Aces, double-for-less, bonus 6/7-card awards, Spanish 21, Blackjack Switch, and Double Exposure from this v1.1 baseline. A newly approved variant requires a separately identified rules revision/profile and tests.
+Exclude real-money operations, paid chips, progressive jackpots, side bets beyond the two specified types, H17 tables, European no-hole-card rules, early surrender, double-for-less, bonus 6/7-card awards, Spanish 21, Blackjack Switch, and Double Exposure from this v1.2 baseline. Re-splitting Aces remains excluded in historical V1.1 profiles. A newly approved variant requires a separately identified rules revision/profile and tests.
 
 Network accounts, multiplayer transport, persistence guarantees, authentication, and reconnect implementation need their own milestone scope; they are not implied by these table rules. No LLM is needed to control the dealer or bots. A deterministic bot decision policy and legal fallbacks belong in the relevant design/specification task; do not advertise an optimal strategy without evidence.
 

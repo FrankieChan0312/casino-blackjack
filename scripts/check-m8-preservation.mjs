@@ -23,9 +23,16 @@ for (const file of files) {
       .replace('    // M8 inventory is the preserved accepted suite; M9 owns its added scenarios.\n', '')
       .replace("    if (file === 'm9.spec.ts') continue;\n", '')
       .replace(" && !/^m9[\\\\/]/.test(file)", '')
+      .replace('    // RA1 owns its new scenarios; this remains the accepted M8 inventory.\n', '')
+      .replace("    if (file === 'ra1.spec.ts') continue;\n", '')
+      .replace(" && !/^ra1[\\\\/]/.test(file)", '')
       .replaceAll('readAcceptedM8(', 'readFileSync(');
   }
   assert.equal(current, baseline, `Accepted M8 test/assertion change: ${file}`);
 }
-assert.equal(git('diff', sha, '--', 'src/domain').trim(), '', 'Accepted M8 domain source changed');
-log('PASS: accepted M8 domain unchanged; 66 Vitest / 5 browser source files and every original assertion preserved');
+// RA1 explicitly authorizes version-aware RSA in these three domain modules.
+// All accepted M8 assertions still run against current production handlers.
+const domainChanges = git('diff', '--name-only', sha, '--', 'src/domain').trim().split(/\r?\n/).filter(Boolean);
+for (const file of domainChanges) assert(['src/domain/profile.ts', 'src/domain/advancedGame.ts',
+  'src/domain/behindController.ts'].includes(file), `Unrelated accepted domain source change: ${file}`);
+log('PASS: domain changes bounded to authorized RA1 modules; 66 Vitest / 5 browser source files and every original assertion preserved');

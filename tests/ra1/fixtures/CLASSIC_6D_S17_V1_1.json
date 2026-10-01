@@ -1,0 +1,322 @@
+{
+  "baseline": "8326f846ad753b79fd8d35f76b00f28854e2f448",
+  "package": {
+    "replayVersion": 1,
+    "configuration": {
+      "seed": 4689,
+      "profileId": "CLASSIC_6D_S17_V1_1",
+      "randomAlgorithm": "MULBERRY32_REJECTION_V1",
+      "initialCreditUnits": 2000,
+      "withHuman": true,
+      "demoFaults": false
+    },
+    "commands": [
+      {
+        "sequence": 1,
+        "command": {
+          "type": "CONFIGURE",
+          "seats": [
+            {
+              "seatNumber": 1,
+              "occupancy": "HUMAN",
+              "sittingOut": false
+            }
+          ]
+        }
+      },
+      {
+        "sequence": 2,
+        "command": {
+          "type": "OPEN"
+        }
+      },
+      {
+        "sequence": 3,
+        "command": {
+          "type": "MAIN",
+          "seat": 1,
+          "amount": 200
+        }
+      },
+      {
+        "sequence": 4,
+        "command": {
+          "type": "CLOSE"
+        }
+      },
+      {
+        "sequence": 5,
+        "command": {
+          "type": "ACT",
+          "action": "SPLIT",
+          "handId": "round-1/seat-1"
+        }
+      },
+      {
+        "sequence": 6,
+        "command": {
+          "type": "ADVANCE"
+        }
+      },
+      {
+        "sequence": 7,
+        "command": {
+          "type": "SETTLE"
+        }
+      }
+    ],
+    "outcomeDigest": "fnv1a32-v1:9ecbae88"
+  },
+  "outcomes": [
+    {
+      "profileId": "CLASSIC_6D_S17_V1_1",
+      "publicState": {
+        "phase": "COMMITTED",
+        "backInsurance": [],
+        "backResults": [],
+        "follow": null,
+        "backWagers": [],
+        "configuration": [
+          {
+            "seatNumber": 1,
+            "occupancy": "HUMAN",
+            "sittingOut": false,
+            "controllerId": "local-human"
+          },
+          {
+            "seatNumber": 2,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          },
+          {
+            "seatNumber": 3,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          },
+          {
+            "seatNumber": 4,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          },
+          {
+            "seatNumber": 5,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          },
+          {
+            "seatNumber": 6,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          },
+          {
+            "seatNumber": 7,
+            "occupancy": "EMPTY",
+            "sittingOut": false,
+            "controllerId": null
+          }
+        ],
+        "round": {
+          "roundId": "round-1",
+          "phase": "ROUND_COMPLETE",
+          "currentSeat": null,
+          "currentHandId": null,
+          "seats": [
+            {
+              "seatNumber": 1,
+              "occupancy": "HUMAN",
+              "sittingOut": false,
+              "hands": [
+                {
+                  "handId": "round-1/seat-1.1",
+                  "origin": "SPLIT",
+                  "cards": [
+                    {
+                      "rank": "A",
+                      "suit": "hearts"
+                    },
+                    {
+                      "rank": "A",
+                      "suit": "clubs"
+                    }
+                  ],
+                  "stakeUnits": 200,
+                  "complete": true,
+                  "outcome": "DEALER_WIN",
+                  "outcomeReason": "LOWER_TOTAL"
+                },
+                {
+                  "handId": "round-1/seat-1.2",
+                  "origin": "SPLIT",
+                  "cards": [
+                    {
+                      "rank": "A",
+                      "suit": "diamonds"
+                    },
+                    {
+                      "rank": "4",
+                      "suit": "spades"
+                    }
+                  ],
+                  "stakeUnits": 200,
+                  "complete": true,
+                  "outcome": "DEALER_WIN",
+                  "outcomeReason": "LOWER_TOTAL"
+                }
+              ]
+            },
+            {
+              "seatNumber": 2,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            },
+            {
+              "seatNumber": 3,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            },
+            {
+              "seatNumber": 4,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            },
+            {
+              "seatNumber": 5,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            },
+            {
+              "seatNumber": 6,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            },
+            {
+              "seatNumber": 7,
+              "occupancy": "EMPTY",
+              "sittingOut": false,
+              "hands": []
+            }
+          ],
+          "dealer": {
+            "upcard": {
+              "rank": "7",
+              "suit": "spades"
+            },
+            "holeCard": {
+              "rank": "8",
+              "suit": "clubs"
+            },
+            "visibleCards": [
+              {
+                "rank": "7",
+                "suit": "spades"
+              },
+              {
+                "rank": "8",
+                "suit": "clubs"
+              },
+              {
+                "rank": "4",
+                "suit": "diamonds"
+              }
+            ]
+          },
+          "insurance": []
+        },
+        "human": {
+          "participantId": "local-human",
+          "controlledSeat": 1,
+          "available": 1600,
+          "reserved": 0
+        }
+      },
+      "resultRecords": [
+        {
+          "roundId": "round-1",
+          "seatNumber": 1,
+          "handId": "round-1/seat-1.1",
+          "stakeUnits": 200,
+          "outcome": "DEALER_WIN",
+          "grossReturnUnits": 0,
+          "netUnits": -200,
+          "status": "COMMITTED",
+          "type": "MAIN",
+          "wagerId": "round-1/seat-1.1/MAIN"
+        },
+        {
+          "roundId": "round-1",
+          "seatNumber": 1,
+          "handId": "round-1/seat-1.2",
+          "stakeUnits": 200,
+          "outcome": "DEALER_WIN",
+          "grossReturnUnits": 0,
+          "netUnits": -200,
+          "status": "COMMITTED",
+          "type": "MAIN",
+          "wagerId": "round-1/seat-1.2/MAIN"
+        }
+      ],
+      "backRecords": [],
+      "computers": [
+        {
+          "participantId": "computer-1",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-2",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-3",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-4",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-5",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-6",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        },
+        {
+          "participantId": "computer-7",
+          "bankroll": {
+            "available": 2000,
+            "reserved": 0
+          }
+        }
+      ]
+    }
+  ]
+}

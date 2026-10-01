@@ -1,8 +1,24 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync as readCurrentFile } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import ts from 'typescript';
 import { execFileSync } from 'node:child_process';
 import { expect, it } from 'vitest';
+
+// RA1 preserves these M9 delivery assertions at their historical reviewed SHA.
+// Current RA1 documentation/inventory has its own executable checks.
+const m9Sha = '8326f846ad753b79fd8d35f76b00f28854e2f448';
+function historicalGit(...args: string[]) {
+  return execFileSync('git', ['-c', `safe.directory=${process.cwd().replaceAll('\\', '/')}`, ...args], { encoding: 'utf8' });
+}
+function readFileSync(file: string, encoding: 'utf8'): string;
+function readFileSync(file: string): Buffer;
+function readFileSync(file: string, encoding?: 'utf8'): string | Buffer {
+  return encoding ? historicalGit('show', `${m9Sha}:${file}`) : readCurrentFile(file);
+}
+function readdirSync(directory: string, options?: { recursive: boolean }) {
+  return historicalGit('ls-tree', '-r', '--name-only', m9Sha, directory).trim().split(/\r?\n/)
+    .map(file => file.slice(directory.length + 1)).filter(file => options?.recursive || !file.includes('/'));
+}
 
 const currentDocs = ['README.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md',
   'docs/UX_UI.md', 'docs/LAB_MANUAL.md', 'docs/PORTFOLIO.md', 'docs/M8_REVIEW_HANDOFF.md', 'docs/SPEC.md', 'docs/DESIGN.md'];

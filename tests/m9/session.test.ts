@@ -39,7 +39,9 @@ it('[M9-018] explicit reset remains available between settled rounds but locks w
 });
 
 it('[M9-016] explicit manual mode resets only at safe boundaries and retains accepted configuration flow', () => {
-  const c = createBrowserController({ playerMode: true, seed: 7 });
+  // MODE deliberately removes the seed. Keep the reset shoe non-natural so
+  // this active-round assertion does not depend on a random opening result.
+  const c = createBrowserController({ playerMode: true, seed: 7, random: { nextInt: max => max - 1 } });
   expect(c.dispatch({ type: 'MODE', playerMode: false })).toBe(true);
   expect(c.getSnapshot()).toMatchObject({ playerMode: false, phase: 'CONFIGURING', seeded: false, lastBet: 0 });
   expect(c.getSnapshot().human).toMatchObject({ available: 2000, reserved: 0 });

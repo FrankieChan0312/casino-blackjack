@@ -1,3 +1,13 @@
+## Current RA1 delivery
+
+House Rules v1.2 amendment: [RA1 contract](RA1_CONTRACT.md), [execution evidence](RA1_EVIDENCE.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
+
+RA1 progress: RA1-T01 IMPLEMENTED / VERIFIED; T02..T05 pending except T05 baseline repair. Repair ledger T01..T05 `2,0,0,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+
+Historical M9/M8 records below retain their original version, inventory and review boundaries; they are not current RA1 claims.
+
+<!-- END CURRENT RA1 -->
+
 ## Current M9 delivery
 
 M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
@@ -1078,3 +1088,7 @@ Follow [M9 contract](M9_CONTRACT.md). Player Mode is an explicit browser option;
 Player Mode is opt-in at the controller boundary and selected by the production entry; legacy manual callers preserve their behavior. Browser DEAL and REPEAT expand to authoritative existing commands, MODE is an explicit safe credit-reset intent, and no wrapper is written into replay schema v1. All command transitions, auto guest wagers, ADVANCE and SETTLE/VOID are audited through the same recorder. Whole-intention capacity budgets are checked before any financial/archive mutation: DEAL5, REPEAT11, NEXT7, automatic decisions4, preparation6; manual2 remains accepted. Computer funds never leave the private state. A single synchronous domain ADVANCE resolves automatic turns; no timers, duplicate effects or per-card fake state. React effects handle focus only, never gameplay. OPEN hides a prior finalized card archive in the player projection without deleting internal replay/history.
 
 Human original MAIN is remembered separately from Double/Split exposure, reset on explicit session reset. NEXT clears optional round stakes through accepted handlers and preserves the shoe and balances; REPEAT uses the exact original human amount and fails clearly without lowering it. Player-only reset is allowed in an unfunded OPEN before any new deal when its internal archive is absent/already terminal; funded/active and manual boundaries remain locked. Native details contain optional wagers and Developer/demo tools. Original SVG fictional figures and scoped Player Mode CSS do not affect the accepted domain. [Review pack](M9_REVIEW_HANDOFF.md).
+
+## RA1 approved version-aware RSA extension
+
+Historical M4/M6 designs describe V1.1. V1.2 retains ordered leaf replacement, but child activation checks the profile, exact A,A cards, total leaves including completed ones, and the controller's available matching stake. A legal child pauses with SPLIT/STAND; other Split-Ace children complete after their one supplement. Hit handler and read-only interaction validation reject Split-Ace Hit independently. Stand closes only a legal RSA decision. The existing computer policy never initiates Split; a controlled Split-Ace opportunity automatically declines with Stand rather than Hit. Behind controller activation uses actual participant funds, not an embedded spendable copy, and runs only after the existing follow window closes. Shared pure eligibility is reused by both activation paths. No schema/RNG/digest/audit version change.
