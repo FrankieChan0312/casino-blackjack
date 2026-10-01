@@ -77,7 +77,7 @@ it('[REG-M8-094] reviewer boundary completes at 10000 and rejects a two-intent o
       expect(c.replayCompleted()).toBe(false); expect(c.startDemo(CLASSIC, 0)).toBe(false);
     }
   }
-});
+}, 20000); // Both near-10000-command scenarios and repeated replay under measured full-suite contention, not a product SLA.
 
 it('[REG-M8-095] defensive replay validation failure hides availability and preserves original finances and audit', () => {
   const c = seeded(); finish(c); const before = c.getSnapshot();

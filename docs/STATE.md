@@ -1,6 +1,22 @@
 # Casino Blackjack - Project State
 
-## Final LOW-04 / LOW-05 repair checkpoint (current; supersedes historical status below)
+## MEDIUM-05 / M8-T07 Review Repair #2 (current)
+
+Baseline 2026-10-01 12:48:07 +08:00: main=HEAD=origin/main=1c639cb6ab35fa7bad80a6db174cda115666279f,0/0,clean/full untracked empty. Supplied fresh review:0 BLOCKER/0 HIGH/1 MEDIUM/0 LOW; earlier findings including LOW-04/05 CLOSED; MEDIUM-05 OPEN. Initial sandbox Git ownership block resolved by owner-context read-only commands, no Git config changes. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
+Scope: test invariant/matcher/replay overhead, local bounded replay budgets, mandatory Windows fixture cleanup and truthful review records. Non-goals: product/domain/browser behaviour, rules, RNG, replay/digest/accounting, dependencies, global timeout/workers, coverage reduction, independent review, acceptance or deployment. Steps -> read-only diagnosis -> smallest test-only change -> six targeted tests x3 consecutive PASS -> four affected suites x3 consecutive PASS -> npm.cmd test x2 consecutive PASS -> official verify.ps1 x2 consecutive PASS including all required checks/preservation -> complete diff/normal commit/push/fetch/main parity0/0/clean -> STOP. Stop on production regression (E), authority conflict, unknown overlapping changes, unavailable required validation, unsafe publication or cumulative10 repairs.
+
+Diagnosis adds no repairs. 067/069/070 classify B+C;093/094 B (local isolation below5s; A not established);077 D mechanism reproduced with real transient Windows handles, original reviewer handle owner unknown, natural EPERM not reproduced. First implementation/validation retained: rmSync retry options still failed the300ms handle probe on Node24.19.0. One corrective cycle uses awaited fs/promises.rm maxRetries3/retryDelay100 after completed spawnSync. Transient locks recover; a10s sustained lock fails EBUSY after3137ms; no error is swallowed. This substantive repair is M8-T07 Review Repair #2; T07=2/10. Prior ledger **0,2,3,2,2,1,1,6,4**; actual ledger **0,2,3,2,2,1,2,6,4**, all M1-M7 ledgers unchanged. Required final stability verification PASS; receipts below. Measurements, failures and coverage rationale: [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md).
+
+Required final stability PASS: six targeted tests x3 (12:59:25-12:59:53), grouped four suites x3/37tests (13:08:40-13:08:54; Vitest2.92/2.56/2.46s; wall7.198/3.223/3.124s), full npm.cmd test x2/66files/956tests (13:10:09-13:10:16,6.71s/wall7.457s;13:10:16-13:10:24,7.36s/wall8.212s).
+
+Official harness#1 PASS/0 at13:11:00-13:12:54,wall113.177s, Vitest66/956/7.65s, Chromium44/41.0s. Official harness#2 PASS/0 at13:12:54-13:14:33,wall99.393s, Vitest66/956/7.70s, Chromium44/41.1s. Both include typecheck/lint/domain isolation/build/fixture exclusion/secrecy/96 exact REG-M8 owners and mandatory preservation M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870 plus24Chromium (19.8s/19.9s), all PASS.
+
+No executable/test/dependency/runtime changes after the successful final harness. Domain diff EMPTY; only factual evidence/status updates follow. Actual ledger0,2,3,2,2,1,2,6,4; independent recheck NOT RUN, M8 ACCEPTED NO, deployment NOT RUN. Normal authorized coherent commit/push/fetch follows; actual commit/parity receipt recorded after publication.
+
+MEDIUM-05 OPEN - repair VERIFIED; independent recheck pending. M8 ACCEPTED = NO. Independent recheck NOT RUN here. Deployment NOT RUN.
+
+## Historical LOW-04 / LOW-05 repair checkpoint (superseded by MEDIUM-05)
 
 Baseline2026-10-01 11:26:27 +08:00: main=HEAD=origin/main=07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54,0/0,clean/full untracked empty. Reconstructed independent review closed MEDIUM-01..04 and LOW-01..03; only LOW-04/05 remain OPEN. The unchanged-HEAD attempted recheck and conversation interruption add no finding/repair cycle/counter. Actual recovery baseline12:13:50 confirmed LOW-05 published and10 intended unstaged LOW-04 files; cached diff EMPTY, no unknown files or pending UI/domain edits. The interrupted harness result was unavailable and not claimed PASS; a fresh official run completed below. No independent review occurs in this implementation session.
 
@@ -35,10 +51,12 @@ Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781
 Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
 Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
 CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
-LOW-04: OPEN - repair VERIFIED; independent recheck pending.
-LOW-05: OPEN - repair VERIFIED; independent recheck pending.
-The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
+Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
+LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
+MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
+Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## Historical repair batch 2 contract and ledger

@@ -162,4 +162,4 @@ it('[REG-M8-093] exact replay cap exports and replays without truncation and rej
   expect(open.getState()).toBe(active); expect(JSON.stringify(open.getState())).toBe(activeBytes);
   expect(open.getAudit()).toEqual(activeAudit); expect(open.hasCapacity()).toBe(false);
   expect(() => open.exportPackage()).toThrow('finalized');
-});
+}, 15000); // Fixed 10000-command workloads plus replay; allowance for measured full-suite contention, not a product SLA.

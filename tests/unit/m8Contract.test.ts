@@ -69,14 +69,16 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     expect(status, file).toContain('Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781');
     expect(status, file).toContain('Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.');
     expect(status, file).toContain('CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.');
-    for (const finding of ['LOW-04', 'LOW-05']) expect(status, file).toMatch(new RegExp(finding + ': OPEN - repair (?:IMPLEMENTED; verification pending|VERIFIED; independent recheck pending)\\.'));
+    for (const finding of ['LOW-04', 'LOW-05']) expect(status, file).toContain(finding + ': CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.');
+    expect(status, file).toContain('Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).');
+    expect(status, file).toMatch(/MEDIUM-05: OPEN - repair (?:IMPLEMENTED; verification pending|VERIFIED; independent recheck pending)\./);
     expect(status, file).toContain('M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.');
     assertInventory(status!, file);
     expect(status, file).not.toMatch(/(?:fresh review|recheck #1).*NOT RUN|all (?:six )?findings.*OPEN/i);
   }
   // The original defect was outside the later review section: test the entry header itself.
   const labHeader = readFileSync(files[0], 'utf8').split('## 1. Purpose')[0];
-  expect(labHeader).toMatch(/Status:.*reconstructed independent review COMPLETED.*LOW-04 and LOW-05 OPEN/);
+  expect(labHeader).toMatch(/Status:.*reconstructed independent review COMPLETED.*LOW-04 and LOW-05 CLOSED.*MEDIUM-05 OPEN/);
   expect(labHeader).not.toMatch(/M8 fresh review NOT RUN/);
   const uxCurrent = readFileSync('docs/UX_UI.md', 'utf8').split('## 36. Current implementation status')[1];
   expect(uxCurrent).toContain('Reconstructed independent review completed');

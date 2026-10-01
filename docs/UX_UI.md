@@ -9,10 +9,12 @@ Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781
 Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
 Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
 CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
-LOW-04: OPEN - repair VERIFIED; independent recheck pending.
-LOW-05: OPEN - repair VERIFIED; independent recheck pending.
-The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
+Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
+LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
+MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
+Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 Document date: 2026-09-28  
@@ -809,4 +811,4 @@ The owner found functionality acceptable but the UI visually boring. The authori
 
 M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.
 
-M8 T01-T09 implementation exists and is VERIFIED. Reconstructed independent review completed at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54 and closed MEDIUM-01..04 and LOW-01..03. Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN; repair verification and fresh independent recheck status are recorded above and in STATE. The title and ACTIVE now use a dedicated wrapping hand-header, preserving both labels in normal flow. M8 ACCEPTED: NO. Deployment: NOT RUN. The bounded seeded demo rejects commands before mutation when fewer than two journal entries remain, reserving an automatic SETTLE/VOID; an unfinished capped demo requires refresh, while finalized sessions retain Start new demo. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md).
+M8 T01-T09 implementation exists and is VERIFIED. Reconstructed independent review completed at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54 and closed MEDIUM-01..04 and LOW-01..03. The later complete-harness review at1c639cb closed LOW-04/05 and opened MEDIUM-05; stability verification and independent recheck status are recorded above and in STATE. The title and ACTIVE now use a dedicated wrapping hand-header, preserving both labels in normal flow. M8 ACCEPTED: NO. Deployment: NOT RUN. The bounded seeded demo rejects commands before mutation when fewer than two journal entries remain, reserving an automatic SETTLE/VOID; an unfinished capped demo requires refresh, while finalized sessions retain Start new demo. Refer to [STATE](STATE.md), [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) and [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md).

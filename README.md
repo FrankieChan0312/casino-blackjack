@@ -17,10 +17,12 @@ Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781
 Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
 Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
 CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
-LOW-04: OPEN - repair VERIFIED; independent recheck pending.
-LOW-05: OPEN - repair VERIFIED; independent recheck pending.
-The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
+Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
+LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
+MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
+Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](docs/M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## Features

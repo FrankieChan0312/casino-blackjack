@@ -1,4 +1,4 @@
-# M8 final LOW-04 / LOW-05 independent recheck handoff
+# M8 MEDIUM-05 independent recheck handoff
 
 ## Current M8 review status
 
@@ -9,19 +9,21 @@ Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781
 Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
 Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
 CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
-LOW-04: OPEN - repair VERIFIED; independent recheck pending.
-LOW-05: OPEN - repair VERIFIED; independent recheck pending.
-The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
+Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
+LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
+All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
+MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
+Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
-## Final narrow recheck contract
+## MEDIUM-05 recheck contract
 
-Findings FIRST. Review the new repaired final HEAD on main, independently verify HEAD=origin/main,0/0 and clean full-untracked status. Previous reviewed SHA:07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54. LOW-05 repair checkpoint:38a1d0e7acbf9af27c42f741ef3b62b844b40aa7, pushed/fetched with parity and clean tree at2026-10-01 11:47:59 +08:00. The final LOW-04 documentation commit cannot embed its own SHA; obtain it from final delivery and actual Git. The unchanged-HEAD attempted narrow recheck was BLOCKED because repairs did not yet exist; no finding/counter changed. All seven earlier findings remain CLOSED by the reconstructed independent review. Only LOW-04 and LOW-05 require closure, by a genuinely fresh reviewer. Read-only review: no file edits, repair, commit, push, deployment or acceptance. Implementation verification cannot close findings. Recommended GPT Sol6.1/High; actual runtime model/effort only if independently verifiable.
+Findings FIRST. Previous reviewed SHA:1c639cb6ab35fa7bad80a6db174cda115666279f. Obtain final repaired HEAD from delivery/Git; require main=origin/main,0/0 and clean full-untracked status. All earlier findings including LOW-04/05 are CLOSED. Only MEDIUM-05 requires recheck. Read-only fresh review: no edits/repair/commit/push/deployment/acceptance. This implementation session does not perform it. Recommended GPT Sol6.1/High; actual settings only if independently verifiable.
 
-LOW-04 / T09 repair4: inspect current inventory in README Verification, this Commands section, LAB section34, eight current-status blocks and M8_MAPPING. Current counts must match actual final harness; historical explicitly-labelled 38/43 runs remain. Inspect REG-M8-096: AST count of executable Chromium registrations, independent Vitest-file count, comparison of original inventory paragraphs and current status, preserved LAB top/UX status checks. Mapping remains exactly96 unique contiguous owners001..096, no097.
+Inspect [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md), complete test/document diff and retained failures. Confirm all256 seeds/312 draws/cut+5/256x3 rounds and every financial/card/replay assertion. One real replay still independently checks outcomes and digest. Confirm exact10000-command success/10001 atomic rejection, journal completeness and no state/RNG/audit/clock mutation or truncation. Review only local REG-093/094 15000/20000ms budgets, REG-070 unchanged15000, no global timeout/workers/test-retries changes. Await mandatory fs/promises.rm after completed spawnSync; known-error bounded retries propagate exhaustion. Original reviewer handle owner remains unknown; real controlled handles establish mechanism and cleanup behaviour.
 
-LOW-05 / T08 repair6: reproduce local active hand at768x1024, both opening and Split. Measure title and ACTIVE bounding rectangles and require no intersection, both readable and no page-level horizontal overflow. Sanity-check1280x900 and320x720; preserve keyboard/focus,44px primary controls, public card labels/Dealer secrecy and reduced motion. Inspect dedicated wrapping flex hand-header, geometric regression and original failing reproduction in log. Domain diff07dbcea..final src/domain must be EMPTY. Review screenshots/hashes in PORTFOLIO without treating hash equality as visual acceptance.
+Require each affected test x3, grouped suites x3, full Vitest x2 and two complete official harness PASS receipts. Independently reproduce the official harness twice under normal full-suite load. Domain diff from reviewed SHA must be EMPTY; all96 REG owners and accepted M1-M7 preservation unchanged.
 
 ## Commands and expected inventory
 
@@ -29,11 +31,12 @@ Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium pr
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
 git diff --check
 git status --short --untracked-files=all
 ```
 
-Require actual PASS for typecheck/lint/domain isolation/production fixture exclusion, Vitest/Chromium, secrecy,96 M8 owners and mandatory M1-M7 preservation (155/78/72/171/168/181; M7 870 plus24 Chromium). Inspect geometric bbox output. Current repair ledger is in STATE/PLAN; expected verified final0,2,3,2,2,1,1,6,4, with T08=6/10 and T09=4/10. Earlier ledgers unchanged. If no findings remain, report LOW-04 CLOSED/LOW-05 CLOSED, earlier findings remain CLOSED, readiness for HUMAN acceptance, actual final SHA/counts/ledger. Do not mark M8 ACCEPTED; deployment remains NOT RUN. STOP.
+Require actual PASS for typecheck/lint/domain isolation/production fixture exclusion, Vitest/Chromium, secrecy,96 M8 owners and all mandatory M1-M7 preservation (155/78/72/171/168/181; M7 870 plus24 Chromium). Actual repair ledger0,2,3,2,2,1,2,6,4; T07=2/10,T08=6/10,T09=4/10; earlier ledgers unchanged. If no findings remain, report MEDIUM-05 CLOSED and all earlier findings still CLOSED, readiness for HUMAN acceptance and actual final SHA/counts/ledger. Do not mark M8 ACCEPTED; deployment NOT RUN. STOP.
 
 ## Historical batch2 review instructions and evidence
 

@@ -13,8 +13,10 @@ it('[REG-M8-067] 256 seeded shoes contain 312 distinct IDs and every draw is wit
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     let shoe=createShoe(`seed-${seed}`,createSeededRandom(seed));expectAccounting(shoe);const ids=new Set<string>();
     for(let n=0;n<312;n++){
-      const result=drawCard(shoe);expect(result.ok).toBe(true);if(!result.ok)throw new Error(result.error);
-      expect(ids.has(result.card.id)).toBe(false);ids.add(result.card.id);shoe=result.shoe;
+      const result=drawCard(shoe);
+      if(!result.ok)throw new Error(`seed ${seed}, draw ${n+1}: ${result.error}`);
+      if(ids.has(result.card.id))throw new Error(`seed ${seed}, draw ${n+1}: duplicate card ${result.card.id}`);
+      ids.add(result.card.id);shoe=result.shoe;
     }
     expect(ids.size).toBe(312);expectAccounting(shoe);expect(shoe.available).toHaveLength(0);
   }
@@ -32,8 +34,10 @@ it('[REG-M8-069] cut crossing preserves shoe identity and position throughout se
   for(let seed=0;seed<INVARIANT_SEEDS;seed++){
     let shoe=createShoe('s',createSeededRandom(seed));const cut=shoe.cutPosition;
     for(let n=1;n<=cut+5;n++){
-      const result=drawCard(shoe);if(!result.ok)throw new Error(result.error);shoe=result.shoe;
-      expect(shoe.shoeId).toBe('s');expect(shoe.cutPosition).toBe(cut);expect(shoe.reshufflePending).toBe(n>=cut);
+      const result=drawCard(shoe);if(!result.ok)throw new Error(`seed ${seed}, draw ${n}: ${result.error}`);shoe=result.shoe;
+      if(shoe.shoeId!=='s')throw new Error(`seed ${seed}, draw ${n}: shoeId ${shoe.shoeId}, expected s`);
+      if(shoe.cutPosition!==cut)throw new Error(`seed ${seed}, draw ${n}: cutPosition ${shoe.cutPosition}, expected ${cut}`);
+      if(shoe.reshufflePending!==(n>=cut))throw new Error(`seed ${seed}, draw ${n}: reshufflePending ${shoe.reshufflePending}, expected ${n>=cut}`);
     }
   }
 });
@@ -73,7 +77,8 @@ it('[REG-M8-070] 256 three-round sessions conserve cards/funds/reservations, set
       expectAccounting(state.table.game.shoe);
       if(round<3)send(s,{type:'NEXT'});
     }
-    const p=s.exportPackage();expect(replay(p).outcomes).toEqual(s.getOutcomes());expect(replay(p).digest).toBe(p.outcomeDigest);
+    const p=s.exportPackage();const result=replay(p);
+    expect(result.outcomes).toEqual(s.getOutcomes());expect(result.digest).toBe(p.outcomeDigest);
   }
 }, 15000); // Fixed 256 x 3 real sessions plus replay; bounded allowance for full-suite CPU contention.
 it('[REG-M8-071] 256 explicit fault sessions conserve actual stakes and VOID exactly once with replay equality',()=>{
