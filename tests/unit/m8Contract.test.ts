@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { expect, it } from 'vitest';
+import ts from 'typescript';
 import { CLASSIC, CHARLIE } from '../../src/domain/profile.js';
 import { REPLAY_VERSION } from '../../src/domain/replay.js';
 import { AUDIT_VERSION } from '../../src/domain/audit.js';
@@ -27,7 +28,36 @@ it('[REG-M8-076] public project text makes no affirmative RTP house-edge certifi
   }
 });
 
-it('[REG-M8-096] eight current documents distinguish completed reviews closed findings and pending batch2 closure', () => {
+it('[REG-M8-096] current review status and verification inventories agree with executable browser registrations', () => {
+  let chromiumTests = 0;
+  for (const file of readdirSync('tests/browser').filter(file => file.endsWith('.spec.ts'))) {
+    const source = ts.createSourceFile(file, readFileSync('tests/browser/' + file, 'utf8'), ts.ScriptTarget.Latest, true);
+    function visit(node: ts.Node) {
+      if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === 'test') {
+        expect(ts.isStringLiteral(node.arguments[0]), file).toBe(true);
+        chromiumTests++;
+      }
+      if (ts.isCallExpression(node) && ts.isPropertyAccessExpression(node.expression)) {
+        expect(node.expression.name.text, file).not.toMatch(/^(skip|todo|only|skipIf|runIf)$/);
+      }
+      ts.forEachChild(node, visit);
+    }
+    visit(source);
+  }
+  const vitestFiles = readdirSync('tests', { recursive: true }).map(String).filter(file => /\.test\.tsx?$/.test(file)).length;
+  expect(vitestFiles).toBe(66);
+  expect(chromiumTests).toBe(44);
+  const expectedInventory = [vitestFiles, 956, 1, chromiumTests];
+  function assertInventory(source: string, file: string) {
+    const inventory = source.match(/\*\*(\d+) Vitest files\s*\/\s*(\d+) tests\*\*, \*\*(\d+) Chromium project\s*\/\s*(\d+) tests\*\*/);
+    expect(inventory, file).not.toBeNull();
+    expect(inventory!.slice(1).map(Number), file).toEqual(expectedInventory);
+  }
+  // These inventory paragraphs originally drifted independently of the shared status header.
+  assertInventory(readFileSync('README.md', 'utf8').split('## Verification')[1].split('## Profiles')[0], 'README verification');
+  assertInventory(readFileSync('docs/M8_REVIEW_HANDOFF.md', 'utf8').split('## Commands and expected inventory')[1].split('\n## ')[0], 'handoff commands');
+  assertInventory(readFileSync('docs/LAB_MANUAL.md', 'utf8').split('## 34.')[1], 'LAB section 34');
+  assertInventory(readFileSync('docs/M8_MAPPING.md', 'utf8'), 'mapping inventory');
   const files = ['docs/LAB_MANUAL.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md',
     'docs/UX_UI.md', 'README.md', 'docs/PORTFOLIO.md', 'docs/M8_REVIEW_HANDOFF.md'];
   for (const file of files) {
@@ -37,17 +67,18 @@ it('[REG-M8-096] eight current documents distinguish completed reviews closed fi
     expect(status, file).toContain('Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666');
     expect(status, file).toContain('Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781');
     expect(status, file).toContain('Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781');
-    expect(status, file).toContain('(0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW)');
-    expect(status, file).toContain('CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.');
-    for (const finding of ['MEDIUM-04', 'LOW-03']) expect(status, file).toMatch(new RegExp(`${finding}: OPEN — repair (?:IMPLEMENTED; verification pending|VERIFIED; independent recheck #2 pending)\\.`));
-    expect(status, file).toMatch(/Repair batch 2: (?:IMPLEMENTED;.*pending|VERIFIED;.*)\./);
+    expect(status, file).toContain('Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.');
+    expect(status, file).toContain('CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.');
+    for (const finding of ['LOW-04', 'LOW-05']) expect(status, file).toMatch(new RegExp(finding + ': OPEN - repair (?:IMPLEMENTED; verification pending|VERIFIED; independent recheck pending)\\.'));
+    expect(status, file).toContain('M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.');
+    assertInventory(status!, file);
     expect(status, file).not.toMatch(/(?:fresh review|recheck #1).*NOT RUN|all (?:six )?findings.*OPEN/i);
   }
   // The original defect was outside the later review section: test the entry header itself.
   const labHeader = readFileSync(files[0], 'utf8').split('## 1. Purpose')[0];
-  expect(labHeader).toMatch(/Status:.*original M8 fresh review and independent recheck #1 COMPLETED/);
+  expect(labHeader).toMatch(/Status:.*reconstructed independent review COMPLETED.*LOW-04 and LOW-05 OPEN/);
   expect(labHeader).not.toMatch(/M8 fresh review NOT RUN/);
   const uxCurrent = readFileSync('docs/UX_UI.md', 'utf8').split('## 36. Current implementation status')[1];
-  expect(uxCurrent).toContain('Independent recheck #1 completed');
+  expect(uxCurrent).toContain('Reconstructed independent review completed');
   expect(uxCurrent).not.toMatch(/All six findings remain OPEN|M8 independent reviewer RECHECK: PENDING/);
 });

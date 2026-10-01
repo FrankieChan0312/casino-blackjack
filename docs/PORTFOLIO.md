@@ -6,13 +6,17 @@ Human manual feedback identified a visually boring dashboard. M8-T08 polish uses
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## Five-minute technical walkthrough
@@ -47,7 +51,7 @@ The polished screenshots replace the historical dashboard images. Portfolio scre
 
 Regenerate with `npm.cmd run test:e2e -- tests/browser/polish.spec.ts tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
 
-Historical visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five semantic/layout polish checks covered desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. LOW-05 adds a sixth geometric check; its current official harness PASS/0 inspected2026-10-01 11:43:28 +08:00 has66 Vitest files/956 tests and44 Chromium tests. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked counts, timestamps, failures and publication evidence. LOW-04/05 remain OPEN pending independent recheck; no acceptance is implied.
+Historical visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five semantic/layout polish checks covered desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. LOW-05 adds a sixth geometric check; the final combined LOW-04/05 official harness PASS/0 inspected2026-10-01 12:19:49 +08:00 has66 Vitest files/956 tests and44 Chromium tests. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked counts, timestamps, failures and publication evidence. LOW-04/05 remain OPEN pending independent recheck; no acceptance is implied.
 
 ## Honest boundaries
 

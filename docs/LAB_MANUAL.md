@@ -5,17 +5,21 @@ Document task: LAB-1.0
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
 Current milestone: M8 - Variant, replay, audit and portfolio polish
-Status: M1-M7 HUMAN ACCEPTED; original M8 fresh review and independent recheck #1 COMPLETED; five original findings CLOSED BY RECHECK; MEDIUM-04 and LOW-03 OPEN — repair VERIFIED, independent recheck #2 pending. Repair batch2 VERIFIED; publication receipt in final delivery/Git. M8 NOT ACCEPTED; deployment NOT RUN. Current M8 notes are section34 and the status below; earlier learning/delivery statements are historical snapshots, superseded by STATE.
+Status: M1-M7 HUMAN ACCEPTED; M8 IMPLEMENTED / VERIFIED; reconstructed independent review COMPLETED at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54; seven earlier findings CLOSED; only LOW-04 and LOW-05 OPEN with repairs and independent recheck status below. M8 NOT ACCEPTED; deployment NOT RUN. Current M8 notes are section34 and the status below; earlier learning/delivery statements are historical snapshots, superseded by STATE.
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## M8 human-feedback visual checkpoint
@@ -1797,9 +1801,9 @@ Gross RNG sanity only checks that outputs/cuts/shuffles do not collapse to one r
 
 M8 browser tests catch in-round profile changes, incorrect fifth-card 21 Blackjack labels, unreproducible seeds, active replay disclosure, original result replacement, unordered/unattributed audit, keyboard failures and 320px overflow. Portfolio fixture screenshots use a fixed UTC clock only in E2E and public UI; repeat generation was byte-identical. A first recipe incorrectly attempted Insurance Decline for seed 21/dealer 4; the executed failure corrected the recipe/test, not gameplay. README commands and links are tested; images contain no private paths or secret information.
 
-REG-M8-001..096 has96 unique executable owners (83Vitest/13Chromium), verified by TypeScript AST and exact documentation rows. Batch1 added cascade refunds092 and strengthened036/059/087; batch2 adds exact replay cap/atomic recorder093, browser reproduction094, defensive replay095 and current-document consistency096 without replacing coverage. Unnumbered completeness/portfolio checks add evidence without inflating the mapping. Expanded full inventory is66files/956tests/38Chromium; actual execution status is in STATE/log. Independent accepted M1-M7 inventories/assertions remain preserved. Only authorized historical absence assertions are anchored to old commits; current gameplay/secrecy remains tested. Isolated harness tests inject a nonzero preservation exit or missing tool and prove no false PASS.
+REG-M8-001..096 has96 unique executable owners (83Vitest/13Chromium), verified by TypeScript AST and exact documentation rows. Batch1 added cascade refunds092 and strengthened036/059/087; batch2 adds exact replay cap/atomic recorder093, browser reproduction094, defensive replay095 and current-document consistency096 without replacing coverage. Unnumbered completeness/portfolio checks add evidence without inflating the mapping. Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**. Actual execution status is in STATE/log. Independent accepted M1-M7 inventories/assertions remain preserved. Only authorized historical absence assertions are anchored to old commits; current gameplay/secrecy remains tested. Isolated harness tests inject a nonzero preservation exit or missing tool and prove no false PASS.
 
-Harness Engineering means explicit task contracts, actual checked exits, evidence-based bounded repair cycles, reproducible mappings and separate VERIFIED/ACCEPTED gates. It does not make generated code trustworthy by itself. M7 human acceptance was recorded with substantive T01 work. Original fresh M8 review completed at eb850326 with3MEDIUM/3LOW; batch1 completed at5218bb9. Independent recheck #1 completed, closed five original findings, retained LOW-03 and added MEDIUM-04. Current repair batch2 evidence is above and in STATE; only a genuinely fresh independent recheck #2 can close the two OPEN findings. This implementation session stops after authorized publication without independent recheck. M8 acceptance NO and deployment NOT RUN. [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) defines the recheck; [PORTFOLIO](PORTFOLIO.md) supplies a factual walkthrough without private career material.
+Harness Engineering means explicit task contracts, actual checked exits, evidence-based bounded repair cycles, reproducible mappings and separate VERIFIED/ACCEPTED gates. It does not make generated code trustworthy by itself. M7 human acceptance was recorded with substantive T01 work. Historical original fresh review/batch1/recheck1 and batch2 repair evidence remain in STATE/log. The reconstructed independent review at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54 closed MEDIUM-01..04 and LOW-01..03. Only LOW-04/05 remain OPEN; final repair verification and a new repaired-SHA fresh independent recheck are separate gates. This implementation session stops after authorized publication without independent recheck. M8 acceptance NO and deployment NOT RUN. [M8_REVIEW_HANDOFF](M8_REVIEW_HANDOFF.md) defines the recheck; [PORTFOLIO](PORTFOLIO.md) supplies a factual walkthrough without private career material.
 
 ### Lessons from M8 review repair batch 1
 
@@ -1816,3 +1820,7 @@ The fixed256-seed x3-round/full-replay workload once exceeded Vitest's default5s
 A decoder bound is also a live-session contract. The old recorder accepted10001 commands although replay v1 decoded at most10000. MAX_REPLAY_COMMANDS now governs recorder, exporter and decoder. Rejection occurs before any authoritative handler/RNG/audit/clock mutation, retains every prior entry and never truncates. Browser intents reserve two slots because ADVANCE or another successful intent may also invoke SETTLE/VOID. At the exact supported completed boundary, the full10000-entry package replays normally; the original9993-wager reproduction rejects ADVANCE at9999 entries before dealer/fund/audit changes. A capped unfinished memory-only demo requires refresh; no forced Stand, artificial VOID or payout change is introduced. Defensive ReplayError handling preserves original finances/audit and removes replay availability instead of exposing a failing result.
 
 Current truth belongs at the document entry point as well as later sections. The stale LAB top statement fresh review NOT RUN survived batch1 despite later review evidence. REG-096 now checks all eight required current-status blocks plus LAB's top status and UX section36, separately from labelled historical records. Original review and failed attempts remain historical evidence; implementation PASS never means finding closure or human acceptance.
+
+### Final inventory and active-hand layout repairs
+
+LOW-04 updates current inventory paragraphs while retaining explicitly historical 38/43-test records. REG-096 counts literal executable Chromium test registrations with TypeScript AST, independently counts Vitest files, and compares the three original inventory locations plus eight current-status blocks and M8_MAPPING against the executed 66-file/956-test/44-Chromium inventory. It also retains review-status checks at the LAB entry point and UX section36. LOW-05 places the title and ACTIVE in wrapping normal flex flow; bounding rectangles at768x1024,1280x900 and320x720 are visible/disjoint with no horizontal page overflow, including Split. The new geometric test failed on the original overlapping layout before the repair. Only a genuinely fresh independent reviewer may close LOW-04/05; implementation verification is not acceptance.

@@ -1,3 +1,19 @@
+### 2026-10-01 12:21:23 +08:00 - final factual records and mapping checks PASS
+
+After final VERIFIED state/ledger records, m8Contract/portfolio/m8Regression3files/7tests PASS/0(start12:21:23,852ms). All96 exact owner rows and current inventories/statuses remain consistent. Full10-path task diff inspected; historical evidence preserved, no unknown/untracked changes, domain diff EMPTY and git diff --check PASS/0. No executable/test/dependency/runtime/image changes after the successful full harness. Final normal docs: sync final verification inventory commit/push/fetch receipt and final SHA/parity/clean are reported in delivery/Git; no self-referential metadata commit. Both findings remain OPEN with repairs VERIFIED; T08=6/10,T09=4/10,ledger0,2,3,2,2,1,1,6,4. STOP after authorized publication, with no independent review/acceptance/deployment.
+
+### 2026-10-01 12:19:49 +08:00 - final LOW-04 / T09 repair4 VERIFIED
+
+Recovery completed from actual existing commit/working tree; no reset/replay/duplicate repair. Official powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1 returned PASS/0: typecheck/lint,66files/956Vitest(start12:16:54,12.10s),ES2023 domain isolation,47-module production build/fixture boundary,44Chromium/48.6s,96 unique contiguous REG-M8 owners and secrecy. Mandatory preservation PASS: M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870(start12:18:14,6.11s)+24Chromium/22.4s. All six opening/Split viewport bbox observations repeat prior evidence:768 title{285.75,484.296875,151.59375,20},ACTIVE{285.75,518.296875,56.640625,20};1280 title{423.234375,514.296875,151.59375,20},ACTIVE{800.109375,517.296875,56.640625,20};320 title{84.203125,828.25,151.59375,20},ACTIVE{131.671875,862.25,56.640625,20}; intersection=false and no page horizontal overflow for all. Primary viewport/keyboard/focus/44px/labels/secrecy/reduced motion PASS. Four current screenshot hashes match PORTFOLIO and LOW-05 committed bytes; no new image change in LOW-04. Classic/Mobile changes from baseline were visually inspected and honestly recorded in LOW-05; Charlie/Replay unchanged. Domain diff07dbcea..current EMPTY; diff --check PASS/0;10 intended tracked LOW-04 paths only/no untracked. Complete scoped same-session diff inspection retains historical38/43 evidence, current44 counts and previous seven independent closures. No independent review or new closure is claimed. T09 advances3->4/10 once after actual successful verification; T08 remains6/10; final M8 ledger0,2,3,2,2,1,1,6,4, all M1-M7 ledgers unchanged. Both LOW-04/05 OPEN - repair IMPLEMENTED / VERIFIED; independent recheck pending. No source/test/dependency/runtime changes after full harness; final factual record checks and normal authorized commit/push/fetch/parity/clean follow. Final documentation SHA cannot embed itself; delivery/Git provide final publication receipt. M8 NOT ACCEPTED; deployment NOT RUN.
+
+### 2026-10-01 12:13:50 +08:00 - recovery baseline after conversation interruption
+
+Executed timestamp/branch/HEAD/origin/parity/full-untracked status/full diff/cached diff/log. Actual main=HEAD=origin/main=38a1d0e7acbf9af27c42f741ef3b62b844b40aa7,0/0. LOW-05 is already complete/verified/pushed; actual dedicated hand-header/CSS/geometric test and committed evidence were inspected. Exactly10 intended LOW-04 documents/contract paths remain unstaged; cached diff EMPTY, no unknown/untracked files, no pending UI/domain change. Interrupted harness session38479 cannot be recovered (unknown process ID), so no completed PASS/FAIL is inferred; typecheck/lint had passed before interruption. Port4173 has no listener and process inspection found no separate running verification harness. Resume the existing T09 repair4 without duplicate edits/commits or resetting/reverting. The interruption is not a finding/repair cycle and changes no counter. Label prior visual-polish current-looking headers historical and align LAB section34 with the current reconstructed-review status. Final official harness is rerun below; no independent review/acceptance/deployment.
+
+### 2026-10-01 11:55:30 +08:00 - LOW-05 published; LOW-04 / T09 repair4 implemented
+
+LOW-05 commit38a1d0e7acbf9af27c42f741ef3b62b844b40aa7 (fix: prevent active-hand label overlap), push origin main/fetch origin main PASS/0, inspected2026-10-01 11:47:59 +08:00: main=HEAD=origin/main,0/0,clean/full untracked empty. T08 remains6/10. LOW-04 hypothesis: mechanically compare current documentation with executable browser registrations and independently counted Vitest files, retain actual956-test total as the checked full-harness contract, and preserve historical38/43 records. REG-096 strengthened without another owner/test; first executed11:52:48 FAIL/1 because README [66,956,1,38] differs from [66,956,1,44]. Surgical updates to README/handoff/LAB/M8_MAPPING and eight current-status blocks now record earlier seven findings CLOSED by reconstructed review, LOW-04/05 OPEN, repaired-head independent recheck pending. Targeted m8Contract/portfolio/m8Regression3files/7tests PASS/0(start11:55:02,1.75s). Earlier atomic patch could not match the Unicode dash; an inline Node edit attempt failed before writes because Windows native argument quoting stripped quotes; stdin script succeeded. These tooling failures are retained, not counted as new substantive repair cycles. T09 repair4 verification pending; current ledger0,2,3,2,2,1,1,6,3 until final full verification. No domain/runtime/dependency/image changes in this checkpoint. No independent recheck, closure, human acceptance or deployment.
+
 ### 2026-10-01 11:43:28 +08:00 — LOW-05 / T08 repair6 VERIFIED
 
 Official powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1 PASS/0: typecheck/lint,66files/956Vitest(start11:37:04,12.06s),ES2023 domain isolation,production build/fixture exclusion,44Chromium/45.5s and exact96 REG-M8 mappings. Mandatory accepted preservation PASS: M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870+24Chromium/22.6s. Geometric boxes/intersection=false match targeted evidence at all3 viewports for original/Split hands; keyboard/focus/touch/secrecy/reduced-motion regressions PASS. Full harness re-generated four images with exactly the11:35:47 hashes; Classic/Mobile changed honestly,Charlie/Replay unchanged. No source/test/dependency changes after this full verification. Same-session scoped diff review:10 intended files; domain diff EMPTY,diff --check PASS/0,no unknown/untracked changes. T08 advances5->6/10,current ledger0,2,3,2,2,1,1,6,3. LOW-05 OPEN — repair VERIFIED; independent recheck pending. T09 repair4/LOW-04 follows. Normal authorized checkpoint publication follows; exact SHA/push/parity receipt is recorded with next checkpoint, not invented. No independent review/acceptance/deployment.
@@ -40,13 +56,17 @@ Contract/stop conditions: STATE human-feedback section and explicit user contrac
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ### 2026-09-30 17:02:17 +08:00 - final publication-version guards PASS

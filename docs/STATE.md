@@ -2,13 +2,19 @@
 
 ## Final LOW-04 / LOW-05 repair checkpoint (current; supersedes historical status below)
 
-Baseline 2026-10-01 11:26:27 +08:00: main=HEAD=origin/main=07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54,0/0,clean including untracked files. The reconstructed independent review closed MEDIUM-01..04 and LOW-01..03 at that SHA, and reported only LOW-04 (current inventory) and LOW-05 (tablet title/badge overlap). The attempted narrow recheck correctly BLOCKED at the unchanged SHA; it assessed no new finding, performed no repair and changed no counter. No independent review is conducted in this implementation session.
+Baseline2026-10-01 11:26:27 +08:00: main=HEAD=origin/main=07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54,0/0,clean/full untracked empty. Reconstructed independent review closed MEDIUM-01..04 and LOW-01..03; only LOW-04/05 remain OPEN. The unchanged-HEAD attempted recheck and conversation interruption add no finding/repair cycle/counter. Actual recovery baseline12:13:50 confirmed LOW-05 published and10 intended unstaged LOW-04 files; cached diff EMPTY, no unknown files or pending UI/domain edits. The interrupted harness result was unavailable and not claimed PASS; a fresh official run completed below. No independent review occurs in this implementation session.
 
-M8-T08 repair6 / LOW-05: VERIFIED after official verify.ps1 PASS/0 inspected2026-10-01 11:43:28 +08:00: typecheck/lint/domain isolation/build/fixture exclusion,66 files/956 Vitest,44 Chromium/45.5s,REG-001..096 and mandatory M1-M7 preservation (155,78,72,171,168,181;M7 870+24Chromium) all PASS. Dedicated wrapping hand-header flow separates title and ACTIVE. New geometric regression fails on original tablet CSS and passes after the fix, including Split and desktop/mobile. Targeted polish/portfolio7 Chromium PASS/0 at11:35:47; targeted documentation/mapping3 files/7 Vitest PASS/0 at11:34:34. Classic/Mobile screenshots changed, regenerated, visually inspected and rehashed; full-harness repeats match. Charlie/Replay byte-identical. Domain diff EMPTY. M8-T09 repair4 / LOW-04 is next: synchronize only current counts and strengthen existing REG-096, preserving historical counts and all96 mappings.
+LOW-05 / M8-T08 review repair6: IMPLEMENTED / VERIFIED. Dedicated wrapping flex hand-header separates title and ACTIVE without hiding/shrinking text or arbitrary large padding. Geometric regression first failed on original tablet CSS and now passes for opening/Split hands at768x1024,1280x900 and320x720: both labels visible, no intersection, no page horizontal overflow. Tablet title{x285.75,y484.296875,width151.59375,height20}; ACTIVE{x285.75,y518.296875,width56.640625,height20}. Keyboard/focus,44px targets, card labels/Dealer secrecy/reduced motion pass. Domain diff07dbcea..current EMPTY. Classic/Mobile screenshots changed under deterministic workflow, visually inspected and honestly rehashed; Charlie/Replay unchanged. All4 full-harness repeated hashes match PORTFOLIO.
 
-T08=6/10;current ledger0,2,3,2,2,1,1,6,3. T09 remains3/10 until its next repair is VERIFIED; expected final0,2,3,2,2,1,1,6,4. M1-M7 ledgers unchanged. LOW-05 OPEN — repair VERIFIED; independent recheck pending. LOW-04 OPEN — repair pending. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED. Scope excludes domain/rules/RNG/funds/replay/audit/policy/dependencies. Steps -> regression reproduction -> surgical layout/current-doc changes -> affected checks/screenshots -> official verify.ps1/preservation -> diff/domain/whitespace/status review -> two normal authorized commit/push/fetch/parity/clean checkpoints -> STOP. Stop for authority conflict, unknown overlap, unavailable validation, unexpected domain diff, unsafe publication or cumulative10 repairs. M8 NOT ACCEPTED; deployment NOT RUN.
+LOW-05 publication receipt2026-10-01 11:47:59 +08:00: commit38a1d0e7acbf9af27c42f741ef3b62b844b40aa7, subject fix: prevent active-hand label overlap; normal push/fetch PASS/0, main=HEAD=origin/main,0/0,clean/full untracked empty. No duplicate commit after reconnect.
 
-## M8-T08 — Human Manual Feedback: Visual Polish / Game Feel
+LOW-04 / M8-T09 review repair4: IMPLEMENTED / VERIFIED. README Verification, handoff Commands, LAB section34, eight current-status blocks and M8_MAPPING agree on66 Vitest files/956 tests/44 Chromium. Historical38/43 records remain explicitly historical. Existing REG-M8-096 counts executable literal browser registrations with TypeScript AST and Vitest files from the filesystem, compares the original inventory locations plus current-status documents, and retains LAB-entry/UX status checks. It failed on old README38 versus source44 at11:52:48, then targeted3files/7tests passed11:55:02. No REG-097;96 unique contiguous owners remain.
+
+Final official powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1 PASS/0 inspected2026-10-01 12:19:49 +08:00: typecheck/lint,66 Vitest files/956 tests(start12:16:54,12.10s), ES2023 domain isolation,47-module production build/fixture exclusion,44 Chromium/48.6s,secrecy,96 exact M8 owners and all mandatory accepted preservation. M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870+24Chromium/22.4s PASS. No source/test/dependency/runtime changes after this full harness; final factual documentation checks and publication receipt are recorded in log/delivery/Git. git diff --check PASS/0; only10 intended LOW-04 tracked files, no untracked changes. Second authorized normal publication follows; its own SHA cannot embed itself, so final delivery/Git records final parity/clean.
+
+T08=6/10; T09=4/10. Final M8 ledger: **0,2,3,2,2,1,1,6,4**. M1-M7 ledgers unchanged. LOW-04 OPEN - repair VERIFIED; independent recheck pending. LOW-05 OPEN - repair VERIFIED; independent recheck pending. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED. Scope excludes domain/rules/RNG/funds/replay/audit/policy/dependencies. Steps -> regression reproduction -> surgical repairs -> affected checks/screenshots -> official verify.ps1/preservation -> diff/domain/whitespace/status review -> two normal authorized commit/push/fetch/parity/clean checkpoints -> STOP. Stop for authority conflict, unknown overlap, unavailable validation, unexpected domain diff, unsafe publication or cumulative10 repairs. M8 NOT ACCEPTED; deployment NOT RUN.
+
+## Historical M8-T08 — Human Manual Feedback: Visual Polish / Game Feel
 
 Entry baseline 2026-09-30 17:52:06 +08:00: main=HEAD=origin/main=e7f174f7c5c4d70e6023d195f2ffad51d71a7b34, ahead/behind 0/0, clean including untracked files. Owner reported acceptable functionality but a boring dashboard-like interface. Historical reviewed T08=1/10; batch1 actually advanced T08 to2/10 at5c9f071. Human-feedback repair3 corrected initial desktop/mobile positioning; repair4 corrected persistent desktop height; repair5 corrected the stronger full-Dealer mobile invariant. **T08 cumulative5/10 VERIFIED**; M8 ledger **0,2,3,2,2,1,1,5,3**. No new T10 and no historical ledger reset. Recommended GPT Sol6.1/High; actual client model/effort NOT VERIFIED/NOT VERIFIED.
 
@@ -22,16 +28,20 @@ UI publication receipt2026-10-01 01:18:17 +08:00: branch main, commit **8769d506
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
-## Repair batch 2 contract and ledger
+## Historical repair batch 2 contract and ledger
 
 Baseline captured 2026-09-30 16:42:46 +08:00: main=HEAD=origin/main=5218bb9594580090cf39bad219a0b40f268c9781,0/0,clean including full untracked status. Existing PLAN scopes assign MEDIUM-04 to M8-T03 (replay contract; browser orchestration/mapping support the same defect) and LOW-03 to M8-T09 (current documentation/full harness/handoff). Prior T03=2/10,T09=2/10; now T03=3/10,T09=3/10 only after full VERIFIED evidence inspected2026-09-30 16:58:01 +08:00. Current M8 ledger: **0,2,3,2,2,1,1,2,3**. All M1-M7 historical ledgers remain unchanged. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
 
@@ -152,7 +162,7 @@ Targeted seven invariants took about 3.85 seconds; T08 full Vitest about 11.64 s
 | M6 | PASS/0 9/181 |
 | M7 | PASS/0 all 56/870 and 1 Chromium project/24 tests; UX-01..14/REG-M7-001..064/E2E-01..15 |
 
-verify-preservation.ps1 selects accepted Git inventories, compares original assertions and independently runs them. Authorized historical REG-M6-095 and M7 REG-002/003 absence anchors preserve past milestone boundaries; no current gameplay assertion is weakened. The unified harness makes preservation mandatory and tests missing-tool/failure propagation. Current full evidence through T08: **66 files/951 tests and 38 Chromium**, typecheck/lint/domain/build/fixture exclusion PASS. T09 final full harness PASS/0 inspected at 2026-09-30 14:04:58 +08:00; Vitest 66/951 (14:02:01, 11.73 seconds), Chromium 38 (31.0 seconds), independent M1-M7 and accepted M7 24 Chromium PASS. Exact evidence is in the execution log and delivery.
+verify-preservation.ps1 selects accepted Git inventories, compares original assertions and independently runs them. Authorized historical REG-M6-095 and M7 REG-002/003 absence anchors preserve past milestone boundaries; no current gameplay assertion is weakened. The unified harness makes preservation mandatory and tests missing-tool/failure propagation. Historical full evidence through T08: **66 files/951 tests and 38 Chromium**, typecheck/lint/domain/build/fixture exclusion PASS. T09 final full harness PASS/0 inspected at 2026-09-30 14:04:58 +08:00; Vitest 66/951 (14:02:01, 11.73 seconds), Chromium 38 (31.0 seconds), independent M1-M7 and accepted M7 24 Chromium PASS. Exact evidence is in the execution log and delivery.
 
 ## Portfolio and exact dependencies
 

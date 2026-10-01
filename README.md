@@ -10,13 +10,17 @@ The visual polish follows human manual feedback: centered Dealer, seven seats ar
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
 ## Features
@@ -71,7 +75,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
 
 ## Verification
 
-Expanded current harness inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 38 tests**; actual execution status is in STATE/log. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**. Actual execution status is in STATE/log. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
 
 [REG-M8-001..096](docs/M8_MAPPING.md) has exactly 96 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
 

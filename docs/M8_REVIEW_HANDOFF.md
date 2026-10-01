@@ -1,21 +1,43 @@
-# M8 repair batch 2 — independent recheck #2 handoff
-
-## Additional final-HEAD visual-polish recheck
-
-M8-T08 human-feedback polish follows the published batch2 replay/document repairs. Recheck the final combined published HEAD, including table composition, cards/back secrecy, local/current-hand priority, explicit wager chips, compact credits, decisions/results, secondary tools, keyboard/320px layout and reduced-motion evidence. Domain diff for polish must be empty; accepted tests, replay/audit semantics and prior repair bodies must be preserved. STATE/log provide the actual cumulative T08 count and full harness. [Owner visual checklist](M8_VISUAL_CHECKLIST.md) remains pending. MEDIUM-04/LOW-03 stay OPEN with repairs VERIFIED until this same independent reviewer decides closure; prior five closures are preserved. Do not mark M8 ACCEPTED from automated tests or screenshot inspection.
+# M8 final LOW-04 / LOW-05 independent recheck handoff
 
 ## Current M8 review status
 
-Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-CLOSED BY RECHECK: MEDIUM-01, MEDIUM-02, MEDIUM-03, LOW-01, LOW-02.
-MEDIUM-04: OPEN — repair VERIFIED; independent recheck #2 pending.
-LOW-03: OPEN — repair VERIFIED; independent recheck #2 pending.
-Repair batch 2: VERIFIED; publication receipt in final delivery/Git; independent recheck #2 pending.
+M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
+Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
+Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
+Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
+Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
+CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
+Only LOW-04 (current verification inventory) and LOW-05 (tablet active-hand label overlap) remain OPEN.
+LOW-04: OPEN - repair VERIFIED; independent recheck pending.
+LOW-05: OPEN - repair VERIFIED; independent recheck pending.
+The unchanged-HEAD narrow recheck was BLOCKED; no new finding, repair cycle or counter change. The next independent recheck requires a genuinely fresh reviewer and the new repaired SHA; no independent review occurs in this implementation session.
 M8 NOT ACCEPTED. Deployment NOT RUN.
 
-**Findings FIRST. Two findings OPEN; genuinely fresh independent recheck #2 required; M8 ACCEPTED NO; deployment NOT RUN.** Original fresh review completed at eb850326 with3MEDIUM/3LOW. Batch1 published5218bb9594580090cf39bad219a0b40f268c9781; fresh recheck #1 completed there and closed MEDIUM-01/02/03 and LOW-01/02, retained LOW-03 and added MEDIUM-04. This batch repairs only the two OPEN findings. Implementation verification cannot close them. A genuinely fresh reviewer must inspect final repaired HEAD without relying on implementation conclusions. If fresh-session independence is unavailable, STOP and report NOT COMPLETED. Read-only review: no edits, repair, commit, push, deployment or acceptance.
+## Final narrow recheck contract
+
+Findings FIRST. Review the new repaired final HEAD on main, independently verify HEAD=origin/main,0/0 and clean full-untracked status. Previous reviewed SHA:07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54. LOW-05 repair checkpoint:38a1d0e7acbf9af27c42f741ef3b62b844b40aa7, pushed/fetched with parity and clean tree at2026-10-01 11:47:59 +08:00. The final LOW-04 documentation commit cannot embed its own SHA; obtain it from final delivery and actual Git. The unchanged-HEAD attempted narrow recheck was BLOCKED because repairs did not yet exist; no finding/counter changed. All seven earlier findings remain CLOSED by the reconstructed independent review. Only LOW-04 and LOW-05 require closure, by a genuinely fresh reviewer. Read-only review: no file edits, repair, commit, push, deployment or acceptance. Implementation verification cannot close findings. Recommended GPT Sol6.1/High; actual runtime model/effort only if independently verifiable.
+
+LOW-04 / T09 repair4: inspect current inventory in README Verification, this Commands section, LAB section34, eight current-status blocks and M8_MAPPING. Current counts must match actual final harness; historical explicitly-labelled 38/43 runs remain. Inspect REG-M8-096: AST count of executable Chromium registrations, independent Vitest-file count, comparison of original inventory paragraphs and current status, preserved LAB top/UX status checks. Mapping remains exactly96 unique contiguous owners001..096, no097.
+
+LOW-05 / T08 repair6: reproduce local active hand at768x1024, both opening and Split. Measure title and ACTIVE bounding rectangles and require no intersection, both readable and no page-level horizontal overflow. Sanity-check1280x900 and320x720; preserve keyboard/focus,44px primary controls, public card labels/Dealer secrecy and reduced motion. Inspect dedicated wrapping flex hand-header, geometric regression and original failing reproduction in log. Domain diff07dbcea..final src/domain must be EMPTY. Review screenshots/hashes in PORTFOLIO without treating hash equality as visual acceptance.
+
+## Commands and expected inventory
+
+Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**. No retries; actual checked execution is recorded in STATE/log. Run:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
+git diff --check
+git status --short --untracked-files=all
+```
+
+Require actual PASS for typecheck/lint/domain isolation/production fixture exclusion, Vitest/Chromium, secrecy,96 M8 owners and mandatory M1-M7 preservation (155/78/72/171/168/181; M7 870 plus24 Chromium). Inspect geometric bbox output. Current repair ledger is in STATE/PLAN; expected verified final0,2,3,2,2,1,1,6,4, with T08=6/10 and T09=4/10. Earlier ledgers unchanged. If no findings remain, report LOW-04 CLOSED/LOW-05 CLOSED, earlier findings remain CLOSED, readiness for HUMAN acceptance, actual final SHA/counts/ledger. Do not mark M8 ACCEPTED; deployment remains NOT RUN. STOP.
+
+## Historical batch2 review instructions and evidence
+
+Everything below is the earlier batch2 handoff snapshot. Its open MEDIUM-04/LOW-03 states, ledgers, counts and review instructions are historical, superseded by the final narrow recheck contract above. Original reproductions and limitations remain useful preservation evidence.
 
 ## Revision and entry gate
 
@@ -85,7 +107,7 @@ git diff --check
 git status --short --untracked-files=all
 ```
 
-Expected current **66 Vitest files /956 tests**, **1 Chromium project /38 tests**, no retries. Required typecheck/lint/ES2023-only domain compile/production build/fixture exclusion PASS; M8 mapping/schema/contracts/portfolio checks execute within Vitest. Harness runs mandatory independent preservation and rejects a missing tool/nonzero child exit. Full historical inventory: M1 12/155, M2 6/78, M3 5/72, M4 7/171, M5 8/168, M6 9/181, M7 all 56/870 plus24 Chromium. Accepted Git-object inventories and original assertions must be inspected, not just totals. Fixed256-seed x3-round/replay REG-070 has a narrow15000ms budget after a measured5482ms default5000ms timeout; all seeds/rounds/assertions are retained. Inspect this test-only allowance and the retained FAIL evidence, not only the final PASS.
+Historical batch2 inventory: **66 Vitest files /956 tests**, **1 Chromium project /38 tests**, no retries. Required typecheck/lint/ES2023-only domain compile/production build/fixture exclusion PASS; M8 mapping/schema/contracts/portfolio checks execute within Vitest. Harness runs mandatory independent preservation and rejects a missing tool/nonzero child exit. Full historical inventory: M1 12/155, M2 6/78, M3 5/72, M4 7/171, M5 8/168, M6 9/181, M7 all 56/870 plus24 Chromium. Accepted Git-object inventories and original assertions must be inspected, not just totals. Fixed256-seed x3-round/replay REG-070 has a narrow15000ms budget after a measured5482ms default5000ms timeout; all seeds/rounds/assertions are retained. Inspect this test-only allowance and the retained FAIL evidence, not only the final PASS.
 
 Historical absence anchors: REG-M6-095 at accepted M6; M7 REG-002/003 at accepted M7. Preservation normalizes only the authorized M7 anchor blocks/imports back to their original assertions and compares the remaining file byte-for-byte. Current secrecy and gameplay tests still execute. Review these exceptions carefully.
 
