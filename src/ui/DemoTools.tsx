@@ -16,6 +16,9 @@ export function DemoTools({ controller, view }: { controller: BrowserController;
   const packageText = showPackage && view.replayAvailable ? JSON.stringify(controller.exportReplay(), null, 2) : '';
   return <section className="panel demo-tools" aria-label="Demo and audit tools">
     <h2>Demo and audit tools</h2><p>Profile: {label} · {view.seeded ? 'Reproducible seeded demo' : 'Normal random demo'}</p>
+    <p>{view.playerMode ? 'Player Mode: guests and dealer progress automatically.' : 'Manual demo: configure and fund seats, then Continue table explicitly.'}</p>
+    <button disabled={!view.canStartDemo} onClick={() => controller.dispatch({ type: 'MODE', playerMode: !view.playerMode })}>
+      {view.playerMode ? 'Open manual demo (resets credits)' : 'Return to Player Mode (resets credits)'}</button>
     <details><summary>Advanced demo settings</summary>
       {(view.canStartDemo || view.profileId === CHARLIE) && <p>Five-Card Charlie is a custom demonstration profile. A legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1.</p>}
       <label htmlFor="demo-profile">New session profile</label><select id="demo-profile" disabled={!view.canStartDemo} value={profile}

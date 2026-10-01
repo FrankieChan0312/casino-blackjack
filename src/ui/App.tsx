@@ -34,8 +34,8 @@ export function App({ controller }: { controller: BrowserController }) {
 
 function PlayerExperience({ view, controller }: { view: BrowserView; controller: BrowserController }) {
   useEffect(() => {
-    if (view.phase === 'OPEN') return;
-    const target = document.querySelector<HTMLElement>(view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
+    if (view.phase === 'OPEN' && !view.lastBet) return;
+    const target = document.querySelector<HTMLElement>(view.phase === 'OPEN' ? '#player-wager' : view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
     target?.focus({ preventScroll: true }); target?.scrollIntoView({ block: 'nearest' });
   }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
   return <main className="player-mode">
@@ -57,6 +57,8 @@ function PlayerExperience({ view, controller }: { view: BrowserView; controller:
       <Results view={view} controller={controller} />
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>
-    <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
+    <details className="panel developer-tools"><summary>Developer / demo tools</summary>
+      <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
+    </details>
   </main>;
 }

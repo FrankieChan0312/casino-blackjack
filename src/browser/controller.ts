@@ -15,6 +15,7 @@ export type BrowserCommand =
   | { type: 'OPEN' | 'CLOSE' | 'ADVANCE' | 'NEXT' }
   | { type: 'DEAL'; amount: number }
   | { type: 'REPEAT' }
+  | { type: 'MODE'; playerMode: boolean }
   | { type: 'MAIN'; seat: number; amount: number }
   | { type: 'SIDE'; kind: SideWagerType; amount: number }
   | { type: 'BACK'; seat: number; amount: number }
@@ -38,7 +39,7 @@ export function explainReason(reason: string | undefined) { return reason ? reas
 
 export function createBrowserController(options: { factory?: () => game.BehindGameState; random?: RandomSource;
   profileId?: ProfileId; seed?: number; clock?: Clock; playerMode?: boolean } = {}) {
-  const playerMode = options.playerMode ?? false;
+  let playerMode = options.playerMode ?? false;
   const random = options.random ?? mathRandomSource;
   if (options.factory && options.seed !== undefined) throw new Error('Seeded replay cannot start from a state factory');
   let session = options.seed !== undefined ? createReplaySession(options.seed, options.profileId ?? CLASSIC, { clock: options.clock }) : null;
@@ -94,6 +95,12 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return result;
   }
   function dispatch(command: BrowserCommand): boolean {
+    if (command.type === 'MODE') {
+      if (!snapshot.canStartDemo) { feedback = 'Change mode only before play or after final settlement.'; publish(); return false; }
+      if (playerMode === command.playerMode) return true;
+      playerMode = command.playerMode;
+      return startDemo(state.table.profileId);
+    }
     // Reserve the whole browser intent before mutation, including automatic
     // ADVANCE and SETTLE/VOID. Manual mode keeps its accepted two-slot boundary.
     const progresses = ['CLOSE', 'ACT', 'ACE', 'FOLLOW'].includes(command.type);

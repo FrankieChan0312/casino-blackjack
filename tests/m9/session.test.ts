@@ -10,6 +10,35 @@ import * as replayModule from '../../src/domain/replay.js';
 import { noRandom } from '../helpers/tableFixture.js';
 import { beginControllerSplit } from '../../src/domain/behindController.js';
 
+it('[M9-016] explicit manual mode resets only at safe boundaries and retains accepted configuration flow', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 });
+  expect(c.dispatch({ type: 'MODE', playerMode: false })).toBe(true);
+  expect(c.getSnapshot()).toMatchObject({ playerMode: false, phase: 'CONFIGURING', seeded: false, lastBet: 0 });
+  expect(c.getSnapshot().human).toMatchObject({ available: 2000, reserved: 0 });
+  c.dispatch({ type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }] });
+  c.dispatch({ type: 'OPEN' }); c.dispatch({ type: 'MAIN', seat: 1, amount: 200 }); c.dispatch({ type: 'CLOSE' });
+  const active = c.getSnapshot(); expect(c.dispatch({ type: 'MODE', playerMode: true })).toBe(false);
+  expect(c.getSnapshot()).toEqual({ ...active, feedback: 'Change mode only before play or after final settlement.' });
+});
+
+it('[M9-017] switching from completed manual demo prepares player seats and clears previous repeat stake', () => {
+  const c = createBrowserController({ seed: 7 });
+  c.dispatch({ type: 'CONFIGURE', seats: [{ seatNumber: 1, occupancy: 'HUMAN', sittingOut: false }] });
+  c.dispatch({ type: 'OPEN' }); c.dispatch({ type: 'MAIN', seat: 1, amount: 200 }); c.dispatch({ type: 'CLOSE' });
+  for (let n = 0; n < 20 && !c.getSnapshot().interaction.nextRound; n++) {
+    const v = c.getSnapshot();
+    if (v.interaction.insurance) c.dispatch({ type: 'ACE', choice: 'DECLINE' });
+    else if (v.interaction.canAdvance) c.dispatch({ type: 'ADVANCE' });
+    else c.dispatch({ type: 'ACT', action: 'STAND', handId: v.interaction.handId });
+  }
+  expect(c.getSnapshot().phase).toBe('COMMITTED');
+  expect(c.dispatch({ type: 'MODE', playerMode: true })).toBe(true);
+  expect(c.getSnapshot()).toMatchObject({ playerMode: true, phase: 'OPEN', seeded: false, lastBet: 0 });
+  expect(c.getSnapshot().human).toMatchObject({ controlledSeat: 4, available: 2000, reserved: 0 });
+  expect(c.getSnapshot().mainWagers.map(w => w.seat)).toEqual([1, 3, 6]);
+  expect(c.getSnapshot().audit.slice(0, 2).map(e => e.type)).toEqual(['SESSION_START', 'SESSION_RESET']); expect(c.exportReplay()).toBeNull();
+});
+
 it('[M9-011] one Deal funds only the human and retains original bet through Double and Repeat', () => {
   const c = createBrowserController({ playerMode: true, seed: 7 });
   expect(c.dispatch({ type: 'DEAL', amount: 200 })).toBe(true);

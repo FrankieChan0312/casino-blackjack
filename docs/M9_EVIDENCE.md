@@ -47,3 +47,9 @@ T06 published 72f31b8b5fa06d3b7e24112c4d4fa370f67ece68 at 21:47:56 +08:00, main 
 ### 2026-10-01 21:55:01 +08:00 - M9-T07 VERIFIED; repairs 2/10
 
 Official verify.ps1 PASS/0: typecheck lint 67/971 Vitest domain isolation build/exclusion 47 Chromium M1-M7 preservation incl24 Chromium. Full scoped diff reviewed. M9-E03 verifies own one-step Deal, Double original stake, automatic completion, repeat100, Deal Again open table. Capacity preflight tests reject before funds/history/journal mutation; no domain changes.
+### 2026-10-01 21:58:12 +08:00 - M9-T08 IMPLEMENTED; repairs 1/10
+
+T07 published508f3baae963c65ab62ffba1a9be5bf0851b2184 at21:55:06 +08:00 main parity0/0 clean. Native closed outer developer tools; explicit mode switch resets credits only before play/after settlement; manual accepted workflow preserved. Deal Again focuses own input, human/follower decision containers keyboard focusable. Initial targeted16/17 and Chromium5/6 PASS; repair1 correct accepted contracts: audit starts SESSION_START before SESSION_RESET; replay seed is configuration.seed. No domain changes. Typecheck PASS.
+### 2026-10-01 22:01:28 +08:00 - M9-T08 VERIFIED; repairs 1/10
+
+Official verify.ps1 PASS/0: typecheck lint 67files/973 Vitest domain isolation build/exclusion 50 Chromium M1-M7 preservation plus24 Chromium. Six M9 browser scenarios PASS including native closed outer tools, safe reset modes, original seeded replay/audit, visible focus keyboard-only own wagering/Stand/Deal Again. Full scoped diff reviewed; no domain change.

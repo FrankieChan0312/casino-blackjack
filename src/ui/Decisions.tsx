@@ -14,7 +14,7 @@ export function Decisions({ view, controller }: { view: BrowserView; controller:
       {!ace.affordable && <p className="reason">Insurance unavailable — not enough available credits.</p>}
       <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>
     </section>}
-    {follow && <section className="panel decision" aria-label="Bet Behind follow decision"><h2>{follow.kind === 'DOUBLE' ? 'Double' : 'Split / Re-split'} follow decision</h2>
+    {follow && <section tabIndex={-1} className="panel decision" aria-label="Bet Behind follow decision"><h2>{follow.kind === 'DOUBLE' ? 'Double' : 'Split / Re-split'} follow decision</h2>
       <p>Seat {follow.targetSeat} · Computer controller · {handLabel(follow.handId)}</p>
       <p>Current follower exposure: {credits(view.interaction.followAmount)} credits</p>
       <p>Matching additional amount: {credits(view.interaction.followAmount)} credits</p>

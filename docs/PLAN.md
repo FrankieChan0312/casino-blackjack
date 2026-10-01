@@ -849,5 +849,5 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 | M9-T05 | VERIFIED; publication receipt in M9_EVIDENCE | 3 |
 | M9-T06 | VERIFIED; publication receipt in M9_EVIDENCE | 0 |
 | M9-T07 | VERIFIED; publication receipt in M9_EVIDENCE | 2 |
-| M9-T08 | NOT RUN | 0 |
+| M9-T08 | VERIFIED; publication receipt in M9_EVIDENCE | 1 |
 | M9-T09 | NOT RUN | 0 |

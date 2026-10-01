@@ -68,6 +68,56 @@ test('[M9-E03] own wager deals once, auto settles, repeats original amount and o
   if (await page.getByRole('button', { name: 'Stand', exact: true }).isVisible()) await page.getByRole('button', { name: 'Stand', exact: true }).click();
   await page.getByRole('button', { name: 'Deal Again', exact: true }).click();
   await expect(page.getByLabel('Your main wager', { exact: false })).toHaveValue('100');
+  await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
   await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeEnabled();
   await expect(page.getByRole('region', { name: 'Seat 4', exact: true }).getByText('Your cards will be dealt here.', { exact: true })).toBeVisible();
+});
+
+test('[M9-E04] tools start collapsed and seeded replay audit remain deliberately reachable', async ({ page }) => {
+  await page.goto('/?fixture=player');
+  const tools = page.locator('.developer-tools'); await expect(tools).not.toHaveAttribute('open', '');
+  await expect(page.getByRole('region', { name: 'Demo and audit tools', exact: true })).toBeHidden();
+  await tools.locator(':scope > summary').focus(); await page.keyboard.press('Enter');
+  await expect(tools).toHaveAttribute('open', '');
+  await page.getByText('Advanced demo settings', { exact: true }).click();
+  await page.getByLabel('Optional reproducible demo seed', { exact: true }).fill('7');
+  await page.getByRole('button', { name: 'Start new demo session', exact: true }).click();
+  await deal(page);
+  await expect(page.getByRole('button', { name: 'Open manual demo (resets credits)', exact: true })).toBeDisabled();
+  await expect(page.getByLabel('Optional reproducible demo seed', { exact: true })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Stand', exact: true }).click();
+  await page.getByRole('button', { name: 'View replay package', exact: true }).click();
+  const p = JSON.parse(await page.getByLabel('Completed replay JSON', { exact: true }).inputValue());
+  expect(p.configuration.seed).toBe(7); expect(p.commands.at(-1).command.type).toBe('SETTLE');
+  await page.getByRole('button', { name: 'Replay completed session', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Replay result', exact: true })).toContainText('Original table results are preserved.');
+  await page.getByText(/Public audit history \(/).click();
+  await expect(page.locator('.audit-list')).toContainText('computer-1');
+  await expect(page.locator('.audit-list')).toContainText('local-human');
+  await expect(page.locator('.audit-list')).not.toContainText('deckIndex');
+});
+
+test('[M9-E05] deliberate manual demo keeps configuration and explicit progress, then returns to player table', async ({ page }) => {
+  await page.goto('/?fixture=player'); await page.getByText('Developer / demo tools', { exact: true }).click();
+  await page.getByRole('button', { name: 'Open manual demo (resets credits)', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Table setup', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Return to Player Mode (resets credits)', exact: true }).click();
+  await expect(page.locator('.player-mode')).toBeVisible(); await expect(page.locator('.developer-tools')).not.toHaveAttribute('open', '');
+  await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Seat 3', exact: true })).toContainText('MAIN: 25 credits');
+});
+
+test('[M9-E06] keyboard can wager, reach visible focus, stand and start another round without computer friction', async ({ page }) => {
+  await page.goto('/?fixture=player');
+  await page.keyboard.press('Tab'); await expect(page.getByRole('link', { name: 'Skip to your hand and actions' })).toBeFocused();
+  await page.keyboard.press('Enter'); await expect(page.locator('#player-decisions')).toBeFocused();
+  await page.keyboard.press('Tab'); await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
+  await page.keyboard.press('Control+A'); await page.keyboard.type('100'); await page.keyboard.press('Enter');
+  await expect(page.locator('#player-hand')).toBeFocused();
+  await page.keyboard.press('Tab'); await page.keyboard.press('Tab');
+  await expect(page.getByRole('button', { name: 'Stand', exact: true })).toBeFocused();
+  expect(await page.getByRole('button', { name: 'Stand', exact: true }).evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');
+  await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+  await page.keyboard.press('Tab'); await expect(page.getByRole('button', { name: 'Deal Again', exact: true })).toBeFocused();
+  await page.keyboard.press('Enter'); await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
 });
