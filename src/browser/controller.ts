@@ -91,9 +91,11 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return result;
   }
   function dispatch(command: BrowserCommand) {
-    // One player intent can require one automatic SETTLE or VOID. Reserve both
-    // before invoking either, so a journal limit cannot strand a half-transition.
-    if (session && !session.hasCapacity(playerMode && command.type === 'NEXT' ? 7 : 2)) {
+    // Reserve the whole browser intent before mutation, including automatic
+    // ADVANCE and SETTLE/VOID. Manual mode keeps its accepted two-slot boundary.
+    const progresses = ['CLOSE', 'ACT', 'ACE', 'FOLLOW'].includes(command.type);
+    const capacity = playerMode ? command.type === 'NEXT' ? 7 : progresses ? 4 : 2 : 2;
+    if (session && !session.hasCapacity(capacity)) {
       feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
     }
     const previousShoe = state.table.game.shoe.shoeId;
@@ -114,6 +116,9 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     } else feedback = explainReason(result.error);
     publish();
     if (result.ok && playerMode && command.type === 'NEXT') return preparePlayerTable();
+    if (result.ok && playerMode && progresses && game.getBehindInteraction(state).canAdvance) {
+      return dispatch({ type: 'ADVANCE' });
+    }
     return result.ok;
   }
   function startDemo(profileId: ProfileId, seed?: number) {
@@ -158,7 +163,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     audit.recordReplay(state, false);
     replayResult = reconstructed; audit.recordReplay(state, true); publish(); return true;
   }
-  if (playerMode) preparePlayerTable();
+  if (playerMode && state.table.phase === 'CONFIGURING') preparePlayerTable();
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
     startDemo, exportReplay, replayCompleted,
     queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };

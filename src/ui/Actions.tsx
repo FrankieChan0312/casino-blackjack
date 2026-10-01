@@ -21,7 +21,7 @@ export function Actions({ view, controller }: { view: BrowserView; controller: B
       </details>
     </>}
     {!current && view.round && <p>No local gameplay actions available.</p>}
-    {view.interaction.canAdvance && <button onClick={() => controller.dispatch({ type: 'ADVANCE' })}>Continue table</button>}
+    {!view.playerMode && view.interaction.canAdvance && <button onClick={() => controller.dispatch({ type: 'ADVANCE' })}>Continue table</button>}
     <p className="shoe-status">{view.shoeMessage}</p>
   </section>;
 }

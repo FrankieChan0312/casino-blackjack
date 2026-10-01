@@ -224,3 +224,15 @@ T02 publication54394bef8eff1e2db4c9475b1b0b3273d108986c PASS normal push/fetch p
 ### 2026-10-01 21:08:40 +08:00 - M9-T03 VERIFIED; repairs 1/10
 
 Owner-context original verify.ps1 PASS/0:67/961 Vitest,44 Chromium, typecheck/lint/domain/build and mandatory M1-M7 preservation+24Chromium PASS. Sandbox run stalled at post-test teardown and was terminated with exact taskkill25632; NOT PASS. Owner execution exited normally with no harness/test/runtime settings changes; use this context thereafter. Scoped source/test diff and diff --check reviewed/PASS. Accepted domain diff EMPTY; no blockers.
+
+### 2026-10-01 21:10:34 +08:00 - M9-T04 IMPLEMENTED; repairs 0/10
+
+T03 publicationa7085f73403abcaedbb022c3a80075173ae84e8b PASS push/fetch parity0/0 clean21:08:53. T04 auto ADVANCE after accepted CLOSE/ACT/ACE/FOLLOW only when domain canAdvance; no effects/timers or human choices. Preflight4 slots for complete intent; manual2 preserved. Real factory states can retain a pending human/follower/VOID test boundary without reconfiguring. Targeted10 tests PASS21:10:17: Ace pause, exact public cards/credits, computer actor order, replay full journal, capacity rejection, actual draw-fault VOID once, first-child follower NO_ADD. No repairs. Full harness pending.
+
+### 2026-10-01 21:11:27 +08:00 - M9-T04 IMPLEMENTED; repairs 1/10
+
+Initial full typecheck FAIL TS18048: test hasCapacity optional argument possibly undefined. Repair1 adds original API default n=1 to mock; typecheck and10 targeted tests PASS. Runtime code unchanged. First run remains FAIL; exact final full harness rerun required.
+
+### 2026-10-01 21:15:59 +08:00 - M9-T04 VERIFIED; repairs 1/10
+
+Final exact-version owner verify.ps1 PASS/0:67/966 Vitest,44 Chromium and all M1-M7 preservation including24Chromium, typecheck/lint/domain isolation/build/fixture exclusion PASS. Full diff reviewed; diff --check PASS; no executable/test changes after final verification. Human Insurance/follow pauses, replay real command completeness, capacity pre-mutation guard, fault VOID/terminal once all PASS. No accepted domain changes/blockers.
