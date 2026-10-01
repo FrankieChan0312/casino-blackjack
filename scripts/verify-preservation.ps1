@@ -66,6 +66,22 @@ try {
             Write-Host 'PASS: M7 accepted Chromium inventory'
         }
     }
+    # The owner accepted this exact M8 version before M9. Verify original
+    # assertions mechanically and rerun its complete 956/44 inventory.
+    & node scripts/check-m8-preservation.mjs
+    if ($LASTEXITCODE -ne 0) { throw 'M8 source/assertion preservation failed' }
+    $m8Sha = '8f5aca327f41f1078fc4fef20b611fd9cd494492'
+    $m8Files = @(& git -c "safe.directory=$repository" ls-tree -r --name-only $m8Sha tests)
+    if ($LASTEXITCODE -ne 0) { throw 'Accepted M8 Git objects unavailable' }
+    $m8Unit = @($m8Files | Where-Object { $_ -match '\.test\.tsx?$' })
+    $m8Browser = @($m8Files | Where-Object { $_ -match '\.spec\.ts$' })
+    if ($m8Unit.Count -ne 66 -or $m8Browser.Count -ne 5) { throw 'Accepted M8 inventory mismatch' }
+    Write-Host "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'): independently rerunning accepted M8 (66 files / 956 tests)"
+    & npm.cmd test -- @m8Unit
+    if ($LASTEXITCODE -ne 0) { throw 'Accepted M8 Vitest preservation failed' }
+    & npm.cmd run test:e2e -- @m8Browser
+    if ($LASTEXITCODE -ne 0) { throw 'Accepted M8 44 Chromium tests failed' }
+    Write-Host 'PASS: M8 accepted 956 Vitest / 44 Chromium inventory'
 }
 catch { Write-Host "FAIL: $($_.Exception.Message)"; exit 1 }
 finally { Pop-Location }

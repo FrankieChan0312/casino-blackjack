@@ -32,6 +32,7 @@ test('[M9-E01] first-person cards stay near player and center dealer without ove
     console.log(JSON.stringify({ viewport, dealer, own, action }));
     if (viewport.width === 1280) expect(action!.y + action!.height).toBeLessThanOrEqual(900);
     await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });
+    await page.screenshot({ path: `docs/images/m9-table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
   }
 });
 
@@ -59,6 +60,7 @@ test('[M9-E03] own wager deals once, auto settles, repeats original amount and o
   await page.getByRole('button', { name: 'Double', exact: true }).click();
   await expect(page.getByRole('region', { name: 'Your round result', exact: true })).toBeVisible();
   await expect(page.locator('#player-result')).toBeFocused();
+  await page.screenshot({ path: 'docs/images/m9-results.png', fullPage: true, animations: 'disabled' });
   await page.getByText('Wager result details', { exact: true }).click();
   await expect(page.getByText(/Stake: 200 · Returned:/)).toBeVisible();
   await page.getByRole('button', { name: 'Repeat Bet · 100 credits', exact: true }).click();
@@ -95,6 +97,8 @@ test('[M9-E04] tools start collapsed and seeded replay audit remain deliberately
   await expect(page.locator('.audit-list')).toContainText('computer-1');
   await expect(page.locator('.audit-list')).toContainText('local-human');
   await expect(page.locator('.audit-list')).not.toContainText('deckIndex');
+  await page.getByRole('button', { name: 'Hide replay package', exact: true }).click();
+  await page.getByRole('region', { name: 'Demo and audit tools', exact: true }).screenshot({ path: 'docs/images/m9-tools.png', animations: 'disabled' });
 });
 
 test('[M9-E05] deliberate manual demo keeps configuration and explicit progress, then returns to player table', async ({ page }) => {
@@ -120,4 +124,67 @@ test('[M9-E06] keyboard can wager, reach visible focus, stand and start another 
   await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
   await page.keyboard.press('Tab'); await expect(page.getByRole('button', { name: 'Deal Again', exact: true })).toBeFocused();
   await page.keyboard.press('Enter'); await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
+});
+
+test('[M9-E07] unconfigured default opens player table and own betting with closed secondary tools', async ({ page }) => {
+  await page.goto('/'); await expect(page.locator('.player-mode')).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Table setup', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('img', { name: 'Original illustrated computer guest in evening attire', exact: true })).toHaveCount(3);
+  await expect(page.locator('.developer-tools')).not.toHaveAttribute('open', '');
+  await expect(page.getByRole('region', { name: 'Your credits', exact: true })).toContainText('1,000');
+  await expect(page.getByLabel('Your main wager', { exact: false })).toHaveValue('25');
+  await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeEnabled();
+  await expect(page.getByRole('region', { name: 'Seat 4', exact: true })).toContainText('Your cards will be dealt here.');
+  for (const seat of [1, 3, 6]) await expect(page.getByRole('region', { name: `Seat ${seat}`, exact: true })).toContainText('MAIN: 25 credits');
+  await page.screenshot({ path: 'docs/images/m9-ready.png', fullPage: true, animations: 'disabled' });
+});
+
+test('[M9-E08] player Ace decision stays explicit, hidden state stays secret even in expanded audit', async ({ page }) => {
+  await page.goto('/?fixture=player-ace'); await deal(page);
+  const decision = page.getByRole('region', { name: 'Insurance decision', exact: true });
+  await expect(decision).toBeFocused(); await expect(page.getByRole('button', { name: 'Stand', exact: true })).toHaveCount(0);
+  await page.getByText('Developer / demo tools', { exact: true }).click(); await page.getByText(/Public audit history \(/).click();
+  const active = await page.locator('main').ariaSnapshot();
+  expect(active).not.toContain('9 of diamonds'); expect(active).not.toContain('deckIndex');
+  expect(await page.locator('main').innerHTML()).not.toMatch(/deckIndex|originalCards|seed":/);
+  await page.getByRole('button', { name: 'Decline', exact: true }).click(); await expect(page.locator('#player-hand')).toBeFocused();
+  await expect(page.getByRole('img', { name: 'Hidden dealer card', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Stand', exact: true }).click();
+  await expect(page.getByRole('img', { name: '9 of diamonds', exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Your round result', exact: true })).toContainText('Net result: -100 credits');
+});
+
+test('[M9-E09] first-person split children remain distinct and automatically finish dealer on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 720 }); await page.goto('/?fixture=player-split'); await deal(page);
+  await page.getByRole('button', { name: 'Split', exact: true }).click();
+  const own = page.getByRole('region', { name: 'Seat 4', exact: true });
+  await expect(own.locator('article')).toHaveCount(2);
+  await expect(own.locator('[data-hand-id="round-1/seat-4.1"]')).toContainText('Current hand');
+  await page.getByRole('button', { name: 'Stand', exact: true }).click();
+  await expect(own.locator('[data-hand-id="round-1/seat-4.2"]')).toContainText('Current hand');
+  await page.getByRole('button', { name: 'Stand', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Your round result', exact: true })).toContainText('Net result: -200 credits');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('[M9-E10] natural resolves without manual continue and pays accepted three-to-two return', async ({ page }) => {
+  await page.goto('/?fixture=player-natural'); await deal(page);
+  await expect(page.getByRole('region', { name: 'Your round result', exact: true })).toContainText('Net result: 150 credits');
+  await page.getByText('Wager result details', { exact: true }).click();
+  await expect(page.getByText('Stake: 100 · Returned: 250 · Net: 150', { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Hit', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Continue table', exact: true })).toHaveCount(0);
+});
+
+test('[M9-E11] exhausted human funds disable repeat and can deliberately start a new credited session', async ({ page }) => {
+  await page.goto('/?fixture=player-loss'); await page.getByLabel('Your main wager', { exact: false }).fill('1000');
+  await page.getByRole('button', { name: 'Deal', exact: true }).click(); await page.getByRole('button', { name: 'Stand', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Repeat Bet · 1,000 credits', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Deal Again', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeDisabled();
+  await page.getByText('Developer / demo tools', { exact: true }).click(); await page.getByText('Advanced demo settings', { exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Start new demo session', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Start new demo session', exact: true }).click();
+  await expect(page.getByRole('region', { name: 'Your credits', exact: true })).toContainText('1,000');
+  await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeEnabled();
 });

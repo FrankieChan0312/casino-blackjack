@@ -1,5 +1,14 @@
-> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
-> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+> The material below retains earlier milestone requirements and timestamped history. Earlier delivery/review statements are historical and superseded by the current delivery block above; manual UX remains supported in deliberate demo mode.
 
 # Casino Blackjack - Engineering Plan
 
@@ -29,7 +38,7 @@ M8-T08 repair6: structural wrapping hand-header, geometric no-intersection regre
 
 VERIFIED, cumulative repair5/10 (prior actual2/10; visual repairs3,4,5), under the explicit human-feedback contract. Targeted22 Vitest and6 Chromium PASS; official verify.ps1 PASS/0 inspected2026-10-01 01:11:59 +08:00,66/956 Vitest,43 Chromium, all M1-M7 preservation including24 original browser tests and96 REG-M8 owners PASS. UI/CSS and reveal-gated Dealer presentation only; domain diff empty. Separate normal UI and polished portfolio/documentation publications -> final parity/clean -> STOP for independent recheck and human visual acceptance. No M8-T10. Recommended GPT Sol6.1/High; actual NOT VERIFIED/NOT VERIFIED. Scope, acceptance and stop conditions: STATE. All other task/historical ledgers and finding statuses preserved; M8 NOT ACCEPTED, deployment NOT RUN.
 
-## Current M8 review status
+## Historical M8 pre-acceptance review status
 
 M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
 Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
@@ -842,12 +851,12 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 
 | Task | Delivery | Repairs /10 |
 | --- | --- | --- |
-| M9-T01 | IMPLEMENTED / VERIFIED; commit/push pending | 0 |
-| M9-T02 | VERIFIED; publication receipt in M9_EVIDENCE | 2 |
-| M9-T03 | VERIFIED; publication receipt in M9_EVIDENCE | 1 |
-| M9-T04 | VERIFIED; publication receipt in M9_EVIDENCE | 1 |
-| M9-T05 | VERIFIED; publication receipt in M9_EVIDENCE | 3 |
-| M9-T06 | VERIFIED; publication receipt in M9_EVIDENCE | 0 |
-| M9-T07 | VERIFIED; publication receipt in M9_EVIDENCE | 2 |
-| M9-T08 | VERIFIED; publication receipt in M9_EVIDENCE | 1 |
-| M9-T09 | NOT RUN | 0 |
+| M9-T01 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 5998df6a74c3123266d7d4f8155c94983d5bf6db | 0 |
+| M9-T02 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 54394bef8eff1e2db4c9475b1b0b3273d108986c | 2 |
+| M9-T03 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED a7085f73403abcaedbb022c3a80075173ae84e8b | 1 |
+| M9-T04 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 77055a247109ce8b50d5da02a5b7690c24d57c65 | 1 |
+| M9-T05 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED e8f3938057bbf12879d3f3088052ee361fc38c57 | 3 |
+| M9-T06 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 72f31b8b5fa06d3b7e24112c4d4fa370f67ece68 | 0 |
+| M9-T07 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 508f3baae963c65ab62ffba1a9be5bf0851b2184 | 2 |
+| M9-T08 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 3bf59fd83df6988096f4dd70b08603046b4e330e | 1 |
+| M9-T09 | VERIFIED; publication receipt in M9_EVIDENCE | 5 |

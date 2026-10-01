@@ -1,3 +1,15 @@
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+> The material below retains earlier milestone requirements and timestamped history. Earlier delivery/review statements are historical and superseded by the current delivery block above; manual UX remains supported in deliberate demo mode.
+
 # Casino Blackjack - Design
 
 ## M8-T08 human-feedback presentation polish
@@ -1058,3 +1070,9 @@ The implemented current API is optionalGame.ts plus optionalPublicView.ts. Inter
 ## M9 approved browser extension
 
 Follow [M9 contract](M9_CONTRACT.md). Player Mode is an explicit browser option; accepted manual controller behavior remains the default for legacy callers/fixtures. Production opts into Player Mode. The same closure retains state, RNG, journal and audit; preparation/automation are composed existing commands, not raw state edits. Each action preflights journal capacity before mutation. No domain source changes. React observes a public player-mode flag, not computer private bankrolls or hidden cards. Original SVG figures are presentation only. No timers on human decisions; browser progression follows current authoritative interaction enablement.
+
+## M9 implemented browser session design
+
+Player Mode is opt-in at the controller boundary and selected by the production entry; legacy manual callers preserve their behavior. Browser DEAL and REPEAT expand to authoritative existing commands, MODE is an explicit safe credit-reset intent, and no wrapper is written into replay schema v1. All command transitions, auto guest wagers, ADVANCE and SETTLE/VOID are audited through the same recorder. Whole-intention capacity budgets are checked before any financial/archive mutation: DEAL5, REPEAT11, NEXT7, automatic decisions4, preparation6; manual2 remains accepted. Computer funds never leave the private state. A single synchronous domain ADVANCE resolves automatic turns; no timers, duplicate effects or per-card fake state. React effects handle focus only, never gameplay. OPEN hides a prior finalized card archive in the player projection without deleting internal replay/history.
+
+Human original MAIN is remembered separately from Double/Split exposure, reset on explicit session reset. NEXT clears optional round stakes through accepted handlers and preserves the shoe and balances; REPEAT uses the exact original human amount and fails clearly without lowering it. Player-only reset is allowed in an unfunded OPEN before any new deal when its internal archive is absent/already terminal; funded/active and manual boundaries remain locked. Native details contain optional wagers and Developer/demo tools. Original SVG fictional figures and scoped Player Mode CSS do not affect the accepted domain. [Review pack](M9_REVIEW_HANDOFF.md).

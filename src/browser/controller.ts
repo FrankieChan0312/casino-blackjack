@@ -70,8 +70,8 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return { playerMode, lastBet, profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
         || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0)
-        || (playerMode && state.table.phase === 'OPEN' && state.table.roundNumber === 1
-          && !state.table.game.round && state.human?.bankroll.reserved === 0),
+        || (playerMode && state.table.phase === 'OPEN' && state.human?.bankroll.reserved === 0
+          && (!state.table.game.round || ['ROUND_COMPLETE', 'INTEGRITY_ERROR'].includes(state.table.game.round.phase))),
       replayAvailable: !!session && !replayFailed && (state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'),
       replayResult, audit: audit.getPublic(), configuration: view.configuration, round, human: view.human,
       backWagers: view.backWagers.map((entry) => ({ targetSeat: entry.targetSeat, stakeUnits: entry.stakeUnits })),

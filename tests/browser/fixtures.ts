@@ -25,6 +25,14 @@ export function fixtureState(ranks: readonly Rank[]): game.BehindGameState {
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
+  const playerScenarios: Record<string, readonly Rank[]> = {
+    'player-ace': ['10', '10', '5', '10', 'A', '7', '7', '6', '7', '9'],
+    'player-split': ['10', '10', '8', '10', '10', '7', '7', '8', '7', '9', '2', '3'],
+    'player-natural': ['10', '10', 'A', '10', '10', '7', '7', 'K', '7', '9'],
+    'player-loss': ['10', '10', '5', '10', '10', '7', '7', '6', '7', '9'],
+  };
+  if (playerScenarios[name]) return createBrowserController({ playerMode: true, factory: () => fixtureState(playerScenarios[name]),
+    random: fixtureRandom, clock: () => '2026-01-01T00:00:00.000Z' });
   const scenarios: Record<string, readonly Rank[]> = {
     setup: ['5', '6', '6', 'K', '2', '7'], basic: ['5', '6', '6', 'K', '2', '7'],
     poor: ['5', '6', '6', 'K', '2', '7'], split: ['8', '9', '8', 'K', '3', '4', '5'],

@@ -1,65 +1,29 @@
-> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
-> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
-
 # Portfolio walkthrough
 
-Casino Blackjack is a modern browser Blackjack demo with a responsive felt table, accessible keyboard controls and domain-backed actions. It demonstrates TypeScript domain modelling, React/Vite integration, Vitest examples/invariants and Playwright E2E. It uses simulated credits only. M1–M7 are HUMAN ACCEPTED.
+## Current M9 delivery
 
-Human manual feedback identified a visually boring dashboard. M8-T08 polish uses project-owned CSS for a table rail, horseshoe seats, local-hand priority, playing cards, chips, active/result markers and restrained reduced-motion-aware transitions. Gameplay rules remain in the domain. [Owner manual checklist](M8_VISUAL_CHECKLIST.md); visual acceptance is pending.
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
 
-## Current M8 review status
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
 
-M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
-Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
-Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
-CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
-LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
-LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
-All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
-MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
-Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
-M8 NOT ACCEPTED. Deployment NOT RUN.
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
 
-## Five-minute technical walkthrough
+<!-- END CURRENT M9 -->
 
-1. Show the [Classic table](images/classic-table.png): explain why the controller returns public cards and legal interactions instead of exposing internal state.
-2. Walk through an accepted command in `src/domain/advancedGame.ts`: validation, immutable transition, actual reserved stake and eventual result. Invalid commands preserve gameplay state.
-3. Show `src/domain/profile.ts`: only profile identity and Charlie flag vary; fixed rules stay fixed. Explain bust/Natural/VOID precedence and independent split-child/follower stakes.
-4. Reproduce README's seed-21 Charlie round. Compare final results with Replay mode and explain real-command replay, strict versioning and canonical timestamp-free digest.
-5. Show public audit sequence/UTC/actor attribution, then the secret-exclusion tests. Audit observes outcomes; it does not drive or persist gameplay.
-6. Run the full harness: explicit examples, 256 seeded invariant scenarios, unique regression mappings and independently selected historical preservation suites.
+## Five minutes at the table
 
-## Decisions worth discussing
+1. Run the README local setup. The default felt table has one local player at Seat 4, three computer guests and an original professional female dealer. There is no computer-count setup or computer wager task.
+2. Select your own main stake and Deal. Show the large near-edge cards and clear Hit/Stand/Double/Split/Surrender controls. Dealer hole identity stays hidden. Guests and dealer progress automatically; human Insurance / Even Money choices pause play.
+3. Finish the round. Show the accurate net result and separate wager details. Deal Again opens betting; Repeat Bet deals only the original main amount while balances and the shoe continue.
+4. Expand Developer / demo tools deliberately. Before own funds are reserved or after settlement, choose seed 7 in Advanced demo settings and start a new Classic demo. Explain the explicit credit reset, then wager100 and Stand. Finalized Replay reconstructs the real command journal without changing table balances. Public Audit shows actor attribution and separate results.
+5. For the historical Charlie walkthrough, open manual demo (resets credits), choose Five-Card Charlie Demo and seed21, start new demo, choose Human Seat1 without computers, open betting, wager100 and deal. Use the documented accepted [M8 portfolio recipe](M8_REVIEW_HANDOFF.md). Profile changes require a new session.
 
-- **Domain boundaries:** immutable returned states avoid stale-state replacement; wrappers preserve optional/follower funding and decision timing. Framework-free compilation keeps engine/UI dependencies separate.
-- **Determinism:** `MULBERRY32_REJECTION_V1` uses documented integer operations, uint32 seeds and known vectors. The seed initializes private generator state; normal public snapshots expose neither.
-- **Replay integrity:** accepted ordered intents use authoritative handlers, not arbitrary internal snapshots. Replay version 1 rejects unsupported/malformed commands with sequence attribution. FNV-1a is a reproducibility fingerprint, not a security signature.
-- **Audit attribution:** sequence is authoritative; UTC timestamps are injected for tests and may be identical. Primitive frozen events preserve previous rounds and exclude hidden cards/IDs/shoe/seed.
-- **Verification:** Harness Engineering combines required exit propagation, concrete evidence, at most ten repair cycles per task and separate VERIFIED/ACCEPTED states. Fresh-session independent review is a required gate, not a claimed result of implementation testing.
+## What the implementation demonstrates
 
-## Demonstration evidence
+Accepted M1-M8 domain behavior remains unchanged. M9 adds browser-only composite intentions and automatic session preparation, not new math. Every computer wager and automatic turn still calls the same real handlers, audit recorder and seed journal; capacity preflight protects the entire browser intention. The independent preservation harness reruns accepted assertions and compares source with accepted Git objects. REG-M8-096 keeps all old assertions on its accepted document snapshot; current M9 documentation/inventory has new checks.
 
-[Charlie result](images/charlie-result.png) and [replay/audit](images/replay-audit.png) are reproducible screenshots from `tests/browser/portfolio.spec.ts`, with fixed audit time and controlled real-domain commands. They contain public UI only; test factories are excluded from normal production builds. Screenshots are demonstration fixtures, not randomness/fairness evidence.
-
-The polished screenshots replace the historical dashboard images. Portfolio screenshots disable CSS animation only for capture, use fixed audit UTC and real-domain deterministic commands; runtime motion and reduced-motion behavior are tested separately. The optional [320px mobile view](images/mobile-table.png) comes from the reduced-motion polish test. Same-session visual inspection checks public-only content and clipping; the owner judges game feel. Historical full-harness captures2026-10-01 01:11:11 +08:00 matched all4 repeats at01:14:15 (targeted6 Chromium PASS/0,9.1s). LOW-05 regeneration at11:35:47 changed Classic/Mobile to the hashes below; both were visually inspected. Charlie/Replay remained byte-identical. Targeted7 Chromium PASS/0; final full-harness repeat evidence is in STATE/log. Hashes prove byte reproducibility, not visual quality.
-
-| Public image | SHA-256 |
-| --- | --- |
-| Classic | `B319E1B5A2731AB3EA1D647CC0E29ED5DB19E2EFC31D1D07280C2F226C67F584` |
-| Charlie | `453383554002E4E9CCFF95F00E1AD85A5E76997DC0CA00E092B90E8F0F0CC90B` |
-| Replay/Audit | `3D0EEC844087BE1E201F798FFF12BA4C9E551808D9CD45E63C16E23DC4CDDE51` |
-| Mobile | `5BEC4DDC70B298480F473B876A728EBAD8998023E922F4ADF52D4612C247B9BF` |
-
-Regenerate with `npm.cmd run test:e2e -- tests/browser/polish.spec.ts tests/browser/portfolio.spec.ts`; compare with `Get-FileHash -Algorithm SHA256 docs/images/*.png`.
-
-Historical visual-polish harness PASS/0:66 Vitest files/956 tests and43 Chromium tests. Five semantic/layout polish checks covered desktop/mobile priority, complete Dealer visibility, closed secondary tools, selectable wager chips, split/Charlie markers, reduced motion and seven funded seats. LOW-05 adds a sixth geometric check; the final combined LOW-04/05 official harness PASS/0 inspected2026-10-01 12:19:49 +08:00 has66 Vitest files/956 tests and44 Chromium tests. [96 exact M8 regression owners](M8_MAPPING.md) and mandatory accepted M1–M7 preservation all PASS, including24 original M7 Chromium tests. [STATE](STATE.md) and [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md) retain actual checked counts, timestamps, failures and publication evidence. LOW-04/05 were subsequently CLOSED by review at1c639cb; MEDIUM-05 remains OPEN pending independent recheck of harness stability. No acceptance is implied.
+The interface now gives play priority through a felt table, original vector patrons, a first-person hand, human-only betting, clear actions and collapsed developer tools. [Desktop](images/m9-table-1280.png), [tablet](images/m9-table-768.png), [mobile](images/m9-table-320.png), [ready table](images/m9-ready.png), [results](images/m9-results.png), [tools](images/m9-tools.png). These are executed Playwright screenshots with public state.
 
 ## Honest boundaries
 
-One local HUMAN, explicit Continue table, no persistence/network/multiplayer/authentication or real-money features. No RTP/house-edge calculation, RNG/fairness certification, optimal-strategy or production casino claim. Browser verification covers Chromium; accessibility checks do not constitute formal certification. Replay is a local engineering/demo mechanism, with terminal-only browser export and no automatic fault recovery.
-
-A concise project description: "Built a TypeScript Blackjack domain engine and responsive React demo with deterministic command replay, public audit trails, and Vitest/Playwright verification. Used bounded repair loops, executable requirement mappings and fresh-session review gates to separate implementation evidence from acceptance."
+This is a local simulated-credit portfolio, with no accounts/persistence/network multiplayer, no real dealer connection, and no deployment in M9. Domain ADVANCE is atomic: computers/dealer resolve immediately between human decisions, without artificial per-card timing. Narrow mobile scrolls vertically and offers expandable guest cards. Visual enjoyment and interviewer readiness await owner judgment after a genuinely fresh independent review; automated verification alone does not answer those questions. [Human checklist](M9_VISUAL_CHECKLIST.md), [review handoff](M9_REVIEW_HANDOFF.md).

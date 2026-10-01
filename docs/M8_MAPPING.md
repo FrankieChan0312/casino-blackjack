@@ -1,3 +1,5 @@
+> Historical accepted M8 inventory (66/956 and44 Chromium), preserved at 8f5aca327f41f1078fc4fef20b611fd9cd494492. M8 HUMAN ACCEPTED; all findings CLOSED. Current M9 inventory/evidence is in [M9_MAPPING](M9_MAPPING.md). REG096 retains its original title/arguments on this accepted Git document snapshot; all original assertions remain and are mechanically compared by the M8 preservation guard.
+
 # M8 executable regression mapping
 
 REG-M8-001..096: 83 Vitest requirements and 13 real Chromium scenarios. Every ID has one literal executable owner; m8Regression verifies exact range, uniqueness, non-skipped registrations and exact document rows. REG-092 adds cascade refund audit;093..096 add bounded replay/atomic browser/defensive replay/current-document requirements. Existing owners retain their semantic coverage; REG-036 and REG-059 are strengthened. Mechanical mapping is not independent review.

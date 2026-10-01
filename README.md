@@ -1,69 +1,24 @@
-> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
-> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](docs/M9_CONTRACT.md).
-
 # Casino Blackjack
 
-A modern browser Blackjack demo: a responsive felt table, accessible keyboard controls, domain-backed actions, deterministic command replay and a player-safe audit trail. Built with TypeScript, React, Vite, Vitest and Playwright E2E.
+Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three evening-attire computer guests are already present. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
 
-**Simulated credits only, with no redemption value.** M1-M7 are HUMAN ACCEPTED.
+**Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
 
-![Classic table with a hidden dealer card](docs/images/classic-table.png)
+![Player table with central dealer, guests and first-person cards](docs/images/m9-table-1280.png)
 
-The visual polish follows human manual feedback: centered Dealer, seven seats around a restrained table rail, lower-center local hand, readable playing cards and clear game controls. Wager chips select amounts before an explicit Set command; Available, Reserved and Pending remain separate. Motion respects reduced-motion preferences; audit/settings stay below gameplay and closed by default. [Manual game-feel acceptance checklist](docs/M8_VISUAL_CHECKLIST.md). Owner visual acceptance is pending.
+## Current M9 delivery
 
-## Current M8 review status
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
 
-M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
-Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
-Historical Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666 (3 MEDIUM / 3 LOW).
-Historical Repair batch 1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781.
-Historical Independent recheck #1: COMPLETED at 5218bb9594580090cf39bad219a0b40f268c9781 (0 BLOCKER / 0 HIGH / 1 MEDIUM / 1 LOW).
-Reconstructed independent review: COMPLETED at 07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54.
-CLOSED BY INDEPENDENT REVIEW: MEDIUM-01, MEDIUM-02, MEDIUM-03, MEDIUM-04, LOW-01, LOW-02, LOW-03.
-Independent complete-harness review: COMPLETED at 1c639cb6ab35fa7bad80a6db174cda115666279f (0 BLOCKER / 0 HIGH / 1 MEDIUM / 0 LOW).
-LOW-04: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
-LOW-05: CLOSED by independent review at 1c639cb6ab35fa7bad80a6db174cda115666279f.
-All earlier M8 findings remain CLOSED. Only MEDIUM-05 (complete-harness reproducibility under full-suite load) remains OPEN.
-MEDIUM-05: OPEN - repair VERIFIED; independent recheck pending.
-Read-only diagnosis and stability evidence: [M8_HARNESS_STABILITY](docs/M8_HARNESS_STABILITY.md). No independent recheck occurs in this implementation session; the next recheck requires a genuinely fresh reviewer and the repaired final SHA.
-M8 NOT ACCEPTED. Deployment NOT RUN.
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
 
-## Features
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](docs/M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](docs/M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
 
-- Six-deck S17 Classic Blackjack: Hit, Stand, Double, Split/Re-split, restricted Split Aces and Late Surrender.
-- One local player or spectator, seven configurable seats, computer Hit/Stand policy, and Bet Behind with separate funded exposure.
-- Independent Pair, THREE_CARD, Insurance and Even Money results; integer half-credit accounting and exactly-once settlement or whole-round VOID/refund.
-- Optional Five-Card Charlie demonstration profile, reproducible seeded sessions, terminal-only replay export and immutable public audit history.
-- Keyboard controls, visible focus, live status and 320px mobile layout. Hidden cards and future shoe information stay outside the player projection.
+<!-- END CURRENT M9 -->
 
-## Engineering highlights
+## Play locally
 
-Rules live in immutable, headless domain transitions. The browser calls authoritative handlers and receives a safe projection; disabled controls never replace domain validation. A DOM-free compile and import checks enforce that boundary.
-
-Replay records ordered commands and runs the real handlers again. Strict versioned schemas reject malformed input and identify failing command sequences. A canonical outcome fingerprint excludes timestamps. A bounded **256-seed** batch checks card accounting, financial reconciliation and deterministic replay; these checks make no RTP, house-edge or certification claim.
-
-Harness Engineering uses one verification entry point, checked process exits, bounded evidence-based repair loops and explicit delivery states. Milestones end at a fresh-session, findings-first independent review gate. Implementation verification does not imply human acceptance.
-
-## Architecture
-
-```mermaid
-flowchart TD
-  UI[React table and secondary demo tools] --> Controller[Browser controller]
-  Controller --> Domain[Authoritative Blackjack commands]
-  Domain --> Profiles[Narrow profiles and RNG]
-  Controller --> Safe[Public projection and interaction selectors]
-  Safe --> UI
-  Controller --> Replay[Versioned command replay]
-  Replay --> Domain
-  Controller --> Audit[Immutable public audit observations]
-  Audit --> UI
-```
-
-Replay and audit are local engineering features, not persistence or production casino recovery. [DESIGN](docs/DESIGN.md) explains the boundaries.
-
-## Run locally
-
-Use Node **>=24.19.0 <25**, npm and Windows PowerShell:
+Requires Node.js/npm and Windows PowerShell for the official harness.
 
 ```powershell
 npm.cmd ci
@@ -71,50 +26,26 @@ npx.cmd playwright install chromium
 npm.cmd run dev
 ```
 
-Open the localhost address Vite prints. Choose your seat or Spectator, **Open betting**, set wagers, then **Close betting and deal**. Use enabled actions and **Continue table** for explicit computer/dealer progression. **Next round** retains credits and the shoe. Refresh resets the in-memory session.
+Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
 
-```powershell
-npm.cmd run build
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify.ps1
-```
+**Deal Again** opens betting with the same balances and shoe. **Repeat Bet** explicitly deals the last original main amount; it does not repeat side/back/Insurance stakes or Double/Split exposure. An unaffordable repeat is disabled. Optional own side/back wagers are under **Optional wagers**. Guests fund 25 credits from their own existing balance, use smaller whole-credit stakes when needed, or sit out below the minimum.
+
+**Developer / demo tools** starts closed. Expand it for seed/profile settings, public Audit, finalized seeded Replay, or a deliberate manual demo with explicit configuration/wagering/progression. Changing modes or starting a new demo is labelled as a credit reset. Active/funded player rounds cannot reset. A refresh starts over; no session is persisted.
 
 ## Verification
 
-Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**. Actual execution status is in STATE/log. It runs typecheck, lint, domain isolation, production build/fixture exclusion, Vitest, Chromium and independent M1-M7 preservation. Chromium tests start localhost port 4173; keep it free. No retries are configured.
-
-[REG-M8-001..096](docs/M8_MAPPING.md) has exactly 96 unique executable owners. Accepted M7 mappings remain [UX-01..14, REG-M7-001..064 and E2E-01..15](docs/M7_MAPPING.md). Detailed timestamped evidence and historical counts live in [STATE](docs/STATE.md) and [DEVELOPMENT_LOG](docs/DEVELOPMENT_LOG.md).
-
-## Profiles
-
-| Profile ID | Behaviour |
-| --- | --- |
-| `CLASSIC_6D_S17_V1_1` | Accepted Classic rules; Charlie OFF |
-| `CHARLIE5_6D_S17_V1_1` | Custom demonstration: a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1 |
-
-Charlie is terminal, including fifth-card 21; bust takes precedence. Three/four-card 21 already stops, Dealer Natural precedes Hit, and Split Aces/Double restrictions remain. Whole-round VOID overrides every award. Profile changes require an eligible new session.
-
-![Seeded Charlie result](docs/images/charlie-result.png)
-
-## Replay and audit demo
-
-In **Advanced demo settings**, choose Five-Card Charlie Demo and seed **21**, then **Start new demo session**. This explicitly resets simulation credits to 1000. Keep Seat 1, open betting, set the default MAIN, close/deal, Hit three times and Continue table. The result is **Charlie Win**.
-
-After financial completion, **Replay completed session** shows **Replay mode** without changing original results. **View replay package** and **Copy replay JSON** are available only for finalized seeded sessions; starting the next round removes export until completion. A seeded session is bounded to10000 accepted journal entries, including automatic settlement. The browser reserves two slots before a command; at the cap it rejects without changing play or credits. Use Start new demo after completion, or refresh to restart an unfinished capped demo. An exported package contains its seed and can reconstruct hidden information, so share it deliberately after completion. The browser supports replay of its own completed session, not arbitrary file import.
-
-**Public audit history** is secondary to gameplay and shows sequence, UTC time, actor/action, stake and result. It excludes hole identity, physical IDs, future shoe order and active seed/state. [Replay schema](docs/REPLAY.md) and [audit schema](docs/AUDIT.md) document versions and developer boundaries.
-
-![Completed replay and public audit](docs/images/replay-audit.png)
-
-Screenshots are generated by `tests/browser/portfolio.spec.ts` using controlled real-domain sessions, fixed audit time and only public UI. Regenerate locally:
-
 ```powershell
-npm.cmd run test:e2e -- tests/browser/portfolio.spec.ts
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
+git diff --check
+git status --short --untracked-files=all
 ```
 
-## Limitations
+The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Accepted M8 remains 66 files / 956 Vitest and 44 Chromium; new M9 evidence owns the added 22 unit/document and 11 browser scenarios. REG-M8-001..096 and all earlier accepted assertions remain. [Acceptance mapping](docs/M9_MAPPING.md), [execution/repair record](docs/M9_EVIDENCE.md).
 
-Local memory only: no accounts, persistence/database, cloud sync, network multiplayer, payments or real money. Normal randomness is the existing browser adapter; seeded Mulberry32 is reproducible, not cryptographic or certified. The outcome fingerprint detects deterministic mismatches and is not authentication. Computer policy Hits below 17 and Stands at 17+, declining optional decisions; advanced follower paths use isolated real-domain test fixtures. Only Chromium is verified. Accessibility checks are not formal WCAG certification or a complete screen-reader audit.
+## Profiles and engineering
 
-## Documentation
+Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split Aces, Late Surrender, separate Pair / THREE_CARD / Insurance / Even Money and Bet Behind. The optional Five-Card Charlie Demo is explicitly selected: a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1. It is a custom demo profile.
 
-[Rules](docs/RULES.md) · [Scope](docs/SPEC.md) · [UX](docs/UX_UI.md) · [Plan](docs/PLAN.md) · [Learning notes](docs/LAB_MANUAL.md) · [Portfolio walkthrough](docs/PORTFOLIO.md) · [Fresh-session review handoff](docs/M8_REVIEW_HANDOFF.md). Current delivery evidence is recorded in STATE.
+Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. Original code-native SVG characters use no external art or real-person references. Keyboard focus, semantic cards, live feedback, reduced motion and 320px layouts have automated coverage.
+
+No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).

@@ -1,3 +1,17 @@
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+## Historical execution records through M9-T08
+
+The complete prior log is retained verbatim below; its earlier status statements are historical. Current truth is above.
+
 > Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
 > Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
 
@@ -2097,3 +2111,29 @@ T07 published508f3baae963c65ab62ffba1a9be5bf0851b2184 at21:55:06 +08:00 main par
 ### 2026-10-01 22:01:28 +08:00 - M9-T08 VERIFIED; repairs 1/10
 
 Official verify.ps1 PASS/0: typecheck lint 67files/973 Vitest domain isolation build/exclusion 50 Chromium M1-M7 preservation plus24 Chromium. Six M9 browser scenarios PASS including native closed outer tools, safe reset modes, original seeded replay/audit, visible focus keyboard-only own wagering/Stand/Deal Again. Full scoped diff reviewed; no domain change.
+
+## M9-T09 execution records
+
+### 2026-10-01 22:06:48 +08:00 - M9-T09 IMPLEMENTED; repairs 1/10
+
+T08 published3bf59fd83df6988096f4dd70b08603046b4e330e at22:01:34 +08:00 main parity0/0 clean. T09 new player browser fixtures and default/Ace/split/Natural/unfunded tests; screenshot generation. First Chromium9/11 PASS; E07/E11 expect unformatted1000 but accepted credits display1,000. Repair1 corrects exact visible format, no production change. Full docs/preservation pack in progress.
+
+### 2026-10-01 22:14:13 +08:00 - M9-T09 IMPLEMENTED; repairs 3/10
+
+Repair1 formatting corrected; npm.cmd grep pipe command failed before runner (NOT RUN), replaced by full spec. Rerun10/11PASS exposes true exhausted-funds reset lock after NEXT. Repair2 player-only canStartDemo allows OPEN with zero human reserve and no round or already terminal archived round; funded/active reset remains rejected. All11 browser scenarios PASS/0. New preservation checker initially FAIL only T02 inventory statement line wrap; repair3 restored exact original line layout. node scripts/check-m8-preservation.mjs PASS/0 confirms66 unit/5 browser files every original assertion plus empty domain diff. M9+M8 contract22testsPASS. REG096 historical doc inputs anchored to accepted8f5aca3; all assertions unchanged, current M9 docs validator added separately. Official full harness with added M8 preservation pending.
+
+### 2026-10-01 22:24:27 +08:00 - M9-T09 IMPLEMENTED; repairs 4/10
+
+Current README/STATE/PLAN/SPEC/DESIGN/UX/log/LAB/PORTFOLIO and M8 handoff updated; M9 mapping/review/visual packs and3 current-doc tests added. Current68/978/55 inventory literal checks PASS;9 targeted docs/contracts/portfolio tests PASS; typecheck PASS. Repair4 new Node checker lint missing process/console globals and regex spacing; replaced with explicit cwd/log imports and quantified spaces; lint and preservation guard PASS. Six M9 screenshots individually inspected (ready,1280,768,320,results,tools), legacy replay/audit reviewed; public-only, original vector art. Added two-round seeded replay/optional non-repeat exact2210-unit test PASS. Final official harness pending.
+
+### 2026-10-01 22:30:21 +08:00 - M9-T09 IMPLEMENTED; repairs 5/10
+
+Scoped diff review caught accidental historical log truncation by generic first-heading prefix replacement. Repair5 restores complete prior HEAD DEVELOPMENT_LOG verbatim beneath current header and appends all new T09 events. Independent includes(original) assertion PASS; no historical failed attempt removed. Add current-doc regression protecting prior log, rerun affected tests and complete official harness because test source changes. First official T09 run executing same product but superseded doc/test version; final verification pending.
+
+### 2026-10-01 22:30:58 +08:00 - M9-T09 IMPLEMENTED; repairs 5/10
+
+Official T09 harness#1 finished PASS/0:68/978 Vitest,55 Chromium, typecheck/lint/domain/build/exclusion, independent M1-M7 plus24 Chromium, M8 assertion/source guard+66/956 Vitest+44 Chromium. Superseded only by repair5 document/history regression addition. Prior log restored verbatim; git diff --numstat DEVELOPMENT_LOG32 additions/0 deletions, current-doc3tests PASS and diff --check PASS. All previous task checkpoint receipts retained. Final unchanged-source harness#2 required before publication.
+
+### 2026-10-01 22:34:55 +08:00 - M9-T09 VERIFIED; repairs 5/10
+
+Final official unchanged-source harness#2 PASS/0: powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1. 68files/978 Vitest,55 Chromium,typecheck/lint/domain DOM-free/build/production exclusion. Independent M1 12/155,M2 6/78,M3 5/72,M4 7/171,M5 8/168,M6 9/181,M7 56/870+24Chromium,M8 source/assertion guard+66/956+44Chromium all PASS. Full scoped source/test/document diff reviewed and six M9 screenshots inspected. Git diff --check PASS; no domain changes, no original assertions removed/weakened. Actual model/effort NOT VERIFIED/NOT VERIFIED. No functional blocker established; mobile vertical scroll and immediate atomic automatic progression documented. Fresh independent review and owner game-feel evaluation NOT RUN; M9 NOT ACCEPTED; no deployment. Only factual documentation status/receipt updates follow, with affected doc checks.

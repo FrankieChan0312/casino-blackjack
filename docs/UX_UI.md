@@ -1,9 +1,18 @@
-> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
-> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+> The material below retains earlier milestone requirements and timestamped history. Earlier delivery/review statements are historical and superseded by the current delivery block above; manual UX remains supported in deliberate demo mode.
 
 # Casino Blackjack — UX/UI Specification
 
-## Current M8 review status
+## Historical M8 pre-acceptance review status
 
 M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
 Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
@@ -810,7 +819,7 @@ Unless a future UX revision explicitly adds them:
 
 The owner found functionality acceptable but the UI visually boring. The authorized presentation repair uses a restrained CSS felt/rail, top-center Dealer, horseshoe seats with lower-center local priority, light playing cards and original card backs, active/result labels and larger action controls. On mobile, current public cards/actions precede compact seats while Dealer remains visible. Available, Reserved and Pending are compact and distinct; chip amounts select inputs before explicit Set. Action guidance is expandable with disabled-reason ARIA links; secondary settings/history stay below gameplay. Insurance/follower choices retain their ownership, amounts and consequences. Motion is presentation-only, disabled under reduced motion. No sound, asset dependency or gameplay-rule changes. The [manual game-feel checklist](M8_VISUAL_CHECKLIST.md) is pending owner evaluation; automated checks do not approve visual quality or make M8 ACCEPTED.
 
-## 36. Current implementation status
+## 36. Historical pre-acceptance implementation status
 
 M1-M7 are HUMAN ACCEPTED. M7's accepted HEAD is **da6f068ffd27713848ed48f023c17ed388b8b44e**, after a genuinely fresh independent review and explicit human acceptance. UX-01..14 have exact unique executable mappings in [M7_MAPPING](M7_MAPPING.md); all 15 planned E2E scenarios ran and remain in preservation verification. This status does not revise any UX/gameplay requirement.
 
@@ -819,3 +828,11 @@ M8 T01-T09 implementation exists and is VERIFIED. Reconstructed independent revi
 ## 37. M9 Player Mode authority
 
 The [M9 contract](M9_CONTRACT.md) supersedes the historical manual default journey for Player Mode only. Open table -> own main bet -> Deal -> explicit human decisions -> automatic guests/dealer -> per-wager results -> Deal Again or explicit Repeat Bet. Computer guests begin seated; dealer and own cards dominate. Native collapsed Developer / demo tools retain manual table setup, Profile/Seed/Replay/Audit. Optional own side/back wagers are secondary but human financial choices never auto-resolve. Responsive first-person felt composition, professional fictional vector characters, keyboard focus, 44px primary controls, public-state secrecy and reduced-motion are required.
+
+## 38. M9 implemented player journey
+
+Production opens a Classic table with Human Seat4, guests1/3/6 and central original professional female dealer. Enter your own whole-credit MAIN (default25) or choose10/25/100, then Deal once. Optional wagers expand separately; reserve your MAIN before adding own side bets, and manage only your own Bet Behind stakes. No guest setup/wager forms appear in normal Player Mode. Automatic guests/dealer pause for every human card/Insurance/Even Money/follower choice. Natural hands and final dealer resolution finish without Continue table.
+
+Own cards sit at the near edge and exceed guest/dealer card size. Desktop1280x900/tablet768x1024 show primary decisions alongside the table. Mobile320x720 scrolls vertically, keeps guests present and offers individual expandable public guest cards. Focus moves to your current hand, explicit decision or round result, then your own wager input after Deal Again; skip link/live status/semantic hidden card and reduced motion remain.
+
+Round complete shows exact net, separate expandable result records, Deal Again and Repeat Bet with the original main amount. Repeat excludes side/back/Insurance/Double/Split additions. Insufficient repeat is disabled with a reason; controller rejection leaves betting open without changing the amount or refilling funds. Developer/demo tools is a closed native details element; expanding it enables deliberate manual mode, profiles/seeds, Audit and finalized seeded Replay. A new demo/mode explicitly resets all simulation credits; funded or active rounds cannot reset. Unfunded betting between terminal rounds can deliberately reset, including after exhausting credits. [Human judgment checklist](M9_VISUAL_CHECKLIST.md) remains NOT RUN.

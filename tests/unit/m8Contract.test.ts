@@ -1,4 +1,5 @@
 import { readFileSync, readdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { expect, it } from 'vitest';
 import ts from 'typescript';
 import { CLASSIC, CHARLIE } from '../../src/domain/profile.js';
@@ -29,6 +30,11 @@ it('[REG-M8-076] public project text makes no affirmative RTP house-edge certifi
 });
 
 it('[REG-M8-096] current review status and verification inventories agree with executable browser registrations', () => {
+  // Authorized M9 historical document boundary: preserve every M8 assertion.
+  function readAcceptedM8(file: string, encoding: 'utf8') {
+    return execFileSync('git', ['-c', `safe.directory=${process.cwd().replaceAll('\\', '/')}`, 'show', `8f5aca327f41f1078fc4fef20b611fd9cd494492:${file}`], { encoding });
+  }
+  // End historical document boundary.
   let chromiumTests = 0;
   for (const file of readdirSync('tests/browser').filter(file => file.endsWith('.spec.ts'))) {
     // M8 inventory is the preserved accepted suite; M9 owns its added scenarios.
@@ -46,8 +52,7 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     }
     visit(source);
   }
-  const vitestFiles = readdirSync('tests', { recursive: true }).map(String)
-    .filter(file => /\.test\.tsx?$/.test(file) && !/^m9[\\/]/.test(file)).length;
+  const vitestFiles = readdirSync('tests', { recursive: true }).map(String).filter(file => /\.test\.tsx?$/.test(file) && !/^m9[\\/]/.test(file)).length;
   expect(vitestFiles).toBe(66);
   expect(chromiumTests).toBe(44);
   const expectedInventory = [vitestFiles, 956, 1, chromiumTests];
@@ -57,14 +62,14 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     expect(inventory!.slice(1).map(Number), file).toEqual(expectedInventory);
   }
   // These inventory paragraphs originally drifted independently of the shared status header.
-  assertInventory(readFileSync('README.md', 'utf8').split('## Verification')[1].split('## Profiles')[0], 'README verification');
-  assertInventory(readFileSync('docs/M8_REVIEW_HANDOFF.md', 'utf8').split('## Commands and expected inventory')[1].split('\n## ')[0], 'handoff commands');
-  assertInventory(readFileSync('docs/LAB_MANUAL.md', 'utf8').split('## 34.')[1], 'LAB section 34');
-  assertInventory(readFileSync('docs/M8_MAPPING.md', 'utf8'), 'mapping inventory');
+  assertInventory(readAcceptedM8('README.md', 'utf8').split('## Verification')[1].split('## Profiles')[0], 'README verification');
+  assertInventory(readAcceptedM8('docs/M8_REVIEW_HANDOFF.md', 'utf8').split('## Commands and expected inventory')[1].split('\n## ')[0], 'handoff commands');
+  assertInventory(readAcceptedM8('docs/LAB_MANUAL.md', 'utf8').split('## 34.')[1], 'LAB section 34');
+  assertInventory(readAcceptedM8('docs/M8_MAPPING.md', 'utf8'), 'mapping inventory');
   const files = ['docs/LAB_MANUAL.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md',
     'docs/UX_UI.md', 'README.md', 'docs/PORTFOLIO.md', 'docs/M8_REVIEW_HANDOFF.md'];
   for (const file of files) {
-    const source = readFileSync(file, 'utf8');
+    const source = readAcceptedM8(file, 'utf8');
     const status = source.match(/## Current M8 review status\r?\n([\s\S]*?M8 NOT ACCEPTED\. Deployment NOT RUN\.)/)?.[1];
     expect(status, file).toBeDefined();
     expect(status, file).toContain('Original fresh review: COMPLETED at eb85032604b03031b5b934818fda773ea9aae666');
@@ -80,10 +85,10 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     expect(status, file).not.toMatch(/(?:fresh review|recheck #1).*NOT RUN|all (?:six )?findings.*OPEN/i);
   }
   // The original defect was outside the later review section: test the entry header itself.
-  const labHeader = readFileSync(files[0], 'utf8').split('## 1. Purpose')[0];
+  const labHeader = readAcceptedM8(files[0], 'utf8').split('## 1. Purpose')[0];
   expect(labHeader).toMatch(/Status:.*reconstructed independent review COMPLETED.*LOW-04 and LOW-05 CLOSED.*MEDIUM-05 OPEN/);
   expect(labHeader).not.toMatch(/M8 fresh review NOT RUN/);
-  const uxCurrent = readFileSync('docs/UX_UI.md', 'utf8').split('## 36. Current implementation status')[1];
+  const uxCurrent = readAcceptedM8('docs/UX_UI.md', 'utf8').split('## 36. Current implementation status')[1];
   expect(uxCurrent).toContain('Reconstructed independent review completed');
   expect(uxCurrent).not.toMatch(/All six findings remain OPEN|M8 independent reviewer RECHECK: PENDING/);
 });

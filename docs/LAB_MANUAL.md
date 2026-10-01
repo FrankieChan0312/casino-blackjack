@@ -1,5 +1,14 @@
-> Current milestone: M9. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`. The owner supplied a genuinely fresh independent review: NO FINDINGS at every severity, MEDIUM-05 CLOSED, all previous findings CLOSED, and explicit "I accept M8." M8 ledger stays `0,2,3,2,2,1,2,6,4`. Recorded with substantive M9-T01 at 2026-10-01 20:41:10 +08:00. No deployment.
-> Earlier M8 status blocks below are pre-acceptance historical snapshots, superseded by this receipt. Their review history and repair counts are retained. [M9 contract](M9_CONTRACT.md).
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+> The material below retains earlier milestone requirements and timestamped history. Earlier delivery/review statements are historical and superseded by the current delivery block above; manual UX remains supported in deliberate demo mode.
 
 # Casino Blackjack — Lab Manual
 
@@ -7,10 +16,10 @@ Document date: 2026-09-28
 Document task: LAB-1.0  
 Intended repository location: `docs/LAB_MANUAL.md`  
 Repository target: `C:\Users\user\Documents\GitHub\casino-blackjack`  
-Current milestone: M8 - Variant, replay, audit and portfolio polish
-Status: M1-M7 HUMAN ACCEPTED; M8 IMPLEMENTED / VERIFIED; reconstructed independent review COMPLETED at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54; all earlier findings including LOW-04 and LOW-05 CLOSED; only MEDIUM-05 OPEN with repair and independent recheck status below. M8 NOT ACCEPTED; deployment NOT RUN. Current M8 notes are section34 and the status below; earlier learning/delivery statements are historical snapshots, superseded by STATE.
+Historical milestone: M8 - Variant, replay, audit and portfolio polish
+Historical status before M8 human acceptance: M1-M7 HUMAN ACCEPTED; M8 IMPLEMENTED / VERIFIED; reconstructed independent review COMPLETED at07dbcea77561c9a8dc30d4e8498f99ec2f8d3b54; all earlier findings including LOW-04 and LOW-05 CLOSED; only MEDIUM-05 OPEN with repair and independent recheck status below. M8 NOT ACCEPTED; deployment NOT RUN. Current M8 notes are section34 and the status below; earlier learning/delivery statements are historical snapshots, superseded by STATE.
 
-## Current M8 review status
+## Historical M8 pre-acceptance review status
 
 M1-M7 HUMAN ACCEPTED. M8 IMPLEMENTED / VERIFIED.
 Current verification inventory: **66 Vitest files / 956 tests**, **1 Chromium project / 44 tests**.
@@ -1835,3 +1844,13 @@ LOW-04 updates current inventory paragraphs while retaining explicitly historica
 Fixed invariant workloads can spend more time constructing matchers than drawing cards. REG-067/069 retain all256 seeds/every draw/check but fail directly with seed/draw/card context. REG-070 stores one real replay and independently checks outcomes and digest, retaining256x3 rounds and all financial/card assertions. REG-093/094 retain the complete10000-command boundary with local15s/20s workload ceilings informed by reviewer load evidence; these are test allowances, not product performance guarantees. Global timeout and070's15s remain unchanged.
 
 Await mandatory fixture cleanup after spawnSync completes. Node24.19.0 rmSync retry options failed an actual Windows handle probe; awaited fs/promises.rm retries known transient errors and propagates exhaustion. Real300ms/1500ms locks recover; a10s lock still fails after3137ms. Recursive retries do not imply a600ms total. Natural reviewer EPERM was not reproduced and its handle owner is unknown. [M8_HARNESS_STABILITY](M8_HARNESS_STABILITY.md) records every measured run and failed proposal. Repeated PASS is bounded evidence, not proof for every machine/load; MEDIUM-05 stays OPEN until independent recheck. M8 ACCEPTED NO; deployment NOT RUN.
+
+## 35. M9 player experience and interview notes
+
+M1-M8 HUMAN ACCEPTED; M9 NOT ACCEPTED, fresh review NOT RUN. The user accepted8f5aca327f41f1078fc4fef20b611fd9cd494492 after the final independent NO FINDINGS review; M8 historical repair counts0,2,3,2,2,1,2,6,4 were not reset. M9 turns a configuration-first manual demo into a prepared casino session through browser orchestration while leaving src/domain unchanged. Existing manual fixtures preserve accepted controls and all original domain assertions.
+
+Key lesson: browser intent is a composite of real domain commands. Preflight must cover auto seats/wagers/progression and final settlement before the first mutation, otherwise a bounded replay can reserve money or clear an archive halfway through an intent. DEAL/REPEAT write only their expanded commands to the accepted journal; real multi-round replay validates the result. Human choices are never inferred from auto progression. UI focus effects do not issue gameplay commands.
+
+A second lesson is evidence scope: accepted M8 documentation tests captured pre-acceptance text and cannot dictate future human status. Their original assertions are fixed to the accepted Git snapshot and source-compared, while new current-document tests enforce truthful acceptance, actual suite additions,15 AC links and screenshot artifacts. No original assertion was deleted, skipped or weakened. Unified preservation reruns accepted M1-M8 independently.
+
+T09 browser evidence found a genuine between-round exhausted-credit reset lock. The targeted fix extends only Player Mode unfunded OPEN with no/terminal archive; own reserved or active states remain locked. No rule change was required. [Mapping](M9_MAPPING.md), [repair evidence](M9_EVIDENCE.md), [five-minute walkthrough](PORTFOLIO.md) and [fresh-session gate](M9_REVIEW_HANDOFF.md). Casual fun, blackjack feel and interviewer readiness await the owner after fresh review.

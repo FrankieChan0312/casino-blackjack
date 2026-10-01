@@ -10,6 +10,34 @@ import * as replayModule from '../../src/domain/replay.js';
 import { noRandom } from '../helpers/tableFixture.js';
 import { beginControllerSplit } from '../../src/domain/behindController.js';
 
+it('[M9-019] repeated seeded rounds omit optional stakes and replay exact independently funded results', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 });
+  c.dispatch({ type: 'MAIN', seat: 4, amount: 200 }); c.dispatch({ type: 'SIDE', kind: 'PAIR', amount: 10 }); c.dispatch({ type: 'BACK', seat: 1, amount: 20 });
+  c.dispatch({ type: 'DEAL', amount: 200 }); c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+  expect(c.getSnapshot().human).toMatchObject({ available: 2210, reserved: 0 });
+  expect(c.dispatch({ type: 'REPEAT' })).toBe(true);
+  expect(c.getSnapshot().sideWagers).toEqual([]); expect(c.getSnapshot().backWagers).toEqual([]);
+  if (c.getSnapshot().interaction.insurance) c.dispatch({ type: 'ACE', choice: 'DECLINE' });
+  if (c.getSnapshot().phase === 'CLOSED') c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+  expect(c.getSnapshot().phase).toBe('COMMITTED');
+  expect(c.getSnapshot().ownResults.map(r => [r.type, r.stake])).toEqual([['MAIN', 200]]);
+  const p = c.exportReplay()!; expect(p.commands.at(-1)?.command.type).toBe('SETTLE');
+  expect(p.commands.some(e => ['DEAL', 'REPEAT'].includes(e.command.type))).toBe(false);
+  expect(replayModule.replay(p).outcomes).toHaveLength(2); expect(c.replayCompleted()).toBe(true);
+});
+
+it('[M9-018] explicit reset remains available between settled rounds but locks when own funds are reserved', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 });
+  c.dispatch({ type: 'DEAL', amount: 200 }); c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+  c.dispatch({ type: 'NEXT' }); expect(c.getSnapshot().canStartDemo).toBe(true);
+  c.dispatch({ type: 'MAIN', seat: 4, amount: 200 }); expect(c.getSnapshot().canStartDemo).toBe(false);
+  const funded = c.getSnapshot(); expect(c.startDemo(CLASSIC, 8)).toBe(false);
+  expect(c.getSnapshot().human).toEqual(funded.human); expect(c.getSnapshot().audit).toEqual(funded.audit);
+  c.dispatch({ type: 'MAIN', seat: 4, amount: 0 }); expect(c.getSnapshot().canStartDemo).toBe(true);
+  expect(c.startDemo(CLASSIC, 8)).toBe(true); expect(c.getSnapshot().human).toMatchObject({ available: 2000, reserved: 0 });
+  expect(c.getSnapshot().lastBet).toBe(0);
+});
+
 it('[M9-016] explicit manual mode resets only at safe boundaries and retains accepted configuration flow', () => {
   const c = createBrowserController({ playerMode: true, seed: 7 });
   expect(c.dispatch({ type: 'MODE', playerMode: false })).toBe(true);

@@ -1,3 +1,15 @@
+## Current M9 delivery
+
+M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
+
+M9-T01..T09 IMPLEMENTED / VERIFIED. T01..T08 COMMITTED / PUSHED; T09 publication pending. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
+
+<!-- END CURRENT M9 -->
+
+> The material below retains earlier milestone requirements and timestamped history. Earlier delivery/review statements are historical and superseded by the current delivery block above; manual UX remains supported in deliberate demo mode.
+
 # Casino Blackjack Specification
 
 Document date: 2026-09-28  
@@ -395,6 +407,6 @@ Before implementation, repository bootstrap must create the minimal documented h
 
 Do not create speculative empty subsystems merely to mirror this list. Each file should begin with the minimum useful content needed for the current task, and later tasks must update the persistent truth as implementation progresses.
 
-## M9 ? Player Experience / Casino Session Flow
+## M9 - Player Experience / Casino Session Flow
 
-The authorized [M9 contract](M9_CONTRACT.md) defines AC-M9-001..015 and sequential T01..T09. M9 changes browser session orchestration and presentation only; accepted M1?M8 rules, financial/replay/audit semantics are preserved. Default Player Mode replaces configuration-first entry with prepared guests, funded automatic computer wagers/progression, near-edge own cards, central illustrated dealer and explicit repeat-round controls. All optional wagers and developer capabilities remain available. No M10 or deployment.
+The authorized [M9 contract](M9_CONTRACT.md) defines AC-M9-001..015 and sequential T01..T09. M9 changes browser session orchestration and presentation only; accepted M1-M8 rules, financial/replay/audit semantics are preserved. Default Player Mode replaces configuration-first entry with prepared guests, funded automatic computer wagers/progression, near-edge own cards, central illustrated dealer and explicit repeat-round controls. All optional wagers and developer capabilities remain available. No M10 or deployment.
