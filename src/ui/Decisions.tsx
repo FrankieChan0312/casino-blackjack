@@ -5,7 +5,7 @@ export function Decisions({ view, controller }: { view: BrowserView; controller:
   const ace = view.interaction.insurance;
   const follow = view.follow;
   return <>
-    {ace && <section className="panel decision" aria-label="Insurance decision"><h2>Insurance / Even Money</h2>
+    {ace && <section tabIndex={-1} className="panel decision" aria-label="Insurance decision"><h2>Insurance / Even Money</h2>
       <p>Dealer shows Ace. Choose before the dealer checks for Blackjack.</p>
       <p>{ace.role === 'BACK' ? 'Bet Behind' : 'Your MAIN'} · Seat {ace.targetSeat} · Insurance amount: {credits(ace.amount)} credits</p>
       <div className="button-row"><button disabled={!ace.affordable} onClick={() => controller.dispatch({ type: 'ACE', choice: 'INSURANCE' })}>Buy Insurance</button>
@@ -34,6 +34,7 @@ export function Decisions({ view, controller }: { view: BrowserView; controller:
 }
 
 export function Results({ view, controller }: { view: BrowserView; controller: BrowserController }) {
+  if (view.playerMode) return <PlayerResults view={view} controller={controller} />;
   const groups = [
     { name: 'Main hand results', records: view.ownResults.filter((entry) => entry.type === 'MAIN') },
     { name: 'Side-bet results', records: view.ownResults.filter((entry) => entry.type === 'PAIR' || entry.type === 'THREE_CARD') },
@@ -56,4 +57,24 @@ export function Results({ view, controller }: { view: BrowserView; controller: B
       <p>The existing shoe continues unless its cut card, remaining cards or integrity status requires replacement at the next deal.</p>
       <button onClick={() => controller.dispatch({ type: 'NEXT' })}>Next round</button></section>}
   </>;
+}
+
+function PlayerResults({ view, controller }: { view: BrowserView; controller: BrowserController }) {
+  if (!view.interaction.nextRound) return null;
+  const records = [...view.ownResults, ...view.backResults];
+  const stake = records.reduce((sum, r) => sum + r.stake, 0);
+  const returned = records.reduce((sum, r) => sum + r.returned, 0);
+  const affordable = view.lastBet > 0 && view.lastBet <= (view.human?.available ?? 0);
+  return <section id="player-result" tabIndex={-1} className="panel player-result" aria-label="Your round result">
+    <h2>{view.phase === 'VOID' ? 'Round interrupted — stakes refunded' : 'Round complete'}</h2>
+    <p className="round-net">{view.phase === 'VOID' ? 'Refunded' : 'Net result'}: {credits(view.phase === 'VOID' ? returned : returned - stake)} credits</p>
+    <div className="button-row"><button className="primary" onClick={() => controller.dispatch({ type: 'NEXT' })}>Deal Again</button>
+      <button disabled={!affordable} onClick={() => controller.dispatch({ type: 'REPEAT' })}>Repeat Bet · {credits(view.lastBet)} credits</button></div>
+    <p>Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.</p>
+    {!affordable && <p className="reason">Repeat Bet unavailable: not enough credits for your original main wager.</p>}
+    <details><summary>Wager result details</summary><p>Each wager settles independently.</p>
+      {records.map((r, i) => <article key={i} className="result"><p>{r.type}{'seat' in r && ` · Seat ${r.seat}`}{r.handId && ` · ${handLabel(r.handId)}`}</p>
+        <strong data-result={r.outcome}>{resultLabel(r.outcome)}</strong><p>Stake: {credits(r.stake)} · Returned: {credits(r.returned)} · Net: {credits(r.returned - r.stake)}</p><p>{r.status === 'REFUNDED' ? 'Refunded' : 'Settled'}</p></article>)}
+    </details>
+  </section>;
 }

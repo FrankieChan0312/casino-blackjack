@@ -1,8 +1,8 @@
-import { useSyncExternalStore } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 import type { BrowserController, BrowserView } from '../browser/controller.js';
 import { Table } from './Table.js';
 import { credits, roundStatus } from './presentation.js';
-import { Setup, Betting } from './Betting.js';
+import { Setup, Betting, PlayerBetting } from './Betting.js';
 import { Actions } from './Actions.js';
 import { Decisions, Results } from './Decisions.js';
 import { DemoTools } from './DemoTools.js';
@@ -33,6 +33,11 @@ export function App({ controller }: { controller: BrowserController }) {
 }
 
 function PlayerExperience({ view, controller }: { view: BrowserView; controller: BrowserController }) {
+  useEffect(() => {
+    if (view.phase === 'OPEN') return;
+    const target = document.querySelector<HTMLElement>(view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
+    target?.focus({ preventScroll: true }); target?.scrollIntoView({ block: 'nearest' });
+  }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
   return <main className="player-mode">
     <a className="skip-link" href="#player-decisions">Skip to your hand and actions</a>
     <header className="casino-header"><div><p className="eyebrow">An evening at the table</p><h1>Casino Blackjack</h1></div>
@@ -48,7 +53,7 @@ function PlayerExperience({ view, controller }: { view: BrowserView; controller:
         <div><dt>Reserved / current exposure</dt><dd>{credits(view.human?.reserved ?? 0)}</dd></div>
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div>
       </dl></section>
-      {view.interaction.betting && <Betting key={view.mainWagers.find(w => w.seat === view.human?.controlledSeat) ? 'funded' : 'empty'} controller={controller} view={view} />}
+      {view.interaction.betting && <PlayerBetting controller={controller} view={view} />}
       <Results view={view} controller={controller} />
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>

@@ -24,7 +24,7 @@ export function Table({ view }: { view: BrowserView }) {
       const local = seat.seatNumber === view.human?.controlledSeat;
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
-      return <section key={seat.seatNumber} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      return <section key={seat.seatNumber} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {view.playerMode && !local && <CasinoPerson kind={seat.seatNumber === 3 ? 'gown' : seat.seatNumber === 6 ? 'tux' : 'suit'} />}
         <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
         <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>

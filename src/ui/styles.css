@@ -237,6 +237,12 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .credits dt { font-size: .6rem; }
 }
 /* Original seated character presentation uses no external assets. */
+.player-mode .player-betting > form { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.player-mode .player-betting h2 { text-align: center; }
+.player-mode .player-betting input { width: 100px; }
+.player-mode .primary { background: #d3dbb0; color: #10271f; font-weight: 700; }
+.player-mode .player-result .round-net { font-size: 1.5rem; color: #eee1b7; }
+.player-mode #player-hand:focus, .player-mode #player-result:focus, .player-mode .decision:focus { outline: 3px solid #e6cf88; outline-offset: 3px; }
 .player-mode .dealer { min-height: 142px; padding-left: 96px; }
 .player-mode .dealer > .casino-person { position: absolute; left: 0; top: 10px; width: 98px; height: 120px; }
 .player-mode .casino-person { filter: drop-shadow(0 4px 4px #0005); }

@@ -10,6 +10,67 @@ import * as replayModule from '../../src/domain/replay.js';
 import { noRandom } from '../helpers/tableFixture.js';
 import { beginControllerSplit } from '../../src/domain/behindController.js';
 
+it('[M9-011] one Deal funds only the human and retains original bet through Double and Repeat', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 });
+  expect(c.dispatch({ type: 'DEAL', amount: 200 })).toBe(true);
+  expect(c.getSnapshot().lastBet).toBe(200);
+  expect(c.dispatch({ type: 'ACT', action: 'DOUBLE', handId: c.getSnapshot().interaction.handId })).toBe(true);
+  expect(c.getSnapshot().phase).toBe('COMMITTED'); expect(c.getSnapshot().ownResults[0].stake).toBe(400);
+  const funds = c.getSnapshot().human!.available;
+  expect(c.dispatch({ type: 'REPEAT' })).toBe(true);
+  expect(c.getSnapshot().phase).toBe('CLOSED'); expect(c.getSnapshot().lastBet).toBe(200);
+  expect(c.getSnapshot().mainWagers.find(w => w.seat === 4)?.amount).toBe(200);
+  expect(c.getSnapshot().human).toMatchObject({ available: funds - 200, reserved: 200 });
+  const p = c.exportReplay(); expect(p).toBeNull();
+  expect(c.getSnapshot().shoeMessage).toBe('Existing 6-deck shoe continues');
+});
+
+it('[M9-012] invalid Deal and guest-only Close cannot start a player round', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 }); const before = c.getSnapshot();
+  for (const amount of [0, 19, 21, 2002, NaN, Infinity]) expect(c.dispatch({ type: 'DEAL', amount })).toBe(false);
+  expect(c.dispatch({ type: 'CLOSE' })).toBe(false);
+  expect(c.getSnapshot().phase).toBe('OPEN'); expect(c.getSnapshot().human).toEqual(before.human);
+  expect(c.getSnapshot().audit).toEqual(before.audit); expect(c.getSnapshot().lastBet).toBe(0);
+});
+
+it('[M9-013] unaffordable Repeat opens betting with feedback and never reduces or replenishes bet', () => {
+  const c = createBrowserController({ playerMode: true, random: noRandom,
+    factory: () => behindFixture(['10', '10', '5', '10', '10', '7', '7', '6', '7', '9']) });
+  c.dispatch({ type: 'DEAL', amount: 2000 }); c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+  expect(c.getSnapshot().human?.available).toBe(0);
+  expect(c.dispatch({ type: 'REPEAT' })).toBe(false);
+  expect(c.getSnapshot().phase).toBe('OPEN'); expect(c.getSnapshot().human).toMatchObject({ available: 0, reserved: 0 });
+  expect(c.getSnapshot().lastBet).toBe(2000); expect(c.getSnapshot().mainWagers.some(w => w.seat === 4)).toBe(false);
+  expect(c.getSnapshot().feedback).toBe('Not enough available credits.');
+});
+
+it('[M9-014] Deal Again clears optional stakes and preserves exact balances/history without reset', () => {
+  const c = createBrowserController({ playerMode: true, seed: 7 });
+  c.dispatch({ type: 'MAIN', seat: 4, amount: 200 }); c.dispatch({ type: 'SIDE', kind: 'PAIR', amount: 10 }); c.dispatch({ type: 'BACK', seat: 1, amount: 20 });
+  c.dispatch({ type: 'DEAL', amount: 200 }); c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+  const done = c.getSnapshot(); expect(done.phase).toBe('COMMITTED');
+  c.dispatch({ type: 'NEXT' });
+  expect(c.getSnapshot().human).toEqual(done.human); expect(c.getSnapshot().sideWagers).toEqual([]); expect(c.getSnapshot().backWagers).toEqual([]);
+  expect(c.getSnapshot().lastBet).toBe(200); expect(c.getSnapshot().audit.slice(0, done.audit.length)).toEqual(done.audit);
+  expect(c.getSnapshot().audit.some(e => e.type === 'SESSION_RESET')).toBe(false);
+});
+
+it('[M9-015] compound Deal and Repeat reserve complete journal capacity before any mutation', () => {
+  const recorder = replayModule.createReplaySession(7); const factory = vi.spyOn(replayModule, 'createReplaySession').mockReturnValue(recorder);
+  try {
+    const c = createBrowserController({ playerMode: true, seed: 7 });
+    const cap = vi.spyOn(recorder, 'hasCapacity').mockImplementation((n = 1) => n < 5);
+    const before = c.getSnapshot(); expect(c.dispatch({ type: 'DEAL', amount: 200 })).toBe(false);
+    expect(c.getSnapshot()).toEqual({ ...before, feedback: expect.stringContaining('command limit reached') }); cap.mockRestore();
+    c.dispatch({ type: 'DEAL', amount: 200 }); c.dispatch({ type: 'ACT', action: 'STAND', handId: c.getSnapshot().interaction.handId });
+    const finished = c.getSnapshot(); const p = c.exportReplay();
+    const cap2 = vi.spyOn(recorder, 'hasCapacity').mockImplementation((n = 1) => n < 11);
+    expect(c.dispatch({ type: 'REPEAT' })).toBe(false);
+    expect(c.getSnapshot()).toEqual({ ...finished, feedback: expect.stringContaining('command limit reached') });
+    expect(c.exportReplay()).toEqual(p); cap2.mockRestore();
+  } finally { factory.mockRestore(); }
+});
+
 it('[M9-001] player shell opens own betting table; manual callers retain configuration', () => {
   const c = createBrowserController({ playerMode: true, seed: 7 });
   const v = c.getSnapshot();

@@ -13,6 +13,8 @@ import { createAuditTrail, type Clock } from '../domain/audit.js';
 export type BrowserCommand =
   | { type: 'CONFIGURE'; seats: readonly SeatState[] }
   | { type: 'OPEN' | 'CLOSE' | 'ADVANCE' | 'NEXT' }
+  | { type: 'DEAL'; amount: number }
+  | { type: 'REPEAT' }
   | { type: 'MAIN'; seat: number; amount: number }
   | { type: 'SIDE'; kind: SideWagerType; amount: number }
   | { type: 'BACK'; seat: number; amount: number }
@@ -45,6 +47,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   let replayResult: ReturnType<typeof replay> | null = null;
   let replayFailed = false;
   let feedback = '';
+  let lastBet = 0;
   let shoeMessage = '6-deck persistent shoe';
   function project() {
     const view = getPublicBehindView(state);
@@ -63,7 +66,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
           : view.round.phase === 'ROUND_COMPLETE' ? 'Dealer complete' : 'Revealed' },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
-    return { playerMode, profileId: state.table.profileId, seeded: session !== null,
+    return { playerMode, lastBet, profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
         || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0)
         || (playerMode && state.table.phase === 'OPEN' && state.table.roundNumber === 1
@@ -90,19 +93,36 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     if (result.ok) state = result.state;
     return result;
   }
-  function dispatch(command: BrowserCommand) {
+  function dispatch(command: BrowserCommand): boolean {
     // Reserve the whole browser intent before mutation, including automatic
     // ADVANCE and SETTLE/VOID. Manual mode keeps its accepted two-slot boundary.
     const progresses = ['CLOSE', 'ACT', 'ACE', 'FOLLOW'].includes(command.type);
-    const capacity = playerMode ? command.type === 'NEXT' ? 7 : progresses ? 4 : 2 : 2;
+    const capacity = playerMode ? command.type === 'REPEAT' ? 11 : command.type === 'DEAL' ? 5 : command.type === 'NEXT' ? 7 : progresses ? 4 : 2 : 2;
     if (session && !session.hasCapacity(capacity)) {
       feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
+    }
+    if (command.type === 'DEAL' || command.type === 'REPEAT') {
+      if (!playerMode || (command.type === 'REPEAT' && (!lastBet || !snapshot.interaction.nextRound))
+        || (command.type === 'DEAL' && state.table.phase !== 'OPEN')) {
+        feedback = explainReason('WRONG_PHASE'); publish(); return false;
+      }
+      const amount = command.type === 'DEAL' ? command.amount : lastBet;
+      if (command.type === 'REPEAT' && !dispatch({ type: 'NEXT' })) return false;
+      const seat = snapshot.human?.controlledSeat;
+      // Zero is a domain cancellation command, never a valid player Deal.
+      const error = amount === 0 ? 'INVALID_MAIN_WAGER' : game.getBehindWagerError(state, { type: 'MAIN', seat: seat ?? 4, amount });
+      if (error) { feedback = explainReason(error); publish(); return false; }
+      return dispatch({ type: 'MAIN', seat: seat ?? 4, amount }) && dispatch({ type: 'CLOSE' });
+    }
+    if (playerMode && command.type === 'CLOSE' && !state.table.wagers.some(w => w.seatNumber === snapshot.human?.controlledSeat)) {
+      feedback = 'Choose your main wager before dealing.'; publish(); return false;
     }
     const previousShoe = state.table.game.shoe.shoeId;
     const result = invoke(command);
     if (result.ok) {
       replayResult = null;
       replayFailed = false;
+      if (command.type === 'CLOSE' && playerMode) lastBet = state.table.wagers.find(w => w.seatNumber === snapshot.human?.controlledSeat)?.stakeUnits ?? 0;
       if (command.type === 'CLOSE') shoeMessage = previousShoe === state.table.game.shoe.shoeId ? 'Existing 6-deck shoe continues' : 'New 6-deck shoe shuffled';
       feedback = command.type === 'FOLLOW' && state.followDecisions.at(-1)?.fundingError ? explainReason('INSUFFICIENT_FUNDS') : '';
       if (state.table.phase === 'CLOSED' && state.table.game.round?.phase === 'ROUND_COMPLETE') {
@@ -129,7 +149,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
     const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
-    replayResult = null; replayFailed = false; feedback = ''; shoeMessage = 'New demo session: starting credits restored';
+    replayResult = null; replayFailed = false; feedback = ''; lastBet = 0; shoeMessage = 'New demo session: starting credits restored';
     publish(); if (playerMode) preparePlayerTable(); return true;
   }
   function preparePlayerTable() {
