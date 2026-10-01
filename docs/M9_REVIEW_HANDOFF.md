@@ -2,7 +2,7 @@
 
 M9 NOT ACCEPTED. Genuinely fresh independent review NOT RUN in this implementation session. No deployment. M1-M8 HUMAN ACCEPTED; M8 accepted SHA `8f5aca327f41f1078fc4fef20b611fd9cd494492`, owner-reported final independent NO FINDINGS, MEDIUM-05 CLOSED, all earlier findings CLOSED. Historical M8 ledger `0,2,3,2,2,1,2,6,4` unchanged. Acceptance was recorded with substantive M9-T01, not a metadata-only commit.
 
-Recommended GPT Sol 6.1 / High. Actual model/effort NOT VERIFIED / NOT VERIFIED; no evidenced client switch. Current expected inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. [Executed evidence and failures](M9_EVIDENCE.md); inventory is not a PASS claim. T09 final official verification PASS; publication pending until the final receipt. Use the synchronized final main SHA from Git/delivery for review, not an intermediate checkpoint.
+Recommended GPT Sol 6.1 / High. Actual model/effort NOT VERIFIED / NOT VERIFIED; no evidenced client switch. Current expected inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. [Executed evidence and failures](M9_EVIDENCE.md); inventory is not a PASS claim. T09 final official verification PASS; implementation published fc5cbd687a14e0e1eb1fae0ee6830e139397fe06 at2026-10-01 22:35:03 +08:00, main=origin/main,0/0,clean/full untracked empty. Use the synchronized final main SHA from Git/delivery for review, not an intermediate checkpoint.
 
 ## Scope and implementation
 
@@ -22,9 +22,9 @@ Deal Again retains funds/shoe and opens betting; Repeat Bet explicitly deals the
 | M9-T06 | 72f31b8b5fa06d3b7e24112c4d4fa370f67ece68 | 0 |
 | M9-T07 | 508f3baae963c65ab62ffba1a9be5bf0851b2184 | 2 |
 | M9-T08 | 3bf59fd83df6988096f4dd70b08603046b4e330e | 1 |
-| M9-T09 | Final receipt in Git/delivery after normal commit/push | 5 |
+| M9-T09 | fc5cbd687a14e0e1eb1fae0ee6830e139397fe06 | 5 |
 
-T01-T08 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. T09 IMPLEMENTED / VERIFIED; publication pending. All published receipts checked main/origin parity0/0 and a clean full-untracked tree. Final T09 SHA cannot be embedded in itself; Git and final delivery give its exact immutable identity. No additional acceptance/deployment is implied.
+T01-T09 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Final factual documentation receipt has no executable/test/runtime change; its final SHA is in Git/delivery. All published receipts checked main/origin parity0/0 and a clean full-untracked tree. Final T09 SHA cannot be embedded in itself; Git and final delivery give its exact immutable identity. No additional acceptance/deployment is implied.
 
 ## Review procedure
 
