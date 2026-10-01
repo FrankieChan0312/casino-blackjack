@@ -2,7 +2,7 @@
 
 House Rules v1.2 amendment: [RA1 contract](RA1_CONTRACT.md), [execution evidence](RA1_EVIDENCE.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
-RA1 progress: T01..T02 COMMITTED / PUSHED; T03 IMPLEMENTED / VERIFIED; T04..T05 pending. Repair ledger T01..T05 `2,0,1,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+RA1 progress: T01..T03 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T03 generated artifact receipt pending; T04..T05 pending. Repair ledger T01..T05 `2,0,2,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
 
 Historical M9/M8 records below retain their original version, inventory and review boundaries; they are not current RA1 claims.
 
@@ -337,3 +337,5 @@ Official final receipt harness#3 powershell.exe -NoProfile -ExecutionPolicy Bypa
 2026-10-02 00:22:31 +08:00 — T03 repair 1/10: first Chromium run 2 PASS/1 FAIL; programmatic focus after mouse input did not request CSS focus-visible. Hypothesis: use actual Tab navigation to verify keyboard modality rather than weakening the solid-outline assertion. Targeted test change; all 3 Chromium PASS/0 after repair, including focus/Enter/Soft12, three viewports/44px/no overflow, automatic unavailable/cap completion. Typecheck and 22 affected Vitest PASS/0 before E2E. Official harness follows.
 
 2026-10-02 00:26:11 +08:00 — T03 official verify.ps1 PASS/0: 71 Vitest files/1005 tests, 58 Chromium; all required typecheck/lint/domain/build/fixture exclusion and independent M1-M8 preservation PASS. M9 flow/automatic guest wagers/progression/Repeat/Deal Again/tools/responsive/accessibility retained; intentional current profile/action availability changes only. RSA desktop/mobile screenshots visually inspected; no portfolio artifact changes. Task diff/whitespace reviewed PASS; publication follows.
+
+2026-10-02 00:28:30 +08:00 — T03 repair 2/10: publication 9a1ce9c029377ae52a70eccab0b6b6bdf924129d reached origin/main parity0/0 but left one known harness-generated m9-tools.png modified. The earlier no-artifact-change statement was incomplete: M8 portfolio images were unchanged; M9 tools now show V1.2 selection/digest. Hypothesis confirmed by visual inspection and M9-E04 targeted PASS/0 regeneration with identical SHA256 4cfecbfb580871d4533e018200817d824ebe016a198396f18594f732c5ac6a00. Publish this artifact and factual correction in a supplemental checkpoint; original reviewed image remains in baseline Git history. No source/test/runtime change since full PASS.
