@@ -24,6 +24,7 @@ export function fixtureState(ranks: readonly Rank[]): game.BehindGameState {
 }
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
+  if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   const scenarios: Record<string, readonly Rank[]> = {
     setup: ['5', '6', '6', 'K', '2', '7'], basic: ['5', '6', '6', 'K', '2', '7'],
     poor: ['5', '6', '6', 'K', '2', '7'], split: ['8', '9', '8', 'K', '3', '4', '5'],

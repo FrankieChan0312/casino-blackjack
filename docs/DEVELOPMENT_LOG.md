@@ -2061,3 +2061,15 @@ Initial full typecheck FAIL TS18048: test hasCapacity optional argument possibly
 ### 2026-10-01 21:15:59 +08:00 - M9-T04 VERIFIED; repairs 1/10
 
 Final exact-version owner verify.ps1 PASS/0:67/966 Vitest,44 Chromium and all M1-M7 preservation including24Chromium, typecheck/lint/domain isolation/build/fixture exclusion PASS. Full diff reviewed; diff --check PASS; no executable/test changes after final verification. Human Insurance/follow pauses, replay real command completeness, capacity pre-mutation guard, fault VOID/terminal once all PASS. No accepted domain changes/blockers.
+
+### 2026-10-01 21:20:08 +08:00 - M9-T05 IMPLEMENTED; repairs 0/10
+
+T04 publication77055a247109ce8b50d5da02a5b7690c24d57c65 PASS push/fetch parity0/0 clean21:16:04. Player composition uses central Dealer, three occupied guests only, near-edge enlarged human cards and placeholder, action dock, compact credits and house inscription. Manual layout untouched; secret public Cards reused. Browser M9-E01 PASS1280x900/768x1024/320x720, own card larger/below Dealer, centered Dealer, hand-title/ACTIVE nonintersection, no horizontal overflow; Stand visible desktop. Typecheck PASS21:19:39. Full screenshots visually inspected; no clipping of table/labels. Betting/character/tool presentation intentionally belongs to remaining T06-T08. Repair0; full harness pending.
+
+### 2026-10-01 21:29:35 +08:00 - M9-T05 IMPLEMENTED; repairs 3/10
+
+First geometry PASS was insufficient: screenshot showed Seat6 after local because DOM sparse grid. Repair1 fixes guest row1/local row2 and duplicate focus target. Diagnostic coordinate logging revealed browser auto-scroll after betting; repair2 measures scroll0 and tightens metadata/header spacing; genuine action bottom1118 ->995, still FAIL. Read-only child-height diagnosis found guest227/local280. Repair3 lays cards and metadata side by side (single computer hand header redundant, accessible article label retained; multi-hands retain headers) and own header/wager same row. Current strong geometry PASS at all3widths; desktop action bottom853.375<=900 and all guests above own seat. Intermediate full harness PASS superseded by these source/test changes; final exact full rerun required. No assertions relaxed; manual accepted layout unchanged. Final desktop screenshot inspected.
+
+### 2026-10-01 21:32:00 +08:00 - M9-T05 VERIFIED; repairs 3/10
+
+Final exact-version owner verify.ps1 PASS/0:67/966 Vitest,45 Chromium (accepted44 plusM9-E01), typecheck/lint/domain/build/fixture exclusion and mandatory M1-M7+24browser preservation PASS. Strong three-viewport geometry and public-only screenshots PASS; final desktop image inspected after repair3. Full App/Table/CSS/test/fixture diff reviewed; diff --check PASS; domain EMPTY. Narrow phone keeps usable full controls with vertical scrolling; compact guests next T06.
