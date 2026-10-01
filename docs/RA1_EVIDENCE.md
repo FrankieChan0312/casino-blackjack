@@ -15,3 +15,7 @@ RA1-T01 IMPLEMENTED; official verification pending. Repairs T01..T05: `1,0,0,0,1
 RA1-T01 repair 2/10: task-diff check found three modified Markdown hard-break lines with trailing whitespace in RULES/SPEC. Hypothesis: retaining the old two-space hard-break style violates git diff --check on changed lines. Removed only those three trailing spaces; recheck required. No executable change.
 
 2026-10-02 00:06:47 +08:00 — RA1-T01 official verify.ps1 PASS/0: 69 Vitest files/979 tests; 55 Chromium; typecheck/lint/domain/build/fixture exclusion and all independent M1-M8 preservation PASS. Same-session task diff reviewed; no unrelated changes. Historical test assertions retained. Final whitespace recheck follows; no executable changes after harness. Normal publication authorized to origin/main.
+
+2026-10-02 00:11:24 +08:00 — T01 publication PASS/0: 68172e89db45fcdb61d04e977267cae22518a372 on main, normal push/fetch, HEAD=origin/main,0/0,clean/full untracked empty. T02 begins from this verified checkpoint; shared pure Ace eligibility and authoritative Hit/Stand/Split validation are the only domain changes. Explicit RSA-001..021 plus funding/turn examples added.
+
+2026-10-02 00:17:46 +08:00 — T02 official verify.ps1 PASS/0: 70 files/1002 Vitest tests, 55 Chromium, all typecheck/lint/domain/build and independent M1-M8 preservation PASS. 23 domain RSA tests PASS on first validation (T02 0/10). Task diff and whitespace PASS. Only advancedGame.ts behavior changed; normal publication follows.

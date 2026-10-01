@@ -2,7 +2,7 @@
 
 House Rules v1.2 amendment: [RA1 contract](RA1_CONTRACT.md), [execution evidence](RA1_EVIDENCE.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
-RA1 progress: RA1-T01 IMPLEMENTED / VERIFIED; T02..T05 pending except T05 baseline repair. Repair ledger T01..T05 `2,0,0,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
+RA1 progress: T01 COMMITTED / PUSHED; T02 IMPLEMENTED / VERIFIED; T03..T05 pending. Repair ledger T01..T05 `2,0,0,0,1` (each /10). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
 
 Historical M9/M8 records below retain their original version, inventory and review boundaries; they are not current RA1 claims.
 

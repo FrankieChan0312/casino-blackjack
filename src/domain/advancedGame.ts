@@ -1,8 +1,8 @@
 import * as betting from './bettingGame.js';
-import { CLASSIC, getProfile, type ProfileId } from './profile.js';
+import { CLASSIC, getProfile, allowsResplitAces, type ProfileId } from './profile.js';
 import type { PhysicalCard } from './card.js';
 import { computerDecision } from './computer.js';
-import { isBankroll, isCreditUnits } from './credits.js';
+import { isBankroll, isCreditUnits, type Bankroll } from './credits.js';
 import { dealerShouldHit } from './dealer.js';
 import type { OutcomeReason, RoundOutcome } from './game.js';
 import { evaluateHand, isNaturalBlackjack } from './hand.js';
@@ -123,6 +123,16 @@ function replaceHand(state: AdvancedGameState, hand: AdvancedHand): AdvancedGame
   return { ...state, game: { ...state.game, round: { ...round,
     players: round.players.map((entry) => entry.handId === hand.handId ? hand : entry) } } };
 }
+// Activation eligibility only; handlers separately validate current turn/owner.
+// Reuse this pure check with the actual participant funds in the M6 adapter.
+export function canResplitAceHand(profileId: ProfileId, hand: AdvancedHand,
+  leaves: readonly AdvancedHand[], bankroll: Bankroll): boolean {
+  return allowsResplitAces(profileId) && hand.splitAces && !hand.decisionTaken
+    && hand.cards.length === 2 && hand.cards.every(card => card.rank === 'A')
+    && leaves.filter(entry => entry.rootHandId === hand.rootHandId).length < 4
+    && isBankroll(bankroll) && isCreditUnits(hand.stakeUnits) && hand.stakeUnits > 0
+    && isCreditUnits(bankroll.reserved + hand.stakeUnits) && bankroll.available >= hand.stakeUnits;
+}
 function selectNextHand(state: AdvancedGameState): AdvancedGameState {
   const round = state.game.round!;
   const current = round.players.find((hand) => !hand.complete);
@@ -131,10 +141,13 @@ function selectNextHand(state: AdvancedGameState): AdvancedGameState {
     const next = { ...state, game: { ...state.game, shoe: draw.shoe } };
     if (!draw.ok) return integrityFailure(next, draw.error);
     const cards = [...current.cards, draw.card];
-    // Activate one child at a time. Split Aces/ordinary 21 end decisions,
-    // but remain ordinary hands requiring shared dealer comparison.
-    return selectNextHand(replaceHand(next, { ...current, cards,
-      complete: current.splitAces || evaluateHand(cards).isTwentyOne }));
+    const supplemented = { ...current, cards };
+    // A legal V1.2 A,A pauses for SPLIT/STAND. All other Split-Ace hands
+    // complete after this supplement, without asking for a redundant Stand.
+    return selectNextHand(replaceHand(next, { ...supplemented,
+      complete: current.splitAces
+        ? !canResplitAceHand(state.profileId, supplemented, round.players, state.bankrolls[current.seatNumber - 1])
+        : evaluateHand(cards).isTwentyOne }));
   }
   return { ...state, game: { ...state.game, round: { ...round,
     currentSeat: current?.seatNumber ?? null, currentHandId: current?.handId ?? null,
@@ -167,11 +180,11 @@ function applyAction(state: AdvancedGameState, action: 'HIT' | 'STAND' | 'DOUBLE
   return selectNextHand(replaceHand(next, hand));
 }
 export function hitAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
-  const error = humanError(state, seatNumber, handId);
+  const error = getAdvancedActionError(state, seatNumber, handId, 'HIT');
   return error ? { ok: false, state, error } : { ok: true, state: applyAction(state, 'HIT') };
 }
 export function standAdvancedHand(state: AdvancedGameState, seatNumber: number, handId: string): AdvancedResult {
-  const error = humanError(state, seatNumber, handId);
+  const error = getAdvancedActionError(state, seatNumber, handId, 'STAND');
   return error ? { ok: false, state, error } : { ok: true, state: applyAction(state, 'STAND') };
 }
 function additionalFundingError(state: AdvancedGameState, hand: AdvancedHand): string | undefined {
@@ -193,12 +206,16 @@ export function getAdvancedActionError(state: AdvancedGameState, seatNumber: num
   if (error) return error;
   const round = state.game.round!;
   const hand = round.players.find((entry) => entry.handId === handId)!;
+  if (action === 'HIT' && hand.splitAces) return 'HIT_NOT_ALLOWED';
+  if (action === 'STAND' && hand.splitAces
+    && !canResplitAceHand(state.profileId, hand, round.players, state.bankrolls[seatNumber - 1])) return 'STAND_NOT_ALLOWED';
   if (action === 'DOUBLE') {
     if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces || evaluateHand(hand.cards).total >= 21) return 'DOUBLE_NOT_ALLOWED';
     return additionalFundingError(state, hand);
   }
   if (action === 'SPLIT') {
-    if (hand.cards.length !== 2 || hand.decisionTaken || hand.splitAces) return 'SPLIT_NOT_ALLOWED';
+    if (hand.cards.length !== 2 || hand.decisionTaken) return 'SPLIT_NOT_ALLOWED';
+    if (hand.splitAces && (!allowsResplitAces(state.profileId) || !hand.cards.every(card => card.rank === 'A'))) return 'SPLIT_NOT_ALLOWED';
     const [first, second] = hand.cards;
     const tens = ['10', 'J', 'Q', 'K'];
     if (first.rank !== second.rank && !(tens.includes(first.rank) && tens.includes(second.rank))) return 'UNEQUAL_SPLIT_VALUE';
@@ -273,7 +290,7 @@ export function advanceAdvancedTable(state: AdvancedGameState, observe?: Compute
   while (next.game.round!.phase === 'PLAYER_TURN') {
     const hand = next.game.round!.players.find((entry) => entry.handId === next.game.round!.currentHandId)!;
     if (hand.controller === 'HUMAN') return { ok: true, state: next };
-    const action = computerDecision(evaluateHand(hand.cards));
+    const action = hand.splitAces ? 'STAND' : computerDecision(evaluateHand(hand.cards));
     next = applyAction(next, action);
     // Observe the actual policy decision, not automatic child supplement cards.
     observe?.(Object.freeze({ action, seatNumber: hand.seatNumber, handId: hand.handId, stakeUnits: hand.stakeUnits }));
