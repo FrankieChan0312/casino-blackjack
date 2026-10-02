@@ -1,7 +1,7 @@
 import type { BrowserView } from '../browser/controller.js';
 import { credits, resultLabel, handLabel } from './presentation.js';
 import { CasinoPerson } from './CasinoPerson.js';
-import type { CharacterLineup } from '../presentation/characters.js';
+import { character, type CharacterLineup } from '../presentation/characters.js';
 
 type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
 const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
@@ -23,13 +23,23 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
     {view.playerMode && <p className="table-inscription" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>}
     <div className="seats">{view.configuration.filter(seat => !view.playerMode || seat.occupancy !== 'EMPTY').map((seat) => {
       const local = seat.seatNumber === view.human?.controlledSeat;
+      const avatarId = lineup && (local ? lineup.human : lineup.guests[seat.seatNumber]);
+      const avatar = avatarId ? character(avatarId) : undefined;
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
       return <section key={seat.seatNumber} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
-        {view.playerMode && !local && <CasinoPerson kind={seat.seatNumber === 3 ? 'gown' : seat.seatNumber === 6 ? 'tux' : 'suit'} />}
-        <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
-        <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
-        <p className="wager-chip">MAIN: {credits(wager)} credits</p>
+        {avatar ? <div className="character-identity">
+          <img src={avatar.portrait} width={60} height={80} alt={`${local ? 'Your avatar' : 'Computer guest'}: ${avatar.name}, ${avatar.archetype}`} />
+          <div><h2 aria-label={avatar.name}>{avatar.name}</h2><p className="character-archetype">{avatar.archetype}</p>
+            <p className="character-controller">Seat {seat.seatNumber} · {local ? 'You · Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}
+              <span className="wager-chip">MAIN: {credits(wager)} credits</span></p>
+          </div>
+        </div> : <>
+          {view.playerMode && !local && <CasinoPerson kind={seat.seatNumber === 3 ? 'gown' : seat.seatNumber === 6 ? 'tux' : 'suit'} />}
+          <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
+          <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
+          <p className="wager-chip">MAIN: {credits(wager)} credits</p>
+        </>}
         {view.playerMode && local && !hands.length && <div className="empty-hand"><div className="cards" aria-hidden="true"><span className="card card-back">♠</span><span className="card card-back">♠</span></div><p>Your cards will be dealt here.</p></div>}
         {view.playerMode && !local && <details className="guest-mobile-cards"><summary>Cards{hands[0] && ` · ${hands[0].total}`}</summary>
           {hands.map(hand => <div key={hand.handId}><p>{handLabel(hand.handId)} · Total: {hand.total} · {hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : 'Playing'}</p><Cards cards={hand.cards} /></div>)}

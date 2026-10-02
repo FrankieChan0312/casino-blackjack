@@ -2,7 +2,7 @@
 
 M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 technically reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Earlier delivery blocks below preserve their historical status.
 
-PA1 is the authorized presentation-only [Fantasy Character Presentation Pack contract](docs/PA1_CONTRACT.md). T01 IMPLEMENTED / VERIFIED: all twelve canonical source portraits passed the [mechanical and individual visual audit](docs/PA1_ASSET_AUDIT.md), including transparent Noble replacements, and the complete official harness passed. Normal publication pending; production conversion and new character UI are not implemented yet. Source PNGs are preserved unchanged in `art/source/characters/PA1_character_sources`; no domain/gameplay change.
+PA1 is the authorized presentation-only [Fantasy Character Presentation Pack contract](docs/PA1_CONTRACT.md). T01-T04 are verified and published; T05 seat presentation is implemented and verified, publication pending. All twelve transparent sources passed the [individual audit](docs/PA1_ASSET_AUDIT.md), including Noble replacements, and are preserved unchanged in `art/source/characters/PA1_character_sources`. The [deterministic pipeline](docs/PA1_ASSET_PIPELINE.md) produces portraits. Player Mode defaults to Roland, with a secondary Change Character picker and three unique fantasy guests. Normal rounds preserve identities; character changes leave gameplay/replay untouched. T06 responsive/accessibility verification and T07 fresh-review handoff follow. PA1 review NOT RUN.
 
 <!-- END CURRENT PA1 -->
 
@@ -20,7 +20,7 @@ Records below preserve their historical versions, inventories, review boundaries
 
 # Casino Blackjack
 
-Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three evening-attire computer guests are already present. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
+Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
 
 **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
 

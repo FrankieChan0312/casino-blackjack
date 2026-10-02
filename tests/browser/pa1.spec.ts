@@ -54,3 +54,32 @@ test('[PA1-E02] changing avatars leaves seeded replay commands gameplay digest f
   expect(results[2]).toBe(results[0]); expect(results[3]).toBe(results[1]);
   expect(receipts[1]).not.toMatch(/character|Caelan|Lucien|Borin/);
 });
+test('[PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards', async ({ page }) => {
+  const roster = [
+    ['elf_male','Caelan','Male Elf'],['elf_female','Elaria','Female Elf'],
+    ['knight_male','Roland','Male Human Knight'],['knight_female','Seraphine','Female Human Knight'],
+    ['mage_male','Alaric','Male Mage'],['mage_female','Nyra','Female Mage'],
+    ['noble_male','Lucien','Male Noble'],['noble_female','Celestine','Female Noble'],
+    ['halforc_male','Garruk','Male Half-Orc Warrior'],['halforc_female','Vesha','Female Half-Orc Warrior'],
+    ['dwarf_male','Borin','Male Dwarf'],['dwarf_female','Brynja','Female Dwarf'],
+  ];
+  await page.goto('/?fixture=player'); await deal(page);
+  const hand = page.locator('#player-hand'), cards = await hand.locator('.cards').innerHTML();
+  for (const [id,name,archetype] of roster) {
+    await choose(page,id);
+    await expect(hand.getByRole('heading',{name,exact:true})).toBeVisible();
+    await expect(hand.locator('.character-archetype')).toHaveText(archetype);
+    await expect(hand.locator('.character-controller')).toContainText('Seat 4 · You · Human');
+    const portrait = hand.getByRole('img',{name:`Your avatar: ${name}, ${archetype}`,exact:true});
+    await expect(portrait).toBeVisible(); await expect(portrait).toHaveAttribute('src',`/characters/${id}.png`);
+    await expect(portrait).toHaveJSProperty('naturalWidth',240); await expect(portrait).toHaveJSProperty('naturalHeight',320);
+    expect(await hand.locator('.cards').innerHTML()).toBe(cards);
+    const ids = await lineup(page); expect(new Set(ids).size).toBe(4);
+  }
+  await expect(page.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+  for (const seat of [1,3,6]) {
+    const guest = page.getByRole('region',{name:`Seat ${seat}`,exact:true});
+    await expect(guest.getByRole('img',{name:/^Computer guest: /})).toBeVisible();
+    await expect(guest.locator('.character-controller')).toContainText(`Seat ${seat} · Computer`);
+  }
+});

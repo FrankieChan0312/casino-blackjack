@@ -9,8 +9,8 @@ Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](P
 | PA1-T01 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 48f0a45de08d87ff4952c3d8342ed65b6bb671a2; main parity0/0/clean | 1 |
 | PA1-T02 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED f757b5f125f5395527de671a0682478a46af05eb; parity0/0/clean | 1 |
 | PA1-T03 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 3f3f664054a69e6bab1d87109626678ff2767899; parity0/0/clean | 2 |
-| PA1-T04 | IMPLEMENTED / VERIFIED;76/1031 Vitest,60 Chromium and complete independent preservation PASS; publication pending | 3 |
-| PA1-T05 | NOT RUN; T04 dependency | 0 |
+| PA1-T04 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 246a5c21d8a2df2829d396bad93a18642577ee6e; parity0/0/clean | 3 |
+| PA1-T05 | IMPLEMENTED / VERIFIED; 1031 Vitest /61 Chromium PASS; publication pending; prior unexplained FAIL retained; repair2 log EOF whitespace | 2 |
 | PA1-T06 | NOT RUN; T05 dependency | 0 |
 | PA1-T07 | NOT RUN; T06 dependency | 0 |
 

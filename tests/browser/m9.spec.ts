@@ -40,7 +40,7 @@ test('[M9-E02] original characters and compact mobile public guest cards retain 
   await page.setViewportSize({ width: 320, height: 720 }); await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/?fixture=player');
   await expect(page.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
-  await expect(page.getByRole('img', { name: 'Original illustrated computer guest in evening attire', exact: true })).toHaveCount(3);
+  await expect(page.getByRole('img', { name: /^Computer guest: / })).toHaveCount(3);
   await deal(page); await page.evaluate(() => scrollTo(0, 0));
   const guest = page.getByRole('region', { name: 'Seat 1', exact: true });
   await expect(guest.locator('.guest-mobile-cards')).not.toHaveAttribute('open', '');
@@ -129,7 +129,7 @@ test('[M9-E06] keyboard can wager, reach visible focus, stand and start another 
 test('[M9-E07] unconfigured default opens player table and own betting with closed secondary tools', async ({ page }) => {
   await page.goto('/'); await expect(page.locator('.player-mode')).toBeVisible();
   await expect(page.getByRole('region', { name: 'Table setup', exact: true })).toHaveCount(0);
-  await expect(page.getByRole('img', { name: 'Original illustrated computer guest in evening attire', exact: true })).toHaveCount(3);
+  await expect(page.getByRole('img', { name: /^Computer guest: / })).toHaveCount(3);
   await expect(page.locator('.developer-tools')).not.toHaveAttribute('open', '');
   await expect(page.getByRole('region', { name: 'Your credits', exact: true })).toContainText('1,000');
   await expect(page.getByLabel('Your main wager', { exact: false })).toHaveValue('25');

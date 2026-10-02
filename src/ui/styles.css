@@ -264,3 +264,21 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .guest-mobile-cards summary { font-size: .65rem; padding: 6px 0; min-height: 44px; }
   .player-mode .guest-mobile-cards .cards { padding: 5px 0; }
 }
+
+.player-mode .character-identity { display: flex; align-items: center; gap: 10px; min-height: 80px; }
+.player-mode .character-identity img { width: 60px; height: 80px; object-fit: contain; flex: 0 0 auto; }
+.player-mode .character-identity > div { min-width: 0; }
+.player-mode .character-identity h2 { display: block; margin: 0; }
+.player-mode .character-identity p { margin: 2px 0; }
+.player-mode .character-archetype { color: #d5dfc6; font-size: .7rem; }
+.player-mode .character-controller { font-size: .65rem; }
+.player-mode .character-controller .wager-chip { margin-left: 8px; }
+.player-mode .local .character-identity { justify-content: center; min-height: 64px; }
+.player-mode .local .character-identity img { width: 48px; height: 64px; }
+@media (max-width: 600px) {
+  .player-mode .seat:not(.local) .character-identity { flex-direction: column; gap: 2px; text-align: center; }
+  .player-mode .seat:not(.local) .character-identity img { width: 42px; height: 56px; }
+  .player-mode .character-archetype, .player-mode .character-controller { font-size: .6rem; }
+  .player-mode .character-controller .wager-chip { display: block; margin: 4px 0; }
+  .player-mode .local .character-identity img { width: 32px; height: 43px; }
+}
