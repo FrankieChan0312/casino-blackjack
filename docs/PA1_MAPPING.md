@@ -1,6 +1,6 @@
 # PA1 requirement-to-evidence mapping
 
-PA1 remains HUMAN ACCEPTED: NO. M9 HUMAN ACCEPTED: NO. Deployment NOT RUN. Fresh independent review NOT RUN. T01-T06 published; T07 IMPLEMENTED / VERIFIED, normal publication pending. Final official76/1031/63 and M1-M8 PASS; source/production receipt equality and pinned12/12 byte reproduction PASS. [Task contracts](PA1_CONTRACT.md), [executed evidence](PA1_EVIDENCE.md), [source audit](PA1_ASSET_AUDIT.md).
+PA1 remains HUMAN ACCEPTED: NO. M9 HUMAN ACCEPTED: NO. Deployment NOT RUN. Fresh independent review NOT RUN; handoff PREPARED. T01-T07 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T07 checkpoint9d1fa1a333aa1f3940333dc16f82b41ff6042734,parity0/0/clean at2026-10-03 00:18:45 +08:00. Final official76/1031/63 and M1-M8 PASS; source/production receipt equality and pinned12/12 byte reproduction PASS. STOP for genuinely fresh review. [Task contracts](PA1_CONTRACT.md), [executed evidence](PA1_EVIDENCE.md), [source audit](PA1_ASSET_AUDIT.md).
 
 | Requirement / task | Independent check / artifact |
 | --- | --- |

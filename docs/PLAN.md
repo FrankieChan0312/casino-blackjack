@@ -12,7 +12,7 @@ Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](P
 | PA1-T04 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 246a5c21d8a2df2829d396bad93a18642577ee6e; parity0/0/clean | 3 |
 | PA1-T05 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED bf2666e740354982e73bc0941acaf026952b69ab; parity0/0/clean; prior unexplained FAIL retained | 2 |
 | PA1-T06 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 34b5dfdf6a308f7e07e2762182ac135dcb114bef; parity0/0/clean | 0 |
-| PA1-T07 | IMPLEMENTED / VERIFIED; official1031/63 and M1-M8 PASS; asset receipts/reproductionPASS; normal publication pending | 2 |
+| PA1-T07 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 9d1fa1a333aa1f3940333dc16f82b41ff6042734; parity0/0/clean; fresh-review handoff PREPARED, review NOT RUN; STOP | 2 |
 
 Owner staging update recorded at 2026-10-02 20:18:08 +08:00: sources will be provided in `C:\Users\user\Documents\GitHub\casino-blackjack\art\source\characters`, using each canonical ID as a `.png` filename. Preserve uncommitted T01 work; STOP and wait for the complete set, then resume the existing T01 audit including both Nobles. Do not start T02. Availability is not a repair cycle. No incomplete task is declared VERIFIED / COMMITTED / PUSHED.
 
