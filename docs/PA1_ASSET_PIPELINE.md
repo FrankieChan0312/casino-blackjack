@@ -9,8 +9,9 @@ Fixed tools: Node v24.19.0, Playwright 1.63.0, bundled Chromium 153.0.8010.12. T
 ```powershell
 node scripts/build-character-assets.mjs
 node scripts/build-character-assets.mjs --check
+node scripts/verify-character-assets.mjs
 ```
 
-The first command writes `public/characters/<canonical-id>.png` and [source/output/version receipts](../art/character-production.json). The second generates every image again with the pinned tools, compares exact PNG bytes and the complete receipt, and writes nothing. Run the second command after generation and at final verification. Both commands preserve all source files. Reproducibility is defined for these exact pinned tools; a tool upgrade requires a separately reviewed receipt change.
+The first command writes `public/characters/<canonical-id>.png` and [source/output/version receipts](../art/character-production.json). The second generates every image again with the pinned tools, compares exact PNG bytes and the complete receipt, and writes nothing. Run the second command after generation and at final verification. The third combines full source and decoded-production mechanical receipt equality with that pinned reproduction, without writes. All commands preserve sources. Reproducibility is defined for these exact pinned tools; an upgrade requires a separately reviewed receipt change.
 
 T02 acceptance requires successful commands with checked exit codes, all twelve production portraits visually inspected on light/felt backgrounds, original source hashes unchanged, and official engineering/diff verification. The renderer is an offline asset tool; production gameplay never runs conversion or reads original files. No source file is replaced or hidden with CSS.

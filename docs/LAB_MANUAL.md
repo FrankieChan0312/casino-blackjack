@@ -1,4 +1,16 @@
-## Current RA1 delivery
+## Current PA1 delivery
+
+M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+T01-T06 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; latest checkpoint34b5dfdf6a308f7e07e2762182ac135dcb114bef,main=origin/main,0/0,clean including untracked at2026-10-02 23:57:24 +08:00. T07 IMPLEMENTED / VERIFIED; normal publication pending. Final official verify.ps1 PASS/0 inspected2026-10-03 00:11:43 +08:00: **76 Vitest files / 1031 tests**, **1 Chromium project / 63 tests**, all engineering gates and independent accepted M1-M8 preservation, including956/44 accepted M8. M9/RA1 all current checks PASS. Source/production receipts and pinned byte reproduction12/12 PASS; all21 inspected screenshot hashes unchanged. Full final output PA1_T07_VERIFY.log; prior failed execution PA1_T07_FAILED_VERIFY.log retained. PA1 genuinely fresh independent review NOT RUN. Repair ledger T01..T07 `1,1,2,3,2,0,2`; historical ledgers unchanged.
+
+Presentation only: twelve passed transparent canonical sources, pinned reproducible240x320 production portraits, Roland default, secondary native Change Character selector, unique automatic guests excluding the human, collision exchange, lineup retention through normal rounds. Dealer independent. `src/domain` diff EMPTY; gameplay RNG, replay commands/digests/semantics, outcome audit and computer policy unchanged. [Contract](PA1_CONTRACT.md), [preservation proof](PA1_PRESERVATION.md), [test mapping](PA1_MAPPING.md), [inspected screenshots](PA1_SCREENSHOTS.md), [fresh-review handoff](PA1_REVIEW_HANDOFF.md).
+
+Earlier delivery statements and inventories below preserve their historical versions; this current block supersedes their status claims. Existing rules/spec/design requirements continue to apply.
+
+## Historical task evidence
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
@@ -1880,3 +1892,10 @@ A200-unit stake requires exactly200 additional units (100 credits);199 units is 
 Real baseline fixtures at seed4689 preserve V1.1 full results/digests9ecbae88/e22e082f. V1.2 RSA has A4/A4/AK versus dealer21 and gross0/0/200, digests5c1e4984/0f67b47b. A rejected Hit plus subsequent legal RSA yields the same accepted package/result as a run without the rejection, while audit retains rejection evidence.
 
 Observed test failures were repaired from explicit evidence: MODE removes the seed, so a test requiring an active round needs a deterministic non-natural reset shoe; programmatic focus after mouse input does not test keyboard focus-visible; seed21 yields4+5+5+4+3=21, so Classic completes too, without a Charlie result. Fixed inventory/source-immutability checks require a documented historical boundary for an authorized amendment, while all original gameplay assertions still run. Mechanical PASS/publication are separate from fresh review and owner acceptance. [RA1 handoff](RA1_REVIEW_HANDOFF.md).
+## 37. PA1 presentation isolation and reproducible evidence
+
+A character is table-local presentation state. Its independent crypto chooser is separate from the gameplay random stream; deterministic tests inject fixed choices. Sampling without replacement excludes the human; choosing a guest's identity swaps that guest to the previous human rather than rerolling other guests. Normal round transitions retain state. A browser-local successful-session marker allows a fresh lineup without entering gameplay journals/digests/audit outcomes. Exact controller-source comparison after three marker inserts and full seeded replay JSON equality make that boundary reviewable.
+
+Production art needs two gates: individual original mechanical/visual audit, then pinned derivative reproduction. An alpha channel can be fully opaque; count actual transparent pixels. Decode PNG CRC/inflate/unfilter and compare decoded pixel hashes as well as file hashes to reject duplicate disguises. Preserve original provenance rather than attaching its signature to transformed pixels. Uniform contain on a transparent240x320 canvas avoids scene masking or character cropping, with fixed tools/output budgets and read-only byte-reproduction checks. Availability is not a failed repair.
+
+Verification failures remain evidence. T05's initial official nonzero exit lacks preserved failing-browser detail; later bounded diagnostics and captured official PASS do not establish its cause. Retain the failure, capture complete output and hand the unresolved history to a genuinely new reviewer. Mechanical verification, normal publication, independent review, human acceptance and deployment remain separate events. [PA1 mapping](PA1_MAPPING.md), [fresh review](PA1_REVIEW_HANDOFF.md).

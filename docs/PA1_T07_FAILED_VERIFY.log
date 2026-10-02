@@ -1,0 +1,519 @@
+Running: npm run typecheck
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+PASS: typecheck
+Running: npm run lint
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint
+Running: npm run test
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/unit/portfolio.test.ts (2 tests | 1 failed) 28ms
+   × README runnable commands match package scripts and required verification tools 18ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/portfolio.test.ts > README runnable commands match package scripts and required verification tools
+AssertionError: expected '## Current PA1 work\n\nM1-M8 and RA1 …' to contain 'REG-M8-001..096'
+
+- Expected
++ Received
+
+- REG-M8-001..096
++ ## Current PA1 work
++
++ M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 technically reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Earlier delivery blocks below preserve their historical status.
++
++ PA1 is the presentation-only [Fantasy Character Presentation Pack](docs/PA1_CONTRACT.md). T01-T06 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T07 final evidence/publication pending. All twelve transparent sources passed the [individual audit](docs/PA1_ASSET_AUDIT.md), including Noble replacements, and remain unchanged in `art/source/characters/PA1_character_sources`. The [pinned pipeline](docs/PA1_ASSET_PIPELINE.md) reproduces240x320 portraits. Player Mode defaults to Roland, with a secondary native Change Character selector and unique automatic guests. Normal rounds preserve identities; changing to a guest's character exchanges only that guest with your previous avatar. Dealer independent. Domain/gameplay RNG/replay/digests/computer strategy unchanged. Current inventory **76 Vitest files / 1031 tests**, **1 Chromium project / 63 tests**; T06 official PASS. [Evidence](docs/PA1_EVIDENCE.md), [screenshots](docs/PA1_SCREENSHOTS.md), [fresh-review handoff](docs/PA1_REVIEW_HANDOFF.md). PA1 review NOT RUN. Recommended GPT Sol6.1/High; actual runtime NOT VERIFIED. Historical delivery blocks below preserve their earlier versions.
++
++ <!-- END CURRENT PA1 -->
++
++ ## Historical RA1 delivery
++
++ House Rules v1.2 / Re-split Aces: [contract](docs/RA1_CONTRACT.md), [mapping](docs/RA1_MAPPING.md), [evidence](docs/RA1_EVIDENCE.md), [fresh-session handoff](docs/RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
++
++ RA1-T01..T05 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Final code/test checkpoint `1fc211a3b92aa095bc9d37de63e2f967a0a52ad4` published on main; normal push/fetch PASS/0 at 2026-10-02 00:52:21 +08:00, main=origin/main,0/0,clean/full untracked empty. Final evidence-only receipt SHA is identified by Git/final delivery. Official final harness PASS/0 at 2026-10-02 00:47:18 +08:00; complete Vitest/Chromium and accepted M1-M8 preservation PASS. Same-session task diff reviewed; genuinely fresh independent review remains pending. RA1 repair ledger T01..T05 `2,0,2,1,1` (each /10); historical M8 `0,2,3,2,2,1,2,6,4` and M9 `0,2,1,1,3,0,2,1,5` unchanged. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
++
++ Current inventory: **73 Vitest files / 1020 tests**, **1 Chromium project / 58 tests**; **30 uniquely mapped RSA regressions** plus additional preservation/contract/UI checks. Inventory is not execution evidence; checked results are in RA1_EVIDENCE. Default normal Player Mode: CLASSIC_6D_S17_V1_2. Supported: CLASSIC_6D_S17_V1_1, CHARLIE5_6D_S17_V1_1 (RSA OFF), CLASSIC_6D_S17_V1_2, CHARLIE5_6D_S17_V1_2 (RSA ON). Replay schema/RNG/digest/audit versions unchanged.
++
++ Records below preserve their historical versions, inventories, review boundaries and failed attempts; earlier M9 fresh-review NOT RUN statements are superseded by the supplied NO FINDINGS review at the baseline. They do not describe RA1 behavior or accept M9/RA1.
++
++ <!-- END CURRENT RA1 -->
++
++ # Casino Blackjack
++
++ Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
++
++ **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
++
++ ![Player table with central dealer, guests and first-person cards](docs/images/m9-table-1280.png)
++
++ ## Current M9 delivery
++
++ M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
++
++ M9-T01..T09 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Stop at the fresh-session review gate. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
++
++ Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](docs/M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](docs/M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
++
++ T09 implementation published on main at fc5cbd687a14e0e1eb1fae0ee6830e139397fe06, normal push/fetch PASS at 2026-10-01 22:35:03 +08:00, main=origin/main,0/0,clean/full untracked empty. This final documentation receipt changes no executable/test/dependency/runtime settings; its own final SHA is recorded in Git/delivery.
++
++ <!-- END CURRENT M9 -->
++
++ ## Play locally
++
++ Requires Node.js/npm and Windows PowerShell for the official harness.
++
++ ```powershell
++ npm.cmd ci
++ npx.cmd playwright install chromium
++ npm.cmd run dev
++ ```
++
++ Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
++
++ The normal table uses **House Rules v1.2 / Classic**, with Re-split Aces. A Split-Ace hand receives one supplement. If it is A+A and funds/cap permit, choose **Split** or **Stand to keep Soft 12**. Otherwise it completes automatically. Hit, Double and Surrender remain unavailable; A+ten is ordinary 21. Historical v1.1 profiles remain available in secondary demo settings and preserve old replay behavior.
++
++ **Deal Again** opens betting with the same balances and shoe. **Repeat Bet** explicitly deals the last original main amount; it does not repeat side/back/Insurance stakes or Double/Split exposure. An unaffordable repeat is disabled. Optional own side/back wagers are under **Optional wagers**. Guests fund 25 credits from their own existing balance, use smaller whole-credit stakes when needed, or sit out below the minimum.
++
++ **Developer / demo tools** starts closed. Expand it for seed/profile settings, public Audit, finalized seeded Replay, or a deliberate manual demo with explicit configuration/wagering/progression. Changing modes or starting a new demo is labelled as a credit reset. Active/funded player rounds cannot reset. A refresh starts over; no session is persisted.
++
++ ## Verification
++
++ ```powershell
++ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
++ git diff --check
++ git status --short --untracked-files=all
++ ```
++
++ The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current PA1 inventory76files/1031Vitest/63Chromium. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
++
++ ## Profiles and engineering
++
++ Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split Aces, Late Surrender, separate Pair / THREE_CARD / Insurance / Even Money and Bet Behind. The optional Five-Card Charlie Demo is explicitly selected: a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1. It is a custom demo profile.
++
++ | Supported profile | Charlie | Re-split Aces |
++ | --- | --- | --- |
++ | `CLASSIC_6D_S17_V1_1` | OFF | DISABLED |
++ | `CHARLIE5_6D_S17_V1_1` | ON | DISABLED |
++ | `CLASSIC_6D_S17_V1_2` (normal Player Mode) | OFF | ENABLED |
++ | `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
++
++ Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. Original code-native SVG characters use no external art or real-person references. Keyboard focus, semantic cards, live feedback, reduced motion and 320px layouts have automated coverage.
++
++ No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).
++
+
+ ❯ tests/unit/portfolio.test.ts:24:18
+     22|   expect(existsSync('scripts/verify.ps1')).toBe(true);
+     23|   expect(existsSync('tests/browser/portfolio.spec.ts')).toBe(true);
+     24|   expect(readme).toContain('REG-M8-001..096');
+       |                  ^
+     25|   expect(readme).toContain('a legal Hit that brings the hand to exactl…
+     26|   expect(readme).not.toMatch(/fifth (?:legal )?Hit/);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 75 passed (76)
+      Tests  1 failed | 1030 passed (1031)
+   Start at  00:04:10
+   Duration  10.15s (tests 77%, import 16%, transform 6%, worker 1%)
+
+    Isolate  76 workers spawned · ~257ms startup each (spawn + environment, per file)
+             at least ~2.54s faster with isolate: false — reuses workers across files instead of one per file
+
+FAIL: test (exit 1)
+Running: npm run typecheck:domain
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain
+Running: npm run build
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 50 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.28 kB
+dist/assets/index-l9KJleTs.css   18.58 kB │ gzip:  4.90 kB
+dist/assets/index-DTL-LVvw.js   318.73 kB │ gzip: 95.29 kB
+
+✓ built in 165ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build
+Running: npm run test:e2e
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:6604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 63 tests using 1 worker
+
+(node:32392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (1.7s)
+  ✓   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (880ms)
+  ✓   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (647ms)
+  ✓   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (646ms)
+  ✓   5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (941ms)
+  ✓   6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (760ms)
+  ✓   7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (742ms)
+  ✓   8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (620ms)
+  ✓   9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (736ms)
+  ✓  10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (753ms)
+  ✓  11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (685ms)
+  ✓  12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (633ms)
+  ✓  13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (722ms)
+  ✓  14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (758ms)
+  ✓  15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (673ms)
+  ✓  16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (824ms)
+  ✓  17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (751ms)
+  ✓  18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (639ms)
+  ✓  19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (577ms)
+  ✓  20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (598ms)
+  ✓  21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (837ms)
+  ✓  22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (952ms)
+  ✓  23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (805ms)
+  ✓  24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (898ms)
+  ✓  25 [chromium] › tests\browser\m8.spec.ts:11:1 › [REG-M8-079] Classic five-card hand has no Charlie result and can continue (776ms)
+  ✓  26 [chromium] › tests\browser\m8.spec.ts:15:1 › [REG-M8-080] Charlie profile is selected explicitly before seeded play (829ms)
+  ✓  27 [chromium] › tests\browser\m8.spec.ts:21:1 › [REG-M8-081] five-card Charlie presents normal 1:1 return and ends actions (845ms)
+  ✓  28 [chromium] › tests\browser\m8.spec.ts:26:1 › [REG-M8-082] fifth-card 21 says Charlie Win rather than Blackjack (859ms)
+  ✓  29 [chromium] › tests\browser\m8.spec.ts:30:1 › [REG-M8-083] profile and seed controls cannot change during active hidden-card round (869ms)
+  ✓  30 [chromium] › tests\browser\m8.spec.ts:34:1 › [REG-M8-084] same seeded browser run reproduces public cards and terminal return (1.9s)
+  ✓  31 [chromium] › tests\browser\m8.spec.ts:40:1 › [REG-M8-085] replay JSON is available only at finalized seeded boundary and removed on next round (1.2s)
+  ✓  32 [chromium] › tests\browser\m8.spec.ts:46:1 › [REG-M8-086] completed replay reproduces result, is clearly marked and preserves original (1.2s)
+  ✓  33 [chromium] › tests\browser\m8.spec.ts:51:1 › [REG-M8-087] public audit displays ordered attribution UTC amounts refunds and pre-round seat occupancy (2.6s)
+  ✓  34 [chromium] › tests\browser\m8.spec.ts:83:1 › [REG-M8-088] active audit leaks no known hole identity, physical ID, seed or future shoe (585ms)
+  ✓  35 [chromium] › tests\browser\m8.spec.ts:88:1 › [REG-M8-089] active seeded DOM and accessible output omit seed value and replay package (926ms)
+  ✓  36 [chromium] › tests\browser\m8.spec.ts:93:1 › [REG-M8-090] M8 tools and replay JSON remain usable at 320px without overflow (1.2s)
+  ✓  37 [chromium] › tests\browser\m8.spec.ts:100:1 › [REG-M8-091] keyboard opens advanced settings, chooses profile and starts seeded session (560ms)
+{"viewport":{"width":1280,"height":900},"dealer":{"x":490,"y":179.421875,"width":300,"height":142.78125},"own":{"x":289.984375,"y":553.203125,"width":700,"height":236.3125},"action":{"x":458,"y":835.515625,"width":116,"height":52}}
+{"viewport":{"width":768,"height":1024},"dealer":{"x":234,"y":174.421875,"width":300,"height":142.78125},"own":{"x":45,"y":600.21875,"width":677.984375,"height":236.3125},"action":{"x":202,"y":885.53125,"width":116,"height":52}}
+{"viewport":{"width":320,"height":720},"dealer":{"x":23,"y":154.34375,"width":274,"height":142.78125},"own":{"x":23,"y":561.65625,"width":274,"height":276.171875},"action":{"x":116.65625,"y":872.828125,"width":86.671875,"height":44}}
+  ✓  38 [chromium] › tests\browser\m9.spec.ts:8:1 › [M9-E01] first-person cards stay near player and center dealer without overlap on desktop tablet mobile (3.4s)
+  ✓  39 [chromium] › tests\browser\m9.spec.ts:39:1 › [M9-E02] original characters and compact mobile public guest cards retain reduced motion and secrecy (736ms)
+  ✓  40 [chromium] › tests\browser\m9.spec.ts:54:1 › [M9-E03] own wager deals once, auto settles, repeats original amount and opens fresh betting (1.7s)
+  ✓  41 [chromium] › tests\browser\m9.spec.ts:78:1 › [M9-E04] tools start collapsed and seeded replay audit remain deliberately reachable (1.4s)
+  ✓  42 [chromium] › tests\browser\m9.spec.ts:104:1 › [M9-E05] deliberate manual demo keeps configuration and explicit progress, then returns to player table (786ms)
+  ✓  43 [chromium] › tests\browser\m9.spec.ts:114:1 › [M9-E06] keyboard can wager, reach visible focus, stand and start another round without computer friction (989ms)
+  ✓  44 [chromium] › tests\browser\m9.spec.ts:129:1 › [M9-E07] unconfigured default opens player table and own betting with closed secondary tools (1.1s)
+  ✓  45 [chromium] › tests\browser\m9.spec.ts:142:1 › [M9-E08] player Ace decision stays explicit, hidden state stays secret even in expanded audit (1.1s)
+  ✓  46 [chromium] › tests\browser\m9.spec.ts:157:1 › [M9-E09] first-person split children remain distinct and automatically finish dealer on mobile (868ms)
+  ✓  47 [chromium] › tests\browser\m9.spec.ts:170:1 › [M9-E10] natural resolves without manual continue and pays accepted three-to-two return (864ms)
+  ✓  48 [chromium] › tests\browser\m9.spec.ts:179:1 › [M9-E11] exhausted human funds disable repeat and can deliberately start a new credited session (1.1s)
+  ✓  49 [chromium] › tests\browser\pa1.spec.ts:13:1 › [PA1-E01] non-blocking default, collision exchange and persistent guests across active play Repeat Bet and Deal Again (1.5s)
+  ✓  50 [chromium] › tests\browser\pa1.spec.ts:38:1 › [PA1-E02] changing avatars leaves seeded replay commands gameplay digest funds and audit outcomes identical (1.8s)
+  ✓  51 [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (3.5s)
+  ✓  52 [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (4.5s)
+  ✓  53 [chromium] › tests\browser\pa1.spec.ts:127:1 › [PA1-E05] failed portraits and 200 percent text enlargement retain readable character identity and playable controls (2.4s)
+{"fixture":"basic","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+  ✓  54 [chromium] › tests\browser\polish.spec.ts:3:1 › active hand title and ACTIVE badge occupy separate visible space on tablet desktop and mobile (1.3s)
+  ✓  55 [chromium] › tests\browser\polish.spec.ts:27:1 › polished desktop anchors dealer and seven seats above visible game controls, with secondary tools closed (737ms)
+  ✓  56 [chromium] › tests\browser\polish.spec.ts:46:1 › mobile puts current cards and actions first, keeps dealer in initial viewport and disables all motion on request (603ms)
+  ✓  57 [chromium] › tests\browser\polish.spec.ts:61:1 › wager chips select an amount without placing it, preserving explicit funded commands (678ms)
+  ✓  58 [chromium] › tests\browser\polish.spec.ts:71:1 › split children and Charlie retain distinct game-object markers and exact returns (1.3s)
+  ✓  59 [chromium] › tests\browser\polish.spec.ts:87:1 › moving the local seat preserves centered priority and seven-seat layout with all computers funded (1.5s)
+  ✓  60 [chromium] › tests\browser\portfolio.spec.ts:3:1 › reproducible portfolio screenshots show only public Classic, Charlie and replay/audit views (2.1s)
+  ✓  61 [chromium] › tests\browser\ra1.spec.ts:3:1 › RA1 browser RSA offers only legal choices and keyboard Stand declines to complete Soft 12 (1.1s)
+  ✓  62 [chromium] › tests\browser\ra1.spec.ts:19:1 › RA1 browser depth-first RSA remains readable with accessible 44px controls across viewport sizes (2.9s)
+  ✓  63 [chromium] › tests\browser\ra1.spec.ts:36:1 › RA1 browser unavailable funding and fourth-leaf cap finish A+A without redundant Stand friction (1.5s)
+
+  63 passed (1.3m)
+PASS: test:e2e
+2026-10-03 00:05:41 +08:00: independently rerunning M1 (12 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/dealerResolution.test.ts tests/integration/roundLifecycle.test.ts tests/unit/card.test.ts tests/unit/dealer.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/playerActions.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  12 passed (12)
+      Tests  155 passed (155)
+   Start at  00:05:42
+   Duration  3.05s (tests 74%, transform 14%, import 9%, worker 2%)
+
+PASS: M1 preservation
+2026-10-03 00:05:45 +08:00: independently rerunning M2 (6 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/computer.test.ts tests/unit/table.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  6 passed (6)
+      Tests  78 passed (78)
+   Start at  00:05:46
+   Duration  515ms (transform 53%, import 22%, tests 21%, worker 4%)
+
+PASS: M2 preservation
+2026-10-03 00:05:46 +08:00: independently rerunning M3 (5 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/betting.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/settlement.test.ts tests/unit/credits.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  5 passed (5)
+      Tests  72 passed (72)
+   Start at  00:05:47
+   Duration  471ms (transform 52%, import 24%, tests 21%, worker 3%)
+
+PASS: M3 preservation
+2026-10-03 00:05:48 +08:00: independently rerunning M4 (7 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  7 passed (7)
+      Tests  171 passed (171)
+   Start at  00:05:48
+   Duration  794ms (transform 45%, tests 31%, import 22%, worker 2%)
+
+PASS: M4 preservation
+2026-10-03 00:05:49 +08:00: independently rerunning M5 (8 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/unit/sideBets.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  8 passed (8)
+      Tests  168 passed (168)
+   Start at  00:05:50
+   Duration  1.08s (transform 55%, import 22%, tests 21%, worker 2%)
+
+PASS: M5 preservation
+2026-10-03 00:05:51 +08:00: independently rerunning M6 (9 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  9 passed (9)
+      Tests  181 passed (181)
+   Start at  00:05:52
+   Duration  934ms (transform 47%, import 28%, tests 22%, worker 2%)
+
+PASS: M6 preservation
+2026-10-03 00:05:53 +08:00: independently rerunning M7 (9 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts tests/integration/betting.test.ts tests/integration/browserController.test.ts tests/integration/dealerResolution.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/integration/roundLifecycle.test.ts tests/integration/settlement.test.ts tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/unit/browserHarness.test.ts tests/unit/browserRegression.test.ts tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/card.test.ts tests/unit/computer.test.ts tests/unit/credits.test.ts tests/unit/dealer.test.ts tests/unit/domainBoundary.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/playerActions.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/unit/sideBets.test.ts tests/unit/table.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  56 passed (56)
+      Tests  870 passed (870)
+   Start at  00:05:54
+   Duration  6.48s (tests 68%, import 19%, transform 11%, worker 2%)
+
+    Isolate  56 workers spawned · ~279ms startup each (spawn + environment, per file)
+             at least ~1.95s faster with isolate: false — reuses workers across files instead of one per file
+
+PASS: M7 preservation
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/accessibility.spec.ts tests/browser/gameplay.spec.ts
+
+[WebServer] (node:1776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:25556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (1.8s)
+  ✓   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (944ms)
+  ✓   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (705ms)
+  ✓   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (692ms)
+  ✓   5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (1.0s)
+  ✓   6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (813ms)
+  ✓   7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (776ms)
+  ✓   8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (647ms)
+  ✓   9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (752ms)
+  ✓  10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (800ms)
+  ✓  11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (711ms)
+  ✓  12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (670ms)
+  ✓  13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (778ms)
+  ✓  14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (842ms)
+  ✓  15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (720ms)
+  ✓  16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (847ms)
+  ✓  17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (809ms)
+  ✓  18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (665ms)
+  ✓  19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (614ms)
+  ✓  20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (639ms)
+  ✓  21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (883ms)
+  ✓  22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (1.0s)
+  ✓  23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (855ms)
+  ✓  24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (881ms)
+
+  24 passed (22.1s)
+PASS: M7 accepted Chromium inventory
+PASS: domain changes bounded to authorized RA1 modules; 66 Vitest / 5 browser source files and every original assertion preserved
+2026-10-03 00:06:26 +08:00: independently rerunning accepted M8 (66 files / 956 tests)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts tests/integration/audit.test.ts tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts tests/integration/betting.test.ts tests/integration/browserController.test.ts tests/integration/browserDemo.test.ts tests/integration/charlie.test.ts tests/integration/dealerResolution.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/m8Invariants.test.ts tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/integration/replay.test.ts tests/integration/roundLifecycle.test.ts tests/integration/settlement.test.ts tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/unit/browserHarness.test.ts tests/unit/browserRegression.test.ts tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/card.test.ts tests/unit/computer.test.ts tests/unit/credits.test.ts tests/unit/dealer.test.ts tests/unit/domainBoundary.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/m8Contract.test.ts tests/unit/m8Harness.test.ts tests/unit/m8Regression.test.ts tests/unit/playerActions.test.ts tests/unit/portfolio.test.ts tests/unit/profileRandom.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/unit/sideBets.test.ts tests/unit/table.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/unit/portfolio.test.ts (2 tests | 1 failed) 33ms
+   × README runnable commands match package scripts and required verification tools 23ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/portfolio.test.ts > README runnable commands match package scripts and required verification tools
+AssertionError: expected '## Current PA1 work\n\nM1-M8 and RA1 …' to contain 'REG-M8-001..096'
+
+- Expected
++ Received
+
+- REG-M8-001..096
++ ## Current PA1 work
++
++ M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 technically reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Earlier delivery blocks below preserve their historical status.
++
++ PA1 is the presentation-only [Fantasy Character Presentation Pack](docs/PA1_CONTRACT.md). T01-T06 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T07 final evidence/publication pending. All twelve transparent sources passed the [individual audit](docs/PA1_ASSET_AUDIT.md), including Noble replacements, and remain unchanged in `art/source/characters/PA1_character_sources`. The [pinned pipeline](docs/PA1_ASSET_PIPELINE.md) reproduces240x320 portraits. Player Mode defaults to Roland, with a secondary native Change Character selector and unique automatic guests. Normal rounds preserve identities; changing to a guest's character exchanges only that guest with your previous avatar. Dealer independent. Domain/gameplay RNG/replay/digests/computer strategy unchanged. Current inventory **76 Vitest files / 1031 tests**, **1 Chromium project / 63 tests**; T06 official PASS. [Evidence](docs/PA1_EVIDENCE.md), [screenshots](docs/PA1_SCREENSHOTS.md), [fresh-review handoff](docs/PA1_REVIEW_HANDOFF.md). PA1 review NOT RUN. Recommended GPT Sol6.1/High; actual runtime NOT VERIFIED. Historical delivery blocks below preserve their earlier versions.
++
++ <!-- END CURRENT PA1 -->
++
++ ## Historical RA1 delivery
++
++ House Rules v1.2 / Re-split Aces: [contract](docs/RA1_CONTRACT.md), [mapping](docs/RA1_MAPPING.md), [evidence](docs/RA1_EVIDENCE.md), [fresh-session handoff](docs/RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
++
++ RA1-T01..T05 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Final code/test checkpoint `1fc211a3b92aa095bc9d37de63e2f967a0a52ad4` published on main; normal push/fetch PASS/0 at 2026-10-02 00:52:21 +08:00, main=origin/main,0/0,clean/full untracked empty. Final evidence-only receipt SHA is identified by Git/final delivery. Official final harness PASS/0 at 2026-10-02 00:47:18 +08:00; complete Vitest/Chromium and accepted M1-M8 preservation PASS. Same-session task diff reviewed; genuinely fresh independent review remains pending. RA1 repair ledger T01..T05 `2,0,2,1,1` (each /10); historical M8 `0,2,3,2,2,1,2,6,4` and M9 `0,2,1,1,3,0,2,1,5` unchanged. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. RA1 fresh independent review NOT RUN.
++
++ Current inventory: **73 Vitest files / 1020 tests**, **1 Chromium project / 58 tests**; **30 uniquely mapped RSA regressions** plus additional preservation/contract/UI checks. Inventory is not execution evidence; checked results are in RA1_EVIDENCE. Default normal Player Mode: CLASSIC_6D_S17_V1_2. Supported: CLASSIC_6D_S17_V1_1, CHARLIE5_6D_S17_V1_1 (RSA OFF), CLASSIC_6D_S17_V1_2, CHARLIE5_6D_S17_V1_2 (RSA ON). Replay schema/RNG/digest/audit versions unchanged.
++
++ Records below preserve their historical versions, inventories, review boundaries and failed attempts; earlier M9 fresh-review NOT RUN statements are superseded by the supplied NO FINDINGS review at the baseline. They do not describe RA1 behavior or accept M9/RA1.
++
++ <!-- END CURRENT RA1 -->
++
++ # Casino Blackjack
++
++ Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
++
++ **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
++
++ ![Player table with central dealer, guests and first-person cards](docs/images/m9-table-1280.png)
++
++ ## Current M9 delivery
++
++ M1-M8 HUMAN ACCEPTED. M8 HUMAN ACCEPTED at `8f5aca327f41f1078fc4fef20b611fd9cd494492`; final independent review NO FINDINGS, MEDIUM-05 CLOSED, all previous findings CLOSED. The owner's explicit acceptance was recorded with substantive T01. M8 repair ledger `0,2,3,2,2,1,2,6,4` remains unchanged.
++
++ M9-T01..T09 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Stop at the fresh-session review gate. M9 NOT ACCEPTED. Fresh-session review NOT RUN. Deployment NOT RUN. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
++
++ Current suite inventory: **68 Vitest files / 978 tests**, **1 Chromium project / 55 tests**. Execution results and failures are recorded separately in [M9 evidence](docs/M9_EVIDENCE.md); inventory is not a PASS claim. [Fresh review pack](docs/M9_REVIEW_HANDOFF.md). M9 cumulative repair ledger: `0,2,1,1,3,0,2,1,5`.
++
++ T09 implementation published on main at fc5cbd687a14e0e1eb1fae0ee6830e139397fe06, normal push/fetch PASS at 2026-10-01 22:35:03 +08:00, main=origin/main,0/0,clean/full untracked empty. This final documentation receipt changes no executable/test/dependency/runtime settings; its own final SHA is recorded in Git/delivery.
++
++ <!-- END CURRENT M9 -->
++
++ ## Play locally
++
++ Requires Node.js/npm and Windows PowerShell for the official harness.
++
++ ```powershell
++ npm.cmd ci
++ npx.cmd playwright install chromium
++ npm.cmd run dev
++ ```
++
++ Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
++
++ The normal table uses **House Rules v1.2 / Classic**, with Re-split Aces. A Split-Ace hand receives one supplement. If it is A+A and funds/cap permit, choose **Split** or **Stand to keep Soft 12**. Otherwise it completes automatically. Hit, Double and Surrender remain unavailable; A+ten is ordinary 21. Historical v1.1 profiles remain available in secondary demo settings and preserve old replay behavior.
++
++ **Deal Again** opens betting with the same balances and shoe. **Repeat Bet** explicitly deals the last original main amount; it does not repeat side/back/Insurance stakes or Double/Split exposure. An unaffordable repeat is disabled. Optional own side/back wagers are under **Optional wagers**. Guests fund 25 credits from their own existing balance, use smaller whole-credit stakes when needed, or sit out below the minimum.
++
++ **Developer / demo tools** starts closed. Expand it for seed/profile settings, public Audit, finalized seeded Replay, or a deliberate manual demo with explicit configuration/wagering/progression. Changing modes or starting a new demo is labelled as a credit reset. Active/funded player rounds cannot reset. A refresh starts over; no session is persisted.
++
++ ## Verification
++
++ ```powershell
++ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
++ git diff --check
++ git status --short --untracked-files=all
++ ```
++
++ The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current PA1 inventory76files/1031Vitest/63Chromium. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
++
++ ## Profiles and engineering
++
++ Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split Aces, Late Surrender, separate Pair / THREE_CARD / Insurance / Even Money and Bet Behind. The optional Five-Card Charlie Demo is explicitly selected: a legal Hit that brings the hand to exactly five cards with a total of 21 or less wins 1:1. It is a custom demo profile.
++
++ | Supported profile | Charlie | Re-split Aces |
++ | --- | --- | --- |
++ | `CLASSIC_6D_S17_V1_1` | OFF | DISABLED |
++ | `CHARLIE5_6D_S17_V1_1` | ON | DISABLED |
++ | `CLASSIC_6D_S17_V1_2` (normal Player Mode) | OFF | ENABLED |
++ | `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
++
++ Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. Original code-native SVG characters use no external art or real-person references. Keyboard focus, semantic cards, live feedback, reduced motion and 320px layouts have automated coverage.
++
++ No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).
++
+
+ ❯ tests/unit/portfolio.test.ts:24:18
+     22|   expect(existsSync('scripts/verify.ps1')).toBe(true);
+     23|   expect(existsSync('tests/browser/portfolio.spec.ts')).toBe(true);
+     24|   expect(readme).toContain('REG-M8-001..096');
+       |                  ^
+     25|   expect(readme).toContain('a legal Hit that brings the hand to exactl…
+     26|   expect(readme).not.toMatch(/fifth (?:legal )?Hit/);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 65 passed (66)
+      Tests  1 failed | 955 passed (956)
+   Start at  00:06:27
+   Duration  10.82s (tests 78%, import 14%, transform 7%, worker 1%)
+
+    Isolate  66 workers spawned · ~306ms startup each (spawn + environment, per file)
+             at least ~2.58s faster with isolate: false — reuses workers across files instead of one per file
+
+FAIL: Accepted M8 Vitest preservation failed
+FAIL: preservation (exit 1)
+FAIL: engineering verification (exit 1)

@@ -1,4 +1,16 @@
-## Current RA1 delivery
+## Current PA1 delivery
+
+M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
+
+T01-T06 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; latest checkpoint34b5dfdf6a308f7e07e2762182ac135dcb114bef,main=origin/main,0/0,clean including untracked at2026-10-02 23:57:24 +08:00. T07 IMPLEMENTED / VERIFIED; normal publication pending. Final official verify.ps1 PASS/0 inspected2026-10-03 00:11:43 +08:00: **76 Vitest files / 1031 tests**, **1 Chromium project / 63 tests**, all engineering gates and independent accepted M1-M8 preservation, including956/44 accepted M8. M9/RA1 all current checks PASS. Source/production receipts and pinned byte reproduction12/12 PASS; all21 inspected screenshot hashes unchanged. Full final output PA1_T07_VERIFY.log; prior failed execution PA1_T07_FAILED_VERIFY.log retained. PA1 genuinely fresh independent review NOT RUN. Repair ledger T01..T07 `1,1,2,3,2,0,2`; historical ledgers unchanged.
+
+Presentation only: twelve passed transparent canonical sources, pinned reproducible240x320 production portraits, Roland default, secondary native Change Character selector, unique automatic guests excluding the human, collision exchange, lineup retention through normal rounds. Dealer independent. `src/domain` diff EMPTY; gameplay RNG, replay commands/digests/semantics, outcome audit and computer policy unchanged. [Contract](PA1_CONTRACT.md), [preservation proof](PA1_PRESERVATION.md), [test mapping](PA1_MAPPING.md), [inspected screenshots](PA1_SCREENSHOTS.md), [fresh-review handoff](PA1_REVIEW_HANDOFF.md).
+
+Earlier delivery statements and inventories below preserve their historical versions; this current block supersedes their status claims. Existing rules/spec/design requirements continue to apply.
+
+## Historical task evidence
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
@@ -41,3 +53,6 @@ The interface now gives play priority through a felt table, original vector patr
 ## Honest boundaries
 
 This is a local simulated-credit portfolio, with no accounts/persistence/network multiplayer, no real dealer connection, and no deployment in M9. Domain ADVANCE is atomic: computers/dealer resolve immediately between human decisions, without artificial per-card timing. Narrow mobile scrolls vertically and offers expandable guest cards. Visual enjoyment and interviewer readiness await owner judgment after a genuinely fresh independent review; automated verification alone does not answer those questions. [Human checklist](M9_VISUAL_CHECKLIST.md), [review handoff](M9_REVIEW_HANDOFF.md).
+## PA1 character demonstration
+
+Start normal Player Mode with default Roland and Deal directly. Open Change Character after the primary controls; select Celestine while a hand is active and observe unchanged cards/wagers/legal actions. Select an occupied guest identity to see the documented exchange and unique table roster. Finish Stand, Repeat Bet and Deal Again: guests retain identities. Explicit new demo session restores Roland and permits a new presentation lineup. Developer/demo tools still start collapsed; replay contains only accepted gameplay commands/digests. [Twelve character views](PA1_SCREENSHOTS.md), [preservation evidence](PA1_PRESERVATION.md), [independent review handoff](PA1_REVIEW_HANDOFF.md). These are simulated-credit local flows; no deployment is claimed.

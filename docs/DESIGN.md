@@ -2,7 +2,7 @@
 
 RA1 HUMAN ACCEPTED by explicit owner update supplied with PA1. M1-M8 HUMAN ACCEPTED; M9 HUMAN ACCEPTED: NO; PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Historical delivery records below retain their original review/acceptance evidence.
 
-Approved PA1 approach: isolated presentation manifest and chooser, stable table-local character identities, non-blocking human selection with collision exchange, public-only seat rendering and unchanged independent dealer. Character selection must not call the game controller or gameplay RNG, enter replay commands/digests or change outcome audit events. A deterministic source-to-production pipeline must preserve originals and reject art that fails mechanical/visual gates. [Contract](PA1_CONTRACT.md); [audit](PA1_ASSET_AUDIT.md). No implementation proceeds past the unavailable-source gate.
+Approved PA1 approach: isolated presentation manifest and browser crypto chooser, stable table-local character identities, non-blocking native human selection with collision exchange, public-only seat rendering and unchanged independent dealer. Character selection does not call the game controller or gameplay RNG, enter replay commands/digests or change outcome audit events. A pinned Canvas pipeline preserves originals and reproduces transparent240x320 PNGs; rejected art is never masked into compliance. T01-T06 verified/published; T07 IMPLEMENTED / VERIFIED; normal publication pending. Current inventory76 Vitest files/1031 tests/63 Chromium; fresh PA1 review NOT RUN. [Contract](PA1_CONTRACT.md), [audit](PA1_ASSET_AUDIT.md), [pipeline](PA1_ASSET_PIPELINE.md), [preservation](PA1_PRESERVATION.md). The source availability gate passed in T01.
 
 <!-- END CURRENT PA1 -->
 

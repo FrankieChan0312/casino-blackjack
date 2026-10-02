@@ -2,13 +2,13 @@
 
 Task: PA1-T01. Audit start: 2026-10-02 19:50:54 +08:00. Repository: `C:\Users\user\Documents\GitHub\casino-blackjack`.
 
-Current asset gate: PASS for all twelve staged sources after the resumed audit, 2026-10-02 21:33:22 +08:00. PA1-T01 IMPLEMENTED / VERIFIED after final official harness PASS/0 inspected21:43:19; publication pending. Actual originals are under the designated directory's `PA1_character_sources` child; preserve those paths and bytes. Prior staging/missing-source evidence below remains historical. Current T01 cumulative repairs1/10 for explicit Buffer import in the audit script; availability was not a repair cycle. Source gate itself required no repair.
+Current asset gate: PASS for all twelve staged sources after the resumed audit,2026-10-02 21:33:22 +08:00. PA1-T01 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at48f0a45de08d87ff4952c3d8342ed65b6bb671a2,parity0/0/clean21:45:08. Final T07 read-only full original/production receipt comparison and pinned derivative reproduction PASS at2026-10-03 00:03:08; originals unchanged from T01. Actual originals are under the designated directory's `PA1_character_sources` child; preserve paths/bytes. Prior staging/missing-source evidence below is historical. T01 cumulative repairs1/10 for explicit Buffer import; availability was not a repair. Source gate itself required no repair.
 
 Expected filenames: `elf_male.png`, `elf_female.png`, `knight_male.png`, `knight_female.png`, `mage_male.png`, `mage_female.png`, `noble_male.png`, `noble_female.png`, `halforc_male.png`, `halforc_female.png`, `dwarf_male.png`, `dwarf_female.png`.
 
 Initial checkpoint: no canonical character source files were found in the repository; source directory/generation direction had been requested before the owner supplied the staging instruction. The executed inventory and individual missing-source results below retain that initial evidence; no staged source has been inspected in this waiting update.
 
-## Executed inventory
+## Historical initial inventory and availability gate
 
 Mechanical repository inventory PASS (exit 0):
 

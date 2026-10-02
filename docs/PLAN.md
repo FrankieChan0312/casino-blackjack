@@ -11,8 +11,8 @@ Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](P
 | PA1-T03 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 3f3f664054a69e6bab1d87109626678ff2767899; parity0/0/clean | 2 |
 | PA1-T04 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 246a5c21d8a2df2829d396bad93a18642577ee6e; parity0/0/clean | 3 |
 | PA1-T05 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED bf2666e740354982e73bc0941acaf026952b69ab; parity0/0/clean; prior unexplained FAIL retained | 2 |
-| PA1-T06 | IMPLEMENTED / VERIFIED;1031 Vitest/63 Chromium +M1-M8 PASS; normal publication pending | 0 |
-| PA1-T07 | NOT RUN; T06 dependency | 0 |
+| PA1-T06 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 34b5dfdf6a308f7e07e2762182ac135dcb114bef; parity0/0/clean | 0 |
+| PA1-T07 | IMPLEMENTED / VERIFIED; official1031/63 and M1-M8 PASS; asset receipts/reproductionPASS; normal publication pending | 2 |
 
 Owner staging update recorded at 2026-10-02 20:18:08 +08:00: sources will be provided in `C:\Users\user\Documents\GitHub\casino-blackjack\art\source\characters`, using each canonical ID as a `.png` filename. Preserve uncommitted T01 work; STOP and wait for the complete set, then resume the existing T01 audit including both Nobles. Do not start T02. Availability is not a repair cycle. No incomplete task is declared VERIFIED / COMMITTED / PUSHED.
 
