@@ -52,6 +52,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   let replayFailed = false;
   let feedback = '';
   let lastBet = 0;
+  let presentationSession = 0;
   let shoeMessage = '6-deck persistent shoe';
   function project() {
     const view = getPublicBehindView(state);
@@ -70,7 +71,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
           : view.round.phase === 'ROUND_COMPLETE' ? 'Dealer complete' : 'Revealed' },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
-    return { playerMode, lastBet, profileId: state.table.profileId, seeded: session !== null,
+    return { playerMode, presentationSession, lastBet, profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
         || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0)
         || (playerMode && state.table.phase === 'OPEN' && state.human?.bankroll.reserved === 0
@@ -158,6 +159,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     if (seed !== undefined && !isSeed(seed)) { feedback = 'Choose an unsigned 32-bit integer seed.'; publish(); return false; }
     const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
     const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
+    presentationSession++;
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
     replayResult = null; replayFailed = false; feedback = ''; lastBet = 0; shoeMessage = 'New demo session: starting credits restored';
     publish(); if (playerMode) preparePlayerTable(); return true;

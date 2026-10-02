@@ -1,4 +1,4 @@
-import { useEffect, useSyncExternalStore } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 import type { BrowserController, BrowserView } from '../browser/controller.js';
 import { Table } from './Table.js';
 import { credits, roundStatus } from './presentation.js';
@@ -6,10 +6,12 @@ import { Setup, Betting, PlayerBetting } from './Betting.js';
 import { Actions } from './Actions.js';
 import { Decisions, Results } from './Decisions.js';
 import { DemoTools } from './DemoTools.js';
+import { createCharacterLineup, changeHumanCharacter, type PresentationChooser } from '../presentation/characters.js';
+import { CharacterPicker } from './CharacterPicker.js';
 
-export function App({ controller }: { controller: BrowserController }) {
+export function App({ controller, chooseCharacter }: { controller: BrowserController; chooseCharacter?: PresentationChooser }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
-  if (view.playerMode) return <PlayerExperience view={view} controller={controller} />;
+  if (view.playerMode) return <PlayerExperience view={view} controller={controller} chooseCharacter={chooseCharacter} />;
   return <main className={view.playerMode ? 'player-mode' : 'manual-mode'}>
     <a className="skip-link" href="#local-actions">Skip to your hand and actions</a>
     <header><p className="eyebrow">Seven seats · One dealer · Your table</p><h1>Casino Blackjack</h1>
@@ -32,7 +34,12 @@ export function App({ controller }: { controller: BrowserController }) {
   </main>;
 }
 
-function PlayerExperience({ view, controller }: { view: BrowserView; controller: BrowserController }) {
+function PlayerExperience({ view, controller, chooseCharacter }: { view: BrowserView; controller: BrowserController; chooseCharacter?: PresentationChooser }) {
+  const [presentation, setPresentation] = useState(() => ({ session: view.presentationSession,
+    lineup: createCharacterLineup([1,3,6],chooseCharacter) }));
+  if (presentation.session !== view.presentationSession) setPresentation({ session: view.presentationSession,
+    lineup: createCharacterLineup([1,3,6],chooseCharacter) });
+  const lineup = presentation.lineup;
   useEffect(() => {
     if (view.phase === 'OPEN' && !view.lastBet) return;
     const target = document.querySelector<HTMLElement>(view.phase === 'OPEN' ? '#player-wager' : view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
@@ -44,7 +51,7 @@ function PlayerExperience({ view, controller }: { view: BrowserView; controller:
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <p className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
     {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
-    <Table view={view} />
+    <Table view={view} lineup={lineup} />
     <div id="player-decisions" tabIndex={-1} className="player-dock">
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />
@@ -57,6 +64,8 @@ function PlayerExperience({ view, controller }: { view: BrowserView; controller:
       <Results view={view} controller={controller} />
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>
+    <CharacterPicker selected={lineup.human} onSelect={id => setPresentation(current => ({ ...current,
+      lineup: changeHumanCharacter(current.lineup,id) }))} />
     <details className="panel developer-tools"><summary>Developer / demo tools</summary>
       <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
     </details>

@@ -1,6 +1,7 @@
 import type { BrowserView } from '../browser/controller.js';
 import { credits, resultLabel, handLabel } from './presentation.js';
 import { CasinoPerson } from './CasinoPerson.js';
+import type { CharacterLineup } from '../presentation/characters.js';
 
 type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
 const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
@@ -8,7 +9,7 @@ export function Cards({ cards }: { cards: readonly PublicCard[] }) {
   return <div className="cards">{cards.map((card, index) => <span key={index} className={`card ${card.suit}`} role="img"
     aria-label={`${card.rank} of ${card.suit}`}><b>{card.rank}<small aria-hidden="true">{suitSymbols[card.suit]}</small></b><span className="card-pip" aria-hidden="true">{suitSymbols[card.suit]}</span><b className="card-corner" aria-hidden="true">{card.rank}</b></span>)}</div>;
 }
-export function Table({ view }: { view: BrowserView }) {
+export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   return <section aria-label="Blackjack table" className="table-surface">
@@ -24,7 +25,7 @@ export function Table({ view }: { view: BrowserView }) {
       const local = seat.seatNumber === view.human?.controlledSeat;
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
-      return <section key={seat.seatNumber} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      return <section key={seat.seatNumber} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {view.playerMode && !local && <CasinoPerson kind={seat.seatNumber === 3 ? 'gown' : seat.seatNumber === 6 ? 'tux' : 'suit'} />}
         <h2>Seat {seat.seatNumber}{local && ' · You'}</h2>
         <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
