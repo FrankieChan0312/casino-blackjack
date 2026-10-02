@@ -1,0 +1,11 @@
+# PA1 preservation boundaries
+
+PA1-T03 baseline2026-10-02 22:17:09 +08:00: main=origin/main=f757b5f125f5395527de671a0682478a46af05eb,0/0,clean including untracked. T02 normal publication PASS. Recommended GPT Sol6.1/High; actual model/effort NOT VERIFIED/NOT VERIFIED.
+
+Before adapting historical checks: M8 contract REG-M8-096 counts exactly66 accepted Vitest files/44 browser tests, excluding authorized M9/RA1 additions. New PA1 tests must likewise be excluded only from that historical inventory, while all original registrations/assertions remain executable. check-m8-preservation must mechanically strip only that explicit inventory adaptation before comparing all original bytes.
+
+RA1 inventory asserts73/1020/58, pre-acceptance documentation, reviewed M9 source equality and a six-file RA1 source whitelist. Those are RA1 delivery assertions; PA1 explicitly authorizes new presentation files/avatar labels, owner RA1 acceptance and added tests. Preserve every RA1 inventory assertion against the accepted PA1 pre-amendment SHA e8e8e2e1586611473f0cdb94540ce995d9bd64e7 with explicit historical file/directory/diff inputs. All other RA1 tests remain unchanged and run against current production. New PA1 preservation checks compare the adapter-stripped inventory test with that exact original, check every other existing test byte except separately documented visual label amendments, and require baseline domain diff EMPTY.
+
+Future T05 browser label amendment: exactly two M9 assertions count three evening-attire SVG guests. Replace only their image-name query with the authorized fantasy guest label query; count remains three and every other M9 assertion remains byte-identical. The RA1 historical input retains the original queries; PA1 mechanical comparison normalizes only those exact queries. Dealer image query remains unchanged. All current M9 browser tests still run, including layout/keyboard/secrecy/normal-flow assertions.
+
+No disabled tests, weaker assertions, global timeout/worker changes or accepted milestone count changes. Added PA1 tests have their own current inventory and execute in the official full suite. Domain bytes are the authoritative proof of unchanged cards/shoe/RNG/rules/policy/replay implementation; current replay digest, RNG-call and UI no-command checks supplement this boundary.

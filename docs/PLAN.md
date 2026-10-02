@@ -7,8 +7,8 @@ Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](P
 | Task | Current status | Repairs /10 |
 | --- | --- | --- |
 | PA1-T01 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 48f0a45de08d87ff4952c3d8342ed65b6bb671a2; main parity0/0/clean | 1 |
-| PA1-T02 | IMPLEMENTED / VERIFIED;240x320 derivatives reproduced/visually passed; normal publication pending | 1 |
-| PA1-T03 | NOT RUN; T02 dependency | 0 |
+| PA1-T02 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED f757b5f125f5395527de671a0682478a46af05eb; parity0/0/clean | 1 |
+| PA1-T03 | IMPLEMENTED / VERIFIED;75 files/1028 Vitest,58 Chromium and independent M1-M8 PASS; publication pending | 2 |
 | PA1-T04 | NOT RUN; T03 dependency | 0 |
 | PA1-T05 | NOT RUN; T04 dependency | 0 |
 | PA1-T06 | NOT RUN; T05 dependency | 0 |

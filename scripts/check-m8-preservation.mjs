@@ -26,6 +26,9 @@ for (const file of files) {
       .replace('    // RA1 owns its new scenarios; this remains the accepted M8 inventory.\n', '')
       .replace("    if (file === 'ra1.spec.ts') continue;\n", '')
       .replace(" && !/^ra1[\\\\/]/.test(file)", '')
+      .replace('    // PA1 owns its new scenarios; this remains the accepted M8 inventory.\n', '')
+      .replace("    if (file === 'pa1.spec.ts') continue;\n", '')
+      .replace(" && !/^pa1[\\\\/]/.test(file)", '')
       .replaceAll('readAcceptedM8(', 'readFileSync(');
   }
   assert.equal(current, baseline, `Accepted M8 test/assertion change: ${file}`);

@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import ts from 'typescript';
 
@@ -7,6 +7,19 @@ const baseline = '8326f846ad753b79fd8d35f76b00f28854e2f448';
 function git(...args: string[]) {
   return execFileSync('git',['-c',`safe.directory=${process.cwd().replaceAll('\\','/')}`,...args],{encoding:'utf8'}).replaceAll('\r\n','\n').trimEnd();
 }
+// BEGIN PA1 historical RA1 input adapter
+// Keep every RA1 delivery assertion at the accepted pre-PA1 boundary.
+// Current PA1 source/assertion and inventory checks live in tests/pa1.
+const ra1Sha = 'e8e8e2e1586611473f0cdb94540ce995d9bd64e7';
+function readFileSync(file: string, encoding: 'utf8') {
+  if (encoding !== 'utf8') throw new Error('Historical text input required');
+  return git('show',`${ra1Sha}:${file}`);
+}
+function readdirSync(directory: string, options?: { recursive: boolean }) {
+  return git('ls-tree','-r','--name-only',ra1Sha,directory).split('\n')
+    .map(file => file.slice(directory.length + 1)).filter(file => options?.recursive || !file.includes('/'));
+}
+// END PA1 historical RA1 input adapter
 const docs = ['README.md',...['STATE','PLAN','DEVELOPMENT_LOG','UX_UI','LAB_MANUAL','PORTFOLIO','SPEC','DESIGN','RA1_EVIDENCE','RA1_REVIEW_HANDOFF','RA1_MAPPING'].map(name=>`docs/${name}.md`)];
 function registrations(file: string, kind: 'it'|'test') {
   const titles: string[] = []; const source = ts.createSourceFile(file,readFileSync(file,'utf8'),ts.ScriptTarget.Latest,true);
@@ -50,5 +63,5 @@ it('RA1 mechanically preserves every reviewed M9 assertion except explicitly aut
   expect(documentation).toBe(git('show',`${baseline}:tests/m9/documentation.test.ts`));
   expect(readFileSync('tests/browser/m9.spec.ts','utf8').replaceAll('\r\n','\n').trimEnd()).toBe(git('show',`${baseline}:tests/browser/m9.spec.ts`));
   const allowed = ['src/domain/profile.ts','src/domain/advancedGame.ts','src/domain/behindController.ts','src/browser/controller.ts','src/ui/Actions.tsx','src/ui/DemoTools.tsx'];
-  for (const file of git('diff','--name-only',baseline,'--','src').split('\n').filter(Boolean)) expect(allowed).toContain(file);
+  for (const file of git('diff','--name-only',baseline,ra1Sha,'--','src').split('\n').filter(Boolean)) expect(allowed).toContain(file);
 });

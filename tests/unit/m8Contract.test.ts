@@ -41,6 +41,8 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     if (file === 'm9.spec.ts') continue;
     // RA1 owns its new scenarios; this remains the accepted M8 inventory.
     if (file === 'ra1.spec.ts') continue;
+    // PA1 owns its new scenarios; this remains the accepted M8 inventory.
+    if (file === 'pa1.spec.ts') continue;
     const source = ts.createSourceFile(file, readFileSync('tests/browser/' + file, 'utf8'), ts.ScriptTarget.Latest, true);
     function visit(node: ts.Node) {
       if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === 'test') {
@@ -54,7 +56,7 @@ it('[REG-M8-096] current review status and verification inventories agree with e
     }
     visit(source);
   }
-  const vitestFiles = readdirSync('tests', { recursive: true }).map(String).filter(file => /\.test\.tsx?$/.test(file) && !/^m9[\\/]/.test(file) && !/^ra1[\\/]/.test(file)).length;
+  const vitestFiles = readdirSync('tests', { recursive: true }).map(String).filter(file => /\.test\.tsx?$/.test(file) && !/^m9[\\/]/.test(file) && !/^ra1[\\/]/.test(file) && !/^pa1[\\/]/.test(file)).length;
   expect(vitestFiles).toBe(66);
   expect(chromiumTests).toBe(44);
   const expectedInventory = [vitestFiles, 956, 1, chromiumTests];
