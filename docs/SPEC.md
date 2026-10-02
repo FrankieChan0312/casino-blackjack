@@ -1,4 +1,12 @@
-## Current RA1 delivery
+## Current PA1 amendment
+
+The owner explicitly reports RA1 HUMAN ACCEPTED in the PA1 instruction. M1-M8 HUMAN ACCEPTED. M9 technically reviewed NO FINDINGS; M9 HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. This current status supersedes the historical RA1 acceptance status below without inventing independent RA1 review evidence.
+
+PA1 is authorized presentation-only scope: [contract and task acceptance criteria](PA1_CONTRACT.md), [source audit](PA1_ASSET_AUDIT.md). Canonical fantasy portraits/local avatar choice replace only guest presentation; dealer remains independent. Domain/rules/gameplay/RNG/funds/replay/audit outcomes/computer policy remain unchanged. All twelve staged source gates PASS; T01 final engineering verification pending, no production/UI implementation claimed.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 

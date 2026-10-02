@@ -1,4 +1,18 @@
-## Current RA1 delivery
+## Current PA1 work
+
+Owner explicitly reports RA1 HUMAN ACCEPTED in the PA1 instruction; recorded with substantive PA1-T01 contract/source inventory work. M1-M8 HUMAN ACCEPTED. M9 technically reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. This supersedes historical RA1 acceptance status below; RA1 fresh independent review is not claimed from an acceptance update alone.
+
+Baseline PASS: 2026-10-02 19:49:27 +08:00, `main`, HEAD = origin/main = `e8e8e2e1586611473f0cdb94540ce995d9bd64e7`, ahead/behind 0/0, clean including untracked. Initial sandbox Git reads were BLOCKED by ownership mismatch; owner-context read-only commands PASS, no Git configuration changes. Recommended GPT Sol 6.1 / High; actual client model/effort NOT VERIFIED / NOT VERIFIED.
+
+Existing PA1-T01 resumed at 2026-10-02 21:26:00 +08:00 after the owner supplied the complete set. Resume baseline main=HEAD=origin/main=e8e8e2e1586611473f0cdb94540ce995d9bd64e7,0/0; existing six modified/three new documents preserved plus twelve owner-staged sources in `art/source/characters/PA1_character_sources`. No unknown overlapping edits. All twelve mechanical and individual visual source gates PASS at21:33:22, including Lucien/Celestine transparent replacements with no old scene/banner/text. Originals unchanged; hashes/alpha/metadata/dimensions/duplicate checks in [asset audit](PA1_ASSET_AUDIT.md) and PA1_SOURCE_AUDIT.json. Python unavailable; native .NET decoder and Node PNG CRC/inflate/unfilter audit plus Chromium rendering were available and executed. No required tool blocker. PA1-T01 IMPLEMENTED / VERIFIED; final official harness PASS/0 inspected2026-10-02 21:43:19 +08:00,73 files/1020 Vitest,58 Chromium and complete independent M1-M8 preservation. Affected documentation5 tests PASS/0 at21:42:10; diff --check/source preservation PASS/0. No executable changes after successful final harness; only factual evidence follows. Normal T01 commit/push pending; T02..T07 NOT RUN. Fresh independent PA1 review NOT RUN. Availability did not count as a repair.
+
+Partial documentation checkpoint verification: official `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1` PASS/0, completion inspected 2026-10-02 19:58:09 +08:00; all 73 Vitest files/1020 tests, 58 Chromium and independent M1-M8 preservation PASS. M9/RA1 checks remain in the full current suite. Follow-up at 20:09:13: `git diff --check` PASS/0; exact baseline `src/tests/scripts/package.json/package-lock.json/docs/images` diff EMPTY/PASS/0. Domain diff EMPTY, replay/RNG/computer policy implementation bytes unchanged, existing replay digest regressions PASS. Full status contains only six intended modified documents plus two new PA1 documents. T01 individual asset validation and T02..T07 remain BLOCKED / NOT RUN; this harness result does not claim PA1 implementation completion.
+
+PA1 repair ledger T01..T07: `1,0,0,0,0,0,0` (each /10). T01 repair1 at2026-10-02 21:35:54 +08:00: initial official lint FAIL/1 on three Buffer no-undef uses in new read-only audit script; hypothesis that explicit node:buffer import resolves the repository ESLint environment. Targeted import only; lint/audit-output and final harness revalidation required. Availability gates did not count as repairs. Historical RA1 `2,0,2,1,1`, M9 `0,2,1,1,3,0,2,1,5`, M8 `0,2,3,2,2,1,2,6,4` unchanged.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 

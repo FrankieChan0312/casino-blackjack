@@ -1,4 +1,26 @@
-## Current RA1 delivery
+## Current PA1 work
+
+Owner explicitly reports RA1 HUMAN ACCEPTED; recorded with the substantive PA1-T01 character contract/source audit. M1-M8 HUMAN ACCEPTED; M9 reviewed NO FINDINGS, HUMAN ACCEPTED: NO; PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Historical RA1 acceptance status below is superseded; no independent RA1 review is invented.
+
+Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](PA1_CONTRACT.md). Source dependency: [PA1_ASSET_AUDIT](PA1_ASSET_AUDIT.md). Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED. Domain diff must remain EMPTY.
+
+| Task | Current status | Repairs /10 |
+| --- | --- | --- |
+| PA1-T01 | IMPLEMENTED / VERIFIED; all twelve source gates and final official harness PASS/0; normal publication pending | 1 |
+| PA1-T02 | NOT RUN; source gate dependency | 0 |
+| PA1-T03 | NOT RUN; T02 dependency | 0 |
+| PA1-T04 | NOT RUN; T03 dependency | 0 |
+| PA1-T05 | NOT RUN; T04 dependency | 0 |
+| PA1-T06 | NOT RUN; T05 dependency | 0 |
+| PA1-T07 | NOT RUN; T06 dependency | 0 |
+
+Owner staging update recorded at 2026-10-02 20:18:08 +08:00: sources will be provided in `C:\Users\user\Documents\GitHub\casino-blackjack\art\source\characters`, using each canonical ID as a `.png` filename. Preserve uncommitted T01 work; STOP and wait for the complete set, then resume the existing T01 audit including both Nobles. Do not start T02. Availability is not a repair cycle. No incomplete task is declared VERIFIED / COMMITTED / PUSHED.
+
+Resume receipt 2026-10-02 21:33:22 +08:00 supersedes that staging wait. Twelve originals found in `PA1_character_sources` child, unchanged. Mechanical and individual visual gates PASS including transparent Noble replacements. Verify/publish T01 before T02; source availability does not reset/add repairs.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 

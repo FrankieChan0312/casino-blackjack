@@ -1,4 +1,12 @@
-## Current RA1 delivery
+## Current PA1 amendment
+
+RA1 HUMAN ACCEPTED by explicit owner update supplied with PA1. M1-M8 HUMAN ACCEPTED; M9 HUMAN ACCEPTED: NO; PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Historical delivery records below retain their original review/acceptance evidence.
+
+Approved PA1 approach: isolated presentation manifest and chooser, stable table-local character identities, non-blocking human selection with collision exchange, public-only seat rendering and unchanged independent dealer. Character selection must not call the game controller or gameplay RNG, enter replay commands/digests or change outcome audit events. A deterministic source-to-production pipeline must preserve originals and reject art that fails mechanical/visual gates. [Contract](PA1_CONTRACT.md); [audit](PA1_ASSET_AUDIT.md). No implementation proceeds past the unavailable-source gate.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 

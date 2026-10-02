@@ -1,4 +1,12 @@
-## Current RA1 delivery
+## Current PA1 work
+
+M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 technically reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Earlier delivery blocks below preserve their historical status.
+
+PA1 is the authorized presentation-only [Fantasy Character Presentation Pack contract](docs/PA1_CONTRACT.md). T01 IMPLEMENTED / VERIFIED: all twelve canonical source portraits passed the [mechanical and individual visual audit](docs/PA1_ASSET_AUDIT.md), including transparent Noble replacements, and the complete official harness passed. Normal publication pending; production conversion and new character UI are not implemented yet. Source PNGs are preserved unchanged in `art/source/characters/PA1_character_sources`; no domain/gameplay change.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](docs/RA1_CONTRACT.md), [mapping](docs/RA1_MAPPING.md), [evidence](docs/RA1_EVIDENCE.md), [fresh-session handoff](docs/RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 

@@ -1,4 +1,12 @@
-## Current RA1 delivery
+## Current PA1 amendment
+
+RA1 HUMAN ACCEPTED by explicit owner update supplied with PA1. M1-M8 HUMAN ACCEPTED; M9 HUMAN ACCEPTED: NO; PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Earlier delivery status below is historical.
+
+PA1 authorizes the [canonical fantasy roster and interaction contract](PA1_CONTRACT.md). Player Mode opens with Roland and keeps Change Character secondary and non-blocking. Human/Computer/You and seat numbers remain explicit alongside portrait/name/archetype. Unique guests persist through normal rounds, Deal Again and Repeat Bet; dealer remains independent. Cards/legal decisions/results retain priority at desktop/tablet/320px widths, with native keyboard controls, visible focus, readable text, practical 44px targets, reduced motion and hidden-card secrecy. This narrowly supersedes M9 guest evening-attire artwork and the historical local-avatar non-goal; accounts/social profiles remain outside scope. All twelve source gates PASS; current UI is unchanged pending later tasks.
+
+<!-- END CURRENT PA1 -->
+
+## Historical RA1 delivery
 
 House Rules v1.2 / Re-split Aces: [contract](RA1_CONTRACT.md), [mapping](RA1_MAPPING.md), [evidence](RA1_EVIDENCE.md), [fresh-session handoff](RA1_REVIEW_HANDOFF.md). M1-M8 HUMAN ACCEPTED. M9 IMPLEMENTED / VERIFIED; genuinely fresh independent review NO FINDINGS at `8326f846ad753b79fd8d35f76b00f28854e2f448`; M9 ACCEPTED: NO. RA1 ACCEPTED: NO. Deployment NOT RUN. No M10.
 
