@@ -6,7 +6,7 @@ import { inflateSync } from 'node:zlib';
 import { join, relative } from 'node:path';
 import process from 'node:process';
 
-const directory = 'art/source/characters/PA1_character_sources';
+const directory = process.argv[2] ?? 'art/source/characters/PA1_character_sources';
 const names = ['elf_male', 'elf_female', 'knight_male', 'knight_female',
   'mage_male', 'mage_female', 'noble_male', 'noble_female',
   'halforc_male', 'halforc_female', 'dwarf_male', 'dwarf_female'].map(id => `${id}.png`);
@@ -56,7 +56,7 @@ const results = names.map(name => {
     }
   }
   if (chunks.at(-1) !== 'IEND' || !data.length) throw new Error(`${name}: incomplete PNG`);
-  if (metadata.some(entry => entry.type !== 'caBX' || !entry.c2pa)) throw new Error(`${name}: unexpected source metadata`);
+  if (metadata.some(entry => entry.type !== 'sRGB' && (entry.type !== 'caBX' || !entry.c2pa))) throw new Error(`${name}: unexpected image metadata`);
   const stride = width * 4, inflated = inflateSync(Buffer.concat(data));
   if (inflated.length !== height * (stride + 1)) throw new Error(`${name}: decoded length`);
   const pixels = Buffer.alloc(width * height * 4);

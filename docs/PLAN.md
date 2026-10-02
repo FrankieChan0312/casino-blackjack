@@ -6,8 +6,8 @@ Sequential task scopes/acceptance/verification/stop conditions: [PA1_CONTRACT](P
 
 | Task | Current status | Repairs /10 |
 | --- | --- | --- |
-| PA1-T01 | IMPLEMENTED / VERIFIED; all twelve source gates and final official harness PASS/0; normal publication pending | 1 |
-| PA1-T02 | NOT RUN; source gate dependency | 0 |
+| PA1-T01 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED 48f0a45de08d87ff4952c3d8342ed65b6bb671a2; main parity0/0/clean | 1 |
+| PA1-T02 | IMPLEMENTED / VERIFIED;240x320 derivatives reproduced/visually passed; normal publication pending | 1 |
 | PA1-T03 | NOT RUN; T02 dependency | 0 |
 | PA1-T04 | NOT RUN; T03 dependency | 0 |
 | PA1-T05 | NOT RUN; T04 dependency | 0 |

@@ -43,3 +43,19 @@ Recommended GPT Sol 6.1 / High; actual client model/effort NOT VERIFIED / NOT VE
 ## T01 final verification - 2026-10-02 21:43:19 +08:00
 
 Official verify.ps1 PASS/0,73 files/1020 Vitest,58 Chromium and complete mandatory M1-M8 preservation. Typecheck/lint/domain isolation/build/fixture exclusion PASS. Current M9/RA1 preservation and historical replay digest tests PASS. Affected current docs5 tests/2 files PASS/0 at21:42:10; whitespace and baseline src/tests/dependency/image diff EMPTY/PASS. Originals remain byte-identical to twelve initial SHA256 receipts. T01 IMPLEMENTED / VERIFIED, repair1/10; publication pending. No executable changes after final harness, only factual documentation. T02..T07 NOT RUN. No acceptance/deployment/fresh independent review claimed.
+
+## T01 publication receipt
+
+2026-10-02 21:45:08 +08:00: normal commit/push/fetch PASS/0 at48f0a45de08d87ff4952c3d8342ed65b6bb671a2 on main, main=origin/main,0/0,clean including untracked. T01 IMPLEMENTED/VERIFIED/COMMITTED/PUSHED, repair1/10. T02 may proceed automatically under the owner contract; no independent PA1 review/acceptance/deployment.
+
+T02 first validation FAIL/1:384x512 canvas PNG exceeded400000-byte per-file budget for elf_male.png; no production file admitted. Hypothesis: source contains detailed high-entropy RGB/alpha and browser PNG encoding is too large at that resolution. Targeted repair1 reduces derivative canvas to240x320 for maximum80 CSSpx portrait rendering at3x density; keep400000-byte budget, all original source bytes/quality, uniform aspect containment and transparency gates unchanged. No weakened historical tests or domain changes. Regenerate twice and inspect all outputs; T02=1/10.
+
+## T02 asset verification - 2026-10-02 21:54:07 +08:00
+
+Pinned conversion generation/reproduction PASS/0 at21:50:11,12 transparent240x320 PNGs,152309..190721 bytes; all source/output/tool receipts art/character-production.json. Public PNG full CRC/decode/alpha/hash uniqueness PASS/0, art/character-production-audit.json. Lint PASS/0 at21:51:57. All12 output portraits visually inspected on felt/light backgrounds PASS, stored sheets docs/images/pa1-production-{felt,light}-{1,2}.png. Original PNGs unchanged. T02 repair1 from initial384x512 size-gate failure retained; availability not counted. Official final harness pending; T02 not yet VERIFIED/COMMITTED/PUSHED.
+
+## T02 interrupted engineering verification - 2026-10-02 22:08:35 +08:00
+
+Official verify.ps1 FAIL/1, completion inspected22:04:40: three existing Windows PowerShell fixture children reported ETIMEDOUT (verifyHarness/browserHarness/m8Harness, approximately273 seconds); other current regressions,58 Chromium and independent M1-M8 preservation passed. This failed execution is retained. Read-only System event query confirms Kernel-Power506 entered Modern Standby at21:56:22 (Idle Timeout),507 exited at22:00:56 (Input Keyboard),274 seconds, matching the fixture stall. This establishes a host standby interruption rather than a production asset or fixture-code change. No timeouts, workers, assertions, tests or machine power settings changed. Revalidate the same tree after resume; no targeted code repair or additional repair cycle. T02 remains unverified until that execution passes.
+
+T02 final official verify.ps1 PASS/0 inspected2026-10-02 22:13:33 +08:00 after host resume:73 files/1020 Vitest,58 Chromium and complete independent M1-M8 preservation, including956/44 accepted M8. Every required check passed; failed interrupted run retained above. Source/src/tests/dependency diffs EMPTY, source receipt equality and production --check PASS, all12 production visual gates PASS. T02 IMPLEMENTED / VERIFIED, normal publication pending; repair1/10 unchanged.
