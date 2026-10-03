@@ -1,6 +1,12 @@
-## M10 table composition checkpoint
+## M10A casino-game recomposition planning
 
-Current UI composition is IMPLEMENTED / VERIFIED with coherent seats, stronger local cards and an integrated action/credit dock. Desktop Stand bottom896.703125<=900 after the owner-authorized11/11 exception. Full78/1047 Vitest,67 Chromium and independent preservation PASS/exit0; actual browser200% zoom precheck PASS. Final unified verify.ps1 PASS/exit0, including type/lint/build/domain isolation and accepted preservation; publication receipts are recorded in STATE. [Current task/evidence](docs/M10_T01.md). Human visual acceptance/fresh independent review/deployment NOT RUN; T02/T04+ NOT STARTED. Earlier published receipts remain historical below.
+M10A is a new documentation/design milestone for one table-centric Blackjack game scene: coherent seat units, a dominant lower-centre local HUD, an upper-centre Dealer reserve, meaningful felt markings, integrated controls and compact exact accounting. [Planning and task gates](docs/M10A_PLANNING.md), [composition design](docs/DESIGN.md), [interaction](docs/UX_UI.md). All M10A implementation tasks remain NOT STARTED, waiting for human planning acceptance; no product/artwork/dependency change or deployment.
+
+M10-T01 remains technically IMPLEMENTED / VERIFIED / COMMITTED / PUSHED, repairs **11/11 — OWNER-AUTHORIZED EXCEPTION**, with its geometry/evidence retained. **M10-T01 Human Visual Acceptance = NOT ACCEPTED**: the owner still sees a dashboard over a table background. M10A responds to that review with independent normal task repair accounting; it is not another T01 repair. M10-T02 NOT STARTED; M10-T04 REQUIREMENTS UPDATED FOR PLANNING / IMPLEMENTATION NOT STARTED. Reference screenshots inform general principles only; no third-party image/artwork is copied or stored.
+
+## Prior published M10 table composition checkpoint
+
+The published UI composition is IMPLEMENTED / VERIFIED with grouped seats, larger local cards and an action/credit dock. Desktop Stand bottom896.703125<=900 after the owner-authorized11/11 exception. Full78/1047 Vitest,67 Chromium and independent preservation PASS/exit0; actual browser200% zoom precheck PASS. Final unified verify.ps1 PASS/exit0, including type/lint/build/domain isolation and accepted preservation; publication receipts are recorded in STATE. [Technical task/evidence](docs/M10_T01.md). At publication human visual acceptance/fresh independent review/deployment were NOT RUN; the subsequent owner visual NOT ACCEPTED decision is recorded above. Earlier published receipts remain historical below.
 
 ## Prior published M10 geometry checkpoint
 

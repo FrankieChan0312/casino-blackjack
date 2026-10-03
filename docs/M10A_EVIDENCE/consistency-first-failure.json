@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-04 01:11:11 +08:00",
+  "status": "FAIL",
+  "exitCode": 1,
+  "scope": "Initial documentary consistency utility; product/tests/source unchanged",
+  "error": "Planning criterion09 Responsive and conceptual seven counts",
+  "causeHypothesis": "The utility searched M10A_PLANNING for the exact phrase no runtime count, which is used in PLAN. Planning already says No real count selector/occupancy changes and identifies count fixtures as engineering-only.",
+  "evidence": "M10A_PLANNING lines37/63 and PLAN line14 inspected; first driver retained in consistency-first-driver.txt",
+  "targetedRepair": "Check the two explicit existing planning exclusions, preserving both independent count constraints. No requirement or production/test assertion weakening.",
+  "repair": "M10A-PLAN1/10; future implementation tasks0/10 NOT STARTED; T01 remains11/11 historical"
+}

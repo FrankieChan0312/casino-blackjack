@@ -1,6 +1,106 @@
-# M10 — Casino Table Experience design
+# M10A — Casino Game UI Recomposition design
 
-Status: planning HUMAN ACCEPTED at `57443bbefddd47512104ba941c65e3ff1988cf02`; owner authorized T01 geometry implementation only. T01 IMPLEMENTED / VERIFIED after immutable-evidence harness repair7/10, final verification PASS/0; T02..T11 NOT STARTED. Planning baseline `4e6cd7efdca91651633931edcd9445a401886bce`, main. [Scope/acceptance](SPEC.md), [task contracts](PLAN.md), [historical planning evidence](M10_PLANNING.md), [T01 implementation/evidence](M10_T01.md). Historical designs below retain their milestone scope. M10 does not accept M9 or revise RULES.
+This owner-authorized composition correction is a planning proposal, not implementation or human planning acceptance. M10-T01 is technically IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at task commit `6486ed9c2f5eab5fa87862de72a609884c4f1797`, with publication receipt `0c943b088740d291e9604ebe09ef4a5b3363e271`. Its repair count remains **11/11 — OWNER-AUTHORIZED EXCEPTION**. The owner now records **M10-T01 Human Visual Acceptance = NOT ACCEPTED**: the interface still reads as a web dashboard over a table background. Retain its geometry and executed evidence. M10A is a separately authorized design/composition milestone; [SPEC](SPEC.md) owns acceptance, [PLAN](PLAN.md) owns tasks, and [M10A planning](M10A_PLANNING.md) owns the planning rationale and gates. All M10A implementation tasks and M10-T02/T04+ remain NOT STARTED; deployment NOT RUN.
+
+## M10A.1 Visual North Star
+
+The player should perceive one Blackjack table that they are playing. The table scene occupies the primary viewport; browser-page title, setup and supporting tools recede into a quiet game frame. Retain original restrained felt/rail/card/character styling. The owner describes reference screenshots as inspiration for seat-anchored avatars, grouped cards, nearby score badges, central Dealer and lower-edge controls. No reference image was supplied as an inspectable image in this request; these are owner-described principles, not an image-analysis claim. Store no third-party image, logo, trademark, character, button artwork, exact layout or decorative asset. Create an original composition from the existing assets.
+
+## M10A.2 Composition Hierarchy
+
+Cards are the primary gameplay objects. Within a seat, priority is cards -> avatar/seat identity -> score -> wager -> bankroll -> secondary metadata. Across the scene, prioritize the current local hand and its legal decision, then the Dealer/public state and other seats. Betting and round-result states retain the same spatial ownership. Avoid giving headings, borders and financial headings the visual weight of cards. Use contrast, spacing and restrained framing rather than a separate dashboard panel for each fact.
+
+## M10A.3 Table Scene
+
+Use the retained table geometry as the scene's coordinate foundation, with a Dealer reserve above an occupied-seat arc and an integrated local zone along the lower rail. The rail, hand destinations and wager spots organize a single surface. Increase useful seat/card/Dealer coverage by composing their footprints together; do not achieve density merely by shrinking the table or scaling/clipping content. Compact supporting controls may share the frame but must not compete with the table. The scene may grow vertically for accessible stress cases. No new absolute-coordinate system replaces `tableGeometry.ts`.
+
+## M10A.4 Seat Unit
+
+Compose each occupied seat from stable real seat number/controller identity, avatar/name, public cards grouped by handId, nearby total/state badge, wager spot, balance position and turn/active-hand marker. A sitting-out computer keeps its identity and explicit status, with no invented hand or funded wager. Visual slots never renumber accounts, hands, commands or turns. Keep cards upright and place each label beside its owner. Split leaves remain subunits of one seat with separately identified cards, stake and result.
+
+Use a compact framed portrait preserving the accepted 3:4 asset aspect ratio as the initial design direction; a seat/role ring can surround that frame. Circular medallions and cropped busts are alternatives only after checking every existing portrait for face/hair recognition at small sizes. Framing or a later CSS/SVG mask must not rewrite PA1 PNGs. A derived asset would require its own authorized provenance/hash record. A portrait failure leaves the seat name, number and controller readable. Decorative portrait framing is not the sole active-turn cue.
+
+## M10A.5 Local Player HUD
+
+Seat 4 remains the local human identity. Its complete cards, score, wager, avatar/You label, current hand and action area form the strongest lower-centre focal zone. Preserve the canonical real-seat arc: at even future counts Seat 4's slot can be right-central. Associate that slot visibly and semantically with the lower-centre HUD; the HUD is a presentation of the same seat, not another seat/account or a second independent hand. Render each full semantic card/decision representation once. This explicitly refines the earlier fixed-centre-versus-dynamic-arc wording without changing the anchor contract or engine seat order.
+
+## M10A.6 Dealer Zone
+
+Reserve upper-centre space for the future avatar-derived Dealer's readable face/upper body, public cards, shoe origin, status and dealing/reveal/settlement destinations. Shoe artwork communicates an origin only; never show future card order. The existing temporary `CasinoPerson.tsx` can occupy this reserve until separately authorized M10-T04 integration. M10A-T04 composes the zone; **M10.7 below remains authoritative** for recognizable roster identity, separate formal attire, dimensions/alpha/provenance/hashes, default Dealer/player identity exclusion and six public states. M10A creates no Dealer asset, selection policy, gestures or animation.
+
+## M10A.7 Cards
+
+Keep original readable rank/suit faces and card backs. Each Dealer/player/split-hand lane owns its cards and nearby label; original two-card hands and five-card hands preserve rank/suit corners. Let five cards wrap or use a tested bounded fan only when every card identity remains legible. Up to four ordered split leaves retain stable labels, stakes, results and visible active-hand context; never merge leaves into one total. Avoid requiring hover to identify a card. A hidden Dealer card is a generic back with no rank/suit/physical ID in text, ARIA, attributes or assets. The Dealer lane reserves capacity for later public draw additions; actual draw sequencing remains M10-T08.
+
+## M10A.8 Score / Status
+
+Place a compact total badge beside the corresponding card lane. Preserve hard/soft information where currently available and distinguish Visible total before Dealer reveal. Add concise text for Bust, Blackjack, decisions complete and actual Charlie result when the selected profile permits it. Five cards alone do not imply Charlie, and split-origin 21 is not natural Blackjack (RULES R05/R16). An explicit Current hand label plus a border/icon accompanies active styling. Do not reconstruct eligibility, outcome or turn from colour, card animation or UI totals.
+
+## M10A.9 Wager / Chips
+
+Place the accepted main wager in a restrained spot inward of its seat and each split stake next to its own hand. Reserve named origins/destinations for future accepted-reserve, cancellation, committed collection and gross-return presentation. Main, side, Insurance and Bet Behind remain distinguishable where offered; no new wager is introduced by a marking. Exact credit text remains authoritative while future chips are decorative. M10-T09 owns transfer/settlement animation and exactly-once presentation; M10A does not apply payouts or move chips.
+
+## M10A.10 Controls
+
+Place existing Hit / Stand / Double / Split / Surrender controls adjacent to the local hand or along its lower rail, within one HUD. Keep native buttons, existing labels, enabled/rejected reasons and dispatch semantics. Current Insurance/Even Money/follower choices, Deal, Deal Again and Repeat Bet remain reachable in the applicable state. Do not convert actions to unlabeled artwork, drag-only gestures, automatic bets or new hotkeys. Geometry and DOM/focus order must agree about which seat/hand owns a decision. Existing optional wagers and deliberate manual/demo tools remain available through subordinate, labelled access.
+
+## M10A.11 Credits / Accounting HUD
+
+Keep Available, Reserved / current exposure and Pending return as compact labelled values in the local HUD/status strip. They remain directly accessible during decisions and results, with exact half-credit formatting; expandable detail may add explanations/per-wager results but must not conceal these three authoritative values. Pending is not spendable. Do not use a chip count or an aggregate balance to replace the accepted accounting semantics (RULES R06/R07/R13).
+
+Data prerequisite: the inspected `BrowserView` exposes human available/reserved, pending returns, public hands and wagers, but no computer-bankroll value; `getPublicBehindView` supplies human funds only. The seat design reserves a guest-balance position, but **guest-bankroll display is BLOCKED pending a separately approved safe read-only projection contract**. Do not guess a balance from 1,000, infer it from cards/results, expose raw engine state, or display a fictional zero. Future T02/T07 must resolve that affected scope with explicit data/AC/preservation evidence before claiming complete guest-balance support. No domain change is authorized; any proven domain need requires separate approval.
+
+## M10A.12 Felt Markings / Page Chrome
+
+Restrained hand landing zones, main-wager spots and Dealer reserve make the felt useful. Keep `BLACKJACK PAYS 3:2` and `DEALER STANDS ON ALL 17` consistent with RULES R12/R13 and the natural-only 3:2 explanation. An Insurance arc is permitted because R09 supports Insurance, but its label/control appears only for the real eligible window and never implies constant availability. Unsupported side-bet spots or payout text are forbidden. Separate side/back context remains explicit where existing controls expose it.
+
+Reduce the title/header to a quiet frame label; retain clearly readable simulation-only/no-redemption disclosure at entry and during play. Betting/turn/result status belongs near the relevant hand rather than in a large detached banner. Integrate the credit strip and future setup landing zone into the same frame. M10-T02 still owns actual player-count/Start behaviour; M10A does not introduce a selector. Secondary character/demo/audit controls remain labelled, keyboard accessible and visually subordinate.
+
+## M10A.13 Responsive Composition
+
+| Surface | Composition principle and testable expectation |
+| --- | --- |
+| Desktop 1280x900 | Table dominates; all occupied seats remain recognizable, Dealer is prominent, full local hand/actions stay along the lower centre. Normal existing four-seat primary Stand remains within 900px. Avoid unnecessary page growth; support secondary/stress vertical flow without clipping essential content. |
+| Tablet 768x1024 | Tighten seat framing/metadata before card legibility; preserve coherent arc, Dealer, labelled hand units and integrated local controls. |
+| Mobile 320x720 | Preserve a visible Dealer, compact seat arc/active-opponent context, felt, full local/current hand and integrated controls. Expand other public hands in labelled ascending-seat context when needed. No generic stacked dashboard replacement; accessible vertical scrolling is allowed. |
+
+Density is conceptual until M10-T02/T03 provide actual count integration: 1 = one lower-centre local unit and Dealer; 2 = two balanced slots with dominant local HUD; 3 = left/centre/right arc; 4 = existing identity set with tighter coherent footprints; 5 = five evenly distributed slots with compact guest metadata; 6 = six slots with deeper/reflowed guest hand lanes; 7 = full seven-slot arc with maximum footprint testing and restrained metadata. At every count, keep one human plus 0–6 computers, stable ascending identities, distinct split hands and useful card/wager destinations. Empty/sitting-out/funded states are different. Never obtain density by hiding configured players, overlapping cards, reducing touch targets or faking runtime count support. Count layout fixtures may be used for future composition verification; actual occupancy/turn/funding integration remains M10-T02/T03.
+
+## M10A.14 Accessibility
+
+Preserve logical semantic order: Dealer -> occupied seats in real ascending order with their named hands -> local decisions -> labelled financial detail/status -> secondary tools. CSS position must not change command ownership or keyboard order; the lower-centre local HUD still identifies Seat 4 and its actual active hand. Use visible focus, non-colour turn/hand/result text, native controls, meaningful region/hand labels and at least 44x44px primary touch targets. A screen reader must understand, for example, Seat 1 / Computer / character name / hand label / public total without relying on its visual location.
+
+Verify text contrast at least 4.5:1 for normal text and 3:1 for large text; primary non-text/focus cues at least 3:1 against adjacent colours. Check failed portraits, long names/statuses, 200% text and actual browser 200% zoom separately; record real zoom factor/CSS viewport, not CSS scaling as a substitute. Permit vertical reflow, reject essential clipping/intersection/page horizontal overflow, and keep all decisions/fund values operable. Preserve current focus restoration and polite decision/result announcements; avoid duplicate card announcements and per-frame live messages. Reduced motion shows the same static public facts and focus/choices; future queue equivalence stays with M10-T05/T10. Bounded tests are not a certification claim.
+
+## M10A.15 Animation Landing Zones
+
+| Composition destination | Future owner and boundary |
+| --- | --- |
+| Dealer character reserve, public card lane, shoe origin, status | M10-T04 character/variant integration; M10-T08 reveal/draw |
+| Original player card slots and generic hidden Dealer slot | M10-T05 sanitized event infrastructure; M10-T06 initial two-pass deal |
+| Named seat/hand lanes, retained split-card/child positions, active marker | M10-T07 action/depth-first split sequencing |
+| Accepted wager spot, committed collection/return destinations | M10-T09 chips/settlement presentation |
+| Stable labels, latest public state, compact controls/Skip reserve | M10-T05 input/queue boundary; M10-T10 replay/reduced motion |
+
+These are layout destinations on retained anchors, not an implemented event API, timeline, scheduler or extra state machine. Coordinates can be measured later from the safe rendered scene. Resize, skipped motion and reduced motion must never dispatch commands. Do not add Motion or introduce sequencing under a composition task.
+
+## M10A.16 Domain / Presentation Boundary
+
+Only current public snapshots and legal interaction descriptions may drive the static scene. Preserve `src/domain/**`, rules, RNG/random source, shoe/card consumption, accounting/bankroll, turn order, settlement, strategy, replay/digest/journal and command semantics. Retain `src/presentation/tableGeometry.ts` and its 1–7 normalized anchors; footprint composition is added around that foundation. Do not create an authoritative UI ledger or derive future cards/eligibility from presentation. Same commands/configuration must retain identical financial/game/replay results. A missing safe value/destination is an affected-scope blocker requiring explicit authorization, not permission to expand domain implicitly. Accepted PA1 source/production/provenance and canonical screenshots are read-only; historical evidence is retained.
+
+## M10A.17 Non-goals
+
+This task changes documentation/evidence only. Future M10A tasks compose static presentation and integrate already-existing controls/public facts; they do not implement M10-T02 count selection, M10-T04 formal Dealer artwork/selection/character motion, M10-T05 infrastructure/Motion, M10-T06–T10 sequencing/replay animation, new rules/side bets, domain refactors, asset replacement, network/accounts, sound/3D, paid resources, real money or deployment. All implementation requires later explicit authorization. The dedicated M10A milestone does not reset T01 or accept its rejected visual composition.
+
+## M10A.18 Visual Acceptance Criteria
+
+[AC-M10A-001..010 in SPEC](SPEC.md) and [task/gate matrix](M10A_PLANNING.md) govern future acceptance. Review normal betting/dealt/decision/results as one game scene: each seat has clear card/avatar/score/wager ownership, lower-centre local HUD is instantly identifiable, Dealer reserve has useful weight, markings express real rules, controls belong to the local hand, and accounting is exact/readable without dominating. Capture the three required surfaces, all seven count-layout fixtures, five cards, four real ordered split leaves, long names/statuses, failed portraits, 200% text, actual browser zoom and keyboard/reduced motion. Count fixtures are not proof that runtime selection exists.
+
+Mechanical fit, regressions and static screenshots cannot decide whether the dashboard feeling has been removed. Before each future bounded task closes, inspect actual renders and ask the owner to review the relevant composition against these criteria; the M10A-T10 final walkthrough covers at least betting, a normal hand, a split case and results on desktop/tablet/mobile. Genuinely fresh independent review, technical verification, planning acceptance, human visual acceptance, commit/push and deployment remain separate. **M10A-T01 NOT STARTED — WAITING FOR HUMAN PLANNING ACCEPTANCE**.
+
+# M10 — Retained geometry and future motion design
+
+Retained M10 planning HUMAN ACCEPTED at `57443bbefddd47512104ba941c65e3ff1988cf02`; original planning baseline `4e6cd7efdca91651633931edcd9445a401886bce`, main. T01 is technically verified/published with11/11 historical repairs and owner visual NOT ACCEPTED, as recorded in the current M10A amendment. T02..T11 NOT STARTED. [Scope/acceptance](SPEC.md), [task contracts](PLAN.md), [historical planning evidence](M10_PLANNING.md), [T01 implementation/evidence](M10_T01.md). The geometry/count/Dealer/motion contracts below remain future authority except composition explicitly refined by M10A; historical pre-M10 designs retain their scope. M10A/M10 do not accept M9 or revise RULES.
 
 ## M10.1 Design goals
 
@@ -12,7 +112,7 @@ No rule/paytable/strategy changes, replacement Blackjack engine, domain refactor
 
 ## M10.3 Casino-table visual direction
 
-Use the existing restrained dark felt, warm rail, high-contrast text cards and transparent fantasy portraits. Players belong to the table perimeter rather than dashboard columns; eliminate rectangular panel emphasis in Player Mode. Dealer anchors the top centre, wagers sit inward of each player, cards remain readable and upright, and the action/credit dock stays outside the felt. Local cards remain larger, with explicit You/Human labels. Keep optional wagers, avatar choice and Developer / demo tools secondary. Preserve deliberate manual mode.
+The current composition direction is M10A.1–18 above: one game scene, complete seat units, a lower-centre local HUD and controls/accounting integrated along its rail. This supersedes the earlier detached outside-felt dock prescription. Retain the T01 normalized geometry and the future M10 player-count, Dealer asset/state and event/motion contracts below. Existing optional wagers, character choice and deliberate manual/demo tools remain available and secondary.
 
 ## M10.4 Table geometry
 
@@ -20,7 +120,7 @@ Use a lower half-ellipse with normalized coordinates and a dedicated reserved de
 
 T01 must verify footprint sizes and settle responsive tokens before T03: account for portraits, names, wagers, five-card hands and four split leaves, not just anchor points. Increase table height/vertical flow or use compact public summaries when space is insufficient; never overlap cards, shrink primary controls, or conceal split results to preserve a mathematical arc. Cards/text stay upright rather than rotating the whole seat. Draw the felt/rail with CSS; no new art pipeline.
 
-T01 geometry checkpoint: pure `tableGeometry.ts` defines the above1–7 normalized slot contract, independently of occupied/funded state. Current physical1/3/4/6 identities use canonical seven-slot guest x/depth values; full human cards stay near-edge in normal flow until T03 count-specific binding. Desktop guest footprints are capped240px with a143.5px card lane at1280px; reserved Dealer band is max150px/9.375rem and perimeter depth2.5rem. At<=1100px lateral shifts yield to compact normal-flow arcs (64px depth);<=600px uses portrait/controller summaries (40px depth) and existing guest-card expansion. Full hands/leaves wrap vertically, controls remain outside felt, and card corners are bounded within upright card boxes at enlarged text. Actual five-card/four-leaf and200% text evidence covers the existing four-player layout only; seven-player rendered integration/matrix remains T03. No motion tokens/dependency/queue are introduced in T01.
+Retained T01 geometry contract: pure `tableGeometry.ts` defines the above1–7 normalized slots independently of occupied/funded state. Current physical1/3/4/6 identities use canonical seven-slot guest x/depth values; full human cards remain near-edge in normal flow until T03 count-specific binding. The published composition checkpoint changed footprint/spacing tokens and fits Stand at896.703125px in1280x900; its authoritative measured evidence is [T01](M10_T01.md) and actual values remain in unchanged `styles.css`. Do not reuse obsolete pre-composition footprint/depth constants as current measurements. Full hands/leaves and enlarged text use bounded upright boxes/vertical reflow. Current rendered evidence covers four players; seven-count runtime integration remains T02/T03. M10A defines new visual footprint composition without replacing the pure anchors. No motion dependency/queue was introduced in T01.
 
 ## M10.5 Seat model
 
@@ -40,7 +140,7 @@ The inspected engine has seven numbered seats and at most one HUMAN. Normal Play
 | 6 | 1, 2, 3, 4, 5, 6 | 5 |
 | 7 | 1, 2, 3, 4, 5, 6, 7 | 6 |
 
-Seat 4 is the central slot for odd counts and the right central slot for even counts. This intentionally supersedes M9's fixed lower-centre placement while retaining dominant own cards/actions. Default four retains the existing controller identities. Ascending seats drive both arc order and the actual engine deal/turn order, including noncontiguous sets.
+Seat 4 is the central slot for odd counts and the right central slot for even counts. The M10A.5 refinement retains those slots while associating the same local seat with its dominant lower-centre HUD; that HUD is not a new seat or duplicate hand. Default four retains existing controller identities. Ascending seats drive arc allocation and actual engine deal/turn order, including noncontiguous sets. M10A grants no player-count implementation authorization.
 
 Offer a native labelled total-player selector before explicit Start table/session. Default four is preselected; setup contains only this choice, not guest wager forms. T02 must move automatic CONFIGURE/OPEN/guest MAIN preparation behind Start, because the current constructor already reserves guest stakes. Validate integer count before any commands/RNG/reset. Configure all seven real occupancies with existing CONFIGURE, OPEN and funded MAIN commands; do not hide seats to fake a count. Selected count persists through Deal Again/Repeat Bet without asking again. Disable changes during funded/active play; an explicit new session at an existing legal reset boundary can change count, clearly disclosing starting-credit reset. Do not reopen OPEN as CONFIGURING or silently reset money. Changing count within an ongoing session is outside scope.
 
@@ -126,7 +226,7 @@ Split Aces/RSA keep V1.1/V1.2 restrictions and supplement order. Insurance/follo
 
 ## M10.12 Timing and motion tokens
 
-Proposed milliseconds: card flight 180, sequential start gap 140, hole flip 220, split layout 220, chip transfer 240, text emphasis 160, dealer gesture 180; ease-out for arrival, ease-in-out for flip/gesture. Sequential starts preserve ordering even where decorative flights overlap. Sixteen initial destinations (seven players plus dealer twice) finish within 2500ms with these tokens. No arbitrary sleep in tests; injectable presentation scheduler plus event/queue completion signals. Reduced motion sets durations/gaps to zero. Validate actual full-table legibility before locking tokens in T01; a duration change never changes events or commands.
+Proposed milliseconds: card flight 180, sequential start gap 140, hole flip 220, split layout 220, chip transfer 240, text emphasis 160, dealer gesture 180; ease-out for arrival, ease-in-out for flip/gesture. Sequential starts preserve ordering even where decorative flights overlap. Sixteen initial destinations (seven players plus dealer twice) finish within 2500ms with these tokens. No arbitrary sleep in tests; injectable presentation scheduler plus event/queue completion signals. Reduced motion sets durations/gaps to zero. Validate actual full-table legibility before locking tokens in M10-T05/T06, not in T01 geometry or M10A composition; a duration change never changes events or commands.
 
 ## M10.13 Presentation-event architecture
 
@@ -155,7 +255,7 @@ Existing `replayCompleted()` returns a terminal reconstruction, not a per-comman
 
 ## M10.16 Responsive behaviour
 
-Required count matrix 1–7 at 1280x900,768x1024,320x720. Desktop uses full elliptical seating; tablet uses a wider/deeper arc with compact guest facts and external action dock. At 320px retain a small semicircular portrait/seat overview with readable numbered summaries, the visible dealer, and full-size own/current hand plus actions below; other public hands expand in ascending order. The overview may abbreviate with a linked full identity below, not illegible portrait/name panels. This replaces dashboard columns while allowing vertical scrolling. Five-card cards, four split leaves and 200% text must remain operable without page horizontal overflow; wrapping and summaries are acceptable. Freeze ordering on resize; remeasure origins/destinations once, snap current flights if necessary, and never replay commands. T03 must demonstrate the seven-seat case rather than extrapolate from the default four.
+M10A.13/14 define current composition principles, including integrated local controls, text enlargement and actual browser zoom. Required eventual runtime count matrix remains1–7 at1280x900,768x1024,320x720 under T02/T03. Composition fixtures do not establish actual occupancy support. Retain numbered public seat/hand context, bounded five-card/four-leaf reflow and vertical scrolling without page horizontal overflow. Future motion freezes ordering on resize, remeasures origins/destinations once and may snap current flights; it never replays commands. T03 must demonstrate actual seven-seat integration rather than extrapolate from four.
 
 ## M10.17 Accessibility
 
@@ -177,7 +277,7 @@ Budget for T05: production gzip JavaScript increase at most 60KiB over the same-
 
 P0 acceptance is traceable to AC-M10-001..004 and T01..T06/T11. Capture all seven counts at the three required viewports: one centre/two balanced/three left-centre-right/four-seven distributed; dealer top-centre distinct; seated characters/cards/wagers form a coherent table. Mechanical geometry verifies no essential intersections/clipping/overflow,44px controls, larger own cards and ordered split labels. Explicit deal fixtures verify each destination and hidden last slot; do not treat a final screenshot as proof of sequential dealing.
 
-Capture action/reveal/settlement/replay/reduced-motion states and failed-image/enlarged-text cases. Use animation checkpoints/events for deterministic screenshots, not arbitrary sleep. Inspect actual moving normal-mode deal and at least three rounds; static captures alone do not establish game feel. T11 delivers AC mapping, full regression results, screenshot/trace receipts, genuinely fresh review handoff, and owner walkthrough. Fresh review and explicit human visual acceptance are separate required events; M10 remains NOT STARTED now, and later automated PASS cannot declare ACCEPTED or DEPLOYED.
+Capture action/reveal/settlement/replay/reduced-motion states and failed-image/enlarged-text cases. Use animation checkpoints/events for deterministic screenshots, not arbitrary sleep. Inspect actual moving normal-mode deal and at least three rounds; static captures alone do not establish moving-game feel. T11 delivers AC mapping, full regression results, screenshot/trace receipts, genuinely fresh review handoff, and owner walkthrough. Fresh review and explicit human visual acceptance are separate required events. T01 technical foundation is retained with owner visual NOT ACCEPTED; remaining M10-T02..T11 and M10A implementation are NOT STARTED. Later automated PASS cannot declare ACCEPTED or DEPLOYED, and M10A's static composition gate does not complete these future motion requirements.
 
 ## Historical pre-M10 design records
 

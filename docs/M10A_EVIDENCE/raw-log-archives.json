@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-10-04 01:28:18 +08:00",
+  "status": "PASS",
+  "scope": "Only new task-owned duplicate raw logs removed after verified lossless archive/round-trip; all failure/source/old evidence retained.",
+  "archives": [
+    {
+      "source": "documentation-final.log",
+      "archive": "documentation-final.log.gz",
+      "rawBytes": 406,
+      "rawSha256": "f05adf95c3c85a27926957941aa05ee4dfb49e13cc5551490b8a295b792f013f",
+      "archiveBytes": 265,
+      "archiveSha256": "fed8bbed8e2e095d952e931d2243e671292844e0e23827feb6b14572dd746cbf",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "documentation.log",
+      "archive": "documentation.log.gz",
+      "rawBytes": 405,
+      "rawSha256": "90b5b939a89f540e17e40bb8d4704d9ffcd2c464d6c1ebbc9094dc672703f722",
+      "archiveBytes": 264,
+      "archiveSha256": "f17fd90727d01b72463c7fbb49b4a9cbb5beee46f45fa407febac5582e16b1dc",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "unified.log",
+      "archive": "unified.log.gz",
+      "rawBytes": 37344,
+      "rawSha256": "0780d8aeb20bae3ceddb0d02a997a6ba5a932031a05f0f3f9f2042cd8bed98f8",
+      "archiveBytes": 6448,
+      "archiveSha256": "17decec34c7a8e9e2d6e95ab8c45aa70d6137bfc6552a1b60bb3ad7b76e0bc9a",
+      "roundTrip": "PASS"
+    }
+  ]
+}

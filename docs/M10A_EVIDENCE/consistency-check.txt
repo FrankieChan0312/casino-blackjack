@@ -1,0 +1,58 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),crypto=require('node:crypto');
+const dir='docs/M10A_EVIDENCE',hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const [phase,timestamp]=process.argv.slice(2);
+const allowed=['README.md','docs/DESIGN.md','docs/UX_UI.md','docs/SPEC.md','docs/PLAN.md','docs/STATE.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md'];
+const read=p=>fs.readFileSync(p,'utf8').replaceAll('\r\n','\n');
+const text=Object.fromEntries([...allowed,'docs/M10A_PLANNING.md'].map(p=>[p,read(p)]));
+const baseline=JSON.parse(read(dir+'/before.json'));
+const protectedFiles=baseline.files.filter(f=>!allowed.includes(f.path)).map(f=>{const b=fs.readFileSync(f.path);if(hash(b)!==f.sha256)throw Error('Protected bytes changed '+f.path);return {path:f.path,bytes:b.length,sha256:f.sha256};});
+if(protectedFiles.length!==733)throw Error('Protected inventory drift');
+const changed=cp.execFileSync('git',['diff','--name-only'],{encoding:'utf8'}).trim().split('\n');
+if(changed.some(p=>!allowed.includes(p)))throw Error('Unexpected tracked change');
+const unknown=cp.execFileSync('git',['ls-files','--others','--exclude-standard'],{encoding:'utf8'}).trim().split('\n').filter(p=>p!=='docs/M10A_PLANNING.md'&&!p.startsWith(dir+'/'));
+if(unknown.length)throw Error('Unknown untracked paths');
+const originalDesign=cp.execFileSync('git',['show',baseline.HEAD+':docs/DESIGN.md'],{encoding:'utf8'}).replaceAll('\r\n','\n');
+const section=s=>s.split('## M10.7 Dealer character integration, placement and states\n')[1].split('## M10.8 Card presentation\n')[0];
+if(section(text['docs/DESIGN.md'])!==section(originalDesign))throw Error('Protected M10.7 Dealer contract changed');
+const originalSpec=cp.execFileSync('git',['show',baseline.HEAD+':docs/SPEC.md'],{encoding:'utf8'}).replaceAll('\r\n','\n');
+const m10Acs=s=>s.split('\n').filter(l=>/^\| AC-M10-\d+/.test(l));
+if(JSON.stringify(m10Acs(text['docs/SPEC.md']))!==JSON.stringify(m10Acs(originalSpec)))throw Error('Existing M10 AC rows changed');
+const oldLog=cp.execFileSync('git',['show',baseline.HEAD+':docs/DEVELOPMENT_LOG.md'],{encoding:'utf8'}).replaceAll('\r\n','\n').trimEnd();
+if(!text['docs/DEVELOPMENT_LOG.md'].startsWith(oldLog))throw Error('Historical log rewritten');
+const expected=Array.from({length:10},(_,i)=>'AC-M10A-'+String(i+1).padStart(3,'0'));
+const acRows=text['docs/SPEC.md'].split('\n').filter(l=>/^\| AC-M10A-\d+/.test(l));
+if(JSON.stringify(acRows.map(l=>l.match(/AC-M10A-\d+/)[0]))!==JSON.stringify(expected))throw Error('M10A AC IDs drift');
+for(const doc of ['docs/PLAN.md','docs/M10A_PLANNING.md']){
+ const rows=text[doc].split('\n').filter(l=>/^\| M10A-T\d\d\b/.test(l));
+ if(rows.length!==10||rows.some((r,i)=>!r.includes('M10A-T'+String(i+1).padStart(2,'0'))||!r.includes('NOT STARTED')||!r.includes('0/10')))throw Error('Task sequence/state drift '+doc);
+}
+const headings=[...text['docs/DESIGN.md'].matchAll(/^## M10A\.(\d+) (.+)$/gm)];
+if(headings.length!==18||headings.some((m,i)=>Number(m[1])!==i+1))throw Error('18-section DESIGN contract');
+let links=0;
+for(const [p,s]of Object.entries(text)){
+ for(const m of s.matchAll(/\]\(([^)]+)\)/g)){const target=m[1].split('#')[0];if(!target||/^[a-z]+:\/\//i.test(target))continue;if(!fs.existsSync(path.resolve(path.dirname(p),target)))throw Error('Missing link '+p+' '+target);links++;}
+}
+const design=text['docs/DESIGN.md'].split('# M10 — Retained geometry')[0], ux=text['docs/UX_UI.md'].split('## Retained M10 future')[0], planning=text['docs/M10A_PLANNING.md'];
+const probes=[
+ ['01','T01 technically verified and11/11 retained',planning.includes('IMPLEMENTED / VERIFIED / COMMITTED / PUSHED')&&planning.includes('11/11 — OWNER-AUTHORIZED EXCEPTION')],
+ ['02','T01 human visual NOT ACCEPTED',[design,ux,planning,text['README.md'],text['docs/STATE.md'],text['docs/SPEC.md']].every(s=>s.includes('M10-T01 Human Visual Acceptance = NOT ACCEPTED'))],
+ ['03','Explicit original visual North Star',design.includes('## M10A.1 Visual North Star')&&design.includes('No reference image was supplied')],
+ ['04','Unified table composition',design.includes('## M10A.3 Table Scene')&&design.includes('do not achieve density merely by shrinking')],
+ ['05','Complete seat unit model',design.includes('## M10A.4 Seat Unit')&&design.includes('cards -> avatar/seat identity -> score -> wager -> bankroll')],
+ ['06','Lower-centre same-seat local HUD',design.includes('## M10A.5 Local Player HUD')&&design.includes('not another seat/account')],
+ ['07','Dealer reserve and unchanged M10.7 contract',design.includes('## M10A.6 Dealer Zone')&&design.includes('M10.7 below remains authoritative')],
+ ['08','Accounting directly accessible and secondary',design.includes('## M10A.11 Credits / Accounting HUD')&&ux.includes('cannot hide those three values')],
+ ['09','Responsive and conceptual seven counts',design.includes('## M10A.13 Responsive Composition')&&design.includes('7 = full seven-slot arc')&&planning.includes('No real count selector/occupancy changes')&&planning.includes('Count fixtures are explicitly engineering layout fixtures; no pretend product selector.')],
+ ['10','Accessibility text/native zoom/focus/contrast',design.includes('## M10A.14 Accessibility')&&design.includes('actual browser 200% zoom')&&design.includes('4.5:1')],
+ ['11','Future animation landing zones and task boundaries',design.includes('## M10A.15 Animation Landing Zones')&&planning.includes('M10-T05')&&planning.includes('M10-T10 / T11')],
+ ['12','Explicit protected domain/public-data prerequisite',design.includes('## M10A.16 Domain / Presentation Boundary')&&design.includes('guest-bankroll display is BLOCKED')],
+ ['13','Immutable PA1/provenance/canonical references',design.includes('Accepted PA1 source/production/provenance and canonical screenshots are read-only')],
+ ['14','Traceable ten-task/ten-AC sequence',expected.length===10&&headings.length===18],
+ ['15','M10-T02/T04 implementation NOT STARTED',planning.includes('M10-T02 NOT STARTED')&&planning.includes('M10-T04 IMPLEMENTATION NOT STARTED')],
+ ['16','No product/asset/test/geometry implementation',protectedFiles.length===733&&unknown.length===0]
+];
+for(const [id,name,pass]of probes)if(!pass)throw Error('Planning criterion '+id+' '+name);
+cp.execFileSync('git',['diff','--check'],{stdio:['ignore','pipe','pipe']});
+const receipt={timestamp,status:'PASS',task:'M10A-PLAN',phase,planningCriteria:probes.map(([id,name])=>({id,name,status:'PASS'})),designSections:headings.map(m=>({number:Number(m[1]),heading:m[2]})),acceptanceIds:expected,implementationTasks:'All10 NOT STARTED,0/10',linksChecked:links,authoredTrackedWhitespaceExit:0,protectedIncomingPaths:733,protectedM10DealerSectionSha256:hash(Buffer.from(section(originalDesign))),originalM10AcRows:'12 unchanged',historicalLogPrefix:'UNCHANGED',unknownUntrackedPaths:unknown,productSourceDomainTestsAssetsGeometryDependenciesRuntime:'UNCHANGED',planningRepairs:'2/10',T01Repairs:'11/11 OWNER-AUTHORIZED EXCEPTION historical',humanPlanningAcceptance:'NOT RUN',freshIndependentReview:'NOT RUN',deployment:'NOT RUN',files:protectedFiles};
+fs.writeFileSync(dir+'/consistency-'+phase+'.json',JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify({status:'PASS',criteria:16,designSections:18,taskRows:10,acRows:10,linksChecked:links,protectedIncomingPaths:733,DealerContract:'UNCHANGED',originalM10AcRows:12,historicalLogPrefix:'UNCHANGED',productDomainAssetsTests:'UNCHANGED'}));

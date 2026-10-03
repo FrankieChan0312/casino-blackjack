@@ -1,4 +1,27 @@
-## M10 — verified exceptional composition repair11
+# M10A — independent casino-game recomposition plan
+
+Owner-authorized planning/design correction from main/`0c943b088740d291e9604ebe09ef4a5b3363e271`. M10-T01 remains technically IMPLEMENTED / VERIFIED / COMMITTED / PUSHED, **11/11 — OWNER-AUTHORIZED EXCEPTION**, with geometry/evidence retained; **M10-T01 Human Visual Acceptance = NOT ACCEPTED**. New M10A planning is a separate milestone, not T01 repair12. [Complete task contracts, AC mapping and verification](M10A_PLANNING.md), [SPEC](SPEC.md), [DESIGN](DESIGN.md), [UX](UX_UI.md).
+
+| Task | Dependency / sequence | Status / repairs |
+| --- | --- | --- |
+| M10A-T01 — Scene frame + composition shell | Human planning acceptance and explicit implementation authorization | NOT STARTED;0/10 |
+| M10A-T02 — Seat-unit component | M10A-T01; guest-bankroll prerequisite for affected value scope | NOT STARTED;0/10 |
+| M10A-T03 — Local-player HUD | M10A-T02 | NOT STARTED;0/10 |
+| M10A-T04 — Dealer-zone composition | M10A-T03; reserve only, distinct from M10-T04 character integration | NOT STARTED;0/10 |
+| M10A-T05 — Felt gameplay markings | M10A-T04 | NOT STARTED;0/10 |
+| M10A-T06 — Control integration | M10A-T05 | NOT STARTED;0/10 |
+| M10A-T07 — Credits/accounting HUD | M10A-T06; guest balance needs separately approved safe public projection | NOT STARTED;0/10 |
+| M10A-T08 — Responsive recomposition | M10A-T07; layout fixtures1–7 only, no runtime count implementation | NOT STARTED;0/10 |
+| M10A-T09 — Edge-case layouts | M10A-T08 | NOT STARTED;0/10 |
+| M10A-T10 — Regression + human visual gate | M10A-T09; fresh review/owner acceptance separate from PASS | NOT STARTED;0/10 |
+
+Retain the suggested order: App/Table already separate scene/seat rendering, so frame/units/local/Dealer/markings precede controls/accounting and matrix completion. The detailed linked contracts define scope, non-goals, acceptance, step -> verification and stop conditions for each row. Recommended GPT Sol6.1/High, reconfirm availability at execution; actual runtime NOT VERIFIED. Sequential work, no delegation. Current M10A-PLAN repairs2/10 (consistency-utility input and evidence-restoration corrections); future task counters independent under normal10-cycle governance. No historical ledger reset; old M10 planning3/10 CLOSED remains separate.
+
+M10A uses existing four-seat runtime and pure1–7 geometry. M10-T02/T03 retain real count selection/occupancy/funding/binding; M10-T04 retains avatar/formal-role integration; M10-T05–T10 retain event/deal/action/reveal/chip/replay motion. No circular dependency or silent implementation authorization: after M10A-T10 composition acceptance the owner must explicitly authorize resuming M10-T02 and subsequent existing sequence. The older row dependencies below retain their task scope with this added resumption gate. **M10-T02 NOT STARTED**; **M10-T04 REQUIREMENTS UPDATED FOR PLANNING / IMPLEMENTATION NOT STARTED**.
+
+**M10A-T01 NOT STARTED — WAITING FOR HUMAN PLANNING ACCEPTANCE**.
+
+## Historical M10 — verified exceptional composition repair11
 
 2026-10-04 00:05:07 +08:00 — Exactly one owner-authorized exceptional CSS correction resolves desktop height at896.703125<=900. Full1047 Vitest/67 Chromium and independent M1–M8/current PA1/M9/M10 preservation PASS/exit0; actual native200% zoom and three-viewport/stress/keyboard precheck PASS. Final verify.ps1 PASS/exit0 at2026-10-04 00:05:08..00:09:50 +08:00; normal publication follows final review. Repair12 NOT AUTHORIZED/NOT PERFORMED, T02..T11 NOT STARTED, planning3/10 CLOSED unchanged. [Current exceptional receipt](M10_T01.md). Earlier10/10 blocker history below is retained.
 
@@ -18,8 +41,8 @@ For every future task: recommended GPT Sol 6.1 / High (client-supported gpt-6.1-
 
 | Task / dependency | Small complete scope and acceptance | Step -> required verification | Status |
 | --- | --- | --- | --- |
-| M10-T01 / owner instruction accepting plan | Casino geometry foundation, pure1–7 slot coordinates, Dealer/card/centre anchors, current four-seat responsive composition and full hand footprints; AC001/012 T01 portion only, no motion/configuration | Literal coordinates/semantic and source-preservation tests -> actual1280/768/320 five-card/four-leaf/text screenshots -> full harness/diff -> commit/push -> human acceptance | IMPLEMENTED / VERIFIED;11/11 OWNER-AUTHORIZED EXCEPTION; human acceptance NOT RUN |
-| M10-T02 / T01 | Pre-session count/Start, real seat configuration, persistent count, unique PA1 guests; default 4 and 1–7 supported; capacity preflight for 6 guests; AC002/009/010 | Literal occupancy/command-order fixtures for every count, invalid/funded/active rejection, guest funds/no refill/sit-out, repeat/reset/cap and lineup -> affected tests + full harness | NOT STARTED |
+| M10-T01 / owner instruction accepting plan | Casino geometry foundation, pure1–7 slot coordinates, Dealer/card/centre anchors, current four-seat responsive composition and full hand footprints; AC001/012 T01 portion only, no motion/configuration | Literal coordinates/semantic and source-preservation tests -> actual1280/768/320 five-card/four-leaf/text screenshots -> full harness/diff -> commit/push -> human acceptance | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;11/11 OWNER-AUTHORIZED EXCEPTION; human visual NOT ACCEPTED; geometry retained |
+| M10-T02 / T01 technical foundation + M10A-T10 human composition gate + explicit resumption authorization | Pre-session count/Start, real seat configuration, persistent count, unique PA1 guests; default 4 and 1–7 supported; capacity preflight for 6 guests; AC002/009/010 | Literal occupancy/command-order fixtures for every count, invalid/funded/active rejection, guest funds/no refill/sit-out, repeat/reset/cap and lineup -> affected tests + full harness | NOT STARTED |
 | M10-T03 / T02 | Responsive semicircular seating using actual seat identities, own-hand priority/split readability; AC001/002/009 | Count 1–7 x three viewports, single/five-card/four-leaf/text-enlargement footprints, no intersections/overflow and 44px controls -> geometry/screenshots/manual inspection + full harness | NOT STARTED |
 | M10-T04 / T03 | Avatar-derived Dealer character integration: roster identity/Dealer role, separate formal-attire asset/component/provenance contract, immutable PA1 assets and default Dealer/player identity exclusion; existing T01 upper-centre anchor, six public visual states, restrained 2D motion, responsive/reduced-motion and presentation-only boundary; AC004/009 | Verify DESIGN M10.7 filename/ID/role/dimensions/alpha/aspect/source/method/hash contract and face/hair/style retention -> role-exclusion and six-state public fixtures, moving-character/formal-attire review,1280/768/320 placement/card separation, reduced-motion/text fallback and unchanged authoritative results -> component/browser tests + full harness; assignment policy future-defined, T05 event infrastructure/T06 initial deal/T08 reveal-draw/T09 settlement retain live sequencing | NOT STARTED |
 | M10-T05 / T04 | Public presentation adapter/feed/queue/cursor, cancellation/skip/input gate; renew Motion decision and pin dependency if authorized; AC003/004/009/010/011 | Literal event fixtures for per-invoke/composite CLOSE/ADVANCE/SETTLE/VOID and split supplements; public-payload secrecy, StrictMode/no duplicates, cleanup, cap rejection and instant-vs-delayed equality -> affected tests/build-size/isolation + full harness | NOT STARTED |

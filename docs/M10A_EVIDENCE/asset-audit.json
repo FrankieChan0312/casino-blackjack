@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-04 01:16:37 +08:00",
+  "command": "node scripts/verify-character-assets.mjs",
+  "executedEnd": "2026-10-04 01:14:33 +08:00",
+  "exitCode": 0,
+  "status": "PASS",
+  "scope": "Read-only accepted PA1 source/production original hash audit and byte-identical production reproduction",
+  "sourcePngs": 12,
+  "productionPngs": 12,
+  "productionDimensions": "240x320",
+  "transparency": "PASS",
+  "reproduction": "BYTE-IDENTICAL",
+  "sourceChanges": "NONE",
+  "evidence": "Actual process session2054 completed exit0; raw stdout inspected. Full incoming hash guard is recorded separately."
+}

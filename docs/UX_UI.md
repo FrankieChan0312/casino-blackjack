@@ -1,4 +1,38 @@
-## M10 casino-table interaction amendment
+# M10A casino-game composition and attention amendment
+
+Current owner decision: **M10-T01 Human Visual Acceptance = NOT ACCEPTED** despite technically verified/published geometry and11/11 repairs. [M10A planning](M10A_PLANNING.md) responds with a new composition milestone, not another T01 repair. [DESIGN M10A.1–18](DESIGN.md) owns visual structure; [SPEC](SPEC.md) owns acceptance. All implementation tasks/M10-T02/M10-T04 remain NOT STARTED, planning acceptance pending, deployment NOT RUN. This amendment changes no current gameplay.
+
+## M10A attention and local ownership
+
+At entry/betting, attention goes to the local wager spot and explicit Deal; during decisions, to the local current hand/score and attached legal actions; at completion, to that hand's result and exact returned/net values followed by Deal Again/Repeat Bet. The Dealer's public cards/state remain visible as the shared comparison context, with opponents subordinate but recognizable. Header/disclaimer/secondary setup/character/demo tools support this scene rather than becoming equal-sized panels. Keep simulation-only/no-redemption disclosure readable.
+
+The lower-centre HUD visibly says You / Human / Seat4 with the selected avatar/name and full hand. Its label connects it to the retained real-seat arc marker even when the future even-count slot is right-central. It is the same human/hand, not a duplicate player. Cards, adjacent total, accepted wager and active split-leaf label form one meaningful unit. Show each full semantic hand/decision once and retain stable seat/hand IDs.
+
+## M10A turns, computer players and Dealer state
+
+Use explicit Current hand / Your turn text and visible border/icon plus colour. Current seat and current hand come from public authority; never infer a turn from an animation or card position. A computer unit says Computer and its stable seat/name, with public hand total/result or Sitting Out/Waiting as applicable. Do not imply a completed automatic computer is still awaiting input. M10A remains static immediate presentation; future M10-T05 owns presentation-catch-up labelling.
+
+Dealer status belongs beside the upper-centre public card lane: waiting/betting, Hole card hidden / Visible total, publicly revealed cards/total, completed result or integrity interruption. Reserve future character/shoe/gesture destinations without pretending they are implemented. Hidden rank/suit must never enter tooltip, text, ARIA or a cosmetic placeholder. DESIGN M10.7 continues to govern the future avatar/formal variant and IDLE/DEALING/WAITING_PLAYER/REVEALING/DRAWING/SETTLING mapping; M10-T04 owns character integration, not this zone plan.
+
+## M10A control and split-hand context
+
+Hit/Stand/Double/Split/Surrender sit immediately beside/beneath the actual local hand or along its lower rail, with native labelled controls and unchanged legal-action/rejection reasons. Preserve Insurance/Even Money/follower decision ownership, Deal/Repeat/result focus restoration and optional wager/manual access. Visual closeness cannot change semantic or command ownership. Keyboard order remains Dealer/ascending occupied seats and named hands -> local decisions -> funds/detail/status -> secondary tools; controls clearly name the hand/seat when multiple contexts exist. Focus survives resize/reflow and repeated rounds.
+
+Split hands are ordered child units of the same seat. Keep the existing hand label, exact cards, per-leaf stake/total/result and Current hand indication for all four possible leaves, including completed/busted leaves. Five cards wrap/fan only with readable identities. No combined split total, mislabeled split Blackjack, hidden leaf or early supplement is permitted. Vertical reflow is acceptable; the current decision and its corresponding hand must stay understandable while scrolling.
+
+## M10A accounting and secondary access
+
+Available, Reserved / current exposure and Pending return stay directly accessible in a compact local strip during betting/decisions/results. A keyboard-operable native disclosure may add per-wager financial explanations/results; it cannot hide those three values or relabel pending as available. Actual half-credit precision and rejection feedback remain. Seat units reserve balance context, but current public BrowserView has no computer-bankroll value: mark that future feature BLOCKED for a separately approved safe projection, never show inferred/fake money or raw engine data.
+
+Secondary character/demo/audit/setup access stays labelled and subordinate; do not bury legal actions behind a details panel. Future player-count/Start remains M10-T02, with no selector added here. Existing profile/side/back choices retain their current scope and financial boundaries.
+
+## M10A responsive and accessible interaction
+
+Desktop prioritizes recognizable occupied seats/Dealer and comfortably accessible lower local actions within the normal1280x900 primary-play gate. Tablet tightens framing before card/control legibility. Mobile retains Dealer/felt/seat arc, active-opponent context, full own/current hand and integrated actions; other public hands expand in ascending labelled context rather than become generic dashboard cards. At200% text or actual browser200% zoom allow vertical scrolling without essential clipping/page horizontal overflow.
+
+Preserve native keyboard access, meaningful screen-reader regions/labels, visible focus,44px primary targets and measured contrast (DESIGN M10A.14). Use text/icon plus colour for identity/turn/result; geometry alone is insufficient. Readable name/seat/controller fallback survives failed portraits/masks. Reduced motion retains identical static public facts/controls; later animation/Skip behaviour remains M10-T05/T10. Existing polite announcements convey decision/result changes rather than decorative frames. Separate actual-browser zoom from text-scaling evidence. Human review must confirm scene/hand/control comprehension, not only a DOM/test PASS.
+
+## Retained M10 future casino-table interaction amendment
 
 T01 geometry delivery: existing four-person entry/actions/characters retained with a half-ellipse felt/rail and central Dealer/card anchors; full hands use vertical flow and compact perimeter summaries on narrow screens. Planning HUMAN ACCEPTED; T01 IMPLEMENTED / VERIFIED, final verification PASS/0 after immutable-evidence repair7/10. Three viewport/five-card/four-leaf/200%-text/native-keyboard checks PASS. [T01 evidence](M10_T01.md). Count/Start setup and all motion described below remain future T02+ work; no implementation acceptance or deployment claimed.
 
@@ -6,7 +40,7 @@ M10 PLANNED / NOT STARTED. [SPEC acceptance](SPEC.md), [DESIGN presentation auth
 
 Before explicit Start table/session, choose **Total players (including you)** from 1–7; dealer excluded, one local human plus 0–6 clearly labelled computers, default 4. This replaces automatic prepared-table entry only for the initial count choice; do not add repeated guest setup/wager forms. Count persists on Deal Again/Repeat Bet. Funded active participation may be lower when guests sit out. Count changes require an explicit new session at an existing safe reset boundary, with starting-credit-reset disclosure; no mid-round/funded change or silent refill.
 
-People occupy a responsive semicircle, in ascending real-seat order. One sits centrally, two balance left/right, three left/centre/right and 4–7 spread along the arc. Stable seat numbers remain visible. Local Seat 4 occupies the central odd-count slot or right central even-count slot; own cards/decisions retain priority despite superseding fixed lower-centre placement. Desktop/tablet show seated figures/cards on felt. Mobile 320px uses a compact semicircular seat overview plus readable public summaries, full-size own/current hand and keyboard/touch controls below. Vertical scrolling and guest expansion are allowed; page horizontal scrolling and overlapping primary information are not.
+People retain the responsive semicircle and ascending real-seat order: one central, two balanced, three left/centre/right and4–7 distributed. Local Seat4's canonical slot stays central for odd/right-central for even counts; the M10A amendment associates this same seat with its lower-centre full-hand/HUD rather than duplicating or renumbering it. M10A defines the visual composition; M10-T02/T03 still own actual count configuration and responsive binding. Vertical scrolling/labelled guest expansion are allowed; page horizontal scrolling and overlapping primary information are not.
 
 Normal motion sequentially presents already-resolved cards in the RULES R08 two-pass order, culminating in a generic dealer hole-card back. Public reveal/draw and action/settlement motion follows actual authoritative events, never a timer-driven engine action. Dealer states/gestures accompany this sequence at top centre. Meaningful Dealing/Showing dealer play text describes presentation catch-up; actual human choices wait without timers. Skip animations immediately shows latest public facts. Temporarily unavailable inputs have a reason and cannot submit a stale staged hand; Skip/focus remain available. Decorative settlement cannot obstruct next-round access.
 

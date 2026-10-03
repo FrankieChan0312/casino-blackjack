@@ -1,0 +1,59 @@
+{
+  "start": "2026-10-04 01:21:35 +08:00",
+  "end": "2026-10-04 01:21:35 +08:00",
+  "status": "PASS",
+  "administrativeExitCode": 0,
+  "wrapperExitCode": 1,
+  "checkedChildExitCode": 0,
+  "checkedChildStatus": "PASS",
+  "probe": "native-access-probe.json",
+  "knownRestored": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "method": "Native .NET WriteAllBytes after successful non-mutating read/write-access probe",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "status": "PASS"
+    }
+  ],
+  "targetedScratchCleanup": "Only own failed replacement copy; SHA256 matched restored original and saved backup before removal",
+  "ownerOrRootCause": "NOT ESTABLISHED; subsequent access/direct write success does not prove permanent File.Replace failure",
+  "productChanges": 0,
+  "testRerun": "NOT RUN; passed full suite not rerun for collection failure",
+  "repair": "M10A-PLAN2/10 administrative restoration"
+}

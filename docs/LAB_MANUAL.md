@@ -1,3 +1,9 @@
+## M10A planning learning checkpoint
+
+2026-10-04 00:50:54 +08:00 — Geometry and technical PASS do not decide visual game identity. The owner rejected T01's dashboard-like composition after technical publication; retain its1–7 anchor/public-state/evidence foundation and11/11 history, then plan the explicitly authorized independent M10A milestone. A useful composition contract states card/seat/hand/decision ownership, local/Dealer focus, useful felt structure and exact compact funds, with visual gates in addition to fit/tests.
+
+Separate the physical seat anchor from the lower-centre local HUD without introducing a second seat/hand/account. Preserve ascending real-seat order and one semantic representation. Public-data feasibility is part of design: the current BrowserView omits guest bankroll, so a design position is not permission to fabricate money or expose engine state. Record a safe projection prerequisite for separate authorization. Preserve PA1 bytes and prefer later presentation framing; no reference image/storage permission is inferred. Static layout destinations belong to M10A, while actual Dealer/event/deal/action/reveal/chip/replay sequencing stays with M10-T04–T10. Planning checks and M10A_PLANNED do not mean human planning acceptance or implementation start.
+
 ## M10-T01 exceptional repair11 learning checkpoint
 
 2026-10-04 00:05:07 +08:00 — A genuine CSS spacing correction can satisfy a viewport gate without reducing card/control dimensions: desktop status margins8px->2px save exactly12px and move Stand908.703125->896.703125. Keep the existing900px oracle and the table-centric composition. The owner exception is11/11, not a reset; no repair12.

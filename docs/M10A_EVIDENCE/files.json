@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-10-04 01:28:18 +08:00",
+  "scope": "Every retained M10A evidence file except this manifest; external retainedAt references are verified separately in unified-captures.json. No self-referential hash.",
+  "files": [
+    {
+      "path": "administrative-final.json",
+      "bytes": 1949,
+      "sha256": "177b4ad240d5af4a6338c6cc707137ec54dbd0a04b6511cc7c6729870d1706c9"
+    },
+    {
+      "path": "asset-audit.json",
+      "bytes": 624,
+      "sha256": "ecb074c5f27574d30e6b9ebddbe24bcc2a444f1e05ecf017c9ca41b665c497fb"
+    },
+    {
+      "path": "before.json",
+      "bytes": 140645,
+      "sha256": "9098a47042c8f44f50ddedb81598f1633e2ba1738573d1102c2110ea98f8a433"
+    },
+    {
+      "path": "consistency-check.txt",
+      "bytes": 7479,
+      "sha256": "32268f8c801e095b658222bfa16557ef5a072ca73777466fc96bbd836c921114"
+    },
+    {
+      "path": "consistency-final.json",
+      "bytes": 143104,
+      "sha256": "17517802539a940e173eec516fb64ec1a0e4c84eb4d28373e1e72dc6733bebb6"
+    },
+    {
+      "path": "consistency-first-driver.txt",
+      "bytes": 7345,
+      "sha256": "9a1991a382df4b34d3b9c1c2e3b177438ef3e696055c932c10ea697f55260a69"
+    },
+    {
+      "path": "consistency-first-failure.json",
+      "bytes": 895,
+      "sha256": "bdb0a9eb89efda1ce96ae64ded84bf7f1fcc7b0c3e706c94587a4e47f5ee1843"
+    },
+    {
+      "path": "consistency-repair01-driver.txt",
+      "bytes": 7479,
+      "sha256": "cda56ecea10ed551ec8ef806515645183a0d5d07fbd5bc5e645857013e978638"
+    },
+    {
+      "path": "consistency-repair01.json",
+      "bytes": 143107,
+      "sha256": "438589cb599a63ceb80fdff092b2af85bf35ded0b04634df6c8ac106d4b6aa4a"
+    },
+    {
+      "path": "documentation-final.json",
+      "bytes": 432,
+      "sha256": "7deef5535ceed3571c4cbf3572893823dcf2086bc6aa078b84a45d2e93eb9eae"
+    },
+    {
+      "path": "documentation-final.log.gz",
+      "bytes": 265,
+      "sha256": "fed8bbed8e2e095d952e931d2243e671292844e0e23827feb6b14572dd746cbf"
+    },
+    {
+      "path": "documentation.json",
+      "bytes": 406,
+      "sha256": "db35b958e7e018e3028bf0d5bdeddda22fa4c351c9e7f9d8d5c1fc115e860e1d"
+    },
+    {
+      "path": "documentation.log.gz",
+      "bytes": 264,
+      "sha256": "f17fd90727d01b72463c7fbb49b4a9cbb5beee46f45fa407febac5582e16b1dc"
+    },
+    {
+      "path": "generated/435323910bb9c3ec0fd6876e8aacce1b1cf9bc867deb52f2165d6db39c887880.png",
+      "bytes": 485006,
+      "sha256": "435323910bb9c3ec0fd6876e8aacce1b1cf9bc867deb52f2165d6db39c887880"
+    },
+    {
+      "path": "generated/987d7de48e37a1e116819ed0f4d1fbfb3b10e2f221baa4079f7f6cb5f0fa6b1e.png",
+      "bytes": 218643,
+      "sha256": "987d7de48e37a1e116819ed0f4d1fbfb3b10e2f221baa4079f7f6cb5f0fa6b1e"
+    },
+    {
+      "path": "native-access-probe.json",
+      "bytes": 203,
+      "sha256": "6c767e4a7b3d93d040d36156f8158a30514fea991200dd48da0425a12a63ef7d"
+    },
+    {
+      "path": "raw-log-archives.json",
+      "bytes": 1273,
+      "sha256": "073b38993390450d525db7956053659c99c2fe3a241072d032f8ca8e7f83420a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4867,
+      "sha256": "e1cd12eaa6b5ceeca98f54e57f9bbc7954a449db7f70a0cde80f435d455e46e2"
+    },
+    {
+      "path": "unified-captures.json",
+      "bytes": 14047,
+      "sha256": "121cb27d9d24f9c5071b05aca4a3b9df6040ce583e3286e6a99a88d9dc2be0cb"
+    },
+    {
+      "path": "unified-restoration.json",
+      "bytes": 2680,
+      "sha256": "3ea55261a7c93fe34397cb5b1a6db1c1c53b9541d694e66f855e7fd46853bc9c"
+    },
+    {
+      "path": "unified-wrapper-failure.json",
+      "bytes": 14690,
+      "sha256": "f70859d650b051405c0b67b7425b47988bc1d9e16e1336fd2bbc20f0576b59f1"
+    },
+    {
+      "path": "unified.json",
+      "bytes": 231,
+      "sha256": "94c9bf7374e0c347ed1dde3a37d1329bf9a6d1b6e5a9db34699e2fb48d488afa"
+    },
+    {
+      "path": "unified.log.gz",
+      "bytes": 6448,
+      "sha256": "17decec34c7a8e9e2d6e95ab8c45aa70d6137bfc6552a1b60bb3ad7b76e0bc9a"
+    },
+    {
+      "path": "verification-runner.txt",
+      "bytes": 4854,
+      "sha256": "cff828b55925fadc4f56bbd7feec0f9551d9a15f6791a8ba715083f81955c6a7"
+    }
+  ]
+}
