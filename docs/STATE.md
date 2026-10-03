@@ -1,3 +1,9 @@
+## Published M10-T04 planning requirement update
+
+2026-10-03 21:49:58 +08:00 — **M10_T04_REQUIREMENT_UPDATE_ACCEPTED_FOR_PLANNING / COMMITTED / PUSHED**. Requirement/evidence commit **b767968eeacad589aff1d16ec67894dca4e0f48b** on **main**; normal origin/main push PASS/0 at2026-10-03 21:48:41..21:48:47 +08:00, post-push fetch and live remote query PASS/0. At21:48:47 HEAD=origin/main=live remote=b767968eeacad589aff1d16ec67894dca4e0f48b, ahead/behind0/0, clean working tree, untracked0. All28 intended paths committed: nine documentation files and19 evidence files. Staged whitespace PASS/0; no product/domain/test/tool/asset/dependency/runtime or prior T01 evidence changes.
+
+Planning repair **3/10 CLOSED**, T01 repairs8/10 unchanged. Full required harness PASS/0,1045 Vitest/66 Chromium/M1–M8, final affected docs5/13 PASS/0;57 protected asset hashes unchanged and accepted PA1 12-source/12-production audit/reproduction PASS/0. Same-session diff/evidence/privacy review PASS; genuinely fresh independent review and human implementation acceptance NOT RUN. T01 human acceptance NOT YET RECORDED. **M10-T04 NOT STARTED; M10-T02 NOT STARTED**. No Dealer selection policy/artwork/implementation or deployment. This follow-up records factual publication only; its own final SHA/parity/clean state is identified by Git/final delivery, avoiding a self-referential hash.
+
 ## M10-T04 planning repair3/10 CLOSED
 
 2026-10-03 21:43:41 +08:00 — **M10_T04_REQUIREMENT_UPDATE_ACCEPTED_FOR_PLANNING**. Human-added avatar/formal-attire requirement is recorded and verified as planning only. T01 remains IMPLEMENTED / VERIFIED / COMMITTED / PUSHED, repairs8/10 unchanged; human implementation acceptance NOT YET RECORDED (NOT RUN). M10-T02 and M10-T04 NOT STARTED; all later implementation tasks remain unstarted. Selection/assignment policy and actual artwork remain future scope.
