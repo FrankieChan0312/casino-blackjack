@@ -12,6 +12,8 @@ Mandatory M10 normal-motion dealing supersedes historical optional animation/imm
 
 This plan does not change RULES, accept M9, or establish visual acceptance. P0 and P1 require actual moving-table review and explicit owner acceptance after verified implementation and genuinely fresh review.
 
+P0 Dealer clarification after owner review: **Dealer = character presentation entity**. Show a recognizable fictional person at the central head of the table, with IDLE/DEALING/WAITING_PLAYER/REVEALING/DRAWING/SETTLING states and restrained 2D gestures synchronized to already-resolved public card events. A generic dealer icon, abstract SVG or static illustration alone is insufficient; SVG remains a permitted rendering medium for an appropriate animated character. At1280/768/320 keep the character separate from public cards/controls; reduced motion retains the character, quiet state pose and text without gesture/stagger delays. Reuse compatible approved character artwork under the dedicated component contract; no new artwork is selected/created in this repair. Dealer motions never control drawing, RNG, turn order, settlement or domain state. M10-T04 owns these acceptance checks.
+
 ## Historical pre-M10 UX records
 
 ## Current PA1 amendment

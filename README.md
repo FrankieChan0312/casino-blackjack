@@ -1,6 +1,6 @@
 ## M10 planning
 
-M10 — Casino Table Experience is **PLANNED / NOT STARTED**. [Presentation design](docs/DESIGN.md), [scope and acceptance](docs/SPEC.md), [T01–T11 task plan](docs/PLAN.md), [planning evidence](docs/M10_PLANNING.md). Planned total-player selection 1–7, responsive semicircular seats, animated dealer and sequential presentation of already-resolved cards. Current playable product remains the PA1 presentation with the M9 journey described below. Planning changes no gameplay, dependencies or assets.
+M10 — Casino Table Experience is **PLANNED / NOT STARTED**. [Presentation design](docs/DESIGN.md), [scope and acceptance](docs/SPEC.md), [T01–T11 task plan](docs/PLAN.md), [planning evidence](docs/M10_PLANNING.md). Planned total-player selection 1–7, responsive semicircular seats, a central animated Dealer character presentation entity and sequential presentation of already-resolved cards. Dealer character integration requires a recognizable person, six public presentation states and restrained 2D gestures; a generic icon or static/abstract SVG alone is insufficient. Current playable product remains the PA1 presentation with the M9 journey described below. Planning changes no gameplay, dependencies or assets.
 
 M10-T01 NOT STARTED. No deployment. Historical delivery blocks below preserve their receipts; current M10 status is governed by this paragraph and STATE.
 

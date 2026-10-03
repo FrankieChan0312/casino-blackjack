@@ -4,7 +4,7 @@ Status: PLANNED / NOT STARTED. Planning baseline `4e6cd7efdca91651633931edcd9445
 
 ## M10.1 Design goals
 
-P0: a responsive semicircular table, real configurable player count, visibly sequential initial dealing, and a central animated dealer. Preserve understandable player decisions, public-card secrecy, deterministic gameplay and the accepted PA1 characters. Additional action/chip/result motion follows P0. **Authoritative state MUST NOT depend on animation timing.**
+P0: a responsive semicircular table, real configurable player count, visibly sequential initial dealing, and a central animated Dealer character presentation entity. Preserve understandable player decisions, public-card secrecy, deterministic gameplay and the accepted PA1 characters. Additional action/chip/result motion follows P0. **Authoritative state MUST NOT depend on animation timing.**
 
 ## M10.2 Non-goals
 
@@ -44,9 +44,13 @@ Offer a native labelled total-player selector before explicit Start table/sessio
 
 Fund guests with the existing 25-credit/affordable-whole-credit/minimum-10 policy and existing accounts; no refill. The configured total is a maximum of participants for that session, not a guarantee of funded cards each round. Retain spectator/manual setup separately. Use existing PA1 chooser with up to six unique guests excluding the human; stable lineup for normal rounds/collision exchange remains. Recompute journal-capacity preflight from actual composite command count plus finalization headroom before mutation: current constants assume three guests and cannot simply be reused for six. Preserve manual cap policy and atomic rejection.
 
-## M10.7 Dealer placement and character states
+## M10.7 Dealer character integration, placement and states
 
-Reuse the independent fictional female SVG in `CasinoPerson.tsx`, top centre above dealer cards. Apply small whole-figure/arm-group transforms where practical; no new rig or portrait dependency. States are presentation enums, never domain phases:
+**Dealer = character presentation entity.** The Dealer must visibly appear as a fictional person with a recognizable face, upper body, professional attire and readable dealing gestures, occupying the central position at the head of the table above the dealer cards. A generic dealer icon, abstract SVG or unchanged static illustration alone does not satisfy P0. SVG is an allowed rendering medium, not the definition of the entity or proof of character animation.
+
+M10-T04 owns a dedicated Dealer character component contract: independent character depiction/asset provenance, public presentation state, event destination/gesture intent, accessible Dealer label and motion preference. Inputs contain only sanitized public presentation facts; the component has no raw domain state, RNG, private cards or command/finalization callbacks. Keep it independent of the PA1 human/guest roster and avatar selection. Reuse compatible existing character artwork when it satisfies this contract, or define a dedicated character presentation component using approved assets. `CasinoPerson.tsx` already defines a fictional professional female person illustration; this is a compatible reuse candidate, not a mandatory static-SVG implementation. This repair selects/creates no new artwork and changes no asset contract. If the existing depiction cannot meet the character/motion acceptance criteria, stop affected asset integration and request separately authorized artwork rather than inventing a new asset now.
+
+Restrained 2D body/arm gestures must visibly communicate the relevant dealing, reveal, draw and settlement states; no 3D/skeletal rig is required. A quiet character pose in IDLE or WAITING_PLAYER is intentional, while the normal-motion action states must demonstrate actual character motion. States are presentation enums, never domain phases:
 
 | State | Observed cause | Presentation |
 | --- | --- | --- |
@@ -58,6 +62,10 @@ Reuse the independent fictional female SVG in `CasinoPerson.tsx`, top centre abo
 | SETTLING | Already-committed wager result events | Restrained collect/return gesture |
 
 Stop gestures at human decisions and queue drain. No endless idle animation. Normal rejection shows concise feedback; integrity/VOID cancels normal celebration and uses interruption text. Dealer can wait while authoritative automation has already finished: presentational waiting must never misrepresent a request for a human action that does not exist.
+
+Card-dealing interaction is observational: character gestures align with already-produced INITIAL_CARD/HIDDEN_CARD/REVEAL/DEALER_CARD events and their safe destinations. Gesture start/completion/skip/cancellation never draws a card, consumes RNG, changes turn order, settles wagers or changes domain state. T04 establishes this mapping with deterministic public-event fixtures; T05/T06 bind the live presentation feed, and T08/T09 complete reveal/draw/settlement integration without moving those authoritative operations into the character.
+
+At1280x900,768x1024 and320x720 the Dealer remains recognizable at the central table head, separate from cards, wagers and controls; adapt scale/framing while preserving visible face/upper body and readable public status. Reduced motion presents the same character and state text in quiet poses with zero gesture/flight delays; preference changes flush presentation only. Asset/render failure provides a readable Dealer text fallback, not an abstract icon claimed as successful character integration. T04 acceptance covers character contract/provenance, all six state fixtures, restrained moving gestures synchronized with card presentation, three-viewport placement, reduced-motion equivalence and the unchanged authoritative boundary. Human visual review must confirm a person/character, not merely component presence or an SVG tag.
 
 ## M10.8 Card presentation
 
