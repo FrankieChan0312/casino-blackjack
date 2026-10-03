@@ -1,0 +1,9 @@
+{
+  "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep 'PA1-E0[34]' --workers=2 --fully-parallel",
+  "start": "2026-10-03 19:31:13 +08:00",
+  "finish": "2026-10-03 19:31:21 +08:00",
+  "exit": 0,
+  "attempt": 3,
+  "predeclaredBound": 3,
+  "instrumentation": "Temporary writeFile path redirection to unique pid-counter-basename; original screenshot buffers/assertions/flags preserved; no canonical writes"
+}

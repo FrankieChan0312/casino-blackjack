@@ -1,0 +1,88 @@
+{
+  "started": "Fixed30 samples/case/location; no retry",
+  "timestamp": "2026-10-03T11:23:51.309Z",
+  "source": "docs/images/pa1-avatar-noble_female.png",
+  "sourceSha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e",
+  "results": [
+    {
+      "location": "repository",
+      "case": "new",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "repository",
+      "case": "existing",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "repository",
+      "case": "copied-PA1",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "repository",
+      "case": "existing-update",
+      "method": "r+",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "repository",
+      "case": "copied-PA1-update",
+      "method": "r+",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "local-temp",
+      "case": "new",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "local-temp",
+      "case": "existing",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "local-temp",
+      "case": "copied-PA1",
+      "method": "w",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "local-temp",
+      "case": "existing-update",
+      "method": "r+",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    },
+    {
+      "location": "local-temp",
+      "case": "copied-PA1-update",
+      "method": "r+",
+      "iterations": 30,
+      "pass": 30,
+      "fail": 0
+    }
+  ]
+}

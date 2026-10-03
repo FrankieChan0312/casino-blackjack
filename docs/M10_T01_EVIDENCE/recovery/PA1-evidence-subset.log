@@ -1,0 +1,48 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1.spec.ts --grep PA1-E0[345]
+
+[WebServer] (node:10708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:20052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (2.7s)
+(node:25300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (4.2s)
+  ok 3 [chromium] › tests\browser\pa1.spec.ts:127:1 › [PA1-E05] failed portraits and 200 percent text enlargement retain readable character identity and playable controls (2.4s)
+
+
+  1) [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+
+    Error: locator.screenshot: UNKNOWN: unknown error, open 'C:\Users\user\Documents\GitHub\casino-blackjack\docs\images\pa1-avatar-noble_female.png'
+
+      76 |     expect(await hand.locator('.cards').innerHTML()).toBe(cards);
+      77 |     const ids = await lineup(page); expect(new Set(ids).size).toBe(4);
+    > 78 |     await hand.screenshot({path:`docs/images/pa1-avatar-${id}.png`,animations:'disabled'});
+         |                ^
+      79 |   }
+      80 |   await expect(page.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+      81 |   for (const seat of [1,3,6]) {
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\pa1.spec.ts:78:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+  2 passed (12.2s)

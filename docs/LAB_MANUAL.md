@@ -1,4 +1,21 @@
-## M10 planning learning checkpoint
+2026-10-03 20:36:04 +08:00 — Current cumulative T01 repairs8/10: infrastructure7 plus documentation-only EOF correction8; affected55 tests/whitespace PASS. Historical repair7 learning receipt follows; T02 remains NOT STARTED.
+
+## M10-T01 repair7 learning checkpoint
+
+2026-10-03 20:31:15 +08:00 — Immutable historical evidence and a fresh verification capture have different lifecycles. Replacing canonical PNGs during ordinary tests was a deterministic harness defect even though Windows UNKNOWN/-4094/open remains ROOT CAUSE NOT ESTABLISHED. Read-only references plus Playwright test-scoped outputs preserve historical truth. Keep the original DOM/portrait/card/responsive/keyboard oracle; validate saved PNG metadata/content and before/after baseline hashes, and prove missing/mismatching evidence fails. Old geometry pixels are not an unapproved golden image for a new layout.
+
+Final sequential verify.ps1 PASS0,78/1045 Vitest and66 Chromium, all preservation; seventeen PA1 hashes unchanged. Repair count7/10, no OS-root-cause claim. Historical inventory/source adapters remain necessary and comparison-only. Losslessly archive diagnosis-owned PNG copies with per-path SHA256 recovery mapping before scoped removal; keep every failed trace/raw record. Same-session visual/source review cannot establish genuinely fresh review or human acceptance. Stop T01 for human acceptance; T02 NOT STARTED, deployment NOT RUN.
+
+## Historical M10-T01 geometry learning checkpoint
+## M10-T01 geometry learning checkpoint
+
+Pure normalized slot data can establish1–7 layout capability without configuring a single participant. Keep physical seat/account/hand IDs and domain commands stable; current T01 binds canonical seven-slot guest offsets but retains the full near-edge human hand until T03. A point on an ellipse is not a verified footprint: measure complete portrait/name/wager/card/result blocks, allow normal-flow wrapping, and verify five actual cards/four actual split leaves/200% root text. Mobile compact arcs and vertical scrolling preserve one table without compressing controls.
+
+Evidence-driven repair: a234px guest footprint pushed desktop Stand below900px; a240px footprint with143.5px three-card lane, shorter perimeter depth and restrained header margins achieved899.09375 without weakening the inherited900px assertion. Batch Git blobs retain exact source preservation within the unchanged test timeout. New milestone tests need explicit historical inventory boundaries, not skipped accepted scenarios. Two existing screenshot writes returned UNKNOWN/open despite current exclusive-open probes passing; record ROOT CAUSE NOT ESTABLISHED, retain failures and run the required complete harness without changing retries/timeouts. Same-session visual inspection does not establish fresh review or human acceptance.
+
+Final T01 delivery is IMPLEMENTED / BLOCKED, not VERIFIED: the exact final harness repeats two existing PA1 PNG write failures after passing77/1037 Vitest and64 Chromium. Preserve raw failed output and avoid repeated green-seeking runs or invented file-lock explanations. Normal commit/push is conditional on complete verification, so working changes remain available for review/resumption. Repair count6/10 persists; infrastructure failure without a targeted code repair does not reset or inflate the ledger. T02 remains NOT STARTED.
+
+## Historical M10 planning learning checkpoint
 
 M10 PLANNED / NOT STARTED. [Design](DESIGN.md), [task plan](PLAN.md), [source inspection](M10_PLANNING.md). Seven modelled seats do not mean seven local humans: the current architecture permits one HUMAN and up to six funded COMPUTER guests. Configure real participation before session preparation, preserve participant balances and stable seat numbers, and distinguish seated count from funded active-round count. Visual arc slots are derived coordinates, not account identities.
 
@@ -1915,3 +1932,6 @@ A character is table-local presentation state. Its independent crypto chooser is
 Production art needs two gates: individual original mechanical/visual audit, then pinned derivative reproduction. An alpha channel can be fully opaque; count actual transparent pixels. Decode PNG CRC/inflate/unfilter and compare decoded pixel hashes as well as file hashes to reject duplicate disguises. Preserve original provenance rather than attaching its signature to transformed pixels. Uniform contain on a transparent240x320 canvas avoids scene masking or character cropping, with fixed tools/output budgets and read-only byte-reproduction checks. Availability is not a failed repair.
 
 Verification failures remain evidence. T05's initial official nonzero exit lacks preserved failing-browser detail; later bounded diagnostics and captured official PASS do not establish its cause. Retain the failure, capture complete output and hand the unresolved history to a genuinely new reviewer. Mechanical verification, normal publication, independent review, human acceptance and deployment remain separate events. [PA1 mapping](PA1_MAPPING.md), [fresh review](PA1_REVIEW_HANDOFF.md).
+## M10-T01 — Intermittent screenshot open diagnosis
+
+Recovery2026-10-03 separates browser screenshot capture from evidence persistence: the encoded PNG buffer exists before Node writeFile fails at open with flag=w/errno=-4094. Four isolated passes and a paired pass did not erase the subsequent subset and controlled isolated failures. Current valid/writable paths, empty Restart Manager ownership and a later successful native open do not prove the original cause. The three historical inventory/source adapters do not execute image I/O. Preserve raw error/trace/snapshots, classify unknown and stop before speculative changes. No product/test/harness repair; cumulative6/10. [Executed evidence](M10_T01_RECOVERY.md). Full post-recovery harness NOT RUN, acceptance/deployment NOT RUN, T02 NOT STARTED.

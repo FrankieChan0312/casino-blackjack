@@ -1,0 +1,19 @@
+{
+  "started": "2026-10-03T10:56:51.582Z",
+  "finished": "2026-10-03T10:56:51.699Z",
+  "pid": 13880,
+  "path": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-avatar-noble_female.png",
+  "operation": "fs.promises.writeFile",
+  "flags": "w",
+  "bufferBytes": 79363,
+  "status": "FAIL",
+  "error": {
+    "stack": "Error: UNKNOWN: unknown error, open 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-avatar-noble_female.png'\n    at open (node:internal/fs/promises:697:25)\n    at Object.writeFile (node:internal/fs/promises:1317:14)\n    at Object.fs.promises.writeFile (C:\\Users\\user\\AppData\\Local\\Temp\\casino-blackjack-M10-T01-recovery-20261003-1855\\observe-io.cjs:9:20)\n    at _ElementHandle.screenshot (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:60937:11)\n    at _frame._wrapApiCall.title (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:58363:20)\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:57430:88\n    at _Frame._wrapApiCall (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:57430:27)\n    at _Locator._withElement (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:58357:16)\n    at _Locator.screenshot (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:58547:16)\n    at file:///C:/Users/user/Documents/GitHub/casino-blackjack/tests/browser/pa1.spec.ts:78:5\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1655:9\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1135:11\n    at TimeoutManager.withRunnable (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:403:14)\n    at TestInfoImpl._runWithTimeout (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:7)\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1653:7\n    at WorkerMain._runTest (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1626:5)\n    at WorkerMain.runTestGroup (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1521:9)\n    at process.<anonymous> (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\common\\index.js:1941:25)",
+    "message": "UNKNOWN: unknown error, open 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-avatar-noble_female.png'",
+    "errno": -4094,
+    "code": "UNKNOWN",
+    "syscall": "open",
+    "path": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-avatar-noble_female.png"
+  },
+  "nativeProbe": "OPEN_EXISTING win32=0\r\nCREATE_ALWAYS win32=0; diagnostic probe preserved original bytes=79361\r\n"
+}

@@ -1,7 +1,9 @@
 import type { BrowserView } from '../browser/controller.js';
+import type { CSSProperties } from 'react';
 import { credits, resultLabel, handLabel } from './presentation.js';
 import { CasinoPerson } from './CasinoPerson.js';
 import { character, type CharacterLineup } from '../presentation/characters.js';
+import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometry.js';
 
 type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
 const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
@@ -12,22 +14,29 @@ export function Cards({ cards }: { cards: readonly PublicCard[] }) {
 export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
-  return <section aria-label="Blackjack table" className="table-surface">
-    <section className="dealer panel" aria-label="Dealer"><h2>Dealer</h2>
+  const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
+  return <section aria-label="Blackjack table" className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
+    <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
       {view.playerMode && <CasinoPerson kind="dealer" />}
-      {round ? <><Cards cards={round.dealer.visibleCards} />
+      <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
         <p className="dealer-total">{round.dealer.holeCard ? 'Total' : 'Visible total'}: {round.dealer.total}</p>
-        <p className="dealer-state">{round.dealer.status}</p></> : <p>Waiting for the initial deal</p>}
+        <p className="dealer-state">{round.dealer.status}</p></> : <p>Waiting for the initial deal</p>}</div>
     </section>
-    {view.playerMode && <p className="table-inscription" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>}
+    {view.playerMode && <p className="table-inscription" data-anchor="table-centre" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>}
     <div className="seats">{view.configuration.filter(seat => !view.playerMode || seat.occupancy !== 'EMPTY').map((seat) => {
       const local = seat.seatNumber === view.human?.controlledSeat;
       const avatarId = lineup && (local ? lineup.human : lineup.guests[seat.seatNumber]);
       const avatar = avatarId ? character(avatarId) : undefined;
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
-      return <section key={seat.seatNumber} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      const anchor = TABLE_SEAT_ANCHORS[seat.seatNumber - 1];
+      const guestIndex = guests.findIndex(entry => entry.seatNumber === seat.seatNumber);
+      const geometryStyle = view.playerMode ? {
+        '--seat-depth': (anchor.y - TABLE_GEOMETRY.centre.y) / TABLE_GEOMETRY.radius.y,
+        '--seat-shift': local ? 0 : anchor.x / 100 - (guestIndex + 0.5) / guests.length,
+      } as CSSProperties : undefined;
+      return <section key={seat.seatNumber} style={geometryStyle} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {avatar ? <div className="character-identity">
           <img src={avatar.portrait} width={60} height={80} alt={`${local ? 'Your avatar' : 'Computer guest'}: ${avatar.name}, ${avatar.archetype}`} />
           <div><h2 aria-label={avatar.name}>{avatar.name}</h2><p className="character-archetype">{avatar.archetype}</p>

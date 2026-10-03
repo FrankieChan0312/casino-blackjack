@@ -1,0 +1,146 @@
+2026-10-03 19:05:46 +08:00
+From https://github.com/FrankieChan0312/casino-blackjack
+ * branch            main       -> FETCH_HEAD
+main
+57443bbefddd47512104ba941c65e3ff1988cf02
+57443bbefddd47512104ba941c65e3ff1988cf02
+0	0
+ M README.md
+ M docs/DESIGN.md
+ M docs/DEVELOPMENT_LOG.md
+ M docs/LAB_MANUAL.md
+ M docs/PLAN.md
+ M docs/SPEC.md
+ M docs/STATE.md
+ M docs/UX_UI.md
+ M scripts/check-m8-preservation.mjs
+ M src/ui/Table.tsx
+ M src/ui/styles.css
+ M tests/browser/fixtures.ts
+ M tests/pa1/preservation.test.ts
+ M tests/unit/m8Contract.test.ts
+?? docs/M10_T01.md
+?? docs/M10_T01_EVIDENCE/administrative.log.gz
+?? docs/M10_T01_EVIDENCE/archives.json
+?? docs/M10_T01_EVIDENCE/browser-initial.log.gz
+?? docs/M10_T01_EVIDENCE/browser-repair04.log.gz
+?? docs/M10_T01_EVIDENCE/browser-repair05.log.gz
+?? docs/M10_T01_EVIDENCE/diagnosis-desktop.png
+?? docs/M10_T01_EVIDENCE/five-cards-1280.png
+?? docs/M10_T01_EVIDENCE/five-cards-320.png
+?? docs/M10_T01_EVIDENCE/five-cards-768.png
+?? docs/M10_T01_EVIDENCE/footprint-diagnosis.json
+?? docs/M10_T01_EVIDENCE/four-leaves-1280.png
+?? docs/M10_T01_EVIDENCE/four-leaves-320.png
+?? docs/M10_T01_EVIDENCE/four-leaves-768.png
+?? docs/M10_T01_EVIDENCE/geometry.json
+?? docs/M10_T01_EVIDENCE/initial-desktop-failure.png
+?? docs/M10_T01_EVIDENCE/initial-keyboard-failure.png
+?? docs/M10_T01_EVIDENCE/inspect.mjs
+?? docs/M10_T01_EVIDENCE/lint-repair06.log.gz
+?? docs/M10_T01_EVIDENCE/recovery/M10OpenProbe.cs.txt
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/.last-run.json
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/test-failed-1.png
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/trace.zip
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.json
+?? docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.log
+?? docs/M10_T01_EVIDENCE/recovery/administrative.json
+?? docs/M10_T01_EVIDENCE/recovery/administrative.log
+?? docs/M10_T01_EVIDENCE/recovery/baseline-manifest.json
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/.last-run.json
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/test-failed-1.png
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/trace.zip
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.json
+?? docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.log
+?? docs/M10_T01_EVIDENCE/recovery/current-file-owners.json
+?? docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-dwarf_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-dwarf_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-elf_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-elf_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-halforc_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-halforc_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-knight_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-knight_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-mage_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-mage_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-noble_female.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-noble_male.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-1280.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-320.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-768.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-text-fallback-1280.png
+?? docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-text-fallback-320.png
+?? docs/M10_T01_EVIDENCE/recovery/git-final.log
+?? docs/M10_T01_EVIDENCE/recovery/historical-image-restoration.json
+?? docs/M10_T01_EVIDENCE/recovery/historical-source-guard.log
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-01.json
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-01.log
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-02.json
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-02.log
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-03.json
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-03.log
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-04.json
+?? docs/M10_T01_EVIDENCE/recovery/isolated-E03-04.log
+?? docs/M10_T01_EVIDENCE/recovery/native-probe-compile.log
+?? docs/M10_T01_EVIDENCE/recovery/new-failure-file-owner.json
+?? docs/M10_T01_EVIDENCE/recovery/new-failure-path.log
+?? docs/M10_T01_EVIDENCE/recovery/observe-io.cjs.txt
+?? docs/M10_T01_EVIDENCE/recovery/observed-error.json
+?? docs/M10_T01_EVIDENCE/recovery/parent-paths.json
+?? docs/M10_T01_EVIDENCE/recovery/previous-failures.json
+?? docs/M10_T01_EVIDENCE/recovery/previous-failures.log
+?? docs/M10_T01_EVIDENCE/recovery/privacy-receipt.json
+?? docs/M10_T01_EVIDENCE/regenerated-historical-images.json
+?? docs/M10_T01_EVIDENCE/repair04-desktop.png
+?? docs/M10_T01_EVIDENCE/repair04-footprint-diagnosis.json
+?? docs/M10_T01_EVIDENCE/table-1280.png
+?? docs/M10_T01_EVIDENCE/table-320.png
+?? docs/M10_T01_EVIDENCE/table-768.png
+?? docs/M10_T01_EVIDENCE/targeted-repair01.log.gz
+?? docs/M10_T01_EVIDENCE/targeted-repair03.log.gz
+?? docs/M10_T01_EVIDENCE/text-fallback-1280.png
+?? docs/M10_T01_EVIDENCE/text-fallback-320.png
+?? docs/M10_T01_EVIDENCE/text-fallback-768.png
+?? docs/M10_T01_EVIDENCE/verify-final.log.gz
+?? docs/M10_T01_EVIDENCE/verify-initial.log.gz
+?? docs/M10_T01_RECOVERY.md
+?? src/presentation/tableGeometry.ts
+?? tests/browser/m10.spec.ts
+?? tests/m10/tableGeometry.test.tsx
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DESIGN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DEVELOPMENT_LOG.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/LAB_MANUAL.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/PLAN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/STATE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/UX_UI.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/check-m8-preservation.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/ui/Table.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/ui/styles.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/browser/fixtures.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/pa1/preservation.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/unit/m8Contract.test.ts', LF will be replaced by CRLF the next time Git touches it
+Tracked modified paths: 14
+Untracked paths: 91
+2026-10-03 19:05:48 +08:00
+{
+  "timestamp": "2026-10-03 19:09:08 +08:00",
+  "branch": "main",
+  "HEAD": "57443bbefddd47512104ba941c65e3ff1988cf02",
+  "remoteHEAD": "57443bbefddd47512104ba941c65e3ff1988cf02",
+  "aheadBehind": "0\t0",
+  "trackedModified": 14,
+  "untracked": 91,
+  "staged": 0,
+  "status": "M10-T01_BLOCKED",
+  "repair": "6/10",
+  "protectedDiff": "EMPTY",
+  "documentationLinks": "PASS",
+  "whitespace": "PASS",
+  "commit": "NOT RUN",
+  "push": "NOT RUN"
+}

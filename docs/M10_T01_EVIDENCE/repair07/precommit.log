@@ -1,0 +1,63 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/pa1 tests/m9 tests/m10 tests/unit/m8Contract.test.ts tests/unit/portfolio.test.ts tests/ra1/inventory.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  10 passed (10)
+      Tests  55 passed (55)
+   Start at  20:33:58
+   Duration  4.03s (tests 71%, transform 15%, import 14%)
+
+
+2026-10-03 20:41:13 +08:00 — Aggregate staged whitespace FAIL/2, classified generated raw evidence only; authored code/docs/metadata PASS0. Raw report follows unchanged:
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:207: trailing whitespace.
++  2   | 
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:293: trailing whitespace.
++  87  | 
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:332: trailing whitespace.
++  126 | 
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:350: trailing whitespace.
++  144 | 
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.log:19: trailing whitespace.
++  1) [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.log:47: trailing whitespace.
++    [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+docs/M10_T01_EVIDENCE/recovery/administrative.log:13: new blank line at EOF.
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:207: trailing whitespace.
++  2   | 
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:293: trailing whitespace.
++  87  | 
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:332: trailing whitespace.
++  126 | 
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md:350: trailing whitespace.
++  144 | 
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.log:23: trailing whitespace.
++  1) [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.log:51: trailing whitespace.
++    [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards 
+docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log:10: trailing whitespace.
++                               
+docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log:11: trailing whitespace.
++                               
+docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log:12: trailing whitespace.
++                               
+docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log:13: trailing whitespace.
++                               
+docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log:18: trailing whitespace.
++                               
+docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/M10NativeInspect.cs.txt:19: new blank line at EOF.
+docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/browser-artifacts/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/error-context.md:209: trailing whitespace.
++  3 | 
+docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/runner.log:18: trailing whitespace.
++  1) [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths 
+docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/runner.log:46: trailing whitespace.
++    [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths 
+docs/M10_T01_EVIDENCE/repair07/lint.log:4: new blank line at EOF.
+docs/M10_T01_EVIDENCE/repair07/precommit.log:13: new blank line at EOF.
+docs/M10_T01_EVIDENCE/repair07/stage-A.log:13: new blank line at EOF.
+docs/M10_T01_EVIDENCE/repair07/stage-E.log:16: new blank line at EOF.
+docs/M10_T01_EVIDENCE/repair07/stage-F-current.log:13: new blank line at EOF.
+docs/M10_T01_EVIDENCE/repair07/typecheck.log:4: new blank line at EOF.

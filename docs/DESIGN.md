@@ -1,6 +1,6 @@
 # M10 — Casino Table Experience design
 
-Status: PLANNED / NOT STARTED. Planning baseline `4e6cd7efdca91651633931edcd9445a401886bce`, main. This section is the authoritative proposed M10 presentation design; implementation requires a later owner instruction. [Scope/acceptance](SPEC.md), [task contracts](PLAN.md), [planning evidence](M10_PLANNING.md). Historical designs below retain their milestone scope. M10 does not accept M9 or revise RULES.
+Status: planning HUMAN ACCEPTED at `57443bbefddd47512104ba941c65e3ff1988cf02`; owner authorized T01 geometry implementation only. T01 IMPLEMENTED / VERIFIED after immutable-evidence harness repair7/10, final verification PASS/0; T02..T11 NOT STARTED. Planning baseline `4e6cd7efdca91651633931edcd9445a401886bce`, main. [Scope/acceptance](SPEC.md), [task contracts](PLAN.md), [historical planning evidence](M10_PLANNING.md), [T01 implementation/evidence](M10_T01.md). Historical designs below retain their milestone scope. M10 does not accept M9 or revise RULES.
 
 ## M10.1 Design goals
 
@@ -19,6 +19,8 @@ Use the existing restrained dark felt, warm rail, high-contrast text cards and t
 Use a lower half-ellipse with normalized coordinates and a dedicated reserved dealer band. Starting desktop anchors: centre `(50%, 34%)`, horizontal radius `40%`, vertical radius `48%`; seat centres follow `x=50%+40%*cos(theta)`, `y=34%+48%*sin(theta)`. For one seat theta=90 degrees; otherwise distribute evenly from 160 to 20 degrees in ascending seat order, left to right. Thus one is central, two are symmetric, three are left/centre/right, and four through seven are evenly distributed. This is presentation geometry, not domain ordering code.
 
 T01 must verify footprint sizes and settle responsive tokens before T03: account for portraits, names, wagers, five-card hands and four split leaves, not just anchor points. Increase table height/vertical flow or use compact public summaries when space is insufficient; never overlap cards, shrink primary controls, or conceal split results to preserve a mathematical arc. Cards/text stay upright rather than rotating the whole seat. Draw the felt/rail with CSS; no new art pipeline.
+
+T01 geometry checkpoint: pure `tableGeometry.ts` defines the above1–7 normalized slot contract, independently of occupied/funded state. Current physical1/3/4/6 identities use canonical seven-slot guest x/depth values; full human cards stay near-edge in normal flow until T03 count-specific binding. Desktop guest footprints are capped240px with a143.5px card lane at1280px; reserved Dealer band is max150px/9.375rem and perimeter depth2.5rem. At<=1100px lateral shifts yield to compact normal-flow arcs (64px depth);<=600px uses portrait/controller summaries (40px depth) and existing guest-card expansion. Full hands/leaves wrap vertically, controls remain outside felt, and card corners are bounded within upright card boxes at enlarged text. Actual five-card/four-leaf and200% text evidence covers the existing four-player layout only; seven-player rendered integration/matrix remains T03. No motion tokens/dependency/queue are introduced in T01.
 
 ## M10.5 Seat model
 

@@ -1,0 +1,74 @@
+[
+  {
+    "original": "docs/M10_T01_EVIDENCE/verify-initial.log",
+    "archive": "docs/M10_T01_EVIDENCE/verify-initial.log.gz",
+    "rawBytes": 37898,
+    "rawSha256": "da1fed1aa89db48c5861b0ebe2bd7c7718193f0b79be6cd94bd590422bfea861",
+    "gzipSha256": "c6352c71c0880c47caacba63a09252d4c119cc03d1fa60b1a275c317d1fd93b8",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/verify-final.log",
+    "archive": "docs/M10_T01_EVIDENCE/verify-final.log.gz",
+    "rawBytes": 43073,
+    "rawSha256": "eb871465b387619f53c7539cc6c8718c7c8d9598bc93253d4b8398e5271cea4f",
+    "gzipSha256": "e10a616806c8ec55ab8e141011290b5cf022b4b46a919c87387fcc6a68cd409f",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/targeted-repair03.log",
+    "archive": "docs/M10_T01_EVIDENCE/targeted-repair03.log.gz",
+    "rawBytes": 362,
+    "rawSha256": "64e50cef5e625ed4052b9bb708635c292c3fa2a9983f499e50a017eca7d567c3",
+    "gzipSha256": "bb33cab0b5da5ee37aa9814e296d75cb484df26472785f7f2274689e998c5e06",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/targeted-repair01.log",
+    "archive": "docs/M10_T01_EVIDENCE/targeted-repair01.log.gz",
+    "rawBytes": 349,
+    "rawSha256": "d8eebc73f229b696b2f84fd27d3fc31bf859223018cd4ecabb4e8d827e1a3f32",
+    "gzipSha256": "fbe31800b42d5411d2d2e4c24df3cf4915a1684d0226b7a6322e1c3b7b4a368b",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/lint-repair06.log",
+    "archive": "docs/M10_T01_EVIDENCE/lint-repair06.log.gz",
+    "rawBytes": 64,
+    "rawSha256": "57d497ac33991f97f0898b07b070946b6b67c9c564aeb23a5981de3f2f7baa0c",
+    "gzipSha256": "03a746f6d20368d636374b7863a2dcfa5284372b2fb6a10bb951dc8d78b4f4be",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/browser-repair05.log",
+    "archive": "docs/M10_T01_EVIDENCE/browser-repair05.log.gz",
+    "rawBytes": 9950,
+    "rawSha256": "dd889143f5769f6d07b58b01ec6f95d6b06adfac90a0622a1c27bfcd6d7b91ff",
+    "gzipSha256": "e229d947c85872ef5dfcc9fcfc9d0f066ba13485f089406b61232596679e6836",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/browser-repair04.log",
+    "archive": "docs/M10_T01_EVIDENCE/browser-repair04.log.gz",
+    "rawBytes": 9777,
+    "rawSha256": "6c2027f4ee0aba65f24658b3daa70a836f52a40417b3d5a6486a748488520183",
+    "gzipSha256": "d0b90b4adf8c2ed7e875fc11f692a018259f7381be7c7e227ae2ab5329d071b1",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/browser-initial.log",
+    "archive": "docs/M10_T01_EVIDENCE/browser-initial.log.gz",
+    "rawBytes": 7214,
+    "rawSha256": "c8addef061daefb937505782ca3a79ed3be9053072a1957c32cdcef2102b80b2",
+    "gzipSha256": "b8e1295b278ee07c206614bb2581c4ecbf83a2b12a77c4f9df34bcf128c1be36",
+    "roundtrip": "PASS"
+  },
+  {
+    "original": "docs/M10_T01_EVIDENCE/administrative.log",
+    "archive": "docs/M10_T01_EVIDENCE/administrative.log.gz",
+    "rawBytes": 438,
+    "rawSha256": "387127ca92f8db8d99df8df3e3c82e4b4d892d4e02cdda425640231eaff92b49",
+    "gzipSha256": "2615ab22405b0be91292c98640bdb6cc960e5600999b2b39c42bf41699fbd064",
+    "roundtrip": "PASS"
+  }
+]

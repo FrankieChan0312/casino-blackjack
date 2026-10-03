@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
+import { capturePa1Evidence } from './pa1Evidence.js';
 
 async function lineup(page: Page) { return page.locator('.seats > .seat').evaluateAll(seats => seats.map(seat => seat.getAttribute('data-character'))); }
 async function choose(page: Page, id: string) {
@@ -75,7 +76,7 @@ test('[PA1-E03] all twelve identities display the correct decoded portrait name 
     await expect(portrait).toHaveJSProperty('naturalWidth',240); await expect(portrait).toHaveJSProperty('naturalHeight',320);
     expect(await hand.locator('.cards').innerHTML()).toBe(cards);
     const ids = await lineup(page); expect(new Set(ids).size).toBe(4);
-    await hand.screenshot({path:`docs/images/pa1-avatar-${id}.png`,animations:'disabled'});
+    await capturePa1Evidence(`docs/images/pa1-avatar-${id}.png`,test.info().outputPath(`pa1-avatar-${id}.png`),path=>hand.screenshot({path,animations:'disabled'}));
   }
   await expect(page.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
   for (const seat of [1,3,6]) {
@@ -120,7 +121,7 @@ test('[PA1-E04] character keyboard focus touch targets reduced motion and unclip
     }
     await expect(page.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-    await page.screenshot({path:`docs/images/pa1-responsive-${viewport.width}.png`,fullPage:true,animations:'disabled'});
+    await capturePa1Evidence(`docs/images/pa1-responsive-${viewport.width}.png`,test.info().outputPath(`pa1-responsive-${viewport.width}.png`),path=>page.screenshot({path,fullPage:true,animations:'disabled'}),{width:viewport.width,minHeight:viewport.height});
   }
 });
 
@@ -136,7 +137,7 @@ test('[PA1-E05] failed portraits and 200 percent text enlargement retain readabl
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     expect(await page.locator('#player-hand .character-identity').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBe(true);
     await expect(page.getByRole('button',{name:'Stand',exact:true})).toBeEnabled();
-    await page.screenshot({path:`docs/images/pa1-text-fallback-${viewport.width}.png`,fullPage:true,animations:'disabled'});
+    await capturePa1Evidence(`docs/images/pa1-text-fallback-${viewport.width}.png`,test.info().outputPath(`pa1-text-fallback-${viewport.width}.png`),path=>page.screenshot({path,fullPage:true,animations:'disabled'}),{width:viewport.width,minHeight:viewport.height});
     await page.getByRole('button',{name:'Stand',exact:true}).click();
     await expect(page.getByRole('region',{name:'Your round result',exact:true})).toBeVisible();
   }

@@ -1,0 +1,9 @@
+{
+  "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep 'PA1-E03'",
+  "start": "2026-10-03 18:51:44 +08:00",
+  "finish": "2026-10-03 18:51:51 +08:00",
+  "exit": 0,
+  "status": "PASS",
+  "targets": "docs/images/pa1-avatar-*.png",
+  "raw": "isolated-E03-01.log"
+}

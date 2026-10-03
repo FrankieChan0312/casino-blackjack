@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-10-03T11:37:04.989Z",
+  "libuv": "1.52.1",
+  "playwrightBundleSha256": "549070af3acabb3efcc4f55bfe6210f9f7c2fcf633cf7eaa59bfe60719969171",
+  "snippets": [
+    {
+      "source": "Node v24.19.0 internal/fs/promises",
+      "line": 1294,
+      "pattern": "/async function writeFile\\(/",
+      "text": "async function writeFile(path, data, options) {\r\n  options = getOptions(options, {\r\n    encoding: 'utf8',\r\n    mode: 0o666,\r\n    flag: 'w',\r\n    flush: false,\r\n  });\r\n  const flag = options.flag || 'w';\r\n  const flush = options.flush ?? false;\r\n\r\n  validateBoolean(flush, 'options.flush');\r\n\r\n  if (!isArrayBufferView(data) && !isCustomIterable(data)) {\r\n    validateStringAfterArrayBufferView(data, 'data');\r\n    data = Buffer.from(data, options.encoding || 'utf8');\r\n  }\r\n\r\n  validateAbortSignal(options.signal);\r\n  if (path instanceof FileHandle)\r\n    return writeFileHandle(path, data, options.signal, options.encoding);\r\n\r\n  checkAborted(options.signal);\r\n\r\n  const fd = await open(path, flag, options.mode);\r\n  let writeOp = writeFileHandle(fd, data, options.signal, options.encoding);\r\n\r\n  if (flush) {\r\n    writeOp = handleFdSync(writeOp, fd);\r\n  }\r\n\r\n  return handleFdClose(writeOp, fd.close);\r\n}\r\n\r\nfunction isCustomIterable(obj) {\r\n  return isIterable(obj) && !isArrayBufferView(obj) && typeof obj !== 'string';\r\n}\r\n\r\nasync function appendFile(path, data, options) {\r\n  options = getOptions(options, { encoding: 'utf8', mode: 0o666, flag: 'a' });\r\n  options = copyObject(options);\r"
+    },
+    {
+      "source": "Node v24.19.0 internal/fs/promises",
+      "line": 431,
+      "pattern": "/function handleFdClose\\(/",
+      "text": "async function handleFdClose(fileOpPromise, closeFunc) {\r\n  return PromisePrototypeThen(\r\n    fileOpPromise,\r\n    (result) => PromisePrototypeThen(closeFunc(), () => result),\r\n    (opError) =>\r\n      PromisePrototypeThen(\r\n        closeFunc(),\r\n        () => PromiseReject(opError),\r\n        (closeError) => PromiseReject(aggregateTwoErrors(closeError, opError)),\r\n      ),\r\n  );\r\n}\r\n\r\nasync function handleFdSync(fileOpPromise, handle) {\r\n  return PromisePrototypeThen(\r\n    fileOpPromise,\r\n    (result) => PromisePrototypeThen(\r\n      handle.sync(),\r\n      () => result,\r\n      (syncError) => PromiseReject(syncError),\r\n    ),\r\n    (opError) => PromiseReject(opError),\r\n  );\r\n}\r\n\r\nasync function fsCall(fn, handle, ...args) {\r\n  assert(handle[kRefs] !== undefined,\r\n         'handle must be an instance of FileHandle');\r\n\r\n  if (handle.fd === -1) {\r\n    // eslint-disable-next-line no-restricted-syntax\r\n    const err = new Error(handle[kCloseReason] ?? 'file closed');\r\n    err.code = 'EBADF';\r\n    err.syscall = fn.name;\r\n    throw err;\r\n  }\r\n\r\n  try {\r\n    handle[kRef]();\r\n    return await fn(handle, ...new SafeArrayIterator(args));\r"
+    },
+    {
+      "source": "playwright-core1.63.0 lib/coreBundle.js",
+      "line": 60923,
+      "text": "      async screenshot(options = {}) {\n        const mask = options.mask;\n        const copy = { ...options, mask: void 0 };\n        if (!copy.type)\n          copy.type = determineScreenshotType(options);\n        if (mask) {\n          copy.mask = mask.map((locator2) => ({\n            frame: locator2._frame._channel,\n            selector: locator2._selector\n          }));\n        }\n        const result2 = await this._elementChannel.screenshot(copy, this._frame._timeout(options));\n        if (options.path) {\n          await mkdirIfNeeded2(options.path);\n          await import_fs46.default.promises.writeFile(options.path, result2.binary);\n        }\n        return result2.binary;\n      }\n      async $(selector) {\n        return _ElementHandle.fromNullable((await this._elementChannel.querySelector({ selector }, kNoTimeout)).element);"
+    },
+    {
+      "source": "playwright-core1.63.0 lib/coreBundle.js",
+      "line": 61783,
+      "text": "      async screenshot(options = {}) {\n        const mask = options.mask;\n        const copy = { ...options, mask: void 0 };\n        if (!copy.type)\n          copy.type = determineScreenshotType(options);\n        if (mask) {\n          copy.mask = mask.map((locator2) => ({\n            frame: locator2._frame._channel,\n            selector: locator2._selector\n          }));\n        }\n        const result2 = await this._channel.screenshot(copy, this._timeoutSettings.timeout(options));\n        if (options.path) {\n          await mkdirIfNeeded2(options.path);\n          await import_fs47.default.promises.writeFile(options.path, result2.binary);\n        }\n        return result2.binary;\n      }\n      async _expectScreenshot(options) {\n        const { timeout, signal, title, ...optionsWithoutTimeout } = options;"
+    }
+  ]
+}

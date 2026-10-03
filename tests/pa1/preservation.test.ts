@@ -27,6 +27,10 @@ it('[PA1-P01] every pre-PA1 test assertion is unchanged except explicit historic
       .replace('    // PA1 owns its new scenarios; this remains the accepted M8 inventory.\n','')
       .replace("    if (file === 'pa1.spec.ts') continue;\n",'')
       .replace(" && !/^pa1[\\\\/]/.test(file)",'');
+    if (file === 'tests/unit/m8Contract.test.ts') current = current
+      .replace('    // M10 owns new geometry scenarios; retain the historical M8 inventory.\n','')
+      .replace("    if (file === 'm10.spec.ts') continue;\n",'')
+      .replace(" && !/^m10[\\\\/]/.test(file)",'');
     if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll("{ name: /^Computer guest: / }","{ name: 'Original illustrated computer guest in evening attire', exact: true }");
     expect(current,file).toBe(historical);
   }

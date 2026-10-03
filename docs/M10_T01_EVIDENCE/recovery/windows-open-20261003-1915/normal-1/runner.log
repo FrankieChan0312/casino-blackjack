@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1.spec.ts --grep PA1-E0[34]
+
+[WebServer] (node:23520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:3956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (4.1s)
+  ok 2 [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (5.6s)
+
+  2 passed (12.2s)

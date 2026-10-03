@@ -1,0 +1,1435 @@
+{
+  "timestamp": "2026-10-03T11:42:20.248Z",
+  "incomingSnapshots": 105,
+  "incomingNonBookkeepingByteIdentical": 102,
+  "priorBookkeepingTextPreserved": 3,
+  "historicalArchives": 9,
+  "relativeLinks": 77,
+  "textCredentialScan": 62,
+  "evidenceHashes": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/baseline-runtime.log",
+      "bytes": 3523,
+      "sha256": "f04837500967ca148711c989420f0bbefde3876d22d757339334585199a3ba8c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/browser-experiment-summary.json",
+      "bytes": 11969,
+      "sha256": "0c09b47b7037b46bc06b124106379386abd4f297c18d272e6f012a2bd02f0a51"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/browser-runtime.json",
+      "bytes": 232,
+      "sha256": "a5692e4704b02d5fa55f3f10fa92db7d38e44236eaa99f6898fa257cb43302ff"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/canonical-restoration.json",
+      "bytes": 5861,
+      "sha256": "213a36a130aaabea77deeccdeb2d2795c73dfe0d8f0516237427c888a53d14c1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/failed-target-powershell-inspection.json",
+      "bytes": 446,
+      "sha256": "03d9d82661d319805c152a2fff8d138f3cf597d83f72f217c4c2a4940519cda1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix-command.json",
+      "bytes": 326,
+      "sha256": "8a9b70b3047dc4c2e9b478525c643aa24d2d5c7e8f59fa13e89d5a08701d6d68"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix-summary.json",
+      "bytes": 1792,
+      "sha256": "6d47771e51620dfe0767e088465f34f3529388ac71fee015fe86b8c4338183ba"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix.jsonl",
+      "bytes": 461448,
+      "sha256": "cbb9f88715491bbfc59013bec73690605b5663dade6dabdeb81ebf58ac0eed39"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix.log",
+      "bytes": 960,
+      "sha256": "b60a61c59c9f1f34cd6cdac1d92122988ea9f473879a6f6ee8011ff2cd5c52a2"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-mage_female.png",
+      "bytes": 80995,
+      "sha256": "c1bf6bf0ec0c1bf64599d45e954fe6cc78a66634202ab551cc2b1cb738b2c40f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-noble_female.png",
+      "bytes": 79362,
+      "sha256": "e1b01c46c625e03cfa0c465eb4003342e659863ae4976f7732ad7471abf0809f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-avatar-noble_male.png",
+      "bytes": 80049,
+      "sha256": "26c704dca8f593892c7463d85b5590ae32bc01a32cc97f7f99dad5c461b4b8f8"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/final-generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/incoming-manifest.json",
+      "bytes": 17205,
+      "sha256": "928426face3de654f789d2d627b2ce1dcf411633e90d8b2b4a89309c9482e6a2"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/M10NativeInspect.cs.txt",
+      "bytes": 3616,
+      "sha256": "82537a4a5512a8c1decdb09c89e88321e044108a56eb82c5548693aa51f3c8f0"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/M10NativeInspect.initial.cs.txt",
+      "bytes": 3619,
+      "sha256": "08df7c13a5ed5df294545d251a0197faaaa3eb0be72cbe46adad1df2b803845f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/matrix.cjs.txt",
+      "bytes": 2453,
+      "sha256": "b583e1b6a341054526dd7b497cbab4117fbe87b4934a0b7fb4cc4a042f760aec"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/native-client.cjs.txt",
+      "bytes": 1244,
+      "sha256": "afca916157f30ab59da58f40123833fb927a5ab7e49a50a0a3baf949e58702e8"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/native-inspector-compile-corrected.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/native-inspector-compile.log",
+      "bytes": 197,
+      "sha256": "768d30e906a9f113ba4c88c9c6ba8c319130f4a0c916a3819e6647c2c07bca8f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/command.json",
+      "bytes": 458,
+      "sha256": "f8fd83809d02e9b0b34309e18232e034b87b7f6523a8b82136cf6d736cfacf8c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79218,
+      "sha256": "6b045cf714ec0ead94b68caa83fdebb9ad222cb2eb1eba404f27039f857315a6"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79567,
+      "sha256": "072ab449b1059d5d7a93566dd73efe0bc825a16ab20ef5addd54b69e6315db5e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-elf_female.png",
+      "bytes": 79628,
+      "sha256": "db982638349aaf92ae94ee24dc84afa0610bd0daddbd77edbf0063b715adfe7f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-elf_male.png",
+      "bytes": 79594,
+      "sha256": "20a15eb5697d60d39e0d68c186d644e7fa3f3d43319c0058bf75d4369d253836"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80745,
+      "sha256": "0c10e15c65a231193327986bc00d966416146f99ca517820c2c340d22c4fac88"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80889,
+      "sha256": "b98da77a0c811d04710e32797fe3bf30e73a0b63749a2a1ed6a34c32f661a8ff"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-knight_female.png",
+      "bytes": 80581,
+      "sha256": "598254e542e4080fdb95c4f28262a8ab478d042fc3e8b1a1cff123427d946bc0"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-knight_male.png",
+      "bytes": 80443,
+      "sha256": "60306ef357a59a96b0ad8e2be3047f0b0b87c835bd42f88d77e13209ba4205fc"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-mage_female.png",
+      "bytes": 80994,
+      "sha256": "540b2bccd92728aa6c45685529c2b4d26f405be1d729a0b70069eb45c40fe62c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-mage_male.png",
+      "bytes": 80115,
+      "sha256": "007ccca974c9e54dd9b78a421e279c1024f7c93e3cbc167da087cc0e89d7adeb"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-noble_female.png",
+      "bytes": 79361,
+      "sha256": "6c975910f2453ab3996f9cf42a58bd0f3d5c7d830c1a34e0b384230d6e47e509"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-avatar-noble_male.png",
+      "bytes": 80044,
+      "sha256": "9c772a6d6446e076a6063f13b4d74e57b2ff6c2d501d2ce65523d3e5e01c6875"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/io-3956.jsonl",
+      "bytes": 22756,
+      "sha256": "ff6170f44cb10dd71b76447748b3af5dbe919b49c106e8a8c32957a809bb784f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/runner.log",
+      "bytes": 913,
+      "sha256": "652c86e0f255c48475fd12de4a790e470e7919c0950af34f69b5ec1509e1c3d8"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/command.json",
+      "bytes": 458,
+      "sha256": "7bab0002ef96392bfd529d5dc6b745331a9f8862ab4f01efca98b16e4015f753"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-mage_female.png",
+      "bytes": 80995,
+      "sha256": "c1bf6bf0ec0c1bf64599d45e954fe6cc78a66634202ab551cc2b1cb738b2c40f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-noble_female.png",
+      "bytes": 79363,
+      "sha256": "61023b722f848e3dc4087ca27f8b3878de939b79016ac1506d6b6d867e116e61"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-avatar-noble_male.png",
+      "bytes": 80048,
+      "sha256": "26397eaa184b39d02b6712ddaf1c9eb42790ed57dad6d4fdb20184fd2b873de5"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/io-33312.jsonl",
+      "bytes": 22771,
+      "sha256": "cf281bcf9bab114a28c6068a38b00ab89469ddcdad4c0d2e3ed590932cd61b53"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/runner.log",
+      "bytes": 914,
+      "sha256": "917c27f0564f47d29e1514dcca598d5f12d01f1207623b1ced2abdcc136870e0"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/observe-screenshots.cjs.txt",
+      "bytes": 1611,
+      "sha256": "a2ab060ab475876f46e55ee855d1146ca9c82d8df379cfc374c9cff9bfa08663"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/command.json",
+      "bytes": 488,
+      "sha256": "2b552f269558a425c36f0f4e93d2e86fb193cb15ddb7019e2b945c0412c4f4a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-mage_female.png",
+      "bytes": 80997,
+      "sha256": "027cc219136df4046b112f7a96ae97e1dfaca5c6bbc68e7f0a7bac419da9a52c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-noble_female.png",
+      "bytes": 79362,
+      "sha256": "e1b01c46c625e03cfa0c465eb4003342e659863ae4976f7732ad7471abf0809f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-avatar-noble_male.png",
+      "bytes": 80049,
+      "sha256": "81f31578bd91514eb2c30e9bee66f88a7ea30a3a4a156a89d0048116c42fd908"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/io-26912.jsonl",
+      "bytes": 4522,
+      "sha256": "dee83bed7c2212c769079ec3f25ab63cab65571ff4bd975af6b45aeff8194459"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/io-31152.jsonl",
+      "bytes": 18243,
+      "sha256": "e248b733bc072f1cddd436fd403e7d0496dfa1db95b71017f35c904bc47eab02"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/runner.log",
+      "bytes": 1110,
+      "sha256": "5e207674663edbc79737ea6eefd41bdcb851a8135be137a3823ca21303963ea1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/command.json",
+      "bytes": 488,
+      "sha256": "0edced92162caf23516d881b0c8d0d085ff0c8de52e4155ace2aa646910e00eb"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-mage_female.png",
+      "bytes": 80995,
+      "sha256": "c1bf6bf0ec0c1bf64599d45e954fe6cc78a66634202ab551cc2b1cb738b2c40f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-noble_female.png",
+      "bytes": 79362,
+      "sha256": "e1b01c46c625e03cfa0c465eb4003342e659863ae4976f7732ad7471abf0809f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-avatar-noble_male.png",
+      "bytes": 80049,
+      "sha256": "26c704dca8f593892c7463d85b5590ae32bc01a32cc97f7f99dad5c461b4b8f8"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/io-14964.jsonl",
+      "bytes": 18243,
+      "sha256": "0a2ef5df4dec896ea5326abac2424dafe98c6d450741038960fa13e3106f6c5c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/io-3988.jsonl",
+      "bytes": 5235,
+      "sha256": "581a4b0651b4aa9ebf474c26cccf0af29f2323c6399574a01650f2061d7c80f3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/runner.log",
+      "bytes": 5834,
+      "sha256": "3fa0a9ded8741df4d096b60e4f5179ffdbd217c6dd282bcf7d646bf6ac9e8e8e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/test-results/.last-run.json",
+      "bytes": 96,
+      "sha256": "6ae9f8669c6af23accb6e4196a22c7731ac8c1744f13b5cb7c1306b9e73909c5"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/error-context.md",
+      "bytes": 11460,
+      "sha256": "cf0032cbc1a92b450c981ee3551f6f43edddc85e110c2b8e00825142217955bb"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/test-failed-1.png",
+      "bytes": 353913,
+      "sha256": "91caa1178fca8195070a077b1291fc4624ae21bfb123299f670c83de45dd201b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/trace.zip",
+      "bytes": 3347118,
+      "sha256": "eb261c889af9af6a6a6912016285fcf2f5fa05d9f0f7851486bdbb4fb2cd816d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/copied-PA1-update.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/copied-PA1.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/existing-update.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/existing.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-1.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-10.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-11.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-12.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-13.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-14.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-15.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-16.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-17.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-18.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-19.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-2.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-20.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-21.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-22.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-23.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-24.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-25.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-26.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-27.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-28.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-29.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-3.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-30.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-4.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-5.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-6.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-7.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-8.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/scratch/new-9.png",
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/command.json",
+      "bytes": 470,
+      "sha256": "17ec379c16fbb154b0457a9805339814cad46493af1a57be88b03b5a419b7aea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-mage_female.png",
+      "bytes": 80997,
+      "sha256": "027cc219136df4046b112f7a96ae97e1dfaca5c6bbc68e7f0a7bac419da9a52c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-noble_female.png",
+      "bytes": 79363,
+      "sha256": "61023b722f848e3dc4087ca27f8b3878de939b79016ac1506d6b6d867e116e61"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-avatar-noble_male.png",
+      "bytes": 80049,
+      "sha256": "81f31578bd91514eb2c30e9bee66f88a7ea30a3a4a156a89d0048116c42fd908"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/io-9700.jsonl",
+      "bytes": 22756,
+      "sha256": "264a004dfbeb433a48c0303a5e406d1b765e6bb3eb3013f941d4f5e429d39fe8"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/runner.log",
+      "bytes": 925,
+      "sha256": "4f2bc5fb3346cad66c208d59d8fee0227c99fab842a2a4f628174e6e620fc565"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/command.json",
+      "bytes": 470,
+      "sha256": "7f5c8800cb3d471dbe866fa0c065ddb7be10a0d0bf502e911c636d2b5b594f25"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-mage_female.png",
+      "bytes": 80997,
+      "sha256": "027cc219136df4046b112f7a96ae97e1dfaca5c6bbc68e7f0a7bac419da9a52c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-noble_female.png",
+      "bytes": 79362,
+      "sha256": "e1b01c46c625e03cfa0c465eb4003342e659863ae4976f7732ad7471abf0809f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-avatar-noble_male.png",
+      "bytes": 80049,
+      "sha256": "81f31578bd91514eb2c30e9bee66f88a7ea30a3a4a156a89d0048116c42fd908"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-production-felt-1.png",
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-production-felt-2.png",
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-production-light-1.png",
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-production-light-2.png",
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-text-fallback-1280.png",
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/generated/pa1-text-fallback-320.png",
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/io-12532.jsonl",
+      "bytes": 22756,
+      "sha256": "951524bee9b372e08c256a07356fc5aaa056cd9b13dc2d4426275d99fa48db88"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/runner.log",
+      "bytes": 926,
+      "sha256": "571be64bd324b47d17183bab8682368b5553deabf8b6ce0ef590819b7d06300b"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/source-inspection.json",
+      "bytes": 4889,
+      "sha256": "441fb196256b71a23898dc1fe6ab685fd1bf8f6d8a74ed4b0c5bf561a05923e0"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-1-pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-10-pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-11-pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-12-pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-2-pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-3-pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-4-pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-5-pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-6-pa1-avatar-mage_female.png",
+      "bytes": 80995,
+      "sha256": "c1bf6bf0ec0c1bf64599d45e954fe6cc78a66634202ab551cc2b1cb738b2c40f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-7-pa1-avatar-noble_male.png",
+      "bytes": 80048,
+      "sha256": "26397eaa184b39d02b6712ddaf1c9eb42790ed57dad6d4fdb20184fd2b873de5"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-8-pa1-avatar-noble_female.png",
+      "bytes": 79363,
+      "sha256": "61023b722f848e3dc4087ca27f8b3878de939b79016ac1506d6b6d867e116e61"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/1360-9-pa1-avatar-halforc_male.png",
+      "bytes": 80893,
+      "sha256": "7198c8f3cf7a689469c561180c48cab2d9311a3a37f8ecb7aa1e08b8cb736f87"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/14100-1-pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/14100-2-pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/14100-3-pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/command.json",
+      "bytes": 433,
+      "sha256": "daa3bd506c6840428c262221a2232ea240a551a7bcd485bfa83b4c83238a7b99"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/io-1360.jsonl",
+      "bytes": 17868,
+      "sha256": "bf10b4f2a0c635d1125efb260a8407123e84adf016a589fff8702cc2a4cad257"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/io-14100.jsonl",
+      "bytes": 4435,
+      "sha256": "427c907936e8e164bbe298e226d79426140df407335981dd724016a94e46507e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/runner.log",
+      "bytes": 1108,
+      "sha256": "bdf51560c2eb2ae72f0a6be7e464ae5e5f3e16ab5bf758fd69c2a545defd6edf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/13940-1-pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/13940-2-pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/13940-3-pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-1-pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-10-pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-11-pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-12-pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-2-pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-3-pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-4-pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-5-pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-6-pa1-avatar-mage_female.png",
+      "bytes": 80995,
+      "sha256": "c1bf6bf0ec0c1bf64599d45e954fe6cc78a66634202ab551cc2b1cb738b2c40f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-7-pa1-avatar-noble_male.png",
+      "bytes": 80048,
+      "sha256": "26397eaa184b39d02b6712ddaf1c9eb42790ed57dad6d4fdb20184fd2b873de5"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-8-pa1-avatar-noble_female.png",
+      "bytes": 79360,
+      "sha256": "278ef4b9d01ca41080022c96f9d1d5f1dbb6284517a0390e9992519cc4084b3a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/28852-9-pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/command.json",
+      "bytes": 433,
+      "sha256": "0a137c08d83ce4fee7c26f7b02e36ba0991aeca3e11305bba34626bfdc68bc9a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/io-13940.jsonl",
+      "bytes": 4435,
+      "sha256": "a6e2810ba7e115a09823f718f1118ab9aae0f21a163eb0b046b7d451997d11bb"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/io-28852.jsonl",
+      "bytes": 17916,
+      "sha256": "c6794beca98cf1ea6e53c06e3048c1c55468d80bcab6fb40444b1cf21224a4ce"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/runner.log",
+      "bytes": 1109,
+      "sha256": "549e9a7aaa23617217fe9d960a506debc813b8b4e74618115536ca471d40aa5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/31700-1-pa1-responsive-1280.png",
+      "bytes": 719327,
+      "sha256": "2bba64bcf1805059362f6f67006eef41ecadb304f6241bdbfdf52612c9cee0bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/31700-2-pa1-responsive-768.png",
+      "bytes": 525999,
+      "sha256": "6337007cd81fcaa528982326633eaf0be7d8ad22273eb3d538e251eea8d54e27"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/31700-3-pa1-responsive-320.png",
+      "bytes": 269501,
+      "sha256": "471a4865c7984792218e5f2577e0abc5cecc496509d0c9de0d97251fb3e48293"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-1-pa1-avatar-elf_male.png",
+      "bytes": 79596,
+      "sha256": "9ce15eaeab0f820d31503cbfc39be0cebfd74ccc0acada61170db3f9681c90bd"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-10-pa1-avatar-halforc_female.png",
+      "bytes": 80749,
+      "sha256": "04e7fc37fd3873784bc98ed6dbee8a2b5bbeb4d5455aeaabeecaf5a73e9ffe6c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-11-pa1-avatar-dwarf_male.png",
+      "bytes": 79570,
+      "sha256": "9e521cd78a605b63d1e3a8dc73f4abb1c1d1b9409f265d280b87abbb9d9923d7"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-12-pa1-avatar-dwarf_female.png",
+      "bytes": 79221,
+      "sha256": "b290ed4dfeab9ed0ec6b14b30a3848c3d9c7b8b3764c1872559c70713ee0ad01"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-2-pa1-avatar-elf_female.png",
+      "bytes": 79631,
+      "sha256": "859eff7baae9441d9e6a0f070149f26688c2c78de0cb809d3599763a5e014195"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-3-pa1-avatar-knight_male.png",
+      "bytes": 80446,
+      "sha256": "26d5945fc0c802adc382937a1823b08ae3212a8ae29a3ed41697443a13a6a81d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-4-pa1-avatar-knight_female.png",
+      "bytes": 80584,
+      "sha256": "bb13f2dac90e1edb645725015ed9bfd2bf61059bf4b13195dadc6f6ad7cc8f81"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-5-pa1-avatar-mage_male.png",
+      "bytes": 80119,
+      "sha256": "c645b6182f1200f1cfba11b830fe75818d66a6ac798320e44062be4cb3e7b28a"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-6-pa1-avatar-mage_female.png",
+      "bytes": 80997,
+      "sha256": "027cc219136df4046b112f7a96ae97e1dfaca5c6bbc68e7f0a7bac419da9a52c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-7-pa1-avatar-noble_male.png",
+      "bytes": 80048,
+      "sha256": "26397eaa184b39d02b6712ddaf1c9eb42790ed57dad6d4fdb20184fd2b873de5"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-8-pa1-avatar-noble_female.png",
+      "bytes": 79363,
+      "sha256": "61023b722f848e3dc4087ca27f8b3878de939b79016ac1506d6b6d867e116e61"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/32328-9-pa1-avatar-halforc_male.png",
+      "bytes": 80891,
+      "sha256": "a5caecfec91736dd579d7e8c0e2ca775a8aa9d02185da745342576050d7b865e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/command.json",
+      "bytes": 433,
+      "sha256": "49e787d6c7c6073141a3556dc1416638557aa626210bc88fa43a8b229011b927"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/io-31700.jsonl",
+      "bytes": 4432,
+      "sha256": "6fc578e70a75e601d740f239eeb637e61367a8775ed74a0da2f3be1d05b64c37"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/io-32328.jsonl",
+      "bytes": 17904,
+      "sha256": "731aa05416691bf207dd2a70e27eca2a62096bb0971f20e84ada4d4851f33f14"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/runner.log",
+      "bytes": 1109,
+      "sha256": "5a73e3bd7af22ab3b73ad0344dbef980a2ff249c1769f0fc78c06243ea58c687"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/test-results/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-canonical-before.json",
+      "bytes": 2847,
+      "sha256": "f04d8a2fb3e52e7516e7af3e6a42e856434b51a83167f054303c3bf89fe98caa"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/windows-runtime.json",
+      "bytes": 186,
+      "sha256": "2de38aa343a329720b3526a38e2e1726a76be15f41e90db3814d5301f9bbe499"
+    }
+  ],
+  "status": "PASS",
+  "rootClassification": 8,
+  "root": "ROOT CAUSE NOT ESTABLISHED",
+  "repairCount": "6/10"
+}

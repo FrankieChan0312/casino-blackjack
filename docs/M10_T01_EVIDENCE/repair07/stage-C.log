@@ -1,0 +1,18 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1.spec.ts
+
+[WebServer] (node:16116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:15280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\pa1.spec.ts:14:1 › [PA1-E01] non-blocking default, collision exchange and persistent guests across active play Repeat Bet and Deal Again (1.5s)
+  ok 2 [chromium] › tests\browser\pa1.spec.ts:39:1 › [PA1-E02] changing avatars leaves seeded replay commands gameplay digest funds and audit outcomes identical (1.7s)
+  ok 3 [chromium] › tests\browser\pa1.spec.ts:58:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (3.4s)
+  ok 4 [chromium] › tests\browser\pa1.spec.ts:89:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (4.0s)
+  ok 5 [chromium] › tests\browser\pa1.spec.ts:128:1 › [PA1-E05] failed portraits and 200 percent text enlargement retain readable character identity and playable controls (2.4s)
+
+  5 passed (15.0s)

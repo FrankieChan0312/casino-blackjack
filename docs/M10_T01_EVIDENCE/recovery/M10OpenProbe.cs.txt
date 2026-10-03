@@ -1,0 +1,15 @@
+using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
+public class M10OpenProbe {
+ [DllImport("kernel32.dll",CharSet=CharSet.Unicode,SetLastError=true)] static extern SafeFileHandle CreateFile(string path,uint access,uint share,IntPtr security,uint disposition,uint flags,IntPtr template);
+ public static void Main(string[] args) {
+  string path=args[0]; byte[] original=File.ReadAllBytes(path);
+  using(SafeFileHandle existing=CreateFile(path,0x40000000,7,IntPtr.Zero,3,0x80,IntPtr.Zero)) {Console.WriteLine("OPEN_EXISTING win32="+(existing.IsInvalid?Marshal.GetLastWin32Error():0));}
+  SafeFileHandle handle=CreateFile(path,0x40000000,7,IntPtr.Zero,2,0x80,IntPtr.Zero);
+  if(handle.IsInvalid) {Console.WriteLine("CREATE_ALWAYS win32="+Marshal.GetLastWin32Error());handle.Dispose();return;}
+  using(FileStream stream=new FileStream(handle,FileAccess.Write)) {stream.Write(original,0,original.Length);stream.Flush();}
+  Console.WriteLine("CREATE_ALWAYS win32=0; diagnostic probe preserved original bytes="+original.Length);
+ }
+}

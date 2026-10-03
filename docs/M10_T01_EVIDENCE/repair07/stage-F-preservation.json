@@ -1,0 +1,7 @@
+{
+  "stage": "F",
+  "end": "2026-10-03 20:21:34 +08:00",
+  "start": "2026-10-03 20:20:03 +08:00",
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1",
+  "exitCode": 0
+}

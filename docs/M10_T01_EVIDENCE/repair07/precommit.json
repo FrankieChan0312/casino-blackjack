@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-03 20:36:04 +08:00",
+  "affectedVitest": "10 files/55 tests PASS/exit0,2026-10-03 20:33:57..20:34:02 +08:00",
+  "whitespace": "Authored code/docs/metadata PASS0; aggregate staged check FAIL2 exclusively on preserved generated raw output, classified and retained without mutation.",
+  "note": "No executable code/test/config change after final official verification. Fresh-session independent review NOT RUN; same-session scoped diff/visual review PASS.",
+  "canonicalHashPairs": 17,
+  "status": "PASS",
+  "protectedTree": "EMPTY",
+  "reviewDocumentLinks": 60,
+  "stagedFiles": 209,
+  "rawWhitespaceFiles": [
+    "docs/M10_T01_EVIDENCE/recovery/administrative.log",
+    "docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md",
+    "docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.log",
+    "docs/M10_T01_EVIDENCE/recovery/filesystem-diagnosis.log",
+    "docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md",
+    "docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.log",
+    "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/M10NativeInspect.cs.txt",
+    "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/browser-artifacts/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/error-context.md",
+    "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/runner.log",
+    "docs/M10_T01_EVIDENCE/repair07/lint.log",
+    "docs/M10_T01_EVIDENCE/repair07/precommit.log",
+    "docs/M10_T01_EVIDENCE/repair07/stage-A.log",
+    "docs/M10_T01_EVIDENCE/repair07/stage-E.log",
+    "docs/M10_T01_EVIDENCE/repair07/stage-F-current.log",
+    "docs/M10_T01_EVIDENCE/repair07/typecheck.log"
+  ]
+}

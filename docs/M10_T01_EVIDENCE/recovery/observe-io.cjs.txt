@@ -1,0 +1,19 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const cp = require('node:child_process');
+const write = fs.promises.writeFile.bind(fs.promises);
+fs.promises.writeFile = async function (target, data, options) {
+  if (!/[/\\]pa1-[^/\\]+\.png$/.test(String(target))) return write(target, data, options);
+  const started = new Date().toISOString();
+  try {
+    const result = await write(target, data, options);
+    process.stderr.write('M10_IO_DIAGNOSTIC '+JSON.stringify({started,finished:new Date().toISOString(),pid:process.pid,path:path.resolve(String(target)),operation:'fs.promises.writeFile',flags:typeof options==='object'&&options?.flag||'w',bufferBytes:data.length,status:'PASS'})+'\n');
+    return result;
+  } catch (error) {
+    const object = Object.fromEntries(Object.getOwnPropertyNames(error).map(key=>[key,error[key]]));
+    let native;
+    try { native=cp.execFileSync(path.join(__dirname,'M10OpenProbe.exe'),[path.resolve(String(target))],{encoding:'utf8'}); } catch (probeError) {native={message:probeError.message,status:probeError.status,stdout:probeError.stdout,stderr:probeError.stderr};}
+    process.stderr.write('M10_IO_DIAGNOSTIC '+JSON.stringify({started,finished:new Date().toISOString(),pid:process.pid,path:path.resolve(String(target)),operation:'fs.promises.writeFile',flags:typeof options==='object'&&options?.flag||'w',bufferBytes:data.length,status:'FAIL',error:object,nativeProbe:native})+'\n');
+    throw error;
+  }
+};

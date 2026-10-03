@@ -1,0 +1,324 @@
+[
+  {
+    "name": "normal-1",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34]",
+      "start": "2026-10-03 19:26:41 +08:00",
+      "finish": "2026-10-03 19:26:55 +08:00",
+      "exit": 0,
+      "configuredWorkers": 1,
+      "cliWorkers": 1,
+      "fullyParallel": false,
+      "mode": "normal",
+      "attempt": 1,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      3956
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": []
+  },
+  {
+    "name": "normal-2",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34]",
+      "start": "2026-10-03 19:26:55 +08:00",
+      "finish": "2026-10-03 19:27:11 +08:00",
+      "exit": 0,
+      "configuredWorkers": 1,
+      "cliWorkers": 1,
+      "fullyParallel": false,
+      "mode": "normal",
+      "attempt": 2,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      33312
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": []
+  },
+  {
+    "name": "serial-1",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34] --workers=1",
+      "start": "2026-10-03 19:27:11 +08:00",
+      "finish": "2026-10-03 19:27:27 +08:00",
+      "exit": 0,
+      "configuredWorkers": 1,
+      "cliWorkers": 1,
+      "fullyParallel": false,
+      "mode": "serial",
+      "attempt": 1,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      9700
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": []
+  },
+  {
+    "name": "serial-2",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34] --workers=1",
+      "start": "2026-10-03 19:27:27 +08:00",
+      "finish": "2026-10-03 19:27:43 +08:00",
+      "exit": 0,
+      "configuredWorkers": 1,
+      "cliWorkers": 1,
+      "fullyParallel": false,
+      "mode": "serial",
+      "attempt": 2,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      12532
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": []
+  },
+  {
+    "name": "parallel-1",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34] --workers=2 --fully-parallel",
+      "start": "2026-10-03 19:27:44 +08:00",
+      "finish": "2026-10-03 19:27:58 +08:00",
+      "exit": 0,
+      "configuredWorkers": 1,
+      "cliWorkers": 2,
+      "fullyParallel": true,
+      "mode": "parallel",
+      "attempt": 1,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      26912,
+      31152
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": []
+  },
+  {
+    "name": "parallel-2",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34] --workers=2 --fully-parallel",
+      "start": "2026-10-03 19:27:58 +08:00",
+      "finish": "2026-10-03 19:28:07 +08:00",
+      "exit": 1,
+      "configuredWorkers": 1,
+      "cliWorkers": 2,
+      "fullyParallel": true,
+      "mode": "parallel",
+      "attempt": 2,
+      "predeclaredRunsPerArm": 2,
+      "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+    },
+    "writeAttempts": 14,
+    "pass": 13,
+    "fail": 1,
+    "workerPids": [
+      14964,
+      3988
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": false,
+    "failures": [
+      {
+        "pid": 3988,
+        "ppid": 31356,
+        "mode": "canonical",
+        "canonical": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png",
+        "actual": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png",
+        "flags": "w",
+        "writeStart": "2026-10-03T11:28:06.168Z",
+        "writeEnd": "2026-10-03T11:28:06.168Z",
+        "sameProcessWriters": 1,
+        "bufferBytes": 525999,
+        "status": "FAIL",
+        "error": {
+          "stack": "Error: UNKNOWN: unknown error, open 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png'\n    at open (node:internal/fs/promises:697:25)\n    at Object.writeFile (node:internal/fs/promises:1317:14)\n    at Object.fs.promises.writeFile (C:\\Users\\user\\AppData\\Local\\Temp\\casino-blackjack-M10-T01-windows-open-20261003-1915\\observe-screenshots.cjs:2:661)\n    at _Page.screenshot (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright-core\\lib\\coreBundle.js:61797:11)\n    at file:///C:/Users/user/Documents/GitHub/casino-blackjack/tests/browser/pa1.spec.ts:123:5\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1655:9\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1135:11\n    at TimeoutManager.withRunnable (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:403:14)\n    at TestInfoImpl._runWithTimeout (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1133:7)\n    at C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1653:7\n    at WorkerMain._runTest (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1626:5)\n    at WorkerMain.runTestGroup (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\worker\\workerProcessEntry.js:1521:9)\n    at process.<anonymous> (C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\playwright\\lib\\common\\index.js:1941:25)",
+          "message": "UNKNOWN: unknown error, open 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png'",
+          "errno": -4094,
+          "code": "UNKNOWN",
+          "syscall": "open",
+          "path": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png"
+        },
+        "before": {
+          "id": 3,
+          "time": "2026-10-03T11:28:06.1691907Z",
+          "path": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png",
+          "exists": true,
+          "parentAttributes": "Directory",
+          "parentAcl": {
+            "allow": [
+              "Modify, Synchronize",
+              "FullControl"
+            ],
+            "deny": [],
+            "scope": "Rights summary; principal identifiers omitted"
+          },
+          "size": 525999,
+          "attributes": "Archive",
+          "hidden": false,
+          "readOnly": false,
+          "archive": true,
+          "reparsePoint": false,
+          "acl": {
+            "allow": [
+              "Modify, Synchronize",
+              "FullControl"
+            ],
+            "deny": [],
+            "scope": "Rights summary; principal identifiers omitted"
+          }
+        },
+        "after": {
+          "id": 4,
+          "time": "2026-10-03T11:28:06.1701918Z",
+          "path": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\pa1-responsive-768.png",
+          "exists": true,
+          "parentAttributes": "Directory",
+          "parentAcl": {
+            "allow": [
+              "Modify, Synchronize",
+              "FullControl"
+            ],
+            "deny": [],
+            "scope": "Rights summary; principal identifiers omitted"
+          },
+          "size": 525999,
+          "attributes": "Archive",
+          "hidden": false,
+          "readOnly": false,
+          "archive": true,
+          "reparsePoint": false,
+          "acl": {
+            "allow": [
+              "Modify, Synchronize",
+              "FullControl"
+            ],
+            "deny": [],
+            "scope": "Rights summary; principal identifiers omitted"
+          },
+          "ownership": {
+            "register": 0,
+            "query": 0,
+            "owners": [],
+            "scope": "Restart Manager current resources; no historic owner attribution"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "unique-1",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep 'PA1-E0[34]' --workers=2 --fully-parallel",
+      "start": "2026-10-03 19:30:56 +08:00",
+      "finish": "2026-10-03 19:31:04 +08:00",
+      "exit": 0,
+      "attempt": 1,
+      "predeclaredBound": 3,
+      "instrumentation": "Temporary writeFile path redirection to unique pid-counter-basename; original screenshot buffers/assertions/flags preserved; no canonical writes"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      1360,
+      14100
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": true,
+    "failures": []
+  },
+  {
+    "name": "unique-2",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep 'PA1-E0[34]' --workers=2 --fully-parallel",
+      "start": "2026-10-03 19:31:04 +08:00",
+      "finish": "2026-10-03 19:31:13 +08:00",
+      "exit": 0,
+      "attempt": 2,
+      "predeclaredBound": 3,
+      "instrumentation": "Temporary writeFile path redirection to unique pid-counter-basename; original screenshot buffers/assertions/flags preserved; no canonical writes"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      13940,
+      28852
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": true,
+    "failures": []
+  },
+  {
+    "name": "unique-3",
+    "command": {
+      "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep 'PA1-E0[34]' --workers=2 --fully-parallel",
+      "start": "2026-10-03 19:31:13 +08:00",
+      "finish": "2026-10-03 19:31:21 +08:00",
+      "exit": 0,
+      "attempt": 3,
+      "predeclaredBound": 3,
+      "instrumentation": "Temporary writeFile path redirection to unique pid-counter-basename; original screenshot buffers/assertions/flags preserved; no canonical writes"
+    },
+    "writeAttempts": 15,
+    "pass": 15,
+    "fail": 0,
+    "workerPids": [
+      31700,
+      32328
+    ],
+    "duplicateTargetsInRun": 0,
+    "maxSameProcessWriters": 1,
+    "unexpectedAttributes": 0,
+    "uniqueAllTargetsInitiallyAbsent": true,
+    "failures": []
+  }
+]

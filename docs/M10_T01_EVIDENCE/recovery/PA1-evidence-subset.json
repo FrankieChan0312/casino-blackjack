@@ -1,0 +1,8 @@
+{
+  "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[345]",
+  "start": "2026-10-03 18:53:10 +08:00",
+  "finish": "2026-10-03 18:53:23 +08:00",
+  "exit": 1,
+  "status": "FAIL",
+  "raw": "PA1-evidence-subset.log"
+}

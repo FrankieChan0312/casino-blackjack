@@ -1,0 +1,13 @@
+{
+  "command": "npm.cmd run test:e2e -- tests/browser/pa1.spec.ts --grep PA1-E0[34]",
+  "start": "2026-10-03 19:26:41 +08:00",
+  "finish": "2026-10-03 19:26:55 +08:00",
+  "exit": 0,
+  "configuredWorkers": 1,
+  "cliWorkers": 1,
+  "fullyParallel": false,
+  "mode": "normal",
+  "attempt": 1,
+  "predeclaredRunsPerArm": 2,
+  "instrumentation": "Temporary read-only attributes/owner observer; errors rethrown; canonical screenshot paths unchanged"
+}

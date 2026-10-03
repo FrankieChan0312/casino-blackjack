@@ -1,0 +1,47 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1.spec.ts --grep PA1-E0[34] --workers=2 --fully-parallel
+
+[WebServer] (node:10372) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:14964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\pa1.spec.ts:57:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (4.9s)
+  x  2 [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (5.0s)
+
+
+  1) [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths 
+
+    Error: UNKNOWN: unknown error, open 'C:\Users\user\Documents\GitHub\casino-blackjack\docs\images\pa1-responsive-768.png'
+
+       at ..\..\..\..\..\AppData\Local\Temp\casino-blackjack-M10-T01-windows-open-20261003-1915\observe-screenshots.cjs:2
+
+      1 | const fs=require('node:fs'),path=require('node:path');const makeNative=require('./native-client.cjs');const write=fs.promises.writeFile.bind(fs.promises);let native,counter=0;const active=new Map();
+    > 2 | fs.promises.writeFile=async function(target,data,options){const source=path.resolve(String(target));if(!/[/\\]docs[/\\]images[/\\]pa1-[^/\\]+\.png$/.test(source))return write(target,data,options);native ||= makeNative();const directory=process.env.M10_IO_DIR;fs.mkdirSync(directory,{recursive:true});const mode=process.env.M10_IO_MODE||'canonical';const actual=mode==='unique'?path.join(directory,process.pid+'-'+(++counter)+'-'+path.basename(source)):source;const before=await native.inspect(actual);const sameProcessWriters=(active.get(actual)||0)+1;active.set(actual,sameProcessWriters);const writeStart=new Date().toISOString();let result,error;try{result=await write(actual,data,options);}catch(e){error=e;}const writeEnd=new Date().toISOString();active.set(actual,active.get(actual)-1);let after;try{after=await native.inspect(actual,!!error);}catch(e){after={diagnosticError:e.message};}const row={pid:process.pid,ppid:process.ppid,mode,canonical:source,actual,flags:typeof options==='object'&&options?.flag||'w',writeStart,writeEnd,sameProcessWriters,bufferBytes:data.length,status:error?'FAIL':'PASS',error:error?Object.fromEntries(Object.getOwnPropertyNames(error).map(k=>[k,error[k]])):undefined,before,after};fs.appendFileSync(path.join(directory,'io-'+process.pid+'.jsonl'),JSON.stringify(row)+'\n');if(error)throw error;if(after.diagnosticError)throw Error(after.diagnosticError);return result;};
+        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+      3 |
+        at Object.fs.promises.writeFile (C:\Users\user\AppData\Local\Temp\casino-blackjack-M10-T01-windows-open-20261003-1915\observe-screenshots.cjs:2:661)
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\pa1.spec.ts:123:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\browser\pa1.spec.ts:88:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths 
+  1 passed (7.3s)

@@ -1,5 +1,7 @@
 # M10 — Casino Table Experience scope
 
+Current delivery receipt: planning HUMAN ACCEPTED at `57443bbefddd47512104ba941c65e3ff1988cf02`; T01 geometry IMPLEMENTED / VERIFIED after infrastructure repair7/10, final unified PASS/0 and immutable PA1 baseline proof. [T01 scope/evidence](M10_T01.md). T02..T11 NOT STARTED; no M10 human implementation acceptance or deployment. The planning status below describes the accepted planning checkpoint; acceptance requirements remain unchanged.
+
 Status: PLANNED / NOT STARTED. Owner-authorized planning only, baseline `4e6cd7efdca91651633931edcd9445a401886bce`. PA1_INDEPENDENT_REVIEW_ACCEPTED / PA1 ACCEPTED; M9 technical preservation review PASS, M9 HUMAN ACCEPTED: NO. New casino-experience requirements are M10 scope, not retroactive PA1 regression findings. M1-M8 and RA1 acceptance remain unchanged. Historical delivery receipts below keep their original scope.
 
 This repository uses milestone contracts/amendments in SPEC; this authorized addition defines M10 without rewriting prior acceptance criteria. [DESIGN](DESIGN.md) defines presentation architecture, [PLAN](PLAN.md) defines T01..T11, and [M10 planning contract/evidence](M10_PLANNING.md) distinguishes planning from implementation.

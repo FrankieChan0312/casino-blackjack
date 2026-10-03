@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "width": 1280,
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "width": 768,
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "width": 320,
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "width": 1280,
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "width": 768,
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "width": 320,
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "width": 1280,
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "width": 768,
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "width": 320,
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "width": 1280,
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "width": 768,
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "width": 320,
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "sameSessionVisual": "PASS",
+      "sha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    }
+  ],
+  "inspected": "2026-10-03 20:21:53 +08:00",
+  "limits": "Same-session inspection; bounded 200% root text, vertical mobile scrolling; human acceptance and fresh-session review NOT RUN."
+}

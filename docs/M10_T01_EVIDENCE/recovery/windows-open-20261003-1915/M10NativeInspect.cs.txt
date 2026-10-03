@@ -1,0 +1,19 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.AccessControl;
+using System.Web.Script.Serialization;
+public class M10NativeInspect {
+ [StructLayout(LayoutKind.Sequential)] public struct UNIQUE {public int id;public System.Runtime.InteropServices.ComTypes.FILETIME start;}
+ [StructLayout(LayoutKind.Sequential,CharSet=CharSet.Unicode)] public struct INFO {public UNIQUE process;[MarshalAs(UnmanagedType.ByValTStr,SizeConst=256)]public string app;[MarshalAs(UnmanagedType.ByValTStr,SizeConst=64)]public string service;public uint type,status,session;[MarshalAs(UnmanagedType.Bool)]public bool restartable;}
+ [DllImport("rstrtmgr.dll",CharSet=CharSet.Unicode)]static extern int RmStartSession(out uint handle,int flags,string key);
+ [DllImport("rstrtmgr.dll",CharSet=CharSet.Unicode)]static extern int RmRegisterResources(uint handle,uint count,string[] files,uint processes,IntPtr proc,uint services,IntPtr names);
+ [DllImport("rstrtmgr.dll")]static extern int RmGetList(uint handle,out uint needed,ref uint count,[In,Out]INFO[] info,ref uint reasons);
+ [DllImport("rstrtmgr.dll")]static extern int RmEndSession(uint handle);
+ static object Acl(string path,bool directory) {var rules=directory?Directory.GetAccessControl(path).GetAccessRules(true,true,typeof(System.Security.Principal.SecurityIdentifier)):File.GetAccessControl(path).GetAccessRules(true,true,typeof(System.Security.Principal.SecurityIdentifier));var allow=new List<string>();var deny=new List<string>();foreach(FileSystemAccessRule rule in rules){(rule.AccessControlType==AccessControlType.Allow?allow:deny).Add(rule.FileSystemRights.ToString());}return new {allow=allow.Distinct().ToArray(),deny=deny.Distinct().ToArray(),scope="Rights summary; principal identifiers omitted"};}
+ static object Owners(string path){uint h,n=0,c=0,r=0;int start=RmStartSession(out h,0,Guid.NewGuid().ToString("N"));if(start!=0)return new {start=start};try{int register=RmRegisterResources(h,1,new[]{path},0,IntPtr.Zero,0,IntPtr.Zero);int query=RmGetList(h,out n,ref c,null,ref r);var owners=new List<object>();if(query==234){c=n;var info=new INFO[c];query=RmGetList(h,out n,ref c,info,ref r);if(query==0)for(int i=0;i<c;i++)owners.Add(new{pid=info[i].process.id,app=info[i].app,service=info[i].service});}return new {register=register,query=query,owners=owners,scope="Restart Manager current resources; no historic owner attribution"};}finally{RmEndSession(h);}}
+ public static void Main(){var json=new JavaScriptSerializer();string line;while((line=Console.ReadLine())!=null){try{var req=json.Deserialize<Dictionary<string,object>>(line);string path=(string)req["path"];bool exists=File.Exists(path);string parent=Path.GetDirectoryName(path);var result=new Dictionary<string,object>{{"id",req["id"]},{"time",DateTime.UtcNow.ToString("o")},{"path",path},{"exists",exists},{"parentAttributes",File.GetAttributes(parent).ToString()},{"parentAcl",Acl(parent,true)}};if(exists){var attributes=File.GetAttributes(path);result["size"]=new FileInfo(path).Length;result["attributes"]=attributes.ToString();result["hidden"]=(attributes&FileAttributes.Hidden)!=0;result["readOnly"]=(attributes&FileAttributes.ReadOnly)!=0;result["archive"]=(attributes&FileAttributes.Archive)!=0;result["reparsePoint"]=(attributes&FileAttributes.ReparsePoint)!=0;result["acl"]=Acl(path,false);}if((bool)req["owners"])result["ownership"]=Owners(path);Console.WriteLine(json.Serialize(result));}catch(Exception error){Console.WriteLine(json.Serialize(new {diagnosticError=error.ToString()}));}}}
+}
+

@@ -26,6 +26,7 @@ export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   const playerScenarios: Record<string, readonly Rank[]> = {
+    'player-five': ['10','10','2','10','9','7','7','2','7','8','2','2','2'],
     'player-rsa': ['10','10','A','10','9','7','7','A','7','8','A','9','6','9'],
     'player-rsa-cap': ['10','10','A','10','9','7','7','A','7','8','A','A','A','A','A','A'],
     'player-ace': ['10', '10', '5', '10', 'A', '7', '7', '6', '7', '9'],

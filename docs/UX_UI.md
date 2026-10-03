@@ -1,4 +1,6 @@
-## M10 planned casino-table interaction amendment
+## M10 casino-table interaction amendment
+
+T01 geometry delivery: existing four-person entry/actions/characters retained with a half-ellipse felt/rail and central Dealer/card anchors; full hands use vertical flow and compact perimeter summaries on narrow screens. Planning HUMAN ACCEPTED; T01 IMPLEMENTED / VERIFIED, final verification PASS/0 after immutable-evidence repair7/10. Three viewport/five-card/four-leaf/200%-text/native-keyboard checks PASS. [T01 evidence](M10_T01.md). Count/Start setup and all motion described below remain future T02+ work; no implementation acceptance or deployment claimed.
 
 M10 PLANNED / NOT STARTED. [SPEC acceptance](SPEC.md), [DESIGN presentation authority](DESIGN.md), [task sequence](PLAN.md). This owner-authorized planning amendment applies only to future M10 Player Mode; current product still uses accepted PA1 presentation and the implemented M9 journey.
 

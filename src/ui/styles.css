@@ -163,28 +163,29 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 /* Player Mode: the accepted manual table keeps its existing layout. */
 .player-mode { max-width: 1280px; padding-top: 18px; }
 .player-mode .casino-header { display: flex; justify-content: space-between; align-items: center; text-align: left; gap: 16px; }
-.player-mode .casino-header h1 { font: 500 1.8rem Georgia, serif; letter-spacing: .03em; color: #f3e7c7; }
+.player-mode .casino-header h1 { font: 500 1.8rem Georgia, serif; letter-spacing: .03em; color: #f3e7c7; margin: 0; }
+.player-mode .casino-header .eyebrow { margin: 0 0 4px; }
 .player-mode .casino-header > p { text-align: right; font-size: .7rem; }
 .player-mode .round-status { border: 0; background: #15261e; border-radius: 8px; padding: 8px; margin: 12px 0; }
-.player-mode .table-surface { padding: 20px 28px 12px; border: 10px solid #493d2d; border-radius: 48% 48% 20% 20% / 22% 22% 10% 10%; background: radial-gradient(ellipse at 50% 25%, #2b6652, #184735 60%, #103227); box-shadow: inset 0 0 0 2px #b39659, inset 0 0 70px #051b15, 0 16px 40px #0006; }
-.player-mode .dealer { position: relative; top: auto; left: auto; width: 100%; max-width: 300px; margin: 0 auto; }
+.player-mode .table-surface { --dealer-band: max(150px, 9.375rem); --perimeter-depth: 2.5rem; padding: 20px 28px 18px; border: 10px solid #493d2d; border-radius: 14% 14% 48% 48% / 8% 8% 32% 32%; background: radial-gradient(ellipse at 50% 25%, #2b6652, #184735 60%, #103227); box-shadow: inset 0 0 0 2px #b39659, inset 0 0 70px #051b15, 0 16px 40px #0006; }
+.player-mode .dealer { position: absolute; top: 20px; left: 50%; translate: -50% 0; width: min(100%, 300px); margin: 0; }
 .player-mode .dealer p { margin: 4px 0; font-size: .75rem; }
 .player-mode .dealer h2 { margin-bottom: 6px; }
-.player-mode .table-inscription { text-align: center; color: #d9c795; font: 500 .75rem Georgia, serif; letter-spacing: .15em; margin: 6px 0; }
+.player-mode .table-inscription { position: absolute; top: calc(var(--dealer-band) + 16px); left: 50%; translate: -50% 0; text-align: center; color: #d9c795; font: 500 .75rem Georgia, serif; letter-spacing: .15em; margin: 6px 0; }
 .player-mode .table-inscription span { display: block; font: .6rem 'Segoe UI', sans-serif; margin-top: 5px; letter-spacing: .15em; }
-.player-mode .seats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 32px; }
-.player-mode .seat[data-position] { grid-area: auto; margin: 0; text-align: center; padding: 10px; border: 1px solid #95a98360; background: #0c281b70; }
+.player-mode .seats { container-type: inline-size; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 0; padding-top: var(--dealer-band); }
+.player-mode .seat[data-position] { grid-area: auto; margin: 0; text-align: center; padding: 8px 0; border: 0; background: transparent; }
 .player-mode .seat .cards { justify-content: center; }
 .player-mode .seat:not(.local)[data-hand-count='1'] .hand-header { display: none; }
-.player-mode .seat:not(.local) article { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 4px; padding: 4px; margin-top: 4px; border: none; }
+.player-mode .seat:not(.local) article { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); align-items: center; gap: 4px; padding: 4px; margin-top: 4px; border: none; }
 .player-mode .seat:not(.local) article .cards { grid-column: 1; grid-row: 1 / span 2; }
 .player-mode .seat:not(.local) article .hand-header { grid-column: 1 / -1; }
 .player-mode .seat:not(.local) article > p { grid-column: 2; }
 .player-mode .seat p { margin: 3px 0; }
 .player-mode .seat:not(.local) .result-badge { padding: 2px 6px; font-size: .7rem; }
 .player-mode .local > p:first-of-type { display: none; }
-.player-mode .seat:not(.local) { grid-row: 1; }
-.player-mode .seat[data-position='local'] { grid-column: 1 / -1; grid-row: 2; justify-self: center; width: min(100%, 700px); border: none; border-top: 1px solid #d6bd7470; background: transparent; padding-top: 14px; }
+.player-mode .seat:not(.local) { grid-row: 1; justify-self: center; width: min(100%, 240px); margin-top: calc(var(--seat-depth) * var(--perimeter-depth)); translate: calc(var(--seat-shift) * 100cqw) 0; }
+.player-mode .seat[data-position='local'] { grid-column: 1 / -1; grid-row: 2; justify-self: center; width: min(100%, 700px); border: none; background: transparent; padding-top: 14px; }
 .player-mode .local h2 { display: inline-block; margin: 4px 12px; }
 .player-mode .local article { display: grid; grid-template-columns: 1fr 1fr; align-items: center; border: 0; background: transparent; margin: 0; padding: 4px; }
 .player-mode .local article .cards { grid-column: 1; grid-row: 2 / span 2; }
@@ -194,10 +195,11 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 .player-mode .local article .hand-header { justify-content: center; text-align: center; }
 .player-mode .local .cards { gap: 8px; padding: 5px; }
 .player-mode .local .card { flex-basis: 76px; width: 76px; height: 98px; box-shadow: 0 7px 12px #0006; }
-.player-mode .local .card b { font-size: 1.25rem; }
-.player-mode .local .card-pip { font-size: 2.1rem; top: 36px; }
-.player-mode .local .card:nth-child(odd) { transform: rotate(-3deg); }
-.player-mode .local .card:nth-child(even) { transform: rotate(3deg); }
+.player-mode .card b { font-size: min(1rem, 18px); }
+.player-mode .card small { font-size: min(.8rem, 14px); }
+.player-mode .seat:not(.local) .card-pip { font-size: min(1.25rem, 24px); }
+.player-mode .local .card b { font-size: min(1.25rem, 24px); }
+.player-mode .local .card-pip { font-size: min(2.1rem, 36px); top: 36px; }
 .player-mode .empty-hand { opacity: .65; }
 .player-mode .empty-hand p { font-size: .8rem; }
 .player-mode .player-dock { max-width: 960px; margin: auto; }
@@ -206,16 +208,19 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 .player-mode .action-bar { margin: 0; }
 .player-mode .credits { max-width: 960px; background: #121f19; border-color: #5b543c; margin: 10px auto; padding: 10px 16px; }
 .player-mode .session-note { text-align: center; font-size: .7rem; color: #c8d1bd; margin-top: 16px; }
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
   .player-mode .seats { gap: 10px; }
-  .player-mode .table-surface { border-radius: 40px; padding: 18px; border-width: 7px; }
+  .player-mode .seat:not(.local) { translate: none; width: 100%; }
+  .player-mode .table-surface { --perimeter-depth: 64px; border-radius: 10% 10% 42% 42% / 5% 5% 20% 20%; padding: 18px; border-width: 7px; }
+  .player-mode .table-inscription { position: static; translate: none; margin-top: var(--dealer-band); }
+  .player-mode .seats { padding-top: 0; }
 }
 @media (max-width: 600px) {
   .player-mode { padding: 10px; }
   .player-mode .casino-header { display: block; text-align: center; }
   .player-mode .casino-header h1 { font-size: 1.4rem; }
   .player-mode .casino-header > p { text-align: center; font-size: .65rem; }
-  .player-mode .table-surface { padding: 12px 8px 6px; border-width: 5px; border-radius: 24px; }
+  .player-mode .table-surface { --perimeter-depth: 40px; padding: 12px 8px 10px; border-width: 5px; border-radius: 20px 20px 48% 48% / 20px 20px 70px 70px; }
   .player-mode .dealer { margin-bottom: 0; }
   .player-mode .table-inscription { font-size: .6rem; letter-spacing: .08em; }
   .player-mode .seats { gap: 6px; }
@@ -265,7 +270,7 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .guest-mobile-cards .cards { padding: 5px 0; }
 }
 
-.player-mode .character-identity { display: flex; align-items: center; gap: 10px; min-height: 80px; }
+.player-mode .character-identity { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 80px; }
 .player-mode .character-identity img { width: 60px; height: 80px; object-fit: contain; flex: 0 0 auto; }
 .player-mode .character-identity > div { min-width: 0; }
 .player-mode .character-identity h2 { display: block; margin: 0; }
