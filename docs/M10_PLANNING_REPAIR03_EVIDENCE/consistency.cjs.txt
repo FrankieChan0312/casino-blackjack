@@ -1,0 +1,102 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const cp = require('node:child_process');
+const baseline = '9dc69dd419b27e2fae5560a13f84629b9953f026';
+const normalize = text => text.replaceAll('\r\n', '\n').trimEnd();
+const read = name => normalize(fs.readFileSync(name, 'utf8'));
+const old = name => normalize(cp.execFileSync('git', ['show', `${baseline}:${name}`], { encoding: 'utf8' }));
+const section = (text, from, to) => text.slice(text.indexOf(from), text.indexOf(to));
+const design = read('docs/DESIGN.md');
+const dealer = section(design, '## M10.7 ', '## M10.8 ');
+const spec = read('docs/SPEC.md');
+const ux = read('docs/UX_UI.md').split('## Historical pre-M10 UX records')[0];
+const plan = read('docs/PLAN.md');
+const planning = read('docs/M10_PLANNING.md');
+const state = read('docs/STATE.md');
+const checks = [];
+function check(name, action) { action(); checks.push({ name, status: 'PASS' }); }
+check('Avatar-derived identity, formal variant, immutable PA1, role separation and open selection policy', () => {
+  for (const text of [dealer, spec, ux]) {
+    assert(text.includes('Dealer = avatar-derived character presentation entity'));
+    assert(/formal casino-attire/.test(text));
+    assert(/immutable/i.test(text));
+  }
+  for (const literal of ['face, hair', 'Lucien', 'Celestine', 'every occupied player character identity', 'No Dealer selection control is required', 'no policy is chosen', 'tuxedo', 'rigid gender', 'sexually explicit']) {
+    assert(dealer.toLowerCase().includes(literal.toLowerCase()), literal);
+  }
+  assert(!dealer.includes('Keep it independent of the PA1 human/guest roster'));
+  assert(!dealer.includes('compatible reuse candidate'));
+});
+check('Exactly six original Dealer visual states and preserved mappings', () => {
+  const rows = dealer.split('\n').filter(line => /^\| (IDLE|DEALING|WAITING_PLAYER|REVEALING|DRAWING|SETTLING) \|/.test(line));
+  const historicalRows = section(old('docs/DESIGN.md'), '## M10.7 ', '## M10.8 ').split('\n').filter(line => /^\| (IDLE|DEALING|WAITING_PLAYER|REVEALING|DRAWING|SETTLING) \|/.test(line));
+  assert.equal(rows.length, 6); assert.deepEqual(rows, historicalRows);
+  for (const name of ['IDLE','DEALING','WAITING_PLAYER','REVEALING','DRAWING','SETTLING']) {
+    assert(spec.includes(name)); assert(ux.includes(name));
+  }
+});
+check('Future asset contract and restrained/readable formal direction', () => {
+  for (const term of ['Canonical filename', 'Character ID', 'Dealer role', 'Dimensions', 'aspect ratio', 'Transparency', 'provenance', 'generated', 'manually authored', 'derived', 'Hashes', 'readable silhouette', 'established character art']) assert(dealer.includes(term), term);
+  for (const viewport of ['1280x900','768x1024','320x720']) assert(dealer.includes(viewport));
+  assert(dealer.includes('Reduced motion')); assert(dealer.includes('immediate state changes'));
+});
+check('Current non-goals preserve PA1 without banning future separate Dealer variants', () => {
+  for (const text of [section(design, '## M10.2 ', '## M10.3 '), spec.split('## Historical pre-M10 specifications')[0], ux]) {
+    assert(!/new portrait (assets|generation)|new character assets/.test(text));
+    assert(text.includes('accepted PA1'));
+    assert(/future separate Dealer variants/i.test(text));
+  }
+});
+check('One-way authoritative boundary and T04/T05/T06/T08 sequencing ownership', () => {
+  for (const text of [dealer, spec]) {
+    assert(text.includes('authoritative engine result -> presentation state -> Dealer visual state -> animation'));
+    for (const term of ['card identity','RNG','shoe order','turn','Dealer strategy','settlement','bankroll','replay digest','journal','authoritative game state']) assert(text.includes(term), term);
+  }
+  for (const term of ['T05 owns general', 'T06 owns initial round-robin', 'T08 owns Dealer reveal/draw', 'T04 does not absorb']) assert(dealer.includes(term));
+  const t04 = plan.split('\n').find(line => line.startsWith('| M10-T04 /'));
+  for (const term of ['formal-attire','immutable PA1','exclusion','T01 upper-centre','six public visual','T05','T06','T08','NOT STARTED']) assert(t04.includes(term), term);
+});
+check('All twelve acceptance IDs; only AC004 amended', () => {
+  const getRows = text => text.split('\n').filter(line => /^\| AC-M10-\d{3}/.test(line));
+  const current = getRows(spec), historical = getRows(old('docs/SPEC.md'));
+  assert.equal(current.length, 12);
+  assert.deepEqual(current.map(line => line.match(/AC-M10-\d{3}/)[0]), historical.map(line => line.match(/AC-M10-\d{3}/)[0]));
+  assert.deepEqual(current.filter(line => !line.includes('AC-M10-004')), historical.filter(line => !line.includes('AC-M10-004')));
+});
+check('T01 geometry and every other task row/repair count unchanged', () => {
+  assert.equal(section(design, '## M10.4 ', '## M10.5 '), section(old('docs/DESIGN.md'), '## M10.4 ', '## M10.5 '));
+  const rows = plan.split('\n').filter(line => /^\| M10-T\d{2} \//.test(line));
+  const historicalRows = old('docs/PLAN.md').split('\n').filter(line => /^\| M10-T\d{2} \//.test(line));
+  assert.equal(rows.length, 11);
+  assert.deepEqual(rows.filter(line => !line.startsWith('| M10-T04 /')), historicalRows.filter(line => !line.startsWith('| M10-T04 /')));
+  assert(rows.find(line => line.startsWith('| M10-T01 /')).includes('8/10'));
+  for (const name of ['M10-T02','M10-T04']) assert(rows.find(line => line.startsWith(`| ${name} /`)).endsWith('| NOT STARTED |'));
+  assert(planning.includes('planning repair3/10')); assert(state.includes('T01 human acceptance NOT RUN'));
+});
+check('Historical authority/evidence retained verbatim after current amendment', () => {
+  for (const name of ['docs/STATE.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md']) assert(read(name).includes(old(name)), name);
+  const originalPlanning = old('docs/M10_PLANNING.md');
+  assert(planning.includes(originalPlanning.slice(originalPlanning.indexOf('\n') + 1).trim()), 'original planning body');
+  assert.equal(read('README.md').split('## Historical M10 planning')[1], old('README.md').split('## Historical M10 planning')[1]);
+  assert.equal(read('docs/UX_UI.md').split('## Historical pre-M10 UX records')[1], old('docs/UX_UI.md').split('## Historical pre-M10 UX records')[1]);
+});
+check('New local Markdown links resolve', () => {
+  const files = ['README.md', ...['DESIGN','SPEC','PLAN','UX_UI','M10_PLANNING','STATE','DEVELOPMENT_LOG','LAB_MANUAL'].map(name => `docs/${name}.md`)];
+  let count = 0;
+  for (const file of files) {
+    const diff = cp.execFileSync('git', ['diff', '--unified=0', baseline, '--', file], { encoding: 'utf8' });
+    const additions = diff.split('\n').filter(line => line.startsWith('+') && !line.startsWith('+++')).join('\n');
+    for (const match of additions.matchAll(/\]\(([^)]+)\)/g)) {
+      const target = match[1].split('#')[0];
+      if (!target || /^https?:/.test(target)) continue;
+      assert(fs.existsSync(path.resolve(path.dirname(file), target)), `${file}: ${target}`); count++;
+    }
+  }
+  assert(count > 0); checks.push({ name: 'Resolved new links', count, status: 'PASS' });
+});
+check('Product/test/tool/asset/domain/dependency/runtime diff EMPTY', () => {
+  const diff = cp.execFileSync('git', ['diff', '--name-only', baseline, '--', 'src','tests','scripts','art','public','package.json','package-lock.json','playwright.config.ts','tsconfig.json','tsconfig.domain.json','vite.config.ts','AGENTS.md','SKILL.md','docs/RULES.md','docs/images'], { encoding: 'utf8' });
+  assert.equal(diff.trim(), '');
+});
+process.stdout.write(JSON.stringify({ timestamp: new Date().toISOString(), baseline, checks, status: 'PASS' }, null, 2) + '\n');

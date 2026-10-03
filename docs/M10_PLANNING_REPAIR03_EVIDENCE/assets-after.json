@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-10-03 21:41:10 +08:00",
+  "baseline": "9dc69dd419b27e2fae5560a13f84629b9953f026",
+  "comparedCount": 57,
+  "assets": [
+    {
+      "bytes": 45223,
+      "sha256": "16c54a924d1f35b6b2b94ba8104f988f1395daab19782e5f889dd7cedb5d0100",
+      "path": "art/character-production-audit.json"
+    },
+    {
+      "bytes": 5612,
+      "sha256": "0b4110e189c0436e3c5ae66ea046321f7c5889dd59a4244e5d2ef3f01f9bf3e9",
+      "path": "art/character-production.json"
+    },
+    {
+      "bytes": 2807031,
+      "sha256": "4cbd5662ca1990ae463c8a0096e08b5b41578323815741af020027fafe349034",
+      "path": "art/source/characters/PA1_character_sources/dwarf_female.png"
+    },
+    {
+      "bytes": 2872199,
+      "sha256": "26dfc1e8752e7e4c6ae23eb8c196646bea55d559e242fc2de78cc65d3dbf6524",
+      "path": "art/source/characters/PA1_character_sources/dwarf_male.png"
+    },
+    {
+      "bytes": 2789504,
+      "sha256": "f1e85fb45af93b13d148ed1d5966b745baa06b253b9424830906e9a50a94fb97",
+      "path": "art/source/characters/PA1_character_sources/elf_female.png"
+    },
+    {
+      "bytes": 2595545,
+      "sha256": "fc22fa69b51a99c386048c637f0c419f9da81cd84448ced636bb04f80715b889",
+      "path": "art/source/characters/PA1_character_sources/elf_male.png"
+    },
+    {
+      "bytes": 2836805,
+      "sha256": "86409e51cd122ab9cd31d67db9295c4990f4194c408020a6b6350ad0c0ecbc26",
+      "path": "art/source/characters/PA1_character_sources/halforc_female.png"
+    },
+    {
+      "bytes": 3028357,
+      "sha256": "2b41f2181c80aba53941bbdd7005a0f2961d58744e3f098970d0168213682167",
+      "path": "art/source/characters/PA1_character_sources/halforc_male.png"
+    },
+    {
+      "bytes": 2816831,
+      "sha256": "a1cde162e0826fe68621346235fc7be61c087a908bb164ea94de6030b83cd151",
+      "path": "art/source/characters/PA1_character_sources/knight_female.png"
+    },
+    {
+      "bytes": 2652800,
+      "sha256": "7b78fc7b735fa80cc3e5f44d7a04dcd1daf85e4aa79feae27a033658a1d076c4",
+      "path": "art/source/characters/PA1_character_sources/knight_male.png"
+    },
+    {
+      "bytes": 3079175,
+      "sha256": "5b0189202bed9a535e852d8ef8ca10178947a84365e5988299e3e97683fb8af6",
+      "path": "art/source/characters/PA1_character_sources/mage_female.png"
+    },
+    {
+      "bytes": 2825923,
+      "sha256": "05c1308f34f888be6896a4f355a473b2cf59c08cb767ef8e25947465c794b109",
+      "path": "art/source/characters/PA1_character_sources/mage_male.png"
+    },
+    {
+      "bytes": 2317918,
+      "sha256": "0b7df086510bc567cf77ab6f35e4ec99c92cb20322a6384e52108ca86ac6d23d",
+      "path": "art/source/characters/PA1_character_sources/noble_female.png"
+    },
+    {
+      "bytes": 2463931,
+      "sha256": "24835b5bba47cef2bc17e4d807bf31f410607461e90387042d18277e9ded397f",
+      "path": "art/source/characters/PA1_character_sources/noble_male.png"
+    },
+    {
+      "bytes": 543887,
+      "sha256": "b2207c64723dfcbd506a9d8fd2c1d8c70c5e0812524d815c4173200a0e4479e8",
+      "path": "docs/images/charlie-result.png"
+    },
+    {
+      "bytes": 479908,
+      "sha256": "7cd374f4ef1813fb35d101c1f849101474f543781eb8fc7e96b3fe72f554a73b",
+      "path": "docs/images/classic-table.png"
+    },
+    {
+      "bytes": 594834,
+      "sha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "path": "docs/images/m9-ready.png"
+    },
+    {
+      "bytes": 692368,
+      "sha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "path": "docs/images/m9-results.png"
+    },
+    {
+      "bytes": 665451,
+      "sha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "path": "docs/images/m9-table-1280.png"
+    },
+    {
+      "bytes": 237648,
+      "sha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "path": "docs/images/m9-table-320.png"
+    },
+    {
+      "bytes": 465483,
+      "sha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "path": "docs/images/m9-table-768.png"
+    },
+    {
+      "bytes": 74151,
+      "sha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "path": "docs/images/m9-tools.png"
+    },
+    {
+      "bytes": 214543,
+      "sha256": "da1cadab2b1ab53503dd2b424848cc275258f8d11bbe0fe2491751c68a5d24a7",
+      "path": "docs/images/mobile-table.png"
+    },
+    {
+      "bytes": 78405,
+      "sha256": "75083054c8959bf248e58880330d0cd6d3b1a165a2647912f4db2eb422724df0",
+      "path": "docs/images/pa1-avatar-dwarf_female.png"
+    },
+    {
+      "bytes": 78280,
+      "sha256": "bc5d21b0f07a5c9990d9c22021a1f166f89a9f9a10675958a1d42870850e9ace",
+      "path": "docs/images/pa1-avatar-dwarf_male.png"
+    },
+    {
+      "bytes": 78913,
+      "sha256": "ebc6c30e65155dba38f3a37b93942821947e59b23c2a151f6526404db74c45f2",
+      "path": "docs/images/pa1-avatar-elf_female.png"
+    },
+    {
+      "bytes": 78862,
+      "sha256": "dbc500de598c8f201fe315d464ecb68a11cd58e0fdae67aace7dd29e0e37f880",
+      "path": "docs/images/pa1-avatar-elf_male.png"
+    },
+    {
+      "bytes": 79545,
+      "sha256": "db6ac47bd42de0fb9ae6440c9c7e0645881120d850e278ab094b78108ddc19dd",
+      "path": "docs/images/pa1-avatar-halforc_female.png"
+    },
+    {
+      "bytes": 79843,
+      "sha256": "2cd38547b9d2ae57137305ea8fc00b023b88cd248ca41ada6be631d8294fa1f5",
+      "path": "docs/images/pa1-avatar-halforc_male.png"
+    },
+    {
+      "bytes": 79826,
+      "sha256": "a0ff09684c2e57d2fd22166d2f0dbbea043db5689df9a7365da26dd17791c535",
+      "path": "docs/images/pa1-avatar-knight_female.png"
+    },
+    {
+      "bytes": 79366,
+      "sha256": "fdf96d06bc5ded1a12e124a318cbe641849fd32eae4e7f4b4003e12cb14cbdff",
+      "path": "docs/images/pa1-avatar-knight_male.png"
+    },
+    {
+      "bytes": 80105,
+      "sha256": "c0b1c8f7d5206f0ec58ceadf343c5f973548c7a8b172b22af4694deb6bbc5594",
+      "path": "docs/images/pa1-avatar-mage_female.png"
+    },
+    {
+      "bytes": 79544,
+      "sha256": "ffaf4c62938285fcca74e5c5c9791841df7f6fefb4471b44afb03ad5642b0466",
+      "path": "docs/images/pa1-avatar-mage_male.png"
+    },
+    {
+      "bytes": 78774,
+      "sha256": "be2d116a985427844790f13f62f2b33bff993fe90655918236e6ecbae5b6007e",
+      "path": "docs/images/pa1-avatar-noble_female.png"
+    },
+    {
+      "bytes": 78883,
+      "sha256": "1bb38fecf2f83bae7cfed3e42cf82d45a1d05da206030d9a8333eaafd7718891",
+      "path": "docs/images/pa1-avatar-noble_male.png"
+    },
+    {
+      "bytes": 837750,
+      "sha256": "da0c67d28081d4548acc5e193d97df7a3ec1b46aa4e02a24365078e5461c6dfd",
+      "path": "docs/images/pa1-production-felt-1.png"
+    },
+    {
+      "bytes": 812308,
+      "sha256": "91ca4c44afe80a7e6af4423beeeab0513d4feb59c8587e9d7402b0984478c07a",
+      "path": "docs/images/pa1-production-felt-2.png"
+    },
+    {
+      "bytes": 841066,
+      "sha256": "659826d4e924d255dfd6b5dcc29abc43bc6417e8b6404d1802d20ecd74838b6b",
+      "path": "docs/images/pa1-production-light-1.png"
+    },
+    {
+      "bytes": 817273,
+      "sha256": "fedfdef64da08eca6db6a63e791354a19222b342d895137a5cc4e1653010ad9c",
+      "path": "docs/images/pa1-production-light-2.png"
+    },
+    {
+      "bytes": 706346,
+      "sha256": "d78107c8d031018f14a67920c20d1ad0535e3f10393ee2216ed71e6c6b111b33",
+      "path": "docs/images/pa1-responsive-1280.png"
+    },
+    {
+      "bytes": 263189,
+      "sha256": "871651d579605b046214bf89621f55392f1672546463dc9e35a114dae5a54f90",
+      "path": "docs/images/pa1-responsive-320.png"
+    },
+    {
+      "bytes": 497527,
+      "sha256": "8f7b01ee4e9cf7c2c0c332de71d70dff03557be1265c62399aa4b314724ab0a2",
+      "path": "docs/images/pa1-responsive-768.png"
+    },
+    {
+      "bytes": 1009669,
+      "sha256": "d3609685f23c727bee51fe36c70f887cf85dc07534dd4b5ad3a47bab2404ed19",
+      "path": "docs/images/pa1-text-fallback-1280.png"
+    },
+    {
+      "bytes": 454245,
+      "sha256": "508cc6b9c19f046de36a7a9e3bbf46c4822fd4bbaabd443a5aeee7a819c29fda",
+      "path": "docs/images/pa1-text-fallback-320.png"
+    },
+    {
+      "bytes": 51575,
+      "sha256": "59c96e613ada184961ddf4999a91dcae6537ecc33b74ac28a428664ba6ebcfec",
+      "path": "docs/images/replay-audit.png"
+    },
+    {
+      "bytes": 163398,
+      "sha256": "3c8af6e4349f6891cb8c9843edb82492fb09fdda31b88f59a4ee4c27b77c7d0c",
+      "path": "public/characters/dwarf_female.png"
+    },
+    {
+      "bytes": 170104,
+      "sha256": "980de0bef894ff15105a6b0e13c7285540e57c23e1c8cbb0755fe9c5d34641fc",
+      "path": "public/characters/dwarf_male.png"
+    },
+    {
+      "bytes": 166378,
+      "sha256": "cd339e633c187cc2917a5259defaed888b42887d9ae48313977ab201854dc3ee",
+      "path": "public/characters/elf_female.png"
+    },
+    {
+      "bytes": 163057,
+      "sha256": "3b8e0b860174ef19267feb282ae4d3b8d0c47c6ce5ce7cf7a9f44c516171f33f",
+      "path": "public/characters/elf_male.png"
+    },
+    {
+      "bytes": 178074,
+      "sha256": "41bf5d62cfae4382346f711f2efdccb30b46f632a9ca467de6c0fa104c9535a6",
+      "path": "public/characters/halforc_female.png"
+    },
+    {
+      "bytes": 189995,
+      "sha256": "2649a898b15902cefa72841d2cb00cb791417df67763ec476e6fc2fe887d75a7",
+      "path": "public/characters/halforc_male.png"
+    },
+    {
+      "bytes": 174034,
+      "sha256": "cdcdb1fb3c44977469647ff852a84133b8c5444c57a4de777f92f229e8466052",
+      "path": "public/characters/knight_female.png"
+    },
+    {
+      "bytes": 169471,
+      "sha256": "c181f62d91695dd5b1fcc5adbd632528c48b26f04c2128095b6137b7674539d7",
+      "path": "public/characters/knight_male.png"
+    },
+    {
+      "bytes": 190721,
+      "sha256": "0a48367b8645e5c284f118188a44f7b43cb5bcefc846d1af360910182960802e",
+      "path": "public/characters/mage_female.png"
+    },
+    {
+      "bytes": 176919,
+      "sha256": "c0eb1322b0053501e86860c4f4e253365444d363b7980fa81ef03e87390a4690",
+      "path": "public/characters/mage_male.png"
+    },
+    {
+      "bytes": 152309,
+      "sha256": "653583f627ae1f9b62186934417d292a9d20c23b694914c9b5644587a16e9472",
+      "path": "public/characters/noble_female.png"
+    },
+    {
+      "bytes": 166015,
+      "sha256": "84c90d956fd96cbfdc8d6395000a3eb5ffe5ec0a1a710eaf3f05a74d09c6cab3",
+      "path": "public/characters/noble_male.png"
+    }
+  ],
+  "status": "PASS",
+  "note": "All tracked art/public/docs-images bytes match the before receipt after scoped restoration of six known generated M9 screenshots. Accepted PA1 assets unchanged throughout."
+}

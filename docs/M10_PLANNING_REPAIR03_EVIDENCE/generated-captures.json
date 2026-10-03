@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-10-03 21:41:10 +08:00",
+  "baseline": "9dc69dd419b27e2fae5560a13f84629b9953f026",
+  "producer": "scripts/verify.ps1 current Chromium historical M9 screenshot tests",
+  "archive": "generated-m9-screenshots.zip",
+  "archiveSha256": "7cc5809ef15ba077bc2b451215b5f0feea212e6746148fe3615b84fec1dc2ae4",
+  "files": [
+    {
+      "path": "docs/images/m9-ready.png",
+      "baselineGitBlob": "aeb5eb5a533188032877a943f29d20b34116552e",
+      "baselineSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "capturedSha256": "ad32ae5298d36ac9dc761e1cd19c46029d53ae305de0b150c7bdb267d5388c0a",
+      "capturedBytes": 598809,
+      "archiveEntry": "docs/images/m9-ready.png",
+      "roundtripSha256": "ad32ae5298d36ac9dc761e1cd19c46029d53ae305de0b150c7bdb267d5388c0a",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "baselineGitBlob": "75f9518fff3df6ba29762c24ca0895717e9115b7",
+      "baselineSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "capturedSha256": "d4faa48fa05782de21b190c3134ff29752c29a1e64e45ade5c206b250fe7563c",
+      "capturedBytes": 689655,
+      "archiveEntry": "docs/images/m9-results.png",
+      "roundtripSha256": "d4faa48fa05782de21b190c3134ff29752c29a1e64e45ade5c206b250fe7563c",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "baselineGitBlob": "6f3bf911e806d6111f5f2d309a1e0c2d16bd17a3",
+      "baselineSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "capturedSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "capturedBytes": 680188,
+      "archiveEntry": "docs/images/m9-table-1280.png",
+      "roundtripSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "baselineGitBlob": "b5586e4bd5a6208e1403d1d4ed10f6ed0a114fc8",
+      "baselineSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "capturedSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "capturedBytes": 244254,
+      "archiveEntry": "docs/images/m9-table-320.png",
+      "roundtripSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "baselineGitBlob": "a7b9669c0668157fe4234593d059e7fef4d002d6",
+      "baselineSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "capturedSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "capturedBytes": 492984,
+      "archiveEntry": "docs/images/m9-table-768.png",
+      "roundtripSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "baselineGitBlob": "b13ba31392e734a2f20be2f68d44a759769b106b",
+      "baselineSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "capturedSha256": "89161d95f524219434d21cb8e170e84d5f2bf80b2be6e981bfa3ae1ee5ceb997",
+      "capturedBytes": 74151,
+      "archiveEntry": "docs/images/m9-tools.png",
+      "roundtripSha256": "89161d95f524219434d21cb8e170e84d5f2bf80b2be6e981bfa3ae1ee5ceb997",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    }
+  ],
+  "status": "PASS",
+  "scope": "Only six known harness-generated M9 captures were archived and restored. No PA1 portrait/canonical PA1 screenshot restoration; no artwork edit."
+}

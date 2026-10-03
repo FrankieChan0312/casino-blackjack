@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-10-03 21:45:45 +08:00",
+  "method": "Lossless .NET GZipStream; decompressed byte SHA256 checked before removing task-owned uncompressed duplicate",
+  "files": [
+    {
+      "original": "targeted.log",
+      "gzip": "targeted.log.gz",
+      "rawSha256": "617c1766bfa1ba674f1578e48e7cf7a60ba104b82304406424304cfbef71545d",
+      "rawBytes": 417,
+      "gzipSha256": "f6fd16ad06359630cafbe1c77c8af42cfd959c9ea418b55415a9da40e9391709",
+      "gzipBytes": 272,
+      "roundtripSha256": "617c1766bfa1ba674f1578e48e7cf7a60ba104b82304406424304cfbef71545d",
+      "status": "PASS"
+    },
+    {
+      "original": "verify.log",
+      "gzip": "verify.log.gz",
+      "rawSha256": "290e52b29689863e58d20b0642d2fb5a19856b4b2a47ae4f7e5b59bb16572cd9",
+      "rawBytes": 37567,
+      "gzipSha256": "7c67f9ba1f4f810e07dbe3ebc6e2693ca68a0b20aa27b6ed099d3cd9a5583d36",
+      "gzipBytes": 6347,
+      "roundtripSha256": "290e52b29689863e58d20b0642d2fb5a19856b4b2a47ae4f7e5b59bb16572cd9",
+      "status": "PASS"
+    },
+    {
+      "original": "character-assets.log",
+      "gzip": "character-assets.log.gz",
+      "rawSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "rawBytes": 270,
+      "gzipSha256": "0da9b602199edbc8c04fa13af73d14f98d6eedca97f2da6ce8c936524413df21",
+      "gzipBytes": 177,
+      "roundtripSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "status": "PASS"
+    },
+    {
+      "original": "consistency-initial.log",
+      "gzip": "consistency-initial.log.gz",
+      "rawSha256": "e6c7b37554ffeae840419386063eff8e8f46842f24e532473e85c6c4453e816e",
+      "rawBytes": 2308,
+      "gzipSha256": "f16b5910de2268ec63324ddbcdbf7edef7cf58b9615800e3209962d8befcd0d4",
+      "gzipBytes": 723,
+      "roundtripSha256": "e6c7b37554ffeae840419386063eff8e8f46842f24e532473e85c6c4453e816e",
+      "status": "PASS"
+    },
+    {
+      "original": "consistency-final.stderr.log",
+      "gzip": "consistency-final.stderr.log.gz",
+      "rawSha256": "f58f103cfa104fae6ce2d260cd5c6e31352b21e0769bbc13e4d7ba0c7a55c6b9",
+      "rawBytes": 980,
+      "gzipSha256": "9439da01942e5def5a618e4517e6b143b8b7bd8342ad27b7fcdded85486cb0b8",
+      "gzipBytes": 195,
+      "roundtripSha256": "f58f103cfa104fae6ce2d260cd5c6e31352b21e0769bbc13e4d7ba0c7a55c6b9",
+      "status": "PASS"
+    },
+    {
+      "original": "targeted-final.log",
+      "gzip": "targeted-final.log.gz",
+      "rawSha256": "6f7a6694a0fd42cca7f562121ba98687683ab7327e4f8f7203383f5f886ad8eb",
+      "rawBytes": 405,
+      "gzipSha256": "d24c80f725ed37fe0299222bf91487847ffc833783d33164cfd98278dcd01753",
+      "gzipBytes": 264,
+      "roundtripSha256": "6f7a6694a0fd42cca7f562121ba98687683ab7327e4f8f7203383f5f886ad8eb",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

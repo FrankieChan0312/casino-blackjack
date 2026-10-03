@@ -1,3 +1,6 @@
+## M10-T04 avatar/formal-variant planning checkpoint
+
+2026-10-03 21:30:06 +08:00 — Character identity, role and asset variant are separate presentation facts. A recognizable Lucien may have player/default and dealer/formal variants without replacing accepted PNGs or changing gameplay. Formal role attire retains face/hair/style and records separate provenance/hash/dimension/alpha contracts. Dealer/player role disjointness is a future presentation policy constraint, not a new account/rules/RNG policy; selection remains undecided. Keep identity integration/state mappings in T04 and live event/deal/reveal sequencing in T05/T06/T08. Planning repair3/10 does not reset T01's8/10 or accept/start implementation. Current repair creates no artwork/code; old planning receipts remain historical.
 2026-10-03 20:36:04 +08:00 — Current cumulative T01 repairs8/10: infrastructure7 plus documentation-only EOF correction8; affected55 tests/whitespace PASS. Historical repair7 learning receipt follows; T02 remains NOT STARTED.
 
 ## M10-T01 repair7 learning checkpoint
