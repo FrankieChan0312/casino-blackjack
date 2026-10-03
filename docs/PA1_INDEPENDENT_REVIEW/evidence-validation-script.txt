@@ -1,0 +1,17 @@
+import { readdirSync,readFileSync } from 'node:fs';
+import { gunzipSync } from 'node:zlib';
+import { createHash } from 'node:crypto';
+import process from 'node:process';
+const root='docs/PA1_INDEPENDENT_REVIEW';
+const manifest=JSON.parse(readFileSync(`${root}/evidence-sha256.json`,'utf8'));
+for(const file of manifest.files) {
+  const bytes=readFileSync(file.path);
+  if(bytes.length!==file.bytes||createHash('sha256').update(bytes).digest('hex')!==file.sha256) throw new Error(`Evidence hash mismatch: ${file.path}`);
+}
+const archives=readdirSync(root).filter(file=>file.endsWith('.gz'));
+for(const file of archives) {
+  const raw=gunzipSync(readFileSync(`${root}/${file}`)).toString('utf8');
+  const normalized=raw.split(/\r?\n/).map(line=>line.replace(/[\t ]+$/,'')).join('\n').trimEnd()+'\n';
+  if(normalized!==readFileSync(`${root}/${file.slice(0,-3)}`,'utf8')) throw new Error(`Preserved terminal content mismatch: ${file}`);
+}
+process.stdout.write(`PASS: ${manifest.files.length} evidence hashes; ${archives.length} lossless gzip archives decode to complete normalized text views\n`);

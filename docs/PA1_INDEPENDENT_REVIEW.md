@@ -99,3 +99,11 @@ The final run again generated a two-pixel wager-border variation for Nyra and al
 ### Evidence formatting repair2/10
 
 At2026-10-03 11:40:22 +08:00 staged `git diff --cached --check` reproduced FAIL/2 with43 terminal-log trailing-whitespace lines. No commit/push occurred. Cause is literal PowerShell wrapping/blank-line whitespace in captured output, not a test/product defect. Preserve each pre-normalization log and the whitespace-check transcript losslessly as adjacent `.gz` files; readable UTF-8 views remove only trailing line whitespace. All assertions/warnings/failure text remain present. This targeted evidence-only correction is review documentationrepair2/10; historical PA1 counters and product repairs0 remain unchanged. Restaged whitespace/evidence and affected documentation checks are required before publication; no test/runtime setting changes or new full-suite repair are involved.
+
+### Acceptance publication and final receipt
+
+Repair2 affected checks2026-10-03 11:41:38..11:41:41 PASS/0 (5files/13tests); evidence link/PNG/hash checks PASS; restaged whitespace PASS/0 at11:42:58. Source/tests/scripts/art/public/dependency/runtime and historical-image diff against the reviewed implementation EMPTY/PASS0. No non-document path was staged. Both review documentation repairs CLOSED, cumulative2/10; product repairs0.
+
+Acceptance/evidence commit **`4abc06c2623a9dedd5794243965162888ab3e998`**, branch main, normal commit PASS/0 at11:43:47. Normal push origin main and fetch PASS/0 at11:44:49; local HEAD = origin/main = that SHA,0/0,clean including no untracked files. At11:45:37 independent validation PASS:83 evidence hashes and15 gzip archives decode to the complete normalized views; reviewed-target executable/historical-artifact diff EMPTY and PA1 baseline domain diff EMPTY, both exit0. Raw failures remain published.
+
+This supplemental publication receipt changes only factual review/state/log evidence, not executable content or acceptance requirements. Its own final commit cannot embed its own SHA; the immediately following normal receipt commit in Git and the final delivery identify that SHA and mechanically checked final HEAD/remote/parity/clean gate. PA1 ACCEPTED; M9 HUMAN ACCEPTED: NO; deployment NOT RUN; M10 NOT STARTED.
