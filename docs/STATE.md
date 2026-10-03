@@ -12,6 +12,8 @@ Official tests regenerated Nyra screenshot with two wager-border pixels differin
 
 2026-10-03 12:35:53 +08:00 — Final affected planning/evidence checks PASS/0:5 files/13 existing assertions; all original document content retained after line-ending normalization; all relative links resolve;20 design subjects,4 P0/12 AC and11 ordered NOT STARTED tasks; exact unified command literal; lossless log decode/hash and restored baseline screenshot hash. Final whitespace PASS/0, exact baseline protected source/tests/scripts/art/public/docs/images/dependency/runtime diff EMPTY/PASS0. M10-PLANNING documentation VERIFIED; milestone stays PLANNED / NOT STARTED. Same-session review completed, planning repair1/10 CLOSED. Only factual publication receipts follow; normal commit/push pending, fresh M10 review/owner acceptance/deployment NOT RUN. M10-T01 NOT STARTED.
 
+2026-10-03 12:37:31 +08:00 — M10 planning publication PASS/0: coherent documentation/evidence checkpoint `519b4a696e19028fd15b354a71aae8628001990e`, commit at12:37:28, normal push origin main/fetch checked successfully. main=HEAD=origin/main,0/0,clean including untracked. Exact staged docs/portfolio/preservation check at12:37:09 PASS/0,5 files/13 tests; staged whitespace/protected-tree diff PASS/0. M10-PLANNING VERIFIED / COMMITTED / PUSHED; M10 remains PLANNED / NOT STARTED, all T01..T11 NOT STARTED. Planning repairs1/10 CLOSED; no product changes/repairs. This factual receipt changes only STATE/DEVELOPMENT_LOG; recheck affected docs/whitespace before its normal publication. Its own SHA is identified by Git/final delivery, avoiding self-reference. Fresh M10 independent review/owner plan acceptance/deployment NOT RUN. M10-T01 NOT STARTED.
+
 ## Historical pre-M10 state
 
 ## Current PA1 independent review
