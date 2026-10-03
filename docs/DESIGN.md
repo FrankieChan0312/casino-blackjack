@@ -1,3 +1,156 @@
+# M10 — Casino Table Experience design
+
+Status: PLANNED / NOT STARTED. Planning baseline `4e6cd7efdca91651633931edcd9445a401886bce`, main. This section is the authoritative proposed M10 presentation design; implementation requires a later owner instruction. [Scope/acceptance](SPEC.md), [task contracts](PLAN.md), [planning evidence](M10_PLANNING.md). Historical designs below retain their milestone scope. M10 does not accept M9 or revise RULES.
+
+## M10.1 Design goals
+
+P0: a responsive semicircular table, real configurable player count, visibly sequential initial dealing, and a central animated dealer. Preserve understandable player decisions, public-card secrecy, deterministic gameplay and the accepted PA1 characters. Additional action/chip/result motion follows P0. **Authoritative state MUST NOT depend on animation timing.**
+
+## M10.2 Non-goals
+
+No rule/paytable/strategy changes, replacement Blackjack engine, domain refactor, multiplayer, persistence, sound, 3D/skeletal rig, paid assets, new portrait generation, real money or deployment. No domain changes are authorized by this plan. Animation is an observer, never a game command source.
+
+## M10.3 Casino-table visual direction
+
+Use the existing restrained dark felt, warm rail, high-contrast text cards and transparent fantasy portraits. Players belong to the table perimeter rather than dashboard columns; eliminate rectangular panel emphasis in Player Mode. Dealer anchors the top centre, wagers sit inward of each player, cards remain readable and upright, and the action/credit dock stays outside the felt. Local cards remain larger, with explicit You/Human labels. Keep optional wagers, avatar choice and Developer / demo tools secondary. Preserve deliberate manual mode.
+
+## M10.4 Table geometry
+
+Use a lower half-ellipse with normalized coordinates and a dedicated reserved dealer band. Starting desktop anchors: centre `(50%, 34%)`, horizontal radius `40%`, vertical radius `48%`; seat centres follow `x=50%+40%*cos(theta)`, `y=34%+48%*sin(theta)`. For one seat theta=90 degrees; otherwise distribute evenly from 160 to 20 degrees in ascending seat order, left to right. Thus one is central, two are symmetric, three are left/centre/right, and four through seven are evenly distributed. This is presentation geometry, not domain ordering code.
+
+T01 must verify footprint sizes and settle responsive tokens before T03: account for portraits, names, wagers, five-card hands and four split leaves, not just anchor points. Increase table height/vertical flow or use compact public summaries when space is insufficient; never overlap cards, shrink primary controls, or conceal split results to preserve a mathematical arc. Cards/text stay upright rather than rotating the whole seat. Draw the felt/rail with CSS; no new art pipeline.
+
+## M10.5 Seat model
+
+Keep authoritative seatNumber/controller and public handId as stable identities. Visual slot/index/angle are derived independently; moving a seat must not renumber accounts, wagers, hand IDs or commands. A presentation card key uses session/round/seat/hand/card-index, never a physical-card ID. Maintain separate configured occupancy, funded active-round participation and visual allocation. Occupied sitting-out seats retain their portrait and explicit status; they receive no cards. Freeze slots during the round. At the next round an unfunded guest may sit out without changing the configured count or other identities.
+
+## M10.6 Dynamic player-count behaviour
+
+The inspected engine has seven numbered seats and at most one HUMAN. Normal Player Mode will support **1–7 total seated players, including you**, with `count-1` COMPUTER guests. Dealer is excluded. Default remains four; one local HUMAN remains Seat 4. Deterministic configured seat sets:
+
+| Total | Occupied ascending seat numbers | Computer count |
+| --- | --- | --- |
+| 1 | 4 | 0 |
+| 2 | 3, 4 | 1 |
+| 3 | 3, 4, 6 | 2 |
+| 4 | 1, 3, 4, 6 | 3 |
+| 5 | 1, 3, 4, 5, 6 | 4 |
+| 6 | 1, 2, 3, 4, 5, 6 | 5 |
+| 7 | 1, 2, 3, 4, 5, 6, 7 | 6 |
+
+Seat 4 is the central slot for odd counts and the right central slot for even counts. This intentionally supersedes M9's fixed lower-centre placement while retaining dominant own cards/actions. Default four retains the existing controller identities. Ascending seats drive both arc order and the actual engine deal/turn order, including noncontiguous sets.
+
+Offer a native labelled total-player selector before explicit Start table/session. Default four is preselected; setup contains only this choice, not guest wager forms. T02 must move automatic CONFIGURE/OPEN/guest MAIN preparation behind Start, because the current constructor already reserves guest stakes. Validate integer count before any commands/RNG/reset. Configure all seven real occupancies with existing CONFIGURE, OPEN and funded MAIN commands; do not hide seats to fake a count. Selected count persists through Deal Again/Repeat Bet without asking again. Disable changes during funded/active play; an explicit new session at an existing legal reset boundary can change count, clearly disclosing starting-credit reset. Do not reopen OPEN as CONFIGURING or silently reset money. Changing count within an ongoing session is outside scope.
+
+Fund guests with the existing 25-credit/affordable-whole-credit/minimum-10 policy and existing accounts; no refill. The configured total is a maximum of participants for that session, not a guarantee of funded cards each round. Retain spectator/manual setup separately. Use existing PA1 chooser with up to six unique guests excluding the human; stable lineup for normal rounds/collision exchange remains. Recompute journal-capacity preflight from actual composite command count plus finalization headroom before mutation: current constants assume three guests and cannot simply be reused for six. Preserve manual cap policy and atomic rejection.
+
+## M10.7 Dealer placement and character states
+
+Reuse the independent fictional female SVG in `CasinoPerson.tsx`, top centre above dealer cards. Apply small whole-figure/arm-group transforms where practical; no new rig or portrait dependency. States are presentation enums, never domain phases:
+
+| State | Observed cause | Presentation |
+| --- | --- | --- |
+| IDLE | Ready/betting/complete, no pending event | Static professional pose |
+| DEALING | Initial public deal events | Small dealing gesture toward destination |
+| WAITING_PLAYER | Presented human hand/Insurance/Even Money/follower choice | Static attention pose and clear decision text |
+| REVEALING | Public reveal event | Brief gesture concurrent with card flip |
+| DRAWING | Already-resolved dealer card events | Small draw gesture per card |
+| SETTLING | Already-committed wager result events | Restrained collect/return gesture |
+
+Stop gestures at human decisions and queue drain. No endless idle animation. Normal rejection shows concise feedback; integrity/VOID cancels normal celebration and uses interruption text. Dealer can wait while authoritative automation has already finished: presentational waiting must never misrepresent a request for a human action that does not exist.
+
+## M10.8 Card presentation
+
+Reuse custom rank/suit cards and the original CSS back. Initial card events follow two passes over funded ascending seats, each followed by Dealer: first upcard, then a generic hidden hole-card slot. Even if CLOSE resolves dealer natural immediately, show the hidden slot before a separately authorized public reveal. Player originalCards, not post-ADVANCE final hand lengths, supply the two initial cards.
+
+A hidden event contains only destination and card-back intent: no rank, suit, physical ID, seed, future order, hidden tooltip/ARIA/text or preloaded secret image. Reveal identity is copied only from an authoritative projection where revelation is public. Totals/outcomes in the staged visual hand advance consistently with displayed cards; do not show a final total or result ahead of its card sequence. The latest legal interaction/funds remain tied to authority, not staged totals. Duplicate flying cards are decorative/aria-hidden; one semantic public card representation is sufficient.
+
+## M10.9 Chips and betting presentation
+
+Use custom CSS chip stacks and exact formatted credit amounts. Chip buttons continue selecting input amounts before explicit wager acceptance. Accepted MAIN/SIDE/BACK/Insurance/Double/Split reserves produce observational chip events; rejection moves nothing. Available/Reserved/Pending remain accurate from the latest authoritative snapshot, clearly separate from decorative chips. Animate a gross return once per committed wager record; never infer payout from chip count, award pending profit early or deduct a loss twice. Keep own/main/side/Insurance/back returns, surrender half-return and VOID refunds distinct. No drag-to-bet or automatic repeat.
+
+## M10.10 Animation principles and interaction
+
+Execute commands and existing synchronous automatic progression immediately, recording observations before React publication can coalesce intermediate snapshots. Play resulting public events in order on a separate presentation cursor. Never split authoritative ADVANCE into timed calls or change command order to make animation convenient.
+
+While a sequence catches up, label `Dealing cards`/`Showing dealer play` as presentation status. Temporarily gate UI submissions that depend on not-yet-presented cards and offer a native **Skip animations** button that immediately flushes to latest public state. This gate does not alter domain legality or queue user game commands. Disable duplicate Deal/Repeat/financial/action clicks at the UI boundary and preserve authoritative stale/repeated-command rejection. Enable the real current human decision as soon as its prerequisite visual events are delivered; decorative settlement must not block next-round access. Skip, cancellation, resize, unmount or a failed animation only changes the visual cursor. No completion callback may issue ACT/ADVANCE/SETTLE/VOID/NEXT or call RNG.
+
+## M10.11 Animation catalogue
+
+| Priority / owner | Event | Visual and semantic outcome |
+| --- | --- | --- |
+| P0 / T06 | INITIAL_CARD, HIDDEN_CARD | Sequential dealer-origin delivery, exactly `2*n+2` slots |
+| P0 / T04,T06 | DEALER_STATE | Restrained states from M10.7 |
+| P1 / T07 | HIT_CARD, STAND | One resolved card; text decisions-complete feedback without draw |
+| P1 / T07 | DOUBLE | Reserve indication, one forced card, completion; respect follower window |
+| P1 / T07 | SPLIT, SUPPLEMENT | Move retained original cards to ordered children; supplements depth-first, never both early |
+| P1 / T08 | REVEAL, DEALER_CARD | Public hole flip then appended dealer cards in order; no unnecessary draws |
+| P1 / T09 | WAGER_RESERVED, WAGER_CANCELLED | Chips inward/return only after accepted command |
+| P1 / T09 | WAGER_RESULT | Committed win payout/loss collection/push return; surrender/VOID distinct |
+| P1 / T09 | HAND_RESULT | Text Blackjack/Charlie/bust/win/loss/push; Charlie only from actual profile result |
+| P1 / T07,T10 | TURN, DECISION | Non-colour active seat/hand and explicit human decision ownership |
+
+Split Aces/RSA keep V1.1/V1.2 restrictions and supplement order. Insurance/follower windows retain all human decisions before resulting new cards. No manufactured bot Double/Split strategy. Rare controlled fixtures remain explicitly labelled engineering tests.
+
+## M10.12 Timing and motion tokens
+
+Proposed milliseconds: card flight 180, sequential start gap 140, hole flip 220, split layout 220, chip transfer 240, text emphasis 160, dealer gesture 180; ease-out for arrival, ease-in-out for flip/gesture. Sequential starts preserve ordering even where decorative flights overlap. Sixteen initial destinations (seven players plus dealer twice) finish within 2500ms with these tokens. No arbitrary sleep in tests; injectable presentation scheduler plus event/queue completion signals. Reduced motion sets durations/gaps to zero. Validate actual full-table legibility before locking tokens in T01; a duration change never changes events or commands.
+
+## M10.13 Presentation-event architecture
+
+```text
+User command -> existing controller -> authoritative engine result
+             -> unchanged journal / outcome audit / automatic progression
+             -> private observational adapter -> sanitized presentation batch
+             -> presentation queue / cursor -> React + Motion
+
+Skip / elapsed time / animation failure -> cursor only
+```
+
+Keep raw engine state inside the controller closure. After EACH invoke (including automatic SETTLE/VOID), capture immutable before/result facts and public snapshots. A private adapter can inspect already-produced original-card and hand-lineage facts, but exports only an allowlisted public event payload. Keep this feed separate from the existing audit: audit intentionally has no card data and is not a card-animation log. React's useSyncExternalStore still reads latest public authority; a separate subscribed feed must not lose batches when several publish calls coalesce.
+
+Batch identity: presentation session, round, monotonic transition sequence, command attribution and ordered event ordinal. Include public seatNumber/handId, semantic card index, safe visible rank/suit only where public, and safe wager/result amounts. No timestamps in logical ordering, gameplay RNG, hidden-card identity, raw snapshots, physical IDs or serializable new replay commands. Retain only pending batches plus current round presentation; clear consumed data and reset on successful explicit new session. StrictMode/effect remount must not duplicate events. Rejected commands produce safe feedback without cards/chips; integrity takes precedence and flushes to actual VOID/public state.
+
+Atomic ADVANCE: use existing ordered `computerActions` observations to distinguish actual HIT/STAND. For each observed HIT consume the corresponding already-returned public hand append in order; append dealer reveal and returned dealer-array additions after the computer sequence. STAND adds no card. Human actions may also activate waiting split children in one result; use retained lineage and ordered before/result hand lists to distinguish retained cards and automatic supplements, including terminal/RSA chains. Do not sort cards by rank or infer bot policy from totals. T05 must prove reconstruction on explicit fixtures; if an ordered case cannot be observed safely with existing data, stop that affected animation and propose a separately authorized narrow seam with preservation tests. Do not modify domain or guess events to pass.
+
+## M10.14 Domain vs presentation boundary
+
+`src/domain/**` owns rules, shoe/drawing, RNG, hand sequencing, bankrolls, finalization, seeded reconstruction, journal and digest. Browser controller owns commands and automatic progression. Presentation owns geometry, public visual events/cursor, gestures and motion preference. Latest public authority and staged visual projection are separate named concepts; the staged projection cannot be submitted back into any handler. No new authoritative state machine, financial ledger or turn-selection function exists in presentation. Preserve gameplay audit order and attribution.
+
+## M10.15 Replay behaviour
+
+Existing `replayCompleted()` returns a terminal reconstruction, not a per-command animation timeline. Keep that summary workflow and original live table untouched. T10 may add an explicit read-only animated playback in a separately labelled view: reconstruct an exported finalized seeded package through existing command handlers in an isolated replay session, observing sanitized public transitions with the same adapter. Replay runs to completion independently of playback speed before presentation begins. Historical packages remain valid; no schema/version/digest/journal changes and no imported state snapshots. Playback never dispatches into live controller or adds outcome audit entries. Match complete outcomes and digest across instant, normal, skipped and reduced playback. Initial count is reconstructed from recorded CONFIGURE commands, not a new package field. Character choices/motion remain outside gameplay packages; no promise of reproducing unrecorded historical avatar choices.
+
+## M10.16 Responsive behaviour
+
+Required count matrix 1–7 at 1280x900,768x1024,320x720. Desktop uses full elliptical seating; tablet uses a wider/deeper arc with compact guest facts and external action dock. At 320px retain a small semicircular portrait/seat overview with readable numbered summaries, the visible dealer, and full-size own/current hand plus actions below; other public hands expand in ascending order. The overview may abbreviate with a linked full identity below, not illegible portrait/name panels. This replaces dashboard columns while allowing vertical scrolling. Five-card cards, four split leaves and 200% text must remain operable without page horizontal overflow; wrapping and summaries are acceptable. Freeze ordering on resize; remeasure origins/destinations once, snap current flights if necessary, and never replay commands. T03 must demonstrate the seven-seat case rather than extrapolate from the default four.
+
+## M10.17 Accessibility
+
+Use native labelled count/Start/Skip/action controls, logical keyboard order, visible focus and 44x44px primary targets. Seat numbers/You/Computer/current hand/result text supplement colour. Keep decorative flights/gestures out of accessibility tree. One polite live region announces meaningful deal completion/decision/result rather than every frame/card; assert no secret data in DOM/ARIA/styles/attributes/events before public reveal. Focus the actual human decision after prerequisite events, and preserve focus across skip/resize/repeated rounds. Keyboard-only, failed portraits and enlarged text stay in acceptance coverage; no comprehensive WCAG certification claim.
+
+## M10.18 prefers-reduced-motion
+
+Respect OS preference and offer a persistent in-memory session Reduce motion setting; either enables immediate presentation. Zero flights/flips/bounces/gestures, no stagger delay, same semantic cards/decisions/results and event order. A preference change mid-sequence flushes once to current public state, with no game command. CSS media queries plus Motion's reduced-motion support must cover all effects; disabling transforms alone does not remove custom queue delays. Normal-motion failure or hidden-tab suspension also flushes safely on resume. Skip is always usable and is not a paid/gameplay decision.
+
+## M10.19 Performance constraints and library decision
+
+Inspected package.json: React/React DOM19.3.0, Vite 8.3.1, TypeScript 6.0.3, Node 24.19.0; no current animation dependency. Read-only npm metadata on 2026-10-03 reports motion 14.0.0, MIT, React/React DOM peers `^18.0.0 || ^19.0.0`. Official [installation](https://motion.dev/docs/react-installation) supports React 18.2+ and Vite without special setup. Compatibility is a supported-range inference, not an executed integration result.
+
+Recommend pinned `motion` for Motion for React in T05 after renewed metadata/license/peer inspection and owner authorization to start that task. Use custom casino/card/chip components. Prefer simple transform/opacity sequences; measure before choosing full `motion/react` or [LazyMotion feature bundles](https://motion.dev/docs/react-reduce-bundle-size). Layout animation requires the larger layout-capable feature set; do not promise layout with domAnimation alone. [useReducedMotion](https://motion.dev/docs/react-use-reduced-motion) responds to preference changes, but the application must also flush its scheduler. This task installs nothing and changes no manifest/lockfile.
+
+Budget for T05: production gzip JavaScript increase at most 60KiB over the same-build baseline; report measured artifacts and imported features, never quote vendor estimates as project measurements. T11: profile a seven-seat deal, maximum split/card case and several rounds at 1280/768/320; target 60fps on the recorded test machine, record traces/frame stalls and any animation-attributable main-thread task over 50ms. Stop for unresolved repeatable usability stalls. Animate transform/opacity, read layout only at sequence start/resize, cap decorative in-flight cards to 16, avoid per-frame React state updates, and discard consumed/current-round data at round/session boundary. Bound queued work to one round: skip/drain before presenting a new round, never accumulate history or gate authoritative finalization on queue capacity. No idle polling, permanent will-change on every card or CDN runtime library loading. Exact browser compatibility/build/isolation checks remain required before claiming integration safe.
+
+## M10.20 Visual acceptance criteria
+
+P0 acceptance is traceable to AC-M10-001..004 and T01..T06/T11. Capture all seven counts at the three required viewports: one centre/two balanced/three left-centre-right/four-seven distributed; dealer top-centre distinct; seated characters/cards/wagers form a coherent table. Mechanical geometry verifies no essential intersections/clipping/overflow,44px controls, larger own cards and ordered split labels. Explicit deal fixtures verify each destination and hidden last slot; do not treat a final screenshot as proof of sequential dealing.
+
+Capture action/reveal/settlement/replay/reduced-motion states and failed-image/enlarged-text cases. Use animation checkpoints/events for deterministic screenshots, not arbitrary sleep. Inspect actual moving normal-mode deal and at least three rounds; static captures alone do not establish game feel. T11 delivers AC mapping, full regression results, screenshot/trace receipts, genuinely fresh review handoff, and owner walkthrough. Fresh review and explicit human visual acceptance are separate required events; M10 remains NOT STARTED now, and later automated PASS cannot declare ACCEPTED or DEPLOYED.
+
+## Historical pre-M10 design records
+
+The following requirements/status receipts describe their original milestones. Only the explicit M10 changes above and the matching SPEC/UX amendment supersede fixed player count, fixed local-centre geometry and immediate card presentation in future M10 Player Mode. All other gameplay/manual/replay/PA1 requirements remain binding.
+
 ## Current PA1 amendment
 
 Current delivery receipt: [PA1 independent review ACCEPTED](PA1_INDEPENDENT_REVIEW.md) for `3c50ab4d0183cff13f2380bd60faa31583d3e988`, under conditional owner delegation. M9 HUMAN ACCEPTED: NO, M10 NOT STARTED, deployment NOT RUN. No design changed; the implementation acceptance/review status below is historical.

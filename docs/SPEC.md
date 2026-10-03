@@ -1,3 +1,34 @@
+# M10 — Casino Table Experience scope
+
+Status: PLANNED / NOT STARTED. Owner-authorized planning only, baseline `4e6cd7efdca91651633931edcd9445a401886bce`. PA1_INDEPENDENT_REVIEW_ACCEPTED / PA1 ACCEPTED; M9 technical preservation review PASS, M9 HUMAN ACCEPTED: NO. New casino-experience requirements are M10 scope, not retroactive PA1 regression findings. M1-M8 and RA1 acceptance remain unchanged. Historical delivery receipts below keep their original scope.
+
+This repository uses milestone contracts/amendments in SPEC; this authorized addition defines M10 without rewriting prior acceptance criteria. [DESIGN](DESIGN.md) defines presentation architecture, [PLAN](PLAN.md) defines T01..T11, and [M10 planning contract/evidence](M10_PLANNING.md) distinguishes planning from implementation.
+
+P0: genuine semicircular seating, configurable 1–7 total players (one HUMAN plus 0–6 COMPUTER; dealer excluded), sequential two-pass initial deal, and a visible animated central dealer. Preserve default four and existing guest funding policy. Count selection happens before explicit session start and persists through normal rounds. It configures actual engine seats/wagers rather than cosmetic visibility. Funded active count can be lower when guests sit out; only funded seats receive cards. Existing 7-seat/one-human architecture establishes this range.
+
+This future Player Mode entry supersedes M9's immediate prepared-table default only enough to choose total players and Start; no repeated configuration/guest wager chores each round. Dynamic arc placement supersedes fixed local-centre placement, retaining own-hand/control priority. Mandatory P0 deal/character motion supersedes optional immediate presentation for M10 normal motion only; reduced motion/skip provide an equivalent immediate experience. Deliberate manual mode remains supported. RULES R02/R07–R13/R15–R17 and prior accepted enforcement requirements are unchanged.
+
+| Acceptance ID | Required outcome and verification | Primary tasks |
+| --- | --- | --- |
+| AC-M10-001 / P0-1 | Semicircular seated composition for counts 1–7; one centre, two symmetric, three left/centre/right;1280x900/768x1024/320x720 usable without essential overlap/page horizontal overflow; actual screenshots + geometry + human moving-table review | T01,T03,T11 |
+| AC-M10-002 / P0-2 | Native pre-session total selector 1–7; count drives real occupancy/funded guests/slots/ascending turns/deal; invalid count and mid-round changes reject before mutation; default 4, existing accounts/low-funds/sit-out/repeat/cap protections; explicit fixtures for every count | T02,T03,T11 |
+| AC-M10-003 / P0-3 | From already-resolved CLOSE, emit exactly 2*n+2 initial destinations: ascending funded players then dealer for each pass; hole slot generic; skip/reduced/cancel timing leaves authoritative results/RNG/journal/digest identical | T05,T06,T10,T11 |
+| AC-M10-004 / P0-4 | Independent central existing 2D dealer shows IDLE/DEALING/WAITING_PLAYER/REVEALING/DRAWING/SETTLING from public events; gestures never hide decisions/cards or issue game commands | T04,T05,T06,T08,T09,T11 |
+| AC-M10-005 | Hit/Stand/Double/Split/RSA show actual command/supplement order, retained-card children, four-leaf identity and explicit follower choices; no invented draws/policy | T07,T11 |
+| AC-M10-006 | Reveal only when public; dealer additions show authoritative order/S17/all-terminal no-draw case and integrity interruption | T08,T11 |
+| AC-M10-007 | Chips observe reserves/cancellation and committed per-wager gross results; main/side/Insurance/back/surrender/VOID distinct; Blackjack/Charlie feedback reflects actual result/profile | T09,T11 |
+| AC-M10-008 | Existing terminal replay remains; optional isolated animated replay reconstructs recorded CONFIGURE/commands with identical complete results/digest across speed/skip/reduced settings; no live mutation/schema change | T10,T11 |
+| AC-M10-009 | Keyboard/count/Start/Skip/current hand/focus/live text/44px targets; reduced motion and mid-sequence toggle instantly catch up; failed image/200% text; no hidden identity in any public payload/DOM/ARIA | T02–T11 |
+| AC-M10-010 | Domain bytes/RNG/shoe/cards/accounting/replay/digest/journal/audit/strategy unchanged for identical commands/configuration; accepted regressions retained; new configurations independently tested | All tasks,T11 |
+| AC-M10-011 | Motion is pinned/tested only in later authorized T05; production build/fixture exclusion/domain isolation PASS, measured JS increase<=60KiB gzip and bounded queue/frame profiling | T05,T11 |
+| AC-M10-012 | Accurate task/evidence/repair states, full mapping/screenshots/traces, fresh independent review and explicit human acceptance recorded separately; no acceptance/deployment from tests | T01,T11 |
+
+Additional P1 scope follows P0: action, split, reveal/draw, wager and payout/collection/return motion, natural/Charlie feedback, active player/hand indication, replay and accessibility completion. Build reduced-motion and secrecy into P0 infrastructure from the start; T10 completes their cross-mode matrix.
+
+Non-goals: rule/paytable/engine/strategy changes, domain refactor, network players, persistent accounts, sound,3D, new portrait assets, paid resources, real money or deployment. **Authoritative state MUST NOT depend on animation timing.** `src/domain/**` stays unchanged. Any later task proving a necessary narrow configuration/observation seam must stop and obtain separate scope authorization with explicit AC/preservation tests; this plan does not grant that authorization.
+
+## Historical pre-M10 specifications
+
 ## Current PA1 amendment
 
 Current delivery receipt: [PA1 independent review ACCEPTED](PA1_INDEPENDENT_REVIEW.md) for `3c50ab4d0183cff13f2380bd60faa31583d3e988`, under conditional owner delegation. M9 HUMAN ACCEPTED: NO, M10 NOT STARTED, deployment NOT RUN. No requirements changed; the implementation acceptance/review status below is historical.

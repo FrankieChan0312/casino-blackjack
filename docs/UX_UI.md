@@ -1,3 +1,19 @@
+## M10 planned casino-table interaction amendment
+
+M10 PLANNED / NOT STARTED. [SPEC acceptance](SPEC.md), [DESIGN presentation authority](DESIGN.md), [task sequence](PLAN.md). This owner-authorized planning amendment applies only to future M10 Player Mode; current product still uses accepted PA1 presentation and the implemented M9 journey.
+
+Before explicit Start table/session, choose **Total players (including you)** from 1–7; dealer excluded, one local human plus 0–6 clearly labelled computers, default 4. This replaces automatic prepared-table entry only for the initial count choice; do not add repeated guest setup/wager forms. Count persists on Deal Again/Repeat Bet. Funded active participation may be lower when guests sit out. Count changes require an explicit new session at an existing safe reset boundary, with starting-credit-reset disclosure; no mid-round/funded change or silent refill.
+
+People occupy a responsive semicircle, in ascending real-seat order. One sits centrally, two balance left/right, three left/centre/right and 4–7 spread along the arc. Stable seat numbers remain visible. Local Seat 4 occupies the central odd-count slot or right central even-count slot; own cards/decisions retain priority despite superseding fixed lower-centre placement. Desktop/tablet show seated figures/cards on felt. Mobile 320px uses a compact semicircular seat overview plus readable public summaries, full-size own/current hand and keyboard/touch controls below. Vertical scrolling and guest expansion are allowed; page horizontal scrolling and overlapping primary information are not.
+
+Normal motion sequentially presents already-resolved cards in the RULES R08 two-pass order, culminating in a generic dealer hole-card back. Public reveal/draw and action/settlement motion follows actual authoritative events, never a timer-driven engine action. Dealer states/gestures accompany this sequence at top centre. Meaningful Dealing/Showing dealer play text describes presentation catch-up; actual human choices wait without timers. Skip animations immediately shows latest public facts. Temporarily unavailable inputs have a reason and cannot submit a stale staged hand; Skip/focus remain available. Decorative settlement cannot obstruct next-round access.
+
+Mandatory M10 normal-motion dealing supersedes historical optional animation/immediate presentation only within this scope. `prefers-reduced-motion` or session Reduce motion removes flights/flips/gestures/stagger delays and retains equivalent semantic feedback/decisions. Switching preference or skipping changes presentation only. Keep 44px targets, visible focus, polite non-per-frame announcements, exact Available/Reserved/Pending, split leaf/result identity and explicit Insurance/Even Money/follower ownership. Hidden card identity must never enter public events/DOM/ARIA. Portrait failures retain readable names/controller text. No sound/3D/new character assets/real-money branding. Existing terminal replay remains; separate animated replay is read-only and labelled.
+
+This plan does not change RULES, accept M9, or establish visual acceptance. P0 and P1 require actual moving-table review and explicit owner acceptance after verified implementation and genuinely fresh review.
+
+## Historical pre-M10 UX records
+
 ## Current PA1 amendment
 
 Current delivery receipt: [PA1 independent review ACCEPTED](PA1_INDEPENDENT_REVIEW.md) for `3c50ab4d0183cff13f2380bd60faa31583d3e988`, under conditional owner delegation. M9 HUMAN ACCEPTED: NO, M10 NOT STARTED, deployment NOT RUN. No UX requirements changed; the implementation acceptance/review status below is historical.

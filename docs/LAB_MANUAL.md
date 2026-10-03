@@ -1,3 +1,13 @@
+## M10 planning learning checkpoint
+
+M10 PLANNED / NOT STARTED. [Design](DESIGN.md), [task plan](PLAN.md), [source inspection](M10_PLANNING.md). Seven modelled seats do not mean seven local humans: the current architecture permits one HUMAN and up to six funded COMPUTER guests. Configure real participation before session preparation, preserve participant balances and stable seat numbers, and distinguish seated count from funded active-round count. Visual arc slots are derived coordinates, not account identities.
+
+Atomic command execution is compatible with sequential presentation. Observe the immutable authoritative result and actual ordered computer actions before React publications coalesce, then animate sanitized public facts on a separate cursor. Completion callbacks cannot draw/advance/settle; skip/reduced motion/cancellation must be equivalent for identical configurations, including exact journal/RNG/digest/accounting. A different configuration legitimately produces different cards and digest. A public audit without card data cannot double as a dealing timeline.
+
+Motion's React peer range and Vite guidance support a recommendation, not an integration PASS. Recheck/pin/measure it in a later authorized task; layout features and reduced-motion queue delays need explicit verification. Static screenshots do not prove ordered motion or human game feel. Mechanical checks, fresh independent review and owner acceptance remain separate. No implementation begins in this planning task.
+
+## Historical pre-M10 learning records
+
 ## PA1 independent review checkpoint
 
 [Independent PA1 review](PA1_INDEPENDENT_REVIEW.md) separates exact source/history preservation, current executed tests and actual application visual inspection. A recovered later green diagnostic cannot explain an earlier lost failure: T05 remains ROOT CAUSE NOT ESTABLISHED despite5 exact E03 and42 integration passes. Preserve both facts rather than inventing a standby/flake explanation.
