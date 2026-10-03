@@ -1,0 +1,29 @@
+{
+  "start": "2026-10-03 23:25:43 +08:00",
+  "end": "2026-10-03 23:25:46 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "step": "Only exact desktop measurement first",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "before": 908.703125,
+  "after": 896.703125,
+  "requirement": "<=900.00px",
+  "stand": {
+    "x": 458,
+    "y": 844.703125,
+    "width": 116,
+    "height": 52
+  },
+  "css": {
+    "marginTop": "2px",
+    "marginBottom": "2px",
+    "padding": "6px",
+    "transform": "none"
+  },
+  "change": "Desktop>1100px .player-mode .round-status margin-block8px->2px; no other product edit",
+  "repairCount": "11/11 OWNER-AUTHORIZED EXCEPTION",
+  "repair12": "NOT AUTHORIZED / NOT PERFORMED"
+}

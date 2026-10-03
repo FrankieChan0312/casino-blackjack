@@ -1,0 +1,188 @@
+{
+  "start": "2026-10-03 23:28:09 +08:00",
+  "end": "2026-10-03 23:28:10 +08:00",
+  "command": "npx.cmd playwright test tests/browser/m10.spec.ts tests/browser/m9.spec.ts --grep 'M10-E01|M9-E01'",
+  "exitCode": 1,
+  "status": "FAIL",
+  "error": null,
+  "knownGeneratedCaptures": [],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "retainedAt": "generated/5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d.md.gz",
+      "bytes": 19827,
+      "sha256": "5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "retainedAt": "generated/2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23.png",
+      "bytes": 675558,
+      "sha256": "2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "retainedAt": "generated/938fe47a887a3d25c2dfa6be660032d3c4fbe6edbb977dd4fe95ea63fe7f5f58.zip",
+      "bytes": 2766272,
+      "sha256": "938fe47a887a3d25c2dfa6be660032d3c4fbe6edbb977dd4fe95ea63fe7f5f58"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-1280.png",
+      "retainedAt": "generated/94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73.png",
+      "bytes": 760961,
+      "sha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-320.png",
+      "retainedAt": "generated/41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4.png",
+      "bytes": 270569,
+      "sha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-768.png",
+      "retainedAt": "generated/53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea.png",
+      "bytes": 534998,
+      "sha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-1280.png",
+      "retainedAt": "generated/25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c.png",
+      "bytes": 710870,
+      "sha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-320.png",
+      "retainedAt": "generated/4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf.png",
+      "bytes": 267730,
+      "sha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-768.png",
+      "retainedAt": "generated/783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96.png",
+      "bytes": 478940,
+      "sha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/error-context.md",
+      "retainedAt": "generated/96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a.md.gz",
+      "bytes": 20746,
+      "sha256": "96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/test-failed-1.png",
+      "retainedAt": "generated/2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23.png",
+      "bytes": 675558,
+      "sha256": "2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/trace.zip",
+      "retainedAt": "generated/2509191a6a99201f80fea57e54b7676061301fe99fb1f349b5fe5ea38f08b99d.zip",
+      "bytes": 2980747,
+      "sha256": "2509191a6a99201f80fea57e54b7676061301fe99fb1f349b5fe5ea38f08b99d"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_female.png",
+      "retainedAt": "generated/58a6fff1dec76f59b66788a268430acfa9cd0d9dc343b7db78488725e7e809f5.png",
+      "bytes": 105372,
+      "sha256": "58a6fff1dec76f59b66788a268430acfa9cd0d9dc343b7db78488725e7e809f5"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_male.png",
+      "retainedAt": "generated/a368e977761917d2a0c8b5daaff28f0e6a3f0d0cb9f3728bb01fb5ab9d254d9d.png",
+      "bytes": 105098,
+      "sha256": "a368e977761917d2a0c8b5daaff28f0e6a3f0d0cb9f3728bb01fb5ab9d254d9d"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_female.png",
+      "retainedAt": "generated/9816522086508faae75d42bb8d851807b4ee60f777f2af003153c507ae203776.png",
+      "bytes": 105203,
+      "sha256": "9816522086508faae75d42bb8d851807b4ee60f777f2af003153c507ae203776"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_male.png",
+      "retainedAt": "generated/cff5a284ef7ba1bfa8fcaee5cdb11b8c001f44d7298a257ba7593116c879f479.png",
+      "bytes": 105388,
+      "sha256": "cff5a284ef7ba1bfa8fcaee5cdb11b8c001f44d7298a257ba7593116c879f479"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_female.png",
+      "retainedAt": "generated/8a20231dd5a695d09d73ca212e4f94b85c1819624fddb2808de3c6c7f47149b1.png",
+      "bytes": 106699,
+      "sha256": "8a20231dd5a695d09d73ca212e4f94b85c1819624fddb2808de3c6c7f47149b1"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_male.png",
+      "retainedAt": "generated/0d499307d09b307601017c5c471993a281195b6f0e9b2afc884030cb5b8462bd.png",
+      "bytes": 107047,
+      "sha256": "0d499307d09b307601017c5c471993a281195b6f0e9b2afc884030cb5b8462bd"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_female.png",
+      "retainedAt": "generated/5a8557cfa834c6d3ae36ae5db41495ee63f012a40c9c4b5f2becdbbead9fcdde.png",
+      "bytes": 106592,
+      "sha256": "5a8557cfa834c6d3ae36ae5db41495ee63f012a40c9c4b5f2becdbbead9fcdde"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_male.png",
+      "retainedAt": "generated/baaee2e58bbf1c3f784247e42e37fd8f6884061bd8fc055c2d3d0232a09ff312.png",
+      "bytes": 105976,
+      "sha256": "baaee2e58bbf1c3f784247e42e37fd8f6884061bd8fc055c2d3d0232a09ff312"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_female.png",
+      "retainedAt": "generated/c2a6ea8262bf5d910b1f98daa09a328a77f9aa9b50817267a775850ff33d9b6a.png",
+      "bytes": 106821,
+      "sha256": "c2a6ea8262bf5d910b1f98daa09a328a77f9aa9b50817267a775850ff33d9b6a"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_male.png",
+      "retainedAt": "generated/2756bf7a643e6b8f50a11f313f71be7e55d3d1e0e1fcb9cd82e8f3eea1e623d6.png",
+      "bytes": 106161,
+      "sha256": "2756bf7a643e6b8f50a11f313f71be7e55d3d1e0e1fcb9cd82e8f3eea1e623d6"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_female.png",
+      "retainedAt": "generated/8c225a059097d0df955c5184c611cd0c08b0c8c6e7e7bae6296f1a2840fdb188.png",
+      "bytes": 105208,
+      "sha256": "8c225a059097d0df955c5184c611cd0c08b0c8c6e7e7bae6296f1a2840fdb188"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_male.png",
+      "retainedAt": "generated/bff62ce0ad1b4fc542f3f6ef81dcbffcb3d7e4331047ff380b422483a2e0dcf7.png",
+      "bytes": 106057,
+      "sha256": "bff62ce0ad1b4fc542f3f6ef81dcbffcb3d7e4331047ff380b422483a2e0dcf7"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-1280.png",
+      "retainedAt": "generated/1a0fb332136d659a655e254454c8b1c854141f65fb1a358fbfbe3f5003f20d52.png",
+      "bytes": 799318,
+      "sha256": "1a0fb332136d659a655e254454c8b1c854141f65fb1a358fbfbe3f5003f20d52"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-320.png",
+      "retainedAt": "generated/705324373b9f48b95661b260295687aabebb2e0bc3e5250ce2b88e9669582ac5.png",
+      "bytes": 297183,
+      "sha256": "705324373b9f48b95661b260295687aabebb2e0bc3e5250ce2b88e9669582ac5"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-768.png",
+      "retainedAt": "generated/98d31bdabff3a307551df10def847bbfafb18540972c3d351d61ff84fc318799.png",
+      "bytes": 567159,
+      "sha256": "98d31bdabff3a307551df10def847bbfafb18540972c3d351d61ff84fc318799"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-1280.png",
+      "retainedAt": "generated/44f5699c0563644b22bf3c527ca14091ca25720ba563cc8b453f87e129bafb91.png",
+      "bytes": 1336216,
+      "sha256": "44f5699c0563644b22bf3c527ca14091ca25720ba563cc8b453f87e129bafb91"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-320.png",
+      "retainedAt": "generated/b671b01f1811540d265431caa088b3197be9ff8f5224c2415f5c5c3d717583f1.png",
+      "bytes": 535014,
+      "sha256": "b671b01f1811540d265431caa088b3197be9ff8f5224c2415f5c5c3d717583f1"
+    }
+  ],
+  "note": "Only known harness output bytes retained and restored to exact incoming task-owned bytes. Accepted canonical PA1 references remain read-only. No product/test/config changes.",
+  "classification": "Command invocation failure: Windows cmd interpreted pipe in regex; Playwright did not start. Not a product failure or new product repair.",
+  "testScopedOutputsClassification": "Pre-existing prior repair10 test-results, copied read-only by the diagnostic wrapper; not evidence of this invocation executing tests."
+}

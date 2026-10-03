@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { writeFileSync } from 'node:fs';
+import { copyFileSync, writeFileSync } from 'node:fs';
 
 const viewports = [{ width: 1280, height: 900 }, { width: 768, height: 1024 }, { width: 320, height: 720 }];
 async function deal(page: Page, fixture = 'player') {
@@ -94,5 +94,45 @@ test('[M10-E03] enlarged text failed portraits and reduced motion keep identity 
     expect(await stand.evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');
     expect(await page.locator('#player-hand .card').first().evaluate(el => getComputedStyle(el).animationName)).toBe('none');
     await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+  }
+});
+
+test('[M10-E04] the table scene owns coherent local cards controls and exact credits through betting and play', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.locator('.table-scene');
+    await expect(scene.getByRole('region', { name: 'Your wager', exact: true })).toBeVisible();
+    const save = async (state: string) => {
+      const filename = `scene-${state}-${viewport.width}.png`, path = info.outputPath(filename);
+      await page.screenshot({ path, fullPage: true, animations: 'disabled' });
+      copyFileSync(path, `docs/M10_T01_EVIDENCE/repair09/${filename}`);
+    };
+    await page.evaluate(() => scrollTo(0, 0)); await save('open');
+    await page.getByLabel('Your main wager', { exact: false }).fill('100');
+    await scene.getByRole('button', { name: 'Deal', exact: true }).click();
+    const own = scene.getByRole('region', { name: 'Seat 4', exact: true });
+    await expect(own.getByRole('img', { name: 'Your avatar: Roland, Male Human Knight', exact: true })).toBeVisible();
+    await expect(own.getByRole('img', { name: '5 of hearts', exact: true })).toBeVisible();
+    await expect(own.getByRole('img', { name: '4 of spades', exact: true })).toBeVisible();
+    await expect(own.getByText('MAIN: 100 credits', { exact: true })).toBeVisible();
+    await expect(scene.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['900', '100', '0']);
+    const positions = await scene.evaluate(el => {
+      const rect = (selector: string) => { const r = el.querySelector(selector)!.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; };
+      return { own: rect('#player-hand'), dock: rect('.player-dock'), table: rect('.casino-table') };
+    });
+    expect(Math.abs(positions.own.x + positions.own.width / 2 - viewport.width / 2)).toBeLessThan(2);
+    expect(Math.abs(positions.dock.x + positions.dock.width / 2 - viewport.width / 2)).toBeLessThan(2);
+    expect(positions.dock.y).toBeGreaterThanOrEqual(positions.own.y + positions.own.height);
+    expect(positions.dock.y - positions.own.y - positions.own.height).toBeLessThanOrEqual(32);
+    expect(positions.table.width).toBeGreaterThan(viewport.width * 0.8);
+    await expect(scene.getByRole('region', { name: 'House rules', exact: true })).toHaveCount(0);
+    await expect(scene.getByLabel('House rules', { exact: true })).toContainText('BLACKJACK PAYS 3:2');
+    await expect(scene.getByLabel('House rules', { exact: true })).toContainText('DEALER STANDS ON ALL 17');
+    expect(await scene.locator('.dealer > .casino-person').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
+    await geometry(page); await page.evaluate(() => scrollTo(0, 0)); await save('dealt');
+    await scene.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await scene.getByRole('button', { name: 'Deal Again', exact: true }).click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toBeFocused();
   }
 });

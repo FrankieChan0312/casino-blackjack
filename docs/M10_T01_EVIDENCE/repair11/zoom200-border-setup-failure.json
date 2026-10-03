@@ -1,0 +1,24 @@
+{
+  "start": "2026-10-03 23:40:01 +08:00",
+  "method": "Isolated headed Chromium persistent profile; native chrome.tabs.setZoom/getZoom. No CSS zoom/font-size/device-scale/page-scale emulation.",
+  "references": [
+    "https://developer.chrome.com/docs/extensions/reference/api/tabs#method-setZoom",
+    "https://playwright.dev/docs/chrome-extensions"
+  ],
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-repair11-zoom-P5LpYN",
+  "scenarios": [],
+  "nativeWindow": {
+    "windowId": 1155636335,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1280,
+      "height": 818,
+      "windowState": "normal"
+    }
+  },
+  "status": "FAIL",
+  "exitCode": 1,
+  "failure": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 1280\nReceived: 1266\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+  "end": "2026-10-03 23:40:08 +08:00"
+}

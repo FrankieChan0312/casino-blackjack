@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-10-03 22:42:15 +08:00",
+  "status": "FAIL",
+  "reviewKind": "Same-session actual PNG inspection; not fresh independent review or owner acceptance",
+  "files": [
+    {
+      "path": "scene-open-1280.png",
+      "bytes": 710870,
+      "sha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "width": 1280,
+      "height": 1300,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "scene-open-768.png",
+      "bytes": 478940,
+      "sha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "width": 768,
+      "height": 1335,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "scene-open-320.png",
+      "bytes": 267730,
+      "sha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "width": 320,
+      "height": 1527,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "scene-dealt-1280.png",
+      "bytes": 760961,
+      "sha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "width": 1280,
+      "height": 1285,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "scene-dealt-768.png",
+      "bytes": 534998,
+      "sha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "width": 768,
+      "height": 1321,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "scene-dealt-320.png",
+      "bytes": 270569,
+      "sha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "width": 320,
+      "height": 1364,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "five-cards-1280.png",
+      "bytes": 792477,
+      "sha256": "2d7194058276d627b8e560d362c83e1277c64a0947a322101add5e9c36181e91",
+      "width": 1280,
+      "height": 1351,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "five-cards-768.png",
+      "bytes": 552431,
+      "sha256": "24a9489cc01deb082c16b7b5ef9068aba75e5c457167d56d0ce358dabb257bac",
+      "width": 768,
+      "height": 1387,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "five-cards-320.png",
+      "bytes": 281054,
+      "sha256": "8eb7492c2476fd6e594ca43797169d973ac5bce298ba1a257ceb5e555bd2f70d",
+      "width": 320,
+      "height": 1464,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "four-leaves-1280.png",
+      "bytes": 1103714,
+      "sha256": "9e1de06fe1f00de0af5f0f43eebc57f4063ff012d78ef099d1f236714ef30200",
+      "width": 1280,
+      "height": 1911,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "four-leaves-768.png",
+      "bytes": 731739,
+      "sha256": "c1d0223c7f3e83e904003700c2b1ed8cd3bd70d2c09ad1a1e2498411eecf6e57",
+      "width": 768,
+      "height": 1953,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "four-leaves-320.png",
+      "bytes": 368134,
+      "sha256": "5d7ea4c5ed626596eac7a1c85fffbce8d5ebd97d5b15387c592b26e42cbdfb2e",
+      "width": 320,
+      "height": 2167,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "text-fallback-1280.png",
+      "bytes": 1274007,
+      "sha256": "9ee975bb189a2812d806c486637dc086d95dbb6a033d304a8ea3fe920df838ad",
+      "width": 1280,
+      "height": 2148,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "text-fallback-768.png",
+      "bytes": 890530,
+      "sha256": "c13791471079a646ba58abba9576d1f1ab37fea5fe32599e8d40b559401501e6",
+      "width": 768,
+      "height": 2233,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    },
+    {
+      "path": "text-fallback-320.png",
+      "bytes": 519069,
+      "sha256": "145e9542abc0bda3bcced73205fe1fe8f7f1e14ee6b2b18d83b93a316ccbed73",
+      "width": 320,
+      "height": 2956,
+      "inspection": "Actual same-session visual inspection completed before 2026-10-03 22:34:50 +08:00"
+    }
+  ],
+  "findings": {
+    "desktop": "FAIL: Stand bottom908.703125>900 at1280x900 in M10-E01 and M9-E01",
+    "tablet": "PASS: bounded focused normal/stress scenarios at768x1024; whole milestone not verified",
+    "mobile": "PASS: bounded focused normal/stress scenarios at320x720; whole milestone not verified",
+    "fiveCards": "PASS: five actual cards retained and normal-flow scrolling allowed",
+    "split": "PASS: four ordered leaves and wager/result labels retained",
+    "keyboard": "PASS: native Tab/Enter and Stand/Deal Again focus in focused cases",
+    "textEnlargement": "PASS: 200% root-text size and fallback stress; long labels wrap",
+    "browserZoom": "NOT RUN: actual browser200% zoom",
+    "assets": "PASS: existing temporary Dealer SVG/PA1 only; no new art or animation"
+  },
+  "freshIndependentReview": "NOT RUN",
+  "humanAcceptance": "NOT RUN / NOT YET RECORDED",
+  "repairCount": "10/10",
+  "productWork": "STOPPED"
+}

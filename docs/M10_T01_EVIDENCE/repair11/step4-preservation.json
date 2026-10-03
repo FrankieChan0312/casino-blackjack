@@ -1,0 +1,25 @@
+{
+  "start": "2026-10-03 23:58:17 +08:00",
+  "end": "2026-10-04 00:01:03 +08:00",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-repair11-step4-preservation-uG9g3V",
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1",
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "knownGeneratedCaptures": [],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/desktop-table.png",
+      "retainedAt": "generated/20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1.png",
+      "bytes": 483197,
+      "sha256": "20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1"
+    },
+    {
+      "path": "test-results/mobile-table.png",
+      "retainedAt": "generated/da1cadab2b1ab53503dd2b424848cc275258f8d11bbe0fe2491751c68a5d24a7.png",
+      "bytes": 214543,
+      "sha256": "da1cadab2b1ab53503dd2b424848cc275258f8d11bbe0fe2491751c68a5d24a7"
+    }
+  ],
+  "note": "Only known harness output bytes retained and restored to exact incoming task-owned bytes. Accepted canonical PA1 references remain read-only. No product/test/config changes."
+}

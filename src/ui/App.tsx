@@ -51,6 +51,7 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <p className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
     {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
+    <div className="table-scene">
     <Table view={view} lineup={lineup} />
     <div id="player-decisions" tabIndex={-1} className="player-dock">
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
@@ -62,6 +63,7 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
       </dl></section>
       {view.interaction.betting && <PlayerBetting controller={controller} view={view} />}
       <Results view={view} controller={controller} />
+    </div>
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>
     <CharacterPicker selected={lineup.human} onSelect={id => setPresentation(current => ({ ...current,

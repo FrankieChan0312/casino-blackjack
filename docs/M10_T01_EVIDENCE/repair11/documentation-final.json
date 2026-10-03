@@ -1,0 +1,7 @@
+{
+  "scope": "Factual documentation closure only; no executable change after final product verification",
+  "command": "npm.cmd test -- tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts tests/m9/documentation.test.ts tests/ra1/inventory.test.ts tests/pa1/preservation.test.ts",
+  "start": "2026-10-04 00:13:48 +08:00",
+  "exitCode": 0,
+  "end": "2026-10-04 00:13:54 +08:00"
+}

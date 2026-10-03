@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-10-04 00:24:35 +08:00",
+  "status": "PASS",
+  "scope": "Exact raw generated contexts/report bytes preserved; only verified task-owned duplicate plaintext copies removed. Digest filenames identify uncompressed bytes; archive SHA256 is recorded separately.",
+  "archives": [
+    {
+      "source": "generated/5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d.md",
+      "archive": "generated/5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d.md.gz",
+      "rawBytes": 19827,
+      "rawSha256": "5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d",
+      "archiveBytes": 5103,
+      "archiveSha256": "2867501ecd14ddf61d1decd13c49cf3152dfafe683b3f5efca6ebbf06695d4b5",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "generated/91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903.json",
+      "archive": "generated/91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903.json.gz",
+      "rawBytes": 45,
+      "rawSha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "archiveBytes": 60,
+      "archiveSha256": "eeb2d2f2d42ce7a6a891fb0b1fa5ae847db0110fdf2d769e41c519444aadb45d",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "generated/96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a.md",
+      "archive": "generated/96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a.md.gz",
+      "rawBytes": 20746,
+      "rawSha256": "96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a",
+      "archiveBytes": 4917,
+      "archiveSha256": "2c47a23bcada49df5940bd89b574ad00c65c41fc93a75a1e35b75c89bfbb969e",
+      "roundTrip": "PASS"
+    }
+  ]
+}

@@ -1,4 +1,8 @@
-## M10 geometry checkpoint
+## M10 table composition checkpoint
+
+Current UI composition is IMPLEMENTED / VERIFIED with coherent seats, stronger local cards and an integrated action/credit dock. Desktop Stand bottom896.703125<=900 after the owner-authorized11/11 exception. Full78/1047 Vitest,67 Chromium and independent preservation PASS/exit0; actual browser200% zoom precheck PASS. Final unified verify.ps1 PASS/exit0, including type/lint/build/domain isolation and accepted preservation; publication receipts are recorded in STATE. [Current task/evidence](docs/M10_T01.md). Human visual acceptance/fresh independent review/deployment NOT RUN; T02/T04+ NOT STARTED. Earlier published receipts remain historical below.
+
+## Prior published M10 geometry checkpoint
 
 [Repair7 evidence](docs/M10_T01_RECOVERY.md): ordinary PA1 verification now reads historical PNGs and saves fresh screenshots through Playwright test-scoped output paths. All17 canonical hashes unchanged; original assertions retained. Windows ROOT CAUSE NOT ESTABLISHED; cumulative repairs8/10 (repair7 infrastructure; repair8 log whitespace). Earlier failures and diagnostic evidence remain available.
 

@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-10-04 00:20:24 +08:00",
+  "status": "PASS",
+  "scope": "Lossless copies of task-owned new raw streams; only verified duplicate raw .log files removed. Historical repair09 evidence unchanged.",
+  "archives": [
+    {
+      "source": "character-assets.log",
+      "archive": "character-assets.log.gz",
+      "rawBytes": 270,
+      "rawSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "archiveBytes": 177,
+      "archiveSha256": "0da9b602199edbc8c04fa13af73d14f98d6eedca97f2da6ce8c936524413df21",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "documentation-final.log",
+      "archive": "documentation-final.log.gz",
+      "rawBytes": 405,
+      "rawSha256": "a2621cca200859098ed24e494db4f6eae3b2981dbb5782941ed3553d48820e35",
+      "archiveBytes": 263,
+      "archiveSha256": "d7b1d31bb5f6e12f1352a26e5c01172f6fb7f6fd412ddd1b6017a862c01d6eee",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "final-verify.log",
+      "archive": "final-verify.log.gz",
+      "rawBytes": 37323,
+      "rawSha256": "959510848dd8095f6f0c237a94850ad19f5c0588213bbcf5e8f2a1fae9403e3d",
+      "archiveBytes": 6416,
+      "archiveSha256": "41e0ef196e33973b0d3d7bf0112aae3725e5b258aa0cb24c37a34f06b137c7bd",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step2-focused-corrected.log",
+      "archive": "step2-focused-corrected.log.gz",
+      "rawBytes": 1406,
+      "rawSha256": "a31af1d208b8e99ca24fa3cdd367cc05e1e4604d49f1e035b9119cdadf77d282",
+      "archiveBytes": 626,
+      "archiveSha256": "7694b0b5a6b9266e38634fe149b376d15d3449d5d9ef2ff0305e4dedcf5f48f3",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step2-focused.log",
+      "archive": "step2-focused.log.gz",
+      "rawBytes": 97,
+      "rawSha256": "da86f87bdd079e8a4efe9fb56f79cf4eadffb0f1beb6ae475c106a1722882f5c",
+      "archiveBytes": 106,
+      "archiveSha256": "f9893c1bee9bc9b20bbcb3a7aef86f104ba44a725b3761b442b6abe6988fa8a2",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step3-browser.log",
+      "archive": "step3-browser.log.gz",
+      "rawBytes": 4472,
+      "rawSha256": "a804ec293281e9dc8795a2c96555bae6f56b909e693cbb2289e478e13c6609d0",
+      "archiveBytes": 1675,
+      "archiveSha256": "57f577115078006dd0c013bba31f768bfdbaf2d39c689ef074c61c4ca944b4bb",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step4-chromium.log",
+      "archive": "step4-chromium.log.gz",
+      "rawBytes": 13160,
+      "rawSha256": "fc8dd70579642c2572d7b562abca9e38b416e4245559cc5ccaba31e705968bb4",
+      "archiveBytes": 4035,
+      "archiveSha256": "dc74a3800fcc0da18b5214c2dde777528661ccc5c3f8c119c56a8cde00f1a150",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step4-preservation.log",
+      "archive": "step4-preservation.log.gz",
+      "rawBytes": 22948,
+      "rawSha256": "fcf077f88646b36f52a36168bb4a12322f9b8fde0ef6dd4fb1742c0eb4bad4ee",
+      "archiveBytes": 4311,
+      "archiveSha256": "4f58a64493b2366337d74a9a8ee9cd2e61ea9dbc3404d20b79bc150cbc6fecee",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "step4-vitest.log",
+      "archive": "step4-vitest.log.gz",
+      "rawBytes": 461,
+      "rawSha256": "11f9f1734b9088f6395ea97863b4573f294936ea0a56d12a8e41bf77fd07bbc1",
+      "archiveBytes": 325,
+      "archiveSha256": "ce11ffae711ee53940a925c249a3b85b277885cb5389aae3d05cdc6618ec0f5c",
+      "roundTrip": "PASS"
+    },
+    {
+      "source": "documentation-reviewed.log",
+      "archive": "documentation-reviewed.log.gz",
+      "rawBytes": 405,
+      "rawSha256": "e74e2359d3a19296327fbe9d3162fd6e4863dc6a7794b5092f8ec5c2d2b2d1cb",
+      "archiveBytes": 264,
+      "archiveSha256": "cb48e74ca461e36123af7574156eb763da0436825333a475983f4fb00cac8516",
+      "roundTrip": "PASS"
+    }
+  ],
+  "finalArchiveTimestamp": "2026-10-04 00:27:41 +08:00"
+}

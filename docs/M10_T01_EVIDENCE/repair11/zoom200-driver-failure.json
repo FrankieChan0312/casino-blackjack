@@ -1,0 +1,141 @@
+{
+  "start": "2026-10-03 23:40:53 +08:00",
+  "method": "Isolated headed Chromium persistent profile; native chrome.tabs.setZoom/getZoom. No CSS zoom/font-size/device-scale/page-scale emulation.",
+  "references": [
+    "https://developer.chrome.com/docs/extensions/reference/api/tabs#method-setZoom",
+    "https://playwright.dev/docs/chrome-extensions"
+  ],
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-repair11-zoom-MGjQVe",
+  "scenarios": [
+    {
+      "fixture": "player",
+      "status": "PASS",
+      "zoom": 1,
+      "geometry": {
+        "table": {
+          "x": 84.33333587646484,
+          "y": -62.57291793823242,
+          "width": 1096,
+          "height": 727.2396240234375
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 472.3333435058594,
+            "y": -40.57291793823242,
+            "width": 320,
+            "height": 154
+          },
+          {
+            "name": "Seat 1",
+            "x": 143.93173217773438,
+            "y": 151.6354217529297,
+            "width": 204,
+            "height": 221.5
+          },
+          {
+            "name": "Seat 3",
+            "x": 367.46533203125,
+            "y": 165.45834350585938,
+            "width": 204,
+            "height": 221.5
+          },
+          {
+            "name": "Seat 4",
+            "x": 332.3333435058594,
+            "y": 394.9583435058594,
+            "width": 600,
+            "height": 247.70834350585938
+          },
+          {
+            "name": "Seat 6",
+            "x": 829.4293823242188,
+            "y": 159.89584350585938,
+            "width": 204,
+            "height": 216.1666717529297
+          }
+        ],
+        "innerWidth": 1280,
+        "scrollWidth": 1265,
+        "cards": [
+          {
+            "clientWidth": 328,
+            "scrollWidth": 328
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 248,
+            "scrollHeight": 248
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 174,
+            "scrollHeight": 174
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 450.3333435058594,
+        "y": 671.3333740234375,
+        "width": 116.00003051757812,
+        "height": 52
+      },
+      "screenshot": "zoom200-player.png"
+    }
+  ],
+  "nativeWindow": {
+    "windowId": 744121231,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1280,
+      "height": 818,
+      "windowState": "normal"
+    }
+  },
+  "baseline": {
+    "innerWidth": 1280,
+    "innerHeight": 723,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 1.5,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1,
+    "screen": {
+      "width": 1280,
+      "height": 800,
+      "availWidth": 1280,
+      "availHeight": 752
+    }
+  },
+  "viewportLimit": "Native Windows browser viewport recorded as observed; prior requested1280x900 setup received1280x723 and stopped before zoom. No assertion on application was relaxed.",
+  "tabZoom": {
+    "tabId": 744121233,
+    "zoom": 2,
+    "settings": {
+      "defaultZoomFactor": 1,
+      "mode": "automatic",
+      "scope": "per-tab"
+    }
+  },
+  "zoomMetrics": {
+    "innerWidth": 640,
+    "innerHeight": 361,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 3,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1
+  },
+  "status": "FAIL",
+  "exitCode": 1,
+  "failure": "Error: expect(locator).toBeFocused() failed\n\nLocator: locator('#player-result')\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeFocused\" locator('#player-result') with timeout 5000ms\n  - waiting for locator('#player-result')\n",
+  "end": "2026-10-03 23:41:03 +08:00"
+}

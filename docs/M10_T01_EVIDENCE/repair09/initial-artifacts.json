@@ -1,0 +1,38 @@
+{
+  "note": "Both first-failure M10-E01/M9-E01 screenshots,contexts,traces retained before later Playwright run cleans test-results.",
+  "archive": "stage-B-initial-artifacts.zip",
+  "timestamp": "2026-10-03 22:26:43 +08:00",
+  "archiveSha256": "efb39ea00915f91c833b3da38353d1823c1b4ed9b773032e6ff1101001178769",
+  "files": [
+    {
+      "bytes": 20746,
+      "sha256": "90bdb537cb18484371ced553ffbc0c582aa0daa4d2a55656f88f2c2fde7e8e88",
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/error-context.md"
+    },
+    {
+      "bytes": 675938,
+      "sha256": "1098fdffbf5b47c982d3b3cc47c35225062b32bb531351119cfd5a0a3c5a5c7a",
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/test-failed-1.png"
+    },
+    {
+      "bytes": 2694010,
+      "sha256": "35e6ffb416bd266f3b2c1b3658783e9340b39343504bbe9fe1677d4bbe0c9504",
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/trace.zip"
+    },
+    {
+      "sha256": "60cc0ea14294916d042eca3e5c24bad492818109483f3214fd099976091326f7",
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "bytes": 19827
+    },
+    {
+      "sha256": "1098fdffbf5b47c982d3b3cc47c35225062b32bb531351119cfd5a0a3c5a5c7a",
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "bytes": 675938
+    },
+    {
+      "sha256": "e7578c746b3d5fcc9be766d1fb4000e2b8b94b83fc55c3ff7058f8a927263aea",
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "bytes": 2812809
+    }
+  ]
+}

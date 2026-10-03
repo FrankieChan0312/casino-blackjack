@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-03 22:47:52 +08:00",
+  "status": "PASS",
+  "note": "Raw generated logs retained byte-for-byte in gzip; only verified task-owned duplicate raw files removed.",
+  "files": [
+    {
+      "original": "character-assets.log",
+      "archive": "character-assets.log.gz",
+      "rawBytes": 270,
+      "rawSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "archiveBytes": 177,
+      "archiveSha256": "d5b1c04a9291d3918b9f7c7d346b3b7ba419d90a562d0d7fa8671573313a7224",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "lint-initial.log",
+      "archive": "lint-initial.log.gz",
+      "rawBytes": 64,
+      "rawSha256": "57d497ac33991f97f0898b07b070946b6b67c9c564aeb23a5981de3f2f7baa0c",
+      "archiveBytes": 81,
+      "archiveSha256": "3473abbe14b065ee7c1adaea59c983703e85b44868752dd94efa290e85999088",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "stage-A-final.log",
+      "archive": "stage-A-final.log.gz",
+      "rawBytes": 412,
+      "rawSha256": "e51cd54d92566804c0e07b198fc2309b194ef7b31348fc389df448db7dcff331",
+      "archiveBytes": 270,
+      "archiveSha256": "bcc476b961179057ff584db2dc54c56c20d0dd8c18204ce10f4d5642b744ea39",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "stage-A.log",
+      "archive": "stage-A.log.gz",
+      "rawBytes": 418,
+      "rawSha256": "f5dd0cd875c8609c04681f9b50805cdd4426bac78a9c37843235bf638c4f3031",
+      "archiveBytes": 276,
+      "archiveSha256": "afe904e71618e0a24e851c3733f82f42112644a92cb31c4f8a76dbafaaab95cb",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "stage-B-final.log",
+      "archive": "stage-B-final.log.gz",
+      "rawBytes": 9813,
+      "rawSha256": "e992355736381d3aa59a982769b6929c7dfaf7cd3db271482da501fa55f15736",
+      "archiveBytes": 2379,
+      "archiveSha256": "b701aabb463d28d2b838cd7c5145c849743e878cbe614654b34348ee090198a7",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "stage-B-initial.log",
+      "archive": "stage-B-initial.log.gz",
+      "rawBytes": 9810,
+      "rawSha256": "3947f94f744b357fec4a35900ced7b468c08f5f15f8a905fc9b5bad463c93ad1",
+      "archiveBytes": 2371,
+      "archiveSha256": "c5bc1620fb068f632febbb575fd9d1c9a9e45e2f51c3bad1e8eb89d136665ca8",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "typecheck-initial.log",
+      "archive": "typecheck-initial.log.gz",
+      "rawBytes": 56,
+      "rawSha256": "53839ccad2c8f7b4b9a2abb464e254db6f6306626b92ede4d299b5a642d45128",
+      "archiveBytes": 76,
+      "archiveSha256": "2d1744514ae2613b0a11920e49dcd2119dca922e572a8a869d20c87369a71a81",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "documentation-final.log",
+      "archive": "documentation-final.log.gz",
+      "rawBytes": 405,
+      "rawSha256": "d3a6a919cb06b4de5f1fe3f2ca99d846a619410b433efc1ce3ac3f99b1d569be",
+      "archiveBytes": 264,
+      "archiveSha256": "7339e5b750306c3e7930ddcad73ced92c4ab6e3affc504918702749f6fae5608",
+      "roundTrip": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-04 00:24:35 +08:00",
+  "status": "FAIL",
+  "exitCode": 1,
+  "scope": "Initial administrative authored-whitespace check, after product verification",
+  "cause": "The utility incorrectly treated three byte-preserved generated Playwright raw reports as authored evidence; raw Markdown contains trailing spaces and these raw reports omit a final newline.",
+  "rawReports": [
+    "5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d.md",
+    "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903.json",
+    "96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a.md"
+  ],
+  "targetedCorrection": "Keep their exact raw bytes through lossless gzip plus round-trip/hash receipts and update new repair11 mapping paths. Do not normalize raw reports or change product/tests. This is not repair12."
+}

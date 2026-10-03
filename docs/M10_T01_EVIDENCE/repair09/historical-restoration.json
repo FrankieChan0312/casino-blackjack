@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "note": "Only12 known harness-generated historical PNGs retained and restored; nine current stress PNGs retained individually, three generated M9 PNGs archived. No PA1 canonical PNG restoration or write.",
+  "timestamp": "2026-10-03 22:31:20 +08:00",
+  "files": [
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/five-cards-1280.png",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generatedSha256": "2d7194058276d627b8e560d362c83e1277c64a0947a322101add5e9c36181e91",
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "baselineBlob": "52edd85b61293cb8e2b6a27d0f47f9dfcb5676d3",
+      "baselineSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/five-cards-320.png",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generatedSha256": "8eb7492c2476fd6e594ca43797169d973ac5bce298ba1a257ceb5e555bd2f70d",
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "baselineBlob": "9f8ba3cb1ea220a0b34f1951859fd33253d1d2f3",
+      "baselineSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/five-cards-768.png",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generatedSha256": "24a9489cc01deb082c16b7b5ef9068aba75e5c457167d56d0ce358dabb257bac",
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "baselineBlob": "d544423ea2bb8095e81b627b16d663dbb2320064",
+      "baselineSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/four-leaves-1280.png",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generatedSha256": "9e1de06fe1f00de0af5f0f43eebc57f4063ff012d78ef099d1f236714ef30200",
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "baselineBlob": "8f45469cd873504fcc54cc8f4318a3e01fb40faf",
+      "baselineSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/four-leaves-320.png",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generatedSha256": "5d7ea4c5ed626596eac7a1c85fffbce8d5ebd97d5b15387c592b26e42cbdfb2e",
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "baselineBlob": "749dd987676e7b5b679681a25f62288ce15a7e57",
+      "baselineSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/four-leaves-768.png",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generatedSha256": "c1d0223c7f3e83e904003700c2b1ed8cd3bd70d2c09ad1a1e2498411eecf6e57",
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "baselineBlob": "86e2146428ebcb5fd2ac58d1836b521197c8acf9",
+      "baselineSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/text-fallback-1280.png",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generatedSha256": "9ee975bb189a2812d806c486637dc086d95dbb6a033d304a8ea3fe920df838ad",
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "baselineBlob": "5542642610d488b34de6f7b4ada177f773309fd5",
+      "baselineSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/text-fallback-320.png",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generatedSha256": "145e9542abc0bda3bcced73205fe1fe8f7f1e14ee6b2b18d83b93a316ccbed73",
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "baselineBlob": "f7a5bfc1b3ae1bca1d3c6886442b83f89398d61f",
+      "baselineSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "retainedAt": "docs/M10_T01_EVIDENCE/repair09/text-fallback-768.png",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generatedSha256": "c13791471079a646ba58abba9576d1f1ab37fea5fe32599e8d40b559401501e6",
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "baselineBlob": "9da363158f30a86d2adedb041706dc65d3e9ff41",
+      "baselineSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "retainedAt": "generated-historical-m9.zip:docs/images/m9-ready.png",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generatedSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "path": "docs/images/m9-ready.png",
+      "baselineBlob": "aeb5eb5a533188032877a943f29d20b34116552e",
+      "baselineSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "retainedAt": "generated-historical-m9.zip:docs/images/m9-results.png",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generatedSha256": "19a7ec242a3c1afc76f1db7e94893410510c8f3c166ab41ee96a8f27bc907d85",
+      "path": "docs/images/m9-results.png",
+      "baselineBlob": "75f9518fff3df6ba29762c24ca0895717e9115b7",
+      "baselineSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "retainedAt": "generated-historical-m9.zip:docs/images/m9-tools.png",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generatedSha256": "10cd07d89464fa69116733c4d45cc89a57461ef7009dbf2c894fd19369c1a138",
+      "path": "docs/images/m9-tools.png",
+      "baselineBlob": "b13ba31392e734a2f20be2f68d44a759769b106b",
+      "baselineSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    }
+  ]
+}

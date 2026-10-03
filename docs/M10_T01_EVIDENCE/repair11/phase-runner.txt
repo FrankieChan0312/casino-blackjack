@@ -1,0 +1,26 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto');
+const [phase,start,command]=process.argv.slice(2),dir=path.resolve('docs/M10_T01_EVIDENCE/repair11');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const known=['docs/M10_T01_EVIDENCE/geometry.json',...['table','five-cards','four-leaves','text-fallback'].flatMap(p=>[1280,768,320].map(w=>'docs/M10_T01_EVIDENCE/'+p+'-'+w+'.png')),...['scene-open','scene-dealt'].flatMap(p=>[1280,768,320].map(w=>'docs/M10_T01_EVIDENCE/repair09/'+p+'-'+w+'.png')),...['m9-ready','m9-results','m9-tools','m9-table-1280','m9-table-768','m9-table-320'].map(p=>'docs/images/'+p+'.png')];
+const before=new Map(known.map(n=>[n,fs.readFileSync(n)])),tempBackup=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'cbg-repair11-'+phase+'-')),backupPaths=new Map();
+for(const [n,b] of before){const original=path.join(tempBackup,hash(b)+path.extname(n));fs.writeFileSync(original,b);backupPaths.set(n,original);}
+const generated=path.join(dir,'generated');fs.mkdirSync(generated,{recursive:true});
+const rawLog=path.join(dir,phase+'.log'),fd=fs.openSync(rawLog,'wx');
+console.log(JSON.stringify({phase,start,command,status:'RUNNING'}));
+const result=cp.spawnSync('powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-Command',command],{stdio:['ignore',fd,fd]});fs.closeSync(fd);
+const preliminary={start,command,exitCode:result.status,status:result.status===0?'PASS':'FAIL',administrativeRestoration:'PENDING'};
+fs.writeFileSync(path.join(dir,phase+'.json'),JSON.stringify(preliminary,null,2)+'\n');console.log(JSON.stringify({phase,commandExitCode:result.status,commandStatus:preliminary.status}));
+const captures=[];
+for(const [n,b] of before){const a=fs.readFileSync(n);if(!a.equals(b)){const digest=hash(a),retained='generated/'+digest+path.extname(n);const dest=path.join(dir,retained);if(!fs.existsSync(dest))fs.writeFileSync(dest,a);if(hash(fs.readFileSync(dest))!==digest)throw Error('Generated capture integrity');const quote=p=>"'"+p.replaceAll("'","''")+"'";
+const replacement=path.join(path.dirname(path.resolve(n)),'.repair11-restore-'+path.basename(n)),replacedBackup=path.join(tempBackup,'replaced-'+path.basename(n));
+cp.execFileSync('powershell.exe',['-NoProfile','-Command',"$ErrorActionPreference = 'Stop'\nCopy-Item -LiteralPath "+quote(backupPaths.get(n))+" -Destination "+quote(replacement)+"\n[System.IO.File]::Replace("+quote(replacement)+","+quote(path.resolve(n))+","+quote(replacedBackup)+")"],{stdio:['ignore','pipe','pipe']});
+if(hash(fs.readFileSync(replacedBackup))!==digest)throw Error('Atomic backup mismatch');
+if(hash(fs.readFileSync(n))!==hash(b))throw Error('Restoration mismatch');captures.push({path:n,beforeSha256:hash(b),generatedSha256:digest,retainedAt:retained,restoredSha256:hash(fs.readFileSync(n)),bytes:a.length});}}
+const outputs=[];
+function collect(root){if(!fs.existsSync(root))return;for(const e of fs.readdirSync(root,{withFileTypes:true})){const n=path.join(root,e.name);if(e.isDirectory())collect(n);else if(e.name!=='.last-run.json'){const b=fs.readFileSync(n),digest=hash(b),retained='generated/'+digest+path.extname(n),dest=path.join(dir,retained);if(!fs.existsSync(dest))fs.writeFileSync(dest,b);outputs.push({path:n.replaceAll('\\','/'),retainedAt:retained,bytes:b.length,sha256:digest});}}}
+if(/playwright|verify.ps1|verify-preservation.ps1/.test(command))collect('test-results');
+const receipt={start,end:stamp(),temporaryOriginalBackup:tempBackup,command,exitCode:result.status,status:result.status===0?'PASS':'FAIL',error:result.error?String(result.error):null,knownGeneratedCaptures:captures,testScopedOutputs:outputs,note:'Only known harness output bytes retained and restored to exact incoming task-owned bytes. Accepted canonical PA1 references remain read-only. No product/test/config changes.'};
+fs.writeFileSync(path.join(dir,phase+'.json'),JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify({phase,end:receipt.end,status:receipt.status,exitCode:result.status,knownCaptures:captures.length,testScopedOutputs:outputs.length}));
+console.log(fs.readFileSync(rawLog,'utf8').split(/\r?\n/).slice(-12).join('\n'));
+process.exitCode=result.status??1;

@@ -1,0 +1,39 @@
+{
+  "archiveSha256": "dc1146740b1679565ba91cc6d382ffd51beed3c7fe068215eee421f42d8269f4",
+  "status": "FAIL",
+  "archive": "stage-B-final-artifacts.zip",
+  "reason": "M10-E01/M9-E01 desktop Stand bottom908.703125 exceeds900; cumulative10/10 stop.",
+  "files": [
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "bytes": 19827,
+      "sha256": "5c474f55a24015d3e5e9e10f2e90441b5a4f8173275a5a9815e419c07a24d69d"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "bytes": 675558,
+      "sha256": "2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "bytes": 2766272,
+      "sha256": "938fe47a887a3d25c2dfa6be660032d3c4fbe6edbb977dd4fe95ea63fe7f5f58"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/error-context.md",
+      "bytes": 20746,
+      "sha256": "96ddf84f9b22983f366d2a941936ba44c5aef8aba21d91c6443ec4d9baf9266a"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/test-failed-1.png",
+      "bytes": 675558,
+      "sha256": "2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/trace.zip",
+      "bytes": 2980747,
+      "sha256": "2509191a6a99201f80fea57e54b7676061301fe99fb1f349b5fe5ea38f08b99d"
+    }
+  ],
+  "timestamp": "2026-10-03 22:31:18 +08:00"
+}

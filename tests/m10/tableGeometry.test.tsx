@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { seatAnchors, TABLE_SEAT_ANCHORS, type SeatCount } from '../../src/presentation/tableGeometry.js';
 import { Table } from '../../src/ui/Table.js';
+import { App } from '../../src/ui/App.js';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { createCharacterLineup } from '../../src/presentation/characters.js';
 
@@ -94,4 +95,35 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
   }
   expect(offset).toBe(blobs.length);
   expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json')).toBe('');
+});
+
+it('[M10-G07] the local table scene retains semantic hand-control-credit order and exact public funds without commands', () => {
+  const controller = createBrowserController({ playerMode: true, seed: 7 });
+  controller.dispatch({ type: 'DEAL', amount: 200 });
+  const before = JSON.stringify(controller.getSnapshot());
+  let notifications = 0;
+  const unsubscribe = controller.subscribe(() => notifications++);
+  const html = renderToStaticMarkup(<App controller={controller} chooseCharacter={() => 0} />);
+  const table = html.indexOf('aria-label="Blackjack table"'), hand = html.indexOf('id="player-hand"');
+  const actions = html.indexOf('id="player-decisions"'), credits = html.indexOf('aria-label="Your credits"');
+  expect(html).toContain('class="table-scene"');
+  expect(table).toBeGreaterThan(0); expect(hand).toBeGreaterThan(table);
+  expect(actions).toBeGreaterThan(hand); expect(credits).toBeGreaterThan(actions);
+  expect(html).toContain('<dt>Available</dt><dd>900</dd>');
+  expect(html).toContain('<dt>Reserved / current exposure</dt><dd>100</dd>');
+  expect(html).toContain('<dt>Pending return</dt><dd>0</dd>');
+  for (const name of ['Hit', 'Stand', 'Double', 'Split', 'Surrender']) expect(html).toContain(`>${name}</button>`);
+  expect(JSON.stringify(controller.getSnapshot())).toBe(before); expect(notifications).toBe(0);
+  unsubscribe();
+});
+
+it('[M10-G08] the player-only composition preserves the manual seven-seat surface and canonical geometry source', () => {
+  const controller = createBrowserController({ seed: 7 });
+  const before = JSON.stringify(controller.getSnapshot());
+  const html = renderToStaticMarkup(<App controller={controller} />);
+  expect(html).not.toContain('class="table-scene"');
+  for (let n = 1; n <= 7; n++) expect(html).toContain(`aria-label="Seat ${n}"`);
+  expect(JSON.stringify(controller.getSnapshot())).toBe(before);
+  const original = execFileSync('git', ['show', '9ca8082b8ce5f9ae7aa90e07356be48c3a6ca2d1:src/presentation/tableGeometry.ts'], { encoding: 'utf8' });
+  expect(readFileSync('src/presentation/tableGeometry.ts', 'utf8').replaceAll('\r\n', '\n')).toBe(original.replaceAll('\r\n', '\n'));
 });

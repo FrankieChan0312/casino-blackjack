@@ -1,0 +1,87 @@
+{
+  "limits": "Targeted credential scan plus actual local screenshot/context inspection; not a general security audit",
+  "traceNetworkOrigins": [
+    "http://127.0.0.1:4173",
+    "ws://127.0.0.1:4173"
+  ],
+  "status": "PASS",
+  "archiveEntriesVerified": 12,
+  "timestamp": "2026-10-03 22:43:36 +08:00",
+  "plaintextRecordsInspected": 58,
+  "credentialPatternHits": [],
+  "archiveEntryResults": [
+    {
+      "bytes": 20746,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/error-context.md",
+      "status": "PASS"
+    },
+    {
+      "bytes": 675938,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/test-failed-1.png",
+      "status": "PASS"
+    },
+    {
+      "bytes": 2694010,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/trace.zip",
+      "status": "PASS"
+    },
+    {
+      "bytes": 19827,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "status": "PASS"
+    },
+    {
+      "bytes": 675938,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "status": "PASS"
+    },
+    {
+      "bytes": 2812809,
+      "archive": "stage-B-initial-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "status": "PASS"
+    },
+    {
+      "bytes": 19827,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "status": "PASS"
+    },
+    {
+      "bytes": 675558,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "status": "PASS"
+    },
+    {
+      "bytes": 2766272,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "status": "PASS"
+    },
+    {
+      "bytes": 20746,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/error-context.md",
+      "status": "PASS"
+    },
+    {
+      "bytes": 675558,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/test-failed-1.png",
+      "status": "PASS"
+    },
+    {
+      "bytes": 2980747,
+      "archive": "stage-B-final-artifacts.zip",
+      "entry": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/trace.zip",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Local test fixture captures and generated command logs only; fictional roster/credits; ordinary local workspace paths; no raw session transcript"
+}
