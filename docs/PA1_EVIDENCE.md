@@ -1,4 +1,8 @@
-## Current PA1 delivery
+## Current independent review
+
+PA1_INDEPENDENT_REVIEW_ACCEPTED for `3c50ab4d0183cff13f2380bd60faa31583d3e988`, baseline `e8e8e2e1586611473f0cdb94540ce995d9bd64e7`. PA1 accepted under the owner's conditional delegation; M9 human acceptance remains NO. Independent official1031/63/all M1-M8, asset/visual12/12, exact production reproduction and preservation PASS. Historical T05 ROOT CAUSE NOT ESTABLISHED,5/5 exact E03 and42/42 integration diagnostic executions PASS. Full decision, limits, raw logs and screenshots: [independent review](PA1_INDEPENDENT_REVIEW.md). No product repair, deployment or M10. Original implementation outcomes and failures below are preserved.
+
+## Historical PA1 delivery
 
 M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
 

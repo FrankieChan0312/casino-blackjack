@@ -1,0 +1,80 @@
+import { chromium, expect } from '@playwright/test';
+import { readFileSync, writeFileSync } from 'node:fs';
+import process from 'node:process';
+
+const output = 'docs/PA1_INDEPENDENT_REVIEW';
+const roster = [['elf_male','Caelan'],['elf_female','Elaria'],['knight_male','Roland'],['knight_female','Seraphine'],['mage_male','Alaric'],['mage_female','Nyra'],['noble_male','Lucien'],['noble_female','Celestine'],['halforc_male','Garruk'],['halforc_female','Vesha'],['dwarf_male','Borin'],['dwarf_female','Brynja']];
+const browser = await chromium.launch();
+const observations = { application: 'production build, http://127.0.0.1:4174/', fixture: false, portraits: [], sourceDecodes: [], errors: [] };
+try {
+  const page = await browser.newPage({ viewport: { width:1280, height:900 }, deviceScaleFactor:1 });
+  page.on('pageerror', error => observations.errors.push(error.message));
+  page.on('response', response => { if (response.status() >= 400) observations.errors.push(`${response.status()} ${response.url()}`); });
+  await page.goto('http://127.0.0.1:4174/');
+  await expect(page.locator('#player-hand h2')).toHaveText('Roland');
+  await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  await page.screenshot({path:`${output}/images/production-ready.png`,fullPage:true,animations:'disabled'});
+  await page.locator('.character-picker summary').click();
+  for (const [id,name] of roster) {
+    await page.getByLabel('Your character',{exact:true}).selectOption(id);
+    await expect(page.locator('#player-hand h2')).toHaveText(name);
+    await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+    const ids = await page.locator('.seats > .seat').evaluateAll(seats => seats.map(seat => seat.getAttribute('data-character')));
+    if (new Set(ids).size !== 4) throw new Error('Duplicate production identities');
+    const portrait = page.locator('#player-hand .character-identity img');
+    observations.portraits.push({id,name,ids,decoded:await portrait.evaluate(image => ({width:image.naturalWidth,height:image.naturalHeight,src:image.getAttribute('src')}))});
+    await page.locator('.table-surface').screenshot({path:`${output}/images/production-table-${id}.png`,animations:'disabled'});
+  }
+  for (const width of [768,320]) {
+    await page.setViewportSize({width,height:width===768?1024:720});
+    await page.getByLabel('Your character',{exact:true}).selectOption('noble_female');
+    await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+    await page.screenshot({path:`${output}/images/production-ready-${width}.png`,fullPage:true,animations:'disabled'});
+  }
+  await page.setViewportSize({width:1280,height:900});
+  await page.getByText('Developer / demo tools',{exact:true}).click();
+  await page.getByText('Advanced demo settings',{exact:true}).click();
+  await page.getByLabel('Optional reproducible demo seed',{exact:true}).fill('7');
+  await page.getByRole('button',{name:'Start new demo session',exact:true}).click();
+  await page.getByText('Developer / demo tools',{exact:true}).click();
+  await page.locator('.character-picker summary').click();
+  await page.getByLabel('Your main wager',{exact:false}).fill('100');
+  await page.getByRole('button',{name:'Deal',exact:true}).click();
+  const initialIds=await page.locator('.seats > .seat').evaluateAll(seats=>seats.map(seat=>seat.getAttribute('data-character')));
+  for(let round=1;round<=3;round++) {
+    if(round===1) await page.screenshot({path:`${output}/images/production-active.png`,fullPage:true,animations:'disabled'});
+    for(let decision=0;decision<8;decision++) {
+      if(await page.getByRole('button',{name:'Decline',exact:true}).count()) await page.getByRole('button',{name:'Decline',exact:true}).click();
+      else if(await page.getByRole('button',{name:'Stand',exact:true}).count()) await page.getByRole('button',{name:'Stand',exact:true}).click();
+      else break;
+    }
+    await expect(page.getByRole('region',{name:'Your round result',exact:true})).toBeVisible();
+    const ids=await page.locator('.seats > .seat').evaluateAll(seats=>seats.map(seat=>seat.getAttribute('data-character')));
+    if(JSON.stringify(ids)!==JSON.stringify(initialIds)) throw new Error('Production round changed character lineup');
+    observations[`round${round}`]=await page.getByRole('region',{name:'Your round result',exact:true}).innerText();
+    await page.screenshot({path:`${output}/images/production-result-${round}.png`,fullPage:true,animations:'disabled'});
+    if(round===1) await page.getByRole('button',{name:/^Repeat Bet/}).click();
+    if(round===2) {
+      await page.getByRole('button',{name:'Deal Again',exact:true}).click();
+      await expect(page.getByLabel('Your main wager',{exact:false})).toBeFocused();
+      await page.getByRole('button',{name:'Deal',exact:true}).click();
+    }
+  }
+  // Independent browser PNG decode and alpha count, compared with the parser receipt.
+  const receipt = JSON.parse(readFileSync('docs/PA1_SOURCE_AUDIT.json','utf8'));
+  for (const entry of receipt.files) {
+    const decoded = await page.evaluate(async base64 => {
+      const image = new Image(); image.src=`data:image/png;base64,${base64}`; await image.decode();
+      const canvas=document.createElement('canvas'); canvas.width=image.naturalWidth; canvas.height=image.naturalHeight;
+      const context=canvas.getContext('2d'); context.drawImage(image,0,0);
+      const pixels=context.getImageData(0,0,canvas.width,canvas.height).data;
+      let transparent=0; for(let i=3;i<pixels.length;i+=4) if(pixels[i]===0) transparent++;
+      return {width:canvas.width,height:canvas.height,transparent};
+    },readFileSync(entry.path).toString('base64'));
+    if(decoded.width!==entry.width||decoded.height!==entry.height||decoded.transparent!==entry.transparentPixels) throw new Error(`${entry.name}: independent decode mismatch`);
+    observations.sourceDecodes.push({name:entry.name,...decoded,result:'PASS'});
+  }
+  if(observations.errors.length) throw new Error(JSON.stringify(observations.errors));
+  writeFileSync(`${output}/production-observations.json`,JSON.stringify(observations,null,2)+'\n');
+  process.stdout.write('PASS: production default Roland, all 12 selectable identities, unique guests, decoded portraits, three viewports, no browser errors and 12 independent source alpha decodes\n');
+} finally { await browser.close(); }

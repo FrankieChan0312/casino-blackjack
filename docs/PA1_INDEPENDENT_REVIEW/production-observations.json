@@ -1,0 +1,276 @@
+{
+  "application": "production build, http://127.0.0.1:4174/",
+  "fixture": false,
+  "portraits": [
+    {
+      "id": "elf_male",
+      "name": "Caelan",
+      "ids": [
+        "mage_male",
+        "elf_female",
+        "elf_male",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/elf_male.png"
+      }
+    },
+    {
+      "id": "elf_female",
+      "name": "Elaria",
+      "ids": [
+        "mage_male",
+        "elf_male",
+        "elf_female",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/elf_female.png"
+      }
+    },
+    {
+      "id": "knight_male",
+      "name": "Roland",
+      "ids": [
+        "mage_male",
+        "elf_male",
+        "knight_male",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/knight_male.png"
+      }
+    },
+    {
+      "id": "knight_female",
+      "name": "Seraphine",
+      "ids": [
+        "mage_male",
+        "elf_male",
+        "knight_female",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/knight_female.png"
+      }
+    },
+    {
+      "id": "mage_male",
+      "name": "Alaric",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "mage_male",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/mage_male.png"
+      }
+    },
+    {
+      "id": "mage_female",
+      "name": "Nyra",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "mage_female",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/mage_female.png"
+      }
+    },
+    {
+      "id": "noble_male",
+      "name": "Lucien",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "noble_male",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/noble_male.png"
+      }
+    },
+    {
+      "id": "noble_female",
+      "name": "Celestine",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "noble_female",
+        "halforc_male"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/noble_female.png"
+      }
+    },
+    {
+      "id": "halforc_male",
+      "name": "Garruk",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "halforc_male",
+        "noble_female"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/halforc_male.png"
+      }
+    },
+    {
+      "id": "halforc_female",
+      "name": "Vesha",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "halforc_female",
+        "noble_female"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/halforc_female.png"
+      }
+    },
+    {
+      "id": "dwarf_male",
+      "name": "Borin",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "dwarf_male",
+        "noble_female"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/dwarf_male.png"
+      }
+    },
+    {
+      "id": "dwarf_female",
+      "name": "Brynja",
+      "ids": [
+        "knight_female",
+        "elf_male",
+        "dwarf_female",
+        "noble_female"
+      ],
+      "decoded": {
+        "width": 240,
+        "height": 320,
+        "src": "/characters/dwarf_female.png"
+      }
+    }
+  ],
+  "sourceDecodes": [
+    {
+      "name": "elf_male.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 406332,
+      "result": "PASS"
+    },
+    {
+      "name": "elf_female.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 392661,
+      "result": "PASS"
+    },
+    {
+      "name": "knight_male.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 355297,
+      "result": "PASS"
+    },
+    {
+      "name": "knight_female.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 346553,
+      "result": "PASS"
+    },
+    {
+      "name": "mage_male.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 313397,
+      "result": "PASS"
+    },
+    {
+      "name": "mage_female.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 238731,
+      "result": "PASS"
+    },
+    {
+      "name": "noble_male.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 401626,
+      "result": "PASS"
+    },
+    {
+      "name": "noble_female.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 478661,
+      "result": "PASS"
+    },
+    {
+      "name": "halforc_male.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 211576,
+      "result": "PASS"
+    },
+    {
+      "name": "halforc_female.png",
+      "width": 1086,
+      "height": 1448,
+      "transparent": 287599,
+      "result": "PASS"
+    },
+    {
+      "name": "dwarf_male.png",
+      "width": 1122,
+      "height": 1402,
+      "transparent": 307778,
+      "result": "PASS"
+    },
+    {
+      "name": "dwarf_female.png",
+      "width": 1122,
+      "height": 1402,
+      "transparent": 348634,
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "round1": "Round complete\n\nNet result: 100 credits\n\nDeal Again\nRepeat Bet · 100 credits\n\nDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.\n\nWager result details",
+  "round2": "Round complete\n\nNet result: -100 credits\n\nDeal Again\nRepeat Bet · 100 credits\n\nDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.\n\nWager result details",
+  "round3": "Round complete\n\nNet result: -100 credits\n\nDeal Again\nRepeat Bet · 100 credits\n\nDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.\n\nWager result details"
+}

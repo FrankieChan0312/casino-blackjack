@@ -1,0 +1,29 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1-review-t05.spec.ts --grep PA1-E03 --repeat-each 4
+
+npm.cmd : [WebServer] (node:19784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+雿 蝺楝:12 摮?:1
++ npm.cmd run test:e2e -- tests/browser/pa1-review-t05.spec.ts --grep P ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([WebServer] (no... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:30432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ?? 1 [chromium] ??tests\browser\pa1-review-t05.spec.ts:57:1 ??[PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (2.3s)
+(node:3456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ?? 2 [chromium] ??tests\browser\pa1-review-t05.spec.ts:57:1 ??[PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (2.9s)
+(node:33580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ?? 3 [chromium] ??tests\browser\pa1-review-t05.spec.ts:57:1 ??[PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (3.5s)
+(node:33320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ?? 4 [chromium] ??tests\browser\pa1-review-t05.spec.ts:57:1 ??[PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (3.2s)
+
+  4 passed (16.7s)

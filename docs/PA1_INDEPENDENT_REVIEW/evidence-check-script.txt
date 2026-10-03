@@ -1,0 +1,24 @@
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import process from 'node:process';
+const root=process.cwd();
+const evidence='docs/PA1_INDEPENDENT_REVIEW';
+for(const file of ['docs/PA1_INDEPENDENT_REVIEW.md',`${evidence}/README.md`]) {
+  for(const match of readFileSync(file,'utf8').matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)) {
+    if(/^https?:/.test(match[1])) continue;
+    readFileSync(resolve(dirname(file),match[1].split('#')[0]));
+  }
+}
+const changed=execFileSync('git',['-c',`safe.directory=${root.replaceAll('\\','/')}`,'diff','--name-only','--','docs/images'],{encoding:'utf8'}).trim().split(/\r?\n/).filter(Boolean);
+for(const path of changed) {
+  if(!/^docs\/images\/pa1-avatar-(elf|knight|mage|noble|halforc|dwarf)_(male|female)\.png$/.test(path)) throw new Error(`Unexpected historical image change: ${path}`);
+  // Only regenerate-and-review outputs created by this review are restored.
+  writeFileSync(`${evidence}/images/final-run-${path.split('/').at(-1)}`,readFileSync(path));
+  writeFileSync(path,execFileSync('git',['-c',`safe.directory=${root.replaceAll('\\','/')}`,'show',`3c50ab4d0183cff13f2380bd60faa31583d3e988:${path}`]));
+}
+const files=readdirSync(evidence,{recursive:true,withFileTypes:true}).filter(entry=>entry.isFile()).map(entry=>`${entry.parentPath}/${entry.name}`.replaceAll('\\','/')).filter(path=>!path.endsWith('/evidence-sha256.json')).sort();
+const hashes=files.map(path=>{const bytes=readFileSync(path);if(path.endsWith('.png')&&bytes.subarray(0,8).toString('hex')!=='89504e470d0a1a0a') throw new Error(`Malformed screenshot: ${path}`);return {path,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};});
+writeFileSync(`${evidence}/evidence-sha256.json`,JSON.stringify({reviewed:'3c50ab4d0183cff13f2380bd60faa31583d3e988',files:hashes},null,2)+'\n');
+process.stdout.write(`PASS: review report links, ${hashes.filter(file=>file.path.endsWith('.png')).length} screenshot PNG signatures and ${hashes.length} evidence hashes; restored only ${changed.length} known regenerated historical avatars\n`);

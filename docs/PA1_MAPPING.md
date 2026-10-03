@@ -1,5 +1,7 @@
 # PA1 requirement-to-evidence mapping
 
+Current review: [PA1_INDEPENDENT_REVIEW_ACCEPTED](PA1_INDEPENDENT_REVIEW.md) for `3c50ab4d0183cff13f2380bd60faa31583d3e988`; PA1 accepted under conditional owner delegation, M9 human acceptance NO, M10 NOT STARTED, deployment NOT RUN. The implementation-state paragraph below is historical. All requirement owners and original evidence remain unchanged; independent execution evidence supplements them.
+
 PA1 remains HUMAN ACCEPTED: NO. M9 HUMAN ACCEPTED: NO. Deployment NOT RUN. Fresh independent review NOT RUN; handoff PREPARED. T01-T07 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T07 checkpoint9d1fa1a333aa1f3940333dc16f82b41ff6042734,parity0/0/clean at2026-10-03 00:18:45 +08:00. Final official76/1031/63 and M1-M8 PASS; source/production receipt equality and pinned12/12 byte reproduction PASS. STOP for genuinely fresh review. [Task contracts](PA1_CONTRACT.md), [executed evidence](PA1_EVIDENCE.md), [source audit](PA1_ASSET_AUDIT.md).
 
 | Requirement / task | Independent check / artifact |

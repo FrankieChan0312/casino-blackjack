@@ -1,5 +1,7 @@
 ## Current PA1 amendment
 
+Current delivery receipt: [PA1 independent review ACCEPTED](PA1_INDEPENDENT_REVIEW.md) for `3c50ab4d0183cff13f2380bd60faa31583d3e988`, under conditional owner delegation. M9 HUMAN ACCEPTED: NO, M10 NOT STARTED, deployment NOT RUN. No requirements changed; the implementation acceptance/review status below is historical.
+
 The owner explicitly reports RA1 HUMAN ACCEPTED in the PA1 instruction. M1-M8 HUMAN ACCEPTED. M9 technically reviewed NO FINDINGS; M9 HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. This current status supersedes the historical RA1 acceptance status below without inventing independent RA1 review evidence.
 
 PA1 is authorized presentation-only scope: [contract and task acceptance criteria](PA1_CONTRACT.md), [source audit](PA1_ASSET_AUDIT.md), [mapping](PA1_MAPPING.md). Canonical fantasy portraits/local avatar choice replace only guest presentation; dealer remains independent. Domain/rules/gameplay/RNG/funds/replay/audit outcomes/computer policy remain unchanged. All twelve source gates PASS; T01-T07 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; T07 checkpoint9d1fa1a333aa1f3940333dc16f82b41ff6042734; fresh-review handoff prepared; fresh PA1 review NOT RUN. Current inventory76 Vitest files/1031 tests/63 Chromium; detailed results in STATE/PA1_EVIDENCE. Original requirements below remain binding within their historical milestone scopes.

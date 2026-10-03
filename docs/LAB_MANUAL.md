@@ -1,4 +1,10 @@
-## Current PA1 delivery
+## PA1 independent review checkpoint
+
+[Independent PA1 review](PA1_INDEPENDENT_REVIEW.md) separates exact source/history preservation, current executed tests and actual application visual inspection. A recovered later green diagnostic cannot explain an earlier lost failure: T05 remains ROOT CAUSE NOT ESTABLISHED despite5 exact E03 and42 integration passes. Preserve both facts rather than inventing a standby/flake explanation.
+
+The review also found a new documentation-only failure: a same-lineM1-M8 acceptance statement andM10 NOT STARTED matched the unchanged portfolio stale-status expression. Reproduce first, separate paragraphs, retain tests and both failed outputs, then rerun affected and full verification. Review documentationrepair1/10; product repairs0; historical ledgers unchanged. PA1 acceptance is delegated to this review; M9 owner's game-feel judgment remains a separate acceptance gate. No deployment orM10.
+
+## Historical PA1 implementation delivery
 
 M1-M8 and RA1 HUMAN ACCEPTED by the owner. M9 reviewed NO FINDINGS, HUMAN ACCEPTED: NO. PA1 HUMAN ACCEPTED: NO. Deployment NOT RUN. No M10. Recommended GPT Sol 6.1 / High; actual model/effort NOT VERIFIED / NOT VERIFIED.
 

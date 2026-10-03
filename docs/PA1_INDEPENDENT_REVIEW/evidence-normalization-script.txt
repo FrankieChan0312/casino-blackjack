@@ -1,0 +1,15 @@
+import { readdirSync,readFileSync,writeFileSync } from 'node:fs';
+import { gzipSync } from 'node:zlib';
+import process from 'node:process';
+const root='docs/PA1_INDEPENDENT_REVIEW';
+let count=0;
+for(const file of readdirSync(root).filter(file=>file.endsWith('.log')||file==='staged-whitespace-failure.txt')) {
+  const path=`${root}/${file}`,bytes=readFileSync(path),text=bytes.toString('utf8');
+  const normalized=text.split(/\r?\n/).map(line=>line.replace(/[\t ]+$/,'')).join('\n').trimEnd()+'\n';
+  if(normalized!==text) {
+    writeFileSync(`${path}.gz`,gzipSync(bytes));
+    writeFileSync(path,normalized);
+    count++;
+  }
+}
+process.stdout.write(`PASS: ${count} terminal logs retained losslessly as gzip; text views remove only trailing line whitespace\n`);
