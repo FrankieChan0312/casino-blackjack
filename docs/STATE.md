@@ -20,6 +20,8 @@ Official tests regenerated Nyra screenshot with two wager-border pixels differin
 
 2026-10-03 13:02:08 +08:00 — Final repair2 affected checks PASS/0:5 files/13 tests at13:01:40..13:01:43, all eight-document links, lossless raw/gzip hashes, exact eight Markdown plus one evidence-file scope, whitespace and protected-tree diff EMPTY. Same-session design/spec/T04/UX/README diff reviewed. M10-PLANNING documentation VERIFIED; normal commit/push pending. No human acceptance or T01 claimed.
 
+2026-10-03 13:02:41 +08:00 — Dealer planning repair2 checkpoint `40fc97db291f621eea3ec41db0ebab7a4e41a1e5` committed and normally pushed to origin/main, checked fetch PASS/0. HEAD=main=origin/main,0/0,clean including untracked. Exact staged affected5 files/13 tests PASS/0 at13:02:34; staged whitespace and intended nine-file scope PASS. M10-PLANNING VERIFIED / COMMITTED / PUSHED; planning2/10 CLOSED, no product changes. This factual publication receipt changes STATE/log only; affected checks and normal receipt publication follow. Its own SHA/parity/clean result is identified by Git/final delivery without self-reference. M10 PLANNED / NOT STARTED; fresh independent review/human plan acceptance/deployment NOT RUN. **M10-T01 NOT STARTED**.
+
 ## Historical pre-M10 state
 
 ## Current PA1 independent review
