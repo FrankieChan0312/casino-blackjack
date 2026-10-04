@@ -2,7 +2,7 @@
 
 The retained visual shell now passes the desktop payout contrast gate:4.476153734022139 -> **4.520553075070118:1**, required>=4.5. The only exceptional change is desktop inscription colour#e2d2a4 ->#e3d3a5; composition dimensions and native controls remain intact, Stand bottom890.71875<=900. [Current evidence, screenshots and exact checks](docs/M10A_T01_EVIDENCE/exceptional-repair11/README.md), [task](docs/M10A_T01.md).
 
-Focused UI46/Chromium22, full79 files/1050 Vitest and69 Chromium, independent preservation and final verify.ps1 PASS/exit0. Desktop/tablet/mobile,200% text, native200% browser zoom and keyboard/focus PASS. **M10A-T01:11/11 — OWNER-AUTHORIZED EXCEPTION**; previous10/10 blocker history preserved, no repair12. Publication follows final review. Human Visual Acceptance NOT ACCEPTED / PENDING; genuinely fresh independent review NOT RUN; no deployment. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**.
+Focused UI46/Chromium22, full79 files/1050 Vitest and69 Chromium, independent preservation and final verify.ps1 PASS/exit0. Desktop/tablet/mobile,200% text, native200% browser zoom and keyboard/focus PASS. **M10A-T01:11/11 — OWNER-AUTHORIZED EXCEPTION**; previous10/10 blocker history preserved, no repair12. COMMITTED / PUSHED normally on main at1a04a5b; [publication receipt](docs/STATE.md). Human Visual Acceptance NOT ACCEPTED / PENDING; genuinely fresh independent review NOT RUN; no deployment. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**.
 
 ## Historical M10A-T01 visual repair — blocked at10/10
 

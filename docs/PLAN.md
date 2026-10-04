@@ -4,7 +4,7 @@ Owner-authorized planning/design correction from main/`0c943b088740d291e9604ebe0
 
 | Task | Dependency / sequence | Status / repairs |
 | --- | --- | --- |
-| M10A-T01 — Scene frame + composition shell | Human planning ACCEPTED at6e460db; owner authorizes T01 shell repair only | IMPLEMENTED / VERIFIED;11/11 OWNER-AUTHORIZED EXCEPTION; contrast4.520553075070118>=4.5; full/final gates PASS; normal publication follows review; owner NOT ACCEPTED / PENDING |
+| M10A-T01 — Scene frame + composition shell | Human planning ACCEPTED at6e460db; owner authorizes T01 shell repair only | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at1a04a5b;11/11 OWNER-AUTHORIZED EXCEPTION; contrast4.520553075070118>=4.5; full/final gates PASS; owner NOT ACCEPTED / PENDING |
 | M10A-T02 — Seat-unit component | M10A-T01; guest-bankroll prerequisite for affected value scope | NOT STARTED;0/10 |
 | M10A-T03 — Local-player HUD | M10A-T02 | NOT STARTED;0/10 |
 | M10A-T04 — Dealer-zone composition | M10A-T03; reserve only, distinct from M10-T04 character integration | NOT STARTED;0/10 |
