@@ -1,3 +1,7 @@
+## M10A-T08 responsive/stress learning checkpoint — 2026-10-05 01:54:22 +08:00
+
+Responsive CSS can group a labelled hand without changing its native DOM order: header first, original cards, independent total/stake/state, then controls and authoritative funds. Tablet uses available width, mobile permits bounded text wrapping and full-width state; desktop complete PNG identity is stronger preservation evidence than a single matching coordinate. Public count concepts are explicit engineering fixtures and never proof of runtime count support. Focused102/46 PASS/0, repair0/10. Fresh independent review NOT RUN; deferred owner visual review remains distinct from technical PASS.
+
 ## M10A-T06 human visual repair — 2026-10-05 00:29:37 +08:00
 
 An executed technical gate does not establish human composition acceptance. The owner accepted the normal dock but rejected two section-focused contextual panels. Scope the repair to those contexts: keep the real focus target/native controls, visually identify focus on the compact live status, remove duplicate headings and move secondary financial/lifecycle prose into native disclosures. Repeat uses exactly the original MAIN and the continuing shoe; hand outcomes stay in LocalPlayerHud. Existing net/funding/settlement/controller calculations are unchanged.

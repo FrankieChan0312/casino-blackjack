@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-05 01:48:42 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "method": "All seven desktop before/after complete PNG bytes and measurements identical",
+  "desktop": [
+    {
+      "state": "open",
+      "sha256": "873b63807444d1fcccf2bcf90aad50520fb3701e7fc8f0d42075def83dca3318"
+    },
+    {
+      "state": "player",
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "state": "insurance",
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "state": "even-money",
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "state": "complete-win",
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "state": "complete-loss",
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "state": "complete-push",
+      "sha256": "65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e"
+    }
+  ]
+}

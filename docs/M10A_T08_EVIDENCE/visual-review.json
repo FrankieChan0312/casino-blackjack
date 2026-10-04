@@ -1,0 +1,185 @@
+{
+  "timestamp": "2026-10-05 01:53:17 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "review": "Actual same-session image inspection; genuinely fresh independent review NOT RUN",
+  "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION",
+  "controlImages": [
+    {
+      "path": "visuals/after-player-1280.png",
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "visuals/after-open-768.png",
+      "sha256": "146d8c93afb14d050bb0847f86168ec27eec6b951b9a0339aea89a3b3fe0fd6f"
+    },
+    {
+      "path": "visuals/after-player-768.png",
+      "sha256": "b7f4d0755ca96a188c3f08dbd3ea7cfee32b078e5c0c9103a3176a86df07b848"
+    },
+    {
+      "path": "visuals/after-insurance-768.png",
+      "sha256": "3433d793b003ab1957d86a4af9472d0a583b6ca155651daebd18604f16662745"
+    },
+    {
+      "path": "visuals/after-even-money-768.png",
+      "sha256": "788e01539821b3b7a7746876a43b432f6267436ae56b30be64e435cd2d60ff3b"
+    },
+    {
+      "path": "visuals/after-complete-win-768.png",
+      "sha256": "0449375ae0871cc0b6cca7cc89f30207a5f02f17537d00870efad24a7e6aec2d"
+    },
+    {
+      "path": "visuals/after-complete-loss-768.png",
+      "sha256": "60dd647f5ce0a4950abb1a7ce21811bb358acfe2aaac1852db2cd79f072506ce"
+    },
+    {
+      "path": "visuals/after-complete-push-768.png",
+      "sha256": "dd85f1bed42a82e48f56462ed2c99f115f35f61fd85fea52a295211fe9ff396c"
+    },
+    {
+      "path": "visuals/after-open-320.png",
+      "sha256": "a7a24c3535a5795d190f591f9af7af148a363de7842867ba991ebf0dd7a4d6f5"
+    },
+    {
+      "path": "visuals/after-player-320.png",
+      "sha256": "0928fb90f0a3f2b710e5c89ae7cf03be17ad665363a7fe6f44c4ef7eb5353ea0"
+    },
+    {
+      "path": "visuals/after-insurance-320.png",
+      "sha256": "b7f05258d3fdf89cdb92a0269406275e5f1b4a5208f31d93918f200a593e6626"
+    },
+    {
+      "path": "visuals/after-even-money-320.png",
+      "sha256": "36209ce8d83fb7ccecf16c09711baefbe938b2ae94320c248fc03982c1c625c4"
+    },
+    {
+      "path": "visuals/after-complete-win-320.png",
+      "sha256": "e4c8cbf6d17459dadabc53f52ee331d3f27928cc6aae1f584ceeedaed322f27c"
+    },
+    {
+      "path": "visuals/after-complete-loss-320.png",
+      "sha256": "f7aaf18d41f33af36ac5f1fb4235394a28698931591f74cd11fdd63d12b64c0a"
+    },
+    {
+      "path": "visuals/after-complete-push-320.png",
+      "sha256": "4c13bb6adf871dbd6d15ea02987958428721febd991f6513b76d3c8ad018fda1"
+    },
+    {
+      "path": "visuals/responsive-normal-1280.png",
+      "sha256": "7ce6cea8dc04ad3bf430ba1f6a083e5009642b4e21dcbb023fbfb7afe952c166"
+    },
+    {
+      "path": "visuals/responsive-normal-320.png",
+      "sha256": "ddfb8afa500b6c19df023545bec1a74d9a2dfebf1c4575e20bcd4763572e2973"
+    },
+    {
+      "path": "visuals/responsive-normal-768.png",
+      "sha256": "b7f4d0755ca96a188c3f08dbd3ea7cfee32b078e5c0c9103a3176a86df07b848"
+    },
+    {
+      "path": "visuals/responsive-text200-1280.png",
+      "sha256": "910c661636103cd8808327d35e2d7d2a53e7acb3106bc480d41feccad92ce94d"
+    },
+    {
+      "path": "visuals/responsive-text200-320.png",
+      "sha256": "5da0159e526b5f4e443f8d8817adaf55486307ec626af0c918a4efbd2a38f20a"
+    },
+    {
+      "path": "visuals/responsive-text200-768.png",
+      "sha256": "5280b5ee22f009b9e55fe8a83fe2597aae7cafeee1107aa03162b6012b223d1f"
+    },
+    {
+      "path": "visuals/responsive-complete-1280.png",
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "visuals/responsive-complete-320.png",
+      "sha256": "e4c8cbf6d17459dadabc53f52ee331d3f27928cc6aae1f584ceeedaed322f27c"
+    },
+    {
+      "path": "visuals/responsive-complete-768.png",
+      "sha256": "0449375ae0871cc0b6cca7cc89f30207a5f02f17537d00870efad24a7e6aec2d"
+    },
+    {
+      "path": "visuals/responsive-even-money-1280.png",
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "visuals/responsive-even-money-320.png",
+      "sha256": "36209ce8d83fb7ccecf16c09711baefbe938b2ae94320c248fc03982c1c625c4"
+    },
+    {
+      "path": "visuals/responsive-even-money-768.png",
+      "sha256": "788e01539821b3b7a7746876a43b432f6267436ae56b30be64e435cd2d60ff3b"
+    },
+    {
+      "path": "visuals/responsive-five-1280.png",
+      "sha256": "99f44281f3aad8a0d41c102cf5e81d05538d68e05c937bfeeba1b5e7ee3a79bb"
+    },
+    {
+      "path": "visuals/responsive-five-320.png",
+      "sha256": "fb0d89af4ef569d1d966ff2505ac8b3946516557ff2cc45a8e1776dd63d27976"
+    },
+    {
+      "path": "visuals/responsive-five-768.png",
+      "sha256": "7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26"
+    },
+    {
+      "path": "visuals/responsive-insurance-1280.png",
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "visuals/responsive-insurance-320.png",
+      "sha256": "b7f05258d3fdf89cdb92a0269406275e5f1b4a5208f31d93918f200a593e6626"
+    },
+    {
+      "path": "visuals/responsive-insurance-768.png",
+      "sha256": "3433d793b003ab1957d86a4af9472d0a583b6ca155651daebd18604f16662745"
+    },
+    {
+      "path": "visuals/responsive-pending-1280.png",
+      "sha256": "49bc3ab56f5a2950ab226d94806991fda30d67f91908c77d40289dd854d77383"
+    },
+    {
+      "path": "visuals/responsive-pending-320.png",
+      "sha256": "10f31f0204e0e1dcf8c18753b512a13d50186868baf64fb58c2049e1bc8d560b"
+    },
+    {
+      "path": "visuals/responsive-pending-768.png",
+      "sha256": "9b6126724800cace1830e048e7d5df10120edb82d4c2e25fe7c996b798f5bdf3"
+    },
+    {
+      "path": "visuals/responsive-split-1280.png",
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "visuals/responsive-split-320.png",
+      "sha256": "6113d19333de681726f500af00abf083bd112602b10d31689fc5ab68e3c40ec4"
+    },
+    {
+      "path": "visuals/responsive-split-768.png",
+      "sha256": "b46a183964bb69feccdb8f3a82ebe78a581e784cc09d0296f3005f4fbb414f65"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "9a259e5e584aa5ff2cc123f668e00c84f26beb47a27b187826bd4c9176a3e8b9"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-controls.png",
+      "sha256": "e4f4a0294cede564ccadca2188de2a96c97b255a0b2be9ceb55767784c514019"
+    }
+  ],
+  "findings": [
+    "All14 tablet/mobile ordinary states plus desktop normal and every new focused responsive capture inspected; no BLOCKER/HIGH.",
+    "Tablet cards/facts grouping and mobile total/wager/status rows remain within the coherent felt scene; full card corners and hand labels visible under text200. DOM/focus order retained.",
+    "All seven complete desktop PNG bytes/measurements equal incoming baseline; remaining desktop contexts mechanically confirmed unchanged rather than claimed individually re-inspected.",
+    "Two native200 controls images inspected, actual zoom2.0 proven separately with CSS root unchanged."
+  ],
+  "standBottom": 883.359375,
+  "contrastReceipt": "visuals/control-contrast.json",
+  "nativeZoomReceipt": "visuals/zoom200.json",
+  "focusedImageCount": 24
+}

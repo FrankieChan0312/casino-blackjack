@@ -534,3 +534,15 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 .player-mode .game-scene .credits dl > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 12px; }
 .player-mode .game-scene .credits dt { font-size: .75rem; }
 .player-mode .game-scene .credits dd { margin: 0; font-size: .85rem; }
+
+/* T08: recompose hand facts at smaller surfaces without reordering the DOM. */
+@media (min-width: 601px) and (max-width: 1100px) {
+  .player-mode .game-scene .local-player-hud article.hud-hand:not(:has(.card:nth-child(3))) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .player-mode .game-scene .local-player-hud article.hud-hand:not(:has(.card:nth-child(3))) .hand-header { grid-column: 1 / -1; grid-row: 1; }
+  .player-mode .game-scene .local-player-hud article.hud-hand:not(:has(.card:nth-child(3))) .cards { grid-column: 1; grid-row: 2; }
+  .player-mode .game-scene .local-player-hud article.hud-hand:not(:has(.card:nth-child(3))) .hud-hand-facts { grid-column: 2; grid-row: 2; }
+}
+@media (max-width: 600px) {
+  .player-mode .local-player-hud .hud-hand-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 4px; }
+  .player-mode .local-player-hud .hud-state { grid-column: 1 / -1; }
+}
