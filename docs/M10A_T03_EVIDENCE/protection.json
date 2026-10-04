@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-04 18:37:36 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "fbed1a787af8cbaac96b7e22a31200b282b0677d",
+  "protectedFiles": 1543,
+  "acceptedCSS": "Exact incoming T01/T02 prefix unchanged; T03 HUD rules appended only",
+  "incomingBrowserAssertions": "Exact normalized prefix unchanged; two new T03 tests appended",
+  "domainDiff": "EMPTY",
+  "immutableEvidence": 1226
+}

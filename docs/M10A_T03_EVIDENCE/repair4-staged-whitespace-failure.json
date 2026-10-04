@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-04 18:35:08 +08:00",
+  "status": "FAIL",
+  "command": "git diff --cached --check",
+  "exitCode": 2,
+  "stageWrapperExitCode": 1,
+  "reason": "Authored docs/M10A_T03.md:74 has new blank line at EOF",
+  "rawLog": "repair4-staged-whitespace-failure.raw.log.gz",
+  "rawSha256": "2af537816a13cd51aa483d238878964ac9c6699c3d507a099da2b53535875c0f",
+  "productChanged": false,
+  "rawEncoding": "gzip",
+  "archiveReferenceUpdatedAt": "2026-10-04 18:37:29 +08:00"
+}

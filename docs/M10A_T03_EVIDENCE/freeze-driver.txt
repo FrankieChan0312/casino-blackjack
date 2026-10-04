@@ -1,0 +1,5 @@
+const fs=require('fs'),cp=require('child_process'),crypto=require('crypto');const dir='docs/M10A_T03_EVIDENCE';
+const names=cp.execFileSync('git',['ls-files','-co','--exclude-standard','--','src','tests','scripts','package.json','package-lock.json','tsconfig.json','tsconfig.domain.json','vite.config.ts','playwright.config.ts','eslint.config.js'],{encoding:'utf8'}).trim().split(/\r?\n/);
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');const files=[...new Set(names)].map(path=>({path,sha256:hash(fs.readFileSync(path))}));
+const timestamp=cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+fs.writeFileSync(dir+'/executed-version.json',JSON.stringify({timestamp,baseline:'fbed1a787af8cbaac96b7e22a31200b282b0677d',method:'Exact executable/test/config file SHA256 snapshot before final unified gate; full suites currently in progress, no subsequent executable edits permitted without affected/final rerun',files},null,2)+'\n');console.log(JSON.stringify({timestamp,files:files.length}));

@@ -1,0 +1,85 @@
+const fs = require('node:fs'), path = require('node:path'), cp = require('node:child_process'), crypto = require('node:crypto'), os = require('node:os');
+const [phase, kind] = process.argv.slice(2), dir = path.resolve('docs/M10A_T03_EVIDENCE');
+const commands = {
+  unit: '& npm.cmd test -- tests/m10/localPlayerHud.test.tsx tests/m10/seatUnit.test.tsx tests/m10/tableGeometry.test.tsx tests/m10/sceneFrame.test.tsx tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/pa1/preservation.test.ts; exit $LASTEXITCODE',
+  typecheck: '& npm.cmd run typecheck; exit $LASTEXITCODE',
+  lint: '& npm.cmd run lint; exit $LASTEXITCODE',
+  browser: '& npm.cmd run test:e2e -- tests/browser/m10.spec.ts tests/browser/m9.spec.ts tests/browser/pa1.spec.ts; exit $LASTEXITCODE',
+  fullunit: '& npm.cmd test; exit $LASTEXITCODE',
+  fullbrowser: '& npm.cmd run test:e2e; exit $LASTEXITCODE',
+  preservation: '& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1; exit $LASTEXITCODE',
+  unified: '& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE',
+  documentation: '& npm.cmd test -- tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts tests/m9/documentation.test.ts tests/ra1/inventory.test.ts tests/pa1/preservation.test.ts; exit $LASTEXITCODE',
+};
+if (!/^[a-z0-9-]+$/.test(phase) || !commands[kind]) throw Error('Unknown verification phase/command');
+const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const stamp = () => cp.execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding:'utf8' }).trim();
+const known = ['docs/M10_T01_EVIDENCE/geometry.json',
+  ...['table','five-cards','four-leaves','text-fallback'].flatMap(name => [1280,768,320].map(width => `docs/M10_T01_EVIDENCE/${name}-${width}.png`)),
+  ...['scene-open','scene-dealt'].flatMap(name => [1280,768,320].map(width => `docs/M10_T01_EVIDENCE/repair09/${name}-${width}.png`)),
+  ...['m9-ready','m9-results','m9-tools','m9-table-1280','m9-table-768','m9-table-320'].map(name => `docs/images/${name}.png`)];
+const incoming = JSON.parse(fs.readFileSync(path.join(dir,'before.json'),'utf8')).files;
+const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cbg-m10a-t01-human-'+phase+'-'));
+const before = known.map(name => {
+  const bytes = fs.readFileSync(name), entry = incoming.find(item => item.path === name);
+  if (!entry || hash(bytes) !== entry.sha256) throw Error('Incoming known evidence drift: '+name);
+  const backup = path.join(temp, hash(bytes)+path.extname(name)); fs.writeFileSync(backup,bytes);
+  return {name,bytes,backup};
+});
+fs.mkdirSync(path.join(dir,'generated'),{recursive:true});
+function preserve(bytes, extension) {
+  const digest=hash(bytes), target=path.join(dir,'generated',digest+extension);
+  if (!fs.existsSync(target)) fs.writeFileSync(target,bytes);
+  if (hash(fs.readFileSync(target)) !== digest) throw Error('Retained byte mismatch');
+  return {retainedAt:path.relative(dir,target).replaceAll('\\','/'),bytes:bytes.length,sha256:digest};
+}
+const routeRoot=path.resolve('.git/m10a-human-writes-'+phase), routeLog=path.resolve('.git/m10a-human-routes-'+phase+'.jsonl');
+if(fs.existsSync(routeRoot)||fs.existsSync(routeLog))throw Error('Occupied scoped evidence route');
+fs.mkdirSync(routeRoot);
+fs.writeFileSync(path.resolve('.git/m10a-human-route-config.json'),JSON.stringify({repository:process.cwd(),known,output:routeRoot,log:routeLog}));
+const childEnv={...process.env,NODE_OPTIONS:((process.env.NODE_OPTIONS||'')+' --require="'+path.resolve('.git/m10a-human-evidence-route.cjs').replaceAll('\\','/')+'"').trim()};
+const previousResultsTime=fs.existsSync('test-results/.last-run.json')?fs.statSync('test-results/.last-run.json').mtimeMs:null;
+const start=stamp(), log=path.join(dir,phase+'.log'), fd=fs.openSync(log,'wx');
+console.log(JSON.stringify({phase,start,kind,command:commands[kind],status:'RUNNING'}));
+const child=cp.spawnSync('powershell.exe',['-NoProfile','-Command',commands[kind]],{stdio:['ignore',fd,fd],env:childEnv}); fs.closeSync(fd);
+const record={phase,kind,start,end:stamp(),command:commands[kind],evidenceRoute:{method:'Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched',root:routeRoot,log:routeLog,nodeOptions:childEnv.NODE_OPTIONS},exitCode:child.status,
+  status:child.error?'BLOCKED':child.status===0?'PASS':'FAIL',error:child.error?String(child.error):null,
+  administrativeRestoration:'PENDING',temporaryOriginalBackup:temp,knownOutputs:[],testScopedOutputs:[]};
+const save=()=>fs.writeFileSync(path.join(dir,phase+'.json'),JSON.stringify(record,null,2)+'\n'); save();
+const quote=value=>"'"+value.replaceAll("'","''")+"'";
+try {
+  if (['browser','fullbrowser','preservation','unified'].includes(kind)) {
+    const collect=root=>{ if(!fs.existsSync(root)) return; for(const entry of fs.readdirSync(root,{withFileTypes:true})) {
+      const filename=path.join(root,entry.name);
+      if(entry.isDirectory()) collect(filename);
+      else if(entry.name!=='.last-run.json') record.testScopedOutputs.push({path:filename.replaceAll('\\','/'),...preserve(fs.readFileSync(filename),path.extname(filename))});
+    }};
+    record.freshTestResults=fs.existsSync('test-results/.last-run.json')&&fs.statSync('test-results/.last-run.json').mtimeMs!==previousResultsTime;
+    if(record.freshTestResults)collect('test-results'); collect(routeRoot);
+    if(fs.existsSync(routeLog))record.evidenceRoute.events=preserve(fs.readFileSync(routeLog),'.jsonl'); save();
+  }
+  for (const {name,bytes,backup} of before) {
+    const fresh=fs.readFileSync(name), changed=!fresh.equals(bytes), generated=changed?preserve(fresh,path.extname(name)):null;
+    const entry={path:name,beforeSha256:hash(bytes),generated,restoration:changed?'PENDING':'UNCHANGED'};
+    record.knownOutputs.push(entry); save();
+    if (changed) {
+      const absolute=path.resolve(name);
+      if (!absolute.startsWith(process.cwd()+path.sep) || hash(fs.readFileSync(backup))!==hash(bytes)) throw Error('Unsafe known-byte restore target');
+      entry.method='Native in-place write, original bytes independently checked for each of25 known writer outputs';
+      cp.execFileSync('powershell.exe',['-NoProfile','-Command',
+        "$ErrorActionPreference='Stop'\n[System.IO.File]::WriteAllBytes("+quote(absolute)+",[System.IO.File]::ReadAllBytes("+quote(backup)+"))"],{stdio:['ignore','pipe','pipe']});
+    }
+    entry.restoredSha256=hash(fs.readFileSync(name));
+    if (entry.restoredSha256!==hash(bytes)) throw Error('Known restoration hash mismatch: '+name);
+    entry.restoration=changed?'PASS':'UNCHANGED'; save();
+  }
+  record.administrativeRestoration='PASS'; record.administrativeExitCode=0;
+  record.note='Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.';
+} catch(error) {
+  record.administrativeRestoration='FAIL'; record.administrativeExitCode=1; record.administrativeFailure=String(error);
+  console.error(error);
+}
+record.collectionEnd=stamp(); save();
+console.log(JSON.stringify({phase,status:record.status,exitCode:record.exitCode,end:record.end,administrativeRestoration:record.administrativeRestoration,knownOutputs:record.knownOutputs.length,testScopedOutputs:record.testScopedOutputs.length}));
+console.log(fs.readFileSync(log,'utf8').split(/\r?\n/).slice(-15).join('\n'));
+process.exitCode=child.status!==0?(child.status??1):record.administrativeExitCode;

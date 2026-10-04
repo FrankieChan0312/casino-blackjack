@@ -1,3 +1,15 @@
+## M10A-T03 verified checkpoint
+
+2026-10-04 18:32:54 +08:00. Exact version passed full81/1071 Vitest,73 Chromium, independent M1–M8 preservation/current PA1/RA1/M9/M10/T01/T02/T03 checks and final verify.ps1/exit0. Baseline80/1059/71 plus12 unit/two browser cases fully explains the inventory. Repair3/10 retained, no new product changes after source freeze. Complete technical verification remains separate from publication and owner visual acceptance.
+
+## M10A-T03 Local Player HUD learning checkpoint
+
+2026-10-04 18:23:09 +08:00. A dedicated public-data HUD can make cards, active hand, total, stake and result one readable object without exposing internal funds or recomputing settlement. Keep one semantic card tree: the Player Mode action component should not retain a second CSS-hidden card copy. Existing authoritative funds and legal actions remain directly accessible in their accepted dock; final control/accounting integration is a later task.
+
+Retain accepted physical anchors, original portrait/card dimensions and incoming CSS/test contracts. Real enlarged five-card evidence found width pressure in the first side-by-side identity layout; the bounded repair moved compact identity above a full-width hand lane and allowed card wrapping. An unchanged PA1 ordering assertion independently caught the same design issue. A new Split test initially expected settlement after first-hand Stand; correct the fixture expectation to the actual next leaf and assert Hand B/total11/ACTIVE, rather than alter turn logic. Literal component cases independently cover 2/3/4/5 cards, 2/3/4 leaves, public natural/Charlie/bust/surrender and half-credit formatting.
+
+Repair3/10: one product layout correction and two new-test corrections; all failed receipts retained. Focused67/26 and actual text200/native zoom/contrast PASS. Native zoom proves2.0 with unchanged16px root and CSS zoom1; its observed window viewport is not the separate1280x900 Stand contract. Same-session image/diff review does not establish fresh independent review or owner acceptance. T02 acceptance is explicit and its8/10 history stays intact.
+
 ## M10A-T02 Seat Unit learning checkpoint
 
 2026-10-04 17:22:48 +08:00. One public snapshot can feed a coherent portrait/card/score/stake/state object without recomputing rules or exposing internal accounts. Keep physical anchors separate from the seat contents and preserve full portrait aspect. Use one semantic card tree through a native mobile disclosure rather than duplicating hidden cards; show the public base wager while closed and every split leaf's own stake while expanded. Active states need explicit text in addition to an outline. The absence of a safe computer-bankroll field is a scope boundary, not permission to invent funds.

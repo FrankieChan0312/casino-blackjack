@@ -6,6 +6,7 @@ import { character, type CharacterLineup } from '../presentation/characters.js';
 import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometry.js';
 import { Cards } from './Cards.js';
 import { SeatUnit } from './SeatUnit.js';
+import { LocalPlayerHud } from './LocalPlayerHud.js';
 
 export { Cards } from './Cards.js';
 export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
@@ -34,7 +35,8 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
         '--seat-shift': local ? 0 : anchor.x / 100 - (guestIndex + 0.5) / guests.length,
       } as CSSProperties : undefined;
       return <section key={seat.seatNumber} style={geometryStyle} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
-        {view.playerMode && !local ? <SeatUnit seat={seat} avatar={avatar} hands={hands} wager={wager}
+        {view.playerMode ? local ? <LocalPlayerHud seat={seat} avatar={avatar} hands={hands} wager={wager}
+          currentHandId={round?.currentHandId} ownResults={view.ownResults} /> : <SeatUnit seat={seat} avatar={avatar} hands={hands} wager={wager}
           currentSeat={round?.currentSeat} currentHandId={round?.currentHandId} /> : <>{avatar ? <div className="character-identity">
           <img src={avatar.portrait} width={60} height={80} alt={`${local ? 'Your avatar' : 'Computer guest'}: ${avatar.name}, ${avatar.archetype}`} />
           <div><h2 aria-label={avatar.name}>{avatar.name}</h2><p className="character-archetype">{avatar.archetype}</p>
@@ -47,7 +49,6 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
           <p>{seat.occupancy === 'EMPTY' ? 'Empty' : seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
           <p className="wager-chip">MAIN: {credits(wager)} credits</p>
         </>}
-        {view.playerMode && local && !hands.length && <div className="empty-hand"><div className="cards" aria-hidden="true"><span className="card card-back">♠</span><span className="card card-back">♠</span></div><p>Your cards will be dealt here.</p></div>}
         {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={`${view.playerMode && !local ? 'guest-desktop-hand ' : ''}${round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}`}>
           <div className="hand-header">
             <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>

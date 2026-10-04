@@ -409,3 +409,31 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .seat:not(.local) .seat-unit .card + .card { margin-left: 0; }
   .player-mode .seat-unit .seat-main-wager { display: block; color: #e7ebd5; font-size: .6rem; }
 }
+/* T03: full local hands lead a dedicated HUD; remote units and scene anchors are retained. */
+.player-mode .game-scene .local-player-hud { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-top: 2px solid #b39659; border-radius: 28px 28px 0 0; background: linear-gradient(90deg, #143b2caa, #143b2c55); }
+.player-mode .game-scene .local-player-hud .hud-identity { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 12px; }
+.player-mode .game-scene .local-player-hud .character-identity { flex-direction: row; gap: 8px; text-align: left; }
+.player-mode .local-player-hud .character-identity img { outline: 2px solid #b39659; outline-offset: -2px; border-radius: 14px; background: #102e23; }
+.player-mode .local-player-hud .hud-you { color: #ffe7a2; font-size: .65rem; font-weight: 750; letter-spacing: .12em; }
+.player-mode .local-player-hud .wager-chip { margin: 4px auto; width: fit-content; background: #143b2c; }
+.player-mode .local-player-hud .hud-hands { min-width: 0; }
+.player-mode .game-scene .local-player-hud article.hud-hand { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; border: 0; border-left: 3px solid transparent; border-radius: 0; background: transparent; margin: 0; padding: 4px; box-shadow: none; transition: none; }
+.player-mode .game-scene .local-player-hud article.hud-hand .hand-header, .player-mode .game-scene .local-player-hud article.hud-hand .cards { grid-column: 1 / -1; grid-row: auto; }
+.player-mode .game-scene .local-player-hud article.hud-hand .cards { flex-wrap: wrap; }
+.player-mode .game-scene .local-player-hud article.hud-hand .hand-header { display: flex; justify-content: center; flex-wrap: wrap; }
+.player-mode .game-scene .local-player-hud article.hud-hand[aria-current] { border-left-color: #ffe7a2; }
+.player-mode .game-scene .local-player-hud article.hud-hand + article.hud-hand { border-top: 1px solid #8fa184; }
+.player-mode .local-player-hud .hud-hand-facts { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 12px; }
+.player-mode .local-player-hud .hud-hand-facts p { margin: 0; }
+.player-mode .local-player-hud .hud-total { font-size: .75rem; }
+.player-mode .local-player-hud .hud-total strong { font-size: 1.3rem; color: #ffe7a2; }
+.player-mode .local-player-hud .hud-wager { font-size: .75rem; color: #e7ebd5; }
+.player-mode .local-player-hud .hud-state { font-weight: 700; font-size: .85rem; }
+.player-mode .local-player-hud .hud-return { text-align: center; font-size: .75rem; }
+.player-mode .local-player-hud .card, .player-mode .local-player-hud .hud-state { animation: none; }
+.player-mode .game-scene .local-actions > p:first-of-type { font-size: .65rem; margin: 2px 0; }
+@media (max-width: 600px) {
+  .player-mode .game-scene .local-player-hud { grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 4px 0; }
+  .player-mode .game-scene .local-player-hud .character-identity { flex-direction: row; text-align: left; }
+  .player-mode .local-player-hud .hud-identity .wager-chip { font-size: .65rem; padding: 2px 6px; }
+}

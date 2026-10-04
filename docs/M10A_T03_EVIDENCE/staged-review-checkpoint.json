@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-04 18:35:17 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "stagedPaths": 280,
+  "principalPaths": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M10A_T02.md",
+    "docs/M10A_T03.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "src/ui/Actions.tsx",
+    "src/ui/LocalPlayerHud.tsx",
+    "src/ui/Table.tsx",
+    "src/ui/styles.css",
+    "tests/browser/m10.spec.ts",
+    "tests/m10/localPlayerHud.test.tsx"
+  ],
+  "rawEvidenceIndexHashes": 267,
+  "stagedWhitespace": "PASS / 0",
+  "protectedScope": "No domain/browser/controller/geometry/assets/canonical/dependency paths staged",
+  "fullDiff": ".git/m10a-t03-complete-staged.diff"
+}

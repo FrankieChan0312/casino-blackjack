@@ -315,3 +315,54 @@ test('[M10A-E04] public composition fixtures keep five remote cards and four lab
     await page.screenshot({path:info.outputPath(`seat-${scenario}-text200-${viewport.width}.png`),fullPage:true,animations:'disabled'});
   }
 });
+
+test('[M10A-E05] local HUD owns one real current hand and existing controls through active play and results', async ({page},info)=>{
+  for(const viewport of viewports){
+    await page.setViewportSize(viewport);await deal(page);
+    const local=page.locator('#player-hand'),hud=local.getByRole('group',{name:'Your player HUD',exact:true});
+    await expect(hud).toHaveAttribute('aria-controls','player-decisions');
+    await expect(local.locator('.hud-hand')).toHaveCount(1);await expect(local.locator('article[aria-current="true"]')).toHaveCount(1);
+    await expect(local.locator('.hud-total')).toHaveAttribute('aria-label','Total: 9');
+    await expect(local.locator('.hud-wager')).toHaveText('Wager: 100 credits');
+    await expect(local.locator('.hud-state')).toHaveText('Playing');await expect(local.getByText('MAIN: 100 credits',{exact:true})).toBeVisible();
+    await expect(local.getByRole('img',{name:'5 of hearts',exact:true})).toBeVisible();await expect(local.getByRole('img',{name:'4 of spades',exact:true})).toBeVisible();
+    await expect(page.locator('.local-actions .cards')).toHaveCount(0);await expect(page.locator('.seat-unit')).toHaveCount(3);
+    await expect(page.getByRole('region',{name:'Your credits',exact:true}).locator('dd')).toHaveText(['900','100','0']);
+    await geometry(page);await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:info.outputPath(`hud-normal-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+    await expect(local).toBeFocused();const stand=page.getByRole('button',{name:'Stand',exact:true});
+    for(let i=0;i<8&&!await stand.evaluate(el=>el===document.activeElement);i++)await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('#player-result')).toBeFocused();
+    await page.getByRole('button',{name:'Deal Again',exact:true}).click();await expect(page.getByLabel('Your main wager',{exact:false})).toBeFocused();
+    await deal(page,'player-loss');await page.getByRole('button',{name:'Stand',exact:true}).click();
+    await expect(local.locator('.hud-state')).toHaveText('Loss');await expect(local.locator('[aria-current]')).toHaveCount(0);
+    await expect(page.getByRole('region',{name:'Your credits',exact:true}).locator('dd')).toHaveText(['900','0','0']);
+    await geometry(page);await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:info.outputPath(`hud-result-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+  }
+});
+
+test('[M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text',async({page},info)=>{
+  for(const viewport of viewports)for(const scenario of ['five','two-split','four-split']){
+    await page.setViewportSize(viewport);await deal(page,scenario==='five'?'player-five':scenario==='two-split'?'player-split':'player-rsa-cap');
+    const local=page.locator('#player-hand');
+    if(scenario==='five')for(let i=0;i<3;i++)await page.getByRole('button',{name:'Hit',exact:true}).click();
+    else for(let i=0;i<(scenario==='two-split'?1:3);i++)await page.getByRole('button',{name:'Split',exact:true}).click();
+    await expect(local.locator('.hud-hand')).toHaveCount(scenario==='five'?1:scenario==='two-split'?2:4);
+    await expect(local.locator('article .card')).toHaveCount(scenario==='five'?5:scenario==='two-split'?3:8);
+    await expect(local.locator('.hud-total')).toHaveText(scenario==='five'?['Total: 10']:scenario==='two-split'?['Total: 10','Total: 8']:['Total: 12','Total: 12','Total: 12','Total: 12']);
+    await expect(local.locator('.hud-wager')).toHaveText(Array(scenario==='five'?1:scenario==='two-split'?2:4).fill('Wager: 100 credits'));
+    await expect(local.locator('[aria-current="true"]')).toHaveCount(scenario==='four-split'?0:1);
+    const funds=scenario==='five'?['900','100','0']:scenario==='two-split'?['800','200','0']:['600','0','0'];
+    await expect(page.getByRole('region',{name:'Your credits',exact:true}).locator('dd')).toHaveText(funds);
+    if(scenario==='four-split')await expect(local.locator('.hud-state')).toHaveText(['Loss','Loss','Loss','Loss']);
+    await geometry(page);await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:info.outputPath(`hud-${scenario}-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+    await page.addStyleTag({content:'html { font-size: 200%; }'});await geometry(page);
+    await page.screenshot({path:info.outputPath(`hud-${scenario}-text200-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+    const control=page.getByRole('button',{name:scenario==='four-split'?'Deal Again':'Stand',exact:true});
+    await control.click();await expect(page.locator(scenario==='four-split'?'#player-wager':scenario==='two-split'?'#player-hand':'#player-result')).toBeFocused();
+    if(scenario==='two-split'){
+      await expect(local.locator('article[aria-current="true"]')).toHaveAttribute('aria-label','Hand B');
+      await expect(local.locator('article[aria-current="true"] .hud-total')).toHaveText('Total: 11');
+      await expect(local.locator('article[aria-current="true"] .turn-marker')).toHaveText('ACTIVE');
+    }
+  }
+});
