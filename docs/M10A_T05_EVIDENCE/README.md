@@ -60,3 +60,7 @@ M10-T04 IMPLEMENTATION NOT STARTED
 2026-10-04 21:59:54 +08:00. [Source/privacy/evidence](precommit-review.json), [stage/whitespace](staged-review-checkpoint.json), [lossless archives](log-archive.json). Full diff/images reviewed; facts-only closure checks follow. Owner acceptance PENDING; fresh independent review NOT RUN.
 
 [Administrative stage-check diagnostic](stage-administration.json): the read-only check rejected an outdated index after its add argument was omitted. No product/test/config changed; restaging verification follows.
+
+## Published implementation
+
+2026-10-04 22:02:54 +08:00. [Commit](implementation-commit.json), [normal push/live parity](implementation-publication.json). Implementation=22edca336d26a5c53a1632fd4009a5966ca86ea7,0/0,CLEAN,untracked0. Raw commit/push/fetch logs retained losslessly. Facts-only receipt follows docs/index checks; final Git/delivery identifies final HEAD. 162 executable hashes unchanged;4/10,owner acceptance PENDING,fresh independent review NOT RUN,deployment NOT RUN. STOP.

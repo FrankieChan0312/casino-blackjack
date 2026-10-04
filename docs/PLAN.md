@@ -8,7 +8,7 @@ Owner-authorized planning/design correction from main/`0c943b088740d291e9604ebe0
 | M10A-T02 — Seat-unit component | M10A-T01 HUMAN ACCEPTED; public guest bankroll excluded | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at9848e3d;8/10; full/final PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
 | M10A-T03 — Local-player HUD | M10A-T02 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED atd4efd69;4/10; full/final PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
 | M10A-T04 — Dealer-zone composition | M10A-T03; reserve only, distinct from M10-T04 character integration | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at9a84110;5/10; full/final PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
-| M10A-T05 — Felt gameplay markings | M10A-T04 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED;4/10; full/final PASS; human visual acceptance PENDING; publication follows review |
+| M10A-T05 — Felt gameplay markings | M10A-T04 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at22edca3;4/10; full/final PASS; human visual acceptance PENDING |
 | M10A-T06 — Control integration | M10A-T05 | NOT STARTED;0/10 |
 | M10A-T07 — Credits/accounting HUD | M10A-T06; guest balance needs separately approved safe public projection | NOT STARTED;0/10 |
 | M10A-T08 — Responsive recomposition | M10A-T07; layout fixtures1–7 only, no runtime count implementation | NOT STARTED;0/10 |

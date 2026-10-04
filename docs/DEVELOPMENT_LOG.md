@@ -1,3 +1,19 @@
+## M10A-T05 published implementation checkpoint
+
+2026-10-04 22:02:54 +08:00. **M10A-T05_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **4/10**. Branch **main**, implementation **22edca336d26a5c53a1632fd4009a5966ca86ea7**. Normal origin/main push PASS/checked0 at2026-10-04 22:02:32 +08:00..2026-10-04 22:02:54 +08:00; fetch/live equality PASS/0. Published HEAD=origin/main=live remote=22edca336d26a5c53a1632fd4009a5966ca86ea7,0/0,CLEAN,untracked0. A factual receipt-only checkpoint follows; final Git/delivery reports final HEAD. [Publication](M10A_T05_EVIDENCE/implementation-publication.json), [evidence](M10A_T05_EVIDENCE/README.md).
+
+162 executed hashes unchanged: focused12/86 UI,rule check1,32Chromium; full83/1090Vitest/79Chromium; independent M1–M8/current PA1/RA1/M9/M10-T01/M10A-T01..T05 and verify.ps1 PASS/checked0. 2112 protected paths/1791 historical evidence unchanged,domain diff EMPTY.15 final felt/15 nativezoom images inspected,Stand883.359375px,gap6px retained. Same-session review PASS; fresh independent review NOT RUN.
+
+T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED,5/10 unchanged; T03 4/10,T02 8/10,T01 exceptional11/11 unchanged. T05 owner acceptance PENDING. Formal art/animation NOT IMPLEMENTED,Motion NOT INSTALLED,deployment NOT RUN.
+
+M10A-T06 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+STOP for owner T05 visual acceptance.
+
 ## M10A-T05 same-session review checkpoint
 
 2026-10-04 21:59:54 +08:00. Full authored diff and15 final felt/15 nativezoom images reviewed: PASS. 109 plaintext/archive records and303 trace text entries scanned,0 sensitive-pattern findings; 452 intended paths/438 evidence blobs match native unfiltered Git hashes,staged whitespace PASS/0. 162 exact executed files unchanged;2112 protected paths/1791 historical evidence unchanged,domain diff EMPTY. [Review](M10A_T05_EVIDENCE/precommit-review.json), [stage](M10A_T05_EVIDENCE/staged-review-checkpoint.json), [lossless archives](M10A_T05_EVIDENCE/log-archive.json). Facts-only closure checks follow.
