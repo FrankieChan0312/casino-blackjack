@@ -1,3 +1,7 @@
+## M10A-T07 overnight technical publication
+
+2026-10-05 01:42:07 +08:00. Published main/356eee37fb04529afa28faaa6ad49ff0275d7195; full85/1104/91 PASS/0; repairs3/10. Human review PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. [Evidence](docs/M10A_T07_EVIDENCE/README.md). T06 owner ACCEPTED. Next authorized task only after clean receipt; T10/M10-T02/M10-T04/animation NOT STARTED, deployment NOT RUN. Earlier records below are historical.
+
 ## M10A-T06 owner visual acceptance — 2026-10-05 00:57:53 +08:00
 
 **M10A-T06 HUMAN VISUAL ACCEPTANCE: ACCEPTED** by explicit owner overnight instruction at main/adf52caf4329060c14a2117147f7e38a6408338e. Normal dock remains accepted; Insurance/Even Money and Round Complete read as compact game decisions/controls integrated with LocalPlayerHud/table. Behaviour/accessibility preserved. Historical repair4/10 retained. T07–T09 authorized conditional unattended technical progression; their human review is deferred, not rejected or self-accepted.
