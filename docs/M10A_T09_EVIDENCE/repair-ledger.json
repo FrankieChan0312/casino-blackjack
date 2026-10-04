@@ -1,7 +1,27 @@
 {
   "task": "M10A-T09",
-  "count": 0,
+  "count": 1,
   "limit": 10,
   "exceptionAuthorized": false,
-  "cycles": []
+  "cycles": [
+    {
+      "count": 1,
+      "timestamp": "2026-10-05 02:47:38 +08:00",
+      "failedReceipt": "t09-receipt-prepublish-check.json",
+      "hypothesis": "The newly consolidated handoff emits a trailing space on the T08/T09 optional empty repair description; no source/test/CSS file changed.",
+      "targetedFix": "Remove the two handoff trailing spaces and record final T09 repair1/10; preserve original failed text/output and every executable hash.",
+      "affectedRerun": {
+        "phase": "t09-receipt-doc-r1",
+        "status": "PASS",
+        "exitCode": 0,
+        "end": "2026-10-05 02:47:44 +08:00"
+      },
+      "whitespaceRerun": {
+        "phase": "t09-receipt-whitespace-r1",
+        "status": "PASS",
+        "exitCode": 0,
+        "end": "2026-10-05 02:49:27 +08:00"
+      }
+    }
+  ]
 }

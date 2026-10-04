@@ -3,7 +3,7 @@
   "status": "PASS",
   "exitCode": 0,
   "task": "M10A-T09",
-  "repairCount": "1/10",
+  "repairCount": "0/10",
   "full": {
     "files": 87,
     "vitest": 1109,
@@ -62,11 +62,5 @@
   "executables": 170,
   "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION",
   "freshIndependentReview": "NOT RUN",
-  "deployment": "NOT RUN",
-  "publicationRepair": {
-    "timestamp": "2026-10-05 02:47:38 +08:00",
-    "scope": "Documentation whitespace and truthful cumulative repair accounting only; exact170 executed files unchanged",
-    "verification": "PASS / checked whitespace exit0 and documentation13 exit0; exact170 executable hashes unchanged",
-    "end": "2026-10-05 02:49:27 +08:00"
-  }
+  "deployment": "NOT RUN"
 }

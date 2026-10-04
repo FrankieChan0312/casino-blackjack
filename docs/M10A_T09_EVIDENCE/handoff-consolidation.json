@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-05 02:45:42 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "priorHandoff": {
+    "retainedAt": "handoff-before-consolidation.md.gz",
+    "encoding": "gzip",
+    "sha256": "98ce944802fc9c4dff080303f87b4f7673bf37c69db57f9c247144a9fb1cd5e4",
+    "compressedSha256": "e53cc7cee3ce371ec7d6749f1e9900403aeaaf5c6464858c554e32286916a093"
+  },
+  "implementationHead": "2b801706140d190e1b42f68e42d1e74e9b64d2f0",
+  "finalReceipt": "Resolved from actual Git after the receipt publication; no invented self-reference",
+  "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION"
+}

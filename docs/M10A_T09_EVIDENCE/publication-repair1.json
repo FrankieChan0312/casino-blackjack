@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-05 02:47:39 +08:00",
+  "status": "VERIFIED",
+  "scope": "Handoff whitespace only",
+  "executableHashesUnchanged": 170,
+  "failedHandoff": {
+    "retainedAt": "handoff-whitespace-failure.md.gz",
+    "encoding": "gzip",
+    "sha256": "bb0b1d49ae8729c9b10649fab9cd55390b2b4abeea258731af88614fe7377bde",
+    "compressedSha256": "a874af98a8c78ef00270f71435c4351ab04a56e4e66ff5e97f21d830acaa941a"
+  },
+  "affectedRerun": {
+    "documentation": "t09-receipt-doc-r1",
+    "whitespace": "t09-receipt-whitespace-r1",
+    "status": "PASS",
+    "exitCode": 0,
+    "end": "2026-10-05 02:49:27 +08:00"
+  }
+}
