@@ -2041,3 +2041,7 @@ Historical image I/O can fail for different observed operations: mapped-section 
 Compact financial presentation can reuse exact public values without reimplementing accounting. The three labelled rows consume existing Available, Reserved/current exposure and Pending return; pending pair returns remain unavailable before settlement. Literal checks cover open1000/0/0, Split800/200/0, Double700/300/0, Insurance848.5/151.5/0 and pending890/110/70. Guest balances are outside this contract.
 
 Two new-test repairs preserve production semantics: commit MAIN before a side wager, and include the existing mobile guest Cards disclosure in native Tab order. Repair2/10; failed receipts and traces retained. Focused100/44 and inspected financial/text/native-zoom evidence PASS; full gates still running at this checkpoint. The owner explicitly accepted T06; T07–T09 human review is deferred by overnight authorization, with no self-acceptance.
+
+## M10A final closure — 2026-10-05 06:41:43 +08:00
+
+Owner acceptance and new independent execution are separate evidence: T01–T09 owner decisions authorize composition closure after T10 re-establishes the complete gate. A test-port conflict is an environment failure, not a failed gameplay assertion; record the first failure, identify the exact repository-local owner, make one targeted repair, then run unchanged tests. Newly inspected36 images/native zoom and protected raw-file hashes supplement87/1109/96 PASS evidence. M10A closure accepts no future count/seating/Dealer motion feature.

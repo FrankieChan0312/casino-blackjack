@@ -1,0 +1,19 @@
+const fs=require('fs'),cp=require('child_process'),crypto=require('crypto'),{chromium,expect}=require('@playwright/test');
+const dir='docs/M10A_T10_EVIDENCE/visuals',phase=process.argv[2];
+if(!['before','after'].includes(phase))throw Error('Unknown phase');
+const stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+(async()=>{const r={start:stamp(),phase,method:'Identical real-domain fixtures/commands at all three viewport sizes; new controlled push fixture added before presentation changes, no domain modification.',scenarios:[]},browser=await chromium.launch();try{
+const page=await browser.newPage();await page.emulateMedia({reducedMotion:'reduce'});
+for(const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}])for(const state of ['open','player','insurance','even-money','complete-win','complete-loss','complete-push']){
+await page.setViewportSize(viewport);const fixture=state==='insurance'?'player-ace':state==='even-money'?'player-even-money':state==='complete-loss'?'player-loss':state==='complete-push'?'player-push':'player';
+await page.goto('http://127.0.0.1:4181/?fixture='+fixture);await page.getByLabel('Your main wager',{exact:false}).fill('100');
+if(state!=='open')await page.getByRole('button',{name:'Deal',exact:true}).click();
+if(state.startsWith('complete-'))await page.getByRole('button',{name:'Stand',exact:true}).click();
+if(state==='complete-push')await expect(page.locator('.round-net')).toHaveText('Net result: 0 credits');
+if(state==='complete-win')await expect(page.locator('.round-net')).toHaveText('Net result: 100 credits');
+if(state==='complete-loss')await expect(page.locator('.round-net')).toHaveText('Net result: -100 credits');
+await page.evaluate(()=>{scrollTo(0,0);return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
+const measurements=await page.evaluate(()=>{const box=el=>{const b=el.getBoundingClientRect();return{x:b.x,y:b.y,width:b.width,height:b.height}};const surface=document.querySelector('[data-control-surface="insurance"],#player-result');return{viewport:{width:innerWidth,height:innerHeight},scrollWidth:document.documentElement.scrollWidth,pageHeight:document.documentElement.scrollHeight,local:box(document.querySelector('#player-hand')),dock:box(document.querySelector('#player-decisions')),surface:surface?{...box(surface),outline:getComputedStyle(surface).outline,border:getComputedStyle(surface).border,shadow:getComputedStyle(surface).boxShadow,context:surface.textContent}:null,credits:box(document.querySelector('.credits')),focus:document.activeElement.id||document.activeElement.className,stand:document.querySelector('button.action-stand')?box(document.querySelector('button.action-stand')):null};});
+const name=`${phase}-${state}-${viewport.width}.png`;await page.screenshot({path:dir+'/'+name,fullPage:true,animations:'disabled'});const b=fs.readFileSync(dir+'/'+name);r.scenarios.push({state,fixture,viewport,measurements,screenshot:{path:name,sha256:crypto.createHash('sha256').update(b).digest('hex'),bytes:b.length}});
+}r.status='PASS';r.exitCode=0;
+}catch(e){r.status='FAIL';r.exitCode=1;r.failure=String(e);process.exitCode=1;console.error(e);}finally{await browser.close();r.end=stamp();fs.writeFileSync(dir+'/'+phase+'-states.json',JSON.stringify(r,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({status:r.status,exitCode:r.exitCode,scenarios:r.scenarios.length}));}})();

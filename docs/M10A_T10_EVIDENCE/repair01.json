@@ -1,0 +1,9 @@
+{
+  "Timestamp": "2026-10-05 06:25:03 +08:00",
+  "Repair": 1,
+  "Limit": 10,
+  "Hypothesis": "A repository-local production Vite server without --mode e2e holds the exclusive test port, so Playwright refuses to start.",
+  "ProcessId": 30760,
+  "CommandLine": "\"node\"   \"C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\node_modules\\.bin\\\\..\\vite\\bin\\vite.js\" --host 127.0.0.1 --port 4173 --strictPort",
+  "Fix": "Stop only the verified repository-local Vite process, then rerun the unchanged Chromium command."
+}

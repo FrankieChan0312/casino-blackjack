@@ -1,3 +1,15 @@
+## M10A-T10 publication repair2/10 — 2026-10-05 06:44:09 +08:00
+
+Staged whitespace FAIL/exit2 retained in publication-first-whitespace. Targeted hypothesis/fix: only task-authored extra EOF blanks removed; original native-zoom driver (one whitespace-only line) retained byte-for-byte as verified gzip. No product/test/config change. Full87/1109/96, native/accessibility/preservation/unified PASS retained on unchanged171 executable hashes. Final cumulative2/10; affected documentation/whitespace rerun pending. No commit/push yet.
+
+## M10A-T10 consolidated closure — 2026-10-05 06:41:43 +08:00
+
+**M10A-T10 IMPLEMENTED / VERIFIED; M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; M10A MILESTONE: ACCEPTED / CLOSED.** Owner explicitly accepted T01–T09; this fresh session independently reviewed authority/source/diff/tests and36 newly executed representative images, then re-established full87 files/1109 Vitest/96 Chromium, current153, documentation13, native200/contrast/keyboard/44px/no-overflow, PA1 byte reproduction and scripts/verify.ps1 PASS / checked exit0. Repairs1/10: verified repository-local test-port conflict only, original failure retained. No product/test/domain/asset/geometry change. [Gate](M10A_T10_EVIDENCE/technical-gate.json), [review](M10A_T10_EVIDENCE/review.json), [contract](M10A_T10.md). Normal main publication pending. M10-T02 next only after clean remote-parity receipt; T02/T03 future human acceptance PENDING. T04/art/Motion/animation/deployment NOT STARTED/NOT RUN. Older status receipts remain historical.
+
+## Overnight Batch 2 / M10A-T10 start — 2026-10-05 06:23:29 +08:00
+
+Baseline main/441d4515855cc106f410264ec767008a4ae99998; clean/untracked0, local=origin/main,0/0. [Contract](M10A_T10.md), [authorization](M10_OVERNIGHT2_AUTHORIZATION.md). Owner explicitly records M10A-T01 through T09 HUMAN VISUAL ACCEPTANCE: ACCEPTED, including newly recorded T07/T08/T09. Historical ledgers retained. T10 IN PROGRESS,0/10, checks NOT RUN; M10A closure conditional on fresh full gate. T02/T03 conditionally authorized after each preceding technical/publication gate, future human acceptance PENDING; T04/art/Motion/animation/deployment excluded.
+
 ## T09 repair1/10 closed — 2026-10-05 02:49:27 +08:00
 
 Documentation13 and git diff --cached --check PASS / checked exit0. Original failed handoff/raw check retained. Exact170 executable hashes unchanged; prior full87 files/1109 Vitest/96 Chromium, focused105/49, preservation and verify.ps1 PASS/0 remain valid. T07 final repair3/10, T08 final repair0/10, T09 final repair1/10. Batch technical tasks IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; final documentation receipt follows, then actual remote parity/clean/untracked check. Human Visual Acceptance remains PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. [Handoff](M10A_OVERNIGHT_HANDOFF.md). M10A-T10 NOT STARTED — WAITING FOR OWNER REVIEW OF T07/T08/T09. Other future tasks/animation NOT STARTED; DEPLOYMENT NOT RUN.

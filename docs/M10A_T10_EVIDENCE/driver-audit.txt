@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),zlib=require('node:zlib');
+const task=process.argv[2],dir='docs/'+task+'_EVIDENCE';
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const before=JSON.parse(fs.readFileSync(dir+'/before.json','utf8'));
+const allow=task==='M10A_T10'?['docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md','README.md','docs/M10A_T07.md','docs/M10A_T08.md','docs/M10A_T09.md']:JSON.parse(fs.readFileSync(dir+'/scope.json','utf8')).allowed;
+let protectedFiles=0,historicalEvidence=0;const changes=[];
+for(const f of before.files){if(allow.includes(f.path))continue;if(hash(fs.readFileSync(f.path))!==f.sha256)changes.push(f.path);protectedFiles++;if(/EVIDENCE|docs\/images|art\//.test(f.path))historicalEvidence++;}
+if(changes.length)throw Error('Protected drift: '+changes.join(', '));
+const patterns=[/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,/\b(?:ghp|github_pat)_[A-Za-z0-9_]{20,}\b/,/\bsk-[A-Za-z0-9_-]{20,}\b/,/\bAKIA[A-Z0-9]{16}\b/,/https?:\/\/[^\s/]+:[^\s/]+@/];
+let evidenceFiles=0;function visit(folder){for(const e of fs.readdirSync(folder,{withFileTypes:true})){const p=path.join(folder,e.name);if(e.isDirectory())visit(p);else{evidenceFiles++;if(/\.(md|json|jsonl|txt|log)$/.test(p)){const t=fs.readFileSync(p,'utf8');for(const pattern of patterns)if(pattern.test(t))throw Error('Sensitive pattern: '+p);}}}}
+visit(dir);for(const p of allow)if(fs.existsSync(p))for(const pattern of patterns)if(pattern.test(fs.readFileSync(p,'utf8')))throw Error('Sensitive pattern: '+p);
+const executed=cp.execFileSync('git',['ls-files','src','tests','scripts'],{encoding:'utf8'}).trim().split('\n').concat(cp.execFileSync('git',['ls-files','--others','--exclude-standard','src','tests','scripts'],{encoding:'utf8'}).trim().split('\n')).filter(Boolean).concat(['package.json','package-lock.json','playwright.config.ts','vite.config.ts','tsconfig.json','tsconfig.domain.json','eslint.config.mjs'].filter(p=>fs.existsSync(p)));
+const files=[...new Set(executed)].sort().map(p=>({path:p,sha256:hash(fs.readFileSync(p))}));
+fs.writeFileSync(dir+'/executed-version.json',JSON.stringify({timestamp:stamp(),files},null,2)+'\n');
+const r={timestamp:stamp(),status:'PASS',exitCode:0,protectedFiles,historicalEvidence,evidenceFiles,executables:files.length,domainDiff:cp.execFileSync('git',['diff','--name-only',before.baseline,'--','src/domain'],{encoding:'utf8'}).trim(),sensitivePatternFindings:[]};if(r.domainDiff)throw Error('Domain changed');fs.writeFileSync(dir+'/protection.json',JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify(r));
+// Preserve exact log bytes while keeping publication size bounded.
+for(const e of fs.readdirSync(dir)){if(!e.endsWith('.log'))continue;const p=dir+'/'+e,raw=fs.readFileSync(p),packed=zlib.gzipSync(raw);fs.writeFileSync(p+'.gz',packed);if(hash(zlib.gunzipSync(fs.readFileSync(p+'.gz')))!==hash(raw))throw Error('Lossless log proof failed');}

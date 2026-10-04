@@ -3210,3 +3210,22 @@ Required scene contrast subsequently FAIL/exit1: BLACKJACK PAYS3:2 foreground226
 ## T06 evidence-index administrative completion — 2026-10-04 23:30:19 +08:00
 
 Final technical gates are PASS. The documentation finalizer reached an EEXIST exclusive-creation guard on the already task-owned evidence README after saving its technical receipt and current docs. Exact initial index and original driver bytes are retained; only the remaining authored index tail was applied. This is an administrative file-mode correction, no product/test/config change or failed validation; T06 remains 3/10. [Receipt](M10A_T06_EVIDENCE/index-administrative-correction.json). Affected-documentation verification follows.
+
+## Overnight Batch 2 / M10A-T10 start — 2026-10-05 06:23:29 +08:00
+
+Baseline main/441d4515855cc106f410264ec767008a4ae99998; clean/untracked0, local=origin/main,0/0. [Contract](M10A_T10.md), [authorization](M10_OVERNIGHT2_AUTHORIZATION.md). Owner explicitly records M10A-T01 through T09 HUMAN VISUAL ACCEPTANCE: ACCEPTED, including newly recorded T07/T08/T09. Historical ledgers retained. T10 IN PROGRESS,0/10, checks NOT RUN; M10A closure conditional on fresh full gate. T02/T03 conditionally authorized after each preceding technical/publication gate, future human acceptance PENDING; T04/art/Motion/animation/deployment excluded.
+
+
+## M10A-T10 repair1/10 — 2026-10-05 06:25:03 +08:00
+
+First Chromium FAIL/exit1 before tests: port4173 occupied by verified repository-local Vite PID30760 without e2e mode. Hypothesis: exclusive test-server conflict. Stop only that verified process; rerun unchanged full Chromium and required gates. Original failure retained. Product/test/config bytes unchanged. Cumulative1/10.
+
+
+## M10A-T10 consolidated closure — 2026-10-05 06:41:43 +08:00
+
+**M10A-T10 IMPLEMENTED / VERIFIED; M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; M10A MILESTONE: ACCEPTED / CLOSED.** Owner explicitly accepted T01–T09; this fresh session independently reviewed authority/source/diff/tests and36 newly executed representative images, then re-established full87 files/1109 Vitest/96 Chromium, current153, documentation13, native200/contrast/keyboard/44px/no-overflow, PA1 byte reproduction and scripts/verify.ps1 PASS / checked exit0. Repairs1/10: verified repository-local test-port conflict only, original failure retained. No product/test/domain/asset/geometry change. [Gate](M10A_T10_EVIDENCE/technical-gate.json), [review](M10A_T10_EVIDENCE/review.json), [contract](M10A_T10.md). Normal main publication pending. M10-T02 next only after clean remote-parity receipt; T02/T03 future human acceptance PENDING. T04/art/Motion/animation/deployment NOT STARTED/NOT RUN. Older status receipts remain historical.
+
+
+## M10A-T10 publication repair2/10 — 2026-10-05 06:44:09 +08:00
+
+Staged whitespace FAIL/exit2 retained in publication-first-whitespace. Targeted hypothesis/fix: only task-authored extra EOF blanks removed; original native-zoom driver (one whitespace-only line) retained byte-for-byte as verified gzip. No product/test/config change. Full87/1109/96, native/accessibility/preservation/unified PASS retained on unchanged171 executable hashes. Final cumulative2/10; affected documentation/whitespace rerun pending. No commit/push yet.

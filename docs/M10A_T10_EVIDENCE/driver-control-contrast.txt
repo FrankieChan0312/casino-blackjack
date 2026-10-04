@@ -1,0 +1,64 @@
+const { chromium, expect } = require('@playwright/test'), fs = require('fs'), path = require('path'), cp = require('child_process');
+const { PNG } = require(path.resolve('node_modules/playwright-core/lib/utilsBundle.js'));
+const dir = 'docs/M10A_T10_EVIDENCE/visuals', rgb = value => value.match(/[\d.]+/g).slice(0, 3).map(Number);
+const luminance = colour => colour.map(v => { const c = v / 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; }).reduce((sum, c, i) => sum + c * [.2126, .7152, .0722][i], 0);
+const ratio = (a, b) => (Math.max(luminance(a), luminance(b)) + .05) / (Math.min(luminance(a), luminance(b)) + .05);
+const stamp = () => cp.execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+(async () => {
+  let browser; const result = { start: stamp(), method: 'Real Chromium computed foreground versus actual rendered background pixels. Flat native button/input backgrounds are independently checked against the pixel at upper centre inside the control; transparent light text uses the brightest sampled surrounding background. Keyboard focus/selected rings use actual adjacent outside pixels. Thresholds remain normal text 4.5 and non-text/focus 3. Bounded checks, not a WCAG certification.', checks: [], focus: [], status: 'PENDING' };
+  try {
+    browser = await chromium.launch(); const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+    for (const state of ['open', 'player', 'insurance', 'even-money', 'unaffordable', 'complete']) {
+      await page.goto('http://127.0.0.1:4181/?fixture=' + (['insurance', 'unaffordable'].includes(state) ? 'player-ace' : state === 'even-money' ? 'player-even-money' : 'player'));
+      await page.getByLabel('Your main wager', { exact: false }).fill(state === 'unaffordable' ? '1000' : '100');
+      if (state !== 'open') await page.getByRole('button', { name: 'Deal', exact: true }).click();
+      if (state === 'complete') await page.getByRole('button', { name: 'Stand', exact: true }).click();
+      if (state === 'player') await page.locator('.action-guidance summary').click();
+      if (state === 'complete') await page.locator('.round-explanation summary').click();
+      if (['insurance', 'even-money', 'unaffordable'].includes(state)) await page.locator('.decision-explanation summary').click();
+      await page.mouse.move(0, 0); await page.evaluate(() => scrollTo(0, 0));
+      const samples = await page.locator('.credits h2:visible, .credits dt:visible, .credits dd:visible, [data-control-surface] button:visible, [data-control-surface] input:visible, [data-control-surface] summary:visible, [data-control-surface] > p:visible, [data-control-surface] .reason:visible, .decision-explanation p:visible, .insurance-timing:visible, .round-explanation > p:visible, #player-action-hand, #player-scene-status').evaluateAll(els => els.map(el => {
+        const b = el.getBoundingClientRect(), s = getComputedStyle(el);
+        return { label: el.tagName === 'INPUT' ? 'Wager input' : el.textContent, tag: el.tagName, disabled: el.disabled || false, pressed: el.getAttribute('aria-pressed'), foreground: s.color, background: s.backgroundColor, box: { x: b.x, y: b.y, width: b.width, height: b.height } };
+      }));
+      const png = PNG.sync.read(await page.screenshot({ path: `${dir}/control-contrast-${state}.png`, fullPage: true, animations: 'disabled' }));
+      const pixel = (x, y) => { const i = (Math.floor(y) * png.width + Math.floor(x)) * 4; if (i < 0 || i + 3 > png.data.length) throw Error('Pixel outside screenshot'); return [...png.data.subarray(i, i + 3)]; };
+      for (const sample of samples) {
+        const b = sample.box, fg = rgb(sample.foreground), opaque = sample.background.startsWith('rgb(') || sample.background.endsWith(', 1)');
+        let background, pixels;
+        if (opaque && ['BUTTON', 'INPUT'].includes(sample.tag)) {
+          background = pixel(b.x + b.width / 2, b.y + 8); pixels = [background];
+          expect(background.every((v, i) => Math.abs(v - rgb(sample.background)[i]) <= 2), state + ': real flat background for ' + sample.label).toBe(true);
+        } else {
+          pixels = [[b.x + 2, b.y + 1], [b.x + b.width / 2, b.y + 1], [b.x + b.width - 2, b.y + 1]].map(([x, y]) => pixel(x, y));
+          const candidates = pixels.filter(p => p.some((v, i) => Math.abs(v - fg[i]) > 32)); if (!candidates.length) throw Error('No independent background for ' + sample.label);
+          background = candidates.reduce((a, b) => luminance(a) > luminance(b) ? a : b);
+        }
+        const measured = ratio(fg, background); result.checks.push({ state, ...sample, backgroundPixels: pixels, renderedBackground: background, ratio: measured, required: 4.5, status: measured >= 4.5 ? 'PASS' : 'FAIL' });
+      }
+      const target = state === 'open' ? page.getByRole('button', { name: 'Choose 100 credits', exact: true }) : state === 'complete' ? page.getByRole('button', { name: 'Deal Again', exact: true }) : state === 'player' ? page.getByRole('button', { name: 'Stand', exact: true }) : page.getByRole('button', { name: 'Decline', exact: true });
+      await page.locator(state === 'open' ? '#player-decisions' : state === 'complete' ? '#player-result' : state === 'player' ? '#player-hand' : '.decision').focus();
+      for (let i = 0; i < 15 && !await target.evaluate(el => el === document.activeElement); i++) await page.keyboard.press('Tab');
+      await expect(target).toBeFocused(); await page.evaluate(() => scrollTo(0, 0));
+      const cue = await target.evaluate(el => { const s = getComputedStyle(el), b = el.getBoundingClientRect(); return { colour: s.outlineColor, style: s.outlineStyle, focusVisible: el.matches(':focus-visible'), x: b.x + b.width / 2, y: b.y - Number.parseFloat(s.outlineOffset) - Number.parseFloat(s.outlineWidth) - 2 }; });
+      const focusedPNG = PNG.sync.read(await page.screenshot({ path: `${dir}/control-focus-${state}.png`, fullPage: true, animations: 'disabled' })), index = (Math.floor(cue.y) * focusedPNG.width + Math.floor(cue.x)) * 4, adjacent = [...focusedPNG.data.subarray(index, index + 3)], measured = ratio(rgb(cue.colour), adjacent);
+      result.focus.push({ state, ...cue, adjacent, ratio: measured, required: 3, status: measured >= 3 && cue.focusVisible && cue.style === 'solid' ? 'PASS' : 'FAIL' });
+      if (['insurance','even-money','unaffordable','complete'].includes(state)) {
+        await page.locator(state==='complete'?'#player-result':'[data-control-surface="insurance"]').focus();await page.evaluate(()=>scrollTo(0,0));
+        const cue=await page.locator('#player-scene-status').evaluate(el=>{const s=getComputedStyle(el),b=el.getBoundingClientRect();return{colour:s.outlineColor,style:s.outlineStyle,width:parseFloat(s.outlineWidth),x:b.x+b.width/2,y:b.y-parseFloat(s.outlineOffset)-parseFloat(s.outlineWidth)-2};});
+        const png=PNG.sync.read(await page.screenshot({path:`${dir}/state-focus-${state}.png`,fullPage:true,animations:'disabled'})),i=(Math.floor(cue.y)*png.width+Math.floor(cue.x))*4,adjacent=[...png.data.subarray(i,i+3)],measured=ratio(rgb(cue.colour),adjacent);
+        result.focus.push({state:state+' state-band',...cue,adjacent,ratio:measured,required:3,status:measured>=3&&cue.style==='solid'&&cue.width>=3?'PASS':'FAIL'});
+      }
+      if (state === 'player') {
+        for (const name of ['Stand', 'Double']) {
+          const control = page.getByRole('button', { name, exact: true }); await control.hover();
+          const colours = await control.evaluate(el => ({ foreground: getComputedStyle(el).color, background: getComputedStyle(el).backgroundColor }));
+          const measured = ratio(rgb(colours.foreground), rgb(colours.background)); result.checks.push({ state: 'hover', label: name, ...colours, ratio: measured, required: 4.5, status: measured >= 4.5 ? 'PASS' : 'FAIL' });
+        }
+      }
+    }
+    expect(result.checks.filter(c => c.status !== 'PASS')).toEqual([]); expect(result.focus.filter(c => c.status !== 'PASS')).toEqual([]);
+    result.status = 'PASS'; result.exitCode = 0;
+  } catch (e) { result.status = 'FAIL'; result.exitCode = 1; result.failure = String(e); process.exitCode = 1; console.error(e); }
+  finally { if (browser) await browser.close(); result.end = stamp(); fs.writeFileSync(dir + '/control-contrast.json', JSON.stringify(result, null, 2) + '\n'); console.log(JSON.stringify({ status: result.status, exitCode: result.exitCode, checks: result.checks.length, focus: result.focus.length, minimumText: result.checks.length ? Math.min(...result.checks.map(c => c.ratio)) : null })); }
+})();

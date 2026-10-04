@@ -1,0 +1,161 @@
+{
+  "timestamp": "2026-10-05 06:33:16 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "review": "Fresh session relative to all M10A-T01–T09 implementation sessions; independent authority/source/diff/tests and newly executed image review. No delegation.",
+  "images": [
+    {
+      "path": "visuals/after-complete-loss-1280.png",
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "visuals/after-complete-loss-320.png",
+      "sha256": "f7aaf18d41f33af36ac5f1fb4235394a28698931591f74cd11fdd63d12b64c0a"
+    },
+    {
+      "path": "visuals/after-complete-loss-768.png",
+      "sha256": "60dd647f5ce0a4950abb1a7ce21811bb358acfe2aaac1852db2cd79f072506ce"
+    },
+    {
+      "path": "visuals/after-complete-push-1280.png",
+      "sha256": "65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e"
+    },
+    {
+      "path": "visuals/after-complete-push-320.png",
+      "sha256": "4c13bb6adf871dbd6d15ea02987958428721febd991f6513b76d3c8ad018fda1"
+    },
+    {
+      "path": "visuals/after-complete-push-768.png",
+      "sha256": "dd85f1bed42a82e48f56462ed2c99f115f35f61fd85fea52a295211fe9ff396c"
+    },
+    {
+      "path": "visuals/after-complete-win-1280.png",
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "visuals/after-complete-win-320.png",
+      "sha256": "e4c8cbf6d17459dadabc53f52ee331d3f27928cc6aae1f584ceeedaed322f27c"
+    },
+    {
+      "path": "visuals/after-complete-win-768.png",
+      "sha256": "0449375ae0871cc0b6cca7cc89f30207a5f02f17537d00870efad24a7e6aec2d"
+    },
+    {
+      "path": "visuals/after-even-money-1280.png",
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "visuals/after-even-money-320.png",
+      "sha256": "36209ce8d83fb7ccecf16c09711baefbe938b2ae94320c248fc03982c1c625c4"
+    },
+    {
+      "path": "visuals/after-even-money-768.png",
+      "sha256": "788e01539821b3b7a7746876a43b432f6267436ae56b30be64e435cd2d60ff3b"
+    },
+    {
+      "path": "visuals/after-insurance-1280.png",
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "visuals/after-insurance-320.png",
+      "sha256": "b7f05258d3fdf89cdb92a0269406275e5f1b4a5208f31d93918f200a593e6626"
+    },
+    {
+      "path": "visuals/after-insurance-768.png",
+      "sha256": "3433d793b003ab1957d86a4af9472d0a583b6ca155651daebd18604f16662745"
+    },
+    {
+      "path": "visuals/after-open-1280.png",
+      "sha256": "873b63807444d1fcccf2bcf90aad50520fb3701e7fc8f0d42075def83dca3318"
+    },
+    {
+      "path": "visuals/after-open-320.png",
+      "sha256": "a7a24c3535a5795d190f591f9af7af148a363de7842867ba991ebf0dd7a4d6f5"
+    },
+    {
+      "path": "visuals/after-open-768.png",
+      "sha256": "146d8c93afb14d050bb0847f86168ec27eec6b951b9a0339aea89a3b3fe0fd6f"
+    },
+    {
+      "path": "visuals/after-player-1280.png",
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "visuals/after-player-320.png",
+      "sha256": "0928fb90f0a3f2b710e5c89ae7cf03be17ad665363a7fe6f44c4ef7eb5353ea0"
+    },
+    {
+      "path": "visuals/after-player-768.png",
+      "sha256": "b7f4d0755ca96a188c3f08dbd3ea7cfee32b078e5c0c9103a3176a86df07b848"
+    },
+    {
+      "path": "visuals/credits-pending-1280.png",
+      "sha256": "49bc3ab56f5a2950ab226d94806991fda30d67f91908c77d40289dd854d77383"
+    },
+    {
+      "path": "visuals/credits-text200-320.png",
+      "sha256": "69fef4470aa98c206de77ffa43c8f4a4aee992dfaef83ebc72ca7aaafc4f8cc5"
+    },
+    {
+      "path": "visuals/edge-cards5-1280.png",
+      "sha256": "99f44281f3aad8a0d41c102cf5e81d05538d68e05c937bfeeba1b5e7ee3a79bb"
+    },
+    {
+      "path": "visuals/edge-cards5-320.png",
+      "sha256": "fb0d89af4ef569d1d966ff2505ac8b3946516557ff2cc45a8e1776dd63d27976"
+    },
+    {
+      "path": "visuals/edge-fallback-1280.png",
+      "sha256": "1282a96f4d824b5bbdbdfc8da4792af46498ddb9f905be129101c768f50c2fed"
+    },
+    {
+      "path": "visuals/edge-four-leaves-1280.png",
+      "sha256": "68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b"
+    },
+    {
+      "path": "visuals/edge-four-leaves-320.png",
+      "sha256": "35eef8ca0b65062ae41ddc179269bf65dbe1e2317485ad03c7f327bb2d4b89e7"
+    },
+    {
+      "path": "visuals/edge-four-leaves-text200-768.png",
+      "sha256": "baadd16a29d9bd580fdb8240a4d06b1ad816c887869020f90a3e64d48a952b13"
+    },
+    {
+      "path": "visuals/edge-long-names-text200-320.png",
+      "sha256": "02f0596ef96911d246723a6ac731f9d451e3fa2620ecc799387a8a33c720f761"
+    },
+    {
+      "path": "visuals/edge-split-first-1280.png",
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "visuals/edge-split-second-768.png",
+      "sha256": "fd881d06e4900101fee07c3fc1d5304f031ecca95402c7933b714d7d58ba4b22"
+    },
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "9a259e5e584aa5ff2cc123f668e00c84f26beb47a27b187826bd4c9176a3e8b9"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-hand.png",
+      "sha256": "d6557493b3e27c077b258230b7718d6358854a693b0778a0e7da4b626dafa48b"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-controls.png",
+      "sha256": "e4f4a0294cede564ccadca2188de2a96c97b255a0b2be9ceb55767784c514019"
+    },
+    {
+      "path": "visuals/zoom200-complete-player-loss-1000-controls.png",
+      "sha256": "02f571e537d76e4a0bb39bc7abc67c408b602caada7b9e78f722ffb0380fe22e"
+    }
+  ],
+  "findings": [
+    "All21 newly captured normal states at1280/768/320 actually inspected; no BLOCKER/HIGH.",
+    "Representative11 fresh full-suite stress images inspected: normal five cards, first/second Split, four leaves, long roster metadata/fallback, text200 and exact pending funds. Isolated long-name fixtures are presentation evidence only.",
+    "Four actual native200 viewport screenshots inspected; setZoom/getZoom factor2.0 with root16px/CSS zoom1,1280x723 ->640x361, DPR1.5 ->3. Native host viewport limitation recorded independently of1280x900 layout test.",
+    "91 actual text samples and10 focus/cue samples PASS, minimum text5.7857037068719395;44px/no-overflow/keyboard/focus/full card ownership assertions retained.",
+    "No product/test/dependency/runtime file modified by T10. Original1/10 environment failure retained and targeted process-owner repair recorded.",
+    "T01–T09 acceptance comes directly from owner instruction; this technical review does not accept future T02/T03 or any motion/Dealer artwork."
+  ],
+  "finalRegression": "PASS / checked exit0"
+}

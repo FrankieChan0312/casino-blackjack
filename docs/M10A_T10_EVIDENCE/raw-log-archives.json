@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-10-05 06:44:48 +08:00",
+  "method": "Only new task-owned logs losslessly compressed; original failures retained.",
+  "logs": [
+    {
+      "path": "pa1-assets.log.gz",
+      "originalSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "compressedSha256": "0da9b602199edbc8c04fa13af73d14f98d6eedca97f2da6ce8c936524413df21",
+      "bytes": 270
+    },
+    {
+      "path": "t10-current.log.gz",
+      "originalSha256": "c68f51306364bfcad0e2a6969da9e3163ae981442de676ecc613e4c1c511f1dd",
+      "compressedSha256": "8845ebac568d7cb7a0a8f099842a3ee1ea40487eb0ace7da32e8cc39c6c162f3",
+      "bytes": 498
+    },
+    {
+      "path": "t10-documentation.log.gz",
+      "originalSha256": "4441aa2c518861726e7fc49aad6fff16664cbb0a381d43f6959d84920e6b9a67",
+      "compressedSha256": "5cc3efc0decacd8993b0cc2ef77b63f3493af30cafdc34a563265b47f9b88044",
+      "bytes": 393
+    },
+    {
+      "path": "t10-full-browser.log.gz",
+      "originalSha256": "a70e262bca4f4dfc9de3f22a7fd469d5534f5310bb5eab479cc3f0681bc8b081",
+      "compressedSha256": "60ee8710f5e2a0a1827976ec2411d2ec17c17fbdea72a1621e8bcd4d87eac7b5",
+      "bytes": 204
+    },
+    {
+      "path": "t10-full-unit.log.gz",
+      "originalSha256": "328a72866dd4c57b10a802f5d075248391e504763e6a28dbf2d8bcf084172f2c",
+      "compressedSha256": "c220c3eb8ecadc2ec7f5629335d5a9d9e53def5499000666e7a94c25a3097652",
+      "bytes": 461
+    },
+    {
+      "path": "t10-r1-full-browser.log.gz",
+      "originalSha256": "1442d0da0df52792b1ce954e69bc927b02be721542f782ccb4fbc45cc2d47915",
+      "compressedSha256": "2087da9b978c57ac948fa67366fe91e215f74ab87ea7d38cd8bdca717e99bfa0",
+      "bytes": 18557
+    },
+    {
+      "path": "t10-unified.log.gz",
+      "originalSha256": "3f2c58e84329b0692d39a3cd43d3f271cbb65e10a55e16fdac68b3721a3484c9",
+      "compressedSha256": "56dc40d800a4daea0da7d0e1cbee3f716c51f79e0c211bb821460cb606e94237",
+      "bytes": 42714
+    },
+    {
+      "path": "t10-final-docs.log.gz",
+      "originalSha256": "3f6c7980fb956ff09eca586c7635010a8478aba0de10573e299ee950aff67c7e",
+      "compressedSha256": "c44bb89233531542cfa797617689699789c98f5f08d340290c404978a9bcde83",
+      "bytes": 404
+    },
+    {
+      "path": "t10-r2-docs.log.gz",
+      "originalSha256": "1533f83f500c89835b430f6da3445ebc19888091c584c18890147d5cd63b9a5a",
+      "compressedSha256": "7f1927102819d99dcb2b4bf44988fe87fe7ffd9075ef6365e4234934eb9e52be",
+      "bytes": 392
+    }
+  ]
+}

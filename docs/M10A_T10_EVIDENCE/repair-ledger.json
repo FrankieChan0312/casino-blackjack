@@ -1,0 +1,41 @@
+{
+  "task": "M10A-T10",
+  "cumulative": 2,
+  "limit": 10,
+  "cycles": [
+    {
+      "number": 1,
+      "evidence": "repair01.json",
+      "failure": "t10-full-browser.json",
+      "rerun": "t10-r1-full-browser.json",
+      "status": "PASS"
+    },
+    {
+      "timestamp": "2026-10-05 06:44:09 +08:00",
+      "number": 2,
+      "limit": 10,
+      "failure": "publication-first-whitespace.txt.gz",
+      "hypothesis": "Task-authored record appenders retain an extra blank EOF; copying the native zoom driver retains its original single-space line. Neither affects the executed version.",
+      "fix": "Remove only new extra EOF blanks; preserve exact zoom-driver bytes in verified lossless gzip. Rerun documentation13 and unchanged staged whitespace check.",
+      "originals": [
+        {
+          "path": "docs/M10A_T10_EVIDENCE/repair02-original-DEVELOPMENT_LOG.md.gz",
+          "sha256": "fddad0e17bd349046332ad3dc2e0baa502334b4e0db99dd98097f8677270c1cc"
+        },
+        {
+          "path": "docs/M10A_T10_EVIDENCE/repair02-original-M10A_T10.md.gz",
+          "sha256": "915065a178da7cb97844b0da8cf8ab57ab8bc7565b1906cf24b9a4dbbb862615"
+        },
+        {
+          "path": "docs/M10A_T10_EVIDENCE/repair02-original-STATE.md.gz",
+          "sha256": "20189c45fc2cc435c15834cf99a88add5e1b1aaa7ea96ba86b6bfa865f6cee55"
+        },
+        {
+          "path": "docs/M10A_T10_EVIDENCE/repair02-original-driver-zoom.txt.gz",
+          "sha256": "cc871a735e06472d68cba80241a704bc6da5956be53b4725e75a5345e72ac263"
+        }
+      ],
+      "status": "RERUN PENDING"
+    }
+  ]
+}
