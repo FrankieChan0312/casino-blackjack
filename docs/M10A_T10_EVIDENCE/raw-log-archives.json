@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-05 06:44:48 +08:00",
+  "timestamp": "2026-10-05 06:46:19 +08:00",
   "method": "Only new task-owned logs losslessly compressed; original failures retained.",
   "logs": [
     {
@@ -54,6 +54,12 @@
       "path": "t10-r2-docs.log.gz",
       "originalSha256": "1533f83f500c89835b430f6da3445ebc19888091c584c18890147d5cd63b9a5a",
       "compressedSha256": "7f1927102819d99dcb2b4bf44988fe87fe7ffd9075ef6365e4234934eb9e52be",
+      "bytes": 392
+    },
+    {
+      "path": "t10-receipt-docs.log.gz",
+      "originalSha256": "cfdff0152fc12b890c85c9adf31a67afe481f443b0f2b84236fe64c321520acd",
+      "compressedSha256": "cec9611236da7ea88afb4b999fa084b59b6ec5a115b56b6f01d1aa85e37781ad",
       "bytes": 392
     }
   ]

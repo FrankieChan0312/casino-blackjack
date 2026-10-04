@@ -35,7 +35,10 @@
           "sha256": "cc871a735e06472d68cba80241a704bc6da5956be53b4725e75a5345e72ac263"
         }
       ],
-      "status": "RERUN PENDING"
+      "status": "PASS",
+      "rerun": "t10-r2-docs.json",
+      "whitespaceExitCode": 0,
+      "closed": "2026-10-05 06:45:07 +08:00"
     }
   ]
 }
