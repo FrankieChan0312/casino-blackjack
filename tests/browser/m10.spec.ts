@@ -136,3 +136,51 @@ test('[M10-E04] the table scene owns coherent local cards controls and exact cre
     await expect(scene.getByLabel('Your main wager', { exact: false })).toBeFocused();
   }
 });
+
+test('[M10A-E01] one scene frame owns the existing game regions and keyboard play across desktop tablet and mobile', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.getByRole('region', { name: 'Blackjack game scene', exact: true });
+    const controls = scene.getByRole('region', { name: 'Your gameplay controls', exact: true });
+    const support = page.getByRole('complementary', { name: 'Table preferences and demo tools', exact: true });
+    await expect(scene.locator('.casino-header')).toContainText('Credits have no redemption value.');
+    await expect(scene.locator('[data-scene-zone="dealer"]')).toHaveCount(1);
+    await expect(scene.locator('[data-scene-zone="local-player"]')).toHaveCount(1);
+    await expect(scene.locator('[data-scene-zone="remote-seat"]')).toHaveCount(3);
+    await expect(controls).toHaveAttribute('aria-describedby', 'player-scene-status');
+    await expect(controls.getByRole('status')).toHaveText('Betting open');
+    await expect(controls.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['1,000','0','0']);
+    await expect(support.getByText('Change Character · Roland', { exact: true })).toBeVisible();
+    if (viewport.width === 1280) await page.screenshot({ path: info.outputPath('frame-open-1280.png'), fullPage: true, animations: 'disabled' });
+    await controls.getByLabel('Your main wager', { exact: false }).fill('100');
+    await controls.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(controls.getByRole('status')).toHaveText('Your turn');
+    await expect(controls.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['900','100','0']);
+    const boxes = await scene.evaluate(el => {
+      const rect = (target: Element) => { const r = target.getBoundingClientRect(); return { x:r.x,y:r.y,width:r.width,height:r.height }; };
+      return { scene:rect(el),table:rect(el.querySelector('.casino-table')!),local:rect(el.querySelector('#player-hand')!),
+        controls:rect(el.querySelector('#player-decisions')!),support:rect(document.querySelector('.scene-support')!),
+        header:rect(el.querySelector('.casino-header')!),scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth };
+    });
+    expect(boxes.scene.width).toBeGreaterThan(viewport.width * .9);
+    expect(boxes.table.width).toBeGreaterThan(viewport.width * .8);
+    expect(boxes.header.height).toBeLessThan(boxes.table.height);
+    expect(boxes.controls.y).toBeGreaterThanOrEqual(boxes.local.y + boxes.local.height);
+    expect(boxes.support.y).toBeGreaterThanOrEqual(boxes.scene.y + boxes.scene.height);
+    expect(boxes.scrollWidth).toBeLessThanOrEqual(boxes.viewport);
+    const stand = controls.getByRole('button', { name:'Stand',exact:true });
+    const target = (await stand.boundingBox())!;
+    expect(target.width).toBeGreaterThanOrEqual(44); expect(target.height).toBeGreaterThanOrEqual(44);
+    if (viewport.width === 1280) expect(target.y + target.height).toBeLessThanOrEqual(900);
+    await page.evaluate(() => scrollTo(0,0));
+    await page.screenshot({ path:info.outputPath(`frame-dealt-${viewport.width}.png`),fullPage:true,animations:'disabled' });
+    await page.locator('#player-hand').focus();
+    for (let i=0;i<8 && !await stand.evaluate(el => el === document.activeElement);i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused(); await page.keyboard.press('Enter');
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await expect(controls.getByRole('status')).toHaveText('Round complete');
+    if (viewport.width === 1280) await page.screenshot({ path:info.outputPath('frame-results-1280.png'),fullPage:true,animations:'disabled' });
+    await controls.getByRole('button', { name:'Deal Again',exact:true }).click();
+    await expect(controls.getByLabel('Your main wager', { exact:false })).toBeFocused();
+  }
+});

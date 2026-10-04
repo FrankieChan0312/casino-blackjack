@@ -16,7 +16,7 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
   return <section aria-label="Blackjack table" className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
-    <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
+    <section className="dealer panel" data-anchor="dealer" data-scene-zone={view.playerMode ? 'dealer' : undefined} aria-label="Dealer"><h2>Dealer</h2>
       {view.playerMode && <CasinoPerson kind="dealer" />}
       <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
@@ -36,7 +36,7 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
         '--seat-depth': (anchor.y - TABLE_GEOMETRY.centre.y) / TABLE_GEOMETRY.radius.y,
         '--seat-shift': local ? 0 : anchor.x / 100 - (guestIndex + 0.5) / guests.length,
       } as CSSProperties : undefined;
-      return <section key={seat.seatNumber} style={geometryStyle} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      return <section key={seat.seatNumber} style={geometryStyle} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {avatar ? <div className="character-identity">
           <img src={avatar.portrait} width={60} height={80} alt={`${local ? 'Your avatar' : 'Computer guest'}: ${avatar.name}, ${avatar.archetype}`} />
           <div><h2 aria-label={avatar.name}>{avatar.name}</h2><p className="character-archetype">{avatar.archetype}</p>

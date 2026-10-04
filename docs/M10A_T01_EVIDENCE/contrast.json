@@ -1,0 +1,516 @@
+{
+  "start": "2026-10-04 10:43:19 +08:00",
+  "method": "Actual Chromium computed foreground colours versus representative screenshot background pixels at the text-box corners/upper edge; maximum sampled background luminance is used. Normal text threshold4.5:1, focus3:1. Bounded scene checks, not comprehensive WCAG certification.",
+  "checks": [
+    {
+      "name": "disclaimer",
+      "foreground": "rgb(204, 216, 205)",
+      "fontSize": "11.2px",
+      "box": {
+        "x": 993.421875,
+        "y": 18.71875,
+        "width": 254.578125,
+        "height": 32.46875
+      },
+      "background": [
+        26,
+        41,
+        36
+      ],
+      "pixels": [
+        [
+          26,
+          41,
+          36
+        ],
+        [
+          22,
+          35,
+          31
+        ],
+        [
+          18,
+          29,
+          26
+        ],
+        [
+          26,
+          40,
+          35
+        ]
+      ],
+      "ratio": 10.29255573647694,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "round status",
+      "foreground": "rgb(245, 233, 198)",
+      "fontSize": "16px",
+      "box": {
+        "x": 328,
+        "y": 789.1875,
+        "width": 624,
+        "height": 31.1875
+      },
+      "background": [
+        27,
+        76,
+        58
+      ],
+      "pixels": [
+        [
+          24,
+          70,
+          52
+        ],
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          23,
+          70,
+          52
+        ],
+        [
+          24,
+          70,
+          52
+        ]
+      ],
+      "ratio": 8.103522898847709,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "felt payout",
+      "foreground": "rgb(226, 210, 164)",
+      "fontSize": "12px",
+      "box": {
+        "x": 562.8828125,
+        "y": 241.90625,
+        "width": 154.234375,
+        "height": 31
+      },
+      "background": [
+        41,
+        98,
+        79
+      ],
+      "pixels": [
+        [
+          39,
+          96,
+          76
+        ],
+        [
+          41,
+          98,
+          79
+        ],
+        [
+          40,
+          97,
+          77
+        ],
+        [
+          40,
+          97,
+          78
+        ]
+      ],
+      "ratio": 4.735013012598905,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Dealer rule",
+      "foreground": "rgb(226, 210, 164)",
+      "fontSize": "9.6px",
+      "box": {
+        "x": 562.8828125,
+        "y": 260.90625,
+        "width": 154.234375,
+        "height": 12
+      },
+      "background": [
+        42,
+        100,
+        80
+      ],
+      "pixels": [
+        [
+          40,
+          97,
+          77
+        ],
+        [
+          42,
+          100,
+          80
+        ],
+        [
+          40,
+          97,
+          77
+        ],
+        [
+          40,
+          97,
+          78
+        ]
+      ],
+      "ratio": 4.605777068974858,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "local name",
+      "foreground": "rgb(241, 234, 200)",
+      "fontSize": "14.4px",
+      "box": {
+        "x": 620.0625,
+        "y": 532.796875,
+        "width": 103.828125,
+        "height": 20
+      },
+      "background": [
+        38,
+        91,
+        72
+      ],
+      "pixels": [
+        [
+          37,
+          91,
+          72
+        ],
+        [
+          37,
+          91,
+          72
+        ],
+        [
+          35,
+          89,
+          70
+        ],
+        [
+          38,
+          91,
+          72
+        ]
+      ],
+      "ratio": 6.489729413928124,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "local controller",
+      "foreground": "rgb(238, 243, 237)",
+      "fontSize": "10.4px",
+      "box": {
+        "x": 620.0625,
+        "y": 573.03125,
+        "width": 103.828125,
+        "height": 44.15625
+      },
+      "background": [
+        40,
+        92,
+        72
+      ],
+      "pixels": [
+        [
+          38,
+          91,
+          71
+        ],
+        [
+          40,
+          92,
+          72
+        ],
+        [
+          38,
+          92,
+          72
+        ],
+        [
+          40,
+          91,
+          70
+        ]
+      ],
+      "ratio": 6.880628425786273,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "guest controller",
+      "foreground": "rgb(238, 243, 237)",
+      "fontSize": "10.4px",
+      "box": {
+        "x": 175.84698486328125,
+        "y": 324.34375,
+        "width": 98.21875,
+        "height": 44.15625
+      },
+      "background": [
+        30,
+        80,
+        62
+      ],
+      "pixels": [
+        [
+          26,
+          74,
+          56
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          30,
+          80,
+          62
+        ],
+        [
+          30,
+          76,
+          58
+        ]
+      ],
+      "ratio": 8.220366999137749,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "wager",
+      "foreground": "rgb(231, 235, 213)",
+      "fontSize": "10.4px",
+      "box": {
+        "x": 620.0625,
+        "y": 592.109375,
+        "width": 103.828125,
+        "height": 25.078125
+      },
+      "background": [
+        75,
+        113,
+        86
+      ],
+      "pixels": [
+        [
+          75,
+          113,
+          86
+        ],
+        [
+          20,
+          59,
+          44
+        ],
+        [
+          75,
+          112,
+          85
+        ],
+        [
+          40,
+          91,
+          70
+        ]
+      ],
+      "ratio": 4.542612537092793,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Available label",
+      "foreground": "rgb(193, 207, 190)",
+      "fontSize": "12px",
+      "box": {
+        "x": 645.46875,
+        "y": 947.375,
+        "width": 47.515625,
+        "height": 16
+      },
+      "background": [
+        23,
+        67,
+        50
+      ],
+      "pixels": [
+        [
+          23,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          66,
+          49
+        ],
+        [
+          20,
+          63,
+          47
+        ]
+      ],
+      "ratio": 6.8614059878176645,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Pending label",
+      "foreground": "rgb(193, 207, 190)",
+      "fontSize": "12px",
+      "box": {
+        "x": 873.265625,
+        "y": 947.375,
+        "width": 78.734375,
+        "height": 16
+      },
+      "background": [
+        21,
+        64,
+        48
+      ],
+      "pixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          20,
+          62,
+          46
+        ],
+        [
+          20,
+          61,
+          46
+        ],
+        [
+          20,
+          61,
+          45
+        ]
+      ],
+      "ratio": 7.155256402648945,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Available value",
+      "foreground": "rgb(238, 243, 237)",
+      "fontSize": "16px",
+      "box": {
+        "x": 645.46875,
+        "y": 967.375,
+        "width": 47.515625,
+        "height": 21
+      },
+      "background": [
+        20,
+        62,
+        46
+      ],
+      "pixels": [
+        [
+          20,
+          62,
+          46
+        ],
+        [
+          20,
+          62,
+          46
+        ],
+        [
+          19,
+          61,
+          45
+        ],
+        [
+          16,
+          54,
+          41
+        ]
+      ],
+      "ratio": 10.62340214418293,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Stand button",
+      "foreground": "rgb(24, 51, 34)",
+      "fontSize": "16.8px",
+      "box": {
+        "x": 458,
+        "y": 830.375,
+        "width": 116,
+        "height": 52
+      },
+      "background": [
+        210,
+        223,
+        181
+      ],
+      "pixels": [
+        [
+          25,
+          73,
+          55
+        ],
+        [
+          210,
+          223,
+          181
+        ],
+        [
+          26,
+          75,
+          56
+        ],
+        [
+          14,
+          33,
+          24
+        ]
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "focus": {
+    "colour": "rgb(255, 231, 162)",
+    "style": "solid",
+    "width": "3px",
+    "keyboardFocused": true,
+    "focusVisible": true,
+    "background": [
+      43,
+      102,
+      82
+    ],
+    "ratio": 5.505122929235555,
+    "required": 3,
+    "status": "PASS"
+  },
+  "exitCode": 0,
+  "end": "2026-10-04 10:43:21 +08:00"
+}

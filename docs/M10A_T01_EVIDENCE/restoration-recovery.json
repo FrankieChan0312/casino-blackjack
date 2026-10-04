@@ -1,0 +1,444 @@
+{
+  "start": "2026-10-04 10:34:42 +08:00",
+  "taskRepair": "1/10",
+  "scope": "Administrative evidence source repair only; no product or assertion change. First wrapper FAIL/exit1 retained separately from checked Chromium21/21 PASS/exit0.",
+  "hypothesis": "The reported user-mapped section blocks in-place truncation for this known geometry.json. A same-directory native atomic replacement uses a different operation and can be falsified by exact incoming-byte recovery; handle owner/root cause remains NOT ESTABLISHED.",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3.json",
+      "retainedAt": "generated/f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d.json",
+      "sha256": "f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d",
+      "bytes": 2778,
+      "restoration": "PASS",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494,
+      "restoration": "PASS",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720,
+      "restoration": "PASS",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111,
+      "restoration": "PASS",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f.png",
+      "retainedAt": "generated/dfc60e9585aacb2da4a9369ac8e20c0cdf834da9e8c36c8ae80184bad14cef61.png",
+      "sha256": "dfc60e9585aacb2da4a9369ac8e20c0cdf834da9e8c36c8ae80184bad14cef61",
+      "bytes": 786479,
+      "restoration": "PASS",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462.png",
+      "retainedAt": "generated/a0f8526f75694889b43e09dfcc5786f01c1da93ac5ce08fb0ad840865814b8ac.png",
+      "sha256": "a0f8526f75694889b43e09dfcc5786f01c1da93ac5ce08fb0ad840865814b8ac",
+      "bytes": 558442,
+      "restoration": "PASS",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16.png",
+      "retainedAt": "generated/a443c4e0c05cc69714f8e50755d82dd92baf316945c157d9de3461e4c46a8ba9.png",
+      "sha256": "a443c4e0c05cc69714f8e50755d82dd92baf316945c157d9de3461e4c46a8ba9",
+      "bytes": 289932,
+      "restoration": "PASS",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3.png",
+      "retainedAt": "generated/dad69bf6764d78625867627312ad22fa9996a2130e0903752758f1e4c9516b8d.png",
+      "sha256": "dad69bf6764d78625867627312ad22fa9996a2130e0903752758f1e4c9516b8d",
+      "bytes": 1158940,
+      "restoration": "PASS",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee.png",
+      "retainedAt": "generated/0b3d9363eff7a7aceb4ebebbd7be55d0a0c7470166de8c268693925b6862d833.png",
+      "sha256": "0b3d9363eff7a7aceb4ebebbd7be55d0a0c7470166de8c268693925b6862d833",
+      "bytes": 811902,
+      "restoration": "PASS",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49.png",
+      "retainedAt": "generated/25df80bb8ce889c36696557be6c55f961348eade8626bee44ceaec086b54e215.png",
+      "sha256": "25df80bb8ce889c36696557be6c55f961348eade8626bee44ceaec086b54e215",
+      "bytes": 430702,
+      "restoration": "PASS",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804.png",
+      "retainedAt": "generated/97aba780a89e380f2967eeb584e1de0ecf52c88ccc86e3f84b2298ee437b0dc3.png",
+      "sha256": "97aba780a89e380f2967eeb584e1de0ecf52c88ccc86e3f84b2298ee437b0dc3",
+      "bytes": 1296558,
+      "restoration": "PASS",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4.png",
+      "retainedAt": "generated/c502a05885399ba02d76797a432cae1b5b47151a267efd37dc3976313b6878d7.png",
+      "sha256": "c502a05885399ba02d76797a432cae1b5b47151a267efd37dc3976313b6878d7",
+      "bytes": 890288,
+      "restoration": "PASS",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e.png",
+      "retainedAt": "generated/93905f796d4595530359e2b850dbe39b9fd52496da74be92f77ff636cf543fe5.png",
+      "sha256": "93905f796d4595530359e2b850dbe39b9fd52496da74be92f77ff636cf543fe5",
+      "bytes": 527518,
+      "restoration": "PASS",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c.png",
+      "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+      "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204",
+      "bytes": 745402,
+      "restoration": "PASS",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96.png",
+      "retainedAt": "generated/b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468.png",
+      "sha256": "b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468",
+      "bytes": 545006,
+      "restoration": "PASS",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf.png",
+      "retainedAt": "generated/119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e.png",
+      "sha256": "119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e",
+      "bytes": 321819,
+      "restoration": "PASS",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494,
+      "restoration": "PASS",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720,
+      "restoration": "PASS",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111,
+      "restoration": "PASS",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d.png",
+      "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+      "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204",
+      "bytes": 745402,
+      "restoration": "PENDING"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe.png",
+      "retainedAt": "generated/8463e90af7d3bed3c7b790899b89ba21c866b36a526a546f1ecffd5a9869412e.png",
+      "sha256": "8463e90af7d3bed3c7b790899b89ba21c866b36a526a546f1ecffd5a9869412e",
+      "bytes": 892425,
+      "restoration": "PENDING"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e.png",
+      "retainedAt": "generated/a440d35af0b58d45a283cd51a831bcc2a28c30ed1674dca48dd4a9d22d30938c.png",
+      "sha256": "a440d35af0b58d45a283cd51a831bcc2a28c30ed1674dca48dd4a9d22d30938c",
+      "bytes": 70827,
+      "restoration": "PENDING"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494,
+      "restoration": "PENDING"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720,
+      "restoration": "PENDING"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "backup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111,
+      "restoration": "PENDING"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-1280.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-320.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-768.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-1280.png",
+      "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+      "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204",
+      "bytes": 745402
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-320.png",
+      "retainedAt": "generated/119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e.png",
+      "sha256": "119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e",
+      "bytes": 321819
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-768.png",
+      "retainedAt": "generated/b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468.png",
+      "sha256": "b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468",
+      "bytes": 545006
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-1280.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-320.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-768.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-open-1280.png",
+      "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+      "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204",
+      "bytes": 745402
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-results-1280.png",
+      "retainedAt": "generated/1121dbe93e1d71089d1fbc9fdeab30845c498863f749476bfa25f2af5ec431d3.png",
+      "sha256": "1121dbe93e1d71089d1fbc9fdeab30845c498863f749476bfa25f2af5ec431d3",
+      "bytes": 847525
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-1280.png",
+      "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+      "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36",
+      "bytes": 751494
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-320.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071",
+      "bytes": 280111
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-768.png",
+      "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+      "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185",
+      "bytes": 539720
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_female.png",
+      "retainedAt": "generated/d0c6727e4025591a1941c3d2a43cb41d8d05cc31776dc5f31df9e47ed4269aa3.png",
+      "sha256": "d0c6727e4025591a1941c3d2a43cb41d8d05cc31776dc5f31df9e47ed4269aa3",
+      "bytes": 97726
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_male.png",
+      "retainedAt": "generated/767040741cb6c86e5a99dbd5aa3c39f02586590d3989a9141e4b55b57052da9c.png",
+      "sha256": "767040741cb6c86e5a99dbd5aa3c39f02586590d3989a9141e4b55b57052da9c",
+      "bytes": 97428
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_female.png",
+      "retainedAt": "generated/b6325f206483fc478debb9d61c40bd24007b49c9fa7918d6fc4787357984b31b.png",
+      "sha256": "b6325f206483fc478debb9d61c40bd24007b49c9fa7918d6fc4787357984b31b",
+      "bytes": 97994
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_male.png",
+      "retainedAt": "generated/de0d43cf8a4d1d6f9dec33456cbfbd707e99e984cbda377c4280ea3c8ec99a59.png",
+      "sha256": "de0d43cf8a4d1d6f9dec33456cbfbd707e99e984cbda377c4280ea3c8ec99a59",
+      "bytes": 98183
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_female.png",
+      "retainedAt": "generated/fba37fc5a475008a7efc7c9066ad6409f61eb39ccda7e85b0c534f01da2c1da5.png",
+      "sha256": "fba37fc5a475008a7efc7c9066ad6409f61eb39ccda7e85b0c534f01da2c1da5",
+      "bytes": 99000
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_male.png",
+      "retainedAt": "generated/49ea1d5fe456dc498d5d651783766b1528cc032c69c847b0a5ebef8878f19c1c.png",
+      "sha256": "49ea1d5fe456dc498d5d651783766b1528cc032c69c847b0a5ebef8878f19c1c",
+      "bytes": 99454
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_female.png",
+      "retainedAt": "generated/3d4c681a33ca41b8301a77db2f4c69eb135fb811b7221ed243fabeec22fbdce7.png",
+      "sha256": "3d4c681a33ca41b8301a77db2f4c69eb135fb811b7221ed243fabeec22fbdce7",
+      "bytes": 99330
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_male.png",
+      "retainedAt": "generated/39ff177d1e8749f6d11fbf8fb994ee87b8e4c3e336d70bad5f3373e27b88c3ad.png",
+      "sha256": "39ff177d1e8749f6d11fbf8fb994ee87b8e4c3e336d70bad5f3373e27b88c3ad",
+      "bytes": 98608
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_female.png",
+      "retainedAt": "generated/1227a76e89fd763c5fb99db410d466714ca1a5921e87b028abc0d1cd3795e779.png",
+      "sha256": "1227a76e89fd763c5fb99db410d466714ca1a5921e87b028abc0d1cd3795e779",
+      "bytes": 98979
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_male.png",
+      "retainedAt": "generated/79af29780e4f7bb483851712bf2f75fbefcbe773730443a90b337575c632ed70.png",
+      "sha256": "79af29780e4f7bb483851712bf2f75fbefcbe773730443a90b337575c632ed70",
+      "bytes": 98808
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_female.png",
+      "retainedAt": "generated/8928b30a68028fa03e631d3b34f0bf11081e78c1a88d52315d62c544f3a04319.png",
+      "sha256": "8928b30a68028fa03e631d3b34f0bf11081e78c1a88d52315d62c544f3a04319",
+      "bytes": 97925
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_male.png",
+      "retainedAt": "generated/5f4cbeaf97e7453b0717fbfc1b60e57bacaaaf1f3198ed7990d35a619fa0009d.png",
+      "sha256": "5f4cbeaf97e7453b0717fbfc1b60e57bacaaaf1f3198ed7990d35a619fa0009d",
+      "bytes": 98468
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-1280.png",
+      "retainedAt": "generated/d952fbe0ca41d328e73a069e76aac6d144a2fe1d868255e816510bcb1e416739.png",
+      "sha256": "d952fbe0ca41d328e73a069e76aac6d144a2fe1d868255e816510bcb1e416739",
+      "bytes": 827766
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-320.png",
+      "retainedAt": "generated/717a6925263d70b321b2808c651919ffe371b3dd55d2f45b96f3978c639924df.png",
+      "sha256": "717a6925263d70b321b2808c651919ffe371b3dd55d2f45b96f3978c639924df",
+      "bytes": 318413
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-768.png",
+      "retainedAt": "generated/c31e6f563a907f6fe6dbe59884f7ae3e628c2e758b5f75875960714c4a5be549.png",
+      "sha256": "c31e6f563a907f6fe6dbe59884f7ae3e628c2e758b5f75875960714c4a5be549",
+      "bytes": 603891
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-1280.png",
+      "retainedAt": "generated/cd8fe0ddff2a37c86b6b53411eff04aca1e08ae050d4421fe3ab581cc2346971.png",
+      "sha256": "cd8fe0ddff2a37c86b6b53411eff04aca1e08ae050d4421fe3ab581cc2346971",
+      "bytes": 1382985
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-320.png",
+      "retainedAt": "generated/21ba1c55403f33f204cab74ef86a7429050cea009f301dd50750e604eff1570e.png",
+      "sha256": "21ba1c55403f33f204cab74ef86a7429050cea009f301dd50750e604eff1570e",
+      "bytes": 556807
+    }
+  ],
+  "status": "FAIL",
+  "exitCode": 1,
+  "failure": "Error: Command failed: powershell.exe -NoProfile -Command $ErrorActionPreference='Stop'\nCopy-Item -LiteralPath 'C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d.png' -Destination 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.m10a-t01-recovery-m9-ready.png'\n[System.IO.File]::Replace('C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.m10a-t01-recovery-m9-ready.png','C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\m9-ready.png','C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\atomic-replaced-m9-ready.png')\nException calling \"Replace\" with \"3\" argument(s): \"The process cannot access the file because it is being used by anoth\r\ner process.\"\r\nAt line:3 char:1\r\n+ [System.IO.File]::Replace('C:\\Users\\user\\Documents\\GitHub\\casino-blac ...\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : IOException\r\n \r\n",
+  "end": "2026-10-04 10:34:53 +08:00"
+}

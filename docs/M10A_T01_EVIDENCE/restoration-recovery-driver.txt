@@ -1,0 +1,22 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto');
+const dir=path.resolve('docs/M10A_T01_EVIDENCE'),failed=JSON.parse(fs.readFileSync(path.join(dir,'focused-browser.json'),'utf8'));
+const before=JSON.parse(fs.readFileSync(path.join(dir,'before.json'),'utf8')).files;
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),quote=s=>"'"+s.replaceAll("'","''")+"'";
+const stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const known=['docs/M10_T01_EVIDENCE/geometry.json',...['table','five-cards','four-leaves','text-fallback'].flatMap(n=>[1280,768,320].map(w=>`docs/M10_T01_EVIDENCE/${n}-${w}.png`)),...['scene-open','scene-dealt'].flatMap(n=>[1280,768,320].map(w=>`docs/M10_T01_EVIDENCE/repair09/${n}-${w}.png`)),...['m9-ready','m9-results','m9-tools','m9-table-1280','m9-table-768','m9-table-320'].map(n=>`docs/images/${n}.png`)];
+const record={start:stamp(),taskRepair:'1/10',scope:'Administrative evidence source repair only; no product or assertion change. First wrapper FAIL/exit1 retained separately from checked Chromium21/21 PASS/exit0.',hypothesis:'The reported user-mapped section blocks in-place truncation for this known geometry.json. A same-directory native atomic replacement uses a different operation and can be falsified by exact incoming-byte recovery; handle owner/root cause remains NOT ESTABLISHED.',knownOutputs:[],testScopedOutputs:[],status:'PENDING'};
+const save=()=>fs.writeFileSync(path.join(dir,'restoration-recovery.json'),JSON.stringify(record,null,2)+'\n');
+function preserve(name,bytes){const sha=hash(bytes),p=path.join(dir,'generated',sha+path.extname(name));if(!fs.existsSync(p))fs.writeFileSync(p,bytes);if(hash(fs.readFileSync(p))!==sha)throw Error('Preservation hash mismatch');return{retainedAt:path.relative(dir,p).replaceAll('\\','/'),sha256:sha,bytes:bytes.length};}
+for(const name of known){const entry=before.find(e=>e.path===name),backup=path.join(failed.temporaryOriginalBackup,entry.sha256+path.extname(name));if(hash(fs.readFileSync(backup))!==entry.sha256)throw Error('Incoming backup mismatch');const bytes=fs.readFileSync(name);record.knownOutputs.push({path:name,beforeSha256:entry.sha256,backup,...preserve(name,bytes),restoration:'PENDING'});}
+function collect(root){if(!fs.existsSync(root))return;for(const e of fs.readdirSync(root,{withFileTypes:true})){const n=path.join(root,e.name);if(e.isDirectory())collect(n);else if(e.name!=='.last-run.json')record.testScopedOutputs.push({path:n.replaceAll('\\','/'),...preserve(n,fs.readFileSync(n))});}}
+collect('test-results');save();
+try{for(const entry of record.knownOutputs){
+ const target=path.resolve(entry.path),replacement=path.join(path.dirname(target),'.m10a-t01-recovery-'+path.basename(target)),backup=path.join(failed.temporaryOriginalBackup,'atomic-replaced-'+path.basename(target));
+ if(!target.startsWith(process.cwd()+path.sep)||fs.existsSync(replacement)||fs.existsSync(backup))throw Error('Unsafe or occupied native recovery path');
+ if(hash(fs.readFileSync(target))!==entry.beforeSha256){
+  cp.execFileSync('powershell.exe',['-NoProfile','-Command',"$ErrorActionPreference='Stop'\nCopy-Item -LiteralPath "+quote(entry.backup)+" -Destination "+quote(replacement)+"\n[System.IO.File]::Replace("+quote(replacement)+","+quote(target)+","+quote(backup)+")"],{stdio:['ignore','pipe','pipe']});
+  if(hash(fs.readFileSync(backup))!==entry.sha256)throw Error('Generated atomic backup mismatch');
+ }
+ entry.restoredSha256=hash(fs.readFileSync(target));if(entry.restoredSha256!==entry.beforeSha256)throw Error('Incoming recovery mismatch');entry.restoration='PASS';save();
+}record.status='PASS';record.exitCode=0;}catch(e){record.status='FAIL';record.exitCode=1;record.failure=String(e);console.error(e);}
+record.end=stamp();save();console.log(JSON.stringify({status:record.status,exitCode:record.exitCode,knownOutputs:record.knownOutputs.length,restored:record.knownOutputs.filter(e=>e.restoration==='PASS').length,testScopedOutputs:record.testScopedOutputs.length,end:record.end}));process.exitCode=record.exitCode;

@@ -1,0 +1,1322 @@
+{
+  "timestamp": "2026-10-04 11:01:59 +08:00",
+  "status": "PASS",
+  "scope": "Task diff/scope and changed/new text/log records reviewed. Pattern inspection is bounded; no credentials/customer/former-employer records or raw private session history are introduced. Screenshot sources are deterministic public e2e fixtures;24 listed visuals actually inspected, with separate preservation receipts for other controlled test captures.",
+  "protectedCount": 757,
+  "linksChecked": 271,
+  "plaintextRecordsInspected": 56,
+  "credentialPatternHits": 0,
+  "inspected": [
+    {
+      "path": "src/ui/App.tsx",
+      "sha256": "98a984727a6087f7169ececb361a39e34f744f35297412a7553447a06a7f96d4"
+    },
+    {
+      "path": "src/ui/Table.tsx",
+      "sha256": "429c1341bfcf30145581b9ed054b4c1034a9a2711959e29b114a48b1d5ff6a68"
+    },
+    {
+      "path": "src/ui/styles.css",
+      "sha256": "1cf532e9107271b5371bd0f608f8215d1b9cc9409feb341052adbaa205c44dc7"
+    },
+    {
+      "path": "tests/browser/m10.spec.ts",
+      "sha256": "969e4810bfa6e98a9846248d42c3aaa3d5ea5c541bc8ae843268bf8c6fca1ba0"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2ea34cf1a971f440941c5cfac0ae5284b740ea627755097ae871be16ef79a20e"
+    },
+    {
+      "path": "docs/PLAN.md",
+      "sha256": "9300e844939885d9664dc814a6924ae10896ca333016223d60a354f49c94fe50"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "47015bf6cd15cd179bd5ed192338b17a3ce367ea1f344d095f755ccd1f19a31a"
+    },
+    {
+      "path": "docs/DEVELOPMENT_LOG.md",
+      "sha256": "f680b63ec2ed616f919026eb973ffcf38fec92ea1681914cbdaf83cbff23ea43"
+    },
+    {
+      "path": "docs/LAB_MANUAL.md",
+      "sha256": "cd2500c9265b1ab7062e5773b2e38caa91b720ca7208a99be68e46a11e3f9e2e"
+    },
+    {
+      "path": "docs/M10A_PLANNING.md",
+      "sha256": "f51568731c05e737b6e69d603f3bb72f66544df6b0401a07a8c19220f22c19bf"
+    },
+    {
+      "path": "tests/m10/sceneFrame.test.tsx",
+      "sha256": "3dd27f0dd71fb58336bafa8fc04bd888eaf547cd5e79ffd091c20f7f89223e6f"
+    },
+    {
+      "path": "docs/M10A_T01.md",
+      "sha256": "711444560b243213466b4968a0b172bd0ec74fc66391701757a7fda2b6482962"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/administrative-review.json",
+      "sha256": "e0365cf82816e5cffcef3e7070198151563ea469200c353a8846142148bc664d"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/asset-audit.json",
+      "sha256": "bec5deb3264db454f18d8caa7564909e1549251584f31b1c6b32d3e5c7a67ab7"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/before.json",
+      "sha256": "a613b30a65f6ee7ab628ab332426e3ea0d153cfba3d33234ed556ad9c3dd130f"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/contrast-driver-first-failure.txt",
+      "sha256": "5bf68fab6ee13c8799e183be24d0fe13b83524e30ca6c48ed05af5d24f3f864a"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/contrast-driver.txt",
+      "sha256": "516ef1ced8b06aa591f0d98a075360abe94ca2c35644c4e8732cf8093153ba36"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/contrast-first-failure.json",
+      "sha256": "c585cfd500aa48d8a0cd9dcdafa7087280b973ffacdf1e3bd006922268ca8217"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/contrast.json",
+      "sha256": "277a2975739bc78ab7d210a4bcc2f20510f3c3beff0f6465ce33812fac2f01da"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/documentation-bookkeeping-failure.json",
+      "sha256": "d2ee0cb5c6e98d83aa9612b7744067ab3a62e9cea33c20c4631db9ddface0a7e"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/documentation-writer-first-failure.txt",
+      "sha256": "63ee87951743b713c5755bd6eb393b18b37f40f1dd6a595951ba7a5d30612367"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/executed-version.json",
+      "sha256": "78c2487ef313fce2faa967f78862d0bc536f78845e060bda2270d7d254a91e84"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/files.json",
+      "sha256": "e336dc80a353545fe58e4c3d21b15a858524957e0e672ac2087298fb9bbf459a"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/final-documentation.json",
+      "sha256": "d4be3767af53bad4ffdc13775782d318a8f768330c26e0d43a24980cc0964b93"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/final-documentation.log.gz",
+      "sha256": "ceb0742ce6a63d18d5d223d106fc365a45729f212c71403a8d6074a8dac7282d"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/final-unified.json",
+      "sha256": "9782261052ab3f7591eceea085a0759c1be70f3517b70b86905f8beb98e00626"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/final-unified.log.gz",
+      "sha256": "1ee0956c5b7f8eb5dc1bcc7fbebac4ea6239dfebc6c8c4914b654fd38b248d82"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/focused-browser.json",
+      "sha256": "40f18d10d4fa271e47fb5da5db2a0cdb59dd98df2d2b8e46808d9e5b49d2ca46"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/focused-browser.log.gz",
+      "sha256": "17530e60157252e0ae27a338db9e8f67d82ecf1dcf6a88e9a066decc57d2959d"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/focused-unit.json",
+      "sha256": "5e3523f4eaa210f29cfa0b2f352a2720fb028fa7940f968cdcce0a778f215414"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/focused-unit.log.gz",
+      "sha256": "ed7a408450889939f5fdae342658a4bd1fc3dde709cff86015b4e04c7c25e1bd"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/full-chromium.json",
+      "sha256": "a4540362068975b4aaddc39852069fc0b8e2382b5646c7744b6c2c167001eb8c"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/full-chromium.log.gz",
+      "sha256": "69ae164f6de0a1a58b41054e5a7674ff41ce8176421c264325dc306cc889666a"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/full-vitest.json",
+      "sha256": "1a4813a983b873bb849be433858cb281f2af4a682417ec5d8f2c503c30888640"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/full-vitest.log.gz",
+      "sha256": "b2102b40cc3121a0a15e1d96d3bf85a58cf931e209f490856ec4beace1474cfa"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/generated/f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d.json",
+      "sha256": "f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/independent-preservation.json",
+      "sha256": "90c6aa670136309f7192745800157889b0db5927e8415259b83ccdbebe8b9533"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/independent-preservation.log.gz",
+      "sha256": "4edbe87c69fa061bba9a0ff9265dbc0eb87aaf41e47d963d71840645ff08bb8b"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/lint.json",
+      "sha256": "3b48dc8f2652f77f562b1a33638a02af55023677dd169a8aedfa4f3433371e60"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/lint.log.gz",
+      "sha256": "20367bf5b8fdf6adf93fb809c2497ee83ccb10a2a70f3fb5ccb11a7553f97068"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/log-archive.json",
+      "sha256": "fedc884ec4335f3e40674539e65519e2e3bbd6c30e6419144e5e5bdfa11960f9"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/protected.json",
+      "sha256": "60d7b20b08839073d6d5a1f4fa715565910c76e2ed03aec7ddb968241bc697ee"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/README.md",
+      "sha256": "20fa5c28c27904d73b837b65bdf107afac7b4aee647656d7874dc2cd94eaded9"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/restoration-native-recovery.json",
+      "sha256": "221f42c586235bbe9aeac219f96ba07b664f35f6d91070ff0576451bb675db41"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/restoration-recovery-driver.txt",
+      "sha256": "17370b90ad8a39bd240fb739e605d1c96cf4e640e8bae90f16ffb64160c76d6a"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/restoration-recovery.json",
+      "sha256": "e905a7e59b573e4ff7e6da5406013ea7f633f0d9ad210dd9c5bda6f3e005b546"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/review-driver.txt",
+      "sha256": "e2fcfe9543ac9787da2ced0eae5e2e95f21d0bf1fb1e82e33968b35afd602469"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/typecheck.json",
+      "sha256": "f34c83550892e69c5dadcce519ffc69a76d2656ca43c85452a697236350acef7"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/typecheck.log.gz",
+      "sha256": "cbae128ff2fc710e4493513d902e2ad1561726a308517d2552f3c62bf510e449"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/updated-documentation.json",
+      "sha256": "2e9ddf47caf53b9c24daeabbf8bd2879d669294ef87400c2b84f5ddaf8289f29"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/updated-documentation.log.gz",
+      "sha256": "0f8854a6479ea4e47728f4e988f9e6ce794f1c8b2b355b1f89f091ad1ecb5c0d"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/verification-runner-first-failure.txt",
+      "sha256": "b3e419c16bf2f55dc456f5fe70d58a44fb38039f1cbaabbe91baf5b28538cc9a"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/verification-runner.txt",
+      "sha256": "27b76a61ac1272aa327b6fabbb39a2e43a9d82695e1a9c8033228e89890b714e"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/visual-review.json",
+      "sha256": "bb6dbbda0bd915b49d26ab862c3a29f87781ac0094c6e3d54a80e58c17155d76"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/zoom-driver.txt",
+      "sha256": "0222162b96dfcf251ead608da0e8ad66da34847e6dab6dc1c576bf7ee5b4c7a9"
+    },
+    {
+      "path": "docs/M10A_T01_EVIDENCE/zoom200.json",
+      "sha256": "3c04197bfe5293d5805eec16ecd44246a677a00c5c3651d0518b6860e774cef5"
+    }
+  ],
+  "links": [
+    {
+      "file": "README.md",
+      "ref": "docs/M10A_T01.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10A_PLANNING.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/DESIGN.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/UX_UI.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10_T01.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10_T01_RECOVERY.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10_T01.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/DESIGN.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/DESIGN.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/SPEC.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PLAN.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10_PLANNING.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_INDEPENDENT_REVIEW.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_CONTRACT.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_ASSET_AUDIT.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_ASSET_PIPELINE.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_EVIDENCE.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_SCREENSHOTS.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_INDEPENDENT_REVIEW.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/RA1_CONTRACT.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/RA1_MAPPING.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/RA1_EVIDENCE.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M10_T01_EVIDENCE/table-1280.png"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M9_EVIDENCE.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_MAPPING.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_PRESERVATION.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/RULES.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/SPEC.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/DESIGN.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/UX_UI.md"
+    },
+    {
+      "file": "README.md",
+      "ref": "docs/PORTFOLIO.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "SPEC.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "UX_UI.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_T01.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_T01.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_T01_RECOVERY.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_T01.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "SPEC.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_PLANNING.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M10_PLANNING.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "PA1_INDEPENDENT_REVIEW.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "PA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "PA1_ASSET_AUDIT.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "RA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "RA1_MAPPING.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "RA1_EVIDENCE.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M9_EVIDENCE.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/PLAN.md",
+      "ref": "M9_CONTRACT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_T01_EVIDENCE/restoration-native-recovery.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_EVIDENCE/administrative-final.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair11/final-verify.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair09/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_PLANNING_REPAIR03_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_FILES.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/stage-G.log"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/stage-G.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/canonical-before.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/canonical-after.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/visual-review.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/historical-m9-restoration.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/diagnostic-pngs.zip"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_EVIDENCE/repair07/cleanup.json"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_RECOVERY.md#m10-t01-repair-710--immutable-pa1-evidence-harness"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_RECOVERY.md#windows-file-open-diagnostic-2026-10-03"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_RECOVERY.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_PLANNING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "SPEC.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PLAN.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_PLANNING_REPAIR02_VERIFY.log.gz"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_PLANNING_VERIFY.log.gz"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_INDEPENDENT_REVIEW.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_INDEPENDENT_REVIEW/README.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_PRESERVATION.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_MAPPING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_SCREENSHOTS.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "PA1_ASSET_AUDIT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "RA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "RA1_MAPPING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "RA1_EVIDENCE.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M9_EVIDENCE.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "DEVELOPMENT_LOG.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "REPLAY.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "AUDIT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_MAPPING.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M8_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M9_CONTRACT.md"
+    },
+    {
+      "file": "docs/STATE.md",
+      "ref": "M10_T01_FILES.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "PA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "PA1_PRESERVATION.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "PA1_MAPPING.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "PA1_SCREENSHOTS.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "PA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "RA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "RA1_MAPPING.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "RA1_EVIDENCE.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M9_EVIDENCE.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M9_CONTRACT.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/stage-G.log"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/stage-G.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/canonical-before.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/canonical-after.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/visual-review.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/historical-m9-restoration.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/diagnostic-pngs.zip"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair07/cleanup.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_FILES.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_FILES.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_PLANNING_REPAIR03_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair09/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair09/administrative-final.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair09/git-final.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair11/final-verify.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10_T01_EVIDENCE/repair11/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_EVIDENCE/administrative-final.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_T01_EVIDENCE/restoration-native-recovery.json"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PLAN.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M10_PLANNING.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_INDEPENDENT_REVIEW.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_PRESERVATION.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_MAPPING.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_SCREENSHOTS.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "RA1_CONTRACT.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "RA1_MAPPING.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "RA1_EVIDENCE.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M9_EVIDENCE.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M8_VISUAL_CHECKLIST.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M8_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PORTFOLIO.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M8_HARNESS_STABILITY.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M9_MAPPING.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M9_EVIDENCE.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PORTFOLIO.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M9_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "RA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_MAPPING.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "PA1_REVIEW_HANDOFF.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M10_T01_RECOVERY.md"
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/M10A_PLANNING.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/M10A_PLANNING.md",
+      "ref": "M10A_T01.md"
+    },
+    {
+      "file": "docs/M10A_PLANNING.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/M10A_PLANNING.md",
+      "ref": "UX_UI.md"
+    },
+    {
+      "file": "docs/M10A_PLANNING.md",
+      "ref": "SPEC.md"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/before.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "DESIGN.md"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "UX_UI.md"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "SPEC.md"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_PLANNING.md"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/focused-unit.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/typecheck.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/lint.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/focused-browser.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/full-vitest.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/full-chromium.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/independent-preservation.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/final-unified.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/visual-review.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/zoom200.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/contrast.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/asset-audit.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/executed-version.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/protected.json"
+    },
+    {
+      "file": "docs/M10A_T01.md",
+      "ref": "M10A_T01_EVIDENCE/README.md"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "../M10A_T01.md"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "before.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "focused-unit.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "focused-unit.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "focused-browser.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "focused-browser.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "typecheck.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "typecheck.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "lint.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "lint.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "full-vitest.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "full-vitest.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "full-chromium.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "full-chromium.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "independent-preservation.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "independent-preservation.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "final-unified.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "final-unified.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "verification-runner-first-failure.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "restoration-recovery-driver.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "restoration-recovery.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "restoration-native-recovery.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "verification-runner.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast-first-failure.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast-driver-first-failure.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast-sample-first.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast-driver.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "contrast-sample-1280.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "zoom-driver.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "zoom200.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "visual-review.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "asset-audit.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "executed-version.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "protected.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "administrative-review.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "log-archive.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "files.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "generated/1121dbe93e1d71089d1fbc9fdeab30845c498863f749476bfa25f2af5ec431d3.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "documentation-bookkeeping-failure.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "documentation-writer-first-failure.txt"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "updated-documentation.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "updated-documentation.log.gz"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "final-documentation.json"
+    },
+    {
+      "file": "docs/M10A_T01_EVIDENCE/README.md",
+      "ref": "final-documentation.log.gz"
+    }
+  ],
+  "review": "Same-session technical scope review PASS; genuinely fresh independent review NOT RUN; human visual acceptance NOT RUN; deployment NOT RUN"
+}

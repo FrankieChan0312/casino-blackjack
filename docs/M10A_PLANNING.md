@@ -1,5 +1,11 @@
 # M10A — Casino Game UI Recomposition planning
 
+## Current owner acceptance and T01 execution
+
+Owner explicitly records **M10A PLANNING HUMAN ACCEPTANCE: ACCEPTED** for planning544dc788bc9a7f635187a3cc0a002055d1a76d2e / final6e460db336a5cc94d03251691af772cfe13765dd. M10A-PLAN2/10 CLOSED. Only M10A-T01 scene shell implementation/publication is authorized: [execution contract](M10A_T01.md). All later M10A and M10-T02/M10-T04 implementation remain NOT STARTED. The planning-run paragraphs/initial counters below retain their historical scope; later actual results live in STATE/DEVELOPMENT_LOG.
+
+M10A-T01 is now IMPLEMENTED / VERIFIED: focused8/46 +21, full79/1050 +68, independent M1–M8 and final verify.ps1 PASS/exit0. Scene shell only, repairs3/10 (tools3/product0). [Execution and inspected evidence](M10A_T01.md). Human T01 visual acceptance/fresh independent review/deployment NOT RUN. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**. The original NOT STARTED table below is the planning-run record; current task state is the PLAN row and newest STATE entry.
+
 Task: **M10A-PLAN**, owner-authorized planning / DESIGN correction only. Starting baseline: main / `0c943b088740d291e9604ebe09ef4a5b3363e271`, clean, live origin/main parity0/0. Recommended model **GPT Sol 6.1**, effort **High**; current client metadata supports gpt-6.1-sol/High, actual runtime model/effort **NOT VERIFIED / NOT VERIFIED**. Sequential work; no delegation authorized. Implementation, owner planning acceptance, fresh independent review and deployment have not occurred in this task.
 
 ## Problem and owner visual finding

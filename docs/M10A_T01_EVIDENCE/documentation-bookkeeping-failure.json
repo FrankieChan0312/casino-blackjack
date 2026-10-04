@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-04 11:00:17 +08:00",
+  "command": "node .git/m10a-t01-docs.cjs",
+  "status": "FAIL",
+  "exitCode": 1,
+  "failure": "SyntaxError: missing ) after argument list at line22; nested Markdown backticks ended the JavaScript template literal",
+  "impact": "Parse failed before execution; no product or document file written. Documentation test5/13 executed before this document update passed0 and is retained as that version, not proof of updated documents.",
+  "correction": "Remove the four internal Markdown backticks from the document-only writer, then parse-check and write; rerun affected checks for genuinely changed docs",
+  "repairCount": "3/10 unchanged: documentation-only bookkeeping explicitly excluded by owner instruction",
+  "originalSource": "documentation-writer-first-failure.txt"
+}

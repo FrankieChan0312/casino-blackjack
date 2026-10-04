@@ -1,0 +1,331 @@
+{
+  "phase": "final-unified",
+  "kind": "unified",
+  "start": "2026-10-04 10:53:44 +08:00",
+  "end": "2026-10-04 10:58:52 +08:00",
+  "command": "& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE",
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-final-unified-O4NHfF",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": {
+        "retainedAt": "generated/f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d.json",
+        "bytes": 2778,
+        "sha256": "f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": {
+        "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+        "bytes": 751494,
+        "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": {
+        "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+        "bytes": 539720,
+        "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": {
+        "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+        "bytes": 280111,
+        "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": {
+        "retainedAt": "generated/dfc60e9585aacb2da4a9369ac8e20c0cdf834da9e8c36c8ae80184bad14cef61.png",
+        "bytes": 786479,
+        "sha256": "dfc60e9585aacb2da4a9369ac8e20c0cdf834da9e8c36c8ae80184bad14cef61"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": {
+        "retainedAt": "generated/a0f8526f75694889b43e09dfcc5786f01c1da93ac5ce08fb0ad840865814b8ac.png",
+        "bytes": 558442,
+        "sha256": "a0f8526f75694889b43e09dfcc5786f01c1da93ac5ce08fb0ad840865814b8ac"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": {
+        "retainedAt": "generated/a443c4e0c05cc69714f8e50755d82dd92baf316945c157d9de3461e4c46a8ba9.png",
+        "bytes": 289932,
+        "sha256": "a443c4e0c05cc69714f8e50755d82dd92baf316945c157d9de3461e4c46a8ba9"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": {
+        "retainedAt": "generated/dad69bf6764d78625867627312ad22fa9996a2130e0903752758f1e4c9516b8d.png",
+        "bytes": 1158940,
+        "sha256": "dad69bf6764d78625867627312ad22fa9996a2130e0903752758f1e4c9516b8d"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": {
+        "retainedAt": "generated/0b3d9363eff7a7aceb4ebebbd7be55d0a0c7470166de8c268693925b6862d833.png",
+        "bytes": 811902,
+        "sha256": "0b3d9363eff7a7aceb4ebebbd7be55d0a0c7470166de8c268693925b6862d833"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": {
+        "retainedAt": "generated/25df80bb8ce889c36696557be6c55f961348eade8626bee44ceaec086b54e215.png",
+        "bytes": 430702,
+        "sha256": "25df80bb8ce889c36696557be6c55f961348eade8626bee44ceaec086b54e215"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": {
+        "retainedAt": "generated/97aba780a89e380f2967eeb584e1de0ecf52c88ccc86e3f84b2298ee437b0dc3.png",
+        "bytes": 1296558,
+        "sha256": "97aba780a89e380f2967eeb584e1de0ecf52c88ccc86e3f84b2298ee437b0dc3"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": {
+        "retainedAt": "generated/c502a05885399ba02d76797a432cae1b5b47151a267efd37dc3976313b6878d7.png",
+        "bytes": 890288,
+        "sha256": "c502a05885399ba02d76797a432cae1b5b47151a267efd37dc3976313b6878d7"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": {
+        "retainedAt": "generated/93905f796d4595530359e2b850dbe39b9fd52496da74be92f77ff636cf543fe5.png",
+        "bytes": 527518,
+        "sha256": "93905f796d4595530359e2b850dbe39b9fd52496da74be92f77ff636cf543fe5"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": {
+        "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+        "bytes": 745402,
+        "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": {
+        "retainedAt": "generated/b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468.png",
+        "bytes": 545006,
+        "sha256": "b5bc0946b42d42870835597ecd6ef7b0bb9a9e6539db407212e31ef6449e2468"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": {
+        "retainedAt": "generated/119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e.png",
+        "bytes": 321819,
+        "sha256": "119b4193476c930010f0999c5e965ca79e00b7354052a9739361c5217ef1b20e"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": {
+        "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+        "bytes": 751494,
+        "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": {
+        "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+        "bytes": 539720,
+        "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": {
+        "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+        "bytes": 280111,
+        "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071"
+      },
+      "restoration": "PASS",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": {
+        "retainedAt": "generated/373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204.png",
+        "bytes": 745402,
+        "sha256": "373090264cf7adcfb58ddf078eb68a789c57abed7f49d65938e18cc998aee204"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": {
+        "retainedAt": "generated/8463e90af7d3bed3c7b790899b89ba21c866b36a526a546f1ecffd5a9869412e.png",
+        "bytes": 892425,
+        "sha256": "8463e90af7d3bed3c7b790899b89ba21c866b36a526a546f1ecffd5a9869412e"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": {
+        "retainedAt": "generated/a440d35af0b58d45a283cd51a831bcc2a28c30ed1674dca48dd4a9d22d30938c.png",
+        "bytes": 70827,
+        "sha256": "a440d35af0b58d45a283cd51a831bcc2a28c30ed1674dca48dd4a9d22d30938c"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": {
+        "retainedAt": "generated/7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36.png",
+        "bytes": 751494,
+        "sha256": "7d74403c72a558a1db468e06ebbe69110ae12d536d5744ac023f328c042afd36"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": {
+        "retainedAt": "generated/3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185.png",
+        "bytes": 539720,
+        "sha256": "3f285b6dec6aa9db057a9d2b5955258c90027f0b34572a40dce6799b16021185"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": {
+        "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+        "bytes": 280111,
+        "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071"
+      },
+      "restoration": "PASS",
+      "method": "Native in-place write, proven on the six known M9 outputs",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/desktop-table.png",
+      "retainedAt": "generated/20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1.png",
+      "bytes": 483197,
+      "sha256": "20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1"
+    },
+    {
+      "path": "test-results/mobile-table.png",
+      "retainedAt": "generated/f8f81e8e2ab72b6d5523d07a061dcc660cd64ce2017519770085a14276d2d3b8.png",
+      "bytes": 217337,
+      "sha256": "f8f81e8e2ab72b6d5523d07a061dcc660cd64ce2017519770085a14276d2d3b8"
+    }
+  ],
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-04 10:59:08 +08:00"
+}

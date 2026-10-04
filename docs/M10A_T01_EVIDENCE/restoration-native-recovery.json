@@ -1,0 +1,61 @@
+{
+  "start": "2026-10-04 10:36:35 +08:00",
+  "taskRepair": "2/10",
+  "hypothesis": "Atomic replacement recovered19 known outputs but failed with sharing violation for m9-ready.png. A non-mutating ReadWrite/shared-access probe and an in-place native write exercise different file operations; exact six incoming hash matches falsify or support recovery. Handle owner/root cause NOT ESTABLISHED.",
+  "scope": "Six explicitly known M9 screenshot outputs, fresh bytes already retained before recovery; no product test rerun.",
+  "files": [
+    {
+      "path": "docs/images/m9-ready.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "nonMutatingProbe": "PASS",
+      "method": "System.IO.File.WriteAllBytes",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "knownFinalRestored": 25,
+  "ownScratchRemoved": "Verified original hash; one owned file only",
+  "end": "2026-10-04 10:36:35 +08:00"
+}

@@ -1,4 +1,10 @@
-## M10A casino-game recomposition planning
+## M10A-T01 scene frame and composition shell
+
+The Player Mode table, Dealer, existing seats, local controls and exact credit values now share one continuous felt/rail scene. A compact header keeps the simulation disclaimer visible; character preferences and demo tools follow gameplay. [Task and scope](docs/M10A_T01.md), [screenshots and executed evidence](docs/M10A_T01_EVIDENCE/README.md).
+
+M10A planning is HUMAN ACCEPTED. T01 is IMPLEMENTED / VERIFIED:79 Vitest files/1050 tests,68 Chromium and independent preservation/final verify.ps1 PASS/exit0. Native200% browser zoom, keyboard focus and three viewport captures passed. T01 repairs3/10 (verification tools3; product0). Human visual acceptance and fresh independent review NOT RUN; deployment NOT RUN. Final seat units, local HUD, Dealer artwork and animation remain future work. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED. Earlier checkpoint descriptions below retain their publication state.
+
+## Historical M10A planning checkpoint
 
 M10A is a new documentation/design milestone for one table-centric Blackjack game scene: coherent seat units, a dominant lower-centre local HUD, an upper-centre Dealer reserve, meaningful felt markings, integrated controls and compact exact accounting. [Planning and task gates](docs/M10A_PLANNING.md), [composition design](docs/DESIGN.md), [interaction](docs/UX_UI.md). All M10A implementation tasks remain NOT STARTED, waiting for human planning acceptance; no product/artwork/dependency change or deployment.
 

@@ -47,13 +47,14 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
   }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
   return <main className="player-mode">
     <a className="skip-link" href="#player-decisions">Skip to your hand and actions</a>
+    <section className="game-scene" aria-label="Blackjack game scene">
     <header className="casino-header"><div><p className="eyebrow">An evening at the table</p><h1>Casino Blackjack</h1></div>
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
-    <p className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
-    {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
     <div className="table-scene">
     <Table view={view} lineup={lineup} />
-    <div id="player-decisions" tabIndex={-1} className="player-dock">
+    <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls">
+      <p id="player-scene-status" className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
+      {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />
       <section className="credits panel" aria-label="Your credits"><h2>Your simulation credits</h2><dl>
@@ -66,10 +67,13 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
     </div>
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>
+    </section>
+    <aside className="scene-support" aria-label="Table preferences and demo tools">
     <CharacterPicker selected={lineup.human} onSelect={id => setPresentation(current => ({ ...current,
       lineup: changeHumanCharacter(current.lineup,id) }))} />
     <details className="panel developer-tools"><summary>Developer / demo tools</summary>
       <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
     </details>
+    </aside>
   </main>;
 }

@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-10-04 11:01:56 +08:00",
+  "status": "PASS",
+  "scope": "Lossless archive of this task own completed logs only; raw whitespace/failed output bytes preserved without rewriting.",
+  "logs": [
+    {
+      "original": "final-documentation.log",
+      "retainedAt": "final-documentation.log.gz",
+      "originalBytes": 392,
+      "originalSha256": "d4b1bc6b0c3476aa4e209038b7c6b134b21500ef1843365407c00beb63d056d2",
+      "archiveBytes": 255,
+      "archiveSha256": "ceb0742ce6a63d18d5d223d106fc365a45729f212c71403a8d6074a8dac7282d",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "final-unified.log",
+      "retainedAt": "final-unified.log.gz",
+      "originalBytes": 37667,
+      "originalSha256": "b24d3d49be3fe24c73951c5d0e5c70bb29e61af2f4ad3ddd640763463c45ddf5",
+      "archiveBytes": 6312,
+      "archiveSha256": "1ee0956c5b7f8eb5dc1bcc7fbebac4ea6239dfebc6c8c4914b654fd38b248d82",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "focused-browser.log",
+      "retainedAt": "focused-browser.log.gz",
+      "originalBytes": 4781,
+      "originalSha256": "a72b08ebe516bbc0ecbb0262fa172b3300ac4ffca47e5236facf8e35e313953b",
+      "archiveBytes": 1756,
+      "archiveSha256": "17530e60157252e0ae27a338db9e8f67d82ecf1dcf6a88e9a066decc57d2959d",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "focused-unit.log",
+      "retainedAt": "focused-unit.log.gz",
+      "originalBytes": 777,
+      "originalSha256": "99de41ba7d159a62873605871a2ae5bb9cd9fae908ef8190c7ad4a06a780a15b",
+      "archiveBytes": 430,
+      "archiveSha256": "ed7a408450889939f5fdae342658a4bd1fc3dde709cff86015b4e04c7c25e1bd",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "full-chromium.log",
+      "retainedAt": "full-chromium.log.gz",
+      "originalBytes": 13356,
+      "originalSha256": "a1285bfe7c6432db2465b045646aa2be2f8e764db4f6004602e5d08b8d562004",
+      "archiveBytes": 4052,
+      "archiveSha256": "69ae164f6de0a1a58b41054e5a7674ff41ce8176421c264325dc306cc889666a",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "full-vitest.log",
+      "retainedAt": "full-vitest.log.gz",
+      "originalBytes": 461,
+      "originalSha256": "57d38a75f46fb5d4406e25576d031b95ad03ab492b4ce5d3c02d9c3745b56b9f",
+      "archiveBytes": 324,
+      "archiveSha256": "b2102b40cc3121a0a15e1d96d3bf85a58cf931e209f490856ec4beace1474cfa",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "independent-preservation.log",
+      "retainedAt": "independent-preservation.log.gz",
+      "originalBytes": 22945,
+      "originalSha256": "e3cbc899c819bacda8086243ba26904e54270ae1ed246920aa0b1d9017ea1af2",
+      "archiveBytes": 4253,
+      "archiveSha256": "4edbe87c69fa061bba9a0ff9265dbc0eb87aaf41e47d963d71840645ff08bb8b",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "lint.log",
+      "retainedAt": "lint.log.gz",
+      "originalBytes": 60,
+      "originalSha256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "archiveBytes": 77,
+      "archiveSha256": "20367bf5b8fdf6adf93fb809c2497ee83ccb10a2a70f3fb5ccb11a7553f97068",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "typecheck.log",
+      "retainedAt": "typecheck.log.gz",
+      "originalBytes": 52,
+      "originalSha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "archiveBytes": 72,
+      "archiveSha256": "cbae128ff2fc710e4493513d902e2ad1561726a308517d2552f3c62bf510e449",
+      "roundTrip": "PASS"
+    },
+    {
+      "original": "updated-documentation.log",
+      "retainedAt": "updated-documentation.log.gz",
+      "originalBytes": 392,
+      "originalSha256": "bfd83cf1d07e077a791b4df24580a096a5bc48fea880d7fc0322ad8a885cc496",
+      "archiveBytes": 257,
+      "archiveSha256": "0f8854a6479ea4e47728f4e988f9e6ce794f1c8b2b355b1f89f091ad1ecb5c0d",
+      "roundTrip": "PASS"
+    }
+  ]
+}

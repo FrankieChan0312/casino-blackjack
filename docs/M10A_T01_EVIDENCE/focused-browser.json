@@ -1,0 +1,28 @@
+{
+  "phase": "focused-browser",
+  "kind": "browser",
+  "start": "2026-10-04 10:32:11 +08:00",
+  "end": "2026-10-04 10:33:14 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10.spec.ts tests/browser/m9.spec.ts tests/browser/pa1.spec.ts; exit $LASTEXITCODE",
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "FAIL",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": {
+        "retainedAt": "generated/f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d.json",
+        "bytes": 2778,
+        "sha256": "f3d6daa857ef543d76485d4a42bedcb2a321f17ae6bd08be30cb11784696455d"
+      },
+      "restoration": "PENDING"
+    }
+  ],
+  "testScopedOutputs": [],
+  "administrativeExitCode": 1,
+  "administrativeFailure": "Error: Command failed: powershell.exe -NoProfile -Command $ErrorActionPreference='Stop'\n[System.IO.File]::WriteAllBytes('C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\geometry.json',[System.IO.File]::ReadAllBytes('C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-focused-browser-O3h9Ee\\b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3.json'))\nException calling \"WriteAllBytes\" with \"2\" argument(s): \"The requested operation cannot be performed on a file with a u\r\nser-mapped section open.\r\n\"\r\nAt line:2 char:1\r\n+ [System.IO.File]::WriteAllBytes('C:\\Users\\user\\Documents\\GitHub\\casin ...\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : IOException\r\n \r\n",
+  "collectionEnd": "2026-10-04 10:33:15 +08:00"
+}
