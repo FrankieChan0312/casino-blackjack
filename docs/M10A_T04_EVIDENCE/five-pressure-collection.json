@@ -1,0 +1,25 @@
+{
+  "method": "Supplementary collection of exact failed E09 test-scoped outputs before the next run; child FAIL/exit1 receipt is unchanged",
+  "outputs": [
+    {
+      "path": "test-results\\m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium\\error-context.md",
+      "retainedAt": "generated/3d34d1397b25de22e2f764fe63f9a51126453b5b660dbd7c3fd33c35ba7fec14.md.gz",
+      "sha256": "3d34d1397b25de22e2f764fe63f9a51126453b5b660dbd7c3fd33c35ba7fec14",
+      "bytes": 21252,
+      "encoding": "gzip",
+      "compressedSha256": "ea25d3cfb7f0acb403c513f4ba958b147ebef3d6867f98252be41de009250112"
+    },
+    {
+      "path": "test-results\\m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium\\test-failed-1.png",
+      "retainedAt": "generated/b7d217949090e092bc5cbbb943ab22fdef98732c51ad972ee952f7e849ef3a55.png",
+      "sha256": "b7d217949090e092bc5cbbb943ab22fdef98732c51ad972ee952f7e849ef3a55",
+      "bytes": 629165
+    },
+    {
+      "path": "test-results\\m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium\\trace.zip",
+      "retainedAt": "generated/a9044bbb5f897ff60c15bac6c99ba62466ddfb3180e310327f2c46d6097f8244.zip",
+      "sha256": "a9044bbb5f897ff60c15bac6c99ba62466ddfb3180e310327f2c46d6097f8244",
+      "bytes": 1739911
+    }
+  ]
+}

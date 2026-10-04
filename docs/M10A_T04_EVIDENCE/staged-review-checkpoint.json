@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-04 20:26:49 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "stagedPaths": 284,
+  "principalPaths": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M10A_T03.md",
+    "docs/M10A_T04.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "src/ui/DealerZone.tsx",
+    "src/ui/Table.tsx",
+    "src/ui/styles.css",
+    "tests/browser/m10.spec.ts",
+    "tests/m10/dealerZone.test.tsx"
+  ],
+  "rawEvidenceIndexHashes": 272,
+  "stagedWhitespace": "PASS / 0",
+  "protectedScope": "No domain/browser/controller/geometry/assets/canonical/dependency paths staged",
+  "fullDiff": ".git/m10a-t04-complete-staged.diff"
+}

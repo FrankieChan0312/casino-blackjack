@@ -437,3 +437,25 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .game-scene .local-player-hud .character-identity { flex-direction: row; text-align: left; }
   .player-mode .local-player-hud .hud-identity .wager-chip { font-size: .65rem; padding: 2px 6px; }
 }
+
+/* T04: one Dealer workstation on the retained character/card anchor. */
+.player-mode .game-scene .dealer-zone { border-bottom: 2px solid #b39659; border-radius: 28px 28px 18px 18px; background: linear-gradient(transparent, #143b2c 70%); padding-right: 8px; }
+.player-mode .game-scene .dealer-zone h2 { margin: 0 0 4px; }
+.player-mode .game-scene .dealer-zone .dealer-card-lane { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; }
+.player-mode .game-scene .dealer-zone .dealer-card-lane .cards { display: contents; }
+.player-mode .game-scene .dealer-zone .card-back { margin-left: 0; }
+.player-mode .game-scene .dealer-zone .card { animation: none; }
+.player-mode .game-scene .dealer-zone .dealer-total { font-size: .95rem; font-variant-numeric: tabular-nums; color: #ffe7a2; }
+.player-mode .game-scene .dealer-zone .dealer-state { font-size: .75rem; font-weight: 650; }
+.player-mode .game-scene .dealer-zone .dealer-shoe { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 4px; }
+.player-mode .game-scene .dealer-zone .dealer-shoe p { margin: 0; font-size: .65rem; color: #e7ebd5; }
+.player-mode .game-scene .dealer-zone .dealer-shoe p span { display: block; }
+.player-mode .game-scene .dealer-zone .shoe-placeholder { width: 28px; height: 32px; flex: 0 0 28px; border: 2px solid #d6c18b; border-radius: 4px 4px 8px 4px; background: repeating-linear-gradient(0deg, #25493d 0 3px, #426354 3px 5px); }
+.player-mode .game-scene .dealer-zone .table-inscription { position: static; translate: none; margin: 6px 0 4px; font-size: .6rem; letter-spacing: .07em; }
+.player-mode .game-scene .dealer-zone .table-inscription span { font-size: .55rem; letter-spacing: .04em; margin-top: 2px; }
+@media (min-width: 1101px) {
+  .player-mode .game-scene .dealer-zone:has(.cards .card:nth-child(4)) { position: relative; top: auto; left: auto; translate: none; margin: 0 auto calc(8px - max(228px, 14.25rem)); }
+}
+@media (max-width: 1100px) {
+  .player-mode .game-scene .dealer-zone { position: relative; top: auto; left: auto; translate: none; margin: -4px auto 8px; }
+}

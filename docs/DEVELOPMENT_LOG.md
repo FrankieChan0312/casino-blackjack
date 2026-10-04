@@ -1,3 +1,61 @@
+## M10A-T04 same-session review checkpoint
+
+2026-10-04 20:27:28 +08:00. Same-session full authored source/test/CSS/docs diff and all required24 Dealer/15 nativezoom images reviewed: PASS. Evidence raw-reference/image hashes validated; 49 raw logs/contexts/tool snapshots losslessly archived; 99 plaintext/archive records and173 trace text entries scanned,0 sensitive-pattern findings. 284 intended stage paths/272 evidence blobs match native unfiltered Git hashes; staged whitespace PASS/0.161 exact executed files unchanged,1826 protected incoming paths/1505 historical evidence unchanged, src/domain diff EMPTY. [Review](M10A_T04_EVIDENCE/precommit-review.json), [stage checkpoint](M10A_T04_EVIDENCE/staged-review-checkpoint.json), [lossless archives](M10A_T04_EVIDENCE/log-archive.json). Facts-only documentation/index closure checks follow before normal main publication.
+
+M10A-T04_IMPLEMENTED_VERIFIED, repairs5/10; T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED, historical4/10 unchanged. T04 owner acceptance PENDING; genuinely fresh independent review NOT RUN. M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED. Motion NOT INSTALLED, deployment NOT RUN.
+
+## M10A-T04 final technical checkpoint
+
+2026-10-04 20:25:46 +08:00. **M10A-T04_IMPLEMENTED_VERIFIED**; repairs **5/10**. Starting main/d6ce93ee458a4698f91ea389d4fce75b107a9a11, local=origin/main=live remote,0/0,CLEAN,untracked0 independently confirmed. **M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED** recorded before product changes; T03 historical4/10, T02 accepted8/10 and T01 accepted exceptional11/11 unchanged. T04 owner acceptance PENDING; fresh independent review NOT RUN, same-session source/test/visual review completed. Normal main/origin publication follows full scope/evidence review; deployment NOT RUN. [Task](M10A_T04.md), [evidence](M10A_T04_EVIDENCE/README.md).
+
+Focused UI **11files/78tests**, focused Chromium **29**, full Vitest **82files/1082tests**, full Chromium **76**, independent M1–M8 preservation, PA1 asset audit/reproduction, current PA1/RA1/M9/M10-T01/M10A-T01/T02/T03/T04 preservation and final **scripts/verify.ps1 PASS / checked exit0**. Baseline81/1071/73 plus one new11-case unit file/three browser cases explains counts; original assertions/thresholds/retries unchanged. 161 frozen executable/test/config hashes unchanged after verification.
+
+Dedicated DealerZone owns the unchanged temporary character, authoritative public cards, generic hidden back, visible/revealed total and status, existing3:2/S17 rules and static labelled6-deck shoe/deal origin. Existing public INTEGRITY_ERROR maps to Round interrupted locally. No Dealer logic/recomputed totals/new state/private identity/random selection/callbacks/timers. Manual Dealer remains unchanged. Future distinct avatar-derived formal/transparent180x220 silhouette, provenance/hash contract remains separate M10-T04 implementation; no art or identity chosen.
+
+Desktop1280x900/tablet768x1024/mobile320x720 initial/hidden/revealed/complete, real three-card Dealer23 Bust and isolated five-card public layout PASS. All24 final Dealer PNGs and15 nativezoom captures actually inspected; normal open/dealt before/final scene/character/remote/local/card/dock/form/Stand geometry exactly equal. Stand **883.359375px <=900**, hand-to-controls gap **6px**, Dealer180x220, guest portraits84x112/local cards100x132 retained. Only4plus public Dealer cards add necessary vertical footprint after subtracting the existing reserve; text200 and nativezoom allow normal vertical scrolling. Five-card layout fixture is explicitly isolated and is not claimed as the surrounding round's outcome.
+
+200% text PASS, genuine nativezoom2.0 PASS (1280x723 ->640x361 CSS viewport,DPR1.5 ->3,root16px/CSSzoom1 unchanged). Native Dealeridle/hidden/revealed3card and existing normal/five-card/Split/four-leaf local/focus/44px targets PASS.28 normal-text contrast checks>=4.5, minimum6.969612258115216:1, Dealer rules **8.35089319569114:1**, real focus5.505122929235555>=3 PASS. Bounded contrast evidence does not imply comprehensive accessibility certification. [Visual review](M10A_T04_EVIDENCE/visual-review.json).
+
+**1826 protected incoming paths /1505 historical evidence paths** match baseline raw SHA256. src/domain diff **EMPTY**; RNG/shoe/cards/Dealer strategy/accounting/bankroll/replay/digest/journal/computer strategy/turn/settlement/controller unchanged. PA1 canonical PNGs/source hashes/provenance/canonical evidence unchanged;12 transparent240x320 production PNGs reproduced byte-for-byte. Accepted T01/T02/T03 CSS and all incoming browser assertions retained as exact normalized prefixes; SeatUnit/LocalPlayerHud/Actions/App/geometry unchanged. [Protection](M10A_T04_EVIDENCE/protection.json).
+
+M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Formal Dealer artwork/identity policy/new animations NOT IMPLEMENTED; Motion NOT INSTALLED; deployment NOT RUN. All failed attempts and5-cycle ledger retained.
+
+## M10A-T04 focused gate — 2026-10-04 20:10:34 +08:00
+
+Repair5/10 final focused UI **11files/78tests PASS**, typecheck/lint PASS, focused Chromium **29tests PASS**, all checked exit0. All24 final Dealer PNGs and15 genuine nativezoom2.0 captures inspected: PASS, owner acceptance PENDING, fresh independent review NOT RUN. Normal before/after geometry identical, Stand883.359375px and6px hand-to-controls gap retained.28 sampled normal-text checks>=4.5 PASS, rules8.35089319569114:1; keyboard/focus PASS. [Visual review](M10A_T04_EVIDENCE/visual-review.json). Full suites/preservation/unified **NOT RUN** at this checkpoint; executable freeze and final gates follow. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED, historical4/10 unchanged.
+
+## M10A-T04 repair5/10 — avoid counting accepted Dealer reserve twice
+
+2026-10-04 19:59:58 +08:00. Repair4 focused Chromium29 PASS/exit0, but actual five-card desktop visual review FAIL: full normal-flow Dealer height is added on top of the accepted228px/14.25rem reserve, creating excess vertical space and pushing the local HUD down unnecessarily. Hypothesis: For only4plus public cards subtract the already accepted desktop Dealer reserve in normal-flow margin; retain just actual added card footprint. Normal1-3-card dimensions/seat/local/controls remain identical. Rerun focused checks and inspect fresh actual screenshots. Cumulative **5/10**. Original failure evidence retained. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical4/10 unchanged, T02 8/10 and T01 exceptional11/11 unchanged. T04 owner acceptance PENDING, fresh independent review NOT RUN; deployment NOT RUN.
+
+## M10A-T04 repair4/10 — large public Dealer hand footprint
+
+2026-10-04 19:56:48 +08:00. New isolated five-card Dealer check FAIL/exit1: wrapped Dealer region intersects Seat3 at normal desktop. Review also finds that the safe integrity phase must identify interruption locally instead of relying on the hidden-card status alone. Hypothesis: Keep normal1-3-card accepted desktop footprint exactly unchanged; let only4plus public Dealer cards reserve real normal-flow height before the unchanged seat arc. Use the existing public INTEGRITY_ERROR phase solely for static Round interrupted text; literal unit case covers it. Rerun focused unit/type/lint/pressure/Chromium; no domain or animation. Cumulative **4/10**. Original failure evidence retained. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical4/10 unchanged, T02 8/10 and T01 exceptional11/11 unchanged. T04 owner acceptance PENDING, fresh independent review NOT RUN; deployment NOT RUN.
+
+## M10A-T04 repair3/10 — responsive Dealer centring and literal completion fixture
+
+2026-10-04 19:52:16 +08:00. Initial Chromium16 PASS/12 FAIL/exit1: responsive Dealer normal-flow layout inherited absolute left50percent/translate and moved172px off centre; new E07 complete fixture wrongly expected17. Hypothesis: Dealer-only responsive left:auto/translate:none restores centred normal flow; literal player-loss Dealer10+9 must be19. Preserve every original assertion/900px threshold. Rerun focused unit/type/lint/Chromium. Cumulative **3/10**. Original failure evidence retained. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical4/10 unchanged, T02 8/10 and T01 exceptional11/11 unchanged. T04 owner acceptance PENDING, fresh independent review NOT RUN; deployment NOT RUN.
+
+## M10A-T04 repair2/10 — typed public Dealer fixtures
+
+2026-10-04 19:49:06 +08:00. Initial focused UI11/78 PASS; initial typecheck FAIL/checked exit2 because two new fixture literals omit required public upcard. Hypothesis: Add literal public upcards to those new examples only; rerun focused UI/typecheck/lint before Chromium. Domain and production contract remain unchanged. Cumulative **2/10**. Original failure evidence retained. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical4/10 unchanged, T02 8/10 and T01 exceptional11/11 unchanged. T04 owner acceptance PENDING, fresh independent review NOT RUN; deployment NOT RUN.
+
+## M10A-T04 repair1/10 — baseline collection order
+
+2026-10-04 19:49:05 +08:00. Initial baseline collector exited1 because this task created its own T04 contract before taking the tracked snapshot; no unexpected user work existed. Original tool invocation and stack remain in this chat; the original guard source is retained. Hypothesis: Move only the known task-authored contract into .git temporarily, run the unchanged clean preflight, then restore that exact contract. Rerun passed at19:43:00 with1835 hashes; no product change. Cumulative **1/10**. Original failure evidence retained. T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical4/10 unchanged, T02 8/10 and T01 exceptional11/11 unchanged. T04 owner acceptance PENDING, fresh independent review NOT RUN; deployment NOT RUN.
+
+## M10A-T03 human acceptance and T04 authorization
+
+2026-10-04 19:43:00 +08:00. **M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED** by explicit owner instruction at main/d6ce93ee458a4698f91ea389d4fce75b107a9a11. The lower-centre HUD groups identity, cards, active-hand state, totals, wagers and results clearly in normal, five-card and Split states. T03 historical **4/10**, T02 **8/10** and T01 **11/11 — OWNER-AUTHORIZED EXCEPTION** remain unchanged.
+
+M10A-T04 Dealer Zone Composition authorized / IN PROGRESS; **0/10**. Independent local/live-remote preflight PASS: main/d6ce93ee458a4698f91ea389d4fce75b107a9a11,0/0,CLEAN,untracked0. [Contract](M10A_T04.md), [baseline](M10A_T04_EVIDENCE/before.json). T04 human visual acceptance PENDING; fresh independent review NOT RUN; deployment NOT RUN. M10A-T05/M10-T02/M10-T04 implementation NOT STARTED.
+
 ## M10A-T03 published implementation checkpoint
 
 2026-10-04 18:39:23 +08:00. **M10A-T03_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**. Implementation commit **d4efd6929b736d0778ba1cee8ae1e94ca82d9477**, branch **main**; normal origin/main push PASS / checked exit0 at2026-10-04 18:39:09 +08:00..2026-10-04 18:39:23 +08:00, checked fetch/live-remote equality PASS/0. At this published checkpoint HEAD=origin/main=live remote=d4efd6929b736d0778ba1cee8ae1e94ca82d9477, ahead/behind0/0, working tree CLEAN,untracked0. A factual publication-receipt-only checkpoint follows; final Git/delivery supplies its final SHA. [Publication receipt](M10A_T03_EVIDENCE/implementation-publication.json), [task/evidence index](M10A_T03_EVIDENCE/README.md).

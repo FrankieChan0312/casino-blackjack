@@ -7,6 +7,7 @@ import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometr
 import { Cards } from './Cards.js';
 import { SeatUnit } from './SeatUnit.js';
 import { LocalPlayerHud } from './LocalPlayerHud.js';
+import { DealerZone } from './DealerZone.js';
 
 export { Cards } from './Cards.js';
 export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
@@ -14,14 +15,12 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
   return <section aria-label="Blackjack table" className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
-    <section className="dealer panel" data-anchor="dealer" data-scene-zone={view.playerMode ? 'dealer' : undefined} aria-label="Dealer"><h2>Dealer</h2>
-      {view.playerMode && <CasinoPerson kind="dealer" />}
+    {view.playerMode ? <DealerZone dealer={round?.dealer} phase={round?.phase} /> : <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
       <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
         <p className="dealer-total">{round.dealer.holeCard ? 'Total' : 'Visible total'}: {round.dealer.total}</p>
         <p className="dealer-state">{round.dealer.status}</p></> : <p>Waiting for the initial deal</p>}</div>
-    </section>
-    {view.playerMode && <p className="table-inscription" data-anchor="table-centre" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>}
+    </section>}
     <div className="seats">{view.configuration.filter(seat => !view.playerMode || seat.occupancy !== 'EMPTY').map((seat) => {
       const local = seat.seatNumber === view.human?.controlledSeat;
       const avatarId = lineup && (local ? lineup.human : lineup.guests[seat.seatNumber]);

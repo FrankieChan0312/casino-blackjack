@@ -1,0 +1,180 @@
+{
+  "timestamp": "2026-10-04 20:10:34 +08:00",
+  "status": "PASS",
+  "method": "Actual same-session inspection of all final24 Dealer screenshots and15 native-zoom captures, alongside measured nonintersection/no horizontal overflow. No owner acceptance or fresh independent review implied.",
+  "dealerImages": [
+    {
+      "path": "visuals/dealer-complete-1280.png",
+      "sha256": "4914923cb684486276d2487a694f02df22b5d4e5f8e41233c624caaa624294df"
+    },
+    {
+      "path": "visuals/dealer-complete-320.png",
+      "sha256": "4a72c8327f3e22ef72eb06c78b789dfd1d39eae59e90e6cb0e7951a9b63a90a0"
+    },
+    {
+      "path": "visuals/dealer-complete-768.png",
+      "sha256": "a0c48c9ab532b6c0ba87f1fa27c5199660a198ea00c34dfac8d575f36106d0f2"
+    },
+    {
+      "path": "visuals/dealer-five-1280.png",
+      "sha256": "2c501165ad2ebae5e2fd6bf865d54d616190535084adb38fb350d4ca448cdd56"
+    },
+    {
+      "path": "visuals/dealer-five-320.png",
+      "sha256": "aa36fe03bd9206c122053cfcc29ac8d073f44dc6813f7060f4ff1622b6e9ebcb"
+    },
+    {
+      "path": "visuals/dealer-five-768.png",
+      "sha256": "c289f26a0c9ceb8b0f898fd8205ca5d40896cb0b637d08aa11759cd11cc99f58"
+    },
+    {
+      "path": "visuals/dealer-five-text200-1280.png",
+      "sha256": "b332d070916d92fc104ad88c60ed6cae596d241825e7c14dda7fb3f5e7cba4ef"
+    },
+    {
+      "path": "visuals/dealer-five-text200-320.png",
+      "sha256": "bf0d14cb1631255fa87985839b2e2be31af5a037c7f07cc654cf3fd83e9f4eb2"
+    },
+    {
+      "path": "visuals/dealer-five-text200-768.png",
+      "sha256": "9c11ae6dc0bac3f672fa1d75d787d4fb8123a0f6e391618ca1a5676c1dc26497"
+    },
+    {
+      "path": "visuals/dealer-hidden-1280.png",
+      "sha256": "7bdc97ce21c88604cbb2194feda4ea5f6db569d66a4695685cae648ead0a82ab"
+    },
+    {
+      "path": "visuals/dealer-hidden-320.png",
+      "sha256": "940e16278da652f48b3a0ffe4b5afffa468ef450922663ea25ce508a919cc04c"
+    },
+    {
+      "path": "visuals/dealer-hidden-768.png",
+      "sha256": "4ad4e570a75bc91f76e6d4089cb70b4a410426826e5b441c07fc2ab3d621d1dc"
+    },
+    {
+      "path": "visuals/dealer-open-1280.png",
+      "sha256": "f216440a0433a9be7bb1e53eccd3540ab206ffbb9a73e3bb806439a6e3d7e334"
+    },
+    {
+      "path": "visuals/dealer-open-320.png",
+      "sha256": "745de0cc4719476fb0239e8783c268e29583f557e25bfc756a67299c751b5725"
+    },
+    {
+      "path": "visuals/dealer-open-768.png",
+      "sha256": "8d7a6028e79d1756a54779c85f178602357c8c6dd39689b3690cb6365a4a0728"
+    },
+    {
+      "path": "visuals/dealer-revealed-1280.png",
+      "sha256": "419eefc7a0e0311c2131a51c25b752c96fd420c0b5f758d6da3a9ce92ea3c436"
+    },
+    {
+      "path": "visuals/dealer-revealed-320.png",
+      "sha256": "a05c58175b3fc7e42c56d7caf7bbb79e49bff9ccbfca948088dd34383e966a65"
+    },
+    {
+      "path": "visuals/dealer-revealed-768.png",
+      "sha256": "9f900efebf64c007dd140b03507c7d48a391d7f110a11a8eb164248c3c0121eb"
+    },
+    {
+      "path": "visuals/dealer-revealed-text200-1280.png",
+      "sha256": "80fda2aecb5e688dd6713b1f94efa0d6895561c1d4a7eea1f592314be6e1ba94"
+    },
+    {
+      "path": "visuals/dealer-revealed-text200-320.png",
+      "sha256": "0c1f7451cde915a2ec0c644744f4ab3942a4f64648da1f26c12f7c985ad1e35b"
+    },
+    {
+      "path": "visuals/dealer-revealed-text200-768.png",
+      "sha256": "cdb76a1c9398716e8cb4307922d519fe26c87c89f3fbeb10d0372c242790cc3b"
+    },
+    {
+      "path": "visuals/dealer-text200-1280.png",
+      "sha256": "5781ba6054b11af7b2de979938edffd17237f4674791566b12ca11326c4a2025"
+    },
+    {
+      "path": "visuals/dealer-text200-320.png",
+      "sha256": "6d847a85145113a52af0fcf771797fa2eab569d365a4b28943b1d54a4fa75b7b"
+    },
+    {
+      "path": "visuals/dealer-text200-768.png",
+      "sha256": "8b19a178238b126909ed509be3c45d04e21ecbf7094267ffe3b3cd499568ff45"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-dealer-hidden.png",
+      "sha256": "230fde8a60c93139ebc474434820a64b4ef4a30e332ea3f5ef8c852e6f1872c8"
+    },
+    {
+      "path": "visuals/zoom200-dealer-idle.png",
+      "sha256": "1b7ba92b3d80ba733098888c9cb7671807e19f3b330a9b77047c9897e6cb9b35"
+    },
+    {
+      "path": "visuals/zoom200-dealer-revealed-three.png",
+      "sha256": "d16121d70a2b086eb0799b5f20175e688b5c3883f257471ebb550a9ab7a01280"
+    },
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "dd2a9505b5c4c6ac413ba861d363e1e5ed46bb0280e7f88b72d5f0d2afef5aa8"
+    },
+    {
+      "path": "visuals/zoom200-player-five-controls.png",
+      "sha256": "462919207a3845430c794e5cb674933837ded06f729bb25be10ae808a8f51176"
+    },
+    {
+      "path": "visuals/zoom200-player-five-hand.png",
+      "sha256": "2cc9c767d4f217bab5aae01c24bda3ad7c8049a59c3f8ab0b3740339136863ae"
+    },
+    {
+      "path": "visuals/zoom200-player-five-top.png",
+      "sha256": "b46c194695513f6816c2bd6e4c72db62853021db9b489d72540c1a2be2da6c73"
+    },
+    {
+      "path": "visuals/zoom200-player-hand.png",
+      "sha256": "589027cf935ab51e96229c2976ada84cd39571ba2efa343706f9971e0867bf4d"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-controls.png",
+      "sha256": "d8cfed9c02badeb60aff3f4c8cbd734fe1e7b202ceb5760d7dc588eca3b7179a"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-hand.png",
+      "sha256": "f2e8210977f7cb7cb58e1cbca3464185ce70c61ad51dc87eec9d19264c742f77"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-top.png",
+      "sha256": "d7d294f17e3470cb3eca4be1d6de03ca51fa7741a8b74b5465054eaeb7c2e605"
+    },
+    {
+      "path": "visuals/zoom200-player-split-controls.png",
+      "sha256": "ff31fb74bca619cbde8e3640c7f3d9b50f78adba95979c6b5c44be7c28934295"
+    },
+    {
+      "path": "visuals/zoom200-player-split-hand.png",
+      "sha256": "090f118fe52fa255c3935dbd838e5deacaff5132381d6cb2179cb2594c134059"
+    },
+    {
+      "path": "visuals/zoom200-player-split-top.png",
+      "sha256": "3d4d369849125311181edfa575e0c566886940bb519cf9ad41d0640202fe1df7"
+    },
+    {
+      "path": "visuals/zoom200-player-top.png",
+      "sha256": "230fde8a60c93139ebc474434820a64b4ef4a30e332ea3f5ef8c852e6f1872c8"
+    }
+  ],
+  "normalDesktopBeforeAfter": "Exact equality of recorded normal open/dealt scene, character, remote/local, dock, card, form and Stand geometry; after-final capture is final repair5 source.",
+  "standBottom": 883.359375,
+  "handToControlsGap": 6,
+  "normalTextChecks": 28,
+  "minimumSampledNormalTextContrast": 6.969612258115216,
+  "findings": [
+    "Dealer frame groups temporary character with visible cards, totals, public status, static shoe/deal origin and accurate rules.",
+    "Actual played seed7 Dealer4 clubs/K clubs/9 spades, total23 Bust revealed; player-loss Dealer10 clubs/9 diamonds total19 complete.",
+    "Five-card2/3/4/5/6 total20 screenshots are an isolated public component layout fixture; the surrounding round is not asserted to have played it.",
+    "4plus Dealer cards add only necessary hand height; normal1-3 cards retain accepted desktop footprint. Text200 and nativezoom allow vertical scrolling and retain essential visible semantics.",
+    "Nativezoom observations include normal/five local cards, Split, four-leaf completion, and Dealer idle/hidden/revealed3card states."
+  ],
+  "freshIndependentReview": "NOT RUN — no genuinely fresh session available; sequential task, no delegation authorized",
+  "humanVisualAcceptance": "PENDING",
+  "repairCount": "5/10"
+}

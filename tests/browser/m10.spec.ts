@@ -366,3 +366,75 @@ test('[M10A-E06] real five-card two-split and four-leaf local HUDs preserve exac
     }
   }
 });
+
+test('[M10A-E07] Dealer workstation owns initial hidden and real revealed three-card states across all surfaces', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const dealer = page.getByRole('region', { name: 'Dealer', exact: true });
+    await expect(dealer.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
+    await expect(dealer.getByText('Waiting for the initial deal', { exact: true })).toBeVisible();
+    await expect(dealer.getByRole('group', { name: 'Shoe and deal origin', exact: true })).toBeVisible();
+    await expect(dealer.getByLabel('House rules', { exact: true })).toContainText('BLACKJACK PAYS 3:2');
+    await geometry(page); await page.screenshot({ path: info.outputPath(`dealer-open-${viewport.width}.png`), fullPage: true });
+    await page.getByLabel('Your main wager', { exact: false }).fill('100'); await page.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(dealer.getByRole('group', { name: 'Dealer hand', exact: true }).getByRole('img')).toHaveCount(2);
+    await expect(dealer.getByRole('img', { name: 'Hidden dealer card', exact: true })).toBeVisible();
+    await expect(dealer.locator('.dealer-total')).toHaveText('Visible total: 4'); await expect(dealer.locator('.dealer-state')).toHaveText('Hole card hidden');
+    await expect(page.locator('.seat-unit')).toHaveCount(3); await expect(page.getByRole('group', { name: 'Your player HUD', exact: true })).toBeVisible();
+    await geometry(page); await page.screenshot({ path: info.outputPath(`dealer-hidden-${viewport.width}.png`), fullPage: true });
+    await page.locator('#player-hand').focus(); const stand = page.getByRole('button', { name: 'Stand', exact: true });
+    for (let i = 0; i < 8 && !await stand.evaluate(el => el === document.activeElement); i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused(); await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+    await expect(dealer.locator('.dealer-card-lane .card')).toHaveCount(3);
+    expect(await dealer.locator('.dealer-card-lane .card').evaluateAll(els => els.every(el => el.getAttribute('role') === 'img'))).toBe(true);
+    expect(await dealer.locator('.dealer-card-lane .card').evaluateAll(els => els.map(el => el.getAttribute('aria-label')))).toEqual(['4 of clubs', 'K of clubs', '9 of spades']);
+    await expect(dealer.locator('.dealer-total')).toHaveText('Total: 23'); await expect(dealer.locator('.dealer-state')).toHaveText('Bust');
+    await expect(dealer.getByRole('img', { name: 'Hidden dealer card', exact: true })).toHaveCount(0);
+    await geometry(page); await page.screenshot({ path: info.outputPath(`dealer-revealed-${viewport.width}.png`), fullPage: true });
+    await page.getByRole('button', { name: 'Deal Again', exact: true }).click(); await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
+    await deal(page, 'player-loss'); await page.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(dealer.locator('.dealer-state')).toHaveText('Dealer complete'); await expect(dealer.locator('.dealer-total')).toHaveText('Total: 19');
+    await geometry(page); await page.screenshot({ path: info.outputPath(`dealer-complete-${viewport.width}.png`), fullPage: true });
+  }
+});
+
+test('[M10A-E08] enlarged Dealer text retains public facts and unclipped workstation ownership with keyboard decisions', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page); await page.addStyleTag({ content: 'html { font-size: 200%; }' });
+    const dealer = page.getByRole('region', { name: 'Dealer', exact: true });
+    for (const selector of ['.dealer-cards', '.dealer-total', '.dealer-state', '.dealer-shoe', '.table-inscription']) {
+      await expect(dealer.locator(selector)).toBeVisible();
+      expect(await dealer.locator(selector).evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
+    }
+    await geometry(page); await page.screenshot({ path: info.outputPath(`dealer-text200-${viewport.width}.png`), fullPage: true });
+    await page.locator('#player-hand').focus(); const stand = page.getByRole('button', { name: 'Stand', exact: true });
+    for (let i = 0; i < 8 && !await stand.evaluate(el => el === document.activeElement); i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused(); await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+    await expect(dealer.locator('.dealer-total')).toHaveText('Total: 23'); await geometry(page);
+    await page.screenshot({ path: info.outputPath(`dealer-revealed-text200-${viewport.width}.png`), fullPage: true });
+  }
+});
+
+test('[M10A-E09] isolated public five-card Dealer composition preserves readable cards and surrounding accepted seats', async ({ page }, info) => {
+  // Public layout fixture only: surrounding seed7 player state is not the fixture's played round.
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page);
+    await page.locator('.dealer-zone').evaluate(async el => {
+      const componentUrl = '/src/ui/DealerZone.tsx', reactUrl = '/node_modules/.vite/deps/react.js', rootUrl = '/node_modules/.vite/deps/react-dom_client.js';
+      const { DealerZone } = await import(componentUrl), { default: React } = await import(reactUrl), { default: ReactDOM } = await import(rootUrl);
+      const mount = document.createElement('div'); mount.setAttribute('data-layout-fixture', 'Isolated public five-card Dealer'); el.replaceWith(mount);
+      ReactDOM.createRoot(mount).render(React.createElement(DealerZone, { dealer: { upcard: { rank: '2', suit: 'clubs' }, holeCard: { rank: '3', suit: 'diamonds' },
+        visibleCards: [{ rank: '2', suit: 'clubs' }, { rank: '3', suit: 'diamonds' }, { rank: '4', suit: 'hearts' }, { rank: '5', suit: 'spades' }, { rank: '6', suit: 'clubs' }], total: 20, status: 'Dealer complete' } }));
+    });
+    const dealer = page.locator('.dealer-zone'); await expect(dealer.locator('.card')).toHaveCount(5);
+    await expect(dealer.locator('.dealer-total')).toHaveText('Total: 20');
+    for (const enlarged of [false, true]) {
+      if (enlarged) await page.addStyleTag({ content: 'html { font-size: 200%; }' });
+      await geometry(page);
+      const cards = await dealer.locator('.card').evaluateAll(els => els.map(el => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; }));
+      for (let i = 0; i < cards.length; i++) for (const b of cards.slice(i + 1)) { const a = cards[i]; expect(a.x + a.width <= b.x || b.x + b.width <= a.x || a.y + a.height <= b.y || b.y + b.height <= a.y).toBe(true); }
+      expect(await dealer.locator('.dealer-card-lane').evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
+      await page.screenshot({ path: info.outputPath(`dealer-five${enlarged ? '-text200' : ''}-${viewport.width}.png`), fullPage: true });
+    }
+  }
+});

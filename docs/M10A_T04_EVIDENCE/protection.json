@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-04 20:28:02 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "d6ce93ee458a4698f91ea389d4fce75b107a9a11",
+  "protectedFiles": 1826,
+  "acceptedCSS": "Exact incoming T01/T02/T03 prefix unchanged; Dealer-only T04 rules appended",
+  "incomingBrowserAssertions": "Exact normalized prefix unchanged; three new T04 tests appended",
+  "t03History": "Exact prior contract/ledger retained after explicit owner acceptance prepend",
+  "domainDiff": "EMPTY",
+  "immutableEvidence": 1505
+}

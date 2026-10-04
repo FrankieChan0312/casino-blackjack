@@ -6,8 +6,8 @@ Owner-authorized planning/design correction from main/`0c943b088740d291e9604ebe0
 | --- | --- | --- |
 | M10A-T01 — Scene frame + composition shell | Human planning ACCEPTED at6e460db; owner authorizes T01 shell repair only | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at1a04a5b;11/11 OWNER-AUTHORIZED EXCEPTION; contrast4.520553075070118>=4.5; full/final gates PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
 | M10A-T02 — Seat-unit component | M10A-T01 HUMAN ACCEPTED; public guest bankroll excluded | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at9848e3d;8/10; full/final PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
-| M10A-T03 — Local-player HUD | M10A-T02 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED atd4efd69;4/10; full/final PASS; human visual acceptance PENDING |
-| M10A-T04 — Dealer-zone composition | M10A-T03; reserve only, distinct from M10-T04 character integration | NOT STARTED;0/10 |
+| M10A-T03 — Local-player HUD | M10A-T02 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED atd4efd69;4/10; full/final PASS; HUMAN VISUAL ACCEPTANCE: ACCEPTED |
+| M10A-T04 — Dealer-zone composition | M10A-T03; reserve only, distinct from M10-T04 character integration | IMPLEMENTED / VERIFIED;5/10; full/final PASS; human visual acceptance PENDING; publication follows review |
 | M10A-T05 — Felt gameplay markings | M10A-T04 | NOT STARTED;0/10 |
 | M10A-T06 — Control integration | M10A-T05 | NOT STARTED;0/10 |
 | M10A-T07 — Credits/accounting HUD | M10A-T06; guest balance needs separately approved safe public projection | NOT STARTED;0/10 |
@@ -19,7 +19,7 @@ Retain the suggested order: App/Table already separate scene/seat rendering, so 
 
 M10A uses existing four-seat runtime and pure1–7 geometry. M10-T02/T03 retain real count selection/occupancy/funding/binding; M10-T04 retains avatar/formal-role integration; M10-T05–T10 retain event/deal/action/reveal/chip/replay motion. No circular dependency or silent implementation authorization: after M10A-T10 composition acceptance the owner must explicitly authorize resuming M10-T02 and subsequent existing sequence. The older row dependencies below retain their task scope with this added resumption gate. **M10-T02 NOT STARTED**; **M10-T04 REQUIREMENTS UPDATED FOR PLANNING / IMPLEMENTATION NOT STARTED**.
 
-M10A planning HUMAN ACCEPTED; planning2/10 CLOSED. [M10A-T01 contract/evidence](M10A_T01.md); complete technical gate PASS, normal publication follows review. **M10A-T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED**; M10A-T02 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical8/10 retained. M10A-T03 IMPLEMENTED / VERIFIED;4/10; full/final PASS, human visual acceptance PENDING; normal publication PASS. M10A-T04 NOT STARTED.
+M10A planning HUMAN ACCEPTED; planning2/10 CLOSED. [M10A-T01 contract/evidence](M10A_T01.md); complete technical gate PASS, normal publication follows review. **M10A-T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED**; M10A-T02 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical8/10 retained. M10A-T03 IMPLEMENTED / VERIFIED;4/10; full/final PASS, HUMAN VISUAL ACCEPTANCE: ACCEPTED; normal publication PASS. M10A-T04 IMPLEMENTED / VERIFIED;5/10; full/final PASS; human visual acceptance PENDING; publication follows review.
 
 ## Historical M10 — verified exceptional composition repair11
 

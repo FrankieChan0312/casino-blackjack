@@ -1,3 +1,11 @@
+## M10A-T04 verified Dealer composition — 2026-10-04 20:25:46 +08:00
+
+Presentation consumes safe public facts: visibleCards, generic hidden back, supplied total/status and the existing integrity phase. A Dealer has no player wager/bankroll and therefore uses its own small component. A static shoe origin establishes a later animation destination without issuing draws or predicting future cards. Temporary art retains the accepted silhouette; roster identity/formal variant/provenance integration stays separately authorized.
+
+Absolute normal desktop anchors already reserve Dealer height. Simply switching a wrapped four/five-card Dealer to normal flow counted that reserve twice: mechanical29 Chromium PASS still produced excessive empty space. Actual screenshot review falsified success; repair5 subtracts only the existing reserve for that exceptional hand footprint. Normal before/final geometry remains equal; genuine seed7 three-card23 Bust is played evidence, explicit public five-card20 is an isolated layout probe.
+
+Full82/1082Vitest/76Chromium, focused78/29, independent M1–M8/current PA1/RA1/M9/M10/T01/T02/T03/T04 preservation and verify.ps1 PASS/0 for161 unchanged executable hashes. Count changes exactly11 new unit cases/three browser cases. Repair5/10/history retained; technical PASS, publication and owner visual acceptance are separate events. Fresh independent review NOT RUN.
+
 ## M10A-T03 verified checkpoint
 
 2026-10-04 18:32:54 +08:00. Exact version passed full81/1071 Vitest,73 Chromium, independent M1–M8 preservation/current PA1/RA1/M9/M10/T01/T02/T03 checks and final verify.ps1/exit0. Baseline80/1059/71 plus12 unit/two browser cases fully explains the inventory. Repair3/10 retained, no new product changes after source freeze. Complete technical verification remains separate from publication and owner visual acceptance.

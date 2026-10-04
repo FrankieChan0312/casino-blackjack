@@ -1,4 +1,10 @@
-## Current M10A-T03 Local Player HUD
+## Current M10A-T04 Dealer Zone Composition
+
+**M10A-T04_IMPLEMENTED_VERIFIED**, repairs **5/10**. A dedicated upper-centre Dealer workstation groups the temporary character, public cards/hidden back, total/status, static shoe/deal origin and accurate3:2/S17 rules. Accepted normal camera/remote seats/local HUD remain in place; Stand bottom883.359375px,6px action gap retained. Desktop/tablet/mobile,200% text and native200% browser zoom PASS. Focused78 UI/29 Chromium, full82files/1082Vitest/76Chromium, independent preservation and verify.ps1 PASS / checked exit0. [Task](docs/M10A_T04.md), [visuals/evidence](docs/M10A_T04_EVIDENCE/README.md).
+
+**M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical4/10 retained; T02 accepted8/10 and T01 accepted exceptional11/11 unchanged. T04 owner visual acceptance PENDING; fresh independent review NOT RUN. Formal Dealer artwork/identity policy/new animations NOT IMPLEMENTED; Motion NOT INSTALLED; M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. Normal main publication follows scope/evidence review. M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE.
+
+## Historical M10A-T03 Local Player HUD
 
 **M10A-T03_IMPLEMENTED_VERIFIED**, repairs **4/10**. Framed original avatar/You identity, large readable cards, compact total/status, exact per-hand wager/result and textual current-hand markers form the lower-centre local HUD. Normal/five-card/two-split/four-leaf layouts pass at desktop/tablet/mobile,200% text and native200% browser zoom; existing actions and authoritative funds remain directly accessible. Full **81 files /1071 Vitest tests**, **73 Chromium tests**, independent preservation and final verify.ps1 PASS / checked exit0. Stand bottom883.359375px <=900. [Task](docs/M10A_T03.md), [visuals and evidence](docs/M10A_T03_EVIDENCE/README.md).
 
