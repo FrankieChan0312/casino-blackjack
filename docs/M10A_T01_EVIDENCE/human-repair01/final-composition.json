@@ -1,0 +1,202 @@
+{
+  "start": "2026-10-04 12:13:41 +08:00",
+  "phase": "after",
+  "method": "Same1280x900 fixture, genuine element sizes and visible bounding-box coverage. Area proxy does not establish human acceptance.",
+  "scenarios": [
+    {
+      "state": "open",
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "pageHeight": 1122,
+        "scrollWidth": 1280,
+        "scene": {
+          "x": 16,
+          "y": 52.46875,
+          "width": 1248,
+          "height": 974.625
+        },
+        "dealer": {
+          "x": 430,
+          "y": 70.46875,
+          "width": 420,
+          "height": 228
+        },
+        "dealerVisual": {
+          "x": 442,
+          "y": 74.46875,
+          "width": 180,
+          "height": 220
+        },
+        "remotePortraits": [
+          {
+            "x": 92.48931884765625,
+            "y": 167.28125,
+            "width": 84,
+            "height": 112
+          },
+          {
+            "x": 350.81414794921875,
+            "y": 310.171875,
+            "width": 84,
+            "height": 112
+          },
+          {
+            "x": 880.91357421875,
+            "y": 252.65625,
+            "width": 84,
+            "height": 112
+          }
+        ],
+        "localPortrait": {
+          "x": 543.546875,
+          "y": 442.171875,
+          "width": 72,
+          "height": 96
+        },
+        "localCards": [
+          {
+            "x": 536,
+            "y": 537.171875,
+            "width": 100,
+            "height": 132
+          },
+          {
+            "x": 649,
+            "y": 537.171875,
+            "width": 100,
+            "height": 132
+          }
+        ],
+        "local": {
+          "x": 260,
+          "y": 434.171875,
+          "width": 760,
+          "height": 274.546875
+        },
+        "dock": {
+          "x": 236,
+          "y": 714.71875,
+          "width": 808,
+          "height": 306.375
+        },
+        "handToControlsGap": 6,
+        "usefulBoxArea": 74736,
+        "sceneArea": 1216332,
+        "form": {
+          "x": 248,
+          "y": 832.90625,
+          "width": 784,
+          "height": 84
+        },
+        "stand": null
+      },
+      "screenshot": {
+        "path": "camera-after-open-1280.png",
+        "bytes": 824195,
+        "sha256": "7b8f0852a9a428d1c5fdd72dd49a30b6aa6662e4b39232a52cf85c3efc64ecb9"
+      }
+    },
+    {
+      "state": "dealt",
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "pageHeight": 1110,
+        "scrollWidth": 1280,
+        "scene": {
+          "x": 16,
+          "y": 49.46875,
+          "width": 1248,
+          "height": 962.25
+        },
+        "dealer": {
+          "x": 430,
+          "y": 67.46875,
+          "width": 420,
+          "height": 228
+        },
+        "dealerVisual": {
+          "x": 442,
+          "y": 71.46875,
+          "width": 180,
+          "height": 220
+        },
+        "remotePortraits": [
+          {
+            "x": 92.48931884765625,
+            "y": 164.28125,
+            "width": 84,
+            "height": 112
+          },
+          {
+            "x": 350.81414794921875,
+            "y": 307.171875,
+            "width": 84,
+            "height": 112
+          },
+          {
+            "x": 880.91357421875,
+            "y": 249.65625,
+            "width": 84,
+            "height": 112
+          }
+        ],
+        "localPortrait": {
+          "x": 539.796875,
+          "y": 545.9375,
+          "width": 72,
+          "height": 96
+        },
+        "localCards": [
+          {
+            "x": 383.578125,
+            "y": 648.53125,
+            "width": 100,
+            "height": 132
+          },
+          {
+            "x": 491.578125,
+            "y": 648.53125,
+            "width": 100,
+            "height": 132
+          }
+        ],
+        "local": {
+          "x": 260,
+          "y": 537.359375,
+          "width": 760,
+          "height": 265.171875
+        },
+        "dock": {
+          "x": 236,
+          "y": 808.53125,
+          "width": 808,
+          "height": 197.1875
+        },
+        "handToControlsGap": 6,
+        "usefulBoxArea": 140697.51748636365,
+        "sceneArea": 1200888,
+        "form": null,
+        "stand": {
+          "x": 458,
+          "y": 835.71875,
+          "width": 116,
+          "height": 52
+        }
+      },
+      "screenshot": {
+        "path": "camera-after-dealt-1280.png",
+        "bytes": 788213,
+        "sha256": "2302682c129c057ae9d2a9ae5387764e31a44c5bc64835b3b9f188b82828d58f"
+      }
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-04 12:13:42 +08:00"
+}

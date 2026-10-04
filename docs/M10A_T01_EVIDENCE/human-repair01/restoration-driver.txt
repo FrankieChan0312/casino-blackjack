@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process');
+const dir='docs/M10A_T01_EVIDENCE/human-repair01', hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex'), stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim(),quote=s=>"'"+s.replaceAll("'","''")+"'";
+const failed=JSON.parse(fs.readFileSync(dir+'/focused-browser.json','utf8')), incoming=JSON.parse(fs.readFileSync(dir+'/before.json','utf8')).files;
+const result={start:stamp(),sourceFailure:'focused-browser.json',cycle:5,hypothesis:'Atomic replacement is blocked for a known historical M10 output; native in-place writes can restore verified original bytes without renaming. No claim about handle owner.',files:[],status:'PENDING'};
+try{
+ const known=JSON.parse(fs.readFileSync('docs/M10A_T01_EVIDENCE/focused-browser.json','utf8')).knownOutputs.map(e=>e.path);
+ for(const name of known){const original=incoming.find(e=>e.path===name),absolute=path.resolve(name),backup=path.join(failed.temporaryOriginalBackup,original.sha256+path.extname(name));
+  if(!absolute.startsWith(process.cwd()+path.sep)||hash(fs.readFileSync(backup))!==original.sha256)throw Error('Unsafe original/target '+name);
+  const bytes=fs.readFileSync(name),changed=hash(bytes)!==original.sha256, retained='generated/'+hash(bytes)+path.extname(name);
+  if(changed&&!fs.existsSync(dir+'/'+retained))fs.writeFileSync(dir+'/'+retained,bytes);
+  if(changed)cp.execFileSync('powershell.exe',['-NoProfile','-Command',"$ErrorActionPreference='Stop'\n[System.IO.File]::WriteAllBytes("+quote(absolute)+",[System.IO.File]::ReadAllBytes("+quote(backup)+"))"],{stdio:['ignore','pipe','pipe']});
+  const restored=hash(fs.readFileSync(name));if(restored!==original.sha256)throw Error('Restore mismatch '+name);
+  result.files.push({path:name,changed,generated:changed?retained:null,restoredSha256:restored,status:'PASS'});
+ }
+ const owned=path.resolve('docs/M10_T01_EVIDENCE/repair09/.m10a-t01-restore-focused-browser-scene-open-1280.png');
+ if(fs.existsSync(owned)){if(!owned.startsWith(path.resolve('docs/M10_T01_EVIDENCE/repair09')+path.sep)||hash(fs.readFileSync(owned))!==incoming.find(e=>e.path==='docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png').sha256)throw Error('Unsafe owned replacement cleanup');cp.execFileSync('powershell.exe',['-NoProfile','-Command',"Remove-Item -LiteralPath "+quote(owned)+" -ErrorAction Stop"]);result.ownedReplacementCleanup='PASS';}
+ result.status='PASS';result.exitCode=0;
+}catch(e){result.status='FAIL';result.exitCode=1;result.failure=String(e);process.exitCode=1;console.error(e);}finally{result.end=stamp();fs.writeFileSync(dir+'/repair05-restoration.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}

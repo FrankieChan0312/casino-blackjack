@@ -1,0 +1,348 @@
+{
+  "start": "2026-10-04 12:42:23 +08:00",
+  "method": "Isolated headed Chromium persistent profile; native chrome.tabs.setZoom/getZoom. No CSS zoom/font-size/device-scale/page-scale emulation.",
+  "references": [
+    "https://developer.chrome.com/docs/extensions/reference/api/tabs#method-setZoom",
+    "https://playwright.dev/docs/chrome-extensions"
+  ],
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-zoom-YxD7dO",
+  "scenarios": [
+    {
+      "fixture": "player",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -511.41668701171875,
+          "width": 600.3333740234375,
+          "height": 808.515625
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -499.41668701171875,
+            "width": 360,
+            "height": 186
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -243.140625,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -224.703125,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": 13.765625,
+            "width": 568.328125,
+            "height": 267.3333435058594
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -232.125,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 309,
+            "scrollWidth": 309
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 267,
+            "scrollHeight": 267
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 284,
+            "scrollHeight": 284
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 196.1666717529297,
+        "y": 123.296875,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "screenshots": [
+        "zoom200-player-top.png",
+        "zoom200-player-hand.png",
+        "zoom200-player-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Stand",
+        "scrollY": 798.3333129882812,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    },
+    {
+      "fixture": "player-five",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -764.75,
+          "width": 600.3333740234375,
+          "height": 874.4739990234375
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -752.75,
+            "width": 360,
+            "height": 186
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -496.4739685058594,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -478.0364685058594,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": -239.56771850585938,
+            "width": 568.328125,
+            "height": 333.29168701171875
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -485.4583435058594,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 534,
+            "scrollWidth": 534
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 333,
+            "scrollHeight": 333
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 284,
+            "scrollHeight": 284
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 196.1666717529297,
+        "y": 154.921875,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "screenshots": [
+        "zoom200-player-five-top.png",
+        "zoom200-player-five-hand.png",
+        "zoom200-player-five-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Stand",
+        "scrollY": 832.6666870117188,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    },
+    {
+      "fixture": "player-rsa-cap",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -1297.0833740234375,
+          "width": 600.3333740234375,
+          "height": 1298.515625
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -1285.0833740234375,
+            "width": 360,
+            "height": 186
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -1028.807373046875,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -1010.3698120117188,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": -771.9010620117188,
+            "width": 568.328125,
+            "height": 757.3333740234375
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -1017.7916870117188,
+            "width": 182.7760467529297,
+            "height": 228.46875
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 309,
+            "scrollWidth": 309
+          },
+          {
+            "clientWidth": 309,
+            "scrollWidth": 309
+          },
+          {
+            "clientWidth": 309,
+            "scrollWidth": 309
+          },
+          {
+            "clientWidth": 309,
+            "scrollWidth": 309
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 757,
+            "scrollHeight": 757
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 372,
+            "scrollHeight": 372
+          }
+        ]
+      },
+      "keyboardTarget": "Deal Again",
+      "button": {
+        "x": 28,
+        "y": 191.42709350585938,
+        "width": 116.015625,
+        "height": 44
+      },
+      "screenshots": [
+        "zoom200-player-rsa-cap-top.png",
+        "zoom200-player-rsa-cap-hand.png",
+        "zoom200-player-rsa-cap-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Deal Again",
+        "scrollY": 1371.6666259765625,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    }
+  ],
+  "nativeWindow": {
+    "windowId": 502515467,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1280,
+      "height": 818,
+      "windowState": "normal"
+    }
+  },
+  "baseline": {
+    "innerWidth": 1280,
+    "innerHeight": 723,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 1.5,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1,
+    "screen": {
+      "width": 1280,
+      "height": 800,
+      "availWidth": 1280,
+      "availHeight": 752
+    }
+  },
+  "viewportLimit": "Native Windows browser viewport is recorded as observed. The1280x900 primary-play requirement is independently checked in Chromium tests; native zoom proves factor2.0 with unchanged root font/CSS zoom and observed halved CSS viewport.",
+  "tabZoom": {
+    "tabId": 502515469,
+    "zoom": 2,
+    "settings": {
+      "defaultZoomFactor": 1,
+      "mode": "automatic",
+      "scope": "per-tab"
+    }
+  },
+  "zoomMetrics": {
+    "innerWidth": 640,
+    "innerHeight": 361,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 3,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-04 12:42:32 +08:00"
+}

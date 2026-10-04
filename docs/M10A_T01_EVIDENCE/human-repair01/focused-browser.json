@@ -1,0 +1,367 @@
+{
+  "phase": "focused-browser",
+  "kind": "browser",
+  "start": "2026-10-04 11:47:38 +08:00",
+  "end": "2026-10-04 11:48:56 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10.spec.ts tests/browser/m9.spec.ts tests/browser/pa1.spec.ts; exit $LASTEXITCODE",
+  "exitCode": 1,
+  "status": "FAIL",
+  "error": null,
+  "administrativeRestoration": "FAIL",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-focused-browser-skglR4",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": {
+        "retainedAt": "generated/04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5.png",
+        "bytes": 784828,
+        "sha256": "04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5"
+      },
+      "restoration": "PENDING",
+      "method": "Native atomic replacement, proven on the19 known M10 outputs"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/error-context.md",
+      "retainedAt": "generated/5c925e1f6b4c1a589641ff0cf07f56384e0a32550074a70a17d708882a0659d6.md",
+      "bytes": 19045,
+      "sha256": "5c925e1f6b4c1a589641ff0cf07f56384e0a32550074a70a17d708882a0659d6"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/test-failed-1.png",
+      "retainedAt": "generated/4821caaae158d1720830ad3ea22d081347dde26dcf5d067864c3fbf40f2c569f.png",
+      "bytes": 703793,
+      "sha256": "4821caaae158d1720830ad3ea22d081347dde26dcf5d067864c3fbf40f2c569f"
+    },
+    {
+      "path": "test-results/m10--M10-E01-current-casin-711a6-controls-at-three-viewports-chromium/trace.zip",
+      "retainedAt": "generated/0205cd4817da09651430754520b10a494b54710c7d481ae8fedda7e3b7608cee.zip",
+      "bytes": 2794243,
+      "sha256": "0205cd4817da09651430754520b10a494b54710c7d481ae8fedda7e3b7608cee"
+    },
+    {
+      "path": "test-results/m10--M10-E02-five-actual-c-b9ef9-ut-overlapping-seat-regions-chromium/error-context.md",
+      "retainedAt": "generated/d88a98130af84e9f7f8b40bf9f04832040f03e231c7c5871843a71fc32813c95.md",
+      "bytes": 19649,
+      "sha256": "d88a98130af84e9f7f8b40bf9f04832040f03e231c7c5871843a71fc32813c95"
+    },
+    {
+      "path": "test-results/m10--M10-E02-five-actual-c-b9ef9-ut-overlapping-seat-regions-chromium/test-failed-1.png",
+      "retainedAt": "generated/c682a7e7dc93c5442114cfb04f0ca5c8ecb580c28c7bda82f7fe4ca524cd4978.png",
+      "bytes": 678795,
+      "sha256": "c682a7e7dc93c5442114cfb04f0ca5c8ecb580c28c7bda82f7fe4ca524cd4978"
+    },
+    {
+      "path": "test-results/m10--M10-E02-five-actual-c-b9ef9-ut-overlapping-seat-regions-chromium/trace.zip",
+      "retainedAt": "generated/818323973b43279f6a781fc48db5765f4a2bc32083e7e90cdc617d78aba9ed28.zip",
+      "bytes": 3706398,
+      "sha256": "818323973b43279f6a781fc48db5765f4a2bc32083e7e90cdc617d78aba9ed28"
+    },
+    {
+      "path": "test-results/m10--M10-E03-enlarged-text-48dfe-yboard-decisions-accessible-chromium/error-context.md",
+      "retainedAt": "generated/a78af8339a5e6ddda0e6776a3d8831d3b161962e735eccd4b42bf2300a7448d8.md",
+      "bytes": 19059,
+      "sha256": "a78af8339a5e6ddda0e6776a3d8831d3b161962e735eccd4b42bf2300a7448d8"
+    },
+    {
+      "path": "test-results/m10--M10-E03-enlarged-text-48dfe-yboard-decisions-accessible-chromium/test-failed-1.png",
+      "retainedAt": "generated/dd12650ee2b11af3d00c1afd2600b81406a5b29c686e1b1e8723e6612380f600.png",
+      "bytes": 650903,
+      "sha256": "dd12650ee2b11af3d00c1afd2600b81406a5b29c686e1b1e8723e6612380f600"
+    },
+    {
+      "path": "test-results/m10--M10-E03-enlarged-text-48dfe-yboard-decisions-accessible-chromium/trace.zip",
+      "retainedAt": "generated/d330fb7e281e505690db3ae2d8e70486cd261f95e8a17bc5a4dd84ffc873ea51.zip",
+      "bytes": 1062271,
+      "sha256": "d330fb7e281e505690db3ae2d8e70486cd261f95e8a17bc5a4dd84ffc873ea51"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/error-context.md",
+      "retainedAt": "generated/e0c2275b52f0e4c723bddeabc690ca871393d1dac8bd921d70be6713d72c0351.md",
+      "bytes": 19050,
+      "sha256": "e0c2275b52f0e4c723bddeabc690ca871393d1dac8bd921d70be6713d72c0351"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-1280.png",
+      "retainedAt": "generated/04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5.png",
+      "bytes": 784828,
+      "sha256": "04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/test-failed-1.png",
+      "retainedAt": "generated/9e04c298c50a3d6b91a0cfa92fff564557d038bd0b6c1766fb21da8817c853f8.png",
+      "bytes": 694053,
+      "sha256": "9e04c298c50a3d6b91a0cfa92fff564557d038bd0b6c1766fb21da8817c853f8"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/trace.zip",
+      "retainedAt": "generated/8051e4bda32957ce0c8357fc9aec6c59e50b1b87388eccee8cdb016503aa6029.zip",
+      "bytes": 2803868,
+      "sha256": "8051e4bda32957ce0c8357fc9aec6c59e50b1b87388eccee8cdb016503aa6029"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-1280.png",
+      "retainedAt": "generated/334fee062264142e17aebc7cd3d6c1ec92b1e1edd141302caa190dc687fa1422.png",
+      "bytes": 787054,
+      "sha256": "334fee062264142e17aebc7cd3d6c1ec92b1e1edd141302caa190dc687fa1422"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-320.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "bytes": 280111,
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-768.png",
+      "retainedAt": "generated/f59189e58612b4e0f0dc1a7ec83d0703ab3bb1f15bfb55b471e533f30edbbf19.png",
+      "bytes": 573845,
+      "sha256": "f59189e58612b4e0f0dc1a7ec83d0703ab3bb1f15bfb55b471e533f30edbbf19"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-open-1280.png",
+      "retainedAt": "generated/04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5.png",
+      "bytes": 784828,
+      "sha256": "04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-results-1280.png",
+      "retainedAt": "generated/65310b5e2b67db9cc0447fa9c8e26f928f96c70ff2e80c457a2d261814d6c86d.png",
+      "bytes": 879159,
+      "sha256": "65310b5e2b67db9cc0447fa9c8e26f928f96c70ff2e80c457a2d261814d6c86d"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/error-context.md",
+      "retainedAt": "generated/44ca7b30135179febf07b945fbce440343bb52eabffb55d265c77679d2207c3d.md",
+      "bytes": 18389,
+      "sha256": "44ca7b30135179febf07b945fbce440343bb52eabffb55d265c77679d2207c3d"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/test-failed-1.png",
+      "retainedAt": "generated/baa9ce1c672af4035affbf121da360395f01bc31090c8f42835867ea8ebba395.png",
+      "bytes": 719331,
+      "sha256": "baa9ce1c672af4035affbf121da360395f01bc31090c8f42835867ea8ebba395"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/trace.zip",
+      "retainedAt": "generated/9ec2cbe17eeb2a285f6a634e1e83b31bf566554b9bae71c6ce783e0ba40fb6ed.zip",
+      "bytes": 2275430,
+      "sha256": "9ec2cbe17eeb2a285f6a634e1e83b31bf566554b9bae71c6ce783e0ba40fb6ed"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-1280.png",
+      "retainedAt": "generated/334fee062264142e17aebc7cd3d6c1ec92b1e1edd141302caa190dc687fa1422.png",
+      "bytes": 787054,
+      "sha256": "334fee062264142e17aebc7cd3d6c1ec92b1e1edd141302caa190dc687fa1422"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-320.png",
+      "retainedAt": "generated/19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071.png",
+      "bytes": 280111,
+      "sha256": "19df1b319bbc24e4c25e2f06f1035dffd6d7f055de76984827c4bb3100986071"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-768.png",
+      "retainedAt": "generated/f59189e58612b4e0f0dc1a7ec83d0703ab3bb1f15bfb55b471e533f30edbbf19.png",
+      "bytes": 573845,
+      "sha256": "f59189e58612b4e0f0dc1a7ec83d0703ab3bb1f15bfb55b471e533f30edbbf19"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_female.png",
+      "retainedAt": "generated/0f5e13aa86fbb770470c4440c0d923f049678890d383d0868ae14588d8c0e09f.png",
+      "bytes": 105954,
+      "sha256": "0f5e13aa86fbb770470c4440c0d923f049678890d383d0868ae14588d8c0e09f"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_male.png",
+      "retainedAt": "generated/b0c258930335ac72feb7d69ae6960928a84861b9def42b06219614f080dcbb99.png",
+      "bytes": 105878,
+      "sha256": "b0c258930335ac72feb7d69ae6960928a84861b9def42b06219614f080dcbb99"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_female.png",
+      "retainedAt": "generated/232e2f458522612f6b6f6fe38e5ce42521f451d136f5e244dd355fbd8536edff.png",
+      "bytes": 106358,
+      "sha256": "232e2f458522612f6b6f6fe38e5ce42521f451d136f5e244dd355fbd8536edff"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_male.png",
+      "retainedAt": "generated/8eb6e67d8904a63edea1e6cf7a755ec8d2dab9147d6929ef8c10d0910b363f1b.png",
+      "bytes": 106438,
+      "sha256": "8eb6e67d8904a63edea1e6cf7a755ec8d2dab9147d6929ef8c10d0910b363f1b"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_female.png",
+      "retainedAt": "generated/ddbb1e72bebebe8160e8ddd642717860c4529323de5df20b36d7d2ea51e60247.png",
+      "bytes": 115922,
+      "sha256": "ddbb1e72bebebe8160e8ddd642717860c4529323de5df20b36d7d2ea51e60247"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_male.png",
+      "retainedAt": "generated/b5026678ad436aab1cfcb5378fcf352ccc8deec53d95655e0e558c9eefff432b.png",
+      "bytes": 109227,
+      "sha256": "b5026678ad436aab1cfcb5378fcf352ccc8deec53d95655e0e558c9eefff432b"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_female.png",
+      "retainedAt": "generated/425c6e30e8728d4f0e09d129feadbed7325bf63359df9c90ed581f62b64665f2.png",
+      "bytes": 107957,
+      "sha256": "425c6e30e8728d4f0e09d129feadbed7325bf63359df9c90ed581f62b64665f2"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_male.png",
+      "retainedAt": "generated/475edb56860302dd8410ba8066e165af12c3232fc5e179f662345b78339f75b6.png",
+      "bytes": 106609,
+      "sha256": "475edb56860302dd8410ba8066e165af12c3232fc5e179f662345b78339f75b6"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_female.png",
+      "retainedAt": "generated/28784ce7ff3af8cd833389a380fa2e09fbf1e4e8f455fb675b090a95171307b4.png",
+      "bytes": 108313,
+      "sha256": "28784ce7ff3af8cd833389a380fa2e09fbf1e4e8f455fb675b090a95171307b4"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_male.png",
+      "retainedAt": "generated/e2c9bf53f5c6c5d5b134959b2be9a006cb545e0ccf82e62812af633fb2dad991.png",
+      "bytes": 107553,
+      "sha256": "e2c9bf53f5c6c5d5b134959b2be9a006cb545e0ccf82e62812af633fb2dad991"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_female.png",
+      "retainedAt": "generated/da9913ead69de5ecfa3f9a27fa5ebfe2ca50a52255247999a3516d1661d8df05.png",
+      "bytes": 106189,
+      "sha256": "da9913ead69de5ecfa3f9a27fa5ebfe2ca50a52255247999a3516d1661d8df05"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_male.png",
+      "retainedAt": "generated/acff1fc7509f30daeb9bc33854bc3f920bd4e03d02e788ea23ea1cbb89402bc4.png",
+      "bytes": 106579,
+      "sha256": "acff1fc7509f30daeb9bc33854bc3f920bd4e03d02e788ea23ea1cbb89402bc4"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/error-context.md",
+      "retainedAt": "generated/24c87560b68618013288662edd703cb35c11a716a85e2227a7075f8a302a8152.md",
+      "bytes": 21169,
+      "sha256": "24c87560b68618013288662edd703cb35c11a716a85e2227a7075f8a302a8152"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/test-failed-1.png",
+      "retainedAt": "generated/1188cbb3295283dd64d8e06188bcbed3c41464f3aa14b7ba72ce9234d6d6ce3e.png",
+      "bytes": 474945,
+      "sha256": "1188cbb3295283dd64d8e06188bcbed3c41464f3aa14b7ba72ce9234d6d6ce3e"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/trace.zip",
+      "retainedAt": "generated/daa9245d1213d9cbe55eeeb4184f0ce60257ebc0b49bc9cb90d73c15247b60cf.zip",
+      "bytes": 2599735,
+      "sha256": "daa9245d1213d9cbe55eeeb4184f0ce60257ebc0b49bc9cb90d73c15247b60cf"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-1280.png",
+      "retainedAt": "generated/a0b4cc30e90b912f946ae77a888409a9061cbfafbe25f11051a5cc9c082cf3f5.png",
+      "bytes": 1556056,
+      "sha256": "a0b4cc30e90b912f946ae77a888409a9061cbfafbe25f11051a5cc9c082cf3f5"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-320.png",
+      "retainedAt": "generated/21ba1c55403f33f204cab74ef86a7429050cea009f301dd50750e604eff1570e.png",
+      "bytes": 556807,
+      "sha256": "21ba1c55403f33f204cab74ef86a7429050cea009f301dd50750e604eff1570e"
+    }
+  ],
+  "administrativeExitCode": 1,
+  "administrativeFailure": "Error: Command failed: powershell.exe -NoProfile -Command $ErrorActionPreference='Stop'\nCopy-Item -LiteralPath 'C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-focused-browser-skglR4\\25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c.png' -Destination 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.m10a-t01-restore-focused-browser-scene-open-1280.png'\n[System.IO.File]::Replace('C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.m10a-t01-restore-focused-browser-scene-open-1280.png','C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-1280.png','C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-focused-browser-skglR4\\atomic-replaced-scene-open-1280.png')\nException calling \"Replace\" with \"3\" argument(s): \"The process cannot access the file because it is being used by anoth\r\ner process.\"\r\nAt line:3 char:1\r\n+ [System.IO.File]::Replace('C:\\Users\\user\\Documents\\GitHub\\casino-blac ...\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : IOException\r\n \r\n",
+  "collectionEnd": "2026-10-04 11:48:58 +08:00"
+}

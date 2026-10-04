@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-04 13:00:59 +08:00",
+  "status": "PASS",
+  "review": "Same-session bounded scope/links/credential-pattern/evidence review; genuinely fresh independent review NOT RUN; Human Visual Acceptance NOT ACCEPTED / PENDING",
+  "protectedCount": 1103,
+  "priorEvidenceUnchanged": 240,
+  "postUnifiedExecutablesUnchanged": 154,
+  "trackedChanged": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M10A_T01.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "src/ui/styles.css",
+    "tests/browser/m10.spec.ts"
+  ],
+  "untrackedCount": 354,
+  "relativeLinks": 280,
+  "missingReferences": [],
+  "plaintextRecordsScanned": 145,
+  "credentialPatternFindings": [],
+  "archiveRoundTrips": 13,
+  "retainedFocusedOutputs": 63,
+  "finalCounts": {
+    "vitestFiles": 79,
+    "vitestTests": 1050,
+    "chromium": 69
+  },
+  "standBottom": 890.71875,
+  "ratio": 4.520553075070118
+}

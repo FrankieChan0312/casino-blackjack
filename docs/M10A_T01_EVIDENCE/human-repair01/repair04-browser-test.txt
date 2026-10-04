@@ -1,0 +1,230 @@
+import { test, expect, type Page } from '@playwright/test';
+import { copyFileSync, writeFileSync } from 'node:fs';
+
+const viewports = [{ width: 1280, height: 900 }, { width: 768, height: 1024 }, { width: 320, height: 720 }];
+async function deal(page: Page, fixture = 'player') {
+  await page.goto(`/?fixture=${fixture}`);
+  await page.getByLabel('Your main wager', { exact: false }).fill('100');
+  await page.getByRole('button', { name: 'Deal', exact: true }).click();
+}
+async function geometry(page: Page) {
+  const data = await page.locator('.casino-table').evaluate(table => {
+    const rect = (el: Element) => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; };
+    const anchors = [...table.querySelectorAll('.dealer, .seat')].map(el => ({ label: el.getAttribute('aria-label'), ...rect(el) }));
+    return { table: rect(table), anchors, viewport: { width: innerWidth, height: innerHeight }, scrollWidth: document.documentElement.scrollWidth };
+  });
+  expect(data.scrollWidth).toBeLessThanOrEqual(data.viewport.width);
+  const dealer = data.anchors[0];
+  expect(Math.abs(dealer.x + dealer.width / 2 - data.viewport.width / 2)).toBeLessThan(2);
+  for (let i = 0; i < data.anchors.length; i++) {
+    const a = data.anchors[i];
+    expect(a.x, a.label!).toBeGreaterThanOrEqual(data.table.x);
+    expect(a.x + a.width, a.label!).toBeLessThanOrEqual(data.table.x + data.table.width);
+    for (const b of data.anchors.slice(i + 1)) {
+      expect(a.x + a.width <= b.x + 1 || b.x + b.width <= a.x + 1 || a.y + a.height <= b.y + 1 || b.y + b.height <= a.y + 1,
+        `${a.label} intersects ${b.label}`).toBe(true);
+    }
+  }
+  for (const cards of await page.locator('.seat article .cards:visible').all()) {
+    expect(await cards.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
+  }
+  return data;
+}
+
+test('[M10-E01] current casino table anchors retain public players and usable controls at three viewports', async ({ page }) => {
+  const receipts = [];
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page); await page.evaluate(() => scrollTo(0, 0));
+    await expect(page.locator('[data-anchor="dealer-cards"]')).toBeVisible();
+    await expect(page.locator('[data-anchor="table-centre"]')).toBeVisible();
+    expect(await page.locator('[data-seat-anchor]').evaluateAll(els => els.map(el => el.getAttribute('data-seat-anchor')))).toEqual(['seat-1','seat-3','seat-4','seat-6']);
+    await expect(page.getByRole('img', { name: 'Hidden dealer card', exact: true })).toBeVisible();
+    receipts.push(await geometry(page));
+    for (const name of ['Hit','Stand','Double','Split','Surrender']) {
+      const button = page.getByRole('button', { name, exact: true });
+      const box = (await button.boundingBox())!;
+      expect(box.width).toBeGreaterThanOrEqual(44); expect(box.height).toBeGreaterThanOrEqual(44);
+    }
+    const stand = page.getByRole('button', { name: 'Stand', exact: true });
+    if (viewport.width === 1280) { const box = (await stand.boundingBox())!; expect(box.y + box.height).toBeLessThanOrEqual(900); }
+    await page.screenshot({ path: `docs/M10_T01_EVIDENCE/table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
+    await stand.click(); await expect(page.locator('#player-result')).toBeFocused();
+    await page.getByRole('button', { name: 'Deal Again', exact: true }).click();
+    await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
+  }
+  writeFileSync('docs/M10_T01_EVIDENCE/geometry.json', JSON.stringify(receipts, null, 2) + '\n');
+});
+
+test('[M10-E02] five actual cards and four actual split leaves use vertical flow without overlapping seat regions', async ({ page }) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page, 'player-five');
+    for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Hit', exact: true }).click();
+    await expect(page.locator('#player-hand article .card')).toHaveCount(5); await geometry(page);
+    await page.screenshot({ path: `docs/M10_T01_EVIDENCE/five-cards-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
+    await page.getByRole('button', { name: 'Stand', exact: true }).click(); await expect(page.locator('#player-result')).toBeFocused();
+    await deal(page, 'player-rsa-cap');
+    for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Split', exact: true }).click();
+    await expect(page.locator('#player-hand article')).toHaveCount(4); await geometry(page);
+    const ids = await page.locator('#player-hand article').evaluateAll(els => els.map(el => el.getAttribute('data-hand-id')));
+    expect(new Set(ids).size).toBe(4);
+    await page.screenshot({ path: `docs/M10_T01_EVIDENCE/four-leaves-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
+    await expect(page.getByRole('button', { name: 'Deal Again', exact: true })).toBeEnabled();
+  }
+});
+
+test('[M10-E03] enlarged text failed portraits and reduced motion keep identity cards and keyboard decisions accessible', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.route('**/characters/*.png', route => route.abort());
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page);
+    await page.addStyleTag({ content: 'html { font-size: 200%; }' });
+    await expect(page.locator('#player-hand').getByRole('heading', { name: 'Roland', exact: true })).toBeVisible();
+    await expect(page.locator('#player-hand .character-identity img')).toHaveJSProperty('naturalWidth', 0);
+    await geometry(page);
+    if (viewport.width === 320) {
+      const guest = page.getByRole('region', { name: 'Seat 1', exact: true });
+      await guest.locator('summary').click();
+      await expect(guest.locator('.guest-mobile-cards .card').first()).toBeVisible(); await geometry(page);
+    }
+    await page.screenshot({ path: `docs/M10_T01_EVIDENCE/text-fallback-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
+    await page.locator('#player-hand').focus();
+    const stand = page.getByRole('button', { name: 'Stand', exact: true });
+    for (let i = 0; i < 8 && !await stand.evaluate(el => el === document.activeElement); i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused();
+    expect(await stand.evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');
+    expect(await page.locator('#player-hand .card').first().evaluate(el => getComputedStyle(el).animationName)).toBe('none');
+    await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+  }
+});
+
+test('[M10-E04] the table scene owns coherent local cards controls and exact credits through betting and play', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.locator('.table-scene');
+    await expect(scene.getByRole('region', { name: 'Your wager', exact: true })).toBeVisible();
+    const save = async (state: string) => {
+      const filename = `scene-${state}-${viewport.width}.png`, path = info.outputPath(filename);
+      await page.screenshot({ path, fullPage: true, animations: 'disabled' });
+      copyFileSync(path, `docs/M10_T01_EVIDENCE/repair09/${filename}`);
+    };
+    await page.evaluate(() => scrollTo(0, 0)); await save('open');
+    await page.getByLabel('Your main wager', { exact: false }).fill('100');
+    await scene.getByRole('button', { name: 'Deal', exact: true }).click();
+    const own = scene.getByRole('region', { name: 'Seat 4', exact: true });
+    await expect(own.getByRole('img', { name: 'Your avatar: Roland, Male Human Knight', exact: true })).toBeVisible();
+    await expect(own.getByRole('img', { name: '5 of hearts', exact: true })).toBeVisible();
+    await expect(own.getByRole('img', { name: '4 of spades', exact: true })).toBeVisible();
+    await expect(own.getByText('MAIN: 100 credits', { exact: true })).toBeVisible();
+    await expect(scene.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['900', '100', '0']);
+    const positions = await scene.evaluate(el => {
+      const rect = (selector: string) => { const r = el.querySelector(selector)!.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; };
+      return { own: rect('#player-hand'), dock: rect('.player-dock'), table: rect('.casino-table') };
+    });
+    expect(Math.abs(positions.own.x + positions.own.width / 2 - viewport.width / 2)).toBeLessThan(2);
+    expect(Math.abs(positions.dock.x + positions.dock.width / 2 - viewport.width / 2)).toBeLessThan(2);
+    expect(positions.dock.y).toBeGreaterThanOrEqual(positions.own.y + positions.own.height);
+    expect(positions.dock.y - positions.own.y - positions.own.height).toBeLessThanOrEqual(32);
+    expect(positions.table.width).toBeGreaterThan(viewport.width * 0.8);
+    await expect(scene.getByRole('region', { name: 'House rules', exact: true })).toHaveCount(0);
+    await expect(scene.getByLabel('House rules', { exact: true })).toContainText('BLACKJACK PAYS 3:2');
+    await expect(scene.getByLabel('House rules', { exact: true })).toContainText('DEALER STANDS ON ALL 17');
+    expect(await scene.locator('.dealer > .casino-person').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
+    await geometry(page); await page.evaluate(() => scrollTo(0, 0)); await save('dealt');
+    await scene.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await scene.getByRole('button', { name: 'Deal Again', exact: true }).click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toBeFocused();
+  }
+});
+
+test('[M10A-E01] one scene frame owns the existing game regions and keyboard play across desktop tablet and mobile', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.getByRole('region', { name: 'Blackjack game scene', exact: true });
+    const controls = scene.getByRole('region', { name: 'Your gameplay controls', exact: true });
+    const support = page.getByRole('complementary', { name: 'Table preferences and demo tools', exact: true });
+    await expect(scene.locator('.casino-header')).toContainText('Credits have no redemption value.');
+    await expect(scene.locator('[data-scene-zone="dealer"]')).toHaveCount(1);
+    await expect(scene.locator('[data-scene-zone="local-player"]')).toHaveCount(1);
+    await expect(scene.locator('[data-scene-zone="remote-seat"]')).toHaveCount(3);
+    await expect(controls).toHaveAttribute('aria-describedby', 'player-scene-status');
+    await expect(controls.getByRole('status')).toHaveText('Betting open');
+    await expect(controls.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['1,000','0','0']);
+    await expect(support.getByText('Change Character · Roland', { exact: true })).toBeVisible();
+    if (viewport.width === 1280) await page.screenshot({ path: info.outputPath('frame-open-1280.png'), fullPage: true, animations: 'disabled' });
+    await controls.getByLabel('Your main wager', { exact: false }).fill('100');
+    await controls.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(controls.getByRole('status')).toHaveText('Your turn');
+    await expect(controls.getByRole('region', { name: 'Your credits', exact: true }).locator('dd')).toHaveText(['900','100','0']);
+    const boxes = await scene.evaluate(el => {
+      const rect = (target: Element) => { const r = target.getBoundingClientRect(); return { x:r.x,y:r.y,width:r.width,height:r.height }; };
+      return { scene:rect(el),table:rect(el.querySelector('.casino-table')!),local:rect(el.querySelector('#player-hand')!),
+        controls:rect(el.querySelector('#player-decisions')!),support:rect(document.querySelector('.scene-support')!),
+        header:rect(el.querySelector('.casino-header')!),scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth };
+    });
+    expect(boxes.scene.width).toBeGreaterThan(viewport.width * .9);
+    expect(boxes.table.width).toBeGreaterThan(viewport.width * .8);
+    expect(boxes.header.height).toBeLessThan(boxes.table.height);
+    expect(boxes.controls.y).toBeGreaterThanOrEqual(boxes.local.y + boxes.local.height);
+    expect(boxes.support.y).toBeGreaterThanOrEqual(boxes.scene.y + boxes.scene.height);
+    expect(boxes.scrollWidth).toBeLessThanOrEqual(boxes.viewport);
+    const stand = controls.getByRole('button', { name:'Stand',exact:true });
+    const target = (await stand.boundingBox())!;
+    expect(target.width).toBeGreaterThanOrEqual(44); expect(target.height).toBeGreaterThanOrEqual(44);
+    if (viewport.width === 1280) expect(target.y + target.height).toBeLessThanOrEqual(900);
+    await page.evaluate(() => scrollTo(0,0));
+    await page.screenshot({ path:info.outputPath(`frame-dealt-${viewport.width}.png`),fullPage:true,animations:'disabled' });
+    await page.locator('#player-hand').focus();
+    for (let i=0;i<8 && !await stand.evaluate(el => el === document.activeElement);i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused(); await page.keyboard.press('Enter');
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await expect(controls.getByRole('status')).toHaveText('Round complete');
+    if (viewport.width === 1280) await page.screenshot({ path:info.outputPath('frame-results-1280.png'),fullPage:true,animations:'disabled' });
+    await controls.getByRole('button', { name:'Deal Again',exact:true }).click();
+    await expect(controls.getByLabel('Your main wager', { exact:false })).toBeFocused();
+  }
+});
+
+test('[M10A-E02] camera repair enlarges existing gameplay footprints and retains native wager play', async ({ page }, info) => {
+  const receipts = [];
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.getByRole('region', { name: 'Blackjack game scene', exact: true });
+    const funds = scene.getByRole('region', { name: 'Your credits', exact: true }).locator('dd');
+    await scene.getByRole('button', { name: '100', exact: true }).click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toHaveValue('100');
+    await expect(funds).toHaveText(['1,000', '0', '0']);
+    if (viewport.width === 1280) await page.screenshot({ path: info.outputPath('camera-open-1280.png'), fullPage: true, animations: 'disabled' });
+    await scene.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(funds).toHaveText(['900', '100', '0']);
+    await expect(scene.locator('#player-hand article .card')).toHaveCount(2);
+    const bounds = await scene.evaluate(el => {
+      const size = (target: Element) => { const r = target.getBoundingClientRect(); return { width: r.width, height: r.height, bottom: r.bottom, top: r.top }; };
+      const local = size(el.querySelector('#player-hand')!), dock = size(el.querySelector('.player-dock')!);
+      return { dealer: size(el.querySelector('.dealer > .casino-person')!),
+        portraits: [...el.querySelectorAll('.seat:not(.local) .character-identity img')].filter(target => target.getBoundingClientRect().width > 0).map(size),
+        ownPortrait: size(el.querySelector('#player-hand .character-identity img')!), ownCard: size(el.querySelector('#player-hand article .card')!),
+        dockGap: dock.top - local.bottom, sceneTransform: getComputedStyle(el).transform, sceneZoom: getComputedStyle(el).zoom };
+    });
+    expect(bounds.sceneTransform).toBe('none'); expect(bounds.sceneZoom).toBe('1');
+    if (viewport.width === 1280) {
+      // Independent dimensions from the owner-rejected8ae9ff2 capture, not subjective acceptance thresholds.
+      expect(bounds.dealer.width).toBeGreaterThan(116); expect(bounds.dealer.height).toBeGreaterThan(144);
+      expect(bounds.portraits).toHaveLength(3);
+      for (const portrait of bounds.portraits) { expect(portrait.width).toBeGreaterThan(54); expect(portrait.height).toBeGreaterThan(72); }
+      expect(bounds.ownPortrait.width).toBeGreaterThan(54); expect(bounds.ownPortrait.height).toBeGreaterThan(72);
+      expect(bounds.ownCard.width).toBeGreaterThan(76); expect(bounds.ownCard.height).toBeGreaterThan(98);
+      expect(bounds.dockGap).toBeGreaterThanOrEqual(0); expect(bounds.dockGap).toBeLessThan(12);
+      const stand = (await scene.getByRole('button', { name: 'Stand', exact: true }).boundingBox())!;
+      expect(stand.y + stand.height).toBeLessThanOrEqual(900);
+    }
+    receipts.push({ viewport, bounds, geometry: await geometry(page) });
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`camera-dealt-${viewport.width}.png`), fullPage: true, animations: 'disabled' });
+    await scene.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await scene.getByRole('button', { name: 'Deal Again', exact: true }).click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toBeFocused();
+  }
+  writeFileSync(info.outputPath('camera-footprints.json'), JSON.stringify(receipts, null, 2) + '\n');
+});

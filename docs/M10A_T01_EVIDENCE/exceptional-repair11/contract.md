@@ -1,0 +1,11 @@
+# M10A-T01 exceptional repair11/11 contract
+
+Owner-authorized exception recorded at2026-10-04 12:40:24 +08:00. Incoming main HEAD8ae9ff2b6e74760d0f0f1df962d7e376292d2ab5; eight known task-owned tracked changes and240 prior repair evidence files are preserved. The1110 incoming paths are hashed in before.json. Previous10/10 blocker history is immutable; no repair12 is authorized.
+
+Reason: Final accessibility contrast correction only. Hypothesis: increasing each desktop payout foreground RGB channel by one (#e2d2a4 -> #e3d3a5) increases its independently calculated contrast against the observed brightest felt43/102/82 from4.476153734022139 to4.520553075070118 without changing geometry. Only the existing desktop inscription rule may gain this colour declaration; all prior CSS, tests and evidence remain intact. No threshold, layout, size, opacity, shadow, asset, domain, controller, geometry, dependency or runtime setting change.
+
+Step -> verification: one colour edit -> ONLY the exact failing rendered payout contrast check first (>=4.5); if PASS -> focused UI/Chromium, desktop/tablet/mobile,200% text, native200% zoom, keyboard/focus and Stand bottom; if all PASS -> full Vitest/Chromium, independent M1-M8/current PA1/RA1/M9/M10/M10A preservation and final scripts/verify.ps1 checked exit0; review protected hashes/diff/evidence -> normal main commit/push and live remote parity0/0, clean/untracked0. Stop immediately if the first contrast check fails; no additional product fix after any failed gate. Required tools/conflicts/unknown overlapping changes stop affected work.
+
+Acceptance: rendered normal-text contrast>=4.5, retained Dealer180x220/guest84x112/local-card100x132/gap6/Stand890.71875<=900, successful responsive/text/zoom/focus and complete technical gates. Human Visual Acceptance remains NOT ACCEPTED / PENDING; M10A-T02 NOT STARTED. No deployment.
+
+Recommended GPT Sol6.1 / High; current client tool metadata lists gpt-6.1-sol and High support. Actual execution model/effort NOT VERIFIED / NOT VERIFIED. Sequential work; no delegation. Proven historical-output routing redirects only25 known writer destinations, never changes assertions or canonical PA1 evidence. All240 prior repair files stay byte-identical.

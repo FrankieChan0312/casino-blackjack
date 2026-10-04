@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-04 13:06:12 +08:00",
+  "requiredTechnicalGate": {
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "ex11-final-verify.json"
+  },
+  "authoredSourceDocsWhitespace": {
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "aggregateWhitespace": {
+    "status": "FAIL",
+    "exitCode": 2,
+    "findings": 4455,
+    "paths": [
+      "docs/M10A_T01_EVIDENCE/exceptional-repair11/administrative-driver.txt",
+      "docs/M10A_T01_EVIDENCE/exceptional-repair11/assets.json",
+      "docs/M10A_T01_EVIDENCE/exceptional-repair11/exact-contrast-driver.txt",
+      "docs/M10A_T01_EVIDENCE/exceptional-repair11/historical-output-route.txt",
+      "docs/M10A_T01_EVIDENCE/exceptional-repair11/protection-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/before.json",
+      "docs/M10A_T01_EVIDENCE/human-repair01/evidence-route-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/final-audit-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/1ef033d06a39c1b3fa2488a0b42a09b29a10925120d1c76832f3fe8e3729396e.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/24c87560b68618013288662edd703cb35c11a716a85e2227a7075f8a302a8152.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/42c091df03b2dae040b82ebd700af8810b3f0e8034b1121dea9c7e4a6e593673.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/44ca7b30135179febf07b945fbce440343bb52eabffb55d265c77679d2207c3d.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/5c925e1f6b4c1a589641ff0cf07f56384e0a32550074a70a17d708882a0659d6.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/60b8bafd6e4669154ebf26cdf23d64df830c064c9e123b97f6721b6f77466172.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/694c762ae64f0bb30266942770151951c7ca1ce52c79bdbe2b138999cfab9a36.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/a78af8339a5e6ddda0e6776a3d8831d3b161962e735eccd4b42bf2300a7448d8.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/b6df42f60a81202a09690dcf8532f36081278489b55d8fa67ec3b0120f064639.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/d71d331e0a451b903aadc3f05b6cb011e6bc1923ecc43fda3c14574bf17a6085.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/d88a98130af84e9f7f8b40bf9f04832040f03e231c7c5871843a71fc32813c95.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/generated/e0c2275b52f0e4c723bddeabc690ca871393d1dac8bd921d70be6713d72c0351.md",
+      "docs/M10A_T01_EVIDENCE/human-repair01/protection-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/recovery-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/repair04-styles.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/repair05-styles.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/repair08-styles.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/repair09-styles.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/repair10-cause-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/restoration-complete-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/restoration-driver.txt",
+      "docs/M10A_T01_EVIDENCE/human-repair01/stop-receipt-driver.txt"
+    ],
+    "categories": {
+      "preserved CRLF": 4392,
+      "preserved raw whitespace": 63
+    },
+    "rawSha256": "6b78e7e022972d188718cb0b37276690e4c6c3b7f32a1db19196a98448cefc4c",
+    "archive": "staged-whitespace.log.gz",
+    "note": "Additional Git whitespace check; raw execution evidence retained exactly. No source assertion, threshold, required verification or test was disabled."
+  },
+  "stagedRawBlobs": "staged-raw-blobs.json",
+  "auxiliaryDriverFailureRetained": true,
+  "noAdditionalProductOrDriverFix": true,
+  "humanVisualAcceptance": "NOT ACCEPTED / PENDING",
+  "freshReview": "NOT RUN"
+}

@@ -1,0 +1,18 @@
+const {chromium}=require('@playwright/test'),fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const {PNG}=require(path.resolve('node_modules/playwright-core/lib/utilsBundle.js'));
+const dir=path.resolve('.git/m10a-exception11-visuals'),stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const luminance=rgb=>rgb.map(v=>{const c=v/255;return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;}).reduce((sum,c,i)=>sum+c*[.2126,.7152,.0722][i],0);
+(async()=>{let browser;const result={start:stamp(),scope:'ONLY original failing desktop payout contrast; same fixture, selector, viewport, computed colour and screenshot-background sampling as retained failing check.',required:4.5,status:'PENDING'};
+try{
+ browser=await chromium.launch();const page=await browser.newPage({viewport:{width:1280,height:900}});
+ await page.goto('http://127.0.0.1:4173/?fixture=player');await page.getByLabel('Your main wager',{exact:false}).fill('100');await page.getByRole('button',{name:'Deal',exact:true}).click();await page.evaluate(()=>scrollTo(0,0));
+ const sample=await page.locator('.table-inscription').evaluate(el=>{const b=el.getBoundingClientRect(),s=getComputedStyle(el);return{foreground:s.color,fontSize:s.fontSize,text:el.textContent,box:{x:b.x,y:b.y,width:b.width,height:b.height}};});
+ const bytes=await page.screenshot({path:path.join(dir,'exact-contrast-1280.png'),fullPage:true,animations:'disabled'}),png=PNG.sync.read(bytes);
+ const fg=sample.foreground.match(/[\d.]+/g).slice(0,3).map(Number),b=sample.box,points=[[b.x+2,b.y+1],[b.x+b.width/2,b.y+1],[b.x+b.width-2,b.y+1],[b.x+2,b.y+b.height-1]];
+ const pixels=points.map(([x,y])=>{const i=(Math.floor(y)*png.width+Math.floor(x))*4;return Array.from(png.data.subarray(i,i+3));});
+ const candidates=pixels.filter(rgb=>rgb.some((v,i)=>Math.abs(v-fg[i])>32));if(!candidates.length)throw Error('No independent background pixel');
+ const background=candidates.reduce((a,b)=>luminance(a)>luminance(b)?a:b),a=luminance(fg),c=luminance(background),ratio=(Math.max(a,c)+.05)/(Math.min(a,c)+.05);
+ Object.assign(result,sample,{background,pixels,ratio});if(ratio<4.5)throw Error('Contrast below unchanged4.5 requirement');result.status='PASS';result.exitCode=0;
+}catch(error){result.status='FAIL';result.exitCode=1;result.failure=String(error);console.error(error);process.exitCode=1;}
+finally{if(browser)await browser.close();result.end=stamp();fs.writeFileSync(path.join(dir,'exact-contrast.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}
+})();

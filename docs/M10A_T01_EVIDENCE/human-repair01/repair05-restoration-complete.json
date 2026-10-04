@@ -1,0 +1,180 @@
+{
+  "start": "2026-10-04 11:53:39 +08:00",
+  "sourceFailure": "focused-browser.json",
+  "cycle": 5,
+  "hypothesis": "Atomic replacement is blocked for a known historical M10 output; native in-place writes can restore verified original bytes without renaming. No claim about handle owner.",
+  "files": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "changed": true,
+      "generated": "generated/04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5.png",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "changed": true,
+      "generated": "generated/04d7677f4c6ca830dfa535a50169c7c287c6a410d14b2352cefd58102d89ddb5.png",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "changed": true,
+      "generated": "generated/db244e67d8e5876399217ebfc5f0b9b0d3281426ff64f6f21a005b0efb420a1d.png",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "changed": true,
+      "generated": "generated/0550d91ca855b48aca06efc24818f1b761fbf0a01e318f900ad1bccf872110aa.png",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "changed": true,
+      "generated": "generated/334fee062264142e17aebc7cd3d6c1ec92b1e1edd141302caa190dc687fa1422.png",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "changed": true,
+      "generated": "generated/f59189e58612b4e0f0dc1a7ec83d0703ab3bb1f15bfb55b471e533f30edbbf19.png",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "status": "PASS"
+    }
+  ],
+  "status": "FAIL",
+  "exitCode": 1,
+  "failure": "Error: Command failed: powershell.exe -NoProfile -Command $ErrorActionPreference='Stop'\n[System.IO.File]::WriteAllBytes('C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\m9-table-320.png',[System.IO.File]::ReadAllBytes('C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-focused-browser-skglR4\\f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616.png'))\nException calling \"WriteAllBytes\" with \"2\" argument(s): \"The requested operation cannot be performed on a file with a u\r\nser-mapped section open.\r\n\"\r\nAt line:2 char:1\r\n+ [System.IO.File]::WriteAllBytes('C:\\Users\\user\\Documents\\GitHub\\casin ...\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : IOException\r\n \r\n",
+  "end": "2026-10-04 11:53:42 +08:00"
+}

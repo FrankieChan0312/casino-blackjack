@@ -1,0 +1,19 @@
+{
+  "start": "2026-10-04 11:52:57 +08:00",
+  "sourceFailure": "focused-browser.json",
+  "cycle": 5,
+  "hypothesis": "Atomic replacement is blocked for a known historical M10 output; native in-place writes can restore verified original bytes without renaming. No claim about handle owner.",
+  "files": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "changed": false,
+      "generated": null,
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "ownedReplacementCleanup": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-04 11:52:57 +08:00"
+}

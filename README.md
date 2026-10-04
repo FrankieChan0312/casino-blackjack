@@ -1,4 +1,16 @@
-## M10A-T01 scene frame and composition shell
+## M10A-T01 contrast repair — IMPLEMENTED / VERIFIED
+
+The retained visual shell now passes the desktop payout contrast gate:4.476153734022139 -> **4.520553075070118:1**, required>=4.5. The only exceptional change is desktop inscription colour#e2d2a4 ->#e3d3a5; composition dimensions and native controls remain intact, Stand bottom890.71875<=900. [Current evidence, screenshots and exact checks](docs/M10A_T01_EVIDENCE/exceptional-repair11/README.md), [task](docs/M10A_T01.md).
+
+Focused UI46/Chromium22, full79 files/1050 Vitest and69 Chromium, independent preservation and final verify.ps1 PASS/exit0. Desktop/tablet/mobile,200% text, native200% browser zoom and keyboard/focus PASS. **M10A-T01:11/11 — OWNER-AUTHORIZED EXCEPTION**; previous10/10 blocker history preserved, no repair12. Publication follows final review. Human Visual Acceptance NOT ACCEPTED / PENDING; genuinely fresh independent review NOT RUN; no deployment. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**.
+
+## Historical M10A-T01 visual repair — blocked at10/10
+
+The owner rejected the published8ae9ff2 scene. The current working-tree shell repair enlarges existing Dealer/occupied portraits/local cards and attaches native betting/actions more closely to play. [Comparable before/after and executed evidence](docs/M10A_T01_EVIDENCE/human-repair01/README.md), [task and scope](docs/M10A_T01.md).
+
+Focused UI46/Chromium22, typecheck/lint and native200% browser zoom passed. The scene contrast gate failed: payout text4.476:1 < required4.5:1. At the normal10/10 cap, further product repair requires explicit authorization. Full regression/final verify.ps1/current commit/push/deployment NOT RUN. Human Visual Acceptance NOT ACCEPTED / PENDING; fresh independent review NOT RUN. **M10A-T02 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE**. M10-T02/M10-T04 implementation NOT STARTED.
+
+## Historical M10A-T01 scene-frame publication
 
 The Player Mode table, Dealer, existing seats, local controls and exact credit values now share one continuous felt/rail scene. A compact header keeps the simulation disclaimer visible; character preferences and demo tools follow gameplay. [Task and scope](docs/M10A_T01.md), [screenshots and executed evidence](docs/M10A_T01_EVIDENCE/README.md).
 

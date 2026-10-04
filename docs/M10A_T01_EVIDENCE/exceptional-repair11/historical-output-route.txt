@@ -1,0 +1,16 @@
+const fs=require('node:fs'),path=require('node:path'),{syncBuiltinESMExports}=require('node:module');
+const configuration=JSON.parse(fs.readFileSync(path.join(__dirname,'m10a-human-route-config.json'),'utf8'));
+const known=new Set(configuration.known.map(name=>path.resolve(configuration.repository,name)));
+const original={writeFileSync:fs.writeFileSync,writeFile:fs.writeFile,copyFileSync:fs.copyFileSync,promisedWrite:fs.promises.writeFile};
+function routed(filename){
+ if(typeof filename!=='string'||!known.has(path.resolve(filename)))return filename;
+ const destination=path.join(configuration.output,path.relative(configuration.repository,path.resolve(filename)));
+ fs.mkdirSync(path.dirname(destination),{recursive:true});
+ fs.appendFileSync(configuration.log,JSON.stringify({timestamp:new Date().toISOString(),pid:process.pid,source:path.resolve(filename),destination})+'\n');
+ return destination;
+}
+fs.writeFileSync=(filename,...args)=>original.writeFileSync(routed(filename),...args);
+fs.writeFile=(filename,...args)=>original.writeFile(routed(filename),...args);
+fs.copyFileSync=(source,destination,...args)=>original.copyFileSync(source,routed(destination),...args);
+fs.promises.writeFile=(filename,...args)=>original.promisedWrite(routed(filename),...args);
+syncBuiltinESMExports();

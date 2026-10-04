@@ -1,0 +1,15 @@
+const fs=require('node:fs'),crypto=require('node:crypto'),cp=require('node:child_process');
+const d='docs/M10A_T01_EVIDENCE/exceptional-repair11',before=JSON.parse(fs.readFileSync(d+'/before.json','utf8'));
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const allowed=new Set(['README.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md','docs/M10A_T01.md','docs/PLAN.md','docs/STATE.md','src/ui/styles.css']);
+const protectedPaths=before.files.filter(f=>!allowed.has(f.path)),mismatches=protectedPaths.filter(f=>!fs.existsSync(f.path)||hash(fs.readFileSync(f.path))!==f.sha256);
+const css=fs.readFileSync('src/ui/styles.css','utf8'),entry=before.files.find(f=>f.path==='src/ui/styles.css');
+const colourOnly=hash(css.replace(' color: #e3d3a5;',''))===entry.sha256;
+const oldExec=JSON.parse(fs.readFileSync('docs/M10A_T01_EVIDENCE/human-repair01/executables-pre-final.json','utf8')).files;
+const execDrift=oldExec.filter(f=>f.path!=='src/ui/styles.css'&&hash(fs.readFileSync(f.path))!==f.sha256);
+const original=JSON.parse(fs.readFileSync('docs/M10A_T01_EVIDENCE/human-repair01/final-composition.json','utf8')),current=JSON.parse(fs.readFileSync(d+'/visuals/after-composition.json','utf8'));
+const identicalGeometry=original.scenarios.every((s,i)=>JSON.stringify(s.measurements)===JSON.stringify(current.scenarios[i].measurements));
+const contrast=JSON.parse(fs.readFileSync(d+'/visuals/contrast.json','utf8')),stand=contrast.checks.find(c=>c.name==='Stand button').box;
+const receipt={timestamp:stamp(),protectedCount:protectedPaths.length,mismatches,priorRepairEvidenceCount:protectedPaths.filter(f=>f.path.includes('/human-repair01/')).length,colourOnly,incomingExecutables:oldExec.length,unchangedExecutables:oldExec.length-1,execDrift,matchedCaptureGeometryIdentical:identicalGeometry,officialStandBottom:stand.y+stand.height,exactContrast:JSON.parse(fs.readFileSync(d+'/visuals/exact-contrast.json','utf8')).ratio,srcDomainDiff:cp.execFileSync('git',['diff','HEAD','--','src/domain'],{encoding:'utf8'}).trim(),executables:oldExec.map(f=>({path:f.path,sha256:hash(fs.readFileSync(f.path))})),status:'PENDING'};
+receipt.status=!mismatches.length&&!execDrift.length&&colourOnly&&identicalGeometry&&receipt.srcDomainDiff===''&&receipt.officialStandBottom===890.71875?'PASS':'FAIL';
+fs.writeFileSync('.git/m10a-exception11-protected.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({...receipt,executables:receipt.executables.length}));if(receipt.status!=='PASS')process.exitCode=1;

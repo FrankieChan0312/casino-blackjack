@@ -1,0 +1,299 @@
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "bounds": {
+      "dealer": {
+        "width": 180,
+        "height": 220,
+        "bottom": 275.46875,
+        "top": 55.46875
+      },
+      "portraits": [
+        {
+          "width": 84,
+          "height": 112,
+          "bottom": 260.28125,
+          "top": 148.28125
+        },
+        {
+          "width": 84,
+          "height": 112,
+          "bottom": 403.171875,
+          "top": 291.171875
+        },
+        {
+          "width": 84,
+          "height": 112,
+          "bottom": 345.65625,
+          "top": 233.65625
+        }
+      ],
+      "ownPortrait": {
+        "width": 72,
+        "height": 96,
+        "bottom": 625.9375,
+        "top": 529.9375
+      },
+      "ownCard": {
+        "width": 100,
+        "height": 132,
+        "bottom": 767.4605712890625,
+        "top": 635.4605712890625
+      },
+      "dockGap": 6,
+      "sceneTransform": "none",
+      "sceneZoom": "1"
+    },
+    "geometry": {
+      "table": {
+        "x": 22,
+        "y": 39.46875,
+        "width": 1236,
+        "height": 753.0625
+      },
+      "anchors": [
+        {
+          "label": "Dealer",
+          "x": 430,
+          "y": 51.46875,
+          "width": 420,
+          "height": 228
+        },
+        {
+          "label": "Seat 1",
+          "x": 65.45806884765625,
+          "y": 140.28125,
+          "width": 256,
+          "height": 313
+        },
+        {
+          "label": "Seat 3",
+          "x": 323.78289794921875,
+          "y": 283.171875,
+          "width": 256,
+          "height": 234.1875
+        },
+        {
+          "label": "Seat 4",
+          "x": 260,
+          "y": 521.359375,
+          "width": 760,
+          "height": 265.171875
+        },
+        {
+          "label": "Seat 6",
+          "x": 857.64794921875,
+          "y": 225.65625,
+          "width": 256,
+          "height": 226
+        }
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scrollWidth": 1280
+    }
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "bounds": {
+      "dealer": {
+        "width": 144,
+        "height": 176,
+        "bottom": 259.90625,
+        "top": 83.90625
+      },
+      "portraits": [
+        {
+          "width": 66,
+          "height": 88,
+          "bottom": 431.84375,
+          "top": 343.84375
+        },
+        {
+          "width": 66,
+          "height": 88,
+          "bottom": 450.28125,
+          "top": 362.28125
+        },
+        {
+          "width": 66,
+          "height": 88,
+          "bottom": 442.859375,
+          "top": 354.859375
+        }
+      ],
+      "ownPortrait": {
+        "width": 66,
+        "height": 88,
+        "bottom": 690.75,
+        "top": 602.75
+      },
+      "ownCard": {
+        "width": 88,
+        "height": 114,
+        "bottom": 841.0198364257812,
+        "top": 727.0198364257812
+      },
+      "dockGap": 16,
+      "sceneTransform": "none",
+      "sceneZoom": "1"
+    },
+    "geometry": {
+      "table": {
+        "x": 16,
+        "y": 67.90625,
+        "width": 736,
+        "height": 808.84375
+      },
+      "anchors": [
+        {
+          "label": "Dealer",
+          "x": 204,
+          "y": 79.90625,
+          "width": 360,
+          "height": 186
+        },
+        {
+          "label": "Seat 1",
+          "x": 32,
+          "y": 335.84375,
+          "width": 228,
+          "height": 228.46875
+        },
+        {
+          "label": "Seat 3",
+          "x": 270,
+          "y": 354.28125,
+          "width": 228,
+          "height": 228.46875
+        },
+        {
+          "label": "Seat 4",
+          "x": 84,
+          "y": 592.75,
+          "width": 600,
+          "height": 268
+        },
+        {
+          "label": "Seat 6",
+          "x": 508,
+          "y": 346.859375,
+          "width": 228,
+          "height": 228.46875
+        }
+      ],
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "scrollWidth": 768
+    }
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 720
+    },
+    "bounds": {
+      "dealer": {
+        "width": 92,
+        "height": 124,
+        "bottom": -299.84375,
+        "top": -423.84375
+      },
+      "portraits": [
+        {
+          "width": 42,
+          "height": 56,
+          "bottom": -153.375,
+          "top": -209.375
+        },
+        {
+          "width": 42,
+          "height": 56,
+          "bottom": -144.15625,
+          "top": -200.15625
+        },
+        {
+          "width": 42,
+          "height": 56,
+          "bottom": -147.875,
+          "top": -203.875
+        }
+      ],
+      "ownPortrait": {
+        "width": 42,
+        "height": 56,
+        "bottom": 74.109375,
+        "top": 18.109375
+      },
+      "ownCard": {
+        "width": 64,
+        "height": 92,
+        "bottom": 208.73757934570312,
+        "top": 116.73757934570312
+      },
+      "dockGap": 10,
+      "sceneTransform": "none",
+      "sceneZoom": "1"
+    },
+    "geometry": {
+      "table": {
+        "x": 10,
+        "y": -439.84375,
+        "width": 300,
+        "height": 728.765625
+      },
+      "anchors": [
+        {
+          "label": "Dealer",
+          "x": 10,
+          "y": -427.84375,
+          "width": 300,
+          "height": 154
+        },
+        {
+          "label": "Seat 1",
+          "x": 18,
+          "y": -214.375,
+          "width": 90.65625,
+          "height": 188.71875
+        },
+        {
+          "label": "Seat 3",
+          "x": 114.65625,
+          "y": -205.15625,
+          "width": 90.671875,
+          "height": 188.71875
+        },
+        {
+          "label": "Seat 4",
+          "x": 18,
+          "y": -0.25,
+          "width": 283.984375,
+          "height": 279.171875
+        },
+        {
+          "label": "Seat 6",
+          "x": 211.328125,
+          "y": -208.875,
+          "width": 90.65625,
+          "height": 202.625
+        }
+      ],
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "scrollWidth": 320
+    }
+  }
+]

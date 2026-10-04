@@ -1,0 +1,14 @@
+{
+  "auxiliaryBatchDriver": {
+    "action": "Failed optional driver retained, not corrected or rerun; separate native read-only Git index inspection performed",
+    "exitCode": 1,
+    "rootCause": "NOT ESTABLISHED",
+    "status": "FAIL",
+    "error": "Blob inspection failed"
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "timestamp": "2026-10-04 13:04:53 +08:00",
+  "method": "Native Git hash-object --no-filters --stdin-paths compared with git ls-files --stage; no product or driver modification",
+  "exactRawStagedBlobs": 354
+}

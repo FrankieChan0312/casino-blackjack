@@ -1,0 +1,45 @@
+{
+  "start": "2026-10-04 12:42:00 +08:00",
+  "scope": "ONLY original failing desktop payout contrast; same fixture, selector, viewport, computed colour and screenshot-background sampling as retained failing check.",
+  "required": 4.5,
+  "status": "PASS",
+  "foreground": "rgb(227, 211, 165)",
+  "fontSize": "12px",
+  "text": "BLACKJACK PAYS 3:2 DEALER STANDS ON ALL 17",
+  "box": {
+    "x": 562.8828125,
+    "y": 302.46875,
+    "width": 154.234375,
+    "height": 31
+  },
+  "background": [
+    43,
+    102,
+    82
+  ],
+  "pixels": [
+    [
+      40,
+      98,
+      78
+    ],
+    [
+      43,
+      102,
+      82
+    ],
+    [
+      40,
+      98,
+      78
+    ],
+    [
+      40,
+      97,
+      77
+    ]
+  ],
+  "ratio": 4.520553075070118,
+  "exitCode": 0,
+  "end": "2026-10-04 12:42:02 +08:00"
+}

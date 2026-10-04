@@ -1,0 +1,27 @@
+const {chromium,expect}=require('@playwright/test'),fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const {PNG}=require(path.resolve('node_modules/playwright-core/lib/utilsBundle.js'));
+const dir=path.resolve('.git/m10a-human-visuals'),stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const luminance=rgb=>rgb.map(v=>{const c=v/255;return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;}).reduce((sum,c,i)=>sum+c*[.2126,.7152,.0722][i],0);
+(async()=>{let browser;const result={start:stamp(),method:'Actual Chromium computed foreground colours versus representative screenshot background pixels at the text-box corners/upper edge; maximum sampled background luminance is used. Normal text threshold4.5:1, focus3:1. Bounded scene checks, not comprehensive WCAG certification.',checks:[],status:'PENDING'};
+try{
+ browser=await chromium.launch();const page=await browser.newPage({viewport:{width:1280,height:900}});
+ await page.goto('http://127.0.0.1:4173/?fixture=player');await page.getByLabel('Your main wager',{exact:false}).fill('100');await page.getByRole('button',{name:'Deal',exact:true}).click();await page.evaluate(()=>scrollTo(0,0));
+ const selectors=[['disclaimer','.casino-header > p'],['round status','#player-scene-status'],['felt payout','.table-inscription'],['Dealer rule','.table-inscription span'],['local name','#player-hand h2'],['local controller','#player-hand .character-controller'],['guest controller','.seat[data-position="1"] .character-controller'],['wager','#player-hand .wager-chip'],['Available label','.credits dt'],['Pending label','.credits dl > div:nth-child(3) dt'],['Available value','.credits dd'],['Stand button','.action-stand']];
+ const samples=[];for(const [name,selector] of selectors)samples.push(await page.locator(selector).first().evaluate((el,name)=>{const b=el.getBoundingClientRect(),s=getComputedStyle(el);return{name,foreground:s.color,fontSize:s.fontSize,box:{x:b.x,y:b.y,width:b.width,height:b.height}};},name));
+ const bytes=await page.screenshot({path:path.join(dir,'contrast-sample-1280.png'),fullPage:true,animations:'disabled'}),png=PNG.sync.read(bytes);
+ for(const sample of samples){const fg=sample.foreground.match(/[\d.]+/g).slice(0,3).map(Number),b=sample.box;
+  const points=[[b.x+2,b.y+1],[b.x+b.width/2,b.y+1],[b.x+b.width-2,b.y+1],[b.x+2,b.y+b.height-1]];
+  const pixels=points.map(([x,y])=>{const i=(Math.floor(y)*png.width+Math.floor(x))*4;return Array.from(png.data.subarray(i,i+3));});
+  const candidates=pixels.filter(rgb=>rgb.some((v,i)=>Math.abs(v-fg[i])>32));if(!candidates.length)throw Error('No independent background pixel: '+sample.name);
+  const background=candidates.reduce((a,b)=>luminance(a)>luminance(b)?a:b),a=luminance(fg),c=luminance(background),ratio=(Math.max(a,c)+.05)/(Math.min(a,c)+.05);
+  result.checks.push({...sample,background,pixels,ratio,required:4.5,status:ratio>=4.5?'PASS':'FAIL'});
+ }
+ const stand=page.getByRole('button',{name:'Stand',exact:true});await page.locator('#player-hand').focus();
+ for(let i=0;i<8&&!await stand.evaluate(el=>el===document.activeElement);i++)await page.keyboard.press('Tab');
+ await expect(stand).toBeFocused();const outline=await stand.evaluate(el=>({colour:getComputedStyle(el).outlineColor,style:getComputedStyle(el).outlineStyle,width:getComputedStyle(el).outlineWidth,keyboardFocused:el===document.activeElement,focusVisible:el.matches(':focus-visible')}));
+ const fg=outline.colour.match(/[\d.]+/g).slice(0,3).map(Number),background=[43,102,82],ratio=(luminance(fg)+.05)/(luminance(background)+.05);
+ result.focus={...outline,background,ratio,required:3,status:ratio>=3&&outline.style==='solid'?'PASS':'FAIL'};
+ expect(result.checks.filter(check=>check.status==='FAIL')).toEqual([]);expect(result.focus.status).toBe('PASS');result.status='PASS';result.exitCode=0;
+}catch(error){result.status='FAIL';result.exitCode=1;result.failure=String(error);console.error(error);process.exitCode=1;}
+finally{if(browser)await browser.close();result.end=stamp();fs.writeFileSync(path.join(dir,'contrast.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}
+})();

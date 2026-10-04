@@ -324,3 +324,52 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .seat:not(.local) .character-identity img { width: 42px; height: 56px; }
   .player-mode .local .character-identity img { width: 42px; height: 56px; }
 }
+/* T01 camera repair: real footprints on the retained arc; no scene transform. */
+.player-mode .game-scene .player-betting .wager-presets button:hover:not(:disabled) { background: #455f47; }
+@media (min-width: 1101px) {
+  .player-mode .game-scene .casino-header { padding: 2px 8px 6px; }
+  .player-mode .game-scene .casino-header .eyebrow { display: none; }
+  .game-scene .table-scene { border-width: 6px; }
+  .player-mode .game-scene .table-surface { --dealer-band: 0px; --perimeter-depth: max(248px, 15.5rem); padding-bottom: 6px; }
+  .player-mode .game-scene .dealer { width: 420px; min-height: max(228px, 14.25rem); padding-left: 188px; }
+  .player-mode .game-scene .dealer > .casino-person { left: 12px; width: 180px; height: 220px; }
+  .player-mode .game-scene .dealer .cards { max-width: 100%; }
+  .player-mode .game-scene .table-inscription { top: calc(max(228px, 10rem) + 16px); color: #e3d3a5; }
+  .player-mode .game-scene .seats { gap: 4px 0; }
+  .player-mode .game-scene .seat:not(.local) { width: min(100%, 256px); }
+  .player-mode .game-scene .seat h2 { font-size: 1.1rem; }
+  .player-mode .game-scene .character-archetype, .player-mode .game-scene .character-controller { font-size: .75rem; }
+  .player-mode .game-scene .seat:not(.local) .character-identity { gap: 8px; min-height: 112px; }
+  .player-mode .game-scene .seat:not(.local) .character-identity img { width: 84px; height: 112px; }
+  .player-mode .game-scene .seat:not(.local) .card { flex-basis: 58px; width: 58px; height: 82px; }
+  .player-mode .game-scene .seat:not(.local) article > p { font-size: .8rem; }
+  .player-mode .game-scene .seat:not(.local) article { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+  .player-mode .game-scene .seat:not(.local) article .cards { grid-column: 1; grid-row: 2 / span 2; }
+  .player-mode .game-scene .seat:not(.local) article > p { grid-column: 2; grid-row: 2; }
+  .player-mode .game-scene .seat:not(.local) article > p + p { grid-row: 3; }
+  .player-mode .game-scene .seat[data-position='local'] { width: min(100%, 760px); padding: 8px 12px 4px; }
+  .player-mode .game-scene .local .character-identity { gap: 12px; min-height: 96px; }
+  .player-mode .game-scene .local .character-identity img { width: 72px; height: 96px; }
+  .player-mode .game-scene .local article:not(:has(.card:nth-child(3))) .hand-header { grid-column: 2; grid-row: 1; }
+  .player-mode .game-scene .local article:not(:has(.card:nth-child(3))) .cards { grid-row: 1 / span 3; }
+  .player-mode .game-scene .local .card { flex-basis: 100px; width: 100px; height: 132px; }
+  .player-mode .game-scene .local .card b { font-size: min(1.4rem, 28px); }
+  .player-mode .game-scene .local .card-pip { font-size: min(2.6rem, 44px); top: 44px; }
+  .player-mode .game-scene .player-dock { max-width: 808px; padding-top: 0; }
+  .player-mode .game-scene .round-status { padding: 0; margin-bottom: 0; }
+  .player-mode .game-scene .credits { margin-top: 4px; padding: 6px 0; }
+  .player-mode .game-scene .player-betting > h2 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin: 2px 0; }
+  .player-mode .game-scene .player-betting > form { gap: 10px; padding: 8px 0; border: 0; }
+  .player-mode .game-scene .player-betting > form > label { font-size: .75rem; margin: 0; }
+  .player-mode .game-scene .player-betting input { width: 96px; min-height: 68px; text-align: center; font-size: 1.25rem; border-radius: 34px; }
+  .player-mode .game-scene .player-betting .wager-presets { margin: 0; }
+  .player-mode .game-scene .player-betting .wager-presets button { width: 68px; min-height: 68px; font-size: 1rem; }
+  .player-mode .game-scene .player-betting > form > .primary { min-width: 136px; min-height: 56px; border-radius: 28px; }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  .player-mode .game-scene .table-surface { --dealer-band: max(210px, 13.125rem); }
+  .player-mode .game-scene .dealer { width: min(100%, 360px); min-height: 186px; padding-left: 164px; }
+  .player-mode .game-scene .dealer > .casino-person { width: 144px; height: 176px; }
+  .player-mode .game-scene .seat .character-identity img { width: 66px; height: 88px; }
+  .player-mode .game-scene .local .card { flex-basis: 88px; width: 88px; height: 114px; }
+}

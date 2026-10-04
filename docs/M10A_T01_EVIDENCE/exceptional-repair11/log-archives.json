@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-10-04 12:56:07 +08:00",
+  "status": "PASS",
+  "method": "Only redundant task-owned raw logs removed after lossless gzip round-trip and hashes; prior240 evidence files untouched.",
+  "archives": [
+    {
+      "path": "assets.log.gz",
+      "rawBytes": 270,
+      "rawSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "gzipBytes": 177,
+      "gzipSha256": "0da9b602199edbc8c04fa13af73d14f98d6eedca97f2da6ce8c936524413df21",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-final-verify.log.gz",
+      "rawBytes": 37642,
+      "rawSha256": "79e7aaee3d07996b50ca76d61afc8176106042a8605dbbe1adf34224a0a0f3a8",
+      "gzipBytes": 6517,
+      "gzipSha256": "492bfe07540c280143a166753fbde7c96ecb931414ba3af5147ab3bab0c6d9b5",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-focused-browser.log.gz",
+      "rawBytes": 4921,
+      "rawSha256": "24030cd68621a0544011ae647c61cefd71ed6c1a7c64f940ac2f9578e4f56808",
+      "gzipBytes": 1832,
+      "gzipSha256": "52359586c8771fa1e0fc467b5912c2a2d5f8a1f4b367b9dc209f0453d36eda03",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-focused-ui.log.gz",
+      "rawBytes": 523,
+      "rawSha256": "2a416efc9efbcf63f348c996308983256c2c082b3a5d993f79ba18002d33e3b7",
+      "gzipBytes": 292,
+      "gzipSha256": "bcc3ac0f1aa7b99afa5b4c8cf94e1cde8fe0132e10b1e8d46703fdf16d5fa6c1",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-full-chromium.log.gz",
+      "rawBytes": 13494,
+      "rawSha256": "397880656c49d797685f877aa49bd57606e40a3049d8ed380a8d59949f19a790",
+      "gzipBytes": 4170,
+      "gzipSha256": "b333352e0b655688bd5d70d4b6f1470f03d9fca82c852b699e6d287979ee5772",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-full-vitest.log.gz",
+      "rawBytes": 461,
+      "rawSha256": "372c8e5f8e963b31f582868052de7b17f2469028f6b74d11e07b4ba29016584e",
+      "gzipBytes": 322,
+      "gzipSha256": "ee1c6b7557edea7216e7aaeff82ea3d0256ab378b1c53fc08c3de06488ecf7ba",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-independent-preservation.log.gz",
+      "rawBytes": 22718,
+      "rawSha256": "70acd227546f4ee101852138dd4fdca23b19cbad6e95dc741da1302c417fbe54",
+      "gzipBytes": 4211,
+      "gzipSha256": "c8d03f12a5e3174d883ebf0beb9fb1d2bb3677378f7ffbd73bc4a45a5cd5c2f4",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "visuals/capture.log.gz",
+      "rawBytes": 2459,
+      "rawSha256": "5497ff7f845fae492f2309d2ba4406342d0b24ea3870f040b9d6c6ac6a415c28",
+      "gzipBytes": 907,
+      "gzipSha256": "9b4e72526ea91095bbb033e1c70dbf973d7ddf66cea19f5fffa1e23a0c4c58c2",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "visuals/contrast.log.gz",
+      "rawBytes": 3968,
+      "rawSha256": "db68b4baffa5723e7f015f4cd2fca44b2745e09dd17bb65f32b15c67e11f4f67",
+      "gzipBytes": 1320,
+      "gzipSha256": "c0ddc5a82e3e5d229956ff3f063db84a74c2af74ff7a48c0eca4c3c7a866ca7e",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "visuals/exact-contrast.log.gz",
+      "rawBytes": 568,
+      "rawSha256": "e145b61d45a223fef680edba2c4c1cee7649dcf3abbd9c6861587c854bc6f39c",
+      "gzipBytes": 418,
+      "gzipSha256": "8783d330ca411ef1244a81425e84f2c9a21ded104fb77c436f5304893eff4bdf",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "visuals/zoom.log.gz",
+      "rawBytes": 536,
+      "rawSha256": "6876ba19a5d7b3651927ed050b4f920b0748c20e4b28dadebec4df1d6cfa37c7",
+      "gzipBytes": 293,
+      "gzipSha256": "f64f2468e5ca6a1029d71903905fd6a0a6aee9604b6ddceb40f696d1fc30b934",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-final-documentation.log.gz",
+      "rawBytes": 404,
+      "rawSha256": "5fc71b8cbc1bf4dff9a993d12bb0f76578e3223e1b3ec28db233478d27dd99a3",
+      "gzipBytes": 263,
+      "gzipSha256": "277e4d4cb65c5d1e0c81aa2aee1430d9e4dd88b8c195fd990a093b77c35d619e",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "ex11-precommit-documentation.log.gz",
+      "rawBytes": 393,
+      "rawSha256": "6756d962e269013ed7d99060d2e83a2925439def25d7b26b8422a489cd5cc0cf",
+      "gzipBytes": 257,
+      "gzipSha256": "c9a01f267d9bde93562ae1b381d1b01b7fa4ebe4994756dc058b0680302e9f20",
+      "roundTrip": "PASS"
+    }
+  ],
+  "finalArchiveTimestamp": "2026-10-04 13:00:58 +08:00"
+}

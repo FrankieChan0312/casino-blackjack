@@ -184,3 +184,71 @@ test('[M10A-E01] one scene frame owns the existing game regions and keyboard pla
     await expect(controls.getByLabel('Your main wager', { exact:false })).toBeFocused();
   }
 });
+
+test('[M10A-E02] camera repair enlarges existing gameplay footprints and retains native wager play', async ({ page }, info) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  const receipts = [];
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const scene = page.getByRole('region', { name: 'Blackjack game scene', exact: true });
+    const funds = scene.getByRole('region', { name: 'Your credits', exact: true }).locator('dd');
+    const chip = scene.getByRole('button', { name: 'Choose 100 credits', exact: true });
+    await chip.hover();
+    const hoverRatio = await chip.evaluate(el => {
+      const parse = (colour: string) => colour.match(/[\d.]+/g)!.slice(0, 3).map(Number);
+      const luminance = (rgb: number[]) => rgb.map(value => { const c = value / 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; })
+        .reduce((sum, value, index) => sum + value * [.2126, .7152, .0722][index], 0);
+      const style = getComputedStyle(el), a = luminance(parse(style.color)), b = luminance(parse(style.backgroundColor));
+      return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+    });
+    expect(hoverRatio).toBeGreaterThanOrEqual(4.5);
+    await chip.click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toHaveValue('100');
+    await expect(funds).toHaveText(['1,000', '0', '0']);
+    if (viewport.width === 1280) await page.screenshot({ path: info.outputPath('camera-open-1280.png'), fullPage: true, animations: 'disabled' });
+    await scene.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(funds).toHaveText(['900', '100', '0']);
+    await expect(scene.locator('#player-hand article .card')).toHaveCount(2);
+    const bounds = await scene.evaluate(el => {
+      const size = (target: Element) => { const r = target.getBoundingClientRect(); return { width: r.width, height: r.height, bottom: r.bottom, top: r.top }; };
+      const local = size(el.querySelector('#player-hand')!), dock = size(el.querySelector('.player-dock')!);
+      return { dealer: size(el.querySelector('.dealer > .casino-person')!),
+        portraits: [...el.querySelectorAll('.seat:not(.local) .character-identity img')].filter(target => target.getBoundingClientRect().width > 0).map(size),
+        ownPortrait: size(el.querySelector('#player-hand .character-identity img')!), ownCard: size(el.querySelector('#player-hand article .card')!),
+        dockGap: dock.top - local.bottom, sceneTransform: getComputedStyle(el).transform, sceneZoom: getComputedStyle(el).zoom };
+    });
+    expect(bounds.sceneTransform).toBe('none'); expect(bounds.sceneZoom).toBe('1');
+    if (viewport.width === 1280) {
+      // Independent dimensions from the owner-rejected8ae9ff2 capture, not subjective acceptance thresholds.
+      expect(bounds.dealer.width).toBeGreaterThan(116); expect(bounds.dealer.height).toBeGreaterThan(144);
+      expect(bounds.portraits).toHaveLength(3);
+      for (const portrait of bounds.portraits) { expect(portrait.width).toBeGreaterThan(54); expect(portrait.height).toBeGreaterThan(72); }
+      expect(bounds.ownPortrait.width).toBeGreaterThan(54); expect(bounds.ownPortrait.height).toBeGreaterThan(72);
+      expect(bounds.ownCard.width).toBeGreaterThan(76); expect(bounds.ownCard.height).toBeGreaterThan(98);
+      expect(bounds.dockGap).toBeGreaterThanOrEqual(0); expect(bounds.dockGap).toBeLessThan(12);
+      const stand = (await scene.getByRole('button', { name: 'Stand', exact: true }).boundingBox())!;
+      expect(stand.y + stand.height).toBeLessThanOrEqual(900);
+    }
+    receipts.push({ viewport, bounds, hoverRatio, geometry: await geometry(page) });
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`camera-dealt-${viewport.width}.png`), fullPage: true, animations: 'disabled' });
+    await scene.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(scene.locator('#player-result')).toBeFocused();
+    await scene.getByRole('button', { name: 'Deal Again', exact: true }).click();
+    await expect(scene.getByLabel('Your main wager', { exact: false })).toBeFocused();
+  }
+  writeFileSync(info.outputPath('camera-footprints.json'), JSON.stringify(receipts, null, 2) + '\n');
+  await page.setViewportSize(viewports[0]); await deal(page);
+  await page.addStyleTag({ content: 'html { font-size: 200%; }' });
+  const enlarged = await page.locator('.casino-table').evaluate(table => {
+    const box = (el: Element) => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; };
+    return { rules: box(table.querySelector('.table-inscription')!), identities: [...table.querySelectorAll('.character-identity')].map(box) };
+  });
+  for (const identity of enlarged.identities) {
+    const rules = enlarged.rules;
+    expect(rules.x + rules.width <= identity.x || identity.x + identity.width <= rules.x || rules.y + rules.height <= identity.y || identity.y + identity.height <= rules.y).toBe(true);
+  }
+  await geometry(page);
+  await page.screenshot({ path: info.outputPath('camera-text200-1280.png'), fullPage: true, animations: 'disabled' });
+  writeFileSync(info.outputPath('camera-text200.json'), JSON.stringify(enlarged, null, 2) + '\n');
+});

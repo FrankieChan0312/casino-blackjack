@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-10-04 12:25:06 +08:00",
+  "status": "PASS",
+  "archives": [
+    {
+      "path": "assets.log.gz",
+      "originalSha256": "1b0b9a01ec5f28b0e9126549ed0e139c4ccf9ae47e602a3aa577dd641e786dd3",
+      "originalBytes": 267,
+      "compressedSha256": "5e2fa5ccf0433c4e3297851bcf65d9d7bb0b748925f459708ab57c80c5c3c3cb",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "contrast.log.gz",
+      "originalSha256": "7bd34b132ec56977d39a0d061a6613f4bd7ff209d059e2fec888a156313abf33",
+      "originalBytes": 4895,
+      "compressedSha256": "3b41638f2921973a0c3b3083b7d0f7255b813f705d97dd46c44689e770ecc5e6",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "focused-browser.log.gz",
+      "originalSha256": "388403a1a95909b93b46d0efa6f2cd07125c218056c7eac06eae20b20de0ca3d",
+      "originalBytes": 21611,
+      "compressedSha256": "0cb918bf57461faf69a3da1e78a4e5fa776538ff82628689db51b59f0e1bdb2d",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "focused-ui.log.gz",
+      "originalSha256": "c3ff7f115174ae454bacc00f1b5b694c783fd2f02ff901c7372c517436e8c5d9",
+      "originalBytes": 777,
+      "compressedSha256": "242b307b9b2e094dbcb58f070e71a22a83fffb32f777a9803658aedf65753859",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "lint.log.gz",
+      "originalSha256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "originalBytes": 60,
+      "compressedSha256": "20367bf5b8fdf6adf93fb809c2497ee83ccb10a2a70f3fb5ccb11a7553f97068",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair06-focused-browser.log.gz",
+      "originalSha256": "1ae00f58b08eb2a96ad9560d3317c64134dddf9db9c4447e55052f2a859de534",
+      "originalBytes": 1976,
+      "compressedSha256": "450e31126ad0f547145eb8553ae99561ee8f40640b6e6aa9afebf9123bf77187",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair07-focused-browser.log.gz",
+      "originalSha256": "db8ad1e87a1631b6989f110ee8a79e069222b6ec6b59cc6971d7a65ce3234381",
+      "originalBytes": 15607,
+      "compressedSha256": "4dcbe5f9a4eaefe4c3619f383c440f19c20611cb5f4e773d6c0d52d305997dbb",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair08-focused-browser.log.gz",
+      "originalSha256": "63a412fb703a942ade9e32856b511c72cbcc96da5eecac424df2b3e585885519",
+      "originalBytes": 10163,
+      "compressedSha256": "8a6f6f59085731870df44e95376cec4225109975a8da81a2e85613c401546450",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair09-focused-browser.log.gz",
+      "originalSha256": "4381dadf91ec8420bf8c408a1ca7e16156102f46bf8330d9049f392a57722406",
+      "originalBytes": 4919,
+      "compressedSha256": "c41e9c972fe002c1ccc634adc540938cd3af8accae4c404d9a5c1fb846097262",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair09-focused-ui.log.gz",
+      "originalSha256": "c718989f2d99ee9859376b66f2f7d6224525e0a8c00412fb2068d69c377c6bf8",
+      "originalBytes": 777,
+      "compressedSha256": "2c5cea09b9326363d8d970f68e6c4889226844708f6d561300a1520cf5c7f811",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair10-focused-browser.log.gz",
+      "originalSha256": "a7bbc2afd8fbdf91a2f1f08fa7e82da6f8fe90ba019d5317b178f158f3c04721",
+      "originalBytes": 4921,
+      "compressedSha256": "fb15f9776a2d103ca41b93e8163795c0736a1d99517ac8f82d7710fb4a85d945",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "repair10-focused-ui.log.gz",
+      "originalSha256": "fabdc5a9a1e015ee2975087c1a20c5c74d7155612e30db6ee498fee75a575278",
+      "originalBytes": 777,
+      "compressedSha256": "457c41afc6f578634cb1716485699af6d7dda2b417022e5f6a63684c166af69f",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "typecheck.log.gz",
+      "originalSha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "originalBytes": 52,
+      "compressedSha256": "cbae128ff2fc710e4493513d902e2ad1561726a308517d2552f3c62bf510e449",
+      "roundTrip": "PASS"
+    },
+    {
+      "path": "blocked-documentation.log.gz",
+      "originalSha256": "75443d31f7dc3a13e52a18f30f653db4b065308bfdbfa0a8c05486ce76421b79",
+      "originalBytes": 392,
+      "compressedSha256": "3a5961352b3f8f5acfd6c268aa4499cc744b58a4642a684dad0a02a86283acf2",
+      "roundTrip": "PASS"
+    }
+  ]
+}
