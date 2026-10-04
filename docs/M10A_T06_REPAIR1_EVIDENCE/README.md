@@ -33,3 +33,7 @@ Focused UI13/97, Chromium42; full84/1101/89; current preservation18/145; indepen
 [Text contrast](visuals/control-contrast.json)49samples minimum6.514407246458633:1,10focus checks >=3; [scene contrast](visuals/contrast.json)28PASS; [native browser zoom2.0](visuals/zoom200.json), [native decision disclosures](visuals/zoom200-disclosure.json), [PA1 reproduction](assets.json). Text200/native200 and keyboard/disclosures/44px/overflow/cards verified for real decisions/results, with all screenshots retained.34 control/8native screenshots listed in visual-review.json were actually opened; other collected screenshots are available but not claimed individually inspected.
 
 All2955 protected files/2629 historical evidence paths byte-identical, domain EMPTY; accepted Actions/Betting/native command/disabled expressions/result calculations unchanged. No future task, Motion/animation or deployment. M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE; M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED.
+
+## Executed publication
+
+Implementation **05c1b4cef9bb6915422a32a93b63e2175fd0a9f6** committed and normally pushed to origin/main, live parity0/0/CLEAN/untracked0 confirmed. [Actual commit](implementation-commit.json), [publication](implementation-publication.json). A documentation/evidence-only receipt follows; final HEAD reported in Git/final delivery. Executable hashes unchanged. Owner overall NOT ACCEPTED / awaiting new live review; T07 remains waiting.

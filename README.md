@@ -1,3 +1,7 @@
+## M10A-T06 visual repair published
+
+Compact Insurance/Even Money and Round Complete game docks verified and pushed normally on main at05c1b4c; cumulative4/10. Full84files/1101Vitest/89Chromium and all required preservation/unified checks PASS/0. [Before/after evidence](docs/M10A_T06_REPAIR1_EVIDENCE/README.md), [actual publication](docs/STATE.md). Accepted normal dock preserved; overall owner visual acceptance NOT ACCEPTED / awaiting new live review. T07 waiting; no Motion/animation/deployment.
+
 ## M10A-T06 Human Visual Repair 1 — technically verified
 
 Insurance/Even Money and Round Complete are compact local game docks with native disclosures and visible state focus. The owner-accepted normal action dock/betting-open pixels and scene geometry are preserved. Full84files/1101Vitest/89Chromium, focused97/42 and independent/unified verification PASS / checked0; cumulative4/10. [Evidence and comparisons](docs/M10A_T06_REPAIR1_EVIDENCE/README.md). Publication pending. Overall owner T06 visual acceptance NOT ACCEPTED / awaiting new live review; fresh independent review NOT RUN. T07 waiting; no accounting HUD redesign, Dealer artwork, Motion/animation or deployment. Earlier checkpoint paragraphs below retain their historical scope.
