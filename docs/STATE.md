@@ -1,3 +1,7 @@
+## M10-T03 published — 2026-10-05 07:51:05 +08:00
+
+M10-T03 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at main/402fccda825a5d0a34449eeb00b50df212be9081. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN,untracked0 at 2026-10-05 07:50:15 +08:00. Repairs5/10; full Vitest1129/Chromium113, M1–M8 and verify.ps1 PASS/0. Exact executables unchanged. HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. This separate factual receipt follows successful implementation publication; its own final SHA is resolved from Git.
+
 ## M10-T03 publication repair5/10 — 2026-10-05 07:48:43 +08:00
 
 Repair5/10: publication staged whitespace FAIL/exit2 before commit/push. Cause hypothesis confirmed: five raw Playwright Markdown error contexts include trailing-space source-line excerpts. Preserve exact original raw bytes via independently checked gzip; original phase metadata retained with generated-archives.json resolution map. First whitespace failure retained. No source/test/config changes; full89/1129/113, M1–M8 and unified PASS remain valid on180 unchanged executable hashes. Rerun affected documentation and actual staged whitespace; no weakening or whitespace trimming of raw evidence.

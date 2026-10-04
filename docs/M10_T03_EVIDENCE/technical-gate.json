@@ -17,9 +17,10 @@
   "domainDiff": "EMPTY",
   "publicationRepair": {
     "timestamp": "2026-10-05 07:48:43 +08:00",
-    "status": "IMPLEMENTED",
+    "status": "VERIFIED",
     "firstWhitespaceExit": 2,
     "archiveProof": "PASS",
-    "affectedChecks": "Documentation/staged whitespace pending;180 exact executed hashes unchanged"
+    "affectedChecks": "Documentation13 PASS/checked0; actual staged whitespace PASS/checked0 before402fccd commit;180 executable hashes unchanged",
+    "closedAt": "2026-10-05 07:51:54 +08:00"
   }
 }

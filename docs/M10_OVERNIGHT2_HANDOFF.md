@@ -1,3 +1,7 @@
+# M10_OVERNIGHT_BATCH2_COMPLETE
+
+Technical implementation/publication gates complete for T10/T02/T03; final unchanged-executable documentation receipt follows. Owner T02/T03 review remains pending.
+
 # Casino Blackjack — Overnight Batch 2 handoff
 
 Starting main/441d4515855cc106f410264ec767008a4ae99998, clean/local=remote/0/0/untracked0. [Authorization](M10_OVERNIGHT2_AUTHORIZATION.md).
@@ -12,7 +16,7 @@ M10-T02 IMPLEMENTED / VERIFIED. Real1–7 pre-session native selector/Start, def
 
 ## M10-T03
 
-M10-T03 IMPLEMENTED / VERIFIED. Pure deterministic seatMapping binds ascending configured identities to unchanged count-specific seatAnchors; Seat4 odd-centre/even-right-centre and one dominant near-edge HUD. Responsive footprint layout retains full local hands, labelled guest card expansion, no phantom participants, no order/RNG mutations. Count1–7/three widths and enlarged-text/long-name/five-card/split/Insurance/result edges executed. Full Vitest1129, Chromium113, independent M1–M8 preservation and scripts/verify.ps1 PASS / checked exit0. Cumulative repairs5/10 (including lossless raw-report publication repair). HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Same-session source/spec/diff/test/evidence review PASS; genuinely fresh separate-session task review NOT COMPLETED (unavailable); owner review pending. Domain/RNG/shoe/cards/accounting/strategies/replay/digest/journal, PA1 assets/provenance/canonical historical evidence protected. Normal authorized main publication pending. T04/art/Motion/animation/deployment excluded. [Evidence](M10_T03_EVIDENCE/README.md). Implementation commit pending.
+M10-T03 IMPLEMENTED / VERIFIED. Pure deterministic seatMapping binds ascending configured identities to unchanged count-specific seatAnchors; Seat4 odd-centre/even-right-centre and one dominant near-edge HUD. Responsive footprint layout retains full local hands, labelled guest card expansion, no phantom participants, no order/RNG mutations. Count1–7/three widths and enlarged-text/long-name/five-card/split/Insurance/result edges executed. Full Vitest1129, Chromium113, independent M1–M8 preservation and scripts/verify.ps1 PASS / checked exit0. Cumulative repairs5/10 (including lossless raw-report publication repair). HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Same-session source/spec/diff/test/evidence review PASS; genuinely fresh separate-session task review NOT COMPLETED (unavailable); owner review pending. Domain/RNG/shoe/cards/accounting/strategies/replay/digest/journal, PA1 assets/provenance/canonical historical evidence protected. Normal authorized main publication pending. T04/art/Motion/animation/deployment excluded. [Evidence](M10_T03_EVIDENCE/README.md). Implementation main/402fccda825a5d0a34449eeb00b50df212be9081; normal push PASS/0, live parity0/0 CLEAN/untracked0. Final receipt SHA resolved from Git.
 
 | Total | Real ascending seats | Arc angles | Human slot |
 | --- | --- | --- | --- |
