@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-10-04 16:53:59 +08:00",
+  "status": "PASS",
+  "review": "Same-session actual image inspection; genuinely fresh independent review NOT RUN; T02 human visual acceptance PENDING",
+  "seatImages": [
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-1280.png",
+      "retainedAt": "generated/50e98927b9b265401a1f9715a2cc6eb5bdedc76cd2b7e410a1c38d70be8de5c5.png",
+      "bytes": 727598,
+      "sha256": "50e98927b9b265401a1f9715a2cc6eb5bdedc76cd2b7e410a1c38d70be8de5c5"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-320.png",
+      "retainedAt": "generated/8e84c8817ea3d8fe1f76cc8f3bc13474d3a7cfbbd26346c37e6a7629f481b81a.png",
+      "bytes": 286220,
+      "sha256": "8e84c8817ea3d8fe1f76cc8f3bc13474d3a7cfbbd26346c37e6a7629f481b81a"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-768.png",
+      "retainedAt": "generated/838171396070a2654a6be69f736f0cdb5158b16a4550342643be27cac2f04d51.png",
+      "bytes": 504126,
+      "sha256": "838171396070a2654a6be69f736f0cdb5158b16a4550342643be27cac2f04d51"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-1280.png",
+      "retainedAt": "generated/aec4a0b64c8b82848ffa7d4603a8623171dc3f28ce49a6eea313f3e96783e371.png",
+      "bytes": 718524,
+      "sha256": "aec4a0b64c8b82848ffa7d4603a8623171dc3f28ce49a6eea313f3e96783e371"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-320.png",
+      "retainedAt": "generated/0dc1e428e1ad7af3e247b9a66c067c41282ed4c345d657003c774945254a368b.png",
+      "bytes": 321595,
+      "sha256": "0dc1e428e1ad7af3e247b9a66c067c41282ed4c345d657003c774945254a368b"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-768.png",
+      "retainedAt": "generated/06c7658fd819f08a4f347b14250865c1e38a14523716f2160467902443eeebc6.png",
+      "bytes": 528725,
+      "sha256": "06c7658fd819f08a4f347b14250865c1e38a14523716f2160467902443eeebc6"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-1280.png",
+      "retainedAt": "generated/562a40a879d95ed6b8f1d6d78fc875c490d40fb389561d11bba653554fd37413.png",
+      "bytes": 1200472,
+      "sha256": "562a40a879d95ed6b8f1d6d78fc875c490d40fb389561d11bba653554fd37413"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-320.png",
+      "retainedAt": "generated/3f0ff10b32ec5e3afc0ccc9c3ebf3c5e2cca08fb7644c8cdad101d44e15e86ae.png",
+      "bytes": 555239,
+      "sha256": "3f0ff10b32ec5e3afc0ccc9c3ebf3c5e2cca08fb7644c8cdad101d44e15e86ae"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-768.png",
+      "retainedAt": "generated/7d6ad9603fa61e76370c2e49801de198edec5091b43b81966e94248fc3ccbe4b.png",
+      "bytes": 897324,
+      "sha256": "7d6ad9603fa61e76370c2e49801de198edec5091b43b81966e94248fc3ccbe4b"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-1280.png",
+      "retainedAt": "generated/5ee0344dfe2bdc481327522a8741239a7eb88b08e855b166f2ecd959bbc5315e.png",
+      "bytes": 861593,
+      "sha256": "5ee0344dfe2bdc481327522a8741239a7eb88b08e855b166f2ecd959bbc5315e"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-320.png",
+      "retainedAt": "generated/f20fb2cac750d6be845217781a56973f49053e04ef8992d420fe0f2c653e4cbd.png",
+      "bytes": 389629,
+      "sha256": "f20fb2cac750d6be845217781a56973f49053e04ef8992d420fe0f2c653e4cbd"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-768.png",
+      "retainedAt": "generated/4c3b786623b0bf176984ed95b6ccb287017a19101859f49a7b53e298a5716c82.png",
+      "bytes": 610863,
+      "sha256": "4c3b786623b0bf176984ed95b6ccb287017a19101859f49a7b53e298a5716c82"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-1280.png",
+      "retainedAt": "generated/db0a43830ffa8c74d7d5f1656091f8500c649146a76ceaf54497e6c1b54e3cd4.png",
+      "bytes": 1474178,
+      "sha256": "db0a43830ffa8c74d7d5f1656091f8500c649146a76ceaf54497e6c1b54e3cd4"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-320.png",
+      "retainedAt": "generated/97f3c7ade4e8ce19c6c4328e55026c40ac9d269b4e6e8579f7dca01bba74fc61.png",
+      "bytes": 673550,
+      "sha256": "97f3c7ade4e8ce19c6c4328e55026c40ac9d269b4e6e8579f7dca01bba74fc61"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-768.png",
+      "retainedAt": "generated/0dc62acc882563b63113976bed4fb1c1c7eb60af553fe21a06f724576071c930.png",
+      "bytes": 1066628,
+      "sha256": "0dc62acc882563b63113976bed4fb1c1c7eb60af553fe21a06f724576071c930"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "ba93f1c391a2bef054279ab13a31945fbbfd715780f5e252e8cddd58e418c23f"
+    },
+    {
+      "path": "visuals/zoom200-player-five-controls.png",
+      "sha256": "e52db603221bc3f16ca931fcd41c3676dea02a1f97c3a27c5262565850edac99"
+    },
+    {
+      "path": "visuals/zoom200-player-five-hand.png",
+      "sha256": "f5a2cfc14c78d15947ca4264835b2056b31d4c3c2531e950458b4ed2cdc1ea6a"
+    },
+    {
+      "path": "visuals/zoom200-player-five-top.png",
+      "sha256": "188560d7e401f9866e8521f03bcab825aa7d721db0c7b79126b9b3c34b711b62"
+    },
+    {
+      "path": "visuals/zoom200-player-hand.png",
+      "sha256": "8f6cc1965f1a9154611d4dc0296f5cb8f701324d0c72a257aa821f7775c028bf"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-controls.png",
+      "sha256": "f2f205caad8d649ff47fadaed12cdf1d61bae4c635a6032b876108b8f6e6544f"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-hand.png",
+      "sha256": "4357fe9ed540d469a25d370bf688bac30074106fedf39456bfbda9b8cc4bac0c"
+    },
+    {
+      "path": "before-rule-layer/80093d00e16905060d1eaa7fda60316aa60d24868c0faa7ebc1d0cf5993b365f-zoom200-player-rsa-cap-top.png",
+      "sha256": "80093d00e16905060d1eaa7fda60316aa60d24868c0faa7ebc1d0cf5993b365f"
+    },
+    {
+      "path": "before-rule-layer/ce7a1d1cf129c549fc87334830bc38a91133096228770dcb7f19ad3d7389b5e2-zoom200-player-top.png",
+      "sha256": "ce7a1d1cf129c549fc87334830bc38a91133096228770dcb7f19ad3d7389b5e2"
+    }
+  ],
+  "findings": "One framed guest object, no detached hand/result panel. Portraits recognized; full2–5 card identities, exact per-hand stakes/results, named split leaves and explicit Current turn/Current hand/ACTIVE. Mobile disclosure contains one semantic hand/card tree, with original main stake visible while closed. Long/text/expanded split cases scroll vertically; no essential clipping or horizontal overflow.",
+  "fixtureQualification": "Five/split remote captures are labelled engineering component layouts mounted using real production SeatUnit and real CSS in the retained scene; surrounding seed7 scene is geometry context. They do not represent a played round, full-scene current-seat state or a new roster/count configuration. Actual roster/gameplay/funds/replay/turn semantics are verified separately by seeded E03 and unchanged PA1/M9 tests.",
+  "standBottom": 876.53125,
+  "requirement": 900,
+  "referenceMaintenance": {
+    "timestamp": "2026-10-04 17:22:48 +08:00",
+    "reason": "Two original native capture paths now resolve to exact pre-layer bytes retained under before-rule-layer; original JSON bytes retained there. Findings/time/counter and all original hashes unchanged."
+  }
+}

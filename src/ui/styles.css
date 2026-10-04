@@ -373,3 +373,39 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
   .player-mode .game-scene .seat .character-identity img { width: 66px; height: 88px; }
   .player-mode .game-scene .local .card { flex-basis: 88px; width: 88px; height: 114px; }
 }
+/* T02: one occupied guest object; anchors and the local/Dealer shell stay owned by T01. */
+.player-mode .game-scene .table-inscription { z-index: 1; }
+.player-mode .seat-unit { border-radius: 20px; background: #143b2c; outline: 1px solid #8fa184; padding: 0 4px; }
+.player-mode .seat-unit[data-current-turn] { outline: 2px solid #ffe7a2; }
+.player-mode .seat-unit .character-identity img { outline: 1px solid #b39659; outline-offset: -1px; border-radius: 12px; background: #102e23; }
+.player-mode .seat-unit .character-controller, .player-mode .seat-unit .character-archetype { color: #d5dfc6; }
+.player-mode .seat-unit .seat-turn { font-weight: 700; color: #ffe7a2; }
+.player-mode .seat-unit .seat-hands { display: block; }
+.player-mode .seat-unit .seat-hands > summary { display: none; }
+.player-mode .game-scene .seat:not(.local) .seat-unit article { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; border: 0; border-radius: 0; background: transparent; margin: 0; padding: 4px 0; box-shadow: none; transition: none; }
+.player-mode .game-scene .seat:not(.local) .seat-unit article .cards { grid-column: 1; grid-row: auto; gap: 4px; }
+.player-mode .game-scene .seat-unit .hand-header { grid-column: 1; }
+.player-mode .seat-unit .hand-header h3 { margin: 2px 0; }
+.player-mode .seat[data-hand-count='1'] .seat-unit .active-hand .hand-header { display: flex; }
+.player-mode .seat-unit .active-hand { border-top: 2px solid #ffe7a2; }
+.player-mode .seat-unit .hand + .hand, .player-mode .seat-unit .hand + .active-hand, .player-mode .seat-unit .active-hand + .hand { border-top: 1px solid #8fa184; }
+.player-mode .seat-unit .seat-hand-facts { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2px 8px; }
+.player-mode .seat-unit .seat-hand-facts p { margin: 0; }
+.player-mode .seat-unit .seat-score { font-size: 1.15rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.player-mode .seat-unit .seat-hand-state { font-size: .7rem; }
+.player-mode .seat-unit .seat-stake { font-size: .7rem; color: #e7ebd5; }
+.player-mode .seat-unit .seat-waiting { padding-bottom: 4px; }
+.player-mode .seat-unit .seat-main-wager { display: none; }
+.player-mode .seat-unit .card, .player-mode .seat-unit .seat-hand-state { animation: none; }
+@media (min-width: 601px) {
+  .player-mode .game-scene .seat:not(.local) .seat-unit article:not(:has(.card:nth-child(3))) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
+  .player-mode .game-scene .seat:not(.local) .seat-unit article:not(:has(.card:nth-child(3))) .cards { grid-column: 1; grid-row: 2; }
+  .player-mode .seat-unit article:not(:has(.card:nth-child(3))) .seat-hand-facts { grid-column: 2; grid-row: 2; }
+  .player-mode .seat-unit .hand-header { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .player-mode .seat-unit .seat-hands > summary { display: block; }
+  .player-mode .game-scene .seat:not(.local) .seat-unit article .cards { gap: 3px; }
+  .player-mode .seat:not(.local) .seat-unit .card + .card { margin-left: 0; }
+  .player-mode .seat-unit .seat-main-wager { display: block; color: #e7ebd5; font-size: .6rem; }
+}

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-04 17:27:10 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "06a95f2541e47a6540bdc63c237ced710666591f",
+  "protectedFiles": 1224,
+  "acceptedT01CSS": "Exact incoming prefix unchanged; T02 rules appended only",
+  "incomingBrowserAssertions": "Exact normalized prefix unchanged; two new tests appended",
+  "domainDiff": "EMPTY",
+  "immutableEvidence": 911
+}

@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-04 17:29:00 +08:00",
+  "command": "git diff --cached --check",
+  "status": "FAIL",
+  "exitCode": 2,
+  "cause": "Repair7 removed all generated Markdown whitespace findings; one original CR line remains in historical-output-route.txt. This copied temporary driver is raw evidence, not executable product source.",
+  "target": "Losslessly gzip that exact task-owned driver snapshot; retain and verify original SHA256, no newline rewriting; repair8/10."
+}

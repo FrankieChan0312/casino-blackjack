@@ -1,3 +1,73 @@
+## M10A-T02 final review and packaging closure
+
+2026-10-04 17:29:55 +08:00. **M10A-T02_IMPLEMENTED_VERIFIED**, cumulative **8/10** (product1/2/3/6, evidence4/5/7/8). Repair7/8 original Markdown/router bytes remain losslessly gzip archived;44 raw records verified against original SHA256/length. Same-session full authored diff and task evidence review PASS; staged whitespace PASS/exit0, all306 staged task evidence blobs match native Git unfiltered/index hashes at the reviewed checkpoint.157 executable/test/config hashes match the exact final verification snapshot;1224 protected incoming paths/911 historical evidence paths unchanged, src/domain diff EMPTY.98 trace text entries and127 plaintext/archive records scanned,0 sensitive-pattern findings. [Review](M10A_T02_EVIDENCE/precommit-review.json), [staged checkpoint](M10A_T02_EVIDENCE/staged-review-checkpoint.json), [lossless archives](M10A_T02_EVIDENCE/log-archive.json). Final affected-document check and updated stage inspection follow before normal main commit/push.
+
+Full80/1059Vitest/71Chromium, independent preservation and final verify.ps1 PASS/checked exit0 remain valid; no executable change after verification. T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical11/11 unchanged. T02 human visual acceptance PENDING; fresh independent review NOT RUN; deployment NOT RUN. M10A-T03 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED.
+
+## Current repair8/10 — original driver snapshot packaging
+
+2026-10-04 17:29:00 +08:00. M10A-T02 cumulative **8/10**. Repair7 affected documents5/13 and raw-evidence integrity PASS; staged whitespace remains FAIL/checked exit2 solely at the original output-router snapshot's final CR line. Hypothesis: lossless gzip of that exact raw driver snapshot preserves the executed tool bytes and removes the final raw-text whitespace finding. No authored/product/test/runtime change. Keep the two-line failed diagnostic and original driver hash; rerun full staged whitespace/raw-index integrity, source freeze and affected-document checks. Prior repair7 and all earlier counts/failures retained. Full80/1059/71 and final verify.ps1 PASS/0 remain valid for the unchanged157 executable hashes. T01 historical11/11 untouched; T02 owner visual acceptance PENDING, fresh independent review NOT RUN, deployment NOT RUN.
+
+## Current repair7/10 — raw evidence packaging
+
+2026-10-04 17:26:31 +08:00. M10A-T02 remains technically IMPLEMENTED / VERIFIED; **7/10** includes this evidence-only repair. Staged whitespace FAIL/exit2 comes exclusively from untouched raw Playwright generated Markdown error contexts. Falsifiable hypothesis: lossless gzip storage of those raw bytes, with SHA256/length/decompression checks and explicit receipt references, preserves failed evidence and lets unchanged authored code/docs pass whitespace review. Target task-owned raw packaging only; no product, test, threshold, dependency, runtime, asset or protected-file change. Full80/1059/71, preservation and final verify.ps1 PASS apply unchanged to the frozen157 executable files. Retain the original98-line diagnostic; rerun stage integrity/whitespace and affected documents. T01 historical11/11 unchanged. Owner visual acceptance PENDING/fresh review NOT RUN/deployment NOT RUN.
+
+## Current M10A-T02 final technical checkpoint
+
+2026-10-04 17:22:48 +08:00. **M10A-T02_IMPLEMENTED_VERIFIED**; cumulative **8/10**. M10A-T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED at main/06a95f2541e47a6540bdc63c237ced710666591f; historical **11/11 — OWNER-AUTHORIZED EXCEPTION** unchanged. T02 human visual acceptance PENDING; genuinely fresh independent review NOT RUN. Normal main/origin commit and push follow full diff/evidence review; no deployment.
+
+Focused UI 9 files / 55 tests and focused Chromium 24 tests PASS / checked exit 0. Exact final full Vitest **80 files / 1,059 tests** and Chromium **71 tests** PASS / 0. Baseline 79/1,050/69 plus one new unit file, nine unit cases and two browser cases explains every count change. Independent M1–M8 preservation and final scripts/verify.ps1 PASS / checked exit 0; no incoming assertion, inventory adapter, threshold or retry setting changed. PA1 read-only asset audit/reproduction PASS / 0. [Final evidence index](M10A_T02_EVIDENCE/README.md).
+
+Reusable remote SeatUnit frames unchanged PA1 portraits, one semantic hand/card tree, compact per-hand score/public state/exact stake and textual Current turn/Current hand/ACTIVE markers. Long real names, five cards and four split leaves remain associated with the seat. Controller/archetype metadata is secondary; unexposed guest bankroll remains absent. Cards is the unchanged rendering function extracted from Table to avoid a component import cycle. Local/manual rendering, Dealer, controller/domain, geometry, assets, dependencies and runtime settings are retained.
+
+Actual desktop/tablet/mobile normal/five/split/text200 images reviewed in this session. Five/split remote images are explicitly isolated production-component layouts mounted in the existing seed7 scene for geometry context; they are not played rounds or whole-scene turn/roster evidence. Real seeded gameplay and the established five-card/four-leaf scenarios remain verified by original tests. Native browser zoom getZoom=2.0, 1280x723 -> 640x361 CSS viewport, DPR 1.5 -> 3, root16px/CSS zoom1 unchanged; three real scenarios and keyboard/focus PASS. Normal desktop Stand bottom **876.53125px <=900**, Dealer180x220, guest portraits84x112, local cards100x132, hand-to-controls gap6px. Normal text17 checks >=4.5; sampled payout4.577793784863828, focus5.505122929235555>=3, seat frame4.491968711099737>=3; no T02 colour change to the accepted payout rule. Repair6 only restores rule glyph layering over the guest backdrop using z-index1 and a new occlusion assertion.
+
+Protected incoming files **1,224** and immutable evidence files **911** match baseline raw SHA256. src/domain diff EMPTY; RNG/shoe/cards/accounting/bankroll/replay/digest/journal/strategy/turn/settlement unchanged. Original source/production PA1 assets, provenance and canonical17 preserved; central M10 geometry unchanged; accepted T01 CSS prefix and incoming M10/M10A assertions retained. [Byte guard](M10A_T02_EVIDENCE/protection.json), [executed source snapshot](M10A_T02_EVIDENCE/executed-version.json).
+
+M10A-T03 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Final Local Player HUD / Dealer formal artwork / new animations NOT IMPLEMENTED; Motion NOT INSTALLED. Deployment NOT RUN.
+
+## Retained execution and repair history
+
+## Repair6/10 — rule-text occlusion found during visual review
+
+2026-10-04 17:01:52 +08:00. Full80/1059 Vitest and71 Chromium PASS/0, inventory exactly baseline79/1050/69+one file/nine unit/two browser tests. Further actual betting image inspection finds a small overlap between the new guest backdrop and existing house-rule text. Hypothesis: retaining the exact rule geometry/colour while painting it above the guest backdrop restores its glyphs. Target one appended z-index declaration and meaningful text-range hit-test in the new browser case; no accepted CSS prefix/geometry/camera/Dealer/local/control/asset/domain change. Before-rule-layer PNG/JSON retained. Earlier full PASS applies to pre-layer version only; rerun focused/full/final for this exact deliverable. T02 cumulative6/10; original T0111/11 untouched.
+
+## Focused gate closed — full verification next
+
+2026-10-04 16:53:59 +08:00. M10A-T02 IMPLEMENTED; repairs5/10 (product cycles1/2/3, evidence-tool cycles4/5). Focused9/55 and Chromium24 PASS/checked exit0; original assertions preserved. Actual15 Seat Unit normal/five/split/text200 captures and9 native zoom clips inspected. Native zoom2.0 PASS,1280x723->640x361,DPR1.5->3,root16px/CSS zoom1 unchanged, keyboard/targets/focus PASS. Contrast17 text checks PASS at>=4.5, focus5.505122929235555>=3, frame4.491968711099737>=3 and active border10.169705531105482>=3; local chip rendered midpoint pixels match solid#143b2c. Normal desktop Stand876.53125<=900, Dealer180x220/guests84x112/local cards100x132/gap6 retained. Protected1224 incoming paths and911 immutable evidence paths PASS; src/domain diff EMPTY. Remote stress fixtures are explicitly isolated component layouts, not a played round; real roster/state preserved by original tests. Unit natural fixture clarified to actual two-cardA/K21 before full validation, no product change. Full Vitest/Chromium/preservation/verify.ps1 NOT RUN yet; T02 human acceptance PENDING/fresh review NOT RUN/deployment NOT RUN/T03 NOT STARTED. [Visual record](M10A_T02_EVIDENCE/visual-review.json).
+
+## Repair5/10 — rounded-chip sampling
+
+2026-10-04 16:51:45 +08:00. Repair4 contrast FAIL/1 retained: sixteen text checks PASS; the chip corner-padding samples still lie on its elliptical decorative border (118/127/91,3.4782127326812193). Actual screenshot inspected; computed solid text backdrop#143b2c unchanged. Hypothesis: the top/bottom midpoint inside the horizontal text padding excludes the rounded edge while sampling the real rendered backdrop. Target evidence tool only: midpoint at3px inside, record computed background and actual pixel samples, retain4.5/3 thresholds. No product correction; no pass fabricated. Direct capture now scrolls to0 before measuring, and reduced-motion capture will stabilize existing animated card boxes. Repair5/10 IN PROGRESS.
+
+## Repair4/10 — contrast evidence tool
+
+2026-10-04 16:50:15 +08:00. Final focused55/24 PASS; actual15 normal/five/split/text200 Seat Unit captures inspected. Native actual200% zoom PASS/0 at16:48:17..25 (1280x723->640x361, DPR1.5->3, root16px/CSS zoom1 unchanged), keyboard/focus/control targets/three real fixtures pass. Contrast driver FAIL/1:16 of17 text checks PASS, unchanged local wager sample selects a decorative border pixel136/139/100 with ratio2.9105641674976077; computed chip background is solid#143b2c. Hypothesis: sample interior padding rather than border, after actual local focus/scroll effects settle. Preserve failed JSON/PNG/raw.log in contrast-first, modify evidence tool only, rerun contrast at unchanged4.5/3 thresholds. Also settle/scroll the direct capture before geometry measurement; its initial receipt is retained and explicitly qualified as scroll-relative. No product colour/layout change. Repair4/10 IN PROGRESS; no repair count reset.
+
+## Repair3/10 — visual inspection
+
+2026-10-04 16:45:26 +08:00. Repair2 focused55/24, type/lint PASS/0; actual normal three-surface screenshots inspected. Desktop Stand876.53125<=900; unit grouping improved. Mobile expanded guest cards still inherit an unintended negative margin; closed disclosure omits visible base MAIN stake. Falsifiable hypothesis: a sufficiently specific Seat Unit-only margin override removes card intersections; mobile-only original main-stake text remains readable while the hand disclosure is closed. Target these two presentation details and add meaningful visible-stake/card-intersection assertions to the new case only. Prior screenshots remain in repair2 receipt/generated hashes. No incoming assertion or local/Dealer/scene anchor changes. Repair3/10 IN PROGRESS.
+
+## Repair2/10
+
+2026-10-04 16:43:34 +08:00 — repair1 Chromium21 PASS/3 FAIL; Stand903.21875>900 and fixture createRoot is not a function. Hypothesis: two-card guest facts beside the cards retain accepted primary fit; Vite optimized React imports need default interop. Targeted Seat Unit-only two-card grid and fixture interop, with original assertions/thresholds/local/Dealer/anchors retained. Original failed logs/traces/PNG retained; repair2 focused unit55 PASS; Chromium receipt follows. Repair2/10.
+
+## Repair1/10
+
+2026-10-04 16:38:25 +08:00. First focused UI55 PASS; typecheck FAIL/2 (fixture missing public controllerId); Chromium19 PASS/5 FAIL (Stand921.453125>900, old mobile guest-desktop-hand display:none, Playwright JSX serialization incompatible with Node SSR). Hypothesis: inherited higher-specificity grid/mobile rules override the new unit, and the fixture driver must mount the actual Vite-compiled component in Chromium. Target: increase only Seat Unit selectors, add fixture controllerId, mount the real component through its existing Vite module without test CSS, and rerun focused/type/lint/browser. Original logs/traces/screenshots retained; no original assertion or900px threshold changed. Initial concurrent route collection augmented in initial-route-supplement.json; future phases serial. Repair1/10 IN PROGRESS.
+
+## M10A-T01 human acceptance and M10A-T02 authorization
+
+2026-10-04 16:28:44 +08:00 — **M10A-T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED**. The owner explicitly accepts the published scene as a unified Blackjack game rather than a dashboard; remaining Seat Unit/local HUD/Dealer/control refinement belongs to subsequent bounded tasks. Acceptance identifies main/06a95f2541e47a6540bdc63c237ced710666591f (task1a04a5b). Preserve **M10A-T01: 11/11 — OWNER-AUTHORIZED EXCEPTION** and all previous10/10 blocker records. This receipt precedes T02 product changes.
+
+**M10A-T02 IMPLEMENTATION AUTHORIZED / IN PROGRESS; 0/10**. [Contract](M10A_T02.md). Baseline main/local=origin/live remote06a95f2541e47a6540bdc63c237ced710666591f,0/0,clean,untracked0 at16:27:28. Missing guest-bankroll projection excludes that value only; do not fabricate it or block the authorized seat composition. T02 human visual acceptance PENDING; genuinely fresh independent review NOT RUN. M10A-T03 NOT STARTED; M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED; deployment NOT RUN.
+
 ## M10A-T01 publication-receipt document check
 
 2026-10-04 13:12:37 +08:00 — Four factual publication documents only: affected5-file/13-test check PASS/exit0 at13:12:33..13:12:37. Product/tests/dependencies/runtime/evidence unchanged since published1a04a5b and final unified PASS; receipt-only normal commit/push follows. Technical status VERIFIED11/11, owner visual acceptance pending, no deployment or later task start. Git/final delivery supplies this receipt's final SHA/parity/clean state.

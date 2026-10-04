@@ -4,13 +4,10 @@ import { credits, resultLabel, handLabel } from './presentation.js';
 import { CasinoPerson } from './CasinoPerson.js';
 import { character, type CharacterLineup } from '../presentation/characters.js';
 import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometry.js';
+import { Cards } from './Cards.js';
+import { SeatUnit } from './SeatUnit.js';
 
-type PublicCard = NonNullable<BrowserView['round']>['dealer']['visibleCards'][number];
-const suitSymbols = { clubs: '♣', diamonds: '♦', hearts: '♥', spades: '♠' };
-export function Cards({ cards }: { cards: readonly PublicCard[] }) {
-  return <div className="cards">{cards.map((card, index) => <span key={index} className={`card ${card.suit}`} role="img"
-    aria-label={`${card.rank} of ${card.suit}`}><b>{card.rank}<small aria-hidden="true">{suitSymbols[card.suit]}</small></b><span className="card-pip" aria-hidden="true">{suitSymbols[card.suit]}</span><b className="card-corner" aria-hidden="true">{card.rank}</b></span>)}</div>;
-}
+export { Cards } from './Cards.js';
 export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
@@ -37,7 +34,8 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
         '--seat-shift': local ? 0 : anchor.x / 100 - (guestIndex + 0.5) / guests.length,
       } as CSSProperties : undefined;
       return <section key={seat.seatNumber} style={geometryStyle} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
-        {avatar ? <div className="character-identity">
+        {view.playerMode && !local ? <SeatUnit seat={seat} avatar={avatar} hands={hands} wager={wager}
+          currentSeat={round?.currentSeat} currentHandId={round?.currentHandId} /> : <>{avatar ? <div className="character-identity">
           <img src={avatar.portrait} width={60} height={80} alt={`${local ? 'Your avatar' : 'Computer guest'}: ${avatar.name}, ${avatar.archetype}`} />
           <div><h2 aria-label={avatar.name}>{avatar.name}</h2><p className="character-archetype">{avatar.archetype}</p>
             <p className="character-controller">Seat {seat.seatNumber} · {local ? 'You · Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}
@@ -50,9 +48,6 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
           <p className="wager-chip">MAIN: {credits(wager)} credits</p>
         </>}
         {view.playerMode && local && !hands.length && <div className="empty-hand"><div className="cards" aria-hidden="true"><span className="card card-back">♠</span><span className="card card-back">♠</span></div><p>Your cards will be dealt here.</p></div>}
-        {view.playerMode && !local && <details className="guest-mobile-cards"><summary>Cards{hands[0] && ` · ${hands[0].total}`}</summary>
-          {hands.map(hand => <div key={hand.handId}><p>{handLabel(hand.handId)} · Total: {hand.total} · {hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : 'Playing'}</p><Cards cards={hand.cards} /></div>)}
-        </details>}
         {hands.map((hand) => <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} className={`${view.playerMode && !local ? 'guest-desktop-hand ' : ''}${round?.currentHandId === hand.handId ? 'active-hand' : 'hand'}`}>
           <div className="hand-header">
             <h3>{handLabel(hand.handId)}{round?.currentHandId === hand.handId && ' · Current hand'}</h3>
@@ -62,7 +57,7 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
           <p className={`result-badge ${hand.outcome === 'CHARLIE' ? 'charlie' : ''}`} data-result={hand.outcome}>{hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason) : hand.complete ? 'Decisions complete' : hand.cards.length === 1 ? 'Waiting for card' : 'Playing'}</p>
           {hand.outcome === 'SURRENDERED' && view.ownResults.filter((result) => result.handId === hand.handId).map((result) =>
             <p key={result.handId}>Returned: {credits(result.returned)} · Lost: {credits(result.stake - result.returned)}</p>)}
-        </article>)}
+        </article>)}</>}
       </section>;
     })}</div>
   </section>;

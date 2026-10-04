@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { copyFileSync, writeFileSync } from 'node:fs';
+import { seatFacts, fiveCardHand, splitHands } from '../m10/seatFixtures.js';
 
 const viewports = [{ width: 1280, height: 900 }, { width: 768, height: 1024 }, { width: 320, height: 720 }];
 async function deal(page: Page, fixture = 'player') {
@@ -251,4 +252,66 @@ test('[M10A-E02] camera repair enlarges existing gameplay footprints and retains
   await geometry(page);
   await page.screenshot({ path: info.outputPath('camera-text200-1280.png'), fullPage: true, animations: 'disabled' });
   writeFileSync(info.outputPath('camera-text200.json'), JSON.stringify(enlarged, null, 2) + '\n');
+});
+
+test('[M10A-E03] remote seat units own real public cards scores wagers and one semantic hand at all three widths', async ({ page }, info) => {
+  for(const viewport of viewports){
+    await page.setViewportSize(viewport);await deal(page);
+    if(viewport.width===1280){
+      await page.evaluate(()=>scrollTo(0,0));
+      const rulesUnobstructed=await page.locator('.table-inscription').evaluate(rule=>{
+        const range=document.createRange();range.selectNodeContents(rule.firstChild!);const r=range.getBoundingClientRect();
+        return [.05,.5,.95].every(fraction=>rule.contains(document.elementFromPoint(r.x+r.width*fraction,r.y+r.height/2)));
+      });
+      expect(rulesUnobstructed).toBe(true);
+    }
+    for(const [seat,total,count] of [[1,17,3],[3,19,2],[6,15,2]]){
+      const guest=page.getByRole('region',{name:`Seat ${seat}`,exact:true});
+      await expect(guest.locator('.seat-unit')).toHaveCount(1);
+      await expect(guest.locator('article')).toHaveCount(1);
+      await expect(guest.locator('article .card')).toHaveCount(count);
+      if(viewport.width===320){await expect(guest.locator('.seat-main-wager')).toHaveText('MAIN: 25 credits');
+        await expect(guest.locator('.seat-main-wager')).toBeVisible();await guest.locator('summary').click();}
+      await expect(guest.locator('.seat-score')).toHaveText(String(total));
+      await expect(guest.locator('.seat-score')).toHaveAttribute('aria-label',`Total: ${total}`);
+      await expect(guest.locator('.seat-stake')).toHaveText('MAIN: 25 credits');
+      expect(await guest.locator('article').evaluate(el=>getComputedStyle(el).borderLeftWidth)).toBe('0px');
+      const cards=await guest.locator('article .card').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return{x:r.x,y:r.y,w:r.width,h:r.height};}));
+      for(let i=0;i<cards.length;i++)for(const b of cards.slice(i+1)){const a=cards[i];expect(a.x+a.w<=b.x||b.x+b.w<=a.x||a.y+a.h<=b.y||b.y+b.h<=a.y).toBe(true);}
+    }
+    const result=await geometry(page);writeFileSync(info.outputPath(`seat-normal-${viewport.width}.json`),JSON.stringify(result,null,2)+'\n');
+    await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:info.outputPath(`seat-normal-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+    await page.getByRole('button',{name:'Stand',exact:true}).click();await expect(page.locator('#player-result')).toBeFocused();
+    await page.getByRole('button',{name:'Deal Again',exact:true}).click();await expect(page.getByLabel('Your main wager',{exact:false})).toBeFocused();
+  }
+});
+
+test('[M10A-E04] public composition fixtures keep five remote cards and four labelled split leaves with real long names', async ({ page }, info) => {
+  // These are explicitly labelled engineering layouts, not a fabricated played round or occupancy selector.
+  for(const viewport of viewports)for(const scenario of ['five','split']){
+    await page.setViewportSize(viewport);await deal(page);
+    const hands=scenario==='five'?[fiveCardHand]:splitHands;
+    const guest=page.getByRole('region',{name:'Seat 1',exact:true});
+    await guest.evaluate(async (el,facts)=>{
+      const unitUrl='/src/ui/SeatUnit.tsx',reactUrl='/node_modules/.vite/deps/react.js',rootUrl='/node_modules/.vite/deps/react-dom_client.js';
+      const {SeatUnit}=await import(unitUrl),{default:React}=await import(reactUrl),{default:ReactDOM}=await import(rootUrl);
+      el.replaceChildren();el.setAttribute('data-hand-count',String(facts.hands.length));
+      ReactDOM.createRoot(el).render(React.createElement(SeatUnit,facts));
+    },{...seatFacts,hands,currentHandId:scenario==='five'?fiveCardHand.handId:splitHands[1].handId});
+    await expect(guest.getByRole('heading',{name:'Seraphine',exact:true})).toBeVisible();
+    await expect(guest.locator('.character-archetype')).toHaveText('Female Human Knight');
+    await expect(guest.locator('.seat-turn')).toHaveText('Current turn');
+    await expect(guest.locator('.turn-marker')).toHaveCount(1);
+    await expect(guest.locator('article')).toHaveCount(scenario==='five'?1:4);
+    await expect(guest.locator('article .card')).toHaveCount(scenario==='five'?5:9);
+    if(viewport.width===320)await guest.locator('summary').click();
+    if(scenario==='five')await expect(guest.locator('.seat-stake')).toHaveText('MAIN: 25.5 credits');
+    else {await expect(guest.locator('.seat-hand-state')).toHaveText(['Win','Playing','Bust','Push']);
+      await expect(guest.locator('.seat-stake')).toHaveText(['Wager: 50 credits','Wager: 100 credits','Wager: 50 credits','Wager: 50 credits']);}
+    expect(await guest.locator('.character-identity').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBe(true);
+    await geometry(page);await page.evaluate(()=>scrollTo(0,0));
+    await page.screenshot({path:info.outputPath(`seat-${scenario}-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+    await page.addStyleTag({content:'html { font-size: 200%; }'});await geometry(page);
+    await page.screenshot({path:info.outputPath(`seat-${scenario}-text200-${viewport.width}.png`),fullPage:true,animations:'disabled'});
+  }
 });

@@ -1,3 +1,13 @@
+## M10A-T02 Seat Unit learning checkpoint
+
+2026-10-04 17:22:48 +08:00. One public snapshot can feed a coherent portrait/card/score/stake/state object without recomputing rules or exposing internal accounts. Keep physical anchors separate from the seat contents and preserve full portrait aspect. Use one semantic card tree through a native mobile disclosure rather than duplicating hidden cards; show the public base wager while closed and every split leaf's own stake while expanded. Active states need explicit text in addition to an outline. The absence of a safe computer-bankroll field is a scope boundary, not permission to invent funds.
+
+Inherited higher-specificity CSS and old negative card margins can defeat a scoped component rule. Check real card intersections and primary-action fit. Component engineering fixtures prove layout and public-field rendering; label their isolation because surrounding scene state does not represent that fixture's gameplay. Literal outcomes and per-hand stakes independently establish formatting without calling settlement logic. Actual roster/turn/accounting/replay fidelity comes from the unchanged real-round tests.
+
+Mechanical PASS must be followed by actual image review: a small new opaque backdrop masked existing rule glyphs after the first full PASS. Repair6 retained all geometry/colour and changed only rule stacking plus a meaningful hit-test; rerun affected/full/final gates for the exact version. Contrast sampling must select the rendered text background, not the curved decorative edge of a chip. Retain both failed tool receipts and the corrected actual-pixel samples at unchanged thresholds. Native browser zoom is separate from text enlargement; observe actual2.0 zoom, viewport and DPR instead of inventing emulated evidence.
+
+T02 repairs8/10, final80/1059/71 and independent/final verification PASS / checked exit0. T01 acceptance precedes T02 and its11/11 history remains; T02 same-session review does not mean fresh independent review or owner acceptance. Stop after authorized normal publication for the owner's visual gate.
+
 ## M10A planning learning checkpoint
 
 2026-10-04 00:50:54 +08:00 — Geometry and technical PASS do not decide visual game identity. The owner rejected T01's dashboard-like composition after technical publication; retain its1–7 anchor/public-state/evidence foundation and11/11 history, then plan the explicitly authorized independent M10A milestone. A useful composition contract states card/seat/hand/decision ownership, local/Dealer focus, useful felt structure and exact compact funds, with visual gates in addition to fit/tests.

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-10-04 17:26:31 +08:00",
+  "command": "git diff --cached --check",
+  "status": "FAIL",
+  "exitCode": 2,
+  "cause": "Raw Playwright Markdown error-context source excerpts retain trailing whitespace; no authored-source failure. Complete98-line diagnostic retained. Packaging repair7/10, no executable/assertion change."
+}

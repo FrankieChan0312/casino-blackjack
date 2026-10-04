@@ -1,4 +1,10 @@
-## M10A-T01 contrast repair — IMPLEMENTED / VERIFIED
+## Current M10A-T02 Player Seat Unit
+
+**M10A-T02_IMPLEMENTED_VERIFIED**, repairs **8/10**. Remote portraits, cards, score, exact stake and public hand state now share one seat frame; secondary metadata is compact and current-turn/hand states retain text. Five-card/four-split-leaf and real long-name layouts pass at desktop/tablet/mobile, 200% text and native200% browser zoom. Full **80 files / 1,059 Vitest tests**, **71 Chromium tests**, independent preservation and final verify.ps1 PASS / exit0. [Task](docs/M10A_T02.md), [comparable screenshots and evidence](docs/M10A_T02_EVIDENCE/README.md).
+
+**M10A-T01 HUMAN VISUAL ACCEPTANCE: ACCEPTED** was recorded before T02 edits; historical11/11 exception retained. T02 owner visual acceptance PENDING; fresh independent review NOT RUN. Final Local Player HUD/Dealer formal artwork/animations NOT IMPLEMENTED; Motion NOT INSTALLED. M10A-T03 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. Publication follows scope review.
+
+## Historical M10A-T01 contrast repair — IMPLEMENTED / VERIFIED
 
 The retained visual shell now passes the desktop payout contrast gate:4.476153734022139 -> **4.520553075070118:1**, required>=4.5. The only exceptional change is desktop inscription colour#e2d2a4 ->#e3d3a5; composition dimensions and native controls remain intact, Stand bottom890.71875<=900. [Current evidence, screenshots and exact checks](docs/M10A_T01_EVIDENCE/exceptional-repair11/README.md), [task](docs/M10A_T01.md).
 

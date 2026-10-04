@@ -1,0 +1,14 @@
+const fs=require('fs'),cp=require('child_process'),crypto=require('crypto');const dir='docs/M10A_T02_EVIDENCE';
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const stamp=()=>cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const base=JSON.parse(fs.readFileSync(dir+'/before.json','utf8'));const allowed=new Set(['README.md','docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md','docs/M10A_T01.md','src/ui/Table.tsx','src/ui/styles.css','tests/browser/m10.spec.ts']);
+const protectedFiles=base.files.filter(f=>!allowed.has(f.path));
+for(const f of protectedFiles)if(hash(fs.readFileSync(f.path))!==f.sha256)throw Error('Protected incoming bytes changed: '+f.path);
+const css=cp.execFileSync('git',['show',base.head+':src/ui/styles.css'],{encoding:'utf8'}).replaceAll('\r\n','\n');
+if(!fs.readFileSync('src/ui/styles.css','utf8').replaceAll('\r\n','\n').startsWith(css))throw Error('Accepted T01 CSS changed');
+const test=cp.execFileSync('git',['show',base.head+':tests/browser/m10.spec.ts'],{encoding:'utf8'}).replaceAll('\r\n','\n').trimEnd();
+const current=fs.readFileSync('tests/browser/m10.spec.ts','utf8').replaceAll('\r\n','\n').replace("import { seatFacts, fiveCardHand, splitHands } from '../m10/seatFixtures.js';\n",'');
+if(current.slice(0,current.indexOf("test('[M10A-E03]")).trimEnd()!==test)throw Error('Incoming browser assertions changed');
+const domain=cp.execFileSync('git',['diff','HEAD','--','src/domain'],{encoding:'utf8'}).trim();if(domain)throw Error('Domain diff not empty');
+const result={timestamp:stamp(),status:'PASS',exitCode:0,baseline:base.head,protectedFiles:protectedFiles.length,acceptedT01CSS:'Exact incoming prefix unchanged; T02 rules appended only',incomingBrowserAssertions:'Exact normalized prefix unchanged; two new tests appended',domainDiff:'EMPTY',immutableEvidence:base.files.filter(f=>f.path.includes('_EVIDENCE/')||f.path.startsWith('docs/images/')).length};
+fs.writeFileSync(dir+'/protection.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
