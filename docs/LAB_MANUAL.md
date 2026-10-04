@@ -1,3 +1,7 @@
+## M10A-T09 responsive/stress learning checkpoint — 2026-10-05 02:25:27 +08:00
+
+Stress verification must distinguish original natural, split21 and profile-specific Charlie from mere card-count/total inference. Ordered hand IDs/stakes/results and public-only Dealer additions provide stronger evidence than attractive screenshots alone. Focused105/49 PASS/0, repair0/10. Fresh independent review NOT RUN; deferred owner visual review remains distinct from technical PASS.
+
 ## M10A-T08 responsive/stress learning checkpoint — 2026-10-05 01:54:22 +08:00
 
 Responsive CSS can group a labelled hand without changing its native DOM order: header first, original cards, independent total/stake/state, then controls and authoritative funds. Tablet uses available width, mobile permits bounded text wrapping and full-width state; desktop complete PNG identity is stronger preservation evidence than a single matching coordinate. Public count concepts are explicit engineering fixtures and never proof of runtime count support. Focused102/46 PASS/0, repair0/10. Fresh independent review NOT RUN; deferred owner visual review remains distinct from technical PASS.

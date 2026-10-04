@@ -13,3 +13,5 @@ T07 final clean receipt c3f7c39a796ba6fe20a0b0503abef504677bc51b; implementation
 ## T08 implemented and published
 
 2026-10-05 02:10:36 +08:00. Implementation 3a718cb5929a27ccba2370d29dadf66ad3dcce9a; repair0/10; full86/1106/93 PASS/0; focused/full/preservation/unified PASS/0. [Evidence](M10A_T08_EVIDENCE/README.md). HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Factual receipt pending.
+
+T08 final clean receipt b263548567318e5b0fd1402911b51c06e3886af2; implementation3a718cb5929a27ccba2370d29dadf66ad3dcce9a, repairs0/10. [T09 baseline receipt](M10A_T09_EVIDENCE/previous-task-receipt.json). T09 IN PROGRESS; no product edit at this checkpoint.

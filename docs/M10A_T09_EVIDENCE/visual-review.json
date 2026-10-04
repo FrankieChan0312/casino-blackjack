@@ -1,0 +1,258 @@
+{
+  "timestamp": "2026-10-05 02:24:41 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "review": "Actual same-session image inspection; genuinely fresh independent review NOT RUN",
+  "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION",
+  "controlImages": [
+    {
+      "path": "visuals/after-open-1280.png",
+      "sha256": "873b63807444d1fcccf2bcf90aad50520fb3701e7fc8f0d42075def83dca3318"
+    },
+    {
+      "path": "visuals/after-player-1280.png",
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "visuals/after-insurance-1280.png",
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "visuals/after-even-money-1280.png",
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "visuals/after-complete-win-1280.png",
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "visuals/after-complete-loss-1280.png",
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "visuals/after-complete-push-1280.png",
+      "sha256": "65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e"
+    },
+    {
+      "path": "visuals/after-open-768.png",
+      "sha256": "146d8c93afb14d050bb0847f86168ec27eec6b951b9a0339aea89a3b3fe0fd6f"
+    },
+    {
+      "path": "visuals/after-player-768.png",
+      "sha256": "b7f4d0755ca96a188c3f08dbd3ea7cfee32b078e5c0c9103a3176a86df07b848"
+    },
+    {
+      "path": "visuals/after-insurance-768.png",
+      "sha256": "3433d793b003ab1957d86a4af9472d0a583b6ca155651daebd18604f16662745"
+    },
+    {
+      "path": "visuals/after-even-money-768.png",
+      "sha256": "788e01539821b3b7a7746876a43b432f6267436ae56b30be64e435cd2d60ff3b"
+    },
+    {
+      "path": "visuals/after-complete-win-768.png",
+      "sha256": "0449375ae0871cc0b6cca7cc89f30207a5f02f17537d00870efad24a7e6aec2d"
+    },
+    {
+      "path": "visuals/after-complete-loss-768.png",
+      "sha256": "60dd647f5ce0a4950abb1a7ce21811bb358acfe2aaac1852db2cd79f072506ce"
+    },
+    {
+      "path": "visuals/after-complete-push-768.png",
+      "sha256": "dd85f1bed42a82e48f56462ed2c99f115f35f61fd85fea52a295211fe9ff396c"
+    },
+    {
+      "path": "visuals/after-open-320.png",
+      "sha256": "a7a24c3535a5795d190f591f9af7af148a363de7842867ba991ebf0dd7a4d6f5"
+    },
+    {
+      "path": "visuals/after-player-320.png",
+      "sha256": "0928fb90f0a3f2b710e5c89ae7cf03be17ad665363a7fe6f44c4ef7eb5353ea0"
+    },
+    {
+      "path": "visuals/after-insurance-320.png",
+      "sha256": "b7f05258d3fdf89cdb92a0269406275e5f1b4a5208f31d93918f200a593e6626"
+    },
+    {
+      "path": "visuals/after-even-money-320.png",
+      "sha256": "36209ce8d83fb7ccecf16c09711baefbe938b2ae94320c248fc03982c1c625c4"
+    },
+    {
+      "path": "visuals/after-complete-win-320.png",
+      "sha256": "e4c8cbf6d17459dadabc53f52ee331d3f27928cc6aae1f584ceeedaed322f27c"
+    },
+    {
+      "path": "visuals/after-complete-loss-320.png",
+      "sha256": "f7aaf18d41f33af36ac5f1fb4235394a28698931591f74cd11fdd63d12b64c0a"
+    },
+    {
+      "path": "visuals/after-complete-push-320.png",
+      "sha256": "4c13bb6adf871dbd6d15ea02987958428721febd991f6513b76d3c8ad018fda1"
+    },
+    {
+      "path": "visuals/edge-cards3-1280.png",
+      "sha256": "366fe84f98107cb478c24c6af712192799aabde2f11a0ffd0e66807c8bc4dfb6"
+    },
+    {
+      "path": "visuals/edge-cards3-320.png",
+      "sha256": "7204dcc22f9e55c021b81c2c310d6965d33ee26288d7b81ecaf45903ce71cd7c"
+    },
+    {
+      "path": "visuals/edge-cards3-768.png",
+      "sha256": "3395ffd8911e5f6821b915b9b854e1a9010b1d6f6411fe18580f501a12379a0f"
+    },
+    {
+      "path": "visuals/edge-cards4-1280.png",
+      "sha256": "ceee40554190710e7f26c980a20b4611c8e44af21ecc4ad04732d320f06a0c0c"
+    },
+    {
+      "path": "visuals/edge-cards4-320.png",
+      "sha256": "a0cf00557e7ee0be5c7fe060670d7f8dad92fed8b486d8cac0e81d1de4d4d01b"
+    },
+    {
+      "path": "visuals/edge-cards4-768.png",
+      "sha256": "7977332aad30c77a0ea3afbb9cc5771587023456e759dd841103727228e1ec14"
+    },
+    {
+      "path": "visuals/edge-cards5-1280.png",
+      "sha256": "99f44281f3aad8a0d41c102cf5e81d05538d68e05c937bfeeba1b5e7ee3a79bb"
+    },
+    {
+      "path": "visuals/edge-cards5-320.png",
+      "sha256": "fb0d89af4ef569d1d966ff2505ac8b3946516557ff2cc45a8e1776dd63d27976"
+    },
+    {
+      "path": "visuals/edge-cards5-768.png",
+      "sha256": "7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26"
+    },
+    {
+      "path": "visuals/edge-five-text200-1280.png",
+      "sha256": "1b0d01ce704365b9c00c41d3386ac8128830e38e9a9edafb0ccb8613b1190211"
+    },
+    {
+      "path": "visuals/edge-five-text200-320.png",
+      "sha256": "9fbd28eae8d042c587233eb5c576bd3c99aa530b2ccc9989378162cb428d7443"
+    },
+    {
+      "path": "visuals/edge-five-text200-768.png",
+      "sha256": "6c73bb4186ff02290aebd8449da8af3b6bbc8f36ffe28ae0042dc77335c8671a"
+    },
+    {
+      "path": "visuals/edge-four-leaves-1280.png",
+      "sha256": "68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b"
+    },
+    {
+      "path": "visuals/edge-four-leaves-320.png",
+      "sha256": "35eef8ca0b65062ae41ddc179269bf65dbe1e2317485ad03c7f327bb2d4b89e7"
+    },
+    {
+      "path": "visuals/edge-four-leaves-768.png",
+      "sha256": "624516b2d068bbcb5d542053693e1bdb7e9a35e1d510e6cb1f6435643f21eb63"
+    },
+    {
+      "path": "visuals/edge-four-leaves-text200-1280.png",
+      "sha256": "4def0315da8ba7e680b183b076f0e0ba6d023403fadcab429b1964ef61319c0a"
+    },
+    {
+      "path": "visuals/edge-four-leaves-text200-320.png",
+      "sha256": "de88eef8889b12d44f7601878dcd10776a5dd9343c972c76580d7af7d92dad99"
+    },
+    {
+      "path": "visuals/edge-four-leaves-text200-768.png",
+      "sha256": "baadd16a29d9bd580fdb8240a4d06b1ad816c887869020f90a3e64d48a952b13"
+    },
+    {
+      "path": "visuals/edge-split-first-1280.png",
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "visuals/edge-split-first-320.png",
+      "sha256": "6113d19333de681726f500af00abf083bd112602b10d31689fc5ab68e3c40ec4"
+    },
+    {
+      "path": "visuals/edge-split-first-768.png",
+      "sha256": "b46a183964bb69feccdb8f3a82ebe78a581e784cc09d0296f3005f4fbb414f65"
+    },
+    {
+      "path": "visuals/edge-split-second-1280.png",
+      "sha256": "3e220b928d5f405278fd1bd5d063643e24ed8386066190243682d5b49c915154"
+    },
+    {
+      "path": "visuals/edge-split-second-320.png",
+      "sha256": "9ccc2e83789fd710a74177370f75bada57c19a611abbf5e9d9d6a213a3f8f35f"
+    },
+    {
+      "path": "visuals/edge-split-second-768.png",
+      "sha256": "fd881d06e4900101fee07c3fc1d5304f031ecca95402c7933b714d7d58ba4b22"
+    },
+    {
+      "path": "visuals/edge-fallback-1280.png",
+      "sha256": "1282a96f4d824b5bbdbdfc8da4792af46498ddb9f905be129101c768f50c2fed"
+    },
+    {
+      "path": "visuals/edge-fallback-320.png",
+      "sha256": "f32f9129b9c4b3729c5a077c4cc42542acd9028fcddfeec06359c41310b12f32"
+    },
+    {
+      "path": "visuals/edge-fallback-768.png",
+      "sha256": "17c38b485f41889a5f75e6fa7c94ce946cfdaf8d70fa8c89260179fa38b46912"
+    },
+    {
+      "path": "visuals/edge-fallback-text200-1280.png",
+      "sha256": "6f8ee65ad54b8c323adba50ad7f5279eaa5feca1f696523defb868ff974620c1"
+    },
+    {
+      "path": "visuals/edge-fallback-text200-320.png",
+      "sha256": "a360f98897af2c5b44a0b98938309f9f9a0ba25ee5631d21b8a1487d80f10a47"
+    },
+    {
+      "path": "visuals/edge-fallback-text200-768.png",
+      "sha256": "f2588302e04fd56de98ab4e28a710d577194163d20701d797ceeba6211cb9c98"
+    },
+    {
+      "path": "visuals/edge-long-names-1280.png",
+      "sha256": "d0b1c0786ed2344512912504b89328af6457998b983d519d87bf31bec471019c"
+    },
+    {
+      "path": "visuals/edge-long-names-320.png",
+      "sha256": "77b8a102d9af9e576f78bd46689292b00123170ccfd9025ed337599d2b9a58a1"
+    },
+    {
+      "path": "visuals/edge-long-names-768.png",
+      "sha256": "98ec5197007641cc17e06dc9e734833dfe34120ffa5dbea09d26bdadc80b87a6"
+    },
+    {
+      "path": "visuals/edge-long-names-text200-1280.png",
+      "sha256": "8099c00627d72018d60edfab59833a7ca842081accaa481392ca7e8004e7cde4"
+    },
+    {
+      "path": "visuals/edge-long-names-text200-320.png",
+      "sha256": "02f0596ef96911d246723a6ac731f9d451e3fa2620ecc799387a8a33c720f761"
+    },
+    {
+      "path": "visuals/edge-long-names-text200-768.png",
+      "sha256": "dfe95eb5d6adcabcd95ab5ce7c4e61b2b5e2374c99df80ea8c55c260d40bb355"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "9a259e5e584aa5ff2cc123f668e00c84f26beb47a27b187826bd4c9176a3e8b9"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-controls.png",
+      "sha256": "e4f4a0294cede564ccadca2188de2a96c97b255a0b2be9ceb55767784c514019"
+    }
+  ],
+  "findings": [
+    "All 21 ordinary after-state images, all 36 new edge-case/text200 captures, and two native200 controls images actually inspected. No BLOCKER/HIGH regression. Normal 21 complete PNG bytes and measurements equal the incoming T08 baseline; src diff EMPTY.",
+    "Actual command-driven 2/3/4/5-card progression and first/second Split hand retain literal totals, enabled/disabled commands, distinct ownership and wagers. Existing legal resplit cap yields four depth-first terminal IDs and correctly settled 600/0/0 credits in the 100-credit browser fixture.",
+    "Labelled isolated public-component fixtures cover the longest existing Seraphine name and Vesha Female Half-Orc Warrior metadata, five-card Dealer/guest, mixed result labels, and portrait load failure. These fixture images establish component readability, not controller synchronization or additional reachable gameplay states; the unchanged live dock still belongs to its original underlying scenario.",
+    "Full labels, card corners, whole totals, and native controls remain accessible at desktop/tablet/mobile/text200. Existing word wrapping and separate visible identity labels survive portrait failures; vertical scroll is permitted. Real native zoom2.0 and contrast minimum5.7857037068719395:1 are independently measured.",
+    "No demonstrated product layout/readability defect required a CSS adjustment. This task adds regression evidence only; protected incoming executable files and accepted composition remain intact. Genuinely fresh independent review NOT RUN; owner acceptance explicitly deferred."
+  ],
+  "standBottom": 883.359375,
+  "contrastReceipt": "visuals/control-contrast.json",
+  "nativeZoomReceipt": "visuals/zoom200.json",
+  "focusedImageCount": 36
+}

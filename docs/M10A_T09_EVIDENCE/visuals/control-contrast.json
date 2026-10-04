@@ -1,0 +1,3559 @@
+{
+  "start": "2026-10-05 02:15:24 +08:00",
+  "method": "Real Chromium computed foreground versus actual rendered background pixels. Flat native button/input backgrounds are independently checked against the pixel at upper centre inside the control; transparent light text uses the brightest sampled surrounding background. Keyboard focus/selected rings use actual adjacent outside pixels. Thresholds remain normal text 4.5 and non-text/focus 3. Bounded checks, not a WCAG certification.",
+  "checks": [
+    {
+      "state": "open",
+      "label": "Betting open",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 589.09375,
+        "y": 789.5,
+        "width": 101.796875,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          30,
+          81,
+          62
+        ],
+        [
+          30,
+          81,
+          63
+        ],
+        [
+          29,
+          80,
+          62
+        ]
+      ],
+      "renderedBackground": [
+        30,
+        81,
+        63
+      ],
+      "ratio": 7.53205987775559,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 822.6875,
+        "width": 168.109375,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          29,
+          79,
+          60
+        ],
+        [
+          29,
+          79,
+          61
+        ],
+        [
+          29,
+          79,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        61
+      ],
+      "ratio": 8.346018012315668,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 841.6875,
+        "width": 121.125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          29,
+          78,
+          60
+        ],
+        [
+          28,
+          78,
+          59
+        ],
+        [
+          29,
+          79,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        60
+      ],
+      "ratio": 5.7857037068719395,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "1,000",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 689.0625,
+        "y": 839.6875,
+        "width": 34.984375,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          29,
+          79,
+          60
+        ],
+        [
+          28,
+          78,
+          59
+        ],
+        [
+          28,
+          78,
+          59
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        60
+      ],
+      "ratio": 8.353989341958027,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 861.6875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          28,
+          77,
+          59
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 5.950178748085423,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 716.21875,
+        "y": 859.6875,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          27,
+          77,
+          58
+        ],
+        [
+          27,
+          77,
+          58
+        ],
+        [
+          27,
+          77,
+          58
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        77,
+        58
+      ],
+      "ratio": 8.610599414564954,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 881.6875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          27,
+          76,
+          58
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        76,
+        58
+      ],
+      "ratio": 6.04076744541221,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 716.21875,
+        "y": 879.6875,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          27,
+          76,
+          57
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        76,
+        58
+      ],
+      "ratio": 8.72227639246055,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Wager input",
+      "tag": "INPUT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(16, 46, 35)",
+      "box": {
+        "x": 479.46875,
+        "y": 946.6875,
+        "width": 96,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          16,
+          46,
+          35
+        ]
+      ],
+      "renderedBackground": [
+        16,
+        46,
+        35
+      ],
+      "ratio": 14.612764927418258,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "10",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "false",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 585.46875,
+        "y": 946.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "25",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "false",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 661.46875,
+        "y": 946.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "100",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "true",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 737.46875,
+        "y": 946.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Deal",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 815.46875,
+        "y": 952.6875,
+        "width": 136,
+        "height": 56
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "10–1000 whole credits. Your guests are already ready to play.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 1030.6875,
+        "width": 784,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          21,
+          62,
+          47
+        ],
+        [
+          24,
+          70,
+          52
+        ],
+        [
+          21,
+          62,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        70,
+        52
+      ],
+      "ratio": 9.508099764504667,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Optional wagers",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 1061.875,
+        "width": 784,
+        "height": 45
+      },
+      "backgroundPixels": [
+        [
+          19,
+          59,
+          44
+        ],
+        [
+          22,
+          66,
+          49
+        ],
+        [
+          19,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        66,
+        49
+      ],
+      "ratio": 10.054390134772424,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Your turn",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 567.859375,
+        "y": 804.171875,
+        "width": 73.40625,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          29,
+          80,
+          61
+        ],
+        [
+          30,
+          80,
+          62
+        ],
+        [
+          29,
+          80,
+          61
+        ]
+      ],
+      "renderedBackground": [
+        30,
+        80,
+        62
+      ],
+      "ratio": 7.637218682043281,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "· Hand A",
+      "tag": "SPAN",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 647.265625,
+        "y": 804.171875,
+        "width": 64.875,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          29,
+          80,
+          61
+        ],
+        [
+          29,
+          80,
+          61
+        ],
+        [
+          29,
+          80,
+          61
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        80,
+        61
+      ],
+      "ratio": 7.654525315854296,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Hit",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 334,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Stand",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 458,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Double",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(37, 66, 53)",
+      "box": {
+        "x": 582,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          37,
+          66,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        37,
+        66,
+        53
+      ],
+      "ratio": 9.782638491072797,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Split",
+      "tag": "BUTTON",
+      "disabled": true,
+      "pressed": null,
+      "foreground": "rgb(201, 208, 200)",
+      "background": "rgb(34, 53, 44)",
+      "box": {
+        "x": 706,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          34,
+          53,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        34,
+        53,
+        44
+      ],
+      "ratio": 8.26701301665702,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Surrender",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(37, 66, 53)",
+      "box": {
+        "x": 830,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          37,
+          66,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        37,
+        66,
+        53
+      ],
+      "ratio": 9.782638491072797,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Action guidance · Unavailable actions explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 883.359375,
+        "width": 784,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          14,
+          33,
+          24
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        50
+      ],
+      "ratio": 9.91938875227585,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Split unavailable — The two cards must have equal Blackjack values.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(228, 204, 171)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 460.609375,
+        "y": 964.75,
+        "width": 358.78125,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          25,
+          73,
+          55
+        ],
+        [
+          24,
+          71,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        25,
+        73,
+        55
+      ],
+      "ratio": 6.598619564170631,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1033.53125,
+        "width": 183.75,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          51
+        ],
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          24,
+          70,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        70,
+        52
+      ],
+      "ratio": 9.508099764504667,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1052.53125,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          68,
+          51
+        ],
+        [
+          22,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        51
+      ],
+      "ratio": 6.777235440424339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "900",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1050.53125,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          22,
+          68,
+          50
+        ],
+        [
+          22,
+          68,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        50
+      ],
+      "ratio": 9.794620406996035,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1072.53125,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        64,
+        48
+      ],
+      "ratio": 7.155256402648945,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "100",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1070.53125,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          64,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        65,
+        49
+      ],
+      "ratio": 10.193741096472339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1092.53125,
+        "width": 163.921875,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        58,
+        44
+      ],
+      "ratio": 7.758693481328103,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 724.046875,
+        "y": 1090.53125,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          18,
+          60,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        60,
+        44
+      ],
+      "ratio": 10.933148155509299,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "hover",
+      "label": "Stand",
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(241, 228, 190)",
+      "ratio": 11.537861030031829,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "hover",
+      "label": "Double",
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(56, 92, 70)",
+      "ratio": 6.700949376032529,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Insurance / Even Money decision",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 511.8125,
+        "y": 804.171875,
+        "width": 256.375,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          28,
+          78,
+          59
+        ],
+        [
+          29,
+          79,
+          61
+        ],
+        [
+          28,
+          78,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        61
+      ],
+      "ratio": 7.753956081402789,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 831.359375,
+        "width": 780,
+        "height": 18.546875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 519.5,
+        "y": 855.90625,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 666.921875,
+        "y": 855.90625,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 905.90625,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          49
+        ],
+        [
+          26,
+          74,
+          56
+        ],
+        [
+          22,
+          66,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        26,
+        74,
+        56
+      ],
+      "ratio": 8.977746213997767,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "SPAN",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 953.90625,
+        "width": 764,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 9.2511473066851,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 973.90625,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          48
+        ],
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          21,
+          63,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        71,
+        53
+      ],
+      "ratio": 9.378940547487277,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1001.296875,
+        "width": 183.75,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          24,
+          70,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        70,
+        52
+      ],
+      "ratio": 9.508099764504667,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1020.296875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          51
+        ],
+        [
+          22,
+          67,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        51
+      ],
+      "ratio": 6.86348701098399,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "900",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1018.296875,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          22,
+          68,
+          50
+        ],
+        [
+          22,
+          68,
+          51
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        51
+      ],
+      "ratio": 9.785664027350492,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1040.296875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        64,
+        48
+      ],
+      "ratio": 7.155256402648945,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "100",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1038.296875,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          64,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        65,
+        49
+      ],
+      "ratio": 10.193741096472339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1060.296875,
+        "width": 163.921875,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          17,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 7.665077313168882,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 724.046875,
+        "y": 1058.296875,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 11.067620711969935,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Insurance / Even Money decision",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 511.8125,
+        "y": 804.171875,
+        "width": 256.375,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          28,
+          78,
+          59
+        ],
+        [
+          29,
+          79,
+          61
+        ],
+        [
+          28,
+          78,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        61
+      ],
+      "ratio": 7.753956081402789,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 831.359375,
+        "width": 780,
+        "height": 18.546875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 433.390625,
+        "y": 855.90625,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 580.8125,
+        "y": 855.90625,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Take Even Money",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 678.375,
+        "y": 855.90625,
+        "width": 164.234375,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 905.90625,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          49
+        ],
+        [
+          26,
+          74,
+          56
+        ],
+        [
+          22,
+          66,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        26,
+        74,
+        56
+      ],
+      "ratio": 8.977746213997767,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "SPAN",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 953.90625,
+        "width": 764,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 9.2511473066851,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 973.90625,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          48
+        ],
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          21,
+          63,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        71,
+        53
+      ],
+      "ratio": 9.378940547487277,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1001.296875,
+        "width": 183.75,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          24,
+          70,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        70,
+        52
+      ],
+      "ratio": 9.508099764504667,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1020.296875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          51
+        ],
+        [
+          22,
+          67,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        51
+      ],
+      "ratio": 6.86348701098399,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "900",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1018.296875,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          22,
+          68,
+          50
+        ],
+        [
+          22,
+          68,
+          51
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        51
+      ],
+      "ratio": 9.785664027350492,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1040.296875,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        64,
+        48
+      ],
+      "ratio": 7.155256402648945,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "100",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 708.40625,
+        "y": 1038.296875,
+        "width": 23.46875,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          64,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        65,
+        49
+      ],
+      "ratio": 10.193741096472339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 548.125,
+        "y": 1060.296875,
+        "width": 163.921875,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          17,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 7.665077313168882,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 724.046875,
+        "y": 1058.296875,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 11.067620711969935,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance / Even Money decision",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 511.8125,
+        "y": 804.171875,
+        "width": 256.375,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          29,
+          78,
+          60
+        ],
+        [
+          30,
+          80,
+          61
+        ],
+        [
+          29,
+          79,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        30,
+        80,
+        61
+      ],
+      "ratio": 7.6445385663781,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 500 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 831.359375,
+        "width": 780,
+        "height": 18.546875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          51
+        ],
+        [
+          28,
+          78,
+          60
+        ],
+        [
+          23,
+          69,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        78,
+        60
+      ],
+      "ratio": 8.473381033476068,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": true,
+      "pressed": null,
+      "foreground": "rgb(201, 208, 200)",
+      "background": "rgb(34, 53, 44)",
+      "box": {
+        "x": 519.5,
+        "y": 855.90625,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          34,
+          53,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        34,
+        53,
+        44
+      ],
+      "ratio": 8.26701301665702,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 666.921875,
+        "y": 855.90625,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance unavailable — not enough available credits.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(228, 204, 171)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 905.90625,
+        "width": 780,
+        "height": 19.703125
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          50
+        ],
+        [
+          26,
+          75,
+          57
+        ],
+        [
+          22,
+          66,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        26,
+        75,
+        57
+      ],
+      "ratio": 6.411194811624996,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 929.609375,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          22,
+          65,
+          49
+        ],
+        [
+          26,
+          74,
+          56
+        ],
+        [
+          22,
+          65,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        26,
+        74,
+        56
+      ],
+      "ratio": 8.977746213997767,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "SPAN",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 977.609375,
+        "width": 764,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        71,
+        53
+      ],
+      "ratio": 9.378940547487277,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 997.609375,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          47
+        ],
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          21,
+          63,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        71,
+        53
+      ],
+      "ratio": 9.378940547487277,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 542.359375,
+        "y": 1025,
+        "width": 195.265625,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          51
+        ],
+        [
+          24,
+          70,
+          52
+        ],
+        [
+          24,
+          69,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        70,
+        52
+      ],
+      "ratio": 9.508099764504667,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 542.359375,
+        "y": 1044,
+        "width": 175.4375,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          50
+        ],
+        [
+          22,
+          67,
+          51
+        ],
+        [
+          22,
+          66,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        51
+      ],
+      "ratio": 6.86348701098399,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 729.796875,
+        "y": 1042,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        50
+      ],
+      "ratio": 9.91938875227585,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 542.359375,
+        "y": 1064,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        64,
+        48
+      ],
+      "ratio": 7.155256402648945,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "1,000",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 702.640625,
+        "y": 1062,
+        "width": 34.984375,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          20,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        65,
+        49
+      ],
+      "ratio": 10.193741096472339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 542.359375,
+        "y": 1084,
+        "width": 175.4375,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          17,
+          58,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          17,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 7.665077313168882,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 729.796875,
+        "y": 1082,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        58,
+        44
+      ],
+      "ratio": 11.202793287452531,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Round complete",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 575.96875,
+        "y": 804.171875,
+        "width": 128.0625,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          31,
+          83,
+          64
+        ],
+        [
+          32,
+          83,
+          65
+        ],
+        [
+          31,
+          83,
+          64
+        ]
+      ],
+      "renderedBackground": [
+        32,
+        83,
+        65
+      ],
+      "ratio": 7.30658909675726,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Net result: 100 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 225, 183)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 831.359375,
+        "width": 784,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          30,
+          82,
+          63
+        ],
+        [
+          24,
+          71,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        30,
+        82,
+        63
+      ],
+      "ratio": 6.893744803320012,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Deal Again",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 472.375,
+        "y": 860.546875,
+        "width": 116.015625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Repeat Bet · 100 credits",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 596.390625,
+        "y": 860.546875,
+        "width": 211.234375,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Wager result details",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 910.546875,
+        "width": 784,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          24,
+          70,
+          52
+        ],
+        [
+          29,
+          79,
+          60
+        ],
+        [
+          24,
+          70,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        60
+      ],
+      "ratio": 8.353989341958027,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 958.546875,
+        "width": 768,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Each wager settles independently.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 979.9375,
+        "width": 768,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          27,
+          76,
+          57
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        76,
+        57
+      ],
+      "ratio": 8.730495878866366,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Credits",
+      "tag": "H2",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 1144.5,
+        "width": 168.109375,
+        "height": 15
+      },
+      "backgroundPixels": [
+        [
+          23,
+          69,
+          51
+        ],
+        [
+          23,
+          69,
+          52
+        ],
+        [
+          23,
+          69,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        23,
+        69,
+        52
+      ],
+      "ratio": 9.641701099936006,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Available",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 1163.5,
+        "width": 121.125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        51
+      ],
+      "ratio": 6.777235440424339,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "1,100",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 689.0625,
+        "y": 1161.5,
+        "width": 34.984375,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          22,
+          68,
+          51
+        ],
+        [
+          22,
+          67,
+          50
+        ],
+        [
+          22,
+          67,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        68,
+        51
+      ],
+      "ratio": 9.785664027350492,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Reserved / current exposure",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 1183.5,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          48
+        ],
+        [
+          20,
+          63,
+          47
+        ],
+        [
+          20,
+          63,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        21,
+        63,
+        48
+      ],
+      "ratio": 7.244841386776972,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 716.21875,
+        "y": 1181.5,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          20,
+          64,
+          48
+        ],
+        [
+          20,
+          64,
+          48
+        ],
+        [
+          20,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        20,
+        64,
+        48
+      ],
+      "ratio": 10.34374093108481,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Pending return",
+      "tag": "DT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(193, 207, 190)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 555.9375,
+        "y": 1203.5,
+        "width": 148.28125,
+        "height": 16
+      },
+      "backgroundPixels": [
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ],
+        [
+          18,
+          58,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        58,
+        44
+      ],
+      "ratio": 7.758693481328103,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "0",
+      "tag": "DD",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 716.21875,
+        "y": 1201.5,
+        "width": 7.828125,
+        "height": 18
+      },
+      "backgroundPixels": [
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ],
+        [
+          18,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        18,
+        59,
+        44
+      ],
+      "ratio": 11.067620711969935,
+      "required": 4.5,
+      "status": "PASS"
+    }
+  ],
+  "focus": [
+    {
+      "state": "open",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 771.46875,
+      "y": 940.6875,
+      "adjacent": [
+        20,
+        59,
+        44
+      ],
+      "ratio": 10.169705531105482,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 516,
+      "y": 822.359375,
+      "adjacent": [
+        28,
+        78,
+        59
+      ],
+      "ratio": 7.81193063921646,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 711.703125,
+      "y": 846.90625,
+      "adjacent": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 7.913276543177864,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance state-band",
+      "colour": "rgb(230, 207, 136)",
+      "style": "solid",
+      "width": 3,
+      "x": 640,
+      "y": 796.171875,
+      "adjacent": [
+        29,
+        79,
+        61
+      ],
+      "ratio": 6.097017260514036,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 625.59375,
+      "y": 846.90625,
+      "adjacent": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 7.913276543177864,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money state-band",
+      "colour": "rgb(230, 207, 136)",
+      "style": "solid",
+      "width": 3,
+      "x": 640,
+      "y": 796.171875,
+      "adjacent": [
+        29,
+        79,
+        61
+      ],
+      "ratio": 6.097017260514036,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 711.703125,
+      "y": 846.90625,
+      "adjacent": [
+        28,
+        78,
+        60
+      ],
+      "ratio": 7.804504570436272,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable state-band",
+      "colour": "rgb(230, 207, 136)",
+      "style": "solid",
+      "width": 3,
+      "x": 640,
+      "y": 796.171875,
+      "adjacent": [
+        29,
+        80,
+        61
+      ],
+      "ratio": 6.0188338032683495,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 530.3828125,
+      "y": 851.546875,
+      "adjacent": [
+        30,
+        81,
+        62
+      ],
+      "ratio": 7.47439931037191,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "complete state-band",
+      "colour": "rgb(230, 207, 136)",
+      "style": "solid",
+      "width": 3,
+      "x": 640,
+      "y": 796.171875,
+      "adjacent": [
+        30,
+        81,
+        63
+      ],
+      "ratio": 5.922537940606055,
+      "required": 3,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-05 02:15:38 +08:00"
+}

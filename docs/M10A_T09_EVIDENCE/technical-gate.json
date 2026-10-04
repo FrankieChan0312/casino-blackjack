@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-10-05 02:43:29 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "task": "M10A-T09",
+  "repairCount": "0/10",
+  "full": {
+    "files": 87,
+    "vitest": 1109,
+    "chromium": 96
+  },
+  "requiredPhases": [
+    {
+      "phase": "t09-focus-unit",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-focus-browser",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-type",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-lint",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-full-unit",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-full-browser",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-preservation",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-current",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t09-unified",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "protectedFiles": 4111,
+  "historicalEvidence": 3775,
+  "domainDiff": "EMPTY",
+  "executables": 170,
+  "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION",
+  "freshIndependentReview": "NOT RUN",
+  "deployment": "NOT RUN"
+}

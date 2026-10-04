@@ -1,0 +1,236 @@
+{
+  "method": "Lossless task-owned raw log archival; checked decompressed SHA256 before exact raw removal, historical evidence read-only",
+  "logs": [
+    {
+      "path": "driver-m10a-overnight-audit.cjs-810084189203.raw.log",
+      "archive": "driver-m10a-overnight-audit.cjs-810084189203.raw.log.gz",
+      "sha256": "8100841892037b8003cd6cb50449fc30cc3418971cfc196dc67526ffa0e6b2eb",
+      "bytes": 4820,
+      "compressedSha256": "79d8da31081285406abb9ab216f9194a83ed9e3d27ad00c36b7fe0191b144943"
+    },
+    {
+      "path": "driver-m10a-overnight-consolidate.cjs-2418aadb1567.raw.log",
+      "archive": "driver-m10a-overnight-consolidate.cjs-2418aadb1567.raw.log.gz",
+      "sha256": "2418aadb1567cdf84644a31cf8d527024a5aa11836abb197a0646309b0ad6a0a",
+      "bytes": 12562,
+      "compressedSha256": "80e1dbe6953cefa266869f79172eb4dd45fb084397d63b8216e955146d6c8fce"
+    },
+    {
+      "path": "driver-m10a-overnight-control-contrast.cjs-a119988cdd57.raw.log",
+      "archive": "driver-m10a-overnight-control-contrast.cjs-a119988cdd57.raw.log.gz",
+      "sha256": "a119988cdd573de28e8e1def8631d3c1bff1bf638a28bac74c2787709b852cd2",
+      "bytes": 8643,
+      "compressedSha256": "aed11588e04e342f747a20bde16de15706bdc71360a8e7d1a0f6c322b0da52eb"
+    },
+    {
+      "path": "driver-m10a-overnight-copy.cjs-6bcd4ce0fb92.raw.log",
+      "archive": "driver-m10a-overnight-copy.cjs-6bcd4ce0fb92.raw.log.gz",
+      "sha256": "6bcd4ce0fb92eaaaf91342d9c23d0a44450109057702b40b92572493eab1f039",
+      "bytes": 1021,
+      "compressedSha256": "8d3577100c63fc1c7b1445ff011b3921985cbabbcd0a2be67b2dc6fa213aa188"
+    },
+    {
+      "path": "driver-m10a-overnight-docs.cjs-939fa92844b8.raw.log",
+      "archive": "driver-m10a-overnight-docs.cjs-939fa92844b8.raw.log.gz",
+      "sha256": "939fa92844b883892fd270a3ec49a202f6c70ae45e1d4d5dd17c7302630fe778",
+      "bytes": 2470,
+      "compressedSha256": "40d64f7398afcec3c4d3f2fae40c54591959502382ef6def1a7eeb0e14a2959f"
+    },
+    {
+      "path": "driver-m10a-overnight-final.cjs-664402447df5.raw.log",
+      "archive": "driver-m10a-overnight-final.cjs-664402447df5.raw.log.gz",
+      "sha256": "664402447df57b9c44214a3fb376acdb19157d134ae2dd46a16b31c0d7f9cdd6",
+      "bytes": 3107,
+      "compressedSha256": "3e4db9e4b6e4bbfa2d8c3ae5be809a5c395606af7cf33ddc506f2d678c83e6e6"
+    },
+    {
+      "path": "driver-m10a-overnight-focused-notes.cjs-68df16aa49bb.raw.log",
+      "archive": "driver-m10a-overnight-focused-notes.cjs-68df16aa49bb.raw.log.gz",
+      "sha256": "68df16aa49bb97acb4d219d7f1cc6e1cc4b8cc256c394a1fca8fc0d4d90adf9c",
+      "bytes": 2793,
+      "compressedSha256": "1f2e5ba9e3053b0122c09d531a503ff39a1a09130671e86e4c5e972db08ff4b5"
+    },
+    {
+      "path": "driver-m10a-overnight-full.cjs-27aeca94c580.raw.log",
+      "archive": "driver-m10a-overnight-full.cjs-27aeca94c580.raw.log.gz",
+      "sha256": "27aeca94c580e3d94f56920fa3965b17f10881afe631a8b28163301c15166c43",
+      "bytes": 389,
+      "compressedSha256": "f11c8bfb5afdf4f60163046ced731ddebf7fd4265a1ced786d483989b445b2fc"
+    },
+    {
+      "path": "driver-m10a-overnight-repair-pass.cjs-380e69ffe614.raw.log",
+      "archive": "driver-m10a-overnight-repair-pass.cjs-380e69ffe614.raw.log.gz",
+      "sha256": "380e69ffe614ca982c0c0de9e5d6cd9d9842a95d28a8295ac96d47bc224528f9",
+      "bytes": 803,
+      "compressedSha256": "acfba92de4be1f7a7316f109899c6f3932f1431f6c58a3483b56ad6abbf864a6"
+    },
+    {
+      "path": "driver-m10a-overnight-repair.cjs-8e7b63c00feb.raw.log",
+      "archive": "driver-m10a-overnight-repair.cjs-8e7b63c00feb.raw.log.gz",
+      "sha256": "8e7b63c00feb65503cea663548edbf2c20f151aee9d237739f05078363fcc8ae",
+      "bytes": 1056,
+      "compressedSha256": "9304e7844f22a933451145f53e1514906fb3eba39c02ea69553d0dd2d917e35d"
+    },
+    {
+      "path": "driver-m10a-overnight-review.cjs-698a83f7a82a.raw.log",
+      "archive": "driver-m10a-overnight-review.cjs-698a83f7a82a.raw.log.gz",
+      "sha256": "698a83f7a82a901c1c8c50235eb8f2eb20217e61263d3681e65c0699a35860c4",
+      "bytes": 5592,
+      "compressedSha256": "d9f80ce4f4c9b98467c8ff6d5cedcb53fba3e570fdfff641010bfd2bc31a5699"
+    },
+    {
+      "path": "driver-m10a-overnight-runner.cjs-ff95b64269ff.raw.log",
+      "archive": "driver-m10a-overnight-runner.cjs-ff95b64269ff.raw.log.gz",
+      "sha256": "ff95b64269ffd9fc8d8dc00512642f1b0e806196b5b38ca9d45dbc5ddb55d0fd",
+      "bytes": 8093,
+      "compressedSha256": "5a053aeeabcaf78b40990f156a7a3adb080d267ad73b210f4797c426b2a69d13"
+    },
+    {
+      "path": "driver-m10a-overnight-scope.cjs-9ceef649085f.raw.log",
+      "archive": "driver-m10a-overnight-scope.cjs-9ceef649085f.raw.log.gz",
+      "sha256": "9ceef649085f8aa0174acce00926217d2870b829c18536c5f93b84a8a1381388",
+      "bytes": 306,
+      "compressedSha256": "2ff938da167ac2c9202adc68187733e86977226b94ea0a6cfd148dcfb2d55bee"
+    },
+    {
+      "path": "driver-m10a-overnight-states.cjs-1e8f4015bfcc.raw.log",
+      "archive": "driver-m10a-overnight-states.cjs-1e8f4015bfcc.raw.log.gz",
+      "sha256": "1e8f4015bfcc395e04c8e17724fb7dabfb1ea46d62d8d182197be7f1090139c1",
+      "bytes": 3505,
+      "compressedSha256": "1b7ee5ebbcf17e8e92ba7b996b266be4bc77db4996c7a346235d0f5ca4036a3e"
+    },
+    {
+      "path": "driver-m10a-overnight-t08-notes.cjs-b1a5f6aea00c.raw.log",
+      "archive": "driver-m10a-overnight-t08-notes.cjs-b1a5f6aea00c.raw.log.gz",
+      "sha256": "b1a5f6aea00cc73f9596f5e0fb8b2032c68fdc6e14c5d28f74cb680112d49fff",
+      "bytes": 2829,
+      "compressedSha256": "77b48ea00f7172a1b877ffe91ece0df308769fe755ab3424f6a8381dc85df6da"
+    },
+    {
+      "path": "driver-m10a-overnight-t09-notes.cjs-38a936363e20.raw.log",
+      "archive": "driver-m10a-overnight-t09-notes.cjs-38a936363e20.raw.log.gz",
+      "sha256": "38a936363e201a57fd1165d5e7be47de29e40081e3dd1ed7cc34f8a29493224e",
+      "bytes": 2742,
+      "compressedSha256": "0a4f7e3e73aa5d58a8c8e94cc6974684b655448e7160b577da4fc0a1b19e3725"
+    },
+    {
+      "path": "driver-m10a-overnight-visual-setup.cjs-176e8e3df1a8.raw.log",
+      "archive": "driver-m10a-overnight-visual-setup.cjs-176e8e3df1a8.raw.log.gz",
+      "sha256": "176e8e3df1a87d33cec27bcc2589804a360159a9509b56b0ebbbd0057449cca0",
+      "bytes": 868,
+      "compressedSha256": "f2a63d30f2fd7a2f09a96a6db1b347d7f97abfc0127e3e658124ac719bec91ed"
+    },
+    {
+      "path": "driver-m10a-overnight-whitespace-close.cjs-a1241424d769.raw.log",
+      "archive": "driver-m10a-overnight-whitespace-close.cjs-a1241424d769.raw.log.gz",
+      "sha256": "a1241424d769b8c2e8ea2bce174a1ad291f8051a30393706d4a3b62dfcfd3d52",
+      "bytes": 1252,
+      "compressedSha256": "cf291fd7f6c3bb0b4cdbd01aa74cf79bf1b29b559f38a1f26f994f438b733fa1"
+    },
+    {
+      "path": "driver-m10a-overnight-whitespace.cjs-48c56fd2e457.raw.log",
+      "archive": "driver-m10a-overnight-whitespace.cjs-48c56fd2e457.raw.log.gz",
+      "sha256": "48c56fd2e4570f1cb45bcfaa2e23702bc5420f92503738b0dce9903349606679",
+      "bytes": 2375,
+      "compressedSha256": "50dc113b283777c6ba1d46be130ea06e37466cff5d72ee2b7db6ad0e975587cf"
+    },
+    {
+      "path": "driver-m10a-overnight-zoom.cjs-20c12a468f32.raw.log",
+      "archive": "driver-m10a-overnight-zoom.cjs-20c12a468f32.raw.log.gz",
+      "sha256": "20c12a468f3215daa406bdbedc053165c22e270cf1a7e7e2ff4980216d596926",
+      "bytes": 17981,
+      "compressedSha256": "10fada022a6d21563731f5187b6c0d6dcc8e06f48f9cef31e9c9fd7e1b65b294"
+    },
+    {
+      "path": "driver-m10a-overnight.cjs-4208c6e3f661.raw.log",
+      "archive": "driver-m10a-overnight.cjs-4208c6e3f661.raw.log.gz",
+      "sha256": "4208c6e3f66107ca70c3256b99be87ca58b704d95cc7fad6189674b9b3161c3f",
+      "bytes": 19135,
+      "compressedSha256": "703db83e09cb6a03b2fba855360480695475934fb5144ed9e5a66484a05c0786"
+    },
+    {
+      "path": "previous-task-receipt-commit.log",
+      "archive": "previous-task-receipt-commit.log.gz",
+      "sha256": "5b985db2f4d01b9cdb8c8e307857abcf159c72a9347b084a66a4450610683b3e",
+      "bytes": 562,
+      "compressedSha256": "759b7ecfc258cad0b9e9980c352f14284956e3fbcb81e1bbde6a9ce6a22f4dda"
+    },
+    {
+      "path": "previous-task-receipt-push.log",
+      "archive": "previous-task-receipt-push.log.gz",
+      "sha256": "9c4e752733b159a296ae3de397005d1b7b726ce5cd81a6d1cd90e8dbe1f3cda0",
+      "bytes": 93,
+      "compressedSha256": "909fa7b4a2dd215ac94eeecbb2b3316ae273d926ec490690345667c9575e3dd9"
+    },
+    {
+      "path": "t09-current.log",
+      "archive": "t09-current.log.gz",
+      "sha256": "5e0d666b2681c4e9cc10c7a1ed5091c1effaaeb2101b3918bdebe4c829874456",
+      "bytes": 498,
+      "compressedSha256": "650482bb591a448827e2ee41c4f09a0e5ae19f40ae54c499ca698cfd47865571"
+    },
+    {
+      "path": "t09-doc.log",
+      "archive": "t09-doc.log.gz",
+      "sha256": "7ede6a38d611dafe8d15e5b3d0752fbc72bfe72c57949f41bc9bf0994396413f",
+      "bytes": 404,
+      "compressedSha256": "d5dfe4a6376c95baaea59974730f525246cb8205f37c95e85e71c68c5f4f228c"
+    },
+    {
+      "path": "t09-focus-browser.log",
+      "archive": "t09-focus-browser.log.gz",
+      "sha256": "ceb3051466c466ca12585c78d723094949315b4fc9922309bbbc7d57a76bd438",
+      "bytes": 10010,
+      "compressedSha256": "3f54bceee69eed7ed62f5555c9f939d50604a8baad4037cbe8c8b00628d3e26f"
+    },
+    {
+      "path": "t09-focus-unit.log",
+      "archive": "t09-focus-unit.log.gz",
+      "sha256": "b04c51614096b2db71f81acf3210fde0701ccc179e68835fc5ba4c7b9e9da447",
+      "bytes": 728,
+      "compressedSha256": "5bc6320758671a61b02f6bda98925688826f64119627111603af64a9f5478429"
+    },
+    {
+      "path": "t09-full-browser.log",
+      "archive": "t09-full-browser.log.gz",
+      "sha256": "a920911b80669559433dd65a549957f9f71d54de7c0ec784238874a103844fef",
+      "bytes": 18554,
+      "compressedSha256": "b8b92ded07f7e1055703de63b9fbfc489424d12ef6f09fba400a06f5e675369b"
+    },
+    {
+      "path": "t09-full-unit.log",
+      "archive": "t09-full-unit.log.gz",
+      "sha256": "78768b6656b7331171674478269cdd9ad15e91cd3c0d76181d582bf5e47a5084",
+      "bytes": 461,
+      "compressedSha256": "5dec9092c896db4d61a13e70b3d5196f68094896f7b6d5f87d9c49078def208e"
+    },
+    {
+      "path": "t09-lint.log",
+      "archive": "t09-lint.log.gz",
+      "sha256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "bytes": 60,
+      "compressedSha256": "20367bf5b8fdf6adf93fb809c2497ee83ccb10a2a70f3fb5ccb11a7553f97068"
+    },
+    {
+      "path": "t09-preservation.log",
+      "archive": "t09-preservation.log.gz",
+      "sha256": "82874e85209d93b09d462e60ab5aa11ed499d47d6ca530ce7feeb44d0e508f92",
+      "bytes": 22714,
+      "compressedSha256": "187812cd9356c4a0e858e7933130babce9f9c978fa46aada00f5fb9f6a09a03c"
+    },
+    {
+      "path": "t09-type.log",
+      "archive": "t09-type.log.gz",
+      "sha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "bytes": 52,
+      "compressedSha256": "cbae128ff2fc710e4493513d902e2ad1561726a308517d2552f3c62bf510e449"
+    },
+    {
+      "path": "t09-unified.log",
+      "archive": "t09-unified.log.gz",
+      "sha256": "422eb13e36137b89a095aa1e5e7913ac35b89c1f7069011aea3cf70317bf3d58",
+      "bytes": 42717,
+      "compressedSha256": "5f299fc44b123c116cc638d652f261777d71de7568fd418da02eba79ab5c868a"
+    }
+  ]
+}
