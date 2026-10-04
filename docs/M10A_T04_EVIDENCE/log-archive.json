@@ -450,7 +450,61 @@
       "compressedBytes": 257,
       "compressedSha256": "56410bc37737f6fa502183d75f000f54b201e2fc8f27ff161056063e7ad85c5c",
       "timestamp": "2026-10-04 20:27:58 +08:00"
+    },
+    {
+      "path": "implementation-commit.raw.log",
+      "archive": "implementation-commit.raw.log.gz",
+      "bytes": 27602,
+      "sha256": "8d723d686624dce33eb30662035ef9ca0d33a026d087e8d88152d675bbc27c4b",
+      "compressedBytes": 6714,
+      "compressedSha256": "1c4d61d695617a5019ca90179cb92e155ddf6f00b3f19c4fde97cfaaab1927cd",
+      "timestamp": "2026-10-04 20:29:41 +08:00"
+    },
+    {
+      "path": "implementation-fetch.raw.log",
+      "archive": "implementation-fetch.raw.log.gz",
+      "bytes": 103,
+      "sha256": "777e9cad49c0bcde5c5ab29d82dd16de4f2e35e70f10bd04510cdc87351cddd5",
+      "compressedBytes": 108,
+      "compressedSha256": "5ac90bbd559fc99f12be94413feb4b73773ca1661cc5eab9476b2a549f08f3c1",
+      "timestamp": "2026-10-04 20:29:41 +08:00"
+    },
+    {
+      "path": "implementation-push.raw.log",
+      "archive": "implementation-push.raw.log.gz",
+      "bytes": 93,
+      "sha256": "7fd7b8b7026676ca77bee3f3f56d4ee8cf475c8ae88c78d5b9848dd0681b0939",
+      "compressedBytes": 108,
+      "compressedSha256": "d119d8c6c0abc72b1421c1aa7cc2d5b8b3818ea767341c8e40b6f73586ae240d",
+      "timestamp": "2026-10-04 20:29:42 +08:00"
+    },
+    {
+      "path": "precommit-fetch.raw.log",
+      "archive": "precommit-fetch.raw.log.gz",
+      "bytes": 103,
+      "sha256": "777e9cad49c0bcde5c5ab29d82dd16de4f2e35e70f10bd04510cdc87351cddd5",
+      "compressedBytes": 108,
+      "compressedSha256": "5ac90bbd559fc99f12be94413feb4b73773ca1661cc5eab9476b2a549f08f3c1",
+      "timestamp": "2026-10-04 20:29:42 +08:00"
+    },
+    {
+      "path": "t04-publication-documentation.log",
+      "archive": "t04-publication-documentation.log.gz",
+      "bytes": 392,
+      "sha256": "b544494cc500b6d7bb0b8935e703b8c936fdbeaeac7bfd16656811363362b50e",
+      "compressedBytes": 258,
+      "compressedSha256": "bd75dd60338cf709b2fb5ab34fa13adec11f3b848883dbc7888ea63b207c78b4",
+      "timestamp": "2026-10-04 20:29:42 +08:00"
+    },
+    {
+      "path": "t04-receipt-final-documentation.log",
+      "archive": "t04-receipt-final-documentation.log.gz",
+      "bytes": 393,
+      "sha256": "6d4986305ef8689865b2d70ec7c1aeec8f51a6acaf13b58d65e161ef6654d9ab",
+      "compressedBytes": 257,
+      "compressedSha256": "ddb53d14c10e8538e21081a1dca02d96462fb6414437bbcc8d9f0443ad8afdba",
+      "timestamp": "2026-10-04 20:31:13 +08:00"
     }
   ],
-  "lastChecked": "2026-10-04 20:27:59 +08:00"
+  "lastChecked": "2026-10-04 20:31:14 +08:00"
 }

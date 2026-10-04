@@ -1,3 +1,19 @@
+## M10A-T04 published implementation checkpoint
+
+2026-10-04 20:28:49 +08:00. **M10A-T04_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **5/10**. Implementation **9a841104e3357d93e42fe5103a4cdc868482a783**, branch **main**. Normal origin/main push PASS / checked exit0 at2026-10-04 20:28:32 +08:00..2026-10-04 20:28:49 +08:00; checked fetch/live-remote equality PASS/0. At this published checkpoint HEAD=origin/main=live remote=9a841104e3357d93e42fe5103a4cdc868482a783, ahead/behind0/0,working tree CLEAN,untracked0. A factual publication-receipt-only checkpoint follows; final Git/delivery identifies final HEAD. [Publication](M10A_T04_EVIDENCE/implementation-publication.json), [task/evidence](M10A_T04_EVIDENCE/README.md).
+
+All161 executable/test/config hashes unchanged: focused11/78 UI and29 Chromium, full82/1082Vitest/76Chromium, independent M1–M8/current PA1/RA1/M9/M10-T01/M10A-T01/T02/T03/T04 preservation and scripts/verify.ps1 PASS/checked exit0. Protected1826 incoming paths/1505 historical evidence unchanged; src/domain diff EMPTY. All24 required Dealer PNGs and15 genuine nativezoom captures inspected; Stand883.359375px and6px gap retained. Same-session complete diff/source/test/evidence/visual review PASS; fresh independent review NOT RUN.
+
+M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED, historical4/10; accepted T02 8/10 and T01 exceptional11/11 unchanged. T04 owner visual acceptance PENDING. Formal Dealer artwork/identity policy/new animations NOT IMPLEMENTED; Motion NOT INSTALLED; deployment NOT RUN.
+
+M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+STOP for owner T04 visual review after this factual receipt checkpoint.
+
 ## M10A-T04 same-session review checkpoint
 
 2026-10-04 20:27:28 +08:00. Same-session full authored source/test/CSS/docs diff and all required24 Dealer/15 nativezoom images reviewed: PASS. Evidence raw-reference/image hashes validated; 49 raw logs/contexts/tool snapshots losslessly archived; 99 plaintext/archive records and173 trace text entries scanned,0 sensitive-pattern findings. 284 intended stage paths/272 evidence blobs match native unfiltered Git hashes; staged whitespace PASS/0.161 exact executed files unchanged,1826 protected incoming paths/1505 historical evidence unchanged, src/domain diff EMPTY. [Review](M10A_T04_EVIDENCE/precommit-review.json), [stage checkpoint](M10A_T04_EVIDENCE/staged-review-checkpoint.json), [lossless archives](M10A_T04_EVIDENCE/log-archive.json). Facts-only documentation/index closure checks follow before normal main publication.

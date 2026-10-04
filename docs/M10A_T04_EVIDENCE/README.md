@@ -67,3 +67,11 @@ Final affected documentation checks: [5 files /13 tests PASS, checked exit0](t04
 ## Same-session precommit review
 
 2026-10-04 20:27:28 +08:00. [Evidence/source/privacy review](precommit-review.json), [native stage/whitespace checkpoint](staged-review-checkpoint.json), [lossless raw archives](log-archive.json). Complete authored diff and required actual images inspected. Final affected-document/index checks follow these facts-only entries; product/tests remain161 exact executed hashes. Current repairs5/10; all historical failures retained. Fresh independent review NOT RUN; owner visual acceptance PENDING.
+
+## Published implementation
+
+Publication-receipt documentation: [5 files /13 tests PASS, checked exit0](t04-publication-documentation.json); unchanged161 product/test/config hashes. This check follows the actual commit/push facts.
+
+Final PLAN publication-status closure: [5 files /13 tests PASS, checked exit0](t04-receipt-final-documentation.json).
+
+2026-10-04 20:28:49 +08:00. [Implementation commit](implementation-commit.json), [normal push/live parity and clean publication](implementation-publication.json). Implementation HEAD=origin/main=live remote=9a841104e3357d93e42fe5103a4cdc868482a783,0/0,CLEAN,untracked0. Actual raw commit/push/fetch logs retained losslessly in the archive manifest. A facts-only publication-receipt commit follows after affected docs/index checks; final Git/delivery reports final HEAD. Product/test/config remain the161 verified hashes; repairs5/10, owner acceptance PENDING, fresh independent review NOT RUN, deployment NOT RUN. STOP; no subsequent task started.

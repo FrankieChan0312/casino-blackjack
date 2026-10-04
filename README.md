@@ -2,7 +2,7 @@
 
 **M10A-T04_IMPLEMENTED_VERIFIED**, repairs **5/10**. A dedicated upper-centre Dealer workstation groups the temporary character, public cards/hidden back, total/status, static shoe/deal origin and accurate3:2/S17 rules. Accepted normal camera/remote seats/local HUD remain in place; Stand bottom883.359375px,6px action gap retained. Desktop/tablet/mobile,200% text and native200% browser zoom PASS. Focused78 UI/29 Chromium, full82files/1082Vitest/76Chromium, independent preservation and verify.ps1 PASS / checked exit0. [Task](docs/M10A_T04.md), [visuals/evidence](docs/M10A_T04_EVIDENCE/README.md).
 
-**M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical4/10 retained; T02 accepted8/10 and T01 accepted exceptional11/11 unchanged. T04 owner visual acceptance PENDING; fresh independent review NOT RUN. Formal Dealer artwork/identity policy/new animations NOT IMPLEMENTED; Motion NOT INSTALLED; M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. Normal main publication follows scope/evidence review. M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE.
+**M10A-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical4/10 retained; T02 accepted8/10 and T01 accepted exceptional11/11 unchanged. T04 owner visual acceptance PENDING; fresh independent review NOT RUN. Formal Dealer artwork/identity policy/new animations NOT IMPLEMENTED; Motion NOT INSTALLED; M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. COMMITTED / PUSHED normally on main at9a84110; [publication receipt](docs/STATE.md). M10A-T05 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE.
 
 ## Historical M10A-T03 Local Player HUD
 
