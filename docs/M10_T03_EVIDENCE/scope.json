@@ -1,0 +1,16 @@
+{
+  "allowed": [
+    "README.md",
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/LAB_MANUAL.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/M10_OVERNIGHT2_HANDOFF.md",
+    "src/presentation/seatMapping.ts",
+    "src/ui/Table.tsx",
+    "src/ui/styles.css",
+    "tests/m10/seatMapping.test.tsx",
+    "tests/browser/m10/seatMapping.spec.ts",
+    "tests/browser/fixtures.ts"
+  ]
+}

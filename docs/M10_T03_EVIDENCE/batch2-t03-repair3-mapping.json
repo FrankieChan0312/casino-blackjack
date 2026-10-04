@@ -1,0 +1,561 @@
+{
+  "phase": "batch2-t03-repair3-mapping",
+  "kind": "mapping",
+  "start": "2026-10-05 07:29:11 +08:00",
+  "end": "2026-10-05 07:30:03 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10/seatMapping.spec.ts; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-batch2-t03-repair3-mapping",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-batch2-t03-repair3-mapping.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\""
+  },
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-batch2-t03-repair3-mapping-fVuJaS",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/edge-public-five-longname-1280.png",
+      "retainedAt": "generated/8713eaaba8d3c188975271bbe752708f2ce9662681b6730e2bc954ad79fb6c08.png",
+      "bytes": 1107330,
+      "sha256": "8713eaaba8d3c188975271bbe752708f2ce9662681b6730e2bc954ad79fb6c08"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/edge-public-five-longname-320.png",
+      "retainedAt": "generated/6ddea93acc51b7118174f7ef917ba7cf39c25387c7077737b6de79fd20870855.png",
+      "bytes": 349595,
+      "sha256": "6ddea93acc51b7118174f7ef917ba7cf39c25387c7077737b6de79fd20870855"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/edge-public-five-longname-768.png",
+      "retainedAt": "generated/cf950d2e97bb56f596fd6415efd0fcbaa2686d4bfdc9067d403fa2f349f95878.png",
+      "bytes": 835102,
+      "sha256": "cf950d2e97bb56f596fd6415efd0fcbaa2686d4bfdc9067d403fa2f349f95878"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/text-seven-five-1280.png",
+      "retainedAt": "generated/0e5a62ee923354b0582c93779ec6b380596c52ee10162197b741fc78dc7964a9.png",
+      "bytes": 1732901,
+      "sha256": "0e5a62ee923354b0582c93779ec6b380596c52ee10162197b741fc78dc7964a9"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/text-seven-five-320.png",
+      "retainedAt": "generated/b1ff16d8dc76d4412679cb721a8ccec2e044f5cb9a7d1bbefcb528381b6cc405.png",
+      "bytes": 636303,
+      "sha256": "b1ff16d8dc76d4412679cb721a8ccec2e044f5cb9a7d1bbefcb528381b6cc405"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E08-73523--name-fixtures-and-200-text-chromium/text-seven-five-768.png",
+      "retainedAt": "generated/cb61870edb9e93ff188b17400f479e99d38f7ae1dbb9bddb4eaac91c9f58adab.png",
+      "bytes": 1509804,
+      "sha256": "cb61870edb9e93ff188b17400f479e99d38f7ae1dbb9bddb4eaac91c9f58adab"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-1280.png",
+      "retainedAt": "generated/757750bf060e44a9c7c421ab14c1eb1421012a0a14fc2afe55d3458022fb0146.png",
+      "bytes": 1029685,
+      "sha256": "757750bf060e44a9c7c421ab14c1eb1421012a0a14fc2afe55d3458022fb0146"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-320.png",
+      "retainedAt": "generated/7fdeda3b806bc0ebfc3a32707593ff032e010f0a523e237b4f97534504d773ed.png",
+      "bytes": 322422,
+      "sha256": "7fdeda3b806bc0ebfc3a32707593ff032e010f0a523e237b4f97534504d773ed"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-768.png",
+      "retainedAt": "generated/02774865e284dd0c1e02135fb5ffb0343991e41c2b1759b63a3f424e322b95c4.png",
+      "bytes": 796909,
+      "sha256": "02774865e284dd0c1e02135fb5ffb0343991e41c2b1759b63a3f424e322b95c4"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-split-1280.png",
+      "retainedAt": "generated/a96ba49a904bb5bb8dcfea5a76708b627be9998cc0c5dc35c564fcb73b16ec14.png",
+      "bytes": 1127122,
+      "sha256": "a96ba49a904bb5bb8dcfea5a76708b627be9998cc0c5dc35c564fcb73b16ec14"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-split-320.png",
+      "retainedAt": "generated/0da2c4e0f5fb1db77f2bb9fea259f8b49eaeedad2c23d1b622b9fe034ddf86e9.png",
+      "bytes": 348335,
+      "sha256": "0da2c4e0f5fb1db77f2bb9fea259f8b49eaeedad2c23d1b622b9fe034ddf86e9"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-split-768.png",
+      "retainedAt": "generated/cfebb9dd348f3919555377892a976043ae5cd9360c0748096e0ecda93f9da386.png",
+      "bytes": 862574,
+      "sha256": "cfebb9dd348f3919555377892a976043ae5cd9360c0748096e0ecda93f9da386"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-insurance-1280.png",
+      "retainedAt": "generated/4f4412018c5cb942374f1b8b2aab2d060e6a92359048c8970d7893a6a958ff59.png",
+      "bytes": 1554273,
+      "sha256": "4f4412018c5cb942374f1b8b2aab2d060e6a92359048c8970d7893a6a958ff59"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-insurance-320.png",
+      "retainedAt": "generated/95277ac565304eb244c7a63ab6eb95df54106827585038f5f3ba6dd06ce63763.png",
+      "bytes": 593498,
+      "sha256": "95277ac565304eb244c7a63ab6eb95df54106827585038f5f3ba6dd06ce63763"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-insurance-768.png",
+      "retainedAt": "generated/3622f89638507192cdd706e5713dd414d7cd8a8a63ad3b6990723b42a2adc873.png",
+      "bytes": 1331292,
+      "sha256": "3622f89638507192cdd706e5713dd414d7cd8a8a63ad3b6990723b42a2adc873"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-split-1280.png",
+      "retainedAt": "generated/8dbe5b48c7eb5f32be2c58ce38429147722190ecaeefe641c3d69002f754a39a.png",
+      "bytes": 1663110,
+      "sha256": "8dbe5b48c7eb5f32be2c58ce38429147722190ecaeefe641c3d69002f754a39a"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-split-320.png",
+      "retainedAt": "generated/535a34efb1a43c47b59fb5d20b135f2d5af10fe68adfc27d84f40737b3cf196d.png",
+      "bytes": 640632,
+      "sha256": "535a34efb1a43c47b59fb5d20b135f2d5af10fe68adfc27d84f40737b3cf196d"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/text-player-seven-split-768.png",
+      "retainedAt": "generated/485094a56b3d2f5166e156902242c1f6739d824e2b4072f765ff95279b0ff0c3.png",
+      "bytes": 1511312,
+      "sha256": "485094a56b3d2f5166e156902242c1f6739d824e2b4072f765ff95279b0ff0c3"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/active-1-1280.png",
+      "retainedAt": "generated/3f8280774052f39c43174dfcb8f56d002922a832eb75ecd49ef007f1db6f1da1.png",
+      "bytes": 657568,
+      "sha256": "3f8280774052f39c43174dfcb8f56d002922a832eb75ecd49ef007f1db6f1da1"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/complete-1-1280.png",
+      "retainedAt": "generated/c01dce4fcfebf9d9236bec5d7ef8418f78815fea846b4fdcb9b8877b2c0a4e76.png",
+      "bytes": 656628,
+      "sha256": "c01dce4fcfebf9d9236bec5d7ef8418f78815fea846b4fdcb9b8877b2c0a4e76"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/desktop-1-1280.png",
+      "retainedAt": "generated/197b4fd24a1d07e33fce0c853ce8bbb133b312a0cb9cc2ca9570b880a182fc53.png",
+      "bytes": 723878,
+      "sha256": "197b4fd24a1d07e33fce0c853ce8bbb133b312a0cb9cc2ca9570b880a182fc53"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/mapping-1.json",
+      "retainedAt": "generated/2d65c78e4e6b3d1f7bba99e87f636dce7afe7f603dcd73f140e15c0855ab0e50.json",
+      "bytes": 3270,
+      "sha256": "2d65c78e4e6b3d1f7bba99e87f636dce7afe7f603dcd73f140e15c0855ab0e50"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/mobile-1-320.png",
+      "retainedAt": "generated/4ba6912837b1acba2fff28028205f180f468831d6a5c878183864b411b21096f.png",
+      "bytes": 252354,
+      "sha256": "4ba6912837b1acba2fff28028205f180f468831d6a5c878183864b411b21096f"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/tablet-1-768.png",
+      "retainedAt": "generated/bdb502ddcee9045d3b40d9b0d3c5f06f6a9b1735a7a7145febc6726d64fcb2eb.png",
+      "bytes": 497289,
+      "sha256": "bdb502ddcee9045d3b40d9b0d3c5f06f6a9b1735a7a7145febc6726d64fcb2eb"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/active-2-1280.png",
+      "retainedAt": "generated/a5e4f38fc3c20b48471ae7c34c9aad647e556413adc971a9bf084f3654661f3f.png",
+      "bytes": 689575,
+      "sha256": "a5e4f38fc3c20b48471ae7c34c9aad647e556413adc971a9bf084f3654661f3f"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/complete-2-1280.png",
+      "retainedAt": "generated/e43dd057f0bbbb567bcdbc79681d63fd986b8e06bdda8078f5980ba9d2752406.png",
+      "bytes": 704408,
+      "sha256": "e43dd057f0bbbb567bcdbc79681d63fd986b8e06bdda8078f5980ba9d2752406"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/desktop-2-1280.png",
+      "retainedAt": "generated/9ed1fd5681abc72fa26056cddf3b44e3e69c8960aedc97ee1fc9f34bcbefcc71.png",
+      "bytes": 752904,
+      "sha256": "9ed1fd5681abc72fa26056cddf3b44e3e69c8960aedc97ee1fc9f34bcbefcc71"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/mapping-2.json",
+      "retainedAt": "generated/11fe556c35b966e9570f8604150612d690fc2d786c48099332c57c13f03012ab.json",
+      "bytes": 4334,
+      "sha256": "11fe556c35b966e9570f8604150612d690fc2d786c48099332c57c13f03012ab"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/mobile-2-320.png",
+      "retainedAt": "generated/3911e1976c8d37576253b2a66c5233d5ede894fa7eb4369c68ac39f04fe15b32.png",
+      "bytes": 284174,
+      "sha256": "3911e1976c8d37576253b2a66c5233d5ede894fa7eb4369c68ac39f04fe15b32"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/tablet-2-768.png",
+      "retainedAt": "generated/51b7da03d2fee1c73e6b5e549dc04b93f756e33d7a0dbbc69c25ec76196c248a.png",
+      "bytes": 574427,
+      "sha256": "51b7da03d2fee1c73e6b5e549dc04b93f756e33d7a0dbbc69c25ec76196c248a"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/active-3-1280.png",
+      "retainedAt": "generated/6de2c17c34199b7f00260ab6a3b2184bafe085872f8b278c93a2f689e3136118.png",
+      "bytes": 703742,
+      "sha256": "6de2c17c34199b7f00260ab6a3b2184bafe085872f8b278c93a2f689e3136118"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/complete-3-1280.png",
+      "retainedAt": "generated/b30c2a8d6c11fd7e383a07953373a54165885267aa42e8fb51708311765301f8.png",
+      "bytes": 757659,
+      "sha256": "b30c2a8d6c11fd7e383a07953373a54165885267aa42e8fb51708311765301f8"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/desktop-3-1280.png",
+      "retainedAt": "generated/710c9eb2ab51d342e9dc396fc4d3b600f73a97ee7ad3549901f8da5767272511.png",
+      "bytes": 754779,
+      "sha256": "710c9eb2ab51d342e9dc396fc4d3b600f73a97ee7ad3549901f8da5767272511"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/mapping-3.json",
+      "retainedAt": "generated/c63c0de1be29cd10ffa106ad51c7bac22c76d0869bd16364c90c8d711f459316.json",
+      "bytes": 5510,
+      "sha256": "c63c0de1be29cd10ffa106ad51c7bac22c76d0869bd16364c90c8d711f459316"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/mobile-3-320.png",
+      "retainedAt": "generated/ab47d32b4483167882e73d4d6a096b42d7ab4b5900016c871c560bb53d2ed064.png",
+      "bytes": 285872,
+      "sha256": "ab47d32b4483167882e73d4d6a096b42d7ab4b5900016c871c560bb53d2ed064"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/tablet-3-768.png",
+      "retainedAt": "generated/aeebe6efea206032b89bec5cbab62bb77bfb574dd8f9cb1b2af315c680fac0dc.png",
+      "bytes": 571270,
+      "sha256": "aeebe6efea206032b89bec5cbab62bb77bfb574dd8f9cb1b2af315c680fac0dc"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/active-4-1280.png",
+      "retainedAt": "generated/198ef581c1a08140e149feb2e71d9ee569e0f048baad0000ac6d0a8c11c66f47.png",
+      "bytes": 781724,
+      "sha256": "198ef581c1a08140e149feb2e71d9ee569e0f048baad0000ac6d0a8c11c66f47"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/complete-4-1280.png",
+      "retainedAt": "generated/6edb318de208ac6dc35157a6a61dc2b9cabade46b24feea3d746dfe92750907a.png",
+      "bytes": 792596,
+      "sha256": "6edb318de208ac6dc35157a6a61dc2b9cabade46b24feea3d746dfe92750907a"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/desktop-4-1280.png",
+      "retainedAt": "generated/11acf168c88d4513d787f341a7418e4e112b554cf4d35b848a0b3d79fa74c447.png",
+      "bytes": 849452,
+      "sha256": "11acf168c88d4513d787f341a7418e4e112b554cf4d35b848a0b3d79fa74c447"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/mapping-4.json",
+      "retainedAt": "generated/dddd8d2c3ecd54f979dc1c18a491d2c26b6a1cff6c25e81894a6343aeeba9ad8.json",
+      "bytes": 6600,
+      "sha256": "dddd8d2c3ecd54f979dc1c18a491d2c26b6a1cff6c25e81894a6343aeeba9ad8"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/mobile-4-320.png",
+      "retainedAt": "generated/54178ebaa83730c40c7b6e09f48f44ba5fca338695f2c5410737fcb7eebb04c9.png",
+      "bytes": 291932,
+      "sha256": "54178ebaa83730c40c7b6e09f48f44ba5fca338695f2c5410737fcb7eebb04c9"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/tablet-4-768.png",
+      "retainedAt": "generated/cf4d111601272802156cb2667d55824c7f3a88e326784717d7e9e97006c69a61.png",
+      "bytes": 557371,
+      "sha256": "cf4d111601272802156cb2667d55824c7f3a88e326784717d7e9e97006c69a61"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/active-5-1280.png",
+      "retainedAt": "generated/6a46555f3952fe00f140a83841de7cffa0af125978a513563e5c46b3135c304d.png",
+      "bytes": 864741,
+      "sha256": "6a46555f3952fe00f140a83841de7cffa0af125978a513563e5c46b3135c304d"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/complete-5-1280.png",
+      "retainedAt": "generated/702b6e820ac7ff4a4108c8f1e7ea237312b206be8a422dd239d6871c0478ddb6.png",
+      "bytes": 893474,
+      "sha256": "702b6e820ac7ff4a4108c8f1e7ea237312b206be8a422dd239d6871c0478ddb6"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/desktop-5-1280.png",
+      "retainedAt": "generated/5a2439d5f46a7cfefc8af33a02e5adf4b7d19394d240f206c842945484cbad2e.png",
+      "bytes": 934745,
+      "sha256": "5a2439d5f46a7cfefc8af33a02e5adf4b7d19394d240f206c842945484cbad2e"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/mapping-5.json",
+      "retainedAt": "generated/3e8607df25be9a21f99a0658eb48623ecd696b1adac2a6ed5d576170a3914401.json",
+      "bytes": 7799,
+      "sha256": "3e8607df25be9a21f99a0658eb48623ecd696b1adac2a6ed5d576170a3914401"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/mobile-5-320.png",
+      "retainedAt": "generated/ebb295af1100eecb0eb3edc6387acfdac3903ba0015d5dfe336194010d9fea37.png",
+      "bytes": 302125,
+      "sha256": "ebb295af1100eecb0eb3edc6387acfdac3903ba0015d5dfe336194010d9fea37"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/tablet-5-768.png",
+      "retainedAt": "generated/9499248c3d4f046b415120e39fad9fdbaae13ec0df2098221413c6c6892c46ac.png",
+      "bytes": 674027,
+      "sha256": "9499248c3d4f046b415120e39fad9fdbaae13ec0df2098221413c6c6892c46ac"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/active-6-1280.png",
+      "retainedAt": "generated/cdd966bb1a32224e1de9c2a1e46c446283719191156da75daeb669a8aff7ad09.png",
+      "bytes": 1044898,
+      "sha256": "cdd966bb1a32224e1de9c2a1e46c446283719191156da75daeb669a8aff7ad09"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/complete-6-1280.png",
+      "retainedAt": "generated/4a41da6d9193d19f8d6a4efa315b3d68c36499d9f1f76d97fe7cb8ff8c3e5c8f.png",
+      "bytes": 1066290,
+      "sha256": "4a41da6d9193d19f8d6a4efa315b3d68c36499d9f1f76d97fe7cb8ff8c3e5c8f"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/desktop-6-1280.png",
+      "retainedAt": "generated/8b3a6ab3865d17d412e554a9407c9445073f23b3922ce06ca8d6204fe076ae95.png",
+      "bytes": 1034197,
+      "sha256": "8b3a6ab3865d17d412e554a9407c9445073f23b3922ce06ca8d6204fe076ae95"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/mapping-6.json",
+      "retainedAt": "generated/379bb952d460544c964e1b1494301832a6eb5dd46090b94203ed2a24609a905c.json",
+      "bytes": 8860,
+      "sha256": "379bb952d460544c964e1b1494301832a6eb5dd46090b94203ed2a24609a905c"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/mobile-6-320.png",
+      "retainedAt": "generated/d4a091eda28d8a8a7b7b604c9c343192b1fd62f3a3ef4e04027dbfb03cfe3137.png",
+      "bytes": 335612,
+      "sha256": "d4a091eda28d8a8a7b7b604c9c343192b1fd62f3a3ef4e04027dbfb03cfe3137"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/tablet-6-768.png",
+      "retainedAt": "generated/5f96ffe324b5a734bdfd73d01ef61aa178f1ef76f0776ce7437c8b81af4d024f.png",
+      "bytes": 752661,
+      "sha256": "5f96ffe324b5a734bdfd73d01ef61aa178f1ef76f0776ce7437c8b81af4d024f"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/active-7-1280.png",
+      "retainedAt": "generated/c2433273e8568f5973ed63fd2ea4078945dde6b9e2fa9a1792f9da75469f1f12.png",
+      "bytes": 1046137,
+      "sha256": "c2433273e8568f5973ed63fd2ea4078945dde6b9e2fa9a1792f9da75469f1f12"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/complete-7-1280.png",
+      "retainedAt": "generated/0821429ba11d44566b967bf03615eadda12f1d8a81d9b9e9a03da15617afd75c.png",
+      "bytes": 1112510,
+      "sha256": "0821429ba11d44566b967bf03615eadda12f1d8a81d9b9e9a03da15617afd75c"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/desktop-7-1280.png",
+      "retainedAt": "generated/24bc1f82f60e7cf7129145645d2f1cf5c33ecfccd8bc1b38ee9e8227a139f66b.png",
+      "bytes": 1040216,
+      "sha256": "24bc1f82f60e7cf7129145645d2f1cf5c33ecfccd8bc1b38ee9e8227a139f66b"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mapping-7.json",
+      "retainedAt": "generated/0456881a0ffc7bf0208d70634fe261c95ab57fe219035ae729a72f543bfe78f4.json",
+      "bytes": 9952,
+      "sha256": "0456881a0ffc7bf0208d70634fe261c95ab57fe219035ae729a72f543bfe78f4"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mobile-7-320.png",
+      "retainedAt": "generated/9ba06f51bfeca81557d8f5b7b1dd48ce2200b793a07e169072da575927e2284b.png",
+      "bytes": 327401,
+      "sha256": "9ba06f51bfeca81557d8f5b7b1dd48ce2200b793a07e169072da575927e2284b"
+    },
+    {
+      "path": "test-results/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/tablet-7-768.png",
+      "retainedAt": "generated/6ed264ba2c5f3ebd8e5f26b452bb8a70b131b62bfd63f7bed816be61eb794afb.png",
+      "bytes": 755082,
+      "sha256": "6ed264ba2c5f3ebd8e5f26b452bb8a70b131b62bfd63f7bed816be61eb794afb"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-05 07:30:04 +08:00"
+}

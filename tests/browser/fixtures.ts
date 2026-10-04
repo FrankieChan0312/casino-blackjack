@@ -24,6 +24,15 @@ export function fixtureState(ranks: readonly Rank[], profileId: ProfileId = CLAS
 }
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
+  if (name === 'player-seven-split' || name === 'player-seven-insurance') {
+    const ranks: readonly Rank[] = name === 'player-seven-split'
+      ? ['10','10','10','8','10','10','10','9','7','7','7','8','7','7','7','8','3','4','10']
+      : ['10','10','10','9','10','10','10','A','7','7','7','7','7','7','7','9','8'];
+    const controller = createBrowserController({ playerMode: true, deferPlayerStart: true,
+      factory: () => fixtureState(ranks, CLASSIC_V1_2), random: fixtureRandom, clock: () => '2026-01-01T00:00:00.000Z' });
+    if (!controller.dispatch({ type: 'START', count: 7 })) throw new Error('Seven-player fixture setup rejected');
+    return controller;
+  }
   if (name === 'player-setup') return createBrowserController({ playerMode: true, deferPlayerStart: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   if (name === 'player-pending') {

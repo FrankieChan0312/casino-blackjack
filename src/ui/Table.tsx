@@ -4,6 +4,7 @@ import { credits, resultLabel, handLabel } from './presentation.js';
 import { CasinoPerson } from './CasinoPerson.js';
 import { character, type CharacterLineup } from '../presentation/characters.js';
 import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometry.js';
+import { mapSeats } from '../presentation/seatMapping.js';
 import { Cards } from './Cards.js';
 import { SeatUnit } from './SeatUnit.js';
 import { LocalPlayerHud } from './LocalPlayerHud.js';
@@ -14,7 +15,11 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
-  return <section aria-label="Blackjack table" data-player-count={view.playerMode ? view.configuration.filter(seat => seat.occupancy !== 'EMPTY').length : undefined} data-felt-markings={view.playerMode || undefined} className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
+  const occupied = view.configuration.filter(seat => seat.occupancy !== 'EMPTY');
+  const mapping = view.playerMode && occupied.length ? mapSeats(occupied.map(seat => seat.seatNumber)) : [];
+  const localRow = occupied.length < 5 ? guests.length ? 2 : 1
+    : Math.max(...mapping.filter(seat => seat.seatNumber !== view.human?.controlledSeat).map(seat => seat.band)) + 2;
+  return <section aria-label="Blackjack table" data-dynamic-seats={view.playerMode || undefined} data-dense-arc={view.playerMode && occupied.length >= 5 || undefined} data-player-count={view.playerMode ? occupied.length : undefined} data-felt-markings={view.playerMode || undefined} className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
     {view.playerMode ? <DealerZone dealer={round?.dealer} phase={round?.phase} /> : <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
       <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
@@ -27,13 +32,17 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
       const avatar = avatarId ? character(avatarId) : undefined;
       const hands = round?.seats.find((entry) => entry.seatNumber === seat.seatNumber)?.hands ?? [];
       const wager = view.mainWagers.find((entry) => entry.seat === seat.seatNumber)?.amount ?? 0;
-      const anchor = TABLE_SEAT_ANCHORS[seat.seatNumber - 1];
+      const mapped = mapping.find(entry => entry.seatNumber === seat.seatNumber);
+      const anchor = mapped ?? TABLE_SEAT_ANCHORS[seat.seatNumber - 1];
       const guestIndex = guests.findIndex(entry => entry.seatNumber === seat.seatNumber);
+      const column = guests.length === 2 ? guestIndex * 2 + 1 : guestIndex + 1;
       const geometryStyle = view.playerMode ? {
         '--seat-depth': (anchor.y - TABLE_GEOMETRY.centre.y) / TABLE_GEOMETRY.radius.y,
-        '--seat-shift': local ? 0 : anchor.x / 100 - (guestIndex + 0.5) / guests.length,
+        '--seat-shift': local ? 0 : anchor.x / 100 - (column - 0.5) / 3,
+        '--arc-shift': anchor.x / 100 - 0.5, '--arc-column': column,
+        '--arc-row': (mapped?.band ?? 0) + 1, '--arc-side': mapped?.side ?? 1, '--local-row': localRow,
       } as CSSProperties : undefined;
-      return <section key={seat.seatNumber} style={geometryStyle} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${anchor.slot}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      return <section key={seat.seatNumber} style={geometryStyle} data-arc-slot={mapped?.slot} data-arc-row={mapped ? mapped.band + 1 : undefined} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${seat.seatNumber}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {view.playerMode ? local ? <LocalPlayerHud seat={seat} avatar={avatar} hands={hands} wager={wager}
           currentHandId={round?.currentHandId} ownResults={view.ownResults} /> : <SeatUnit seat={seat} avatar={avatar} hands={hands} wager={wager}
           currentSeat={round?.currentSeat} currentHandId={round?.currentHandId} /> : <>{avatar ? <div className="character-identity">

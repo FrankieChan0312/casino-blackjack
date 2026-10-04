@@ -1,0 +1,40 @@
+{
+  "purpose": "Recover drivers into .git to reproduce scoped historical-output routing. Actual checked command/exit timestamps remain in phase JSON and raw logs.",
+  "files": [
+    {
+      "name": "batch2-runner.cjs",
+      "sha256": "678bef22e09813c5418004dd30198ae249269bf1da56bfe678401bfe714a98e3",
+      "bytes": 8409
+    },
+    {
+      "name": "batch2-audit.cjs",
+      "sha256": "16cdfe7794880c5ae80680b9ad04ea7d6389bb0e7e963deb01d1ffce8c087003",
+      "bytes": 3173
+    },
+    {
+      "name": "batch2-publish.cjs",
+      "sha256": "cacb0894d46e9966ec7d7bfbda7e78d689d2a33517f6c48229fd4a5104019b9c",
+      "bytes": 3778
+    },
+    {
+      "name": "batch2-catalog.cjs",
+      "sha256": "01ddf59f03aa16fed74c34744f495b6aafa82a3f71ee93df0b7ff394b3c88d15",
+      "bytes": 675
+    },
+    {
+      "name": "batch2-close.cjs",
+      "sha256": "dbe139739e3e974df6539bac9a803c35d2df2863b9fa9c6c2a9c6ad436a89c10",
+      "bytes": 8520
+    },
+    {
+      "name": "batch2-receipt.cjs",
+      "sha256": "0075250353667492a1ff01821b9a42295449778c647357ed670076fa32817c26",
+      "bytes": 2628
+    },
+    {
+      "name": "m10a-human-evidence-route.cjs",
+      "sha256": "4e3b99489f608ca457de9dfe76ba08d90e3c6fbdc7767501b1f2fd50102da402",
+      "bytes": 1297
+    }
+  ]
+}
