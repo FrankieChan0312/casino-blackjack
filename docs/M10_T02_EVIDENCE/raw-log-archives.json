@@ -1,0 +1,65 @@
+{
+  "logs": [
+    {
+      "path": "t02-closure-docs.log.gz",
+      "originalSha256": "4ab825359ec28361a1a608ef2486cb4b8ef7284497f390d739282bf3fdf64e3c",
+      "compressedSha256": "0a39b382d7c613a6a4c6d73b412e28456f2849d3322c28c77b3f4fb88442fb5d",
+      "bytes": 393
+    },
+    {
+      "path": "t02-final-count-evidence.log.gz",
+      "originalSha256": "dd0f7b74748f134a234e7fd713b76c68e27ef61aa9e2a5e8b4b2b80f7ffcee0a",
+      "compressedSha256": "cbe22a1bbc2171e65c5a309eee8ab7473d554a997c1808b75e4201bc0938ecaf",
+      "bytes": 1592
+    },
+    {
+      "path": "t02-first-count-browser.log.gz",
+      "originalSha256": "6036df4ccfc9467bb07f73c95448c7f56db6b0b7a6a4562d641bfcb6c13bbfc8",
+      "compressedSha256": "5f3203cc60d2e9eee1d564ca903603220172ad77be796b13931959c324c5717f",
+      "bytes": 1592
+    },
+    {
+      "path": "t02-first-focused.log.gz",
+      "originalSha256": "9b2aa876a5f1f019350c8105cf2e6f5c0539c04508289cf0b80e1ebf5d591728",
+      "compressedSha256": "be76e6c2544e147abeb20dd02fd59cae8dea7482ecb3aaf3844639fbfb34a8a4",
+      "bytes": 1734
+    },
+    {
+      "path": "t02-first-typecheck.log.gz",
+      "originalSha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "compressedSha256": "8940f12bddb3937b7e24941a6ef78dc965df39b09e60334b5820ef17653f2ac5",
+      "bytes": 52
+    },
+    {
+      "path": "t02-full-gate.log.gz",
+      "originalSha256": "de34887b93a530b828739aeb53a38b1c678aa1261c408034609c9d76d3e8a0b0",
+      "compressedSha256": "6382f387dbce72225c40b1fe3090793e47e34b6a57cadaf66da1dff7e22fd9a2",
+      "bytes": 46940
+    },
+    {
+      "path": "t02-repair1-focused.log.gz",
+      "originalSha256": "ee7a8431ef0bd77dcb1620d05919d0cd01935b229af9f01d9eb57874ecab323a",
+      "compressedSha256": "ee4e3e20a0ff338c1ab3572ce431754801f43bce1a6f8836121ea73d461ac6a5",
+      "bytes": 673
+    },
+    {
+      "path": "t02-repair2-count-browser.log.gz",
+      "originalSha256": "9c3d32f85622c314dea18b0bfb9625ab837f61a23de89f18bf53e9a8973f87f2",
+      "compressedSha256": "898f23f6dc2bd2a7119336c49b6a2f2eca508e741d86d496c84f22f603cb36fd",
+      "bytes": 1592
+    },
+    {
+      "path": "t02-repair3-avatar.log.gz",
+      "originalSha256": "3c3b4076c2132dc501c93e46430055f8c86462ce4c83dbcb2defad53faa39fc8",
+      "compressedSha256": "71d1cba2a62a61ae208bd8d72f6423e6dbabf94bc4cdfac5af6ff2199c3fd75a",
+      "bytes": 680
+    },
+    {
+      "path": "t02-repair3-full-gate.log.gz",
+      "originalSha256": "91b14227513df2260aae93ca1ef789013a64d289302a31d118db1c3a76b68bc5",
+      "compressedSha256": "5c72d16bb76831ba99f47cce6c0ede5e3813a8aa92de692284b2f656ddcb9dc0",
+      "bytes": 43908
+    }
+  ],
+  "timestamp": "2026-10-05 07:21:10 +08:00"
+}

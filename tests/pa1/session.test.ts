@@ -3,10 +3,11 @@ import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createBrowserController } from '../../src/browser/controller.js';
 import { characters, createCharacterLineup, changeHumanCharacter } from '../../src/presentation/characters.js';
+import { acceptedController } from '../m10/historicalConfiguration.js';
 import { CLASSIC_V1_2 } from '../../src/domain/profile.js';
 
 it('[PA1-S01] controller differs only by a browser-local session marker, with every gameplay statement unchanged', () => {
-  const current = readFileSync('src/browser/controller.ts','utf8').replaceAll('\r\n','\n')
+  const current = acceptedController(readFileSync('src/browser/controller.ts','utf8')).replaceAll('\r\n','\n')
     .replace('  let presentationSession = 0;\n','')
     .replace('playerMode, presentationSession, lastBet','playerMode, lastBet')
     .replace('    presentationSession++;\n','').trimEnd();

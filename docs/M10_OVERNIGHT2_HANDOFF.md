@@ -8,7 +8,7 @@ IMPLEMENTED / VERIFIED; M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; MILESTONE: ACCEP
 
 ## M10-T02
 
-NOT STARTED;0/10. Authorized only after T10 full technical/publication/clean gate. Planned actual occupancy1–7, one HUMAN Seat4 plus0–6 COMPUTER. Human Visual Acceptance: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION.
+M10-T02 IMPLEMENTED / VERIFIED. Real1–7 pre-session native selector/Start, default4, HUMAN Seat4 and0–6 existing COMPUTER accounts. Count persists across NEXT/REPEAT; explicit disclosed new-table reset only at CONFIGURING/COMMITTED/VOID. Exact config/deal counts/replay3 rounds/funding/no refill/capacity and unique roster tested. Legacy caller four-seat seam documented. Non-four layout intentionally temporary until T03. Full Vitest1121, Chromium104, independent M1–M8 preservation and scripts/verify.ps1 PASS / checked exit0. Cumulative repairs3/10. HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Same-session source/spec/diff/test/evidence review PASS; genuinely fresh separate-session task review NOT COMPLETED (unavailable); owner review pending. Domain/RNG/shoe/cards/accounting/strategies/replay/digest/journal, PA1 assets/provenance/canonical historical evidence protected. Normal authorized main publication pending. T04/art/Motion/animation/deployment excluded. [Evidence](M10_T02_EVIDENCE/README.md). Implementation commit pending.
 
 ## M10-T03
 
@@ -20,7 +20,7 @@ T10 domain/RNG/shoe/cards/accounting/strategies/replay/digest/journal, PA1 asset
 
 ## Morning-review list
 
-T02/T03 screenshots NOT RUN yet; final list follows only after actual capture.
+T02 setup/table screenshots1/2/4/7 actually captured and inspected; [catalog](M10_T02_EVIDENCE/screenshots/index.json). Final T03 eight-image morning list pending.
 
 ## Boundary
 

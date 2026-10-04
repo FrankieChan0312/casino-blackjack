@@ -1,0 +1,24 @@
+{
+  "allowed": [
+    "README.md",
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/LAB_MANUAL.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/M10_OVERNIGHT2_HANDOFF.md",
+    "src/browser/controller.ts",
+    "src/browser/playerConfiguration.ts",
+    "src/main.tsx",
+    "src/ui/App.tsx",
+    "src/ui/PlayerSetup.tsx",
+    "src/ui/Table.tsx",
+    "src/ui/styles.css",
+    "tests/browser/fixtures.ts",
+    "tests/browser/m10/playerCount.spec.ts",
+    "tests/m10/playerCount.test.tsx",
+    "tests/m10/configurationDelta.json",
+    "tests/m10/historicalConfiguration.ts",
+    "tests/pa1/session.test.ts",
+    "tests/m10/tableGeometry.test.tsx"
+  ]
+}

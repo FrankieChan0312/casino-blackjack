@@ -1,0 +1,33 @@
+import { test, expect } from '@playwright/test';
+for (const count of [1,2,3,4,5,6,7]) test(`[M10-C-E${count}] explicit ${count}-player setup and real funded table`, async ({page},info)=>{
+  await page.setViewportSize({width:1280,height:900}); await page.goto('/?fixture=player-setup');
+  const players=page.getByLabel('Total players'); await expect(players).toHaveValue('4');
+  await expect(page.locator('[data-seat-anchor]')).toHaveCount(0);
+  await players.selectOption(String(count));
+  await page.screenshot({path:info.outputPath(`setup-${count}-1280.png`),fullPage:true});
+  await page.getByRole('button',{name:'Start table',exact:true}).click();
+  await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+  await expect(page.getByRole('img',{name:/Your avatar:/})).toHaveCount(1);
+  await expect(page.getByRole('img',{name:/Computer guest:/})).toHaveCount(count-1);
+  await expect(page.getByRole('button',{name:'New table · reset to 1000 credits'})).toBeDisabled();
+  await expect(players).toHaveCount(0);
+  const chars=await page.locator('[data-character]').evaluateAll(els=>els.map(e=>e.getAttribute('data-character')));
+  expect(new Set(chars).size).toBe(count);
+  await page.screenshot({path:info.outputPath(`table-${count}-1280.png`),fullPage:true});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const dealer=await page.locator('.dealer').boundingBox(); expect(dealer).not.toBeNull();
+  expect(Math.abs(dealer!.x+dealer!.width/2-640)).toBeLessThan(2);
+  await page.getByLabel('Your main wager',{exact:false}).fill('100');
+  await page.getByRole('button',{name:'Deal',exact:true}).click();
+  await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+  await page.screenshot({path:info.outputPath(`active-${count}-1280.png`),fullPage:true});
+});
+test('[M10-C-E08] native keyboard selector and Start preserve touch/focus semantics at 320px',async({page})=>{
+  await page.setViewportSize({width:320,height:720}); await page.goto('/?fixture=player-setup');
+  await page.getByLabel('Total players').focus(); await page.keyboard.press('Home'); await page.keyboard.press('End');
+  await expect(page.getByLabel('Total players')).toHaveValue('7');
+  await page.keyboard.press('Tab'); await expect(page.getByRole('button',{name:'Start table',exact:true})).toBeFocused();
+  await page.keyboard.press('Enter'); await expect(page.locator('[data-seat-anchor]')).toHaveCount(7);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const selectHeight=await page.getByRole('button',{name:'Deal',exact:true}).evaluate(el=>el.getBoundingClientRect().height); expect(selectHeight).toBeGreaterThanOrEqual(44);
+});

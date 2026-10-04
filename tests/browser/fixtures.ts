@@ -24,6 +24,7 @@ export function fixtureState(ranks: readonly Rank[], profileId: ProfileId = CLAS
 }
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
+  if (name === 'player-setup') return createBrowserController({ playerMode: true, deferPlayerStart: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   if (name === 'player-pending') {
     const controller = createBrowserController({ playerMode: true,

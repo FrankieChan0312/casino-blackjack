@@ -1,3 +1,4 @@
+import { DEFAULT_PLAYER_COUNT, PLAYER_SEATS, isPlayerCount, type PlayerCount } from './playerConfiguration.js';
 import * as game from '../domain/behindGame.js';
 import { getPublicBehindView } from '../domain/behindPublicView.js';
 import { isSeed, mathRandomSource, type RandomSource } from '../domain/random.js';
@@ -11,6 +12,8 @@ import { applySessionCommand, type SessionCommand } from '../domain/sessionComma
 import { createAuditTrail, type Clock } from '../domain/audit.js';
 
 export type BrowserCommand =
+  | { type: 'START'; count: number }
+  | { type: 'NEW_TABLE' }
   | { type: 'CONFIGURE'; seats: readonly SeatState[] }
   | { type: 'OPEN' | 'CLOSE' | 'ADVANCE' | 'NEXT' }
   | { type: 'DEAL'; amount: number }
@@ -40,8 +43,10 @@ const reasons: Record<string, string> = {
 export function explainReason(reason: string | undefined) { return reason ? reasons[reason] ?? 'This command is unavailable in the current state.' : ''; }
 
 export function createBrowserController(options: { factory?: () => game.BehindGameState; random?: RandomSource;
-  profileId?: ProfileId; seed?: number; clock?: Clock; playerMode?: boolean } = {}) {
+  profileId?: ProfileId; seed?: number; clock?: Clock; playerMode?: boolean; deferPlayerStart?: boolean } = {}) {
   let playerMode = options.playerMode ?? false;
+  let playerCount: PlayerCount = DEFAULT_PLAYER_COUNT;
+  let tableStarted = !options.deferPlayerStart;
   const random = options.random ?? mathRandomSource;
   const profileId = options.profileId ?? (playerMode ? CLASSIC_V1_2 : CLASSIC);
   if (options.factory && options.seed !== undefined) throw new Error('Seeded replay cannot start from a state factory');
@@ -71,7 +76,8 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
           : view.round.phase === 'ROUND_COMPLETE' ? 'Dealer complete' : 'Revealed' },
       seats: view.round.seats.map((seat) => ({ ...seat, hands: seat.hands.map((hand) => ({ ...hand,
         total: evaluateHand(state.table.game.round!.players.find((entry) => entry.handId === hand.handId)!.cards).total })) })) } : null;
-    return { playerMode, presentationSession, lastBet, profileId: state.table.profileId, seeded: session !== null,
+    return { playerMode, presentationSession, playerCount, tableStarted,
+      canCreateTable: ['CONFIGURING', 'COMMITTED', 'VOID'].includes(state.table.phase), lastBet, profileId: state.table.profileId, seeded: session !== null,
       canStartDemo: state.table.phase === 'COMMITTED' || state.table.phase === 'VOID'
         || (state.table.phase === 'CONFIGURING' && state.table.roundNumber === 0)
         || (playerMode && state.table.phase === 'OPEN' && state.human?.bankroll.reserved === 0
@@ -99,6 +105,27 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     return result;
   }
   function dispatch(command: BrowserCommand): boolean {
+    if (command.type === 'START') {
+      if (!playerMode || tableStarted || state.table.phase !== 'CONFIGURING' || !isPlayerCount(command.count)) {
+        feedback = 'Choose 1–7 players before starting the table.'; publish(); return false;
+      }
+      if (session && !session.hasCapacity(fundedGuestCount(command.count) + 3)) {
+        feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
+      }
+      playerCount = command.count; tableStarted = true; feedback = '';
+      return preparePlayerTable();
+    }
+    if (command.type === 'NEW_TABLE') {
+      if (!playerMode || !snapshot.canCreateTable) {
+        feedback = 'Create a new table only before play or after final settlement.'; publish(); return false;
+      }
+      tableStarted = false;
+      return startDemo(state.table.profileId);
+    }
+    // Setup selection cannot issue gameplay commands before explicit Start.
+    if (playerMode && !tableStarted && command.type !== 'MODE') {
+      feedback = 'Start your table before betting.'; publish(); return false;
+    }
     if (command.type === 'MODE') {
       if (!snapshot.canStartDemo) { feedback = 'Change mode only before play or after final settlement.'; publish(); return false; }
       if (playerMode === command.playerMode) return true;
@@ -108,7 +135,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     // Reserve the whole browser intent before mutation, including automatic
     // ADVANCE and SETTLE/VOID. Manual mode keeps its accepted two-slot boundary.
     const progresses = ['CLOSE', 'ACT', 'ACE', 'FOLLOW'].includes(command.type);
-    const capacity = playerMode ? command.type === 'REPEAT' ? 11 : command.type === 'DEAL' ? 5 : command.type === 'NEXT' ? 7 : progresses ? 4 : 2 : 2;
+    const capacity = playerMode ? command.type === 'REPEAT' ? fundedGuestCount(playerCount) + 8 : command.type === 'DEAL' ? 5 : command.type === 'NEXT' ? fundedGuestCount(playerCount) + 4 : progresses ? 4 : 2 : 2;
     if (session && !session.hasCapacity(capacity)) {
       feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
     }
@@ -162,14 +189,17 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     presentationSession++;
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
     replayResult = null; replayFailed = false; feedback = ''; lastBet = 0; shoeMessage = 'New demo session: starting credits restored';
-    publish(); if (playerMode) preparePlayerTable(); return true;
+    publish(); if (playerMode && tableStarted) preparePlayerTable(); return true;
+  }
+  function fundedGuestCount(count: PlayerCount) {
+    return PLAYER_SEATS[count].filter(seat => seat !== 4 && state.computers[seat - 1].bankroll.available >= 20).length;
   }
   function preparePlayerTable() {
-    // CONFIGURE + OPEN + up to three guest wagers, plus finalization headroom.
-    if (session && !session.hasCapacity(6)) {
+    // CONFIGURE + OPEN + actual funded guest wagers + finalization headroom.
+    if (session && !session.hasCapacity(fundedGuestCount(playerCount) + 3)) {
       feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;
     }
-    const guests = [1, 3, 6];
+    const guests = PLAYER_SEATS[playerCount].filter(seat => seat !== 4);
     const seats: SeatState[] = state.table.game.table.seats.map(seat => ({ seatNumber: seat.seatNumber,
       occupancy: seat.seatNumber === 4 ? 'HUMAN' : guests.includes(seat.seatNumber) ? 'COMPUTER' : 'EMPTY',
       sittingOut: guests.includes(seat.seatNumber) && state.computers[seat.seatNumber - 1].bankroll.available < 20 }));
@@ -195,7 +225,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     audit.recordReplay(state, false);
     replayResult = reconstructed; audit.recordReplay(state, true); publish(); return true;
   }
-  if (playerMode && state.table.phase === 'CONFIGURING') preparePlayerTable();
+  if (playerMode && tableStarted && state.table.phase === 'CONFIGURING') preparePlayerTable();
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
     startDemo, exportReplay, replayCompleted,
     queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };

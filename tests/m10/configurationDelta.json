@@ -1,0 +1,46 @@
+[
+  {
+    "before": "import * as game from '../domain/behindGame.js';",
+    "after": "import { DEFAULT_PLAYER_COUNT, PLAYER_SEATS, isPlayerCount, type PlayerCount } from './playerConfiguration.js';\nimport * as game from '../domain/behindGame.js';"
+  },
+  {
+    "before": "export type BrowserCommand =\n",
+    "after": "export type BrowserCommand =\n  | { type: 'START'; count: number }\n  | { type: 'NEW_TABLE' }\n"
+  },
+  {
+    "before": "clock?: Clock; playerMode?: boolean } = {})",
+    "after": "clock?: Clock; playerMode?: boolean; deferPlayerStart?: boolean } = {})"
+  },
+  {
+    "before": "  let playerMode = options.playerMode ?? false;",
+    "after": "  let playerMode = options.playerMode ?? false;\n  let playerCount: PlayerCount = DEFAULT_PLAYER_COUNT;\n  let tableStarted = !options.deferPlayerStart;"
+  },
+  {
+    "before": "return { playerMode, presentationSession, lastBet,",
+    "after": "return { playerMode, presentationSession, playerCount, tableStarted,\n      canCreateTable: ['CONFIGURING', 'COMMITTED', 'VOID'].includes(state.table.phase), lastBet,"
+  },
+  {
+    "before": "  function dispatch(command: BrowserCommand): boolean {",
+    "after": "  function dispatch(command: BrowserCommand): boolean {\n    if (command.type === 'START') {\n      if (!playerMode || tableStarted || state.table.phase !== 'CONFIGURING' || !isPlayerCount(command.count)) {\n        feedback = 'Choose 1–7 players before starting the table.'; publish(); return false;\n      }\n      if (session && !session.hasCapacity(fundedGuestCount(command.count) + 3)) {\n        feedback = explainReason('REPLAY_COMMAND_LIMIT'); publish(); return false;\n      }\n      playerCount = command.count; tableStarted = true; feedback = '';\n      return preparePlayerTable();\n    }\n    if (command.type === 'NEW_TABLE') {\n      if (!playerMode || !snapshot.canCreateTable) {\n        feedback = 'Create a new table only before play or after final settlement.'; publish(); return false;\n      }\n      tableStarted = false;\n      return startDemo(state.table.profileId);\n    }\n    // Setup selection cannot issue gameplay commands before explicit Start.\n    if (playerMode && !tableStarted && command.type !== 'MODE') {\n      feedback = 'Start your table before betting.'; publish(); return false;\n    }"
+  },
+  {
+    "before": "command.type === 'REPEAT' ? 11 : command.type === 'DEAL' ? 5 : command.type === 'NEXT' ? 7",
+    "after": "command.type === 'REPEAT' ? fundedGuestCount(playerCount) + 8 : command.type === 'DEAL' ? 5 : command.type === 'NEXT' ? fundedGuestCount(playerCount) + 4"
+  },
+  {
+    "before": "publish(); if (playerMode) preparePlayerTable(); return true;",
+    "after": "publish(); if (playerMode && tableStarted) preparePlayerTable(); return true;"
+  },
+  {
+    "before": "  function preparePlayerTable() {\n    // CONFIGURE + OPEN + up to three guest wagers, plus finalization headroom.\n    if (session && !session.hasCapacity(6)) {",
+    "after": "  function fundedGuestCount(count: PlayerCount) {\n    return PLAYER_SEATS[count].filter(seat => seat !== 4 && state.computers[seat - 1].bankroll.available >= 20).length;\n  }\n  function preparePlayerTable() {\n    // CONFIGURE + OPEN + actual funded guest wagers + finalization headroom.\n    if (session && !session.hasCapacity(fundedGuestCount(playerCount) + 3)) {"
+  },
+  {
+    "before": "    const guests = [1, 3, 6];",
+    "after": "    const guests = PLAYER_SEATS[playerCount].filter(seat => seat !== 4);"
+  },
+  {
+    "before": "if (playerMode && state.table.phase === 'CONFIGURING') preparePlayerTable();",
+    "after": "if (playerMode && tableStarted && state.table.phase === 'CONFIGURING') preparePlayerTable();"
+  }
+]

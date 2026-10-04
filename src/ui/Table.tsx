@@ -14,7 +14,7 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
-  return <section aria-label="Blackjack table" data-felt-markings={view.playerMode || undefined} className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
+  return <section aria-label="Blackjack table" data-player-count={view.playerMode ? view.configuration.filter(seat => seat.occupancy !== 'EMPTY').length : undefined} data-felt-markings={view.playerMode || undefined} className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
     {view.playerMode ? <DealerZone dealer={round?.dealer} phase={round?.phase} /> : <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
       <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}

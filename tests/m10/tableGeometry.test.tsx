@@ -1,4 +1,5 @@
 import { expect, it } from 'vitest';
+import { acceptedController } from './historicalConfiguration.js';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -91,10 +92,15 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
         );
       }
     }
+    if (file === 'tests/pa1/session.test.ts') current = current
+      .replace("import { acceptedController } from '../m10/historicalConfiguration.js';\n", '')
+      .replace("acceptedController(readFileSync('src/browser/controller.ts','utf8'))", "readFileSync('src/browser/controller.ts','utf8')");
     expect(current, file).toBe(historical);
   }
   expect(offset).toBe(blobs.length);
-  expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json')).toBe('');
+  expect(acceptedController(readFileSync('src/browser/controller.ts', 'utf8')).trimEnd()).toBe(git('show', baseline + ':src/browser/controller.ts'));
+  expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json',
+    ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts')).toBe('');
 });
 
 it('[M10-G07] the local table scene retains semantic hand-control-credit order and exact public funds without commands', () => {

@@ -8,6 +8,7 @@ import { Decisions, Results } from './Decisions.js';
 import { DemoTools } from './DemoTools.js';
 import { createCharacterLineup, changeHumanCharacter, type PresentationChooser } from '../presentation/characters.js';
 import { CharacterPicker } from './CharacterPicker.js';
+import { PlayerSetup } from './PlayerSetup.js';
 
 export function App({ controller, chooseCharacter }: { controller: BrowserController; chooseCharacter?: PresentationChooser }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
@@ -35,13 +36,15 @@ export function App({ controller, chooseCharacter }: { controller: BrowserContro
 }
 
 function PlayerExperience({ view, controller, chooseCharacter }: { view: BrowserView; controller: BrowserController; chooseCharacter?: PresentationChooser }) {
-  const [presentation, setPresentation] = useState(() => ({ session: view.presentationSession,
-    lineup: createCharacterLineup([1,3,6],chooseCharacter) }));
-  if (presentation.session !== view.presentationSession) setPresentation({ session: view.presentationSession,
-    lineup: createCharacterLineup([1,3,6],chooseCharacter) });
+  const guestSeats = view.configuration.filter(seat => seat.occupancy === 'COMPUTER').map(seat => seat.seatNumber);
+  const sessionKey = view.presentationSession + ':' + guestSeats.join(',');
+  const [presentation, setPresentation] = useState(() => ({ session: sessionKey, generation: view.presentationSession,
+    lineup: createCharacterLineup(guestSeats,chooseCharacter) }));
+  if (presentation.session !== sessionKey) setPresentation({ session: sessionKey, generation: view.presentationSession,
+    lineup: createCharacterLineup(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.lineup.human : 'knight_male') });
   const lineup = presentation.lineup;
   useEffect(() => {
-    if (view.phase === 'OPEN' && !view.lastBet) return;
+    if (view.phase === 'CONFIGURING' || (view.phase === 'OPEN' && !view.lastBet)) return;
     const target = document.querySelector<HTMLElement>(view.phase === 'OPEN' ? '#player-wager' : view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
     target?.focus({ preventScroll: true }); target?.scrollIntoView({ block: 'nearest' });
   }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
@@ -54,7 +57,7 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
     <Table view={view} lineup={lineup} />
     <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls"
       data-contextual-dock={view.interaction.insurance ? 'insurance' : view.interaction.nextRound ? 'result' : undefined}>
-      <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
+      <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{view.tableStarted ? roundStatus(view) : 'Choose your players, then start the table'}</p>
         {view.interaction.handId && view.interaction.actions.some(a => a.enabled) && <span id="player-action-hand">· {handLabel(view.interaction.handId)}</span>}</div>
       {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
@@ -65,12 +68,15 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
         <div><dt>Reserved / current exposure</dt><dd>{credits(view.human?.reserved ?? 0)}</dd></div>
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div>
       </dl></section>
+      {!view.tableStarted && <PlayerSetup key={view.presentationSession} controller={controller} view={view} />}
       {view.interaction.betting && <PlayerBetting controller={controller} view={view} />}
     </div>
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>
     </section>
     <aside className="scene-support" aria-label="Table preferences and demo tools">
+    {view.tableStarted && <div className="table-preference"><p>{view.playerCount} players · 1 human · {view.playerCount - 1} computer guests</p>
+      <button disabled={!view.canCreateTable} onClick={() => controller.dispatch({ type: 'NEW_TABLE' })}>New table · reset to 1000 credits</button></div>}
     <CharacterPicker selected={lineup.human} onSelect={id => setPresentation(current => ({ ...current,
       lineup: changeHumanCharacter(current.lineup,id) }))} />
     <details className="panel developer-tools"><summary>Developer / demo tools</summary>
