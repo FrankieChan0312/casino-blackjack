@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-10-04 21:32:39 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "method": "Actual same-session inspection of all15 final felt and15 nativezoom screenshots after repair3; not owner acceptance or fresh independent review",
+  "feltImages": [
+    {
+      "path": "visuals/felt-complete-1280.png",
+      "sha256": "34410b3d21ef68ff9339ddff7510e364a2c287b392c75de9aeb2370b671f3600"
+    },
+    {
+      "path": "visuals/felt-complete-320.png",
+      "sha256": "11132e4002f19d68364830980b5a4a504eb5abf72ed8d8b1e35f6b8a1aa08ec1"
+    },
+    {
+      "path": "visuals/felt-complete-768.png",
+      "sha256": "97ce89a78987e29e7e0f5a17db3ae01c0432e05477565bcf71ef72c284c18419"
+    },
+    {
+      "path": "visuals/felt-dealt-1280.png",
+      "sha256": "026bb160d4b850c7e9003793b707745679f89bb1f5a0f0d05d4b5d62ee388d5c"
+    },
+    {
+      "path": "visuals/felt-dealt-320.png",
+      "sha256": "4b351405494a9d07d8d4a20954da19f354bdc46acc06c5375b5f0e7c734f27cd"
+    },
+    {
+      "path": "visuals/felt-dealt-768.png",
+      "sha256": "061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646"
+    },
+    {
+      "path": "visuals/felt-open-1280.png",
+      "sha256": "fbe864a5853a1d9827504522786765accf927baa7bc24b5adf6c4c0bc1c23abd"
+    },
+    {
+      "path": "visuals/felt-open-320.png",
+      "sha256": "83afc0aca7a0d4962411c22db98a5dc2d26cfb0223b4cba4b0586aedaf24a127"
+    },
+    {
+      "path": "visuals/felt-open-768.png",
+      "sha256": "eb43913a4a777e0abffe7c12690b3e2528fd8fef0ad1c7305cd2f2be9bfa3558"
+    },
+    {
+      "path": "visuals/felt-split-1280.png",
+      "sha256": "12b111b737dda3770819606252442df3b62b25badd4956f68a9a799e998d08d3"
+    },
+    {
+      "path": "visuals/felt-split-320.png",
+      "sha256": "c3bcbf44ee3468eb1565eaac5456a921c59094d7f6a79a807beeb40f9d5e971c"
+    },
+    {
+      "path": "visuals/felt-split-768.png",
+      "sha256": "d334c466f051d687042e1ae28e21f7366d275f487253da7580807008ff957218"
+    },
+    {
+      "path": "visuals/felt-text200-1280.png",
+      "sha256": "1ad00e60ea5be7e60bf81c60668ccb205ae1122c5bf586e13912b16a7f702eb8"
+    },
+    {
+      "path": "visuals/felt-text200-320.png",
+      "sha256": "c7f761f4dfeaaced90f3e87206fe78e09731cbc7ad1794dc1c16be2b2aa34d73"
+    },
+    {
+      "path": "visuals/felt-text200-768.png",
+      "sha256": "438757a708cfb1c827573b396f5cb12bd82fdda8c27435a6348a62602f2b1a13"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-dealer-hidden.png",
+      "sha256": "9daed67809257cb5035769b1a5417a895ab17abd4a73801eeb057cb2050467c1"
+    },
+    {
+      "path": "visuals/zoom200-dealer-idle.png",
+      "sha256": "519dab42f1bb8ada0abc9be642f368157dc71efbaf101079584fd3b49369d21c"
+    },
+    {
+      "path": "visuals/zoom200-dealer-revealed-three.png",
+      "sha256": "220cca9b7c834bb31e8e224243cc0f85579c1cfe8f732bfe8fd65450824dd0d7"
+    },
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "66b6e12c024e5cc05f211af57dba74eef95fc910b2ebd3d1b4b37e0941c755cb"
+    },
+    {
+      "path": "visuals/zoom200-player-five-controls.png",
+      "sha256": "9239945b87dc5225964e028836b39c08f791800702ec17bcce5d1d9c85ea625e"
+    },
+    {
+      "path": "visuals/zoom200-player-five-hand.png",
+      "sha256": "f9af9b934c5cc2d1d879b473a26d2d40ffdbb08f2b7eda5ff99a6f87773fce5a"
+    },
+    {
+      "path": "visuals/zoom200-player-five-top.png",
+      "sha256": "98692700bf1ed5c3857e5c31d762fd1df1bced56fd6631d6c2722d82815094db"
+    },
+    {
+      "path": "visuals/zoom200-player-hand.png",
+      "sha256": "ec6dc5c5367eb4dc62f474cbec331c705fa17631334c1d98218a2d00456b354c"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-controls.png",
+      "sha256": "d8cfed9c02badeb60aff3f4c8cbd734fe1e7b202ceb5760d7dc588eca3b7179a"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-hand.png",
+      "sha256": "f2e8210977f7cb7cb58e1cbca3464185ce70c61ad51dc87eec9d19264c742f77"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-top.png",
+      "sha256": "614935e48bdff217f3096ae77fd7f5b7daf5c626794ad97e2e8bbefe022e1148"
+    },
+    {
+      "path": "visuals/zoom200-player-split-controls.png",
+      "sha256": "ff31fb74bca619cbde8e3640c7f3d9b50f78adba95979c6b5c44be7c28934295"
+    },
+    {
+      "path": "visuals/zoom200-player-split-hand.png",
+      "sha256": "d961eea1f507ad55dad8c75f236891894e84fce0538c073ce220b8d19ddca8fd"
+    },
+    {
+      "path": "visuals/zoom200-player-split-top.png",
+      "sha256": "8e8e55047717b7de98389876a8c852590a9affc0bfbc142e92b84ba5c86df6d6"
+    },
+    {
+      "path": "visuals/zoom200-player-top.png",
+      "sha256": "9daed67809257cb5035769b1a5417a895ab17abd4a73801eeb057cb2050467c1"
+    }
+  ],
+  "normalDesktopBeforeAfter": "Exact recorded geometry equality in open/dealt states",
+  "standBottom": 883.359375,
+  "handToControlsGap": 6,
+  "minimumSampledNormalTextContrast": 6.969612258115216,
+  "findings": [
+    "Real MAIN ellipses associate with existing amounts; no new wager text or invented chips.",
+    "Single-hand and Dealer arcs underline actual cards; Split leaves use named semantic destinations without duplicate outlines.",
+    "Rule lines follow actual3:2/S17 paragraph after relative positioning and inherited-inset correction; no floating decoration or new panel.",
+    "Cards/avatars/active state/local controls retain hierarchy and all accepted dimensions. Desktop/tablet/mobile/text/nativezoom readable with normal vertical scrolling as required."
+  ],
+  "repairCount": "3/10",
+  "humanVisualAcceptance": "PENDING",
+  "freshIndependentReview": "NOT RUN"
+}

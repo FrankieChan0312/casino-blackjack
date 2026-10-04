@@ -30,8 +30,8 @@ export function SeatUnit({ seat, avatar, hands, wager, currentSeat, currentHandI
         <p className="character-controller">Seat {seat.seatNumber} · {seat.occupancy === 'HUMAN' ? 'Human' : 'Computer'}{seat.sittingOut && ' · Sitting Out'}</p>
       </div>
     </div>
-    {hands.length > 0 && <p className="seat-main-wager">MAIN: {credits(wager)} credits</p>}
-    {!hands.length && <div className="seat-waiting"><p className="wager-chip">MAIN: {credits(wager)} credits</p>
+    {hands.length > 0 && <p className="seat-main-wager" data-felt-destination="main-wager">MAIN: {credits(wager)} credits</p>}
+    {!hands.length && <div className="seat-waiting"><p className="wager-chip" data-felt-destination="main-wager">MAIN: {credits(wager)} credits</p>
       <p>{seat.sittingOut ? 'Sitting Out' : 'Waiting for the deal'}</p></div>}
     {hands.length > 0 && <details className="guest-mobile-cards seat-hands" open={!mobile}>
       <summary>Cards · {hands[0].total}</summary>
@@ -39,14 +39,14 @@ export function SeatUnit({ seat, avatar, hands, wager, currentSeat, currentHandI
         const current = currentHandId === hand.handId;
         const status = hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason)
           : hand.complete ? 'Decisions complete' : hand.cards.length === 1 ? 'Waiting for card' : 'Playing';
-        return <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId}
+        return <article key={hand.handId} aria-label={handLabel(hand.handId)} data-hand-id={hand.handId} data-felt-destination="hand"
           className={`guest-desktop-hand ${current ? 'active-hand' : 'hand'}`}>
           <div className="hand-header"><h3>{handLabel(hand.handId)}{current && ' · Current hand'}</h3>
             {current && <span className="turn-marker">ACTIVE</span>}</div>
           <Cards cards={hand.cards} />
           <div className="seat-hand-facts"><p className="seat-score" aria-label={`Total: ${hand.total}`}>{hand.total}</p>
             <p className="seat-hand-state" data-result={hand.outcome}>{status}</p>
-            <p className="seat-stake">{hands.length === 1 ? 'MAIN: ' : 'Wager: '}{credits(hand.stakeUnits)} credits</p></div>
+            <p className="seat-stake" data-felt-destination={hands.length === 1 ? 'main-wager' : 'hand-wager'}>{hands.length === 1 ? 'MAIN: ' : 'Wager: '}{credits(hand.stakeUnits)} credits</p></div>
         </article>;
       })}
     </details>}

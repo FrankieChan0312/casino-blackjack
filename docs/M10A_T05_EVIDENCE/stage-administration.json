@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-04 22:01:21 +08:00",
+  "task": "M10A-T05",
+  "command": "node .git/m10a-t05-stage.cjs",
+  "status": "FAIL",
+  "exitCode": 1,
+  "diagnostic": "Index does not retain raw bytes: docs/M10A_T05_EVIDENCE/README.md",
+  "indexHash": "13ca40655bc46d0535e21f71e006152e5e6f372c",
+  "workingHash": "a01d030d249128dd77c9975969b5828f2d3d518a",
+  "cause": "The read-only stage checker was invoked without its add argument after facts-only review documentation changed.",
+  "correction": "Invoke the existing helper with add to stage the reviewed files, then check the exact index bytes and whitespace.",
+  "scope": "Administrative staging correction only; no product/test/config or requirement change.",
+  "repairCount": "4/10",
+  "implementationRepair": false
+}

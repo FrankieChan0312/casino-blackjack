@@ -1,0 +1,368 @@
+{
+  "phase": "t05-unified",
+  "kind": "unified",
+  "start": "2026-10-04 21:39:08 +08:00",
+  "end": "2026-10-04 21:44:58 +08:00",
+  "command": "& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-t05-unified",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-t05-unified.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\"",
+    "events": {
+      "retainedAt": "generated/af62e43de431864b2054811b55ce64c7c0f597f64ee5fe6ebef7ccb3507e01ad.jsonl",
+      "bytes": 7710,
+      "sha256": "af62e43de431864b2054811b55ce64c7c0f597f64ee5fe6ebef7ccb3507e01ad"
+    }
+  },
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-t05-unified-cf7vCI",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/desktop-table.png",
+      "retainedAt": "generated/20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1.png",
+      "bytes": 483197,
+      "sha256": "20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1"
+    },
+    {
+      "path": "test-results/mobile-table.png",
+      "retainedAt": "generated/987d7de48e37a1e116819ed0f4d1fbfb3b10e2f221baa4079f7f6cb5f0fa6b1e.png",
+      "bytes": 218643,
+      "sha256": "987d7de48e37a1e116819ed0f4d1fbfb3b10e2f221baa4079f7f6cb5f0fa6b1e"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-ready.png",
+      "retainedAt": "generated/fbe864a5853a1d9827504522786765accf927baa7bc24b5adf6c4c0bc1c23abd.png",
+      "bytes": 813154,
+      "sha256": "fbe864a5853a1d9827504522786765accf927baa7bc24b5adf6c4c0bc1c23abd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-results.png",
+      "retainedAt": "generated/a082c93a654a601bfb3482c6757e8a09088e6c4b3668caf8a7e80306f0e216de.png",
+      "bytes": 903292,
+      "sha256": "a082c93a654a601bfb3482c6757e8a09088e6c4b3668caf8a7e80306f0e216de"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-table-1280.png",
+      "retainedAt": "generated/5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be.png",
+      "bytes": 725711,
+      "sha256": "5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-table-320.png",
+      "retainedAt": "generated/57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd.png",
+      "bytes": 255177,
+      "sha256": "57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-table-768.png",
+      "retainedAt": "generated/061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646.png",
+      "bytes": 521423,
+      "sha256": "061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/images/m9-tools.png",
+      "retainedAt": "generated/ad4ebdfb8baed06de40f175f5d884b59d38f6163fdebfa9f9bc5d74baa1461f2.png",
+      "bytes": 70775,
+      "sha256": "ad4ebdfb8baed06de40f175f5d884b59d38f6163fdebfa9f9bc5d74baa1461f2"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "retainedAt": "generated/179b190b70f1f5c2708312f504a6914a9ebd93ff66827bfa9b79cd7d36fb318e.png",
+      "bytes": 786971,
+      "sha256": "179b190b70f1f5c2708312f504a6914a9ebd93ff66827bfa9b79cd7d36fb318e"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "retainedAt": "generated/b986300ca4508b707a3c93776ea92d8961c14d05e201351b2adc62b12ea530f7.png",
+      "bytes": 266008,
+      "sha256": "b986300ca4508b707a3c93776ea92d8961c14d05e201351b2adc62b12ea530f7"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "retainedAt": "generated/461ac13cf678b39480d5fc82a0e7b83f8b06455c8dfdc3d6ecf7f583764fd804.png",
+      "bytes": 497481,
+      "sha256": "461ac13cf678b39480d5fc82a0e7b83f8b06455c8dfdc3d6ecf7f583764fd804"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "retainedAt": "generated/7d4a79ea8da6397ad9e839d5fc61edcc9f05d0362932961a4ebf2cd838bf8a2b.png",
+      "bytes": 1150301,
+      "sha256": "7d4a79ea8da6397ad9e839d5fc61edcc9f05d0362932961a4ebf2cd838bf8a2b"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "retainedAt": "generated/d9ba1b3009df723a40661514ead5fe447ae39f19a6c464caa43814d78dfde50a.png",
+      "bytes": 385139,
+      "sha256": "d9ba1b3009df723a40661514ead5fe447ae39f19a6c464caa43814d78dfde50a"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "retainedAt": "generated/86ae442398653de87a12cd3e621d7b4cad57d7ae63941d43e48e50afcf676c01.png",
+      "bytes": 860534,
+      "sha256": "86ae442398653de87a12cd3e621d7b4cad57d7ae63941d43e48e50afcf676c01"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/geometry.json",
+      "retainedAt": "generated/8eef21f974cf7082e22542d8d27535474eb142950738edec725a984fb8bd68ca.json",
+      "bytes": 2761,
+      "sha256": "8eef21f974cf7082e22542d8d27535474eb142950738edec725a984fb8bd68ca"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "retainedAt": "generated/5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be.png",
+      "bytes": 725711,
+      "sha256": "5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "retainedAt": "generated/57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd.png",
+      "bytes": 255177,
+      "sha256": "57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "retainedAt": "generated/061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646.png",
+      "bytes": 521423,
+      "sha256": "061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "retainedAt": "generated/fbe864a5853a1d9827504522786765accf927baa7bc24b5adf6c4c0bc1c23abd.png",
+      "bytes": 813154,
+      "sha256": "fbe864a5853a1d9827504522786765accf927baa7bc24b5adf6c4c0bc1c23abd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "retainedAt": "generated/83afc0aca7a0d4962411c22db98a5dc2d26cfb0223b4cba4b0586aedaf24a127.png",
+      "bytes": 295802,
+      "sha256": "83afc0aca7a0d4962411c22db98a5dc2d26cfb0223b4cba4b0586aedaf24a127"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "retainedAt": "generated/eb43913a4a777e0abffe7c12690b3e2528fd8fef0ad1c7305cd2f2be9bfa3558.png",
+      "bytes": 533249,
+      "sha256": "eb43913a4a777e0abffe7c12690b3e2528fd8fef0ad1c7305cd2f2be9bfa3558"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/table-1280.png",
+      "retainedAt": "generated/5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be.png",
+      "bytes": 725711,
+      "sha256": "5547aa15bf65827147d14adec171b2544d1645d45cd4ac213e146670e8e220be"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/table-320.png",
+      "retainedAt": "generated/57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd.png",
+      "bytes": 255177,
+      "sha256": "57313c4738c0e45acad815275829aaffc1ff81cf78135b6d40807584c7c91ddd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/table-768.png",
+      "retainedAt": "generated/061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646.png",
+      "bytes": 521423,
+      "sha256": "061738df599feb2306b6c405acf6ab870b133b931747ba632f0d2ffc77936646"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "retainedAt": "generated/a6ff652e8e426ce6710867c4dc9d6da9e8860c3f087f0e15422cd85be8f77973.png",
+      "bytes": 1093017,
+      "sha256": "a6ff652e8e426ce6710867c4dc9d6da9e8860c3f087f0e15422cd85be8f77973"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "retainedAt": "generated/8c8800407c5a59ad8b4b5a66d414b766c13963496347d46f5160b470da3df2e5.png",
+      "bytes": 554816,
+      "sha256": "8c8800407c5a59ad8b4b5a66d414b766c13963496347d46f5160b470da3df2e5"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t05-unified/docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "retainedAt": "generated/d50559091069827cc38ff5ea9ef4883ebdbec13c0e9acaeff4699c676563946d.png",
+      "bytes": 842255,
+      "sha256": "d50559091069827cc38ff5ea9ef4883ebdbec13c0e9acaeff4699c676563946d"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-04 21:44:59 +08:00"
+}

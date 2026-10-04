@@ -1,3 +1,59 @@
+## M10A-T05 same-session review checkpoint
+
+2026-10-04 21:59:54 +08:00. Full authored diff and15 final felt/15 nativezoom images reviewed: PASS. 109 plaintext/archive records and303 trace text entries scanned,0 sensitive-pattern findings; 452 intended paths/438 evidence blobs match native unfiltered Git hashes,staged whitespace PASS/0. 162 exact executed files unchanged;2112 protected paths/1791 historical evidence unchanged,domain diff EMPTY. [Review](M10A_T05_EVIDENCE/precommit-review.json), [stage](M10A_T05_EVIDENCE/staged-review-checkpoint.json), [lossless archives](M10A_T05_EVIDENCE/log-archive.json). Facts-only closure checks follow.
+
+M10A-T05_IMPLEMENTED_VERIFIED;4/10. T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED,5/10 unchanged. T05 owner acceptance PENDING; fresh independent review NOT RUN. M10A-T06 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED; Motion NOT INSTALLED,deployment NOT RUN.
+
+## M10A-T05 documentation correction — 2026-10-04 21:52:18 +08:00
+
+Current **M10A-T05_IMPLEMENTED_VERIFIED**, repairs **4/10**. The starting inventory is **82files/1082Vitest/76Chromium**; final **83files/1090Vitest/79Chromium** adds one8-case unit file/three browser cases. Only an incoming-count transcription is corrected, original archived driver bytes retained. Earlier3/10 technical/focused checkpoint times/counters remain historical truth. All162 executed hashes unchanged; complete focused/full/preservation/unified gates remain PASS/checked0. Affected documentation checks follow. Owner visual acceptance PENDING; fresh independent review NOT RUN.
+
+## M10A-T05 repair4/10 — 2026-10-04 21:52:16 +08:00
+
+Evidence/cause hypothesis: Manual full diff review finds incoming83/1082/76 typo; the before receipt and committed T04 evidence show82/1082/76. Earlier naive repair-count substitution matched the substring2/10 inside82/1082; executed83/1090/79 results are correct. Targeted correction: Correct only incoming-count documentary text; current count4/10, preserve actual earlier3/10 checkpoints and archived driver bytes. Use token-boundary-safe current receipt substitutions. Affected rerun: t05-final-documentation; frozen162 hashes and protection unchanged. All original failure evidence retained; prior task counters unchanged.
+
+## M10A-T05 final technical checkpoint
+
+2026-10-04 21:47:42 +08:00. **M10A-T05_IMPLEMENTED_VERIFIED**, repairs **3/10**. Starting main/480fe2e0d2dd7c85ae17b8b27db347f35e8f597a, local=origin/main=live remote,0/0,CLEAN,untracked0 independently confirmed. T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED recorded before product edits; historical T04 5/10, T03 4/10, T02 8/10 and T01 11/11 OWNER-AUTHORIZED EXCEPTION unchanged. T05 owner visual acceptance PENDING; fresh independent review NOT RUN. Normal main publication follows scope/evidence review; deployment NOT RUN. [Task](M10A_T05.md), [evidence](M10A_T05_EVIDENCE/README.md).
+
+Focused **12files/86 UI**, rule consistency **1 passed/7 deliberately unselected by exact -t**, focused Chromium **32**, full Vitest **83files/1090**, full Chromium **79**, independent M1–M8/current PA1/RA1/M9/M10-T01/M10A-T01/T02/T03/T04/T05 preservation and **scripts/verify.ps1 PASS / checked exit0**. Incoming82/1082/76 plus one new8-case unit file and three browser cases fully explains increases; original assertions/thresholds/retries unchanged. All162 executable/test/config SHA256 hashes unchanged after verification.
+
+Static MAIN ellipses reuse existing exact wagers; single-hand lower arcs follow actual card containers; Split leaves retain named semantic destinations without repeated decorative outlines. Dealer hand arc and rule-print lines remain inside the accepted workstation; house text3:2/S17,6-deck shoe/deal origin unchanged. All occupied seat/hand/wager associations use existing real anchors and public IDs. No extra labels, fake chips, generic panels, hidden text, state, timers or speculative animation API. Existing accepted frames/rail/font hierarchy preserved.
+
+All15 final felt screenshots and15 genuine nativezoom captures actually inspected: normal open/dealt/complete/Split at1280/768/320 and normal text200. Existing focused stress cases cover actual five-card/four-leaf/remote layouts, hidden/revealed Dealer and failed portraits. Normal before/final camera/Dealer/remote/local/card/dock/form/Stand geometry exactly equal; Stand **883.359375px<=900**, gap **6px**, Dealer180x220, guest portraits84x112, local cards100x132. Nativezoom2.0 observed1280x723 ->640x361 CSS viewport,DPR1.5 ->3,root16px/CSSzoom1 unchanged. Keyboard/focus44px PASS.28 sampled normal-text checks>=4.5 PASS, minimum6.969612258115216:1, rules8.35089319569114:1, focus5.505122929235555>=3. Bounded contrast evidence, no comprehensive accessibility certification claim.
+
+Protected **2112** incoming paths and **1791** historical evidence raw hashes unchanged; src/domain diff **EMPTY**. RNG/shoe/cards/accounting/bankroll/replay/digest/journal/strategy/turn/settlement/controller/geometry unchanged. PA1 original/provenance/hash/canonical records immutable;12 production PNGs reproduced byte-for-byte. Exact accepted T01..T04 CSS and incoming Chromium assertions retained as prefixes.
+
+M10A-T06 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Final control integration NOT IMPLEMENTED; formal Dealer art/identity NOT IMPLEMENTED; Motion NOT INSTALLED; animations NOT IMPLEMENTED; deployment NOT RUN. All executed gate failures and3-cycle ledger retained.
+
+## M10A-T05 focused gate — 2026-10-04 21:32:39 +08:00
+
+Repair3/10 final UI12files/86tests, rule-only1, typecheck/lint and focused32Chromium PASS/checked0. All15 final felt/15 nativezoom images actually inspected: PASS. Normal open/dealt geometry equals baseline; Stand883.359375px,6px gap, accepted dimensions unchanged. Actual nativezoom2.0 and keyboard44px/focus PASS.28 sampled text contrasts>=4.5,minimum6.969612258115216:1,rule8.35089319569114:1. [Visual review](M10A_T05_EVIDENCE/visual-review.json). Full/final gates NOT RUN at this checkpoint; freeze and full verification follow. T04 owner accepted,5/10 unchanged. T05 owner acceptance PENDING; fresh independent review NOT RUN.
+
+## M10A-T05 repair3/10 — 2026-10-04 21:27:27 +08:00
+
+Evidence/cause hypothesis: Repair2 focused Chromium11PASS/21FAIL reveals inherited absolute top and left offsets become active under relative positioning, shifting rule print and causing narrow-view overflow. Targeted correction: Clear inset on only the new rule-print relative container; preserve flow size and all incoming CSS. Affected rerun: t05-repair3-browser, final camera, contrast and nativezoom. All original failure evidence retained; prior task counters unchanged.
+
+## M10A-T05 repair2/10 — 2026-10-04 21:21:10 +08:00
+
+Evidence/cause hypothesis: Actual desktop screenshots show rule-print short lines at Dealer top: accepted four-class position static overrides the new three-class-equivalent relative selector, so absolute pseudo elements use Dealer containing block. Targeted correction: Give only the rule-print position selector matching specificity; keep dimensions and accepted CSS prefix unchanged. Affected rerun: t05-repair2-browser, final camera, contrast and native zoom visuals. All original failure evidence retained; prior task counters unchanged.
+
+## M10A-T05 repair1/10 — 2026-10-04 21:16:36 +08:00
+
+Evidence/cause hypothesis: Typecheck TS2741 identifies missing required controllerId in newly authored local Split test fixture; adding the literal public identity should resolve it. Targeted correction: Add controllerId human to the explicit test fixture only. Affected rerun: t05-repair1-unit and t05-repair1-typecheck. All original failure evidence retained; prior task counters unchanged.
+
+## M10A-T04 human acceptance and T05 authorization
+
+2026-10-04 21:09:25 +08:00. **M10A-T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED** by explicit owner instruction at main/480fe2e0d2dd7c85ae17b8b27db347f35e8f597a: the coherent Dealer workstation preserves the accepted scene and public card/status grouping. Historical T04 **5/10**, T03 **4/10**, T02 **8/10**, T01 **11/11 — OWNER-AUTHORIZED EXCEPTION** unchanged.
+
+M10A-T05 Felt Gameplay Markings authorized / IN PROGRESS; **0/10**. Baseline live parity0/0, CLEAN,untracked0. [Contract](M10A_T05.md), [baseline](M10A_T05_EVIDENCE/before.json). T05 owner visual acceptance PENDING; fresh independent review NOT RUN; deployment NOT RUN. M10A-T06/M10-T02/M10-T04 implementation NOT STARTED.
+
 ## M10A-T04 published implementation checkpoint
 
 2026-10-04 20:28:49 +08:00. **M10A-T04_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **5/10**. Implementation **9a841104e3357d93e42fe5103a4cdc868482a783**, branch **main**. Normal origin/main push PASS / checked exit0 at2026-10-04 20:28:32 +08:00..2026-10-04 20:28:49 +08:00; checked fetch/live-remote equality PASS/0. At this published checkpoint HEAD=origin/main=live remote=9a841104e3357d93e42fe5103a4cdc868482a783, ahead/behind0/0,working tree CLEAN,untracked0. A factual publication-receipt-only checkpoint follows; final Git/delivery identifies final HEAD. [Publication](M10A_T04_EVIDENCE/implementation-publication.json), [task/evidence](M10A_T04_EVIDENCE/README.md).

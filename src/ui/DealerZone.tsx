@@ -8,7 +8,7 @@ export function DealerZone({ dealer, phase }: { dealer: NonNullable<BrowserView[
     data-dealer-status={status} aria-label="Dealer">
     <CasinoPerson kind="dealer" />
     <h2>Dealer</h2>
-    <div className="dealer-cards" data-anchor="dealer-cards" role="group" aria-label="Dealer hand">
+    <div className="dealer-cards" data-anchor="dealer-cards" data-felt-destination="dealer-hand" role="group" aria-label="Dealer hand">
       {dealer ? <>
         <div className="dealer-card-lane"><Cards cards={dealer.visibleCards} />
           {!dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
@@ -17,10 +17,10 @@ export function DealerZone({ dealer, phase }: { dealer: NonNullable<BrowserView[
         <p className="dealer-state">{status}</p>
       </> : <p className="dealer-state">Waiting for the initial deal</p>}
     </div>
-    <div className="dealer-shoe" data-anchor="dealer-shoe" role="group" aria-label="Shoe and deal origin">
+    <div className="dealer-shoe" data-anchor="dealer-shoe" data-felt-destination="deal-origin" role="group" aria-label="Shoe and deal origin">
       <span className="shoe-placeholder" aria-hidden="true" />
       <p>Shoe · Deal origin <span>6 decks</span></p>
     </div>
-    <p className="table-inscription" data-anchor="table-centre" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>
+    <p className="table-inscription" data-anchor="table-centre" data-felt-rules="true" aria-label="House rules">BLACKJACK PAYS 3:2 <span>DEALER STANDS ON ALL 17</span></p>
   </section>;
 }

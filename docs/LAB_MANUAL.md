@@ -1,3 +1,13 @@
+## M10A-T05 documentation correction — 2026-10-04 21:52:18 +08:00
+
+Current **M10A-T05_IMPLEMENTED_VERIFIED**, repairs **4/10**. The starting inventory is **82files/1082Vitest/76Chromium**; final **83files/1090Vitest/79Chromium** adds one8-case unit file/three browser cases. Only an incoming-count transcription is corrected, original archived driver bytes retained. Earlier3/10 technical/focused checkpoint times/counters remain historical truth. All162 executed hashes unchanged; complete focused/full/preservation/unified gates remain PASS/checked0. Affected documentation checks follow. Owner visual acceptance PENDING; fresh independent review NOT RUN.
+
+## M10A-T05 static felt destinations — 2026-10-04 21:47:42 +08:00
+
+A semantic destination can be an existing real container: seat anchor, named public leaf, exact wager and public Dealer card/shoe region. Static pseudo-element arcs and MAIN ellipses need no second game state, calculated funds or animation API. Single-hand decor yields to live Split leaves and mobile disclosed cards; player-visible wording remains supported by R03/R06/R08/R10/R12/R13.
+
+Mechanical32 Chromium PASS did not prove intended placement: actual desktop inspection found short rule lines positioned at the Dealer top because an accepted more-specific position:static rule won. Repair2 adjusts new selector specificity but activates inherited offsets; repair3 clears only those offsets and final geometry remains exactly equal. Repair1 fixed missing required controllerId in literal test facts. Historical failures retained,3/10. Full83/1090/79 and final unified PASS/0; technical verification/publication/owner acceptance remain separate.
+
 ## M10A-T04 verified Dealer composition — 2026-10-04 20:25:46 +08:00
 
 Presentation consumes safe public facts: visibleCards, generic hidden back, supplied total/status and the existing integrity phase. A Dealer has no player wager/bankroll and therefore uses its own small component. A static shoe origin establishes a later animation destination without issuing draws or predicting future cards. Temporary art retains the accepted silhouette; roster identity/formal variant/provenance integration stays separately authorized.

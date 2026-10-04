@@ -1,0 +1,600 @@
+{
+  "method": "Lossless gzip archival of task-owned raw logs, Playwright generated Markdown error contexts and the original historical output-router snapshot only; original SHA256/length verified after decompression before removal of each exact path. Failed content retained; no newline rewriting.",
+  "logs": [
+    {
+      "path": "assets.log",
+      "archive": "assets.log.gz",
+      "bytes": 267,
+      "sha256": "1b0b9a01ec5f28b0e9126549ed0e139c4ccf9ae47e602a3aa577dd641e786dd3",
+      "compressedBytes": 174,
+      "compressedSha256": "5e2fa5ccf0433c4e3297851bcf65d9d7bb0b748925f459708ab57c80c5c3c3cb",
+      "timestamp": "2026-10-04 21:47:43 +08:00"
+    },
+    {
+      "path": "generated/13983d685874c07c890e71788a4d8ceacf187f860f11385fd3b011f3b3e38a27.md",
+      "archive": "generated/13983d685874c07c890e71788a4d8ceacf187f860f11385fd3b011f3b3e38a27.md.gz",
+      "bytes": 17529,
+      "sha256": "13983d685874c07c890e71788a4d8ceacf187f860f11385fd3b011f3b3e38a27",
+      "compressedBytes": 4766,
+      "compressedSha256": "9c35d969a62e4fb188252045328f3458cbfd3a60037324fb6712642ee5467673",
+      "timestamp": "2026-10-04 21:47:43 +08:00"
+    },
+    {
+      "path": "generated/2a53b53d56d1f1361d960a7ec9c3d89518436a51bf7dad2adfb95067fbafe3fd.md",
+      "archive": "generated/2a53b53d56d1f1361d960a7ec9c3d89518436a51bf7dad2adfb95067fbafe3fd.md.gz",
+      "bytes": 18851,
+      "sha256": "2a53b53d56d1f1361d960a7ec9c3d89518436a51bf7dad2adfb95067fbafe3fd",
+      "compressedBytes": 4830,
+      "compressedSha256": "02226752c6a51f396d342162e99209b01e8f836c23441968d454b4c5b893c381",
+      "timestamp": "2026-10-04 21:47:44 +08:00"
+    },
+    {
+      "path": "generated/3250b8ad9f11b43d7e897eec3046d9050af5b16b14f2b59867dd23ef516cee72.md",
+      "archive": "generated/3250b8ad9f11b43d7e897eec3046d9050af5b16b14f2b59867dd23ef516cee72.md.gz",
+      "bytes": 17834,
+      "sha256": "3250b8ad9f11b43d7e897eec3046d9050af5b16b14f2b59867dd23ef516cee72",
+      "compressedBytes": 4783,
+      "compressedSha256": "44ab39f48cb907fcfb0fc3bd47738a5c18f07311d6f1c586e739c0fd81533530",
+      "timestamp": "2026-10-04 21:47:44 +08:00"
+    },
+    {
+      "path": "generated/4f78c2a996fd9cbc28158c7cecf24b329647ae406050572ab3b7306ee0d5271e.md",
+      "archive": "generated/4f78c2a996fd9cbc28158c7cecf24b329647ae406050572ab3b7306ee0d5271e.md.gz",
+      "bytes": 16725,
+      "sha256": "4f78c2a996fd9cbc28158c7cecf24b329647ae406050572ab3b7306ee0d5271e",
+      "compressedBytes": 4621,
+      "compressedSha256": "13b414b5fe081cb3bea75b24f6e1ca0b24f9787184de862a1a9d256b70fa3286",
+      "timestamp": "2026-10-04 21:47:44 +08:00"
+    },
+    {
+      "path": "generated/504d85d5c2b1950a692a646dad8a90f1fb9c2387b32ac84c014811f845626ac9.md",
+      "archive": "generated/504d85d5c2b1950a692a646dad8a90f1fb9c2387b32ac84c014811f845626ac9.md.gz",
+      "bytes": 15958,
+      "sha256": "504d85d5c2b1950a692a646dad8a90f1fb9c2387b32ac84c014811f845626ac9",
+      "compressedBytes": 4572,
+      "compressedSha256": "2bf0639ce7d9c51fd228c055f607e85040cdb6e2d88749f54699426f50b45a6f",
+      "timestamp": "2026-10-04 21:47:45 +08:00"
+    },
+    {
+      "path": "generated/5191748ea6f2e46d0704e45d7a1c0be8edd5f714cfc5c210aac56d0a2737f740.md",
+      "archive": "generated/5191748ea6f2e46d0704e45d7a1c0be8edd5f714cfc5c210aac56d0a2737f740.md.gz",
+      "bytes": 17661,
+      "sha256": "5191748ea6f2e46d0704e45d7a1c0be8edd5f714cfc5c210aac56d0a2737f740",
+      "compressedBytes": 4686,
+      "compressedSha256": "955846880621dbea05244f53c24a62aef843c46d576902ed2cc60e6e0c9f0f3f",
+      "timestamp": "2026-10-04 21:47:45 +08:00"
+    },
+    {
+      "path": "generated/59aab7375fcfdbb8043757c4fca2f16838b46558d3876645d6ce33b4dc7aaf7e.md",
+      "archive": "generated/59aab7375fcfdbb8043757c4fca2f16838b46558d3876645d6ce33b4dc7aaf7e.md.gz",
+      "bytes": 17673,
+      "sha256": "59aab7375fcfdbb8043757c4fca2f16838b46558d3876645d6ce33b4dc7aaf7e",
+      "compressedBytes": 4746,
+      "compressedSha256": "50bddb361acf76a865e2395c555060b9214e53ed7c404cd15c6d1a523146b15e",
+      "timestamp": "2026-10-04 21:47:45 +08:00"
+    },
+    {
+      "path": "generated/5bdb39203de4c8fb2907158974756d2b10a8c06fb6aeb37d59733a8e0ca1cb41.md",
+      "archive": "generated/5bdb39203de4c8fb2907158974756d2b10a8c06fb6aeb37d59733a8e0ca1cb41.md.gz",
+      "bytes": 16711,
+      "sha256": "5bdb39203de4c8fb2907158974756d2b10a8c06fb6aeb37d59733a8e0ca1cb41",
+      "compressedBytes": 4623,
+      "compressedSha256": "d092caeebc03d202ff2cf94832a6f9111026b168cda3ca69658fef4bb946f680",
+      "timestamp": "2026-10-04 21:47:46 +08:00"
+    },
+    {
+      "path": "generated/678b27d4ae932a07027d6fc6dedbe08d722c5992246493cab34bdc252a7053ef.md",
+      "archive": "generated/678b27d4ae932a07027d6fc6dedbe08d722c5992246493cab34bdc252a7053ef.md.gz",
+      "bytes": 24765,
+      "sha256": "678b27d4ae932a07027d6fc6dedbe08d722c5992246493cab34bdc252a7053ef",
+      "compressedBytes": 6182,
+      "compressedSha256": "127b2556f498de136b543bfa57c07fb266442916b220612528852445aa6f2355",
+      "timestamp": "2026-10-04 21:47:46 +08:00"
+    },
+    {
+      "path": "generated/6b636d85b4b0dcaffecd0ef3d0e1c3ce9b281588fdbc7859c9233d83f48d7f77.md",
+      "archive": "generated/6b636d85b4b0dcaffecd0ef3d0e1c3ce9b281588fdbc7859c9233d83f48d7f77.md.gz",
+      "bytes": 16714,
+      "sha256": "6b636d85b4b0dcaffecd0ef3d0e1c3ce9b281588fdbc7859c9233d83f48d7f77",
+      "compressedBytes": 4661,
+      "compressedSha256": "3e00e8c866fb75cf38adffbd7890a322a3cdca9cda3bb2da456a3983abc66052",
+      "timestamp": "2026-10-04 21:47:47 +08:00"
+    },
+    {
+      "path": "generated/7694f510da873cba2779b5a2fa18fc8e62b0ce138fffdb263ec08eef4febaa79.md",
+      "archive": "generated/7694f510da873cba2779b5a2fa18fc8e62b0ce138fffdb263ec08eef4febaa79.md.gz",
+      "bytes": 16717,
+      "sha256": "7694f510da873cba2779b5a2fa18fc8e62b0ce138fffdb263ec08eef4febaa79",
+      "compressedBytes": 4667,
+      "compressedSha256": "0c9791c6d49400f799ef1fc3ac750eae96f66bb9a9e2a67639ea7689f02fb42a",
+      "timestamp": "2026-10-04 21:47:47 +08:00"
+    },
+    {
+      "path": "generated/944d60877b208914883182cfcb1e27a43d19de63dc6e2c8c0eed7e844c53b856.md",
+      "archive": "generated/944d60877b208914883182cfcb1e27a43d19de63dc6e2c8c0eed7e844c53b856.md.gz",
+      "bytes": 16716,
+      "sha256": "944d60877b208914883182cfcb1e27a43d19de63dc6e2c8c0eed7e844c53b856",
+      "compressedBytes": 4625,
+      "compressedSha256": "3fdac4ce001e5529c7e0024ca385b97839eba69a62ce0184b3c1edf88d0c9973",
+      "timestamp": "2026-10-04 21:47:47 +08:00"
+    },
+    {
+      "path": "generated/a41a7cbd057711924c35338b4e4d4755785ae590fb988c8bba03478bca638f54.md",
+      "archive": "generated/a41a7cbd057711924c35338b4e4d4755785ae590fb988c8bba03478bca638f54.md.gz",
+      "bytes": 16725,
+      "sha256": "a41a7cbd057711924c35338b4e4d4755785ae590fb988c8bba03478bca638f54",
+      "compressedBytes": 4665,
+      "compressedSha256": "36b3a82f52607f4f21234be08c177573745f45a2b3f485ac661703210422ca35",
+      "timestamp": "2026-10-04 21:47:48 +08:00"
+    },
+    {
+      "path": "generated/c89474a534579e602790e42bae6ed7ce1952e7aadbc3b9fcbf9cb806d7a1ee18.md",
+      "archive": "generated/c89474a534579e602790e42bae6ed7ce1952e7aadbc3b9fcbf9cb806d7a1ee18.md.gz",
+      "bytes": 18938,
+      "sha256": "c89474a534579e602790e42bae6ed7ce1952e7aadbc3b9fcbf9cb806d7a1ee18",
+      "compressedBytes": 4923,
+      "compressedSha256": "31a2c5ed7b4090d16ae9d50f26eb3d3099357617056e5724f536b84b86167aa3",
+      "timestamp": "2026-10-04 21:47:48 +08:00"
+    },
+    {
+      "path": "generated/cf4826cd0a468ffef541941f23fbbca75ee1e2349a3358d01c3e13818c6ba6ef.md",
+      "archive": "generated/cf4826cd0a468ffef541941f23fbbca75ee1e2349a3358d01c3e13818c6ba6ef.md.gz",
+      "bytes": 20751,
+      "sha256": "cf4826cd0a468ffef541941f23fbbca75ee1e2349a3358d01c3e13818c6ba6ef",
+      "compressedBytes": 4539,
+      "compressedSha256": "d64b1db1afe094b5dafcf5d553c2daf7eb3c2e9fbb6993d5761c0ac3fa02139b",
+      "timestamp": "2026-10-04 21:47:48 +08:00"
+    },
+    {
+      "path": "generated/d60ad792adf9daa8a48b37c9a3d26972779115b2fe78dc8481e1813c5c363b26.md",
+      "archive": "generated/d60ad792adf9daa8a48b37c9a3d26972779115b2fe78dc8481e1813c5c363b26.md.gz",
+      "bytes": 16705,
+      "sha256": "d60ad792adf9daa8a48b37c9a3d26972779115b2fe78dc8481e1813c5c363b26",
+      "compressedBytes": 4662,
+      "compressedSha256": "274c26127c332871346f7d87ab7b8bcd0503236f70b5506bbc56a2a361998df4",
+      "timestamp": "2026-10-04 21:47:49 +08:00"
+    },
+    {
+      "path": "generated/dcfbb055f7033d2335a009c88271a19c4c108a357e7a6296e102ef04fd7f7881.md",
+      "archive": "generated/dcfbb055f7033d2335a009c88271a19c4c108a357e7a6296e102ef04fd7f7881.md.gz",
+      "bytes": 22524,
+      "sha256": "dcfbb055f7033d2335a009c88271a19c4c108a357e7a6296e102ef04fd7f7881",
+      "compressedBytes": 5180,
+      "compressedSha256": "cca3ca659e68013b316310d4ddea4b1702f1e1beed6cad11d89526ed191baeee",
+      "timestamp": "2026-10-04 21:47:49 +08:00"
+    },
+    {
+      "path": "generated/e0c03c42a336c58315528b149ad237551833975d277ea4c03e188c7c60732988.md",
+      "archive": "generated/e0c03c42a336c58315528b149ad237551833975d277ea4c03e188c7c60732988.md.gz",
+      "bytes": 19321,
+      "sha256": "e0c03c42a336c58315528b149ad237551833975d277ea4c03e188c7c60732988",
+      "compressedBytes": 4720,
+      "compressedSha256": "c386943ac13418a2cc1c04d6fa89e27e9915f3de22d0bb923de607a1b801c11a",
+      "timestamp": "2026-10-04 21:47:49 +08:00"
+    },
+    {
+      "path": "generated/e24351d1deb6f64bb62156af3801f908c5638e037416d68acd383e600016ecb9.md",
+      "archive": "generated/e24351d1deb6f64bb62156af3801f908c5638e037416d68acd383e600016ecb9.md.gz",
+      "bytes": 15960,
+      "sha256": "e24351d1deb6f64bb62156af3801f908c5638e037416d68acd383e600016ecb9",
+      "compressedBytes": 4576,
+      "compressedSha256": "9646b0efb4e295bf22daedecf6aeb4a0c901771c370f906721afe784dee32d96",
+      "timestamp": "2026-10-04 21:47:50 +08:00"
+    },
+    {
+      "path": "generated/e5b993ab63fe4fd206a45fcbbd5883ec12b6fe4495c74571bba60efc36490b75.md",
+      "archive": "generated/e5b993ab63fe4fd206a45fcbbd5883ec12b6fe4495c74571bba60efc36490b75.md.gz",
+      "bytes": 19954,
+      "sha256": "e5b993ab63fe4fd206a45fcbbd5883ec12b6fe4495c74571bba60efc36490b75",
+      "compressedBytes": 5050,
+      "compressedSha256": "4866db905056331b78564df2a7da5588fc6701cbdc6666d0d3d48bc9ea0c2491",
+      "timestamp": "2026-10-04 21:47:50 +08:00"
+    },
+    {
+      "path": "generated/fb99ef1aa14c1189895a4308ed197bfc5e1ba3b7fa9de0eb83910d94ee6ad8ee.md",
+      "archive": "generated/fb99ef1aa14c1189895a4308ed197bfc5e1ba3b7fa9de0eb83910d94ee6ad8ee.md.gz",
+      "bytes": 17389,
+      "sha256": "fb99ef1aa14c1189895a4308ed197bfc5e1ba3b7fa9de0eb83910d94ee6ad8ee",
+      "compressedBytes": 4615,
+      "compressedSha256": "23152933f4da6f5e91c696427683e7eb3bd0d497bd8d69921e8f88e271d1d926",
+      "timestamp": "2026-10-04 21:47:50 +08:00"
+    },
+    {
+      "path": "historical-output-route.txt",
+      "archive": "historical-output-route.txt.gz",
+      "bytes": 1297,
+      "sha256": "4e3b99489f608ca457de9dfe76ba08d90e3c6fbdc7767501b1f2fd50102da402",
+      "compressedBytes": 530,
+      "compressedSha256": "f5a0dac387c4616808d648ed25415824065634593e23dcd9d1fd0722df8158b2",
+      "timestamp": "2026-10-04 21:47:51 +08:00"
+    },
+    {
+      "path": "t05-current-preservation.log",
+      "archive": "t05-current-preservation.log.gz",
+      "bytes": 498,
+      "sha256": "5a216298d3be40890bb9040aa671cda7f7bf90fa5e4c06088903e0c490b21999",
+      "compressedBytes": 337,
+      "compressedSha256": "0e6b2dd6842c86f0e97f3cddda0d46f5892c7039fe653d3a489c39faab1a6cf1",
+      "timestamp": "2026-10-04 21:47:51 +08:00"
+    },
+    {
+      "path": "t05-focused-browser.log",
+      "archive": "t05-focused-browser.log.gz",
+      "bytes": 6684,
+      "sha256": "40250fd2a242ffa901611eeb6b7cbd4827c00ba26ad28d6c5eae1c4d4f3d6a71",
+      "compressedBytes": 2316,
+      "compressedSha256": "6f3071cbd33c48d00ba3f69802eed1c2bce995f63a43f51958399b17f7b80921",
+      "timestamp": "2026-10-04 21:47:52 +08:00"
+    },
+    {
+      "path": "t05-focused-unit.log",
+      "archive": "t05-focused-unit.log.gz",
+      "bytes": 903,
+      "sha256": "497e99a043a3d48f1086744d31cb60b14b4beb5223782f823aeae3c904eccaee",
+      "compressedBytes": 473,
+      "compressedSha256": "8f1ffd49625c70e279855d4b9de40ef6c263b5889e65f8995759a456bd52225b",
+      "timestamp": "2026-10-04 21:47:52 +08:00"
+    },
+    {
+      "path": "t05-full-chromium.log",
+      "archive": "t05-full-chromium.log.gz",
+      "bytes": 15265,
+      "sha256": "1c2ba6719241408d7b774373a2e5a2124e304c23636dd18dccfd25d50da81768",
+      "compressedBytes": 4626,
+      "compressedSha256": "2a071a448b52de4b5b53b86e8e2b0c53d1681041182d6dc4914f6dd7225676fb",
+      "timestamp": "2026-10-04 21:47:52 +08:00"
+    },
+    {
+      "path": "t05-full-vitest.log",
+      "archive": "t05-full-vitest.log.gz",
+      "bytes": 461,
+      "sha256": "3a5edd89ab8858d396aca4488fcea86302e90d08be0f9c5c2d17d8b8b4233b30",
+      "compressedBytes": 324,
+      "compressedSha256": "fb5aafeff3cb8b3f45767b7ba2c60cf8355db75a5a37442380a9bf62a59a77ad",
+      "timestamp": "2026-10-04 21:47:53 +08:00"
+    },
+    {
+      "path": "t05-lint.log",
+      "archive": "t05-lint.log.gz",
+      "bytes": 60,
+      "sha256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "compressedBytes": 77,
+      "compressedSha256": "20367bf5b8fdf6adf93fb809c2497ee83ccb10a2a70f3fb5ccb11a7553f97068",
+      "timestamp": "2026-10-04 21:47:53 +08:00"
+    },
+    {
+      "path": "t05-preservation.log",
+      "archive": "t05-preservation.log.gz",
+      "bytes": 22926,
+      "sha256": "0121e4d4699b13e1f4890279490e78d571ca5b44de9a2a27a6a31d3479463d25",
+      "compressedBytes": 4168,
+      "compressedSha256": "37e57320f78168f3b2b1a46ec5102a4543c8c7cc65ade8f87ca9d7f4712dfea8",
+      "timestamp": "2026-10-04 21:47:53 +08:00"
+    },
+    {
+      "path": "t05-repair1-typecheck.log",
+      "archive": "t05-repair1-typecheck.log.gz",
+      "bytes": 52,
+      "sha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "compressedBytes": 72,
+      "compressedSha256": "cbae128ff2fc710e4493513d902e2ad1561726a308517d2552f3c62bf510e449",
+      "timestamp": "2026-10-04 21:47:54 +08:00"
+    },
+    {
+      "path": "t05-repair1-unit.log",
+      "archive": "t05-repair1-unit.log.gz",
+      "bytes": 903,
+      "sha256": "9cbe2fa7cdc15c8c5b7bb93d1af3ae9327020c1c7ab5f5ff9bc671b3e388599c",
+      "compressedBytes": 472,
+      "compressedSha256": "ebdcfd4bc8a116ff2f8e42eaea8014c4145e93738ca4185c16abf6090b1b3ff4",
+      "timestamp": "2026-10-04 21:47:54 +08:00"
+    },
+    {
+      "path": "t05-repair2-browser.log",
+      "archive": "t05-repair2-browser.log.gz",
+      "bytes": 65119,
+      "sha256": "224282ae2c82c000566d53cb4ee7b11ef440e03c398609da3d589993cd7631b8",
+      "compressedBytes": 6278,
+      "compressedSha256": "e047f86f261d85c2adae3d01500fa1f8f8e948f12c19279a14d06e0b2497ecb5",
+      "timestamp": "2026-10-04 21:47:54 +08:00"
+    },
+    {
+      "path": "t05-repair3-browser.log",
+      "archive": "t05-repair3-browser.log.gz",
+      "bytes": 6686,
+      "sha256": "4b927e1572d523eafd16e47a6d9bc06bddc5226e8458fb24895bc36b660f3928",
+      "compressedBytes": 2319,
+      "compressedSha256": "8227d47642d3f0a8e1ce97932e6dd0e612dc0968b925a6fe6f0feb91cbc7d008",
+      "timestamp": "2026-10-04 21:47:55 +08:00"
+    },
+    {
+      "path": "t05-rules.log",
+      "archive": "t05-rules.log.gz",
+      "bytes": 309,
+      "sha256": "64cf74f999ee646767ceccdeac6fde7e4b171b3c4c75f3144bdb34414ad0af5f",
+      "compressedBytes": 244,
+      "compressedSha256": "a939ef8b438e6938f15f4782838877ac5b8b76d78a3e5b7555ebcd7f51474db4",
+      "timestamp": "2026-10-04 21:47:55 +08:00"
+    },
+    {
+      "path": "t05-typecheck.log",
+      "archive": "t05-typecheck.log.gz",
+      "bytes": 335,
+      "sha256": "0a2af1342f4f6945bde20ba8d6ec71fe64897e58cb566fc4c0aec8a10942af6d",
+      "compressedBytes": 245,
+      "compressedSha256": "1fb40553d00d061461ab44953b8497f93dd8b9aa073491b4acaea261799b407c",
+      "timestamp": "2026-10-04 21:47:55 +08:00"
+    },
+    {
+      "path": "t05-unified.log",
+      "archive": "t05-unified.log.gz",
+      "bytes": 39603,
+      "sha256": "ad628754ed267e034154273826791d225c7d8e0b3f139cef6c6ec6469f0fa148",
+      "compressedBytes": 6933,
+      "compressedSha256": "dfa09173e967772327950235cdfb585a1c392b2bc26c35b2cbf20c6992600df3",
+      "timestamp": "2026-10-04 21:47:56 +08:00"
+    },
+    {
+      "path": "tool-accounting-update.raw.log",
+      "archive": "tool-accounting-update.raw.log.gz",
+      "bytes": 1212,
+      "sha256": "1ff98be100ceb7a560de3bb5273a95ae0af181ba42184ec6b54d5ce060d078d3",
+      "compressedBytes": 570,
+      "compressedSha256": "be930f31257088b9d91e1409563bf36f0892506c9dfc131271fd1c61eeae914c",
+      "timestamp": "2026-10-04 21:47:56 +08:00"
+    },
+    {
+      "path": "tool-archive.raw.log",
+      "archive": "tool-archive.raw.log.gz",
+      "bytes": 3550,
+      "sha256": "0fb45277f223361e7ce2f18b7c82e207bd52f08109832f6dc180d27a8d85fbc1",
+      "compressedBytes": 1457,
+      "compressedSha256": "ec251f894f0d56312cf5e970b4394be9e01b540b645b9f09bcdcdc5fb225e95a",
+      "timestamp": "2026-10-04 21:47:56 +08:00"
+    },
+    {
+      "path": "tool-assets.raw.log",
+      "archive": "tool-assets.raw.log.gz",
+      "bytes": 818,
+      "sha256": "89e34d432742045941243569213820e4995e80876ea2b7c7f1bf20d24904812f",
+      "compressedBytes": 497,
+      "compressedSha256": "6512271e03afc85d934ea17a60e0e96cfd3f1c4b64f523adeecb738e86fe9dde",
+      "timestamp": "2026-10-04 21:47:57 +08:00"
+    },
+    {
+      "path": "tool-audit.raw.log",
+      "archive": "tool-audit.raw.log.gz",
+      "bytes": 5068,
+      "sha256": "6c8d0d9773b9a6260d23213ad31f4a754b984f16104ea2c677f2ac3c62d91a0f",
+      "compressedBytes": 2358,
+      "compressedSha256": "66ac260ca82b46c4dbc3ab24645d62fcfb42e5afdcafd6901cae4ae037f9d86a",
+      "timestamp": "2026-10-04 21:47:57 +08:00"
+    },
+    {
+      "path": "tool-capture.raw.log",
+      "archive": "tool-capture.raw.log.gz",
+      "bytes": 3273,
+      "sha256": "2bd38e63023ecfaafb9f6d6d6d0bdbc5b39aa1f2968ad2ad7774a383f074c526",
+      "compressedBytes": 1543,
+      "compressedSha256": "d3e496b61a96d95ce6bba506e3a70109850243d432f2f53e007f9e1afb2d380d",
+      "timestamp": "2026-10-04 21:47:57 +08:00"
+    },
+    {
+      "path": "tool-commit-receipt.raw.log",
+      "archive": "tool-commit-receipt.raw.log.gz",
+      "bytes": 2174,
+      "sha256": "2fe483485cc3b9234dff4c315ab87d17275be9436f4c3a1b1b50f49b768266b0",
+      "compressedBytes": 998,
+      "compressedSha256": "8a5d8dd0f04f317073decd9be23ff5b5560a177fb043c1fdc16ae30c25e60584",
+      "timestamp": "2026-10-04 21:47:58 +08:00"
+    },
+    {
+      "path": "tool-commit.raw.log",
+      "archive": "tool-commit.raw.log.gz",
+      "bytes": 2145,
+      "sha256": "52fe3b9508f52cba923de11fb370188c3c609d9a409b4d5bd0aa7be1c2c8a0dc",
+      "compressedBytes": 1029,
+      "compressedSha256": "e27f56799ec21bafafb2f99d9eaee2924af86db51e6cc2c6d0e547968a55acfe",
+      "timestamp": "2026-10-04 21:47:58 +08:00"
+    },
+    {
+      "path": "tool-contrast.raw.log",
+      "archive": "tool-contrast.raw.log.gz",
+      "bytes": 5515,
+      "sha256": "5bdae38efa378f98ee85f954bf4c5f82437eb32b68f415caffc2a841636298ab",
+      "compressedBytes": 2468,
+      "compressedSha256": "6496a545de63233103178edcbc271f2534a33f2a702658c9a659b18623f009b1",
+      "timestamp": "2026-10-04 21:47:59 +08:00"
+    },
+    {
+      "path": "tool-copy-visuals.raw.log",
+      "archive": "tool-copy-visuals.raw.log.gz",
+      "bytes": 823,
+      "sha256": "6bc0cb0392bab1e0aaf8e813999ccaccfdf6a797ddef7b200c45f8ce20651373",
+      "compressedBytes": 497,
+      "compressedSha256": "e95a56bbf0ffd50c58a3a77383ac0fbdeea39cbbca8a4e67c52d74d37f09fb09",
+      "timestamp": "2026-10-04 21:47:59 +08:00"
+    },
+    {
+      "path": "tool-document-final.raw.log",
+      "archive": "tool-document-final.raw.log.gz",
+      "bytes": 13950,
+      "sha256": "589680a4139d27ffd9f988b835f6a23d024ca04dc28a3052c1d284a0b93d337f",
+      "compressedBytes": 5813,
+      "compressedSha256": "996afd1551ede96e1ab6d2dac1117b032bdbeb8dd415dbe1269d96acb8c504ea",
+      "timestamp": "2026-10-04 21:47:59 +08:00"
+    },
+    {
+      "path": "tool-focused-record.raw.log",
+      "archive": "tool-focused-record.raw.log.gz",
+      "bytes": 4091,
+      "sha256": "9536c710ac264ae909a2af8c3390a54b1ce80aab3aef98f9658a366635049e39",
+      "compressedBytes": 1889,
+      "compressedSha256": "9e699a918c8a101e68e2d97afe9cd41ffa171438d67632a2945bbe75d5d98bdd",
+      "timestamp": "2026-10-04 21:48:00 +08:00"
+    },
+    {
+      "path": "tool-freeze.raw.log",
+      "archive": "tool-freeze.raw.log.gz",
+      "bytes": 1086,
+      "sha256": "a18884b08e660001a4e93e5e681b8aea71a8d9eb6a99c8f85069e2e54915a198",
+      "compressedBytes": 658,
+      "compressedSha256": "a1d418bae4412c13455c0b421b2968e5060efaeeedd15c5bddbe656a14ab7c6f",
+      "timestamp": "2026-10-04 21:48:00 +08:00"
+    },
+    {
+      "path": "tool-git.raw.log",
+      "archive": "tool-git.raw.log.gz",
+      "bytes": 2062,
+      "sha256": "f6c922ce98285d280d7ecf5c417d7a24007f753eb39cfdd34da4e358e429259d",
+      "compressedBytes": 1027,
+      "compressedSha256": "f537c5074d6afc5fb4034deee9963539dcb89e70ac22299a5bacca2a57262faf",
+      "timestamp": "2026-10-04 21:48:00 +08:00"
+    },
+    {
+      "path": "tool-init.raw.log",
+      "archive": "tool-init.raw.log.gz",
+      "bytes": 5747,
+      "sha256": "edb972747e8e8a98c564f8b1de3b1f9fee793e8e8354d18600d45b89d7c88cdd",
+      "compressedBytes": 2746,
+      "compressedSha256": "80bc47e31a6d5cabf5ddeb76caee2892943730b1362449d359b9db2b98c1a948",
+      "timestamp": "2026-10-04 21:48:01 +08:00"
+    },
+    {
+      "path": "tool-ledger.raw.log",
+      "archive": "tool-ledger.raw.log.gz",
+      "bytes": 1181,
+      "sha256": "e6f016ab1ab09fc2e08a3cb1b90a774527c31193497fa5b6de926b2525d22d75",
+      "compressedBytes": 730,
+      "compressedSha256": "66e6b777ffc3ba58f4adb7a328741f1b2d835e438f5d2f6b626bf506819ca4f3",
+      "timestamp": "2026-10-04 21:48:01 +08:00"
+    },
+    {
+      "path": "tool-protection.raw.log",
+      "archive": "tool-protection.raw.log.gz",
+      "bytes": 2285,
+      "sha256": "12d80256fcf4640f64df84d0ca37bb87b05aba707d42b84d809d9458b4d1756f",
+      "compressedBytes": 1056,
+      "compressedSha256": "536657af88ff04a2399f098d5980ab1298269405c986371b749536b96f6d2322",
+      "timestamp": "2026-10-04 21:48:01 +08:00"
+    },
+    {
+      "path": "tool-publication-final.raw.log",
+      "archive": "tool-publication-final.raw.log.gz",
+      "bytes": 3365,
+      "sha256": "88d4433c25f486b6d8d2eac2025b5442608b532ba5323d788531cf8dafc3e70f",
+      "compressedBytes": 1481,
+      "compressedSha256": "778050f9632ac3bda2210472a59abc56490f4e85b69a1e2c2000436cede21166",
+      "timestamp": "2026-10-04 21:48:02 +08:00"
+    },
+    {
+      "path": "tool-retain-initial.raw.log",
+      "archive": "tool-retain-initial.raw.log.gz",
+      "bytes": 887,
+      "sha256": "eec5997ad21875f7e7f6345ed03aff146853f8b497b02b2688b0f9e24d6a6a1f",
+      "compressedBytes": 542,
+      "compressedSha256": "b0a89b6d21aa0cfb91f4cb1b0a01f05af4e9ea0a0dca7147dae328ffc9f9401f",
+      "timestamp": "2026-10-04 21:48:02 +08:00"
+    },
+    {
+      "path": "tool-review-final.raw.log",
+      "archive": "tool-review-final.raw.log.gz",
+      "bytes": 2353,
+      "sha256": "68f27c4dae1cb4d26dd0556874cc30750acd59ab104cc0dc0e683ea84992b4d3",
+      "compressedBytes": 1139,
+      "compressedSha256": "36f54873da9b8be69af72e71891e92eeb27891a73030a18908edc9eb6868eeb5",
+      "timestamp": "2026-10-04 21:48:02 +08:00"
+    },
+    {
+      "path": "tool-runner.raw.log",
+      "archive": "tool-runner.raw.log.gz",
+      "bytes": 8247,
+      "sha256": "7df76c026f13f55d952e7ae6b6b83451ae8a5d087ebfe89064ba4be2009c23c6",
+      "compressedBytes": 3011,
+      "compressedSha256": "4cf1e13be23afa8854310a089d68c315dbb86ce487e0cbbc0113c055b1769a50",
+      "timestamp": "2026-10-04 21:48:03 +08:00"
+    },
+    {
+      "path": "tool-stage.raw.log",
+      "archive": "tool-stage.raw.log.gz",
+      "bytes": 2449,
+      "sha256": "30db5972f71d884194c9bcc758a292081497381d44db0c004bdc286a3a83cf31",
+      "compressedBytes": 1218,
+      "compressedSha256": "6c7c5a375324f404e42373186ad922edd1c518e06ba2a0f508db3fe56e928d91",
+      "timestamp": "2026-10-04 21:48:03 +08:00"
+    },
+    {
+      "path": "tool-zoom.raw.log",
+      "archive": "tool-zoom.raw.log.gz",
+      "bytes": 11137,
+      "sha256": "28e0e4e9ee06ddfd2b018f29fecc92e9f7ca16cc8260773a6c34efa0f9ce3516",
+      "compressedBytes": 3398,
+      "compressedSha256": "abfbc2f9ed5bc82d5e1feab63f6987996bd2b07896ee94280093f4c81d0042bd",
+      "timestamp": "2026-10-04 21:48:03 +08:00"
+    },
+    {
+      "path": "t05-final-documentation.log",
+      "archive": "t05-final-documentation.log.gz",
+      "bytes": 393,
+      "sha256": "592a79c3f6e7b6ae3717bf3210794ce52b8cdf9bed09f8e7a7808936c8ca3dc0",
+      "compressedBytes": 257,
+      "compressedSha256": "c599ae6db6fa631dad3e28c7cc7315ba03e52b7a0998e34360b9061afc8ec76b",
+      "timestamp": "2026-10-04 21:53:08 +08:00"
+    },
+    {
+      "path": "tool-documentation-correction.raw.log",
+      "archive": "tool-documentation-correction.raw.log.gz",
+      "bytes": 2568,
+      "sha256": "991b42b637bf59915aec273324812b384d0432c7c529bc1784a9ea36d1665254",
+      "compressedBytes": 1207,
+      "compressedSha256": "ec6ec0777a9db4424f612aa1e260c1199ead11c7e3e465bc1874c638a7874b95",
+      "timestamp": "2026-10-04 21:53:09 +08:00"
+    },
+    {
+      "path": "tool-git-repair4.raw.log",
+      "archive": "tool-git-repair4.raw.log.gz",
+      "bytes": 2062,
+      "sha256": "1c43cf53a747f0cd8374855b958d5bd26f56b3310cd2535b8e857481750961b9",
+      "compressedBytes": 1027,
+      "compressedSha256": "315351f7bd6bad499bb1b420c1cf9479b25b456031ad9eda81fddd770c1e8178",
+      "timestamp": "2026-10-04 21:53:09 +08:00"
+    },
+    {
+      "path": "tool-publication-final-repair4.raw.log",
+      "archive": "tool-publication-final-repair4.raw.log.gz",
+      "bytes": 3365,
+      "sha256": "2a3a08acb80e27f4bc24b46846a33100e1ef174c8075862c057ebfc07292d122",
+      "compressedBytes": 1481,
+      "compressedSha256": "8c73ba4fdf7290b66892482a9160f98b5a96b6f66cde97f4c06bfbb741235cc5",
+      "timestamp": "2026-10-04 21:53:09 +08:00"
+    },
+    {
+      "path": "tool-review-final-repair4.raw.log",
+      "archive": "tool-review-final-repair4.raw.log.gz",
+      "bytes": 2353,
+      "sha256": "a2b075b540f35519df1bf371e868c172b350f59664fca1d219ef59a5beb0b7be",
+      "compressedBytes": 1139,
+      "compressedSha256": "73236589f7bf631ad689cff39d8ee8a24469a4bba87a8b0da4eabb78dcf2abeb",
+      "timestamp": "2026-10-04 21:53:10 +08:00"
+    },
+    {
+      "path": "t05-review-documentation.log",
+      "archive": "t05-review-documentation.log.gz",
+      "bytes": 392,
+      "sha256": "f582b5abe3d65f47512f928bf2dc2325d0107e64e1a350f738ed52e1f632720c",
+      "compressedBytes": 257,
+      "compressedSha256": "0f63063fbfbdfb3d2b92b2a9d6c84edce8e7a662f7bd4759881104d72f12cc00",
+      "timestamp": "2026-10-04 22:00:11 +08:00"
+    },
+    {
+      "path": "t05-stage-documentation.log",
+      "archive": "t05-stage-documentation.log.gz",
+      "bytes": 393,
+      "sha256": "1f2843917478d3589b7d80918f55bc70971a8073d92e0e27ee41f0bdc2a81f08",
+      "compressedBytes": 257,
+      "compressedSha256": "6ac838e93d6390c5d91d2086d4f53a215f2069558b19a8ab99c76a39a7dea04d",
+      "timestamp": "2026-10-04 22:01:41 +08:00"
+    }
+  ],
+  "lastChecked": "2026-10-04 22:01:42 +08:00"
+}

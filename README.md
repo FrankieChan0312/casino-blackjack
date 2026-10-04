@@ -1,4 +1,14 @@
-## Current M10A-T04 Dealer Zone Composition
+## Current M10A-T05 Felt Gameplay Markings
+
+**M10A-T05_IMPLEMENTED_VERIFIED**, repairs4/10. Restrained static MAIN ellipses, hand/Dealer guides and accurate3:2/S17 print reuse real occupied seat and hand destinations. Accepted composition unchanged: Stand883.359375px and6px gap. Focused86 UI/32 Chromium, full83files/1090Vitest/79Chromium, independent preservation and verify.ps1 PASS/checked0. [Task](docs/M10A_T05.md), [visual/evidence index](docs/M10A_T05_EVIDENCE/README.md).
+
+T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED, historical5/10 retained. T05 owner visual acceptance PENDING; fresh independent review NOT RUN. Normal main publication follows scope/evidence review. M10A-T06 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02/M10-T04 implementation NOT STARTED; formal art/animation NOT IMPLEMENTED, Motion NOT INSTALLED, deployment NOT RUN.
+
+## Historical M10A-T05 start
+
+T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED; historical5/10 retained. T05 static felt cues authorized;0/10, verification NOT RUN, owner acceptance PENDING. [Contract](docs/M10A_T05.md). Control integration, formal Dealer art, Motion and animation implementation remain unstarted.
+
+## Historical M10A-T04 Dealer Zone Composition
 
 **M10A-T04_IMPLEMENTED_VERIFIED**, repairs **5/10**. A dedicated upper-centre Dealer workstation groups the temporary character, public cards/hidden back, total/status, static shoe/deal origin and accurate3:2/S17 rules. Accepted normal camera/remote seats/local HUD remain in place; Stand bottom883.359375px,6px action gap retained. Desktop/tablet/mobile,200% text and native200% browser zoom PASS. Focused78 UI/29 Chromium, full82files/1082Vitest/76Chromium, independent preservation and verify.ps1 PASS / checked exit0. [Task](docs/M10A_T04.md), [visuals/evidence](docs/M10A_T04_EVIDENCE/README.md).
 

@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2026-10-04 21:16:36 +08:00",
+    "count": 1,
+    "cause": "Typecheck TS2741 identifies missing required controllerId in newly authored local Split test fixture; adding the literal public identity should resolve it",
+    "fix": "Add controllerId human to the explicit test fixture only",
+    "affectedVerification": "t05-repair1-unit and t05-repair1-typecheck"
+  },
+  {
+    "timestamp": "2026-10-04 21:21:10 +08:00",
+    "count": 2,
+    "cause": "Actual desktop screenshots show rule-print short lines at Dealer top: accepted four-class position static overrides the new three-class-equivalent relative selector, so absolute pseudo elements use Dealer containing block",
+    "fix": "Give only the rule-print position selector matching specificity; keep dimensions and accepted CSS prefix unchanged",
+    "affectedVerification": "t05-repair2-browser, final camera, contrast and native zoom visuals"
+  },
+  {
+    "timestamp": "2026-10-04 21:27:27 +08:00",
+    "count": 3,
+    "cause": "Repair2 focused Chromium11PASS/21FAIL reveals inherited absolute top and left offsets become active under relative positioning, shifting rule print and causing narrow-view overflow",
+    "fix": "Clear inset on only the new rule-print relative container; preserve flow size and all incoming CSS",
+    "affectedVerification": "t05-repair3-browser, final camera, contrast and nativezoom"
+  },
+  {
+    "timestamp": "2026-10-04 21:52:16 +08:00",
+    "count": 4,
+    "cause": "Manual full diff review finds incoming83/1082/76 typo; the before receipt and committed T04 evidence show82/1082/76. Earlier naive repair-count substitution matched the substring2/10 inside82/1082; executed83/1090/79 results are correct",
+    "fix": "Correct only incoming-count documentary text; current count4/10, preserve actual earlier3/10 checkpoints and archived driver bytes. Use token-boundary-safe current receipt substitutions",
+    "affectedVerification": "t05-final-documentation; frozen162 hashes and protection unchanged"
+  }
+]

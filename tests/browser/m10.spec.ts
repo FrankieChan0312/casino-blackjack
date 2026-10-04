@@ -438,3 +438,70 @@ test('[M10A-E09] isolated public five-card Dealer composition preserves readable
     }
   }
 });
+
+test('[M10A-E10] felt spots follow only occupied seats and real public hands through open play and settlement', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    const table = page.locator('[data-felt-markings]');
+    await expect(table).toHaveCount(1);
+    expect(await table.locator('.seat').evaluateAll(els => els.map(el => el.getAttribute('data-seat-anchor')))).toEqual(['seat-1', 'seat-3', 'seat-4', 'seat-6']);
+    await expect(table.locator('[data-felt-destination="main-wager"]:visible')).toHaveCount(4);
+    await expect(table.locator('[data-felt-rules]')).toHaveText('BLACKJACK PAYS 3:2 DEALER STANDS ON ALL 17');
+    await expect(table.locator('[data-felt-destination="deal-origin"]')).toHaveAttribute('data-anchor', 'dealer-shoe');
+    await geometry(page); await page.screenshot({ path: info.outputPath(`felt-open-${viewport.width}.png`), fullPage: true });
+    await page.getByLabel('Your main wager', { exact: false }).fill('100'); await page.getByRole('button', { name: 'Deal', exact: true }).click();
+    await expect(table.locator('article[data-felt-destination="hand"]')).toHaveCount(4);
+    for (const hand of await table.locator('article[data-felt-destination="hand"]').all()) {
+      expect(await hand.getAttribute('data-hand-id')).toBeTruthy();
+      await expect(hand.locator('[data-felt-destination="main-wager"], [data-felt-destination="hand-wager"]')).toHaveCount(1);
+    }
+    await expect(page.locator('#player-hand [data-felt-destination="main-wager"]')).toHaveText('MAIN: 100 credits');
+    await expect(page.locator('#player-hand [data-felt-destination="hand-wager"]')).toHaveText('Wager: 100 credits');
+    await geometry(page); await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`felt-dealt-${viewport.width}.png`), fullPage: true });
+    await page.getByRole('button', { name: 'Stand', exact: true }).click();
+    await expect(page.locator('#player-result')).toBeFocused();
+    await expect(table.locator('[data-felt-destination="dealer-hand"]')).toHaveAttribute('data-anchor', 'dealer-cards');
+    await expect(table.getByRole('img', { name: 'Hidden dealer card', exact: true })).toHaveCount(0);
+    await geometry(page); await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`felt-complete-${viewport.width}.png`), fullPage: true });
+  }
+});
+
+test('[M10A-E11] real Split leaves keep exact wager destinations without repeating decorative hand outlines', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page, 'player-split');
+    await page.getByRole('button', { name: 'Split', exact: true }).click();
+    const local = page.locator('#player-hand');
+    await expect(local.locator('article[data-felt-destination="hand"]')).toHaveCount(2);
+    await expect(local.locator('[data-felt-destination="hand-wager"]')).toHaveText(['Wager: 100 credits', 'Wager: 100 credits']);
+    await expect(local.locator('[data-felt-destination="main-wager"]')).toHaveCount(1);
+    for (const cards of await local.locator('article .cards').all()) {
+      expect(await cards.evaluate(el => getComputedStyle(el, '::after').content)).toBe('none');
+    }
+    await expect(local.locator('.turn-marker')).toHaveCount(1);
+    await geometry(page); await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`felt-split-${viewport.width}.png`), fullPage: true });
+  }
+});
+
+test('[M10A-E12] enlarged felt text and static guides preserve unobstructed keyboard focus and native controls', async ({ page }, info) => {
+  for (const viewport of viewports) {
+    await page.setViewportSize(viewport); await deal(page);
+    await page.addStyleTag({ content: 'html { font-size: 200%; }' });
+    await geometry(page);
+    for (const el of await page.locator('[data-felt-rules], #player-hand [data-felt-destination="main-wager"]').all()) {
+      expect(await el.evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
+    }
+    const rules = page.locator('[data-felt-rules]');
+    const decorative = await rules.evaluate(el => ({ content: getComputedStyle(el, '::before').content, pointerEvents: getComputedStyle(el, '::before').pointerEvents }));
+    expect(decorative).toEqual({ content: '""', pointerEvents: 'none' });
+    await page.evaluate(() => scrollTo(0, 0));
+    await page.screenshot({ path: info.outputPath(`felt-text200-${viewport.width}.png`), fullPage: true });
+    await page.locator('#player-hand').focus(); const stand = page.getByRole('button', { name: 'Stand', exact: true });
+    for (let i = 0; i < 8 && !await stand.evaluate(el => el === document.activeElement); i++) await page.keyboard.press('Tab');
+    await expect(stand).toBeFocused(); const box = await stand.boundingBox();
+    expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);
+    await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused();
+  }
+});
