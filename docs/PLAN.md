@@ -1,3 +1,16 @@
+## Current M10A-T06 human repair gate — 2026-10-05 00:29:37 +08:00
+
+| Task | Dependency | Current state |
+| --- | --- | --- |
+| M10A-T06 — Control integration | M10A-T05 HUMAN ACCEPTED | IMPLEMENTED / VERIFIED;4/10; full/final PASS; normal publication pending; HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED / awaiting new review |
+| M10A-T07 — Accounting HUD | M10A-T06 HUMAN VISUAL ACCEPTANCE | NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE |
+
+Normal action dock accepted and preserved; Insurance/Even Money and Round Complete repaired only. [Exact technical gate](M10A_T06_REPAIR1_EVIDENCE/technical-gate.json). The original3/10 publication and all previous tables below remain historical checkpoints. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED.
+
+## M10A-T06 owner visual repair — 2026-10-04 23:58:53 +08:00
+
+T06 HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED; normal action dock accepted, Insurance/Even Money and Round Complete rejected. Same task IN PROGRESS, cumulative 4/10. Historical 3/10 publication below retained. [Repair contract](M10A_T06.md). T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED.
+
 # M10A — independent casino-game recomposition plan
 
 Owner-authorized planning/design correction from main/`0c943b088740d291e9604ebe09ef4a5b3363e271`. M10-T01 remains technically IMPLEMENTED / VERIFIED / COMMITTED / PUSHED, **11/11 — OWNER-AUTHORIZED EXCEPTION**, with geometry/evidence retained; **M10-T01 Human Visual Acceptance = NOT ACCEPTED**. New M10A planning is a separate milestone, not T01 repair12. [Complete task contracts, AC mapping and verification](M10A_PLANNING.md), [SPEC](SPEC.md), [DESIGN](DESIGN.md), [UX](UX_UI.md).

@@ -5,14 +5,19 @@ export function Decisions({ view, controller }: { view: BrowserView; controller:
   const ace = view.interaction.insurance;
   const follow = view.follow;
   return <>
-    {ace && <section tabIndex={-1} className="panel decision" data-control-surface={view.playerMode ? 'insurance' : undefined} aria-label="Insurance decision"><h2>Insurance / Even Money</h2>
-      <p id="insurance-context">Dealer shows Ace. Choose before the dealer checks for Blackjack.</p>
-      <p>{ace.role === 'BACK' ? 'Bet Behind' : 'Your MAIN'} · Seat {ace.targetSeat} · Insurance amount: {credits(ace.amount)} credits</p>
+    {ace && <section tabIndex={-1} className="panel decision" data-control-surface={view.playerMode ? 'insurance' : undefined} aria-label="Insurance decision"
+      aria-describedby={view.playerMode ? 'player-scene-status insurance-context' : undefined}>
+      {!view.playerMode && <h2>Insurance / Even Money</h2>}
+      {view.playerMode ? <p className="insurance-context" id="insurance-context"><span>Dealer shows Ace.</span>{' '}
+        <span>{ace.role === 'BACK' ? 'Bet Behind' : 'Your MAIN'} · Seat {ace.targetSeat} · Insurance amount: {credits(ace.amount)} credits</span></p>
+        : <><p id="insurance-context">Dealer shows Ace. Choose before the dealer checks for Blackjack.</p>
+          <p>{ace.role === 'BACK' ? 'Bet Behind' : 'Your MAIN'} · Seat {ace.targetSeat} · Insurance amount: {credits(ace.amount)} credits</p></>}
       <div className="button-row"><button disabled={!ace.affordable} aria-describedby={!ace.affordable ? 'insurance-unavailable' : 'insurance-context'} onClick={() => controller.dispatch({ type: 'ACE', choice: 'INSURANCE' })}>Buy Insurance</button>
         <button onClick={() => controller.dispatch({ type: 'ACE', choice: 'DECLINE' })}>Decline</button>
         {ace.evenMoney && <button onClick={() => controller.dispatch({ type: 'ACE', choice: 'EVEN_MONEY' })}>Take Even Money</button>}</div>
       {!ace.affordable && <p className="reason" id="insurance-unavailable">Insurance unavailable — not enough available credits.</p>}
       {view.playerMode ? <details className="decision-explanation"><summary>Insurance and Even Money explained</summary>
+        <span className="insurance-timing">Dealer shows Ace. Choose before the dealer checks for Blackjack.</span>
         <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>
       </details> : <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>}
     </section>}
@@ -67,14 +72,15 @@ function PlayerResults({ view, controller }: { view: BrowserView; controller: Br
   const stake = records.reduce((sum, r) => sum + r.stake, 0);
   const returned = records.reduce((sum, r) => sum + r.returned, 0);
   const affordable = view.lastBet > 0 && view.lastBet <= (view.human?.available ?? 0);
-  return <section id="player-result" tabIndex={-1} className="panel player-result" data-control-surface="result" aria-label="Your round result">
-    <h2>{view.phase === 'VOID' ? 'Round interrupted — stakes refunded' : 'Round complete'}</h2>
-    <p className="round-net">{view.phase === 'VOID' ? 'Refunded' : 'Net result'}: {credits(view.phase === 'VOID' ? returned : returned - stake)} credits</p>
+  return <section id="player-result" tabIndex={-1} className="panel player-result" data-control-surface="result" aria-label="Your round result" aria-describedby="player-scene-status round-net">
+    {view.phase === 'VOID' && <h2>Round interrupted — stakes refunded</h2>}
+    <p className="round-net" id="round-net">{view.phase === 'VOID' ? 'Refunded' : 'Net result'}: {credits(view.phase === 'VOID' ? returned : returned - stake)} credits</p>
     <div className="button-row"><button className="primary" onClick={() => controller.dispatch({ type: 'NEXT' })}>Deal Again</button>
       <button disabled={!affordable} onClick={() => controller.dispatch({ type: 'REPEAT' })}>Repeat Bet · {credits(view.lastBet)} credits</button></div>
-    <p>Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.</p>
     {!affordable && <p className="reason">Repeat Bet unavailable: not enough credits for your original main wager.</p>}
-    <details><summary>Wager result details</summary><p>Each wager settles independently.</p>
+    <details className="round-explanation"><summary>Wager result details</summary>
+      <p>Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.</p>
+      <p>Each wager settles independently.</p>
       {records.map((r, i) => <article key={i} className="result"><p>{r.type}{'seat' in r && ` · Seat ${r.seat}`}{r.handId && ` · ${handLabel(r.handId)}`}</p>
         <strong data-result={r.outcome}>{resultLabel(r.outcome)}</strong><p>Stake: {credits(r.stake)} · Returned: {credits(r.returned)} · Net: {credits(r.returned - r.stake)}</p><p>{r.status === 'REFUNDED' ? 'Refunded' : 'Settled'}</p></article>)}
     </details>

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-05 00:29:37 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "7bae9b2b22a5a94f8a06cbdf234a555a1b62bc83",
+  "protectedFiles": 2955,
+  "immutableEvidence": 2629,
+  "domainDiff": "EMPTY",
+  "acceptedCSS": "Entire incoming T01–T06 CSS prefix identical; only Insurance/result scoped rules appended",
+  "actionsBetting": "Exact incoming Actions.tsx and Betting.tsx raw bytes unchanged",
+  "handlersAndDisabled": "Exact incoming command/disabled expressions and existing result calculations unchanged",
+  "historicalTests": "Every historical file protected; existing T06 cases exact prefix, only 3 unit/3 browser cases appended; one real-domain push fixture inserted",
+  "historicalDocs": "Full incoming histories retained as suffixes",
+  "normalVisuals": "Open and player screenshots pixel SHA256 identical at1280/768/320; complete desktop camera measurements equal; contextual local HUD bounds equal",
+  "standBottom": 883.359375
+}

@@ -1,3 +1,11 @@
+## M10A-T06 Human Visual Repair 1 — technically verified
+
+Insurance/Even Money and Round Complete are compact local game docks with native disclosures and visible state focus. The owner-accepted normal action dock/betting-open pixels and scene geometry are preserved. Full84files/1101Vitest/89Chromium, focused97/42 and independent/unified verification PASS / checked0; cumulative4/10. [Evidence and comparisons](docs/M10A_T06_REPAIR1_EVIDENCE/README.md). Publication pending. Overall owner T06 visual acceptance NOT ACCEPTED / awaiting new live review; fresh independent review NOT RUN. T07 waiting; no accounting HUD redesign, Dealer artwork, Motion/animation or deployment. Earlier checkpoint paragraphs below retain their historical scope.
+
+## M10A-T06 human visual repair in progress
+
+T06 owner visual acceptance NOT ACCEPTED. Normal action dock accepted and preserved; Insurance/Even Money and Round Complete are under a scoped composition repair, cumulative 4/10. Technical verification for this new version NOT RUN. [Contract](docs/M10A_T06.md), [new evidence](docs/M10A_T06_REPAIR1_EVIDENCE/README.md). T07 remains waiting; no accounting HUD redesign, artwork, Motion, animation or deployment.
+
 ## Current M10A-T06 Control Integration
 
 **M10A-T06_IMPLEMENTED_VERIFIED**, repairs **3/10**. One native action dock names the current public hand; green/gold primary controls, dashed disabled states, exact wager/chip/Deal controls and compact Insurance/Even Money decisions share the accepted table scene. Full 84 files / 1098 Vitest tests / 86 Chromium cases, independent preservation and verify.ps1 PASS / checked exit 0. Stand bottom 883.359375px; desktop/tablet/mobile, text 200%, genuine browser 200% zoom, keyboard/focus and measured contrast PASS. [Task](docs/M10A_T06.md), [visual/evidence index](docs/M10A_T06_EVIDENCE/README.md).

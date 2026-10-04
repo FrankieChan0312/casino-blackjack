@@ -1,0 +1,23 @@
+{
+  "task": "M10A-T06",
+  "count": 4,
+  "limit": 10,
+  "exceptionAuthorized": false,
+  "previousLedger": "../M10A_T06_EVIDENCE/repair-ledger.json",
+  "cycles": [
+    {
+      "count": 4,
+      "timestamp": "2026-10-04 23:58:53 +08:00",
+      "trigger": "Owner Human Visual Repair 1",
+      "finding": "Normal action dock accepted; Insurance/Even Money and Round Complete rejected as detached web cards",
+      "hypothesis": "Full-section focus outline and expanded result explanations dominate the lower scene",
+      "target": "Only scoped decision/result composition; accepted normal controls/scene/financial behavior unchanged",
+      "verification": {
+        "status": "PASS",
+        "exitCode": 0,
+        "timestamp": "2026-10-05 00:14:36 +08:00",
+        "receipt": "focused-gate.json"
+      }
+    }
+  ]
+}

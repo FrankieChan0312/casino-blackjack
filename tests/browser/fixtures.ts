@@ -34,6 +34,7 @@ export function createFixtureController(name: string | null) {
     'player-split': ['10', '10', '8', '10', '10', '7', '7', '8', '7', '9', '2', '3'],
     'player-natural': ['10', '10', 'A', '10', '10', '7', '7', 'K', '7', '9'],
     'player-loss': ['10', '10', '5', '10', '10', '7', '7', '6', '7', '9'],
+    'player-push': ['10', '10', '10', '10', '10', '7', '7', '9', '7', '9'],
   };
   if (playerScenarios[name]) return createBrowserController({ playerMode: true, factory: () => fixtureState(playerScenarios[name],
     name.startsWith('player-rsa') ? CLASSIC_V1_2 : CLASSIC),

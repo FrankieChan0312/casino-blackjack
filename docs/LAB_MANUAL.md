@@ -1,3 +1,9 @@
+## M10A-T06 human visual repair — 2026-10-05 00:29:37 +08:00
+
+An executed technical gate does not establish human composition acceptance. The owner accepted the normal dock but rejected two section-focused contextual panels. Scope the repair to those contexts: keep the real focus target/native controls, visually identify focus on the compact live status, remove duplicate headings and move secondary financial/lifecycle prose into native disclosures. Repeat uses exactly the original MAIN and the continuing shoe; hand outcomes stay in LocalPlayerHud. Existing net/funding/settlement/controller calculations are unchanged.
+
+Comparable states show Insurance192.375 ->118.546875px and result250.171875 ->123.1875px, while normal/open pixels and local HUD bounds remain identical. Literal win/loss/push amounts and native next/repeat/low-fund/disclosure tests strengthen the presentation contract. Focused97/42, full84/1101/89 and independent/unified PASS /0; repair4/10, original3 cycles preserved. [Evidence](M10A_T06_REPAIR1_EVIDENCE/README.md). Same-session review does not replace genuinely fresh review or owner acceptance; overall T06 NOT ACCEPTED / waiting for new live review. T07 NOT STARTED.
+
 ## M10A-T06 learning checkpoint — 2026-10-04 23:28:57 +08:00
 
 Control integration stays presentational: consume the public current-hand identity alongside the unchanged live-status text, preserve native buttons/input/disclosures and reuse existing dispatch/availability. A solid denomination ring, dashed disabled border, explicit reason and preserved keyboard focus communicate states without colour alone. Insurance is separately funded; eligible Even Money settles the original stake at 1:1 without another wager. The real 100-credit fixture verifies 150 exposure/850 available for Insurance and 100 profit/1100 available for Even Money. No UI accounting calculations were added.

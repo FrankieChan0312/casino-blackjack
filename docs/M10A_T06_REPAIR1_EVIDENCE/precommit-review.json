@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-05 00:30:53 +08:00",
+  "status": "PASS",
+  "executableHashes": 164,
+  "evidenceFiles": 428,
+  "evidenceBytes": 245970699,
+  "plaintextFiles": 73,
+  "traceTextEntries": 0,
+  "relativeLinks": 52,
+  "sensitivePatternFindings": [],
+  "remote": {
+    "host": "github.com",
+    "path": "/FrankieChan0312/casino-blackjack.git"
+  },
+  "review": "Same-session full source/test/CSS/diff/evidence review; no genuinely fresh independent session available; owner visual acceptance pending",
+  "exitCode": 0,
+  "scope": "Complete three-file contextual UI/CSS diff, one push fixture, three appended unit/three appended nested browser cases, six current task documents and all new retained evidence",
+  "findings": [
+    "App preserves the exact accepted normal context/actions/betting/credits markup and only marks rejected contextual states and puts terminal controls directly before the unchanged credits strip.",
+    "Decisions preserves all incoming dispatch/disabled expressions, ownership/eligibility/amount/full financial wording and existing net calculation. Native full explanation disclosure and focus routing remain; no hidden choices or automatic decisions.",
+    "Entire incoming T01–T06 CSS is an exact prefix; every appended block scopes Insurance/result/state focus. Actions/Betting/domain/controller/geometry/PA1 and all prior evidence byte-identical.",
+    "Win/loss/neutral Push, low funds and native next/repeat/disclosure behavior are exercised with literal expected amounts. Historical T06 cases remain exact prefix; all historical tests/retries/thresholds preserved. Counts84/1101/89 are explained by3+3 new cases.",
+    "34 control and8 native zoom images listed in the bounded visual review actually opened before full checks. Other captured images are retained without falsely claiming individual inspection.",
+    "All focused/full/preservation/unified required checked command exits are0. No source/test/config change after164-file freeze. No model/effort/fresh review/owner acceptance/deployment claim without evidence."
+  ],
+  "repairCount": "4/10",
+  "freshIndependentReview": "NOT RUN",
+  "ownerAcceptance": "NOT ACCEPTED / waiting for new live owner review",
+  "disposition": "Final affected-documentation validation, evidence audit/staging, then authorized normal publication"
+}

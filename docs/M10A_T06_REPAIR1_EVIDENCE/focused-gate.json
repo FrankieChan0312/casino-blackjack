@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-05 00:14:36 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "task": "M10A-T06",
+  "repairCount": "4/10",
+  "focusedUI": {
+    "files": 13,
+    "tests": 97
+  },
+  "focusedChromium": 42,
+  "requiredGates": [
+    "hr1-focused-unit.json",
+    "hr1-focused-browser.json",
+    "hr1-focused-type.json",
+    "hr1-focused-lint.json",
+    "protection.json",
+    "visuals/contrast.json",
+    "visuals/control-contrast.json",
+    "visuals/zoom200.json",
+    "visuals/zoom200-disclosure.json"
+  ],
+  "desktopTabletMobile": "PASS",
+  "text200": "PASS",
+  "nativeBrowser200": "PASS; actual zoom2.0, CSS viewport1280->640, DPR1.5->3, root16px/CSSzoom1 unchanged",
+  "keyboardDisclosure": "PASS; native Tab/Enter/Space, amounts/names/disabled preserved",
+  "textContrastMinimum": 6.514407246458633,
+  "focusChecks": 10,
+  "standBottom": 883.359375,
+  "visualReview": {
+    "controlImages": 34,
+    "nativeZoomImages": 8,
+    "status": "PASS"
+  },
+  "fullVerification": "NOT RUN",
+  "humanVisualAcceptance": "NOT ACCEPTED / awaiting new review"
+}

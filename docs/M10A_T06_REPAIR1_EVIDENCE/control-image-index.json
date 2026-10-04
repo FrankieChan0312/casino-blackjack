@@ -1,0 +1,582 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "images": [
+    {
+      "path": "visuals/control-text200-even-money-1280.png",
+      "sha256": "500db1d64b40a227e50b569637b5755d13bc3db6bd0b4fbe277c6703fce09ea6",
+      "source": "generated/500db1d64b40a227e50b569637b5755d13bc3db6bd0b4fbe277c6703fce09ea6.png",
+      "bytes": 1203193
+    },
+    {
+      "path": "visuals/control-text200-even-money-320.png",
+      "sha256": "665b0afb24a71e8371ab86a62a5d669a25bd733013f3db8640e8172daab10cbb",
+      "source": "generated/665b0afb24a71e8371ab86a62a5d669a25bd733013f3db8640e8172daab10cbb.png",
+      "bytes": 551343
+    },
+    {
+      "path": "visuals/control-text200-even-money-768.png",
+      "sha256": "4582629982bc8dfc43b07d81ecbed19077d95e74d7bc4d32be7e5c5fc7680dd2",
+      "source": "generated/4582629982bc8dfc43b07d81ecbed19077d95e74d7bc4d32be7e5c5fc7680dd2.png",
+      "bytes": 948292
+    },
+    {
+      "path": "visuals/control-text200-insurance-1280.png",
+      "sha256": "b9c8f62d882ef60d4e19fcda12673821a0a1485be0b64152efca76f86730289e",
+      "source": "generated/b9c8f62d882ef60d4e19fcda12673821a0a1485be0b64152efca76f86730289e.png",
+      "bytes": 1206422
+    },
+    {
+      "path": "visuals/control-text200-insurance-320.png",
+      "sha256": "f2eca587a9bf9ed49899d74e01763e416b8e9c5e55447e92c5f7bbbaf4f3d285",
+      "source": "generated/f2eca587a9bf9ed49899d74e01763e416b8e9c5e55447e92c5f7bbbaf4f3d285.png",
+      "bytes": 542990
+    },
+    {
+      "path": "visuals/control-text200-insurance-768.png",
+      "sha256": "fbc129009308f0e2ba35455bb84e67fb2f6739116e2eca0739d33e11180fa3f1",
+      "source": "generated/fbc129009308f0e2ba35455bb84e67fb2f6739116e2eca0739d33e11180fa3f1.png",
+      "bytes": 923456
+    },
+    {
+      "path": "visuals/control-text200-open-1280.png",
+      "sha256": "2566523515528e6a833c484b9f84c620acda45cc1dbf9d48eb23eb9b040cf904",
+      "source": "generated/2566523515528e6a833c484b9f84c620acda45cc1dbf9d48eb23eb9b040cf904.png",
+      "bytes": 1292611
+    },
+    {
+      "path": "visuals/control-text200-open-320.png",
+      "sha256": "437fe17b22d148433060a6d96c2e8f8640952962ca6384bcbade1861bd6208b1",
+      "source": "generated/437fe17b22d148433060a6d96c2e8f8640952962ca6384bcbade1861bd6208b1.png",
+      "bytes": 546725
+    },
+    {
+      "path": "visuals/control-text200-open-768.png",
+      "sha256": "6515f96069877b9b8f58c36847afbc5b35ea8c1957a1923c1b22704cbc9164a9",
+      "source": "generated/6515f96069877b9b8f58c36847afbc5b35ea8c1957a1923c1b22704cbc9164a9.png",
+      "bytes": 872618
+    },
+    {
+      "path": "visuals/control-text200-player-1280.png",
+      "sha256": "1b506ebc5270e3ffed66a82f0f26d0f61ba787c67647c0a806b8cd2e07652bc2",
+      "source": "generated/1b506ebc5270e3ffed66a82f0f26d0f61ba787c67647c0a806b8cd2e07652bc2.png",
+      "bytes": 1158857
+    },
+    {
+      "path": "visuals/control-text200-player-320.png",
+      "sha256": "f763269bd4e8d023444259321695a73188e3a79c89355f4f98ff330a8918c91e",
+      "source": "generated/f763269bd4e8d023444259321695a73188e3a79c89355f4f98ff330a8918c91e.png",
+      "bytes": 522767
+    },
+    {
+      "path": "visuals/control-text200-player-768.png",
+      "sha256": "4ca8a8c1d0f527df048bb1775124eedf4fa9a6c73038ebe49838227a39e4e9cd",
+      "source": "generated/4ca8a8c1d0f527df048bb1775124eedf4fa9a6c73038ebe49838227a39e4e9cd.png",
+      "bytes": 890865
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-loss-1280.png",
+      "sha256": "e7c5e4edf5608c067fb1340cefaaa16799e3da11313da24024f833f40275416f",
+      "source": "generated/e7c5e4edf5608c067fb1340cefaaa16799e3da11313da24024f833f40275416f.png",
+      "bytes": 1165321
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-loss-320.png",
+      "sha256": "acabad6a8a609e0f34a4f2434a9993f38435a91cd2182806a640dbb76a5656ed",
+      "source": "generated/acabad6a8a609e0f34a4f2434a9993f38435a91cd2182806a640dbb76a5656ed.png",
+      "bytes": 493087
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-loss-768.png",
+      "sha256": "d86d804547fd78969302f510f3cbd7aaf96a50ee9eb435e7d05e331052ead382",
+      "source": "generated/d86d804547fd78969302f510f3cbd7aaf96a50ee9eb435e7d05e331052ead382.png",
+      "bytes": 849590
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-push-1280.png",
+      "sha256": "1cc3eda1c40d78ea4e5ac3e599d3df586ca30769317f62c252e68990d2b4c67e",
+      "source": "generated/1cc3eda1c40d78ea4e5ac3e599d3df586ca30769317f62c252e68990d2b4c67e.png",
+      "bytes": 1165971
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-push-320.png",
+      "sha256": "869890ecc7dfc35265221220ef461260abd0a81bb52094cc4cdb55b391fafe47",
+      "source": "generated/869890ecc7dfc35265221220ef461260abd0a81bb52094cc4cdb55b391fafe47.png",
+      "bytes": 492950
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-push-768.png",
+      "sha256": "aeb4cb909e1ef0df2deb1926bafa34a69f0da5031128039fe39b9bc625e7c495",
+      "source": "generated/aeb4cb909e1ef0df2deb1926bafa34a69f0da5031128039fe39b9bc625e7c495.png",
+      "bytes": 849332
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-win-1280.png",
+      "sha256": "bbb6d784bd306ddca2c2a1b56ecf61d132dabcad530cb1e1c4403e7dc4de3aba",
+      "source": "generated/bbb6d784bd306ddca2c2a1b56ecf61d132dabcad530cb1e1c4403e7dc4de3aba.png",
+      "bytes": 1162192
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-win-320.png",
+      "sha256": "81e14ecb07db3539b39dbccb658b385bb4a85c9973ca66a9002d8995850b6969",
+      "source": "generated/81e14ecb07db3539b39dbccb658b385bb4a85c9973ca66a9002d8995850b6969.png",
+      "bytes": 484434
+    },
+    {
+      "path": "visuals/control-repair-text200-complete-win-768.png",
+      "sha256": "659d29c15ed807bc54704f31d8deb52a2bd72e844cf5a466f3aff2555f2ae4b7",
+      "source": "generated/659d29c15ed807bc54704f31d8deb52a2bd72e844cf5a466f3aff2555f2ae4b7.png",
+      "bytes": 865410
+    },
+    {
+      "path": "visuals/control-repair-text200-even-money-1280.png",
+      "sha256": "500db1d64b40a227e50b569637b5755d13bc3db6bd0b4fbe277c6703fce09ea6",
+      "source": "generated/500db1d64b40a227e50b569637b5755d13bc3db6bd0b4fbe277c6703fce09ea6.png",
+      "bytes": 1203193
+    },
+    {
+      "path": "visuals/control-repair-text200-even-money-320.png",
+      "sha256": "665b0afb24a71e8371ab86a62a5d669a25bd733013f3db8640e8172daab10cbb",
+      "source": "generated/665b0afb24a71e8371ab86a62a5d669a25bd733013f3db8640e8172daab10cbb.png",
+      "bytes": 551343
+    },
+    {
+      "path": "visuals/control-repair-text200-even-money-768.png",
+      "sha256": "4582629982bc8dfc43b07d81ecbed19077d95e74d7bc4d32be7e5c5fc7680dd2",
+      "source": "generated/4582629982bc8dfc43b07d81ecbed19077d95e74d7bc4d32be7e5c5fc7680dd2.png",
+      "bytes": 948292
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-loss-1280.png",
+      "sha256": "f9a1dcdd11e040dfbe8f3bf97809760fd6cd0fd8af442894644ebda4e4c2a5e0",
+      "source": "generated/f9a1dcdd11e040dfbe8f3bf97809760fd6cd0fd8af442894644ebda4e4c2a5e0.png",
+      "bytes": 1379763
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-loss-320.png",
+      "sha256": "fcd2300950ec2cdc7429a504a80907168947ac0b1c1e6858fe4fafd4b0c78c68",
+      "source": "generated/fcd2300950ec2cdc7429a504a80907168947ac0b1c1e6858fe4fafd4b0c78c68.png",
+      "bytes": 604085
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-loss-768.png",
+      "sha256": "8a7dabf7a0fb65e2f17580ff434d435621d2c60dd36dae8b02f0ddda8c7c8554",
+      "source": "generated/8a7dabf7a0fb65e2f17580ff434d435621d2c60dd36dae8b02f0ddda8c7c8554.png",
+      "bytes": 1014555
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-push-1280.png",
+      "sha256": "a446abd7c88623f32dc2ea6ea09c00bf6a815a36aede4fe841d340fb73f3c43e",
+      "source": "generated/a446abd7c88623f32dc2ea6ea09c00bf6a815a36aede4fe841d340fb73f3c43e.png",
+      "bytes": 1379978
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-push-320.png",
+      "sha256": "a50122ddbeb5cccb10058a84e1e552958ecbea2e716962e2d4727c5a5a798ac8",
+      "source": "generated/a50122ddbeb5cccb10058a84e1e552958ecbea2e716962e2d4727c5a5a798ac8.png",
+      "bytes": 603882
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-push-768.png",
+      "sha256": "d73fa3bd8eb314d8266ee50ae92292028f078494c0024ce8f93680248c0bcc90",
+      "source": "generated/d73fa3bd8eb314d8266ee50ae92292028f078494c0024ce8f93680248c0bcc90.png",
+      "bytes": 1014382
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-win-1280.png",
+      "sha256": "d7966609f1d7949bc92b60a4a1fffce7b5f26fe8bbae91346cb5c11ddba35cfd",
+      "source": "generated/d7966609f1d7949bc92b60a4a1fffce7b5f26fe8bbae91346cb5c11ddba35cfd.png",
+      "bytes": 1385267
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-win-320.png",
+      "sha256": "a7b6d3b7504dba8d986f56c8bc5b195cf4dce6c1c79eeff16bfd84d16a219c84",
+      "source": "generated/a7b6d3b7504dba8d986f56c8bc5b195cf4dce6c1c79eeff16bfd84d16a219c84.png",
+      "bytes": 595995
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-complete-win-768.png",
+      "sha256": "da7b331a8951707ebca58094052413e371d222b0022df7a98bf974f45e5ef4be",
+      "source": "generated/da7b331a8951707ebca58094052413e371d222b0022df7a98bf974f45e5ef4be.png",
+      "bytes": 1028597
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-even-money-1280.png",
+      "sha256": "4badefab5751199b4d47d102d2a0ba8422547212b9c4bbf97d7c8bc5f7586124",
+      "source": "generated/4badefab5751199b4d47d102d2a0ba8422547212b9c4bbf97d7c8bc5f7586124.png",
+      "bytes": 1295649
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-even-money-320.png",
+      "sha256": "1743b4790161e779b8b300895d217e5ed6ba8a4d5932e6179733e93352d603d6",
+      "source": "generated/1743b4790161e779b8b300895d217e5ed6ba8a4d5932e6179733e93352d603d6.png",
+      "bytes": 637125
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-even-money-768.png",
+      "sha256": "503559e90cd422931fea18ab3ffb17b7430c2d51592119881ed5c357abad2104",
+      "source": "generated/503559e90cd422931fea18ab3ffb17b7430c2d51592119881ed5c357abad2104.png",
+      "bytes": 1040287
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-insurance-1280.png",
+      "sha256": "85dc33b61a307ac14fc7e5eb1bd64f510a4c29b954f5c208eaa6c8dc1be3ce3d",
+      "source": "generated/85dc33b61a307ac14fc7e5eb1bd64f510a4c29b954f5c208eaa6c8dc1be3ce3d.png",
+      "bytes": 1298942
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-insurance-320.png",
+      "sha256": "21042f713e94bbad9684eeb9756c6bc487aa52ed9d666b96ae2694103cdba815",
+      "source": "generated/21042f713e94bbad9684eeb9756c6bc487aa52ed9d666b96ae2694103cdba815.png",
+      "bytes": 629012
+    },
+    {
+      "path": "visuals/control-repair-text200-expanded-insurance-768.png",
+      "sha256": "062780e664118ed56b17d3a323247ced9271f50b8c0428aec89a653b439ec148",
+      "source": "generated/062780e664118ed56b17d3a323247ced9271f50b8c0428aec89a653b439ec148.png",
+      "bytes": 1016242
+    },
+    {
+      "path": "visuals/control-repair-text200-insurance-1280.png",
+      "sha256": "b9c8f62d882ef60d4e19fcda12673821a0a1485be0b64152efca76f86730289e",
+      "source": "generated/b9c8f62d882ef60d4e19fcda12673821a0a1485be0b64152efca76f86730289e.png",
+      "bytes": 1206422
+    },
+    {
+      "path": "visuals/control-repair-text200-insurance-320.png",
+      "sha256": "f2eca587a9bf9ed49899d74e01763e416b8e9c5e55447e92c5f7bbbaf4f3d285",
+      "source": "generated/f2eca587a9bf9ed49899d74e01763e416b8e9c5e55447e92c5f7bbbaf4f3d285.png",
+      "bytes": 542990
+    },
+    {
+      "path": "visuals/control-repair-text200-insurance-768.png",
+      "sha256": "fbc129009308f0e2ba35455bb84e67fb2f6739116e2eca0739d33e11180fa3f1",
+      "source": "generated/fbc129009308f0e2ba35455bb84e67fb2f6739116e2eca0739d33e11180fa3f1.png",
+      "bytes": 923456
+    },
+    {
+      "path": "visuals/control-even-money-1280.png",
+      "sha256": "8e385a0e42fe5b5935033041b182a8e36e241de3a0d51079509d55679547876c",
+      "source": "generated/8e385a0e42fe5b5935033041b182a8e36e241de3a0d51079509d55679547876c.png",
+      "bytes": 748559
+    },
+    {
+      "path": "visuals/control-even-money-320.png",
+      "sha256": "35f945c982399b8610fc4b64a4e291005322e37ff31025b4f465d07d5d558e70",
+      "source": "generated/35f945c982399b8610fc4b64a4e291005322e37ff31025b4f465d07d5d558e70.png",
+      "bytes": 279535
+    },
+    {
+      "path": "visuals/control-even-money-768.png",
+      "sha256": "5252aeb97eb02ce4644bc2686e3387f7262ebc007a520199c54d19cc560986d1",
+      "source": "generated/5252aeb97eb02ce4644bc2686e3387f7262ebc007a520199c54d19cc560986d1.png",
+      "bytes": 532444
+    },
+    {
+      "path": "visuals/control-complete-1280.png",
+      "sha256": "db8c24928afbe23ad3a67fb1a9f450be2dd079a80571e889e17d95888c055fae",
+      "source": "generated/db8c24928afbe23ad3a67fb1a9f450be2dd079a80571e889e17d95888c055fae.png",
+      "bytes": 739187
+    },
+    {
+      "path": "visuals/control-complete-320.png",
+      "sha256": "c8dd4cca31e5d33ec15dac5ac07c44390ed7c7a475d0fc14dbc7a54bee10dc77",
+      "source": "generated/c8dd4cca31e5d33ec15dac5ac07c44390ed7c7a475d0fc14dbc7a54bee10dc77.png",
+      "bytes": 262866
+    },
+    {
+      "path": "visuals/control-complete-768.png",
+      "sha256": "40dc58599e8a3b60fe3524b8074ae8a9c834f896a72f16bd23a6287f5bf9ae9b",
+      "source": "generated/40dc58599e8a3b60fe3524b8074ae8a9c834f896a72f16bd23a6287f5bf9ae9b.png",
+      "bytes": 546975
+    },
+    {
+      "path": "visuals/control-open-1280.png",
+      "sha256": "4a2d27ed61e3d77d9f9d00f400ad9c73657e46db6fa157a594bca862cb4970aa",
+      "source": "generated/4a2d27ed61e3d77d9f9d00f400ad9c73657e46db6fa157a594bca862cb4970aa.png",
+      "bytes": 802232
+    },
+    {
+      "path": "visuals/control-open-320.png",
+      "sha256": "aaf394a331388840f5a63d2bfad4f6445c6761d2cc1aa791a6a8b741e5329466",
+      "source": "generated/aaf394a331388840f5a63d2bfad4f6445c6761d2cc1aa791a6a8b741e5329466.png",
+      "bytes": 280374
+    },
+    {
+      "path": "visuals/control-open-768.png",
+      "sha256": "90da4e14bc9cc8d694fbd51c4f3b7d77b3ba48454b1d020d7e1459e14e90d1e2",
+      "source": "generated/90da4e14bc9cc8d694fbd51c4f3b7d77b3ba48454b1d020d7e1459e14e90d1e2.png",
+      "bytes": 521566
+    },
+    {
+      "path": "visuals/control-player-1280.png",
+      "sha256": "130921f2645e01fb6cfe3192dbb9b9f8c8e788a5e3120be40f248e0fc0ab9c40",
+      "source": "generated/130921f2645e01fb6cfe3192dbb9b9f8c8e788a5e3120be40f248e0fc0ab9c40.png",
+      "bytes": 728669
+    },
+    {
+      "path": "visuals/control-player-320.png",
+      "sha256": "17a247b87d83f01f837ed77033f15d6f346968b675bb823248930cbb59abd215",
+      "source": "generated/17a247b87d83f01f837ed77033f15d6f346968b675bb823248930cbb59abd215.png",
+      "bytes": 258280
+    },
+    {
+      "path": "visuals/control-player-768.png",
+      "sha256": "412156785ef7c4545c3b5bd6b467d59adc28b40368d0eb1cfb781383e2b5312e",
+      "source": "generated/412156785ef7c4545c3b5bd6b467d59adc28b40368d0eb1cfb781383e2b5312e.png",
+      "bytes": 523874
+    },
+    {
+      "path": "visuals/control-split-a-1280.png",
+      "sha256": "d3154631edd4f219916fed9230f249781a69efbcec1daf0aecfeba5d87b9abbe",
+      "source": "generated/d3154631edd4f219916fed9230f249781a69efbcec1daf0aecfeba5d87b9abbe.png",
+      "bytes": 846085
+    },
+    {
+      "path": "visuals/control-split-a-320.png",
+      "sha256": "28f420c7f4017d3f7f6132bc1331da35e93ec66e671db54e76f1e87c65c9c4d9",
+      "source": "generated/28f420c7f4017d3f7f6132bc1331da35e93ec66e671db54e76f1e87c65c9c4d9.png",
+      "bytes": 297226
+    },
+    {
+      "path": "visuals/control-split-a-768.png",
+      "sha256": "e76d47685a653f03c206205430d92bcd3ee116f5addfd8db0c5138e7e249636b",
+      "source": "generated/e76d47685a653f03c206205430d92bcd3ee116f5addfd8db0c5138e7e249636b.png",
+      "bytes": 621268
+    },
+    {
+      "path": "visuals/control-split-b-1280.png",
+      "sha256": "eb9c677acb8635b7c13011f74b03293c28023f37f329dcd57f8f3acf060a8687",
+      "source": "generated/eb9c677acb8635b7c13011f74b03293c28023f37f329dcd57f8f3acf060a8687.png",
+      "bytes": 842953
+    },
+    {
+      "path": "visuals/control-split-b-320.png",
+      "sha256": "799d0a1b37a6e988cf8709c113e935dab3d1471378a1bf5a8e94485bdbafa84c",
+      "source": "generated/799d0a1b37a6e988cf8709c113e935dab3d1471378a1bf5a8e94485bdbafa84c.png",
+      "bytes": 291624
+    },
+    {
+      "path": "visuals/control-split-b-768.png",
+      "sha256": "58d6bad8b6789cab14b8b30d58b9d86060289206bd3dc69cb5f90a6f90c49f3f",
+      "source": "generated/58d6bad8b6789cab14b8b30d58b9d86060289206bd3dc69cb5f90a6f90c49f3f.png",
+      "bytes": 616240
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-ace-1280.png",
+      "sha256": "d16bbf383e0243c585ebe0e7e3d3f9f60da327f727158a8ef2f39734d82326dc",
+      "source": "generated/d16bbf383e0243c585ebe0e7e3d3f9f60da327f727158a8ef2f39734d82326dc.png",
+      "bytes": 780565
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-ace-320.png",
+      "sha256": "bb73fe8598399b86472ace7d5adfe7bb466fe2950099d1bd6015969c8e98c0ce",
+      "source": "generated/bb73fe8598399b86472ace7d5adfe7bb466fe2950099d1bd6015969c8e98c0ce.png",
+      "bytes": 296367
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-ace-768.png",
+      "sha256": "71e2d9656393383d25fd4da4a9019b519665d618fe245ce9d1b554614537719c",
+      "source": "generated/71e2d9656393383d25fd4da4a9019b519665d618fe245ce9d1b554614537719c.png",
+      "bytes": 564318
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-even-money-1280.png",
+      "sha256": "caba4178adb7abd2af8dc18736a3a0de5514006880579d714a8402d481c897d6",
+      "source": "generated/caba4178adb7abd2af8dc18736a3a0de5514006880579d714a8402d481c897d6.png",
+      "bytes": 779651
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-even-money-320.png",
+      "sha256": "42adf8d7ecd2b2406ad68410e66bf552ec8654f00cdaa1bb3b17a9c4eaec503c",
+      "source": "generated/42adf8d7ecd2b2406ad68410e66bf552ec8654f00cdaa1bb3b17a9c4eaec503c.png",
+      "bytes": 303289
+    },
+    {
+      "path": "visuals/control-repair-insurance-expanded-player-even-money-768.png",
+      "sha256": "176df66571c45edad2a2dd72f59975b741c346a222f2c73caf8fe6779e7dc607",
+      "source": "generated/176df66571c45edad2a2dd72f59975b741c346a222f2c73caf8fe6779e7dc607.png",
+      "bytes": 562407
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-ace-1280.png",
+      "sha256": "ffe42a60d7154c5b5c71039d17f9cd1de3dbd40bb38c383038b8009dc2e118ce",
+      "source": "generated/ffe42a60d7154c5b5c71039d17f9cd1de3dbd40bb38c383038b8009dc2e118ce.png",
+      "bytes": 749625
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-ace-320.png",
+      "sha256": "b9a4baa944f1fa478182286dfabf987579c099e0d961bbf47d4bd285b8174512",
+      "source": "generated/b9a4baa944f1fa478182286dfabf987579c099e0d961bbf47d4bd285b8174512.png",
+      "bytes": 272315
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-ace-768.png",
+      "sha256": "1db9b3193e2ab0f425363380ccd3150dea26a393af94409b09f0f1c63aeccb82",
+      "source": "generated/1db9b3193e2ab0f425363380ccd3150dea26a393af94409b09f0f1c63aeccb82.png",
+      "bytes": 534251
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-even-money-1280.png",
+      "sha256": "8e385a0e42fe5b5935033041b182a8e36e241de3a0d51079509d55679547876c",
+      "source": "generated/8e385a0e42fe5b5935033041b182a8e36e241de3a0d51079509d55679547876c.png",
+      "bytes": 748559
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-even-money-320.png",
+      "sha256": "35f945c982399b8610fc4b64a4e291005322e37ff31025b4f465d07d5d558e70",
+      "source": "generated/35f945c982399b8610fc4b64a4e291005322e37ff31025b4f465d07d5d558e70.png",
+      "bytes": 279535
+    },
+    {
+      "path": "visuals/control-repair-insurance-player-even-money-768.png",
+      "sha256": "5252aeb97eb02ce4644bc2686e3387f7262ebc007a520199c54d19cc560986d1",
+      "source": "generated/5252aeb97eb02ce4644bc2686e3387f7262ebc007a520199c54d19cc560986d1.png",
+      "bytes": 532444
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-1280.png",
+      "sha256": "fec9345c3bbca2e5a7d7d701d02f3f0d90a98d4eb417d8445fe96df9aa2d5076",
+      "source": "generated/fec9345c3bbca2e5a7d7d701d02f3f0d90a98d4eb417d8445fe96df9aa2d5076.png",
+      "bytes": 857023
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-320.png",
+      "sha256": "ac598e78d726cf7d1946c13c0e91b91478e754ba888c6726434a25752ac98634",
+      "source": "generated/ac598e78d726cf7d1946c13c0e91b91478e754ba888c6726434a25752ac98634.png",
+      "bytes": 306709
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-768.png",
+      "sha256": "bb54ec1828b94e537fca0c44a6caf0a378fe6454560bcaa5c5fd90756ce7385f",
+      "source": "generated/bb54ec1828b94e537fca0c44a6caf0a378fe6454560bcaa5c5fd90756ce7385f.png",
+      "bytes": 628972
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-loss-1280.png",
+      "sha256": "f7842cbf54f3f023315fdd70aa3d49a22d87a2e6306e6ab1b8fbc4ee4475ce30",
+      "source": "generated/f7842cbf54f3f023315fdd70aa3d49a22d87a2e6306e6ab1b8fbc4ee4475ce30.png",
+      "bytes": 861896
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-loss-320.png",
+      "sha256": "59ae27a1f115f7926403ee13e2bc20a94513282cce087f28bae6c8e5e1b52291",
+      "source": "generated/59ae27a1f115f7926403ee13e2bc20a94513282cce087f28bae6c8e5e1b52291.png",
+      "bytes": 309749
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-loss-768.png",
+      "sha256": "6502cb3052d04f65760763f84aa050bb9397e44748679bd508c8c06208b03540",
+      "source": "generated/6502cb3052d04f65760763f84aa050bb9397e44748679bd508c8c06208b03540.png",
+      "bytes": 615082
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-push-1280.png",
+      "sha256": "6d9df97a08d2d2c40ba218c2aa7d7e347587fe7a572f749c427271a0b862779a",
+      "source": "generated/6d9df97a08d2d2c40ba218c2aa7d7e347587fe7a572f749c427271a0b862779a.png",
+      "bytes": 862611
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-push-320.png",
+      "sha256": "0815ebd8d89c8cac967036772c44e3c7db8281663e50d8374bedeb83ce356292",
+      "source": "generated/0815ebd8d89c8cac967036772c44e3c7db8281663e50d8374bedeb83ce356292.png",
+      "bytes": 309633
+    },
+    {
+      "path": "visuals/control-repair-complete-expanded-player-push-768.png",
+      "sha256": "984d4d1096ac9bb024292a7b72a578534c59f46d2ba91974f3fd91722439804b",
+      "source": "generated/984d4d1096ac9bb024292a7b72a578534c59f46d2ba91974f3fd91722439804b.png",
+      "bytes": 615426
+    },
+    {
+      "path": "visuals/control-repair-complete-player-1280.png",
+      "sha256": "d7920528a8e72aee9beb567de9945ee53fc14dd9d9980c892ff8f130657ae95f",
+      "source": "generated/d7920528a8e72aee9beb567de9945ee53fc14dd9d9980c892ff8f130657ae95f.png",
+      "bytes": 740025
+    },
+    {
+      "path": "visuals/control-repair-complete-player-320.png",
+      "sha256": "f457b20b06d498619437371277517637f9e7713e268cf46697eec9208310015d",
+      "source": "generated/f457b20b06d498619437371277517637f9e7713e268cf46697eec9208310015d.png",
+      "bytes": 262660
+    },
+    {
+      "path": "visuals/control-repair-complete-player-768.png",
+      "sha256": "18aca4a1f51b37351261df694bcc1fac55019747410f053d2cfb372cbb2b6ef4",
+      "source": "generated/18aca4a1f51b37351261df694bcc1fac55019747410f053d2cfb372cbb2b6ef4.png",
+      "bytes": 547166
+    },
+    {
+      "path": "visuals/control-repair-complete-player-loss-1280.png",
+      "sha256": "39fc5fb81d7fdaa3d27e8fe01befa232670c696cc550c976ee0170852acd0ed2",
+      "source": "generated/39fc5fb81d7fdaa3d27e8fe01befa232670c696cc550c976ee0170852acd0ed2.png",
+      "bytes": 745574
+    },
+    {
+      "path": "visuals/control-repair-complete-player-loss-320.png",
+      "sha256": "2cdb9bf07be162a9b767a13b13569671c81484a1c8ce5b8ab13fe765646941ed",
+      "source": "generated/2cdb9bf07be162a9b767a13b13569671c81484a1c8ce5b8ab13fe765646941ed.png",
+      "bytes": 265991
+    },
+    {
+      "path": "visuals/control-repair-complete-player-loss-768.png",
+      "sha256": "0ef626ca0e14cc960c0852116b0bc01e61191c7ef3d2fe5c45379826431e3e12",
+      "source": "generated/0ef626ca0e14cc960c0852116b0bc01e61191c7ef3d2fe5c45379826431e3e12.png",
+      "bytes": 531024
+    },
+    {
+      "path": "visuals/control-repair-complete-player-push-1280.png",
+      "sha256": "2321fe88acf92d9fa68260543b62582ff63c3303289a54cac44cf69170ef0602",
+      "source": "generated/2321fe88acf92d9fa68260543b62582ff63c3303289a54cac44cf69170ef0602.png",
+      "bytes": 746396
+    },
+    {
+      "path": "visuals/control-repair-complete-player-push-320.png",
+      "sha256": "b2f1d798604e8770b9d35ec5c6fb8bfd8707e9d4f7a317f10374b5a5dbc76e44",
+      "source": "generated/b2f1d798604e8770b9d35ec5c6fb8bfd8707e9d4f7a317f10374b5a5dbc76e44.png",
+      "bytes": 265908
+    },
+    {
+      "path": "visuals/control-repair-complete-player-push-768.png",
+      "sha256": "d44a96a73d5d2b923faba279cf75527c237d5f9f3718b05415c51c23b25ad7db",
+      "source": "generated/d44a96a73d5d2b923faba279cf75527c237d5f9f3718b05415c51c23b25ad7db.png",
+      "bytes": 531343
+    },
+    {
+      "path": "visuals/control-insurance-1280.png",
+      "sha256": "ffe42a60d7154c5b5c71039d17f9cd1de3dbd40bb38c383038b8009dc2e118ce",
+      "source": "generated/ffe42a60d7154c5b5c71039d17f9cd1de3dbd40bb38c383038b8009dc2e118ce.png",
+      "bytes": 749625
+    },
+    {
+      "path": "visuals/control-insurance-320.png",
+      "sha256": "b9a4baa944f1fa478182286dfabf987579c099e0d961bbf47d4bd285b8174512",
+      "source": "generated/b9a4baa944f1fa478182286dfabf987579c099e0d961bbf47d4bd285b8174512.png",
+      "bytes": 272315
+    },
+    {
+      "path": "visuals/control-insurance-768.png",
+      "sha256": "1db9b3193e2ab0f425363380ccd3150dea26a393af94409b09f0f1c63aeccb82",
+      "source": "generated/1db9b3193e2ab0f425363380ccd3150dea26a393af94409b09f0f1c63aeccb82.png",
+      "bytes": 534251
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-1280.png",
+      "sha256": "1037376676ba14afcf38143351fd9b23a39cb37a974a22f4c58834829bb820a3",
+      "source": "generated/1037376676ba14afcf38143351fd9b23a39cb37a974a22f4c58834829bb820a3.png",
+      "bytes": 768187
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-320.png",
+      "sha256": "2e02d17a84984559507a788cf9c9f7dca190e834bdd117cde64e048befa4ec02",
+      "source": "generated/2e02d17a84984559507a788cf9c9f7dca190e834bdd117cde64e048befa4ec02.png",
+      "bytes": 283547
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-768.png",
+      "sha256": "1947a0d4fa233be1cb76b9005c2de6bff203240e712cf5ae4c5b2eb1572ab64d",
+      "source": "generated/1947a0d4fa233be1cb76b9005c2de6bff203240e712cf5ae4c5b2eb1572ab64d.png",
+      "bytes": 549749
+    }
+  ]
+}

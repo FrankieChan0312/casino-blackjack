@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-05 00:30:00 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "stagedPaths": 440,
+  "principalPaths": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M10A_T06.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "src/ui/App.tsx",
+    "src/ui/Decisions.tsx",
+    "src/ui/styles.css",
+    "tests/browser/fixtures.ts",
+    "tests/browser/m10a/controlIntegration.spec.ts",
+    "tests/m10/controlIntegration.test.tsx"
+  ],
+  "rawEvidenceIndexHashes": 428,
+  "stagedWhitespace": "PASS / 0",
+  "protectedScope": "Only contextual App/Decisions/styles, one push fixture, two existing T06 tests with appended cases, six task docs and new repair evidence; no Actions/Betting/domain/controller/geometry/assets/canonical/dependency mutation",
+  "fullDiff": ".git/m10a-t06-human1-complete-staged.diff",
+  "qualification": "Initial reviewed stage; final documentation/evidence receipts follow and all staging/audit checks repeat"
+}

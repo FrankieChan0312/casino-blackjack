@@ -52,19 +52,20 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <div className="table-scene">
     <Table view={view} lineup={lineup} />
-    <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls">
+    <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls"
+      data-contextual-dock={view.interaction.insurance ? 'insurance' : view.interaction.nextRound ? 'result' : undefined}>
       <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
         {view.interaction.handId && view.interaction.actions.some(a => a.enabled) && <span id="player-action-hand">· {handLabel(view.interaction.handId)}</span>}</div>
       {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />
+      <Results view={view} controller={controller} />
       <section className="credits panel" aria-label="Your credits"><h2>Your simulation credits</h2><dl>
         <div><dt>Available</dt><dd>{credits(view.human?.available ?? 0)}</dd></div>
         <div><dt>Reserved / current exposure</dt><dd>{credits(view.human?.reserved ?? 0)}</dd></div>
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div>
       </dl></section>
       {view.interaction.betting && <PlayerBetting controller={controller} view={view} />}
-      <Results view={view} controller={controller} />
     </div>
     </div>
     <p className="session-note">{view.shoeMessage} · Computer guests play with their own simulation credits.</p>

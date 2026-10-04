@@ -1,0 +1,78 @@
+{
+  "start": "2026-10-05 00:13:19 +08:00",
+  "method": "Native chrome.tabs.setZoom/getZoom 2.0 in isolated headed Chromium; additional Insurance/Even Money disclosure-specific keyboard check; no CSS/font zoom emulation",
+  "scenarios": [
+    {
+      "fixture": "player-ace",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "fontSize": "16px",
+        "cssZoom": "1",
+        "dpr": 3,
+        "children": [
+          {
+            "text": "Insurance and Even Money explained",
+            "clientWidth": 576,
+            "scrollWidth": 576
+          },
+          {
+            "text": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+            "clientWidth": 560,
+            "scrollWidth": 560
+          },
+          {
+            "text": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+            "clientWidth": 560,
+            "scrollWidth": 560
+          }
+        ]
+      },
+      "screenshot": "zoom200-disclosure-player-ace.png",
+      "keyboard": "Enter/Space disclosure, Enter Decline, actual phase focus PASS"
+    },
+    {
+      "fixture": "player-even-money",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "fontSize": "16px",
+        "cssZoom": "1",
+        "dpr": 3,
+        "children": [
+          {
+            "text": "Insurance and Even Money explained",
+            "clientWidth": 576,
+            "scrollWidth": 576
+          },
+          {
+            "text": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+            "clientWidth": 560,
+            "scrollWidth": 560
+          },
+          {
+            "text": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+            "clientWidth": 560,
+            "scrollWidth": 560
+          }
+        ]
+      },
+      "screenshot": "zoom200-disclosure-player-even-money.png",
+      "keyboard": "Enter/Space disclosure, Enter Decline, actual phase focus PASS"
+    }
+  ],
+  "baseline": {
+    "innerWidth": 1280,
+    "innerHeight": 723,
+    "dpr": 1.5,
+    "fontSize": "16px",
+    "cssZoom": "1"
+  },
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-05 00:13:24 +08:00"
+}

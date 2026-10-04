@@ -151,3 +151,79 @@ test('[M10A-CB07] native keyboard actions keep visible focus, real hand routing 
   await page.keyboard.press('Tab'); await expect(button(page, 'Deal Again')).toBeFocused();
   await page.keyboard.press('Enter'); await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
 });
+
+async function compactContext(page: Page, surface: ReturnType<Page['locator']>) {
+  await expect(surface).toBeFocused();
+  expect(await surface.evaluate(el => getComputedStyle(el).outlineStyle)).toBe('none');
+  expect(await surface.evaluate(el => parseFloat(getComputedStyle(el).borderTopWidth))).toBe(0);
+  expect(await surface.evaluate(el => getComputedStyle(el).boxShadow)).toBe('none');
+  const status = page.locator('#player-scene-status');
+  expect(await status.evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');
+  expect(await status.evaluate(el => parseFloat(getComputedStyle(el).outlineWidth))).toBeGreaterThanOrEqual(3);
+  if (await page.evaluate(() => innerWidth) === 1280) expect((await surface.boundingBox())!.height).toBeLessThanOrEqual(150);
+  await fit(page);
+}
+
+test('[M10A-CB08] compact Insurance/Even Money keeps one state band, exact visible decision amount and keyboard disclosure', async ({ page }, info) => {
+  for (const viewport of viewports) for (const fixture of ['player-ace', 'player-even-money']) {
+    await page.setViewportSize(viewport); await deal(page, fixture);
+    const decision = page.getByRole('region', { name: 'Insurance decision', exact: true });
+    await compactContext(page, decision);
+    await expect(page.locator('#player-scene-status')).toHaveText('Insurance / Even Money decision');
+    await expect(page.locator('#insurance-context')).toHaveText('Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 credits');
+    await expect(decision.locator('h2')).toHaveCount(0); await expect(decision.locator('details')).not.toHaveAttribute('open', '');
+    await capture(page, info, `repair-insurance-${fixture}`, viewport.width);
+    const summary = decision.locator('summary'); await summary.focus(); await page.keyboard.press('Enter');
+    await expect(decision.locator('.insurance-timing')).toHaveText('Dealer shows Ace. Choose before the dealer checks for Blackjack.');
+    await expect(decision.locator('details p')).toHaveText('Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.');
+    await fit(page); await capture(page, info, `repair-insurance-expanded-${fixture}`, viewport.width);
+    await page.keyboard.press('Space'); await expect(decision.locator('details')).not.toHaveAttribute('open', '');
+  }
+});
+
+test('[M10A-CB09] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior', async ({ page }, info) => {
+  for (const viewport of viewports) for (const [fixture, net, available, result] of [
+    ['player', '100', '1,100', 'Win'], ['player-loss', '-100', '900', 'Loss'], ['player-push', '0', '1,000', 'Push'],
+  ]) {
+    await page.setViewportSize(viewport); await deal(page, fixture); await button(page, 'Stand').click();
+    const dock = page.getByRole('region', { name: 'Your round result', exact: true });
+    await compactContext(page, dock); await expect(page.locator('.round-net')).toHaveText(`Net result: ${net} credits`);
+    await expect(page.locator('#player-scene-status')).toHaveText('Round complete'); await expect(dock.locator('h2')).toHaveCount(0);
+    await expect(page.locator('#player-hand .hud-state')).toHaveText(result);
+    await expect(page.locator('.credits dd')).toHaveText([available, '0', '0']);
+    expect(await dock.evaluate(el => el.compareDocumentPosition(document.querySelector('.credits')!) & Node.DOCUMENT_POSITION_FOLLOWING)).toBeTruthy();
+    await expect(dock.locator('details')).not.toHaveAttribute('open', ''); await capture(page, info, `repair-complete-${fixture}`, viewport.width);
+    await dock.locator('summary').focus(); await page.keyboard.press('Enter');
+    await expect(dock.locator('details')).toHaveAttribute('open', '');
+    await expect(dock.locator('details')).toContainText('Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.');
+    await fit(page); await capture(page, info, `repair-complete-expanded-${fixture}`, viewport.width);
+    await dock.locator('summary').focus(); await page.keyboard.press('Space');
+    await button(page, 'Repeat Bet · 100 credits').focus(); await page.keyboard.press('Enter');
+    await expect(page.locator('.session-note')).toContainText('Existing 6-deck shoe continues');
+    await expect(page.locator('#player-hand [data-felt-destination="main-wager"]')).toHaveText('MAIN: 100 credits');
+    await deal(page, fixture); await button(page, 'Stand').click(); await dock.focus();
+    await page.keyboard.press('Tab'); await expect(button(page, 'Deal Again')).toBeFocused(); await page.keyboard.press('Enter');
+    await expect(page.getByLabel('Your main wager', { exact: false })).toBeFocused();
+    await expect(page.getByLabel('Your main wager', { exact: false })).toHaveValue('100'); await expect(page.locator('.credits dd')).toHaveText([available, '0', '0']);
+  }
+  await deal(page, 'player-loss', '1000'); await button(page, 'Stand').click();
+  await expect(button(page, 'Repeat Bet · 1,000 credits')).toBeDisabled(); await expect(button(page, 'Deal Again')).toBeEnabled();
+  await expect(page.locator('#player-result .reason')).toHaveText('Repeat Bet unavailable: not enough credits for your original main wager.');
+  await expect(page.locator('.credits dd')).toHaveText(['0', '0', '0']);
+});
+
+test('[M10A-CB10] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details', async ({ page }, info) => {
+  for (const viewport of viewports) for (const state of ['insurance', 'even-money', 'complete-win', 'complete-loss', 'complete-push']) {
+    await page.setViewportSize(viewport);
+    await deal(page, state === 'insurance' ? 'player-ace' : state === 'even-money' ? 'player-even-money' : state === 'complete-loss' ? 'player-loss' : state === 'complete-push' ? 'player-push' : 'player');
+    if (state.startsWith('complete')) await button(page, 'Stand').click();
+    await page.addStyleTag({ content: 'html { font-size: 200%; }' }); await fit(page);
+    const surface = page.locator(state.startsWith('complete') ? '#player-result' : '[data-control-surface="insurance"]');
+    const summary = surface.locator('summary'); const box = (await summary.boundingBox())!;
+    expect(box.height).toBeGreaterThanOrEqual(44); expect(await summary.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
+    await capture(page, info, `repair-text200-${state}`, viewport.width);
+    await summary.focus(); await page.keyboard.press('Enter'); await expect(surface.locator('details')).toHaveAttribute('open', ''); await fit(page);
+    expect(await surface.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true);
+    await capture(page, info, `repair-text200-expanded-${state}`, viewport.width);
+  }
+});

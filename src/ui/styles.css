@@ -510,3 +510,19 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 .player-mode .decision-explanation { font-size: .75rem; }
 .player-mode .decision-explanation summary { min-height: 44px; padding: 12px 8px; text-align: center; }
 .player-mode .decision-explanation p { margin: 4px 8px; }
+
+/* T06 human repair: only contextual decisions/results share the local state band. */
+.player-mode .game-scene [data-control-surface='insurance'],
+.player-mode .game-scene #player-result { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; text-align: center; }
+.player-mode .game-scene [data-control-surface='insurance']:focus,
+.player-mode .game-scene #player-result:focus { outline: none; }
+.player-mode .player-dock[data-contextual-dock]:has([data-control-surface='insurance']:focus, #player-result:focus) > .control-context .round-status { outline: 3px solid #e6cf88; outline-offset: 3px; border-radius: 4px; }
+.player-mode [data-control-surface='insurance'] .insurance-context { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 12px; font-size: .8rem; }
+.player-mode [data-control-surface='insurance'] .button-row,
+.player-mode #player-result .button-row { justify-content: center; margin: 6px 0; }
+.player-mode .insurance-timing { display: block; margin: 4px 8px; }
+.player-mode .game-scene #player-result .round-net { margin: 4px 0; font-size: 1rem; font-weight: 700; }
+.player-mode #player-result .round-explanation { font-size: .75rem; }
+.player-mode #player-result .round-explanation summary { min-height: 44px; padding: 12px 8px; }
+.player-mode #player-result .round-explanation > p { margin: 4px 8px; }
+.player-mode #player-result .round-explanation .result { text-align: left; }

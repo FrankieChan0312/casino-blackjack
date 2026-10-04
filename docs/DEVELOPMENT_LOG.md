@@ -1,3 +1,55 @@
+## M10A-T06 Human Visual Repair 1 same-session review
+
+2026-10-05 00:30:53 +08:00. Complete scoped diff, tests, docs and retained evidence reviewed: **PASS**. 73 plaintext/archive records/0 trace text entries scanned, zero sensitive-pattern findings. Initial reviewed stage440 intended paths/428 exact raw evidence blobs; staged whitespace PASS /0. Final affected documentation/archival/audit/staging follow. All164 executable file hashes/2955 protected incoming paths/2629 historical evidence identical, domain EMPTY. [Review](M10A_T06_REPAIR1_EVIDENCE/precommit-review.json), [staged checkpoint](M10A_T06_REPAIR1_EVIDENCE/staged-review-checkpoint.json), [lossless logs](M10A_T06_REPAIR1_EVIDENCE/log-archive.json).
+
+M10A-T06_IMPLEMENTED_VERIFIED; cumulative4/10. Normal dock accepted/preserved; overall HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED / awaiting owner review. Genuinely fresh independent review NOT RUN. T07 waiting; M10-T02/M10-T04 implementation NOT STARTED; no Motion/animation/deployment.
+
+## M10A-T06 Human Visual Repair 1 verified checkpoint
+
+2026-10-05 00:29:37 +08:00. **M10A-T06_IMPLEMENTED_VERIFIED**, cumulative **4/10** (owner-directed repair, original3/10 history retained; no subsequent technical failure/product repair). Starting main/7bae9b2b22a5a94f8a06cbdf234a555a1b62bc83, clean/live parity0/0/untracked0. Owner finding: normal action dock accepted; Insurance/Even Money and Round Complete rejected. Overall **M10A-T06 HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED**, awaiting new live owner review; technical PASS is not acceptance. [Contract](M10A_T06.md), [technical gate](M10A_T06_REPAIR1_EVIDENCE/technical-gate.json), [evidence index](M10A_T06_REPAIR1_EVIDENCE/README.md).
+
+Focused13 files/97 UI tests/42 Chromium and full84 files/1101 Vitest/89 Chromium PASS / checked exit0. Incoming84/1098/86 plus3 appended unit and3 appended nested Chromium cases explains every count change; prior assertions/thresholds/retries and M8 top-level44 inventory unchanged. Independent M1–M8 and current PA1/RA1/M9/M10-T01/M10A-T01..T06 (18files/145tests) PASS /0. **scripts/verify.ps1 PASS / checked exit0** at2026-10-05 00:21:38 +08:00..2026-10-05 00:29:01 +08:00. All164 executed file hashes unchanged since freeze.
+
+Insurance uses one existing live state band, short Dealer Ace/exact MAIN or Bet Behind amount, immediate distinct native choices and full explanation through existing native disclosure. Result controls sit immediately after local state/before the unchanged credits strip; exact existing net calculation/values/hand results and NEXT/REPEAT handlers preserved. Full repeat/shoe explanation moves into existing Wager result details. Large section focus outline is replaced only in these contexts by a visible3px focused status cue. No recommendation/default decision or new accounting logic.
+
+Desktop contextual heights: Insurance192.375 ->118.546875px; result250.171875 ->123.1875px. Comparable before/after win/loss/neutral Push/Insurance/eligible Even Money at3 widths retained.34 listed control/8 native zoom images actually opened before full verification; other collected images are not falsely called individually inspected. Text200/native browser200 (actual2.0, viewport1280->640, DPR1.5->3, root16px/CSSzoom1), keyboard/Enter/Space disclosures, focus/44px/no overflow/card collision PASS.49 control text samples minimum6.514407246458633:1 >=4.5 and10 focus samples >=3 PASS. Scene28 text samples PASS. Normal/open screenshot bytes identical at3 widths, complete desktop geometry equal, Stand883.359375px <=900, gap6/16/10. Local HUD bounds unchanged in all contextual captures; accepted scene/Dealer/seats/felt stay intact.
+
+2955 protected incoming paths/2629 historical evidence paths raw hashes identical; **src/domain diff EMPTY**. Actions.tsx/Betting.tsx/controller/domain/geometry/PA1/canonical evidence unchanged; twelve production portraits reproduced byte-for-byte. All prior task ledgers retained. Same-session complete diff/privacy review and authorized normal publication follow; genuinely fresh independent review NOT RUN. A shell-only Node -e quoting failure during helper preparation was captured in tool output; no product/evidence mutation, required checks ran separately and passed, no repair-count reset or hidden technical test rerun.
+
+M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Motion NOT INSTALLED; animation NOT IMPLEMENTED; deployment NOT RUN.
+
+## M10A-T06 Human Visual Repair 1 focused gate — 2026-10-05 00:14:36 +08:00
+
+Cumulative **4/10**, focused **13 files /97 UI tests /42 Chromium** PASS / checked exit0. Three widths, text200, actual native browser zoom2.0 including decision/result disclosures, native keyboard/focus/44px/no-overflow,49 control text checks minimum6.514407246458633:1 and10 focus checks PASS. Listed34 control /8 native-zoom images actually opened and reviewed; desktop card rejection resolved in this same-session judgment before full regression. Insurance height192.375 ->118.546875px; result250.171875 ->123.1875px. Normal/open images byte-identical atall3 widths, Stand883.359375, gaps6/16/10;2955 protected files/2629 historical evidence identical; domain EMPTY. [Focused receipt](M10A_T06_REPAIR1_EVIDENCE/focused-gate.json), [bounded visual review](M10A_T06_REPAIR1_EVIDENCE/visual-review.json).
+
+Full required verification NOT RUN; exact executable version freeze follows. Owner T06 HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED / awaiting new live review. Normal action dock accepted and preserved. Fresh independent review NOT RUN. T07 waiting; M10-T02/M10-T04 implementation NOT STARTED; no Motion/animation/deployment.
+
+## M10A-T06 Human Visual Repair 1 — IN PROGRESS
+
+2026-10-04 23:58:53 +08:00. **M10A-T06 HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED**. Owner accepted the normal Hit/Stand/Double/Split/Surrender dock, Your turn / Hand X, guidance, native enabled/disabled treatment and existing LocalPlayerHud spacing. Owner rejected Insurance/Even Money and Round Complete as detached large web cards. This is the same T06 task: **cumulative repair 4/10**, following the retained 3/10 history; limit 10, no exception.
+
+Starting main/7bae9b2b22a5a94f8a06cbdf234a555a1b62bc83: local=origin/main=live remote, ahead/behind 0/0, CLEAN, untracked 0. Incoming 84 Vitest files / 1098 tests / 86 Chromium. Recommended GPT Sol 6.1 / High; client catalog confirms gpt-6.1-sol/High availability, actual selected runtime model/effort NOT VERIFIED. Sequential; no delegation.
+
+Scope: only compact Insurance/Even Money and Round Complete/next-round composition, related wrappers/styles/tests. Preserve normal action dock and betting-open byte/geometry/interaction contracts, T01–T05 scene/camera/seats/Dealer/HUD/felt, credits/accounting values and layout, domain/rules/RNG/shoe/cards/strategy/turn/Split/Insurance/settlement/replay/digest/journal, PA1 and all prior evidence. No animation, Motion, future tasks or deployment.
+
+Hypothesis: section-wide programmatic-focus outlines plus expanded result explanation give the rejected states a large-card appearance. Localize visible focus to the existing state heading, keep full native choices immediate, put full secondary explanation inside native disclosure, and place terminal controls immediately after local state before the unchanged credits strip. Preserve existing commands, calculations, financial copy and focus targets.
+
+Step -> verification: immutable baseline and comparable before screenshots -> smallest scoped presentation repair -> focused UI/Chromium/three widths/text200/actual browser zoom200/keyboard/contrast/normal camera comparison -> inspect desktop decision/result images before full tests -> freeze exact executable files -> full Vitest/Chromium, independent M1–M8 and PA1/RA1/M9/M10-T01/M10A-T01..T06 preservation, verify.ps1 checked PASS/0 -> full diff/protection/privacy/evidence review -> authorized normal main commit/push/factual receipt/live equality0/0/CLEAN/untracked0 -> STOP for owner visual review.
+
+Acceptance: no large decision/summary card; compact state/amount/native choices attached to the local rail, full accessible disclosure, result ownership in LocalPlayerHud, exact existing financial values/lifecycle. Preserve Stand 883.359375px <=900, gaps 6/16/10, 44px controls, text >=4.5 and focus >=3, no overflow/intersections at three widths/text200/native200. Required validation currently NOT RUN. Stop affected work for conflict/unknown overlap/missing tool/protected drift/failed focused visual gate/no progress/10 repairs/out-of-scope publication. Fresh independent review NOT RUN; owner acceptance NOT ACCEPTED / awaiting new review.
+
+M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
 ## M10A-T06 published implementation checkpoint
 
 2026-10-04 23:36:11 +08:00. **M10A-T06_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **3/10**. Branch **main**, implementation **37e71e6aded3dcd193317f4eb1518ceb76bcfd9e**. Normal origin/main push PASS / checked exit 0 at 2026-10-04 23:34:43 +08:00..2026-10-04 23:35:01 +08:00; fetch/live equality PASS / 0. Published implementation HEAD=origin/main=live remote=37e71e6aded3dcd193317f4eb1518ceb76bcfd9e, ahead/behind **0/0**, working tree **CLEAN**, untracked **0**. [Actual publication](M10A_T06_EVIDENCE/implementation-publication.json), [commit](M10A_T06_EVIDENCE/implementation-commit.json), [evidence](M10A_T06_EVIDENCE/README.md). A factual documentation/evidence receipt checkpoint follows; final delivery and Git report its final HEAD rather than embedding a self-referential commit hash in tracked content. All 164 executed file contents and 2567 protected incoming paths remain unchanged.

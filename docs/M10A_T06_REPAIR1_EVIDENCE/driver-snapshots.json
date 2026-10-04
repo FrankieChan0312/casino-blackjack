@@ -1,0 +1,167 @@
+{
+  "timestamp": "2026-10-05 00:29:38 +08:00",
+  "method": "Exact new repair-specific execution drivers plus historical25-output router; archived losslessly after executed gates. No previous driver/evidence overwritten.",
+  "snapshots": [
+    {
+      "retainedAt": "driver-m10a-t06-human1-archive.cjs.raw.log.gz",
+      "sha256": "ab6b47256c5dcf3005217238b23663773e95b4c7a0ac7e13c884c823d8286001",
+      "bytes": 3558,
+      "encoding": "gzip",
+      "compressedSha256": "9cbc5edbade891923f2ff44fe5fab783d79a8494494b83ddd2ca2964af988a67"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-assets.cjs.raw.log.gz",
+      "sha256": "75227f591a1d3fbb557baa390106c379fa87b99517b607e99c3d083b4c9fef29",
+      "bytes": 826,
+      "encoding": "gzip",
+      "compressedSha256": "dd992c18cadcf7d450ad79e14969bfff29f147a58629dcf1dd609bca64f306bc"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-audit.cjs.raw.log.gz",
+      "sha256": "a2061ecb6c8b1cbdd8e0bfe2231e6d3ce5c80476348be5901cc672011fac9a99",
+      "bytes": 4830,
+      "encoding": "gzip",
+      "compressedSha256": "cfe81905ebbbbdac4830b20bb35c684ed32ba601c85e25aa874365377a8aa174"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-capture.cjs.raw.log.gz",
+      "sha256": "0f4a85d1b48b7d03f8ccee876302411fe0d64b52a273ed87792abc99cc439061",
+      "bytes": 3281,
+      "encoding": "gzip",
+      "compressedSha256": "69abe869df98f91a5b9c71a735958130ccfd6e502a1ef787d7e8512ddf132907"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-commit.cjs.raw.log.gz",
+      "sha256": "cb94faac325b564136bfc24da92b17bef0ce46b5530d80d0c38f50ac7665fa6f",
+      "bytes": 3281,
+      "encoding": "gzip",
+      "compressedSha256": "72350edf0c8d8513436549f1211f5d1df27852bcc14a59af275723ae440930d1"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-contrast.cjs.raw.log.gz",
+      "sha256": "e7b4bfd7c3d42b710c7e907cd3036a033f8b426bc037873f6b98c33e094069d6",
+      "bytes": 5523,
+      "encoding": "gzip",
+      "compressedSha256": "cfec24cbfcf8b4e4f095141e762d532e28ad47c57a3e33bbcde620169607eac4"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-control-contrast.cjs.raw.log.gz",
+      "sha256": "ebacb539c681d019e86b88383d332ddc0fd9b0cc3766612a044fabfe47915bac",
+      "bytes": 8588,
+      "encoding": "gzip",
+      "compressedSha256": "7f877c6447775c728d429edb74d9d84fd1c434eb8c6b1972e59e1f8dedd8cc08"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-copy.cjs.raw.log.gz",
+      "sha256": "c4508cec7a2c1cd8db94ea238fa51738ab70ba2323f616f6db23e8daba3e3e37",
+      "bytes": 846,
+      "encoding": "gzip",
+      "compressedSha256": "b70a6e994e648ea46d58076af97d3a7725f76be53fdf69fa6d8fbc9d845d77aa"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-final-docs.cjs.raw.log.gz",
+      "sha256": "695c4b0ea8dec5c6248b86f9c270adbf6974389b3ee7312a052e86d1545fb789",
+      "bytes": 12972,
+      "encoding": "gzip",
+      "compressedSha256": "477412b27237db29e0e6896190b51f14b78aaa2ab535f4c80358ec0d2e736108"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-focused.cjs.raw.log.gz",
+      "sha256": "39e0cb8c881db0efc1283fcf82c29ebd835612434082e9af8bb53b90ca93832f",
+      "bytes": 5279,
+      "encoding": "gzip",
+      "compressedSha256": "b8a0747ded7e564251b74cf9050dc24257c097b351a7931698d467b0393326a8"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-freeze.cjs.raw.log.gz",
+      "sha256": "60802b8d9bde8bb91871f7b346ab17c08b3b164e398d3c899dc82bf4bc77780d",
+      "bytes": 1099,
+      "encoding": "gzip",
+      "compressedSha256": "a717b60b1ecfd0acc0d74fe8eedcfe58c1679d7446e38a5e6c3513393dfd5982"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-git.cjs.raw.log.gz",
+      "sha256": "d98f9326a0a799b3588844b4d7a1485dee7f4f1ad9ba87056c5b7deb17f8fdae",
+      "bytes": 2998,
+      "encoding": "gzip",
+      "compressedSha256": "0fe60a2a466bdeac5639dbafe7e8ac4d2b54d5666c449a32ccfedd2c03432ea8"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-init.cjs.raw.log.gz",
+      "sha256": "b7ef5026e5ceea623a9563faae0fab0b70c38831c49c7a421fd1f678834282c7",
+      "bytes": 7420,
+      "encoding": "gzip",
+      "compressedSha256": "e6da4745daf84bf68485f548756fcc8ad310a481ce72e121111b5454e05d953f"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-protection.cjs.raw.log.gz",
+      "sha256": "450094bb33bafcf089d3020d400864d753b344241eb981ca0dc6499251bcdfda",
+      "bytes": 4427,
+      "encoding": "gzip",
+      "compressedSha256": "e78f691bc3e892d2af6a4a6d61a15dd65674f3547bac7a668a944095b86765a3"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-publication-docs.cjs.raw.log.gz",
+      "sha256": "a963f68480bae886bd82ebfec2afb3798d98728b9aed3dd769617673c9c50b78",
+      "bytes": 4081,
+      "encoding": "gzip",
+      "compressedSha256": "1f41cce92068314985e5145062fe7084c3b8ba781536bb17627f98fcec9ac1f0"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-review.cjs.raw.log.gz",
+      "sha256": "82b64e7785bdc33d3bcbf91e8f8ad094f252639c22e0925e87bf557c90d8d07c",
+      "bytes": 4094,
+      "encoding": "gzip",
+      "compressedSha256": "d8086fe3caf46f90517c3141e5d046c992710a2b80733e2d5344f931f3254248"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-runner.cjs.raw.log.gz",
+      "sha256": "2ede86539c22872bd1e760949d6e785fc9479a8b79fb16762db7b4aa760d3513",
+      "bytes": 8339,
+      "encoding": "gzip",
+      "compressedSha256": "d55ed2b5bebcec38f8d1eda09313940ad7f20a60fd5e3515a53e39678f1ca085"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-scope.cjs.raw.log.gz",
+      "sha256": "434130adf361c916773f9c57e6686def336a342422ed38f35e4051bae60c657e",
+      "bytes": 445,
+      "encoding": "gzip",
+      "compressedSha256": "bfa7c324b6647b1004ddda7529eb4296dc6dbca5f503081d894d4cec49724186"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-snapshot.cjs.raw.log.gz",
+      "sha256": "895472e3ae141413ea124a83097eea478bf86c326213c46473d6c2e440db04d1",
+      "bytes": 1062,
+      "encoding": "gzip",
+      "compressedSha256": "3335aaa531de30c331ef659c712aa716d313d823eedbe0b44b0a232ec6081250"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-stage.cjs.raw.log.gz",
+      "sha256": "bc8a95b3fef01036d90b891dc2943df6cd692d63c7199f26b8457e50c79a0846",
+      "bytes": 2369,
+      "encoding": "gzip",
+      "compressedSha256": "b7b3d171daa4dccf9feae20e99ba80c8ac3b2cef9b96c82737293428165b1038"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-states.cjs.raw.log.gz",
+      "sha256": "bf8b7fbc5b2ea70ba223133d0ea71a946690d3cfb76c90d231ecf252b2eec673",
+      "bytes": 3513,
+      "encoding": "gzip",
+      "compressedSha256": "01824348032d6b8b30cf111326f89fa23e477dd2796c1b73edda4d6dac3321fa"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-zoom-disclosure.cjs.raw.log.gz",
+      "sha256": "5ed1ae331f18a82b64c1f38bc5ac8bb49bc908a9999ac21c83fa5303685b8c5a",
+      "bytes": 4602,
+      "encoding": "gzip",
+      "compressedSha256": "08b58b554dbabd97749999d93de5649b60584fe5bcab2e1e8bdb00bfcf8054e7"
+    },
+    {
+      "retainedAt": "driver-m10a-t06-human1-zoom.cjs.raw.log.gz",
+      "sha256": "4c7c85f08963b49b42a170319d883a27718d4342fe6830dd0580331328b05b9e",
+      "bytes": 17788,
+      "encoding": "gzip",
+      "compressedSha256": "ef555ca831f794cb227c5285180576e562e63e708db3e3ee598f613c80453934"
+    }
+  ]
+}

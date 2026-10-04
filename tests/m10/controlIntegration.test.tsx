@@ -92,3 +92,46 @@ it('[M10A-C08] manual decisions retain ordinary explanations and existing follow
   expect(follow).toContain('>ADD</button>'); expect(follow).toContain('>NO ADD</button>');
   expect(follow).toContain('existing exposure follows the first ordered child only');
 });
+
+it('[M10A-C09] the compact Ace context keeps exact ownership/amount, one state announcement and full native explanation', () => {
+  for (const fixture of ['player-ace', 'player-even-money']) {
+    const c = deal(fixture), before = JSON.stringify(c.getSnapshot()), html = render(c);
+    expect(html).toContain('aria-label="Insurance decision" aria-describedby="player-scene-status insurance-context"');
+    expect(html).toContain('<span>Dealer shows Ace.</span>');
+    expect(html).toContain('Your MAIN · Seat 4 · Insurance amount: 50 credits');
+    expect([...html.matchAll(/id="player-scene-status"/g)]).toHaveLength(1);
+    expect(html).not.toContain('<h2>Insurance / Even Money</h2>');
+    expect(html).toContain('<details class="decision-explanation"><summary>Insurance and Even Money explained</summary>');
+    expect(html).toContain('Dealer shows Ace. Choose before the dealer checks for Blackjack.');
+    expect(html).toContain('Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.');
+    expect(JSON.stringify(c.getSnapshot())).toBe(before);
+  }
+});
+
+it('[M10A-C10] terminal win/loss/push docks retain literal results and funds, HUD ownership and secondary full explanation without render mutation', () => {
+  for (const [fixture, net, available, outcome] of [
+    ['player', 100, 2200, 'PLAYER_WIN'], ['player-loss', -100, 1800, 'DEALER_WIN'], ['player-push', 0, 2000, 'PUSH'],
+  ] as const) {
+    const c = deal(fixture); expect(c.dispatch({ type: 'ACT', action: 'STAND', handId: 'round-1/seat-4' })).toBe(true);
+    expect(c.getSnapshot().human).toMatchObject({ available, reserved: 0 });
+    expect(c.getSnapshot().pending).toBe(0); expect(c.getSnapshot().ownResults[0].outcome).toBe(outcome);
+    const before = JSON.stringify(c.getSnapshot()), html = render(c);
+    expect(html).toContain(`id="round-net">Net result: ${net} credits`);
+    expect(html).toContain('aria-label="Your round result" aria-describedby="player-scene-status round-net"');
+    expect(html.indexOf('id="player-hand"')).toBeLessThan(html.indexOf('id="player-result"'));
+    expect(html.indexOf('id="player-result"')).toBeLessThan(html.indexOf('aria-label="Your credits"'));
+    expect(html).not.toContain('<h2>Round complete</h2>');
+    expect(html).toContain('<details class="round-explanation"><summary>Wager result details</summary><p>Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.</p>');
+    expect(JSON.stringify(c.getSnapshot())).toBe(before);
+  }
+});
+
+it('[M10A-C11] a real all-credit loss retains disabled Repeat Bet, exact reason and available Deal Again without automatic reset', () => {
+  const c = deal('player-loss', 2000);
+  expect(c.dispatch({ type: 'ACT', action: 'STAND', handId: 'round-1/seat-4' })).toBe(true);
+  const html = render(c); expect(html).toContain('disabled="">Repeat Bet · 1,000 credits</button>');
+  expect(html).toContain('Repeat Bet unavailable: not enough credits for your original main wager.');
+  expect(html).toContain('>Deal Again</button>'); expect(c.getSnapshot().human).toMatchObject({ available: 0, reserved: 0 });
+  expect(c.dispatch({ type: 'NEXT' })).toBe(true); expect(c.getSnapshot().phase).toBe('OPEN');
+  expect(c.getSnapshot().human).toMatchObject({ available: 0, reserved: 0 }); expect(c.getSnapshot().lastBet).toBe(2000);
+});
