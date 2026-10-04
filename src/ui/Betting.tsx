@@ -69,7 +69,7 @@ export function PlayerBetting({ controller, view }: { controller: BrowserControl
   const [target, setTarget] = useState(view.interaction.backTargets[0] ?? 0);
   const units = Number(amount) * 2;
   const reason = units === 0 ? 'Choose 10 to 1000 whole credits.' : controller.queryWager({ type: 'MAIN', seat: local, amount: units });
-  return <section className="panel player-betting" aria-label="Your wager"><h2>Take your seat</h2>
+  return <section className="panel player-betting" data-control-surface="betting" aria-label="Your wager"><h2>Take your seat</h2>
     <form onSubmit={event => { event.preventDefault(); controller.dispatch({ type: 'DEAL', amount: units }); }}>
       <label htmlFor="player-wager">Your main wager <span>(credits)</span></label>
       <input id="player-wager" type="number" min={10} max={1000} step={1} required value={amount} onChange={event => setAmount(event.target.value)} />

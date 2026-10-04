@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-04 23:32:09 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "stagedPaths": 389,
+  "principalPaths": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M10A_T05.md",
+    "docs/M10A_T06.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "src/ui/Actions.tsx",
+    "src/ui/App.tsx",
+    "src/ui/Betting.tsx",
+    "src/ui/Decisions.tsx",
+    "src/ui/styles.css",
+    "tests/browser/fixtures.ts",
+    "tests/browser/m10a/controlIntegration.spec.ts",
+    "tests/m10/controlIntegration.test.tsx"
+  ],
+  "rawEvidenceIndexHashes": 374,
+  "stagedWhitespace": "PASS / 0",
+  "protectedScope": "Only five UI files, one existing fixture, two new T06 test files, seven task docs and T06 evidence; no domain/controller/geometry/assets/canonical/dependency mutation",
+  "fullDiff": ".git/m10a-t06-complete-staged.diff",
+  "qualification": "Initial reviewed stage; final receipts and affected-documents logs are added and the same staging checks rerun before commit"
+}

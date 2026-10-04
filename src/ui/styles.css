@@ -479,3 +479,34 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 @media (max-width: 600px) {
   .player-mode [data-felt-markings] .seat-stake[data-felt-destination='main-wager'] { outline: none; }
 }
+
+/* T06: native controls share the local rail; public hands and felt retain their footprint. */
+.player-mode .control-context { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 6px; }
+.player-mode #player-action-hand { line-height: 1.45; font-weight: 700; color: #f5e9c6; }
+.player-mode [data-control-surface] button { border-radius: 18px; transition: none; }
+.player-mode [data-control-surface] button:not(:disabled) { box-shadow: inset 0 2px 0 #ffffff18, 0 3px 0 #0e2118; }
+.player-mode [data-control-surface] .primary,
+.player-mode [data-control-surface] .action-hit,
+.player-mode [data-control-surface] .action-stand { background: #e3d3a5; color: #102e23; border-color: #e3d3a5; }
+.player-mode [data-control-surface] .action-double,
+.player-mode [data-control-surface] .action-split,
+.player-mode [data-control-surface] .action-surrender { background: #254235; color: #eef3ed; border-color: #8fa184; }
+.player-mode [data-control-surface] button:hover:not(:disabled) { background: #385c46; color: #eef3ed; }
+.player-mode [data-control-surface] .primary:hover:not(:disabled),
+.player-mode [data-control-surface] .action-hit:hover:not(:disabled),
+.player-mode [data-control-surface] .action-stand:hover:not(:disabled) { background: #f1e4be; color: #102e23; }
+.player-mode [data-control-surface] button:disabled { background: #22352c; color: #c9d0c8; border-color: #8fa184; border-style: dashed; box-shadow: none; }
+.player-mode [data-control-surface] .wager-presets button { border-radius: 50%; border-color: #b39659; }
+.player-mode [data-control-surface] .wager-presets button[aria-pressed='true'] { border-style: solid; font-weight: 800; outline: 2px solid #ffe7a2; outline-offset: 2px; }
+.player-mode .game-scene [data-control-surface='betting'] > form { border-radius: 26px; background: #143b2c; box-shadow: inset 0 1px 0 #8fa184; }
+.player-mode .game-scene [data-control-surface='betting'] input { border-color: #b39659; background: #102e23; }
+.player-mode .game-scene [data-control-surface='insurance'],
+.player-mode .game-scene [data-control-surface='follow'] { margin: 4px 0 0; padding: 8px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.player-mode [data-control-surface='insurance'] h2,
+.player-mode [data-control-surface='follow'] h2 { margin: 0; text-align: center; font-size: .85rem; letter-spacing: .08em; }
+.player-mode [data-control-surface='insurance'] > p { margin: 4px 0; text-align: center; }
+.player-mode [data-control-surface='insurance'] .button-row,
+.player-mode [data-control-surface='follow'] .button-row { justify-content: center; margin: 8px 0; }
+.player-mode .decision-explanation { font-size: .75rem; }
+.player-mode .decision-explanation summary { min-height: 44px; padding: 12px 8px; text-align: center; }
+.player-mode .decision-explanation p { margin: 4px 8px; }

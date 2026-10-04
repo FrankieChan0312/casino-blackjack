@@ -1,3 +1,55 @@
+## M10A-T06 same-session review checkpoint
+
+2026-10-04 23:33:18 +08:00. Complete authored source/test/CSS/docs diff and 36 control / 23 native-browser zoom images reviewed: **PASS**. 96 plaintext/archive records and 94 trace text entries scanned, zero sensitive-pattern findings. Initial reviewed stage: 389 intended paths / 374 exact raw evidence blobs; staged whitespace PASS / 0. Final affected-documentation check and staging repeat follow after these factual receipts. All 164 executed file contents / 2567 protected incoming paths / 2244 historical evidence unchanged; domain diff EMPTY. [Review](M10A_T06_EVIDENCE/precommit-review.json), [stage checkpoint](M10A_T06_EVIDENCE/staged-review-checkpoint.json), [lossless archive manifest](M10A_T06_EVIDENCE/log-archive.json).
+
+M10A-T06_IMPLEMENTED_VERIFIED; 3/10. M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED; 4/10 unchanged. Owner T06 acceptance PENDING; genuinely fresh independent review NOT RUN. M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED; Motion NOT INSTALLED; deployment NOT RUN.
+
+## M10A-T06 final technical checkpoint
+
+2026-10-04 23:28:57 +08:00. **M10A-T06_IMPLEMENTED_VERIFIED**, repairs **3/10**. Starting main/81b5268783fcc8ffc2631a331a0471a2ce7b39d8, local=origin/main=live remote, 0/0, CLEAN, untracked 0 independently confirmed before edits. **M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED** recorded before implementation; historical T05 4/10, T04 5/10, T03 4/10, T02 8/10 and T01 11/11 OWNER-AUTHORIZED EXCEPTION unchanged. Owner T06 visual acceptance PENDING; genuinely fresh independent review NOT RUN. Normal publication follows full scope/evidence review; deployment NOT RUN. [Task](M10A_T06.md), [evidence](M10A_T06_EVIDENCE/README.md), [actual technical receipt](M10A_T06_EVIDENCE/technical-gate.json).
+
+Focused UI **13 files / 94 tests**, focused Chromium **39**, full Vitest **84 files / 1098 tests**, full Chromium **86**, independent M1–M8 and current PA1/RA1/M9/M10-T01/M10A-T01..T06 **18 files / 142 tests**, final **scripts/verify.ps1 PASS / checked exit 0**. Baseline 83/1090/79 plus one eight-case unit file and one seven-case browser file fully explains the changes. Repair 3 keeps new browser cases in the recursively discovered M10A subdirectory; all accepted historical assertions, 44-case M8 inventory, thresholds and retries remain unchanged. Both prior focused failures and the first full inventory failure are retained.
+
+The existing five native actions form one green/gold dock and visibly name the public current Hand A/B/descendant. Disabled actions retain native semantics, dashed boundaries and named reasons. Exact numeric wager input retains min 10/max 1000/step 1; denominations 10/25/100 and Deal preserve existing dispatch/reservation. Insurance/Decline/eligible Even Money remain separate native choices; compact transparent decision controls retain the exact funded-wager / original-stake explanation through a native disclosure. Follower decisions, result/Deal Again/Repeat Bet and focus routing are unchanged. Final accounting HUD is not implemented.
+
+All **36 control screenshots / 23 genuine native-browser zoom screenshots** inspected before full regression: three widths, normal/Split A/B/betting/Insurance/Even Money/unaffordable/result and text 200%; native zoom 2.0 observed 1280x723 -> 640x361 CSS viewport, DPR 1.5 -> 3, root 16px/CSS zoom 1 unchanged. Keyboard/focus and native 44px targets PASS; no horizontal overflow or card overlap. Control labels/value/guidance/disabled/selected/hover contrast: **42 checks**, minimum **6.598619564170631:1** >=4.5; six actual focus-ring pixel checks >=3 PASS. Existing scene text 28 checks PASS, minimum 6.969612258115216:1; rules 8.35089319569114:1. Bounded measured evidence, no broad accessibility certification claim.
+
+Before/final normal camera/Dealer/remote/local/card/dock/form measurements exactly match. Stand bottom **883.359375px <=900**; existing action gap **6px desktop / 16px tablet / 10px mobile**, Dealer 180x220, guest portraits 84x112, local cards 100x132. Accepted T01–T05 CSS remains an exact prefix; no recomposition. **2567** protected incoming paths / **2244** historical evidence raw hashes unchanged; src/domain diff **EMPTY**. RNG/shoe/cards/accounting/bankroll/replay/digest/journal/Dealer/computer strategy/controller/geometry remain unchanged. PA1 sources/provenance/canonical evidence immutable; twelve production PNGs reproduced byte-for-byte.
+
+M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Formal Dealer artwork and animations NOT IMPLEMENTED; Motion NOT INSTALLED; deployment NOT RUN. STOP after normal publication for owner T06 visual acceptance.
+
+## M10A-T06 repair 3 closed; focused gate retained
+
+2026-10-04 23:14:08 +08:00. Affected documentation/M8 inventory 5 files / 13 tests and focused Chromium 39 cases PASS / checked exit 0. Full recursive Chromium discovery retains all seven new T06 registrations; all historical assertions remain untouched. Each of 164 executable file contents equals the first frozen version after mapping only the renamed new spec. The completed 36-control/23-native screenshot review and contrast/zoom/geometry checks therefore still apply to identical product bytes. T06 3/10; refreeze followed by full Vitest/full Chromium/independent/current/unified gates. Owner visual acceptance PENDING, fresh independent review NOT RUN.
+
+## M10A-T06 repair 3/10
+
+2026-10-04 23:09:08 +08:00. Full Vitest executed: 83 files PASS / 1 file FAIL; 1097 tests PASS / 1 test FAIL, checked exit 1. [Original failure](M10A_T06_EVIDENCE/t06-full-vitest.json). REG-M8-096 counted 51 top-level browser registrations instead of its accepted 44 because the new T06 spec contributed seven later-task cases. Move only the new spec to the M10A subdirectory, which the unchanged recursive Playwright configuration discovers. Preserve all existing historical tests and all seven new assertions; no filtering, skips, threshold changes or product changes. Rerun affected documentation/M8 inventory and focused Chromium; only after PASS refreeze and rerun complete gates. Historical frozen version retained as executed-version-before-repair3.json. T06 3/10, owner acceptance PENDING; no future task started.
+
+## M10A-T06 focused gate passed
+
+2026-10-04 23:06:25 +08:00. T06 repair 2/10 closed: focused UI 13 files / 94 tests and focused Chromium 39 tests PASS / checked exit 0. Desktop/tablet/mobile, normal/Split A/B, betting, Insurance/Even Money/unaffordable and round-complete checks PASS. All 36 control screenshots and 23 genuine native-browser 200% zoom screenshots inspected: [visual review](M10A_T06_EVIDENCE/visual-review.json). Text 200%, native zoom 2.0 (1280 CSS width -> 640; unchanged 16px root), keyboard/focus and no overflow PASS. Control text minimum 6.598619564170631:1 across 42 checks; six actual focus-ring checks PASS. Stand bottom remains 883.359375px; accepted normal camera measurements unchanged. PA1 twelve originals/production derivatives and exact reproduction PASS / exit 0. Full regression has NOT RUN yet and follows only after this gate. Owner T06 acceptance PENDING; genuinely fresh independent review NOT RUN.
+
+## M10A-T06 repair 2/10
+
+2026-10-04 22:50:20 +08:00. Focused Chromium 32 PASS / 7 FAIL, checked exit 1. [Failure](M10A_T06_EVIDENCE/t06-focused-browser.json), [ledger](M10A_T06_EVIDENCE/repair-ledger.json). Preserve the existing exact Your turn live-status text; display public Hand A/B alongside it without adding a row. The newly authored gap check incorrectly required desktop 6px at all widths; incoming CSS explicitly retains tablet 16px/mobile 10px. Correct only that new test contract, preserve all pre-existing assertions and the 900px acceptance threshold. Rerun affected UI and full focused Chromium before any full regression. T06 2/10; owner acceptance PENDING.
+
+## M10A-T06 repair 1/10
+
+2026-10-04 22:42:38 +08:00. Initial focused UI: 92 PASS / 2 FAIL, checked exit 1. The new Insurance and Even Money record assertions used the wrong existing contract literals. Authoritative optionalGame types/constructors require null Insurance handId and COMMITTED final status. Correct only those two test literals; financial/eligibility assertions remain intact. [Failure](M10A_T06_EVIDENCE/t06-initial-unit.json), [ledger](M10A_T06_EVIDENCE/repair-ledger.json). Affected rerun t06-repair1-unit follows. Product unchanged by repair; T06 1/10, owner acceptance PENDING; no future task started.
+
+## M10A-T05 human acceptance and T06 authorization
+
+2026-10-04 22:34:20 +08:00. **M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED** by explicit owner instruction at main/81b5268783fcc8ffc2631a331a0471a2ce7b39d8. Restrained betting, hand-landing and Dealer/table markings communicate Blackjack structure without competing with cards, seats, DealerZone or LocalPlayerHud. Split and decision states remain clear; controls/accounting/animation belong to later tasks. Historical T05 **4/10**, T04 **5/10**, T03 **4/10**, T02 **8/10**, T01 **11/11 — OWNER-AUTHORIZED EXCEPTION** remain unchanged.
+
+M10A-T06 Control Integration authorized / IN PROGRESS; **0/10**. Live baseline equality, 0/0, CLEAN, untracked 0 independently checked before authored files. [Contract](M10A_T06.md), [raw baseline](M10A_T06_EVIDENCE/before.json). T06 owner acceptance PENDING; fresh independent review NOT RUN; deployment NOT RUN. M10A-T07 / M10-T02 / M10-T04 implementation NOT STARTED.
+
 ## M10A-T05 published implementation checkpoint
 
 2026-10-04 22:02:54 +08:00. **M10A-T05_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **4/10**. Branch **main**, implementation **22edca336d26a5c53a1632fd4009a5966ca86ea7**. Normal origin/main push PASS/checked0 at2026-10-04 22:02:32 +08:00..2026-10-04 22:02:54 +08:00; fetch/live equality PASS/0. Published HEAD=origin/main=live remote=22edca336d26a5c53a1632fd4009a5966ca86ea7,0/0,CLEAN,untracked0. A factual receipt-only checkpoint follows; final Git/delivery reports final HEAD. [Publication](M10A_T05_EVIDENCE/implementation-publication.json), [evidence](M10A_T05_EVIDENCE/README.md).
@@ -2934,3 +2986,7 @@ Required scene contrast subsequently FAIL/exit1: BLACKJACK PAYS3:2 foreground226
 ## M10A-T05 administrative stage-check diagnostic
 
 2026-10-04 22:01:21 +08:00. The stage checker failed with exit 1 because its add argument was omitted after review documentation changed. The existing index still contained the previous README bytes. [Observed hashes and diagnostic](M10A_T05_EVIDENCE/stage-administration.json) are retained. This is a staging operation correction, with no implementation change; repair count remains 4/10. Restaging and exact-byte/whitespace verification follow.
+
+## T06 evidence-index administrative completion — 2026-10-04 23:30:19 +08:00
+
+Final technical gates are PASS. The documentation finalizer reached an EEXIST exclusive-creation guard on the already task-owned evidence README after saving its technical receipt and current docs. Exact initial index and original driver bytes are retained; only the remaining authored index tail was applied. This is an administrative file-mode correction, no product/test/config change or failed validation; T06 remains 3/10. [Receipt](M10A_T06_EVIDENCE/index-administrative-correction.json). Affected-documentation verification follows.

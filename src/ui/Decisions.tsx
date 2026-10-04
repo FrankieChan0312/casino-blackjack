@@ -5,16 +5,18 @@ export function Decisions({ view, controller }: { view: BrowserView; controller:
   const ace = view.interaction.insurance;
   const follow = view.follow;
   return <>
-    {ace && <section tabIndex={-1} className="panel decision" aria-label="Insurance decision"><h2>Insurance / Even Money</h2>
-      <p>Dealer shows Ace. Choose before the dealer checks for Blackjack.</p>
+    {ace && <section tabIndex={-1} className="panel decision" data-control-surface={view.playerMode ? 'insurance' : undefined} aria-label="Insurance decision"><h2>Insurance / Even Money</h2>
+      <p id="insurance-context">Dealer shows Ace. Choose before the dealer checks for Blackjack.</p>
       <p>{ace.role === 'BACK' ? 'Bet Behind' : 'Your MAIN'} · Seat {ace.targetSeat} · Insurance amount: {credits(ace.amount)} credits</p>
-      <div className="button-row"><button disabled={!ace.affordable} onClick={() => controller.dispatch({ type: 'ACE', choice: 'INSURANCE' })}>Buy Insurance</button>
+      <div className="button-row"><button disabled={!ace.affordable} aria-describedby={!ace.affordable ? 'insurance-unavailable' : 'insurance-context'} onClick={() => controller.dispatch({ type: 'ACE', choice: 'INSURANCE' })}>Buy Insurance</button>
         <button onClick={() => controller.dispatch({ type: 'ACE', choice: 'DECLINE' })}>Decline</button>
         {ace.evenMoney && <button onClick={() => controller.dispatch({ type: 'ACE', choice: 'EVEN_MONEY' })}>Take Even Money</button>}</div>
-      {!ace.affordable && <p className="reason">Insurance unavailable — not enough available credits.</p>}
-      <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>
+      {!ace.affordable && <p className="reason" id="insurance-unavailable">Insurance unavailable — not enough available credits.</p>}
+      {view.playerMode ? <details className="decision-explanation"><summary>Insurance and Even Money explained</summary>
+        <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>
+      </details> : <p>Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.</p>}
     </section>}
-    {follow && <section tabIndex={-1} className="panel decision" aria-label="Bet Behind follow decision"><h2>{follow.kind === 'DOUBLE' ? 'Double' : 'Split / Re-split'} follow decision</h2>
+    {follow && <section tabIndex={-1} className="panel decision" data-control-surface={view.playerMode ? 'follow' : undefined} aria-label="Bet Behind follow decision"><h2>{follow.kind === 'DOUBLE' ? 'Double' : 'Split / Re-split'} follow decision</h2>
       <p>Seat {follow.targetSeat} · Computer controller · {handLabel(follow.handId)}</p>
       <p>Current follower exposure: {credits(view.interaction.followAmount)} credits</p>
       <p>Matching additional amount: {credits(view.interaction.followAmount)} credits</p>
@@ -65,7 +67,7 @@ function PlayerResults({ view, controller }: { view: BrowserView; controller: Br
   const stake = records.reduce((sum, r) => sum + r.stake, 0);
   const returned = records.reduce((sum, r) => sum + r.returned, 0);
   const affordable = view.lastBet > 0 && view.lastBet <= (view.human?.available ?? 0);
-  return <section id="player-result" tabIndex={-1} className="panel player-result" aria-label="Your round result">
+  return <section id="player-result" tabIndex={-1} className="panel player-result" data-control-surface="result" aria-label="Your round result">
     <h2>{view.phase === 'VOID' ? 'Round interrupted — stakes refunded' : 'Round complete'}</h2>
     <p className="round-net">{view.phase === 'VOID' ? 'Refunded' : 'Net result'}: {credits(view.phase === 'VOID' ? returned : returned - stake)} credits</p>
     <div className="button-row"><button className="primary" onClick={() => controller.dispatch({ type: 'NEXT' })}>Deal Again</button>

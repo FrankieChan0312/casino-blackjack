@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-04 23:28:52 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "81b5268783fcc8ffc2631a331a0471a2ce7b39d8",
+  "protectedFiles": 2567,
+  "immutableEvidence": 2244,
+  "acceptedCSS": "Exact T01–T05 prefix unchanged; T06 static control rules appended",
+  "t05History": "Exact historical suffix retained after explicit acceptance prepend",
+  "domainDiff": "EMPTY",
+  "controlHandlersAndDisabledExpressions": "Exact incoming expressions unchanged",
+  "historicalBrowserAssertions": "All existing browser specs unchanged; only one real-domain Even Money fixture and a separate new T06 spec added"
+}

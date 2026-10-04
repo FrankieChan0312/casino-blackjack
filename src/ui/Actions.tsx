@@ -9,7 +9,8 @@ export function Actions({ view, controller }: { view: BrowserView; controller: B
   const current = local?.hands.find((hand) => hand.handId === view.interaction.handId);
   const rsa = view.interaction.actions.some(entry => entry.action === 'HIT' && entry.reason === 'HIT_NOT_ALLOWED')
     && view.interaction.actions.some(entry => entry.action === 'SPLIT' && entry.enabled);
-  return <section id="local-actions" className="panel local-actions" aria-label="Primary actions" tabIndex={-1}><h2>Local player</h2>
+  return <section id="local-actions" className="panel local-actions" aria-label="Primary actions" aria-describedby={view.playerMode ? 'player-scene-status player-action-hand' : undefined}
+    data-control-surface={view.playerMode ? 'actions' : undefined} data-active-hand-id={view.playerMode ? current?.handId : undefined} tabIndex={-1}><h2>Local player</h2>
     <p>{view.human?.controlledSeat ? `You control Seat ${view.human.controlledSeat}` : 'Spectator — no card control'}</p>
     {current && <>{!view.playerMode && <><h3>{handLabel(current.handId)} · Your current hand <span className="turn-marker">ACTIVE</span></h3><Cards cards={current.cards} /><p className="local-total">Total: {current.total} <span className="wager-chip">Wager: {credits(current.stakeUnits)}</span></p></>}
       {rsa && <p id="rsa-choice">Re-split Aces: choose Split with a matching wager, or Stand to keep Soft 12. This hand cannot Hit, Double or Surrender.</p>}

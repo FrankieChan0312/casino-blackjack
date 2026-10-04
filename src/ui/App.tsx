@@ -1,7 +1,7 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import type { BrowserController, BrowserView } from '../browser/controller.js';
 import { Table } from './Table.js';
-import { credits, roundStatus } from './presentation.js';
+import { credits, handLabel, roundStatus } from './presentation.js';
 import { Setup, Betting, PlayerBetting } from './Betting.js';
 import { Actions } from './Actions.js';
 import { Decisions, Results } from './Decisions.js';
@@ -53,7 +53,8 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
     <div className="table-scene">
     <Table view={view} lineup={lineup} />
     <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls">
-      <p id="player-scene-status" className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
+      <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{roundStatus(view)}</p>
+        {view.interaction.handId && view.interaction.actions.some(a => a.enabled) && <span id="player-action-hand">· {handLabel(view.interaction.handId)}</span>}</div>
       {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />

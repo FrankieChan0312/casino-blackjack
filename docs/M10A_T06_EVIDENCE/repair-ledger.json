@@ -1,0 +1,41 @@
+{
+  "task": "M10A-T06",
+  "initialTimestamp": "2026-10-04 22:34:20 +08:00",
+  "count": 3,
+  "limit": 10,
+  "exceptionAuthorized": false,
+  "cycles": [
+    {
+      "number": 1,
+      "timestamp": "2026-10-04 22:42:38 +08:00",
+      "failure": "t06-initial-unit: 2 FAIL / 92 PASS / exit 1",
+      "hypothesis": "The two newly authored literal expectations confuse the existing record contract with absent/display terminology.",
+      "authority": "src/domain/optionalGame.ts lines 33–38 declare COMMITTED and null Insurance handId; lines 300/319 produce those values. Financial expectations already passed.",
+      "fix": "Change only the two test literals undefined -> null and SETTLED -> COMMITTED. No product/domain/contract changes.",
+      "verification": "t06-repair1-unit",
+      "result": "PASS / 0"
+    },
+    {
+      "number": 2,
+      "timestamp": "2026-10-04 22:50:20 +08:00",
+      "failure": "t06-focused-browser: 32 PASS / 7 FAIL / checked exit 1",
+      "hypothesis": "Appending Hand A inside role=status breaks the existing exact Your turn semantic contract. The new uniform 6px test incorrectly ignores unchanged tablet 16px/mobile 10px table padding.",
+      "authority": "Existing M10A-E01 status assertion and incoming styles.css padding rules at 246/255/333. Desktop before/after metrics already exactly match at 6px and Stand 883.359375px.",
+      "fix": "Preserve role=status unchanged and show the current-hand span alongside it. Keep native action context accessible through both existing status and visible hand ID. Correct only new responsive gap assertions to the unchanged 6/16/10px contract; old assertions/thresholds remain untouched.",
+      "verification": "t06-repair2-unit and t06-repair2-browser",
+      "result": "PASS / 0: focused UI 13 files / 94 tests; focused Chromium 39 tests. Visual/contrast/native-zoom gate PASS before full regression.",
+      "closureTimestamp": "2026-10-04 23:06:25 +08:00"
+    },
+    {
+      "number": 3,
+      "timestamp": "2026-10-04 23:09:08 +08:00",
+      "failure": "t06-full-vitest: 84 files / 1098 tests; 1097 PASS / 1 FAIL / checked exit 1",
+      "hypothesis": "The accepted M8 inventory enumerates only top-level browser specs and excludes known later-milestone files. The new top-level T06 file contributes seven later-task registrations to the accepted 44-case count (actual 51).",
+      "authority": "Unchanged tests/unit/m8Contract.test.ts REG-M8-096 and existing recursive playwright.config.ts testMatch.",
+      "fix": "Move only the newly added T06 spec into tests/browser/m10a/controlIntegration.spec.ts. Keep all seven literal registrations/assertions and every pre-existing historical test unchanged. Full Playwright recursive discovery still includes all T06 tests; no test exclusion or threshold change.",
+      "verification": "Affected documentation/M8 inventory and focused Chromium, then refreeze and complete full gates",
+      "result": "PASS / 0: documentation 5 files / 13 tests and focused Chromium 39 tests. All 164 executable contents equal the first frozen version after mapping only the new spec path.",
+      "closureTimestamp": "2026-10-04 23:14:08 +08:00"
+    }
+  ]
+}

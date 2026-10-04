@@ -1,0 +1,1535 @@
+{
+  "start": "2026-10-04 22:55:48 +08:00",
+  "method": "Real Chromium computed foreground versus actual rendered background pixels. Flat native button/input backgrounds are independently checked against the pixel at upper centre inside the control; transparent light text uses the brightest sampled surrounding background. Keyboard focus/selected rings use actual adjacent outside pixels. Thresholds remain normal text 4.5 and non-text/focus 3. Bounded checks, not a WCAG certification.",
+  "checks": [
+    {
+      "state": "open",
+      "label": "Wager input",
+      "tag": "INPUT",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(16, 46, 35)",
+      "box": {
+        "x": 479.46875,
+        "y": 915.6875,
+        "width": 96,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          16,
+          46,
+          35
+        ]
+      ],
+      "renderedBackground": [
+        16,
+        46,
+        35
+      ],
+      "ratio": 14.612764927418258,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "10",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "false",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 585.46875,
+        "y": 915.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "25",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "false",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 661.46875,
+        "y": 915.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "100",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": "true",
+      "foreground": "rgb(241, 242, 218)",
+      "background": "rgb(49, 77, 54)",
+      "box": {
+        "x": 737.46875,
+        "y": 915.6875,
+        "width": 68,
+        "height": 68
+      },
+      "backgroundPixels": [
+        [
+          49,
+          77,
+          54
+        ]
+      ],
+      "renderedBackground": [
+        49,
+        77,
+        54
+      ],
+      "ratio": 8.218265144527537,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Deal",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 815.46875,
+        "y": 921.6875,
+        "width": 136,
+        "height": 56
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "10–1000 whole credits. Your guests are already ready to play.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 999.6875,
+        "width": 784,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          20,
+          62,
+          47
+        ],
+        [
+          23,
+          70,
+          52
+        ],
+        [
+          20,
+          62,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        23,
+        70,
+        52
+      ],
+      "ratio": 9.51976074140991,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "open",
+      "label": "Optional wagers",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 1030.875,
+        "width": 784,
+        "height": 45
+      },
+      "backgroundPixels": [
+        [
+          19,
+          59,
+          45
+        ],
+        [
+          22,
+          67,
+          49
+        ],
+        [
+          19,
+          59,
+          45
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        67,
+        49
+      ],
+      "ratio": 9.928392469220645,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "· Hand A",
+      "tag": "SPAN",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(245, 233, 198)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 647.265625,
+        "y": 804.171875,
+        "width": 64.875,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          29,
+          79,
+          60
+        ],
+        [
+          29,
+          79,
+          60
+        ],
+        [
+          29,
+          79,
+          60
+        ]
+      ],
+      "renderedBackground": [
+        29,
+        79,
+        60
+      ],
+      "ratio": 7.761361929301275,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Hit",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 334,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Stand",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 458,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Double",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(37, 66, 53)",
+      "box": {
+        "x": 582,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          37,
+          66,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        37,
+        66,
+        53
+      ],
+      "ratio": 9.782638491072797,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Split",
+      "tag": "BUTTON",
+      "disabled": true,
+      "pressed": null,
+      "foreground": "rgb(201, 208, 200)",
+      "background": "rgb(34, 53, 44)",
+      "box": {
+        "x": 706,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          34,
+          53,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        34,
+        53,
+        44
+      ],
+      "ratio": 8.26701301665702,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Surrender",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(37, 66, 53)",
+      "box": {
+        "x": 830,
+        "y": 831.359375,
+        "width": 116,
+        "height": 52
+      },
+      "backgroundPixels": [
+        [
+          37,
+          66,
+          53
+        ]
+      ],
+      "renderedBackground": [
+        37,
+        66,
+        53
+      ],
+      "ratio": 9.782638491072797,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Action guidance · Unavailable actions explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 883.359375,
+        "width": 784,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          50
+        ],
+        [
+          14,
+          33,
+          24
+        ],
+        [
+          22,
+          66,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        66,
+        50
+      ],
+      "ratio": 10.045156548143616,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "label": "Split unavailable — The two cards must have equal Blackjack values.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(228, 204, 171)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 460.609375,
+        "y": 964.75,
+        "width": 358.78125,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          24,
+          70,
+          52
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          23,
+          70,
+          52
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 6.698190592294427,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "hover",
+      "label": "Stand",
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(241, 228, 190)",
+      "ratio": 11.537861030031829,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "hover",
+      "label": "Double",
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgb(56, 92, 70)",
+      "ratio": 6.700949376032529,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 861.359375,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Your MAIN · Seat 4 · Insurance amount: 50 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 888.546875,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          67,
+          51
+        ],
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          23,
+          67,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        76,
+        58
+      ],
+      "ratio": 8.72227639246055,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 519.5,
+        "y": 919.734375,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 666.921875,
+        "y": 919.734375,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 971.734375,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 9.2511473066851,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 1019.734375,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          20,
+          62,
+          47
+        ],
+        [
+          23,
+          70,
+          52
+        ],
+        [
+          21,
+          63,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        23,
+        70,
+        52
+      ],
+      "ratio": 9.51976074140991,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 861.359375,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Your MAIN · Seat 4 · Insurance amount: 50 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 888.546875,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          67,
+          51
+        ],
+        [
+          27,
+          76,
+          58
+        ],
+        [
+          23,
+          67,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        27,
+        76,
+        58
+      ],
+      "ratio": 8.72227639246055,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 433.390625,
+        "y": 919.734375,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 580.8125,
+        "y": 919.734375,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Take Even Money",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 678.375,
+        "y": 919.734375,
+        "width": 164.234375,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 971.734375,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 9.2511473066851,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 1019.734375,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          20,
+          62,
+          47
+        ],
+        [
+          23,
+          70,
+          52
+        ],
+        [
+          21,
+          63,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        23,
+        70,
+        52
+      ],
+      "ratio": 9.51976074140991,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Dealer shows Ace. Choose before the dealer checks for Blackjack.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 861.359375,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          78,
+          59
+        ],
+        [
+          23,
+          69,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        78,
+        59
+      ],
+      "ratio": 8.481443545296958,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Your MAIN · Seat 4 · Insurance amount: 500 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 888.546875,
+        "width": 780,
+        "height": 23.1875
+      },
+      "backgroundPixels": [
+        [
+          23,
+          68,
+          51
+        ],
+        [
+          28,
+          77,
+          59
+        ],
+        [
+          23,
+          68,
+          51
+        ]
+      ],
+      "renderedBackground": [
+        28,
+        77,
+        59
+      ],
+      "ratio": 8.591475188266326,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Buy Insurance",
+      "tag": "BUTTON",
+      "disabled": true,
+      "pressed": null,
+      "foreground": "rgb(201, 208, 200)",
+      "background": "rgb(34, 53, 44)",
+      "box": {
+        "x": 519.5,
+        "y": 919.734375,
+        "width": 139.421875,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          34,
+          53,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        34,
+        53,
+        44
+      ],
+      "ratio": 8.26701301665702,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Decline",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 666.921875,
+        "y": 919.734375,
+        "width": 89.5625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance unavailable — not enough available credits.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(228, 204, 171)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 971.734375,
+        "width": 780,
+        "height": 19.703125
+      },
+      "backgroundPixels": [
+        [
+          21,
+          65,
+          49
+        ],
+        [
+          25,
+          73,
+          55
+        ],
+        [
+          21,
+          65,
+          49
+        ]
+      ],
+      "renderedBackground": [
+        25,
+        73,
+        55
+      ],
+      "ratio": 6.598619564170631,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance and Even Money explained",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 995.4375,
+        "width": 780,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          21,
+          64,
+          48
+        ],
+        [
+          24,
+          72,
+          54
+        ],
+        [
+          21,
+          64,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        72,
+        54
+      ],
+      "ratio": 9.2511473066851,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "label": "Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 256,
+        "y": 1043.4375,
+        "width": 764,
+        "height": 17.390625
+      },
+      "backgroundPixels": [
+        [
+          20,
+          62,
+          47
+        ],
+        [
+          23,
+          70,
+          52
+        ],
+        [
+          21,
+          62,
+          47
+        ]
+      ],
+      "renderedBackground": [
+        23,
+        70,
+        52
+      ],
+      "ratio": 9.51976074140991,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Net result: 100 credits",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 225, 183)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 933.359375,
+        "width": 784,
+        "height": 34.796875
+      },
+      "backgroundPixels": [
+        [
+          22,
+          66,
+          50
+        ],
+        [
+          26,
+          75,
+          57
+        ],
+        [
+          22,
+          66,
+          50
+        ]
+      ],
+      "renderedBackground": [
+        26,
+        75,
+        57
+      ],
+      "ratio": 7.627300838453566,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Deal Again",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(16, 46, 35)",
+      "background": "rgb(227, 211, 165)",
+      "box": {
+        "x": 248,
+        "y": 980.15625,
+        "width": 116.015625,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          227,
+          211,
+          165
+        ]
+      ],
+      "renderedBackground": [
+        227,
+        211,
+        165
+      ],
+      "ratio": 9.830360053763966,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Repeat Bet · 100 credits",
+      "tag": "BUTTON",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(24, 51, 34)",
+      "background": "rgb(210, 223, 181)",
+      "box": {
+        "x": 372.015625,
+        "y": 980.15625,
+        "width": 211.234375,
+        "height": 44
+      },
+      "backgroundPixels": [
+        [
+          210,
+          223,
+          181
+        ]
+      ],
+      "renderedBackground": [
+        210,
+        223,
+        181
+      ],
+      "ratio": 9.744680206531394,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Deal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.",
+      "tag": "P",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 1036.15625,
+        "width": 784,
+        "height": 46.375
+      },
+      "backgroundPixels": [
+        [
+          21,
+          63,
+          48
+        ],
+        [
+          24,
+          71,
+          53
+        ],
+        [
+          21,
+          63,
+          48
+        ]
+      ],
+      "renderedBackground": [
+        24,
+        71,
+        53
+      ],
+      "ratio": 9.378940547487277,
+      "required": 4.5,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "label": "Wager result details",
+      "tag": "SUMMARY",
+      "disabled": false,
+      "pressed": null,
+      "foreground": "rgb(238, 243, 237)",
+      "background": "rgba(0, 0, 0, 0)",
+      "box": {
+        "x": 248,
+        "y": 1090.53125,
+        "width": 784,
+        "height": 45
+      },
+      "backgroundPixels": [
+        [
+          19,
+          59,
+          44
+        ],
+        [
+          22,
+          66,
+          49
+        ],
+        [
+          19,
+          59,
+          44
+        ]
+      ],
+      "renderedBackground": [
+        22,
+        66,
+        49
+      ],
+      "ratio": 10.054390134772424,
+      "required": 4.5,
+      "status": "PASS"
+    }
+  ],
+  "focus": [
+    {
+      "state": "open",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 771.46875,
+      "y": 909.6875,
+      "adjacent": [
+        20,
+        59,
+        44
+      ],
+      "ratio": 10.169705531105482,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "player",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 516,
+      "y": 822.359375,
+      "adjacent": [
+        27,
+        77,
+        58
+      ],
+      "ratio": 7.930891130668267,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "insurance",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 711.703125,
+      "y": 910.734375,
+      "adjacent": [
+        27,
+        75,
+        57
+      ],
+      "ratio": 8.14543489298296,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "even-money",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 625.59375,
+      "y": 910.734375,
+      "adjacent": [
+        27,
+        75,
+        57
+      ],
+      "ratio": 8.14543489298296,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "unaffordable",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 711.703125,
+      "y": 910.734375,
+      "adjacent": [
+        27,
+        76,
+        58
+      ],
+      "ratio": 8.033752489192722,
+      "required": 3,
+      "status": "PASS"
+    },
+    {
+      "state": "complete",
+      "colour": "rgb(255, 231, 162)",
+      "style": "solid",
+      "focusVisible": true,
+      "x": 306.0078125,
+      "y": 971.15625,
+      "adjacent": [
+        23,
+        67,
+        51
+      ],
+      "ratio": 9.116698132979883,
+      "required": 3,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-04 22:55:56 +08:00"
+}

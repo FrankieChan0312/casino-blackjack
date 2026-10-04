@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-10-04 23:28:57 +08:00",
+  "task": "M10A-T06",
+  "status": "M10A-T06_IMPLEMENTED_VERIFIED",
+  "repairCount": "3/10",
+  "startingHead": "81b5268783fcc8ffc2631a331a0471a2ce7b39d8",
+  "focusedUI": {
+    "files": 13,
+    "tests": 94,
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-repair2-unit.json"
+  },
+  "focusedChromium": {
+    "tests": 39,
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-repair3-browser.json"
+  },
+  "fullVitest": {
+    "files": 84,
+    "tests": 1098,
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-repair3-full-vitest.json"
+  },
+  "fullChromium": {
+    "tests": 86,
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-full-chromium.json"
+  },
+  "independentM1ToM8": {
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-preservation.json"
+  },
+  "currentPreservation": {
+    "files": 18,
+    "tests": 142,
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-current-preservation.json"
+  },
+  "unified": {
+    "status": "PASS",
+    "exitCode": 0,
+    "receipt": "t06-unified.json"
+  },
+  "inventoryDelta": "Baseline 83 files / 1090 Vitest / 79 Chromium + one 8-case T06 unit file and one 7-case recursively discovered T06 browser file = 84 / 1098 / 86. Historical M8 66/956/44 unchanged.",
+  "visuals": {
+    "status": "PASS",
+    "controlImages": 36,
+    "nativeZoomImages": 23,
+    "standBottomPx": 883.359375,
+    "handControlsGap": "Existing 6px desktop / 16px tablet / 10px mobile",
+    "nativeZoom": 2,
+    "minimumControlTextContrast": 6.598619564170631,
+    "controlTextChecks": 42,
+    "focusChecks": 6
+  },
+  "protection": {
+    "status": "PASS",
+    "domainDiff": "EMPTY",
+    "incomingPaths": 2567,
+    "historicalEvidence": 2244,
+    "pa1ProductionReproduction": "12 PNGs byte-for-byte"
+  },
+  "ownerAcceptance": "PENDING",
+  "freshIndependentReview": "NOT RUN",
+  "deployment": "NOT RUN",
+  "next": "M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE"
+}

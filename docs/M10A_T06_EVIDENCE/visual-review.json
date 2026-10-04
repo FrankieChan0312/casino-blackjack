@@ -1,0 +1,329 @@
+{
+  "timestamp": "2026-10-04 23:06:25 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "reviewer": "Implementation agent in the same session; every listed image was opened and visually inspected",
+  "controlImages": [
+    {
+      "path": "visuals/control-even-money-1280.png",
+      "sha256": "3ac6cc251db7470c81fcbce4386f609ce25d8a43eb93d2076c199a9b702e6179",
+      "bytes": 798119,
+      "source": "generated/3ac6cc251db7470c81fcbce4386f609ce25d8a43eb93d2076c199a9b702e6179.png"
+    },
+    {
+      "path": "visuals/control-even-money-320.png",
+      "sha256": "36e583199d3879422f8c22b29b942ae4101fd9dbd803dab95093b46573d36674",
+      "bytes": 294243,
+      "source": "generated/36e583199d3879422f8c22b29b942ae4101fd9dbd803dab95093b46573d36674.png"
+    },
+    {
+      "path": "visuals/control-even-money-768.png",
+      "sha256": "b91ff665b1ec97558cdde384affeb1463531cdcc2a4865cc899e9f78ac00d5bd",
+      "bytes": 565116,
+      "source": "generated/b91ff665b1ec97558cdde384affeb1463531cdcc2a4865cc899e9f78ac00d5bd.png"
+    },
+    {
+      "path": "visuals/control-text200-even-money-1280.png",
+      "sha256": "936436630317ca944c41940f71e7d93eb4a552ef5db911152e438689ccc747b4",
+      "bytes": 1319127,
+      "source": "generated/936436630317ca944c41940f71e7d93eb4a552ef5db911152e438689ccc747b4.png"
+    },
+    {
+      "path": "visuals/control-text200-even-money-320.png",
+      "sha256": "406a67a5a8fa99887f42fe0e72369e9df68976443c800990520a1bc96221e1d0",
+      "bytes": 619811,
+      "source": "generated/406a67a5a8fa99887f42fe0e72369e9df68976443c800990520a1bc96221e1d0.png"
+    },
+    {
+      "path": "visuals/control-text200-even-money-768.png",
+      "sha256": "81657c0ebbe99d7149c953f3d43626495b641e6a695b3033139abbd8adddfde4",
+      "bytes": 1028196,
+      "source": "generated/81657c0ebbe99d7149c953f3d43626495b641e6a695b3033139abbd8adddfde4.png"
+    },
+    {
+      "path": "visuals/control-text200-insurance-1280.png",
+      "sha256": "cbeb9d3764f761b12a3e8cafd3e4583bc8024ff45b770df8656d97e373738c09",
+      "bytes": 1322481,
+      "source": "generated/cbeb9d3764f761b12a3e8cafd3e4583bc8024ff45b770df8656d97e373738c09.png"
+    },
+    {
+      "path": "visuals/control-text200-insurance-320.png",
+      "sha256": "f1a5e0d95ade626e27912a505e50d7387a7f7ffd0d85350cfb3d347d52f74c8a",
+      "bytes": 612328,
+      "source": "generated/f1a5e0d95ade626e27912a505e50d7387a7f7ffd0d85350cfb3d347d52f74c8a.png"
+    },
+    {
+      "path": "visuals/control-text200-insurance-768.png",
+      "sha256": "cd574dcef46650fd26ab68d9d75624228ca65413f89780690e1d9a7c7a8c9ccb",
+      "bytes": 1003913,
+      "source": "generated/cd574dcef46650fd26ab68d9d75624228ca65413f89780690e1d9a7c7a8c9ccb.png"
+    },
+    {
+      "path": "visuals/control-text200-open-1280.png",
+      "sha256": "2566523515528e6a833c484b9f84c620acda45cc1dbf9d48eb23eb9b040cf904",
+      "bytes": 1292611,
+      "source": "generated/2566523515528e6a833c484b9f84c620acda45cc1dbf9d48eb23eb9b040cf904.png"
+    },
+    {
+      "path": "visuals/control-text200-open-320.png",
+      "sha256": "437fe17b22d148433060a6d96c2e8f8640952962ca6384bcbade1861bd6208b1",
+      "bytes": 546725,
+      "source": "generated/437fe17b22d148433060a6d96c2e8f8640952962ca6384bcbade1861bd6208b1.png"
+    },
+    {
+      "path": "visuals/control-text200-open-768.png",
+      "sha256": "6515f96069877b9b8f58c36847afbc5b35ea8c1957a1923c1b22704cbc9164a9",
+      "bytes": 872618,
+      "source": "generated/6515f96069877b9b8f58c36847afbc5b35ea8c1957a1923c1b22704cbc9164a9.png"
+    },
+    {
+      "path": "visuals/control-text200-player-1280.png",
+      "sha256": "1b506ebc5270e3ffed66a82f0f26d0f61ba787c67647c0a806b8cd2e07652bc2",
+      "bytes": 1158857,
+      "source": "generated/1b506ebc5270e3ffed66a82f0f26d0f61ba787c67647c0a806b8cd2e07652bc2.png"
+    },
+    {
+      "path": "visuals/control-text200-player-320.png",
+      "sha256": "f763269bd4e8d023444259321695a73188e3a79c89355f4f98ff330a8918c91e",
+      "bytes": 522767,
+      "source": "generated/f763269bd4e8d023444259321695a73188e3a79c89355f4f98ff330a8918c91e.png"
+    },
+    {
+      "path": "visuals/control-text200-player-768.png",
+      "sha256": "4ca8a8c1d0f527df048bb1775124eedf4fa9a6c73038ebe49838227a39e4e9cd",
+      "bytes": 890865,
+      "source": "generated/4ca8a8c1d0f527df048bb1775124eedf4fa9a6c73038ebe49838227a39e4e9cd.png"
+    },
+    {
+      "path": "visuals/control-insurance-1280.png",
+      "sha256": "87cdd67c92c3744a5eb0dc0a287bcf2499ae54b57beafa11b46ee6209f0c0cd0",
+      "bytes": 799011,
+      "source": "generated/87cdd67c92c3744a5eb0dc0a287bcf2499ae54b57beafa11b46ee6209f0c0cd0.png"
+    },
+    {
+      "path": "visuals/control-insurance-320.png",
+      "sha256": "eb775a43aa21ec43d26406de471a7e3058927afa97574ed381e916d02d3cd9c0",
+      "bytes": 286737,
+      "source": "generated/eb775a43aa21ec43d26406de471a7e3058927afa97574ed381e916d02d3cd9c0.png"
+    },
+    {
+      "path": "visuals/control-insurance-768.png",
+      "sha256": "cfa3e523149a1c1e155c447612b893a50e582e6e9005d94935f92ff8ef51733f",
+      "bytes": 567133,
+      "source": "generated/cfa3e523149a1c1e155c447612b893a50e582e6e9005d94935f92ff8ef51733f.png"
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-1280.png",
+      "sha256": "d9cb8f9fd2d6fe692cc3f691b85c6c971e0a92b77c0177df7c7dfd12cf7f68c8",
+      "bytes": 816718,
+      "source": "generated/d9cb8f9fd2d6fe692cc3f691b85c6c971e0a92b77c0177df7c7dfd12cf7f68c8.png"
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-320.png",
+      "sha256": "580e46111f537fd4dcc639c40f357d591163a5beec6b097aebc58b797355b40b",
+      "bytes": 298562,
+      "source": "generated/580e46111f537fd4dcc639c40f357d591163a5beec6b097aebc58b797355b40b.png"
+    },
+    {
+      "path": "visuals/control-insurance-unavailable-768.png",
+      "sha256": "f2029b150cc924fb088bb7ffd8ad0ba84cc1552f8b12a73ac15fea7e61632def",
+      "bytes": 581612,
+      "source": "generated/f2029b150cc924fb088bb7ffd8ad0ba84cc1552f8b12a73ac15fea7e61632def.png"
+    },
+    {
+      "path": "visuals/control-complete-1280.png",
+      "sha256": "0a64e4b441064ffec7eb7bc7284254056bcb931c4b59ec75e8cacd9faf22bb93",
+      "bytes": 831323,
+      "source": "generated/0a64e4b441064ffec7eb7bc7284254056bcb931c4b59ec75e8cacd9faf22bb93.png"
+    },
+    {
+      "path": "visuals/control-complete-320.png",
+      "sha256": "14e837b8500a085165bc9925a58df1b477ba73df90a565605c7e4eb1075eaf66",
+      "bytes": 303954,
+      "source": "generated/14e837b8500a085165bc9925a58df1b477ba73df90a565605c7e4eb1075eaf66.png"
+    },
+    {
+      "path": "visuals/control-complete-768.png",
+      "sha256": "472932ef36bee7e39f32cbbd598c5a35d1e7607bf615886dd259fcc84b96e233",
+      "bytes": 606448,
+      "source": "generated/472932ef36bee7e39f32cbbd598c5a35d1e7607bf615886dd259fcc84b96e233.png"
+    },
+    {
+      "path": "visuals/control-open-1280.png",
+      "sha256": "4a2d27ed61e3d77d9f9d00f400ad9c73657e46db6fa157a594bca862cb4970aa",
+      "bytes": 802232,
+      "source": "generated/4a2d27ed61e3d77d9f9d00f400ad9c73657e46db6fa157a594bca862cb4970aa.png"
+    },
+    {
+      "path": "visuals/control-open-320.png",
+      "sha256": "aaf394a331388840f5a63d2bfad4f6445c6761d2cc1aa791a6a8b741e5329466",
+      "bytes": 280374,
+      "source": "generated/aaf394a331388840f5a63d2bfad4f6445c6761d2cc1aa791a6a8b741e5329466.png"
+    },
+    {
+      "path": "visuals/control-open-768.png",
+      "sha256": "90da4e14bc9cc8d694fbd51c4f3b7d77b3ba48454b1d020d7e1459e14e90d1e2",
+      "bytes": 521566,
+      "source": "generated/90da4e14bc9cc8d694fbd51c4f3b7d77b3ba48454b1d020d7e1459e14e90d1e2.png"
+    },
+    {
+      "path": "visuals/control-player-1280.png",
+      "sha256": "130921f2645e01fb6cfe3192dbb9b9f8c8e788a5e3120be40f248e0fc0ab9c40",
+      "bytes": 728669,
+      "source": "generated/130921f2645e01fb6cfe3192dbb9b9f8c8e788a5e3120be40f248e0fc0ab9c40.png"
+    },
+    {
+      "path": "visuals/control-player-320.png",
+      "sha256": "17a247b87d83f01f837ed77033f15d6f346968b675bb823248930cbb59abd215",
+      "bytes": 258280,
+      "source": "generated/17a247b87d83f01f837ed77033f15d6f346968b675bb823248930cbb59abd215.png"
+    },
+    {
+      "path": "visuals/control-player-768.png",
+      "sha256": "412156785ef7c4545c3b5bd6b467d59adc28b40368d0eb1cfb781383e2b5312e",
+      "bytes": 523874,
+      "source": "generated/412156785ef7c4545c3b5bd6b467d59adc28b40368d0eb1cfb781383e2b5312e.png"
+    },
+    {
+      "path": "visuals/control-split-a-1280.png",
+      "sha256": "d3154631edd4f219916fed9230f249781a69efbcec1daf0aecfeba5d87b9abbe",
+      "bytes": 846085,
+      "source": "generated/d3154631edd4f219916fed9230f249781a69efbcec1daf0aecfeba5d87b9abbe.png"
+    },
+    {
+      "path": "visuals/control-split-a-320.png",
+      "sha256": "28f420c7f4017d3f7f6132bc1331da35e93ec66e671db54e76f1e87c65c9c4d9",
+      "bytes": 297226,
+      "source": "generated/28f420c7f4017d3f7f6132bc1331da35e93ec66e671db54e76f1e87c65c9c4d9.png"
+    },
+    {
+      "path": "visuals/control-split-a-768.png",
+      "sha256": "e76d47685a653f03c206205430d92bcd3ee116f5addfd8db0c5138e7e249636b",
+      "bytes": 621268,
+      "source": "generated/e76d47685a653f03c206205430d92bcd3ee116f5addfd8db0c5138e7e249636b.png"
+    },
+    {
+      "path": "visuals/control-split-b-1280.png",
+      "sha256": "eb9c677acb8635b7c13011f74b03293c28023f37f329dcd57f8f3acf060a8687",
+      "bytes": 842953,
+      "source": "generated/eb9c677acb8635b7c13011f74b03293c28023f37f329dcd57f8f3acf060a8687.png"
+    },
+    {
+      "path": "visuals/control-split-b-320.png",
+      "sha256": "799d0a1b37a6e988cf8709c113e935dab3d1471378a1bf5a8e94485bdbafa84c",
+      "bytes": 291624,
+      "source": "generated/799d0a1b37a6e988cf8709c113e935dab3d1471378a1bf5a8e94485bdbafa84c.png"
+    },
+    {
+      "path": "visuals/control-split-b-768.png",
+      "sha256": "58d6bad8b6789cab14b8b30d58b9d86060289206bd3dc69cb5f90a6f90c49f3f",
+      "bytes": 616240,
+      "source": "generated/58d6bad8b6789cab14b8b30d58b9d86060289206bd3dc69cb5f90a6f90c49f3f.png"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-player-top.png",
+      "sha256": "9daed67809257cb5035769b1a5417a895ab17abd4a73801eeb057cb2050467c1"
+    },
+    {
+      "path": "visuals/zoom200-player-hand.png",
+      "sha256": "ec6dc5c5367eb4dc62f474cbec331c705fa17631334c1d98218a2d00456b354c"
+    },
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "69b667ed1da5a3a2a33bcfd9e8917758d93eb0150444f9829df56e31c774eb5f"
+    },
+    {
+      "path": "visuals/zoom200-player-five-top.png",
+      "sha256": "98692700bf1ed5c3857e5c31d762fd1df1bced56fd6631d6c2722d82815094db"
+    },
+    {
+      "path": "visuals/zoom200-player-five-hand.png",
+      "sha256": "42f82e5fe36cfa0fe1391500843768ec15b0b4f5db082390a11e2c543b5f675f"
+    },
+    {
+      "path": "visuals/zoom200-player-five-controls.png",
+      "sha256": "23e35803eb4ee267b6dca4cb2604c02dac1d65fa394ec20291c6cd9b8caf37c6"
+    },
+    {
+      "path": "visuals/zoom200-player-split-top.png",
+      "sha256": "8e8e55047717b7de98389876a8c852590a9affc0bfbc142e92b84ba5c86df6d6"
+    },
+    {
+      "path": "visuals/zoom200-player-split-hand.png",
+      "sha256": "d961eea1f507ad55dad8c75f236891894e84fce0538c073ce220b8d19ddca8fd"
+    },
+    {
+      "path": "visuals/zoom200-player-split-controls.png",
+      "sha256": "ef8fc0ff712fc1f5a579e94c408a55ad971e8e16efd1e5fd5fe50be0866dfcca"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-top.png",
+      "sha256": "2fb5fcc40c8c69e69d1adac397389f477f2d4152e02b0568b94fb010c798f241"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-hand.png",
+      "sha256": "c7c1c7401a8422d9af2d567286ddadb50b0002c7eac48c011b02e075dbe6e562"
+    },
+    {
+      "path": "visuals/zoom200-player-rsa-cap-controls.png",
+      "sha256": "b23c958cc5510b0cdd833e86af197c950631351d89bb546cf5f6682f9448c04b"
+    },
+    {
+      "path": "visuals/zoom200-dealer-idle.png",
+      "sha256": "da096ffe3548205e1188ed10088c205f1d5862e5c8cbe63d5bbaf1c2ba90823e"
+    },
+    {
+      "path": "visuals/zoom200-dealer-hidden.png",
+      "sha256": "9daed67809257cb5035769b1a5417a895ab17abd4a73801eeb057cb2050467c1"
+    },
+    {
+      "path": "visuals/zoom200-dealer-revealed-three.png",
+      "sha256": "835895c2f2370c45b5260cc93ce22d4db6ea11fec9b8171dfebf896b7a755a1a"
+    },
+    {
+      "path": "visuals/zoom200-control-open-hand.png",
+      "sha256": "b6a9e13888c4d99040dc952608124a5c04021b03969728e3581022ab82a9decb"
+    },
+    {
+      "path": "visuals/zoom200-control-open-controls.png",
+      "sha256": "ad2ed6e1b7d5a6de9ce5279fb2a8aa3b536a83ccf017140a1f6d924f336b256d"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-hand.png",
+      "sha256": "f71faeb9783670cc4d3ca5d4f845b9acee1b3e5b7a37d0c472bc4bff70c0ad53"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-controls.png",
+      "sha256": "0439cf49453eb49e96cab1cc27a8b552da90570668bda82bfbc98c520d16eda5"
+    },
+    {
+      "path": "visuals/zoom200-control-even-money-hand.png",
+      "sha256": "ee1e706c20b09d6d1b816734c61ea9480f4fde89958fa7fa0775074ce314bc68"
+    },
+    {
+      "path": "visuals/zoom200-control-even-money-controls.png",
+      "sha256": "479b552a2dba65bf08cc86de54d7e3e15355d084c6d52990e1e0947edd5bd50a"
+    },
+    {
+      "path": "visuals/zoom200-control-unaffordable-hand.png",
+      "sha256": "7f514205252d5afd650f1421e69578b9e2b05544372a3f50ec242886d9db1f38"
+    },
+    {
+      "path": "visuals/zoom200-control-unaffordable-controls.png",
+      "sha256": "ccbaef78901b42921ac64b5cdbdba144d89257dffc779a147b42269c80b81c34"
+    }
+  ],
+  "findings": [
+    "All eight normal states at 1280/768/320 and all four text-200% states at those widths were inspected. Buttons are substantial green/gold native controls; selected denomination has a solid ring, disabled controls have dashed boundaries and accessible explanations.",
+    "A single dock follows visible Hand A/B; cards remain dominant and unobstructed. Betting input, chips and Deal retain the accepted compact region and real exact input.",
+    "Insurance choices use a transparent compact decision surface, with distinct Even Money action only when eligible and full explanation discoverable through native disclosure. The existing bright programmatic focus outline is deliberately retained, including on entry into Insurance/result states.",
+    "All 23 genuine browser-zoom screenshots were inspected, including five cards, Split, multiple RSA leaves, Dealer hidden/revealed states and betting/Insurance/Even Money/unaffordable controls. Labels remain readable and controls operable by scrolling; no overlap or horizontal overflow was observed.",
+    "Focused behavioral and geometric assertions corroborate the visual inspection: native 44px targets, status/keyboard routing, unchanged normal desktop camera footprints, Stand bottom 883.359375px, existing hand-to-controls gaps 6px desktop/16px tablet/10px mobile.",
+    "This is the required focused visual gate before full regression, not owner acceptance or a fresh independent review."
+  ],
+  "ownerAcceptance": "PENDING",
+  "freshIndependentReview": "NOT RUN",
+  "repairCount": "2/10"
+}
