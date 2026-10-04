@@ -1,0 +1,47 @@
+{
+  "task": "M10A-T07",
+  "count": 3,
+  "limit": 10,
+  "exceptionAuthorized": false,
+  "cycles": [
+    {
+      "count": 1,
+      "timestamp": "2026-10-05 01:02:27 +08:00",
+      "failedReceipt": "t07-focus-unit.json",
+      "hypothesis": "The real domain rejects a side wager without a funded qualifying MAIN in the new fixture.",
+      "targetedFix": "Set the explicit existing MAIN command before the Pair SIDE command; unchanged production and literal amounts.",
+      "affectedRerun": {
+        "phase": "t07-focus-unit-r1",
+        "status": "PASS",
+        "exitCode": 0,
+        "end": "2026-10-05 01:02:32 +08:00"
+      }
+    },
+    {
+      "count": 2,
+      "timestamp": "2026-10-05 01:11:42 +08:00",
+      "failedReceipt": "t07-focus-browser.json",
+      "hypothesis": "The new test incorrectly expects Hit as the first mobile Tab target after Seat4, bypassing the existing ascending Seat6 native hand disclosure.",
+      "targetedFix": "Assert Seat6 disclosure focus then Hit and Stand; preserve production DOM/focus semantics and visible focus assertions.",
+      "affectedRerun": {
+        "phase": "t07-focus-browser-r2",
+        "status": "PASS",
+        "exitCode": 0,
+        "end": "2026-10-05 01:15:23 +08:00"
+      }
+    },
+    {
+      "count": 3,
+      "timestamp": "2026-10-05 01:40:48 +08:00",
+      "failedReceipt": "t07-prepublish-check.json",
+      "hypothesis": "Only task document EOF and raw diagnostic whitespace fail prepublication; frozen product/tests remain unchanged.",
+      "targetedFix": "Trim the new task document EOF; retain generated Markdown byte-for-byte in lossless gzip with checked hashes and updated references.",
+      "affectedRerun": {
+        "phase": "t07-doc-r3",
+        "status": "PASS",
+        "exitCode": 0,
+        "end": "2026-10-05 01:40:53 +08:00"
+      }
+    }
+  ]
+}

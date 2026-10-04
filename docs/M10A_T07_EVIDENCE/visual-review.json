@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-10-05 01:24:03 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "review": "Actual same-session image inspection; genuinely fresh independent review NOT RUN",
+  "humanVisualAcceptance": "PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION",
+  "controlImages": [
+    {
+      "path": "visuals/after-open-1280.png",
+      "sha256": "873b63807444d1fcccf2bcf90aad50520fb3701e7fc8f0d42075def83dca3318"
+    },
+    {
+      "path": "visuals/after-player-1280.png",
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "visuals/after-insurance-1280.png",
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "visuals/after-even-money-1280.png",
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "visuals/after-complete-win-1280.png",
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "visuals/after-complete-loss-1280.png",
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "visuals/after-complete-push-1280.png",
+      "sha256": "65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e"
+    },
+    {
+      "path": "visuals/after-open-768.png",
+      "sha256": "146d8c93afb14d050bb0847f86168ec27eec6b951b9a0339aea89a3b3fe0fd6f"
+    },
+    {
+      "path": "visuals/after-player-768.png",
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "visuals/after-insurance-768.png",
+      "sha256": "3874933f8112f9da94feb316e27191563c01496d4ca8efbd5f4bb3afe8f77a03"
+    },
+    {
+      "path": "visuals/after-even-money-768.png",
+      "sha256": "8990e785065ababeaad4fca551bdbbb6cf00ff54a7946a5e735bb156d43f474b"
+    },
+    {
+      "path": "visuals/after-complete-win-768.png",
+      "sha256": "003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4"
+    },
+    {
+      "path": "visuals/after-complete-loss-768.png",
+      "sha256": "2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853"
+    },
+    {
+      "path": "visuals/after-complete-push-768.png",
+      "sha256": "3de42e6df069740d21e9527aa5d1c773a445b808acadea7fa0fa7676a5c2c5fa"
+    },
+    {
+      "path": "visuals/after-open-320.png",
+      "sha256": "a7a24c3535a5795d190f591f9af7af148a363de7842867ba991ebf0dd7a4d6f5"
+    },
+    {
+      "path": "visuals/after-player-320.png",
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "visuals/after-insurance-320.png",
+      "sha256": "b8ed856520ed78c0f66285c19734f99585a001904eb12fda2bed671a52c7da30"
+    },
+    {
+      "path": "visuals/after-even-money-320.png",
+      "sha256": "020fa0f11678a21292e0ee04f8cf5ba396fea1bd218e7a43097f56887dcce003"
+    },
+    {
+      "path": "visuals/after-complete-win-320.png",
+      "sha256": "bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e"
+    },
+    {
+      "path": "visuals/after-complete-loss-320.png",
+      "sha256": "8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883"
+    },
+    {
+      "path": "visuals/after-complete-push-320.png",
+      "sha256": "afffae181c6f2b5f81f15d6ab982ece9ad4ef6b9919cfa329e4f0247138bb9e5"
+    },
+    {
+      "path": "visuals/credits-open-1280.png",
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "visuals/credits-open-320.png",
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "visuals/credits-open-768.png",
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "visuals/credits-pending-1280.png",
+      "sha256": "49bc3ab56f5a2950ab226d94806991fda30d67f91908c77d40289dd854d77383"
+    },
+    {
+      "path": "visuals/credits-pending-320.png",
+      "sha256": "49c1f30359bef8ea81908c1641ac8a5b1e6af3116a3407aeb5b194b3ced87103"
+    },
+    {
+      "path": "visuals/credits-pending-768.png",
+      "sha256": "3fc82a125040062d6991b298690dbfbfceb700eefb50da2ac4bbcea172a83ef3"
+    },
+    {
+      "path": "visuals/credits-text200-1280.png",
+      "sha256": "441d7f3ccb844ace30e3258264a95d64fe8f443333bcf51a3e31e7361e23f16b"
+    },
+    {
+      "path": "visuals/credits-text200-320.png",
+      "sha256": "205b0e41aa7ca345a050308bdd10ddfde7376fe8799b823a27d91267da0bd4f0"
+    },
+    {
+      "path": "visuals/credits-text200-768.png",
+      "sha256": "dcad3e6601e5c5e132e9d1887dd89ebc2f4d5420b65dbd16d1efab09a05a6463"
+    }
+  ],
+  "nativeZoomImages": [
+    {
+      "path": "visuals/zoom200-player-controls.png",
+      "sha256": "f74a82d540587976b083725a78005140cb9740d336d12b8bbe3ae6bba4df1b99"
+    },
+    {
+      "path": "visuals/zoom200-control-insurance-controls.png",
+      "sha256": "53decd20b7bd74018bf9c84d8b6003d28f38197cc576bbb3205b707bff06bb84"
+    }
+  ],
+  "findings": [
+    "All 21 ordinary after-state images and all 9 new financial/text200 captures inspected. Exact existing public amounts remain readable; compact secondary funds, no guest balances.",
+    "Native zoom player and Insurance screenshots inspected; separate native zoom receipt proves chrome.tabs zoom=2 with unchanged CSS root size.",
+    "No BLOCKER/HIGH regression. Local and Stand boxes match all 21 incoming scenarios exactly; only authorized financial readout changes. No accounting calculation or domain changes."
+  ],
+  "standBottom": 883.359375,
+  "contrastReceipt": "visuals/control-contrast.json",
+  "nativeZoomReceipt": "visuals/zoom200.json",
+  "focusedImageCount": 9
+}

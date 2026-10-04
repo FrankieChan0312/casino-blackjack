@@ -1,3 +1,7 @@
+## M10A-T06 owner visual acceptance — 2026-10-05 00:57:53 +08:00
+
+**M10A-T06 HUMAN VISUAL ACCEPTANCE: ACCEPTED** by explicit owner overnight instruction at main/adf52caf4329060c14a2117147f7e38a6408338e. Normal dock remains accepted; Insurance/Even Money and Round Complete read as compact game decisions/controls integrated with LocalPlayerHud/table. Behaviour/accessibility preserved. Historical repair4/10 retained. T07–T09 authorized conditional unattended technical progression; their human review is deferred, not rejected or self-accepted.
+
 ## Current T06 human-repair publication — 2026-10-05 00:33:15 +08:00
 
 M10A-T06 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at05c1b4cef9bb6915422a32a93b63e2175fd0a9f6;4/10; full/final PASS. Normal action dock accepted and preserved; overall HUMAN VISUAL ACCEPTANCE: NOT ACCEPTED / awaiting final live review. M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE; M10-T02 NOT STARTED; M10-T04 IMPLEMENTATION NOT STARTED. Earlier technical/publication checkpoints below remain historical.

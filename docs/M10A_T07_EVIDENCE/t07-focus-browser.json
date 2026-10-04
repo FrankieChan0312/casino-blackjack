@@ -1,0 +1,1720 @@
+{
+  "phase": "t07-focus-browser",
+  "kind": "browser",
+  "start": "2026-10-05 01:05:16 +08:00",
+  "end": "2026-10-05 01:09:05 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10a tests/browser/m10.spec.ts tests/browser/m9.spec.ts tests/browser/pa1.spec.ts; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-t07-focus-browser",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-t07-focus-browser.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\"",
+    "events": {
+      "retainedAt": "generated/9ed72cc046c501432c658eaf3cbf5b72b2e5b9054d4a6f5b6e634f331cbdc17c.jsonl",
+      "bytes": 7885,
+      "sha256": "9ed72cc046c501432c658eaf3cbf5b72b2e5b9054d4a6f5b6e634f331cbdc17c"
+    }
+  },
+  "exitCode": 1,
+  "status": "FAIL",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-t07-focus-browser-2gTqDe",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-dealt-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "test-results/m10--M10-E04-the-table-sce-e0039-ts-through-betting-and-play-chromium/scene-open-768.png",
+      "retainedAt": "generated/80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3.png",
+      "bytes": 530158,
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-results-1280.png",
+      "retainedAt": "generated/1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1.png",
+      "bytes": 760818,
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-dealt-1280.png",
+      "retainedAt": "generated/7ce6cea8dc04ad3bf430ba1f6a083e5009642b4e21dcbb023fbfb7afe952c166.png",
+      "bytes": 747886,
+      "sha256": "7ce6cea8dc04ad3bf430ba1f6a083e5009642b4e21dcbb023fbfb7afe952c166"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-dealt-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-dealt-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-footprints.json",
+      "retainedAt": "generated/1cebd24b37b4397dd866c6ecc8cf073c5cbaa56b915b995c644824d60792167e.json",
+      "bytes": 6124,
+      "sha256": "1cebd24b37b4397dd866c6ecc8cf073c5cbaa56b915b995c644824d60792167e"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-open-1280.png",
+      "retainedAt": "generated/b455e2729dbfe0e3100d56fd1cc339a2fc67b7ce8707ff84ca4b1e9e1b42a1bb.png",
+      "bytes": 817415,
+      "sha256": "b455e2729dbfe0e3100d56fd1cc339a2fc67b7ce8707ff84ca4b1e9e1b42a1bb"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-text200-1280.png",
+      "retainedAt": "generated/da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd.png",
+      "bytes": 1137861,
+      "sha256": "da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd"
+    },
+    {
+      "path": "test-results/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-text200.json",
+      "retainedAt": "generated/97e586f4002ecfb21826ff35bcd295449703cb30639596e1838e9f8d9db670d7.json",
+      "bytes": 545,
+      "sha256": "97e586f4002ecfb21826ff35bcd295449703cb30639596e1838e9f8d9db670d7"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-1280.json",
+      "retainedAt": "generated/6f72f8d801f7cfb98f312b16fdc2cd5b089b9fad121b519dc8e10c5c23f7160a.json",
+      "bytes": 824,
+      "sha256": "6f72f8d801f7cfb98f312b16fdc2cd5b089b9fad121b519dc8e10c5c23f7160a"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-320.json",
+      "retainedAt": "generated/b7ea06d5eaf70729fa294572618164d9ae03b2e2a293d8652dbda345d56ad833.json",
+      "bytes": 842,
+      "sha256": "b7ea06d5eaf70729fa294572618164d9ae03b2e2a293d8652dbda345d56ad833"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-320.png",
+      "retainedAt": "generated/7e703024872d84a39835bafb323998702203d9b5e097e971f165d97151c5c997.png",
+      "bytes": 282056,
+      "sha256": "7e703024872d84a39835bafb323998702203d9b5e097e971f165d97151c5c997"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-768.json",
+      "retainedAt": "generated/8138bab57d93f62435bf367e9f4aec4fc369d802aa47096e97ae9c0df89edf46.json",
+      "bytes": 792,
+      "sha256": "8138bab57d93f62435bf367e9f4aec4fc369d802aa47096e97ae9c0df89edf46"
+    },
+    {
+      "path": "test-results/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-1280.png",
+      "retainedAt": "generated/e2e78939fad5dd1589f77dd96b1b6b97fa28f0d5035f3cfc4eb177b72c7efb39.png",
+      "bytes": 739177,
+      "sha256": "e2e78939fad5dd1589f77dd96b1b6b97fa28f0d5035f3cfc4eb177b72c7efb39"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-320.png",
+      "retainedAt": "generated/da049b941d32c791b872aae3dc285d8bacdefab6ab0e5e3052e324028a1cb947.png",
+      "bytes": 327625,
+      "sha256": "da049b941d32c791b872aae3dc285d8bacdefab6ab0e5e3052e324028a1cb947"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-768.png",
+      "retainedAt": "generated/38990ecc46fc9226fbaf602afbd33933280c5e0e76d9b773eeaaa1850d240912.png",
+      "bytes": 559980,
+      "sha256": "38990ecc46fc9226fbaf602afbd33933280c5e0e76d9b773eeaaa1850d240912"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-1280.png",
+      "retainedAt": "generated/80c48d383e596fe98ef00864ed33316de007cd84a76a1b256603211005ad6f88.png",
+      "bytes": 1118212,
+      "sha256": "80c48d383e596fe98ef00864ed33316de007cd84a76a1b256603211005ad6f88"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-320.png",
+      "retainedAt": "generated/9207588970f818e9309a363ab3e6980f8b7ed0a17a2288f8794aa65a499cf020.png",
+      "bytes": 601830,
+      "sha256": "9207588970f818e9309a363ab3e6980f8b7ed0a17a2288f8794aa65a499cf020"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-five-text200-768.png",
+      "retainedAt": "generated/f034c298108ed45826fb5d0aaff0f43a75be2e94e41fd1f58a614dfbcb286717.png",
+      "bytes": 958435,
+      "sha256": "f034c298108ed45826fb5d0aaff0f43a75be2e94e41fd1f58a614dfbcb286717"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-1280.png",
+      "retainedAt": "generated/303292df9874ae1b868fee3d797428d0c6b71d923923dcd3411b9cd04b0845d5.png",
+      "bytes": 882896,
+      "sha256": "303292df9874ae1b868fee3d797428d0c6b71d923923dcd3411b9cd04b0845d5"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-320.png",
+      "retainedAt": "generated/6de0ec907dd4a54df2f854190b468fb90b26efe12a5eba2b40879134a6837e69.png",
+      "bytes": 396238,
+      "sha256": "6de0ec907dd4a54df2f854190b468fb90b26efe12a5eba2b40879134a6837e69"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-768.png",
+      "retainedAt": "generated/f99163cd1563891febe1fef14f80ffbe92d1a0eaa0bf6b8cca6ac9f008a84cd1.png",
+      "bytes": 641485,
+      "sha256": "f99163cd1563891febe1fef14f80ffbe92d1a0eaa0bf6b8cca6ac9f008a84cd1"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-1280.png",
+      "retainedAt": "generated/e683b487df3a3c594735d2978486045d1faee2067bbe24a3a3d2e4a24ef63292.png",
+      "bytes": 1376477,
+      "sha256": "e683b487df3a3c594735d2978486045d1faee2067bbe24a3a3d2e4a24ef63292"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-320.png",
+      "retainedAt": "generated/1889363e58fc2a2d6a1d262dbceb646a1be085cbfb746fae2a26530677958f4d.png",
+      "bytes": 722997,
+      "sha256": "1889363e58fc2a2d6a1d262dbceb646a1be085cbfb746fae2a26530677958f4d"
+    },
+    {
+      "path": "test-results/m10--M10A-E04-public-compo-6822d-leaves-with-real-long-names-chromium/seat-split-text200-768.png",
+      "retainedAt": "generated/4a9f2af09d93d7ed8a159176a666747f332607732fd5ed9e128e549432a59340.png",
+      "bytes": 1125932,
+      "sha256": "4a9f2af09d93d7ed8a159176a666747f332607732fd5ed9e128e549432a59340"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-normal-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-normal-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-normal-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-result-1280.png",
+      "retainedAt": "generated/e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf.png",
+      "bytes": 766557,
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-result-320.png",
+      "retainedAt": "generated/8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883.png",
+      "bytes": 266283,
+      "sha256": "8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883"
+    },
+    {
+      "path": "test-results/m10--M10A-E05-local-HUD-ow-40e44-ugh-active-play-and-results-chromium/hud-result-768.png",
+      "retainedAt": "generated/2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853.png",
+      "bytes": 539928,
+      "sha256": "2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-1280.png",
+      "retainedAt": "generated/240b2cc66b092c3b88e0f17a314b67c4dd5e0eacfba8f5debc2acb7efdc5ec8a.png",
+      "bytes": 807123,
+      "sha256": "240b2cc66b092c3b88e0f17a314b67c4dd5e0eacfba8f5debc2acb7efdc5ec8a"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-320.png",
+      "retainedAt": "generated/e80966e6778562c496510b3f7084365dc574f7be4373b08f96219eaafd9a5e81.png",
+      "bytes": 271398,
+      "sha256": "e80966e6778562c496510b3f7084365dc574f7be4373b08f96219eaafd9a5e81"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-768.png",
+      "retainedAt": "generated/7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26.png",
+      "bytes": 510416,
+      "sha256": "7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-text200-1280.png",
+      "retainedAt": "generated/1b0d01ce704365b9c00c41d3386ac8128830e38e9a9edafb0ccb8613b1190211.png",
+      "bytes": 1228976,
+      "sha256": "1b0d01ce704365b9c00c41d3386ac8128830e38e9a9edafb0ccb8613b1190211"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-text200-320.png",
+      "retainedAt": "generated/743b7caa5144499017aba21bfa8923802bf547b8591edca29231e35343797685.png",
+      "bytes": 517838,
+      "sha256": "743b7caa5144499017aba21bfa8923802bf547b8591edca29231e35343797685"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-five-text200-768.png",
+      "retainedAt": "generated/6c73bb4186ff02290aebd8449da8af3b6bbc8f36ffe28ae0042dc77335c8671a.png",
+      "bytes": 868410,
+      "sha256": "6c73bb4186ff02290aebd8449da8af3b6bbc8f36ffe28ae0042dc77335c8671a"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-1280.png",
+      "retainedAt": "generated/68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b.png",
+      "bytes": 1083076,
+      "sha256": "68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-320.png",
+      "retainedAt": "generated/d4e638d29bd8dcbb126e7ca2f5359e88f15347b7c5b1138f8a1ad57a33e2d3bf.png",
+      "bytes": 350345,
+      "sha256": "d4e638d29bd8dcbb126e7ca2f5359e88f15347b7c5b1138f8a1ad57a33e2d3bf"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-768.png",
+      "retainedAt": "generated/fa14f4bd0149948dc5bcb609305cb8628d8d1eb46530b4d18bd4aa372634b4ee.png",
+      "bytes": 814432,
+      "sha256": "fa14f4bd0149948dc5bcb609305cb8628d8d1eb46530b4d18bd4aa372634b4ee"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-text200-1280.png",
+      "retainedAt": "generated/4def0315da8ba7e680b183b076f0e0ba6d023403fadcab429b1964ef61319c0a.png",
+      "bytes": 1468291,
+      "sha256": "4def0315da8ba7e680b183b076f0e0ba6d023403fadcab429b1964ef61319c0a"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-text200-320.png",
+      "retainedAt": "generated/40438e74a6fb6844b391c5218b5d4d3220b16e52a52d0bff4f90a9d8198d8be2.png",
+      "bytes": 623769,
+      "sha256": "40438e74a6fb6844b391c5218b5d4d3220b16e52a52d0bff4f90a9d8198d8be2"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-text200-768.png",
+      "retainedAt": "generated/c1e38fe6b9c8a4c8ceea329b257e27a65f686d16bb9840b498594007a4ea3b78.png",
+      "bytes": 1209944,
+      "sha256": "c1e38fe6b9c8a4c8ceea329b257e27a65f686d16bb9840b498594007a4ea3b78"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-1280.png",
+      "retainedAt": "generated/fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31.png",
+      "bytes": 864277,
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-320.png",
+      "retainedAt": "generated/f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7.png",
+      "bytes": 297672,
+      "sha256": "f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-768.png",
+      "retainedAt": "generated/02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96.png",
+      "bytes": 630671,
+      "sha256": "02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-text200-1280.png",
+      "retainedAt": "generated/6dc74e012f439847055119726b5d38bbbe3771429ac1d7c324f547bd53b69371.png",
+      "bytes": 1251516,
+      "sha256": "6dc74e012f439847055119726b5d38bbbe3771429ac1d7c324f547bd53b69371"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-text200-320.png",
+      "retainedAt": "generated/5d5fa4c9b08b6968c18c592fe4e625376bab81922af1617867ba130ec19ae7a2.png",
+      "bytes": 584329,
+      "sha256": "5d5fa4c9b08b6968c18c592fe4e625376bab81922af1617867ba130ec19ae7a2"
+    },
+    {
+      "path": "test-results/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-two-split-text200-768.png",
+      "retainedAt": "generated/93f41a72813c3e916ea45d85659d2122c0e275f66c4bdbf1e1afa8e7d8476ce8.png",
+      "bytes": 986027,
+      "sha256": "93f41a72813c3e916ea45d85659d2122c0e275f66c4bdbf1e1afa8e7d8476ce8"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-complete-1280.png",
+      "retainedAt": "generated/e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf.png",
+      "bytes": 766557,
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-complete-320.png",
+      "retainedAt": "generated/8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883.png",
+      "bytes": 266283,
+      "sha256": "8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-complete-768.png",
+      "retainedAt": "generated/2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853.png",
+      "bytes": 539928,
+      "sha256": "2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-hidden-1280.png",
+      "retainedAt": "generated/7ce6cea8dc04ad3bf430ba1f6a083e5009642b4e21dcbb023fbfb7afe952c166.png",
+      "bytes": 747886,
+      "sha256": "7ce6cea8dc04ad3bf430ba1f6a083e5009642b4e21dcbb023fbfb7afe952c166"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-hidden-320.png",
+      "retainedAt": "generated/d386086778dfaeefd7cec74392c9fc643960e60d6be3427f320bc084a3f74be8.png",
+      "bytes": 259976,
+      "sha256": "d386086778dfaeefd7cec74392c9fc643960e60d6be3427f320bc084a3f74be8"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-hidden-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-open-768.png",
+      "retainedAt": "generated/80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3.png",
+      "bytes": 530158,
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-revealed-1280.png",
+      "retainedAt": "generated/1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1.png",
+      "bytes": 760818,
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-revealed-320.png",
+      "retainedAt": "generated/bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e.png",
+      "bytes": 262998,
+      "sha256": "bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e"
+    },
+    {
+      "path": "test-results/m10--M10A-E07-Dealer-works-fc0d5--states-across-all-surfaces-chromium/dealer-revealed-768.png",
+      "retainedAt": "generated/003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4.png",
+      "bytes": 554805,
+      "sha256": "003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-revealed-text200-1280.png",
+      "retainedAt": "generated/91142e9ebc78da604e979d0e44d809ad5efc2007ef89578a49cec0b30b751cc5.png",
+      "bytes": 1140717,
+      "sha256": "91142e9ebc78da604e979d0e44d809ad5efc2007ef89578a49cec0b30b751cc5"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-revealed-text200-320.png",
+      "retainedAt": "generated/20617d89d7883cf6a97a48f06b0c41e9a639869aae0fed47fc0a4bd5d963699e.png",
+      "bytes": 469300,
+      "sha256": "20617d89d7883cf6a97a48f06b0c41e9a639869aae0fed47fc0a4bd5d963699e"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-revealed-text200-768.png",
+      "retainedAt": "generated/3f6059660ae47079faaab49c1a854178255410685901cc6812d704b82180f9da.png",
+      "bytes": 866815,
+      "sha256": "3f6059660ae47079faaab49c1a854178255410685901cc6812d704b82180f9da"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-text200-1280.png",
+      "retainedAt": "generated/da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd.png",
+      "bytes": 1137861,
+      "sha256": "da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-text200-320.png",
+      "retainedAt": "generated/ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb.png",
+      "bytes": 507772,
+      "sha256": "ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb"
+    },
+    {
+      "path": "test-results/m10--M10A-E08-enlarged-Dea-53e18-hip-with-keyboard-decisions-chromium/dealer-text200-768.png",
+      "retainedAt": "generated/169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df.png",
+      "bytes": 892539,
+      "sha256": "169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-1280.png",
+      "retainedAt": "generated/9521c9c79847458004de42d084e9d2f15af4e775f2774e396e890e851bb91a85.png",
+      "bytes": 792475,
+      "sha256": "9521c9c79847458004de42d084e9d2f15af4e775f2774e396e890e851bb91a85"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-320.png",
+      "retainedAt": "generated/0115b3d192a983cf9c495a3caee72c92524618865f5c9736cb9a7c0febd5b5d2.png",
+      "bytes": 272327,
+      "sha256": "0115b3d192a983cf9c495a3caee72c92524618865f5c9736cb9a7c0febd5b5d2"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-768.png",
+      "retainedAt": "generated/e137529bbf7b5b022ce224c5d686ef89d31c4b0d0badf899721df3494b8c9454.png",
+      "bytes": 572301,
+      "sha256": "e137529bbf7b5b022ce224c5d686ef89d31c4b0d0badf899721df3494b8c9454"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-text200-1280.png",
+      "retainedAt": "generated/035635a1a648c30e0c051936af03362c7e918e7fa1dea8d40f5754b69fc71d30.png",
+      "bytes": 1140966,
+      "sha256": "035635a1a648c30e0c051936af03362c7e918e7fa1dea8d40f5754b69fc71d30"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-text200-320.png",
+      "retainedAt": "generated/0a10f2dff3e5373cc1d791830e4849271965104e242a17f3ab09e0dd8bf15f61.png",
+      "bytes": 502437,
+      "sha256": "0a10f2dff3e5373cc1d791830e4849271965104e242a17f3ab09e0dd8bf15f61"
+    },
+    {
+      "path": "test-results/m10--M10A-E09-isolated-pub-a073f--surrounding-accepted-seats-chromium/dealer-five-text200-768.png",
+      "retainedAt": "generated/90fa94a3526b0d73c3d558e7b9dcc7b2c605d235f895937fd7794c290bf485f4.png",
+      "bytes": 894168,
+      "sha256": "90fa94a3526b0d73c3d558e7b9dcc7b2c605d235f895937fd7794c290bf485f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-complete-1280.png",
+      "retainedAt": "generated/1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1.png",
+      "bytes": 760818,
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-complete-320.png",
+      "retainedAt": "generated/bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e.png",
+      "bytes": 262998,
+      "sha256": "bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-complete-768.png",
+      "retainedAt": "generated/003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4.png",
+      "bytes": 554805,
+      "sha256": "003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-dealt-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-dealt-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-dealt-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "test-results/m10--M10A-E10-felt-spots-f-8d6c7-gh-open-play-and-settlement-chromium/felt-open-768.png",
+      "retainedAt": "generated/80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3.png",
+      "bytes": 530158,
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "test-results/m10--M10A-E11-real-Split-l-1a5fb-ng-decorative-hand-outlines-chromium/felt-split-1280.png",
+      "retainedAt": "generated/fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31.png",
+      "bytes": 864277,
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "test-results/m10--M10A-E11-real-Split-l-1a5fb-ng-decorative-hand-outlines-chromium/felt-split-320.png",
+      "retainedAt": "generated/f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7.png",
+      "bytes": 297672,
+      "sha256": "f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7"
+    },
+    {
+      "path": "test-results/m10--M10A-E11-real-Split-l-1a5fb-ng-decorative-hand-outlines-chromium/felt-split-768.png",
+      "retainedAt": "generated/02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96.png",
+      "bytes": 630671,
+      "sha256": "02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96"
+    },
+    {
+      "path": "test-results/m10--M10A-E12-enlarged-fel-49fdd-d-focus-and-native-controls-chromium/felt-text200-1280.png",
+      "retainedAt": "generated/da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd.png",
+      "bytes": 1137861,
+      "sha256": "da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd"
+    },
+    {
+      "path": "test-results/m10--M10A-E12-enlarged-fel-49fdd-d-focus-and-native-controls-chromium/felt-text200-320.png",
+      "retainedAt": "generated/ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb.png",
+      "bytes": 507772,
+      "sha256": "ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb"
+    },
+    {
+      "path": "test-results/m10--M10A-E12-enlarged-fel-49fdd-d-focus-and-native-controls-chromium/felt-text200-768.png",
+      "retainedAt": "generated/169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df.png",
+      "bytes": 892539,
+      "sha256": "169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-even-money-1280.png",
+      "retainedAt": "generated/2b786a7b18f74c96cdb8a0c9837d3cfac84a8daad9e69f74ac2bd6d3044b8623.png",
+      "bytes": 1183468,
+      "sha256": "2b786a7b18f74c96cdb8a0c9837d3cfac84a8daad9e69f74ac2bd6d3044b8623"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-even-money-320.png",
+      "retainedAt": "generated/7b3e62cd0602170261f4c484c43d62a4fc42e8d92d6c938eb88918f6b9336370.png",
+      "bytes": 536557,
+      "sha256": "7b3e62cd0602170261f4c484c43d62a4fc42e8d92d6c938eb88918f6b9336370"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-even-money-768.png",
+      "retainedAt": "generated/b24ca6acf35c2a5ec06c7b688852ce421123454f3fbcf715a0782e4cb6091f1f.png",
+      "bytes": 949841,
+      "sha256": "b24ca6acf35c2a5ec06c7b688852ce421123454f3fbcf715a0782e4cb6091f1f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-insurance-1280.png",
+      "retainedAt": "generated/97d10b8631ba08bb5786fba7a177bcb1b988fbb1f91096e08ee897f619cdae14.png",
+      "bytes": 1186745,
+      "sha256": "97d10b8631ba08bb5786fba7a177bcb1b988fbb1f91096e08ee897f619cdae14"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-insurance-320.png",
+      "retainedAt": "generated/da59a0235e066b8352ec357e6981a46017289ae3ae7844b6bea51b8a56673921.png",
+      "bytes": 528426,
+      "sha256": "da59a0235e066b8352ec357e6981a46017289ae3ae7844b6bea51b8a56673921"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-insurance-768.png",
+      "retainedAt": "generated/1172fdb255377b41c061521705353e5380c2e801b99630b2cbd1b949eb362195.png",
+      "bytes": 924881,
+      "sha256": "1172fdb255377b41c061521705353e5380c2e801b99630b2cbd1b949eb362195"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-open-1280.png",
+      "retainedAt": "generated/b5655ae1b14001edfbf1c13e5612f8050242e7d06d06f22adeb6c2535867bb4b.png",
+      "bytes": 1269298,
+      "sha256": "b5655ae1b14001edfbf1c13e5612f8050242e7d06d06f22adeb6c2535867bb4b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-open-320.png",
+      "retainedAt": "generated/c58a2bb354e95264eaba487aa811843db968c6809b8b387e376145a75ec9f406.png",
+      "bytes": 531701,
+      "sha256": "c58a2bb354e95264eaba487aa811843db968c6809b8b387e376145a75ec9f406"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-open-768.png",
+      "retainedAt": "generated/a532a12a8cbf77571b1285a082c73b815b21983e831eec27f37774ad91d8abec.png",
+      "bytes": 874355,
+      "sha256": "a532a12a8cbf77571b1285a082c73b815b21983e831eec27f37774ad91d8abec"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-player-1280.png",
+      "retainedAt": "generated/da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd.png",
+      "bytes": 1137861,
+      "sha256": "da35de2bc3cf19020e6a74538a80edad5df601f3c9ed0723f838241b72e3c9dd"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-player-320.png",
+      "retainedAt": "generated/ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb.png",
+      "bytes": 507772,
+      "sha256": "ca9b0a0edd6991be91c72d5f1c5aa20cacce4089c5859c8e332774fcb2e659eb"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0ac66-able-without-covering-cards-chromium/control-text200-player-768.png",
+      "retainedAt": "generated/169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df.png",
+      "bytes": 892539,
+      "sha256": "169ed16536fccb72c5788869d3407d31d04b9c6cbc1c1f01dc5f1611535388df"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-loss-1280.png",
+      "retainedAt": "generated/860eaaeb447e9171b5e9f9917103acc19bf934af3ef1a2684e1cbf52b0b639d4.png",
+      "bytes": 1143706,
+      "sha256": "860eaaeb447e9171b5e9f9917103acc19bf934af3ef1a2684e1cbf52b0b639d4"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-loss-320.png",
+      "retainedAt": "generated/e91bb2da7e155721e189547c4398a023e04fa9562dd9db27011d564ec736633c.png",
+      "bytes": 478478,
+      "sha256": "e91bb2da7e155721e189547c4398a023e04fa9562dd9db27011d564ec736633c"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-loss-768.png",
+      "retainedAt": "generated/88843b05b60fdbc89b76358bf89c8706dea5591f5e047071b2cf2bce71893f87.png",
+      "bytes": 851457,
+      "sha256": "88843b05b60fdbc89b76358bf89c8706dea5591f5e047071b2cf2bce71893f87"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-push-1280.png",
+      "retainedAt": "generated/28609f025f02bc5e042b81eb8f89e4e2db3afd778ce67ae1ad949d44af4dcd92.png",
+      "bytes": 1144925,
+      "sha256": "28609f025f02bc5e042b81eb8f89e4e2db3afd778ce67ae1ad949d44af4dcd92"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-push-320.png",
+      "retainedAt": "generated/378f786bc70d3ddaa1250465e8ed5f45415f5ffd82bb99c36892ab18ab4025b8.png",
+      "bytes": 478412,
+      "sha256": "378f786bc70d3ddaa1250465e8ed5f45415f5ffd82bb99c36892ab18ab4025b8"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-push-768.png",
+      "retainedAt": "generated/398d2517cb31e40fe68f51d0cde5a61895b09b7c9cee12a9281209b6f2c6bfa3.png",
+      "bytes": 851509,
+      "sha256": "398d2517cb31e40fe68f51d0cde5a61895b09b7c9cee12a9281209b6f2c6bfa3"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-win-1280.png",
+      "retainedAt": "generated/91142e9ebc78da604e979d0e44d809ad5efc2007ef89578a49cec0b30b751cc5.png",
+      "bytes": 1140717,
+      "sha256": "91142e9ebc78da604e979d0e44d809ad5efc2007ef89578a49cec0b30b751cc5"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-win-320.png",
+      "retainedAt": "generated/20617d89d7883cf6a97a48f06b0c41e9a639869aae0fed47fc0a4bd5d963699e.png",
+      "bytes": 469300,
+      "sha256": "20617d89d7883cf6a97a48f06b0c41e9a639869aae0fed47fc0a4bd5d963699e"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-complete-win-768.png",
+      "retainedAt": "generated/3f6059660ae47079faaab49c1a854178255410685901cc6812d704b82180f9da.png",
+      "bytes": 866815,
+      "sha256": "3f6059660ae47079faaab49c1a854178255410685901cc6812d704b82180f9da"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-even-money-1280.png",
+      "retainedAt": "generated/2b786a7b18f74c96cdb8a0c9837d3cfac84a8daad9e69f74ac2bd6d3044b8623.png",
+      "bytes": 1183468,
+      "sha256": "2b786a7b18f74c96cdb8a0c9837d3cfac84a8daad9e69f74ac2bd6d3044b8623"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-even-money-320.png",
+      "retainedAt": "generated/7b3e62cd0602170261f4c484c43d62a4fc42e8d92d6c938eb88918f6b9336370.png",
+      "bytes": 536557,
+      "sha256": "7b3e62cd0602170261f4c484c43d62a4fc42e8d92d6c938eb88918f6b9336370"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-even-money-768.png",
+      "retainedAt": "generated/b24ca6acf35c2a5ec06c7b688852ce421123454f3fbcf715a0782e4cb6091f1f.png",
+      "bytes": 949841,
+      "sha256": "b24ca6acf35c2a5ec06c7b688852ce421123454f3fbcf715a0782e4cb6091f1f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-1280.png",
+      "retainedAt": "generated/dd60c0e41a2e1962b92046fdadef608b58754f387d5727237f0a413285967ced.png",
+      "bytes": 1358258,
+      "sha256": "dd60c0e41a2e1962b92046fdadef608b58754f387d5727237f0a413285967ced"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-320.png",
+      "retainedAt": "generated/b6f0da45a9c83af8cedcfdda2d1e6fd4ae89f91ff350f710a129476c3b399527.png",
+      "bytes": 589062,
+      "sha256": "b6f0da45a9c83af8cedcfdda2d1e6fd4ae89f91ff350f710a129476c3b399527"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-768.png",
+      "retainedAt": "generated/2766773068dcae89415442f5b1473c913a8f40a41eb3983e5955c427d8a4acf5.png",
+      "bytes": 1017088,
+      "sha256": "2766773068dcae89415442f5b1473c913a8f40a41eb3983e5955c427d8a4acf5"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-1280.png",
+      "retainedAt": "generated/cc88fa946e2a4edec2731c2fc3524d70e1f4d2050f5b61c5d4dd714a5bf71d71.png",
+      "bytes": 1358364,
+      "sha256": "cc88fa946e2a4edec2731c2fc3524d70e1f4d2050f5b61c5d4dd714a5bf71d71"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-320.png",
+      "retainedAt": "generated/00cfbc6bdb93b571ae2d7e006516840efd183e0d458286c6e7e89611ce868444.png",
+      "bytes": 589053,
+      "sha256": "00cfbc6bdb93b571ae2d7e006516840efd183e0d458286c6e7e89611ce868444"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-768.png",
+      "retainedAt": "generated/087a28b10f02ec0801b3b1e250e01319c6238ea622cb66abb26a915cf0dfe258.png",
+      "bytes": 1017132,
+      "sha256": "087a28b10f02ec0801b3b1e250e01319c6238ea622cb66abb26a915cf0dfe258"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-1280.png",
+      "retainedAt": "generated/3285db5fd3c4884719f5836187141c751ac2619a6c1bb13af88260eb7eb41637.png",
+      "bytes": 1362861,
+      "sha256": "3285db5fd3c4884719f5836187141c751ac2619a6c1bb13af88260eb7eb41637"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-320.png",
+      "retainedAt": "generated/f19a186304a1cd3ad2bea1091da51b3b10ef1c868bc61dfe7018e07d0ddf726b.png",
+      "bytes": 580968,
+      "sha256": "f19a186304a1cd3ad2bea1091da51b3b10ef1c868bc61dfe7018e07d0ddf726b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-768.png",
+      "retainedAt": "generated/eab274f45834a36ff3344312558275f8850db0803c98f31f60ae5c096a9e714f.png",
+      "bytes": 1030051,
+      "sha256": "eab274f45834a36ff3344312558275f8850db0803c98f31f60ae5c096a9e714f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-1280.png",
+      "retainedAt": "generated/f6b8441743c8fce6127442e8b7be6329f36b217d976fe15df0448118c6520e0f.png",
+      "bytes": 1274131,
+      "sha256": "f6b8441743c8fce6127442e8b7be6329f36b217d976fe15df0448118c6520e0f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-320.png",
+      "retainedAt": "generated/440d35dbde3495aba3ae6971c42d6118e515ca03a8e5dbf246a005e1e811154f.png",
+      "bytes": 621998,
+      "sha256": "440d35dbde3495aba3ae6971c42d6118e515ca03a8e5dbf246a005e1e811154f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-768.png",
+      "retainedAt": "generated/b93fae394b2590c6098471b2427e78822ebaec7a2527ac7554a7e079e76f253f.png",
+      "bytes": 1041477,
+      "sha256": "b93fae394b2590c6098471b2427e78822ebaec7a2527ac7554a7e079e76f253f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-1280.png",
+      "retainedAt": "generated/b771524ed3c5c52992c9a7d2dd973e3cd00cf0d2cced65fee38e804b9475ccc0.png",
+      "bytes": 1277925,
+      "sha256": "b771524ed3c5c52992c9a7d2dd973e3cd00cf0d2cced65fee38e804b9475ccc0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-320.png",
+      "retainedAt": "generated/c696e79fc66e4bd9762147bbd9663bfd304a4a965b0434f6ce85ce70cce58c32.png",
+      "bytes": 613967,
+      "sha256": "c696e79fc66e4bd9762147bbd9663bfd304a4a965b0434f6ce85ce70cce58c32"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-768.png",
+      "retainedAt": "generated/e82fa388b6b3efd3f86de49c81e3e3a13c0cf44dc097226b4578a589cc9b1119.png",
+      "bytes": 1017671,
+      "sha256": "e82fa388b6b3efd3f86de49c81e3e3a13c0cf44dc097226b4578a589cc9b1119"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-insurance-1280.png",
+      "retainedAt": "generated/97d10b8631ba08bb5786fba7a177bcb1b988fbb1f91096e08ee897f619cdae14.png",
+      "bytes": 1186745,
+      "sha256": "97d10b8631ba08bb5786fba7a177bcb1b988fbb1f91096e08ee897f619cdae14"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-insurance-320.png",
+      "retainedAt": "generated/da59a0235e066b8352ec357e6981a46017289ae3ae7844b6bea51b8a56673921.png",
+      "bytes": 528426,
+      "sha256": "da59a0235e066b8352ec357e6981a46017289ae3ae7844b6bea51b8a56673921"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-0c7ab--cards-or-financial-details-chromium/control-repair-text200-insurance-768.png",
+      "retainedAt": "generated/1172fdb255377b41c061521705353e5380c2e801b99630b2cbd1b949eb362195.png",
+      "bytes": 924881,
+      "sha256": "1172fdb255377b41c061521705353e5380c2e801b99630b2cbd1b949eb362195"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4c491-ttled-original-stake-profit-chromium/control-even-money-1280.png",
+      "retainedAt": "generated/896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47.png",
+      "bytes": 766205,
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4c491-ttled-original-stake-profit-chromium/control-even-money-320.png",
+      "retainedAt": "generated/020fa0f11678a21292e0ee04f8cf5ba396fea1bd218e7a43097f56887dcce003.png",
+      "bytes": 279895,
+      "sha256": "020fa0f11678a21292e0ee04f8cf5ba396fea1bd218e7a43097f56887dcce003"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4c491-ttled-original-stake-profit-chromium/control-even-money-768.png",
+      "retainedAt": "generated/8990e785065ababeaad4fca551bdbbb6cf00ff54a7946a5e735bb156d43f474b.png",
+      "bytes": 542002,
+      "sha256": "8990e785065ababeaad4fca551bdbbb6cf00ff54a7946a5e735bb156d43f474b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-complete-1280.png",
+      "retainedAt": "generated/0a508e3670f3decf0865b79d67a56cd657ae69d0b4cc17b023b7fb4417d4d693.png",
+      "bytes": 760027,
+      "sha256": "0a508e3670f3decf0865b79d67a56cd657ae69d0b4cc17b023b7fb4417d4d693"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-complete-320.png",
+      "retainedAt": "generated/cdf1b4dd16e3e7f2040b9d2ef4aabfdf68fbdcabcceccbeb96c90b4b0b85fdc3.png",
+      "bytes": 263143,
+      "sha256": "cdf1b4dd16e3e7f2040b9d2ef4aabfdf68fbdcabcceccbeb96c90b4b0b85fdc3"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-complete-768.png",
+      "retainedAt": "generated/19122189b0f9ea3adac90358e0251244c0e21885dead3c3c97455ed2263225ce.png",
+      "bytes": 554695,
+      "sha256": "19122189b0f9ea3adac90358e0251244c0e21885dead3c3c97455ed2263225ce"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-4e044--controls-retain-their-flow-chromium/control-open-768.png",
+      "retainedAt": "generated/37755977a6db18a026ba6d216477b80c2b2706d1d818cc5382e18b0d9f7845fa.png",
+      "bytes": 530327,
+      "sha256": "37755977a6db18a026ba6d216477b80c2b2706d1d818cc5382e18b0d9f7845fa"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-player-1280.png",
+      "retainedAt": "generated/c20ae85f5c7088f565b7626e5a142f4c504fb5db0dbf85bf01951276a76db950.png",
+      "bytes": 747802,
+      "sha256": "c20ae85f5c7088f565b7626e5a142f4c504fb5db0dbf85bf01951276a76db950"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-player-320.png",
+      "retainedAt": "generated/0a53a26fd7b65f1c99ec00e55f7ed34f0e95ba83eb6c63245e7078932e3cfb04.png",
+      "bytes": 258887,
+      "sha256": "0a53a26fd7b65f1c99ec00e55f7ed34f0e95ba83eb6c63245e7078932e3cfb04"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-player-768.png",
+      "retainedAt": "generated/864252284fdd099c0bd1d7526aa9670146a5e95e73734dbb2415e22ac69a9ef7.png",
+      "bytes": 532068,
+      "sha256": "864252284fdd099c0bd1d7526aa9670146a5e95e73734dbb2415e22ac69a9ef7"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-a-1280.png",
+      "retainedAt": "generated/fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31.png",
+      "bytes": 864277,
+      "sha256": "fee2c6ce841cfa6b86adc233cb885b326e891457956480603ea515a9583f0f31"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-a-320.png",
+      "retainedAt": "generated/f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7.png",
+      "bytes": 297672,
+      "sha256": "f94535e39c531561be865676031897f9f24a08e093e98815aaa76443645199e7"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-a-768.png",
+      "retainedAt": "generated/02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96.png",
+      "bytes": 630671,
+      "sha256": "02ddc5caeccda6fad000e1eb37100fe5348ebc8bc394230f9c4db56721915d96"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-b-1280.png",
+      "retainedAt": "generated/36d1dc5a71909980591b0ad9b1d1251aa09e2eb07fe042769c755f17229dad32.png",
+      "bytes": 860999,
+      "sha256": "36d1dc5a71909980591b0ad9b1d1251aa09e2eb07fe042769c755f17229dad32"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-b-320.png",
+      "retainedAt": "generated/c9110c876910eed662c480f0f8394fc53a89ffbadf587f967b7a0361cc15498a.png",
+      "bytes": 292136,
+      "sha256": "c9110c876910eed662c480f0f8394fc53a89ffbadf587f967b7a0361cc15498a"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-68a3f-etained-desktop-primary-fit-chromium/control-split-b-768.png",
+      "retainedAt": "generated/94018dca993228539ccf1f251b8a594d156923810a8a75033a676629cde4279b.png",
+      "bytes": 625717,
+      "sha256": "94018dca993228539ccf1f251b8a594d156923810a8a75033a676629cde4279b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-ace-1280.png",
+      "retainedAt": "generated/b921ce1c3480b72dd7dc7c9956534a9d170edcb6ecacd6afefbb39cc3d30e6c2.png",
+      "bytes": 800662,
+      "sha256": "b921ce1c3480b72dd7dc7c9956534a9d170edcb6ecacd6afefbb39cc3d30e6c2"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-ace-320.png",
+      "retainedAt": "generated/473b1f9e088b76622fe40d8458ff400bba6f0c18cff7e4e84574c94a273f45e8.png",
+      "bytes": 296696,
+      "sha256": "473b1f9e088b76622fe40d8458ff400bba6f0c18cff7e4e84574c94a273f45e8"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-ace-768.png",
+      "retainedAt": "generated/b3871c50ed98d95047bbf77b7504aca2932d9b5166a5f5f00a727a8d1de79666.png",
+      "bytes": 574191,
+      "sha256": "b3871c50ed98d95047bbf77b7504aca2932d9b5166a5f5f00a727a8d1de79666"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-even-money-1280.png",
+      "retainedAt": "generated/42bbbcc20d71c59d558ce879cf9537203b772ed821739b43c82fb224e0570d61.png",
+      "bytes": 799643,
+      "sha256": "42bbbcc20d71c59d558ce879cf9537203b772ed821739b43c82fb224e0570d61"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-even-money-320.png",
+      "retainedAt": "generated/2c0f1749590485292eeaf6186afb927d3fd3e12dee0d2e6703dcd83404aa0a51.png",
+      "bytes": 303398,
+      "sha256": "2c0f1749590485292eeaf6186afb927d3fd3e12dee0d2e6703dcd83404aa0a51"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-expanded-player-even-money-768.png",
+      "retainedAt": "generated/4e891db03e8942e26c80fd6e2c2b9d85f65596c133e4ed64efcf8f846d3fac5e.png",
+      "bytes": 572275,
+      "sha256": "4e891db03e8942e26c80fd6e2c2b9d85f65596c133e4ed64efcf8f846d3fac5e"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-ace-1280.png",
+      "retainedAt": "generated/2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6.png",
+      "bytes": 767129,
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-ace-320.png",
+      "retainedAt": "generated/b8ed856520ed78c0f66285c19734f99585a001904eb12fda2bed671a52c7da30.png",
+      "bytes": 272370,
+      "sha256": "b8ed856520ed78c0f66285c19734f99585a001904eb12fda2bed671a52c7da30"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-ace-768.png",
+      "retainedAt": "generated/3874933f8112f9da94feb316e27191563c01496d4ca8efbd5f4bb3afe8f77a03.png",
+      "bytes": 543926,
+      "sha256": "3874933f8112f9da94feb316e27191563c01496d4ca8efbd5f4bb3afe8f77a03"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-even-money-1280.png",
+      "retainedAt": "generated/896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47.png",
+      "bytes": 766205,
+      "sha256": "896efdf8811197d2c518ba0f60fb3fe9e69a6d2fd2e2b52bf9bfdc2215456e47"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-even-money-320.png",
+      "retainedAt": "generated/020fa0f11678a21292e0ee04f8cf5ba396fea1bd218e7a43097f56887dcce003.png",
+      "bytes": 279895,
+      "sha256": "020fa0f11678a21292e0ee04f8cf5ba396fea1bd218e7a43097f56887dcce003"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-69ca8-unt-and-keyboard-disclosure-chromium/control-repair-insurance-player-even-money-768.png",
+      "retainedAt": "generated/8990e785065ababeaad4fca551bdbbb6cf00ff54a7946a5e735bb156d43f474b.png",
+      "bytes": 542002,
+      "sha256": "8990e785065ababeaad4fca551bdbbb6cf00ff54a7946a5e735bb156d43f474b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-1280.png",
+      "retainedAt": "generated/d7ae0ed3885a6bab5bb06b25d1bf5fe3505ed0c81cf6cfb9716285b37f0ee0a0.png",
+      "bytes": 877856,
+      "sha256": "d7ae0ed3885a6bab5bb06b25d1bf5fe3505ed0c81cf6cfb9716285b37f0ee0a0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-320.png",
+      "retainedAt": "generated/0ce1f80d8eb4fc0f80bdb61da19a13f3fbb300a20ab44cf3f8bf73d5d0cdc8b7.png",
+      "bytes": 307082,
+      "sha256": "0ce1f80d8eb4fc0f80bdb61da19a13f3fbb300a20ab44cf3f8bf73d5d0cdc8b7"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-768.png",
+      "retainedAt": "generated/5a236529ba66bef636e61fd46884a31423a11e86111769bfb060b0cc257335b3.png",
+      "bytes": 638082,
+      "sha256": "5a236529ba66bef636e61fd46884a31423a11e86111769bfb060b0cc257335b3"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-loss-1280.png",
+      "retainedAt": "generated/2e352a4e3be5862e588fc8dd6a3293343a93b47b4c436a6ba36e98fe60033c47.png",
+      "bytes": 883002,
+      "sha256": "2e352a4e3be5862e588fc8dd6a3293343a93b47b4c436a6ba36e98fe60033c47"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-loss-320.png",
+      "retainedAt": "generated/79a4604ec5f3d708379f143f433ee72735b6f15f8c6307cfd2ce924359edd93a.png",
+      "bytes": 310173,
+      "sha256": "79a4604ec5f3d708379f143f433ee72735b6f15f8c6307cfd2ce924359edd93a"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-loss-768.png",
+      "retainedAt": "generated/a77eecad4f52f3f331b70e5bbcf5da56fef19b75b9fca0ec029f72e984b5eee7.png",
+      "bytes": 623572,
+      "sha256": "a77eecad4f52f3f331b70e5bbcf5da56fef19b75b9fca0ec029f72e984b5eee7"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-push-1280.png",
+      "retainedAt": "generated/45f0ad3565f89eda5121567d7c3f9451be31a8d4a917a0f25a53bc8dfc382055.png",
+      "bytes": 883424,
+      "sha256": "45f0ad3565f89eda5121567d7c3f9451be31a8d4a917a0f25a53bc8dfc382055"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-push-320.png",
+      "retainedAt": "generated/1e7784d41b2c6519fd731789e39d9ab39be552f1bf9ed6c56d42ed4ecd5959b7.png",
+      "bytes": 309977,
+      "sha256": "1e7784d41b2c6519fd731789e39d9ab39be552f1bf9ed6c56d42ed4ecd5959b7"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-expanded-player-push-768.png",
+      "retainedAt": "generated/5d2b5e8e5a4eda95c83c87dc555f766cd1d6ee4064f2d3ef23500e3765f8e011.png",
+      "bytes": 623790,
+      "sha256": "5d2b5e8e5a4eda95c83c87dc555f766cd1d6ee4064f2d3ef23500e3765f8e011"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-1280.png",
+      "retainedAt": "generated/1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1.png",
+      "bytes": 760818,
+      "sha256": "1a955b5e241064187e52b76b4e94d94fa01163dc0a32abebb77ff1e76a95aec1"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-320.png",
+      "retainedAt": "generated/bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e.png",
+      "bytes": 262998,
+      "sha256": "bdfb771919c20d7c6e52b5279eaf1fe04d325636c7fe18b53685805aa806236e"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-768.png",
+      "retainedAt": "generated/003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4.png",
+      "bytes": 554805,
+      "sha256": "003609588359143977f2c5d2c512f87748218dee40d571bc6a95c0b69e41e5d4"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-loss-1280.png",
+      "retainedAt": "generated/e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf.png",
+      "bytes": 766557,
+      "sha256": "e6fe16718e9e42e427fd69bc254df10ec6f19fe8a5c240a95dd2e56df47ec5cf"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-loss-320.png",
+      "retainedAt": "generated/8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883.png",
+      "bytes": 266283,
+      "sha256": "8d02f1a495817e1cfa29d4f1f619d733eca148aff2f465f8da121a567c8e0883"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-loss-768.png",
+      "retainedAt": "generated/2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853.png",
+      "bytes": 539928,
+      "sha256": "2e8504112f8d239f447b59ac08035367416122f4731c0715ddb91b7d1873e853"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-push-1280.png",
+      "retainedAt": "generated/65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e.png",
+      "bytes": 766931,
+      "sha256": "65a05a95f6faed549132c11a6eec2ecf48ab9d52d9b5cdc4fe69c8329190021e"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-push-320.png",
+      "retainedAt": "generated/afffae181c6f2b5f81f15d6ab982ece9ad4ef6b9919cfa329e4f0247138bb9e5.png",
+      "bytes": 266221,
+      "sha256": "afffae181c6f2b5f81f15d6ab982ece9ad4ef6b9919cfa329e4f0247138bb9e5"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-78234--low-fund-disabled-behavior-chromium/control-repair-complete-player-push-768.png",
+      "retainedAt": "generated/3de42e6df069740d21e9527aa5d1c773a445b808acadea7fa0fa7676a5c2c5fa.png",
+      "bytes": 540121,
+      "sha256": "3de42e6df069740d21e9527aa5d1c773a445b808acadea7fa0fa7676a5c2c5fa"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a6266-neligible-Even-Money-choice-chromium/control-insurance-1280.png",
+      "retainedAt": "generated/2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6.png",
+      "bytes": 767129,
+      "sha256": "2a6bab7c88f3ff08825bd8e11f632f4935b7f390182c627f23f551d961f0b6b6"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a6266-neligible-Even-Money-choice-chromium/control-insurance-320.png",
+      "retainedAt": "generated/b8ed856520ed78c0f66285c19734f99585a001904eb12fda2bed671a52c7da30.png",
+      "bytes": 272370,
+      "sha256": "b8ed856520ed78c0f66285c19734f99585a001904eb12fda2bed671a52c7da30"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a6266-neligible-Even-Money-choice-chromium/control-insurance-768.png",
+      "retainedAt": "generated/3874933f8112f9da94feb316e27191563c01496d4ca8efbd5f4bb3afe8f77a03.png",
+      "bytes": 543926,
+      "sha256": "3874933f8112f9da94feb316e27191563c01496d4ca8efbd5f4bb3afe8f77a03"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a9364-nd-Decline-reserves-nothing-chromium/control-insurance-unavailable-1280.png",
+      "retainedAt": "generated/13385e37055338839a58d1b2c8b6aab299016ec71cf03934718dac3c920bced0.png",
+      "bytes": 786007,
+      "sha256": "13385e37055338839a58d1b2c8b6aab299016ec71cf03934718dac3c920bced0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a9364-nd-Decline-reserves-nothing-chromium/control-insurance-unavailable-320.png",
+      "retainedAt": "generated/c53a3f3f1a2ed04ea684b6ebf6233d19460029fa5376b6144fb80191211e6fca.png",
+      "bytes": 284058,
+      "sha256": "c53a3f3f1a2ed04ea684b6ebf6233d19460029fa5376b6144fb80191211e6fca"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-a9364-nd-Decline-reserves-nothing-chromium/control-insurance-unavailable-768.png",
+      "retainedAt": "generated/b6e5cac5e66a20aa64b92b3c02108a121479d72a0180210221594c279d1f8ea9.png",
+      "bytes": 556703,
+      "sha256": "b6e5cac5e66a20aa64b92b3c02108a121479d72a0180210221594c279d1f8ea9"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-open-768.png",
+      "retainedAt": "generated/80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3.png",
+      "bytes": 530158,
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-pending-1280.png",
+      "retainedAt": "generated/49bc3ab56f5a2950ab226d94806991fda30d67f91908c77d40289dd854d77383.png",
+      "bytes": 750307,
+      "sha256": "49bc3ab56f5a2950ab226d94806991fda30d67f91908c77d40289dd854d77383"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-pending-320.png",
+      "retainedAt": "generated/49c1f30359bef8ea81908c1641ac8a5b1e6af3116a3407aeb5b194b3ced87103.png",
+      "bytes": 258067,
+      "sha256": "49c1f30359bef8ea81908c1641ac8a5b1e6af3116a3407aeb5b194b3ced87103"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B01-sec-3e806-fund-values-at-three-widths-chromium/credits-pending-768.png",
+      "retainedAt": "generated/3fc82a125040062d6991b298690dbfbfceb700eefb50da2ac4bbcea172a83ef3.png",
+      "bytes": 529599,
+      "sha256": "3fc82a125040062d6991b298690dbfbfceb700eefb50da2ac4bbcea172a83ef3"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/credits-text200-1280.png",
+      "retainedAt": "generated/441d7f3ccb844ace30e3258264a95d64fe8f443333bcf51a3e31e7361e23f16b.png",
+      "bytes": 1131598,
+      "sha256": "441d7f3ccb844ace30e3258264a95d64fe8f443333bcf51a3e31e7361e23f16b"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/credits-text200-320.png",
+      "retainedAt": "generated/205b0e41aa7ca345a050308bdd10ddfde7376fe8799b823a27d91267da0bd4f0.png",
+      "bytes": 493189,
+      "sha256": "205b0e41aa7ca345a050308bdd10ddfde7376fe8799b823a27d91267da0bd4f0"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/credits-text200-768.png",
+      "retainedAt": "generated/dcad3e6601e5c5e132e9d1887dd89ebc2f4d5420b65dbd16d1efab09a05a6463.png",
+      "bytes": 884897,
+      "sha256": "dcad3e6601e5c5e132e9d1887dd89ebc2f4d5420b65dbd16d1efab09a05a6463"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/error-context.md",
+      "retainedAt": "generated/796b23a1e2e9f9055e1bc9b0e2bb61bd80444dac0d6e57339d63a8440045c02c.md.gz",
+      "bytes": 4681,
+      "sha256": "796b23a1e2e9f9055e1bc9b0e2bb61bd80444dac0d6e57339d63a8440045c02c",
+      "encoding": "gzip",
+      "compressedSha256": "51e745375d5371873912a706f80d128f70905321b5d29d2571160df6b1dca1eb"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/test-failed-1.png",
+      "retainedAt": "generated/4fac3db64903f1fdf077a390878690a351445659ebbb1b32ef04c3356ca0426d.png",
+      "bytes": 124498,
+      "sha256": "4fac3db64903f1fdf077a390878690a351445659ebbb1b32ef04c3356ca0426d"
+    },
+    {
+      "path": "test-results/m10a-t07--M10A-T07-B02-tex-6f315-us-stops-or-hiding-controls-chromium/trace.zip",
+      "retainedAt": "generated/da0ee847f692afa655dae044f383db9e8ce2bfca48e0fc40ecf8464fe7bc43ef.zip",
+      "bytes": 2015609,
+      "sha256": "da0ee847f692afa655dae044f383db9e8ce2bfca48e0fc40ecf8464fe7bc43ef"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "test-results/m9--M9-E01-first-person-ca-15ba2-ap-on-desktop-tablet-mobile-chromium/table-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_female.png",
+      "retainedAt": "generated/bbf1694a74fdeb9233fd70918285ab0234b084d1cd6ace2f30d42838e15b1eba.png",
+      "bytes": 132601,
+      "sha256": "bbf1694a74fdeb9233fd70918285ab0234b084d1cd6ace2f30d42838e15b1eba"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-dwarf_male.png",
+      "retainedAt": "generated/be5be1908b59e491fc6c7bff14194c2cfb5f421cab667c1f4e90f730f1a30ee1.png",
+      "bytes": 132143,
+      "sha256": "be5be1908b59e491fc6c7bff14194c2cfb5f421cab667c1f4e90f730f1a30ee1"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_female.png",
+      "retainedAt": "generated/e21f24ed5245aaa26dc910f2592b871b262f9b3bb1cc32e3aedf10ea8a6fc8f6.png",
+      "bytes": 132484,
+      "sha256": "e21f24ed5245aaa26dc910f2592b871b262f9b3bb1cc32e3aedf10ea8a6fc8f6"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-elf_male.png",
+      "retainedAt": "generated/240a74419f2716c3aa42a3b33eb93a483db2f2ce9a08cbfae726a29f9ff68b05.png",
+      "bytes": 132601,
+      "sha256": "240a74419f2716c3aa42a3b33eb93a483db2f2ce9a08cbfae726a29f9ff68b05"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_female.png",
+      "retainedAt": "generated/7ef6860b35b1eea3953c3405d2b0f3ca0763da0846142332d7d0589120fd5f79.png",
+      "bytes": 133895,
+      "sha256": "7ef6860b35b1eea3953c3405d2b0f3ca0763da0846142332d7d0589120fd5f79"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-halforc_male.png",
+      "retainedAt": "generated/0e6d599fec7ed9b51a5e4524b632f5b6f18ebb0d72a54dce2de6f6c09a8ab672.png",
+      "bytes": 135142,
+      "sha256": "0e6d599fec7ed9b51a5e4524b632f5b6f18ebb0d72a54dce2de6f6c09a8ab672"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_female.png",
+      "retainedAt": "generated/b0a0fae7d58145a2a719f9fa9e236616b8d956d5df7f3ed8ed1708f90d97866b.png",
+      "bytes": 134175,
+      "sha256": "b0a0fae7d58145a2a719f9fa9e236616b8d956d5df7f3ed8ed1708f90d97866b"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-knight_male.png",
+      "retainedAt": "generated/c88bbb5f572d9e4db48eabd1f115b2be0f339e10c7a3a8b83ef4f1852a3d2649.png",
+      "bytes": 133063,
+      "sha256": "c88bbb5f572d9e4db48eabd1f115b2be0f339e10c7a3a8b83ef4f1852a3d2649"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_female.png",
+      "retainedAt": "generated/26a144ef63cba463e2ce6713013140fed6c512ca94fe97787cf4fb74b8bd83f6.png",
+      "bytes": 134685,
+      "sha256": "26a144ef63cba463e2ce6713013140fed6c512ca94fe97787cf4fb74b8bd83f6"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-mage_male.png",
+      "retainedAt": "generated/4bb73907eaa2e9de6a10a9a7e4ae80e43e8db9ea1024be44b87223e9004d1e07.png",
+      "bytes": 133967,
+      "sha256": "4bb73907eaa2e9de6a10a9a7e4ae80e43e8db9ea1024be44b87223e9004d1e07"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_female.png",
+      "retainedAt": "generated/692652233d045a69fe80c138264bb0b14694184cac565546e30f9b70a75a385d.png",
+      "bytes": 132226,
+      "sha256": "692652233d045a69fe80c138264bb0b14694184cac565546e30f9b70a75a385d"
+    },
+    {
+      "path": "test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/pa1-avatar-noble_male.png",
+      "retainedAt": "generated/502b6142882ea6edd92f6c0c7127339fa9fbab0a9e2d0d9dd9671c744c64602d.png",
+      "bytes": 132405,
+      "sha256": "502b6142882ea6edd92f6c0c7127339fa9fbab0a9e2d0d9dd9671c744c64602d"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-1280.png",
+      "retainedAt": "generated/feae849f5d1c10e64e819b7fd57dba34295173967d25506eee2e7bedd31df9a0.png",
+      "bytes": 823253,
+      "sha256": "feae849f5d1c10e64e819b7fd57dba34295173967d25506eee2e7bedd31df9a0"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-320.png",
+      "retainedAt": "generated/3823b98a9c99cb4b8a479ac08a804701e5860a2b1fa5d2dbcfa2b9bd60b06202.png",
+      "bytes": 299210,
+      "sha256": "3823b98a9c99cb4b8a479ac08a804701e5860a2b1fa5d2dbcfa2b9bd60b06202"
+    },
+    {
+      "path": "test-results/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/pa1-responsive-768.png",
+      "retainedAt": "generated/8f74b6e7b990db79977efb2e09bf9e07e34b777cfa56e86421aa7a2e09c7ee86.png",
+      "bytes": 597121,
+      "sha256": "8f74b6e7b990db79977efb2e09bf9e07e34b777cfa56e86421aa7a2e09c7ee86"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-1280.png",
+      "retainedAt": "generated/af01a37402d8eb9ad477442df1e34f249b9990039fd97a4fe78b11fc7f61cefe.png",
+      "bytes": 1168760,
+      "sha256": "af01a37402d8eb9ad477442df1e34f249b9990039fd97a4fe78b11fc7f61cefe"
+    },
+    {
+      "path": "test-results/pa1--PA1-E05-failed-portra-c3823-ntity-and-playable-controls-chromium/pa1-text-fallback-320.png",
+      "retainedAt": "generated/83ebed03cb545f2b612c77ebfb95cfee4e5b94830655b4dcd0dea497b7b97baa.png",
+      "bytes": 547557,
+      "sha256": "83ebed03cb545f2b612c77ebfb95cfee4e5b94830655b4dcd0dea497b7b97baa"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-ready.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-results.png",
+      "retainedAt": "generated/b12615b7c06e38dfdc680b273a0cf6d7f1c2f2a360731e126ec0823585d9dd62.png",
+      "bytes": 835863,
+      "sha256": "b12615b7c06e38dfdc680b273a0cf6d7f1c2f2a360731e126ec0823585d9dd62"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-table-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-table-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-table-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/images/m9-tools.png",
+      "retainedAt": "generated/21e683df9d72d20ecaa47a1b430956a6ce95a854fe280163a5fc8491e42ba8fd.png",
+      "bytes": 70822,
+      "sha256": "21e683df9d72d20ecaa47a1b430956a6ce95a854fe280163a5fc8491e42ba8fd"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "retainedAt": "generated/99f44281f3aad8a0d41c102cf5e81d05538d68e05c937bfeeba1b5e7ee3a79bb.png",
+      "bytes": 807806,
+      "sha256": "99f44281f3aad8a0d41c102cf5e81d05538d68e05c937bfeeba1b5e7ee3a79bb"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "retainedAt": "generated/ae9dda73638b029de1151251523699708c159741885efb25f6f7e93395416860.png",
+      "bytes": 271926,
+      "sha256": "ae9dda73638b029de1151251523699708c159741885efb25f6f7e93395416860"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "retainedAt": "generated/7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26.png",
+      "bytes": 510416,
+      "sha256": "7d3f3add39562ffe2f9fc8167f720aaf1a7ab85b5632abf430d8794cd2248d26"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "retainedAt": "generated/68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b.png",
+      "bytes": 1083076,
+      "sha256": "68c8ea386b9cc09640770eb6524f86b1e2c4362a59c21bef2ca9bf315695c51b"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "retainedAt": "generated/d4e638d29bd8dcbb126e7ca2f5359e88f15347b7c5b1138f8a1ad57a33e2d3bf.png",
+      "bytes": 350345,
+      "sha256": "d4e638d29bd8dcbb126e7ca2f5359e88f15347b7c5b1138f8a1ad57a33e2d3bf"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "retainedAt": "generated/0af40aeb7a3bcbfd065843a07c09fad7f685a2f0d59ca01f454982872c1c11a9.png",
+      "bytes": 814628,
+      "sha256": "0af40aeb7a3bcbfd065843a07c09fad7f685a2f0d59ca01f454982872c1c11a9"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/geometry.json",
+      "retainedAt": "generated/8eef21f974cf7082e22542d8d27535474eb142950738edec725a984fb8bd68ca.json",
+      "bytes": 2761,
+      "sha256": "8eef21f974cf7082e22542d8d27535474eb142950738edec725a984fb8bd68ca"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "retainedAt": "generated/9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197.png",
+      "bytes": 817501,
+      "sha256": "9cae80755030c21f02b94417dae199b8a38ba17e87496ed327ce4ca404c8f197"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "retainedAt": "generated/f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905.png",
+      "bytes": 280462,
+      "sha256": "f1b6159de8b53744e1f70fda49eed892690bdeb8df284d74c7a4a81ad2a6a905"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "retainedAt": "generated/80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3.png",
+      "bytes": 530158,
+      "sha256": "80e03af9fd2096bc3b7711d49730299330f7091878e6d580533bc29911c202a3"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/table-1280.png",
+      "retainedAt": "generated/9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9.png",
+      "bytes": 748700,
+      "sha256": "9462f01d36746ae18f3a43b118fb0895a50ab8e8fe323c1b645508bcc04517a9"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/table-320.png",
+      "retainedAt": "generated/aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa.png",
+      "bytes": 259992,
+      "sha256": "aa4cddaaf18ce10b44b1e7960665ad4b3e773e9ebc453578b75528086beaddaa"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/table-768.png",
+      "retainedAt": "generated/c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4.png",
+      "bytes": 533917,
+      "sha256": "c50cd5bd58bafad638602d7ee94be3f445b49301775227294d547e64b07f63f4"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "retainedAt": "generated/470db5a1d95ba4b05ffea47ed98bef0ba5c8f5c83c31699b1c95fe3bbb93ba1c.png",
+      "bytes": 1075582,
+      "sha256": "470db5a1d95ba4b05ffea47ed98bef0ba5c8f5c83c31699b1c95fe3bbb93ba1c"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "retainedAt": "generated/a9de4b76ea376ae32f6f99dc18ec2adcbbcf5133ad7519461115f553c4e75893.png",
+      "bytes": 552219,
+      "sha256": "a9de4b76ea376ae32f6f99dc18ec2adcbbcf5133ad7519461115f553c4e75893"
+    },
+    {
+      "path": "C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-writes-t07-focus-browser/docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "retainedAt": "generated/6b56d930622c2c52e28159be8604835ef9aa8bbf7bea6c796a53ae9177eac929.png",
+      "bytes": 850360,
+      "sha256": "6b56d930622c2c52e28159be8604835ef9aa8bbf7bea6c796a53ae9177eac929"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-05 01:09:07 +08:00"
+}

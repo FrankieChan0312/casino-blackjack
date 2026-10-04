@@ -1,0 +1,1042 @@
+{
+  "start": "2026-10-05 00:59:21 +08:00",
+  "phase": "before",
+  "method": "Identical real-domain fixtures/commands at all three viewport sizes; new controlled push fixture added before presentation changes, no domain modification.",
+  "scenarios": [
+    {
+      "state": "open",
+      "fixture": "player",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1197,
+        "local": {
+          "x": 260,
+          "y": 494.953125,
+          "width": 760,
+          "height": 288.546875
+        },
+        "dock": {
+          "x": 236,
+          "y": 789.5,
+          "width": 808,
+          "height": 306.375
+        },
+        "surface": null,
+        "credits": {
+          "x": 248,
+          "y": 816.6875,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "player-wager",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-open-1280.png",
+        "sha256": "aea4ba4a30436276dee6ccd6dbc6c17bf69f6d5935b25d0e812ea6660f42c8ef",
+        "bytes": 805705
+      }
+    },
+    {
+      "state": "player",
+      "fixture": "player",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1103,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 197.1875
+        },
+        "surface": null,
+        "credits": {
+          "x": 248,
+          "y": 935.359375,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "player-hand",
+        "stand": {
+          "x": 458,
+          "y": 831.359375,
+          "width": 116,
+          "height": 52
+        }
+      },
+      "screenshot": {
+        "path": "before-player-1280.png",
+        "sha256": "c64c8599bdd6e3d2918056260eaf31c6d24e57ae5f8943f3b8ac00a223edcd68",
+        "bytes": 730335
+      }
+    },
+    {
+      "state": "insurance",
+      "fixture": "player-ace",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1121,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 215.734375
+        },
+        "surface": {
+          "x": 248,
+          "y": 831.359375,
+          "width": 780,
+          "height": 118.546875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 248,
+          "y": 953.90625,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-insurance-1280.png",
+        "sha256": "ffe42a60d7154c5b5c71039d17f9cd1de3dbd40bb38c383038b8009dc2e118ce",
+        "bytes": 749625
+      }
+    },
+    {
+      "state": "even-money",
+      "fixture": "player-even-money",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1121,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 215.734375
+        },
+        "surface": {
+          "x": 248,
+          "y": 831.359375,
+          "width": 780,
+          "height": 118.546875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineTake Even MoneyInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 248,
+          "y": 953.90625,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-even-money-1280.png",
+        "sha256": "8e385a0e42fe5b5935033041b182a8e36e241de3a0d51079509d55679547876c",
+        "bytes": 748559
+      }
+    },
+    {
+      "state": "complete-win",
+      "fixture": "player",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1126,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 220.375
+        },
+        "surface": {
+          "x": 248,
+          "y": 831.359375,
+          "width": 784,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand AWinStake: 100 · Returned: 200 · Net: 100Settled"
+        },
+        "credits": {
+          "x": 248,
+          "y": 958.546875,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-win-1280.png",
+        "sha256": "d7920528a8e72aee9beb567de9945ee53fc14dd9d9980c892ff8f130657ae95f",
+        "bytes": 740025
+      }
+    },
+    {
+      "state": "complete-loss",
+      "fixture": "player-loss",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1126,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 220.375
+        },
+        "surface": {
+          "x": 248,
+          "y": 831.359375,
+          "width": 784,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: -100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand ALossStake: 100 · Returned: 0 · Net: -100Settled"
+        },
+        "credits": {
+          "x": 248,
+          "y": 958.546875,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-loss-1280.png",
+        "sha256": "39fc5fb81d7fdaa3d27e8fe01befa232670c696cc550c976ee0170852acd0ed2",
+        "bytes": 745574
+      }
+    },
+    {
+      "state": "complete-push",
+      "fixture": "player-push",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "measurements": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "scrollWidth": 1280,
+        "pageHeight": 1126,
+        "local": {
+          "x": 260,
+          "y": 526.171875,
+          "width": 760,
+          "height": 272
+        },
+        "dock": {
+          "x": 236,
+          "y": 804.171875,
+          "width": 808,
+          "height": 220.375
+        },
+        "surface": {
+          "x": 248,
+          "y": 831.359375,
+          "width": 784,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 0 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand APushStake: 100 · Returned: 100 · Net: 0Settled"
+        },
+        "credits": {
+          "x": 248,
+          "y": 958.546875,
+          "width": 784,
+          "height": 54
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-push-1280.png",
+        "sha256": "2321fe88acf92d9fa68260543b62582ff63c3303289a54cac44cf69170ef0602",
+        "bytes": 746396
+      }
+    },
+    {
+      "state": "open",
+      "fixture": "player",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1202,
+        "local": {
+          "x": 84,
+          "y": 478.0625,
+          "width": 600,
+          "height": 264.546875
+        },
+        "dock": {
+          "x": 60,
+          "y": 758.609375,
+          "width": 648,
+          "height": 344.375
+        },
+        "surface": null,
+        "credits": {
+          "x": 72,
+          "y": 807.796875,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "player-wager",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-open-768.png",
+        "sha256": "5489d2ab65022c02e937719d24260b13c7a16f7140616825c0a89ecc2ecd4b43",
+        "bytes": 522293
+      }
+    },
+    {
+      "state": "player",
+      "fixture": "player",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1176,
+        "local": {
+          "x": 84,
+          "y": 530.953125,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 853.09375,
+          "width": 648,
+          "height": 223.1875
+        },
+        "surface": null,
+        "credits": {
+          "x": 72,
+          "y": 1006.28125,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "player-hand",
+        "stand": {
+          "x": 202,
+          "y": 898.28125,
+          "width": 116,
+          "height": 52
+        }
+      },
+      "screenshot": {
+        "path": "before-player-768.png",
+        "sha256": "ab15b01f8dfe14a031b6f45201d37cc413f7114eaf9e85f89c7a55ecfbb88149",
+        "bytes": 526428
+      }
+    },
+    {
+      "state": "insurance",
+      "fixture": "player-ace",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1186,
+        "local": {
+          "x": 84,
+          "y": 522.703125,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 844.84375,
+          "width": 648,
+          "height": 241.734375
+        },
+        "surface": {
+          "x": 72,
+          "y": 890.03125,
+          "width": 624,
+          "height": 118.546875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 72,
+          "y": 1016.578125,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-insurance-768.png",
+        "sha256": "1db9b3193e2ab0f425363380ccd3150dea26a393af94409b09f0f1c63aeccb82",
+        "bytes": 534251
+      }
+    },
+    {
+      "state": "even-money",
+      "fixture": "player-even-money",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1186,
+        "local": {
+          "x": 84,
+          "y": 522.703125,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 844.84375,
+          "width": 648,
+          "height": 241.734375
+        },
+        "surface": {
+          "x": 72,
+          "y": 890.03125,
+          "width": 624,
+          "height": 118.546875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineTake Even MoneyInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 72,
+          "y": 1016.578125,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-even-money-768.png",
+        "sha256": "5252aeb97eb02ce4644bc2686e3387f7262ebc007a520199c54d19cc560986d1",
+        "bytes": 532444
+      }
+    },
+    {
+      "state": "complete-win",
+      "fixture": "player",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1210,
+        "local": {
+          "x": 84,
+          "y": 541.96875,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 864.109375,
+          "width": 648,
+          "height": 246.375
+        },
+        "surface": {
+          "x": 72,
+          "y": 909.296875,
+          "width": 624,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand AWinStake: 100 · Returned: 200 · Net: 100Settled"
+        },
+        "credits": {
+          "x": 72,
+          "y": 1040.484375,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-win-768.png",
+        "sha256": "18aca4a1f51b37351261df694bcc1fac55019747410f053d2cfb372cbb2b6ef4",
+        "bytes": 547166
+      }
+    },
+    {
+      "state": "complete-loss",
+      "fixture": "player-loss",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1190,
+        "local": {
+          "x": 84,
+          "y": 522.703125,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 844.84375,
+          "width": 648,
+          "height": 246.375
+        },
+        "surface": {
+          "x": 72,
+          "y": 890.03125,
+          "width": 624,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: -100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand ALossStake: 100 · Returned: 0 · Net: -100Settled"
+        },
+        "credits": {
+          "x": 72,
+          "y": 1021.21875,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-loss-768.png",
+        "sha256": "0ef626ca0e14cc960c0852116b0bc01e61191c7ef3d2fe5c45379826431e3e12",
+        "bytes": 531024
+      }
+    },
+    {
+      "state": "complete-push",
+      "fixture": "player-push",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "measurements": {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "scrollWidth": 768,
+        "pageHeight": 1190,
+        "local": {
+          "x": 84,
+          "y": 522.703125,
+          "width": 600,
+          "height": 306.140625
+        },
+        "dock": {
+          "x": 60,
+          "y": 844.84375,
+          "width": 648,
+          "height": 246.375
+        },
+        "surface": {
+          "x": 72,
+          "y": 890.03125,
+          "width": 624,
+          "height": 123.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 0 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand APushStake: 100 · Returned: 100 · Net: 0Settled"
+        },
+        "credits": {
+          "x": 72,
+          "y": 1021.21875,
+          "width": 624,
+          "height": 58
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-push-768.png",
+        "sha256": "d44a96a73d5d2b923faba279cf75527c237d5f9f3718b05415c51c23b25ad7db",
+        "bytes": 531343
+      }
+    },
+    {
+      "state": "open",
+      "fixture": "player",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1444,
+        "local": {
+          "x": 18,
+          "y": 471.46875,
+          "width": 283.984375,
+          "height": 220.546875
+        },
+        "dock": {
+          "x": 10,
+          "y": 702.015625,
+          "width": 300,
+          "height": 531.5625
+        },
+        "surface": null,
+        "credits": {
+          "x": 22,
+          "y": 751.203125,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "player-wager",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-open-320.png",
+        "sha256": "aa29717b7d71138b5c27e6c31a2418c515153e33900fc8d32a76735b93521748",
+        "bytes": 281178
+      }
+    },
+    {
+      "state": "player",
+      "fixture": "player",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1310,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 310.1875
+        },
+        "surface": null,
+        "credits": {
+          "x": 22,
+          "y": 990.5,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "player-hand",
+        "stand": {
+          "x": 116.65625,
+          "y": 834.5,
+          "width": 86.671875,
+          "height": 44
+        }
+      },
+      "screenshot": {
+        "path": "before-player-320.png",
+        "sha256": "603384c53b2d348bc6ecc83dd7a80f6e6c15024edb46162226c3414b8df9148c",
+        "bytes": 259512
+      }
+    },
+    {
+      "state": "insurance",
+      "fixture": "player-ace",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1348,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 347.828125
+        },
+        "surface": {
+          "x": 22,
+          "y": 830.5,
+          "width": 276,
+          "height": 189.640625,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 22,
+          "y": 1028.140625,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-insurance-320.png",
+        "sha256": "b9a4baa944f1fa478182286dfabf987579c099e0d961bbf47d4bd285b8174512",
+        "bytes": 272315
+      }
+    },
+    {
+      "state": "even-money",
+      "fixture": "player-even-money",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1400,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 399.828125
+        },
+        "surface": {
+          "x": 22,
+          "y": 830.5,
+          "width": 276,
+          "height": 241.640625,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Dealer shows Ace. Your MAIN · Seat 4 · Insurance amount: 50 creditsBuy InsuranceDeclineTake Even MoneyInsurance and Even Money explainedDealer shows Ace. Choose before the dealer checks for Blackjack.Insurance is a separate funded wager. Eligible Even Money locks a 1:1 profit on the original stake without another wager."
+        },
+        "credits": {
+          "x": 22,
+          "y": 1080.140625,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "panel decision",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-even-money-320.png",
+        "sha256": "35f945c982399b8610fc4b64a4e291005322e37ff31025b4f465d07d5d558e70",
+        "bytes": 279535
+      }
+    },
+    {
+      "state": "complete-win",
+      "fixture": "player",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1337,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 337.375
+        },
+        "surface": {
+          "x": 22,
+          "y": 834.5,
+          "width": 276,
+          "height": 175.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand AWinStake: 100 · Returned: 200 · Net: 100Settled"
+        },
+        "credits": {
+          "x": 22,
+          "y": 1017.6875,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-win-320.png",
+        "sha256": "f457b20b06d498619437371277517637f9e7713e268cf46697eec9208310015d",
+        "bytes": 262660
+      }
+    },
+    {
+      "state": "complete-loss",
+      "fixture": "player-loss",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1337,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 337.375
+        },
+        "surface": {
+          "x": 22,
+          "y": 834.5,
+          "width": 276,
+          "height": 175.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: -100 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand ALossStake: 100 · Returned: 0 · Net: -100Settled"
+        },
+        "credits": {
+          "x": 22,
+          "y": 1017.6875,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-loss-320.png",
+        "sha256": "2cdb9bf07be162a9b767a13b13569671c81484a1c8ce5b8ab13fe765646941ed",
+        "bytes": 265991
+      }
+    },
+    {
+      "state": "complete-push",
+      "fixture": "player-push",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "measurements": {
+        "viewport": {
+          "width": 320,
+          "height": 720
+        },
+        "scrollWidth": 320,
+        "pageHeight": 1337,
+        "local": {
+          "x": 18,
+          "y": 517.171875,
+          "width": 283.984375,
+          "height": 262.140625
+        },
+        "dock": {
+          "x": 10,
+          "y": 789.3125,
+          "width": 300,
+          "height": 337.375
+        },
+        "surface": {
+          "x": 22,
+          "y": 834.5,
+          "width": 276,
+          "height": 175.1875,
+          "outline": "rgb(238, 243, 237) none 3px",
+          "border": "0px none rgb(238, 243, 237)",
+          "shadow": "none",
+          "context": "Net result: 0 creditsDeal AgainRepeat Bet · 100 creditsWager result detailsDeal Again opens betting. Repeat Bet deals your original main wager only. Balances and the existing shoe continue.Each wager settles independently.MAIN · Hand APushStake: 100 · Returned: 100 · Net: 0Settled"
+        },
+        "credits": {
+          "x": 22,
+          "y": 1017.6875,
+          "width": 276,
+          "height": 97
+        },
+        "focus": "player-result",
+        "stand": null
+      },
+      "screenshot": {
+        "path": "before-complete-push-320.png",
+        "sha256": "b2f1d798604e8770b9d35ec5c6fb8bfd8707e9d4f7a317f10374b5a5dbc76e44",
+        "bytes": 265908
+      }
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-05 00:59:32 +08:00"
+}

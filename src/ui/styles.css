@@ -526,3 +526,11 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 .player-mode #player-result .round-explanation summary { min-height: 44px; padding: 12px 8px; }
 .player-mode #player-result .round-explanation > p { margin: 4px 8px; }
 .player-mode #player-result .round-explanation .result { text-align: left; }
+
+/* T07: authoritative local funds, secondary to the hand and its decisions. */
+.player-mode .game-scene .credits { display: block; width: fit-content; max-width: 100%; margin: 6px auto 0; padding: 4px 8px; border: 0; background: transparent; }
+.player-mode .game-scene .credits h2 { margin: 0 0 2px; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.player-mode .game-scene .credits dl { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.player-mode .game-scene .credits dl > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 12px; }
+.player-mode .game-scene .credits dt { font-size: .75rem; }
+.player-mode .game-scene .credits dd { margin: 0; font-size: .85rem; }

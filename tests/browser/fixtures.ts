@@ -25,6 +25,14 @@ export function fixtureState(ranks: readonly Rank[], profileId: ProfileId = CLAS
 export function createFixtureController(name: string | null) {
   if (!name) return createBrowserController({ playerMode: true });
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
+  if (name === 'player-pending') {
+    const controller = createBrowserController({ playerMode: true,
+      factory: () => fixtureState(['10','10','8','10','10','7','7','8','7','9']),
+      random: fixtureRandom, clock: () => '2026-01-01T00:00:00.000Z' });
+    if (!controller.dispatch({ type: 'MAIN', seat: 4, amount: 200 })) throw new Error('Pending-return fixture main wager rejected');
+    if (!controller.dispatch({ type: 'SIDE', kind: 'PAIR', amount: 20 })) throw new Error('Pending-return fixture side wager rejected');
+    return controller;
+  }
   const playerScenarios: Record<string, readonly Rank[]> = {
     'player-five': ['10','10','2','10','9','7','7','2','7','8','2','2','2'],
     'player-rsa': ['10','10','A','10','9','7','7','A','7','8','A','9','6','9'],

@@ -60,7 +60,7 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />
       <Results view={view} controller={controller} />
-      <section className="credits panel" aria-label="Your credits"><h2>Your simulation credits</h2><dl>
+      <section className="credits panel" aria-label="Your credits"><h2>Credits</h2><dl>
         <div><dt>Available</dt><dd>{credits(view.human?.available ?? 0)}</dd></div>
         <div><dt>Reserved / current exposure</dt><dd>{credits(view.human?.reserved ?? 0)}</dd></div>
         <div><dt>Pending return</dt><dd>{credits(view.pending)}</dd></div>
