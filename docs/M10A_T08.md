@@ -1,3 +1,7 @@
+## M10A-T08 published implementation — 2026-10-05 02:10:36 +08:00
+
+**IMPLEMENTED / VERIFIED / COMMITTED / PUSHED**, main/3a718cb5929a27ccba2370d29dadf66ad3dcce9a, normal origin/main push PASS/0, live parity0/0. Repairs0/10; human acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. [Actual publication](M10A_T08_EVIDENCE/implementation-publication.json). A documentation/evidence receipt follows; the final receipt hash is reported by Git/next task baseline without embedding its own hash in tracked content. All executed files unchanged.
+
 ## M10A-T08 final same-session review — 2026-10-05 02:09:34 +08:00
 
 Product diff is limited to responsive local hand facts/card grouping. No DOM, focus, card scale, anchors, Dealer, controls, accounting or desktop product change. T08 additions and actual inventory are recorded in the task contract and full receipts; all incoming tests remain enabled. Full86 files/1106 Vitest/93 Chromium; focused/type/lint/independent M1–M8/current PA1/RA1/M9/M10/M10A/verify.ps1 PASS /checked exit0. Protected3750 incoming paths and3417 historical evidence unchanged; domain EMPTY. Raw failure evidence retained, lossless logs and indexed pixels checked before publication. Same-session review completed; genuinely fresh independent review NOT RUN. Human review remains PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION; no acceptance or deployment inferred.

@@ -1,3 +1,7 @@
+## M10A-T08 overnight technical publication
+
+2026-10-05 02:10:36 +08:00. Published main/3a718cb5929a27ccba2370d29dadf66ad3dcce9a; full86/1106/93 PASS/0; repairs0/10. Human review PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. [Evidence](M10A_T08_EVIDENCE/README.md). T06 owner ACCEPTED. Next authorized task only after clean receipt; T10/M10-T02/M10-T04/animation NOT STARTED, deployment NOT RUN. Earlier records below are historical.
+
 ## M10A-T07 overnight technical publication
 
 2026-10-05 01:42:07 +08:00. Published main/356eee37fb04529afa28faaa6ad49ff0275d7195; full85/1104/91 PASS/0; repairs3/10. Human review PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. [Evidence](M10A_T07_EVIDENCE/README.md). T06 owner ACCEPTED. Next authorized task only after clean receipt; T10/M10-T02/M10-T04/animation NOT STARTED, deployment NOT RUN. Earlier records below are historical.
