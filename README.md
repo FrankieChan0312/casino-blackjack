@@ -2,7 +2,7 @@
 
 **M10A-T03_IMPLEMENTED_VERIFIED**, repairs **4/10**. Framed original avatar/You identity, large readable cards, compact total/status, exact per-hand wager/result and textual current-hand markers form the lower-centre local HUD. Normal/five-card/two-split/four-leaf layouts pass at desktop/tablet/mobile,200% text and native200% browser zoom; existing actions and authoritative funds remain directly accessible. Full **81 files /1071 Vitest tests**, **73 Chromium tests**, independent preservation and final verify.ps1 PASS / checked exit0. Stand bottom883.359375px <=900. [Task](docs/M10A_T03.md), [visuals and evidence](docs/M10A_T03_EVIDENCE/README.md).
 
-**M10A-T02 HUMAN VISUAL ACCEPTANCE: ACCEPTED** recorded before T03; T02 historical8/10 and T01 accepted exceptional11/11 retained. T03 owner visual acceptance PENDING; fresh independent review NOT RUN. M10A-T04 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. Formal Dealer artwork/final T06 controls/final T07 accounting integration/new animations NOT IMPLEMENTED; Motion NOT INSTALLED. M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. Normal main publication follows scope/evidence review.
+**M10A-T02 HUMAN VISUAL ACCEPTANCE: ACCEPTED** recorded before T03; T02 historical8/10 and T01 accepted exceptional11/11 retained. T03 owner visual acceptance PENDING; fresh independent review NOT RUN. M10A-T04 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. Formal Dealer artwork/final T06 controls/final T07 accounting integration/new animations NOT IMPLEMENTED; Motion NOT INSTALLED. M10-T02/M10-T04 implementation NOT STARTED; deployment NOT RUN. COMMITTED / PUSHED normally on main atd4efd69; [publication receipt](docs/STATE.md).
 
 ## Historical M10A-T02 Player Seat Unit checkpoint
 

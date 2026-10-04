@@ -55,3 +55,7 @@ Full81files/1071Vitest/73Chromium, focused67/26. Baseline80/1059/71+one new12-ca
 ## Same-session precommit review
 
 2026-10-04 18:37:29 +08:00. [Evidence/source/privacy review](precommit-review.json), [native index/whitespace checkpoint](staged-review-checkpoint.json), [lossless raw archives](log-archive.json), [repair4 affected document PASS](t03-repair4-documentation.json). Full authored diff and required actual images inspected; complete technical gates PASS for159 unchanged executable hashes. Final facts-only documentation and index checks follow before publication. Current repairs4/10; all prior checkpoints/failures retained. Fresh independent review NOT RUN; owner visual acceptance PENDING.
+
+## Implementation publication
+
+2026-10-04 18:39:23 +08:00. Normal main/origin push PASS/checked exit0. [Implementation commit](implementation-commit.json), [live parity/clean publication receipt](implementation-publication.json). HEAD/origin/live remote=d4efd6929b736d0778ba1cee8ae1e94ca82d9477, ahead/behind0/0,working tree CLEAN,untracked0 at this published checkpoint. Actual raw commit/push/fetch logs are retained losslessly in the archive manifest. A facts-only publication-receipt commit follows after affected docs/index checks; final Git/delivery identifies that final HEAD. Product/tests/config remain the159 verified hashes. Repairs4/10, owner acceptance PENDING, fresh independent review NOT RUN, deployment NOT RUN. STOP; no later task started.
