@@ -1,3 +1,17 @@
+## M10A-T06 published implementation checkpoint
+
+2026-10-04 23:36:11 +08:00. **M10A-T06_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED**, repairs **3/10**. Branch **main**, implementation **37e71e6aded3dcd193317f4eb1518ceb76bcfd9e**. Normal origin/main push PASS / checked exit 0 at 2026-10-04 23:34:43 +08:00..2026-10-04 23:35:01 +08:00; fetch/live equality PASS / 0. Published implementation HEAD=origin/main=live remote=37e71e6aded3dcd193317f4eb1518ceb76bcfd9e, ahead/behind **0/0**, working tree **CLEAN**, untracked **0**. [Actual publication](M10A_T06_EVIDENCE/implementation-publication.json), [commit](M10A_T06_EVIDENCE/implementation-commit.json), [evidence](M10A_T06_EVIDENCE/README.md). A factual documentation/evidence receipt checkpoint follows; final delivery and Git report its final HEAD rather than embedding a self-referential commit hash in tracked content. All 164 executed file contents and 2567 protected incoming paths remain unchanged.
+
+Full 84 files / 1098 Vitest / 86 Chromium; focused 94 UI / 39 Chromium; independent M1–M8/current PA1/RA1/M9/M10-T01/M10A-T01..T06 and verify.ps1 PASS / checked 0. Same-session review PASS; fresh independent review NOT RUN. **M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical 4/10 retained; T06 owner visual acceptance PENDING.
+
+M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE
+
+M10-T02 NOT STARTED
+
+M10-T04 IMPLEMENTATION NOT STARTED
+
+Final accounting HUD/formal Dealer artwork/animations NOT IMPLEMENTED; Motion NOT INSTALLED; deployment NOT RUN. STOP for owner T06 visual acceptance after receipt publication.
+
 ## M10A-T06 same-session review checkpoint
 
 2026-10-04 23:33:18 +08:00. Complete authored source/test/CSS/docs diff and 36 control / 23 native-browser zoom images reviewed: **PASS**. 96 plaintext/archive records and 94 trace text entries scanned, zero sensitive-pattern findings. Initial reviewed stage: 389 intended paths / 374 exact raw evidence blobs; staged whitespace PASS / 0. Final affected-documentation check and staging repeat follow after these factual receipts. All 164 executed file contents / 2567 protected incoming paths / 2244 historical evidence unchanged; domain diff EMPTY. [Review](M10A_T06_EVIDENCE/precommit-review.json), [stage checkpoint](M10A_T06_EVIDENCE/staged-review-checkpoint.json), [lossless archive manifest](M10A_T06_EVIDENCE/log-archive.json).

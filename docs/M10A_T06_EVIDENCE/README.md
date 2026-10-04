@@ -40,3 +40,7 @@ Text enlargement images are control-text200-{open,player,insurance,even-money}-{
 Five product files: App, Actions, Betting, Decisions and appended styles only. Existing fixture adds one real-domain controlled Even Money shoe; two new T06 test files. No domain/controller/RNG/shoe/cards/accounting/replay/strategy/geometry/dependency mutation. Exact T01–T05 CSS prefix, 2567 protected incoming files, 2244 historical evidence files and all PA1 original/production/canonical bytes retained. Twenty-five known historical screenshot destinations are routed into owned outputs during verification; original assertions unchanged and historical incoming hashes checked for each phase. Task-owned driver snapshots preserve reproducibility; traces/logs include original failed attempts.
 
 M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02 NOT STARTED. M10-T04 IMPLEMENTATION NOT STARTED. Final accounting HUD/formal Dealer artwork/animations NOT IMPLEMENTED; Motion NOT INSTALLED; deployment NOT RUN.
+
+## Publication
+
+Implementation 37e71e6aded3dcd193317f4eb1518ceb76bcfd9e was committed and pushed normally to origin/main. [Actual commit](implementation-commit.json), [live parity and clean-tree receipt](implementation-publication.json). A documentation/evidence-only follow-up records these executed facts; the final commit is reported in Git/final delivery. No executable content changed after the frozen technical gate. Human T06 acceptance remains PENDING; T07 remains NOT STARTED.

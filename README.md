@@ -2,7 +2,7 @@
 
 **M10A-T06_IMPLEMENTED_VERIFIED**, repairs **3/10**. One native action dock names the current public hand; green/gold primary controls, dashed disabled states, exact wager/chip/Deal controls and compact Insurance/Even Money decisions share the accepted table scene. Full 84 files / 1098 Vitest tests / 86 Chromium cases, independent preservation and verify.ps1 PASS / checked exit 0. Stand bottom 883.359375px; desktop/tablet/mobile, text 200%, genuine browser 200% zoom, keyboard/focus and measured contrast PASS. [Task](docs/M10A_T06.md), [visual/evidence index](docs/M10A_T06_EVIDENCE/README.md).
 
-**M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical 4/10 retained. T06 owner visual acceptance PENDING; fresh independent review NOT RUN; normal main publication pending. M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02/M10-T04 implementation NOT STARTED; final accounting HUD/formal Dealer art/animation NOT IMPLEMENTED, Motion NOT INSTALLED, deployment NOT RUN.
+**M10A-T05 HUMAN VISUAL ACCEPTANCE: ACCEPTED**, historical 4/10 retained. T06 owner visual acceptance PENDING; fresh independent review NOT RUN; COMMITTED / PUSHED normally on main at 37e71e6; [publication receipt](docs/STATE.md). M10A-T07 NOT STARTED — WAITING FOR HUMAN VISUAL ACCEPTANCE. M10-T02/M10-T04 implementation NOT STARTED; final accounting HUD/formal Dealer art/animation NOT IMPLEMENTED, Motion NOT INSTALLED, deployment NOT RUN.
 
 ## Historical M10A-T05 Felt Gameplay Markings
 
