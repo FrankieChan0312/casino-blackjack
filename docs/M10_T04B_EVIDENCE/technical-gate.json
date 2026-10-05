@@ -50,8 +50,18 @@
   "git": {
     "branch": "main",
     "baseline": "e5cb332bcab72786c17be201db4dab4ccdfcb856",
-    "implementationCommit": "NOT RUN",
-    "push": "NOT RUN"
+    "implementationCommit": "2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7",
+    "headAtImplementationPublication": "2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7",
+    "remoteAtImplementationPublication": "2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7",
+    "aheadAtImplementationPublication": 0,
+    "behindAtImplementationPublication": 0,
+    "workingTreeAtImplementationPublication": "CLEAN",
+    "untrackedAtImplementationPublication": 0,
+    "commit": "PASS/0",
+    "push": "PASS/0",
+    "publicationStart": "2026-10-05 12:46:49 +08:00",
+    "publicationEnd": "2026-10-05 12:47:56 +08:00",
+    "receiptCommit": "Documentation-only receipt follows this completed publication event; latest HEAD is recorded by Git and the final delivery"
   },
   "motion": "NOT INSTALLED",
   "animation": "NOT IMPLEMENTED",

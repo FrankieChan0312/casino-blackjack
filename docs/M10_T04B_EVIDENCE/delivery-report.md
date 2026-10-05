@@ -88,7 +88,7 @@ Ten new source/runtime formal PNGs; original manifest and art/dealer-assets.json
 
 ## GIT STATE
 
-Implementation commit/push NOT RUN at gate completion; final Git publication receipt will be added after authorized normal main commit/push.
+Implementation commit 2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7; normal main commit/push PASS/0 at2026-10-05 12:47:56 +08:00. At this completed publication checkpoint HEAD=origin/live=2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7,ahead/behind0/0,working tree CLEAN,untracked0. This documentation-only receipt follows that checkpoint; latest final HEAD is recorded by Git and the final delivery. [Actual implementation publication](publication-implementation.json).
 
 ## EVIDENCE
 

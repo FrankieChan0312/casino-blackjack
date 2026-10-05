@@ -3402,3 +3402,11 @@ Final **verify.ps1 PASS / checked0**, 2026-10-05 12:28:00 +08:00 to 2026-10-05 1
 Five owner-provided source1086x1448/runtime240x320 transparent3:4 portraits and original MANIFEST retained byte-for-byte. Celestine/noble_female -> Seraphine/knight_female -> Nyra/mage_female -> Elaria/elf_female -> Vesha/halforc_female; deterministic existing-session ordinal, all seated identities excluded, generic fallback on exhaustion/image failure, zero gameplay RNG. STATIC FORMAL PORTRAIT USED FOR ALL SIX STATES. Earlier failed logs/versions/receipts retained; no retry-until-green. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable). Publication pending the final documentation/privacy/diff review; actual Git receipt follows publication.
 
 **M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING.** M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN. Earlier blocked/unapproved-repair11 status below is historical and superseded by this explicit owner authorization and executed gate.
+
+## M10-T04B implementation publication — 2026-10-05 12:47:56 +08:00
+
+Normal **main** implementation commit **2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7** and push **PASS/checked0**. Live remote and origin/main equal that hash, ahead/behind0/0, working tree CLEAN/untracked0 at the completed publication checkpoint. All188 verified executable hashes unchanged. [Actual publication receipt](M10_T04B_EVIDENCE/publication-implementation.json). A documentation-only receipt commit records this event; latest HEAD remains available from Git.
+
+M10-T04B IMPLEMENTED / VERIFIED; **11/11 — OWNER-AUTHORIZED EXCEPTION**, repair12 NOT AUTHORIZED. Complete gate PASS: full91 files/1164 Vitest,142 Chromium, all M1–M8 preservation, verify.ps1/0 and final documentation checks. Human visual acceptance PENDING; fresh separate-session review NOT COMPLETED.
+
+M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.

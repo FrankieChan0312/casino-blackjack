@@ -1,3 +1,11 @@
+## M10-T04B implementation publication — 2026-10-05 12:47:56 +08:00
+
+Normal **main** implementation commit **2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7** and push **PASS/checked0**. Live remote and origin/main equal that hash, ahead/behind0/0, working tree CLEAN/untracked0 at the completed publication checkpoint. All188 verified executable hashes unchanged. [Actual publication receipt](M10_T04B_EVIDENCE/publication-implementation.json). A documentation-only receipt commit records this event; latest HEAD remains available from Git.
+
+M10-T04B IMPLEMENTED / VERIFIED; **11/11 — OWNER-AUTHORIZED EXCEPTION**, repair12 NOT AUTHORIZED. Complete gate PASS: full91 files/1164 Vitest,142 Chromium, all M1–M8 preservation, verify.ps1/0 and final documentation checks. Human visual acceptance PENDING; fresh separate-session review NOT COMPLETED.
+
+M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.
+
 ## M10-T04B IMPLEMENTED / VERIFIED — 2026-10-05 12:44:02 +08:00
 
 **M10-T04B_IMPLEMENTED_VERIFIED**. Owner-authorized exceptional repair **11/11 — OWNER-AUTHORIZED EXCEPTION** is CLOSED. Only two existing CB09 structural lines changed in this continuation; inverse replacement reproduces all original source bytes. Every original win/loss/push assertion is retained at1280/768/320, with unchanged low-funds assertions executed at each width. The30s budget is Playwright's default per-case runner timeout, not a product-performance criterion. No product code/artwork/domain/browser/controller/RNG/seat mapping/replay/digest/journal/strategy/accounting/settlement/configuration changes during repair11; all188 executable hashes match the final gate-start version. Repair12 NOT AUTHORIZED.
