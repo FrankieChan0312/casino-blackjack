@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-05 19:30:08 +08:00",
+  "auditStatus": "PASS",
+  "delivery": "M10-T06_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11",
+  "protectedIncomingCount": 6543,
+  "unexpected": [],
+  "unchangedExecutableCount": 208,
+  "executableChanged": [],
+  "allowedFiles": [
+    "tests/ra1/inventory.test.ts",
+    "README.md",
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/M10_T06.md",
+    "docs/M10_T06_EVIDENCE/index.md"
+  ],
+  "domainBrowserAssetsPackagesStylesDiff": "",
+  "branch": "main",
+  "head": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "origin": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "remote": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "aheadBehind": "0\t0",
+  "staged": "",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "repair12": "NOT AUTHORIZED / NOT RUN"
+}

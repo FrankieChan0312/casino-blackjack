@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/m10/initialDeal.test.ts tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/presentationLifecycle.test.tsx tests/m10/t09.test.tsx --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-f-units-vitest.json; exit $LASTEXITCODE",
+  "started": "2026-10-05 20:49:34 +08:00",
+  "finished": "2026-10-05 20:49:37 +08:00",
+  "exit": 0
+}

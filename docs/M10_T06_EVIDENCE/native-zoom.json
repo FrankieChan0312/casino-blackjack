@@ -1,0 +1,167 @@
+{
+  "started": "2026-10-05 20:53:03 +08:00",
+  "method": "Isolated Chromium native chrome.tabs.setZoom/getZoom; root16px, CSS zoom1, no scale emulation",
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\casino-blackjack-t06-native-obBGrg",
+  "scenarios": [
+    {
+      "fixture": "player-setup",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 266,
+            "scroll": 266
+          }
+        ],
+        "hands": 1
+      },
+      "button": {
+        "x": 348.9296875,
+        "y": 33.609375,
+        "width": 89.5625,
+        "height": 44
+      },
+      "screenshots": [
+        {
+          "name": "native-player-setup-dealer.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-setup-hand.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-setup-controls.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-seven-split",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 266,
+            "scroll": 266
+          },
+          {
+            "width": 266,
+            "scroll": 266
+          }
+        ],
+        "hands": 2
+      },
+      "button": {
+        "x": 200,
+        "y": 199.5234375,
+        "width": 116,
+        "height": 52
+      },
+      "screenshots": [
+        {
+          "name": "native-player-seven-split-dealer.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-seven-split-hand.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-seven-split-controls.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-rsa-cap",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 265,
+            "scroll": 265
+          },
+          {
+            "width": 265,
+            "scroll": 265
+          },
+          {
+            "width": 265,
+            "scroll": 265
+          },
+          {
+            "width": 265,
+            "scroll": 265
+          }
+        ],
+        "hands": 4
+      },
+      "button": {
+        "x": 152.3828125,
+        "y": 304.1328125,
+        "width": 116.015625,
+        "height": 44
+      },
+      "screenshots": [
+        {
+          "name": "native-player-rsa-cap-dealer.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-rsa-cap-hand.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        },
+        {
+          "name": "native-player-rsa-cap-controls.png",
+          "width": 1280,
+          "height": 902,
+          "method": "CDP native viewport"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "baseline": {
+    "innerWidth": 1280,
+    "dpr": 1,
+    "font": "16px",
+    "cssZoom": "1"
+  },
+  "status": "PASS",
+  "exit": 0,
+  "finished": "2026-10-05 20:53:13 +08:00"
+}

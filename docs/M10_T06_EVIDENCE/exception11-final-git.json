@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-05 19:31:57 +08:00",
+  "status": "M10-T06_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11",
+  "repairCount": "M10-T06: 11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "repair12": "NOT AUTHORIZED / NOT RUN",
+  "branch": "main",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "head": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "remote": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "aheadBehind": "0\t0",
+  "staged": "",
+  "workingTree": "DIRTY - known task changes retained",
+  "trackedModified": 15,
+  "untrackedFilesIncludingReceipt": 237,
+  "gates": {
+    "A": "PASS /245.4807ms",
+    "B": "FAIL /279+1 M10-G06",
+    "C": "NOT RUN",
+    "D": "NOT RUN",
+    "E": "NOT RUN",
+    "F": "NOT RUN",
+    "G": "NOT RUN"
+  },
+  "humanAcceptance": "PENDING",
+  "freshReview": "NOT COMPLETED",
+  "deployment": "NOT RUN"
+}

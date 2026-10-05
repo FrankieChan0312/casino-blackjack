@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/ra1/inventory.test.ts -t \"RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers\" --reporter=verbose --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception11-stage-a-vitest.json; exit $LASTEXITCODE",
+  "started": "2026-10-05 19:24:15 +08:00",
+  "finished": "2026-10-05 19:24:17 +08:00",
+  "exit": 0
+}

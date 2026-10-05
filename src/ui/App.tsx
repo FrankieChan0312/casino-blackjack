@@ -11,7 +11,7 @@ import { createDealerTableIdentity, changeDealerTableHuman, dealerPresentation, 
   type DealerConfiguration } from '../presentation/dealerPresentation.js';
 import { CharacterPicker } from './CharacterPicker.js';
 import { PlayerSetup } from './PlayerSetup.js';
-import { PresentationProvider, useDealerPresentationState } from './PresentationProvider.js';
+import { PresentationProvider, useDealerPresentationState, useInitialDeal, usePresentationRuntime } from './PresentationProvider.js';
 
 export function App({ controller, chooseCharacter, dealerConfiguration }: {
   controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
@@ -57,6 +57,7 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
     identity: createDealerTableIdentity(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.identity.lineup.human : 'knight_male',
       view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined, dealerConfiguration?.rotationPool, view.presentationSession) });
   const lineup = presentation.identity.lineup;
+  const initialDeal = useInitialDeal(), runtime = usePresentationRuntime();
   const dealerState = useDealerPresentationState(dealerPresentationState({
     awaitingPlayer: !!view.interaction.insurance || !!view.follow || view.interaction.actions.some(action => action.enabled),
     interrupted: view.round?.phase === 'INTEGRITY_ERROR',
@@ -69,16 +70,17 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
   }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
   return <main className="player-mode">
     <a className="skip-link" href="#player-decisions">Skip to your hand and actions</a>
-    <section className="game-scene" aria-label="Blackjack game scene">
+    <section className="game-scene" aria-label="Blackjack game scene" data-initial-deal-running={String(initialDeal.running)} data-initial-deal-delivered={initialDeal.delivered}>
     <header className="casino-header"><div><p className="eyebrow">An evening at the table</p><h1>Casino Blackjack</h1></div>
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <div className="table-scene">
     <Table view={view} lineup={lineup} dealerPresentation={dealer} />
     <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls"
       data-contextual-dock={view.interaction.insurance ? 'insurance' : view.interaction.nextRound ? 'result' : undefined}>
-      <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{view.tableStarted ? roundStatus(view) : 'Choose your players, then start the table'}</p>
+      <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{initialDeal.running ? 'Dealing cards' : view.tableStarted ? roundStatus(view) : 'Choose your players, then start the table'}</p>
         {view.interaction.handId && view.interaction.actions.some(a => a.enabled) && <span id="player-action-hand">· {handLabel(view.interaction.handId)}</span>}</div>
       {view.feedback && <p role="alert" className="feedback">{view.feedback}</p>}
+      {initialDeal.running && <button onClick={() => runtime?.timeline.skip()}>Skip animations</button>}
       {view.interaction.actions.some(a => a.enabled) && <Actions view={view} controller={controller} />}
       <Decisions view={view} controller={controller} />
       <Results view={view} controller={controller} />

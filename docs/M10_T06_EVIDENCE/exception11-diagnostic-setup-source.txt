@@ -1,0 +1,85 @@
+
+import { writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const report={classification:'Diagnostic replay of unchanged inventory body with standalone matchers; NOT the Vitest acceptance gate',git:[],parse:[],exists:[],durationMs:0};
+function execFileSync(...args){const start=performance.now();const result=realExec(...args);report.git.push({args:args[1],durationMs:performance.now()-start,bytes:Buffer.byteLength(result),sha256:createHash('sha256').update(result).digest('hex')});return result;}
+function existsSync(file){report.exists.push(file);return realExists(file);}
+function profileParse(...args){const start=performance.now();const parsed=ts.createSourceFile(...args);report.parse.push({file:args[0],bytes:Buffer.byteLength(args[1]),durationMs:performance.now()-start});return parsed;}
+function it(name,callback){if(!name.startsWith('RA1 has exactly thirty'))return;const start=performance.now();callback();report.durationMs=performance.now()-start;report.name=name;report.gitMs=report.git.reduce((sum,item)=>sum+item.durationMs,0);report.parseMs=report.parse.reduce((sum,item)=>sum+item.durationMs,0);writeFileSync('docs/M10_T06_EVIDENCE/exception11-diagnostic-before.json',JSON.stringify(report,null,2)+'\n');console.log({durationMs:report.durationMs,gitCalls:report.git.length,gitMs:report.gitMs,parseCalls:report.parse.length,parseMs:report.parseMs,exists:report.exists.length});}
+import { expect } from '@playwright/test';
+import ts from 'typescript';
+const baseline = '8326f846ad753b79fd8d35f76b00f28854e2f448';
+function git(...args) {
+    return execFileSync('git', ['-c', `safe.directory=${process.cwd().replaceAll('\\', '/')}`, ...args], { encoding: 'utf8' }).replaceAll('\r\n', '\n').trimEnd();
+}
+// BEGIN PA1 historical RA1 input adapter
+// Keep every RA1 delivery assertion at the accepted pre-PA1 boundary.
+// Current PA1 source/assertion and inventory checks live in tests/pa1.
+const ra1Sha = 'e8e8e2e1586611473f0cdb94540ce995d9bd64e7';
+function readFileSync(file, encoding) {
+    if (encoding !== 'utf8')
+        throw new Error('Historical text input required');
+    return git('show', `${ra1Sha}:${file}`);
+}
+function readdirSync(directory, options) {
+    return git('ls-tree', '-r', '--name-only', ra1Sha, directory).split('\n')
+        .map(file => file.slice(directory.length + 1)).filter(file => options?.recursive || !file.includes('/'));
+}
+// END PA1 historical RA1 input adapter
+const docs = ['README.md', ...['STATE', 'PLAN', 'DEVELOPMENT_LOG', 'UX_UI', 'LAB_MANUAL', 'PORTFOLIO', 'SPEC', 'DESIGN', 'RA1_EVIDENCE', 'RA1_REVIEW_HANDOFF', 'RA1_MAPPING'].map(name => `docs/${name}.md`)];
+function registrations(file, kind) {
+    const titles = [];
+    const source = profileParse(file, readFileSync(file, 'utf8'), ts.ScriptTarget.Latest, true);
+    function visit(node) {
+        if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === kind) {
+            expect(ts.isStringLiteral(node.arguments[0]), file).toBe(true);
+            titles.push(node.arguments[0].text);
+        }
+        if (ts.isCallExpression(node) && ts.isPropertyAccessExpression(node.expression))
+            expect(node.expression.name.text, file).not.toMatch(/^(skip|todo|only|skipIf|runIf)$/);
+        ts.forEachChild(node, visit);
+    }
+    visit(source);
+    return titles;
+}
+it('RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers', () => {
+    const files = readdirSync('tests', { recursive: true }).map(String).filter(file => /\.test\.tsx?$/.test(file));
+    const rsaFiles = files.filter(file => /^ra1[\\/]/.test(file));
+    const titles = rsaFiles.flatMap(file => registrations(`tests/${file}`, 'it'));
+    const ids = titles.flatMap(title => [...title.matchAll(/\[(RSA-\d{3})\]/g)].map(m => m[1])).sort();
+    const expected = Array.from({ length: 30 }, (_, n) => `RSA-${String(n + 1).padStart(3, '0')}`);
+    expect(ids).toEqual(expected);
+    const mapping = readFileSync('docs/RA1_MAPPING.md', 'utf8');
+    expect([...mapping.matchAll(/^\| (RSA-\d+) \|/gm)].map(m => m[1])).toEqual(expected);
+    for (const match of mapping.matchAll(/\| (tests\/ra1\/[^ |]+) \|/g))
+        expect(existsSync(match[1])).toBe(true);
+    const browser = readdirSync('tests/browser').filter(file => file.endsWith('.spec.ts')).flatMap(file => registrations(`tests/browser/${file}`, 'test')).length;
+    expect(files).toHaveLength(73);
+    expect(titles).toHaveLength(42);
+    expect(browser).toBe(58);
+    for (const file of docs) {
+        const current = readFileSync(file, 'utf8').split('<!-- END CURRENT RA1 -->')[0];
+        const inventory = current.match(/\*\*(\d+) Vitest files \/ (\d+) tests\*\*, \*\*(\d+) Chromium project \/ (\d+) tests\*\*/);
+        expect(inventory, file).not.toBeNull();
+        expect(inventory.slice(1).map(Number), file).toEqual([files.length, 978 + titles.length, 1, browser]);
+        for (const truth of ['House Rules v1.2', 'M1-M8 HUMAN ACCEPTED', 'M9 ACCEPTED: NO', 'RA1 ACCEPTED: NO', 'Deployment NOT RUN', 'actual model/effort NOT VERIFIED / NOT VERIFIED',
+            'RA1 fresh independent review NOT RUN', '8326f846ad753b79fd8d35f76b00f28854e2f448', 'NO FINDINGS', '`2,0,2,1,1`'])
+            expect(current, file).toContain(truth);
+    }
+});
+it('RA1 mechanically preserves every reviewed M9 assertion except explicitly authorized profile and deterministic input changes', () => {
+    let session = readFileSync('tests/m9/session.test.ts', 'utf8').replaceAll('\r\n', '\n').trimEnd();
+    session = session.replace('import { CLASSIC, CLASSIC_V1_2 }', 'import { CLASSIC }')
+        .replace('  // MODE deliberately removes the seed. Keep the reset shoe non-natural so\n  // this active-round assertion does not depend on a random opening result.\n', '')
+        .replace('seed: 7, random: { nextInt: max => max - 1 }', 'seed: 7')
+        .replace('expect(v.profileId).toBe(CLASSIC_V1_2)', 'expect(v.profileId).toBe(CLASSIC)');
+    expect(session).toBe(git('show', `${baseline}:tests/m9/session.test.ts`));
+    let documentation = readFileSync('tests/m9/documentation.test.ts', 'utf8').replaceAll('\r\n', '\n').trimEnd();
+    documentation = documentation.replace("import { existsSync, readFileSync as readCurrentFile } from 'node:fs';", "import { existsSync, readFileSync, readdirSync } from 'node:fs';")
+        .replace(/\/\/ RA1 preserves these M9 delivery assertions[\s\S]*?const currentDocs/, 'const currentDocs');
+    expect(documentation).toBe(git('show', `${baseline}:tests/m9/documentation.test.ts`));
+    expect(readFileSync('tests/browser/m9.spec.ts', 'utf8').replaceAll('\r\n', '\n').trimEnd()).toBe(git('show', `${baseline}:tests/browser/m9.spec.ts`));
+    const allowed = ['src/domain/profile.ts', 'src/domain/advancedGame.ts', 'src/domain/behindController.ts', 'src/browser/controller.ts', 'src/ui/Actions.tsx', 'src/ui/DemoTools.tsx'];
+    for (const file of git('diff', '--name-only', baseline, ra1Sha, '--', 'src').split('\n').filter(Boolean))
+        expect(allowed).toContain(file);
+});

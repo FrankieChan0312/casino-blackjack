@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-05 21:10:27 +08:00",
+  "status": "PASS",
+  "oldExecutableCount": 209,
+  "unchanged": 208,
+  "changed": [
+    "vite.config.ts"
+  ],
+  "unexpected": [],
+  "authorizedChange": "Only non-frozen vite.config.ts setup registration; new harness source is outside original file set",
+  "setupHash": "94ebff673cb2fec8eb9a00e534a3b68907894c95373e60b198dec4a62a1dda6f"
+}

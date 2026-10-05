@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-05 21:22:16 +08:00",
+  "status": "PASS",
+  "historical": "M1–M8 all checked0, M7 56/870+24, M8 66/956+44",
+  "current": "31/280 checked0; five document files/13 cases checked0",
+  "currentBrowser": {
+    "tests": 120,
+    "exit": 0,
+    "packages": [
+      "PA1",
+      "RA1",
+      "M9",
+      "M10-T01",
+      "closed M10A",
+      "M10-T02 through T06"
+    ]
+  },
+  "assets": "Dealer source/runtime/provenance; twelve original/runtime PNG receipts+byte-exact reproduction PASS0",
+  "executableFrozen": 210
+}

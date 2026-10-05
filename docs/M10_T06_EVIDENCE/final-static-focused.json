@@ -1,0 +1,6 @@
+{
+  "command": "npm.cmd run typecheck; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm.cmd run lint; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node node_modules/vitest/vitest.mjs run tests/m10/initialDeal.test.ts tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/presentationLifecycle.test.tsx tests/m10/t09.test.tsx; exit $LASTEXITCODE",
+  "started": "2026-10-05 18:34:39 +08:00",
+  "finished": "2026-10-05 18:35:03 +08:00",
+  "exit": 0
+}

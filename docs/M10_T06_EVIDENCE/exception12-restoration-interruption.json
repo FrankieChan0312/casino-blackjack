@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-05 21:39:50 +08:00",
+  "operation": "Post-J routine restoration of known generated historical output, not a validation invocation",
+  "status": "BLOCKED - Node writeFileSync UNKNOWN open; all A–J already PASS0",
+  "error": {
+    "code": "UNKNOWN",
+    "errno": -4094,
+    "syscall": "open",
+    "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png"
+  },
+  "capturedExpectedHash": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+  "capturedExpectedBytes": 760961,
+  "currentHash": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7",
+  "currentBytes": 825182,
+  "generatedArchive": "exception12-after-j-legacy/7.gz",
+  "archiveHash": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7",
+  "sourceChanges": "NONE",
+  "testRerun": "NOT RUN",
+  "repair13": "NOT AUTHORIZED / NOT RUN",
+  "next": "Same captured bytes via native .NET file API; no target deletion or protection-baseline change"
+}

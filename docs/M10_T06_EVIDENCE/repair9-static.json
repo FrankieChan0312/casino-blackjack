@@ -1,0 +1,6 @@
+{
+  "command": "npm.cmd run typecheck; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm.cmd run lint; exit $LASTEXITCODE",
+  "started": "2026-10-05 18:32:00 +08:00",
+  "finished": "2026-10-05 18:32:24 +08:00",
+  "exit": 1
+}

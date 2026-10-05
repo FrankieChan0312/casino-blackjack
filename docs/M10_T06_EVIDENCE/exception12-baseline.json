@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-05 20:44:27 +08:00",
+  "branch": "main",
+  "head": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "origin": "fd7997bf9dc4f2a1c77610fb912b3f8f2f3cb120",
+  "aheadBehind": "0\t0",
+  "status": "M README.md\n M docs/DEVELOPMENT_LOG.md\n M docs/LAB_MANUAL.md\n M docs/PLAN.md\n M docs/STATE.md\n M playwright.config.ts\n M src/presentation/events.ts\n M src/presentation/motionTokens.ts\n M src/ui/App.tsx\n M src/ui/Cards.tsx\n M src/ui/DealerZone.tsx\n M src/ui/LocalPlayerHud.tsx\n M src/ui/PresentationProvider.tsx\n M src/ui/SeatUnit.tsx\n M tests/ra1/inventory.test.ts\n?? docs/M10_T06.md\n?? docs/M10_T06_EVIDENCE/\n?? src/presentation/initialDeal.ts\n?? src/ui/InitialDealFlight.ts\n?? tests/browser/m10/initialDeal.spec.ts\n?? tests/m10/initialDeal.test.ts",
+  "incoming": 6572,
+  "unchangedExecutable": 204,
+  "changed": [],
+  "repair": "12/12 OWNER-AUTHORIZED FINAL EXCEPTION",
+  "repair13": "NOT AUTHORIZED / NOT RUN"
+}

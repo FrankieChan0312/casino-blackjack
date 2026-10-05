@@ -1,0 +1,6 @@
+{
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE",
+  "started": "2026-10-05 21:22:16 +08:00",
+  "finished": "2026-10-05 21:37:03 +08:00",
+  "exit": 0
+}

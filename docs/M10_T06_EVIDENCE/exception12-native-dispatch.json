@@ -1,0 +1,8 @@
+{
+  "recorded": "2026-10-05 20:55:59 +08:00",
+  "status": "BLOCKED before command execution; required native test NOT RUN on this dispatch",
+  "reason": "Automatic approval review rejected composite Start-Process/cleanup command: blocked by policy. No detailed reason supplied.",
+  "recovery": "Ordinary managed exec session started Vite; native gate ran exactly once and PASS0, stage-f-native receipt. Verified owned Vite PID27580 stopped after successful gate; service process exit1 is intentional termination, not a test result.",
+  "repair": "No source change/test retry/additional repair",
+  "originalImages": "Ten previous native output bytes preserved in exception12-native-originals.zip"
+}

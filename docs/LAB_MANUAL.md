@@ -1,3 +1,15 @@
+## M10-T06 final repair learning checkpoint — 2026-10-05 21:15:24 +08:00
+
+Historical source protection and input equivalence are separate gates. Repair11 reduced27 Git processes to3 with identical inputs, but changed a PA1 adapter whose complete source M10-G06 freezes. Repair12 restores the original5521-byte Git blob and moves batching into the current Vitest setup, limited to one exact inventory invocation. The unchanged source still performs its own12 AST analyses,30 filesystem existence checks, normalization and assertions; the setup returns real historical Git bytes, resets per check and delegates every other subprocess. Independent24 raw-input hashes and actual27 logical/3 physical request receipts establish the boundary. Faster execution alone cannot waive whole-source preservation, and a preserved hash alone cannot prove runtime behavior. [Historical hash](M10_T06_EVIDENCE/exception12-stage-a.json), [input/performance proof](M10_T06_EVIDENCE/exception12-equivalence.json), [unchanged M10-G06 execution](M10_T06_EVIDENCE/exception12-stage-d.json). Final complete verification and owner visual acceptance remain separate.
+
+## M10-T06 initial deal learning checkpoint — 2026-10-05 18:19:03 +08:00
+
+Capture the committed CLOSE result before synchronous automatic ADVANCE; final hand length is insufficient evidence of initial dealing. Existing public round/hand/index slots avoid exporting physical identities, and the hidden Dealer event remains anonymous even if later authority already permits revelation. A visual pending-slot set can stage the first render without copying game state or affecting legal commands.
+
+React external-store snapshot identity matters: acknowledging an empty feed on every layout render creates an update loop. A pure repeated-consume test reproduced that failure and now protects the empty path. Coalesced MAIN/CLOSE batches must enqueue together, preventing a non-motion event from prematurely clearing initial staging.
+
+Visual evidence must exercise real lifecycle policies. Full-page/document-sized screenshot capture fires resize and correctly settles the sequence; native viewport capture with paused Motion controls and before/after stage assertions preserves the real checkpoint. Decorative clones also need to opt out of inherited CSS card-enter animation, otherwise independent opacity can make a correct flight faint. Settled DOM should omit redundant opacity1 attributes, preserving existing strict static-render assertions without editing them. Technical PASS and owner moving-table acceptance remain separate. [Executed evidence and repair ledger](M10_T06.md).
+
 ## M10A-T09 responsive/stress learning checkpoint — 2026-10-05 02:25:27 +08:00
 
 Stress verification must distinguish original natural, split21 and profile-specific Charlie from mere card-count/total inference. Ordered hand IDs/stakes/results and public-only Dealer additions provide stronger evidence than attractive screenshots alone. Focused105/49 PASS/0, repair0/10. Fresh independent review NOT RUN; deferred owner visual review remains distinct from technical PASS.
@@ -2111,3 +2123,9 @@ Exact inventory extensions must be normalized at every historical source-compari
 ## M10-T05 exceptional evidence-path repair — 2026-10-05 16:51:35 +08:00
 
 A fresh Playwright output and a canonical historical reference have different lifetimes. Reuse the already-tested immutable PA1 capture helper: validate saved PNG bytes/dimensions and unchanged canonical hashes without pixel equality to an older layout. Recover exact original M9 source in every historical comparison tier with unique-match literal inverse adapters; retain all assertions. A stale-status regex can span two truthful milestone phrases on one line: repair authored paragraph structure, keep the validator. Independent gates, actual native exits, frozen hashes, preserved first failures and explicit human acceptance remain separate facts. Repair11 closed by owner exception, no count reset or repair12.
+
+## M10-T06 bounded completion checkpoint — 2026-10-05 18:42:47 +08:00
+
+A collapsed details descendant can return geometry that does not describe the visible hand destination. Register the existing Cards summary and use it only when closed; independently assert its center rather than trusting the same production measurement. Browser checkpoint receipts prove the correction <=1px. Declare real browser globals in page.evaluate diagnostics while retaining every lint rule.
+
+Do not assume resource-heavy verifications are independent merely because they do not edit code. The additional preservation invocation overlapped complete Chromium and RA1 inventory exceeded5000ms; contention is a hypothesis, not a proven cause. Earlier passes or an eventual unified PASS cannot silently waive this failure. At cumulative10/10 retain exact evidence and STOP repair/publication; no retry-until-green or automatic cycle11. Technical verification, same-session review, fresh-session review and owner acceptance remain separate.

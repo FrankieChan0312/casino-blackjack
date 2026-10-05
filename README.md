@@ -1,4 +1,22 @@
-## Current M10-T05 status — 2026-10-05 16:51:35 +08:00
+## Current M10-T06 implemented/verified — 2026-10-05 21:44:49 +08:00
+
+Round-robin initial dealing is IMPLEMENTED / VERIFIED. Full95 files/1199 Vitest and164 Chromium, complete preservation/assets and final verify.ps1 PASS/exit0. Final12/12 owner-authorized exception restores the frozen RA1 adapter and relocates identical Git batching to test setup (27->3, exact223.1529ms under unchanged5000ms). Previous failures retained. [Task/evidence](docs/M10_T06.md).
+
+Human acceptance PENDING; fresh independent review NOT COMPLETED. Normal main commit/push follows final privacy/diff review. M10-T07 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. Future action/Dealer/chip animations NOT IMPLEMENTED. Deployment NOT RUN.
+
+## Retained earlier T06 exception history
+
+## Current M10-T06 final exception — 2026-10-05 20:47:10 +08:00
+
+M10-T06: 12/12 — OWNER-AUTHORIZED FINAL EXCEPTION, IN PROGRESS. Repair13 NOT AUTHORIZED / NOT RUN. Prior repair10 timeout and repair11 M10-G06 failure remain historical. Frozen tests/ra1/inventory.test.ts restored to exact M10-G06/HEAD blob SHA256 1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4; A PASS before tests. New tests/harness/ra1InventorySetup.ts batches real fixed-RA1 Git outputs only within the exact original inventory invocation, configured through vite.config.ts. Existing T06 product remains unchanged. Gates B–J NOT RUN; commit/push NOT RUN; human acceptance PENDING, fresh separate-session review NOT COMPLETED. Any required FAIL -> M10-T06_BLOCKED_AFTER_FINAL_REPAIR_12; no retry or repair13. T07 NOT STARTED, deployment NOT RUN.
+
+## Retained repair11 history (superseded by current exception above)
+
+## Current M10-T06 status
+
+M10-T06_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11: owner-authorized RA1 inventory batching passed the exact case in245.4807ms under unchanged5000ms, but the complete280-test subset failed M10-G06's historical whole-source comparison (279 PASS). Repairs11/11 — OWNER-AUTHORIZED EXCEPTION; repair12 NOT AUTHORIZED / NOT RUN. Later C–G gates, commit/push NOT RUN; existing T06 product remains unchanged. [Task and retained evidence](docs/M10_T06.md). T04/T05/T06 human acceptance PENDING; T07 NOT STARTED; deployment NOT RUN.
+
+## Historical M10-T05 status — 2026-10-05 16:51:35 +08:00
 
 Motion14.0.0 presentation infrastructure is IMPLEMENTED / VERIFIED. Deterministic public events, cancellable queue, reduced/immediate/skip paths, lifecycle refs, motion tokens and Dealer six-state integration are ready. Full94 files/1193 Vitest,149 Chromium, complete preservation/assets and unified verify.ps1 PASS/exit0. M10-T05: 11/11 — OWNER-AUTHORIZED EXCEPTION — CLOSED; repair12 NOT AUTHORIZED / NOT RUN. [Task, exact verification and retained failed history](docs/M10_T05.md). Human acceptance PENDING; fresh separate-session review NOT COMPLETED. T04 human visual acceptance remains PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05.
 

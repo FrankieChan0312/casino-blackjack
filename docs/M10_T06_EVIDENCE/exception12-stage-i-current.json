@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-i-current-vitest.json; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node node_modules/vitest/vitest.mjs run tests/harness.test.ts tests/unit/m8Contract.test.ts tests/m9/documentation.test.ts tests/ra1/inventory.test.ts tests/unit/portfolio.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-i-docs-vitest.json; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node scripts/verify-dealer-assets.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node scripts/verify-character-assets.mjs; exit $LASTEXITCODE",
+  "started": "2026-10-05 21:09:36 +08:00",
+  "finished": "2026-10-05 21:09:58 +08:00",
+  "exit": 0
+}

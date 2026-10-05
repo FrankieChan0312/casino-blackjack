@@ -3,7 +3,7 @@ import type { DealerPresentationState } from './dealerPresentation.js';
 // Public positions, not physical-card IDs. Hidden slots deliberately carry no face.
 export type CardSlot = Readonly<{ roundId: string; owner: 'dealer' | number; handId: string; index: number }>;
 export type PublicFace = Readonly<{ rank: string; suit: string }>;
-export type AnchorId = 'deal-origin' | 'dealer-hand' | `seat-${number}` | `hand:${string}` | `wager:${number}` | `hand-wager:${string}`;
+export type AnchorId = 'deal-origin' | 'dealer-hand' | `seat-${number}` | `hand:${string}` | `wager:${number}` | `hand-wager:${string}` | `card:${string}` | `hand-summary:${number}`;
 export type PresentationFact =
   | Readonly<{ type: 'DEAL_CARD'; card: CardSlot; face: PublicFace | null; reason: 'INITIAL' | 'HIT' | 'DOUBLE' | 'SUPPLEMENT' | 'DEALER'; destination: AnchorId }>
   | Readonly<{ type: 'REVEAL_HOLE_CARD'; card: CardSlot; face: PublicFace }>

@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/@playwright/test/cli.js test tests/browser/m10/initialDeal.spec.ts tests/browser/m10/presentation.spec.ts; exit $LASTEXITCODE",
+  "started": "2026-10-05 18:32:00 +08:00",
+  "finished": "2026-10-05 18:33:32 +08:00",
+  "exit": 0
+}

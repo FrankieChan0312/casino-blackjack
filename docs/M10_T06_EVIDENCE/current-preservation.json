@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts; exit $LASTEXITCODE",
+  "started": "2026-10-05 18:39:49 +08:00",
+  "finished": "2026-10-05 18:40:09 +08:00",
+  "exit": 1
+}

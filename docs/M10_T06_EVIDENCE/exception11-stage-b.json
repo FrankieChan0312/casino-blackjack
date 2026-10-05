@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception11-stage-b-vitest.json; exit $LASTEXITCODE",
+  "started": "2026-10-05 19:25:21 +08:00",
+  "finished": "2026-10-05 19:25:30 +08:00",
+  "exit": 1
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-05 19:26:54 +08:00",
+  "semanticEquivalence": "PASS - input byte hashes, original assertion body,30 exact existence queries and12 AST input paths/sizes unchanged",
+  "distinctInputs": 24,
+  "gitProcesses": {
+    "before": 27,
+    "after": 3
+  },
+  "diagnosticMs": {
+    "before": 2424.5037,
+    "after": 1296.7035999999998
+  },
+  "stageA": [
+    {
+      "fullName": "RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers",
+      "status": "passed",
+      "duration": 245.4807
+    }
+  ],
+  "stageB": {
+    "passed": 279,
+    "failed": 1,
+    "failures": [
+      {
+        "fullName": "[M10-G06] every pre-task assertion stays byte-identical except documented inventory and evidence-output adapters",
+        "status": "failed",
+        "duration": 211.52400000000011
+      }
+    ],
+    "ra1": [
+      {
+        "fullName": "RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers",
+        "status": "passed",
+        "duration": 391.8325
+      },
+      {
+        "fullName": "RA1 mechanically preserves every reviewed M9 assertion except explicitly authorized profile and deterministic input changes",
+        "status": "passed",
+        "duration": 400.4892000000001
+      }
+    ]
+  },
+  "delivery": "M10-T06_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11",
+  "note": "Semantic proof does not waive the M10-G06 historical whole-source comparator FAIL. No comparator edit or retry authorized."
+}

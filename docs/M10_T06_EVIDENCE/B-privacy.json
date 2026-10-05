@@ -1,0 +1,6 @@
+{
+  "command": "npx.cmd vitest run tests/m10/presentationEvents.test.ts tests/m10/initialDeal.test.ts -t \"T05-E06|T06-P01\"; exit $LASTEXITCODE",
+  "started": "2026-10-05 17:51:04 +08:00",
+  "finished": "2026-10-05 17:51:05 +08:00",
+  "exit": 255
+}

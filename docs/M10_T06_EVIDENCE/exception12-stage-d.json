@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/m10/tableGeometry.test.tsx -t \"M10-G06\" --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-d-vitest.json; exit $LASTEXITCODE",
+  "started": "2026-10-05 20:48:05 +08:00",
+  "finished": "2026-10-05 20:48:07 +08:00",
+  "exit": 0
+}

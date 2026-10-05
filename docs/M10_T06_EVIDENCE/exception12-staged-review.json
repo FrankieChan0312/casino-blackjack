@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-05 21:50:40 +08:00",
+  "aggregate": {
+    "command": "git diff --cached --check",
+    "status": "FAIL",
+    "exit": 2,
+    "output": "docs/M10_T06_EVIDENCE/blocked-current-preservation-output.txt:30: new blank line at EOF.\n"
+  },
+  "classification": "Only immutable original failed-transcript EOF blank line; retain original raw bytes/history as owner requires. No authoring error, assertion/test exclusion, whitespace rule change or repair13.",
+  "raw": {
+    "file": "docs/M10_T06_EVIDENCE/blocked-current-preservation-output.txt",
+    "incomingHash": "e89410975a38b1025763b5b70f0c071e6e544f23c57279e63361b94dcdf6810a",
+    "currentHash": "e89410975a38b1025763b5b70f0c071e6e544f23c57279e63361b94dcdf6810a",
+    "equal": true
+  },
+  "authored": {
+    "command": "git diff --cached --check -- . :!docs/M10_T06_EVIDENCE/blocked-current-preservation-output.txt",
+    "status": "PASS",
+    "exit": 0
+  },
+  "requiredGates": "A–J remain PASS/checked0",
+  "review": "Complete384 staged files checked; only original task source/docs/evidence, no protected domain/browser/assets/dependency changes"
+}

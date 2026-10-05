@@ -1,0 +1,30 @@
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/ra1/inventory.test.ts (2 tests | 1 failed) 6736ms
+   × RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers 5568ms
+
+ Test Files  1 failed | 30 passed (31)
+      Tests  1 failed | 279 passed (280)
+   Start at  18:39:50
+   Duration  18.33s (import 55%, tests 37%, transform 8%)
+
+    Isolate  31 workers spawned · ~435ms startup each (spawn + environment, per file)
+             at least ~1.49s faster with isolate: false — reuses workers across files instead of one per file
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ra1/inventory.test.ts > RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/ra1/inventory.test.ts:35:1
+     33|   visit(source); return titles;
+     34| }
+     35| it('RA1 has exactly thirty unique executable RSA owners and truthful c…
+       | ^
+     36|   const files = readdirSync('tests',{recursive:true}).map(String).filt…
+     37|   const rsaFiles = files.filter(file=>/^ra1[\\/]/.test(file));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

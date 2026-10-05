@@ -1,0 +1,264 @@
+{
+  "classification": "Diagnostic replay of unchanged inventory body with standalone matchers; NOT the Vitest acceptance gate",
+  "git": [
+    {
+      "args": [
+        "-c",
+        "safe.directory=C:/Users/user/Documents/GitHub/casino-blackjack",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "e8e8e2e1586611473f0cdb94540ce995d9bd64e7",
+        "tests"
+      ],
+      "durationMs": 45.47019999999998,
+      "bytes": 3132,
+      "sha256": "0a84700e61d1afab9c282783aed3ef962a1edcd1891c682c1cf0dc66be760e34"
+    },
+    {
+      "args": [
+        "-c",
+        "safe.directory=C:/Users/user/Documents/GitHub/casino-blackjack",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "e8e8e2e1586611473f0cdb94540ce995d9bd64e7",
+        "tests/browser"
+      ],
+      "durationMs": 43.99890000000005,
+      "bytes": 230,
+      "sha256": "417bfa5188ba52e4904dcae156929f8f5394fc0ca291620dbeafa2c8b87f5634"
+    },
+    {
+      "args": [
+        "-c",
+        "safe.directory=C:/Users/user/Documents/GitHub/casino-blackjack",
+        "cat-file",
+        "--batch"
+      ],
+      "durationMs": 99.3447000000001,
+      "bytes": 770549,
+      "sha256": "f2f5cd91457af97004017a683edfdabcc54f723e074419959a9ee7796a406587"
+    }
+  ],
+  "parse": [
+    {
+      "file": "tests/ra1/browser.test.ts",
+      "bytes": 2816,
+      "durationMs": 22.004900000000134
+    },
+    {
+      "file": "tests/ra1/domain.test.ts",
+      "bytes": 9945,
+      "durationMs": 34.62480000000005
+    },
+    {
+      "file": "tests/ra1/inventory.test.ts",
+      "bytes": 4818,
+      "durationMs": 5.442000000000007
+    },
+    {
+      "file": "tests/ra1/preservation.test.ts",
+      "bytes": 12205,
+      "durationMs": 18.13799999999992
+    },
+    {
+      "file": "tests/ra1/profile.test.ts",
+      "bytes": 937,
+      "durationMs": 0.8290000000001783
+    },
+    {
+      "file": "tests/browser/accessibility.spec.ts",
+      "bytes": 3788,
+      "durationMs": 4.962099999999964
+    },
+    {
+      "file": "tests/browser/gameplay.spec.ts",
+      "bytes": 12504,
+      "durationMs": 10.804000000000087
+    },
+    {
+      "file": "tests/browser/m8.spec.ts",
+      "bytes": 9966,
+      "durationMs": 8.105499999999893
+    },
+    {
+      "file": "tests/browser/m9.spec.ts",
+      "bytes": 15826,
+      "durationMs": 24.528299999999945
+    },
+    {
+      "file": "tests/browser/polish.spec.ts",
+      "bytes": 6901,
+      "durationMs": 3.387300000000323
+    },
+    {
+      "file": "tests/browser/portfolio.spec.ts",
+      "bytes": 1913,
+      "durationMs": 1.0202999999996791
+    },
+    {
+      "file": "tests/browser/ra1.spec.ts",
+      "bytes": 3894,
+      "durationMs": 1.7703000000001339
+    }
+  ],
+  "exists": [
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/domain.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/preservation.test.ts",
+    "tests/ra1/browser.test.ts"
+  ],
+  "durationMs": 1296.7035999999998,
+  "batched": [
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/ra1/browser.test.ts",
+      "bytes": 2817,
+      "sha256": "4405f508351be2645e3c8fc55ca7f25029140a143975f966232e551bd40a913f"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/ra1/domain.test.ts",
+      "bytes": 9946,
+      "sha256": "cfcb333d5ac0bfe5490697fb0ff64bb3c7f6f5eae2f5f179d355e8e6f9562c53"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/ra1/inventory.test.ts",
+      "bytes": 4819,
+      "sha256": "3d57e16d8b219be3051dfcb9d706116ab3d064f08f5186fab209cb1b7573bc9e"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/ra1/preservation.test.ts",
+      "bytes": 12206,
+      "sha256": "d7d16609661276bb27ee1e972775b4a6181c63260bbd5f7987770835fa9088fe"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/ra1/profile.test.ts",
+      "bytes": 938,
+      "sha256": "a87f249fc43d9fb8976648b6f83659adeac67ffb75e0817abc5e027a52da9b9e"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/accessibility.spec.ts",
+      "bytes": 3789,
+      "sha256": "3fffce09ad926609fe1f190d87a57ebc58558a59540fa77e6c4d8a7928649b8c"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/gameplay.spec.ts",
+      "bytes": 12505,
+      "sha256": "8f119193b30e35980ae9eae787765e5b5e8ab676a93b527cb840ee806c3e1d7f"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/m8.spec.ts",
+      "bytes": 9967,
+      "sha256": "866d7513f91e162ae9e9a2b6359738bff615b2a06f390f494bf325a8b0de1fc0"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/m9.spec.ts",
+      "bytes": 15827,
+      "sha256": "4a6f205c1190f5cf895fdec82f0654c4a777605786e4578c1051f4520af063da"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/polish.spec.ts",
+      "bytes": 6902,
+      "sha256": "d90b6e812b5d0771b31ce24c11213a2be7b65593b947864841c813c6cf6b1601"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/portfolio.spec.ts",
+      "bytes": 1914,
+      "sha256": "c95a690e1a6b38a5fa1e7b0759219001a902f9f8cb47368567e67cd642fba1f1"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:tests/browser/ra1.spec.ts",
+      "bytes": 3895,
+      "sha256": "82732f2b2e633c04c124bf05c2cf5a990a60f880e98673c5f3c7f0122a92ab71"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:README.md",
+      "bytes": 7517,
+      "sha256": "1feaab2a8f9e9a47859eb7754c959153b5363533b8d50771dc00c17cb4ec84c0"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/STATE.md",
+      "bytes": 62643,
+      "sha256": "e78adfa6c44398bc23a04905b8e7da558777a215a70ef3baff75f84e814ea2bd"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/PLAN.md",
+      "bytes": 49576,
+      "sha256": "dce2941d0408803befdd32e4d7a55175181eb5b58e1a54c4b89285b6bb5f91a0"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/DEVELOPMENT_LOG.md",
+      "bytes": 300421,
+      "sha256": "327b0ae8450f82cbbb5fbd2c681e29f30d712d5cd8de28e6ff19b8317ae916db"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/UX_UI.md",
+      "bytes": 31903,
+      "sha256": "1c7287d5f02080cdede231df1a9268a6ccb53953a5a64383e27a0853e4b3354e"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/LAB_MANUAL.md",
+      "bytes": 107194,
+      "sha256": "ef4cf68175c167228d248d9ed34a581bf7cda95342a0ae287652af4913325f13"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/PORTFOLIO.md",
+      "bytes": 6353,
+      "sha256": "b9e2d27b702d0fed0508b4fe400f3a5098b25e8eda5d167cab2b94e91365cec1"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/SPEC.md",
+      "bytes": 24743,
+      "sha256": "e6174577a75488a3e0aa64a181899224145eb439b8d2aa47efbb34f64db55758"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/DESIGN.md",
+      "bytes": 68137,
+      "sha256": "84ac02a94f1a655cabdf5b2ddbb6d3f45ffbf63dd6add385d5b9d2040c029bec"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/RA1_EVIDENCE.md",
+      "bytes": 11565,
+      "sha256": "c7ba3b10d352dd984da3f638da3cdf91622c046cb1211ef98693a3e365792f6e"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/RA1_REVIEW_HANDOFF.md",
+      "bytes": 6801,
+      "sha256": "049f0e103c093f6fe951a4efeeb4e5210d64a14d4c29b364bf7803f441428251"
+    },
+    {
+      "ref": "e8e8e2e1586611473f0cdb94540ce995d9bd64e7:docs/RA1_MAPPING.md",
+      "bytes": 6911,
+      "sha256": "491edbde4d3eceff1f1227f08ed608caada535c3eebfc37cfbe3815d52509087"
+    }
+  ],
+  "name": "RA1 has exactly thirty unique executable RSA owners and truthful current suite/status headers",
+  "gitMs": 188.81380000000013,
+  "parseMs": 135.61650000000031
+}

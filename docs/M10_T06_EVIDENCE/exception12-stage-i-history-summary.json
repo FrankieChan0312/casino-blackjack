@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-05 21:10:27 +08:00",
+  "status": "PASS",
+  "checkedExit": 0,
+  "passes": [
+    "PASS: M1 preservation",
+    "PASS: M2 preservation",
+    "PASS: M3 preservation",
+    "PASS: M4 preservation",
+    "PASS: M5 preservation",
+    "PASS: M6 preservation",
+    "PASS: M7 preservation",
+    "PASS: M7 accepted Chromium inventory",
+    "PASS: M8 accepted 956 Vitest / 44 Chromium inventory"
+  ],
+  "counts": [
+    " Test Files  12 passed (12)",
+    "      Tests  155 passed (155)",
+    " Test Files  6 passed (6)",
+    "      Tests  78 passed (78)",
+    " Test Files  5 passed (5)",
+    "      Tests  72 passed (72)",
+    " Test Files  7 passed (7)",
+    "      Tests  171 passed (171)",
+    " Test Files  8 passed (8)",
+    "      Tests  168 passed (168)",
+    " Test Files  9 passed (9)",
+    "      Tests  181 passed (181)",
+    " Test Files  56 passed (56)",
+    "      Tests  870 passed (870)",
+    "  24 passed (29.8s)",
+    " Test Files  66 passed (66)",
+    "      Tests  956 passed (956)",
+    "  44 passed (58.0s)"
+  ]
+}

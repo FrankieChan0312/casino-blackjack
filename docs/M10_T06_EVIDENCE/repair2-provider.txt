@@ -1,0 +1,96 @@
+import { createContext, useCallback, useContext, useLayoutEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { MotionConfig, useReducedMotion } from 'motion/react';
+import { animate } from 'motion/mini';
+import { createAnchorRegistry } from '../presentation/anchors.js';
+import { createPresentationTimeline, type VisualStep, type PresentationMode } from '../presentation/timeline.js';
+import type { AnchorId, PresentationFeed } from '../presentation/events.js';
+import { MOTION_TOKENS } from '../presentation/motionTokens.js';
+import type { DealerPresentationState } from '../presentation/dealerPresentation.js';
+import { createInitialDealProjection, initialCards, initialCardKey } from '../presentation/initialDeal.js';
+import { playInitialDealFlight } from './InitialDealFlight.js';
+
+export function createPresentationRuntime() {
+  const anchors = createAnchorRegistry(), initialDeal = createInitialDealProjection();
+  const timeline = createPresentationTimeline(event => {
+    if (event.type === 'DEAL_CARD' && event.reason === 'INITIAL') return playInitialDealFlight(event, anchors, () => initialDeal.arrive(event));
+  });
+  timeline.subscribe(() => {
+    const snapshot = timeline.getSnapshot();
+    if (!snapshot.activeId && !snapshot.pending) initialDeal.clear();
+  });
+  return { anchors, timeline, initialDeal };
+}
+type Runtime = ReturnType<typeof createPresentationRuntime>;
+const PresentationContext = createContext<Runtime | null>(null);
+export const usePresentationRuntime = () => useContext(PresentationContext);
+const emptySubscription = () => () => {};
+const emptySnapshot = () => null;
+const DealContext = createContext<{ feed: PresentationFeed; mode: PresentationMode } | null>(null);
+export function useInitialDeal() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.initialDeal.subscribe ?? emptySubscription, runtime?.initialDeal.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription, context?.feed.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const pending = context?.mode === 'FULL_MOTION' ? projection?.pending ?? [] : [];
+  // The unconsumed feed masks the first render, before the layout-effect player starts.
+  const incoming = context?.mode === 'FULL_MOTION' ? initialCards(feed?.batches.flatMap(batch => batch.events) ?? []) : [];
+  const keys = [...pending, ...incoming.map(event => initialCardKey(event.card.handId, event.card.index))];
+  return { running: keys.length > 0, delivered: projection?.delivered ?? 0,
+    visible: (owner: string, index: number) => !keys.length || (index < 2 && !keys.includes(initialCardKey(owner, index))) };
+}
+export function useDealerPresentationState(fallback: DealerPresentationState): DealerPresentationState {
+  const runtime = usePresentationRuntime();
+  const snapshot = useSyncExternalStore(runtime?.timeline.subscribe ?? emptySubscription, runtime?.timeline.getSnapshot ?? emptySnapshot, emptySnapshot);
+  return snapshot?.dealerState ?? fallback;
+}
+
+export function usePresentationAnchor(id: AnchorId) {
+  const runtime = usePresentationRuntime();
+  return useCallback((element: HTMLElement | null) => element && runtime ? runtime.anchors.register(id, element) : undefined, [runtime, id]);
+}
+
+// Demand-driven native Motion control, used by the isolated infrastructure harness.
+// No domain/controller reference or command callback is accepted.
+export function playMotionStep(element: HTMLElement, keyframes: { opacity: number[] }, duration = MOTION_TOKENS.resultEmphasis): VisualStep {
+  const controls = animate(element, keyframes, { duration, ease: [...MOTION_TOKENS.arrivalEase] });
+  return { finished: new Promise<void>((resolve, reject) => { controls.then(resolve, reject); }), cancel: () => controls.cancel(), settle: () => { element.style.opacity = String(keyframes.opacity.at(-1)); } };
+}
+
+export function consumePresentation(feed: PresentationFeed, runtime: Runtime, mode: PresentationMode) {
+  const snapshot = feed.getSnapshot();
+  runtime.timeline.begin(snapshot.generation);
+  if (mode === 'FULL_MOTION') runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+  runtime.timeline.enqueue(snapshot.batches.flatMap(batch => batch.events));
+  feed.acknowledge(snapshot.revision);
+}
+
+export function connectPresentation(feed: PresentationFeed, runtime: Runtime, mode: PresentationMode, deferred = false) {
+  runtime.timeline.setMode(mode);
+  function consume() {
+    consumePresentation(feed, runtime, mode);
+  }
+  if (!deferred) consume();
+  const unsubscribe = deferred ? () => {} : feed.subscribe(consume);
+  const settle = () => runtime.timeline.skip();
+  const visibility = () => { if (document.hidden) settle(); };
+  const input = (event: Event) => { if ((event.target as HTMLElement)?.closest?.('button')) settle(); };
+  const keyboard = (event: KeyboardEvent) => { if (event.key === 'Enter' || event.key === ' ') input(event); };
+  window.addEventListener('resize', settle);
+  document.addEventListener('visibilitychange', visibility);
+  window.addEventListener('click', input, true);
+  window.addEventListener('keydown', keyboard, true);
+  return () => {
+    unsubscribe(); window.removeEventListener('resize', settle); document.removeEventListener('visibilitychange', visibility);
+    window.removeEventListener('click', input, true); window.removeEventListener('keydown', keyboard, true);
+    runtime.timeline.cancel();
+  };
+}
+
+export function PresentationProvider({ feed, children, mode }: { feed: PresentationFeed; children: ReactNode; mode?: PresentationMode }) {
+  const [runtime] = useState(createPresentationRuntime);
+  const reduced = useReducedMotion();
+  const resolvedMode = reduced ? 'REDUCED_MOTION' : mode ?? 'FULL_MOTION';
+  const snapshot = useSyncExternalStore(feed.subscribe, feed.getSnapshot, feed.getSnapshot);
+  useLayoutEffect(() => connectPresentation(feed, runtime, resolvedMode, true), [feed, runtime, resolvedMode]);
+  useLayoutEffect(() => consumePresentation(feed, runtime, resolvedMode), [feed, runtime, resolvedMode, snapshot]);
+  return <MotionConfig reducedMotion="user"><PresentationContext.Provider value={runtime}><DealContext.Provider value={{ feed, mode: resolvedMode }}>{children}</DealContext.Provider></PresentationContext.Provider></MotionConfig>;
+}

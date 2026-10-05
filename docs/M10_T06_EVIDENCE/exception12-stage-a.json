@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-05 20:46:31 +08:00",
+  "status": "PASS",
+  "file": "tests/ra1/inventory.test.ts",
+  "baseline": "57443bbefddd47512104ba941c65e3ff1988cf02",
+  "expectedHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+  "restoredHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+  "committedHeadHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+  "previousCapturedWorkingHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+  "comparatorHash": "4ac36501651769ef8ab102b060384a1569b1c886d0b1b0639aceddb796476646",
+  "comparatorUnchanged": true,
+  "expectedBytes": 5521,
+  "restoredBytes": 5521,
+  "workingLineEndings": "Exact historical Git blob; prior CRLF checkout source normalizes identically",
+  "beforeAnyTests": true
+}

@@ -1,0 +1,6 @@
+{
+  "command": "node node_modules/vitest/vitest.mjs run tests/m10/initialDeal.test.ts tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/presentationLifecycle.test.tsx; exit $LASTEXITCODE",
+  "started": "2026-10-05 18:10:24 +08:00",
+  "finished": "2026-10-05 18:10:26 +08:00",
+  "exit": 0
+}

@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-10-05 21:44:49 +08:00",
+  "status": "M10-T06_IMPLEMENTED_VERIFIED",
+  "allRequired": "A–J PASS",
+  "repair": "12/12 OWNER-AUTHORIZED FINAL EXCEPTION",
+  "repair13": "NOT AUTHORIZED / NOT RUN",
+  "statuses": {
+    "A": {
+      "timestamp": "2026-10-05 20:46:31 +08:00",
+      "status": "PASS",
+      "file": "tests/ra1/inventory.test.ts",
+      "baseline": "57443bbefddd47512104ba941c65e3ff1988cf02",
+      "expectedHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+      "restoredHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+      "committedHeadHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+      "previousCapturedWorkingHash": "1bcb30edc1a6c8440a92b7277570567ade2ade5a537a201372ef3ed3195152d4",
+      "comparatorHash": "4ac36501651769ef8ab102b060384a1569b1c886d0b1b0639aceddb796476646",
+      "comparatorUnchanged": true,
+      "expectedBytes": 5521,
+      "restoredBytes": 5521,
+      "workingLineEndings": "Exact historical Git blob; prior CRLF checkout source normalizes identically",
+      "beforeAnyTests": true
+    },
+    "B": {
+      "command": "node node_modules/vitest/vitest.mjs run tests/ra1/inventory.test.ts -t \"RA1 has exactly thirty\" --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-b-vitest.json; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:47:21 +08:00",
+      "finished": "2026-10-05 20:47:23 +08:00",
+      "exit": 0
+    },
+    "C": {
+      "command": "node node_modules/vitest/vitest.mjs run tests/ra1 --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-c-vitest.json; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:47:51 +08:00",
+      "finished": "2026-10-05 20:47:54 +08:00",
+      "exit": 0
+    },
+    "D": {
+      "command": "node node_modules/vitest/vitest.mjs run tests/m10/tableGeometry.test.tsx -t \"M10-G06\" --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-d-vitest.json; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:48:05 +08:00",
+      "finished": "2026-10-05 20:48:07 +08:00",
+      "exit": 0
+    },
+    "E": {
+      "command": "node node_modules/vitest/vitest.mjs run tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-e-vitest.json; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:48:17 +08:00",
+      "finished": "2026-10-05 20:48:27 +08:00",
+      "exit": 0
+    },
+    "F": [
+      {
+        "command": "npm.cmd run typecheck; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm.cmd run lint; exit $LASTEXITCODE",
+        "started": "2026-10-05 20:48:52 +08:00",
+        "finished": "2026-10-05 20:49:20 +08:00",
+        "exit": 0
+      },
+      {
+        "command": "node node_modules/vitest/vitest.mjs run tests/m10/initialDeal.test.ts tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/presentationLifecycle.test.tsx tests/m10/t09.test.tsx --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-f-units-vitest.json; exit $LASTEXITCODE",
+        "started": "2026-10-05 20:49:34 +08:00",
+        "finished": "2026-10-05 20:49:37 +08:00",
+        "exit": 0
+      },
+      {
+        "command": "node node_modules/@playwright/test/cli.js test tests/browser/m10/initialDeal.spec.ts tests/browser/m10/presentation.spec.ts; exit $LASTEXITCODE",
+        "started": "2026-10-05 20:49:51 +08:00",
+        "finished": "2026-10-05 20:51:14 +08:00",
+        "exit": 0
+      },
+      {
+        "command": "node docs/M10_T06_EVIDENCE/nativeZoom.mjs; exit $LASTEXITCODE",
+        "started": "2026-10-05 20:53:02 +08:00",
+        "finished": "2026-10-05 20:53:14 +08:00",
+        "exit": 0
+      }
+    ],
+    "G": {
+      "command": "node node_modules/vitest/vitest.mjs run --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-g-vitest.json; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:53:56 +08:00",
+      "finished": "2026-10-05 20:54:13 +08:00",
+      "exit": 0
+    },
+    "H": {
+      "command": "node node_modules/@playwright/test/cli.js test; exit $LASTEXITCODE",
+      "started": "2026-10-05 20:54:46 +08:00",
+      "finished": "2026-10-05 21:06:23 +08:00",
+      "exit": 0
+    },
+    "I": [
+      {
+        "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1; exit $LASTEXITCODE",
+        "started": "2026-10-05 21:07:04 +08:00",
+        "finished": "2026-10-05 21:09:10 +08:00",
+        "exit": 0
+      },
+      {
+        "command": "node node_modules/vitest/vitest.mjs run tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-i-current-vitest.json; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node node_modules/vitest/vitest.mjs run tests/harness.test.ts tests/unit/m8Contract.test.ts tests/m9/documentation.test.ts tests/ra1/inventory.test.ts tests/unit/portfolio.test.ts --reporter=default --reporter=json --outputFile=docs/M10_T06_EVIDENCE/exception12-stage-i-docs-vitest.json; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node scripts/verify-dealer-assets.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node scripts/verify-character-assets.mjs; exit $LASTEXITCODE",
+        "started": "2026-10-05 21:09:36 +08:00",
+        "finished": "2026-10-05 21:09:58 +08:00",
+        "exit": 0
+      },
+      {
+        "command": "node node_modules/@playwright/test/cli.js test tests/browser/pa1.spec.ts tests/browser/ra1.spec.ts tests/browser/m9.spec.ts tests/browser/m10 tests/browser/m10a; exit $LASTEXITCODE",
+        "started": "2026-10-05 21:10:57 +08:00",
+        "finished": "2026-10-05 21:21:37 +08:00",
+        "exit": 0
+      }
+    ],
+    "J": {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE",
+      "started": "2026-10-05 21:22:16 +08:00",
+      "finished": "2026-10-05 21:37:03 +08:00",
+      "exit": 0
+    }
+  },
+  "counts": {
+    "RA1": 42,
+    "preservation": 280,
+    "focusedUnit": 38,
+    "focusedBrowser": 22,
+    "nativeZoomScenarios": 3,
+    "nativePNG": 9,
+    "vitestFiles": 95,
+    "vitest": 1199,
+    "chromium": 164,
+    "currentPreservationBrowser": 120
+  },
+  "protection": "exception12-final-protected.json",
+  "sameSessionReview": "Source/product-scope/representative desktop+mobile stages/all nine native200 images/evidence PASS; privacy/publication review follows",
+  "freshSessionReview": "NOT COMPLETED - genuinely fresh independent session unavailable",
+  "humanAcceptance": "PENDING",
+  "commit": "NOT RUN",
+  "push": "NOT RUN"
+}
