@@ -1,0 +1,8 @@
+{
+  "mutation": "NONE",
+  "target": "docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+  "timestamp": "2026-10-06 03:13:58 +08:00",
+  "testResults": "All seven native stages PASS/checked0; gate failed only final archive/restore",
+  "probe": "PASS exclusive read; no persistent reader handle now",
+  "hypothesis": "Transient file reader prevented delete-share during atomic replacement; exact owner not proven"
+}

@@ -1,0 +1,43 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/compatibility.test.ts tests/m10/presentationLifecycle.test.tsx tests/m10/presentationEvents.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/compatibility.test.ts (8 tests | 1 failed) 60ms
+   × [T10-U03] surrender half-return has its exact recorded amount and owner route 7ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/compatibility.test.ts > [T10-U03] surrender half-return has its exact recorded amount and owner route
+AssertionError: expected { type: 'SETTLE_RESULT', …(11) } to match object { kind: 'MAIN', …(4) }
+(7 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "kind": "MAIN",
+-   "outcome": "SURRENDER",
++   "outcome": "SURRENDERED",
+    "returnTo": "local-credits",
+    "returned": 100,
+    "stake": 200,
+  }
+
+ ❯ tests/m10/compatibility.test.ts:53:18
+     51|   if(!c.getSnapshot().interaction.nextRound) expect(c.dispatch({type:'…
+     52|   const result=wagerEvents(events).find(event=>event.type==='SETTLE_RE…
+     53|   expect(result).toMatchObject({kind:'MAIN',outcome:'SURRENDER',stake:…
+       |                  ^
+     54|   expect(wagerFlight(result)).toEqual({amount:100,from:'hand-wager:rou…
+     55| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 2 passed (3)
+      Tests  1 failed | 23 passed (24)
+   Start at  02:04:24
+   Duration  985ms (import 53%, transform 27%, tests 17%, setup 3%, worker 1%)

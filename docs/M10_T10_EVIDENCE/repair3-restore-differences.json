@@ -1,0 +1,135 @@
+{
+  "gateExit": 1,
+  "cause": "File.Replace sharing error during final output restore; all native exits persisted PASS0",
+  "timestamp": "2026-10-06 03:12:57 +08:00",
+  "unrestored": [
+    {
+      "replacementExists": true,
+      "archiveExists": true,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+      "generatedSHA256": "6A57BF01BBFC6851AC6CBA1A1EE5B6CBEAC67517F26BD2A43C47DD45991A9397",
+      "originalSHA256": "D06B60F50482A02A9C2F15C54D160163ED7355FDCDE4C256012AA91866386A81"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json",
+      "generatedSHA256": "CA2D563722BA628812C5CFCBCFBE2AF0867B9613499B1D4292225456B421E249",
+      "originalSHA256": "A3C4E1BFA9C9C163D1F7FB3CFBE3E04B1278CDD92F2E960A7073C28A2F5E623F"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/4-1280-settled.png",
+      "generatedSHA256": "0BEA2C674D2E61221EBE4029DE742F63422FAE67D5CE55CE55473ADDD271C7A2",
+      "originalSHA256": "547D45465662D0A18B8F7D5B89430A69F4AB286867104E2EB0B024A76AB9A4F7"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json",
+      "generatedSHA256": "045C5EF129FF49D4A06F6D418E0560CD13A1656ACA0F37161C4158EC4F4AE759",
+      "originalSHA256": "73BAE084D3D12514662E827CD1669CF0D88B4E5E85DBB691183CBB60A5550F80"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-1280-settled.png",
+      "generatedSHA256": "3AAC82D14FE9619D627C62E4A38026DE11D4E83DF7A03B95AA31AAF125DACDAC",
+      "originalSHA256": "1692175D872DC967E93232CF96AC3A470AE062E22BC06436B60B108523BAC4C3"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-end-first-pass.png",
+      "generatedSHA256": "81F835381F2AE4FE404B5755660BF6B1694B4A74653E594CCE504EB7CA91D7B9",
+      "originalSHA256": "AD5CA2B3979EEE5EE3E226778A042B8123A386C805D297AD873D9C270CCEB6EC"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-first-pass.png",
+      "generatedSHA256": "6C16A3ECA39936A335E4EF7FD589E7C0AA92C134A44839E8D7B1ED6F6D2EDF66",
+      "originalSHA256": "224DFC9430E3A6328FD229C35642FCCE76BC28533DB5321FB21986FD8458ADFD"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-second-pass.png",
+      "generatedSHA256": "B3385C8467CCCC1B27C1D553C250EA76E8DE08A0C62567C94731C52ADADF6D79",
+      "originalSHA256": "A44AC02C5730E38B26318FB95190FB9120FDADDB257FAED596519FF0B76217DA"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json",
+      "generatedSHA256": "E4B3958DED01791B61C727DBB7AE99A3B72A5E4858BCCAD2946ED5D12157BDD8",
+      "originalSHA256": "920B8F8768423F8619058458DFA855B96C674B9719DBAF50A4A8D79A69EB0C95"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-settled.png",
+      "generatedSHA256": "2FBFD680BEED965767D81506CE0E628405362CD6F773B2C3AE672258969A33DF",
+      "originalSHA256": "94BA3CCC540D3DA72D512EAF32B5F482308C66DB5EA4697442D636BD6E513F50"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-320-start.png",
+      "generatedSHA256": "3AD79CE48A728D7A2CF4025498EA17D01B3CA0E58E2DA5AF4F41F875E077023C",
+      "originalSHA256": "765848B1392D30AE2FF908806E9EC63DAE0F793E44274D1BF29FDABBE787FBF2"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json",
+      "generatedSHA256": "D3361D91218D6DD6098FDF656A440D27BAAF681DC7BA85769D82CEF1E8C1F02A",
+      "originalSHA256": "9D14D23EF9FE0EAD18D67B1DDC743529C1EC04177A7E625A68CBD70A0A43F695"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/M10_T06_EVIDENCE/screenshots/7-768-settled.png",
+      "generatedSHA256": "4A199800007E97B67477BEE0FCA314F2150855F4A7612D23290A82250EC7295B",
+      "originalSHA256": "59D5857A012AE01F113048D28501CAE00F1B05A2DBFC3086DA773D24A23B09CE"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/images/m9-ready.png",
+      "generatedSHA256": "E57A5DA7553989C9C9DD61CF62AD49CE8285C765FEAAAF2A2EFE63DE85D7AA6B",
+      "originalSHA256": "32E77A1ED7D1046091DD224C54D90A7A01A7D17D4C2D44D84F2A8AD8BD6A011D"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/images/m9-results.png",
+      "generatedSHA256": "ABF6C8CF1A6D16BC11ED27629ECCDBB561ACC7C26AB7429D97B89FB977BACCAB",
+      "originalSHA256": "6DD1C88008C3582177E6D860F288529A1C1D947AFDF18E8EB3ACA1CB5DA75EBE"
+    },
+    {
+      "replacementExists": false,
+      "archiveExists": false,
+      "displacedExists": false,
+      "path": "docs/images/m9-tools.png",
+      "generatedSHA256": "40B0C5ABD9E2AD4ACF24E857B7EEE22B609E2693173A29B81773C0A373DAD925",
+      "originalSHA256": "82375819A7E7F7F580772EAE327C3A34DB03193DA4250ED7820E3C0D5DD8903E"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "requiredStages": "7 PASS/checked0",
+  "artifactRecovery": "PASS/0 targeted one-pass closure with320 exact original hashes",
+  "task": "M10-T10",
+  "currentFiles": 35,
+  "firstRunnerStatus": "BLOCKED/1 artifact sharing failure retained",
+  "zipTextEntriesScanned": 73,
+  "currentTests": 278,
+  "units": 1230,
+  "textFilesScanned": 130,
+  "exactExecutableFiles": 429,
+  "gate": "gate-20261006-023029",
+  "freshSeparateSessionReview": "NOT COMPLETED",
+  "sameSessionSourceRenderDiffReview": "PASS",
+  "protectedDiff": "EMPTY",
+  "humanVisual": "PENDING",
+  "limitations": [
+    "Visibility browser proof uses explicit synthetic hidden/event injection, not actual OS tab background",
+    "Existing replay remains immediate terminal summary; original live state/packages preserved",
+    "Video/GIF not supported by current repository workflow",
+    "Fresh separate-session review unavailable; human visual review deferred by explicit owner authorization"
+  ],
+  "status": "PASS",
+  "unitFiles": 99,
+  "timestamp": "2026-10-06 03:18:54 +08:00",
+  "credentialsSensitiveDataReview": "PASS no detected credentials/customer data; controlled local fixtures and captures inspected",
+  "chromium": 216,
+  "repairs": 3,
+  "exactExecutableHashes": "PASS unchanged"
+}

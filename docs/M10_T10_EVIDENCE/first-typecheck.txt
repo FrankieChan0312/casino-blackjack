@@ -1,0 +1,12 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+tests/m10/compatibility.test.ts(59,124): error TS2339: Property 'stake' does not exist on type 'WagerEvent'.
+  Property 'stake' does not exist on type 'Readonly<{ type: "MOVE_WAGER"; seat: number; amount: number; kind: string; handId?: string | undefined; returnTo?: AnchorId | undefined; }> & Readonly<{ id: string; generation: number; sequence: number; ordinal: number; }>'.
+tests/m10/compatibility.test.ts(59,136): error TS2339: Property 'returned' does not exist on type 'WagerEvent'.
+  Property 'returned' does not exist on type 'Readonly<{ type: "MOVE_WAGER"; seat: number; amount: number; kind: string; handId?: string | undefined; returnTo?: AnchorId | undefined; }> & Readonly<{ id: string; generation: number; sequence: number; ordinal: number; }>'.
+tests/m10/compatibility.test.ts(72,134): error TS2339: Property 'stake' does not exist on type 'WagerEvent'.
+  Property 'stake' does not exist on type 'Readonly<{ type: "MOVE_WAGER"; seat: number; amount: number; kind: string; handId?: string | undefined; returnTo?: AnchorId | undefined; }> & Readonly<{ id: string; generation: number; sequence: number; ordinal: number; }>'.
+tests/m10/compatibility.test.ts(72,146): error TS2339: Property 'returned' does not exist on type 'WagerEvent'.
+  Property 'returned' does not exist on type 'Readonly<{ type: "MOVE_WAGER"; seat: number; amount: number; kind: string; handId?: string | undefined; returnTo?: AnchorId | undefined; }> & Readonly<{ id: string; generation: number; sequence: number; ordinal: number; }>'.

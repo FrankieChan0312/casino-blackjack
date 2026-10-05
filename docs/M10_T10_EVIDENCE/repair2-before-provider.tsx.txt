@@ -1,0 +1,150 @@
+import { createContext, useCallback, useContext, useLayoutEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
+import { MotionConfig, useReducedMotion } from 'motion/react';
+import { animate } from 'motion/mini';
+import { createAnchorRegistry } from '../presentation/anchors.js';
+import { createPresentationTimeline, type VisualStep, type PresentationMode } from '../presentation/timeline.js';
+import type { AnchorId, PresentationFeed } from '../presentation/events.js';
+import { MOTION_TOKENS } from '../presentation/motionTokens.js';
+import type { DealerPresentationState } from '../presentation/dealerPresentation.js';
+import { createInitialDealProjection, initialCards, initialCardKey } from '../presentation/initialDeal.js';
+import { playInitialDealFlight } from './InitialDealFlight.js';
+import { createPlayerActionProjection, playerCardKeys } from '../presentation/playerActions.js';
+import { captureSplitOrigins, playSplitMotion, type SplitOrigins } from './PlayerActionMotion.js';
+import { createDealerActionProjection, dealerCardKeys } from '../presentation/dealerActions.js';
+import { playDealerReveal } from './DealerActionMotion.js';
+import { createWagerProjection, wagerEvents } from '../presentation/wagers.js';
+import { playWagerMotion } from './WagerMotion.js';
+
+export function createPresentationRuntime() {
+  const anchors = createAnchorRegistry(), initialDeal = createInitialDealProjection();
+  const playerActions = createPlayerActionProjection(), splitOrigins: SplitOrigins = new Map();
+  const dealerActions = createDealerActionProjection();
+  const wagers = createWagerProjection();
+  const timeline = createPresentationTimeline(event => {
+    if (event.type === 'DEAL_CARD' && event.reason === 'INITIAL') return playInitialDealFlight(event, anchors, () => initialDeal.arrive(event));
+    if (event.type === 'DEAL_CARD' && event.reason !== 'DEALER') return playInitialDealFlight(event, anchors, () => playerActions.arrive(event));
+    if (event.type === 'SPLIT_HANDS') return playSplitMotion(event, anchors, splitOrigins, () => playerActions.arrive(event));
+    if (event.type === 'REVEAL_HOLE_CARD') return playDealerReveal(event, anchors, () => dealerActions.reveal(event), () => dealerActions.arrive(event));
+    if (event.type === 'DEAL_CARD' && event.reason === 'DEALER') return playInitialDealFlight(event, anchors, () => dealerActions.arrive(event));
+    if (event.type === 'MOVE_WAGER' || event.type === 'SETTLE_RESULT') return playWagerMotion(event, anchors, () => wagers.arrive(event));
+    if (event.type === 'PLAYER_ACTION' && event.action === 'STAND') {
+      const element = anchors.get(`hand:${event.handId}`);
+      if (element) return playMotionStep(element, { opacity: [.85, 1] });
+    }
+  });
+  timeline.subscribe(() => {
+    const snapshot = timeline.getSnapshot();
+    if (!snapshot.activeId && !snapshot.pending) { initialDeal.clear(); playerActions.clear(); dealerActions.clear(); wagers.clear(); splitOrigins.clear(); }
+  });
+  return { anchors, timeline, initialDeal, playerActions, dealerActions, wagers, splitOrigins };
+}
+type Runtime = ReturnType<typeof createPresentationRuntime>;
+const PresentationContext = createContext<Runtime | null>(null);
+export const usePresentationRuntime = () => useContext(PresentationContext);
+const emptySubscription = () => () => {};
+const emptySnapshot = () => null;
+const DealContext = createContext<{ feed: PresentationFeed; mode: PresentationMode; sessionReduced: boolean; systemReduced: boolean; setSessionReduced(value: boolean): void } | null>(null);
+export const useMotionPreference = () => useContext(DealContext);
+export function useInitialDeal() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.initialDeal.subscribe ?? emptySubscription, runtime?.initialDeal.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription, context?.feed.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const pending = context?.mode === 'FULL_MOTION' ? projection?.pending ?? [] : [];
+  // The unconsumed feed masks the first render, before the layout-effect player starts.
+  const incoming = context?.mode === 'FULL_MOTION' ? initialCards(feed?.batches.flatMap(batch => batch.events) ?? []) : [];
+  const keys = [...pending, ...incoming.map(event => initialCardKey(event.card.handId, event.card.index))];
+  return { running: keys.length > 0, delivered: projection?.delivered ?? 0,
+    visible: (owner: string, index: number) => !keys.length || (index < 2 && !keys.includes(initialCardKey(owner, index))) };
+}
+export function useDealerPresentationState(fallback: DealerPresentationState): DealerPresentationState {
+  const runtime = usePresentationRuntime();
+  const snapshot = useSyncExternalStore(runtime?.timeline.subscribe ?? emptySubscription, runtime?.timeline.getSnapshot ?? emptySnapshot, emptySnapshot);
+  return snapshot?.dealerState ?? fallback;
+}
+export function usePlayerActions() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.playerActions.subscribe ?? emptySubscription, runtime?.playerActions.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription, context?.feed.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const keys = context?.mode === 'FULL_MOTION' ? [...(projection?.pending ?? []), ...playerCardKeys(feed?.batches.flatMap(batch => batch.events) ?? [])] : [];
+  return { running: keys.length > 0, visible: (handId: string, index: number) => !keys.includes(initialCardKey(handId, index)),
+    busy: (handId: string) => keys.some(key => key.startsWith(`${handId}:`)) };
+}
+export function useDealerActions() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.dealerActions.subscribe ?? emptySubscription, runtime?.dealerActions.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription, context?.feed.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const keys = context?.mode === 'FULL_MOTION' ? [...(projection?.pending ?? []), ...dealerCardKeys(feed?.batches.flatMap(batch => batch.events) ?? [])] : [];
+  return { running: keys.length > 0, back: keys.includes('dealer:1') && !projection?.revealed.includes('dealer:1'),
+    visible: (index: number) => index < 2 || !keys.includes(`dealer:${index}`) };
+}
+export function useWagers() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.wagers.subscribe ?? emptySubscription,runtime?.wagers.getSnapshot ?? emptySnapshot,emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription,context?.feed.getSnapshot ?? emptySnapshot,emptySnapshot);
+  return { running: context?.mode === 'FULL_MOTION' && ((projection?.pending.length ?? 0) > 0 || wagerEvents(feed?.batches.flatMap(batch=>batch.events) ?? []).length > 0) };
+}
+
+export function usePresentationAnchor(id: AnchorId) {
+  const runtime = usePresentationRuntime();
+  return useCallback((element: HTMLElement | null) => element && runtime ? runtime.anchors.register(id, element) : undefined, [runtime, id]);
+}
+
+// Demand-driven native Motion control, used by the isolated infrastructure harness.
+// No domain/controller reference or command callback is accepted.
+export function playMotionStep(element: HTMLElement, keyframes: { opacity: number[] }, duration = MOTION_TOKENS.resultEmphasis): VisualStep {
+  const controls = animate(element, keyframes, { duration, ease: [...MOTION_TOKENS.arrivalEase] });
+  return { finished: new Promise<void>((resolve, reject) => { controls.then(resolve, reject); }), cancel: () => controls.cancel(), settle: () => { element.style.opacity = String(keyframes.opacity.at(-1)); } };
+}
+
+export function consumePresentation(feed: PresentationFeed, runtime: Runtime, mode: PresentationMode) {
+  const snapshot = feed.getSnapshot();
+  const activeMode = typeof document !== 'undefined' && document.hidden ? 'IMMEDIATE' : mode;
+  if (runtime.timeline.getSnapshot().mode !== activeMode) runtime.timeline.setMode(activeMode);
+  runtime.timeline.begin(snapshot.generation);
+  if (!snapshot.batches.length) return;
+  if (activeMode === 'FULL_MOTION') {
+    runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+    runtime.playerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+    runtime.dealerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+    runtime.wagers.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+  }
+  runtime.timeline.enqueue(snapshot.batches.flatMap(batch => batch.events));
+  feed.acknowledge(snapshot.revision);
+}
+
+export function connectPresentation(feed: PresentationFeed, runtime: Runtime, mode: PresentationMode, deferred = false) {
+  runtime.timeline.setMode(mode);
+  function consume() {
+    consumePresentation(feed, runtime, mode);
+  }
+  if (!deferred) consume();
+  const unsubscribe = deferred ? () => {} : feed.subscribe(consume);
+  const settle = () => runtime.timeline.skip();
+  const visibility = () => { if (document.hidden) settle(); };
+  const input = (event: Event) => { if ((event.target as HTMLElement)?.closest?.('button')) {
+    settle(); captureSplitOrigins(runtime.anchors, runtime.splitOrigins);
+  } };
+  const keyboard = (event: KeyboardEvent) => { if (event.key === 'Enter' || event.key === ' ') input(event); };
+  window.addEventListener('resize', settle);
+  document.addEventListener('visibilitychange', visibility);
+  window.addEventListener('click', input, true);
+  window.addEventListener('keydown', keyboard, true);
+  return () => {
+    unsubscribe(); window.removeEventListener('resize', settle); document.removeEventListener('visibilitychange', visibility);
+    window.removeEventListener('click', input, true); window.removeEventListener('keydown', keyboard, true);
+    runtime.timeline.cancel();
+  };
+}
+
+export function PresentationProvider({ feed, children, mode }: { feed: PresentationFeed; children: ReactNode; mode?: PresentationMode }) {
+  const [runtime] = useState(createPresentationRuntime);
+  const [sessionReduced, setSessionReduced] = useState(false);
+  const reduced = useReducedMotion();
+  const resolvedMode = reduced || sessionReduced ? 'REDUCED_MOTION' : mode ?? 'FULL_MOTION';
+  const snapshot = useSyncExternalStore(feed.subscribe, feed.getSnapshot, feed.getSnapshot);
+  useLayoutEffect(() => connectPresentation(feed, runtime, resolvedMode, true), [feed, runtime, resolvedMode]);
+  useLayoutEffect(() => consumePresentation(feed, runtime, resolvedMode), [feed, runtime, resolvedMode, snapshot]);
+  return <MotionConfig reducedMotion={resolvedMode === 'FULL_MOTION' ? 'user' : 'always'}><PresentationContext.Provider value={runtime}><DealContext.Provider value={{ feed, mode: resolvedMode, sessionReduced, systemReduced: !!reduced, setSessionReduced }}>
+    {(sessionReduced || mode && mode !== 'FULL_MOTION') && <style>{'.player-mode *, .manual-mode *, .player-mode *::before, .player-mode *::after, .manual-mode *::before, .manual-mode *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }'}</style>}
+    {children}</DealContext.Provider></PresentationContext.Provider></MotionConfig>;
+}

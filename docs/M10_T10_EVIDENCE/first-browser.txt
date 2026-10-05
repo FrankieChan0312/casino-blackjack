@@ -1,0 +1,262 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/compatibility.spec.ts
+
+[WebServer] (node:31356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 20 tests using 1 worker
+
+(node:17156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   1 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-1] actual 1-player three-mode replay/package/audit equality and round/table lifecycle (30.8s)
+(node:27904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   2 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-4] actual 4-player three-mode replay/package/audit equality and round/table lifecycle (31.2s)
+(node:9552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   3 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-7] actual 7-player three-mode replay/package/audit equality and round/table lifecycle (4.7s)
+(node:13788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  4 [chromium] › tests\browser\m10\compatibility.spec.ts:67:25 › [T10-B02-FULL_MOTION] one-player forced Double, two Dealer draws and exact final credits (3.2s)
+[WebServer] 上午2:18:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  5 [chromium] › tests\browser\m10\compatibility.spec.ts:67:25 › [T10-B02-REDUCED_MOTION] one-player forced Double, two Dealer draws and exact final credits (1.2s)
+  ok  6 [chromium] › tests\browser\m10\compatibility.spec.ts:67:25 › [T10-B02-IMMEDIATE] one-player forced Double, two Dealer draws and exact final credits (1.3s)
+  ok  7 [chromium] › tests\browser\m10\compatibility.spec.ts:72:25 › [T10-B03-FULL_MOTION] four RSA leaves and Insurance/Even Money settle without stale cards or money (19.4s)
+[WebServer] 上午2:19:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午2:19:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午2:19:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  8 [chromium] › tests\browser\m10\compatibility.spec.ts:72:25 › [T10-B03-REDUCED_MOTION] four RSA leaves and Insurance/Even Money settle without stale cards or money (3.0s)
+  ok  9 [chromium] › tests\browser\m10\compatibility.spec.ts:72:25 › [T10-B03-IMMEDIATE] four RSA leaves and Insurance/Even Money settle without stale cards or money (2.9s)
+  ok 10 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-initial] native mid-sequence skip removes every overlay and presents exact current state (1.2s)
+  ok 11 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-Hit] native mid-sequence skip removes every overlay and presents exact current state (3.2s)
+  ok 12 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-Double] native mid-sequence skip removes every overlay and presents exact current state (3.6s)
+  ok 13 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-split] native mid-sequence skip removes every overlay and presents exact current state (4.1s)
+  ok 14 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-reveal] native mid-sequence skip removes every overlay and presents exact current state (4.1s)
+  ok 15 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-draw] native mid-sequence skip removes every overlay and presents exact current state (4.1s)
+  ok 16 [chromium] › tests\browser\m10\compatibility.spec.ts:91:84 › [T10-B04-settlement] native mid-sequence skip removes every overlay and presents exact current state (4.6s)
+  x  17 [chromium] › tests\browser\m10\compatibility.spec.ts:103:1 › [T10-B05] session preference flushes native Hit, uses a 44px keyboard target and persists across round/table (30.9s)
+(node:17504) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  18 [chromium] › tests\browser\m10\compatibility.spec.ts:112:1 › [T10-B06] actual media preference mid-Double clears all native controls and cannot be overridden (9.3s)
+(node:13080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 19 [chromium] › tests\browser\m10\compatibility.spec.ts:117:1 › [T10-B07] synthetic visibility suspension handles subsequent accepted Stand before resume without a stale flip/payout (3.5s)
+  ok 20 [chromium] › tests\browser\m10\compatibility.spec.ts:124:1 › [T10-B08] real secondary App unmount cancels native transfer; later accepted commands create no ghost DOM (2.1s)
+
+
+  1) [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-1] actual 1-player three-mode replay/package/audit equality and round/table lifecycle
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'New table · reset to 1000 credits', exact: true })
+        - locator resolved to <button disabled>New table · reset to 1000 credits</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        28 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      58 |     await page.getByRole('button',{name:'Deal Again',exact:true}).click();await settled(page);
+      59 |     await expect(page.locator('.dealer-zone')).toHaveAttribute('data-dealer-character',dealer!);await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+    > 60 |     await page.getByRole('button',{name:'New table · reset to 1000 credits',exact:true}).click();await settled(page);
+         |                                                                                          ^
+      61 |     await expect(page.locator('[data-card-slot]')).toHaveCount(0);await page.getByLabel('Total players',{exact:true}).selectOption(String(count));
+      62 |     await page.getByRole('button',{name:'Start table',exact:true}).click();await settled(page);
+      63 |     await expect(page.locator('.dealer-zone')).not.toHaveAttribute('data-dealer-character',dealer!);await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:60:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-0e359-y-and-round-table-lifecycle-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-compatibility--T10-B01-0e359-y-and-round-table-lifecycle-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-0e359-y-and-round-table-lifecycle-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-compatibility--T10-B01-0e359-y-and-round-table-lifecycle-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-4] actual 4-player three-mode replay/package/audit equality and round/table lifecycle
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'New table · reset to 1000 credits', exact: true })
+        - locator resolved to <button disabled>New table · reset to 1000 credits</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        45 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      58 |     await page.getByRole('button',{name:'Deal Again',exact:true}).click();await settled(page);
+      59 |     await expect(page.locator('.dealer-zone')).toHaveAttribute('data-dealer-character',dealer!);await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+    > 60 |     await page.getByRole('button',{name:'New table · reset to 1000 credits',exact:true}).click();await settled(page);
+         |                                                                                          ^
+      61 |     await expect(page.locator('[data-card-slot]')).toHaveCount(0);await page.getByLabel('Total players',{exact:true}).selectOption(String(count));
+      62 |     await page.getByRole('button',{name:'Start table',exact:true}).click();await settled(page);
+      63 |     await expect(page.locator('.dealer-zone')).not.toHaveAttribute('data-dealer-character',dealer!);await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:60:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-eaf8e-y-and-round-table-lifecycle-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-compatibility--T10-B01-eaf8e-y-and-round-table-lifecycle-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-eaf8e-y-and-round-table-lifecycle-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-compatibility--T10-B01-eaf8e-y-and-round-table-lifecycle-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-7] actual 7-player three-mode replay/package/audit equality and round/table lifecycle
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 2500
+    Received:    2623.399999856949
+
+      44 |     await deal(page);await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
+      45 |     const timing=await page.evaluate(()=>(window as unknown as {initialTiming:{start:number|null;end:number|null;flights:number}}).initialTiming);
+    > 46 |     if(mode==='FULL_MOTION'){expect(timing.flights).toBe(count===1?4:count===4?10:16);expect(timing.end!-timing.start!).toBeLessThanOrEqual(2500);}else expect(timing.flights).toBe(0);
+         |                                                                                                                         ^
+      47 |     const root=`docs/M10_T10_EVIDENCE/browser/${Date.now()}-${count}-${mode}`;mkdirSync(root,{recursive:true});await capture(page,`${root}/initial-settled.png`);
+      48 |     await finish(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      49 |     await page.screenshot({path:`${root}/round-settled.png`,fullPage:true});
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:46:121
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-c1830-y-and-round-table-lifecycle-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-compatibility--T10-B01-c1830-y-and-round-table-lifecycle-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B01-c1830-y-and-round-table-lifecycle-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-compatibility--T10-B01-c1830-y-and-round-table-lifecycle-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\browser\m10\compatibility.spec.ts:103:1 › [T10-B05] session preference flushes native Hit, uses a 44px keyboard target and persists across round/table
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'New table · reset to 1000 credits', exact: true })
+        - locator resolved to <button disabled>New table · reset to 1000 credits</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not enabled
+        - retrying click action
+          - waiting 100ms
+        53 × waiting for element to be visible, enabled and stable
+           - element is not enabled
+         - retrying click action
+           - waiting 500ms
+
+
+      108 |   expect(await page.locator('.audit-list').textContent()).toBe(audit);expect(await checkbox.locator('..').evaluate(element=>element.getBoundingClientRect().height)).toBeGreaterThanOrEqual(44);
+      109 |   await finish(page);await page.getByRole('button',{name:'Deal Again',exact:true}).click();await settled(page);await expect(checkbox).toBeChecked();
+    > 110 |   await page.getByRole('button',{name:'New table · reset to 1000 credits',exact:true}).click();await settled(page);await expect(checkbox).toBeChecked();await checkbox.uncheck();await expect(page.locator('.game-scene')).toHaveAttribute('data-presentation-mode','FULL_MOTION');
+          |                                                                                        ^
+      111 | });
+      112 | test('[T10-B06] actual media preference mid-Double clears all native controls and cannot be overridden',async({page})=>{
+      113 |   await open(page,'player-loss');await deal(page);await pausePhase(page,'Double');await page.getByRole('button',{name:'Double',exact:true}).click();await expect(page.locator('[data-action-card-flight]')).toHaveCount(1);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:110:88
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B05-ed6a3-persists-across-round-table-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-compatibility--T10-B05-ed6a3-persists-across-round-table-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B05-ed6a3-persists-across-round-table-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-compatibility--T10-B05-ed6a3-persists-across-round-table-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests\browser\m10\compatibility.spec.ts:112:1 › [T10-B06] actual media preference mid-Double clears all native controls and cannot be overridden
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.game-scene')
+    Expected: "false"
+    Received: "true"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.game-scene') with timeout 5000ms
+      - waiting for locator('.game-scene')
+        13 × locator resolved to <section class="game-scene" data-wagers-running="true" data-initial-deal-delivered="10" aria-label="Blackjack game scene" data-initial-deal-running="false" data-player-actions-running="true" data-dealer-actions-running="true" data-presentation-mode="FULL_MOTION">…</section>
+           - unexpected value "true"
+
+
+      12 | }
+      13 | async function settled(page:Page) {
+    > 14 |   for(const flag of ['initial-deal','player-actions','dealer-actions','wagers']) await expect(page.locator('.game-scene')).toHaveAttribute(`data-${flag}-running`,'false');
+         |                                                                                                                            ^
+      15 |   await expect(page.locator(overlays)).toHaveCount(0);
+      16 | }
+      17 | async function deal(page:Page) {
+        at settled (C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:14:124)
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\compatibility.spec.ts:114:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B06-75efa-ls-and-cannot-be-overridden-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-compatibility--T10-B06-75efa-ls-and-cannot-be-overridden-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-compatibility--T10-B06-75efa-ls-and-cannot-be-overridden-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-compatibility--T10-B06-75efa-ls-and-cannot-be-overridden-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5 failed
+    [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-1] actual 1-player three-mode replay/package/audit equality and round/table lifecycle
+    [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-4] actual 4-player three-mode replay/package/audit equality and round/table lifecycle
+    [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-7] actual 7-player three-mode replay/package/audit equality and round/table lifecycle
+    [chromium] › tests\browser\m10\compatibility.spec.ts:103:1 › [T10-B05] session preference flushes native Hit, uses a 44px keyboard target and persists across round/table
+    [chromium] › tests\browser\m10\compatibility.spec.ts:112:1 › [T10-B06] actual media preference mid-Double clears all native controls and cannot be overridden
+  15 passed (3.0m)

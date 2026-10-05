@@ -1,0 +1,197 @@
+{
+  "policy": "Planned display normalization before whitespace check; all original failures/results/timestamps retained, no test/checker/source change",
+  "archive": "prepublication-verbatim-text.zip",
+  "independentArchiveReadBack": "PASS",
+  "files": [
+    {
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "path": "docs/M10_T10_EVIDENCE/browser-typecheck.txt",
+      "originalSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6",
+      "originalBytes": 52,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "7BB4E2B508BE880B2C3C730289CC201C80796BBB6E94AF75F209A948BC35ABD1",
+      "path": "docs/M10_T10_EVIDENCE/compatibility-matrix.md",
+      "originalSHA256": "E9822E4401E23870E6ADDB5F9603B0B7C164D4248A2A8CF3022668E2DDD0FD78",
+      "originalBytes": 3365,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "309843282C4B2237D49B87FE9F2976E1A2BB458F608CD9C27117F432E0FD7EE5",
+      "path": "docs/M10_T10_EVIDENCE/final-documentation.txt",
+      "originalSHA256": "95B3652E03349FEAD2B25BC6F403D9E7BB823BCE2C328341B43A70B5800CF713",
+      "originalBytes": 354,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "4F69FE7C8DEFAF55A2B71C6F829AAA6827E2689178F47748990EBBA31E74E26A",
+      "path": "docs/M10_T10_EVIDENCE/first-browser.txt",
+      "originalSHA256": "781A2253014C5B5F3865AEF33210E6E5E442ED041F7D8BD988079CFE0EBAF827",
+      "originalBytes": 23417,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "9929910124109A2704904CF2FA7B46F653B9A462D30D01B92F228545EB06727C",
+      "path": "docs/M10_T10_EVIDENCE/first-lint.txt",
+      "originalSHA256": "DD47E925A563FD23B0AE2AE0712A0084329DD17D3A37A75F7A642E5ABACD9450",
+      "originalBytes": 60,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "71266090A175FCAE01CA5DCA57716D3F4751AC2F73CC5FCA23C8FDD9659A5B95",
+      "path": "docs/M10_T10_EVIDENCE/first-unit.txt",
+      "originalSHA256": "17E32245B5738ADEAE41DCEB5ACBD0600CD361073D6221BEE64F06416B980D08",
+      "originalBytes": 1555,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "path": "docs/M10_T10_EVIDENCE/repair1-typecheck.txt",
+      "originalSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6",
+      "originalBytes": 52,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "F1EC541FA33E934ED2DB61430E6C841E5C864DCDCE9C4617E248E438EDC1F118",
+      "path": "docs/M10_T10_EVIDENCE/repair1-unit.txt",
+      "originalSHA256": "806C455617BE10917DBF73644F08CB4127D1355D55B8D4F86E52A643EF995A7C",
+      "originalBytes": 375,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "2024BF6463171130630B7E6880C661EE66CFCDE77041AB691A97D109FF1C73BC",
+      "path": "docs/M10_T10_EVIDENCE/repair2-before-browser.ts.txt",
+      "originalSHA256": "4FF481F31CEF00FFFD362C6F74A533A139117523549EC6F570E609FD573BB4C1",
+      "originalBytes": 15749,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "0E2E4A669E8C7A8E315B2FC4104014604C589ED8271D39D15DB980B78DF62A2A",
+      "path": "docs/M10_T10_EVIDENCE/repair2-before-provider.tsx.txt",
+      "originalSHA256": "CF45D992CA44EF5A1E943367B05A6AA266DCAFF77E1F2C6A9937B7059931E1F5",
+      "originalBytes": 11575,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "948530A6D23B9A35EF1EE02797A6AC02388B1FC4475C96BA37661C9F35DB9488",
+      "path": "docs/M10_T10_EVIDENCE/repair2-before-tokens.ts.txt",
+      "originalSHA256": "56B6A718316FA034172884FB2441AEB50A1D79DAED0E68F432D40B18A3D03873",
+      "originalBytes": 336,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "6265A774CAF9725398A7E1CEF6BE285046F0FAB7FDB778DA0CC7B5538ED06638",
+      "path": "docs/M10_T10_EVIDENCE/repair2-browser.txt",
+      "originalSHA256": "92A9EFB71E881CF845F8E8D2351AF897FF020B2385B0736608A11ED170AE6426",
+      "originalBytes": 5730,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "9929910124109A2704904CF2FA7B46F653B9A462D30D01B92F228545EB06727C",
+      "path": "docs/M10_T10_EVIDENCE/repair2-lint.txt",
+      "originalSHA256": "DD47E925A563FD23B0AE2AE0712A0084329DD17D3A37A75F7A642E5ABACD9450",
+      "originalBytes": 60,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "path": "docs/M10_T10_EVIDENCE/repair2-typecheck.txt",
+      "originalSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6",
+      "originalBytes": 52,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "D4B5387D8208A0689E9B7AEA2AF021C608DFBC9A8CC66A962D120FDAF2CD01CD",
+      "path": "docs/M10_T10_EVIDENCE/repair2-units.txt",
+      "originalSHA256": "C7C9CACAB2594B6C30E6CDE1B35CF07C208A0641469B01C21EBFA0C8E1064B69",
+      "originalBytes": 406,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "E310260D0CA4FD0724FDEFF47B20DE6D82125A0DBDBDC1A65AD279A128A42403",
+      "path": "docs/M10_T10_EVIDENCE/first-browser-artifacts/m10-compatibility--T10-B01-0e359-y-and-round-table-lifecycle-chromium/error-context.md",
+      "originalSHA256": "154FFA45F06D3A6211569EB977F72A49F57EBD3E3BD81C8DC22AF0B753AA3711",
+      "originalBytes": 23478,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "8B02B3D594DD4EB6F62649F02A7EB2AE3047C84F73E343383028A0E4CB4862F5",
+      "path": "docs/M10_T10_EVIDENCE/first-browser-artifacts/m10-compatibility--T10-B01-c1830-y-and-round-table-lifecycle-chromium/error-context.md",
+      "originalSHA256": "6AED667C7A59A08589F683923427A689A94079FCCD191AFFF29E97D37EBF95AB",
+      "originalBytes": 26410,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "8496C1F0D291301F65F18662EA14EABB434CB00E382846104AF985940FD21438",
+      "path": "docs/M10_T10_EVIDENCE/first-browser-artifacts/m10-compatibility--T10-B01-eaf8e-y-and-round-table-lifecycle-chromium/error-context.md",
+      "originalSHA256": "744947353682A12CECABCE38195DB4CBB53AB5D7BDAA0D7DE9E894CED31797E0",
+      "originalBytes": 25379,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "C88B712BE7C883C0742926E8EE11C708EE6E171659036F6037DB950258984135",
+      "path": "docs/M10_T10_EVIDENCE/first-browser-artifacts/m10-compatibility--T10-B05-ed6a3-persists-across-round-table-chromium/error-context.md",
+      "originalSHA256": "D515E8897DEEF7E37233DB842C1009C648A4B30E71E01F313D533CA00E3F37C2",
+      "originalBytes": 23984,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "1A4A7A369D75E7FBAE70D8D070C00A5821DCA7C0A0B9E9B615F1EFEE511050C3",
+      "path": "docs/M10_T10_EVIDENCE/first-browser-artifacts/m10-compatibility--T10-B06-75efa-ls-and-cannot-be-overridden-chromium/error-context.md",
+      "originalSHA256": "37AD5BC366149769162B6F08CB1D161791432B3DB50F9ABC906848E79E2C8506",
+      "originalBytes": 15166,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "4431164B5E2FDE8D853D98DAF0EE34B1AC5487D4AC75A2BE660D113AE5D856FE",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/chromium.txt",
+      "originalSHA256": "DA077CCF13F531007BB3A6A8E0C438BC9000661BBBCFD75A748192F121DAB043",
+      "originalBytes": 39457,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "3094016C0D063B688BE6376025D482D46B7802D34DBFACA3D4C866AD649BB5C4",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/current-preservation.txt",
+      "originalSHA256": "2C70EBF7405E47CF28F86E2DA21E36161417C3624011BA11EC8B37A201012FAF",
+      "originalBytes": 559,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "75723FE6867DD9C850FB4D4E70D96451F41FBAE11F7CAA69BAFF2FD024E64C05",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/dealer-assets.txt",
+      "originalSHA256": "9D81CE14F9EB2759D9BEB0F5E3010A67ACD8FA5F0AB4B1F8EFD20B57E54CD74B",
+      "originalBytes": 12862,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "B53922724CCCEC1738E2357217DFAE9A007146180AB8564AEEFE953AA71E19C7",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/player-assets.txt",
+      "originalSHA256": "1B0B9A01EC5F28B0E9126549ED0E139C4CCF9AE47E602A3AA577DD641E786DD3",
+      "originalBytes": 267,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "A4D3BB2F46CFBE4E859145743472CAB8C2A7C9FDA7913F181E02240DACA9D58F",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/preservation.txt",
+      "originalSHA256": "E968CD4A8A93DE9B6E149BD65123CC13538008865A0633D93868310744B451D2",
+      "originalBytes": 23088,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "DA4025456363533236A2DA025D42286FAED35DBE200BFCE08230394C6DB8B7EE",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/unified.txt",
+      "originalSHA256": "2D4C0132F51E04FB12EFEC9F3EFD662CBA7F8C338CB758462B4540C296C5AEF8",
+      "originalBytes": 64186,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    },
+    {
+      "displaySHA256": "161671D385E90064EE8ABA89758591C887B9CDE60D3BA968E5901DE0A00F5A32",
+      "path": "docs/M10_T10_EVIDENCE/gate-20261006-023029/units.txt",
+      "originalSHA256": "01864EBAB7831AD89C86990BC55B4911B33EBD704AE8F15D1036AF2C7FAB0D8E",
+      "originalBytes": 567,
+      "operation": "Display trailing horizontal whitespace/blank EOF only; original complete byte stream archived"
+    }
+  ],
+  "timestamp": "2026-10-06 03:17:51 +08:00"
+}

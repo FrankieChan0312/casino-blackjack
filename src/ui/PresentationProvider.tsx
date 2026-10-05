@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useLayoutEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
-import { MotionConfig, useReducedMotion } from 'motion/react';
+import { MotionConfig } from 'motion/react';
 import { animate } from 'motion/mini';
 import { createAnchorRegistry } from '../presentation/anchors.js';
 import { createPresentationTimeline, type VisualStep, type PresentationMode } from '../presentation/timeline.js';
@@ -43,7 +43,8 @@ const PresentationContext = createContext<Runtime | null>(null);
 export const usePresentationRuntime = () => useContext(PresentationContext);
 const emptySubscription = () => () => {};
 const emptySnapshot = () => null;
-const DealContext = createContext<{ feed: PresentationFeed; mode: PresentationMode } | null>(null);
+const DealContext = createContext<{ feed: PresentationFeed; mode: PresentationMode; sessionReduced: boolean; systemReduced: boolean; setSessionReduced(value: boolean): void } | null>(null);
+export const useMotionPreference = () => useContext(DealContext);
 export function useInitialDeal() {
   const runtime = usePresentationRuntime(), context = useContext(DealContext);
   const projection = useSyncExternalStore(runtime?.initialDeal.subscribe ?? emptySubscription, runtime?.initialDeal.getSnapshot ?? emptySnapshot, emptySnapshot);
@@ -97,9 +98,11 @@ export function playMotionStep(element: HTMLElement, keyframes: { opacity: numbe
 
 export function consumePresentation(feed: PresentationFeed, runtime: Runtime, mode: PresentationMode) {
   const snapshot = feed.getSnapshot();
+  const activeMode = typeof document !== 'undefined' && document.hidden ? 'IMMEDIATE' : mode;
+  if (runtime.timeline.getSnapshot().mode !== activeMode) runtime.timeline.setMode(activeMode);
   runtime.timeline.begin(snapshot.generation);
   if (!snapshot.batches.length) return;
-  if (mode === 'FULL_MOTION') {
+  if (activeMode === 'FULL_MOTION') {
     runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
     runtime.playerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
     runtime.dealerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
@@ -133,12 +136,22 @@ export function connectPresentation(feed: PresentationFeed, runtime: Runtime, mo
   };
 }
 
+function subscribeReducedMotion(changed: () => void) {
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  preference.addEventListener('change', changed);
+  return () => preference.removeEventListener('change', changed);
+}
+const readReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 export function PresentationProvider({ feed, children, mode }: { feed: PresentationFeed; children: ReactNode; mode?: PresentationMode }) {
   const [runtime] = useState(createPresentationRuntime);
-  const reduced = useReducedMotion();
-  const resolvedMode = reduced ? 'REDUCED_MOTION' : mode ?? 'FULL_MOTION';
+  const [sessionReduced, setSessionReduced] = useState(false);
+  const reduced = useSyncExternalStore(subscribeReducedMotion, readReducedMotion, () => false);
+  const resolvedMode = reduced || sessionReduced ? 'REDUCED_MOTION' : mode ?? 'FULL_MOTION';
   const snapshot = useSyncExternalStore(feed.subscribe, feed.getSnapshot, feed.getSnapshot);
   useLayoutEffect(() => connectPresentation(feed, runtime, resolvedMode, true), [feed, runtime, resolvedMode]);
   useLayoutEffect(() => consumePresentation(feed, runtime, resolvedMode), [feed, runtime, resolvedMode, snapshot]);
-  return <MotionConfig reducedMotion="user"><PresentationContext.Provider value={runtime}><DealContext.Provider value={{ feed, mode: resolvedMode }}>{children}</DealContext.Provider></PresentationContext.Provider></MotionConfig>;
+  return <MotionConfig reducedMotion={resolvedMode === 'FULL_MOTION' ? 'user' : 'always'}><PresentationContext.Provider value={runtime}><DealContext.Provider value={{ feed, mode: resolvedMode, sessionReduced, systemReduced: !!reduced, setSessionReduced }}>
+    {(sessionReduced || mode && mode !== 'FULL_MOTION') && <style>{'.player-mode *, .manual-mode *, .player-mode *::before, .player-mode *::after, .manual-mode *::before, .manual-mode *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }'}</style>}
+    {children}</DealContext.Provider></PresentationContext.Provider></MotionConfig>;
 }

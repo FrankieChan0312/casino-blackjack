@@ -8,7 +8,7 @@ T08 Dealer reveal/draw IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;97 files/1212
 
 T09 authoritative wager/settlement presentation IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;98 files/1222 Vitest,187 Chromium, preservation/assets/verify.ps1 PASS/0; repairs5/10. Generic labelled chips, exact post-Double/Split/Insurance amounts, loss collection and committed gross returns; no payout/accounting changes. Implementationd0b5a0814c2a87f5cd942f17cc630db2bf935d37; documentation-only publication receipt follows.
 
-T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
+T10 immediate replay/session and OS Reduce motion/cleanup matrix IMPLEMENTED / VERIFIED;99 files/1230 Vitest,216 Chromium,35/278 current preservation, independent M1–M8/assets/verify.ps1 PASS/0. Repairs3/10: final runner artifact sharing failure retained; single targeted restoration PASS0 with320 original/429 executable hashes equal. No source/test/settings change in that repair. Normal publication follows. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
 
 M10-T11 NOT STARTED. M10 NOT YET ACCEPTED. Deployment NOT RUN. Fresh separate-session review NOT COMPLETED.
 ## Retained prior delivery history

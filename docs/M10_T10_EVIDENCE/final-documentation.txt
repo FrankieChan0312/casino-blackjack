@@ -1,0 +1,12 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/unit/portfolio.test.ts tests/unit/preservationHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  2 passed (2)
+      Tests  4 passed (4)
+   Start at  03:17:38
+   Duration  219ms (transform 50%, setup 18%, tests 13%, import 13%, worker 5%)

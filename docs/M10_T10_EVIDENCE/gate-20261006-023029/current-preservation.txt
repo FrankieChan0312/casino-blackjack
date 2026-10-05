@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10 tests/pa1 tests/ra1 tests/m9 tests/harness.test.ts tests/unit/portfolio.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  35 passed (35)
+      Tests  278 passed (278)
+   Start at  02:51:01
+   Duration  12.91s (import 47%, tests 45%, transform 6%, setup 2%, worker 1%)
+
+    Isolate  35 workers spawned · ~224ms startup each (spawn + environment, per file)
+             at least ~1.73s faster with isolate: false — reuses workers across files instead of one per file

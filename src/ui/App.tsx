@@ -11,13 +11,14 @@ import { createDealerTableIdentity, changeDealerTableHuman, dealerPresentation, 
   type DealerConfiguration } from '../presentation/dealerPresentation.js';
 import { CharacterPicker } from './CharacterPicker.js';
 import { PlayerSetup } from './PlayerSetup.js';
-import { PresentationProvider, useDealerPresentationState, useInitialDeal, usePlayerActions, useDealerActions, useWagers, usePresentationRuntime } from './PresentationProvider.js';
+import { PresentationProvider, useDealerPresentationState, useInitialDeal, usePlayerActions, useDealerActions, useWagers, useMotionPreference, usePresentationRuntime } from './PresentationProvider.js';
 import { PresentationAnchor } from './PresentationAnchor.js';
+import type { PresentationMode } from '../presentation/timeline.js';
 
-export function App({ controller, chooseCharacter, dealerConfiguration }: {
-  controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
+export function App({ controller, chooseCharacter, dealerConfiguration, presentationMode }: {
+  controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration; presentationMode?: PresentationMode;
 }) {
-  return <PresentationProvider feed={controller.presentation}><Experience controller={controller} chooseCharacter={chooseCharacter} dealerConfiguration={dealerConfiguration} /></PresentationProvider>;
+  return <PresentationProvider feed={controller.presentation} mode={presentationMode}><Experience controller={controller} chooseCharacter={chooseCharacter} dealerConfiguration={dealerConfiguration} /></PresentationProvider>;
 }
 function Experience({ controller, chooseCharacter, dealerConfiguration }: {
   controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
@@ -59,6 +60,7 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
       view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined, dealerConfiguration?.rotationPool, view.presentationSession) });
   const lineup = presentation.identity.lineup;
   const initialDeal = useInitialDeal(), playerActions = usePlayerActions(), dealerActions = useDealerActions(), wagers = useWagers(), runtime = usePresentationRuntime();
+  const motionPreference = useMotionPreference();
   const dealerState = useDealerPresentationState(dealerPresentationState({
     awaitingPlayer: !!view.interaction.insurance || !!view.follow || view.interaction.actions.some(action => action.enabled),
     interrupted: view.round?.phase === 'INTEGRITY_ERROR',
@@ -71,7 +73,7 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
   }, [view.phase, view.interaction.handId, view.interaction.insurance?.targetSeat, view.follow?.handId, view.interaction.nextRound]);
   return <main className="player-mode">
     <a className="skip-link" href="#player-decisions">Skip to your hand and actions</a>
-    <section className="game-scene" aria-label="Blackjack game scene" data-initial-deal-running={String(initialDeal.running)} data-initial-deal-delivered={initialDeal.delivered} data-player-actions-running={String(playerActions.running)} data-dealer-actions-running={String(dealerActions.running)} data-wagers-running={String(wagers.running)}>
+    <section className="game-scene" aria-label="Blackjack game scene" data-presentation-mode={motionPreference?.mode} data-initial-deal-running={String(initialDeal.running)} data-initial-deal-delivered={initialDeal.delivered} data-player-actions-running={String(playerActions.running)} data-dealer-actions-running={String(dealerActions.running)} data-wagers-running={String(wagers.running)}>
     <header className="casino-header"><div><p className="eyebrow">An evening at the table</p><h1>Casino Blackjack</h1></div>
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <div className="table-scene">
@@ -100,6 +102,10 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
     <aside className="scene-support" aria-label="Table preferences and demo tools">
     {view.tableStarted && <div className="table-preference"><p>{view.playerCount} players · 1 human · {view.playerCount - 1} computer guests</p>
       <button disabled={!view.canCreateTable} onClick={() => controller.dispatch({ type: 'NEW_TABLE' })}>New table · reset to 1000 credits</button></div>}
+    {motionPreference && <div className="panel motion-preference"><label style={{display:'flex',alignItems:'center',gap:'8px',minHeight:'44px'}}>
+      <input type="checkbox" style={{width:'20px',height:'20px',flexShrink:0}} checked={motionPreference.sessionReduced || motionPreference.systemReduced} disabled={motionPreference.systemReduced}
+        aria-describedby={motionPreference.systemReduced ? 'motion-preference-note' : undefined} onChange={event => motionPreference.setSessionReduced(event.target.checked)} />Reduce motion</label>
+      {motionPreference.systemReduced && <p id="motion-preference-note">Reduced motion is enabled by your device.</p>}</div>}
     <CharacterPicker selected={lineup.human} dealerCharacterId={presentation.identity.characterId}
       onSelect={id => setPresentation(current => ({ ...current, identity: changeDealerTableHuman(current.identity,id) }))} />
     <details className="panel developer-tools"><summary>Developer / demo tools</summary>

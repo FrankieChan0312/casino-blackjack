@@ -15,4 +15,5 @@ if (import.meta.env.MODE === 'e2e') {
 const dealerConfiguration = import.meta.env.MODE === 'e2e' && new URLSearchParams(location.search).get('dealer') === 'legacy'
   ? undefined : FORMAL_DEALER_CONFIGURATION;
 createRoot(document.getElementById('root')!).render(<App controller={controller} dealerConfiguration={dealerConfiguration}
+  presentationMode={import.meta.env.MODE === 'e2e' && new URLSearchParams(location.search).get('motion') === 'IMMEDIATE' ? 'IMMEDIATE' : undefined}
   chooseCharacter={import.meta.env.MODE === 'e2e' ? () => 0 : undefined} />);

@@ -34,6 +34,11 @@ export function createFixtureController(name: string | null) {
     return controller;
   }
   if (name === 'player-setup') return createBrowserController({ playerMode: true, deferPlayerStart: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
+  if (name === 'player-one-actions') {
+    const controller = createBrowserController({ playerMode:true,deferPlayerStart:true,factory:()=>fixtureState(['5','5','6','6','2','4','6']),random:fixtureRandom,clock:()=> '2026-01-01T00:00:00.000Z' });
+    if (!controller.dispatch({type:'START',count:1})) throw new Error('One-player fixture setup rejected');
+    return controller;
+  }
   if (name === 'player') return createBrowserController({ playerMode: true, seed: 7, clock: () => '2026-01-01T00:00:00.000Z' });
   if (name === 'player-pending') {
     const controller = createBrowserController({ playerMode: true,
