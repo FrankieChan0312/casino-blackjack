@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "restorations": [
+    {
+      "baselineLine": "**M10-T04A_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED** on main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN/untracked0 at 2026-10-05 09:10:55 +08:00. M10-T04 repairs2/10. Full90/1150/122, independent M1–M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR.",
+      "path": "README.md",
+      "restored": true
+    },
+    {
+      "baselineLine": "**IMPLEMENTED / VERIFIED / COMMITTED / PUSHED**, main/b8df9cc9d6b05c66168764d26b82ac2045d20ddd; normal origin/main push PASS/exit0, HEAD=origin/main=live remote,0/0,CLEAN,untracked0. M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; MILESTONE: ACCEPTED / CLOSED, based on explicit owner T01–T09 acceptance plus fresh consolidated review/full gate. Final repairs2/10; documentation13 and staged whitespace PASS/checked0 after publication-only repair; exact171 executable hashes unchanged. [Publication](docs/M10A_T10_EVIDENCE/implementation-publication.json). This factual receipt is a separate documentation checkpoint; its own final SHA is resolved from Git. T02 authorized only after this receipt's clean publication. T03 remains conditional on T02 gate; future human review PENDING. T04/art/Motion/animation/deployment excluded.",
+      "path": "README.md",
+      "restored": true
+    },
+    {
+      "baselineLine": "**M10-T04A_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED** on main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN/untracked0 at 2026-10-05 09:10:55 +08:00. M10-T04 repairs2/10. Full90/1150/122, independent M1–M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR.",
+      "path": "docs/PLAN.md",
+      "restored": true
+    },
+    {
+      "baselineLine": "**IMPLEMENTED / VERIFIED / COMMITTED / PUSHED**, main/b8df9cc9d6b05c66168764d26b82ac2045d20ddd; normal origin/main push PASS/exit0, HEAD=origin/main=live remote,0/0,CLEAN,untracked0. M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; MILESTONE: ACCEPTED / CLOSED, based on explicit owner T01–T09 acceptance plus fresh consolidated review/full gate. Final repairs2/10; documentation13 and staged whitespace PASS/checked0 after publication-only repair; exact171 executable hashes unchanged. [Publication](M10A_T10_EVIDENCE/implementation-publication.json). This factual receipt is a separate documentation checkpoint; its own final SHA is resolved from Git. T02 authorized only after this receipt's clean publication. T03 remains conditional on T02 gate; future human review PENDING. T04/art/Motion/animation/deployment excluded.",
+      "path": "docs/PLAN.md",
+      "restored": true
+    },
+    {
+      "baselineLine": "Retain the suggested order: App/Table already separate scene/seat rendering, so frame/units/local/Dealer/markings precede controls/accounting and matrix completion. The detailed linked contracts define scope, non-goals, acceptance, step -> verification and stop conditions for each row. Recommended GPT Sol6.1/High, reconfirm availability at execution; actual runtime NOT VERIFIED. Sequential work, no delegation. Current M10A-PLAN repairs2/10 (consistency-utility input and evidence-restoration corrections); future task counters independent under normal10-cycle governance. No historical ledger reset; old M10 planning3/10 CLOSED remains separate.",
+      "path": "docs/PLAN.md",
+      "restored": true
+    },
+    {
+      "baselineLine": "PA1-T01..T07 independent review ACCEPTED for implementation `3c50ab4d0183cff13f2380bd60faa31583d3e988` under the owner's conditional delegation. [Review and acceptance evidence](PA1_INDEPENDENT_REVIEW.md). Official1031/63 and all M1-M8 preservation PASS; asset/visual12/12 PASS; domain/RNG/replay/digest/computer strategy preserved. T05 original lost failure remains ROOT CAUSE NOT ESTABLISHED;5 exact E03 and42 integration executions PASS. Historical repair counts unchanged; review documentation repairs2/10, product repairs0. M9 HUMAN ACCEPTED: NO, separate owner experience gate outstanding. M10 NOT STARTED. Deployment NOT RUN. Final documentation verification and normal review-only publication receipts are recorded in STATE/DEVELOPMENT_LOG after execution.",
+      "path": "docs/PLAN.md",
+      "restored": true
+    }
+  ],
+  "timestamp": "2026-10-06 00:40:57 +08:00",
+  "note": "Restore exact full historical lines from91af baseline; current T08 counter4, actual T07 counter7. Erroneous1165959 publication retained; no history rewrite."
+}
