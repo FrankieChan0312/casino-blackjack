@@ -4,7 +4,9 @@ Owner authorizes T07 through T10 with complete per-task technical and clean Git 
 
 T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED; complete technical gate PASS/0:96 files/1204 Vitest,171 Chromium, independent M1–M8/current preservation, assets and verify.ps1. Repairs6/10; normal main publication PASS at0a065f2.
 
-T08–T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
+T08 Dealer reveal/draw IMPLEMENTED / VERIFIED;97 files/1212 Vitest,177 Chromium, preservation/assets/verify.ps1 PASS/0; native200% PASS. Repairs3/10; normal publication follows final review.
+
+T09–T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
 
 M10-T11 NOT STARTED. M10 NOT YET ACCEPTED. Deployment NOT RUN. Fresh separate-session review NOT COMPLETED.
 
@@ -130,7 +132,7 @@ Implementation main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688 already normally pu
 
 ## M10-T04-A published — 2026-10-05 09:11:58 +08:00
 
-**M10-T04A_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED** on main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN/untracked0 at 2026-10-05 09:10:55 +08:00. M10-T04 repairs2/10. Full90/1150/122, independent M1–M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR.
+**M10-T04A_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED** on main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN/untracked0 at 2026-10-05 09:10:55 +08:00. M10-T04 repairs3/10. Full90/1150/122, independent M1–M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR.
 
 M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN. This separate factual receipt follows actual successful publication; its own final SHA is resolved from Git. [Contract](docs/M10_T04.md), [publication](docs/M10_T04_EVIDENCE/implementation-publication.json).
 
@@ -166,7 +168,7 @@ M10-T02 IMPLEMENTED / VERIFIED. Real1–7 pre-session native selector/Start, def
 
 ## M10A-T10 published closure — 2026-10-05 06:45:07 +08:00
 
-**IMPLEMENTED / VERIFIED / COMMITTED / PUSHED**, main/b8df9cc9d6b05c66168764d26b82ac2045d20ddd; normal origin/main push PASS/exit0, HEAD=origin/main=live remote,0/0,CLEAN,untracked0. M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; MILESTONE: ACCEPTED / CLOSED, based on explicit owner T01–T09 acceptance plus fresh consolidated review/full gate. Final repairs2/10; documentation13 and staged whitespace PASS/checked0 after publication-only repair; exact171 executable hashes unchanged. [Publication](docs/M10A_T10_EVIDENCE/implementation-publication.json). This factual receipt is a separate documentation checkpoint; its own final SHA is resolved from Git. T02 authorized only after this receipt's clean publication. T03 remains conditional on T02 gate; future human review PENDING. T04/art/Motion/animation/deployment excluded.
+**IMPLEMENTED / VERIFIED / COMMITTED / PUSHED**, main/b8df9cc9d6b05c66168764d26b82ac2045d20ddd; normal origin/main push PASS/exit0, HEAD=origin/main=live remote,0/0,CLEAN,untracked0. M10A HUMAN VISUAL ACCEPTANCE: ACCEPTED; MILESTONE: ACCEPTED / CLOSED, based on explicit owner T01–T09 acceptance plus fresh consolidated review/full gate. Final repairs3/10; documentation13 and staged whitespace PASS/checked0 after publication-only repair; exact171 executable hashes unchanged. [Publication](docs/M10A_T10_EVIDENCE/implementation-publication.json). This factual receipt is a separate documentation checkpoint; its own final SHA is resolved from Git. T02 authorized only after this receipt's clean publication. T03 remains conditional on T02 gate; future human review PENDING. T04/art/Motion/animation/deployment excluded.
 
 ## M10A-T10 consolidated closure — 2026-10-05 06:41:43 +08:00
 

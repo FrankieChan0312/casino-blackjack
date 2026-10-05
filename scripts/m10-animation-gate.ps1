@@ -30,7 +30,7 @@ try {
             'units' { & cmd.exe /d /c "npm.cmd test > $log 2>&1" }
             'chromium' { & cmd.exe /d /c "npm.cmd run test:e2e > $log 2>&1" }
             'preservation' { & cmd.exe /d /c "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1 > $log 2>&1" }
-            'current-preservation' { & cmd.exe /d /c "npm.cmd test -- tests/m10 tests/pa1 tests/ra1 tests/unit/portfolio.test.ts tests/unit/verificationHarness.test.ts > $log 2>&1" }
+            'current-preservation' { & cmd.exe /d /c "npm.cmd test -- tests/m10 tests/pa1 tests/ra1 tests/m9 tests/harness.test.ts tests/unit/portfolio.test.ts > $log 2>&1" }
             'dealer-assets' { & cmd.exe /d /c "node scripts/verify-dealer-assets.mjs > $log 2>&1" }
             'player-assets' { & cmd.exe /d /c "node scripts/verify-character-assets.mjs > $log 2>&1" }
             'unified' { & cmd.exe /d /c "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1 > $log 2>&1" }
@@ -41,7 +41,7 @@ try {
         $receipts += @{ stage = $stage; start = $start; finish = $finish; exitCode = $code; status = $status; log = $log }
         # Native command evidence survives a later artifact I/O failure.
         ConvertTo-Json -InputObject $receipts -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence 'receipts.json') -Encoding UTF8
-        if (Test-Path -LiteralPath test-results) {
+        if ($stage -in @('chromium', 'preservation', 'unified') -and (Test-Path -LiteralPath test-results)) {
             Copy-Item -LiteralPath test-results -Destination (Join-Path $evidence "$stage-browser-artifacts") -Recurse
         }
         $generated = @()

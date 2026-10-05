@@ -1,0 +1,58 @@
+﻿[
+    {
+        "exitCode":  0,
+        "stage":  "units",
+        "finish":  "2026-10-06 00:00:42 +08:00",
+        "start":  "2026-10-06 00:00:17 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\units.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "chromium",
+        "finish":  "2026-10-06 00:14:50 +08:00",
+        "start":  "2026-10-06 00:00:42 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\chromium.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "preservation",
+        "finish":  "2026-10-06 00:17:23 +08:00",
+        "start":  "2026-10-06 00:14:55 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\preservation.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "current-preservation",
+        "finish":  "2026-10-06 00:17:37 +08:00",
+        "start":  "2026-10-06 00:17:24 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\current-preservation.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "dealer-assets",
+        "finish":  "2026-10-06 00:17:39 +08:00",
+        "start":  "2026-10-06 00:17:37 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\dealer-assets.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "player-assets",
+        "finish":  "2026-10-06 00:17:47 +08:00",
+        "start":  "2026-10-06 00:17:39 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\player-assets.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "unified",
+        "finish":  "2026-10-06 00:35:51 +08:00",
+        "start":  "2026-10-06 00:17:47 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_T08_EVIDENCE\\gate-20261006-000015\\unified.txt"
+    }
+]

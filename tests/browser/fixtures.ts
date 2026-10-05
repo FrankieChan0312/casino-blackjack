@@ -44,6 +44,8 @@ export function createFixtureController(name: string | null) {
     return controller;
   }
   const playerScenarios: Record<string, readonly Rank[]> = {
+    'player-dealer-multi': ['10','10','5','10','5','7','7','6','7','6','2','4'],
+    'player-dealer-bust': ['10','10','5','10','9','7','7','6','7','6','10'],
     'player-five': ['10','10','2','10','9','7','7','2','7','8','2','2','2'],
     'player-rsa': ['10','10','A','10','9','7','7','A','7','8','A','9','6','9'],
     'player-rsa-cap': ['10','10','A','10','9','7','7','A','7','8','A','A','A','A','A','A'],

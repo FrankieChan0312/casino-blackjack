@@ -1,0 +1,55 @@
+{
+  "start": "2026-10-05 23:57:26 +08:00",
+  "method": "Native chrome.tabs.setZoom/getZoom 2; no CSS scale; root16px/CSSzoom1",
+  "scenarios": [
+    {
+      "fixture": "player-dealer-multi",
+      "zoom": 2,
+      "facts": {
+        "width": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "lane": {
+          "width": 188,
+          "scroll": 188
+        },
+        "cards": 4
+      },
+      "images": [
+        "player-dealer-multi-dealer.png",
+        "player-dealer-multi-result.png"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-dealer-bust",
+      "zoom": 2,
+      "facts": {
+        "width": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "lane": {
+          "width": 188,
+          "scroll": 188
+        },
+        "cards": 3
+      },
+      "images": [
+        "player-dealer-bust-dealer.png",
+        "player-dealer-bust-result.png"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "baseline": {
+    "dpr": 1,
+    "width": 1280
+  },
+  "status": "PASS",
+  "exit": 0,
+  "finish": "2026-10-05 23:57:40 +08:00"
+}

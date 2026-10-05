@@ -1,0 +1,910 @@
+Running: npm run typecheck
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+PASS: typecheck
+Running: npm run lint
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint
+Running: npm run test
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  97 passed (97)
+      Tests  1212 passed (1212)
+   Start at  00:18:07
+   Duration  21.62s (tests 56%, import 35%, transform 5%, setup 2%, worker 1%)
+
+     Import  176 modules were evaluated 340 times · 23.57s total, 35% of tracked time
+             ~1.61s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+PASS: test
+Running: npm run typecheck:domain
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain
+Running: npm run build
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 484 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.28 kB
+dist/assets/index-BStbh149.css   41.49 kB │ gzip:   8.23 kB
+dist/assets/index-F4N_egDO.js   364.68 kB │ gzip: 109.64 kB
+
+✓ built in 328ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build
+Running: npm run test:e2e
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:12728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 177 tests using 1 worker
+
+(node:28040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 上午12:18:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (12.7s)
+[WebServer] 上午12:18:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (1.1s)
+[WebServer] 上午12:18:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (946ms)
+[WebServer] 上午12:18:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (850ms)
+[WebServer] 上午12:18:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (1.1s)
+[WebServer] 上午12:18:53 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (1.0s)
+[WebServer] 上午12:18:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (944ms)
+[WebServer] 上午12:18:55 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (847ms)
+[WebServer] 上午12:18:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok   9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (918ms)
+[WebServer] 上午12:18:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (1.0s)
+[WebServer] 上午12:18:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (953ms)
+[WebServer] 上午12:18:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (842ms)
+[WebServer] 上午12:18:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (921ms)
+[WebServer] 上午12:19:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (1.0s)
+[WebServer] 上午12:19:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (926ms)
+[WebServer] 上午12:19:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (1.1s)
+[WebServer] 上午12:19:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (976ms)
+[WebServer] 上午12:19:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (775ms)
+[WebServer] 上午12:19:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (730ms)
+[WebServer] 上午12:19:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (792ms)
+[WebServer] 上午12:19:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:19:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (1.1s)
+[WebServer] 上午12:19:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (1.1s)
+[WebServer] 上午12:19:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (1.1s)
+[WebServer] 上午12:19:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (1.0s)
+  ok  25 [chromium] › tests\browser\m10\dealerActions.spec.ts:9:1 › [T08-B01] hidden privacy, real flip midpoint and exact multi-draw order with six-state hooks (6.6s)
+  ok  26 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-1280-false] responsive Dealer bust and skip settle without stale overlays (4.2s)
+  ok  27 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-768-false] responsive Dealer bust and skip settle without stale overlays (3.9s)
+  ok  28 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-320-false] responsive Dealer bust and skip settle without stale overlays (3.8s)
+  ok  29 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-1280-true] responsive Dealer bust and skip settle without stale overlays (4.2s)
+[WebServer] 上午12:19:34 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  30 [chromium] › tests\browser\m10\dealerActions.spec.ts:32:1 › [T08-B03] reduced motion Insurance branch stays secret before reveal and settles public face immediately (1.3s)
+[WebServer] 上午12:19:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  31 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E1] configured 1-player table reserves deterministic Dealer and keeps real participants (2.3s)
+[WebServer] 上午12:19:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  32 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E2] configured 2-player table reserves deterministic Dealer and keeps real participants (2.4s)
+[WebServer] 上午12:19:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  33 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E3] configured 3-player table reserves deterministic Dealer and keeps real participants (2.5s)
+[WebServer] 上午12:19:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  34 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E4] configured 4-player table reserves deterministic Dealer and keeps real participants (2.5s)
+[WebServer] 上午12:19:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  35 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E5] configured 5-player table reserves deterministic Dealer and keeps real participants (2.4s)
+[WebServer] 上午12:19:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  36 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E6] configured 6-player table reserves deterministic Dealer and keeps real participants (2.4s)
+[WebServer] 上午12:19:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  37 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:23:34 › [M10-D-E7] configured 7-player table reserves deterministic Dealer and keeps real participants (2.1s)
+[WebServer] 上午12:19:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:19:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:19:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:19:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:19:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  38 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:46:1 › [M10-D-E08] explicit unconfigured fallback retains actual1/4/7 players, public cards and placement at three widths plus text200 (17.8s)
+[WebServer] 上午12:20:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  39 [chromium] › tests\browser\m10\dealerPresentation.spec.ts:70:1 › [M10-D-E09] intentionally invalid image contract fixture falls back without a broken portrait or new artwork (1.2s)
+[WebServer] 上午12:20:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  40 [chromium] › tests\browser\m10\formalDealers.spec.ts:41:1 › [M10-F-E01] production rotates all five portraits on new tables, wraps, and preserves fresh-reload Celestine preference (8.0s)
+[WebServer] 上午12:20:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  41 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-1] 1 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.1s)
+[WebServer] 上午12:20:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  42 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-2] 2 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.0s)
+[WebServer] 上午12:20:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  43 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-3] 3 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.4s)
+[WebServer] 上午12:20:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  44 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-4] 4 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.5s)
+[WebServer] 上午12:20:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  45 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-5] 5 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.2s)
+[WebServer] 上午12:20:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  46 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-6] 6 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.5s)
+[WebServer] 上午12:20:33 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  47 [chromium] › tests\browser\m10\formalDealers.spec.ts:52:34 › [M10-F-E02-7] 7 real players preserve Dealer identity through avatar changes, resize, NEXT and REPEAT (2.9s)
+[WebServer] 上午12:20:36 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  48 [chromium] › tests\browser\m10\formalDealers.spec.ts:64:1 › [M10-F-E03] seated Celestine yields next eligible formal Seraphine without changing the player lineup (2.0s)
+[WebServer] 上午12:20:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  49 [chromium] › tests\browser\m10\formalDealers.spec.ts:69:1 › [M10-F-E04] all five approved identities seated use non-roster fallback, preserve all seven players and retain that assignment (2.6s)
+[WebServer] 上午12:20:41 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  50 [chromium] › tests\browser\m10\formalDealers.spec.ts:87:1 › [M10-F-E05] missing runtime image retains generic illustration and functional authoritative cards/actions (1.4s)
+[WebServer] 上午12:20:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:53 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:55 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:20:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  51 [chromium] › tests\browser\m10\formalDealers.spec.ts:93:1 › [M10-F-E06] formal1/4/7 players retain bounded cards/status/shoe/rules at desktop/tablet/mobile and text200 (18.1s)
+[WebServer] 上午12:21:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  52 [chromium] › tests\browser\m10\formalDealers.spec.ts:102:1 › [M10-F-E07] non-Celestine 7-player tablet/mobile public waiting/reveal/result states and keyboard focus remain readable (4.1s)
+[WebServer] 上午12:21:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  53 [chromium] › tests\browser\m10\formalDealers.spec.ts:113:1 › [M10-F-E08] formal portrait remains observable with reduced motion, real hidden/public cards and keyboard Stand/results (2.5s)
+  ok  54 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-1] real FULL_MOTION two-pass order, one clone, no premature arrival (2.1s)
+  ok  55 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-4] real FULL_MOTION two-pass order, one clone, no premature arrival (3.2s)
+  ok  56 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-7] real FULL_MOTION two-pass order, one clone, no premature arrival (4.3s)
+  ok  57 [chromium] › tests\browser\m10\initialDeal.spec.ts:59:103 › [T06-B02-1-1280] checkpoint captures actual start/first/second/settled (4.7s)
+  ok  58 [chromium] › tests\browser\m10\initialDeal.spec.ts:59:103 › [T06-B02-4-1280] checkpoint captures actual start/first/second/settled (5.9s)
+  ok  59 [chromium] › tests\browser\m10\initialDeal.spec.ts:59:103 › [T06-B02-7-1280] checkpoint captures actual start/first/second/settled (7.0s)
+  ok  60 [chromium] › tests\browser\m10\initialDeal.spec.ts:59:103 › [T06-B02-7-768] checkpoint captures actual start/first/second/settled (7.0s)
+  ok  61 [chromium] › tests\browser\m10\initialDeal.spec.ts:59:103 › [T06-B02-7-320] checkpoint captures actual start/first/second/settled (5.5s)
+  ok  62 [chromium] › tests\browser\m10\initialDeal.spec.ts:102:1 › [T06-B03] skip/keyboard legal action settles before dispatch; new round/new table never replay stale cards (3.0s)
+  ok  63 [chromium] › tests\browser\m10\initialDeal.spec.ts:123:1 › [T06-B04] resize/background/text200 settle safely, keep native focus and bounded geometry (2.1s)
+[WebServer] 上午12:21:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  64 [chromium] › tests\browser\m10\initialDeal.spec.ts:140:1 › [T06-B05] reduced preference settles without flights; IMMEDIATE uses the identical authoritative result (2.1s)
+  ok  65 [chromium] › tests\browser\m10\initialDeal.spec.ts:163:1 › [T06-B06] real Provider unmount cancels the active flight, leaves authority and late callbacks unchanged (1.3s)
+  ok  66 [chromium] › tests\browser\m10\initialDeal.spec.ts:190:92 › [T06-B07-player-natural] post-deal Dealer state follows actual terminal/Insurance authority (2.8s)
+  ok  67 [chromium] › tests\browser\m10\initialDeal.spec.ts:190:92 › [T06-B07-player-ace] post-deal Dealer state follows actual terminal/Insurance authority (2.9s)
+  ok  68 [chromium] › tests\browser\m10\initialDeal.spec.ts:198:1 › [T06-B08] new table cancels an active terminal deal; later Hit stays immediate and fully visible (4.0s)
+  ok  69 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Hit] actual pre/mid/settled motion and authoritative hand targeting (4.2s)
+  ok  70 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Double] actual pre/mid/settled motion and authoritative hand targeting (4.4s)
+  ok  71 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Split] actual pre/mid/settled motion and authoritative hand targeting (4.4s)
+  ok  72 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-1280] Hit after Split, exact child anchor and interrupt before next legal action (4.7s)
+  ok  73 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-768] Hit after Split, exact child anchor and interrupt before next legal action (4.4s)
+  ok  74 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-320] Hit after Split, exact child anchor and interrupt before next legal action (4.3s)
+  ok  75 [chromium] › tests\browser\m10\playerActions.spec.ts:72:1 › [T07-B03] three Splits to four RSA leaves preserve active hand and bounded overlays (6.9s)
+[WebServer] 上午12:22:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  76 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E1] explicit 1-player setup and real funded table (2.5s)
+[WebServer] 上午12:22:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  77 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E2] explicit 2-player setup and real funded table (2.4s)
+[WebServer] 上午12:22:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  78 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E3] explicit 3-player setup and real funded table (2.6s)
+[WebServer] 上午12:22:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  79 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E4] explicit 4-player setup and real funded table (2.9s)
+[WebServer] 上午12:22:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  80 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E5] explicit 5-player setup and real funded table (2.7s)
+[WebServer] 上午12:22:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  81 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E6] explicit 6-player setup and real funded table (2.9s)
+[WebServer] 上午12:22:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  82 [chromium] › tests\browser\m10\playerCount.spec.ts:2:38 › [M10-C-E7] explicit 7-player setup and real funded table (2.9s)
+[WebServer] 上午12:22:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  83 [chromium] › tests\browser\m10\playerCount.spec.ts:25:1 › [M10-C-E08] native keyboard selector and Start preserve touch/focus semantics at 320px (908ms)
+[WebServer] 上午12:22:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  84 [chromium] › tests\browser\m10\presentation.spec.ts:3:1 › [T05-B01] real Motion controls finish via explicit completion, then skip/resize/hidden/unmount clean up (1.4s)
+[WebServer] 上午12:22:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  85 [chromium] › tests\browser\m10\presentation.spec.ts:30:1 › [T05-B02] StrictMode consumes batches once; React anchor refs survive rerender and unmount (1.5s)
+  ok  86 [chromium] › tests\browser\m10\presentation.spec.ts:51:64 › [T05-B03-no-preference] system policy preserves exact DOM/cards/controls/money on seven-player Split and four leaves (6.2s)
+[WebServer] 上午12:23:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:23:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  87 [chromium] › tests\browser\m10\presentation.spec.ts:51:64 › [T05-B03-reduce] system policy preserves exact DOM/cards/controls/money on seven-player Split and four leaves (2.1s)
+[WebServer] 上午12:23:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  88 [chromium] › tests\browser\m10\presentation.spec.ts:66:26 › [T05-B04-1] count 1 responsive authority remains immediate with no idle animation (1.2s)
+[WebServer] 上午12:23:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  89 [chromium] › tests\browser\m10\presentation.spec.ts:66:26 › [T05-B04-7] count 7 responsive authority remains immediate with no idle animation (1.2s)
+[WebServer] 上午12:23:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  90 [chromium] › tests\browser\m10\presentation.spec.ts:79:1 › [T05-B05] Motion mini cancellation leaves the same final frame; reduced-motion queue never starts a tween (1.0s)
+[WebServer] 上午12:23:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  91 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E1] real 1-seat arc, stable resize, active and complete footprints (4.7s)
+[WebServer] 上午12:23:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  92 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E2] real 2-seat arc, stable resize, active and complete footprints (4.7s)
+[WebServer] 上午12:23:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  93 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E3] real 3-seat arc, stable resize, active and complete footprints (5.5s)
+[WebServer] 上午12:23:27 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  94 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E4] real 4-seat arc, stable resize, active and complete footprints (5.4s)
+[WebServer] 上午12:23:33 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  95 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E5] real 5-seat arc, stable resize, active and complete footprints (6.3s)
+[WebServer] 上午12:23:39 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  96 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E6] real 6-seat arc, stable resize, active and complete footprints (6.6s)
+[WebServer] 上午12:23:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  97 [chromium] › tests\browser\m10\seatMapping.spec.ts:24:34 › [M10-S-E7] real 7-seat arc, stable resize, active and complete footprints (8.1s)
+[WebServer] 上午12:23:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:23:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  98 [chromium] › tests\browser\m10\seatMapping.spec.ts:53:1 › [M10-S-E08] seven actual players retain public five-card long-name fixtures and 200% text (10.8s)
+[WebServer] 上午12:24:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  99 [chromium] › tests\browser\m10\seatMapping.spec.ts:70:1 › [M10-S-E09] real seven-player Split and Insurance retain local ownership, focus, safe density and enlarged text (18.0s)
+[WebServer] 上午12:24:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:27 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 100 [chromium] › tests\browser\m10.spec.ts:35:1 › [M10-E01] current casino table anchors retain public players and usable controls at three viewports (6.3s)
+[WebServer] 上午12:24:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:31 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:41 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 101 [chromium] › tests\browser\m10.spec.ts:59:1 › [M10-E02] five actual cards and four actual split leaves use vertical flow without overlapping seat regions (15.0s)
+[WebServer] 上午12:24:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 102 [chromium] › tests\browser\m10.spec.ts:76:1 › [M10-E03] enlarged text failed portraits and reduced motion keep identity cards and keyboard decisions accessible (8.1s)
+[WebServer] 上午12:24:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:24:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 103 [chromium] › tests\browser\m10.spec.ts:101:1 › [M10-E04] the table scene owns coherent local cards controls and exact credits through betting and play (9.2s)
+[WebServer] 上午12:25:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 104 [chromium] › tests\browser\m10.spec.ts:141:1 › [M10A-E01] one scene frame owns the existing game regions and keyboard play across desktop tablet and mobile (6.4s)
+[WebServer] 上午12:25:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:13 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 105 [chromium] › tests\browser\m10.spec.ts:189:1 › [M10A-E02] camera repair enlarges existing gameplay footprints and retains native wager play (7.8s)
+[WebServer] 上午12:25:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 106 [chromium] › tests\browser\m10.spec.ts:257:1 › [M10A-E03] remote seat units own real public cards scores wagers and one semantic hand at all three widths (5.7s)
+[WebServer] 上午12:25:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:31 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:33 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 107 [chromium] › tests\browser\m10.spec.ts:289:1 › [M10A-E04] public composition fixtures keep five remote cards and four labelled split leaves with real long names (14.3s)
+[WebServer] 上午12:25:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 108 [chromium] › tests\browser\m10.spec.ts:319:1 › [M10A-E05] local HUD owns one real current hand and existing controls through active play and results (9.3s)
+[WebServer] 上午12:25:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:25:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 109 [chromium] › tests\browser\m10.spec.ts:343:1 › [M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text (22.9s)
+[WebServer] 上午12:26:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 110 [chromium] › tests\browser\m10.spec.ts:370:1 › [M10A-E07] Dealer workstation owns initial hidden and real revealed three-card states across all surfaces (13.0s)
+[WebServer] 上午12:26:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 111 [chromium] › tests\browser\m10.spec.ts:401:1 › [M10A-E08] enlarged Dealer text retains public facts and unclipped workstation ownership with keyboard decisions (7.1s)
+[WebServer] 上午12:26:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:32 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 112 [chromium] › tests\browser\m10.spec.ts:418:1 › [M10A-E09] isolated public five-card Dealer composition preserves readable cards and surrounding accepted seats (6.6s)
+[WebServer] 上午12:26:34 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 113 [chromium] › tests\browser\m10.spec.ts:442:1 › [M10A-E10] felt spots follow only occupied seats and real public hands through open play and settlement (7.9s)
+[WebServer] 上午12:26:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 114 [chromium] › tests\browser\m10.spec.ts:471:1 › [M10A-E11] real Split leaves keep exact wager destinations without repeating decorative hand outlines (3.8s)
+[WebServer] 上午12:26:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 115 [chromium] › tests\browser\m10.spec.ts:488:1 › [M10A-E12] enlarged felt text and static guides preserve unobstructed keyboard focus and native controls (5.0s)
+[WebServer] 上午12:26:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:26:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 116 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:29:1 › [M10A-CB01] real wager entry, supported denominations, invalid input and complete/next-round controls retain their flow (8.6s)
+[WebServer] 上午12:27:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 117 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:55:1 › [M10A-CB02] one native action dock targets normal and actual Split A/B hands with retained desktop primary fit (12.4s)
+[WebServer] 上午12:27:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 118 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:83:1 › [M10A-CB03] Insurance preserves separate funding and native disclosure with no ineligible Even Money choice (4.5s)
+[WebServer] 上午12:27:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 119 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:100:1 › [M10A-CB04] eligible Even Money keeps its distinct keyboard choice and exact settled original-stake profit (5.7s)
+[WebServer] 上午12:27:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:24 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 120 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:116:1 › [M10A-CB05] disabled Insurance is identifiable and explained while native tab order skips it and Decline reserves nothing (5.3s)
+[WebServer] 上午12:27:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:32 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:34 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:36 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:39 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:41 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 121 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:131:1 › [M10A-CB06] text 200% keeps every wager, action and Insurance/Even Money label operable without covering cards (20.1s)
+[WebServer] 上午12:27:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 122 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:145:1 › [M10A-CB07] native keyboard actions keep visible focus, real hand routing and result/next-round focus under reduced motion (1.3s)
+[WebServer] 上午12:27:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:27:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 123 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:167:1 › [M10A-CB08] compact Insurance/Even Money keeps one state band, exact visible decision amount and keyboard disclosure (13.0s)
+[WebServer] 上午12:28:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:13 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 124 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:184:35 › [M10A-CB09-1280] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior (13.0s)
+[WebServer] 上午12:28:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:27 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 125 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:184:35 › [M10A-CB09-768] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior (12.7s)
+[WebServer] 上午12:28:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:32 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:33 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:36 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 126 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:184:35 › [M10A-CB09-320] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior (9.8s)
+[WebServer] 上午12:28:38 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 127 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:215:35 › [M10A-CB10-1280] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details (14.7s)
+[WebServer] 上午12:28:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:28:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 128 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:215:35 › [M10A-CB10-768] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details (12.2s)
+[WebServer] 上午12:29:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 129 [chromium] › tests\browser\m10a\controlIntegration.spec.ts:215:35 › [M10A-CB10-320] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details (11.1s)
+[WebServer] 上午12:29:16 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:31 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:31 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:33 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:34 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 130 [chromium] › tests\browser\m10a\t07.spec.ts:15:1 › [M10A-T07-B01] secondary accounting keeps exact normal, Insurance, pending, Split/Double and low-fund values at three widths (21.1s)
+[WebServer] 上午12:29:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:39 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 131 [chromium] › tests\browser\m10a\t07.spec.ts:28:1 › [M10A-T07-B02] text200 keeps three funds visible without introducing focus stops or hiding controls (5.2s)
+[WebServer] 上午12:29:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 132 [chromium] › tests\browser\m10a\t08.spec.ts:18:1 › [M10A-T08-B01] tablet groups two cards beside facts, mobile keeps stake/total above status, desktop retains primary play (8.0s)
+[WebServer] 上午12:29:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:55 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:29:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 133 [chromium] › tests\browser\m10a\t08.spec.ts:33:35 › [M10A-T08-B02-1280] responsive scene retains Split, five cards, Insurance, Even Money, Dealer additions and pending funds (13.8s)
+[WebServer] 上午12:30:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 134 [chromium] › tests\browser\m10a\t08.spec.ts:33:35 › [M10A-T08-B02-768] responsive scene retains Split, five cards, Insurance, Even Money, Dealer additions and pending funds (12.9s)
+[WebServer] 上午12:30:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:24 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 135 [chromium] › tests\browser\m10a\t08.spec.ts:33:35 › [M10A-T08-B02-320] responsive scene retains Split, five cards, Insurance, Even Money, Dealer additions and pending funds (10.6s)
+[WebServer] 上午12:30:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 136 [chromium] › tests\browser\m10a\t09.spec.ts:17:1 › [M10A-T09-B01] actual2/3/4/5 cards keep every corner and exact total under three widths and text200 (19.8s)
+[WebServer] 上午12:30:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:30:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 137 [chromium] › tests\browser\m10a\t09.spec.ts:28:1 › [M10A-T09-B02] active first and second Split plus four depth-first terminal leaves remain separate owners (25.9s)
+[WebServer] 上午12:31:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:39 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 138 [chromium] › tests\browser\m10a\t09.spec.ts:39:1 › [M10A-T09-B03] labelled public long-name fallback four-result and five-card Dealer compositions remain bounded (30.1s)
+[WebServer] 上午12:31:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 139 [chromium] › tests\browser\m8.spec.ts:11:1 › [REG-M8-079] Classic five-card hand has no Charlie result and can continue (1.3s)
+[WebServer] 上午12:31:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 140 [chromium] › tests\browser\m8.spec.ts:15:1 › [REG-M8-080] Charlie profile is selected explicitly before seeded play (1.3s)
+[WebServer] 上午12:31:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 141 [chromium] › tests\browser\m8.spec.ts:21:1 › [REG-M8-081] five-card Charlie presents normal 1:1 return and ends actions (1.4s)
+[WebServer] 上午12:31:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 142 [chromium] › tests\browser\m8.spec.ts:26:1 › [REG-M8-082] fifth-card 21 says Charlie Win rather than Blackjack (1.3s)
+[WebServer] 上午12:31:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 143 [chromium] › tests\browser\m8.spec.ts:30:1 › [REG-M8-083] profile and seed controls cannot change during active hidden-card round (1.4s)
+[WebServer] 上午12:31:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 144 [chromium] › tests\browser\m8.spec.ts:34:1 › [REG-M8-084] same seeded browser run reproduces public cards and terminal return (2.8s)
+[WebServer] 上午12:31:53 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 145 [chromium] › tests\browser\m8.spec.ts:40:1 › [REG-M8-085] replay JSON is available only at finalized seeded boundary and removed on next round (1.8s)
+[WebServer] 上午12:31:55 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 146 [chromium] › tests\browser\m8.spec.ts:46:1 › [REG-M8-086] completed replay reproduces result, is clearly marked and preserves original (1.6s)
+[WebServer] 上午12:31:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:31:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 147 [chromium] › tests\browser\m8.spec.ts:51:1 › [REG-M8-087] public audit displays ordered attribution UTC amounts refunds and pre-round seat occupancy (3.0s)
+[WebServer] 上午12:31:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 148 [chromium] › tests\browser\m8.spec.ts:83:1 › [REG-M8-088] active audit leaks no known hole identity, physical ID, seed or future shoe (864ms)
+[WebServer] 上午12:32:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 149 [chromium] › tests\browser\m8.spec.ts:88:1 › [REG-M8-089] active seeded DOM and accessible output omit seed value and replay package (1.3s)
+[WebServer] 上午12:32:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 150 [chromium] › tests\browser\m8.spec.ts:93:1 › [REG-M8-090] M8 tools and replay JSON remain usable at 320px without overflow (1.5s)
+[WebServer] 上午12:32:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 151 [chromium] › tests\browser\m8.spec.ts:100:1 › [REG-M8-091] keyboard opens advanced settings, chooses profile and starts seeded session (892ms)
+[WebServer] 上午12:32:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"viewport":{"width":1280,"height":900},"dealer":{"x":430,"y":70.46875,"width":420,"height":228},"own":{"x":260,"y":526.171875,"width":760,"height":272},"action":{"x":458,"y":831.359375,"width":116,"height":52}}
+[WebServer] 上午12:32:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"viewport":{"width":768,"height":1024},"dealer":{"x":204,"y":79.90625,"width":360,"height":217.421875},"own":{"x":84,"y":530.953125,"width":600,"height":274},"action":{"x":202,"y":866.140625,"width":116,"height":52}}
+[WebServer] 上午12:32:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"viewport":{"width":320,"height":720},"dealer":{"x":18,"y":80.15625,"width":284,"height":217.421875},"own":{"x":18,"y":511.671875,"width":283.984375,"height":283.84375},"action":{"x":116.65625,"y":850.703125,"width":86.671875,"height":44}}
+  ok 152 [chromium] › tests\browser\m9.spec.ts:9:1 › [M9-E01] first-person cards stay near player and center dealer without overlap on desktop tablet mobile (4.9s)
+[WebServer] 上午12:32:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 153 [chromium] › tests\browser\m9.spec.ts:39:1 › [M9-E02] original characters and compact mobile public guest cards retain reduced motion and secrecy (1.0s)
+[WebServer] 上午12:32:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 154 [chromium] › tests\browser\m9.spec.ts:54:1 › [M9-E03] own wager deals once, auto settles, repeats original amount and opens fresh betting (2.5s)
+[WebServer] 上午12:32:13 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 155 [chromium] › tests\browser\m9.spec.ts:78:1 › [M9-E04] tools start collapsed and seeded replay audit remain deliberately reachable (2.0s)
+[WebServer] 上午12:32:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 156 [chromium] › tests\browser\m9.spec.ts:104:1 › [M9-E05] deliberate manual demo keeps configuration and explicit progress, then returns to player table (1.5s)
+[WebServer] 上午12:32:16 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 157 [chromium] › tests\browser\m9.spec.ts:114:1 › [M9-E06] keyboard can wager, reach visible focus, stand and start another round without computer friction (1.6s)
+[WebServer] 上午12:32:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 158 [chromium] › tests\browser\m9.spec.ts:129:1 › [M9-E07] unconfigured default opens player table and own betting with closed secondary tools (1.7s)
+[WebServer] 上午12:32:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 159 [chromium] › tests\browser\m9.spec.ts:142:1 › [M9-E08] player Ace decision stays explicit, hidden state stays secret even in expanded audit (1.7s)
+[WebServer] 上午12:32:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 160 [chromium] › tests\browser\m9.spec.ts:157:1 › [M9-E09] first-person split children remain distinct and automatically finish dealer on mobile (1.3s)
+[WebServer] 上午12:32:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 161 [chromium] › tests\browser\m9.spec.ts:170:1 › [M9-E10] natural resolves without manual continue and pays accepted three-to-two return (1.3s)
+[WebServer] 上午12:32:24 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 162 [chromium] › tests\browser\m9.spec.ts:179:1 › [M9-E11] exhausted human funds disable repeat and can deliberately start a new credited session (1.5s)
+[WebServer] 上午12:32:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 163 [chromium] › tests\browser\pa1.spec.ts:14:1 › [PA1-E01] non-blocking default, collision exchange and persistent guests across active play Repeat Bet and Deal Again (2.2s)
+[WebServer] 上午12:32:27 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 164 [chromium] › tests\browser\pa1.spec.ts:39:1 › [PA1-E02] changing avatars leaves seeded replay commands gameplay digest funds and audit outcomes identical (2.7s)
+[WebServer] 上午12:32:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 165 [chromium] › tests\browser\pa1.spec.ts:58:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (5.0s)
+[WebServer] 上午12:32:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 166 [chromium] › tests\browser\pa1.spec.ts:89:1 › [PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths (6.8s)
+[WebServer] 上午12:32:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 167 [chromium] › tests\browser\pa1.spec.ts:128:1 › [PA1-E05] failed portraits and 200 percent text enlargement retain readable character identity and playable controls (3.4s)
+[WebServer] 上午12:32:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"fixture":"basic","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+[WebServer] 上午12:32:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"fixture":"split","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+  ok 168 [chromium] › tests\browser\polish.spec.ts:3:1 › active hand title and ACTIVE badge occupy separate visible space on tablet desktop and mobile (1.6s)
+[WebServer] 上午12:32:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 169 [chromium] › tests\browser\polish.spec.ts:27:1 › polished desktop anchors dealer and seven seats above visible game controls, with secondary tools closed (1.1s)
+[WebServer] 上午12:32:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 170 [chromium] › tests\browser\polish.spec.ts:46:1 › mobile puts current cards and actions first, keeps dealer in initial viewport and disables all motion on request (1.0s)
+[WebServer] 上午12:32:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 171 [chromium] › tests\browser\polish.spec.ts:61:1 › wager chips select an amount without placing it, preserving explicit funded commands (831ms)
+[WebServer] 上午12:32:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:51 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 172 [chromium] › tests\browser\polish.spec.ts:71:1 › split children and Charlie retain distinct game-object markers and exact returns (1.6s)
+[WebServer] 上午12:32:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 173 [chromium] › tests\browser\polish.spec.ts:87:1 › moving the local seat preserves centered priority and seven-seat layout with all computers funded (1.6s)
+[WebServer] 上午12:32:53 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 174 [chromium] › tests\browser\portfolio.spec.ts:3:1 › reproducible portfolio screenshots show only public Classic, Charlie and replay/audit views (2.5s)
+[WebServer] 上午12:32:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 175 [chromium] › tests\browser\ra1.spec.ts:3:1 › RA1 browser RSA offers only legal choices and keyboard Stand declines to complete Soft 12 (1.3s)
+[WebServer] 上午12:32:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:32:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:33:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 176 [chromium] › tests\browser\ra1.spec.ts:19:1 › RA1 browser depth-first RSA remains readable with accessible 44px controls across viewport sizes (4.5s)
+[WebServer] 上午12:33:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:33:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 177 [chromium] › tests\browser\ra1.spec.ts:36:1 › RA1 browser unavailable funding and fourth-leaf cap finish A+A without redundant Stand friction (2.0s)
+
+  177 passed (14.5m)
+PASS: test:e2e
+2026-10-06 00:33:06 +08:00: independently rerunning M1 (12 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/dealerResolution.test.ts tests/integration/roundLifecycle.test.ts tests/unit/card.test.ts tests/unit/dealer.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/playerActions.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  12 passed (12)
+      Tests  155 passed (155)
+   Start at  00:33:07
+   Duration  4.13s (tests 81%, transform 7%, setup 5%, import 5%, worker 1%)
+
+    Isolate  12 workers spawned · ~234ms startup each (spawn + environment, per file)
+             at least ~469ms faster with isolate: false — reuses workers across files instead of one per file
+
+PASS: M1 preservation
+2026-10-06 00:33:12 +08:00: independently rerunning M2 (6 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/computer.test.ts tests/unit/table.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  6 passed (6)
+      Tests  78 passed (78)
+   Start at  00:33:13
+   Duration  701ms (transform 43%, tests 27%, import 15%, setup 12%, worker 3%)
+
+PASS: M2 preservation
+2026-10-06 00:33:13 +08:00: independently rerunning M3 (5 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/betting.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/settlement.test.ts tests/unit/credits.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  5 passed (5)
+      Tests  72 passed (72)
+   Start at  00:33:14
+   Duration  631ms (transform 51%, tests 20%, import 15%, setup 11%, worker 3%)
+
+PASS: M3 preservation
+2026-10-06 00:33:15 +08:00: independently rerunning M4 (7 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  7 passed (7)
+      Tests  171 passed (171)
+   Start at  00:33:16
+   Duration  899ms (transform 37%, tests 34%, import 16%, setup 9%, worker 3%)
+
+PASS: M4 preservation
+2026-10-06 00:33:17 +08:00: independently rerunning M5 (8 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/unit/sideBets.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  8 passed (8)
+      Tests  168 passed (168)
+   Start at  00:33:18
+   Duration  1.06s (transform 39%, tests 31%, import 17%, setup 10%, worker 3%)
+
+PASS: M5 preservation
+2026-10-06 00:33:19 +08:00: independently rerunning M6 (9 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  9 passed (9)
+      Tests  181 passed (181)
+   Start at  00:33:20
+   Duration  1.13s (transform 40%, tests 27%, import 23%, setup 8%, worker 2%)
+
+PASS: M6 preservation
+2026-10-06 00:33:21 +08:00: independently rerunning M7 (9 files)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts tests/integration/betting.test.ts tests/integration/browserController.test.ts tests/integration/dealerResolution.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/integration/roundLifecycle.test.ts tests/integration/settlement.test.ts tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/unit/browserHarness.test.ts tests/unit/browserRegression.test.ts tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/card.test.ts tests/unit/computer.test.ts tests/unit/credits.test.ts tests/unit/dealer.test.ts tests/unit/domainBoundary.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/playerActions.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/unit/sideBets.test.ts tests/unit/table.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  56 passed (56)
+      Tests  870 passed (870)
+   Start at  00:33:23
+   Duration  9.80s (tests 55%, import 32%, transform 8%, setup 4%, worker 1%)
+
+    Isolate  56 workers spawned · ~207ms startup each (spawn + environment, per file)
+             at least ~2.69s faster with isolate: false — reuses workers across files instead of one per file
+
+PASS: M7 preservation
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/accessibility.spec.ts tests/browser/gameplay.spec.ts
+
+[WebServer] (node:30868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:31808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 上午12:33:50 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (14.4s)
+[WebServer] 上午12:33:52 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (1.4s)
+[WebServer] 上午12:33:54 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (971ms)
+[WebServer] 上午12:33:55 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (909ms)
+[WebServer] 上午12:33:56 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (1.4s)
+[WebServer] 上午12:33:57 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (1.1s)
+[WebServer] 上午12:33:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (1.1s)
+[WebServer] 上午12:33:59 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (1.3s)
+[WebServer] 上午12:34:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (2.6s)
+[WebServer] 上午12:34:04 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (1.8s)
+[WebServer] 上午12:34:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (1.2s)
+[WebServer] 上午12:34:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (920ms)
+[WebServer] 上午12:34:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (1.1s)
+[WebServer] 上午12:34:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (1.3s)
+[WebServer] 上午12:34:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (997ms)
+[WebServer] 上午12:34:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (1.3s)
+[WebServer] 上午12:34:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (1.4s)
+[WebServer] 上午12:34:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (1.2s)
+[WebServer] 上午12:34:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (1.1s)
+[WebServer] 上午12:34:16 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (999ms)
+[WebServer] 上午12:34:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:34:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (1.5s)
+[WebServer] 上午12:34:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (1.5s)
+[WebServer] 上午12:34:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (1.3s)
+[WebServer] 上午12:34:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (1.3s)
+
+  24 passed (48.9s)
+PASS: M7 accepted Chromium inventory
+PASS: domain changes bounded to authorized RA1 modules; 66 Vitest / 5 browser source files and every original assertion preserved
+2026-10-06 00:34:26 +08:00: independently rerunning accepted M8 (66 files / 956 tests)
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/harness.test.ts tests/integration/advancedDouble.test.ts tests/integration/advancedFoundation.test.ts tests/integration/advancedIntegrity.test.ts tests/integration/advancedRegression.test.ts tests/integration/advancedResplit.test.ts tests/integration/advancedSettlement.test.ts tests/integration/advancedSplit.test.ts tests/integration/audit.test.ts tests/integration/behindBetting.test.ts tests/integration/behindDouble.test.ts tests/integration/behindInsurance.test.ts tests/integration/behindIntegrity.test.ts tests/integration/behindOutcomes.test.ts tests/integration/behindOwnership.test.ts tests/integration/behindRegression.test.ts tests/integration/behindSettlement.test.ts tests/integration/behindSplit.test.ts tests/integration/betting.test.ts tests/integration/browserController.test.ts tests/integration/browserDemo.test.ts tests/integration/charlie.test.ts tests/integration/dealerResolution.test.ts tests/integration/financialLifecycle.test.ts tests/integration/fundedRegression.test.ts tests/integration/m8Invariants.test.ts tests/integration/optionalBetting.test.ts tests/integration/optionalEvaluation.test.ts tests/integration/optionalEvenMoney.test.ts tests/integration/optionalInsurance.test.ts tests/integration/optionalIntegrity.test.ts tests/integration/optionalRegression.test.ts tests/integration/optionalSettlement.test.ts tests/integration/replay.test.ts tests/integration/roundLifecycle.test.ts tests/integration/settlement.test.ts tests/integration/tableActions.test.ts tests/integration/tableAutomation.test.ts tests/integration/tableDeal.test.ts tests/integration/tableLifecycle.test.ts tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/unit/browserHarness.test.ts tests/unit/browserRegression.test.ts tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/card.test.ts tests/unit/computer.test.ts tests/unit/credits.test.ts tests/unit/dealer.test.ts tests/unit/domainBoundary.test.ts tests/unit/game.test.ts tests/unit/hand.test.ts tests/unit/m8Contract.test.ts tests/unit/m8Harness.test.ts tests/unit/m8Regression.test.ts tests/unit/playerActions.test.ts tests/unit/portfolio.test.ts tests/unit/profileRandom.test.ts tests/unit/publicView.test.ts tests/unit/random.test.ts tests/unit/shoe.test.ts tests/unit/sideBets.test.ts tests/unit/table.test.ts tests/verifyHarness.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  66 passed (66)
+      Tests  956 passed (956)
+   Start at  00:34:27
+   Duration  15.19s (tests 66%, import 23%, transform 6%, setup 3%, worker 1%)
+
+    Isolate  66 workers spawned · ~230ms startup each (spawn + environment, per file)
+             at least ~3.57s faster with isolate: false — reuses workers across files instead of one per file
+
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/accessibility.spec.ts tests/browser/gameplay.spec.ts tests/browser/m8.spec.ts tests/browser/polish.spec.ts tests/browser/portfolio.spec.ts
+
+[WebServer] (node:20596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 44 tests using 1 worker
+
+(node:10588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 上午12:34:58 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (12.8s)
+[WebServer] 上午12:35:00 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (1.3s)
+[WebServer] 上午12:35:01 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (956ms)
+[WebServer] 上午12:35:02 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (981ms)
+[WebServer] 上午12:35:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (1.1s)
+[WebServer] 上午12:35:05 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (963ms)
+[WebServer] 上午12:35:06 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (982ms)
+[WebServer] 上午12:35:07 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (978ms)
+[WebServer] 上午12:35:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (997ms)
+[WebServer] 上午12:35:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (1.1s)
+[WebServer] 上午12:35:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (938ms)
+[WebServer] 上午12:35:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (816ms)
+[WebServer] 上午12:35:11 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (880ms)
+[WebServer] 上午12:35:12 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (975ms)
+[WebServer] 上午12:35:13 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (936ms)
+[WebServer] 上午12:35:14 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (1.0s)
+[WebServer] 上午12:35:15 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (956ms)
+[WebServer] 上午12:35:16 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (984ms)
+[WebServer] 上午12:35:17 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (785ms)
+[WebServer] 上午12:35:18 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (844ms)
+[WebServer] 上午12:35:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:19 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (1.2s)
+[WebServer] 上午12:35:20 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (1.2s)
+[WebServer] 上午12:35:21 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (1.0s)
+[WebServer] 上午12:35:22 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (1.1s)
+[WebServer] 上午12:35:23 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 25 [chromium] › tests\browser\m8.spec.ts:11:1 › [REG-M8-079] Classic five-card hand has no Charlie result and can continue (1.1s)
+[WebServer] 上午12:35:25 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 26 [chromium] › tests\browser\m8.spec.ts:15:1 › [REG-M8-080] Charlie profile is selected explicitly before seeded play (1.1s)
+[WebServer] 上午12:35:26 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 27 [chromium] › tests\browser\m8.spec.ts:21:1 › [REG-M8-081] five-card Charlie presents normal 1:1 return and ends actions (1.1s)
+[WebServer] 上午12:35:27 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 28 [chromium] › tests\browser\m8.spec.ts:26:1 › [REG-M8-082] fifth-card 21 says Charlie Win rather than Blackjack (1.0s)
+[WebServer] 上午12:35:28 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 29 [chromium] › tests\browser\m8.spec.ts:30:1 › [REG-M8-083] profile and seed controls cannot change during active hidden-card round (1.1s)
+[WebServer] 上午12:35:29 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:30 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 30 [chromium] › tests\browser\m8.spec.ts:34:1 › [REG-M8-084] same seeded browser run reproduces public cards and terminal return (2.1s)
+[WebServer] 上午12:35:31 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 31 [chromium] › tests\browser\m8.spec.ts:40:1 › [REG-M8-085] replay JSON is available only at finalized seeded boundary and removed on next round (1.4s)
+[WebServer] 上午12:35:32 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 32 [chromium] › tests\browser\m8.spec.ts:46:1 › [REG-M8-086] completed replay reproduces result, is clearly marked and preserves original (1.4s)
+[WebServer] 上午12:35:34 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:35 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:36 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 33 [chromium] › tests\browser\m8.spec.ts:51:1 › [REG-M8-087] public audit displays ordered attribution UTC amounts refunds and pre-round seat occupancy (2.8s)
+[WebServer] 上午12:35:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 34 [chromium] › tests\browser\m8.spec.ts:83:1 › [REG-M8-088] active audit leaks no known hole identity, physical ID, seed or future shoe (798ms)
+[WebServer] 上午12:35:37 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 35 [chromium] › tests\browser\m8.spec.ts:88:1 › [REG-M8-089] active seeded DOM and accessible output omit seed value and replay package (1.2s)
+[WebServer] 上午12:35:39 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 36 [chromium] › tests\browser\m8.spec.ts:93:1 › [REG-M8-090] M8 tools and replay JSON remain usable at 320px without overflow (1.4s)
+[WebServer] 上午12:35:40 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 37 [chromium] › tests\browser\m8.spec.ts:100:1 › [REG-M8-091] keyboard opens advanced settings, chooses profile and starts seeded session (852ms)
+[WebServer] 上午12:35:41 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"fixture":"basic","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"basic","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+[WebServer] 上午12:35:42 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+{"fixture":"split","viewport":{"width":768,"height":1024},"title":{"x":285.75,"y":484.296875,"width":151.59375,"height":20},"active":{"x":285.75,"y":518.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":1280,"height":900},"title":{"x":423.234375,"y":514.296875,"width":151.59375,"height":20},"active":{"x":800.109375,"y":517.296875,"width":56.640625,"height":20},"intersection":false}
+{"fixture":"split","viewport":{"width":320,"height":720},"title":{"x":84.203125,"y":828.25,"width":151.59375,"height":20},"active":{"x":131.671875,"y":862.25,"width":56.640625,"height":20},"intersection":false}
+  ok 38 [chromium] › tests\browser\polish.spec.ts:3:1 › active hand title and ACTIVE badge occupy separate visible space on tablet desktop and mobile (1.6s)
+[WebServer] 上午12:35:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 39 [chromium] › tests\browser\polish.spec.ts:27:1 › polished desktop anchors dealer and seven seats above visible game controls, with secondary tools closed (938ms)
+[WebServer] 上午12:35:43 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 40 [chromium] › tests\browser\polish.spec.ts:46:1 › mobile puts current cards and actions first, keeps dealer in initial viewport and disables all motion on request (852ms)
+[WebServer] 上午12:35:44 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 41 [chromium] › tests\browser\polish.spec.ts:61:1 › wager chips select an amount without placing it, preserving explicit funded commands (820ms)
+[WebServer] 上午12:35:45 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:46 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 42 [chromium] › tests\browser\polish.spec.ts:71:1 › split children and Charlie retain distinct game-object markers and exact returns (1.7s)
+[WebServer] 上午12:35:47 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 43 [chromium] › tests\browser\polish.spec.ts:87:1 › moving the local seat preserves centered priority and seven-seat layout with all computers funded (1.6s)
+[WebServer] 上午12:35:48 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午12:35:49 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 44 [chromium] › tests\browser\portfolio.spec.ts:3:1 › reproducible portfolio screenshots show only public Classic, Charlie and replay/audit views (2.6s)
+
+  44 passed (1.1m)
+PASS: M8 accepted 956 Vitest / 44 Chromium inventory
+PASS: preservation
+PASS: engineering verification

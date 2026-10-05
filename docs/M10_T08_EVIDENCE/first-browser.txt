@@ -1,0 +1,16 @@
+[WebServer] (node:24104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\dealerActions.spec.ts:9:1 › [T08-B01] hidden privacy, real flip midpoint and exact multi-draw order with six-state hooks (15.5s)
+  ok 2 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-1280-false] responsive Dealer bust and skip settle without stale overlays (4.4s)
+  ok 3 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-768-false] responsive Dealer bust and skip settle without stale overlays (3.9s)
+  ok 4 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-320-false] responsive Dealer bust and skip settle without stale overlays (3.8s)
+  ok 5 [chromium] › tests\browser\m10\dealerActions.spec.ts:25:111 › [T08-B02-1280-true] responsive Dealer bust and skip settle without stale overlays (4.0s)
+[WebServer] 下午11:56:41 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok 6 [chromium] › tests\browser\m10\dealerActions.spec.ts:32:1 › [T08-B03] reduced motion Insurance branch stays secret before reveal and settles public face immediately (1.3s)
+
+  6 passed (36.6s)

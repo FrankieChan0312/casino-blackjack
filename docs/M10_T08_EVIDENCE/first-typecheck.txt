@@ -1,0 +1,8 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+tests/m10/dealerActions.test.ts(28,100): error TS2339: Property 'card' does not exist on type 'PresentationEvent'.
+  Property 'card' does not exist on type 'Readonly<{ type: "SPLIT_HANDS"; seat: number; parentHandId: string; children: readonly Readonly<{ handId: string; retained: Readonly<{ roundId: string; owner: number | "dealer"; handId: string; index: number; }>; destination: Readonly<...>; }>[]; }> & Readonly<...>'.
+tests/m10/dealerActions.test.ts(28,117): error TS2339: Property 'face' does not exist on type 'PresentationEvent'.
+  Property 'face' does not exist on type 'Readonly<{ type: "SPLIT_HANDS"; seat: number; parentHandId: string; children: readonly Readonly<{ handId: string; retained: Readonly<{ roundId: string; owner: number | "dealer"; handId: string; index: number; }>; destination: Readonly<...>; }>[]; }> & Readonly<...>'.
