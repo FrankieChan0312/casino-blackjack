@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-10-05 09:42:20 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "method": "Exact TypeScript source transpiled in memory; explicit independent first-free collision fixtures for counts1-7; no source/test/tool/dependency changes",
+  "rows": [
+    {
+      "count": 1,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "elf_male",
+      "expectedLiteralFallback": "elf_male",
+      "playerCount": 1
+    },
+    {
+      "count": 2,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "elf_female",
+      "expectedLiteralFallback": "elf_female",
+      "playerCount": 2
+    },
+    {
+      "count": 3,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "knight_male",
+      "expectedLiteralFallback": "knight_male",
+      "playerCount": 3
+    },
+    {
+      "count": 4,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "knight_female",
+      "expectedLiteralFallback": "knight_female",
+      "playerCount": 4
+    },
+    {
+      "count": 5,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "mage_male",
+      "expectedLiteralFallback": "mage_male",
+      "playerCount": 5
+    },
+    {
+      "count": 6,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "mage_female",
+      "expectedLiteralFallback": "mage_female",
+      "playerCount": 6
+    },
+    {
+      "count": 7,
+      "unseatedPreferred": "noble_female",
+      "seatedCelestineFallback": "noble_male",
+      "expectedLiteralFallback": "noble_male",
+      "playerCount": 7
+    }
+  ],
+  "guestCollisionExpected": "elf_female",
+  "entropyCalls": 0,
+  "gameplayCommandsIssued": 0,
+  "historyPreservation": [
+    {
+      "path": "README.md",
+      "existingBytesPreserved": true,
+      "method": "prefix-added",
+      "incomingSha256": "634ad9660608759855bd802c0ed3cb971594d4d7148a28947ea1293a283ce349"
+    },
+    {
+      "path": "docs/STATE.md",
+      "existingBytesPreserved": true,
+      "method": "prefix-added",
+      "incomingSha256": "26c2b6aa4e7c8c2c2aef76457b7b830159635a9cce90b6f89ad7a508d23f601d"
+    },
+    {
+      "path": "docs/PLAN.md",
+      "existingBytesPreserved": true,
+      "method": "prefix-added",
+      "incomingSha256": "44bdcc8386a4ead198ef0902c83c27c4b79bbb5bd3737c6eb7526e4d71fcffae"
+    },
+    {
+      "path": "docs/M10_T04.md",
+      "existingBytesPreserved": true,
+      "method": "suffix-added",
+      "incomingSha256": "2d63895fe53e25bcb4cb8741d8732bec05622969c1b5e057e12249c6aa164a92"
+    },
+    {
+      "path": "docs/DEVELOPMENT_LOG.md",
+      "existingBytesPreserved": true,
+      "method": "suffix-added",
+      "incomingSha256": "63a26ceadc5ec09112b8f594f77c3884a9f2d1c3283ef7c3b76a86492cb740b1"
+    },
+    {
+      "path": "docs/LAB_MANUAL.md",
+      "existingBytesPreserved": true,
+      "method": "suffix-added",
+      "incomingSha256": "eb952c6782f9cde35ff3e7fb0127577c364195342e27c1e533ce2805a0605b1f"
+    }
+  ],
+  "contractLinks": [
+    "M10_T04_OWNER_APPROVAL_EVIDENCE/owner-authorization.txt",
+    "M10_T04_OWNER_APPROVAL_EVIDENCE/approved-direction.json",
+    "M10_T04.md",
+    "M10_T04_OWNER_APPROVAL_EVIDENCE/driver-archives.json"
+  ],
+  "manifestValidation": "PASS",
+  "sourceHashes": [
+    {
+      "path": "src/presentation/characters.ts",
+      "sha256": "65eb0e60aa218d2bcf26e871fa47e46653c0da881b5323d2b120d19b1aeca52e"
+    },
+    {
+      "path": "src/presentation/dealerPresentation.ts",
+      "sha256": "b69e98a33bee7b2e6e6ea96794158f9baed12dd671b39b5ad0640d3337fe4f8c"
+    }
+  ]
+}

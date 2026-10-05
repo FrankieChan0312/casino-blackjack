@@ -1,3 +1,19 @@
+## M10-T04 owner approval verified — 2026-10-05 09:42:19 +08:00
+
+**M10-T04_OWNER_APPROVAL_RECORDED. INITIAL DEALER AVATAR: CELESTINE — OWNER APPROVED** (noble_female). Deterministic occupied-seat exclusion/first-free fallback, session retention and zero gameplay RNG preserved. Formal direction/path and PA1 immutability recorded in the [approval contract](M10_T04_OWNER_APPROVAL.md); no asset or production activation. **FORMAL CELESTINE DEALER ARTWORK NOT YET PRESENT — ASSET REQUIRED.** T04-B integration waits for the separately approved transparent240x320 formal PNG and traceable provenance.
+
+Required checks **PASS / checked exit0**: documentation5 files/13 tests, unchanged identity21, Chromium9, explicit Celestine1–7 literal fallback/zero-entropy probe and PA1 original/output hash/decode/12-byte-reproduction. All18 actual fallback screenshots byte-identical to inspected T04-A renders. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable). Full unified NOT RUN for this documentation-only checkpoint; prior exact product verification remains historical. Cumulative M10-T04 **5/10**: prior T04-A3 retained,2 additional administrative history-proof repairs (Git LF versus mixed incoming line endings),0 product repairs. Both failures/reproductions and strict incoming-SHA proof retained; historical bytes unchanged. Publication pending.
+
+WAITING FOR APPROVED CELESTINE FORMAL DEALER ASSET. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.
+
+## M10-T04 owner approval — 2026-10-05 09:36:03 +08:00
+
+**M10-T04_OWNER_APPROVAL_RECORDED. INITIAL DEALER AVATAR: CELESTINE — OWNER APPROVED** (noble_female). Approved preferred identity uses the unchanged zero-gameplay-RNG policy: exclude every occupied human/computer identity, including Sitting Out; if Celestine is seated choose the first eligible canonical roster ID; retain the assignment within the table/session. Formal direction: separate transparent240x320 PNG,3:4, identity-preserving black/deep-charcoal formalwear, white shirt, restrained gold accents. Immutable PA1 source/player portraits/provenance preserved.
+
+**FORMAL CELESTINE DEALER ARTWORK NOT YET PRESENT — ASSET REQUIRED.** Expected public/characters/dealer/noble_female/formal.png; separately derived source art/source/dealers/noble_female/formal.png. No actual asset/descriptor or production activation. T04-B artwork integration BLOCKED by the absent approved PNG/provenance. Verification initially NOT RUN; receipts follow. Cumulative T04 repairs3/10 unchanged, approval checkpoint adds0. Earlier T04-A pending-selection statements are historical and superseded only for this explicit owner decision. [Approval contract](M10_T04_OWNER_APPROVAL.md).
+
+WAITING FOR APPROVED CELESTINE FORMAL DEALER ASSET. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.
+
 ## M10-T04-A final receipt gate — 2026-10-05 09:14:35 +08:00
 
 Documentation5 files/13 tests PASS/checked0 after receipt-only repair3/10. Final cumulative M10-T04 **3/10**, all cycles closed; first failures retained. Implementation main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688 already normally published with live0/0/CLEAN/untracked0. Full90/1150/122, independent M1–M8, unified verify.ps1, native zoom and PA1 byte reproduction PASS/0 remain valid on184 unchanged executable hashes. Source/tests/dependencies/runtime settings unchanged in this receipt. Same-session review PASS; fresh separate-session review NOT COMPLETED, unavailable. Final documentation-only push follows this factual gate.

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-05 09:42:19 +08:00",
+  "task": "M10_T04_OWNER_APPROVAL",
+  "cumulativeM10T04": 5,
+  "limit": 10,
+  "priorT04A": 3,
+  "approvalCheckpointAdded": 2,
+  "productRepairsAdded": 0,
+  "cycles": [
+    {
+      "cycle": 4,
+      "status": "CLOSED_WITH_FAILED_FIRST_FIX",
+      "evidence": "drivers/t04-owner-probe-first-failure.log.gz",
+      "reproductionTimestamp": "2026-10-05 09:38:35 +08:00",
+      "hypothesis": "Git blob LF versus incoming Windows CRLF explains the preservation mismatch",
+      "targetedFix": "Try exact blob or uniform CRLF candidate, each pinned to incoming SHA256",
+      "result": "FAIL; incoming DEVELOPMENT_LOG has mixed line endings, so neither candidate matches its captured incoming hash",
+      "repairEvidence": "drivers/t04-owner-probe-repair1-failure.log.gz"
+    },
+    {
+      "cycle": 5,
+      "status": "CLOSED",
+      "reproductionTimestamp": "2026-10-05 09:39:59 +08:00",
+      "hypothesis": "The mixed-line-ending incoming prefix can be checked directly against its pre-edit SHA256 without reconstructing it from normalized Git content",
+      "targetedFix": "Slice original document bytes at the task-owned appended boundary, require exact incoming SHA256; keep strict no-rewrite assertions",
+      "result": "PASS/0 at2026-10-05 09:40:00 +08:00; all6 historical document byte sequences preserved",
+      "evidence": "celestine-contract-probe.json"
+    }
+  ],
+  "note": "Administrative helper/evidence repairs only. Original T04-A3/10 ledger and failed attempts remain untouched; no cycle reset or changed product/test assertion."
+}

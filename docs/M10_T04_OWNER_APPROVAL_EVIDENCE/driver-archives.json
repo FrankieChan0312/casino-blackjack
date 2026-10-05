@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-10-05 09:42:19 +08:00",
+  "files": [
+    {
+      "path": "drivers/t04-owner-init.cjs.gz",
+      "originalSha256": "8b2a8900e1a038fbfd3ce6327f513ef5bbb47e7f58aef348ad5fd170fe7c7cb7",
+      "compressedSha256": "1bca98166d588e1090fd114fdd888638e89ffdb641a15acf79ce4f94ea4de7e5"
+    },
+    {
+      "path": "drivers/t04-owner-check.cjs.gz",
+      "originalSha256": "f279f2e5966dc066ea2ed1e8873f32a4e0b9092f52fa9c2fa547b73bcc6a0ad0",
+      "compressedSha256": "84449c6f3aef99c9e5e1805f2af5b350d390d52c3a2fd883e1bf5b350d41def6"
+    },
+    {
+      "path": "drivers/t04-owner-probe-before.cjs.gz",
+      "originalSha256": "ea3bcc7bc984223cb1e3953ede816867b2017045c8d08cc044c1e2acc1beb06f",
+      "compressedSha256": "c8d15eb95318b7252310985129c94699fa7dbc56696935fe365e243a18235f60"
+    },
+    {
+      "path": "drivers/t04-owner-probe-repair1.cjs.gz",
+      "originalSha256": "85c5f09b222e9eacf0714a8fe0434f745abd73c01748874ef95420252659e6c9",
+      "compressedSha256": "47df0d0b0da42782cf3018c292dbfcbdc0a9648842b7e1f0e2d34c60f7252505"
+    },
+    {
+      "path": "drivers/t04-owner-probe.cjs.gz",
+      "originalSha256": "e6caf46990c8272fe6ce0b0af10ac81487914bce4c9665b4c01bacaa859df033",
+      "compressedSha256": "4df5c5d5eb7e27f6a43fe38dcccfa62b69973af44f3868b438ff33fd61ab256e"
+    },
+    {
+      "path": "drivers/t04-owner-probe-first-failure.log.gz",
+      "originalSha256": "000e83984c172cd0a4d39c996b322e456a038a9fec2b2d3ba742df3e902f2688",
+      "compressedSha256": "4b996215f2e87041e2087d1a746eeab389300653ed344731c35cbcf295752ba2"
+    },
+    {
+      "path": "drivers/t04-owner-probe-repair1-failure.log.gz",
+      "originalSha256": "374c49f19802d59a00caaebb0e07fc01e5cbb33b631143d1bbd7b60db025791d",
+      "compressedSha256": "bc364077e025a7b1ccfe9bc8dd99a3f631271dc509ad92bbe68a35c7b87b048b"
+    }
+  ],
+  "note": "First failures remain in the tool transcript; retained unchanged reproductions and both failed helper versions preserve the administrative failure history."
+}

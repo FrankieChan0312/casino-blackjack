@@ -1,0 +1,346 @@
+# Casino Blackjack — M10-T04 Owner Approval
+# Initial Dealer Identity + Formal Variant Direction
+
+Repository:
+
+C:\Users\user\Documents\GitHub\casino-blackjack
+
+Branch:
+
+main
+
+Current accepted M10-T04A result:
+
+M10-T04A_IMPLEMENTED_VERIFIED
+
+Current expected HEAD:
+
+a888bd36bc88deb249c83584279da13a18322ce5
+
+---
+
+## OWNER DECISION
+
+The owner explicitly approves:
+
+INITIAL DEALER AVATAR: Celestine
+
+STATUS:
+
+OWNER APPROVED
+
+Celestine is now the preferred canonical initial Dealer identity for the presentation
+assignment policy defined by M10-T04A.
+
+Update the appropriate repository documentation to record this owner decision.
+
+---
+
+## DEALER IDENTITY POLICY
+
+Preserve the deterministic assignment policy already established in M10-T04A.
+
+Required behaviour:
+
+1. Preferred Dealer identity = Celestine.
+2. If Celestine is NOT seated as an active player, use Celestine as Dealer.
+3. If Celestine IS seated as an active player, do NOT duplicate her identity.
+4. Instead select the first eligible avatar from the existing stable canonical roster order.
+5. Dealer identity remains stable for the table/session.
+6. Dealer assignment must consume ZERO gameplay RNG.
+7. Dealer assignment must not affect:
+   - participant count
+   - player seat mapping
+   - turn order
+   - card order
+   - shoe
+   - replay
+   - digest
+   - journal
+   - strategy
+   - accounting
+   - settlement
+
+Do not introduce random Dealer selection.
+
+---
+
+## OWNER-APPROVED FORMAL VARIANT
+
+Approved presentation contract:
+
+Identity: Celestine
+Role: Dealer
+Variant: Formal
+
+Asset format:
+- transparent PNG
+- 240 × 320 px
+- 3:4 aspect ratio
+
+The formal Dealer asset must be a SEPARATE presentation asset.
+
+Do NOT overwrite, edit, replace or mutate the accepted PA1 Celestine source asset.
+
+Canonical PA1 asset hashes and provenance remain immutable.
+
+---
+
+## VISUAL DIRECTION
+
+The future Celestine Dealer/formal variant should preserve:
+
+- Celestine's recognisable face
+- hair identity / silhouette
+- feminine noble identity
+- overall established character-art style
+
+Approved outfit direction:
+
+- elegant formal casino Dealer presentation
+- black or deep-charcoal tailored waistcoat / tuxedo-inspired formalwear
+- white shirt
+- restrained gold accents
+- premium evening-table appearance
+- clean silhouette readable at DealerZone size
+- transparent background
+- upper-body / dealer-table crop
+- hands / forearms positioned naturally enough to support future dealing presentation
+
+Reduce or remove:
+
+- oversized royal crown / head ornamentation where necessary
+- excessive ceremonial sleeve decoration
+- visual details that interfere with cards or DealerZone readability
+
+Avoid:
+
+- green-dominant clothing that blends into the felt
+- heavy armour styling
+- exaggerated casino accessories
+- excessive jewellery
+- sexualised redesign
+- changes that make Celestine unrecognisable
+
+---
+
+## SIX DEALER STATES
+
+Continue to preserve the already-established presentation contract:
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+These remain presentation states only.
+
+Do NOT implement animation in this approval task unless the current T04B task explicitly
+requires only static integration hooks.
+
+No Motion installation yet unless separately authorized by the later animation milestone.
+
+---
+
+## T04B PREPARATION
+
+This owner approval authorizes M10-T04B to use Celestine as the preferred initial Dealer
+identity.
+
+However:
+
+DO NOT fabricate, synthesize, download or silently create the final Dealer artwork if the
+approved formal Celestine PNG is not already present in the repository.
+
+If the final formal asset is absent:
+
+1. record the owner approval
+2. update the Dealer asset contract / manifest as needed
+3. establish the exact canonical destination filename/path expected by T04B
+4. verify the fallback Dealer still works
+5. report the asset requirement
+6. STOP before pretending T04B artwork integration is complete
+
+Expected status in that case:
+
+FORMAL DEALER ARTWORK REQUIRED
+
+Do not create fake placeholder formal artwork.
+
+---
+
+## IF APPROVED FORMAL ARTWORK IS PRESENT
+
+Only if a separately approved Celestine Dealer/formal asset is actually present and its
+provenance is known:
+
+- validate format
+- validate 240×320 dimensions
+- validate transparency
+- validate canonical filename/path
+- record SHA256
+- record provenance
+- mechanically validate asset contract
+- visually integrate it into the existing DealerZone
+- preserve fallback behaviour
+- verify it does not duplicate a seated Celestine identity
+- verify 1–7 player tables
+- verify desktop/tablet/mobile
+- verify 200% text / native zoom
+- verify accessibility
+- verify existing Dealer cards/status/shoe/rules remain readable
+
+Do not alter gameplay behaviour.
+
+---
+
+## PROTECTED AREAS
+
+Expected:
+
+src/domain diff = EMPTY
+
+Must remain unchanged:
+
+- Blackjack rules
+- RNG
+- shoe/cards
+- accounting/bankroll
+- replay/digest/journal
+- Dealer strategy
+- computer strategy
+- turn order
+- settlement
+- M10-T02 player count
+- M10-T03 dynamic seating
+- accepted M10A UI
+- PA1 canonical assets
+
+---
+
+## DOCUMENTATION
+
+Update the appropriate existing documents to record:
+
+INITIAL DEALER AVATAR: Celestine
+OWNER APPROVED
+
+Also record:
+
+- deterministic fallback policy
+- formal-variant direction
+- PA1 immutability
+- artwork status
+- T04B readiness / blocker if asset absent
+
+Do not rewrite M10-T04A history.
+
+---
+
+## GIT
+
+For documentation / contract changes:
+
+- inspect diff
+- validate docs
+- confirm product/domain preservation
+- commit
+- push normally
+- confirm local == remote
+- ahead/behind 0/0
+- clean tree
+- untracked files 0
+
+No force push.
+No deployment.
+
+---
+
+## FINAL RESPONSE FORMAT
+
+### STATUS
+
+One of:
+
+`M10-T04_OWNER_APPROVAL_RECORDED`
+
+or, if approved artwork was also present and T04B was explicitly completed:
+
+`M10-T04B_IMPLEMENTED_VERIFIED`
+
+### OWNER DECISION
+
+`INITIAL DEALER AVATAR: CELESTINE — OWNER APPROVED`
+
+### DEALER ASSIGNMENT
+
+Confirm:
+
+- Celestine preferred
+- seated-player duplication prohibited
+- deterministic fallback
+- zero gameplay RNG use
+- stable within session
+
+### FORMAL VARIANT
+
+Confirm approved:
+
+- role = Dealer
+- variant = Formal
+- transparent PNG
+- 240×320
+- 3:4
+- identity preservation
+- black/deep-charcoal formal casino attire
+- white shirt
+- restrained gold accents
+
+### PA1 PRESERVATION
+
+Confirm original Celestine PA1 asset remains immutable.
+
+### ARTWORK STATUS
+
+State exactly one:
+
+`FORMAL CELESTINE DEALER ARTWORK NOT YET PRESENT — ASSET REQUIRED`
+
+or
+
+`FORMAL CELESTINE DEALER ARTWORK VALIDATED AND INTEGRATED`
+
+### PRESENTATION STATES
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+State:
+
+`ANIMATION NOT IMPLEMENTED`
+
+unless separately authorized later.
+
+### GIT STATE
+
+- final HEAD
+- remote HEAD
+- ahead/behind
+- working tree
+- untracked
+
+### NEXT ACTION
+
+If artwork is absent:
+
+`WAITING FOR APPROVED CELESTINE FORMAL DEALER ASSET`
+
+Do NOT begin M10-T05.
+Do NOT install Motion.
+Do NOT begin animation.

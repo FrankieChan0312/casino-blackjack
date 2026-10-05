@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-10-05 09:36:03 +08:00",
+  "status": "FORMAL DEALER ARTWORK REQUIRED",
+  "identity": {
+    "name": "Celestine",
+    "characterId": "noble_female",
+    "ownerApproval": "docs/M10_T04_OWNER_APPROVAL_EVIDENCE/owner-authorization.txt",
+    "preferred": true
+  },
+  "role": "dealer",
+  "variant": "formal",
+  "format": "png",
+  "transparent": true,
+  "width": 240,
+  "height": 320,
+  "aspectRatio": "3:4",
+  "plannedProduction": "public/characters/dealer/noble_female/formal.png",
+  "plannedPublicUrl": "/characters/dealer/noble_female/formal.png",
+  "plannedDerivedSource": "art/source/dealers/noble_female/formal.png",
+  "artworkPresent": false,
+  "sha256": null,
+  "derivedProvenance": null,
+  "approvedFinalArtwork": false,
+  "runtimeDescriptorRegistered": false,
+  "original": {
+    "path": "art/source/characters/PA1_character_sources/noble_female.png",
+    "sha256": "0b7df086510bc567cf77ab6f35e4ec99c92cb20322a6384e52108ca86ac6d23d"
+  },
+  "canonicalPlayer": {
+    "path": "public/characters/noble_female.png",
+    "sha256": "653583f627ae1f9b62186934417d292a9d20c23b694914c9b5644587a16e9472"
+  },
+  "originalProvenanceReference": "docs/PA1_SOURCE_AUDIT.json",
+  "direction": {
+    "preserve": [
+      "recognisable face",
+      "hair identity and silhouette",
+      "feminine noble identity",
+      "established character-art style"
+    ],
+    "outfit": [
+      "black or deep-charcoal tailored waistcoat / tuxedo-inspired formalwear",
+      "white shirt",
+      "restrained gold accents",
+      "premium evening-table appearance",
+      "clean readable upper-body silhouette",
+      "natural hands and forearms"
+    ],
+    "reduce": [
+      "oversized crown or head ornamentation",
+      "ceremonial sleeve decoration",
+      "details interfering with cards or DealerZone"
+    ],
+    "avoid": [
+      "green-dominant clothing",
+      "heavy armour",
+      "exaggerated casino accessories",
+      "excessive jewellery",
+      "sexualised redesign",
+      "unrecognisable face"
+    ]
+  },
+  "presentationStates": [
+    "IDLE",
+    "DEALING",
+    "WAITING_PLAYER",
+    "REVEALING",
+    "DRAWING",
+    "SETTLING"
+  ],
+  "animationImplemented": false
+}

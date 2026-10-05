@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-10-05 09:42:19 +08:00",
+  "status": "M10-T04_OWNER_APPROVAL_RECORDED",
+  "requiredVerification": "PASS",
+  "exitCode": 0,
+  "documentation": {
+    "files": 5,
+    "tests": 13,
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "identity": {
+    "files": 1,
+    "tests": 21,
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "chromium": {
+    "tests": 9,
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "celestineLiteralProbe": {
+    "counts": 7,
+    "status": "PASS",
+    "exitCode": 0,
+    "entropyCalls": 0
+  },
+  "pa1": {
+    "sourceHashes": 12,
+    "productionHashes": 12,
+    "transparentProductionReproduction": 12,
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "fallbackPixels": {
+    "images": 18,
+    "status": "PASS"
+  },
+  "formalArtwork": "BLOCKED: approved separate PNG/provenance absent",
+  "t04BIntegration": "NOT RUN: artwork prerequisite absent",
+  "fullUnified": "NOT RUN: documentation-only checkpoint; prior T04-A PASS is historical on unchanged executable bytes",
+  "sameSessionReview": "PASS: owner request/contract/manifest/source/actual evidence/scoped diff inspected",
+  "freshSeparateSessionReview": "NOT COMPLETED: unavailable",
+  "cumulativeRepairs": 5,
+  "approvalAdded": 2,
+  "productAdded": 0,
+  "animationImplemented": false,
+  "motionInstalled": false,
+  "deployment": "NOT RUN"
+}

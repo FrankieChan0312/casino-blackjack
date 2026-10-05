@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-10-05 09:36:03 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "method": "git ls-files art public plus actual expected-path existence checks; clean untracked baseline",
+  "files": [
+    {
+      "path": "art/character-production-audit.json",
+      "sha256": "16c54a924d1f35b6b2b94ba8104f988f1395daab19782e5f889dd7cedb5d0100"
+    },
+    {
+      "path": "art/character-production.json",
+      "sha256": "0b4110e189c0436e3c5ae66ea046321f7c5889dd59a4244e5d2ef3f01f9bf3e9"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/dwarf_female.png",
+      "sha256": "4cbd5662ca1990ae463c8a0096e08b5b41578323815741af020027fafe349034"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/dwarf_male.png",
+      "sha256": "26dfc1e8752e7e4c6ae23eb8c196646bea55d559e242fc2de78cc65d3dbf6524"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/elf_female.png",
+      "sha256": "f1e85fb45af93b13d148ed1d5966b745baa06b253b9424830906e9a50a94fb97"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/elf_male.png",
+      "sha256": "fc22fa69b51a99c386048c637f0c419f9da81cd84448ced636bb04f80715b889"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/halforc_female.png",
+      "sha256": "86409e51cd122ab9cd31d67db9295c4990f4194c408020a6b6350ad0c0ecbc26"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/halforc_male.png",
+      "sha256": "2b41f2181c80aba53941bbdd7005a0f2961d58744e3f098970d0168213682167"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/knight_female.png",
+      "sha256": "a1cde162e0826fe68621346235fc7be61c087a908bb164ea94de6030b83cd151"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/knight_male.png",
+      "sha256": "7b78fc7b735fa80cc3e5f44d7a04dcd1daf85e4aa79feae27a033658a1d076c4"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/mage_female.png",
+      "sha256": "5b0189202bed9a535e852d8ef8ca10178947a84365e5988299e3e97683fb8af6"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/mage_male.png",
+      "sha256": "05c1308f34f888be6896a4f355a473b2cf59c08cb767ef8e25947465c794b109"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/noble_female.png",
+      "sha256": "0b7df086510bc567cf77ab6f35e4ec99c92cb20322a6384e52108ca86ac6d23d"
+    },
+    {
+      "path": "art/source/characters/PA1_character_sources/noble_male.png",
+      "sha256": "24835b5bba47cef2bc17e4d807bf31f410607461e90387042d18277e9ded397f"
+    },
+    {
+      "path": "public/characters/dwarf_female.png",
+      "sha256": "3c8af6e4349f6891cb8c9843edb82492fb09fdda31b88f59a4ee4c27b77c7d0c"
+    },
+    {
+      "path": "public/characters/dwarf_male.png",
+      "sha256": "980de0bef894ff15105a6b0e13c7285540e57c23e1c8cbb0755fe9c5d34641fc"
+    },
+    {
+      "path": "public/characters/elf_female.png",
+      "sha256": "cd339e633c187cc2917a5259defaed888b42887d9ae48313977ab201854dc3ee"
+    },
+    {
+      "path": "public/characters/elf_male.png",
+      "sha256": "3b8e0b860174ef19267feb282ae4d3b8d0c47c6ce5ce7cf7a9f44c516171f33f"
+    },
+    {
+      "path": "public/characters/halforc_female.png",
+      "sha256": "41bf5d62cfae4382346f711f2efdccb30b46f632a9ca467de6c0fa104c9535a6"
+    },
+    {
+      "path": "public/characters/halforc_male.png",
+      "sha256": "2649a898b15902cefa72841d2cb00cb791417df67763ec476e6fc2fe887d75a7"
+    },
+    {
+      "path": "public/characters/knight_female.png",
+      "sha256": "cdcdb1fb3c44977469647ff852a84133b8c5444c57a4de777f92f229e8466052"
+    },
+    {
+      "path": "public/characters/knight_male.png",
+      "sha256": "c181f62d91695dd5b1fcc5adbd632528c48b26f04c2128095b6137b7674539d7"
+    },
+    {
+      "path": "public/characters/mage_female.png",
+      "sha256": "0a48367b8645e5c284f118188a44f7b43cb5bcefc846d1af360910182960802e"
+    },
+    {
+      "path": "public/characters/mage_male.png",
+      "sha256": "c0eb1322b0053501e86860c4f4e253365444d363b7980fa81ef03e87390a4690"
+    },
+    {
+      "path": "public/characters/noble_female.png",
+      "sha256": "653583f627ae1f9b62186934417d292a9d20c23b694914c9b5644587a16e9472"
+    },
+    {
+      "path": "public/characters/noble_male.png",
+      "sha256": "84c90d956fd96cbfdc8d6395000a3eb5ffe5ec0a1a710eaf3f05a74d09c6cab3"
+    }
+  ],
+  "productionExists": false,
+  "derivedSourceExists": false,
+  "formalCandidateFiles": [],
+  "note": "24 PA1 PNGs and two existing production/audit JSON files; no approved Dealer formal asset"
+}
