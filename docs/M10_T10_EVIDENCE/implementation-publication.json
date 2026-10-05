@@ -1,0 +1,93 @@
+{
+  "task": "M10-T10",
+  "liveMain": "4b3c8c064a71daa1e329bb27ef970496b7b8fe0f",
+  "readCommands": [
+    {
+      "exitCode": 0,
+      "arguments": [
+        "rev-parse",
+        "HEAD"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "branch",
+        "--show-current"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "remote",
+        "get-url",
+        "origin"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "rev-parse",
+        "origin/main"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "rev-list",
+        "--left-right",
+        "--count",
+        "HEAD...origin/main"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "status",
+        "--porcelain"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "ls-files",
+        "--others",
+        "--exclude-standard"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "arguments": [
+        "log",
+        "-1",
+        "--format=%s"
+      ]
+    }
+  ],
+  "behind": 0,
+  "branch": "main",
+  "executableVersion": "429 frozen hashes unchanged",
+  "timestamp": "2026-10-06 03:22:27 +08:00",
+  "freshSeparateSession": "NOT COMPLETED",
+  "followingReceipt": "Documentation-only checkpoint, final identity is containing Git commit and final delivery",
+  "gate": "7 native PASS0 plus repair3 restoration PASS0, original runner BLOCKED1 preserved",
+  "humanVisual": "PENDING",
+  "push": "PASS/exit0",
+  "commitSubjectActual": "\\ Complete M10-T10 motion compatibility and immediate replay verification\\",
+  "repairs": 3,
+  "implementationCommit": "4b3c8c064a71daa1e329bb27ef970496b7b8fe0f",
+  "ahead": 0,
+  "remote": "https://github.com/FrankieChan0312/casino-blackjack.git",
+  "fetch": "PASS/exit0",
+  "untracked": 0,
+  "originMain": "4b3c8c064a71daa1e329bb27ef970496b7b8fe0f",
+  "workingTree": "CLEAN"
+}
