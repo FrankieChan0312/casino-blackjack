@@ -12,17 +12,21 @@ import { createPlayerActionProjection, playerCardKeys } from '../presentation/pl
 import { captureSplitOrigins, playSplitMotion, type SplitOrigins } from './PlayerActionMotion.js';
 import { createDealerActionProjection, dealerCardKeys } from '../presentation/dealerActions.js';
 import { playDealerReveal } from './DealerActionMotion.js';
+import { createWagerProjection, wagerEvents } from '../presentation/wagers.js';
+import { playWagerMotion } from './WagerMotion.js';
 
 export function createPresentationRuntime() {
   const anchors = createAnchorRegistry(), initialDeal = createInitialDealProjection();
   const playerActions = createPlayerActionProjection(), splitOrigins: SplitOrigins = new Map();
   const dealerActions = createDealerActionProjection();
+  const wagers = createWagerProjection();
   const timeline = createPresentationTimeline(event => {
     if (event.type === 'DEAL_CARD' && event.reason === 'INITIAL') return playInitialDealFlight(event, anchors, () => initialDeal.arrive(event));
     if (event.type === 'DEAL_CARD' && event.reason !== 'DEALER') return playInitialDealFlight(event, anchors, () => playerActions.arrive(event));
     if (event.type === 'SPLIT_HANDS') return playSplitMotion(event, anchors, splitOrigins, () => playerActions.arrive(event));
     if (event.type === 'REVEAL_HOLE_CARD') return playDealerReveal(event, anchors, () => dealerActions.reveal(event), () => dealerActions.arrive(event));
     if (event.type === 'DEAL_CARD' && event.reason === 'DEALER') return playInitialDealFlight(event, anchors, () => dealerActions.arrive(event));
+    if (event.type === 'MOVE_WAGER' || event.type === 'SETTLE_RESULT') return playWagerMotion(event, anchors, () => wagers.arrive(event));
     if (event.type === 'PLAYER_ACTION' && event.action === 'STAND') {
       const element = anchors.get(`hand:${event.handId}`);
       if (element) return playMotionStep(element, { opacity: [.85, 1] });
@@ -30,9 +34,9 @@ export function createPresentationRuntime() {
   });
   timeline.subscribe(() => {
     const snapshot = timeline.getSnapshot();
-    if (!snapshot.activeId && !snapshot.pending) { initialDeal.clear(); playerActions.clear(); dealerActions.clear(); splitOrigins.clear(); }
+    if (!snapshot.activeId && !snapshot.pending) { initialDeal.clear(); playerActions.clear(); dealerActions.clear(); wagers.clear(); splitOrigins.clear(); }
   });
-  return { anchors, timeline, initialDeal, playerActions, dealerActions, splitOrigins };
+  return { anchors, timeline, initialDeal, playerActions, dealerActions, wagers, splitOrigins };
 }
 type Runtime = ReturnType<typeof createPresentationRuntime>;
 const PresentationContext = createContext<Runtime | null>(null);
@@ -72,6 +76,12 @@ export function useDealerActions() {
   return { running: keys.length > 0, back: keys.includes('dealer:1') && !projection?.revealed.includes('dealer:1'),
     visible: (index: number) => index < 2 || !keys.includes(`dealer:${index}`) };
 }
+export function useWagers() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.wagers.subscribe ?? emptySubscription,runtime?.wagers.getSnapshot ?? emptySnapshot,emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription,context?.feed.getSnapshot ?? emptySnapshot,emptySnapshot);
+  return { running: context?.mode === 'FULL_MOTION' && ((projection?.pending.length ?? 0) > 0 || wagerEvents(feed?.batches.flatMap(batch=>batch.events) ?? []).length > 0) };
+}
 
 export function usePresentationAnchor(id: AnchorId) {
   const runtime = usePresentationRuntime();
@@ -93,6 +103,7 @@ export function consumePresentation(feed: PresentationFeed, runtime: Runtime, mo
     runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
     runtime.playerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
     runtime.dealerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+    runtime.wagers.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
   }
   runtime.timeline.enqueue(snapshot.batches.flatMap(batch => batch.events));
   feed.acknowledge(snapshot.revision);

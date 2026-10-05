@@ -1,0 +1,340 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/wagers.spec.ts
+
+[WebServer] (node:25640) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:21436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result (26.0s)
+(node:19340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result (11.0s)
+(node:12108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result (11.1s)
+(node:30644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  4 [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption (30.7s)
+(node:12228) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [chromium] › tests\browser\m10\wagers.spec.ts:68:1 › [T09-B03] Double total, Split child stakes and Insurance exact amount/anchor (9.2s)
+  x  6 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available (9.9s)
+(node:6532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  7 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available (10.3s)
+(node:5552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  8 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available (9.8s)
+(node:32404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 上午12:59:03 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  x  9 [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks (6.4s)
+
+
+  1) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      48 |   await expect(page.locator(own)).toHaveAttribute('aria-hidden', 'true');
+      49 |   await expect(page.locator(own)).toHaveCSS('pointer-events', 'none');
+    > 50 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      51 |   await expect(page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').nth(1)).toHaveText('0');
+      52 |   expect(await page.locator(own).locator('button,input,a,[tabindex]').count()).toBe(0);
+      53 |   await capture(page, `${root}/mid.png`); await resume(page);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:50:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      48 |   await expect(page.locator(own)).toHaveAttribute('aria-hidden', 'true');
+      49 |   await expect(page.locator(own)).toHaveCSS('pointer-events', 'none');
+    > 50 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      51 |   await expect(page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').nth(1)).toHaveText('0');
+      52 |   expect(await page.locator(own).locator('button,input,a,[tabindex]').count()).toBe(0);
+      53 |   await capture(page, `${root}/mid.png`); await resume(page);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:50:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      48 |   await expect(page.locator(own)).toHaveAttribute('aria-hidden', 'true');
+      49 |   await expect(page.locator(own)).toHaveCSS('pointer-events', 'none');
+    > 50 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      51 |   await expect(page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').nth(1)).toHaveText('0');
+      52 |   expect(await page.locator(own).locator('button,input,a,[tabindex]').count()).toBe(0);
+      53 |   await capture(page, `${root}/mid.png`); await resume(page);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:50:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      62 |   await expect(page.locator(own)).toHaveAttribute('data-wager-amount', '500');
+      63 |   await expect(page.locator(own)).toContainText('250 credits');
+    > 64 |   await page.getByRole('button', { name: 'Next round', exact: true }).click();
+         |                                                                       ^
+      65 |   await expect(page.locator('[data-wager-flight],[data-action-card-flight],[data-dealer-reveal]')).toHaveCount(0);
+      66 |   await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeEnabled();
+      67 | });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:64:71
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      94 |   await page.setViewportSize({ width: width + 1, height });
+      95 |   await expect(page.locator('[data-wager-flight]')).toHaveCount(0);
+    > 96 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      97 | });
+      98 | test('[T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks', async ({ page }) => {
+      99 |   await page.emulateMedia({ reducedMotion: 'reduce' });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:96:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      94 |   await page.setViewportSize({ width: width + 1, height });
+      95 |   await expect(page.locator('[data-wager-flight]')).toHaveCount(0);
+    > 96 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      97 | });
+      98 | test('[T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks', async ({ page }) => {
+      99 |   await page.emulateMedia({ reducedMotion: 'reduce' });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:96:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator: getByRole('button', { name: 'Next round', exact: true })
+    Expected: enabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Next round', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Next round', exact: true })
+
+
+      94 |   await page.setViewportSize({ width: width + 1, height });
+      95 |   await expect(page.locator('[data-wager-flight]')).toHaveCount(0);
+    > 96 |   await expect(page.getByRole('button', { name: 'Next round', exact: true })).toBeEnabled();
+         |                                                                               ^
+      97 | });
+      98 | test('[T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks', async ({ page }) => {
+      99 |   await page.emulateMedia({ reducedMotion: 'reduce' });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:96:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('region', { name: 'Your credits', exact: true }).locator('dd').first()
+    Expected: "1100"
+    Received: "1,100"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('region', { name: 'Your credits', exact: true }).locator('dd').first() with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Your credits', exact: true }).locator('dd').first()
+        14 × locator resolved to <dd>1,100</dd>
+           - unexpected value "1,100"
+
+
+      100 |   for (const [fixture, available] of [['player-dealer-bust', '1100'], ['player-loss', '900'], ['player-push', '1000']] as const) {
+      101 |     await deal(page, fixture); await page.getByRole('button', { name: 'Stand', exact: true }).click();
+    > 102 |     await expect(page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').first()).toHaveText(available);
+          |                                                                                                         ^
+      103 |     await expect(page.locator('[data-wager-flight]')).toHaveCount(0);
+      104 |   }
+      105 |   await deal(page, 'player-even-money'); await page.getByRole('button', { name: 'Take Even Money', exact: true }).click();
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\wagers.spec.ts:102:105
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result
+    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result
+    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result
+    [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption
+    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available
+    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available
+    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available
+    [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks
+  1 passed (2.3m)

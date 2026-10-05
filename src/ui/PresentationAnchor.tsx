@@ -4,7 +4,7 @@ import { usePresentationAnchor } from './PresentationProvider.js';
 
 // Reuses the original semantic element; introduces no layout wrapper.
 export function PresentationAnchor({ as = 'div', anchor, ...props }: HTMLAttributes<HTMLElement> & {
-  as?: 'section' | 'article' | 'p' | 'div'; anchor: AnchorId;
+  as?: 'section' | 'article' | 'p' | 'div' | 'span'; anchor: AnchorId;
 }) {
   return createElement(as, { ...props, ref: usePresentationAnchor(anchor) });
 }

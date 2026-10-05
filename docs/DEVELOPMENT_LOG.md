@@ -1,3 +1,43 @@
+## M10-T09 repair5 affected verification — 2026-10-06 01:54:06 +08:00
+
+Affected documentation7 PASS/checked0; rerun original output in repair5-docs-rerun.zip, display whitespace normalized without result changes. Cumulative5/10, no source/test/settings change after complete technical PASS. Original25 failed/check streams independently byte-verified in repair5-verbatim-text.zip. Full staged whitespace and final frozen/scope review follow; commit/push still NOT RUN.
+
+## M10-T09 publication repair5 — 2026-10-06 01:52:18 +08:00
+
+Cumulative5/10. Full staged whitespace FAIL/exit2 on newly generated CLI/Playwright trailing whitespace and blank EOF, not authored code. No commit/push occurred. Hypothesis: retain each original byte stream in repair5-verbatim-text.zip with verified SHA mapping, then remove only display-text trailing horizontal whitespace/extra blank EOF. Original failures/status/assertions unchanged; verbatim archive independently hash-checked PASS. No source/test/settings/threshold/history change. Complete1222/187/preservation/assets/unified PASS remains exact; affected docs/whitespace/hash checks required before ordinary publication. ZIP and normalization manifest preserve all prior original bytes.
+
+## M10-T09 complete technical gate — 2026-10-06 01:47:21 +08:00
+
+IMPLEMENTED / VERIFIED; repairs4/10 CLOSED. All7 mandatory stages PASS/checked0, final at2026-10-06 01:46:05 +08:00:98 files/1222 Vitest,187 Chromium, independent M1–M8 (M7 870/24; M8 956/44), current34/270, Dealer/player assets, unified verify.ps1 with repeated complete regression/preservation. All frozen executable hashes unchanged; protected domain/controller/styles/assets/dependencies diff EMPTY. Same-session source/render/diff/privacy review PASS; fresh independent NOT COMPLETED. Raw failures/repairs and original outputs retained; fresh prior-task sequences checked against frozen generators. Final docs checks and ordinary main publication follow. Human visual PENDING; T10/T11 NOT STARTED, deployment NOT RUN.
+
+## M10-T09 repair4 verification and final freeze — 2026-10-06 01:07:36 +08:00
+
+Affected Credits/wagers/events28 tests, typecheck, actual Double/Split/Insurance Chromium1 PASS/checked0. Repairs4/10 CLOSED pending exact complete gate. Marker is adjacent to authoritative Credits; original3 privacy/amount assertions all pass unchanged. First freeze/gate FAIL retained; final executable hashes refreshed after targeted UI repair. Complete technical gate now required; human visual PENDING, fresh review NOT COMPLETED, publication NOT RUN, T10/T11 NOT STARTED.
+
+## M10-T09 repair4 — 2026-10-06 01:06:20 +08:00
+
+Cumulative4/10. First complete gate units FAIL1:98 files/1222 cases,1219 PASS/3 M10A-T07 Credits privacy cases FAIL; Chromium/preservation/assets/unified NOT RUN. Evidence: placing decorative Insurance span inside Credits breaks the established closing boundary and introduces aria-hidden text in the authoritative-only region; test slice then includes later Computer content. Hypothesis: move compact Insurance anchor immediately adjacent to the unchanged Credits section, retaining exact dl/section boundary and all semantic values. Original assertions unchanged. Targeted one-line UI relocation only, no values/authority/styles/geometry rules change. First failed gate preserved. Affected Credits/wagers/events units plus typecheck and Insurance browser precede a new exact-version full gate.
+
+## M10-T09 focused gate and freeze — 2026-10-06 01:04:36 +08:00
+
+Repair3 focused30 units,10 Chromium, typecheck/lint PASS/checked0. Repairs3/10 CLOSED pending complete gate. Actual win/loss/push native paused captures inspected: exact gross/stake labels, noninteractive decorative clones, authoritative result/buttons simultaneous. Source/test/settings frozen in M10_T09_EVIDENCE/frozen-executable.json. Required full Vitest/Chromium/independent/current preservation/assets/verify.ps1 gate follows; protected domain/assets/packages/styles review EMPTY. Human visual PENDING, fresh review NOT COMPLETED, publication NOT RUN, T10/T11 NOT STARTED.
+
+## M10-T09 repair3 — 2026-10-06 01:02:19 +08:00
+
+Cumulative3/10. Repair2 focused10 Chromium PASS0, exact token routes, Double/Split/Insurance, two-leaf collection, reduced balances and all3 widths. Design M10.11 accepted cancellation review fixture FAIL1: observer emitted0/MAIN rather than original200/MAIN_CANCELLED. Hypothesis: copy prior accepted stake record and route spot->account for accepted cancellation; no subtraction/refund/account math or domain mutation. Targeted observer/route patch, new test refers actual human.bankroll schema. No product source changed during repair2 browser run. Raw cancellation failure retained; affected units/typecheck/lint and full focused browser follow.
+
+## M10-T09 repair2 — 2026-10-06 00:59:58 +08:00
+
+Cumulative2/10. First browser1 PASS/8 FAIL exit1: seven selectors expected manual Next round instead of existing Player Mode Deal Again; reduced test expected unformatted1100 instead of existing1,100. Exact raw failure traces/screenshots/test retained. Hypothesis: exact established button and literal formatted balances repair the test contract, preserving all amounts/destination/accessibility/interrupt assertions. Product text/formatter/thresholds unchanged. First Double/Split/Insurance motion PASS. Affected complete focused browser rerun follows; explicit two-child settlement added to complete requested coverage.
+
+## M10-T09 repair1 — 2026-10-06 00:54:13 +08:00
+
+Cumulative1/10. First focused29 units PASS0; typecheck FAIL2 because two new tests sent internal SETTLE/VOID through BrowserCommand. Hypothesis: existing accepted ADVANCE/HIT already automatically commits/refunds, so remove only redundant invalid dispatches while preserving literal result assertions. No BrowserCommand/API/authority change. Failure logs retained; affected typecheck/unit and first browser verification follow.
+
+## M10-T09 task start — 2026-10-06 00:45:16 +08:00
+
+Baseline1c2ab68a2f52311ded71616c0cec1a6b333394ee, main=origin/main/0-0/CLEAN/untracked0 before implementation. T08 final same HEAD, repairs4/10 CLOSED; all historical ledgers restored. T09 repairs0/10. Scope: generic labelled stacks for accepted reserves, exact post-Double/Split stakes, Insurance, committed/refunded results. No denomination/payout math, account/strategy/card/replay changes. Minimal local-credits/Insurance anchors; result dock concurrent, skip/input settles first. Event amounts copy authority records, VOID emits actual refund records without Dealer reveal or normal payout. Step->literal amount/funding/exactly-once tests->full/reduced/skip/responsive motion/evidence->complete gate->review/publication. Settings/contracts/stops in handoff. T10 NOT STARTED; human visual PENDING; deployment NOT RUN.
+
 ## M10-T08 final corrective receipt — 2026-10-06 00:41:52 +08:00
 
 Repair4 affected documentation7 PASS0; full historical README/PLAN diff now contains only authorized T07 current-count correction and T08 status/row. All unrelated historical lines restored exactly, all failed attempts/publication1165959 retained. Exact source/test/settings hash checks PASS; complete97/1212,177 and all preservation/assets/unified remain PASS. T08 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; repairs4/10 CLOSED. This documentation-only corrective receipt uses ordinary commit/push; its final HEAD will be the T09 clean preflight baseline. Human visual PENDING; fresh independent review NOT COMPLETED; T11 NOT STARTED, deployment NOT RUN.

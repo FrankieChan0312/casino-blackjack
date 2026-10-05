@@ -3,7 +3,7 @@ import type { DealerPresentationState } from './dealerPresentation.js';
 // Public positions, not physical-card IDs. Hidden slots deliberately carry no face.
 export type CardSlot = Readonly<{ roundId: string; owner: 'dealer' | number; handId: string; index: number }>;
 export type PublicFace = Readonly<{ rank: string; suit: string }>;
-export type AnchorId = 'deal-origin' | 'dealer-hand' | `seat-${number}` | `hand:${string}` | `wager:${number}` | `hand-wager:${string}` | `card:${string}` | `hand-summary:${number}`;
+export type AnchorId = 'deal-origin' | 'dealer-hand' | 'local-credits' | 'insurance-wager' | `seat-${number}` | `hand:${string}` | `wager:${number}` | `hand-wager:${string}` | `card:${string}` | `hand-summary:${number}`;
 export type PresentationFact =
   | Readonly<{ type: 'DEAL_CARD'; card: CardSlot; face: PublicFace | null; reason: 'INITIAL' | 'HIT' | 'DOUBLE' | 'SUPPLEMENT' | 'DEALER'; destination: AnchorId }>
   | Readonly<{ type: 'REVEAL_HOLE_CARD'; card: CardSlot; face: PublicFace }>
@@ -11,8 +11,8 @@ export type PresentationFact =
   | Readonly<{ type: 'EMPHASIZE_ACTIVE_HAND'; handId: string | null }>
   | Readonly<{ type: 'PLAYER_ACTION'; seat: number; handId: string; action: string }>
   | Readonly<{ type: 'DEALER_STATE'; state: DealerPresentationState }>
-  | Readonly<{ type: 'MOVE_WAGER'; seat: number; amount: number; kind: string }>
-  | Readonly<{ type: 'SETTLE_RESULT'; seat: number; handId?: string; kind: string; outcome: string; stake: number; returned: number }>;
+  | Readonly<{ type: 'MOVE_WAGER'; seat: number; amount: number; kind: string; handId?: string; returnTo?: AnchorId }>
+  | Readonly<{ type: 'SETTLE_RESULT'; seat: number; handId?: string; kind: string; outcome: string; stake: number; returned: number; returnTo?: AnchorId }>;
 export type PresentationEvent = PresentationFact & Readonly<{ id: string; generation: number; sequence: number; ordinal: number }>;
 export type PresentationBatch = Readonly<{ generation: number; sequence: number; roundId: string; command: string; events: readonly PresentationEvent[] }>;
 

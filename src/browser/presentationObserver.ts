@@ -11,14 +11,45 @@ export function observePresentation(before: BehindGameState, result: SessionResu
   const facts: PresentationFact[] = [];
   const face = (card: PublicFace): PublicFace => Object.freeze({ rank: card.rank, suit: card.suit });
   const state = (value: Extract<PresentationFact, { type: 'DEALER_STATE' }>['state']) => facts.push({ type: 'DEALER_STATE', state: value });
+  const humanSeat = after.table.game.table.seats.find(seat => seat.occupancy === 'HUMAN')?.seatNumber;
+  const returnTo = (seat: number, kind: string) => kind.startsWith('BACK') || seat === humanSeat ? 'local-credits' as const : `seat-${seat}` as const;
+  const move = (seat: number, amount: number, kind: string, handId?: string) => facts.push({ type: 'MOVE_WAGER', seat, amount, kind, handId, returnTo: returnTo(seat, kind) });
+  const settlements = () => {
+    for (const entry of after.table.wagerResults) facts.push({ type: 'SETTLE_RESULT', seat: entry.seatNumber,
+      handId: entry.handId ?? undefined, kind: entry.type, outcome: entry.outcome, stake: entry.stakeUnits, returned: entry.grossReturnUnits, returnTo: returnTo(entry.seatNumber, entry.type) });
+    for (const entry of after.backResults) facts.push({ type: 'SETTLE_RESULT', seat: entry.targetSeat,
+      handId: entry.handId, kind: entry.wagerId.endsWith('/INSURANCE') ? 'BACK_INSURANCE' : 'BACK', outcome: entry.outcome, stake: entry.stakeUnits, returned: entry.grossReturnUnits, returnTo: 'local-credits' });
+  };
   if (command.type === 'NEXT' || command.type === 'CONFIGURE' || command.type === 'OPEN') return [];
-  if (command.type === 'VOID' || publicRound?.phase === 'INTEGRITY_ERROR') { state('IDLE'); return facts; }
+  if (command.type === 'VOID') { state('SETTLING'); settlements(); state('IDLE'); return facts; }
+  if (publicRound?.phase === 'INTEGRITY_ERROR') { state('IDLE'); return facts; }
   if (command.type === 'MAIN' || command.type === 'SIDE' || command.type === 'BACK') {
     const seat = command.type === 'SIDE' ? after.table.game.table.seats.find(s => s.occupancy === 'HUMAN')!.seatNumber : command.seat;
-    facts.push({ type: 'MOVE_WAGER', seat, amount: command.amount, kind: command.type === 'SIDE' ? command.kind : command.type });
+    const amount = command.type === 'MAIN' ? after.table.wagers.find(entry => entry.seatNumber === seat)?.stakeUnits ?? 0
+      : command.type === 'SIDE' ? after.table.sideWagers.find(entry => entry.type === command.kind && entry.seatNumber === seat)?.stakeUnits ?? 0
+      : after.backWagers.find(entry => entry.targetSeat === seat)?.stakeUnits ?? 0;
+    const kind = command.type === 'SIDE' ? command.kind : command.type;
+    if (command.amount === 0) {
+      const previousAmount = command.type === 'MAIN' ? before.table.wagers.find(entry => entry.seatNumber === seat)?.stakeUnits ?? 0
+        : command.type === 'SIDE' ? before.table.sideWagers.find(entry => entry.type === command.kind && entry.seatNumber === seat)?.stakeUnits ?? 0
+        : before.backWagers.find(entry => entry.targetSeat === seat)?.stakeUnits ?? 0;
+      move(seat, previousAmount, `${kind}_CANCELLED`);
+    } else move(seat, amount, kind);
     return facts;
   }
   if (!round || !publicRound) return facts;
+  // Total authoritative exposure, never a presentation-side delta or payout formula.
+  for (const hand of round.players) {
+    const old = previous?.players.find(entry => entry.handId === hand.handId);
+    if (old && old.stakeUnits !== hand.stakeUnits) move(hand.seatNumber, hand.stakeUnits, 'DOUBLE', hand.handId);
+    else if (!old && hand.parentHandId && previous?.players.some(entry => entry.handId === hand.parentHandId)) move(hand.seatNumber, hand.stakeUnits, 'SPLIT', hand.handId);
+  }
+  for (const decision of after.table.insuranceDecisions) if (decision.choice === 'INSURANCE' && decision.stakeUnits !== before.table.insuranceDecisions.find(entry => entry.seatNumber === decision.seatNumber)?.stakeUnits)
+    move(decision.seatNumber, decision.stakeUnits, 'INSURANCE');
+  for (const decision of after.backInsurance) if (decision.choice === 'INSURANCE' && decision.stakeUnits !== before.backInsurance.find(entry => entry.wagerId === decision.wagerId)?.stakeUnits)
+    move(decision.targetSeat, decision.stakeUnits, 'BACK_INSURANCE');
+  if (command.type === 'FOLLOW' && after.followDecisions.at(-1)?.choice === 'ADD') for (const entry of after.backExposures)
+    if (entry.stakeUnits !== before.backExposures.find(old => old.handId === entry.handId)?.stakeUnits) move(entry.targetSeat, entry.stakeUnits, 'BACK', entry.handId);
   const emitted = new Set<string>();
   const deal = (hand: typeof round.players[number], index: number, reason: Extract<PresentationFact, { type: 'DEAL_CARD' }>['reason']) => {
     const card = hand.cards[index]; if (!card || emitted.has(card.id)) return;
@@ -82,10 +113,7 @@ export function observePresentation(before: BehindGameState, result: SessionResu
   }
   if (command.type === 'SETTLE') {
     state('SETTLING');
-    for (const entry of after.table.wagerResults) facts.push({ type: 'SETTLE_RESULT', seat: entry.seatNumber,
-      handId: entry.handId ?? undefined, kind: entry.type, outcome: entry.outcome, stake: entry.stakeUnits, returned: entry.grossReturnUnits });
-    for (const entry of after.backResults) facts.push({ type: 'SETTLE_RESULT', seat: entry.targetSeat,
-      handId: entry.handId, kind: 'BACK', outcome: entry.outcome, stake: entry.stakeUnits, returned: entry.grossReturnUnits });
+    settlements();
   }
   if (previous?.currentHandId !== round.currentHandId || command.type === 'CLOSE') facts.push({ type: 'EMPHASIZE_ACTIVE_HAND', handId: round.currentHandId });
   state(publicRound.phase === 'INSURANCE' || after.followWindow || round.currentHandId && round.players.find(h => h.handId === round.currentHandId)?.controller === 'HUMAN'

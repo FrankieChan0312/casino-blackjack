@@ -1,0 +1,27 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/wagers.spec.ts
+
+[WebServer] (node:34592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:27368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result (20.6s)
+  ok  2 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result (6.9s)
+  ok  3 [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result (6.9s)
+  ok  4 [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption (5.5s)
+  ok  5 [chromium] › tests\browser\m10\wagers.spec.ts:68:1 › [T09-B03] Double total, Split child stakes and Insurance exact amount/anchor (10.0s)
+  ok  6 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available (4.7s)
+  ok  7 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available (4.6s)
+  ok  8 [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available (4.5s)
+[WebServer] 上午1:01:08 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午1:01:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午1:01:09 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+[WebServer] 上午1:01:10 [vite] (client) [console.warn] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled
+  ok  9 [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks (3.2s)
+  ok 10 [chromium] › tests\browser\m10\wagers.spec.ts:109:1 › [T09-B06] two Split leaf settlements collect exact per-hand stake once (7.3s)
+
+  10 passed (1.3m)

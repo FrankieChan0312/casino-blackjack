@@ -1,0 +1,160 @@
+{
+  "archive": "repair5-verbatim-text.zip",
+  "timestamp": "2026-10-06 01:52:18 +08:00",
+  "byteVerification": "PASS",
+  "files": [
+    {
+      "path": "docs/M10_T09_EVIDENCE/browser-typecheck.txt",
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/cancellation-review-gap.txt",
+      "displaySHA256": "40D8E65279C8DDB79E598151213768E66A3410D98574651C927299D6C1D16CEB",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "16F994F364F7C272199E928AD2DE3815C490F6D35A31D21248E4AD1BE71BFD46"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/final-docs.txt",
+      "displaySHA256": "ADA677085933238D8D76494199C98CB48107B71F8ED310332815C4EE2CEC2069",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "F00937D208081FA34E853EF03E736711D0FEF6D3422C8921C674431851724AE0"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium/error-context.md",
+      "displaySHA256": "2474B29727EF4DD94A94CA47DA1C02CABF2EDF92108F307C5CE6DBAD236AAE2B",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "3BBB7EE3A400543E828E58D71DAFDA5704AA57D0BB1011D710445C8BCBF35D20"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium/error-context.md",
+      "displaySHA256": "0925D2F5BCB9A6464494452D8241B1355AAE53330F3013AAEBF7F5B1F02B9F0F",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "A2F516D0FE782AC838D5B4CE0CB0CC16AB9304A83C5F9092D1C83B06BD21801B"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium/error-context.md",
+      "displaySHA256": "DF6C839B0330DFAFE2D60A727476BAAECC04CAF089C72CBF65125C68D01CEC4B",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "BF22DA7AAC0294BC372B1F1AC64D77A9D3994A2863CACA6D22B914A406C5740D"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium/error-context.md",
+      "displaySHA256": "AE41BE486A1BE7FF792CCB1E334CC7481BACCF060E69DAA656B38A072B5073F3",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "E09530E2DE4A13A2745217AA389F35E6EA92F4B21F6D5A30F5FBDCCF669E6A5B"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium/error-context.md",
+      "displaySHA256": "4F959C68AC90174DDC72D71B113F5187D0E4F212F0C49955AE9AE7E84B7CEA78",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "04E23FEC3B9C79389DDD0DBBBDD0BF435FFF8170E8BABE676723D12E2F6F837A"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium/error-context.md",
+      "displaySHA256": "62D7C62CBCB6FE013107B7C1C4DCA7415E71D825B9C1A5E489E08B6C0DD40912",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "6D8C4C16EA6A106821DAE96C71AD14E212C3E8CA7A32FE76FC47532308170631"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium/error-context.md",
+      "displaySHA256": "F82F44CF5A2A5AA2EFAA178890A34D17F7B9ABD2B3DDFF3E6700A024FCE2378B",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "62A3D8AC3833470373EFDDD4B687B90CD9A234F05C2D9E0448A4CB3611A53A78"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium/error-context.md",
+      "displaySHA256": "3BF1598ED60F8B73CB881F30C29C659E7975C703C127F36FC313DF3AECA1B676",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "31D2F3EF444113D43754085C47B8D3B591746F9F95C4856BAEA38A80117B65CC"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-browser.txt",
+      "displaySHA256": "6228A9C447FFCBC04DDE78C6AEDDEC7A1D77EC059ED1489D8A80E7ED627F6CE4",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "F6C30BBEC989023576C610023076B2AEE702293288A06947BF34DAB7B9AE77D3"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/first-unit.txt",
+      "displaySHA256": "D8021C6309BE89EBD3E6E86273DFC3D43C4D0AF32B3071C7382C715072F2DE3B",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "FE42BA31E0A9165363A5DCD1B162899BD87D7F54D8D69A5ECDAE05B784568420"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/gate-20261006-010436/units.txt",
+      "displaySHA256": "1E654CF0C6914E8B69E7D56E56238B244D4E3A7CAA1EAE0ADB210F01B366206E",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "9E50982F34E98916189FC0F1CC497205A38342D4E2657E09223B60A6BD5EE383"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/gate-20261006-010737/current-preservation.txt",
+      "displaySHA256": "74E83B50647E2F1F8F8CED20A69A876A88F93AC5168BA415E01C3E44D4E40941",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "479ECB9F196807974700F2402E5C2B950A5C20F96427270145D98D0F312DBD7A"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/gate-20261006-010737/units.txt",
+      "displaySHA256": "56859EAB2FCCB729EC3DC2A501E12FC6E34306E3690E8E7547C6469015D706FA",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "EE4A5613909015DE159990EE578E68A53217B91924FBF256D71512FFA5023A02"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/lint.txt",
+      "displaySHA256": "9929910124109A2704904CF2FA7B46F653B9A462D30D01B92F228545EB06727C",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "DD47E925A563FD23B0AE2AE0712A0084329DD17D3A37A75F7A642E5ABACD9450"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair1-typecheck.txt",
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair1-unit.txt",
+      "displaySHA256": "3B3335A711924C5A4DC9673C363C455BEEFD00C2069D9CC564E9E59FB9BECDE4",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "D1AD66F19A737E7C60962D4988B33D4780238207EDC0CD0A23DCB39FE96E23B9"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair3-lint.txt",
+      "displaySHA256": "9929910124109A2704904CF2FA7B46F653B9A462D30D01B92F228545EB06727C",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "DD47E925A563FD23B0AE2AE0712A0084329DD17D3A37A75F7A642E5ABACD9450"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair3-typecheck.txt",
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair3-unit.txt",
+      "displaySHA256": "4D71B06F271586BB4EF1ECC16E7EF1FB1DCAD563EF42EFB0026F781F8C212990",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "CFCBA770E95B9EB0027EEA7990D078453E1E3C6FA5CA75983813D217754E62EC"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair4-typecheck.txt",
+      "displaySHA256": "3B533818D010C85EBBDEF3C732159142976D6D40DCB2A887A31AA510ADF0BAE0",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "1AFD5DE322C5295E760B989C7EBE13870ED73A9DF4F0F6DD2FAFCCD8A28F30A6"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair4-unit.txt",
+      "displaySHA256": "9490F9697D98B29A6F72792E67FD67A4F2ACCC12F5AB13CC6DDF70305D3476D3",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "D6E9E6CB13693582026A35E192E143AA878D36BB7C88EA643DC8F3E197C3D451"
+    },
+    {
+      "path": "docs/M10_T09_EVIDENCE/repair5-whitespace-before.txt",
+      "displaySHA256": "AEA66938FE095E1D1686F7DBDDF28D31507399792C73EABCE8C6BCBA6274E546",
+      "normalization": "Trailing horizontal whitespace and extra blank EOF only; all failure/status/assertion text retained",
+      "verbatimSHA256": "0B55214035E8BFDD9ACAA6D7ACD0B7DEC6C213F484C0D5D23104FFFDB364C46D"
+    }
+  ],
+  "archiveSHA256": "C47DFF120A45B87D86AD3452BAFFCD23F6B9FA958F981D55B8E5C6384F58197F",
+  "initialWhitespaceExitCode": 2,
+  "repair": 5
+}

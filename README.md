@@ -1,15 +1,16 @@
-## M10 animation overnight batch — 2026-10-05 22:34:47 +08:00
+## M10 animation overnight batch
 
 Owner authorizes T07 through T10 with complete per-task technical and clean Git publication gates. T06 Human Visual Acceptance ACCEPTED; its historical12/12 final exception CLOSED is unchanged. [Task contracts and handoff](docs/M10_ANIMATION_OVERNIGHT_HANDOFF.md).
 
-T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED; complete technical gate PASS/0:96 files/1204 Vitest,171 Chromium, independent M1–M8/current preservation, assets and verify.ps1. Repairs7/10; normal main publication PASS at0a065f2.
+T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; complete technical gate PASS/0:96 files/1204 Vitest,171 Chromium, independent M1–M8/current preservation, assets and verify.ps1. Repairs7/10; implementation0a065f2, final task HEAD91af1e8.
 
-T08 Dealer reveal/draw IMPLEMENTED / VERIFIED;97 files/1212 Vitest,177 Chromium, preservation/assets/verify.ps1 PASS/0; native200% PASS. Repairs4/10; implementation published at1165959; final documentation repair/receipt follows.
+T08 Dealer reveal/draw IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;97 files/1212 Vitest,177 Chromium, preservation/assets/verify.ps1 PASS/0; native200% PASS. Repairs4/10; implementation1165959, final corrective receipt1c2ab68.
 
-T09–T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
+T09 authoritative wager/settlement presentation IMPLEMENTED / VERIFIED;98 files/1222 Vitest,187 Chromium, preservation/assets/verify.ps1 PASS/0; repairs5/10. Generic labelled chips, exact post-Double/Split/Insurance amounts, loss collection and committed gross returns; no payout/accounting changes. Normal main publication follows final docs checks.
+
+T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
 
 M10-T11 NOT STARTED. M10 NOT YET ACCEPTED. Deployment NOT RUN. Fresh separate-session review NOT COMPLETED.
-
 ## Retained prior delivery history
 
 ## Current M10-T06 published delivery — 2026-10-05 21:53:59 +08:00

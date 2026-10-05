@@ -1,0 +1,41 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/wagers.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/wagers.test.ts (10 tests | 1 failed) 72ms
+   × [T09-E06] accepted wager cancellation returns the exact previous reserve without arithmetic 14ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/wagers.test.ts > [T09-E06] accepted wager cancellation returns the exact previous reserve without arithmetic
+AssertionError: expected [ { type: 'MOVE_WAGER', …(5) } ] to deeply equal [ { type: 'MOVE_WAGER', …(5) } ]
+
+- Expected
++ Received
+
+  [
+    {
+-     "amount": 200,
++     "amount": 0,
+      "handId": undefined,
+-     "kind": "MAIN_CANCELLED",
++     "kind": "MAIN",
+      "returnTo": "local-credits",
+      "seat": 1,
+      "type": "MOVE_WAGER",
+    },
+  ]
+
+ ❯ tests/m10/wagers.test.ts:59:17
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 passed (10)
+   Start at  01:00:44
+   Duration  996ms (transform 73%, import 13%, tests 10%, setup 3%, worker 1%)

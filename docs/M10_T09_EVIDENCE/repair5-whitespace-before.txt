@@ -1,0 +1,79 @@
+docs/M10_T09_EVIDENCE/browser-typecheck.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/cancellation-review-gap.txt:42: new blank line at EOF.
+docs/M10_T09_EVIDENCE/final-docs.txt:13: new blank line at EOF.
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium/error-context.md:130: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-DEALER-e50f6-ediate-authoritative-result-chromium/error-context.md:236: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium/error-context.md:131: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PLAYER-03b1c-ediate-authoritative-result-chromium/error-context.md:237: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium/error-context.md:130: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B01-PUSH-r-0d9a7-ediate-authoritative-result-chromium/error-context.md:236: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium/error-context.md:235: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B02-Blackj-b56a8-and-next-round-interruption-chromium/error-context.md:341: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium/error-context.md:129: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-1280-l-c6e44-les-controls-stay-available-chromium/error-context.md:235: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium/error-context.md:114: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-320-lo-86bdb-les-controls-stay-available-chromium/error-context.md:220: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium/error-context.md:130: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B04-768-lo-dc544-les-controls-stay-available-chromium/error-context.md:236: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium/error-context.md:39: trailing whitespace.
++  4   |
+docs/M10_T09_EVIDENCE/first-browser-artifacts/m10-wagers--T09-B05-reduce-01496-ult-without-floating-stacks-chromium/error-context.md:145: trailing whitespace.
++  109 |
+docs/M10_T09_EVIDENCE/first-browser.txt:38: trailing whitespace.
++  1) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:75: trailing whitespace.
++  2) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:112: trailing whitespace.
++  3) [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:149: trailing whitespace.
++  4) [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption
+docs/M10_T09_EVIDENCE/first-browser.txt:181: trailing whitespace.
++  5) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:218: trailing whitespace.
++  6) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:255: trailing whitespace.
++  7) [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:292: trailing whitespace.
++  8) [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks
+docs/M10_T09_EVIDENCE/first-browser.txt:332: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PLAYER_WIN] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:333: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-DEALER_WIN] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:334: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:40:13 › [T09-B01-PUSH] real reserve/return token and immediate authoritative result
+docs/M10_T09_EVIDENCE/first-browser.txt:335: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:58:1 › [T09-B02] Blackjack exact gross 250 credits and next-round interruption
+docs/M10_T09_EVIDENCE/first-browser.txt:336: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-1280] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:337: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-768] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:338: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:89:71 › [T09-B04-320] loss collection fits, resize settles, controls stay available
+docs/M10_T09_EVIDENCE/first-browser.txt:339: trailing whitespace.
++    [chromium] › tests\browser\m10\wagers.spec.ts:98:1 › [T09-B05] reduced win/loss/push and Even Money display exact result without floating stacks
+docs/M10_T09_EVIDENCE/first-unit.txt:13: new blank line at EOF.
+docs/M10_T09_EVIDENCE/gate-20261006-010436/units.txt:75: new blank line at EOF.
+docs/M10_T09_EVIDENCE/gate-20261006-010737/current-preservation.txt:16: new blank line at EOF.
+docs/M10_T09_EVIDENCE/gate-20261006-010737/units.txt:17: new blank line at EOF.
+docs/M10_T09_EVIDENCE/lint.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair1-typecheck.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair1-unit.txt:13: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair3-lint.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair3-typecheck.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair3-unit.txt:13: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair4-typecheck.txt:4: new blank line at EOF.
+docs/M10_T09_EVIDENCE/repair4-unit.txt:13: new blank line at EOF.

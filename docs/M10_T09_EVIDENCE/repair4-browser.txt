@@ -1,0 +1,14 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/wagers.spec.ts --grep T09-B03
+
+[WebServer] (node:27012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:6988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\wagers.spec.ts:68:1 › [T09-B03] Double total, Split child stakes and Insurance exact amount/anchor (23.2s)
+
+  1 passed (26.2s)

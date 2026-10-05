@@ -1,0 +1,6 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+tests/m10/wagers.test.ts(34,224): error TS2322: Type '"SETTLE"' is not assignable to type '"OPEN" | "MAIN" | "BACK" | "SIDE" | "CONFIGURE" | "CLOSE" | "ADVANCE" | "NEXT" | "ACT" | "ACE" | "FOLLOW" | "START" | "NEW_TABLE" | "DEAL" | "REPEAT" | "MODE"'.
+tests/m10/wagers.test.ts(38,155): error TS2322: Type '"VOID"' is not assignable to type '"OPEN" | "MAIN" | "BACK" | "SIDE" | "CONFIGURE" | "CLOSE" | "ADVANCE" | "NEXT" | "ACT" | "ACE" | "FOLLOW" | "START" | "NEW_TABLE" | "DEAL" | "REPEAT" | "MODE"'.
