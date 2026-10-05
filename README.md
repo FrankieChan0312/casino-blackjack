@@ -2,7 +2,7 @@
 
 Owner authorizes T07 through T10 with complete per-task technical and clean Git publication gates. T06 Human Visual Acceptance ACCEPTED; its historical12/12 final exception CLOSED is unchanged. [Task contracts and handoff](docs/M10_ANIMATION_OVERNIGHT_HANDOFF.md).
 
-T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED; complete technical gate PASS/0:96 files/1204 Vitest,171 Chromium, independent M1–M8/current preservation, assets and verify.ps1. Repairs6/10; normal main publication follows final review.
+T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED; complete technical gate PASS/0:96 files/1204 Vitest,171 Chromium, independent M1–M8/current preservation, assets and verify.ps1. Repairs6/10; normal main publication PASS at0a065f2.
 
 T08–T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
 

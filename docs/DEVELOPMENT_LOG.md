@@ -1,3 +1,7 @@
+## M10-T07 published checkpoint — 2026-10-05 23:49:08 +08:00
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. Main implementation 0a065f26d62423c56c482d1646e6934180d71683 normally pushed to origin; checked0, fetched equality/0-0/CLEAN/untracked0. Complete96/1204 and171 browser/full preservation/unified gate PASS; docs7 PASS; authored staged review PASS; source hashes unchanged. Repairs7/10 CLOSED; all attempts retained. Following documentation-only receipt records this actual publication; its own HEAD resolves from Git/delivery and T08 baseline. Human Visual Acceptance PENDING under explicit overnight authorization; fresh independent review NOT COMPLETED. T08 awaits this final clean receipt, T11 NOT STARTED, deployment NOT RUN.
+
 ## M10-T07 publication repair7 — 2026-10-05 23:45:54 +08:00
 
 Cumulative7/10. Git add FAIL due pre-existing .git/index.lock; no staging/commit/push occurred. Evidence: empty0 bytes, unchanged lastWrite23:01:35, no live git.exe on two inspections, exclusive read succeeded. Orphaned-lock hypothesis; original creator/root cause NOT PROVEN. Reversibly moved only the empty placeholder into repo-local .git archive after absolute-path/content/age/PID checks; archive SHA E3B0... matches and index raw bytes unchanged. No delete, process termination, index/history/user-file change. HEAD remains expected baseline. Repair6 affected docs3/7 PASS0. Source/test/settings unchanged after full gate PASS; staged review and normal publication follow. See repair7-lock.json.
