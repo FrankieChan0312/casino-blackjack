@@ -1,0 +1,29 @@
+{
+  "task": "M10-T04",
+  "cumulative": 2,
+  "maximum": 10,
+  "cycles": [
+    {
+      "cycle": 1,
+      "failurePhase": "t04a-20261005-first-dealer",
+      "status": "FAIL",
+      "exitCode": 1,
+      "hypothesis": "Single-player seed7 public Ace Insurance requires Decline before an available Stand; new test missed the decision.",
+      "fix": "Test-only actual Insurance/Stand/committed-result helper; retains all identity/state/card/order assertions.",
+      "rerunPhase": "t04a-20261005-repair1-dealer",
+      "rerunStatus": "PASS",
+      "rerunExitCode": 0
+    },
+    {
+      "cycle": 2,
+      "failurePhase": "first-whitespace",
+      "status": "FAIL",
+      "exitCode": 2,
+      "hypothesis": "New checkpoint note ended with two newline bytes; task-authored development log has one surplus EOF blank.",
+      "fix": "Remove only surplus task-authored EOF blank after persisting original failure. No raw evidence/source/test change.",
+      "rerunPhase": "repair2-whitespace",
+      "rerunStatus": "PASS",
+      "rerunExitCode": 0
+    }
+  ]
+}

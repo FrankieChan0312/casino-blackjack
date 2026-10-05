@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-10-05 09:08:18 +08:00",
+  "task": "M10-T04-A",
+  "status": "M10-T04A_IMPLEMENTED_VERIFIED",
+  "repairCount": "2/10",
+  "inventory": {
+    "vitestFiles": 90,
+    "vitestTests": 1150,
+    "chromiumTests": 122
+  },
+  "focused": {
+    "vitestFiles": 19,
+    "vitestTests": 146,
+    "chromiumTests": 9,
+    "currentTests": 194
+  },
+  "checks": [
+    {
+      "phase": "t04a-20261005-first-unit",
+      "command": "& npm.cmd test -- tests/m10 tests/unit/browserShell.test.tsx tests/unit/browserTable.test.tsx tests/unit/browserActions.test.tsx tests/unit/browserBetting.test.tsx tests/unit/browserDecisions.test.tsx tests/pa1/preservation.test.ts; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:38:20 +08:00",
+      "end": "2026-10-05 08:38:25 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-first-typecheck",
+      "command": "& npm.cmd run typecheck; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:38:55 +08:00",
+      "end": "2026-10-05 08:39:03 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-first-lint",
+      "command": "& npm.cmd run lint; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:39:04 +08:00",
+      "end": "2026-10-05 08:39:12 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-repair1-dealer",
+      "command": "& npm.cmd run test:e2e -- tests/browser/m10/dealerPresentation.spec.ts; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:41:29 +08:00",
+      "end": "2026-10-05 08:42:01 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-current",
+      "command": "& npm.cmd test -- tests/pa1 tests/ra1 tests/m9 tests/m10; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:43:37 +08:00",
+      "end": "2026-10-05 08:43:46 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-fullunit",
+      "command": "& npm.cmd test; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:45:57 +08:00",
+      "end": "2026-10-05 08:46:17 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-fullbrowser",
+      "command": "& npm.cmd run test:e2e; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:46:18 +08:00",
+      "end": "2026-10-05 08:54:34 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-preservation",
+      "command": "& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:54:47 +08:00",
+      "end": "2026-10-05 08:56:52 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "phase": "t04a-20261005-unified",
+      "command": "& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; exit $LASTEXITCODE",
+      "start": "2026-10-05 08:56:54 +08:00",
+      "end": "2026-10-05 09:07:30 +08:00",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "nativeZoom": {
+    "status": "PASS",
+    "exitCode": 0,
+    "zoom": 2
+  },
+  "assetPreservation": "PASS",
+  "domainDiff": "EMPTY",
+  "humanAcceptance": "PENDING",
+  "formalArtwork": "NOT CREATED — OWNER APPROVAL REQUIRED",
+  "initialDealerIdentity": "NOT SELECTED — OWNER APPROVAL REQUIRED",
+  "freshSeparateSessionReview": "NOT COMPLETED — unavailable",
+  "sameSessionReview": "PASS",
+  "publication": "PENDING",
+  "next": "WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR",
+  "motion": "NOT INSTALLED",
+  "animation": "NOT STARTED",
+  "deployment": "NOT RUN"
+}

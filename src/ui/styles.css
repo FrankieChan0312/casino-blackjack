@@ -439,6 +439,7 @@ textarea { width: 100%; max-width: 100%; background: #14271d; color: #fff; borde
 }
 
 /* T04: one Dealer workstation on the retained character/card anchor. */
+.player-mode .dealer-formal-portrait { object-fit: contain; }
 .player-mode .game-scene .dealer-zone { border-bottom: 2px solid #b39659; border-radius: 28px 28px 18px 18px; background: linear-gradient(transparent, #143b2c 70%); padding-right: 8px; }
 .player-mode .game-scene .dealer-zone h2 { margin: 0 0 4px; }
 .player-mode .game-scene .dealer-zone .dealer-card-lane { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 5px; }

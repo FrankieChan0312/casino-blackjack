@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-05 09:08:18 +08:00",
+  "command": "node scripts/verify-character-assets.mjs",
+  "status": "PASS",
+  "exitCode": 0,
+  "originals": 12,
+  "production": 12,
+  "reproduction": "byte-for-byte",
+  "readOnly": true,
+  "logSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7"
+}

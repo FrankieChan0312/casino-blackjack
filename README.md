@@ -1,3 +1,13 @@
+## M10-T04-A technical gate — 2026-10-05 09:08:18 +08:00
+
+**M10-T04A_IMPLEMENTED_VERIFIED**; repair count M10-T04 **2/10**. Optional approved preferred identity -> unseated preference else first eligible canonical ID; stable reservation through rounds/resize/avatar changes; production identity remains unassigned pending owner selection. Separate formal asset contract and DealerZone shell retain existing temporary fallback; six static public-state hooks, no commands/timing/RNG. Full90 files/1150 Vitest and122 Chromium, current194, focused146/9, native200 zoom, PA1 read-only byte reproduction, independent M1–M8 and scripts/verify.ps1 **PASS / checked exit0**.184 exact executable hashes unchanged after verification; domain/browser/PA1 originals/provenance/canonical historical evidence unchanged. Same-session spec/source/diff/test/evidence review PASS; genuinely fresh separate-session review NOT COMPLETED (unavailable).
+
+M10A ACCEPTED/CLOSED; M10-T02/T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED. T04-A HUMAN ACCEPTANCE PENDING; full T04 artwork/motion AC is not accepted by this architecture gate. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Ranked shortlist: Lucien, Celestine, Caelan. Normal authorized main publication pending; then stop for owner selection/artwork direction. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN. [Contract](docs/M10_T04.md), [gate](docs/M10_T04_EVIDENCE/technical-gate.json).
+
+## Owner acceptance and T04-A start — 2026-10-05 08:32:41 +08:00
+
+M10A ACCEPTED/CLOSED. M10-T02 and M10-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED, explicitly recorded in the new owner instruction at baseline main/ddb8ff9920ed159c38140f71e9d70ab052fd556f. Prior pending statements below are historical. T02 repairs3/10 and T03 repairs5/10 unchanged. T04-A architecture-only IN PROGRESS,0/10; no Dealer identity or artwork approved. [Contract](docs/M10_T04.md). T05/Motion/animation NOT STARTED; deployment NOT RUN.
+
 ## M10-T03 published — 2026-10-05 07:51:05 +08:00
 
 M10-T03 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at main/402fccda825a5d0a34449eeb00b50df212be9081. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN,untracked0 at 2026-10-05 07:50:15 +08:00. Repairs5/10; full Vitest1129/Chromium113, M1–M8 and verify.ps1 PASS/0. Exact executables unchanged. HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. This separate factual receipt follows successful implementation publication; its own final SHA is resolved from Git.

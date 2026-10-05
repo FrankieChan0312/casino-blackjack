@@ -1,0 +1,315 @@
+{
+  "phase": "t04a-20261005-repair1-dealer",
+  "kind": "dealer",
+  "start": "2026-10-05 08:41:29 +08:00",
+  "end": "2026-10-05 08:42:01 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10/dealerPresentation.spec.ts; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-t04a-20261005-repair1-dealer",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-t04a-20261005-repair1-dealer.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\""
+  },
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-t04a-20261005-repair1-dealer-q6tJvm",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-layout.json",
+      "retainedAt": "generated/00f84cc2f74e7b053d88874e65a4a48abad80fd4179a90644ac0098d9b5430db.json",
+      "bytes": 18908,
+      "sha256": "00f84cc2f74e7b053d88874e65a4a48abad80fd4179a90644ac0098d9b5430db"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-1280-text200.png",
+      "retainedAt": "generated/114d924669386ec7f0ca67ebf6b2bd1f9286f795be5f8570f9d9ed2739288c5e.png",
+      "bytes": 1020501,
+      "sha256": "114d924669386ec7f0ca67ebf6b2bd1f9286f795be5f8570f9d9ed2739288c5e"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-1280.png",
+      "retainedAt": "generated/3f8280774052f39c43174dfcb8f56d002922a832eb75ecd49ef007f1db6f1da1.png",
+      "bytes": 657568,
+      "sha256": "3f8280774052f39c43174dfcb8f56d002922a832eb75ecd49ef007f1db6f1da1"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-320-text200.png",
+      "retainedAt": "generated/c9c711436da57087195992492f9333e97c01de57248e0c1d5fabcbd813960ce4.png",
+      "bytes": 493083,
+      "sha256": "c9c711436da57087195992492f9333e97c01de57248e0c1d5fabcbd813960ce4"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-320.png",
+      "retainedAt": "generated/a0f7798d6c0bc6b35e85d664f602fe53d6c2a5b70759821f65884d1360e2436e.png",
+      "bytes": 255725,
+      "sha256": "a0f7798d6c0bc6b35e85d664f602fe53d6c2a5b70759821f65884d1360e2436e"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-768-text200.png",
+      "retainedAt": "generated/56fcc36aed5d1b83c1d11b631d3774e09458cfc01873b2b231764cf96737354d.png",
+      "bytes": 784569,
+      "sha256": "56fcc36aed5d1b83c1d11b631d3774e09458cfc01873b2b231764cf96737354d"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-1-768.png",
+      "retainedAt": "generated/d07933acdc627053accc2d1a45b09e812dd8963dc28d60543c63cf8bcde1c0d8.png",
+      "bytes": 457541,
+      "sha256": "d07933acdc627053accc2d1a45b09e812dd8963dc28d60543c63cf8bcde1c0d8"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-1280-text200.png",
+      "retainedAt": "generated/11dfca272ca65b0bbfd11d2d53d698b7a59f2b285f1107622cc48c00036f4db4.png",
+      "bytes": 1188087,
+      "sha256": "11dfca272ca65b0bbfd11d2d53d698b7a59f2b285f1107622cc48c00036f4db4"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-1280.png",
+      "retainedAt": "generated/198ef581c1a08140e149feb2e71d9ee569e0f048baad0000ac6d0a8c11c66f47.png",
+      "bytes": 781724,
+      "sha256": "198ef581c1a08140e149feb2e71d9ee569e0f048baad0000ac6d0a8c11c66f47"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-320-text200.png",
+      "retainedAt": "generated/73d5f37c2f4fd42c5ed812040c12ce4ac64a2b1ff03044d4e01fb6a74007244a.png",
+      "bytes": 531911,
+      "sha256": "73d5f37c2f4fd42c5ed812040c12ce4ac64a2b1ff03044d4e01fb6a74007244a"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-320.png",
+      "retainedAt": "generated/94f6b0a5fd652e1758d8d1d0b8f43e1baf5b9ba469be483926cb5425c0c2da80.png",
+      "bytes": 271702,
+      "sha256": "94f6b0a5fd652e1758d8d1d0b8f43e1baf5b9ba469be483926cb5425c0c2da80"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-768-text200.png",
+      "retainedAt": "generated/64c0ac7abc6bcb256f190bf85776f980b3ec398014ba15612d6f778190b7e25e.png",
+      "bytes": 918510,
+      "sha256": "64c0ac7abc6bcb256f190bf85776f980b3ec398014ba15612d6f778190b7e25e"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-4-768.png",
+      "retainedAt": "generated/0ddf87453d7ac4100b3ad003ee2acc8a2bf09ff6de43166504c1a42f2f4461a5.png",
+      "bytes": 533185,
+      "sha256": "0ddf87453d7ac4100b3ad003ee2acc8a2bf09ff6de43166504c1a42f2f4461a5"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-1280-text200.png",
+      "retainedAt": "generated/0896df962984066213dec70b2356af67a8977ceec5fb3727b1e64085012d0fef.png",
+      "bytes": 1543710,
+      "sha256": "0896df962984066213dec70b2356af67a8977ceec5fb3727b1e64085012d0fef"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-1280.png",
+      "retainedAt": "generated/c2433273e8568f5973ed63fd2ea4078945dde6b9e2fa9a1792f9da75469f1f12.png",
+      "bytes": 1046137,
+      "sha256": "c2433273e8568f5973ed63fd2ea4078945dde6b9e2fa9a1792f9da75469f1f12"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-320-text200.png",
+      "retainedAt": "generated/59173b63d52ff35aa791bf10f50f0980664c79cb48d54f27a17409330ac4bff7.png",
+      "bytes": 573036,
+      "sha256": "59173b63d52ff35aa791bf10f50f0980664c79cb48d54f27a17409330ac4bff7"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-320.png",
+      "retainedAt": "generated/e9d9d431a441b777d5835f77b60410f4ab80cebfd06aaf2842c42d3a0a0642aa.png",
+      "bytes": 312109,
+      "sha256": "e9d9d431a441b777d5835f77b60410f4ab80cebfd06aaf2842c42d3a0a0642aa"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-768-text200.png",
+      "retainedAt": "generated/69474b80efbd29e379e62a44bd874d1ff9c85c39578b34e42baf4499b34b20be.png",
+      "bytes": 1419451,
+      "sha256": "69474b80efbd29e379e62a44bd874d1ff9c85c39578b34e42baf4499b34b20be"
+    },
+    {
+      "path": "test-results/m10-dealerPresentation--M1-5a343-t-three-widths-plus-text200-chromium/dealer-table-7-768.png",
+      "retainedAt": "generated/4a6f700fd261e492c1aaa80934d0fcfdee128cdf936f26d2bbd0ff649431ac13.png",
+      "bytes": 804994,
+      "sha256": "4a6f700fd261e492c1aaa80934d0fcfdee128cdf936f26d2bbd0ff649431ac13"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-05 08:42:01 +08:00"
+}

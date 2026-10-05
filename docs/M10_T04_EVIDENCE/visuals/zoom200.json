@@ -1,0 +1,862 @@
+{
+  "start": "2026-10-05 08:45:02 +08:00",
+  "method": "Isolated headed Chromium persistent profile; native chrome.tabs.setZoom/getZoom. No CSS zoom/font-size/device-scale/page-scale emulation.",
+  "references": [
+    "https://developer.chrome.com/docs/extensions/reference/api/tabs#method-setZoom",
+    "https://playwright.dev/docs/chrome-extensions"
+  ],
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-zoom-BQtVEm",
+  "scenarios": [
+    {
+      "fixture": "player",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -486.75,
+          "width": 600.3333740234375,
+          "height": 776.09375
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -474.75,
+            "width": 360,
+            "height": 217.765625
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -238.0416717529297,
+            "width": 182.7760467529297,
+            "height": 222.91146850585938
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -219.6041717529297,
+            "width": 182.7760467529297,
+            "height": 209.61459350585938
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": 0.010416666977107525,
+            "width": 568.328125,
+            "height": 273.3333435058594
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -238.0416717529297,
+            "width": 182.7760467529297,
+            "height": 178
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 273,
+            "scrollHeight": 273
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 306,
+            "scrollHeight": 306
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 196.1666717529297,
+        "y": 100.875,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "screenshots": [
+        "zoom200-player-top.png",
+        "zoom200-player-hand.png",
+        "zoom200-player-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Stand",
+        "scrollY": 788.3333129882812,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    },
+    {
+      "fixture": "player-five",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -543.75,
+          "width": 600.3333740234375,
+          "height": 808.2552490234375
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -531.75,
+            "width": 360,
+            "height": 217.765625
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -295.04168701171875,
+            "width": 182.7760467529297,
+            "height": 209.61459350585938
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -276.60418701171875,
+            "width": 182.7760467529297,
+            "height": 209.61459350585938
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": -56.989585876464844,
+            "width": 568.328125,
+            "height": 305.49481201171875
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -295.04168701171875,
+            "width": 182.7760467529297,
+            "height": 178
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 525,
+            "scrollWidth": 525
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 305,
+            "scrollHeight": 305
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 306,
+            "scrollHeight": 306
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 196.1666717529297,
+        "y": 154.703125,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "screenshots": [
+        "zoom200-player-five-top.png",
+        "zoom200-player-five-hand.png",
+        "zoom200-player-five-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Stand",
+        "scrollY": 766.6666870117188,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    },
+    {
+      "fixture": "player-split",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -511.75,
+          "width": 600.3333740234375,
+          "height": 934.4271240234375
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -499.75,
+            "width": 360,
+            "height": 217.765625
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -263.04168701171875,
+            "width": 182.7760467529297,
+            "height": 209.61459350585938
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -244.6041717529297,
+            "width": 182.7760467529297,
+            "height": 209.61459350585938
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": -24.98958396911621,
+            "width": 568.328125,
+            "height": 431.66668701171875
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -263.04168701171875,
+            "width": 182.7760467529297,
+            "height": 178
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          },
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 432,
+            "scrollHeight": 432
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 306,
+            "scrollHeight": 306
+          }
+        ]
+      },
+      "keyboardTarget": "Stand",
+      "button": {
+        "x": 196.1666717529297,
+        "y": 73.20833587646484,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "screenshots": [
+        "zoom200-player-split-top.png",
+        "zoom200-player-split-hand.png",
+        "zoom200-player-split-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Stand",
+        "scrollY": 974.3333129882812,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    },
+    {
+      "fixture": "player-rsa-cap",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "table": {
+          "x": 16,
+          "y": -1034.0833740234375,
+          "width": 600.3333740234375,
+          "height": 1219.479248046875
+        },
+        "regions": [
+          {
+            "name": "Dealer",
+            "x": 136.1666717529297,
+            "y": -1022.0833740234375,
+            "width": 360,
+            "height": 217.765625
+          },
+          {
+            "name": "Seat 1",
+            "x": 32,
+            "y": -785.375,
+            "width": 182.7760467529297,
+            "height": 178
+          },
+          {
+            "name": "Seat 3",
+            "x": 224.7760467529297,
+            "y": -766.9375,
+            "width": 182.7760467529297,
+            "height": 178
+          },
+          {
+            "name": "Seat 4",
+            "x": 32,
+            "y": -578.9375,
+            "width": 568.328125,
+            "height": 748.3333740234375
+          },
+          {
+            "name": "Seat 6",
+            "x": 417.5520935058594,
+            "y": -785.375,
+            "width": 182.7760467529297,
+            "height": 178
+          }
+        ],
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "cards": [
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          },
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          },
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          },
+          {
+            "clientWidth": 262,
+            "scrollWidth": 262
+          }
+        ],
+        "clips": [
+          {
+            "name": "player-hand",
+            "overflow": "visible",
+            "clientHeight": 748,
+            "scrollHeight": 748
+          },
+          {
+            "name": "player-decisions",
+            "overflow": "visible",
+            "clientHeight": 269,
+            "scrollHeight": 269
+          }
+        ]
+      },
+      "keyboardTarget": "Deal Again",
+      "button": {
+        "x": 148.546875,
+        "y": 120.79167175292969,
+        "width": 116.015625,
+        "height": 44
+      },
+      "screenshots": [
+        "zoom200-player-rsa-cap-top.png",
+        "zoom200-player-rsa-cap-hand.png",
+        "zoom200-player-rsa-cap-controls.png"
+      ],
+      "focusBefore": {
+        "tag": "BUTTON",
+        "text": "Deal Again",
+        "scrollY": 1241,
+        "innerWidth": 640
+      },
+      "configuredZoom": 2,
+      "beforeKeyboardZoom": 2
+    }
+  ],
+  "nativeWindow": {
+    "windowId": 600411493,
+    "bounds": {
+      "left": 10,
+      "top": 10,
+      "width": 1280,
+      "height": 818,
+      "windowState": "normal"
+    }
+  },
+  "baseline": {
+    "innerWidth": 1280,
+    "innerHeight": 723,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 1.5,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1,
+    "screen": {
+      "width": 1280,
+      "height": 800,
+      "availWidth": 1280,
+      "availHeight": 752
+    }
+  },
+  "viewportLimit": "Native Windows browser viewport is recorded as observed. The1280x900 primary-play requirement is independently checked in Chromium tests; native zoom proves factor2.0 with unchanged root font/CSS zoom and observed halved CSS viewport.",
+  "tabZoom": {
+    "tabId": 600411495,
+    "zoom": 2,
+    "settings": {
+      "defaultZoomFactor": 1,
+      "mode": "automatic",
+      "scope": "per-tab"
+    }
+  },
+  "zoomMetrics": {
+    "innerWidth": 640,
+    "innerHeight": 361,
+    "outerWidth": 1294,
+    "outerHeight": 818,
+    "dpr": 3,
+    "fontSize": "16px",
+    "cssZoom": "1",
+    "visualScale": 1
+  },
+  "dealerStates": {
+    "status": "PASS",
+    "zoom": 2,
+    "screenshots": [
+      "zoom200-dealer-idle.png",
+      "zoom200-dealer-hidden.png",
+      "zoom200-dealer-revealed-three.png"
+    ],
+    "geometry": {
+      "width": 640,
+      "scrollWidth": 632,
+      "total": "Total: 23",
+      "status": "Bust",
+      "children": [
+        {
+          "className": "dealer-card-lane",
+          "clientWidth": 188,
+          "scrollWidth": 188
+        },
+        {
+          "className": "dealer-total",
+          "clientWidth": 188,
+          "scrollWidth": 188
+        },
+        {
+          "className": "dealer-state",
+          "clientWidth": 188,
+          "scrollWidth": 188
+        },
+        {
+          "className": "dealer-shoe",
+          "clientWidth": 188,
+          "scrollWidth": 188
+        },
+        {
+          "className": "table-inscription",
+          "clientWidth": 188,
+          "scrollWidth": 188
+        }
+      ]
+    }
+  },
+  "controlScenarios": [
+    {
+      "state": "open",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": null,
+            "width": 100,
+            "height": 44,
+            "clientWidth": 98,
+            "scrollWidth": 98,
+            "disabled": false
+          },
+          {
+            "text": "10",
+            "width": 44,
+            "height": 44,
+            "clientWidth": 40,
+            "scrollWidth": 40,
+            "disabled": false
+          },
+          {
+            "text": "25",
+            "width": 44,
+            "height": 44,
+            "clientWidth": 40,
+            "scrollWidth": 40,
+            "disabled": false
+          },
+          {
+            "text": "100",
+            "width": 47.609375,
+            "height": 44,
+            "clientWidth": 44,
+            "scrollWidth": 44,
+            "disabled": false
+          },
+          {
+            "text": "Deal",
+            "width": 67.609375,
+            "height": 44,
+            "clientWidth": 66,
+            "scrollWidth": 66,
+            "disabled": false
+          },
+          {
+            "text": "Optional wagers",
+            "width": 576.3333740234375,
+            "height": 45.333335876464844,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "keyboardTarget": "Deal",
+      "screenshots": [
+        "zoom200-control-open-hand.png",
+        "zoom200-control-open-controls.png"
+      ]
+    },
+    {
+      "state": "insurance",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Buy Insurance",
+            "width": 139.421875,
+            "height": 44,
+            "clientWidth": 137,
+            "scrollWidth": 137,
+            "disabled": false
+          },
+          {
+            "text": "Decline",
+            "width": 89.5625,
+            "height": 44,
+            "clientWidth": 88,
+            "scrollWidth": 88,
+            "disabled": false
+          },
+          {
+            "text": "Insurance and Even Money explained",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "keyboardTarget": "Decline",
+      "screenshots": [
+        "zoom200-control-insurance-hand.png",
+        "zoom200-control-insurance-controls.png"
+      ]
+    },
+    {
+      "state": "even-money",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Buy Insurance",
+            "width": 139.421875,
+            "height": 44,
+            "clientWidth": 137,
+            "scrollWidth": 137,
+            "disabled": false
+          },
+          {
+            "text": "Decline",
+            "width": 89.5625,
+            "height": 44,
+            "clientWidth": 88,
+            "scrollWidth": 88,
+            "disabled": false
+          },
+          {
+            "text": "Take Even Money",
+            "width": 164.234375,
+            "height": 44,
+            "clientWidth": 162,
+            "scrollWidth": 162,
+            "disabled": false
+          },
+          {
+            "text": "Insurance and Even Money explained",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "keyboardTarget": "Take Even Money",
+      "screenshots": [
+        "zoom200-control-even-money-hand.png",
+        "zoom200-control-even-money-controls.png"
+      ]
+    },
+    {
+      "state": "unaffordable",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Buy Insurance",
+            "width": 139.421875,
+            "height": 44,
+            "clientWidth": 137,
+            "scrollWidth": 137,
+            "disabled": true
+          },
+          {
+            "text": "Decline",
+            "width": 89.5625,
+            "height": 44,
+            "clientWidth": 88,
+            "scrollWidth": 88,
+            "disabled": false
+          },
+          {
+            "text": "Insurance and Even Money explained",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "keyboardTarget": "Decline",
+      "screenshots": [
+        "zoom200-control-unaffordable-hand.png",
+        "zoom200-control-unaffordable-controls.png"
+      ]
+    }
+  ],
+  "roundCompleteScenarios": [
+    {
+      "fixture": "player",
+      "amount": "100",
+      "net": "100",
+      "available": "1,100",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44,
+            "clientWidth": 114,
+            "scrollWidth": 114,
+            "disabled": false
+          },
+          {
+            "text": "Repeat Bet · 100 credits",
+            "width": 211.22396850585938,
+            "height": 44,
+            "clientWidth": 209,
+            "scrollWidth": 209,
+            "disabled": false
+          },
+          {
+            "text": "Wager result details",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshots": [
+        "zoom200-complete-player-100-hand.png",
+        "zoom200-complete-player-100-controls.png",
+        "zoom200-complete-player-100-expanded.png"
+      ],
+      "disclosureKeyboard": "Enter/Space PASS",
+      "nextRoundFocus": "Native Tab/Enter Deal Again -> wager PASS"
+    },
+    {
+      "fixture": "player-loss",
+      "amount": "100",
+      "net": "-100",
+      "available": "900",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44,
+            "clientWidth": 114,
+            "scrollWidth": 114,
+            "disabled": false
+          },
+          {
+            "text": "Repeat Bet · 100 credits",
+            "width": 211.22396850585938,
+            "height": 44,
+            "clientWidth": 209,
+            "scrollWidth": 209,
+            "disabled": false
+          },
+          {
+            "text": "Wager result details",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshots": [
+        "zoom200-complete-player-loss-100-hand.png",
+        "zoom200-complete-player-loss-100-controls.png",
+        "zoom200-complete-player-loss-100-expanded.png"
+      ],
+      "disclosureKeyboard": "Enter/Space PASS",
+      "nextRoundFocus": "Native Tab/Enter Deal Again -> wager PASS"
+    },
+    {
+      "fixture": "player-push",
+      "amount": "100",
+      "net": "0",
+      "available": "1,000",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44,
+            "clientWidth": 114,
+            "scrollWidth": 114,
+            "disabled": false
+          },
+          {
+            "text": "Repeat Bet · 100 credits",
+            "width": 211.22396850585938,
+            "height": 44,
+            "clientWidth": 209,
+            "scrollWidth": 209,
+            "disabled": false
+          },
+          {
+            "text": "Wager result details",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshots": [
+        "zoom200-complete-player-push-100-hand.png",
+        "zoom200-complete-player-push-100-controls.png",
+        "zoom200-complete-player-push-100-expanded.png"
+      ],
+      "disclosureKeyboard": "Enter/Space PASS",
+      "nextRoundFocus": "Native Tab/Enter Deal Again -> wager PASS"
+    },
+    {
+      "fixture": "player-loss",
+      "amount": "1000",
+      "net": "-1,000",
+      "available": "0",
+      "status": "PASS",
+      "zoom": 2,
+      "geometry": {
+        "innerWidth": 640,
+        "scrollWidth": 632,
+        "controls": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44,
+            "clientWidth": 114,
+            "scrollWidth": 114,
+            "disabled": false
+          },
+          {
+            "text": "Repeat Bet · 1,000 credits",
+            "width": 224.765625,
+            "height": 44,
+            "clientWidth": 223,
+            "scrollWidth": 223,
+            "disabled": true
+          },
+          {
+            "text": "Wager result details",
+            "width": 576.3333740234375,
+            "height": 44,
+            "clientWidth": 576,
+            "scrollWidth": 576,
+            "disabled": false
+          }
+        ]
+      },
+      "screenshots": [
+        "zoom200-complete-player-loss-1000-hand.png",
+        "zoom200-complete-player-loss-1000-controls.png",
+        "zoom200-complete-player-loss-1000-expanded.png"
+      ],
+      "disclosureKeyboard": "Enter/Space PASS",
+      "nextRoundFocus": "Native Tab/Enter Deal Again -> wager PASS"
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "end": "2026-10-05 08:45:33 +08:00"
+}

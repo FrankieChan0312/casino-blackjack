@@ -3277,3 +3277,24 @@ M10-T03 IMPLEMENTED / VERIFIED. Pure deterministic seatMapping binds ascending c
 M10-T03 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at main/402fccda825a5d0a34449eeb00b50df212be9081. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN,untracked0 at 2026-10-05 07:50:15 +08:00. Repairs5/10; full Vitest1129/Chromium113, M1–M8 and verify.ps1 PASS/0. Exact executables unchanged. HUMAN VISUAL ACCEPTANCE: PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. This separate factual receipt follows successful implementation publication; its own final SHA is resolved from Git.
 
 2026-10-05 07:51:54 +08:00 — Publication repair5/10 CLOSED: documentation13 and actual staged whitespace PASS/checked0; exact180 executable hashes unchanged. Implementation main/402fccda825a5d0a34449eeb00b50df212be9081 pushed with live parity0/0 CLEAN/untracked0. Final factual documentation receipt follows; T02/T03 human acceptance PENDING, fresh separate task review NOT COMPLETED (unavailable). M10-T04 NOT STARTED — WAITING FOR OWNER REVIEW OF M10-T02/T03; Dealer artwork/Motion/animation not started, deployment NOT RUN.
+
+## 2026-10-05 08:32:41 +08:00 — M10-T04-A baseline and owner acceptance
+
+Main/ddb8ff9920ed159c38140f71e9d70ab052fd556f=origin/live,0/0,CLEAN/untracked0. Authorities read in required order, no approved identity/policy; Lucien is only a design example. Owner explicitly accepts T02/T03 human visual delivery. T04-A contract and exact authorization persisted,0/10. All incoming file SHA256 captured before product edits. Only optional approved preferred identity activates deterministic exclusion; production remains unassigned until owner selection. No delegation/artwork/Motion/animation/deployment. Recommended Sol6.1/High supported; actual runtime NOT VERIFIED.
+
+2026-10-05 08:41:28 +08:00 — M10_T04: Repair1/10: first Chromium focused run FAIL/exit1, 8 passed and configured single-player case waited for nonexistent Stand during real seed7 Ace Insurance. Hypothesis: new fixture omitted existing Insurance step; target test-only fix declines actual Insurance then Stand if legal and requires committed result. Gameplay/UI assertions retained, source unchanged. Original log/trace/context/screenshot preserved. Affected rerun pending.
+
+## M10-T04-A focused checkpoint — 2026-10-05 08:43:20 +08:00
+
+Repair1/10 closed: first new Chromium fixture incorrectly attempted Stand during actual single-player Insurance; original FAIL/exit1 retained. Targeted test-only sequence repair passed9/9 Chromium, focused19 files/146 Vitest, typecheck/lint PASS/0. No source repair or assertion weakening.18 new fallback/text200 screenshots retained for review; artwork NOT CREATED. Full gate pending. M10-T02/T03 human ACCEPTED; T05/Motion/animation NOT STARTED.
+
+
+## M10-T04-A repair2/10 — 2026-10-05 08:47:11 +08:00
+
+Git task diff whitespace FAIL/exit2: newly appended checkpoint note leaves an extra EOF blank in DEVELOPMENT_LOG.md. Falsifiable cause hypothesis: the task-authored note ends with two newlines. Targeted fix removes only that surplus EOF blank; raw first failure retained, no source/test change. All focused checks and native zoom remain valid on184 frozen executable hashes. Affected whitespace/documentation rerun pending.
+
+## M10-T04-A technical gate — 2026-10-05 09:08:18 +08:00
+
+**M10-T04A_IMPLEMENTED_VERIFIED**; repair count M10-T04 **2/10**. Optional approved preferred identity -> unseated preference else first eligible canonical ID; stable reservation through rounds/resize/avatar changes; production identity remains unassigned pending owner selection. Separate formal asset contract and DealerZone shell retain existing temporary fallback; six static public-state hooks, no commands/timing/RNG. Full90 files/1150 Vitest and122 Chromium, current194, focused146/9, native200 zoom, PA1 read-only byte reproduction, independent M1–M8 and scripts/verify.ps1 **PASS / checked exit0**.184 exact executable hashes unchanged after verification; domain/browser/PA1 originals/provenance/canonical historical evidence unchanged. Same-session spec/source/diff/test/evidence review PASS; genuinely fresh separate-session review NOT COMPLETED (unavailable).
+
+M10A ACCEPTED/CLOSED; M10-T02/T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED. T04-A HUMAN ACCEPTANCE PENDING; full T04 artwork/motion AC is not accepted by this architecture gate. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Ranked shortlist: Lucien, Celestine, Caelan. Normal authorized main publication pending; then stop for owner selection/artwork direction. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN. [Contract](M10_T04.md), [gate](M10_T04_EVIDENCE/technical-gate.json).

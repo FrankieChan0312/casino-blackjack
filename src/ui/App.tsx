@@ -6,13 +6,17 @@ import { Setup, Betting, PlayerBetting } from './Betting.js';
 import { Actions } from './Actions.js';
 import { Decisions, Results } from './Decisions.js';
 import { DemoTools } from './DemoTools.js';
-import { createCharacterLineup, changeHumanCharacter, type PresentationChooser } from '../presentation/characters.js';
+import { type PresentationChooser } from '../presentation/characters.js';
+import { createDealerTableIdentity, changeDealerTableHuman, dealerPresentation, dealerPresentationState,
+  type DealerConfiguration } from '../presentation/dealerPresentation.js';
 import { CharacterPicker } from './CharacterPicker.js';
 import { PlayerSetup } from './PlayerSetup.js';
 
-export function App({ controller, chooseCharacter }: { controller: BrowserController; chooseCharacter?: PresentationChooser }) {
+export function App({ controller, chooseCharacter, dealerConfiguration }: {
+  controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
+}) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
-  if (view.playerMode) return <PlayerExperience view={view} controller={controller} chooseCharacter={chooseCharacter} />;
+  if (view.playerMode) return <PlayerExperience view={view} controller={controller} chooseCharacter={chooseCharacter} dealerConfiguration={dealerConfiguration} />;
   return <main className={view.playerMode ? 'player-mode' : 'manual-mode'}>
     <a className="skip-link" href="#local-actions">Skip to your hand and actions</a>
     <header><p className="eyebrow">Seven seats · One dealer · Your table</p><h1>Casino Blackjack</h1>
@@ -35,14 +39,21 @@ export function App({ controller, chooseCharacter }: { controller: BrowserContro
   </main>;
 }
 
-function PlayerExperience({ view, controller, chooseCharacter }: { view: BrowserView; controller: BrowserController; chooseCharacter?: PresentationChooser }) {
+function PlayerExperience({ view, controller, chooseCharacter, dealerConfiguration }: {
+  view: BrowserView; controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
+}) {
   const guestSeats = view.configuration.filter(seat => seat.occupancy === 'COMPUTER').map(seat => seat.seatNumber);
-  const sessionKey = view.presentationSession + ':' + guestSeats.join(',');
+  const sessionKey = view.presentationSession + ':' + view.tableStarted + ':' + guestSeats.join(',');
   const [presentation, setPresentation] = useState(() => ({ session: sessionKey, generation: view.presentationSession,
-    lineup: createCharacterLineup(guestSeats,chooseCharacter) }));
+    identity: createDealerTableIdentity(guestSeats,chooseCharacter, 'knight_male', view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined) }));
   if (presentation.session !== sessionKey) setPresentation({ session: sessionKey, generation: view.presentationSession,
-    lineup: createCharacterLineup(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.lineup.human : 'knight_male') });
-  const lineup = presentation.lineup;
+    identity: createDealerTableIdentity(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.identity.lineup.human : 'knight_male',
+      view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined) });
+  const lineup = presentation.identity.lineup;
+  const dealer = dealerPresentation(presentation.identity.characterId, dealerPresentationState({
+    awaitingPlayer: !!view.interaction.insurance || !!view.follow || view.interaction.actions.some(action => action.enabled),
+    interrupted: view.round?.phase === 'INTEGRITY_ERROR',
+  }), dealerConfiguration?.assets);
   useEffect(() => {
     if (view.phase === 'CONFIGURING' || (view.phase === 'OPEN' && !view.lastBet)) return;
     const target = document.querySelector<HTMLElement>(view.phase === 'OPEN' ? '#player-wager' : view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');
@@ -54,7 +65,7 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
     <header className="casino-header"><div><p className="eyebrow">An evening at the table</p><h1>Casino Blackjack</h1></div>
       <p>Simulation credits only — no real-money gambling.<br />Credits have no redemption value.</p></header>
     <div className="table-scene">
-    <Table view={view} lineup={lineup} />
+    <Table view={view} lineup={lineup} dealerPresentation={dealer} />
     <div id="player-decisions" tabIndex={-1} className="player-dock" role="region" aria-label="Your gameplay controls" aria-describedby="player-scene-status" data-scene-zone="controls"
       data-contextual-dock={view.interaction.insurance ? 'insurance' : view.interaction.nextRound ? 'result' : undefined}>
       <div className="control-context"><p id="player-scene-status" className="round-status" role="status" aria-live="polite">{view.tableStarted ? roundStatus(view) : 'Choose your players, then start the table'}</p>
@@ -77,8 +88,8 @@ function PlayerExperience({ view, controller, chooseCharacter }: { view: Browser
     <aside className="scene-support" aria-label="Table preferences and demo tools">
     {view.tableStarted && <div className="table-preference"><p>{view.playerCount} players · 1 human · {view.playerCount - 1} computer guests</p>
       <button disabled={!view.canCreateTable} onClick={() => controller.dispatch({ type: 'NEW_TABLE' })}>New table · reset to 1000 credits</button></div>}
-    <CharacterPicker selected={lineup.human} onSelect={id => setPresentation(current => ({ ...current,
-      lineup: changeHumanCharacter(current.lineup,id) }))} />
+    <CharacterPicker selected={lineup.human} dealerCharacterId={presentation.identity.characterId}
+      onSelect={id => setPresentation(current => ({ ...current, identity: changeDealerTableHuman(current.identity,id) }))} />
     <details className="panel developer-tools"><summary>Developer / demo tools</summary>
       <DemoTools key={view.profileId + String(view.seeded)} view={view} controller={controller} />
     </details>

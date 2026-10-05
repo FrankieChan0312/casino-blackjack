@@ -1,0 +1,50 @@
+{
+  "purpose": "Lossless task-specific drivers; recover into .git. Check scoped routing and exact recorded commands/results before reproduction; init/close are historical evidence writers, not universal task scripts.",
+  "drivers": [
+    {
+      "name": "t04a-init.cjs",
+      "sha256": "7e76d6935a79f63b561dc18ab4029943f1d56e2bdee0a1272463e2f9c0cb8238",
+      "bytes": 6371
+    },
+    {
+      "name": "t04a-runner.cjs",
+      "sha256": "dbd25596d024f8cf39ea6ce3d3a08deac1e68f05424367b8d4bffab4feb7ef00",
+      "bytes": 8522
+    },
+    {
+      "name": "t04a-evidence.cjs",
+      "sha256": "3ceb79651050bc250d5fafee6734421a4d9c01305e27ab38be82c24ed1afd237",
+      "bytes": 3615
+    },
+    {
+      "name": "t04a-review.cjs",
+      "sha256": "6e70c9dd6ead39f62402506217623ed53033e55ef8c4f95f6c3d50f6c97d41f9",
+      "bytes": 4141
+    },
+    {
+      "name": "t04a-zoom.cjs",
+      "sha256": "b05516235b87fab85478f9645ea4ed6be8bd45ffe2963fdb51f17973df383150",
+      "bytes": 17980
+    },
+    {
+      "name": "t04a-close.cjs",
+      "sha256": "063b7fb27b5caf79055d599a3a028a2d6286992910acd15e38cd01a92378ca2c",
+      "bytes": 10454
+    },
+    {
+      "name": "batch2-audit.cjs",
+      "sha256": "16cdfe7794880c5ae80680b9ad04ea7d6389bb0e7e963deb01d1ffce8c087003",
+      "bytes": 3173
+    },
+    {
+      "name": "batch2-publish.cjs",
+      "sha256": "cacb0894d46e9966ec7d7bfbda7e78d689d2a33517f6c48229fd4a5104019b9c",
+      "bytes": 3778
+    },
+    {
+      "name": "m10a-human-evidence-route.cjs",
+      "sha256": "4e3b99489f608ca457de9dfe76ba08d90e3c6fbdc7767501b1f2fd50102da402",
+      "bytes": 1297
+    }
+  ]
+}

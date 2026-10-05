@@ -1,0 +1,729 @@
+# Casino Blackjack — M10-T04-A
+# Dealer Avatar Identity + Formal Variant Contract + Integration Shell
+
+Repository:
+
+C:\Users\user\Documents\GitHub\casino-blackjack
+
+Branch:
+
+main
+
+Expected starting HEAD:
+
+ddb8ff9920ed159c38140f71e9d70ab052fd556f
+
+---
+
+# 0. Governance state
+
+M10A:
+
+ACCEPTED / CLOSED
+
+M10-T02:
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED
+HUMAN VISUAL ACCEPTANCE: ACCEPTED
+
+M10-T03:
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED
+HUMAN VISUAL ACCEPTANCE: ACCEPTED
+
+Record those owner acceptances in repository documentation if not already recorded.
+
+M10-T04:
+
+NOT STARTED
+
+Dealer artwork:
+
+NOT STARTED
+
+Motion:
+
+NOT INSTALLED
+
+Animation:
+
+NOT STARTED
+
+Deployment:
+
+NOT RUN
+
+---
+
+# 1. Objective
+
+Begin M10-T04:
+
+Dealer Avatar + Formal Attire
+
+This subtask is:
+
+M10-T04-A — Dealer Identity / Role / Asset Contract / Integration Shell
+
+Do NOT generate, fabricate or edit final Dealer artwork in this task.
+
+The task must establish:
+
+- Dealer character identity contract
+- Dealer-vs-player exclusivity
+- deterministic presentation-only Dealer assignment policy
+- formal-attire variant asset contract
+- Dealer asset manifest / provenance expectations
+- UI integration shell for future formal Dealer image
+- compatibility with six planned Dealer presentation states
+
+Then STOP for owner/artwork review.
+
+---
+
+# 2. Mandatory preflight
+
+Confirm:
+
+- repo path
+- branch = main
+- HEAD = ddb8ff9920ed159c38140f71e9d70ab052fd556f
+- origin/main
+- ahead/behind = 0/0
+- working tree clean
+- untracked = 0
+
+If unexpected changes exist:
+
+STOP.
+
+Do not reset or discard unknown work.
+
+---
+
+# 3. Read governing documentation
+
+Read at minimum:
+
+- AGENTS.md
+- README.md
+- docs/DESIGN.md
+- docs/UX_UI.md
+- docs/SPEC.md
+- docs/PLAN.md
+- docs/STATE.md
+- docs/RULES.md
+- docs/M10_PLANNING.md
+- docs/M10A_PLANNING.md
+- docs/M10_T02-related task docs
+- docs/M10_T03-related task docs
+- docs/DEVELOPMENT_LOG.md
+- docs/LAB_MANUAL.md
+- PA1 asset/provenance documentation
+- scripts/verify.ps1
+
+Inspect:
+
+- current character/avatar roster
+- canonical avatar IDs
+- player-avatar assignment
+- current temporary Dealer implementation
+- DealerZone
+- current 1–7 player configuration
+- current seat assignment
+
+Do not assume asset names or identity rules.
+
+---
+
+# 4. Dealer design contract
+
+The accepted design requirement is:
+
+Dealer = avatar-derived character presentation entity
+
+The Dealer may use an identity from the established avatar roster.
+
+When used as Dealer:
+
+- recognisable character identity is preserved
+- role-specific formal casino attire is a SEPARATE presentation variant
+- canonical PA1 player asset remains immutable
+
+Conceptually:
+
+avatar identity
+├── player/default presentation
+└── dealer/formal presentation
+
+Do not overwrite one with the other.
+
+---
+
+# 5. Dealer must not duplicate a seated player
+
+Default rule:
+
+Dealer character identity != any currently seated player identity
+
+This must hold visually within one table/session.
+
+Do not permit:
+
+Lucien seated as player
++
+Lucien simultaneously shown as Dealer
+
+or equivalent.
+
+---
+
+# 6. Dealer assignment must NOT use gameplay RNG
+
+Dealer identity is presentation-only.
+
+Do NOT consume:
+
+- gameplay RNG
+- shoe RNG
+- strategy RNG
+- replay-affecting randomness
+
+Dealer assignment must not alter:
+
+- card order
+- digest
+- journal
+- replay
+- gameplay outcome
+
+Use deterministic presentation logic only.
+
+---
+
+# 7. Assignment policy
+
+Inspect repository design/docs first.
+
+If no Dealer identity policy already exists, implement or specify a stable deterministic
+presentation policy with these properties:
+
+1. preferred canonical Dealer identity may be configured
+2. preferred identity is used when not seated
+3. if preferred identity is seated, select the first eligible identity from a stable
+   canonical roster order
+4. never use random selection
+5. assignment remains stable for the table/session
+6. presentation assignment does not affect participant/turn order
+
+Do not hard-code behaviour that cannot later support alternative Dealer identities.
+
+Document the exact policy.
+
+---
+
+# 8. Candidate review
+
+Inspect the accepted avatar roster.
+
+Produce a ranked shortlist of the best 3 existing avatar identities for the initial
+formal Dealer variant.
+
+Evaluate only visual/presentation suitability, for example:
+
+- recognisable head/face
+- clean silhouette
+- suitability for upper-centre Dealer crop
+- enough source quality for formal-attire derivation
+- visual contrast against green felt
+- compatibility with current DealerZone aspect ratio
+
+Do NOT make claims based on gender stereotypes.
+
+Do not alter artwork.
+
+The owner will approve the actual initial Dealer identity.
+
+---
+
+# 9. IMPORTANT stop rule for artwork identity
+
+If repository docs already explicitly name the initial Dealer avatar:
+
+use that identity contract.
+
+If no identity is already explicitly approved:
+
+DO NOT permanently lock a final initial Dealer identity without reporting it to the owner.
+
+You may implement the generic identity-selection architecture and provide the ranked
+shortlist.
+
+Final formal artwork creation waits for owner approval.
+
+---
+
+# 10. Formal-attire variant contract
+
+Define the future Dealer asset contract.
+
+At minimum include:
+
+- canonical character ID
+- role = dealer
+- variant = formal
+- file format
+- transparency requirement
+- intended dimensions/aspect ratio
+- safe crop region
+- provenance/source
+- source avatar reference
+- hash requirements
+- visual-review requirement
+- original PA1 asset immutability
+- licensing/provenance notes where applicable
+
+The formal asset must be separate from the accepted player image.
+
+---
+
+# 11. Formal attire visual direction
+
+Document the approved visual direction:
+
+Premium casino / evening-table formalwear.
+
+Possible examples:
+
+- tuxedo
+- formal suit
+- waistcoat / dealer-formal attire
+- elegant eveningwear
+- formal casino uniform
+
+Requirements:
+
+- preserve face/hair/identity cues
+- tasteful, premium, restrained
+- visually compatible with existing character art
+- transparent background
+- readable at DealerZone scale
+- no excessive accessories that cover cards/table
+- no sexualised redesign for the sake of casino theme
+
+Do NOT create the artwork now.
+
+---
+
+# 12. Dealer integration shell
+
+Refactor or extend the presentation layer only as needed so DealerZone can consume:
+
+dealerCharacter = {
+  characterId,
+  role: "dealer",
+  variant: "formal",
+  asset,
+  presentationState
+}
+
+or the cleanest equivalent matching current architecture.
+
+Do not create unnecessary abstraction.
+
+The DealerZone should be able to swap:
+
+temporary placeholder
+→ future approved formal Dealer asset
+
+without another structural redesign.
+
+---
+
+# 13. Six Dealer presentation states
+
+Preserve the planned presentation contract:
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+T04-A may establish:
+
+- types
+- semantic state mapping
+- CSS/data hooks
+- static presentation contract
+
+Do NOT implement animation yet.
+
+Do NOT add timers.
+
+Do NOT add Motion.
+
+Do NOT make these states control gameplay.
+
+---
+
+# 14. State mapping must observe authoritative state
+
+Required direction:
+
+authoritative gameplay state/result
+→ derived Dealer presentation state
+→ DealerZone rendering
+
+Forbidden:
+
+Dealer presentation state
+→ command
+→ gameplay decision
+
+Dealer remains presentation-only.
+
+---
+
+# 15. Temporary Dealer fallback
+
+Until formal artwork exists:
+
+the current temporary Dealer must remain usable.
+
+No broken image state is allowed.
+
+If formal asset is absent:
+
+use the established temporary Dealer fallback explicitly.
+
+Do not invent an untracked asset path.
+
+---
+
+# 16. T02/T03 preservation
+
+Dealer-role work must not break:
+
+- 1–7 player configuration
+- participant count
+- dynamic seat mapping
+- human lower-centre seat
+- computer player assignments
+- turn order
+
+If Dealer identity exclusion affects avatar assignment:
+
+perform the smallest presentation/identity-layer adjustment necessary.
+
+Do NOT change gameplay participant counts.
+
+---
+
+# 17. Maximum-player compatibility
+
+At 7 players:
+
+there must still be at least one eligible Dealer identity under the accepted roster.
+
+Verify roster cardinality and assignment assumptions mechanically.
+
+If not guaranteed:
+
+STOP and report BLOCKER.
+
+Do not silently duplicate an identity.
+
+---
+
+# 18. Domain protection
+
+Expected:
+
+src/domain diff = EMPTY
+
+Protected:
+
+- Blackjack rules
+- RNG
+- shoe/cards
+- accounting
+- replay/digest/journal
+- Dealer strategy
+- computer strategy
+- turn order
+- settlement
+
+Dealer identity / clothing is presentation configuration.
+
+If protected domain changes appear required:
+
+STOP.
+
+---
+
+# 19. PA1 protection
+
+Canonical PA1 assets remain immutable.
+
+Do NOT:
+
+- edit them
+- overwrite them
+- crop them destructively
+- change provenance
+- change hashes
+
+Any future formal Dealer artwork is a new derived presentation asset with its own
+provenance/evidence.
+
+---
+
+# 20. No image generation in Codex
+
+Do NOT generate final raster/SVG Dealer character art during T04-A.
+
+Do not synthesize a placeholder formal outfit.
+
+Do not use third-party downloaded character artwork.
+
+The owner will provide/approve the formal asset separately.
+
+---
+
+# 21. Accessibility
+
+Dealer identity/state must remain accessible.
+
+Preserve:
+
+- semantic Dealer label
+- cards/total/hole-card state
+- responsive behaviour
+- 200% text
+- native zoom
+- contrast
+
+Formal artwork later must have appropriate accessible naming without redundant screen-reader noise.
+
+---
+
+# 22. Tests
+
+Add/update tests for:
+
+- deterministic Dealer assignment
+- Dealer never duplicates seated-player identity
+- stable assignment within session
+- 1-player through 7-player table compatibility
+- no gameplay RNG consumption
+- placeholder fallback when formal asset absent
+- six presentation-state mapping contract
+- DealerZone remains functional
+- replay/digest unaffected
+- T02/T03 preserved
+
+Do not test visual artwork that does not yet exist.
+
+---
+
+# 23. Visual evidence
+
+Capture current Dealer integration shell with fallback at representative:
+
+- 1-player table
+- 4-player table
+- 7-player table
+- tablet
+- mobile
+
+This is architecture evidence, not final Dealer-art human acceptance.
+
+---
+
+# 24. Repair accounting
+
+M10-T04 starts:
+
+0/10
+
+Normal repairs up to 10/10.
+
+No exceptional extension is pre-authorized.
+
+---
+
+# 25. Verification
+
+Focused:
+
+- Dealer identity assignment tests
+- T02/T03 compatibility
+- DealerZone tests
+- replay/RNG preservation
+
+Then full:
+
+- Vitest
+- Chromium
+- preservation
+- verify.ps1
+
+Required:
+
+PASS / exit 0
+
+---
+
+# 26. Documentation
+
+Create/update as appropriate:
+
+- docs/M10_T04.md
+- docs/STATE.md
+- docs/PLAN.md
+- docs/DEVELOPMENT_LOG.md
+- docs/LAB_MANUAL.md
+
+Document:
+
+- Dealer assignment policy
+- identity exclusivity
+- formal asset contract
+- shortlist
+- six presentation states
+- artwork status = REQUIRED / NOT YET CREATED
+
+---
+
+# 27. Git
+
+If technical gate passes:
+
+- inspect diff
+- commit
+- push normally
+- local == remote
+- ahead/behind 0/0
+- clean
+- untracked 0
+
+No deployment.
+
+---
+
+# 28. HARD STOP
+
+After T04-A:
+
+STOP.
+
+Do NOT:
+
+- create formal Dealer art
+- implement final formal Dealer image
+- start Motion
+- start dealing animation
+- begin M10-T05
+- begin M10-T06
+
+Wait for owner to approve the Dealer identity and artwork direction.
+
+---
+
+# 29. Final response format
+
+## STATUS
+
+`M10-T04A_IMPLEMENTED_VERIFIED`
+
+or
+
+`M10-T04A_BLOCKED`
+
+## DEALER IDENTITY ARCHITECTURE
+
+- assignment policy
+- seated-player exclusion
+- session stability
+- RNG independence
+
+## DEALER CANDIDATE SHORTLIST
+
+Rank 3 candidates:
+
+1.
+2.
+3.
+
+For each state why it fits the existing DealerZone.
+
+Do NOT claim owner approval.
+
+## FORMAL ASSET CONTRACT
+
+- character ID
+- role/variant
+- format
+- dimensions/aspect
+- transparency
+- provenance
+- hash/evidence
+- PA1 source immutability
+
+## PRESENTATION STATES
+
+Confirm contract for:
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+State clearly:
+
+ANIMATION NOT IMPLEMENTED
+
+## PRESERVATION
+
+- src/domain
+- gameplay RNG
+- replay/digest/journal
+- accounting
+- strategy
+- T02/T03
+- PA1 assets
+
+## VERIFICATION
+
+- focused tests
+- Vitest
+- Chromium
+- preservation
+- verify.ps1
+
+## REPAIR COUNT
+
+`M10-T04: X/10`
+
+## GIT
+
+- implementation commit
+- final HEAD
+- remote HEAD
+- clean state
+
+## ARTWORK STATUS
+
+`FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED`
+
+## NEXT ACTION
+
+`WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR`
+
+`M10-T05 NOT STARTED`
+`MOTION NOT INSTALLED`
+`ANIMATION NOT STARTED`

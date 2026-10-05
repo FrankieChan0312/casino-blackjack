@@ -9,9 +9,10 @@ import { Cards } from './Cards.js';
 import { SeatUnit } from './SeatUnit.js';
 import { LocalPlayerHud } from './LocalPlayerHud.js';
 import { DealerZone } from './DealerZone.js';
+import type { DealerPresentation } from '../presentation/dealerPresentation.js';
 
 export { Cards } from './Cards.js';
-export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterLineup }) {
+export function Table({ view, lineup, dealerPresentation }: { view: BrowserView; lineup?: CharacterLineup; dealerPresentation?: DealerPresentation }) {
   const round = view.round;
   const otherSeats = view.configuration.filter(seat => seat.seatNumber !== view.human?.controlledSeat);
   const guests = otherSeats.filter(seat => seat.occupancy !== 'EMPTY');
@@ -20,7 +21,7 @@ export function Table({ view, lineup }: { view: BrowserView; lineup?: CharacterL
   const localRow = occupied.length < 5 ? guests.length ? 2 : 1
     : Math.max(...mapping.filter(seat => seat.seatNumber !== view.human?.controlledSeat).map(seat => seat.band)) + 2;
   return <section aria-label="Blackjack table" data-dynamic-seats={view.playerMode || undefined} data-dense-arc={view.playerMode && occupied.length >= 5 || undefined} data-player-count={view.playerMode ? occupied.length : undefined} data-felt-markings={view.playerMode || undefined} className={`table-surface${view.playerMode ? ' casino-table' : ''}`}>
-    {view.playerMode ? <DealerZone dealer={round?.dealer} phase={round?.phase} /> : <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
+    {view.playerMode ? <DealerZone dealer={round?.dealer} phase={round?.phase} presentation={dealerPresentation} /> : <section className="dealer panel" data-anchor="dealer" aria-label="Dealer"><h2>Dealer</h2>
       <div className="dealer-cards" data-anchor="dealer-cards">{round ? <><Cards cards={round.dealer.visibleCards} />
         {!round.dealer.holeCard && <span role="img" aria-label="Hidden dealer card" className="card card-back">◆</span>}
         <p className="dealer-total">{round.dealer.holeCard ? 'Total' : 'Visible total'}: {round.dealer.total}</p>

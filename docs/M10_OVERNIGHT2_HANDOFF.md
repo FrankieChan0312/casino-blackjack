@@ -1,3 +1,7 @@
+## Owner acceptance and T04-A start — 2026-10-05 08:32:41 +08:00
+
+M10A ACCEPTED/CLOSED. M10-T02 and M10-T03 HUMAN VISUAL ACCEPTANCE: ACCEPTED, explicitly recorded in the new owner instruction at baseline main/ddb8ff9920ed159c38140f71e9d70ab052fd556f. Prior pending statements below are historical. T02 repairs3/10 and T03 repairs5/10 unchanged. T04-A architecture-only IN PROGRESS,0/10; no Dealer identity or artwork approved. [Contract](M10_T04.md). T05/Motion/animation NOT STARTED; deployment NOT RUN.
+
 # M10_OVERNIGHT_BATCH2_COMPLETE
 
 Technical implementation/publication gates complete for T10/T02/T03; final unchanged-executable documentation receipt follows. Owner T02/T03 review remains pending.

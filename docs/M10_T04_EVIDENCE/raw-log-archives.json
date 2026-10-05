@@ -1,0 +1,101 @@
+{
+  "logs": [
+    {
+      "path": "asset-preservation.log.gz",
+      "originalSha256": "9ebdcb59006d82d95f4f9ee2502b777545d16c5a6477cf6480e0e152e386b4a7",
+      "compressedSha256": "0da9b602199edbc8c04fa13af73d14f98d6eedca97f2da6ce8c936524413df21",
+      "bytes": 270
+    },
+    {
+      "path": "first-whitespace.log.gz",
+      "originalSha256": "6f244d0a4a2e8bfd1b2d5f509337e6ee9eac2697633b3e09648bcddd90fc82be",
+      "compressedSha256": "464aa4869088655bd6cfaf76dd9fe58e425be11ea9735b24152e1b743dbb9964",
+      "bytes": 1380
+    },
+    {
+      "path": "native-zoom.log.gz",
+      "originalSha256": "4fc63dee72342df49a36d8783c8b95f5ca6307604f6a8bf4c4318a5ad861971f",
+      "compressedSha256": "37e8271a5138d34e74c45eb6e5703d656e27cc7e5bb71352996d85922be71f50",
+      "bytes": 551
+    },
+    {
+      "path": "repair2-whitespace.log.gz",
+      "originalSha256": "267852d2fc29c02c1041746be61592f1d96253d53bdf613463fb28e4c17b234e",
+      "compressedSha256": "d541535371e3a96207b3863c1178f12dd42ddf8ce7ba7f1bdf36b81938021839",
+      "bytes": 1327
+    },
+    {
+      "path": "t04a-20261005-current.log.gz",
+      "originalSha256": "e96d560381492aa7c2139c2d34904239689cc8b0aa84d14da053348d7e3ad627",
+      "compressedSha256": "cb2610a654023c281f462264323339b0605798a658b540f59a5dbe7385f3a942",
+      "bytes": 497
+    },
+    {
+      "path": "t04a-20261005-final-documentation.log.gz",
+      "originalSha256": "2bcfeab7895d2ba8286bcf53702009c458761c47b468cdbd6cb1fb24233063d1",
+      "compressedSha256": "1865e073710325e523c25fd7dcee5f1740dc2c3cef0864d28c252ee7cd80c509",
+      "bytes": 403
+    },
+    {
+      "path": "t04a-20261005-first-dealer.log.gz",
+      "originalSha256": "4d92abbbbb9257c059dc7239db796b91c156e1be8823dba1a92d29ff562ebfef",
+      "compressedSha256": "31ffa271d9e37126bf972ffe9225886525b4786b340fe052e98aa1ef09ca4635",
+      "bytes": 5264
+    },
+    {
+      "path": "t04a-20261005-first-lint.log.gz",
+      "originalSha256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "compressedSha256": "a03f7ee8e68a3c477801c06d1af0b5a6544775c36dae6555e5c78d04f346e379",
+      "bytes": 60
+    },
+    {
+      "path": "t04a-20261005-first-typecheck.log.gz",
+      "originalSha256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "compressedSha256": "8940f12bddb3937b7e24941a6ef78dc965df39b09e60334b5820ef17653f2ac5",
+      "bytes": 52
+    },
+    {
+      "path": "t04a-20261005-first-unit.log.gz",
+      "originalSha256": "76d692d659175119db6d470eee5eb0d4ac3b2ae2b5b3ce71aaa59ea588fc5614",
+      "compressedSha256": "b94ac185d00806da2a206bf1e6c3a0cc1d211a8cf59ac8ff2ad7f76dd564f675",
+      "bytes": 673
+    },
+    {
+      "path": "t04a-20261005-fullbrowser.log.gz",
+      "originalSha256": "0419a4b2c8f71a6230ce8c8519f786f1f312aad2759910712725918c7c96cba8",
+      "compressedSha256": "2c630edf5e09d2a0ab45b362df903f9e6034943ddeee5b7e1c80bc8f07209475",
+      "bytes": 22872
+    },
+    {
+      "path": "t04a-20261005-fullunit.log.gz",
+      "originalSha256": "f4d89527b8bdbad81676caadb3923f5afdc7093fffd59838c2675e634f1da1c5",
+      "compressedSha256": "89a01dc5d4410b53b3f8efc6c89e0718230f2bed97c1d96e01fa67eabf100795",
+      "bytes": 461
+    },
+    {
+      "path": "t04a-20261005-prepublication-documentation.log.gz",
+      "originalSha256": "9025579f06fd377f8bc65389349b290818ea953885670a01be3431e2ef134295",
+      "compressedSha256": "3dc3504bbfd84cdc4848de4aa24f8c1a2b40689aeea30c047cc07d164ffa6380",
+      "bytes": 404
+    },
+    {
+      "path": "t04a-20261005-preservation.log.gz",
+      "originalSha256": "ccb0dda307a5567fc98c6f53b04d09d2fdcfe2678fc7d083bceb4187c20a8f5a",
+      "compressedSha256": "ca8378bdbee9982a5e29a7d5e40515105c71887fdd5a2829ec23a525643b266f",
+      "bytes": 22717
+    },
+    {
+      "path": "t04a-20261005-repair1-dealer.log.gz",
+      "originalSha256": "a14963d7e6bf9f8232b91d30e4e0ab9c33c3db433f0be5ca0a3acbd5af47220c",
+      "compressedSha256": "1408d4914667e62e03538e7ea9dc23b1f053d6ffb26eef43de8fdc07cc7fbd6f",
+      "bytes": 2161
+    },
+    {
+      "path": "t04a-20261005-unified.log.gz",
+      "originalSha256": "af7053e73252f3fe492f8d55c8f64014aeedfd798ef7a1468ad88efde032acc3",
+      "compressedSha256": "dafe7c6e8b8eb686bfeac711c25f4e1f9a553c2a5070f01602b46aa73f1f0989",
+      "bytes": 47207
+    }
+  ],
+  "timestamp": "2026-10-05 09:10:24 +08:00"
+}

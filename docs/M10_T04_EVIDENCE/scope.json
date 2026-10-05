@@ -1,0 +1,22 @@
+{
+  "allowed": [
+    "README.md",
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/LAB_MANUAL.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/M10_OVERNIGHT2_HANDOFF.md",
+    "docs/M10_T02.md",
+    "docs/M10_T03.md",
+    "docs/M10_T04.md",
+    "src/presentation/dealerPresentation.ts",
+    "src/ui/DealerAvatar.tsx",
+    "src/ui/DealerZone.tsx",
+    "src/ui/App.tsx",
+    "src/ui/Table.tsx",
+    "src/ui/CharacterPicker.tsx",
+    "src/ui/styles.css",
+    "tests/m10/dealerPresentation.test.tsx",
+    "tests/browser/m10/dealerPresentation.spec.ts"
+  ]
+}
