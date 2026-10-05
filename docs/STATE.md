@@ -1,3 +1,9 @@
+## M10-T06 published checkpoint and final receipt — 2026-10-05 21:53:59 +08:00
+
+M10-T06_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED. Implementation checkpoint 7b3a1d93f8b7bed9a914e005b0ffcbadd37df29e normally pushed to origin/main; actual remote/local/tracking equality,0/0,CLEAN/untracked0 confirmed at this timestamp. All required A–J PASS; final verify.ps1 checked0,95/1199 Vitest and164 Chromium plus independent complete preservation/assets. All210 verified executable hashes unchanged by publication. Final12/12 OWNER-AUTHORIZED FINAL EXCEPTION CLOSED; prior10/11 failures retained, repair13 NOT AUTHORIZED / NOT RUN. This following receipt changes documentation/evidence only; its own final HEAD/parity/cleanliness is confirmed in Git/final delivery rather than self-embedded.
+
+Human acceptance PENDING; genuinely fresh independent review NOT COMPLETED. Same-session source/scope/render/evidence/privacy review PASS. M10-T07 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. Hit/Double/Split animation, Dealer reveal/draw animation and chip/payout animation NOT IMPLEMENTED. Deployment NOT RUN. STOP after synchronized final receipt.
+
 ## M10-T06 implemented/verified final exception — 2026-10-05 21:44:49 +08:00
 
 M10-T06_IMPLEMENTED_VERIFIED. A–J PASS/checked0 in owner-required order: exact historical hash; B223.1529ms/27 logical requests->3 actual Git processes under unchanged5000ms; C fullRA1 5/42; D unchanged M10-G06; E31/280; F typecheck/lint,38 units,22 Chromium and native200%3 scenarios/9 PNGs; G95/1199; H164; I independent M1–M8/current31/280+docs13+120 current browser+assets/provenance; J verify.ps1 exit0 from21:22:16 to21:37:03. Counts unchanged. Repair12/12 — OWNER-AUTHORIZED FINAL EXCEPTION — CLOSED. Normal10/10 and repair11 failure retained; repair13 NOT AUTHORIZED / NOT RUN.

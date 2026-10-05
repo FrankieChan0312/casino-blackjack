@@ -1,3 +1,7 @@
+## Actual implementation publication
+
+[Normal main publication and live equality/CLEAN0 receipt](exception12-publication.json): 7b3a1d93f8b7bed9a914e005b0ffcbadd37df29e,210 executable hashes unchanged; all A–J PASS. This docs-only final receipt is separately published; final receipt SHA in Git/delivery, not self-embedded. Human acceptance PENDING; fresh independent review NOT COMPLETED; no13/T07/deployment.
+
 ## Final publication review
 
 [Updated-document13 PASS](exception12-final-docs.json), [text/gzip privacy](exception12-privacy-text.json), [29 ZIP/nested230 text-entry privacy](exception12-privacy-zip.json) PASS. Same-session complete review PASS; all210 executable hashes unchanged. Fresh independent review NOT COMPLETED; human acceptance PENDING. Authorized normal main publication follows.

@@ -1,3 +1,11 @@
+## Current M10-T06 published delivery — 2026-10-05 21:53:59 +08:00
+
+Round-robin initial dealing is IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at 7b3a1d93f8b7bed9a914e005b0ffcbadd37df29e. Full95/1199 Vitest,164 Chromium and complete preservation/assets/final verify.ps1 PASS0. Historical RA1 source restored exactly; equivalent test-setup batching uses3 Git processes rather than27, exact223.1529ms under unchanged5000ms. Final12/12 owner exception CLOSED; all failures retained. [Task/evidence/publication](docs/M10_T06.md). This following document receipt has identical verified executable bytes; final receipt SHA is in Git/delivery.
+
+Human acceptance PENDING; fresh independent review NOT COMPLETED. M10-T07 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. Future action/Dealer/chip animations NOT IMPLEMENTED. Deployment NOT RUN.
+
+## Retained prior verification/publication history
+
 ## Current M10-T06 implemented/verified — 2026-10-05 21:44:49 +08:00
 
 Round-robin initial dealing is IMPLEMENTED / VERIFIED. Full95 files/1199 Vitest and164 Chromium, complete preservation/assets and final verify.ps1 PASS/exit0. Final12/12 owner-authorized exception restores the frozen RA1 adapter and relocates identical Git batching to test setup (27->3, exact223.1529ms under unchanged5000ms). Previous failures retained. [Task/evidence](docs/M10_T06.md).
