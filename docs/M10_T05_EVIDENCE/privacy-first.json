@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-05 13:54:42 +08:00",
+  "scope": "All existing T05 text, decompressed gzip source/output, ZIP text/trace/network bodies; current active full log excluded until completion. Native/failed PNGs visually reviewed. No session transcript imported. Public deterministic fixtures contain simulated credits and no account credentials.",
+  "scannedTextBodies": 65,
+  "patterns": [
+    "openai-secret",
+    "github-token",
+    "aws-key",
+    "private-key",
+    "bearer-secret"
+  ],
+  "findings": [],
+  "status": "PASS"
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-05 14:39:40 +08:00",
+  "incoming": 6119,
+  "protected": 6099,
+  "intentionalTrackedChanges": [
+    "README.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/PLAN.md",
+    "docs/STATE.md",
+    "package.json",
+    "package-lock.json",
+    "scripts/check-m8-preservation.mjs",
+    "src/browser/controller.ts",
+    "src/ui/App.tsx",
+    "src/ui/Cards.tsx",
+    "src/ui/DealerZone.tsx",
+    "src/ui/LocalPlayerHud.tsx",
+    "src/ui/SeatUnit.tsx",
+    "src/ui/Table.tsx",
+    "tests/integration/browserDemo.test.ts",
+    "tests/m10/historicalConfiguration.ts",
+    "tests/m10/tableGeometry.test.tsx",
+    "tests/pa1/preservation.test.ts",
+    "tests/unit/m8Contract.test.ts"
+  ],
+  "mismatches": [
+    "docs/M10_T01_EVIDENCE/geometry.json"
+  ],
+  "originalHistoricalDocsRetainedNormalized": {
+    "README.md": true,
+    "docs/DEVELOPMENT_LOG.md": true,
+    "docs/LAB_MANUAL.md": true,
+    "docs/PLAN.md": true,
+    "docs/STATE.md": true
+  },
+  "status": "FAIL",
+  "domainDiff": ""
+}

@@ -10,6 +10,8 @@ import { CLASSIC, CLASSIC_V1_2, getProfile, type ProfileId } from '../domain/pro
 import { createReplaySession, replay, ReplayError, type ReplayPackage } from '../domain/replay.js';
 import { applySessionCommand, type SessionCommand } from '../domain/sessionCommand.js';
 import { createAuditTrail, type Clock } from '../domain/audit.js';
+import { createPresentationFeed } from '../presentation/events.js';
+import { observePresentation } from './presentationObserver.js';
 
 export type BrowserCommand =
   | { type: 'START'; count: number }
@@ -58,6 +60,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
   let feedback = '';
   let lastBet = 0;
   let presentationSession = 0;
+  const presentation = createPresentationFeed();
   let shoeMessage = '6-deck persistent shoe';
   function project() {
     const view = getPublicBehindView(state);
@@ -102,6 +105,13 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     const result = session ? session.dispatch(command) : applySessionCommand(state, command, random);
     audit.record(before, result, command);
     if (result.ok) state = result.state;
+    // Committed authority precedes observation. Presentation failure never reverses a command.
+    try {
+      if (result.ok && (command.type === 'NEXT' || command.type === 'CONFIGURE' || command.type === 'VOID'
+        || state.table.game.round?.phase === 'INTEGRITY_ERROR')) presentation.clear();
+      const facts = observePresentation(before, result, command);
+      if (facts.length) presentation.append(`round-${state.table.roundNumber + (['OPEN', 'CONFIGURING'].includes(state.table.phase) ? 1 : 0)}`, command.type, facts);
+    } catch { presentation.fail(); }
     return result;
   }
   function dispatch(command: BrowserCommand): boolean {
@@ -187,6 +197,7 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
     const nextSession = seed === undefined ? null : createReplaySession(seed, profileId, { clock: options.clock });
     const nextState = nextSession?.getState() ?? game.createBehindGame('local-shoe-1', random, true, profileId);
     presentationSession++;
+    presentation.clear();
     session = nextSession; state = nextState; audit = createAuditTrail(state, options.clock); audit.recordReset(state);
     replayResult = null; replayFailed = false; feedback = ''; lastBet = 0; shoeMessage = 'New demo session: starting credits restored';
     publish(); if (playerMode && tableStarted) preparePlayerTable(); return true;
@@ -222,12 +233,13 @@ export function createBrowserController(options: { factory?: () => game.BehindGa
       replayResult = null; replayFailed = true;
       feedback = 'Completed replay is unavailable: replay validation failed.'; publish(); return false;
     }
+    presentation.clear();
     audit.recordReplay(state, false);
     replayResult = reconstructed; audit.recordReplay(state, true); publish(); return true;
   }
   if (playerMode && tableStarted && state.table.phase === 'CONFIGURING') preparePlayerTable();
   return { getSnapshot: () => snapshot, subscribe: (listener: () => void) => { listeners.add(listener); return () => { listeners.delete(listener); }; }, dispatch,
-    startDemo, exportReplay, replayCompleted,
+    startDemo, exportReplay, replayCompleted, presentation,
     queryWager: (query: game.WagerQuery) => explainReason(game.getBehindWagerError(state, query)) };
 }
 export type BrowserController = ReturnType<typeof createBrowserController>;

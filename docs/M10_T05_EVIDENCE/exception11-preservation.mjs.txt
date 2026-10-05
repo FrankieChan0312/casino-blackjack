@@ -1,0 +1,77 @@
+import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { gzipSync } from 'node:zlib';
+const root = 'docs/M10_T05_EVIDENCE/';
+const stamp = () => execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], {encoding:'utf8'}).trim();
+const git = (...args) => execFileSync('git', args, {encoding:'utf8'}).trim();
+const hash = path => createHash('sha256').update(fs.readFileSync(path)).digest('hex');
+const read = path => JSON.parse(fs.readFileSync(path.endsWith('.json') ? path : path+'.json'));
+const save = (name, value) => fs.writeFileSync(root+name+'.json', JSON.stringify(value,null,2)+'\n');
+const files = () => git('ls-files','--cached','--others','--exclude-standard').split('\n');
+const sourcePaths = ['tests/browser/m9.spec.ts','tests/pa1/preservation.test.ts','tests/m10/tableGeometry.test.tsx','README.md'];
+const canonical = [1280,768,320].map(width=>`docs/images/m9-table-${width}.png`);
+const mode = process.argv[2];
+if (mode === 'baseline') {
+  const previous = read(root+'files-changed.json'), frozen = read(root+'gate-repair10-start.json');
+  const incoming = read(root+'baseline.json');
+  const changed = git('diff','--name-only').split('\n');
+  const untracked = git('ls-files','--others','--exclude-standard').split('\n');
+  const unknown = [...changed.filter(p=>!previous.tracked.includes(p)), ...untracked.filter(p=>!previous.untracked.includes(p))];
+  const frozenMismatch = Object.entries(frozen.files).filter(([p,h])=>hash(p)!==h).map(([p])=>p);
+  const protectedMismatch = Object.entries(incoming.files).filter(([p,h])=>!previous.tracked.includes(p)&&hash(p)!==h).map(([p])=>p);
+  const receipt = {timestamp:stamp(),cwd:process.cwd(),branch:git('branch','--show-current'),head:git('rev-parse','HEAD'),remote:git('ls-remote','origin','refs/heads/main'),aheadBehind:git('rev-list','--left-right','--count','HEAD...origin/main'),changed,untracked,unknown,frozenMismatch,protectedMismatch,files:Object.fromEntries(files().map(p=>[p,hash(p)])),canonical:Object.fromEntries(canonical.map(p=>[p,hash(p)])),recommendedModel:'GPT Sol 6.1',recommendedEffort:'High',clientAvailability:'gpt-6.1-sol / high available in current tool metadata',actualRuntimeModel:'NOT VERIFIED',actualRuntimeEffort:'NOT VERIFIED'};
+  save('exception11-baseline',receipt);
+  if (unknown.length||frozenMismatch.length||protectedMismatch.length) throw Error('Unknown baseline difference; stop');
+  fs.writeFileSync(root+'exception11-before-source.json.gz',gzipSync(Buffer.from(JSON.stringify(Object.fromEntries(sourcePaths.map(p=>[p,fs.readFileSync(p).toString('base64')]))))));
+  console.log(JSON.stringify({timestamp:receipt.timestamp,unknown,frozenMismatch,protectedMismatch,tracked:changed.length,untracked:untracked.length,canonical:receipt.canonical}));
+}
+if (mode === 'proof') {
+  const capture = "    await capturePa1Evidence(`docs/images/m9-table-${viewport.width}.png`, info.outputPath(`table-${viewport.width}.png`), path => page.screenshot({ path, fullPage: true, animations: 'disabled' }), { width: viewport.width, minHeight: viewport.height });";
+  const legacy = "    await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });\n    await page.screenshot({ path: `docs/images/m9-table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });";
+  const normalize = value => value.replaceAll('\r\n','\n');
+  const old = normalize(execFileSync('git',['show','HEAD:tests/browser/m9.spec.ts'],{encoding:'utf8'}));
+  const current = normalize(fs.readFileSync(sourcePaths[0],'utf8'));
+  const inverse = current.replace("import { capturePa1Evidence } from './pa1Evidence.js';\n",'').replace(capture,legacy);
+  const equivalence = inverse === old;
+  const before = read(root+'exception11-baseline');
+  const allowed = [...sourcePaths,'docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/M10_T05.md'];
+  const protectedMismatch = Object.entries(before.files).filter(([p,h])=>!allowed.includes(p)&&hash(p)!==h).map(([p])=>p);
+  const canonicalEqual = Object.entries(before.canonical).every(([p,h])=>hash(p)===h);
+  save('exception11-equivalence',{timestamp:stamp(),status:equivalence&&canonicalEqual&&!protectedMismatch.length?'PASS':'FAIL',oldCapture:legacy,newCapture:capture,inverseSourceEquality:equivalence,oldAssertions:old.split('\n').filter(l=>l.includes('expect(')),newAssertions:current.split('\n').filter(l=>l.includes('expect(')),canonicalBefore:before.canonical,canonicalAfter:Object.fromEntries(canonical.map(p=>[p,hash(p)])),canonicalEqual,protectedMismatch,validatorUnchanged:hash('tests/unit/portfolio.test.ts')===before.files['tests/unit/portfolio.test.ts'],coverage:'All original M9-E01 layout, card, keyboard/control, overlap and three-viewport assertions retained. Same full-page PNG capture with animations disabled; existing PA1 helper adds saved-byte, PNG-dimension and immutable-baseline checks. No pixel baseline assertion existed or was removed.'});
+  if (!equivalence||!canonicalEqual||protectedMismatch.length) throw Error('Equivalence or protected hash failure');
+  save('exception11-freeze',{timestamp:stamp(),files:Object.fromEntries(files().filter(p=>/^(src|tests|scripts|art|public)\//.test(p)||/^(package.*json|.*config.*|\.gitignore)$/.test(p)).map(p=>[p,hash(p)]))});
+  console.log('PASS: exact M9 source inverse / original assertion equivalence / canonical hashes / protected pre11 version / validator unchanged');
+}
+if (mode === 'outputs') {
+  const label = process.argv[3];
+  const before = read(root+'exception11-baseline');
+  const candidates = read(root+'generated-output-restoration.json').files;
+  if (label === 'before') {
+    fs.mkdirSync('.git/exception11-originals',{recursive:true});
+    for(const p of candidates) fs.writeFileSync('.git/exception11-originals/'+p.replaceAll('/','__'),fs.readFileSync(p));
+    console.log('Captured exact25 known original output bytes; no restore performed');
+  } else {
+    const mismatches = candidates.filter(p=>hash(p)!==before.files[p]);
+    if(mismatches.some(p=>canonical.includes(p))) throw Error('M9-E01 canonical mutated; stop');
+    fs.writeFileSync(root+`exception11-${label}-legacy-generated.json.gz`,gzipSync(Buffer.from(JSON.stringify(Object.fromEntries(mismatches.map(p=>[p,fs.readFileSync(p).toString('base64')]))))));
+    for(const p of mismatches) {
+      const original = fs.readFileSync('.git/exception11-originals/'+p.replaceAll('/','__'));
+      if(createHash('sha256').update(original).digest('hex')!==before.files[p]) throw Error('Original byte mismatch');
+      fs.writeFileSync(p,original);
+    }
+    save(`exception11-${label}-output-preservation`,{timestamp:stamp(),knownLegacyGeneratedOutputs:mismatches,operation:'Archive actual known legacy output bytes, then restore exact pre11 bytes. No source repair or failed-test retry.',canonicalBefore:before.canonical,canonicalAfter:Object.fromEntries(canonical.map(p=>[p,hash(p)])),status:candidates.every(p=>hash(p)===before.files[p])?'PASS':'FAIL'});
+    console.log(`PASS: ${label} canonical3 unchanged; ${mismatches.length} known legacy outputs archived/restored`);
+  }
+}
+if(mode === 'audit') {
+  const frozen = read(root+'exception11-freeze');
+  const incoming = read(root+'baseline.json');
+  const changed = read(root+'files-changed.json').tracked.concat('tests/browser/m9.spec.ts');
+  const frozenMismatch = Object.entries(frozen.files).filter(([p,h])=>hash(p)!==h).map(([p])=>p);
+  const protectedMismatch = Object.entries(incoming.files).filter(([p,h])=>!changed.includes(p)&&hash(p)!==h).map(([p])=>p);
+  const receipt = {timestamp:stamp(),status:frozenMismatch.length||protectedMismatch.length?'FAIL':'PASS',frozenCount:Object.keys(frozen.files).length,frozenMismatch,protectedCount:Object.keys(incoming.files).length-changed.length,protectedMismatch,domainDiff:git('diff','--name-only','HEAD','--','src/domain'),assetDiff:git('diff','--name-only','HEAD','--','art','public'),validatorUnchanged:hash('tests/unit/portfolio.test.ts')===read(root+'exception11-baseline').files['tests/unit/portfolio.test.ts']};
+  save('exception11-'+(process.argv[3]||'protected'),receipt);
+  console.log(JSON.stringify(receipt));
+  if(receipt.status!=='PASS'||receipt.domainDiff||receipt.assetDiff||!receipt.validatorUnchanged) throw Error('Protected audit failure');
+}

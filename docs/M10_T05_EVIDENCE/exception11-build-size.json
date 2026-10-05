@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-05 16:51:35 +08:00",
+  "method": "Same Node gzipSync as retained incoming baseline; final successful StageH production build",
+  "files": [
+    {
+      "file": "index-DllMtCCD.js",
+      "bytes": 345813,
+      "sha256": "4e3e32003a904378aeaf18c1bb46a4dd6ae0460060a1fc15cc78806478ac82fe",
+      "gzip": 102598
+    }
+  ],
+  "baseline": 99361,
+  "current": 102598,
+  "increase": 3237,
+  "budget": 61440,
+  "status": "PASS"
+}

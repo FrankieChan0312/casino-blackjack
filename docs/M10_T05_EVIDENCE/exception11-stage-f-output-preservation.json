@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-05 16:33:39 +08:00",
+  "knownLegacyGeneratedOutputs": [
+    "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+    "docs/M10_T01_EVIDENCE/five-cards-320.png",
+    "docs/M10_T01_EVIDENCE/five-cards-768.png",
+    "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+    "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+    "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+    "docs/M10_T01_EVIDENCE/geometry.json",
+    "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+    "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+    "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+    "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+    "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+    "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+    "docs/M10_T01_EVIDENCE/table-1280.png",
+    "docs/M10_T01_EVIDENCE/table-320.png",
+    "docs/M10_T01_EVIDENCE/table-768.png",
+    "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+    "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+    "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+    "docs/images/m9-ready.png",
+    "docs/images/m9-results.png",
+    "docs/images/m9-tools.png"
+  ],
+  "operation": "Archive actual known legacy output bytes, then restore exact pre11 bytes. No source repair or failed-test retry.",
+  "canonicalBefore": {
+    "docs/images/m9-table-1280.png": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+    "docs/images/m9-table-768.png": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+    "docs/images/m9-table-320.png": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+  },
+  "canonicalAfter": {
+    "docs/images/m9-table-1280.png": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+    "docs/images/m9-table-768.png": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+    "docs/images/m9-table-320.png": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+  },
+  "status": "PASS"
+}

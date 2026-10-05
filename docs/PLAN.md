@@ -1,3 +1,77 @@
+## M10-T05 IMPLEMENTED / VERIFIED — 2026-10-05 16:51:35 +08:00
+
+M10-T05_IMPLEMENTED_VERIFIED. M10-T05: 11/11 — OWNER-AUTHORIZED EXCEPTION — CLOSED. Prior10/10 blockers/failed logs/UNKNOWN-open/docs12/13/proposal retained; count not reset. Repair12 NOT AUTHORIZED / NOT RUN. Only M9-E01 output/helper and exact historical inverse adapters plus README wording/status/evidence changed during11; all product/dependency/settings/assets unchanged from pre11. Canonical3 hashes equal before/after; original whole M9 source/old assertions recovered by exact inverse, same three viewport/layout/control checks, same full-page capture with animations disabled. Existing PA1 helper adds PNG/saved-byte/dimension/immutability validation. Other22 known legacy outputs archived separately then exact originals restored; no silent history replacement, delete-before-write, assertion removal, retry, timeout increase or product workaround. Windows handle owner/root cause remains NOT PROVEN.
+
+Ordered gates PASS/checked0: A exact M9-E01(1); B full M9(11); C original documentation5/13 with validator hash unchanged; D13/148 focused units and47 Chromium; E full94/1193 Vitest; F149 Chromium; G30/274 current preservation units, complete independent M1–M8 including M7 56/870+24 browser and M8 66/956+44 browser, Dealer PNG/provenance and all12 original/player PNG reproduction; H final verify.ps1 complete typecheck/lint/domain/build/full94/1193/149 and independent M1–M8, exit0 (2026-10-05 16:38:31 +08:00 to 2026-10-05 16:51:00 +08:00). [Exact gate and receipts](M10_T05_EVIDENCE/exception11-final-gate.json), [equivalence](M10_T05_EVIDENCE/exception11-equivalence.json), [protected proof](M10_T05_EVIDENCE/exception11-final-protected.json).
+
+All240 frozen source/test/configuration hashes match. Protected6098 original files match; domain/assets diff EMPTY, prior evidence unchanged. Same-build gzip 99361->102598, +3237 bytes within61440. Motion14.0.0; public deterministic event/feed, bounded queue, cancellation/late-callback guards, reduced/immediate/skip, React lifecycle/ref anchors, central motion tokens and six-state Dealer integration retained. Animation can neither draw nor consume gameplay entropy nor change legal actions, strategies, shoe/cards, accounts/settlement, journal/audit/replay/digest; all mode authority receipts equal. Live T05 has no gameplay tween. Same-session scope/source/render review PASS; genuinely fresh separate-session review NOT COMPLETED (unavailable). Recommended GPT Sol6.1 / High available in metadata; actual runtime model/effort NOT VERIFIED.
+
+Human acceptance PENDING; T04 PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05, T02/T03 accepted, M10A accepted/closed. Commit/push NOT RUN at this gate receipt; final privacy/staged-diff/publication evidence follows. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. ROUND-ROBIN DEALING NOT IMPLEMENTED. VISIBLE GAMEPLAY ANIMATION NOT IMPLEMENTED. DEPLOYMENT NOT RUN.
+
+## M10-T05 exceptional repair11 authorization — 2026-10-05 16:17:43 +08:00
+
+M10-T05: 11/11 — OWNER-AUTHORIZED EXCEPTION. Owner explicitly authorizes this single repair beyond the prior10/10 blocker; count is not reset. Repair12 NOT AUTHORIZED / NOT RUN. Scope: M9-E01 ordinary screenshot output moves from a canonical overwrite to existing PA1 immutable capture with fresh Playwright test output; README paragraph structure fixes the unchanged stale-status validator. Exact inverse adapters in PA1-P01/M10-G06 retain whole historical-source comparisons for this output-only change. No product, dependency, settings, asset or domain edit is authorized. Recommended GPT Sol6.1 / High; current tools list gpt-6.1-sol/high as available, actual selected model/effort NOT VERIFIED.
+
+Acceptance: original M9 assertions/source recovered by exact inverse; canonical before/after hashes equal; documentation13/13 with original regex; focused T05; full94/1193 Vitest; all149 Chromium; complete preservation/assets; final verify.ps1 exit0; frozen product and protected histories unchanged. Step -> verification: output/wording repair -> exact M9-E01 A; screenshot subset/hash B; exact docs C; focused T05 D; full units E; full browser F; all preservation G; final unified H. Preserve the first result of every invocation. Any failed required stage -> STOP M10-T05_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11; no repair12 or retry-until-green. Commit/normal origin main push only after all gates PASS and full diff/privacy review.
+
+Historical10/10 failures/proposal below remain unchanged. Baseline main/c853a7e7e7cc234dc6fad07477d5aab1d0a3035a, origin/live0/0;20 known tracked changes and139 known untracked files, no unknown differences, all242 prior frozen hashes and6099 protected incoming files match. Geometry status is an LF/CRLF index-stat warning with empty diff and exact original SHA. Pre-edit sources and raw hash manifest saved. Setup receipt helper initially read its own basename without .json (ENOENT before any task source edit/test invocation); corrected bookkeeping path during preparation, no product/test retry. Existing22 other known legacy writers remain unchanged; their generated bytes will be separately archived then exact captured originals restored, as in earlier verification. M9-E01's three canonical PNGs must remain unchanged throughout capture.
+
+Human acceptance PENDING; fresh separate-session review NOT COMPLETED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. ROUND-ROBIN DEALING NOT IMPLEMENTED. VISIBLE GAMEPLAY ANIMATION NOT IMPLEMENTED. DEPLOYMENT NOT RUN.
+
+## M10-T05 final blocked audit — 2026-10-05 14:47:16 +08:00
+
+M10-T05_BLOCKED, repairs10/10. Required engineering gate FAIL/1:1193 Vitest PASS,148/149 Chromium with M9 historical screenshot UNKNOWN:open failure; complete M1–M8 preservation PASS. Final blocked-status documentation check FAIL/1,12/13: README M8-PASS/T06-NOT-STARTED paragraph triggers old regex; source and unapplied paragraph patch retained. Protected6099 incoming files PASS after exact known-output LF restoration; original historical docs retained normalized. All242 gate-start hashes unchanged, gzip+3237 bytes within61440, privacy164 text bodies/14 ZIPs PASS, git diff--check PASS/0. These bookkeeping successes do not waive the failed engineering/documentation gates.
+
+Implementation changes retained; commit/push NOT RUN. Same-session scope review PASS; delivery blocked, fresh separate-session review NOT COMPLETED. Extra-cycle approval question sent with [unapplied limited proposal](M10_T05_EVIDENCE/next-repair-proposal.md); human authorization PENDING, tool question presentation is not approval. No repair11 or failed-test rerun performed. T05 human acceptance PENDING; T04 PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. DEPLOYMENT NOT RUN.
+
+## M10-T05 BLOCKED — repair limit / historical screenshot I/O — 2026-10-05 14:38:20 +08:00
+
+**M10-T05_BLOCKED**. Infrastructure IMPLEMENTED; complete required verification FAIL/checked1, so task NOT VERIFIED, commit/push NOT RUN. Final unified run2026-10-05 14:18:11 to14:30:03 +08:00: typecheck/lint/domain/build PASS; full94 files/1193 Vitest PASS; Chromium148/149 PASS with M9-E01 Windows UNKNOWN:open on docs/images/m9-table-768.png; independent M1–M8 preservation PASS including M7 56/870+24 browser and M8 66/956+44 browser. No expected/received gameplay assertion failed in that case; handle owner/root cause NOT PROVEN. Do not waive the required artifact-write failure or silently rerun.
+
+Cumulative **M10-T05:10/10**; no repair11 authorized or executed. Repairs9/10 exact historical inverse adapters PASS, complete affected1193 units PASS; final new I/O failure prevents publication. [Actual blocked gate](M10_T05_EVIDENCE/blocked-gate.json), [unapplied repair11 proposal](M10_T05_EVIDENCE/next-repair-proposal.md). All242 frozen source/test/config/evidence hashes match the executed version. Original failed source and raw output retained; final failure screenshot/trace were cleared by required later M7/M8 Playwright runs and are NOT AVAILABLE, explicitly recorded. Known25 generated outputs archived separately and restored; no implementation/user changes discarded. Gzip3237 extra bytes against61440 budget PASS.
+
+Same-session scope/source review PASS; delivery review incomplete because required gate FAIL. Fresh separate-session review NOT COMPLETED. Main HEAD=origin/live=c853a7e7e7cc234dc6fad07477d5aab1d0a3035a,0/0; known working T05 changes retained, no commit or push. Earlier commentary incorrectly called the final149 Chromium all passed; corrected to actual148+1 and FAIL.
+
+M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. T05 HUMAN ACCEPTANCE: PENDING. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. ROUND-ROBIN DEALING, ACTION, DEALER REVEAL/DRAW, CHIP/PAYOUT ANIMATIONS NOT IMPLEMENTED. DEPLOYMENT NOT RUN.
+
+## M10-T05 repair10 CLOSED; final exact gate — 2026-10-05 14:18:09 +08:00
+
+M10-T05 repairs10/10 CLOSED; no repair11 authorized. Complete affected Vitest94/1193 PASS/0. Final required unified verification IN PROGRESS; no VERIFIED claim until checked0. First two failed unified runs, exact failed sources/traces and targeted repairs preserved in [task evidence](M10_T05.md). Product/dependencies/settings unchanged during9/10; original historical equality assertions preserved with exact named inverse adapters. Human acceptance PENDING; fresh separate-session review NOT COMPLETED.
+
+M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 final repair10 proposed — 2026-10-05 14:06:15 +08:00
+
+Second full Vitest FAIL/1:1191/1193, PA1-P01/M10-G06 historical comparators require the same exact authorized Motion/presentation inverse adapter. Repair10/10 IN PROGRESS; no repair11 authorized. Evidence and falsifiable proposal in [repair10-proposal](M10_T05_EVIDENCE/repair10-proposal.json). Frozen second runner still collecting results; no further source edits until completion. No VERIFIED claim or publication. Human acceptance PENDING; fresh separate-session review NOT COMPLETED. M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05.
+
+VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 repair9 CLOSED; final gate — 2026-10-05 14:02:56 +08:00
+
+Repairs9/10 CLOSED: exact two authorized historical allowlist additions and inverse checker; targeted28 tests/checker PASS/0. First full gate FAIL/1 retained (1191+2 Vitest,149 Chromium PASS, M1–M7 PASS, M8 same two failures). Final full unified verification IN PROGRESS for frozen exact version; no VERIFIED claim until PASS/0. All product/runtime bytes unchanged by9. Current [task/evidence](M10_T05.md). Human acceptance PENDING; fresh separate-session review NOT COMPLETED.
+
+M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 repair9 boundary evidence — 2026-10-05 13:59:33 +08:00
+
+First full Vitest FAIL/1: two exact historical allowlists omit explicitly authorized Motion/presentation additions;1191/1193 passed. Proposed repair9/10 is limited to those two list entries plus exact inverse normalization in scripts/check-m8-preservation.mjs, preserving every other historical statement and all current secrecy/no-network/storage/payment/deployment assertions. First full runner remains active; frozen source/tests unchanged until collection completes. Repairs1–8 CLOSED, repair9 IN PROGRESS; full final gate not passed, publication pending.
+
+Human acceptance PENDING. M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 focused gates complete — 2026-10-05 13:49:26 +08:00
+
+Motion14.0.0 presentation infrastructure IMPLEMENTED; full unified verification IN PROGRESS. New focused units: 3 files/29 tests PASS/0; complete focused Chromium:47 PASS/0. Separate typecheck/lint and formal Dealer asset gate PASS/0. Native200% zoom: three scenarios/nine corrected native viewport screenshots PASS/0 and individually inspected; failed clipped captures retained. Cumulative repairs8/10 CLOSED, no repair11 authorized. Full gate has not yet completed; no technical VERIFIED claim.
+
+M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. T05 human acceptance PENDING; fresh separate-session review NOT COMPLETED. VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 infrastructure in progress — 2026-10-05 13:24:15 +08:00
+
+Owner authorized M10-T05 from main/c853a7e7e7cc234dc6fad07477d5aab1d0a3035a, origin parity 0/0, CLEAN/untracked 0 before changes. M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED; historical T04 11/11 exception CLOSED. [T05 task contract](M10_T05.md).
+
+Motion 14.0.0 installed/pinned; public per-invoke observation, deterministic feed/queue, refs and system reduced-motion infrastructure IMPLEMENTED, verification IN PROGRESS. First typecheck FAIL/2; repair 1/10 targeted types/record mapping, affected rerun PASS/0. Full gate NOT RUN. Human acceptance PENDING; fresh separate-session review NOT COMPLETED.
+
+VISIBLE GAMEPLAY ANIMATIONS NOT YET IMPLEMENTED. M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. Deployment NOT RUN.
+
 ## M10-T04B implementation publication — 2026-10-05 12:47:56 +08:00
 
 Normal **main** implementation commit **2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7** and push **PASS/checked0**. Live remote and origin/main equal that hash, ahead/behind0/0, working tree CLEAN/untracked0 at the completed publication checkpoint. All188 verified executable hashes unchanged. [Actual publication receipt](M10_T04B_EVIDENCE/publication-implementation.json). A documentation-only receipt commit records this event; latest HEAD remains available from Git.
@@ -1192,3 +1266,5 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 | RA1-T05 | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED at 1fc211a; full final1020/58, mapping/docs/handoff PASS | 1 |
 
 T04/T05 share one coherent final preservation/documentation verification checkpoint after the corrected Charlie test. Their delivery/repair identities remain separate. Evidence-only publication receipts follow without source/test/runtime changes. STOP at fresh-session review gate, with clean main parity0/0. No M10 or deployment.
+
+2026-10-05 14:42:59 +08:00 — Final blocked-status documentation check FAIL/1:5 files/13 cases,12 PASS and portfolio README stale-status regex matches across the new M8-PASS/T06-NOT-STARTED single paragraph. Exact failed README/test source and raw log retained. Paragraph-only patch is unapplied in next-repair-readme.patch, included in owner-authorization scope; no additional repair or rerun. Protected incoming scan initially FAIL for one known geometry.json rollback: Git CRLF smudge altered raw bytes. Verified canonical Git bytes equal captured incomingSHA and restored only that known generated artifact to exact bytes; remaining6098 protected hashes already match. Routine original-output rollback completed, not a new implementation/assertion/harness repair. Protected6099 PASS; original historical docs retained normalized. Full failed gate and10/10 stop remain unchanged.

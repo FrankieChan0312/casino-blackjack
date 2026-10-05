@@ -14,7 +14,7 @@ function finish(c: ReturnType<typeof seeded>) {
   c.dispatch({type:'ADVANCE'});
 }
 it('[REG-M8-060] new demo API exposes methods but no raw domain state or seed', () => {
-  const c=seeded();expect(Object.keys(c).sort()).toEqual(['dispatch','exportReplay','getSnapshot','queryWager','replayCompleted','startDemo','subscribe']);
+  const c=seeded();expect(Object.keys(c).sort()).toEqual(['dispatch','exportReplay','getSnapshot','presentation','queryWager','replayCompleted','startDemo','subscribe']);
   expect(JSON.stringify(c.getSnapshot())).not.toMatch(/"seed"|deckIndex|availableCards|originalCards|"shoe"|randomAlgorithm/);
 });
 it('[REG-M8-061] profile cannot change in active round and invalid seed rejects atomically', () => {

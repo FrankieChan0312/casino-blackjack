@@ -19,6 +19,27 @@ it('[PA1-P01] every pre-PA1 test assertion is unchanged except explicit historic
     const historical = blobs.subarray(newline + 1,newline + 1 + size).toString('utf8').replaceAll('\r\n','\n').trimEnd();
     offset = newline + 1 + size + 1;
     let current = readFileSync(file,'utf8').replaceAll('\r\n','\n').trimEnd();
+    // BEGIN T05 exceptional M9 immutable evidence adapter
+    if (file === 'tests/browser/m9.spec.ts') {
+      const evidence = "    await capturePa1Evidence(`docs/images/m9-table-${viewport.width}.png`, info.outputPath(`table-${viewport.width}.png`), path => page.screenshot({ path, fullPage: true, animations: 'disabled' }), { width: viewport.width, minHeight: viewport.height });";
+      const evidenceImport = "import { capturePa1Evidence } from './pa1Evidence.js';\n";
+      expect(current.split(evidence),file).toHaveLength(2);
+      expect(current.split(evidenceImport),file).toHaveLength(2);
+      current = current.replace(evidenceImport,'').replace(evidence,"    await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });\n    await page.screenshot({ path: `docs/images/m9-table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });");
+    }
+    // END T05 exceptional M9 immutable evidence adapter
+    // BEGIN T05 authorized presentation allowlist adapter
+    if (file === 'tests/integration/browserDemo.test.ts') {
+      const extension = "'getSnapshot','presentation','queryWager'";
+      expect(current.split(extension),file).toHaveLength(2);
+      current = current.replace(extension,"'getSnapshot','queryWager'");
+    }
+    if (file === 'tests/unit/m8Contract.test.ts') {
+      const extension = "['motion','react','react-dom']";
+      expect(current.split(extension),file).toHaveLength(2);
+      current = current.replace(extension,"['react','react-dom']");
+    }
+    // END T05 authorized presentation allowlist adapter
     if (file === 'tests/ra1/inventory.test.ts') current = current
       .replace("import { existsSync } from 'node:fs';","import { readFileSync, readdirSync, existsSync } from 'node:fs';")
       .replace(/\/\/ BEGIN PA1 historical RA1 input adapter[\s\S]*?\/\/ END PA1 historical RA1 input adapter\n/,'')

@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-05 14:42:59 +08:00",
+  "operation": "Complete rollback of the one known generated geometry output: git restore smudged LF toCRLF. Exact incoming Git bytes verified against immutable baseline SHA before writing. No task source/assertion/settings repair or failed test rerun.",
+  "path": "docs/M10_T01_EVIDENCE/geometry.json",
+  "before": "5f9acf2146bbda4f91e26ec70ba8830e07ee5f94dee5819ef4b0bbc747000d59",
+  "expected": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+  "after": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+  "status": "PASS"
+}

@@ -20,7 +20,7 @@ it('[REG-M8-075] runtime source and package have no network persistence auth pay
     expect(source,file).not.toMatch(/from ['"](?:https?:|@aws-sdk|firebase|supabase|stripe)/);
   }
   const pkg=JSON.parse(readFileSync('package.json','utf8')) as {scripts:Record<string,string>;dependencies:Record<string,string>};
-  expect(Object.keys(pkg.scripts)).not.toContain('deploy');expect(Object.keys(pkg.dependencies).sort()).toEqual(['react','react-dom']);
+  expect(Object.keys(pkg.scripts)).not.toContain('deploy');expect(Object.keys(pkg.dependencies).sort()).toEqual(['motion','react','react-dom']);
 });
 it('[REG-M8-076] public project text makes no affirmative RTP house-edge certification or production gambling claims',()=>{
   for(const file of ['README.md','docs/REPLAY.md','docs/AUDIT.md']){

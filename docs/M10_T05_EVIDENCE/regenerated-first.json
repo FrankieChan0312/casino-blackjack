@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-10-05 14:00:05 +08:00",
+  "reason": "Existing tests/browser/m10.spec.ts overwrites these known outputs during required verification. Preserve new generated evidence separately; restore original baseline bytes after runner completion. No unknown user changes. Read-only hash audit ran during writes and correctly reported transient FAIL; final protected check follows cleanup. Routine generated-output housekeeping does not change source/assertions or add a repair cycle.",
+  "files": [
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "generatedSha256": "90f11c8298e675e4e698df3268aa499a1de0b87adc968e6d4ba8822f0d90a87c"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "generatedSha256": "75482b6d0d97f2c55585730131b219a5d5f18a4c60d0c049a5e03f7df49357ec"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "generatedSha256": "f068795eff885f27a51b2f5edfa4548c96a8f45e50960470bb56caf00198c611"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "generatedSha256": "7c1ab4de0a4c3a95a1fd9fc0885267139e66c0674011d7b16a827a3e42c49409"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "generatedSha256": "bf4f5be2eec17cec015d5f1f05117012e298fa4e7fe93350c531e95e0bfcd669"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "generatedSha256": "c2d1f7615fefb9063abb830104a63e3a1eead448d40620ef89243c6d74741d30"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/geometry.json",
+      "generatedSha256": "1c11a291714d49d789b85899f8e59865ce755894691e64f521465381c05e0295"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "generatedSha256": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "generatedSha256": "7ea2aa0d94a02c207ed88b78c9a5014f5f33cb461e3cd4fd850ad395a6ea570c"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "generatedSha256": "f078c9cdd950fec259aa44698b4a54fa2b358fa8f49b624d79db7f2190d53e01"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "generatedSha256": "4316e4a3a32d7b31fa7c385b1280bc1bbf35c7b014b024976db03d11c11ccc28"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "generatedSha256": "1fb2201f4754799341fcb1503bc119d4f1e2341ade4e594fdd76af17cb2108c4"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "generatedSha256": "397d3a99981c9293b4b65b72808027ef05dfd3629dfea6f9687c263d840a8c17"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "generatedSha256": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-320.png",
+      "generatedSha256": "7ea2aa0d94a02c207ed88b78c9a5014f5f33cb461e3cd4fd850ad395a6ea570c"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-768.png",
+      "generatedSha256": "f078c9cdd950fec259aa44698b4a54fa2b358fa8f49b624d79db7f2190d53e01"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "generatedSha256": "e29e7d9cc794cdd60d70a7fa0a7b5d04d100681e244f37b99a746159cb4c6fde"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "generatedSha256": "e1c31f5f160c5a016a30911ccf2f83c80637171e4050c65cc36c89a2ed134f61"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "generatedSha256": "ad875a5d3253d7e9cbf47ea2db38f686491f6623357699c2760ff451b21c23d1"
+    }
+  ]
+}

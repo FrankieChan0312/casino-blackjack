@@ -11,8 +11,14 @@ import { createDealerTableIdentity, changeDealerTableHuman, dealerPresentation, 
   type DealerConfiguration } from '../presentation/dealerPresentation.js';
 import { CharacterPicker } from './CharacterPicker.js';
 import { PlayerSetup } from './PlayerSetup.js';
+import { PresentationProvider, useDealerPresentationState } from './PresentationProvider.js';
 
 export function App({ controller, chooseCharacter, dealerConfiguration }: {
+  controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
+}) {
+  return <PresentationProvider feed={controller.presentation}><Experience controller={controller} chooseCharacter={chooseCharacter} dealerConfiguration={dealerConfiguration} /></PresentationProvider>;
+}
+function Experience({ controller, chooseCharacter, dealerConfiguration }: {
   controller: BrowserController; chooseCharacter?: PresentationChooser; dealerConfiguration?: DealerConfiguration;
 }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
@@ -51,10 +57,11 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
     identity: createDealerTableIdentity(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.identity.lineup.human : 'knight_male',
       view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined, dealerConfiguration?.rotationPool, view.presentationSession) });
   const lineup = presentation.identity.lineup;
-  const dealer = dealerPresentation(presentation.identity.characterId, dealerPresentationState({
+  const dealerState = useDealerPresentationState(dealerPresentationState({
     awaitingPlayer: !!view.interaction.insurance || !!view.follow || view.interaction.actions.some(action => action.enabled),
     interrupted: view.round?.phase === 'INTEGRITY_ERROR',
-  }), dealerConfiguration?.assets);
+  }));
+  const dealer = dealerPresentation(presentation.identity.characterId, dealerState, dealerConfiguration?.assets);
   useEffect(() => {
     if (view.phase === 'CONFIGURING' || (view.phase === 'OPEN' && !view.lastBet)) return;
     const target = document.querySelector<HTMLElement>(view.phase === 'OPEN' ? '#player-wager' : view.interaction.nextRound ? '#player-result' : view.interaction.insurance || view.follow ? '.decision' : '#player-hand');

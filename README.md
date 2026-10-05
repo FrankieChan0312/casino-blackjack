@@ -1,3 +1,21 @@
+## Current M10-T05 status — 2026-10-05 16:51:35 +08:00
+
+Motion14.0.0 presentation infrastructure is IMPLEMENTED / VERIFIED. Deterministic public events, cancellable queue, reduced/immediate/skip paths, lifecycle refs, motion tokens and Dealer six-state integration are ready. Full94 files/1193 Vitest,149 Chromium, complete preservation/assets and unified verify.ps1 PASS/exit0. M10-T05: 11/11 — OWNER-AUTHORIZED EXCEPTION — CLOSED; repair12 NOT AUTHORIZED / NOT RUN. [Task, exact verification and retained failed history](docs/M10_T05.md). Human acceptance PENDING; fresh separate-session review NOT COMPLETED. T04 human visual acceptance remains PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05.
+
+M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. ROUND-ROBIN DEALING NOT IMPLEMENTED. VISIBLE GAMEPLAY ANIMATION NOT IMPLEMENTED. DEPLOYMENT NOT RUN.
+
+## Historical checkpoints (superseded by current status above)
+
+## M10-T05 infrastructure BLOCKED — 2026-10-05 14:38:20 +08:00
+
+Motion14.0.0 and public presentation infrastructure IMPLEMENTED. Full1193 Vitest and M1–M8 preservation PASS; final Chromium148/149 with historical screenshot UNKNOWN:open failure, unified verify.ps1 FAIL/1. Task NOT VERIFIED, repairs10/10; no repair11 authorized, commit/push NOT RUN. [Executed task/blocker and unapplied proposal](docs/M10_T05.md). Human acceptance PENDING; T04 remains PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05. Visible gameplay animations NOT IMPLEMENTED.
+
+M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. DEPLOYMENT NOT RUN.
+
+## M10-T05 presentation infrastructure — 2026-10-05 13:49:26 +08:00
+
+Motion14.0.0, deterministic public events, cancellable timeline, system reduced-motion and semantic refs IMPLEMENTED; focused checks PASS, full gate IN PROGRESS. [Task and executed evidence](docs/M10_T05.md). Human acceptance PENDING. Visible gameplay animations NOT YET IMPLEMENTED; M10-T06 NOT STARTED — WAITING FOR OWNER APPROVAL. Deployment NOT RUN. T04 human visual acceptance remains PENDING — OWNER AUTHORIZED PROGRESSION TO M10-T05.
+
 ## M10-T04B implementation publication — 2026-10-05 12:47:56 +08:00
 
 Normal **main** implementation commit **2b095b5fe0542b79d9be40c3bb78ffdb8ab993e7** and push **PASS/checked0**. Live remote and origin/main equal that hash, ahead/behind0/0, working tree CLEAN/untracked0 at the completed publication checkpoint. All188 verified executable hashes unchanged. [Actual publication receipt](docs/M10_T04B_EVIDENCE/publication-implementation.json). A documentation-only receipt commit records this event; latest HEAD remains available from Git.

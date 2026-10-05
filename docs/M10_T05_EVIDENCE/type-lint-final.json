@@ -1,0 +1,6 @@
+{
+  "command": "npm.cmd run typecheck; if ( -ne 0) { exit  }; npm.cmd run lint",
+  "started": "2026-10-05 13:38:44 +08:00",
+  "finished": "2026-10-05 13:39:05 +08:00",
+  "exit": 0
+}

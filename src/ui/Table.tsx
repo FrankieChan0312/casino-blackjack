@@ -6,6 +6,7 @@ import { character, type CharacterLineup } from '../presentation/characters.js';
 import { TABLE_GEOMETRY, TABLE_SEAT_ANCHORS } from '../presentation/tableGeometry.js';
 import { mapSeats } from '../presentation/seatMapping.js';
 import { Cards } from './Cards.js';
+import { PresentationAnchor } from './PresentationAnchor.js';
 import { SeatUnit } from './SeatUnit.js';
 import { LocalPlayerHud } from './LocalPlayerHud.js';
 import { DealerZone } from './DealerZone.js';
@@ -43,7 +44,7 @@ export function Table({ view, lineup, dealerPresentation }: { view: BrowserView;
         '--arc-shift': anchor.x / 100 - 0.5, '--arc-column': column,
         '--arc-row': (mapped?.band ?? 0) + 1, '--arc-side': mapped?.side ?? 1, '--local-row': localRow,
       } as CSSProperties : undefined;
-      return <section key={seat.seatNumber} style={geometryStyle} data-arc-slot={mapped?.slot} data-arc-row={mapped ? mapped.band + 1 : undefined} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${seat.seatNumber}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
+      return <PresentationAnchor as="section" anchor={`seat-${seat.seatNumber}`} key={seat.seatNumber} style={geometryStyle} data-arc-slot={mapped?.slot} data-arc-row={mapped ? mapped.band + 1 : undefined} data-scene-zone={view.playerMode ? local ? 'local-player' : 'remote-seat' : undefined} data-seat-anchor={view.playerMode ? `seat-${seat.seatNumber}` : undefined} data-anchor-x={view.playerMode ? anchor.x : undefined} data-anchor-y={view.playerMode ? anchor.y : undefined} data-character={lineup && (local ? lineup.human : lineup.guests[seat.seatNumber])} id={view.playerMode && local ? 'player-hand' : undefined} tabIndex={view.playerMode && local ? -1 : undefined} data-hand-count={hands.length} data-position={local ? 'local' : otherSeats.findIndex(entry => entry.seatNumber === seat.seatNumber) + 1} className={`seat panel ${local ? 'local' : ''} ${round?.currentSeat === seat.seatNumber ? 'turn-seat' : ''}`} aria-label={`Seat ${seat.seatNumber}`}>
         {view.playerMode ? local ? <LocalPlayerHud seat={seat} avatar={avatar} hands={hands} wager={wager}
           currentHandId={round?.currentHandId} ownResults={view.ownResults} /> : <SeatUnit seat={seat} avatar={avatar} hands={hands} wager={wager}
           currentSeat={round?.currentSeat} currentHandId={round?.currentHandId} /> : <>{avatar ? <div className="character-identity">
@@ -68,7 +69,7 @@ export function Table({ view, lineup, dealerPresentation }: { view: BrowserView;
           {hand.outcome === 'SURRENDERED' && view.ownResults.filter((result) => result.handId === hand.handId).map((result) =>
             <p key={result.handId}>Returned: {credits(result.returned)} · Lost: {credits(result.stake - result.returned)}</p>)}
         </article>)}</>}
-      </section>;
+      </PresentationAnchor>;
     })}</div>
   </section>;
 }

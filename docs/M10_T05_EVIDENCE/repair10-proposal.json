@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-05 14:06:15 +08:00",
+  "repair": 10,
+  "maximum": 10,
+  "status": "PROPOSED; SOURCE FROZEN WHILE SECOND RUN COLLECTS",
+  "failure": "PA1-P01 and M10-G06 compare historical source and see the same two authorized allowlist additions from repair9. Their adapters must inverse only these unique literals; G06 must also normalize the newly explicit PA1 adapter block to preserve every other original PA1 statement. No production/settings/dependency or gameplay assertion change.",
+  "firstGeneratedM9Images": [
+    "docs/images/m9-ready.png",
+    "docs/images/m9-results.png",
+    "docs/images/m9-table-1280.png",
+    "docs/images/m9-table-320.png",
+    "docs/images/m9-table-768.png",
+    "docs/images/m9-tools.png"
+  ],
+  "causeEvidence": "full-verify-final.log /1191+2; failed raw sources preserved in repair10-source-raw.zip.",
+  "hypothesis": "Exact unique literal reversals in both historical comparison loops plus removal of only the specifically delimited new PA1 normalization block will recover all historical source strings, keeping current M8 expectations and secrecy assertions executing."
+}

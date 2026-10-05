@@ -1,0 +1,107 @@
+{
+  "started": "2026-10-05 13:41:31 +08:00",
+  "method": "Isolated Chromium native chrome.tabs.setZoom/getZoom; root16px, CSS zoom1, no scale emulation",
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\casino-blackjack-t05-native-eLaVGl",
+  "scenarios": [
+    {
+      "fixture": "player-setup",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 3,
+        "scroll": 632,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 262,
+            "scroll": 262
+          }
+        ],
+        "hands": 1
+      },
+      "button": {
+        "x": 345.09375,
+        "y": 24.44270896911621,
+        "width": 89.5625,
+        "height": 44.00000190734863
+      },
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-seven-split",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 3,
+        "scroll": 632,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 262,
+            "scroll": 262
+          },
+          {
+            "width": 262,
+            "scroll": 262
+          }
+        ],
+        "hands": 2
+      },
+      "button": {
+        "x": 196.1666717529297,
+        "y": 154.6822967529297,
+        "width": 116.00001525878906,
+        "height": 52
+      },
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-rsa-cap",
+      "zoom": 2,
+      "facts": {
+        "innerWidth": 640,
+        "dpr": 3,
+        "scroll": 632,
+        "font": "16px",
+        "cssZoom": "1",
+        "cards": [
+          {
+            "width": 262,
+            "scroll": 262
+          },
+          {
+            "width": 262,
+            "scroll": 262
+          },
+          {
+            "width": 262,
+            "scroll": 262
+          },
+          {
+            "width": 262,
+            "scroll": 262
+          }
+        ],
+        "hands": 4
+      },
+      "button": {
+        "x": 148.546875,
+        "y": 259.79168701171875,
+        "width": 116.015625,
+        "height": 44
+      },
+      "status": "PASS"
+    }
+  ],
+  "baseline": {
+    "innerWidth": 1280,
+    "dpr": 1.5,
+    "font": "16px",
+    "cssZoom": "1"
+  },
+  "status": "PASS",
+  "exit": 0,
+  "finished": "2026-10-05 13:41:38 +08:00"
+}

@@ -15,7 +15,17 @@ assert.equal(files.filter(file => /\.spec\.ts$/.test(file)).length, 5);
 for (const file of files) {
   const baseline = git('show', `${sha}:${file}`).replaceAll('\r\n', '\n').trimEnd();
   let current = readFileSync(file, 'utf8').replaceAll('\r\n', '\n').trimEnd();
+  // M10-T05 explicitly adds Motion and a public presentation adapter. Reverse
+  // exactly those two allowlist entries; all other accepted statements still match.
+  if (file === 'tests/integration/browserDemo.test.ts') {
+    const extension = "'getSnapshot','presentation','queryWager'";
+    assert.equal(current.split(extension).length, 2, 'T05 public adapter boundary changed');
+    current = current.replace(extension, "'getSnapshot','queryWager'");
+  }
   if (file === 'tests/unit/m8Contract.test.ts') {
+    const extension = "['motion','react','react-dom']";
+    assert.equal(current.split(extension).length, 2, 'T05 dependency boundary changed');
+    current = current.replace(extension, "['react','react-dom']");
     // Only approved historical inventory/document input adaptations. Every
     // registration, assertion and other statement must still match accepted M8.
     current = current.replace("import { execFileSync } from 'node:child_process';\n", '')

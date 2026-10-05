@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-05 13:56:53 +08:00",
+  "status": "PASS",
+  "files": [
+    {
+      "source": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-1280.png",
+      "destination": "docs/M10_T05_EVIDENCE/responsive-review/frame-dealt-1280.png",
+      "sha256": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7"
+    },
+    {
+      "source": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-320.png",
+      "destination": "docs/M10_T05_EVIDENCE/responsive-review/frame-dealt-320.png",
+      "sha256": "7ea2aa0d94a02c207ed88b78c9a5014f5f33cb461e3cd4fd850ad395a6ea570c"
+    },
+    {
+      "source": "test-results/m10--M10A-E01-one-scene-fr-b6765-s-desktop-tablet-and-mobile-chromium/frame-dealt-768.png",
+      "destination": "docs/M10_T05_EVIDENCE/responsive-review/frame-dealt-768.png",
+      "sha256": "f078c9cdd950fec259aa44698b4a54fa2b358fa8f49b624d79db7f2190d53e01"
+    }
+  ],
+  "inspectedAt": "2026-10-05 13:57:36 +08:00",
+  "observations": "All three1280/768/320 screenshots individually inspected: unchanged static Dealer, visible/public cards and hidden hole, correct local ownership, readable funds/status and native controls; mobile remote disclosure retained, no horizontal overflow or added animation wrapper."
+}

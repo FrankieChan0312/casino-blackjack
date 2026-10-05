@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { capturePa1Evidence } from './pa1Evidence.js';
 
 async function deal(page: import('@playwright/test').Page) {
   await page.getByLabel('Your main wager', { exact: false }).fill('100');
@@ -31,8 +32,7 @@ test('[M9-E01] first-person cards stay near player and center dealer without ove
     const action = await page.getByRole('button', { name: 'Stand', exact: true }).boundingBox();
     console.log(JSON.stringify({ viewport, dealer, own, action }));
     if (viewport.width === 1280) expect(action!.y + action!.height).toBeLessThanOrEqual(900);
-    await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });
-    await page.screenshot({ path: `docs/images/m9-table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });
+    await capturePa1Evidence(`docs/images/m9-table-${viewport.width}.png`, info.outputPath(`table-${viewport.width}.png`), path => page.screenshot({ path, fullPage: true, animations: 'disabled' }), { width: viewport.width, minHeight: viewport.height });
   }
 });
 

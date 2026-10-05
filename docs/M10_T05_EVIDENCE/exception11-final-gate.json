@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-10-05 16:51:35 +08:00",
+  "status": "M10-T05_IMPLEMENTED_VERIFIED",
+  "repairCount": "M10-T05: 11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "normalLimit": "10/10 reached; historical blocker retained",
+  "repair12": "NOT AUTHORIZED / NOT RUN",
+  "receipts": {
+    "stage-a": {
+      "command": "npm.cmd run test:e2e -- tests/browser/m9.spec.ts --grep M9-E01",
+      "started": "2026-10-05 16:18:43 +08:00",
+      "finished": "2026-10-05 16:18:54 +08:00",
+      "exit": 0
+    },
+    "stage-b": {
+      "command": "npm.cmd run test:e2e -- tests/browser/m9.spec.ts",
+      "started": "2026-10-05 16:19:14 +08:00",
+      "finished": "2026-10-05 16:19:39 +08:00",
+      "exit": 0
+    },
+    "stage-c": {
+      "command": "npm.cmd test -- tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts tests/m9/documentation.test.ts tests/ra1/inventory.test.ts tests/pa1/preservation.test.ts",
+      "started": "2026-10-05 16:19:55 +08:00",
+      "finished": "2026-10-05 16:20:00 +08:00",
+      "exit": 0
+    },
+    "stage-d-unit": {
+      "command": "npm.cmd test -- tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/presentationLifecycle.test.tsx tests/m10/dealerPresentation.test.tsx tests/m10/formalDealers.test.tsx tests/m10/tableGeometry.test.tsx tests/m10/playerCount.test.tsx tests/m10/seatMapping.test.tsx tests/pa1/session.test.ts tests/pa1/preservation.test.ts tests/m9/session.test.ts tests/ra1/preservation.test.ts tests/integration/replay.test.ts",
+      "started": "2026-10-05 16:20:24 +08:00",
+      "finished": "2026-10-05 16:20:30 +08:00",
+      "exit": 0
+    },
+    "stage-d-browser": {
+      "command": "npm.cmd run test:e2e -- tests/browser/m10/presentation.spec.ts tests/browser/m10/playerCount.spec.ts tests/browser/m10/dealerPresentation.spec.ts tests/browser/m10/formalDealers.spec.ts tests/browser/m10/seatMapping.spec.ts",
+      "started": "2026-10-05 16:20:43 +08:00",
+      "finished": "2026-10-05 16:23:18 +08:00",
+      "exit": 0
+    },
+    "stage-e": {
+      "command": "npm.cmd test",
+      "started": "2026-10-05 16:23:28 +08:00",
+      "finished": "2026-10-05 16:23:51 +08:00",
+      "exit": 0
+    },
+    "stage-f": {
+      "command": "npm.cmd run test:e2e",
+      "started": "2026-10-05 16:23:58 +08:00",
+      "finished": "2026-10-05 16:33:12 +08:00",
+      "exit": 0
+    },
+    "stage-g-unit": {
+      "command": "npm.cmd test -- tests/pa1 tests/ra1 tests/m9 tests/m10 tests/integration/replay.test.ts tests/integration/audit.test.ts",
+      "started": "2026-10-05 16:33:39 +08:00",
+      "finished": "2026-10-05 16:33:58 +08:00",
+      "exit": 0
+    },
+    "stage-g-preservation": {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1",
+      "started": "2026-10-05 16:34:35 +08:00",
+      "finished": "2026-10-05 16:37:12 +08:00",
+      "exit": 0
+    },
+    "stage-g-dealer": {
+      "command": "node scripts/verify-dealer-assets.mjs",
+      "started": "2026-10-05 16:34:46 +08:00",
+      "finished": "2026-10-05 16:34:49 +08:00",
+      "exit": 0
+    },
+    "stage-g-character": {
+      "command": "node scripts/verify-character-assets.mjs",
+      "started": "2026-10-05 16:34:50 +08:00",
+      "finished": "2026-10-05 16:35:10 +08:00",
+      "exit": 0
+    },
+    "stage-h": {
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+      "started": "2026-10-05 16:38:31 +08:00",
+      "finished": "2026-10-05 16:51:00 +08:00",
+      "exit": 0
+    }
+  },
+  "productProtected": {
+    "timestamp": "2026-10-05 16:51:34 +08:00",
+    "status": "PASS",
+    "frozenCount": 240,
+    "frozenMismatch": [],
+    "protectedCount": 6098,
+    "protectedMismatch": [],
+    "domainDiff": "",
+    "assetDiff": "",
+    "validatorUnchanged": true
+  },
+  "canonical": {
+    "timestamp": "2026-10-05 16:51:21 +08:00",
+    "knownLegacyGeneratedOutputs": [
+      "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "docs/M10_T01_EVIDENCE/geometry.json",
+      "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "docs/M10_T01_EVIDENCE/table-1280.png",
+      "docs/M10_T01_EVIDENCE/table-320.png",
+      "docs/M10_T01_EVIDENCE/table-768.png",
+      "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "docs/images/m9-ready.png",
+      "docs/images/m9-results.png",
+      "docs/images/m9-tools.png"
+    ],
+    "operation": "Archive actual known legacy output bytes, then restore exact pre11 bytes. No source repair or failed-test retry.",
+    "canonicalBefore": {
+      "docs/images/m9-table-1280.png": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "docs/images/m9-table-768.png": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "docs/images/m9-table-320.png": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    },
+    "canonicalAfter": {
+      "docs/images/m9-table-1280.png": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "docs/images/m9-table-768.png": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "docs/images/m9-table-320.png": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    },
+    "status": "PASS"
+  },
+  "humanAcceptance": "PENDING",
+  "freshSeparateSessionReview": "NOT COMPLETED — unavailable",
+  "commit": "NOT RUN — pending final documentation/privacy/diff review",
+  "push": "NOT RUN",
+  "deployment": "NOT RUN",
+  "coverage": "StageF exact frozen full149 Chromium executes PA1/RA1/M9/M10-T01/M10A/T02–T05 browser preservation. StageG independently reruns strict current30/274 milestone/RNG/replay/audit units, historical M1–M8 complete accepted inventories, and both asset/provenance/reproduction gates. StageH repeats complete unified verification without source/settings changes."
+}

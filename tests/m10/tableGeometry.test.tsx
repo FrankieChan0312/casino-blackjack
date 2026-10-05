@@ -72,6 +72,33 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
     const historical = blobs.subarray(newline + 1, newline + 1 + size).toString('utf8').replaceAll('\r\n', '\n').trimEnd();
     offset = newline + 1 + size + 1;
     let current = readFileSync(file, 'utf8').replaceAll('\r\n', '\n').trimEnd();
+    // BEGIN T05 exceptional M9 immutable evidence adapter
+    if (file === 'tests/browser/m9.spec.ts') {
+      const evidence = "    await capturePa1Evidence(`docs/images/m9-table-${viewport.width}.png`, info.outputPath(`table-${viewport.width}.png`), path => page.screenshot({ path, fullPage: true, animations: 'disabled' }), { width: viewport.width, minHeight: viewport.height });";
+      const evidenceImport = "import { capturePa1Evidence } from './pa1Evidence.js';\n";
+      expect(current.split(evidence),file).toHaveLength(2);
+      expect(current.split(evidenceImport),file).toHaveLength(2);
+      current = current.replace(evidenceImport,'').replace(evidence,"    await page.screenshot({ path: info.outputPath(`table-${viewport.width}.png`), fullPage: true, animations: 'disabled' });\n    await page.screenshot({ path: `docs/images/m9-table-${viewport.width}.png`, fullPage: true, animations: 'disabled' });");
+    }
+    // END T05 exceptional M9 immutable evidence adapter
+    // BEGIN T05 authorized presentation allowlist adapter
+    if (file === 'tests/integration/browserDemo.test.ts') {
+      const extension = "'getSnapshot','presentation','queryWager'";
+      expect(current.split(extension),file).toHaveLength(2);
+      current = current.replace(extension,"'getSnapshot','queryWager'");
+    }
+    if (file === 'tests/unit/m8Contract.test.ts') {
+      const extension = "['motion','react','react-dom']";
+      expect(current.split(extension),file).toHaveLength(2);
+      current = current.replace(extension,"['react','react-dom']");
+    }
+    // END T05 authorized presentation allowlist adapter
+    if (file === 'tests/pa1/preservation.test.ts') {
+      expect(current.split('    // BEGIN T05 exceptional M9 immutable evidence adapter'),file).toHaveLength(2);
+      current = current.replace(/ {4}\/\/ BEGIN T05 exceptional M9 immutable evidence adapter[\s\S]*? {4}\/\/ END T05 exceptional M9 immutable evidence adapter\n/, '');
+      expect(current.split('    // BEGIN T05 authorized presentation allowlist adapter'),file).toHaveLength(2);
+      current = current.replace(/ {4}\/\/ BEGIN T05 authorized presentation allowlist adapter[\s\S]*? {4}\/\/ END T05 authorized presentation allowlist adapter\n/, '');
+    }
     if (['tests/browser/m9.spec.ts','tests/browser/pa1.spec.ts'].includes(file)) current = current
       .replaceAll('/?fixture=player&dealer=legacy','/?fixture=player');
     if (file === 'tests/pa1/preservation.test.ts') current = current.replace(
@@ -105,6 +132,7 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
   expect(acceptedController(readFileSync('src/browser/controller.ts', 'utf8')).trimEnd()).toBe(git('show', baseline + ':src/browser/controller.ts'));
   expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json',
     ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts',
+    ':(exclude)src/browser/presentationObserver.ts', ':(exclude)package.json', ':(exclude)package-lock.json',
     ':(exclude)art/dealer-assets.json', ':(exclude)art/source/dealers/MANIFEST.json',
     ...['noble_female','knight_female','mage_female','elf_female','halforc_female'].flatMap(id => [
       `:(exclude)art/source/dealers/${id}/formal.png`, `:(exclude)public/characters/dealer/${id}/formal.png`,

@@ -1,0 +1,26 @@
+[
+  {
+    "before": "import { createAuditTrail, type Clock } from '../domain/audit.js';",
+    "after": "import { createAuditTrail, type Clock } from '../domain/audit.js';\nimport { createPresentationFeed } from '../presentation/events.js';\nimport { observePresentation } from './presentationObserver.js';"
+  },
+  {
+    "before": "  let presentationSession = 0;",
+    "after": "  let presentationSession = 0;\n  const presentation = createPresentationFeed();"
+  },
+  {
+    "before": "    if (result.ok) state = result.state;",
+    "after": "    if (result.ok) state = result.state;\n    // Committed authority precedes observation. Presentation failure never reverses a command.\n    try {\n      if (result.ok && (command.type === 'NEXT' || command.type === 'CONFIGURE' || command.type === 'VOID'\n        || state.table.game.round?.phase === 'INTEGRITY_ERROR')) presentation.clear();\n      const facts = observePresentation(before, result, command);\n      if (facts.length) presentation.append(`round-${state.table.roundNumber + (['OPEN', 'CONFIGURING'].includes(state.table.phase) ? 1 : 0)}`, command.type, facts);\n    } catch { presentation.fail(); }"
+  },
+  {
+    "before": "    presentationSession++;",
+    "after": "    presentationSession++;\n    presentation.clear();"
+  },
+  {
+    "before": "    audit.recordReplay(state, false);",
+    "after": "    presentation.clear();\n    audit.recordReplay(state, false);"
+  },
+  {
+    "before": "    startDemo, exportReplay, replayCompleted,",
+    "after": "    startDemo, exportReplay, replayCompleted, presentation,"
+  }
+]

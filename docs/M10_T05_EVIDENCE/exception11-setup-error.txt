@@ -1,0 +1,16 @@
+Preparation failure retained from the actual tool result (exit1).
+The baseline capture completed before this bookkeeping failure. No repository
+source/test repair or required verification stage had executed at this point.
+The receipt reader used exception11-baseline without its .json suffix; the
+capture-original-outputs operation therefore stopped before writing originals.
+The suffix was corrected during preparation; required A-H results are separate.
+
+Error-message excerpt from the returned tool output (not a complete raw log):
+Error: ENOENT: no such file or directory, open 'C:\Users\user\Documents\GitHub\casino-blackjack\docs\M10_T05_EVIDENCE\exception11-baseline'
+
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T05_EVIDENCE\\exception11-baseline'
+
+Node.js v24.19.0

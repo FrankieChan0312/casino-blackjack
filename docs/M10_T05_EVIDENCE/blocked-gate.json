@@ -1,0 +1,43 @@
+{
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\verify.ps1",
+  "started": "2026-10-05 14:18:11 +08:00",
+  "finished": "2026-10-05 14:30:03 +08:00",
+  "exit": 1,
+  "status": "FAIL",
+  "taskStatus": "M10-T05_BLOCKED",
+  "repairCount": "10/10",
+  "repair11": "NOT AUTHORIZED / NOT RUN",
+  "failure": {
+    "test": "M9-E01",
+    "file": "tests/browser/m9.spec.ts",
+    "line": 35,
+    "message": "UNKNOWN: unknown error, open docs/images/m9-table-768.png",
+    "assertionFailure": "No expected/received gameplay assertion failed in this case; operation failed during historical screenshot write. Windows owner/root cause NOT PROVEN."
+  },
+  "checks": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "domainIsolation": "PASS",
+    "build": "PASS",
+    "fullVitest": "PASS \u2014 94 files/1193 tests",
+    "fullChromium": "FAIL \u2014 148 passed/1 failed",
+    "M1-M8Preservation": "PASS \u2014 including M7 56/870+24 browser and M8 66/956+44 browser"
+  },
+  "executedFiles": 242,
+  "executedFileMismatches": [],
+  "failureArtifacts": {
+    "rawFullOutput": "full-verify-repair10.log.gz",
+    "exactSource": "final-blocker-source.zip",
+    "screenshot": "NOT AVAILABLE \u2014 cleared by required subsequent M7/M8 Playwright runs",
+    "trace": "NOT AVAILABLE \u2014 same cleanup; raw output preserves original path and error",
+    "latestKnownOutputs": "regenerated-blocked.zip; some M9 images retain previous-run bytes because the failed case stopped before later viewports"
+  },
+  "implemented": "YES",
+  "verified": "NO \u2014 complete required gate failed",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "deployment": "NOT RUN",
+  "humanAcceptance": "PENDING",
+  "freshSessionReview": "NOT COMPLETED",
+  "next": "M10-T06 NOT STARTED \u2014 WAITING FOR OWNER APPROVAL"
+}

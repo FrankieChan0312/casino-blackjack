@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-05 14:36:25 +08:00",
+  "method": "Same Node gzipSync as incoming baseline; final successful production build from failed unified gate; source unchanged",
+  "files": [
+    {
+      "file": "index-DllMtCCD.js",
+      "bytes": 345813,
+      "gzip": 102598
+    }
+  ],
+  "baseline": 99361,
+  "current": 102598,
+  "increase": 3237,
+  "budget": 61440,
+  "status": "PASS"
+}

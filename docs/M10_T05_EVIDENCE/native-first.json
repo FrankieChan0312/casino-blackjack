@@ -1,0 +1,16 @@
+{
+  "started": "2026-10-05 13:39:38 +08:00",
+  "method": "Isolated Chromium native chrome.tabs.setZoom/getZoom; root16px, CSS zoom1, no scale emulation",
+  "profile": "C:\\Users\\user\\AppData\\Local\\Temp\\casino-blackjack-t05-native-mmKQuA",
+  "scenarios": [],
+  "baseline": {
+    "innerWidth": 1280,
+    "dpr": 1.5,
+    "font": "16px",
+    "cssZoom": "1"
+  },
+  "status": "FAIL",
+  "exit": 1,
+  "failure": "TimeoutError: locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Stand', exact: true })\u001b[22m\n",
+  "finished": "2026-10-05 13:40:12 +08:00"
+}
