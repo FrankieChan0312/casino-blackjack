@@ -1,6 +1,6 @@
 {
   "task": "M10-T04",
-  "cumulative": 2,
+  "cumulative": 3,
   "maximum": 10,
   "cycles": [
     {
@@ -22,6 +22,17 @@
       "hypothesis": "New checkpoint note ended with two newline bytes; task-authored development log has one surplus EOF blank.",
       "fix": "Remove only surplus task-authored EOF blank after persisting original failure. No raw evidence/source/test change.",
       "rerunPhase": "repair2-whitespace",
+      "rerunStatus": "PASS",
+      "rerunExitCode": 0
+    },
+    {
+      "cycle": 3,
+      "failurePhase": "t04a-20261005-receipt-documentation",
+      "status": "FAIL",
+      "exitCode": 1,
+      "hypothesis": "New receipt places accepted M8 preservation and future T05 NOT STARTED on one physical line; existing stale-milestone regex spans both.",
+      "fix": "Separate current acceptance/publication prose from future-task status with a paragraph break. Preserve all assertions, raw failure and actual status.",
+      "rerunPhase": "t04a-20261005-repair3-documentation",
       "rerunStatus": "PASS",
       "rerunExitCode": 0
     }

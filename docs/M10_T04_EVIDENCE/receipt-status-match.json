@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-10-05 09:13:19 +08:00",
+  "pattern": "C:\\Users\\|AppData|M[78].*NOT STARTED|M7.*NOT ACCEPTED",
+  "match": "M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED",
+  "impact": "Receipt line conflates accepted M8 preservation with future T05 status in one regex span; no false milestone status or product/test change."
+}

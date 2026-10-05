@@ -1,3 +1,19 @@
+## M10-T04-A final receipt gate — 2026-10-05 09:14:35 +08:00
+
+Documentation5 files/13 tests PASS/checked0 after receipt-only repair3/10. Final cumulative M10-T04 **3/10**, all cycles closed; first failures retained. Implementation main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688 already normally published with live0/0/CLEAN/untracked0. Full90/1150/122, independent M1–M8, unified verify.ps1, native zoom and PA1 byte reproduction PASS/0 remain valid on184 unchanged executable hashes. Source/tests/dependencies/runtime settings unchanged in this receipt. Same-session review PASS; fresh separate-session review NOT COMPLETED, unavailable. Final documentation-only push follows this factual gate.
+
+FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Initial identity NOT SELECTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN.
+
+## M10-T04-A receipt repair3/10 — 2026-10-05 09:13:19 +08:00
+
+Implementation main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688 already normally pushed with0/0/CLEAN/untracked0. Receipt documentation FAIL/exit1 retained: unchanged portfolio regex spans M8 preservation and future T05 status on one long line. Hypothesis confirmed by receipt-status-match.json. Targeted documentation-only paragraph separation; no test assertion/source/config change. Final cumulative M10-T04 **3/10**; full90/1150/122, independent/unified PASS/0 remain valid on184 unchanged executed hashes. Affected13 documentation checks pending rerun. Formal Dealer artwork NOT CREATED; initial identity/owner review pending.
+
+## M10-T04-A published — 2026-10-05 09:11:58 +08:00
+
+**M10-T04A_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED** on main/ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688. Normal authorized origin/main push PASS/checked0; HEAD=origin/main=live remote,0/0,CLEAN/untracked0 at 2026-10-05 09:10:55 +08:00. M10-T04 repairs2/10. Full90/1150/122, independent M1–M8, native200 zoom/PA1 byte reproduction and scripts/verify.ps1 PASS/0;184 executable hashes remain unchanged. Documentation13/whitespace PASS/0 before implementation commit. Initial Dealer identity NOT SELECTED; production retains existing temporary fallback. FORMAL DEALER ARTWORK NOT CREATED — OWNER APPROVAL REQUIRED. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable); T04-A human acceptance PENDING. M10A ACCEPTED/CLOSED; T02/T03 human ACCEPTED. WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR.
+
+M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN. This separate factual receipt follows actual successful publication; its own final SHA is resolved from Git. [Contract](docs/M10_T04.md), [publication](docs/M10_T04_EVIDENCE/implementation-publication.json).
+
 ## M10-T04-A technical gate — 2026-10-05 09:08:18 +08:00
 
 **M10-T04A_IMPLEMENTED_VERIFIED**; repair count M10-T04 **2/10**. Optional approved preferred identity -> unseated preference else first eligible canonical ID; stable reservation through rounds/resize/avatar changes; production identity remains unassigned pending owner selection. Separate formal asset contract and DealerZone shell retain existing temporary fallback; six static public-state hooks, no commands/timing/RNG. Full90 files/1150 Vitest and122 Chromium, current194, focused146/9, native200 zoom, PA1 read-only byte reproduction, independent M1–M8 and scripts/verify.ps1 **PASS / checked exit0**.184 exact executable hashes unchanged after verification; domain/browser/PA1 originals/provenance/canonical historical evidence unchanged. Same-session spec/source/diff/test/evidence review PASS; genuinely fresh separate-session review NOT COMPLETED (unavailable).

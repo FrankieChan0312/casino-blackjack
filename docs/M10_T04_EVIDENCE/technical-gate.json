@@ -2,7 +2,7 @@
   "timestamp": "2026-10-05 09:08:18 +08:00",
   "task": "M10-T04-A",
   "status": "M10-T04A_IMPLEMENTED_VERIFIED",
-  "repairCount": "2/10",
+  "repairCount": "3/10",
   "inventory": {
     "vitestFiles": 90,
     "vitestTests": 1150,
@@ -100,9 +100,23 @@
   "initialDealerIdentity": "NOT SELECTED — OWNER APPROVAL REQUIRED",
   "freshSeparateSessionReview": "NOT COMPLETED — unavailable",
   "sameSessionReview": "PASS",
-  "publication": "PENDING",
+  "publication": {
+    "status": "PASS",
+    "exitCode": 0,
+    "implementationCommit": "ebd4d1ae9d6c9a0baf022ed6854cc18dee19e688",
+    "branch": "main",
+    "ahead": 0,
+    "behind": 0,
+    "workingTree": "CLEAN",
+    "untracked": 0
+  },
   "next": "WAITING FOR OWNER TO SELECT/APPROVE INITIAL DEALER AVATAR",
   "motion": "NOT INSTALLED",
   "animation": "NOT STARTED",
-  "deployment": "NOT RUN"
+  "deployment": "NOT RUN",
+  "receiptDocumentation": {
+    "status": "PASS",
+    "exitCode": 0,
+    "phase": "t04a-20261005-repair3-documentation"
+  }
 }
