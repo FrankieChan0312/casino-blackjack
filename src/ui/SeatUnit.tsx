@@ -4,7 +4,7 @@ import type { characters } from '../presentation/characters.js';
 import { Cards } from './Cards.js';
 import { PresentationAnchor } from './PresentationAnchor.js';
 import { credits, handLabel, resultLabel } from './presentation.js';
-import { useInitialDeal, usePresentationAnchor } from './PresentationProvider.js';
+import { useInitialDeal, usePlayerActions, usePresentationAnchor } from './PresentationProvider.js';
 
 type PublicHand = NonNullable<BrowserView['round']>['seats'][number]['hands'][number];
 type SeatIdentity = BrowserView['configuration'][number];
@@ -23,7 +23,7 @@ export function SeatUnit({ seat, avatar, hands, wager, currentSeat, currentHandI
   wager: number; currentSeat?: number | null; currentHandId?: string | null;
 }) {
   const mobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverSnapshot);
-  const deal = useInitialDeal();
+  const deal = useInitialDeal(), actions = usePlayerActions();
   const summaryAnchor = usePresentationAnchor(`hand-summary:${seat.seatNumber}`);
   return <div className="seat-unit" data-current-turn={currentSeat === seat.seatNumber || undefined}>
     <div className="character-identity">
@@ -38,7 +38,7 @@ export function SeatUnit({ seat, avatar, hands, wager, currentSeat, currentHandI
     {!hands.length && <div className="seat-waiting"><PresentationAnchor as="p" anchor={`wager:${seat.seatNumber}`} className="wager-chip" data-felt-destination="main-wager">MAIN: {credits(wager)} credits</PresentationAnchor>
       <p>{seat.sittingOut ? 'Sitting Out' : 'Waiting for the deal'}</p></div>}
     {hands.length > 0 && <details className="guest-mobile-cards seat-hands" open={!mobile}>
-      <summary ref={summaryAnchor}>Cards · {deal.running ? 'Dealing' : hands[0].total}</summary>
+      <summary ref={summaryAnchor}>Cards · {deal.running || hands.some(hand => actions.busy(hand.handId)) ? 'Dealing' : hands[0].total}</summary>
       {hands.map(hand => {
         const current = currentHandId === hand.handId;
         const status = hand.outcome ? resultLabel(hand.outcome, hand.outcomeReason)
@@ -48,8 +48,8 @@ export function SeatUnit({ seat, avatar, hands, wager, currentSeat, currentHandI
           <div className="hand-header"><h3>{handLabel(hand.handId)}{current && ' · Current hand'}</h3>
             {current && <span className="turn-marker">ACTIVE</span>}</div>
           <Cards cards={hand.cards} ownerId={hand.handId} />
-          <div className="seat-hand-facts"><p className="seat-score" style={{ opacity: deal.running ? 0 : 1 }} aria-label={`Total: ${hand.total}`}>{hand.total}</p>
-            <p className="seat-hand-state" style={{ opacity: deal.running ? 0 : 1 }} data-result={hand.outcome}>{status}</p>
+          <div className="seat-hand-facts"><p className="seat-score" style={{ opacity: deal.running || actions.busy(hand.handId) ? 0 : 1 }} aria-label={`Total: ${hand.total}`}>{hand.total}</p>
+            <p className="seat-hand-state" style={{ opacity: deal.running || actions.busy(hand.handId) ? 0 : 1 }} data-result={hand.outcome}>{status}</p>
             <PresentationAnchor as="p" anchor={`hand-wager:${hand.handId}`} className="seat-stake" data-felt-destination={hands.length === 1 ? 'main-wager' : 'hand-wager'}>{hands.length === 1 ? 'MAIN: ' : 'Wager: '}{credits(hand.stakeUnits)} credits</PresentationAnchor></div>
         </PresentationAnchor>;
       })}

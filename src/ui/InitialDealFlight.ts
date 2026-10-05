@@ -16,7 +16,8 @@ export function playInitialDealFlight(event: InitialCardEvent, anchors: AnchorRe
     ?? anchors.measure(event.destination) ?? (typeof event.card.owner === 'number' ? anchors.measure(`seat-${event.card.owner}`) : null);
   if (!origin || !target) { arrive(); return; }
   const layer = document.createElement('div'), card = document.createElement('span');
-  layer.dataset.initialDealFlight = event.id;
+  if (event.reason === 'INITIAL') layer.dataset.initialDealFlight = event.id;
+  else { layer.dataset.actionCardFlight = event.id; layer.dataset.actionReason = event.reason; }
   layer.dataset.dealTarget = initialCardKey(event.card.handId, event.card.index);
   layer.setAttribute('aria-hidden', 'true');
   Object.assign(layer.style, { position: 'absolute', left: '0', top: '0', width: '100%', height: `${document.documentElement.scrollHeight}px`,

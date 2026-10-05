@@ -1,0 +1,142 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/playerActions.spec.ts
+
+[WebServer] (node:20940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:32712) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Hit] actual pre/mid/settled motion and authoritative hand targeting (7.8s)
+  ok 2 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Double] actual pre/mid/settled motion and authoritative hand targeting (3.9s)
+  ok 3 [chromium] › tests\browser\m10\playerActions.spec.ts:32:3 › [T07-B01-Split] actual pre/mid/settled motion and authoritative hand targeting (4.2s)
+  x  4 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-1280] Hit after Split, exact child anchor and interrupt before next legal action (9.3s)
+(node:27552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  5 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-768] Hit after Split, exact child anchor and interrupt before next legal action (9.5s)
+(node:26788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  6 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-320] Hit after Split, exact child anchor and interrupt before next legal action (9.4s)
+(node:8824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 7 [chromium] › tests\browser\m10\playerActions.spec.ts:71:1 › [T07-B03] three Splits to four RSA leaves preserve active hand and bounded overlays (6.6s)
+
+
+  1) [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-1280] Hit after Split, exact child anchor and interrupt before next legal action 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Hand 2.*Current hand/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Hand 2.*Current hand/ }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: /Hand 2.*Current hand/ })
+
+
+      64 |   await page.getByRole('button',{ name:'Stand',exact:true }).click();
+      65 |   await expect(page.locator('[data-card-slot="round-1/seat-4.1:2"]')).toHaveCSS('opacity','1');
+    > 66 |   await expect(page.getByRole('heading',{ name:/Hand 2.*Current hand/ })).toBeVisible();
+         |                                                                           ^
+      67 |   await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+      68 |   await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+      69 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\playerActions.spec.ts:66:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-3d657-pt-before-next-legal-action-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-playerActions--T07-B02-3d657-pt-before-next-legal-action-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-3d657-pt-before-next-legal-action-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-playerActions--T07-B02-3d657-pt-before-next-legal-action-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-768] Hit after Split, exact child anchor and interrupt before next legal action 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Hand 2.*Current hand/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Hand 2.*Current hand/ }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: /Hand 2.*Current hand/ })
+
+
+      64 |   await page.getByRole('button',{ name:'Stand',exact:true }).click();
+      65 |   await expect(page.locator('[data-card-slot="round-1/seat-4.1:2"]')).toHaveCSS('opacity','1');
+    > 66 |   await expect(page.getByRole('heading',{ name:/Hand 2.*Current hand/ })).toBeVisible();
+         |                                                                           ^
+      67 |   await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+      68 |   await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+      69 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\playerActions.spec.ts:66:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-6a00a-pt-before-next-legal-action-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-playerActions--T07-B02-6a00a-pt-before-next-legal-action-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-6a00a-pt-before-next-legal-action-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-playerActions--T07-B02-6a00a-pt-before-next-legal-action-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-320] Hit after Split, exact child anchor and interrupt before next legal action 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Hand 2.*Current hand/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Hand 2.*Current hand/ }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: /Hand 2.*Current hand/ })
+
+
+      64 |   await page.getByRole('button',{ name:'Stand',exact:true }).click();
+      65 |   await expect(page.locator('[data-card-slot="round-1/seat-4.1:2"]')).toHaveCSS('opacity','1');
+    > 66 |   await expect(page.getByRole('heading',{ name:/Hand 2.*Current hand/ })).toBeVisible();
+         |                                                                           ^
+      67 |   await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+      68 |   await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+      69 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\playerActions.spec.ts:66:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-530d2-pt-before-next-legal-action-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-playerActions--T07-B02-530d2-pt-before-next-legal-action-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-playerActions--T07-B02-530d2-pt-before-next-legal-action-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-playerActions--T07-B02-530d2-pt-before-next-legal-action-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-1280] Hit after Split, exact child anchor and interrupt before next legal action 
+    [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-768] Hit after Split, exact child anchor and interrupt before next legal action 
+    [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-320] Hit after Split, exact child anchor and interrupt before next legal action 
+  4 passed (58.8s)

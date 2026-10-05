@@ -1,0 +1,16 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/playerActions.spec.ts --grep T07-B02
+
+[WebServer] (node:12540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:32160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-1280] Hit after Split, exact child anchor and interrupt before next legal action (7.5s)
+  ok 2 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-768] Hit after Split, exact child anchor and interrupt before next legal action (4.3s)
+  ok 3 [chromium] › tests\browser\m10\playerActions.spec.ts:58:65 › [T07-B02-320] Hit after Split, exact child anchor and interrupt before next legal action (4.1s)
+
+  3 passed (20.5s)

@@ -1,0 +1,74 @@
+param([Parameter(Mandatory = $true)][ValidateSet('T07', 'T08', 'T09', 'T10')][string]$Task)
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+Push-Location (Split-Path -Parent $PSScriptRoot)
+try {
+    $runId = Get-Date -Format 'yyyyMMdd-HHmmss'
+    $evidence = "docs/M10_${Task}_EVIDENCE/gate-$runId"
+    $backup = ".git/m10-animation-$Task-$runId"
+    New-Item -ItemType Directory -Path $evidence, $backup -Force | Out-Null
+    # Existing tests write these historical outputs. Preserve their exact bytes,
+    # archive each new generated version, then restore captured originals.
+    $outputs = @(git ls-files docs/images docs/M10_T01_EVIDENCE docs/M10_T06_EVIDENCE/screenshots docs/M10_T06_EVIDENCE/reduced-seven-settled.png |
+        Where-Object { $_ -match '\.(png|json)$' })
+    if ($LASTEXITCODE -ne 0) { throw 'Cannot capture tracked historical output inventory' }
+    $originals = @{}
+    foreach ($path in $outputs) {
+        $bytes = [IO.File]::ReadAllBytes((Join-Path (Get-Location) $path))
+        $originals[$path] = $bytes
+        $target = Join-Path $backup $path
+        New-Item -ItemType Directory -Path (Split-Path $target) -Force | Out-Null
+        [IO.File]::WriteAllBytes($target, $bytes)
+    }
+    $receipts = @()
+    $gateFailed = $false
+    foreach ($stage in @('units', 'chromium', 'preservation', 'current-preservation', 'dealer-assets', 'player-assets', 'unified')) {
+        $start = Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'
+        Write-Host "$start START $Task $stage"
+        $log = Join-Path $evidence "$stage.txt"
+        switch ($stage) {
+            'units' { & npm.cmd test *> $log }
+            'chromium' { & npm.cmd run test:e2e *> $log }
+            'preservation' { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1 *> $log }
+            'current-preservation' { & npm.cmd test -- tests/m10 tests/pa1 tests/ra1 tests/unit/portfolio.test.ts tests/unit/verificationHarness.test.ts *> $log }
+            'dealer-assets' { & node scripts/verify-dealer-assets.mjs *> $log }
+            'player-assets' { & node scripts/verify-character-assets.mjs *> $log }
+            'unified' { & powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1 *> $log }
+        }
+        $code = $LASTEXITCODE
+        $finish = Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'
+        $status = if ($code -eq 0) { 'PASS' } else { 'FAIL' }
+        $receipts += @{ stage = $stage; start = $start; finish = $finish; exitCode = $code; status = $status; log = $log }
+        if (Test-Path -LiteralPath test-results) {
+            Copy-Item -LiteralPath test-results -Destination (Join-Path $evidence "$stage-browser-artifacts") -Recurse
+        }
+        $generated = @()
+        foreach ($path in $outputs) {
+            $absolute = Join-Path (Get-Location) $path
+            $current = [IO.File]::ReadAllBytes($absolute)
+            $hash = [Convert]::ToBase64String([Security.Cryptography.SHA256]::Create().ComputeHash($current))
+            $originalHash = [Convert]::ToBase64String([Security.Cryptography.SHA256]::Create().ComputeHash($originals[$path]))
+            if ($hash -ne $originalHash) {
+                $archive = Join-Path $evidence "${stage}-generated/$path"
+                New-Item -ItemType Directory -Path (Split-Path $archive) -Force | Out-Null
+                [IO.File]::WriteAllBytes($archive, $current)
+                [IO.File]::WriteAllBytes($absolute, $originals[$path])
+                $restored = [Convert]::ToBase64String([Security.Cryptography.SHA256]::Create().ComputeHash([IO.File]::ReadAllBytes($absolute)))
+                if ($restored -ne $originalHash) { throw "Historical output restore failed: $path" }
+                $generated += @{ path = $path; originalSHA256Base64 = $originalHash; generatedSHA256Base64 = $hash; restored = $true }
+            }
+        }
+        ConvertTo-Json -InputObject $generated -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence "$stage-output-preservation.json") -Encoding UTF8
+        ConvertTo-Json -InputObject $receipts -Depth 5 | Set-Content -LiteralPath (Join-Path $evidence 'receipts.json') -Encoding UTF8
+        Write-Host "$finish $status $Task $stage exit $code"
+        Get-Content -LiteralPath $log -Tail 8
+        if ($code -ne 0) { $gateFailed = $true; break }
+    }
+    if ($gateFailed) { exit 1 }
+    & git diff --exit-code 6c7f7db7ecd74b5ec0cbb93b4d097be81607a2c5 -- src/domain art public package.json package-lock.json
+    if ($LASTEXITCODE -ne 0) { throw 'Protected authority/assets/dependencies changed' }
+    Write-Host "PASS: $Task complete animation technical gate"
+}
+catch { Write-Host "BLOCKED: $($_.Exception.Message)"; exit 1 }
+finally { Pop-Location }
+exit 0

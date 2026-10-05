@@ -8,17 +8,26 @@ import { MOTION_TOKENS } from '../presentation/motionTokens.js';
 import type { DealerPresentationState } from '../presentation/dealerPresentation.js';
 import { createInitialDealProjection, initialCards, initialCardKey } from '../presentation/initialDeal.js';
 import { playInitialDealFlight } from './InitialDealFlight.js';
+import { createPlayerActionProjection, playerCardKeys } from '../presentation/playerActions.js';
+import { captureSplitOrigins, playSplitMotion, type SplitOrigins } from './PlayerActionMotion.js';
 
 export function createPresentationRuntime() {
   const anchors = createAnchorRegistry(), initialDeal = createInitialDealProjection();
+  const playerActions = createPlayerActionProjection(), splitOrigins: SplitOrigins = new Map();
   const timeline = createPresentationTimeline(event => {
     if (event.type === 'DEAL_CARD' && event.reason === 'INITIAL') return playInitialDealFlight(event, anchors, () => initialDeal.arrive(event));
+    if (event.type === 'DEAL_CARD' && event.reason !== 'DEALER') return playInitialDealFlight(event, anchors, () => playerActions.arrive(event));
+    if (event.type === 'SPLIT_HANDS') return playSplitMotion(event, anchors, splitOrigins, () => playerActions.arrive(event));
+    if (event.type === 'PLAYER_ACTION' && event.action === 'STAND') {
+      const element = anchors.get(`hand:${event.handId}`);
+      if (element) return playMotionStep(element, { opacity: [.85, 1] });
+    }
   });
   timeline.subscribe(() => {
     const snapshot = timeline.getSnapshot();
-    if (!snapshot.activeId && !snapshot.pending) initialDeal.clear();
+    if (!snapshot.activeId && !snapshot.pending) { initialDeal.clear(); playerActions.clear(); splitOrigins.clear(); }
   });
-  return { anchors, timeline, initialDeal };
+  return { anchors, timeline, initialDeal, playerActions, splitOrigins };
 }
 type Runtime = ReturnType<typeof createPresentationRuntime>;
 const PresentationContext = createContext<Runtime | null>(null);
@@ -42,6 +51,14 @@ export function useDealerPresentationState(fallback: DealerPresentationState): D
   const snapshot = useSyncExternalStore(runtime?.timeline.subscribe ?? emptySubscription, runtime?.timeline.getSnapshot ?? emptySnapshot, emptySnapshot);
   return snapshot?.dealerState ?? fallback;
 }
+export function usePlayerActions() {
+  const runtime = usePresentationRuntime(), context = useContext(DealContext);
+  const projection = useSyncExternalStore(runtime?.playerActions.subscribe ?? emptySubscription, runtime?.playerActions.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const feed = useSyncExternalStore(context?.feed.subscribe ?? emptySubscription, context?.feed.getSnapshot ?? emptySnapshot, emptySnapshot);
+  const keys = context?.mode === 'FULL_MOTION' ? [...(projection?.pending ?? []), ...playerCardKeys(feed?.batches.flatMap(batch => batch.events) ?? [])] : [];
+  return { running: keys.length > 0, visible: (handId: string, index: number) => !keys.includes(initialCardKey(handId, index)),
+    busy: (handId: string) => keys.some(key => key.startsWith(`${handId}:`)) };
+}
 
 export function usePresentationAnchor(id: AnchorId) {
   const runtime = usePresentationRuntime();
@@ -59,7 +76,10 @@ export function consumePresentation(feed: PresentationFeed, runtime: Runtime, mo
   const snapshot = feed.getSnapshot();
   runtime.timeline.begin(snapshot.generation);
   if (!snapshot.batches.length) return;
-  if (mode === 'FULL_MOTION') runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+  if (mode === 'FULL_MOTION') {
+    runtime.initialDeal.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+    runtime.playerActions.prepare(snapshot.generation, snapshot.batches.flatMap(batch => batch.events));
+  }
   runtime.timeline.enqueue(snapshot.batches.flatMap(batch => batch.events));
   feed.acknowledge(snapshot.revision);
 }
@@ -73,7 +93,9 @@ export function connectPresentation(feed: PresentationFeed, runtime: Runtime, mo
   const unsubscribe = deferred ? () => {} : feed.subscribe(consume);
   const settle = () => runtime.timeline.skip();
   const visibility = () => { if (document.hidden) settle(); };
-  const input = (event: Event) => { if ((event.target as HTMLElement)?.closest?.('button')) settle(); };
+  const input = (event: Event) => { if ((event.target as HTMLElement)?.closest?.('button')) {
+    settle(); captureSplitOrigins(runtime.anchors, runtime.splitOrigins);
+  } };
   const keyboard = (event: KeyboardEvent) => { if (event.key === 'Enter' || event.key === ' ') input(event); };
   window.addEventListener('resize', settle);
   document.addEventListener('visibilitychange', visibility);

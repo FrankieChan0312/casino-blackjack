@@ -36,15 +36,6 @@ export function observePresentation(before: BehindGameState, result: SessionResu
   } else {
     if (command.type === 'ACT') facts.push({ type: 'PLAYER_ACTION', seat: previous!.players.find(h => h.handId === command.handId)!.seatNumber,
       handId: command.handId, action: command.action });
-    // Existing ordered observations distinguish actual bot HIT/STAND without policy inference.
-    const cursors = new Map(previous?.players.map(hand => [hand.handId, hand.cards.length]));
-    for (const action of result.computerActions ?? []) {
-      facts.push({ type: 'PLAYER_ACTION', seat: action.seatNumber, handId: action.handId, action: action.action });
-      if (action.action === 'HIT') {
-        const hand = round.players.find(h => h.handId === action.handId)!;
-        const index = cursors.get(hand.handId)!; deal(hand, index, 'HIT'); cursors.set(hand.handId, index + 1);
-      }
-    }
     for (const parent of previous?.players ?? []) {
       const children = round.players.filter(hand => hand.parentHandId === parent.handId);
       if (!round.players.some(hand => hand.handId === parent.handId) && children.length) {
@@ -55,9 +46,28 @@ export function observePresentation(before: BehindGameState, result: SessionResu
       }
     }
     const oldCards = new Set(previous?.players.flatMap(hand => hand.cards.map(card => card.id)));
+    // A computer action can activate a waiting split sibling inside atomic ADVANCE.
+    // Ordered leaves + retained originals identify its supplement BEFORE its HIT;
+    // policy observations identify only actual decisions, never those supplements.
+    const cursors = new Map(previous?.players.map(hand => [hand.handId, hand.cards.length]));
+    for (const action of result.computerActions ?? []) {
+      const position = round.players.findIndex(hand => hand.handId === action.handId);
+      for (const hand of round.players.slice(0, position + 1)) {
+        if (hand.origin === 'SPLIT' && hand.cards[1] && !oldCards.has(hand.cards[1].id)) deal(hand, 1, 'SUPPLEMENT');
+      }
+      facts.push({ type: 'PLAYER_ACTION', seat: action.seatNumber, handId: action.handId, action: action.action });
+      if (action.action === 'HIT') {
+        const hand = round.players[position];
+        const index = Math.max(cursors.get(hand.handId) ?? 1, hand.origin === 'SPLIT' ? 2 : 0);
+        deal(hand, index, 'HIT'); cursors.set(hand.handId, index + 1);
+      }
+    }
+    const doubleHandId = command.type === 'ACT' && command.action === 'DOUBLE' ? command.handId
+      : command.type === 'CONTROLLER' && command.action === 'DOUBLE' ? command.handId
+      : command.type === 'FOLLOW' && before.followWindow?.kind === 'DOUBLE' ? before.followWindow.handId : null;
     for (const hand of round.players) hand.cards.forEach((card, index) => {
-      if (!oldCards.has(card.id)) deal(hand, index, command.type === 'ACT' && hand.handId === command.handId
-        ? command.action === 'DOUBLE' ? 'DOUBLE' : 'HIT' : 'SUPPLEMENT');
+      if (!oldCards.has(card.id)) deal(hand, index, hand.handId === doubleHandId ? 'DOUBLE'
+        : command.type === 'ACT' && hand.handId === command.handId ? 'HIT' : 'SUPPLEMENT');
     });
   }
   const wasVisible = command.type !== 'CLOSE' && !!getPublicBehindView(before).round?.dealer.holeCard;

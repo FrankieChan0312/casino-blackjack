@@ -1,0 +1,17 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  96 passed (96)
+      Tests  1204 passed (1204)
+   Start at  22:47:08
+   Duration  23.91s (tests 58%, import 34%, transform 5%, setup 2%, worker 1%)
+
+     Import  173 modules were evaluated 315 times · 25.16s total, 34% of tracked time
+             ~1.84s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+

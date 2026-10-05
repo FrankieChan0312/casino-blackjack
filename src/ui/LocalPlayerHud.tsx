@@ -3,7 +3,7 @@ import type { characters } from '../presentation/characters.js';
 import { Cards } from './Cards.js';
 import { PresentationAnchor } from './PresentationAnchor.js';
 import { credits, handLabel, resultLabel } from './presentation.js';
-import { useInitialDeal } from './PresentationProvider.js';
+import { useInitialDeal, usePlayerActions } from './PresentationProvider.js';
 
 type PublicHand = NonNullable<BrowserView['round']>['seats'][number]['hands'][number];
 export function LocalPlayerHud({ seat, avatar, hands, wager, currentHandId, ownResults }: {
@@ -11,7 +11,7 @@ export function LocalPlayerHud({ seat, avatar, hands, wager, currentHandId, ownR
   hands: readonly PublicHand[]; wager: number; currentHandId?: string | null;
   ownResults: BrowserView['ownResults'];
 }) {
-  const deal = useInitialDeal();
+  const deal = useInitialDeal(), actions = usePlayerActions();
   return <div className="local-player-hud" role="group" aria-label="Your player HUD"
     aria-describedby="player-scene-status" aria-controls="player-decisions">
     <div className="hud-identity">
@@ -34,9 +34,9 @@ export function LocalPlayerHud({ seat, avatar, hands, wager, currentHandId, ownR
           <div className="hand-header"><h3>{handLabel(hand.handId)}{current && ' · Current hand'}</h3>
             {current && <span className="turn-marker">ACTIVE</span>}</div>
           <Cards cards={hand.cards} ownerId={hand.handId} />
-          <div className="hud-hand-facts"><p className="hud-total" style={{ opacity: deal.running ? 0 : 1 }} aria-label={`Total: ${hand.total}`}>Total: <strong>{hand.total}</strong></p>
+          <div className="hud-hand-facts"><p className="hud-total" style={{ opacity: deal.running || actions.busy(hand.handId) ? 0 : 1 }} aria-label={`Total: ${hand.total}`}>Total: <strong>{hand.total}</strong></p>
             <PresentationAnchor as="p" anchor={`hand-wager:${hand.handId}`} className="hud-wager" data-felt-destination="hand-wager">Wager: {credits(hand.stakeUnits)} credits</PresentationAnchor>
-            <p className="hud-state" style={deal.running ? { opacity: 0 } : undefined} data-result={hand.outcome}>{status}</p></div>
+            <p className="hud-state" style={deal.running || actions.busy(hand.handId) ? { opacity: 0 } : undefined} data-result={hand.outcome}>{status}</p></div>
           {hand.outcome === 'SURRENDERED' && ownResults.filter(result => result.handId === hand.handId).map(result =>
             <p key={result.handId} className="hud-return">Returned: {credits(result.returned)} · Lost: {credits(result.stake - result.returned)}</p>)}
         </PresentationAnchor>;

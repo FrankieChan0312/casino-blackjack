@@ -1,0 +1,50 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m9/documentation.test.ts (3 tests | 1 failed) 9606ms
+   × [M9-D03] current inventory includes every literal executable M9 and browser registration without skipped tests 6050ms
+ ❯ tests/m10/formalDealers.test.tsx (14 tests | 1 failed) 8498ms
+   × [M10-F01] exactly five owner-approved source/runtime pairs decode with manifest hashes, alpha and dimensions 6054ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/formalDealers.test.tsx > [M10-F01] exactly five owner-approved source/runtime pairs decode with manifest hashes, alpha and dimensions
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m10/formalDealers.test.tsx:15:1
+     13| const pool = ['noble_female','knight_female','mage_female','elf_female…
+     14| const seats = [[4],[3,4],[3,4,6],[1,3,4,6],[1,3,4,5,6],[1,2,3,4,5,6],[…
+     15| it('[M10-F01] exactly five owner-approved source/runtime pairs decode …
+       | ^
+     16|   expect(FORMAL_DEALER_POOL).toEqual(pool);
+     17|   expect(FORMAL_DEALER_ASSETS.map(a=>a.characterId)).toEqual(pool);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/m9/documentation.test.ts > [M9-D03] current inventory includes every literal executable M9 and browser registration without skipped tests
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m9/documentation.test.ts:63:1
+     61| });
+     62|
+     63| it('[M9-D03] current inventory includes every literal executable M9 an…
+       | ^
+     64|   let browser = 0; let m9 = 0;
+     65|   const browserFiles = readdirSync('tests/browser').filter(f => f.ends…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 94 passed (96)
+      Tests  2 failed | 1202 passed (1204)
+   Start at  22:42:54
+   Duration  28.19s (tests 63%, import 29%, transform 6%, setup 2%, worker 1%)
+
+     Import  173 modules were evaluated 358 times · 46.17s total, 29% of tracked time
+             ~1.64s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+

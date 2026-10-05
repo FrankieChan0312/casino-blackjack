@@ -1,0 +1,85 @@
+import { test, expect, type Page } from '@playwright/test';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { Buffer } from 'node:buffer';
+
+test.use({ reducedMotion: 'no-preference' });
+async function deal(page: Page, fixture: string) {
+  await page.goto(`/?fixture=${fixture}`);
+  await page.getByLabel('Your main wager', { exact: false }).fill('100');
+  await page.getByRole('button', { name: 'Deal', exact: true }).click();
+  await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running','false');
+}
+async function pauseNext(page: Page) {
+  await page.evaluate(() => {
+    const observer = new MutationObserver(records => {
+      for (const record of records) for (const node of record.addedNodes) if (node instanceof HTMLElement && (node.dataset.actionCardFlight || node.dataset.splitFlight)) {
+        node.getAnimations({ subtree: true }).forEach(animation => { animation.pause(); animation.currentTime = 70; });
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body,{ childList: true });
+  });
+}
+async function resume(page: Page) {
+  await page.evaluate(() => document.querySelectorAll<HTMLElement>('[data-action-card-flight],[data-split-flight]').forEach(element => element.getAnimations({ subtree: true }).forEach(animation => animation.play())));
+}
+async function capture(page: Page, path: string) {
+  const cdp = await page.context().newCDPSession(page);
+  const screenshot = await cdp.send('Page.captureScreenshot',{ format:'png', fromSurface:true, captureBeyondViewport:false });
+  await cdp.detach(); writeFileSync(path,Buffer.from(screenshot.data,'base64'));
+}
+for (const [action,fixture] of [['Hit','player-loss'],['Double','player-loss'],['Split','player-split']] as const) {
+  test(`[T07-B01-${action}] actual pre/mid/settled motion and authoritative hand targeting`, async ({ page }) => {
+    await deal(page,fixture);
+    const root = `docs/M10_T07_EVIDENCE/browser/${Date.now()}-${action}`; mkdirSync(root,{ recursive:true });
+    await capture(page,`${root}/pre.png`); await pauseNext(page);
+    await page.getByRole('button',{ name:action,exact:true }).click();
+    const selector = action === 'Split' ? '[data-split-flight]' : '[data-action-card-flight]';
+    await expect(page.locator(selector)).toHaveCount(1);
+    await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','true');
+    const target = action === 'Split' ? 'round-1/seat-4.1:0' : 'round-1/seat-4:2';
+    await expect(page.locator(`[data-card-slot="${target}"]`)).toHaveCSS('opacity','0');
+    if (action === 'Split') {
+      await expect(page.locator('[data-split-target]')).toHaveCount(2);
+      expect(await page.locator('[data-split-target]').evaluateAll(elements => elements.map(element => (element as HTMLElement).dataset.splitTarget))).toEqual(['round-1/seat-4.1:0','round-1/seat-4.2:0']);
+    } else {
+      await expect(page.locator(selector)).toHaveAttribute('data-deal-target',target);
+      await expect(page.locator(`${selector} .card`)).toHaveClass(/card-back/);
+      await expect(page.locator(selector)).toHaveAttribute('aria-hidden','true');
+    }
+    await capture(page,`${root}/mid.png`); await resume(page);
+    await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+    await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+    await expect(page.locator(`[data-card-slot="${target}"]`)).toHaveCSS('opacity','1');
+    await capture(page,`${root}/settled.png`);
+    writeFileSync(`${root}/receipt.json`,JSON.stringify({ action,target,viewport:page.viewportSize(),files:['pre.png','mid.png','settled.png'] },null,2));
+  });
+}
+for (const [width,height] of [[1280,900],[768,1024],[320,720]]) test(`[T07-B02-${width}] Hit after Split, exact child anchor and interrupt before next legal action`,async ({ page }) => {
+  await page.setViewportSize({ width,height }); await deal(page,'player-split');
+  await page.getByRole('button',{ name:'Split',exact:true }).click();
+  await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+  await pauseNext(page); await page.getByRole('button',{ name:'Hit',exact:true }).click();
+  await expect(page.locator('[data-action-card-flight]')).toHaveAttribute('data-deal-target','round-1/seat-4.1:2');
+  await page.getByRole('button',{ name:'Stand',exact:true }).click();
+  await expect(page.locator('[data-card-slot="round-1/seat-4.1:2"]')).toHaveCSS('opacity','1');
+  await expect(page.getByRole('heading',{ name:/Hand B.*Current hand/ })).toBeVisible();
+  await expect(page.locator('[data-hand-id="round-1/seat-4.2"]')).toHaveAttribute('aria-current','true');
+  await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+  await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+test('[T07-B03] three Splits to four RSA leaves preserve active hand and bounded overlays', async ({ page }) => {
+  await deal(page,'player-rsa-cap');
+  const root=`docs/M10_T07_EVIDENCE/browser/${Date.now()}-four-leaves`; mkdirSync(root,{recursive:true});
+  for (let count=0;count<3;count++) {
+    await page.getByRole('button',{ name:'Split',exact:true }).click();
+    await expect(page.locator('.game-scene')).toHaveAttribute('data-player-actions-running','false');
+  }
+  await expect(page.locator('.hud-hand')).toHaveCount(4);
+  expect(await page.locator('.hud-hand').evaluateAll(elements => elements.map(element => element.getAttribute('data-hand-id')))).toEqual([
+    'round-1/seat-4.1.1.1','round-1/seat-4.1.1.2','round-1/seat-4.1.2','round-1/seat-4.2',
+  ]);
+  await expect(page.locator('[data-action-card-flight],[data-split-flight]')).toHaveCount(0);
+  await capture(page,`${root}/settled-four-leaves.png`);
+});
