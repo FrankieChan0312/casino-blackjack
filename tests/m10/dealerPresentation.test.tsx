@@ -112,10 +112,10 @@ it('[M10-D09] shell/configured assignment preserves seeded commands, complete re
   expect(receipts[1]).toEqual(receipts[0]);expect(receipts[2]).toEqual(receipts[0]);
   expect(JSON.stringify(receipts)).not.toMatch(/characterId|noble_male|variant/);
 });
-it('[M10-D10] public-only module and empty production configuration have no gameplay, timers or animation dependency', () => {
+it('[M10-D10] public-only module and production formal configuration have no gameplay, timers or animation dependency', () => {
   const source=readFileSync('src/presentation/dealerPresentation.ts','utf8');
   expect(source).not.toMatch(/from ['"].*(domain|browser)|Math\.random|crypto|dispatch\s*\(|setTimeout|setInterval|motion/);
-  expect(readFileSync('src/main.tsx','utf8')).not.toContain('dealerConfiguration');
+  expect(readFileSync('src/main.tsx','utf8')).toContain('FORMAL_DEALER_CONFIGURATION');
   expect(DEALER_PRESENTATION_STATES).toEqual(['IDLE','DEALING','WAITING_PLAYER','REVEALING','DRAWING','SETTLING']);
   expect(characters.map(c=>c.id)).toHaveLength(12);
   // Explicit fixture preferences never imply owner approval or artwork availability.

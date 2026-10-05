@@ -1,3 +1,37 @@
+## M10-T04B IMPLEMENTED / VERIFIED — 2026-10-05 12:44:02 +08:00
+
+**M10-T04B_IMPLEMENTED_VERIFIED**. Owner-authorized exceptional repair **11/11 — OWNER-AUTHORIZED EXCEPTION** is CLOSED. Only two existing CB09 structural lines changed in this continuation; inverse replacement reproduces all original source bytes. Every original win/loss/push assertion is retained at1280/768/320, with unchanged low-funds assertions executed at each width. The30s budget is Playwright's default per-case runner timeout, not a product-performance criterion. No product code/artwork/domain/browser/controller/RNG/seat mapping/replay/digest/journal/strategy/accounting/settlement/configuration changes during repair11; all188 executable hashes match the final gate-start version. Repair12 NOT AUTHORIZED.
+
+Final **verify.ps1 PASS / checked0**, 2026-10-05 12:28:00 +08:00 to 2026-10-05 12:42:40 +08:00: typecheck/lint/domain/build, full91 files/1164 Vitest,142 Chromium, independent M1–M8 preservation including M7 browser24 and M8 inventory956/44. Targeted CB09 three cases PASS0; prior focused40/static rotation/collision/exhaustion/1–7, desktop1280/tablet768/mobile320/text200/native200/keyboard/focus/public-card gates remain PASS and are preserved. Protected5629 incoming files/5300 historical records plus5660 exceptional-repair protected files unchanged. [Technical receipt](docs/M10_T04B_EVIDENCE/technical-gate.json), [repair equivalence](docs/M10_T04B_EVIDENCE/repair11-equivalence.json), [asset details](docs/M10_T04B_EVIDENCE/asset-validation.md), [visual evidence](docs/M10_T04B_EVIDENCE/screenshots/index.json).
+
+Five owner-provided source1086x1448/runtime240x320 transparent3:4 portraits and original MANIFEST retained byte-for-byte. Celestine/noble_female -> Seraphine/knight_female -> Nyra/mage_female -> Elaria/elf_female -> Vesha/halforc_female; deterministic existing-session ordinal, all seated identities excluded, generic fallback on exhaustion/image failure, zero gameplay RNG. STATIC FORMAL PORTRAIT USED FOR ALL SIX STATES. Earlier failed logs/versions/receipts retained; no retry-until-green. Same-session review PASS; fresh separate-session review NOT COMPLETED (unavailable). Publication pending the final documentation/privacy/diff review; actual Git receipt follows publication.
+
+**M10-T04 HUMAN VISUAL ACCEPTANCE: PENDING.** M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN. Earlier blocked/unapproved-repair11 status below is historical and superseded by this explicit owner authorization and executed gate.
+
+## M10-T04B final blocked receipt — 2026-10-05 12:08:30 +08:00
+
+**M10-T04B_BLOCKED — REPAIR LIMIT / REGRESSION TIMEOUT**. Final verify.ps1 FAIL/checked1 (2026-10-05 11:49:55 +08:00 to 2026-10-05 12:04:26 +08:00): typecheck/lint/domain/build/full91 files/1164 Vitest PASS; Chromium139/140 PASS with one required M10A-CB09 overall30000ms timeout at31.5s. Independent M1–M8 preservation PASS/0 including M7 browser24 and M8 inventory956/44. Do not label the entire task VERIFIED or silently retry.
+
+All188 executable hashes match the final gate-start version. Protected5629 incoming files /5300 historical evidence bytes PASS, empty domain/browser semantic diff, canonical PA1 assets/provenance unchanged, new five source/runtime imports unchanged. Focused40/native200/1–7/rotation/collision/exhaustion/responsive/accessibility/static hooks PASS. Evidence privacy pattern scan PASS. Latest failed20 screenshots/context/trace plus exact source retained in final-blocker; first-full standalone timed-out traces had been auto-cleared, with raw logs/failed source retained and limitation documented.
+
+Main HEAD=origin/live=e5cb332bcab72786c17be201db4dab4ccdfcb856,0/0; implementation commit/push NOT RUN. Known task changes retained: 23 tracked modifications,435 untracked files at receipt capture, staged0. Cumulative M10-T04 **10/10**; repair11 NOT RUN — explicit authorization required by AGENTS section9. [Concrete unapplied repair proposal](docs/M10_T04B_EVIDENCE/next-repair-proposal.md). Same-session scope/visual review PASS; fresh separate-session review NOT COMPLETED.
+
+Human visual acceptance PENDING. M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE. MOTION NOT INSTALLED; ANIMATION NOT STARTED; DEPLOYMENT NOT RUN.
+
+## M10-T04B BLOCKED — repair limit / full regression timeout — 2026-10-05 12:02:21 +08:00
+
+**M10-T04B_BLOCKED — REPAIR LIMIT / REGRESSION TIMEOUT**. Asset-not-ready blocker RESOLVED: all five owner-provided source/runtime pairs and original manifest integrated unchanged. Asset/focused40/native200/1–7/rotation/collision/exhaustion/public-card/accessibility gates PASS; final full Vitest91/1164, typecheck/lint/domain/build PASS. Final full Chromium newly fails M10A-CB09 at31.5s against unchanged30000ms overall matrix budget; context shows timeout closing the protocol session during a details assertion. Do not infer a proven gameplay/visual defect or waive the failure.
+
+Cumulative **M10-T04:10/10**, prior5 never reset; completed cycles6–10 remain CLOSED, this new blocker has **no repair11 attempted**. AGENTS section9 requires explicit authorization for additional cycles. STOP affected implementation/test repair; no commit/push. Capture20 current failed screenshots/context/trace artifacts and exact failed source bytes before subsequent preservation clears outputs. [Current blocker evidence](docs/M10_T04B_EVIDENCE/final-blocker/index.json). Existing unified invocation continues only to collect its actual final result; no new regression rerun. Current full gate FAIL; independent preservation final result initially pending.
+
+Known working changes are retained without stash/reset/discard. Same-session visual/scope review PASS; fresh separate-session review NOT COMPLETED. Human visual acceptance PENDING; technical gate must pass before publication. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.
+
+## Formal female Dealer integration — 2026-10-05 11:29:53 +08:00
+
+M10-T04B resumes after the owner supplies the missing approved pack. All five source/runtime pairs are preserved unchanged, with deterministic session rotation, seated-identity exclusion and generic fallback on exhaustion. Focused units208/Chromium40/native200 and PA1 asset checks PASS; full verification IN PROGRESS. Static portraits only; [task and evidence](docs/M10_T04B.md). Owner human visual acceptance PENDING. Earlier missing-asset statements below are historical.
+
+M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN.
+
 ## Celestine Dealer approval published — 2026-10-05 09:45:13 +08:00
 
 **M10-T04_OWNER_APPROVAL_RECORDED**, main/d0beb06b0bed62f4e2bbb3c9147a72e4ccbbbc15. Normal authorized commit/push/fetch PASS/0 at2026-10-05 09:44:05 +08:00; HEAD=origin/main=live,0/0,CLEAN/untracked0. Celestine/noble_female identity and formal direction OWNER APPROVED. Required documentation13/identity21/Chromium9/Celestine1–7/PA1 byte reproduction PASS; all184 executable files unchanged, domain/browser/assets/protected historical evidence preserved. Cumulative T04 repairs5/10, all cycles closed (prior3 plus2 administrative,0 product additions). Same-session review PASS; fresh separate-session review NOT COMPLETED. [Approval and asset prerequisite](docs/M10_T04_OWNER_APPROVAL.md).

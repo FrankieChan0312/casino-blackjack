@@ -1,5 +1,5 @@
 // Read-only PA1 source audit. Decode the supplied non-interlaced RGBA8 PNGs.
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { Buffer } from 'node:buffer';
 import { createHash } from 'node:crypto';
 import { inflateSync } from 'node:zlib';
@@ -10,7 +10,9 @@ const directory = process.argv[2] ?? 'art/source/characters/PA1_character_source
 const names = ['elf_male', 'elf_female', 'knight_male', 'knight_female',
   'mage_male', 'mage_female', 'noble_male', 'noble_female',
   'halforc_male', 'halforc_female', 'dwarf_male', 'dwarf_female'].map(id => `${id}.png`);
-const actual = readdirSync(directory).sort();
+// Separate approved Dealer variants do not belong to the immutable twelve-player receipt.
+const actual = readdirSync(directory).filter(name => !(directory === 'public/characters' && name === 'dealer' &&
+  statSync(join(directory, name)).isDirectory())).sort();
 if (JSON.stringify(actual) !== JSON.stringify([...names].sort())) throw new Error('Canonical filename set mismatch');
 
 function crc32(bytes) {

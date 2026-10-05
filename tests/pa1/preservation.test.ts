@@ -31,6 +31,9 @@ it('[PA1-P01] every pre-PA1 test assertion is unchanged except explicit historic
       .replace('    // M10 owns new geometry scenarios; retain the historical M8 inventory.\n','')
       .replace("    if (file === 'm10.spec.ts') continue;\n",'')
       .replace(" && !/^m10[\\\\/]/.test(file)",'');
+    // BEGIN T04B named unconfigured Dealer input adapter
+    if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll('/?fixture=player&dealer=legacy','/?fixture=player');
+    // END T04B named unconfigured Dealer input adapter
     if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll("{ name: /^Computer guest: / }","{ name: 'Original illustrated computer guest in evening attire', exact: true }");
     expect(current,file).toBe(historical);
   }

@@ -1,3 +1,13 @@
+## M10-T04B approved formal pool amendment — 2026-10-05 11:29:53 +08:00
+
+The owner supplies and approves the five-pair Dealer pack in [M10-T04B](M10_T04B.md), superseding the earlier absent-asset prerequisite and canonical-ID production fallback policy. The production registry is exactly noble_female/Celestine, knight_female/Seraphine, mage_female/Nyra, elf_female/Elaria, halforc_female/Vesha. Sources1086x1448 and runtime240x320 are transparent3:4 PNGs copied unchanged; original MANIFEST.json and separate import/provenance receipt retained. No PA1 artwork/provenance is rewritten and no generation/resizing is performed.
+
+Use the existing presentationSession ordinal, starting0 on a new controller, to begin at ordinal modulo5 and scan cyclically past all seated human/computer identities including Sitting Out. Preserve the entire existing lineup; if all five are seated use null/non-roster generic Dealer. Successful existing NEW_TABLE/new-demo/MODE reset advances the ordinal; NEXT/REPEAT/actions/resize/avatar changes retain the assignment. Assignment is presentation-only and consumes zero gameplay RNG. No wall clock or persistent storage is used. The old unconfigured helper remains supported; its historical tests use an explicit e2e-only legacy input.
+
+The portrait uses contain within the existing Dealer reserve, with short alt text Dealer: name and generic fallback on unavailable/decode-failed artwork. Actual visible cards, hidden-card back, public total/status, shoe and3:2/S17 rules remain authoritative and separate from decorative cards held in the portrait. IDLE/DEALING/WAITING_PLAYER/REVEALING/DRAWING/SETTLING all use the same static PNG. STATIC FORMAL PORTRAIT USED FOR ALL SIX STATES. ANIMATION NOT IMPLEMENTED.
+
+This static integration has focused technical/visual evidence; full gate and owner human visual acceptance are recorded separately in STATE. Earlier planning/absence records remain historical. M10-T05 NOT STARTED; MOTION NOT INSTALLED; DEPLOYMENT NOT RUN.
+
 # M10A casino-game composition and attention amendment
 
 Current owner decision: **M10-T01 Human Visual Acceptance = NOT ACCEPTED** despite technically verified/published geometry and11/11 repairs. [M10A planning](M10A_PLANNING.md) responds with a new composition milestone, not another T01 repair. [DESIGN M10A.1–18](DESIGN.md) owns visual structure; [SPEC](SPEC.md) owns acceptance. All implementation tasks/M10-T02/M10-T04 remain NOT STARTED, planning acceptance pending, deployment NOT RUN. This amendment changes no current gameplay.

@@ -1,0 +1,309 @@
+{
+  "phase": "matrix-responsive-final",
+  "kind": "matrixResponsive",
+  "start": "2026-10-05 11:47:50 +08:00",
+  "end": "2026-10-05 11:48:36 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10a/t08.spec.ts --grep M10A-T08-B02; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-matrix-responsive-final",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-matrix-responsive-final.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\""
+  },
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-matrix-responsive-final-pNH3lL",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-complete-1280.png",
+      "retainedAt": "generated/10c02d10a0f5b342355795e11e293458b34f2b9a74b12bcd295ad3a87cab122d.png",
+      "bytes": 836733,
+      "sha256": "10c02d10a0f5b342355795e11e293458b34f2b9a74b12bcd295ad3a87cab122d"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-even-money-1280.png",
+      "retainedAt": "generated/ca118b6d47117070ee63a88e96318a962aae6b19c48fcfcb9a46fa78aecee6ad.png",
+      "bytes": 842090,
+      "sha256": "ca118b6d47117070ee63a88e96318a962aae6b19c48fcfcb9a46fa78aecee6ad"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-five-1280.png",
+      "retainedAt": "generated/90f11c8298e675e4e698df3268aa499a1de0b87adc968e6d4ba8822f0d90a87c.png",
+      "bytes": 883954,
+      "sha256": "90f11c8298e675e4e698df3268aa499a1de0b87adc968e6d4ba8822f0d90a87c"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-insurance-1280.png",
+      "retainedAt": "generated/cd3baf57425f94278e8efe60396eafd5a0e1003c0d440d949b87e6f1238d85bd.png",
+      "bytes": 842988,
+      "sha256": "cd3baf57425f94278e8efe60396eafd5a0e1003c0d440d949b87e6f1238d85bd"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-pending-1280.png",
+      "retainedAt": "generated/e406292510730c815d816816c28ccefde747dd0fde867bfe9ec2d6d522c60ca7.png",
+      "bytes": 825771,
+      "sha256": "e406292510730c815d816816c28ccefde747dd0fde867bfe9ec2d6d522c60ca7"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-128-492c2-additions-and-pending-funds-chromium/responsive-split-1280.png",
+      "retainedAt": "generated/51231925eadfe93480f11e3c85dbc57f1d594d77f92386e872f101b6265ba1db.png",
+      "bytes": 939689,
+      "sha256": "51231925eadfe93480f11e3c85dbc57f1d594d77f92386e872f101b6265ba1db"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-complete-320.png",
+      "retainedAt": "generated/77022314173e862baed32f34ebd9e410125992359d8903df71c15dffd4c061ae.png",
+      "bytes": 286095,
+      "sha256": "77022314173e862baed32f34ebd9e410125992359d8903df71c15dffd4c061ae"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-even-money-320.png",
+      "retainedAt": "generated/14003cc444e8fe18df7f2035474708502628e94a0957152b05de943854c45ad8.png",
+      "bytes": 302760,
+      "sha256": "14003cc444e8fe18df7f2035474708502628e94a0957152b05de943854c45ad8"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-five-320.png",
+      "retainedAt": "generated/75482b6d0d97f2c55585730131b219a5d5f18a4c60d0c049a5e03f7df49357ec.png",
+      "bytes": 295825,
+      "sha256": "75482b6d0d97f2c55585730131b219a5d5f18a4c60d0c049a5e03f7df49357ec"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-insurance-320.png",
+      "retainedAt": "generated/32d6c2ec25dfc5c914b582306858167d744bd1d94a2f07a19e68a8b415dc9a95.png",
+      "bytes": 295474,
+      "sha256": "32d6c2ec25dfc5c914b582306858167d744bd1d94a2f07a19e68a8b415dc9a95"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-pending-320.png",
+      "retainedAt": "generated/8494577571fcbbadf650fe7cb76313aef3c7b258964951c90cad138262b82f84.png",
+      "bytes": 282409,
+      "sha256": "8494577571fcbbadf650fe7cb76313aef3c7b258964951c90cad138262b82f84"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-320-59aa9-additions-and-pending-funds-chromium/responsive-split-320.png",
+      "retainedAt": "generated/a95108d00b472fe64b45c88e688e0e7322d8e0c266fd8034285eb394cee07c8f.png",
+      "bytes": 336212,
+      "sha256": "a95108d00b472fe64b45c88e688e0e7322d8e0c266fd8034285eb394cee07c8f"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-complete-768.png",
+      "retainedAt": "generated/02f49ab79d7d3650c92c778c437a5e38c0fd6f846fd889d6b38a1efd6b63288e.png",
+      "bytes": 566190,
+      "sha256": "02f49ab79d7d3650c92c778c437a5e38c0fd6f846fd889d6b38a1efd6b63288e"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-even-money-768.png",
+      "retainedAt": "generated/eb929a11a8c21f441afce5e6908ea91c8a753da9b3043e3f2b9b686a1bd34906.png",
+      "bytes": 571042,
+      "sha256": "eb929a11a8c21f441afce5e6908ea91c8a753da9b3043e3f2b9b686a1bd34906"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-five-768.png",
+      "retainedAt": "generated/f068795eff885f27a51b2f5edfa4548c96a8f45e50960470bb56caf00198c611.png",
+      "bytes": 567261,
+      "sha256": "f068795eff885f27a51b2f5edfa4548c96a8f45e50960470bb56caf00198c611"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-insurance-768.png",
+      "retainedAt": "generated/2b4616ed2e9c7dd64c79e0afe7104d26624ab5ad7b285480da60b337b686b84a.png",
+      "bytes": 572957,
+      "sha256": "2b4616ed2e9c7dd64c79e0afe7104d26624ab5ad7b285480da60b337b686b84a"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-pending-768.png",
+      "retainedAt": "generated/3994f1a8908120db8337c1e64b003bfdb3526582d9808d938040982007dfacea.png",
+      "bytes": 559514,
+      "sha256": "3994f1a8908120db8337c1e64b003bfdb3526582d9808d938040982007dfacea"
+    },
+    {
+      "path": "test-results/m10a-t08--M10A-T08-B02-768-644de-additions-and-pending-funds-chromium/responsive-split-768.png",
+      "retainedAt": "generated/f80a6789ea598ab49f10124aa5582ca2b978df872d580a63fccc233cfb1c3497.png",
+      "bytes": 635967,
+      "sha256": "f80a6789ea598ab49f10124aa5582ca2b978df872d580a63fccc233cfb1c3497"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-05 11:48:37 +08:00"
+}

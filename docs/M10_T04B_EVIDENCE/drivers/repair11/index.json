@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-05 12:36:46 +08:00",
+  "status": "PASS",
+  "note": "Lossless repair11 orchestration archive; earlier drivers/index.json retained unchanged. Ignored helpers do not change product behavior. Do not blindly rerun occupied baseline/patch/phase helpers.",
+  "files": [
+    {
+      "originalIgnoredPath": ".git/t04b-repair11.cjs",
+      "retainedAt": "t04b-repair11.cjs.gz",
+      "originalSha256": "5bad1084c7915456e46bafa2d8511ed717d8a2f64c48d4f6810bed6d18c549f4",
+      "compressedSha256": "47c608bf56cf6f887bb6cc40ac24048e0547edf32b091e186d6b5f9fc29b948f"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-repair11-freeze.cjs",
+      "retainedAt": "t04b-repair11-freeze.cjs.gz",
+      "originalSha256": "288eb63f1c0bf6f0dbc583dbcc13d182b6d37a35770bfc9d5aa41da1c94ecbf3",
+      "compressedSha256": "60d184f3b0b4fd116683f46b801da7dedda6ce725bf200a64c381295bb497bfb"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-repair11-gate.cjs",
+      "retainedAt": "t04b-repair11-gate.cjs.gz",
+      "originalSha256": "3feaac5f9d050e4b39850ffae0ed5ef49571a29a58d590de6eed24f53753485e",
+      "compressedSha256": "9197a87c7491edd408ef10909fa44271dcba59b2fcb69a6943f25b607f56e21c"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-repair11-evidence.cjs",
+      "retainedAt": "t04b-repair11-evidence.cjs.gz",
+      "originalSha256": "264c2d25f7070b81c050e60234a7054356f4e9774977067e1c8d59a6251469a9",
+      "compressedSha256": "c410a421bf9f3eb34af85bc8bb11893e1fc9eb237e723ce1b14c7c2a1272edeb"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-runner.cjs",
+      "retainedAt": "t04b-runner.cjs.gz",
+      "originalSha256": "e4232fe51909979b25004f8ece59da41037f7a36762e1ccda4fa1f2870d99d4f",
+      "compressedSha256": "1c2619bc5667c73e21c205712f356ae79074c08f2b089592544b3f660dbe706d"
+    }
+  ]
+}

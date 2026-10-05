@@ -369,7 +369,7 @@ test('[M10A-E06] real five-card two-split and four-leaf local HUDs preserve exac
 
 test('[M10A-E07] Dealer workstation owns initial hidden and real revealed three-card states across all surfaces', async ({ page }, info) => {
   for (const viewport of viewports) {
-    await page.setViewportSize(viewport); await page.goto('/?fixture=player');
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player&dealer=legacy');
     const dealer = page.getByRole('region', { name: 'Dealer', exact: true });
     await expect(dealer.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
     await expect(dealer.getByText('Waiting for the initial deal', { exact: true })).toBeVisible();

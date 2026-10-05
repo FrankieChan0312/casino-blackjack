@@ -12,7 +12,7 @@ async function deal(page: Page) {
   await page.getByRole('button',{name:'Deal',exact:true}).click();
 }
 test('[PA1-E01] non-blocking default, collision exchange and persistent guests across active play Repeat Bet and Deal Again', async ({ page }) => {
-  await page.goto('/?fixture=player');
+  await page.goto('/?fixture=player&dealer=legacy');
   expect(await lineup(page)).toEqual(['elf_male','elf_female','knight_male','knight_female']);
   await expect(page.locator('.character-picker')).not.toHaveAttribute('open','');
   await expect(page.getByRole('button',{name:'Deal',exact:true})).toBeEnabled();
@@ -39,7 +39,7 @@ test('[PA1-E01] non-blocking default, collision exchange and persistent guests a
 test('[PA1-E02] changing avatars leaves seeded replay commands gameplay digest funds and audit outcomes identical', async ({ page }) => {
   const receipts: string[] = [], results: string[] = [], audits: string[] = [];
   for (const change of [false,true]) {
-    await page.goto('/?fixture=player');
+    await page.goto('/?fixture=player&dealer=legacy');
     if (change) await choose(page,'dwarf_female');
     await deal(page); if (change) await choose(page,'noble_male');
     await page.getByRole('button',{name:'Stand',exact:true}).click();
@@ -64,7 +64,7 @@ test('[PA1-E03] all twelve identities display the correct decoded portrait name 
     ['halforc_male','Garruk','Male Half-Orc Warrior'],['halforc_female','Vesha','Female Half-Orc Warrior'],
     ['dwarf_male','Borin','Male Dwarf'],['dwarf_female','Brynja','Female Dwarf'],
   ];
-  await page.goto('/?fixture=player'); await deal(page);
+  await page.goto('/?fixture=player&dealer=legacy'); await deal(page);
   const hand = page.locator('#player-hand'), cards = await hand.locator('.cards').innerHTML();
   for (const [id,name,archetype] of roster) {
     await choose(page,id);
@@ -89,7 +89,7 @@ test('[PA1-E03] all twelve identities display the correct decoded portrait name 
 test('[PA1-E04] character keyboard focus touch targets reduced motion and unclipped identities preserve cards at desktop tablet and mobile widths', async ({ page }) => {
   await page.emulateMedia({reducedMotion:'reduce'});
   for (const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]) {
-    await page.setViewportSize(viewport); await page.goto('/?fixture=player'); await deal(page);
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player&dealer=legacy'); await deal(page);
     const summary = page.locator('.character-picker summary');
     for (let i=0;i<30 && !await summary.evaluate(el=>el===document.activeElement);i++) await page.keyboard.press('Tab');
     await expect(summary).toBeFocused();
@@ -128,7 +128,7 @@ test('[PA1-E04] character keyboard focus touch targets reduced motion and unclip
 test('[PA1-E05] failed portraits and 200 percent text enlargement retain readable character identity and playable controls', async ({ page }) => {
   await page.route('**/characters/*.png',route=>route.abort());
   for (const viewport of [{width:1280,height:900},{width:320,height:720}]) {
-    await page.setViewportSize(viewport); await page.goto('/?fixture=player'); await deal(page); await choose(page,'knight_female');
+    await page.setViewportSize(viewport); await page.goto('/?fixture=player&dealer=legacy'); await deal(page); await choose(page,'knight_female');
     await page.addStyleTag({content:'html { font-size: 200%; }'});
     await expect(page.locator('#player-hand').getByRole('heading',{name:'Seraphine',exact:true})).toBeVisible();
     await expect(page.locator('#player-hand .character-archetype')).toHaveText('Female Human Knight');

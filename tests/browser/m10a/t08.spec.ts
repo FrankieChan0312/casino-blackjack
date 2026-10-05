@@ -30,8 +30,8 @@ test('[M10A-T08-B01] tablet groups two cards beside facts, mobile keeps stake/to
     await page.screenshot({path:info.outputPath(`responsive-text200-${viewport.width}.png`),fullPage:true});
   }
 });
-test('[M10A-T08-B02] responsive scene retains Split, five cards, Insurance, Even Money, Dealer additions and pending funds', async({page},info)=>{
-  for(const viewport of viewports)for(const state of ['split','five','insurance','even-money','complete','pending']) {
+for (const viewport of viewports) test(`[M10A-T08-B02-${viewport.width}] responsive scene retains Split, five cards, Insurance, Even Money, Dealer additions and pending funds`, async({page},info)=>{
+  for(const state of ['split','five','insurance','even-money','complete','pending']) {
     await page.setViewportSize(viewport); await deal(page,state==='complete'?'player':'player-'+(state==='insurance'?'ace':state));
     if(state==='split')await page.getByRole('button',{name:'Split',exact:true}).click();
     if(state==='five')for(let i=0;i<3;i++)await page.getByRole('button',{name:'Hit',exact:true}).click();

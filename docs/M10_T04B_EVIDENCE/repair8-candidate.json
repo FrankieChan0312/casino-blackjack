@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-05 11:36:10 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "elapsedMs": 1554.1657,
+  "experiment": "Ignored candidate only; executable repository file remains unchanged during unified-first",
+  "comparison": "Exact full10-file decoded audit JSON identical to before: byte/decoded SHA,CRC,alpha,pixel counts,dims/provenance",
+  "fix": "Selected predictor only; all assertions/timeouts/concurrency unchanged"
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-05 12:36:46 +08:00",
+  "status": "PASS",
+  "localInstalledPlaywright": "1.63.0",
+  "source": {
+    "path": "node_modules/playwright/lib/common/index.js",
+    "sha256": "f4a6b14f5ba21a118b58a6a25eb0b281a3acc4157023b014e0197145056124a4",
+    "defaultTimeout": {
+      "line": 478,
+      "text": "var defaultTimeout = 3e4;",
+      "milliseconds": 30000
+    },
+    "fallback": {
+      "line": 598,
+      "text": "      timeout: takeFirst(configCLIOverrides.debug === \"inspector\" ? 0 : void 0, configCLIOverrides.timeout, projectConfig.timeout, config.timeout, defaultTimeout),"
+    }
+  },
+  "projectConfig": {
+    "path": "playwright.config.ts",
+    "sha256": "ad326e72ede0f315b74be0dc5fa6ffb9198cdd1e76132e91207e7a8a8feb2530",
+    "timeoutOverride": false,
+    "retries": 0
+  },
+  "contractInspection": "RULES/SPEC/DESIGN/PLAN/STATE/UX_UI and task records inspected; DESIGN M10.19 future animation budgets do not apply to CB09. CB09 contains no elapsed-time/performance assertion. Previous failure reports Test timeout of30000ms exceeded.",
+  "conclusion": "Runner timeout only; no product performance acceptance bypass",
+  "modifications": "No timeout/dependency/configuration changes"
+}

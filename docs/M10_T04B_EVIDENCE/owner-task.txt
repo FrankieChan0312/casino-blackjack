@@ -1,0 +1,1258 @@
+# Casino Blackjack — M10-T04B
+# Formal Female Dealer Assets Integration + Deterministic Rotation
+
+Repository:
+
+C:\Users\user\Documents\GitHub\casino-blackjack
+
+Branch:
+
+main
+
+Expected starting HEAD:
+
+e5cb332bcab72786c17be201db4dab4ccdfcb856
+
+Recommended model:
+
+GPT-6.1 Sol
+
+Reasoning:
+
+Max / highest available
+
+---
+
+# 0. OWNER-APPROVED ARTWORK SET
+
+The owner has explicitly approved a formal female Dealer artwork pool consisting of:
+
+1. Celestine
+2. Seraphine
+3. Nyra
+4. Elaria
+5. Vesha
+
+All five approved artworks should be supplied to this Codex task as image attachments/files.
+
+The images are owner-approved presentation assets.
+
+Do NOT generate replacement images.
+
+Do NOT download third-party character art.
+
+Do NOT synthesize missing artwork.
+
+If any required approved artwork file is not available to this task:
+
+STOP.
+
+Return:
+
+M10-T04B_BLOCKED — ASSET NOT READY
+
+List exactly which approved Dealer assets are missing.
+
+---
+
+# 1. Current governance state
+
+M10A:
+
+ACCEPTED / CLOSED
+
+M10-T02:
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED
+HUMAN VISUAL ACCEPTANCE: ACCEPTED
+
+M10-T03:
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED
+HUMAN VISUAL ACCEPTANCE: ACCEPTED
+
+M10-T04A:
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED
+
+M10-T04 Owner Approval:
+
+RECORDED / PUSHED
+
+Current owner-approved initial Dealer decision previously recorded:
+
+Celestine preferred.
+
+The owner has now expanded the approved formal Dealer pool to:
+
+- Celestine
+- Seraphine
+- Nyra
+- Elaria
+- Vesha
+
+M10-T04 current repair count:
+
+5/10
+
+Do NOT reset it.
+
+M10-T04B is the continuation of the same M10-T04 task.
+
+Motion:
+
+NOT INSTALLED
+
+Animation:
+
+NOT IMPLEMENTED
+
+Deployment:
+
+NOT RUN
+
+---
+
+# 2. Objective
+
+Implement:
+
+M10-T04B — Formal Female Dealer Assets Integration + Deterministic Rotation
+
+The task must:
+
+1. ingest and validate the five owner-approved formal Dealer artworks
+2. preserve the supplied source artworks without destructive mutation
+3. create validated runtime Dealer assets following the approved 240×320 / 3:4 contract
+4. integrate them into DealerZone
+5. implement deterministic presentation-only female Dealer rotation
+6. prohibit Dealer identity duplication with seated players
+7. preserve the existing fallback Dealer
+8. preserve all six Dealer presentation-state hooks
+9. preserve gameplay/domain/RNG/replay/accounting semantics
+10. fully verify 1–7 player tables and responsive layouts
+
+Do NOT implement animation.
+
+---
+
+# 3. Mandatory preflight
+
+Before modifying anything, independently confirm:
+
+- repository path
+- branch = main
+- HEAD = e5cb332bcab72786c17be201db4dab4ccdfcb856
+- origin/main
+- ahead/behind = 0/0
+- working tree clean
+- untracked files = 0
+
+Confirm M10-T04A and owner approval documentation are present.
+
+If repository state differs unexpectedly:
+
+STOP.
+
+Do not:
+
+- reset
+- clean
+- overwrite
+- discard unknown work
+
+---
+
+# 4. Read governing documentation
+
+Read and obey at minimum:
+
+- AGENTS.md
+- README.md
+- docs/DESIGN.md
+- docs/UX_UI.md
+- docs/SPEC.md
+- docs/PLAN.md
+- docs/STATE.md
+- docs/RULES.md
+- docs/M10_PLANNING.md
+- docs/M10_T04.md
+- docs/M10_T04_OWNER_APPROVAL.md
+- docs/M10A_PLANNING.md
+- docs/DEVELOPMENT_LOG.md
+- docs/LAB_MANUAL.md
+- all PA1 asset/provenance documentation
+- existing asset validation scripts
+- scripts/verify.ps1
+
+Inspect:
+
+- canonical roster IDs
+- PA1 character asset paths
+- source/provenance conventions
+- Dealer identity architecture created in T04A
+- DealerZone
+- T02 player-count configuration
+- T03 dynamic seat mapping
+- current fallback Dealer
+- current presentation-state mapping
+
+Do not invent canonical character IDs.
+
+---
+
+# 5. Approved Dealer pool
+
+The owner-approved formal Dealer pool is:
+
+- Celestine
+- Seraphine
+- Nyra
+- Elaria
+- Vesha
+
+Resolve each name to the EXACT existing canonical roster character ID.
+
+Do not invent IDs from class names.
+
+Create one explicit stable Dealer pool using those canonical IDs.
+
+Conceptually:
+
+FORMAL_DEALER_POOL = [
+  Celestine canonical ID,
+  Seraphine canonical ID,
+  Nyra canonical ID,
+  Elaria canonical ID,
+  Vesha canonical ID
+]
+
+The exact code structure must follow current project architecture.
+
+---
+
+# 6. Celestine remains initial preferred Dealer
+
+The first/default Dealer for a fresh application/table presentation should remain:
+
+Celestine
+
+unless Celestine is seated as an active player.
+
+The owner-approved pool now permits subsequent female Dealer rotation.
+
+Do not erase the historical owner approval of Celestine.
+
+Document that:
+
+Celestine = initial preferred Dealer
+Female Dealer pool = rotation pool
+
+---
+
+# 7. Deterministic rotation policy
+
+Implement deterministic PRESENTATION-ONLY Dealer rotation.
+
+No gameplay RNG.
+
+No random Dealer selection.
+
+Required policy:
+
+1. Fresh app/presentation state begins with Celestine as the preferred rotation position.
+2. A new TABLE / SESSION advances the preferred Dealer rotation position through the approved formal Dealer pool.
+3. Deal Again / Repeat Bet / ordinary new ROUND within the same table/session must NOT rotate Dealer.
+4. The canonical "new table/session" lifecycle must be derived from the actual current repository architecture.
+5. For each new table/session:
+   - determine preferred pool index deterministically
+   - scan cyclically from that index
+   - choose the first approved Dealer identity not currently seated as a player
+6. Dealer identity remains stable for that table/session.
+7. The next table/session advances deterministically.
+8. Dealer rotation must not depend on:
+   - cards
+   - wager
+   - win/loss
+   - player actions
+   - gameplay RNG
+   - shoe RNG
+   - replay RNG
+
+If the repository has a suitable presentation-level session/table ordinal, use it.
+
+If not, add the smallest presentation/application-layer rotation state necessary.
+
+Do NOT place Dealer rotation state in protected game/domain logic.
+
+---
+
+# 8. All-approved-pool-seated fallback
+
+A 7-player table may potentially seat multiple or all approved female Dealer identities.
+
+Dealer identity must NEVER duplicate a seated player.
+
+If every identity in:
+
+Celestine / Seraphine / Nyra / Elaria / Vesha
+
+is currently seated:
+
+DO NOT:
+
+- duplicate a player identity
+- switch to an unapproved male/formal-less player avatar
+- consume RNG
+- remove/change a seated player
+
+Instead:
+
+use the existing non-roster / generic fallback Dealer presentation for that table/session.
+
+Record this explicitly.
+
+Fallback priority:
+
+approved eligible formal female Dealer
+→ existing generic Dealer fallback
+
+Never:
+
+seated identity duplication
+
+---
+
+# 9. Presentation-only rule
+
+Dealer identity and rotation are presentation-only.
+
+They must NOT affect:
+
+- participant count
+- player assignment
+- logical seat identity
+- player turn order
+- card order
+- shoe state
+- RNG consumption
+- strategy
+- Dealer hit/stand strategy
+- replay
+- digest
+- journal
+- wager/accounting
+- settlement
+- game outcome
+
+Expected:
+
+src/domain diff = EMPTY
+
+If implementation appears to require protected domain changes:
+
+STOP.
+
+Return BLOCKED.
+
+---
+
+# 10. Source asset preservation
+
+Follow the existing PA1 source/provenance conventions.
+
+The five owner-approved supplied Dealer artworks are new Dealer source assets.
+
+Preserve the supplied source bytes wherever the repository's established art-source
+workflow requires.
+
+Do not destructively edit the only source copy.
+
+For each source asset record mechanically:
+
+- source filename/path
+- canonical character ID
+- character display name
+- role = dealer
+- variant = formal
+- source dimensions
+- source aspect ratio
+- alpha/transparency status
+- SHA256
+- provenance
+- owner approval status
+
+Do not fabricate provenance fields that are unknown.
+
+If repository convention permits a provenance note, record truthfully that the artwork
+was owner-provided / owner-approved for this project.
+
+---
+
+# 11. Runtime asset contract
+
+Approved runtime contract:
+
+- PNG
+- transparent background
+- 240 × 320 px
+- 3:4
+- role = Dealer
+- variant = Formal
+
+Celestine's already-approved canonical runtime destination is:
+
+public/characters/dealer/noble_female/formal.png
+
+For Seraphine, Nyra, Elaria and Vesha:
+
+derive the directory from their EXACT existing canonical roster IDs.
+
+Use conceptually:
+
+public/characters/dealer/<canonical-character-id>/formal.png
+
+Do NOT invent an inconsistent parallel naming scheme.
+
+---
+
+# 12. Source-to-runtime derivation
+
+The supplied approved artworks may be higher resolution than 240×320.
+
+Create runtime derivatives NON-DESTRUCTIVELY.
+
+Requirements:
+
+- source retained
+- exact 3:4 crop/aspect preserved
+- output exactly 240×320
+- alpha retained
+- no black/white background introduced
+- no visual stretching
+- no destructive modification to PA1 assets
+
+Use the repository's existing image/asset processing tooling if available.
+
+If no suitable deterministic local tool exists:
+
+prefer a minimal deterministic local conversion method already available in the environment.
+
+Do not add a large dependency solely to resize five PNG files unless clearly justified.
+
+Do not access external web services.
+
+---
+
+# 13. Mechanical asset validation
+
+For every formal Dealer runtime asset verify:
+
+- file exists
+- PNG valid
+- width = 240
+- height = 320
+- aspect = 3:4
+- alpha channel present
+- meaningful transparency exists
+- file not blank
+- image not corrupt
+- source hash recorded
+- runtime hash recorded
+- source/runtime relationship documented
+
+Fail the task if an image unexpectedly has an opaque background or broken transparency.
+
+Do not silently accept malformed artwork.
+
+---
+
+# 14. Human-readable visual validation
+
+Inspect all five formal Dealer assets in isolation and in DealerZone.
+
+Check:
+
+- identity remains distinguishable
+- head/hair visible
+- hands/cards not awkwardly clipped
+- silhouette clean
+- black/charcoal uniform separates from green felt
+- transparent edge quality acceptable
+- no major halo/background artifacts
+- face remains readable at runtime scale
+- cards held by artwork do not become confusing with actual game cards
+- artwork does not cover Dealer hand/status/shoe/rules
+
+If the internally held decorative deck competes visually with actual Dealer cards:
+
+solve with layout/crop/scale placement first.
+
+Do not edit/redraw approved source artwork without owner authorization.
+
+---
+
+# 15. DealerZone integration
+
+Integrate approved formal Dealer artwork through the architecture prepared in T04A.
+
+DealerZone must consume Dealer presentation identity/asset via the formal asset registry/contract.
+
+Avoid:
+
+if (dealer === "Celestine") ...
+else if ...
+
+scattered through DealerZone.
+
+Prefer:
+
+canonical Dealer identity
+→ asset registry
+→ DealerZone
+
+Follow current architecture.
+
+---
+
+# 16. Runtime fallback
+
+The existing fallback Dealer must remain fully functional.
+
+Use fallback when:
+
+- formal asset is unavailable
+- every approved formal Dealer identity is seated
+- a formal Dealer asset fails a validated availability condition
+
+Do not show a broken image icon.
+
+Do not crash DealerZone.
+
+---
+
+# 17. Approved female Dealer identities
+
+Integrate exactly these owner-approved formal identities in this task:
+
+- Celestine
+- Seraphine
+- Nyra
+- Elaria
+- Vesha
+
+Do not add additional unapproved Dealers.
+
+Do not add male Dealer formal variants in this task.
+
+Future pool expansion can occur separately.
+
+---
+
+# 18. No seated-player duplication
+
+For every supported player count 1–7:
+
+mechanically verify:
+
+Dealer identity ∉ active seated player character identities
+
+where formal Dealer is used.
+
+Where no approved Dealer is eligible:
+
+fallback Dealer is used.
+
+Do not mutate player assignment merely to preserve Dealer artwork.
+
+Players have priority over presentation Dealer selection.
+
+---
+
+# 19. T02 / T03 preservation
+
+Must preserve:
+
+M10-T02:
+- 1–7 participant configuration
+- 1 human + 0–6 computers
+- table/session configuration behaviour
+
+M10-T03:
+- seat mapping
+- human anchor
+- deterministic logical seat association
+- turn identity
+
+Dealer rotation must observe these results, not alter them.
+
+---
+
+# 20. Rotation tests
+
+Add mechanical tests covering at minimum:
+
+## Session 1
+preferred Celestine, if eligible
+
+## Subsequent sessions
+rotation advances through approved pool deterministically
+
+## Player collision
+preferred candidate seated → next eligible candidate
+
+## Multiple collisions
+scan continues in stable pool order
+
+## All five approved identities seated
+generic fallback Dealer
+
+## Stability
+same table/session → Dealer does not change between rounds
+
+## Round continuation
+Deal Again / Repeat Bet does not rotate
+
+## New table
+rotation advances
+
+## Reload / new presentation lifecycle
+behaviour matches documented policy
+
+Do not rely on wall-clock time.
+
+Do not rely on randomness.
+
+---
+
+# 21. RNG-proof test
+
+Add/retain a direct mechanical proof that Dealer rotation consumes ZERO gameplay RNG.
+
+Compare relevant RNG/shoe/digest behaviour before/after Dealer selection where existing
+test architecture permits.
+
+Expected:
+
+Dealer presentation assignment does not alter RNG receipts / card outcomes / digest.
+
+Do not duplicate the domain RNG implementation inside the test.
+
+---
+
+# 22. Replay / digest
+
+Replay/digest must remain authoritative and unchanged.
+
+Dealer artwork choice need not be part of gameplay replay unless current presentation
+architecture already records non-authoritative visual metadata.
+
+Do NOT change gameplay digest to include Dealer identity.
+
+Do NOT make replay fail because the presentation Dealer differs.
+
+If replay has a presentation mode:
+
+use a deterministic visual policy that does not mutate replay semantics.
+
+---
+
+# 23. Six presentation states
+
+Preserve the static state contract:
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+For T04B:
+
+all six states may use the same static formal portrait asset.
+
+The state must remain available semantically/data-wise for future animation.
+
+Do NOT create six image files merely by duplicating identical PNGs.
+
+Do NOT animate.
+
+Do NOT add timers.
+
+Do NOT install Motion.
+
+---
+
+# 24. Dealer cards vs artwork cards
+
+The approved formal Dealer illustrations visually hold decorative playing cards.
+
+These are part of character artwork only.
+
+Authoritative Dealer game cards remain the existing rendered Dealer hand.
+
+Do not:
+
+- infer gameplay cards from artwork
+- hide real Dealer cards
+- use artwork cards as game state
+- visually position the artwork so its decorative deck is mistaken for the authoritative hand
+
+Maintain clear visual hierarchy:
+
+Dealer character artwork
++
+actual Dealer hand/cards
++
+actual status/total
++
+shoe
++
+rules
+
+---
+
+# 25. Responsive desktop
+
+Verify:
+
+- 1-player
+- 4-player
+- 7-player
+
+for multiple Dealer identities.
+
+Dealer artwork must:
+
+- fit existing DealerZone
+- not cover actual cards
+- not overlap remote SeatUnits
+- preserve table rule readability
+- preserve scene density
+- preserve local HUD
+
+---
+
+# 26. Tablet
+
+Verify formal Dealers on tablet.
+
+At minimum:
+
+- Celestine
+- one non-Celestine Dealer
+- 7-player table
+
+Requirements:
+
+- face readable
+- cards/status readable
+- no remote-seat collision
+- DealerZone remains coherent
+
+---
+
+# 27. Mobile
+
+Verify formal Dealer presentation at mobile.
+
+Requirements:
+
+- Dealer identity visible
+- actual Dealer cards visible
+- status/hole-card state visible
+- formal image does not consume excessive vertical space
+- no page-level horizontal overflow
+- local player gameplay remains primary
+
+Use responsive sizing/cropping.
+
+Do not hide Dealer entirely.
+
+---
+
+# 28. 200% text and native 200% zoom
+
+Run both.
+
+Formal artwork must not:
+
+- overlap enlarged text
+- cover Dealer status
+- cover rules
+- push essential controls off unusably
+- create horizontal overflow
+
+Preserve accessibility contracts.
+
+---
+
+# 29. Accessibility
+
+Dealer artwork is visual identity support.
+
+Do not cause redundant screen-reader noise.
+
+Dealer semantic region should continue exposing useful information such as:
+
+- Dealer identity where appropriate
+- Dealer cards
+- total
+- hole-card state
+- gameplay status
+
+Use sensible alt/aria treatment consistent with current character assets.
+
+Do not announce decorative uniform details.
+
+---
+
+# 30. PA1 protection
+
+Canonical PA1 assets remain immutable.
+
+Verify:
+
+- original Celestine asset unchanged
+- original Seraphine asset unchanged
+- original Nyra asset unchanged
+- original Elaria asset unchanged
+- original Vesha asset unchanged
+- existing player thumbnails unchanged
+- existing provenance unchanged
+
+New Dealer variants are separate files.
+
+Expected PA1 protected hashes remain identical.
+
+---
+
+# 31. Asset provenance evidence
+
+Create/update evidence following repository conventions.
+
+For each of five Dealer formal assets record:
+
+- name
+- canonical ID
+- source path
+- source SHA256
+- runtime path
+- runtime SHA256
+- dimensions
+- alpha result
+- approval status
+- source/provenance note
+- visual review result
+
+Do not store unsupported claims.
+
+---
+
+# 32. No animation
+
+Strictly do NOT:
+
+- install Motion
+- animate Dealer
+- animate cards
+- implement dealing
+- implement idle breathing
+- implement reveal
+- implement drawing
+- implement settlement motion
+
+M10-T05 remains NOT STARTED.
+
+---
+
+# 33. No player-count redesign
+
+Do not revisit T02/T03 design unless an actual regression is found.
+
+T04B consumes their participant/seat results.
+
+It does not change them.
+
+---
+
+# 34. Tests
+
+Add/update focused tests for:
+
+- five approved formal assets registered
+- source/runtime mechanical validation
+- deterministic pool order
+- Celestine initial preference
+- rotation
+- collision fallback
+- all-pool-seated fallback
+- stability within session
+- no rotation per round
+- zero RNG consumption
+- 1–7 compatibility
+- DealerZone asset rendering
+- generic fallback
+- static six-state compatibility
+- responsive presence
+- PA1 immutability
+
+---
+
+# 35. Visual evidence matrix
+
+Capture human-readable screenshots at minimum:
+
+Desktop:
+1. Celestine Dealer — 1 player
+2. Seraphine Dealer
+3. Nyra Dealer
+4. Elaria Dealer
+5. Vesha Dealer
+6. Celestine collision → fallback eligible formal Dealer
+7. 7-player table formal Dealer/fallback case
+8. player turn with formal Dealer
+9. round complete with formal Dealer
+
+Tablet:
+10. formal Dealer + 7-player
+
+Mobile:
+11. formal Dealer active round
+
+Keep evidence sufficient for owner human review.
+
+Do NOT claim owner visual acceptance.
+
+---
+
+# 36. Focused review gate
+
+Before full regression, inspect all five Dealer variants inside the actual DealerZone.
+
+Do not proceed directly to full regression if any variant:
+
+- appears broken
+- has opaque background
+- is severely clipped
+- covers authoritative cards
+- merges into felt
+- is visually enormous/tiny
+- causes DealerZone layout regression
+
+Use bounded repair cycles.
+
+Do not edit source artwork without owner approval.
+
+Layout/integration repair is allowed.
+
+---
+
+# 37. Repair accounting
+
+Current cumulative:
+
+M10-T04: 5/10
+
+T04B continues the same task.
+
+Any genuine repair after failed validation increments normally:
+
+6/10
+7/10
+...
+
+Maximum:
+
+10/10
+
+No repair 11 is pre-authorized.
+
+If 10/10 is reached and still failing:
+
+STOP.
+
+Do not request/assume an exception automatically.
+
+---
+
+# 38. Focused verification
+
+Before full suite:
+
+- asset validation
+- Dealer pool/rotation tests
+- 1–7 collision tests
+- RNG-proof tests
+- DealerZone tests
+- T02/T03 regression
+- PA1 asset preservation
+- focused Chromium
+- desktop/tablet/mobile
+- zoom/accessibility
+- visual screenshot review
+
+Preserve the first failure.
+
+Do not retry-until-green silently.
+
+---
+
+# 39. Full verification
+
+Only after focused gates pass, run:
+
+- full Vitest
+- full Chromium
+- M1–M8 preservation
+- PA1
+- RA1 where required
+- M9
+- M10-T01
+- closed M10A milestone
+- M10-T02
+- M10-T03
+- M10-T04
+- replay/digest checks
+- asset provenance checks
+- docs checks
+- .\scripts\verify.ps1
+
+Required:
+
+PASS
+exit 0
+
+Explain all legitimate test-count increases.
+
+---
+
+# 40. Documentation
+
+Update as required:
+
+- docs/M10_T04.md
+- docs/M10_T04_OWNER_APPROVAL.md
+- docs/STATE.md
+- docs/PLAN.md
+- docs/DEVELOPMENT_LOG.md
+- docs/LAB_MANUAL.md
+- README only if genuinely useful
+
+Record:
+
+- five approved female formal Dealers
+- Celestine initial preference
+- deterministic rotation
+- seated-player exclusion
+- generic fallback when pool exhausted
+- zero RNG
+- formal asset paths/hashes
+- six static presentation states
+- animation NOT implemented
+
+Do not erase historical T04A / owner-approval records.
+
+---
+
+# 41. Git discipline
+
+Only after complete technical verification:
+
+1. inspect complete diff
+2. confirm src/domain EMPTY
+3. confirm PA1 originals unchanged
+4. confirm no secrets
+5. confirm only approved new formal Dealer assets
+6. confirm source/runtime provenance
+7. retain required evidence
+8. remove only known disposable task artifacts
+9. commit
+10. push normally
+11. confirm local HEAD == remote HEAD
+12. confirm ahead/behind 0/0
+13. working tree CLEAN
+14. untracked = 0
+
+No force push.
+
+No deployment.
+
+---
+
+# 42. Human acceptance
+
+Do NOT mark:
+
+M10-T04 HUMAN VISUAL ACCEPTANCE: ACCEPTED
+
+The owner must inspect the integrated Dealer variants in the live game.
+
+Technical success means only:
+
+M10-T04B_IMPLEMENTED_VERIFIED
+
+---
+
+# 43. HARD STOP AFTER T04B
+
+After T04B is implemented / verified / committed / pushed:
+
+STOP.
+
+Do NOT start:
+
+- M10-T05
+- Motion
+- animation infrastructure
+- round-robin dealing
+- Dealer animation
+
+Wait for owner human visual acceptance of the integrated formal Dealer pool.
+
+---
+
+# 44. Final response format
+
+## STATUS
+
+`M10-T04B_IMPLEMENTED_VERIFIED`
+
+or
+
+`M10-T04B_BLOCKED`
+
+## BASELINE
+
+- starting SHA
+- branch
+- starting Git state
+
+## APPROVED DEALER POOL
+
+List exact canonical IDs and display names for:
+
+- Celestine
+- Seraphine
+- Nyra
+- Elaria
+- Vesha
+
+## ASSET VALIDATION
+
+For each:
+
+- source path
+- source dimensions
+- source SHA256
+- runtime path
+- runtime 240×320
+- runtime SHA256
+- alpha/transparency result
+- visual review result
+
+## ROTATION POLICY
+
+Confirm:
+
+- Celestine initial preference
+- deterministic session/table rotation
+- no rotation per round
+- seated-player exclusion
+- stable within session
+- all-pool-seated → generic fallback
+- zero gameplay RNG
+
+## PRESENTATION STATES
+
+Confirm:
+
+- IDLE
+- DEALING
+- WAITING_PLAYER
+- REVEALING
+- DRAWING
+- SETTLING
+
+State:
+
+`STATIC FORMAL PORTRAIT USED FOR ALL SIX STATES`
+`ANIMATION NOT IMPLEMENTED`
+
+## GAMEPLAY PRESERVATION
+
+- src/domain diff
+- RNG
+- shoe/cards
+- replay/digest/journal
+- turn order
+- strategies
+- accounting/settlement
+- T02/T03
+
+## PA1 PRESERVATION
+
+Confirm all original five player assets remain unchanged.
+
+## VERIFICATION
+
+- focused asset validation
+- rotation/collision tests
+- RNG-proof
+- 1–7 tables
+- Vitest
+- Chromium
+- preservation
+- verify.ps1
+- desktop
+- tablet
+- mobile
+- 200% text
+- native zoom
+- keyboard/focus
+
+## REPAIR COUNT
+
+`M10-T04: X/10`
+
+## FILES CHANGED
+
+List:
+
+- new source Dealer assets
+- runtime Dealer assets
+- source/test/docs/evidence files
+
+## GIT STATE
+
+- implementation commit
+- final HEAD
+- remote HEAD
+- ahead/behind
+- working tree
+- untracked files
+
+## EVIDENCE
+
+List the most useful screenshots:
+
+- all five Dealers
+- collision fallback
+- 7-player table
+- tablet
+- mobile
+
+## HUMAN ACCEPTANCE
+
+`PENDING`
+
+## NEXT ACTION
+
+`M10-T05 NOT STARTED — WAITING FOR OWNER HUMAN VISUAL ACCEPTANCE`
+
+`MOTION NOT INSTALLED`
+`ANIMATION NOT STARTED`
+`DEPLOYMENT NOT RUN`
+
+STOP.

@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-10-05 12:25:59 +08:00",
+  "status": "PASS",
+  "target": "tests/browser/m10a/controlIntegration.spec.ts",
+  "beforeSha256": "413683ea2e76f77689ef968da371449d17583df82f78fce9788a53462ae1f675",
+  "afterSha256": "1f1745fea7b85cbb84d6573c863cde1100d0f4d134371bab1d44f77de6e26f98",
+  "inverseStructuralReplacementEqualsAllOriginalBytes": true,
+  "changedLines": 2,
+  "originalViewportMatrix": [
+    {
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 320,
+      "height": 720
+    }
+  ],
+  "outcomes": [
+    [
+      "player",
+      "100",
+      "1,100",
+      "Win"
+    ],
+    [
+      "player-loss",
+      "-100",
+      "900",
+      "Loss"
+    ],
+    [
+      "player-push",
+      "0",
+      "1,000",
+      "Push"
+    ]
+  ],
+  "allOriginalScenarioAndAssertionBytes": "UNCHANGED",
+  "lowFunds": "Original unchanged block now runs after each viewport's three outcomes; expands original final320-only execution to all three widths",
+  "scenarioCombinations": 12,
+  "timeout": "Unchanged default30000ms per case",
+  "retries": 0,
+  "productFilesChanged": [],
+  "assertionSemantics": "Same viewport, fixtures, result/credit values, native disclosure/keyboard/focus/next/repeat/disabled-funds assertions; fresh page per viewport is harness partition only"
+}

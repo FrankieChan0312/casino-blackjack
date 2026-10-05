@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-05 11:45:04 +08:00",
+  "records": [
+    {
+      "path": "tests/browser/m10a/controlIntegration.spec.ts",
+      "beforeSha256": "a8c41d21d0cca4bb0bd1fadfab1ff065aefefbf7acb21cc3236ebb52dc38f9f2",
+      "afterSha256": "413683ea2e76f77689ef968da371449d17583df82f78fce9788a53462ae1f675",
+      "changes": "Only test header and outer viewport loop moved to module parameterization",
+      "inverseTransformationByteEquality": "PASS",
+      "assertionAndScenarioBodies": "UNCHANGED",
+      "perCaseTimeoutMs": 30000,
+      "skipRetryAdded": false
+    },
+    {
+      "path": "tests/browser/m10a/t08.spec.ts",
+      "beforeSha256": "a11f2bed8d4c9e0ed344aaf97465551efcc03f809ab0216b56d2d2818216de63",
+      "afterSha256": "3b8e3d0418b62b0fbd73a780596da1c6e3fddc99f1659ce02804f7bce9b82037",
+      "changes": "Only test header and outer viewport loop moved to module parameterization",
+      "inverseTransformationByteEquality": "PASS",
+      "assertionAndScenarioBodies": "UNCHANGED",
+      "perCaseTimeoutMs": 30000,
+      "skipRetryAdded": false
+    }
+  ],
+  "decoderChange": "Selected predictor only; identical10-file decoded JSON candidate proof retained",
+  "testTitleCorrection": "D10 now names its existing approved formal production assertion truthfully; assertions unchanged",
+  "affectedVerification": "NOT RUN"
+}

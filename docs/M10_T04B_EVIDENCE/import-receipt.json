@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-10-05 11:02:04 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "files": [
+    {
+      "source": {
+        "path": "art/source/dealers/noble_female/formal.png",
+        "originalPackFilename": "source/noble_female_formal_source.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "cfd6a5aff817b19c38363bdefd52ed6a18993b6eb57d5619a7155daad5af8beb"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/noble_female/formal.png",
+        "src": "/characters/dealer/noble_female/formal.png",
+        "width": 240,
+        "height": 320,
+        "sha256": "73a1409d5db2e4565e294bebbef1c61f729b063f94e3c4afbc4bd46434dbddab"
+      },
+      "import": "BYTE_IDENTICAL"
+    },
+    {
+      "source": {
+        "path": "art/source/dealers/knight_female/formal.png",
+        "originalPackFilename": "source/knight_female_formal_source.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "09d869cc5ec6fe8160526832a77e5aaf09bebb623a488800bf9db43f67931a9c"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/knight_female/formal.png",
+        "src": "/characters/dealer/knight_female/formal.png",
+        "width": 240,
+        "height": 320,
+        "sha256": "8b4a4566ff56a135a8109549c93c3714b0c5f62bde1c8a3de21a5b52355a2b3d"
+      },
+      "import": "BYTE_IDENTICAL"
+    },
+    {
+      "source": {
+        "path": "art/source/dealers/mage_female/formal.png",
+        "originalPackFilename": "source/mage_female_formal_source.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "e5f1bb09cddede5e25b6c89217bc1554a5db0b7a13a698a0403158cdbb92604b"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/mage_female/formal.png",
+        "src": "/characters/dealer/mage_female/formal.png",
+        "width": 240,
+        "height": 320,
+        "sha256": "aaf123b256a272be9a13091ece2bbff4bcd6f17bd0cf5090ec003aa8bb7b63ed"
+      },
+      "import": "BYTE_IDENTICAL"
+    },
+    {
+      "source": {
+        "path": "art/source/dealers/elf_female/formal.png",
+        "originalPackFilename": "source/elf_female_formal_source.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "dce9191837a86c49582535010c8321e63d8eeb76ae653a9c84743a0ec48909d6"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/elf_female/formal.png",
+        "src": "/characters/dealer/elf_female/formal.png",
+        "width": 240,
+        "height": 320,
+        "sha256": "6145c299ec6abf5d4071b7f8d47e5a80173f42a949166ad1951d078b8d56f0f9"
+      },
+      "import": "BYTE_IDENTICAL"
+    },
+    {
+      "source": {
+        "path": "art/source/dealers/halforc_female/formal.png",
+        "originalPackFilename": "source/halforc_female_formal_source.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "fb9b9ec828ec1ee6bb50cbb2e19b2239953644fb1e40697d071f79b8119f7998"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/halforc_female/formal.png",
+        "src": "/characters/dealer/halforc_female/formal.png",
+        "width": 240,
+        "height": 320,
+        "sha256": "ccc53b5417a0d071d859e8e97d5e0dcf84c2ac4fec10581f36397dfafc9122a6"
+      },
+      "import": "BYTE_IDENTICAL"
+    }
+  ],
+  "manifestSha256": "3810355288aef32bc320b103333c8cb9b24650dce1be89d8b000374ba3b793cd"
+}

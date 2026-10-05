@@ -24,12 +24,23 @@ export function assignDealerIdentity(lineup: CharacterLineup, preferred: Charact
   if (!chosen) throw new Error('No eligible Dealer identity');
   return chosen.id;
 }
+export function assignRotatingDealerIdentity(lineup: CharacterLineup, pool: readonly CharacterId[],
+  preferred: CharacterId, sessionOrdinal: number): CharacterId | null {
+  const seated = new Set([lineup.human, ...Object.values(lineup.guests)]);
+  const start = (pool.indexOf(preferred) + sessionOrdinal) % pool.length;
+  for (let offset = 0; offset < pool.length; offset++) {
+    const candidate = pool[(start + offset) % pool.length];
+    if (!seated.has(candidate)) return candidate;
+  }
+  return null;
+}
 export type DealerTableIdentity = Readonly<{ lineup: CharacterLineup; characterId: CharacterId | null }>;
 export function createDealerTableIdentity(guestSeats: readonly number[], choose?: PresentationChooser,
-  human: CharacterId = 'knight_male', preferred?: CharacterId): DealerTableIdentity {
+  human: CharacterId = 'knight_male', preferred?: CharacterId, rotationPool?: readonly CharacterId[], sessionOrdinal = 0): DealerTableIdentity {
   const lineup = createCharacterLineup(guestSeats, choose, human);
   // No owner-selected preferred ID means no identity assignment or artwork claim.
-  return Object.freeze({ lineup, characterId: preferred ? assignDealerIdentity(lineup, preferred) : null });
+  return Object.freeze({ lineup, characterId: preferred ? rotationPool
+    ? assignRotatingDealerIdentity(lineup, rotationPool, preferred, sessionOrdinal) : assignDealerIdentity(lineup, preferred) : null });
 }
 export function changeDealerTableHuman(table: DealerTableIdentity, selected: CharacterId): DealerTableIdentity {
   if (selected === table.characterId) return table;
@@ -60,7 +71,8 @@ export type DealerFormalAsset = Readonly<{
   review: Readonly<{ ownerApproval: string; identityComparison: string; decodedAssetEvidence: string;
     dealerZoneEvidence: string }>;
 }>;
-export type DealerConfiguration = Readonly<{ preferredCharacterId: CharacterId; assets?: readonly DealerFormalAsset[] }>;
+export type DealerConfiguration = Readonly<{ preferredCharacterId: CharacterId; assets?: readonly DealerFormalAsset[];
+  rotationPool?: readonly CharacterId[] }>;
 export type DealerPresentation = Readonly<{ characterId: CharacterId | null; role: 'dealer'; variant: 'formal';
   asset: DealerFormalAsset | null; presentationState: DealerPresentationState }>;
 export function dealerPresentation(characterId: CharacterId | null, presentationState: DealerPresentationState,

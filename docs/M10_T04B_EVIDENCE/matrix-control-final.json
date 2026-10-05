@@ -1,0 +1,381 @@
+{
+  "phase": "matrix-control-final",
+  "kind": "matrixControl",
+  "start": "2026-10-05 11:46:47 +08:00",
+  "end": "2026-10-05 11:47:31 +08:00",
+  "command": "& npm.cmd run test:e2e -- tests/browser/m10a/controlIntegration.spec.ts --grep M10A-CB10; exit $LASTEXITCODE",
+  "evidenceRoute": {
+    "method": "Only25 historical destinations redirected by scoped Node preload; assertions and source tests unchanged; canonical PA1 untouched",
+    "root": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-writes-matrix-control-final",
+    "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10a-human-routes-matrix-control-final.jsonl",
+    "nodeOptions": "--require=\"C:/Users/user/Documents/GitHub/casino-blackjack/.git/m10a-human-evidence-route.cjs\""
+  },
+  "exitCode": 0,
+  "status": "PASS",
+  "error": null,
+  "administrativeRestoration": "PASS",
+  "temporaryOriginalBackup": "C:\\Users\\user\\AppData\\Local\\Temp\\cbg-m10a-t01-human-matrix-control-final-3Rewix",
+  "knownOutputs": [
+    {
+      "path": "docs/M10_T01_EVIDENCE/geometry.json",
+      "beforeSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "beforeSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-768.png",
+      "beforeSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/table-320.png",
+      "beforeSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "beforeSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "beforeSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "beforeSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "beforeSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "beforeSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "beforeSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "beforeSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "beforeSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "beforeSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "beforeSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "beforeSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "beforeSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "beforeSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "beforeSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea"
+    },
+    {
+      "path": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "beforeSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4"
+    },
+    {
+      "path": "docs/images/m9-ready.png",
+      "beforeSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d"
+    },
+    {
+      "path": "docs/images/m9-results.png",
+      "beforeSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe"
+    },
+    {
+      "path": "docs/images/m9-tools.png",
+      "beforeSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e"
+    },
+    {
+      "path": "docs/images/m9-table-1280.png",
+      "beforeSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "06a0343599800453b5d0d55255fee1a1017a2f89229ebfbff8cf5a0b09a0ea27"
+    },
+    {
+      "path": "docs/images/m9-table-768.png",
+      "beforeSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "d6af087decfb831356a540264839a38d500a94f3acd18778ceba85abeba2dc5c"
+    },
+    {
+      "path": "docs/images/m9-table-320.png",
+      "beforeSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616",
+      "generated": null,
+      "restoration": "UNCHANGED",
+      "restoredSha256": "f5e585125753b12b7f222d24e0dfdf18738f840a6227df658974c6722c912616"
+    }
+  ],
+  "testScopedOutputs": [
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-complete-loss-320.png",
+      "retainedAt": "generated/a1a902ebb5b70b018ba149b3a82c2046208abdcefc747ef0a2ea1545de553824.png",
+      "bytes": 521986,
+      "sha256": "a1a902ebb5b70b018ba149b3a82c2046208abdcefc747ef0a2ea1545de553824"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-complete-push-320.png",
+      "retainedAt": "generated/59db92a3b942f46571ee17985a25fe990499454b03db249da4fb5b78c4ccd3bc.png",
+      "bytes": 522192,
+      "sha256": "59db92a3b942f46571ee17985a25fe990499454b03db249da4fb5b78c4ccd3bc"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-complete-win-320.png",
+      "retainedAt": "generated/efad5cd2c4e5e238d3ed8735a53485dc0be52cfb5c5d1a02ec00c8eb17817afd.png",
+      "bytes": 512549,
+      "sha256": "efad5cd2c4e5e238d3ed8735a53485dc0be52cfb5c5d1a02ec00c8eb17817afd"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-even-money-320.png",
+      "retainedAt": "generated/0760a77ef4ce37de019724381d20ce6d7ecd3df44225cc1ca30b5e7b4d4eb07b.png",
+      "bytes": 571958,
+      "sha256": "0760a77ef4ce37de019724381d20ce6d7ecd3df44225cc1ca30b5e7b4d4eb07b"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-320.png",
+      "retainedAt": "generated/189529725c0393e4f0e08bb616bd46c8adcbb750e9a3cd342d341b3bd7d6e4d1.png",
+      "bytes": 631823,
+      "sha256": "189529725c0393e4f0e08bb616bd46c8adcbb750e9a3cd342d341b3bd7d6e4d1"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-320.png",
+      "retainedAt": "generated/a0312304b3925edcf48e349e51b7c716fbbeef439a2d795323c2cd7a12ff3815.png",
+      "bytes": 631922,
+      "sha256": "a0312304b3925edcf48e349e51b7c716fbbeef439a2d795323c2cd7a12ff3815"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-320.png",
+      "retainedAt": "generated/c5e14ddfbf5b2eb04165a4339bdb5c63e305c71b62f846b469d441f198c1ae3c.png",
+      "bytes": 624671,
+      "sha256": "c5e14ddfbf5b2eb04165a4339bdb5c63e305c71b62f846b469d441f198c1ae3c"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-320.png",
+      "retainedAt": "generated/269e3e6188d9d2352fad21f036847201028ffe3c23834bcfe3d6344ab7676fc0.png",
+      "bytes": 656510,
+      "sha256": "269e3e6188d9d2352fad21f036847201028ffe3c23834bcfe3d6344ab7676fc0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-320.png",
+      "retainedAt": "generated/1aee68b8b0ba365eb0ad9c047ff58ceea34c53cfb5aa4739941f9f608e7dfaa0.png",
+      "bytes": 649038,
+      "sha256": "1aee68b8b0ba365eb0ad9c047ff58ceea34c53cfb5aa4739941f9f608e7dfaa0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-40504--cards-or-financial-details-chromium/control-repair-text200-insurance-320.png",
+      "retainedAt": "generated/668b4fff560c157f78c28bb145c8b4280c0f2b97a044c363ce3d7a73b0a9bdcb.png",
+      "bytes": 563666,
+      "sha256": "668b4fff560c157f78c28bb145c8b4280c0f2b97a044c363ce3d7a73b0a9bdcb"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-complete-loss-1280.png",
+      "retainedAt": "generated/1636210e25d54489d6a87620af4580fe0decdf884f719c81436bdc1b5a0d3af9.png",
+      "bytes": 1240451,
+      "sha256": "1636210e25d54489d6a87620af4580fe0decdf884f719c81436bdc1b5a0d3af9"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-complete-push-1280.png",
+      "retainedAt": "generated/9180692c0fa2191b0e5e83b1a82392f925433f2ab65d31b5b1f1ba7722b77b14.png",
+      "bytes": 1241745,
+      "sha256": "9180692c0fa2191b0e5e83b1a82392f925433f2ab65d31b5b1f1ba7722b77b14"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-complete-win-1280.png",
+      "retainedAt": "generated/4284c02c4d1203066ccacf68a2be3ecbf58fe8a8a11a9310c3f02fb02c413356.png",
+      "bytes": 1227169,
+      "sha256": "4284c02c4d1203066ccacf68a2be3ecbf58fe8a8a11a9310c3f02fb02c413356"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-even-money-1280.png",
+      "retainedAt": "generated/eeaf47994a028e1b7c997d74e2095cea37cac870ceca6a34c921936e8777f733.png",
+      "bytes": 1280821,
+      "sha256": "eeaf47994a028e1b7c997d74e2095cea37cac870ceca6a34c921936e8777f733"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-1280.png",
+      "retainedAt": "generated/86c1caab053a701c3e7c1bdcdb94daf70abfad5d3530a105bce0e6e1c076c773.png",
+      "bytes": 1454099,
+      "sha256": "86c1caab053a701c3e7c1bdcdb94daf70abfad5d3530a105bce0e6e1c076c773"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-1280.png",
+      "retainedAt": "generated/2be06132e4c41dc7b20fd1aabe1c001788e25bee6704374da4f5d11032bfb4c5.png",
+      "bytes": 1454249,
+      "sha256": "2be06132e4c41dc7b20fd1aabe1c001788e25bee6704374da4f5d11032bfb4c5"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-1280.png",
+      "retainedAt": "generated/e8e83d33cfd39bdb21f02210f3911a7e0f513d28c60a81361b8679c0b651b255.png",
+      "bytes": 1440685,
+      "sha256": "e8e83d33cfd39bdb21f02210f3911a7e0f513d28c60a81361b8679c0b651b255"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-1280.png",
+      "retainedAt": "generated/f9b577a93162d3c5a585ad36925a8253a67084428159cb19131a1ca5b1e6b71e.png",
+      "bytes": 1369736,
+      "sha256": "f9b577a93162d3c5a585ad36925a8253a67084428159cb19131a1ca5b1e6b71e"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-1280.png",
+      "retainedAt": "generated/335a2a0cfcf4a4bac97ba86aea190b1d8eb0552b53ebd5d64f102971fa5556be.png",
+      "bytes": 1374220,
+      "sha256": "335a2a0cfcf4a4bac97ba86aea190b1d8eb0552b53ebd5d64f102971fa5556be"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-516ec--cards-or-financial-details-chromium/control-repair-text200-insurance-1280.png",
+      "retainedAt": "generated/31e0601ed69220e3c9979e80520e21b1731561d26970d6a5ace0792b4a6ecfc2.png",
+      "bytes": 1283853,
+      "sha256": "31e0601ed69220e3c9979e80520e21b1731561d26970d6a5ace0792b4a6ecfc2"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-complete-loss-768.png",
+      "retainedAt": "generated/e2a049e1fdf8d794fca1e1802963ff70d14bb1748e39c346cd5b78ca5eadcea4.png",
+      "bytes": 894531,
+      "sha256": "e2a049e1fdf8d794fca1e1802963ff70d14bb1748e39c346cd5b78ca5eadcea4"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-complete-push-768.png",
+      "retainedAt": "generated/2532db5303039490c404d55cf34fffea240a422cc1c0393d238f2f86d0088c80.png",
+      "bytes": 894503,
+      "sha256": "2532db5303039490c404d55cf34fffea240a422cc1c0393d238f2f86d0088c80"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-complete-win-768.png",
+      "retainedAt": "generated/0d675f7636654910f5a0b1a824bb9000ea0e5791560fbd44d7032e6c86a50c1f.png",
+      "bytes": 897040,
+      "sha256": "0d675f7636654910f5a0b1a824bb9000ea0e5791560fbd44d7032e6c86a50c1f"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-even-money-768.png",
+      "retainedAt": "generated/1b42607995c560c1f38566bff43e75d337815f076eadb139c07f74f48d398838.png",
+      "bytes": 995779,
+      "sha256": "1b42607995c560c1f38566bff43e75d337815f076eadb139c07f74f48d398838"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-loss-768.png",
+      "retainedAt": "generated/8a8580f905bccea3020d91b1c506c0e00e31c1ab689e8b4d2e0b6b5ae41c9a66.png",
+      "bytes": 1057451,
+      "sha256": "8a8580f905bccea3020d91b1c506c0e00e31c1ab689e8b4d2e0b6b5ae41c9a66"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-push-768.png",
+      "retainedAt": "generated/34ab498c605ebe75121d657da9a1e07879e170a1f9d9ad088313dcbca11cd935.png",
+      "bytes": 1057561,
+      "sha256": "34ab498c605ebe75121d657da9a1e07879e170a1f9d9ad088313dcbca11cd935"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-expanded-complete-win-768.png",
+      "retainedAt": "generated/e82ceddcc98c1f545fba8c66868533536fa751a5e388ff62f0b439eca44383c9.png",
+      "bytes": 1060443,
+      "sha256": "e82ceddcc98c1f545fba8c66868533536fa751a5e388ff62f0b439eca44383c9"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-expanded-even-money-768.png",
+      "retainedAt": "generated/b10aac154360d4f563a43f8d399a005fe6b462bc687d6acba1545134e01e6065.png",
+      "bytes": 1088044,
+      "sha256": "b10aac154360d4f563a43f8d399a005fe6b462bc687d6acba1545134e01e6065"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-expanded-insurance-768.png",
+      "retainedAt": "generated/a415a901096450eadfc19eb4eea699d2ed9dc71b447bd59bea8bcacd44d781c0.png",
+      "bytes": 1064606,
+      "sha256": "a415a901096450eadfc19eb4eea699d2ed9dc71b447bd59bea8bcacd44d781c0"
+    },
+    {
+      "path": "test-results/m10a-controlIntegration--M-e62be--cards-or-financial-details-chromium/control-repair-text200-insurance-768.png",
+      "retainedAt": "generated/af3069959780a070b1376f18b059dfd27c7cb18339563d6220dccdfb58a40813.png",
+      "bytes": 971363,
+      "sha256": "af3069959780a070b1376f18b059dfd27c7cb18339563d6220dccdfb58a40813"
+    }
+  ],
+  "freshTestResults": true,
+  "administrativeExitCode": 0,
+  "note": "Checked command exit is separate from collection/restoration. Only25 known historical writer outputs are restored; canonical PA1 is read-only. New M10A screenshots are retained from test-scoped output. Native in-place known-byte writes verified by incoming hashes; no claim about historical Windows handle owner/root cause.",
+  "collectionEnd": "2026-10-05 11:47:33 +08:00"
+}

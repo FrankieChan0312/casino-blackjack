@@ -72,6 +72,10 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
     const historical = blobs.subarray(newline + 1, newline + 1 + size).toString('utf8').replaceAll('\r\n', '\n').trimEnd();
     offset = newline + 1 + size + 1;
     let current = readFileSync(file, 'utf8').replaceAll('\r\n', '\n').trimEnd();
+    if (['tests/browser/m9.spec.ts','tests/browser/pa1.spec.ts'].includes(file)) current = current
+      .replaceAll('/?fixture=player&dealer=legacy','/?fixture=player');
+    if (file === 'tests/pa1/preservation.test.ts') current = current.replace(
+      / {4}\/\/ BEGIN T04B named unconfigured Dealer input adapter[\s\S]*? {4}\/\/ END T04B named unconfigured Dealer input adapter\n/, '');
     if (file === 'tests/unit/m8Contract.test.ts') current = current
       .replace('    // M10 owns new geometry scenarios; retain the historical M8 inventory.\n', '')
       .replace("    if (file === 'm10.spec.ts') continue;\n", '')
@@ -100,7 +104,11 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
   expect(offset).toBe(blobs.length);
   expect(acceptedController(readFileSync('src/browser/controller.ts', 'utf8')).trimEnd()).toBe(git('show', baseline + ':src/browser/controller.ts'));
   expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json',
-    ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts')).toBe('');
+    ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts',
+    ':(exclude)art/dealer-assets.json', ':(exclude)art/source/dealers/MANIFEST.json',
+    ...['noble_female','knight_female','mage_female','elf_female','halforc_female'].flatMap(id => [
+      `:(exclude)art/source/dealers/${id}/formal.png`, `:(exclude)public/characters/dealer/${id}/formal.png`,
+    ]))).toBe('');
 });
 
 it('[M10-G07] the local table scene retains semantic hand-control-credit order and exact public funds without commands', () => {

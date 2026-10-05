@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-05 11:29:53 +08:00",
+  "status": "PASS",
+  "review": "Same-session source/runtime/live screenshot visual inspection; owner acceptance PENDING; fresh separate-session review NOT COMPLETED",
+  "images": [
+    {
+      "path": "source-contact-1.png",
+      "sha256": "f03fc2a5a79d4c865525b982be302cc7e4d6379cfaa1e1f3b125fca44cd1638e"
+    },
+    {
+      "path": "identity-comparison.png",
+      "sha256": "7ff20abcb1f23f05f5dd3a11c829cd531d7f26f0053d4732b8d8d7baac7e56eb"
+    },
+    {
+      "path": "live-portraits-1.png",
+      "sha256": "dab7404576948d8b2786fa1589486b74f885685f9e1fd2db1aa9e91ce60f4f98"
+    },
+    {
+      "path": "responsive-review-1.png",
+      "sha256": "d151541bc4f7e79cfcab94b2fd3e81407e79ce00e079414295383137236d52d7"
+    },
+    {
+      "path": "responsive-review-2.png",
+      "sha256": "175c6edcf2bafc4995cca8d4343c70158bbab32efa5d037c60d4cb3e8615895a"
+    },
+    {
+      "path": "responsive-review-3.png",
+      "sha256": "76bb92fb2780a8954afc3e25e4526d530aed6fecf19db769d13f5be3dd5b4d4e"
+    },
+    {
+      "path": "responsive-review-4.png",
+      "sha256": "3bcb7885af53b2551ced5df3707794762273ccad62a3dd423a1d2a1dab9f0ba8"
+    },
+    {
+      "path": "native-review-1.png",
+      "sha256": "d866030fac125240e22c8f810a4d0fa3b45a04f5a45e9c24767ce2f8cd1efd45"
+    },
+    {
+      "path": "native-review-2.png",
+      "sha256": "4df293c548c76adf88c281e68c487b18cda1da3417ef5ba4ab1ba0d860f64322"
+    },
+    {
+      "path": "screenshots/formal-player-turn-desktop.png",
+      "sha256": "890fd7ec0825197a0ac3c2135243aedc1cd8858116709bff754dc6cafbd37d22"
+    },
+    {
+      "path": "screenshots/formal-Vesha-7-768-active.png",
+      "sha256": "fb6170f72a928c44b15255968aef04f612ee804e429f57a4615d671166f9fc97"
+    },
+    {
+      "path": "screenshots/formal-7-mobile-active.png",
+      "sha256": "8917b694aab55cf512be391704eb32f7c1f7976bb823ae113929d2337c4d9f00"
+    },
+    {
+      "path": "visuals/formal-mage_female-4-native2.png",
+      "sha256": "649ca384f029c03c58e7352e42c26c8bc763489b1d5100cfb473b42375c250a7"
+    }
+  ],
+  "identities": [
+    "Celestine: blonde bun",
+    "Seraphine: red waves",
+    "Nyra: purple waves",
+    "Elaria: long blonde hair/pointed ears",
+    "Vesha: olive skin/black waves/tusks"
+  ],
+  "findings": [
+    "All five approved portraits recognizable, transparent and not blank; face/hair/hands fit reserved contain image",
+    "Formal attire cohesive black/gold/white; runtime files and canonical player assets unchanged",
+    "Decorative red deck in hands separate from authoritative white cards/back/status/rules/shoe",
+    "Collision Celestine seated -> Seraphine; all five seated -> original non-roster fallback visible",
+    "Desktop/tablet/mobile, hidden/revealed/active/results and text200 show no covered functional cards/controls",
+    "Native2 five identities and4/7 examples show readable portrait and retained Dealer reserve"
+  ],
+  "limitation": "Overview contact sheets are reduced; tall screenshots/sheets may be tool-resized to2048. Source images/critical originals inspected, with independent measured layout gate. This is not owner approval."
+}

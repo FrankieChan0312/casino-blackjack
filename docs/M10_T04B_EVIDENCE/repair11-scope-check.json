@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-05 12:27:49 +08:00",
+  "status": "PASS",
+  "immutableFiles": 229,
+  "executableFiles": 188,
+  "onlyExecutableDelta": "tests/browser/m10a/controlIntegration.spec.ts (two structural lines)",
+  "productCodeAssetsConfigurations": "All unchanged against exceptional-repair baseline",
+  "gateStartVersion": "repair11-gate-start-version.json"
+}

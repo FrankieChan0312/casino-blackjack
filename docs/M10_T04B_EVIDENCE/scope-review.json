@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-05 11:37:10 +08:00",
+  "scopeReview": "PASS",
+  "protectedSemanticDiff": "",
+  "filesInspected": [
+    "src/presentation/dealerPresentation.ts",
+    "src/presentation/formalDealers.ts",
+    "src/main.tsx",
+    "src/ui/App.tsx",
+    "src/ui/DealerAvatar.tsx",
+    "scripts/audit-character-sources.mjs",
+    "scripts/verify-dealer-assets.mjs",
+    "tests/m10/formalDealers.test.tsx",
+    "tests/browser/m10/formalDealers.spec.ts",
+    "all historical test-input adapter diffs",
+    "task/docs/asset/evidence receipts"
+  ],
+  "findings": [
+    "No domain/browser/controller/shoe/replay/strategy/accounting/CSS/seat geometry/dependency/runtime-setting diff",
+    "Existing PA1 filename/hash checks remain strict for12 players; only exact separate dealer directory recognized",
+    "Historical generic fallback/all12 unreserved input fixture assertions retained, no skip/timeout/assertion weakening",
+    "Literal collision/order/exhaustion/1–7 fixtures, zero-RNG test and exact seeded replay comparison independent of rotation implementation",
+    "Accessibility short Dealer name alt; original generic fallback; no hidden state or animation timing",
+    "One open decoder-efficiency repair8 must pass final full gate before publication"
+  ],
+  "freshSeparateSessionReview": "NOT COMPLETED: unavailable; no delegation authorized",
+  "humanVisualAcceptance": "PENDING",
+  "final": {
+    "timestamp": "2026-10-05 12:44:02 +08:00",
+    "status": "PASS",
+    "repair11": "Two structural CB09 lines only; exact inverse source-byte equality",
+    "allRequiredCases": "3 viewport × win/loss/push plus low-funds completed, no assertion/timeouts/retries/settings weakening",
+    "exceptionalProtectedFiles": 5660,
+    "executedHashes": 188,
+    "requiredGate": "PASS/0",
+    "protectedSemantics": "No domain/browser/controller/CSS/geometry/dependency change in T04B; no product changes in repair11",
+    "freshSeparateSessionReview": "NOT COMPLETED",
+    "humanVisualAcceptance": "PENDING"
+  }
+}

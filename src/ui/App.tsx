@@ -45,10 +45,11 @@ function PlayerExperience({ view, controller, chooseCharacter, dealerConfigurati
   const guestSeats = view.configuration.filter(seat => seat.occupancy === 'COMPUTER').map(seat => seat.seatNumber);
   const sessionKey = view.presentationSession + ':' + view.tableStarted + ':' + guestSeats.join(',');
   const [presentation, setPresentation] = useState(() => ({ session: sessionKey, generation: view.presentationSession,
-    identity: createDealerTableIdentity(guestSeats,chooseCharacter, 'knight_male', view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined) }));
+    identity: createDealerTableIdentity(guestSeats,chooseCharacter, 'knight_male', view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined,
+      dealerConfiguration?.rotationPool, view.presentationSession) }));
   if (presentation.session !== sessionKey) setPresentation({ session: sessionKey, generation: view.presentationSession,
     identity: createDealerTableIdentity(guestSeats,chooseCharacter, presentation.generation === view.presentationSession ? presentation.identity.lineup.human : 'knight_male',
-      view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined) });
+      view.tableStarted ? dealerConfiguration?.preferredCharacterId : undefined, dealerConfiguration?.rotationPool, view.presentationSession) });
   const lineup = presentation.identity.lineup;
   const dealer = dealerPresentation(presentation.identity.characterId, dealerPresentationState({
     awaitingPlayer: !!view.interaction.insurance || !!view.follow || view.interaction.actions.some(action => action.enabled),

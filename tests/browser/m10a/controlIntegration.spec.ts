@@ -181,8 +181,8 @@ test('[M10A-CB08] compact Insurance/Even Money keeps one state band, exact visib
   }
 });
 
-test('[M10A-CB09] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior', async ({ page }, info) => {
-  for (const viewport of viewports) for (const [fixture, net, available, result] of [
+for (const viewport of viewports) test(`[M10A-CB09-${viewport.width}] compact terminal win/loss/push preserves results, credits, native disclosure, next/repeat and low-fund disabled behavior`, async ({ page }, info) => {
+  for (const [fixture, net, available, result] of [
     ['player', '100', '1,100', 'Win'], ['player-loss', '-100', '900', 'Loss'], ['player-push', '0', '1,000', 'Push'],
   ]) {
     await page.setViewportSize(viewport); await deal(page, fixture); await button(page, 'Stand').click();
@@ -212,8 +212,8 @@ test('[M10A-CB09] compact terminal win/loss/push preserves results, credits, nat
   await expect(page.locator('.credits dd')).toHaveText(['0', '0', '0']);
 });
 
-test('[M10A-CB10] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details', async ({ page }, info) => {
-  for (const viewport of viewports) for (const state of ['insurance', 'even-money', 'complete-win', 'complete-loss', 'complete-push']) {
+for (const viewport of viewports) test(`[M10A-CB10-${viewport.width}] text 200% retains both contextual docks and disclosure without clipping labels, cards or financial details`, async ({ page }, info) => {
+  for (const state of ['insurance', 'even-money', 'complete-win', 'complete-loss', 'complete-push']) {
     await page.setViewportSize(viewport);
     await deal(page, state === 'insurance' ? 'player-ace' : state === 'even-money' ? 'player-even-money' : state === 'complete-loss' ? 'player-loss' : state === 'complete-push' ? 'player-push' : 'player');
     if (state.startsWith('complete')) await button(page, 'Stand').click();

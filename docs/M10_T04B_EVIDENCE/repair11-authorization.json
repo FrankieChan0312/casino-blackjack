@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-10-05 12:25:59 +08:00",
+  "task": "M10-T04B (continued existing task)",
+  "repair": "11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "source": "Explicit latest owner instruction in this task",
+  "recommendedModel": "GPT Sol 6.1",
+  "recommendedEffort": "Max from task contract; repository default High",
+  "availability": "Client tool metadata lists gpt-6.1-sol with High and Max support",
+  "actualRuntimeModelEffort": "NOT VERIFIED",
+  "scope": "Existing M10A-CB09 structural viewport split only",
+  "nonGoals": [
+    "No product code or src/domain edits",
+    "No gameplay/Dealer rotation/seat mapping/RNG/replay/digest/journal/strategy/accounting/settlement changes",
+    "No artwork changes/regeneration/substitution",
+    "No Motion/animation/M10-T05"
+  ],
+  "acceptance": [
+    "All three original viewports and win/loss/push plus low-funds run",
+    "Assertion semantics equivalent, no deletion/skip/weakening",
+    "No timeout increase or retry-until-green",
+    "CB09 split cases, full Chromium, full Vitest, all preservation, verify.ps1 PASS before commit/push"
+  ],
+  "stopConditions": [
+    "If original30s is product performance acceptance, STOP",
+    "Any genuine failure after11: STOP/BLOCKED; repair12 NOT AUTHORIZED",
+    "After M10-T04B stop for owner human visual acceptance"
+  ],
+  "timeoutAuthority": {
+    "config": "playwright.config.ts has no timeout override; retries0,workers1",
+    "localSource": "node_modules/playwright/lib/common/index.js:478 defaultTimeout = 3e4; line598 configuration fallback",
+    "contract": "CB09 has no timing/performance assertion; RULES/SPEC/UX/task contract contain no30s CB09 performance acceptance. DESIGN M10.19 budgets concern future T05 bundle/T11 animation performance, not CB09 cumulative runtime.",
+    "conclusion": "30s is test-runner per-case timeout; approved partition may proceed"
+  }
+}

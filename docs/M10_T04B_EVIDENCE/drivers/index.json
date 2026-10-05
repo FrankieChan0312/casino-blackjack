@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-10-05 11:50:39 +08:00",
+  "note": "Scoped ignored orchestration drivers retained for reproduction; not product code. Copy to original ignored paths before deliberate use; do not blindly rerun occupied evidence/import/repair phases. Native driver requires the documented4181 e2e server. Historical route redirects only25 known write outputs; test assertions unchanged.",
+  "files": [
+    {
+      "originalIgnoredPath": ".git/t04b-runner.cjs",
+      "retainedAt": "t04b-runner.cjs.gz",
+      "originalSha256": "7a1487a0efc7588d2ff840447bba33908ff8019ad312d3d06d94c58c76ab55a2",
+      "compressedSha256": "735706ba3903f16bc68a4008d6aebe4f19cca8d64e4baf52742e578ac08b844b"
+    },
+    {
+      "originalIgnoredPath": ".git/m10a-human-evidence-route.cjs",
+      "retainedAt": "m10a-human-evidence-route.cjs.gz",
+      "originalSha256": "4e3b99489f608ca457de9dfe76ba08d90e3c6fbdc7767501b1f2fd50102da402",
+      "compressedSha256": "d8c429a688946cc01c116196d9eb2048e86561d92e98957b59cfb84343b60487"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-native-zoom.cjs",
+      "retainedAt": "t04b-native-zoom.cjs.gz",
+      "originalSha256": "ee9b054612214445f7c989900010fe1c81b9195ee718b8a63827f6e219875023",
+      "compressedSha256": "4d2e08868f0cde18d727e07c8feeae1207705d7bbace2777cfc6b69233961266"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-check.cjs",
+      "retainedAt": "t04b-check.cjs.gz",
+      "originalSha256": "547dece06c69de05e735d1000cc0302692e15520ed0b0f321c9ef987cc731224",
+      "compressedSha256": "e4da28c90cbcf40e08d6b5ce3e7e460186d0e177d8399d5c3f961e9388e95507"
+    },
+    {
+      "originalIgnoredPath": ".git/batch2-audit.cjs",
+      "retainedAt": "batch2-audit.cjs.gz",
+      "originalSha256": "16cdfe7794880c5ae80680b9ad04ea7d6389bb0e7e963deb01d1ffce8c087003",
+      "compressedSha256": "bc62b802195b18cfb6ce5a21a1bde91433bc549f0b1d9a47951f03b369705b18"
+    },
+    {
+      "originalIgnoredPath": ".git/batch2-publish.cjs",
+      "retainedAt": "batch2-publish.cjs.gz",
+      "originalSha256": "cacb0894d46e9966ec7d7bfbda7e78d689d2a33517f6c48229fd4a5104019b9c",
+      "compressedSha256": "ec44adda867c3db14748d8a823f587a957c757e74da99ea341adc277ffa51a38"
+    },
+    {
+      "originalIgnoredPath": ".git/batch2-sheets.cjs",
+      "retainedAt": "batch2-sheets.cjs.gz",
+      "originalSha256": "3da6e02ea99c1be4f5b3777ad4e4edd4b718bf307c0124846725182678481017",
+      "compressedSha256": "d83394980ea97d83b1885a60bc3d35faea3d91a32d33fc8c70b8ba2a5be07f1c"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-comparison.cjs",
+      "retainedAt": "t04b-comparison.cjs.gz",
+      "originalSha256": "9c03b8217b95612179da477d2d8025a357ff21df10d2688c7326218846df32a4",
+      "compressedSha256": "75d5ac8a1efde2d40236484c9adc600a62e6d1e3797febe66b17b6e61a0b7800"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-candidate8.cjs",
+      "retainedAt": "t04b-candidate8.cjs.gz",
+      "originalSha256": "f5d0492bbe262e728c13091c1049c62fac488386268062f6aece6175bcc6861a",
+      "compressedSha256": "6dc22db8269ce4c2d4175351167a26abb813e06b70ac81b7ea1659887baa8e37"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-fix89.cjs",
+      "retainedAt": "t04b-fix89.cjs.gz",
+      "originalSha256": "6e46e35fdf7ba65e15d503eb15ce2c20015d32ba4c78e802efb8f1b973d5b98f",
+      "compressedSha256": "fd015bd25aa71d56786b9ed6d3e0d99a24654b60a56b0db5cde9b405a7af6b91"
+    },
+    {
+      "originalIgnoredPath": ".git/t04b-privacy.ps1",
+      "retainedAt": "t04b-privacy.ps1.gz",
+      "originalSha256": "4f21221e3aedfeded99866181cc9b2147b0fef54a9c246f8bdd4bf7fdc80e798",
+      "compressedSha256": "20af74234e00fea5d9608eb0cf2cbf9832eafed55095edb96e373b1fae13e130"
+    }
+  ]
+}

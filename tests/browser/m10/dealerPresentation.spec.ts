@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 
 // Configured identity is an isolated engineering fixture, never an owner selection.
 async function configuredFixture(page:Page) {
-  await page.goto('/?fixture=player-setup');
+  await page.goto('/?fixture=player-setup&dealer=legacy');
   await page.locator('#root').evaluate(async root=>{
     const appUrl='/src/ui/App.tsx',controllerUrl='/src/browser/controller.ts',reactUrl='/node_modules/.vite/deps/react.js',rootUrl='/node_modules/.vite/deps/react-dom_client.js';
     const {App}=await import(appUrl),{createBrowserController}=await import(controllerUrl),{default:React}=await import(reactUrl),{default:ReactDOM}=await import(rootUrl);
@@ -43,10 +43,10 @@ for(let count=1;count<=7;count++)test(`[M10-D-E${count}] configured ${count}-pla
   await page.getByRole('button',{name:/^Repeat Bet/}).click();
   await expect(dealer).toHaveAttribute('data-dealer-character',expected[count-1]);
 });
-test('[M10-D-E08] unassigned production fallback retains actual1/4/7 players, public cards and placement at three widths plus text200',async({page},info)=>{
+test('[M10-D-E08] explicit unconfigured fallback retains actual1/4/7 players, public cards and placement at three widths plus text200',async({page},info)=>{
   const receipts=[];
   for(const count of [1,4,7])for(const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]){
-    await page.setViewportSize(viewport);await page.goto('/?fixture=player-setup');await start(page,count);await deal(page);
+    await page.setViewportSize(viewport);await page.goto('/?fixture=player-setup&dealer=legacy');await start(page,count);await deal(page);
     const dealer=page.getByRole('region',{name:'Dealer',exact:true});
     await expect(dealer).toHaveAttribute('data-dealer-art','temporary-fallback');
     expect(await dealer.getAttribute('data-dealer-character')).toBeNull();
@@ -68,7 +68,7 @@ test('[M10-D-E08] unassigned production fallback retains actual1/4/7 players, pu
   writeFileSync(info.outputPath('dealer-layout.json'),JSON.stringify(receipts,null,2));
 });
 test('[M10-D-E09] intentionally invalid image contract fixture falls back without a broken portrait or new artwork',async({page})=>{
-  await page.goto('/?fixture=player');
+  await page.goto('/?fixture=player&dealer=legacy');
   const dealer=page.getByRole('region',{name:'Dealer',exact:true});
   await dealer.evaluate(async el=>{
     const avatarUrl='/src/ui/DealerAvatar.tsx',reactUrl='/node_modules/.vite/deps/react.js',rootUrl='/node_modules/.vite/deps/react-dom_client.js';

@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-10-05 12:44:02 +08:00",
+  "cumulative": 11,
+  "limit": 11,
+  "prior": 5,
+  "cycles": [
+    {
+      "cycle": 6,
+      "status": "CLOSED",
+      "firstFailure": "unit-first.json",
+      "firstFailureEnd": "2026-10-05 11:10:30 +08:00",
+      "result": "FAIL/1: M10-G06 exact historical test-byte comparison first detects the explicit legacy fixture URL",
+      "hypothesis": "Historical pre-M10 byte/scope checks must normalize the named unconfigured input and exclude exactly the newly authorized ten formal PNGs/two manifest files; current assertions, canonical assets and all protected semantics stay strict",
+      "fix": "Named exact URL normalization; marked PA1 adapter stripped only by its historical comparator; literal ten new asset paths and two manifests excluded from pre-artwork baseline scope",
+      "affectedVerification": "unit-repair6 PASS/0,25 files/207 tests at2026-10-05 11:12:28 +08:00"
+    },
+    {
+      "cycle": 7,
+      "status": "CLOSED",
+      "firstFailure": "focused-first.json",
+      "firstFailureEnd": "2026-10-05 11:16:43 +08:00",
+      "additionalEvidence": "native-first.log; native-first-failure/zoom200.json FAIL/1 at11:17:05",
+      "hypothesis": "New fixtures try NEW_TABLE while OPEN; existing canCreateTable permits only CONFIGURING/COMMITTED/VOID, so disabled control is correct",
+      "fix": "Complete the actual round using public Decline/Stand/results before NEW_TABLE in the two E2E cases and native five-portrait loop; preserve all rotation/focus/image assertions and controller timing",
+      "affectedVerification": "Focused40 Chromium PASS/0 at11:21:29; native-repair7 PASS/0 (actual chrome.tabs zoom2, root16px, no CSS scale)"
+    },
+    {
+      "cycle": 8,
+      "status": "CLOSED",
+      "firstFailure": "unified-final.log (runner still collecting full gate)",
+      "result": "Full Vitest91 files/1164 tests:1163 passed, F01 PNG audit exceeded unchanged5000ms limit (6382ms)",
+      "hypothesis": "Decoder computes every predictor including Paeth and allocates a five-element array for every RGBA byte even when unused;91-worker CPU contention exposes avoidable decoder work",
+      "plannedFix": "Calculate only the selected PNG filter predictor, retaining identical decoded hashes/CRC/alpha checks, all test assertions,5000ms limit and worker configuration",
+      "affectedVerification": "unit-repair8 PASS/0,91 files/1164 tests at11:45:26; existing5000ms unchanged"
+    },
+    {
+      "cycle": 9,
+      "status": "CLOSED",
+      "firstFailure": "unified-final.log; generated first-full CB10/T08-B02 contexts/traces",
+      "result": "Two historical multi-viewport cases exceed unchanged30000ms overall budgets after performing many scenarios; no expected/received assertion failure in contexts",
+      "hypothesis": "One test accumulates15/18 scenarios plus screenshots/enlarged text over three widths; partitioning by viewport retains each scenario and assertion within independent unchanged30000ms budgets",
+      "plannedFix": "Parameterize only CB10 and T08-B02 by viewport; preserve exact original scenario bodies and all30s per-case timeouts, no skip/retries or legacy-art substitution",
+      "impact": "Chromium cases136 ->140; full matrix still required. Exact before/after assertion-body comparison will be recorded",
+      "affectedVerification": "matrix-control-final3/3 PASS0 at11:47:31; matrix-responsive-final3/3 PASS0 at11:48:36, unchanged30000ms per-case; exact inverse assertion-body preservation PASS",
+      "evidenceClarification": "Raw unified-final.log/json and exact failed source gzip retained. Error contexts were inspected in tool transcript; standalone first-full contexts/screenshots/traces were cleared by the required M7/M8 Playwright runs before end-of-unified collection. They are NOT retained artifacts; earlier shorthand claiming generated contexts/traces is superseded by this explicit limitation. Earlier focused/native first failures remain archived."
+    },
+    {
+      "cycle": 10,
+      "status": "CLOSED",
+      "firstFailure": "matrix-repair9.json/log",
+      "result": "Runner command FAIL/255; intended test cases NOT RUN because npm.cmd treated unquoted transmitted grep pipe as shell pipeline",
+      "hypothesis": "Avoid pipe metacharacter by separate simple grep commands for each matrix",
+      "fix": "Two sequential phases matrixControl/matrixResponsive, each selecting original tag without pipe; preserve product/tests/settings and before/after records",
+      "affectedVerification": "matrix-control-final3/3 PASS0 at11:47:31; matrix-responsive-final3/3 PASS0 at11:48:36, unchanged30000ms per-case; exact inverse assertion-body preservation PASS",
+      "limit": "No repair11 authorized; stop affected work if new failed repair needed"
+    },
+    {
+      "cycle": 11,
+      "status": "CLOSED",
+      "authorization": "repair11-authorization.json",
+      "firstFailure": "unified-complete.json/log; final-blocker/index.json",
+      "hypothesis": "CB09 accumulates nine complete-result scenarios plus a low-funds block over three viewports in one unchanged30s runner budget; separate viewport cases retain exact scenario/assertion bytes within unchanged per-case limits",
+      "fix": "Only CB09 header and viewport outer-loop location changed (two lines), low-funds block unchanged and runs at each width",
+      "equivalence": "repair11-equivalence.json PASS: inverse structural replacements reproduce complete pre-fix source bytes",
+      "affectedVerification": "repair11-cb09:3/3 PASS/0; repair11-unified PASS/0 full91 files/1164 Vitest,142 Chromium,M1–M8 preservation,verify.ps1; no retry/timeout/configuration change",
+      "stop": "Any genuine failure: STOP/BLOCKED; no repair12"
+    }
+  ],
+  "administrativeNote": "One PowerShell command failed parsing before it executed or wrote files during initial drafting. Tool transcript retains it; corrected with a saved helper before validation. It is not a post-validation repair cycle.",
+  "latestBlockingFailure": {
+    "phase": "unified-complete",
+    "case": "M10A-CB09",
+    "result": "FAIL: overall30000ms timeout,31.5s; details assertion interrupted by closed protocol session",
+    "context": "final-blocker/index.json (20 artifacts captured before preservation)",
+    "failedSource": {
+      "path": "tests/browser/m10a/controlIntegration.spec.ts",
+      "sha256": "413683ea2e76f77689ef968da371449d17583df82f78fce9788a53462ae1f675",
+      "retainedAt": "final-blocker/failed-controlIntegration.spec.ts.gz"
+    },
+    "repairCount": 10,
+    "repair11": "CLOSED / PASS: owner-authorized exceptional cycle11",
+    "implementationStopped": true,
+    "commit": "NOT RUN",
+    "push": "NOT RUN",
+    "resolvedBy": "Owner-authorized exceptional repair11; previous failure records retained",
+    "currentStatus": "RESOLVED; full gate PASS",
+    "receiptContext": "Historical failed checkpoint retained; currentStatus and resolvedBy record its verified resolution"
+  },
+  "limitAuthorization": "11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "repair12": "NOT AUTHORIZED"
+}
