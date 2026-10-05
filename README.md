@@ -1,3 +1,9 @@
+## Celestine Dealer approval published — 2026-10-05 09:45:13 +08:00
+
+**M10-T04_OWNER_APPROVAL_RECORDED**, main/d0beb06b0bed62f4e2bbb3c9147a72e4ccbbbc15. Normal authorized commit/push/fetch PASS/0 at2026-10-05 09:44:05 +08:00; HEAD=origin/main=live,0/0,CLEAN/untracked0. Celestine/noble_female identity and formal direction OWNER APPROVED. Required documentation13/identity21/Chromium9/Celestine1–7/PA1 byte reproduction PASS; all184 executable files unchanged, domain/browser/assets/protected historical evidence preserved. Cumulative T04 repairs5/10, all cycles closed (prior3 plus2 administrative,0 product additions). Same-session review PASS; fresh separate-session review NOT COMPLETED. [Approval and asset prerequisite](docs/M10_T04_OWNER_APPROVAL.md).
+
+**FORMAL CELESTINE DEALER ARTWORK NOT YET PRESENT — ASSET REQUIRED.** T04-B integration BLOCKED; production retains the established temporary Dealer. WAITING FOR APPROVED CELESTINE FORMAL DEALER ASSET. M10-T05 NOT STARTED; MOTION NOT INSTALLED; ANIMATION NOT IMPLEMENTED; DEPLOYMENT NOT RUN. This factual documentation-only publication receipt follows actual push evidence; its own SHA/parity/clean result is resolved from Git/final delivery after checked publication.
+
 ## M10-T04 owner approval verified — 2026-10-05 09:42:19 +08:00
 
 **M10-T04_OWNER_APPROVAL_RECORDED. INITIAL DEALER AVATAR: CELESTINE — OWNER APPROVED** (noble_female). Deterministic occupied-seat exclusion/first-free fallback, session retention and zero gameplay RNG preserved. Formal direction/path and PA1 immutability recorded in the [approval contract](docs/M10_T04_OWNER_APPROVAL.md); no asset or production activation. **FORMAL CELESTINE DEALER ARTWORK NOT YET PRESENT — ASSET REQUIRED.** T04-B integration waits for the separately approved transparent240x320 formal PNG and traceable provenance.
