@@ -6,7 +6,7 @@ T07 Hit/Stand/Double/Split presentation IMPLEMENTED / VERIFIED / COMMITTED / PUS
 
 T08 Dealer reveal/draw IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;97 files/1212 Vitest,177 Chromium, preservation/assets/verify.ps1 PASS/0; native200% PASS. Repairs4/10; implementation1165959, final corrective receipt1c2ab68.
 
-T09 authoritative wager/settlement presentation IMPLEMENTED / VERIFIED;98 files/1222 Vitest,187 Chromium, preservation/assets/verify.ps1 PASS/0; repairs5/10. Generic labelled chips, exact post-Double/Split/Insurance amounts, loss collection and committed gross returns; no payout/accounting changes. Normal main publication follows final docs checks.
+T09 authoritative wager/settlement presentation IMPLEMENTED / VERIFIED / COMMITTED / PUSHED;98 files/1222 Vitest,187 Chromium, preservation/assets/verify.ps1 PASS/0; repairs5/10. Generic labelled chips, exact post-Double/Split/Insurance amounts, loss collection and committed gross returns; no payout/accounting changes. Implementationd0b5a0814c2a87f5cd942f17cc630db2bf935d37; documentation-only publication receipt follows.
 
 T10 NOT STARTED. Human Visual Acceptance PENDING, owner review deferred by explicit overnight authorization.
 

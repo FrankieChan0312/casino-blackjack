@@ -1,3 +1,7 @@
+## M10-T09 published checkpoint — 2026-10-06 01:58:11 +08:00
+
+IMPLEMENTED / VERIFIED / COMMITTED / PUSHED atd0b5a0814c2a87f5cd942f17cc630db2bf935d37. Normal origin/main push/fetch/live equality PASS/checked0;0/0/CLEAN/untracked0 at2026-10-06 01:55:41 +08:00. Repairs5/10 CLOSED; full98/1222 and187, all preservation/assets/unified PASS; final docs7 and full staged whitespace PASS; source/test/settings hashes unchanged. Following documentation-only receipt records actual publication and archived original whitespace evidence; its final HEAD becomes the T10 clean preflight baseline. Human visual PENDING; fresh independent review NOT COMPLETED; T10 awaits clean receipt, T11 NOT STARTED/deployment NOT RUN.
+
 ## M10-T09 repair5 affected verification — 2026-10-06 01:54:06 +08:00
 
 Affected documentation7 PASS/checked0; rerun original output in repair5-docs-rerun.zip, display whitespace normalized without result changes. Cumulative5/10, no source/test/settings change after complete technical PASS. Original25 failed/check streams independently byte-verified in repair5-verbatim-text.zip. Full staged whitespace and final frozen/scope review follow; commit/push still NOT RUN.
