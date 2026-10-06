@@ -1,0 +1,17 @@
+{
+  "start": "2026-10-06T17:58:12.079Z",
+  "finish": "2026-10-06T17:58:12.084Z",
+  "command": "m11-repair2-protection",
+  "args": [
+    "--",
+    "node",
+    ".git/overnight/audit.cjs"
+  ],
+  "log": ".git\\evidence-capture\\--label.txt",
+  "status": "BLOCKED",
+  "exitCode": -4058,
+  "signal": null,
+  "launchError": "spawn m11-repair2-protection ENOENT",
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

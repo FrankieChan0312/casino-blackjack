@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T17:33:06.575Z",
+  "finish": "2026-10-06T17:33:17.881Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "npm.cmd run typecheck; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm.cmd test -- tests/casino/platform.test.tsx tests/m10/playerCount.test.tsx tests/m10/dealerCleanup.test.tsx; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m11-focused.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -3917,3 +3917,48 @@ R1 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Annotated blackjack-v1.0 local/r
 ## Casino overnight — 2026-10-07 01:29:29 +08:00
 
 R1 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary commit b527969400ba35bb0eb645bdf1c1fc37cf07f9c5 published normally to origin/main, PASS/exit0; observed live=tracking=HEAD,0/0,CLEAN,untracked0 at 2026-10-07 01:29:29 +08:00. Tag blackjack-v1.0 still points exactly to original accepted79533bc22afb8571f8ff53e37cd95eaa6c65e5d8 locally/remotely. Full unchanged gate1240Vitest/245Chromium/independentM1–M8 PASS0; final documentation3files/9tests, audit269protectedinputs and privacy21files/0findings/0exclusions PASS0. Product diff EMPTY. Repairs1/10; first failure retained. Same-session review PASS; new fresh-session review NOT RUN. This documentation-only receipt records the primary publication; its own SHA is resolved by Git and rechecked after ordinary push.
+
+
+## Casino overnight — 2026-10-07 01:33:05 +08:00
+
+M11 IMPLEMENTED; verification NOT RUN; repairs0/10. Baseline main1b71e164d537a8f3d39635fd91875813ec3e1c7a observed2026-10-07 01:29:47 +08:00, local/tracking/live equal,CLEAN,0/0,untracked0. R1 completed/published. Thin native-link platform: /casino lobby, /blackjack accepted app with navigation footer, /baccarat explicit bootstrap; / retained unchanged legacy entry. Existing Blackjack modules/assets/dependencies/motion unchanged; controller constructed only on its route. [Contract](CASINO_PLATFORM.md). Focused tests, preserved full gate, docs/privacy/publication pending. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. New fresh-session review NOT RUN; recommendedGPT-6.1Sol/Max available, selectedruntime NOT VERIFIED.
+
+
+## Casino overnight — 2026-10-07 01:36:05 +08:00
+
+M11 repair1/10 — 2026-10-07 01:36:04 +08:00: first focused Chromium FAIL1/4PASS/native1. M11-B01 expected Start table after native Play Blackjack link, but preserved tests/browser/fixtures.ts:26 intentionally returns an already-started player table for null fixture; :36 provides player-setup with deferPlayerStart. URL navigation had succeeded. Falsifiable test-cause hypothesis: incorrect new-test fixture assumption, not routing/product failure. Evidence .git/evidence-capture/m11-browser-focused.{txt,json} and .git/overnight/m11-first-browser-artifacts (PNG/context/trace). Before changing test, record impact: retain all old assertions and product source; verify null-fixture ready controls, then separately deep-link/refresh player-setup and retain Start/Deal/formal-Dealer assertions. No threshold increase, skipped tests or changed old fixture. Affected focused browser + full gate pending.
+
+
+## Casino overnight — 2026-10-07 01:43:01 +08:00
+
+M11 final-copy verification progress at 2026-10-07 01:43:01 +08:00: full Vitest1245/1245 and typecheck/lint/domain/build/production-fixture guard PASS0. New five routing/browser cases PASS in current full run. Final desktop/tablet/mobile lobby screenshots inspected after player-facing engineering wording removed; navigation44px/focus and no horizontal overflow, formal portrait correct. Blackjack screenshot reviewed with only subordinate footer added on /blackjack; root legacy DOM unchanged. Full Chromium/independent preservation pending. Repairs1/10; human visual acceptance PENDING and fresh-session review NOT RUN.
+
+
+## Casino overnight — 2026-10-07 01:57:47 +08:00
+
+M11 repair2/10 — 2026-10-07 01:57:47 +08:00: first complete unified gate FAIL/native1. Full Vitest1244PASS/1FAIL and independent accepted M8 Vitest955PASS/1FAIL share REG-M8-096: frozen historical inventory expected66 files, observed67 because tests/casino/platform.test.tsx is outside original M9/RA1/PA1/M10 exclusions. Full Chromium250PASS; independent M1–M7 PASS; M8 Chromium NOT RUN after inventory failure. Earlier progress shorthand1245PASS was incorrect and is superseded by this exact native evidence. Falsifiable cause hypothesis: new suite discovery overlaps historical filesystem inventory; unchanged frozen assertions work when new Casino suite uses a separate explicit discovery root. Targeted fix: move ONLY new platform test to casino-tests/platform.test.tsx; add casino-tests includes to Vitest and TypeScript. All existing tests/includes/assertions/thresholds and production code retained. Full gate still discovers and executes every new Casino test; accepted suite66 count remains historical. Record Vite config exact additive delta separately from268 unchanged protected inputs. Verify focused new5 + original REG-M8-096, typecheck, then required complete gate; no skipped/disabled test or hidden registration. Evidence m11-unified native log/receipt retained,98 historical generated outputs restored exactly. Repair ledger R1/M11/M12/M13/M14 1/2/0/0/0, each /10.
+
+
+## Casino overnight — 2026-10-07 01:58:34 +08:00
+
+M11 repair2 affected verification PASS/native0: TypeScript plus9 tests (new Casino5 and unchanged M8 contract4). Protected audit PASS0:268 frozen inputs unchanged and exact additive Vitest/TypeScript discovery. Initial affected invocation was BLOCKED before tests (direct npm.cmd spawn EINVAL); corrected to native PowerShell file without changing product/tests. Collector CLI typo also BLOCKED/ENOENT before audit, then correctly invoked; original records retained. Repairs remain2/10 for two targeted test/discovery fixes; launch errors were not test results. Required complete exact-version gate starts next.
+
+
+## Casino overnight — 2026-10-07 02:01:47 +08:00
+
+M11 same-session review of routing/main/config/test diff and final screenshots: no unrelated refactor, dependency/art change or modified existing test assertion. Exact old controller/App construction preserved; scoped Casino CSS and subordinate /blackjack footer; / legacy DOM retained. New discovery root explicitly included in full Vitest/typecheck; fixed historical inventory66 remains independently executed. Human visual acceptance remains PENDING, fresh-session review NOT RUN. Complete repaired gate runtime checks now1245Vitest PASS0; Chromium/preservation pending.
+
+
+## Casino overnight — 2026-10-07 02:19:14 +08:00
+
+M11 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Final unchanged verify.ps1 PASS/native0:102files/1245Vitest,250Chromium, typecheck/lint/domain/build/fixture exclusion and independentM1–M8 preservation. Focused23unit and repaired5browser PASS0; accepted268protectedinputs unchanged plus exact additive test-discovery config, live retiredDealer0. /casino lobby, /blackjack accepted app/footer, /baccarat truthful bootstrap; / legacy preserved; lazy construction and no new dependencies/assets. Final1280/768/320 screenshots inspected. Repairs2/10 (new-test fixture assumption; explicit discovery boundary), failed PNG/context/trace and native output retained. Same-session review PASS; fresh-session review NOT RUN. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Final docs/privacy/publication pending.
+
+
+## Casino overnight — 2026-10-07 02:20:02 +08:00
+
+M11 final review/checks PASS0: docs3files/9tests; accepted268protectedinputs unchanged plus exact additive discovery delta; accepted main construction/lazy boundary; privacy285files/12traceentries/0findings, zero exclusions. All98 changed historical output variants archived and originals restored. Final mobile gallery reinspected: no horizontal overflow, legible/focus visible; human acceptance still PENDING. Complete task diff reviewed: only Casino source/new tests, main and discovery configuration plus authorized documentation/evidence. Native full gate0 at2026-10-07 02:19:01+08. Commit/push next; no runtime input changed since full gate.
+
+
+## Casino overnight — 2026-10-07 02:20:39 +08:00
+
+M11 repair3/10: staged whitespace check FAIL/native2 on three trailing-space lines in published first-failure log/context previews. Originals under .git/evidence-capture and .git/overnight/m11-first-browser-artifacts remain unchanged. Falsifiable cause: native diagnostic formatting is copied into Git text previews without per-line trailing-space normalization. Targeted documentation-only fix: remove trailing spaces on those two previews, retain exact raw files and SHA/byte receipts, disclose normalization. No runtime/tests/assertions/threshold changes. Affected whitespace/docs/privacy/audit checks rerun; full runtime gate remains exact and PASS0.

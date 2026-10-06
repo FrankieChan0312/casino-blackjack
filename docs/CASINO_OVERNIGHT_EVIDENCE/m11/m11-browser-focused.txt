@@ -1,0 +1,60 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/casino/platform.spec.ts
+
+[WebServer] (node:31524) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:28828) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\browser\casino\platform.spec.ts:4:1 › [M11-B01] lobby native navigation, deep links and refresh mount accepted Blackjack (22.6s)
+(node:28204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [chromium] › tests\browser\casino\platform.spec.ts:18:39 › [M11-B02-1280] responsive lobby and keyboard game links (1.4s)
+  ok 3 [chromium] › tests\browser\casino\platform.spec.ts:18:39 › [M11-B02-768] responsive lobby and keyboard game links (1.1s)
+  ok 4 [chromium] › tests\browser\casino\platform.spec.ts:18:39 › [M11-B02-320] responsive lobby and keyboard game links (1.1s)
+  ok 5 [chromium] › tests\browser\casino\platform.spec.ts:27:1 › [M11-B03] original root entry and unknown route stay explicit (1.4s)
+
+
+  1) [chromium] › tests\browser\casino\platform.spec.ts:4:1 › [M11-B01] lobby native navigation, deep links and refresh mount accepted Blackjack
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Start table', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Start table', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Start table', exact: true })
+
+
+       5 |   await page.goto('/casino'); await expect(page.getByRole('heading', { name: 'Casino Lobby', exact: true })).toBeVisible();
+       6 |   await page.getByRole('link', { name: 'Play Blackjack' }).click();
+    >  7 |   await expect(page).toHaveURL(/\/blackjack$/); await expect(page.getByRole('button', { name: 'Start table', exact: true })).toBeVisible();
+         |                                                                                                                              ^
+       8 |   await page.reload(); await expect(page.getByRole('button', { name: 'Start table', exact: true })).toBeVisible();
+       9 |   await page.getByRole('button', { name: 'Start table', exact: true }).click();
+      10 |   await expect(page.getByRole('button', { name: 'Deal', exact: true })).toBeEnabled();
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\casino\platform.spec.ts:7:126
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\casino-platform--M11-B01-l-d27d8-sh-mount-accepted-Blackjack-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\casino-platform--M11-B01-l-d27d8-sh-mount-accepted-Blackjack-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\casino-platform--M11-B01-l-d27d8-sh-mount-accepted-Blackjack-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\casino-platform--M11-B01-l-d27d8-sh-mount-accepted-Blackjack-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\browser\casino\platform.spec.ts:4:1 › [M11-B01] lobby native navigation, deep links and refresh mount accepted Blackjack
+  4 passed (32.0s)

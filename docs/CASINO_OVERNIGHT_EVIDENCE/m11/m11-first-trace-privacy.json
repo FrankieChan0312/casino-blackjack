@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T17:46:45.002Z",
+  "finish": "2026-10-06T17:46:45.906Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "& ./scripts/scan-evidence.ps1 -Roots @(\".git/overnight/m11-first-browser-artifacts\") -ResultPath \".git/evidence-capture/m11-first-trace-scan.json\"; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m11-first-trace-privacy.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T17:37:31.430Z",
+  "finish": "2026-10-06T17:55:31.087Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m11-unified.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-06T18:20:38.598Z",
+  "finish": "2026-10-06T18:20:38.666Z",
+  "command": "git",
+  "args": [
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "log": ".git\\evidence-capture\\m11-staged-whitespace-initial.txt",
+  "status": "FAIL",
+  "exitCode": 2,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

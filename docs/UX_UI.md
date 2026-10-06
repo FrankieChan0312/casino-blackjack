@@ -1,3 +1,7 @@
+## Authorized Casino Platform M11 amendment — 2026-10-07 01:33:04 +08:00
+
+The owner authorizes a thin platform around accepted Blackjack; [M11 scope, acceptance and approved integration](CASINO_PLATFORM.md) defines /casino lobby, /blackjack deep link and /baccarat bootstrap, preserving /. Existing Blackjack requirements and accepted behaviour remain protected. Baccarat engine/UI/presentation require sequential M12/M13/M14 gates; no multiplayer, deployment or M15. This requirement/design amendment is not verification or human visual acceptance. Earlier M10 planning statements below are historical; M10 remains ACCEPTED / CLOSED under its final owner closure.
+
 ## M10-PRE-T11 owner requirement and acceptance — 2026-10-06 10:43:11 +08:00
 
 M10-T07 / T08 / T09 / T10 HUMAN VISUAL ACCEPTANCE: **ACCEPTED**, explicitly recorded by the owner. Their dated PENDING records remain historical. [Legacy Dealer cleanup](M10_PRE_T11_DEALER_CLEANUP.md) is a new task, starting 0/10 with normal maximum10; closed T04/T06 counters remain unchanged. M10-T11 NOT STARTED; DEPLOYMENT NOT RUN.

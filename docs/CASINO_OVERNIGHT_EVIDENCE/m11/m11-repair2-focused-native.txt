@@ -1,0 +1,16 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests/platform.test.tsx tests/unit/m8Contract.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  2 passed (2)
+      Tests  9 passed (9)
+   Start at  01:58:12
+   Duration  1.24s (tests 48%, transform 26%, import 23%, setup 2%, worker 1%)

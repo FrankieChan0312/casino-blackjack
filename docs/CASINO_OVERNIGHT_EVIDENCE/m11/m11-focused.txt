@@ -1,0 +1,16 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/casino/platform.test.tsx tests/m10/playerCount.test.tsx tests/m10/dealerCleanup.test.tsx
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  3 passed (3)
+      Tests  23 passed (23)
+   Start at  01:33:15
+   Duration  2.65s (tests 50%, import 29%, transform 19%, setup 2%)
