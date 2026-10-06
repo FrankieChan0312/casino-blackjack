@@ -1,0 +1,6 @@
+Exception calling "Replace" with "3" argument(s): "The path is not of a legal form."
+At C:\Users\user\Documents\GitHub\casino-blackjack\.git\overnight\m13-repair7-restore.ps1:23 char:5
++     [IO.File]::Replace($replacement,$target,$null)
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ArgumentException

@@ -1,3 +1,7 @@
+## Authorized M13 playable Baccarat amendment — 2026-10-07 02:59:14 +08:00
+
+[Table scope/acceptance and approved presentation](BACCARAT_TABLE.md) connects M12 authority to a single-user Baccarat table with existing art/cards/visual vocabulary. This supersedes only M11 Baccarat bootstrap availability. Accepted Blackjack remains protected; static dealing now, M14 animation after clean technical gate. Human visual acceptance PENDING; no multiplayer/deployment/M15.
+
 ## Authorized Casino Platform M11 amendment — 2026-10-07 01:33:04 +08:00
 
 The owner authorizes a thin platform around accepted Blackjack; [M11 scope, acceptance and approved integration](CASINO_PLATFORM.md) defines /casino lobby, /blackjack deep link and /baccarat bootstrap, preserving /. Existing Blackjack requirements and accepted behaviour remain protected. Baccarat engine/UI/presentation require sequential M12/M13/M14 gates; no multiplayer, deployment or M15. This requirement/design amendment is not verification or human visual acceptance. Earlier M10 planning statements below are historical; M10 remains ACCEPTED / CLOSED under its final owner closure.

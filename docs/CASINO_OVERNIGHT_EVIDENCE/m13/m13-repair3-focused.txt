@@ -1,0 +1,37 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  6 passed (6)
+      Tests  120 passed (120)
+   Start at  03:16:09
+   Duration  1.39s (tests 41%, import 29%, transform 24%, setup 4%, worker 1%)
+
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 498 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.28 kB
+dist/assets/index-Bi3t69Qz.css   51.41 kB │ gzip:  10.15 kB
+dist/assets/index-BBekx6bY.js   392.78 kB │ gzip: 117.44 kB
+
+✓ built in 234ms
+PASS: production fixture boundary (2 browser output files)
+PASS: Baccarat controlled inventory/fixture query/diagnostic excluded from production (2 browser files)

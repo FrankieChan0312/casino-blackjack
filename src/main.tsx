@@ -4,8 +4,11 @@ import { createBrowserController } from './browser/controller.js';
 import { FORMAL_DEALER_CONFIGURATION } from './presentation/formalDealers.js';
 import { CasinoApp } from './casino/CasinoApp.js';
 import { casinoRoute } from './casino/routes.js';
+import { BaccaratTable } from './baccarat/BaccaratTable.js';
+import { createBaccaratController } from './baccarat/controller.js';
 import './ui/styles.css';
 import './casino/casino.css';
+import './baccarat/baccarat.css';
 
 async function blackjackEntry() {
 let controller;
@@ -22,6 +25,15 @@ return <App controller={controller} dealerConfiguration={dealerConfiguration}
   presentationMode={import.meta.env.MODE === 'e2e' && new URLSearchParams(location.search).get('motion') === 'IMMEDIATE' ? 'IMMEDIATE' : undefined}
   chooseCharacter={import.meta.env.MODE === 'e2e' ? () => 0 : undefined} />;
 }
+async function baccaratEntry() {
+  let controller;
+  if (import.meta.env.MODE === 'e2e') {
+    const { createBaccaratFixture } = await import('../tests/browser/baccaratFixtures.js');
+    controller = createBaccaratFixture(new URLSearchParams(location.search).get('baccaratFixture'));
+  } else controller = createBaccaratController();
+  return <BaccaratTable controller={controller} />;
+}
 const path = location.pathname;
 createRoot(document.getElementById('root')!).render(<CasinoApp path={path}
-  blackjack={casinoRoute(path) === 'BLACKJACK' ? await blackjackEntry() : undefined} />);
+  blackjack={casinoRoute(path) === 'BLACKJACK' ? await blackjackEntry() : undefined}
+  baccarat={casinoRoute(path) === 'BACCARAT' ? await baccaratEntry() : undefined} baccaratAvailable />);

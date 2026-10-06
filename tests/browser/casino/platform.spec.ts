@@ -17,9 +17,10 @@ test('[M11-B01] lobby native navigation, deep links and refresh mount accepted B
   await expect(page.getByRole('img', { name: 'Dealer: Celestine', exact: true })).toBeVisible();
   mkdirSync(evidence, { recursive: true }); await page.screenshot({ path: evidence + '/blackjack.png', fullPage: true });
   await page.getByRole('navigation', { name: 'Casino games' }).getByRole('link', { name: 'Casino Lobby' }).click();
-  await page.getByRole('link', { name: 'Preview Baccarat' }).click();
-  await expect(page).toHaveURL(/\/baccarat$/); await expect(page.getByRole('region', { name: 'Baccarat preview' })).toBeVisible();
-  await page.reload(); await expect(page.getByText('Player · Tie · Banker', { exact: true })).toBeVisible();
+  // M13 intentionally replaces the preview with a verified playable table.
+  await page.getByRole('link', { name: 'Play Baccarat' }).click();
+  await expect(page).toHaveURL(/\/baccarat$/); await expect(page.getByRole('region', { name: 'Baccarat table' })).toBeVisible();
+  await page.reload(); await expect(page.getByRole('button', { name: 'Place Bet · Player' })).toBeVisible();
 });
 for (const width of [1280, 768, 320]) test(`[M11-B02-${width}] responsive lobby and keyboard game links`, async ({ page }) => {
   await page.setViewportSize({ width, height: width === 768 ? 1024 : 900 }); await page.goto('/casino');

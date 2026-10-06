@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T19:13:06.021Z",
+  "finish": "2026-10-06T19:13:21.602Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "& npm.cmd run typecheck; if($LASTEXITCODE -ne 0){exit $LASTEXITCODE}; & npm.cmd run lint; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m13-repair2-input-check.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

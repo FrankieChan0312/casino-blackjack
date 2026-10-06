@@ -1,0 +1,26 @@
+{
+  "start": "2026-10-06T19:16:49.198Z",
+  "finish": "2026-10-06T19:16:49.248Z",
+  "command": "git",
+  "args": [
+    "diff",
+    "--exit-code",
+    "a9e40249f1b9d9d861cda97f36b74bfda774ad74",
+    "--",
+    "src/baccarat/domain",
+    "src/casino/routes.ts",
+    "src/casino/casino.css",
+    "casino-tests/platform.test.tsx",
+    "casino-tests/baccarat/engine.test.ts",
+    "casino-tests/baccarat/rules.test.ts",
+    "casino-tests/baccarat/validator.test.ts",
+    "casino-tests/baccarat/replay.test.ts",
+    "tsconfig.baccarat.json"
+  ],
+  "log": ".git\\evidence-capture\\m13-domain-boundary.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

@@ -1,3 +1,7 @@
+Casino Platform — Blackjack + playable Baccarat. `/casino` selects either game; `/blackjack` and preserved `/` open accepted Blackjack, `/baccarat` opens the single-user8-deck Punto Banco table. Player/Banker/Tie wagers use exact simulated credits, existing approved art, responsive cards and accessible controls. [Table contract and gallery](docs/BACCARAT_TABLE.md). Technical1360Vitest/267Chromium/unified preservation PASS0; Human Visual Acceptance PENDING. M14 animation is the next conditional stage; deployment NOT RUN.
+
+## Historical expansion checkpoints (superseded by current playable table)
+
 Baccarat M12: independent eight-deck Punto Banco engine, exact commission/accounting and deterministic replay; [rules and execution evidence](docs/BACCARAT_RULES.md). Technical gate1355Vitest/250Chromium PASS. The Baccarat table remains a development preview until M13.
 
 Casino Platform M11: `/casino` lobby, `/blackjack` and preserved `/` Blackjack entries, `/baccarat` development preview. [Platform contract and evidence](docs/CASINO_PLATFORM.md). Technical verification1245Vitest/250Chromium PASS; Human Visual Acceptance PENDING.

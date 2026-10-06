@@ -1,0 +1,6 @@
+Copy-Item : The requested operation cannot be performed on a file with a user-mapped section open.
+At C:\Users\user\Documents\GitHub\casino-blackjack\.git\overnight\m13-repair6-restore.ps1:21 char:5
++     Copy-Item -LiteralPath $original -Destination $target -Force
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Copy-Item], IOException
+    + FullyQualifiedErrorId : System.IO.IOException,Microsoft.PowerShell.Commands.CopyItemCommand

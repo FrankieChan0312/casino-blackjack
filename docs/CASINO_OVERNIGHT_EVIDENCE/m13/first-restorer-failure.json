@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-07 04:05:38 +08:00",
+  "wrapperStatus": "FAIL",
+  "wrapperExitCode": 1,
+  "nativeReceipt": ".git/evidence-capture/m13-repair5-unified.json",
+  "nativeStatus": "PASS",
+  "nativeExitCode": 0,
+  "error": {
+    "code": "UNKNOWN",
+    "errno": -4094,
+    "syscall": "open",
+    "path": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+    "source": ".git/overnight/gate.cjs:22"
+  },
+  "rootCause": "Exact transient/API/lock trigger not isolated",
+  "originalBackup": ".git/overnight/m13-repair5-unified/original/docs/M10_T01_EVIDENCE/five-cards-1280.png",
+  "generatedBackup": ".git/overnight/m13-repair5-unified/generated/docs/M10_T01_EVIDENCE/five-cards-1280.png"
+}

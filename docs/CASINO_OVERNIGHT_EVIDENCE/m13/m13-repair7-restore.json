@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T20:07:31.563Z",
+  "finish": "2026-10-06T20:07:32.455Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/overnight/m13-repair7-restore.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m13-repair7-restore.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

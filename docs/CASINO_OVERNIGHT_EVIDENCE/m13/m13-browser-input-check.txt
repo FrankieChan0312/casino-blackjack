@@ -1,0 +1,13 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\baccarat\nativeZoom.spec.ts
+  5:115  error  Unexpected empty object pattern  no-empty-pattern
+
+✖ 1 problem (1 error, 0 warnings)

@@ -1,0 +1,88 @@
+.baccarat-page { width: min(1120px, 100%); margin: 0 auto; padding: 16px; color: #f3e7c7; }
+.baccarat-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 0 8px 12px; }
+.baccarat-header h1 { font: 500 2.5rem Georgia, serif; margin: 4px 0; }
+.baccarat-header p { font-size: .75rem; color: #d8dfcf; }
+.baccarat-table { position: relative; padding: 20px 32px 28px; border: 6px solid #514532; border-radius: 48px; background: radial-gradient(ellipse at 50% 25%, #306c54, #184735 65%, #103227); box-shadow: inset 0 0 0 1px #d6c18b77, 0 15px 30px #0005; }
+.baccarat-dealer { position: relative; text-align: center; min-height: max(170px,10rem); }
+.baccarat-dealer .dealer-formal-portrait { width: 108px; height: 144px; object-fit: contain; }
+.baccarat-dealer p { margin: 0; font-size: .8rem; color: #d6c18b; }
+.baccarat-shoe { position: absolute; right: 10px; top: 45px; display: flex; flex-direction: column; align-items: center; color: #e6d3a7; }
+.baccarat-shoe > span { font-size: 3rem; transform: rotate(-8deg); }
+.baccarat-shoe small { font-size: .7rem; }
+.baccarat-status { text-align: center; min-height: 52px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; align-items: center; color: #f5dc98; }
+.baccarat-status strong { font: 600 1.15rem Georgia, serif; letter-spacing: .08em; }
+.baccarat-status span { font-size: .7rem; }
+.baccarat-hands { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.baccarat-hand { min-width: 0; text-align: center; padding: 14px; border: 1px solid #d6c18b44; border-radius: 22px; background: #102c2233; }
+.baccarat-hand h2 { margin: 0; font: 500 1.3rem Georgia, serif; letter-spacing: .12em; text-transform: uppercase; color: #e6d3a7; }
+.baccarat-total { min-height: 1.5em; margin: 8px 0 12px; font-weight: 650; }
+.baccarat-hand-cards { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; min-height: 6rem; }
+.baccarat-card-slot { flex: 0 0 auto; }
+.baccarat-page .card { flex-basis: 4rem; width: 4rem; height: 5.625rem; animation: none; }
+.baccarat-card-outline { width: 4rem; height: 5.625rem; border: 1px solid #d6c18b44; border-radius: 7px; }
+.baccarat-decision { font-size: .75rem; color: #d8dfcf; margin: 10px 0 0; min-height: 1.5em; }
+.baccarat-wager-zones { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin: 20px auto; max-width: 760px; }
+.baccarat-wager-zone { display: flex; flex-direction: column; align-items: center; min-width: 0; gap: 8px; border: 1px solid #d6c18b66; border-radius: 50% / 22%; padding: 10px 6px; }
+.baccarat-wager-zone button { background: transparent; color: #f3e7c7; border-color: transparent; width: 100%; padding: 8px; font: 600 1.05rem Georgia, serif; }
+.baccarat-wager-zone button[aria-pressed="true"] { border-color: #e6d3a7; background: #d6c18b22; }
+.baccarat-wager-zone button:disabled { color: #f3e7c7; opacity: 1; }
+.baccarat-wager-zone button small { display: block; font: 400 .7rem "Segoe UI", sans-serif; margin-top: 5px; color: #d6c18b; }
+.baccarat-wager-chip { font-size: .8rem; text-align: center; min-height: 28px; }
+.baccarat-wager-chip[data-wager-units]:not([data-wager-units="0"]) { border: 2px dashed #d6c18b; border-radius: 30px; padding: 4px 10px; background: #23564b; box-shadow: 0 3px 0 #b79a54; }
+.baccarat-wager-result { font-size: .7rem; color: #f5dc98; }
+.baccarat-local-hud { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px 32px; padding: 12px; border-top: 1px solid #d6c18b44; }
+.baccarat-human { display: flex; gap: 12px; align-items: center; }
+.baccarat-human img { width: 72px; height: 96px; object-fit: contain; }
+.baccarat-human strong, .baccarat-human span { display: block; }
+.baccarat-human span { font-size: .7rem; color: #d8dfcf; margin-top: 5px; }
+.baccarat-local-hud dl { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin: 0; }
+.baccarat-local-hud dl > div { text-align: center; }
+.baccarat-local-hud dt { font-size: .7rem; color: #d8dfcf; }
+.baccarat-local-hud dd { margin: 5px 0 0; font-size: 1.25rem; font-weight: 650; color: #f5dc98; }
+.baccarat-controls { text-align: center; max-width: 620px; margin: 0 auto; }
+.baccarat-selected { font-size: .85rem; }
+.baccarat-wager-entry { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.baccarat-wager-entry label { font-size: .8rem; }
+.baccarat-wager-entry input { width: 110px; max-width: 100%; color: #f3e7c7; background: #17392b; border: 1px solid #d6c18b; padding: 8px; }
+.baccarat-page button { background: #e6d3a7; color: #17392b; border-color: #d6c18b; }
+.baccarat-page button:disabled { background: #38453c; color: #c9d0c8; border-color: #6e7b6e; }
+.baccarat-page .baccarat-wager-zone button { color: #f3e7c7; background: #17392b; border-color: #d6c18b66; }
+.baccarat-page .baccarat-wager-zone button[aria-pressed="true"] { color: #fff1ce; background: #386048; border-color: #e6d3a7; }
+.baccarat-page .baccarat-wager-zone button:disabled { opacity: 1; }
+.baccarat-page button:focus-visible, .baccarat-page input:focus-visible, .baccarat-page select:focus-visible, .baccarat-page summary:focus-visible { outline: 3px solid #f5dc98; outline-offset: 4px; }
+.baccarat-chips, .baccarat-primary-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.baccarat-chips button { border: 2px dashed #d6c18b; border-radius: 50%; min-width: 44px; background: #23564b; color: #f3e7c7; padding: 8px; }
+.baccarat-chips button[aria-pressed="true"] { outline: 2px solid #f5dc98; outline-offset: 2px; }
+.baccarat-primary-controls button { min-width: 150px; min-height: 48px; }
+.baccarat-deal { box-shadow: 0 4px 0 #0e2118; }
+.baccarat-result { margin: 10px 0; padding: 12px; border: 1px solid #d6c18b66; border-radius: 12px; background: #102c2255; }
+.baccarat-result strong { font: 600 1.15rem Georgia, serif; color: #f5dc98; }
+.baccarat-result p { margin-bottom: 0; }
+.baccarat-error { border: 1px solid #f0c38c; color: #ffe0b8; padding: 10px; border-radius: 8px; }
+.baccarat-support { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 0 8px 12px; }
+.baccarat-support .panel { min-width: 0; background: transparent; border: 0; border-top: 1px solid #526359; border-radius: 0; padding: 12px 0; }
+.baccarat-support summary { min-height: 44px; cursor: pointer; display: flex; align-items: center; }
+.baccarat-support select { width: 100%; max-width: 100%; }
+@media (max-width: 600px) {
+  .baccarat-page { padding: 8px; }
+  .baccarat-header { align-items: flex-start; }
+  .baccarat-header h1 { font-size: 1.8rem; }
+  .baccarat-header p { font-size: .7rem; }
+  .baccarat-table { padding: 12px 10px 20px; border-width: 4px; border-radius: 28px; }
+  .baccarat-dealer { min-height: 0; }
+  .baccarat-dealer .dealer-formal-portrait { width: 96px; height: 128px; }
+  .baccarat-shoe { position: static; max-width: none; flex-direction: row; justify-content: center; gap: 8px; }
+  .baccarat-shoe > span { font-size: 2rem; }
+  .baccarat-hands { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .baccarat-hand { padding: 12px 8px; }
+  .baccarat-wager-zones { gap: 6px; grid-template-columns: repeat(auto-fit,minmax(min(100%,4.5rem),1fr)); }
+  .baccarat-wager-zone { padding: 8px 3px; border-radius: 18px; }
+  .baccarat-wager-zone button { font-size: .9rem; padding: 8px 3px; }
+  .baccarat-wager-chip { font-size: .7rem; }
+  .baccarat-wager-chip[data-wager-units]:not([data-wager-units="0"]) { padding: 4px 6px; }
+  .baccarat-local-hud { padding: 12px 0; gap: 12px; }
+  .baccarat-local-hud dl { gap: 12px; }
+  .baccarat-primary-controls button { min-width: 0; flex: 1 1 8rem; }
+  .baccarat-support { grid-template-columns: minmax(0,1fr); gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .baccarat-page *, .baccarat-page *::before, .baccarat-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

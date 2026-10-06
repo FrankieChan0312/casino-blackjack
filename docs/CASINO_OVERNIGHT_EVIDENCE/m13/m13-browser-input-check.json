@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T19:09:59.872Z",
+  "finish": "2026-10-06T19:10:16.280Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "& npm.cmd run typecheck; if($LASTEXITCODE -ne 0){exit $LASTEXITCODE}; & npm.cmd run lint; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m13-browser-input-check.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

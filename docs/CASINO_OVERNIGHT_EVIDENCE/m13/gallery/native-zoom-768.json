@@ -1,0 +1,14 @@
+{
+  "nativeApi": "chrome.tabs.setZoom",
+  "mode": "automatic",
+  "zoom": 2,
+  "before": {
+    "width": 750,
+    "dpr": 1
+  },
+  "after": {
+    "width": 375,
+    "dpr": 2,
+    "overflow": false
+  }
+}

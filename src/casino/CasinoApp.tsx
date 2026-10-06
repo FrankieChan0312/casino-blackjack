@@ -8,7 +8,7 @@ export function GameNavigation() {
     <a href="/casino">Casino Lobby</a><a href="/blackjack">Blackjack</a><a href="/baccarat">Baccarat</a>
   </nav>;
 }
-export function CasinoApp({ path, blackjack, baccarat }: { path: string; blackjack?: ReactNode; baccarat?: ReactNode }) {
+export function CasinoApp({ path, blackjack, baccarat, baccaratAvailable = false }: { path: string; blackjack?: ReactNode; baccarat?: ReactNode; baccaratAvailable?: boolean }) {
   const route = casinoRoute(path);
   if (route === 'BLACKJACK') return <>{blackjack}{path !== '/' && <GameNavigation />}</>;
   if (route === 'BACCARAT' && baccarat) return <>{baccarat}<GameNavigation /></>;
@@ -28,10 +28,10 @@ export function CasinoApp({ path, blackjack, baccarat }: { path: string; blackja
           <a className="casino-play" href="/blackjack">Play Blackjack <span aria-hidden="true">→</span></a>
         </article>
         <article className="casino-game-card"><p className="casino-game-symbol" aria-hidden="true">◇ ♣</p>
-          <p className="casino-availability">IN DEVELOPMENT</p><h2>Baccarat</h2>
-          <p>Player, Banker or Tie. A new Punto Banco table in the same casino universe.</p>
-          <p className="casino-game-detail">A new table is on its way</p>
-          <a className="casino-play casino-preview" href="/baccarat">Preview Baccarat <span aria-hidden="true">→</span></a>
+          <p className="casino-availability">{baccaratAvailable ? 'AVAILABLE' : 'IN DEVELOPMENT'}</p><h2>Baccarat</h2>
+          <p>Player, Banker or Tie. A Punto Banco table in the same casino universe.</p>
+          <p className="casino-game-detail">{baccaratAvailable ? 'Eight decks · Player 1:1 · Banker 0.95:1 · Tie 8:1' : 'A new table is on its way'}</p>
+          <a className={`casino-play${baccaratAvailable ? '' : ' casino-preview'}`} href="/baccarat">{baccaratAvailable ? 'Play Baccarat' : 'Preview Baccarat'} <span aria-hidden="true">→</span></a>
         </article>
       </section>
       <p className="casino-session-note">Each table opens a local simulation session. No account or payment is needed.</p>

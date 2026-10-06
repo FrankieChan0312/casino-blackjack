@@ -1,0 +1,35 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/baccarat tests/browser/casino/platform.spec.ts
+
+[WebServer] (node:29268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 22 tests using 1 worker
+
+(node:21584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-1280] actual automatic native browser zoom 200% (19.8s)
+  ok  2 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-768] actual automatic native browser zoom 200% (2.7s)
+  ok  3 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-640] actual automatic native browser zoom 200% (2.6s)
+  ok  4 [chromium] › tests\browser\baccarat\table.spec.ts:11:1 › [M13-B01] targets, atomic funding, clear, exact commission, next and repeat (5.1s)
+  ok  5 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-player-natural] authority cards, totals and result (1.4s)
+  ok  6 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-two-card] authority cards, totals and result (1.3s)
+  ok  7 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-player-third] authority cards, totals and result (1.4s)
+  ok  8 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-banker-third] authority cards, totals and result (1.3s)
+  ok  9 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-both-third] authority cards, totals and result (1.3s)
+  ok 10 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-banker-win] authority cards, totals and result (1.4s)
+  ok 11 [chromium] › tests\browser\baccarat\table.spec.ts:49:74 › [M13-B02-tie] authority cards, totals and result (1.4s)
+  ok 12 [chromium] › tests\browser\baccarat\table.spec.ts:57:1 › [M13-B03] tie returns both main stakes and pays Tie 8:1 (1.5s)
+  ok 13 [chromium] › tests\browser\baccarat\table.spec.ts:65:1 › [M13-B04] rejection preserves authority, insufficient repeat has no refill (1.7s)
+  ok 14 [chromium] › tests\browser\baccarat\table.spec.ts:74:1 › [M13-B05] approved identities, reserved Dealer, fallback and unchanged authority (2.2s)
+  ok 15 [chromium] › tests\browser\baccarat\table.spec.ts:87:39 › [M13-B06-1280] responsive, keyboard, touch and 200% text (2.3s)
+  ok 16 [chromium] › tests\browser\baccarat\table.spec.ts:87:39 › [M13-B06-768] responsive, keyboard, touch and 200% text (2.0s)
+  ok 17 [chromium] › tests\browser\baccarat\table.spec.ts:87:39 › [M13-B06-320] responsive, keyboard, touch and 200% text (1.5s)
+  ok 18 [chromium] › tests\browser\casino\platform.spec.ts:4:1 › [M11-B01] lobby native navigation, deep links and refresh mount accepted Blackjack (3.9s)
+  ok 19 [chromium] › tests\browser\casino\platform.spec.ts:25:39 › [M11-B02-1280] responsive lobby and keyboard game links (1.4s)
+  ok 20 [chromium] › tests\browser\casino\platform.spec.ts:25:39 › [M11-B02-768] responsive lobby and keyboard game links (1.2s)
+  ok 21 [chromium] › tests\browser\casino\platform.spec.ts:25:39 › [M11-B02-320] responsive lobby and keyboard game links (1.1s)
+  ok 22 [chromium] › tests\browser\casino\platform.spec.ts:34:1 › [M11-B03] original root entry and unknown route stay explicit (1.5s)
+
+  22 passed (1.1m)

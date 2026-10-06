@@ -4007,3 +4007,68 @@ M12 final source/test/contract/evidence diff reviewed; only new bounded Baccarat
 ## Casino overnight — 2026-10-07 02:56:13 +08:00
 
 M12 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary commit 581c4a368a67b5cab70166f0d9064ea7f9ce941c normally pushed origin/main PASS0; observed local=tracking=live,CLEAN/untracked0/0/0 at 2026-10-07 02:56:13 +08:00. Full exact unchanged verify.ps11355Vitest/250Chromium/independentM1–M8 PASS/native0; focused110 + headless compile/Lint PASS0, literal independent80/8/36/10000 validator and actual multi-shoe replay PASS. Whole-credit stakes use integer hundredths for exact5% commission; no rounding. Once-only commit/refund, atomic independent targets, stale/duplicate rejection, private future shoe, deterministic command replay and timestamp/visual-free fingerprint verified. Protected268acceptedinputs/exact Casino discovery/main boundaries, final docs9 and privacy PASS0. Repairs2/10; all failed attempts retained. Same-session review PASS; fresh-session review NOT RUN. No UI/animation yet; M13/M14 NOT STARTED pending this documentation receipt normal publication and clean parity. Human visual PENDING; Blackjack ACCEPTED/CLOSED/FROZEN; M15/multiplayer NOT STARTED; deployment NOT RUN. This receipt records primary SHA; its own SHA is resolved by Git after normal push.
+
+
+## Casino overnight — 2026-10-07 02:59:15 +08:00
+
+M12 fully published: primary581c4a368a67b5cab70166f0d9064ea7f9ce941c, receipt a9e40249f1b9d9d861cda97f36b74bfda774ad74, normal origin/main push PASS0; CLEAN/local=tracking=live/untracked0/0/0 at2026-10-07 02:56:32+08. M13 STARTED / NOT IMPLEMENTED / verification NOT RUN; repairs0/10. [Table contract](BACCARAT_TABLE.md) defines engine-connected wager/deal/result/next/repeat, same approved art/cards/visual language, game-appropriate two-hand layout and16 captures. Native200% zoom method confirmed from official Playwright/Chrome docs; actual execution NOT RUN. No dependency/new art or Blackjack redesign. M14 NOT STARTED. Repair ledger1/3/2/0/0 each /10; human visual PENDING/fresh-session review NOT RUN; M15/multiplayer NOT STARTED/deployment NOT RUN.
+
+
+## Casino overnight — 2026-10-07 03:10:33 +08:00
+
+M13 repair1/10: browser-input typecheck PASS; Lint FAIL native1 because new nativeZoom spec used an empty fixture destructuring parameter (no-empty-pattern). Browser execution NOT RUN. Hypothesis: name/assert the actual browserName fixture without weakening lint. First failure retained m13-browser-input-check. Targeted test-only fix -> affected typecheck/Lint and first focused browser run.
+
+
+## Casino overnight — 2026-10-07 03:13:03 +08:00
+
+M13 repair2/10: first Chromium focused17PASS/5FAIL native1. Three nativeZoom tests duplicate Playwright automatic tracing; Dealer fallback route glob does not match nested formal.png; mobile320 fails actual200% text no-overflow. Visual inspection also confirms general button CSS overrides wager labels/marking contrast. Hypotheses: use built-in retain-on-failure trace, intercept exact formal image route, wrap enlarged header and scale/fit card/target grid in rem, restore scoped felt target colors after generic buttons. First failed screenshots/contexts/traces and original gallery preserved in .git/overnight/m13-first-*; affected type/Lint/browser verification follows. No test threshold/accepted module changes.
+
+
+## Casino overnight — 2026-10-07 03:15:48 +08:00
+
+M13 repair3/10: repair2 focused Chromium22PASS/native0 including real native zoom API2/viewport half/dPR2x and all widths/text. Visual review FAIL: mobile200% shoe caption overlaps status despite no horizontal overflow; Repeat Bet word breaks; native zoom fullPage capture is clipped despite valid renderer geometry. Hypothesis: mobile shoe participates in normal flow, rem-sized primary buttons wrap whole; native viewport screenshot uses physical browser widget rather than fullPage clip. Add measured shoe/status non-overlap at200% text, native viewport evidence plus required alternate-avatar/lobby captures. Prior gallery retained m13-repair2-visual; no weakening of overflow/zoom assertions. Human visual acceptance remains PENDING.
+
+
+## Casino overnight — 2026-10-07 03:18:50 +08:00
+
+M13 repair4/10: repair3 unit120/type/headless/Lint/build/fixture guards PASS0; browser20PASS/2FAIL native1. Stronger shoe/status assertion reveals same enlarged-font overlap at1280/768, mobile320 fixed. Native viewport screenshot is blank because Playwright screenshot clip coordinates mismatch native zoom, while zoom API/geometry remain PASS. Hypothesis: desktop Dealer min-height max(170px,10rem) accommodates enlarged caption; direct CDP Page.captureScreenshot clip uses Page.getLayoutMetrics contentSize in DIP, not CSS coords. CDP used only for capture, never zoom/emulation. Assert captured PNG width against DIP clip; native zoom2/renderer half/2x/no-overflow assertions retained. All new first failures/gallery retained; targeted type/Lint/browser follows.
+
+
+## Casino overnight — 2026-10-07 03:22:43 +08:00
+
+M13 repair4 focused general TypeScript/Lint and22Chromium PASS/native0. Real2x native zoom API/renderer geometry, complete DIP screenshots and200% text shoe/status non-overlap at1280/768/320 PASS. Current gallery reviewed: same formal Dealer/avatar/card/felt language; alternate Alaric, mobile enlarged text and full native captures now readable. All four repairs preserve original failures; cumulative4/10. Full unchanged scripts/verify.ps1 started at2026-10-07 03:21+08; all1360 Vitest tests passed, full267 Chromium IN PROGRESS, independent preservation pending. No executable input will change while gate runs. Human visual acceptance PENDING/fresh-session review NOT RUN/M14 NOT STARTED.
+
+
+## Casino overnight — 2026-10-07 03:41:14 +08:00
+
+M13 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Exact M12 engine/Blackjack construction preserved. Engine-connected Player/Tie/Banker wagers, exact5% commission, Clear/Deal/settlement/Next/atomic Repeat/insufficient balances, approved Celestine/local/alternate Avatar and formal fallback. Focused120/general/headless/Lint/build/both fixture guards PASS0; focused22Chromium PASS0; full unchanged verify.ps1 PASS/native0:107files/1360Vitest,267Chromium and independentM1–M8 preservation.1280/768/320 keyboard/focus44px,200% text/no overlap/no overflow and actual automatic Chrome200% zoom verified (API2, viewport half, dPR2x), required16+ images captured/inspected. Repairs4/10: lint parameter; trace/route/mobile text/contrast; stronger visual repair; enlarged desktop Dealer/DIP capture. Native failed logs/PNG/trace and original galleries retained; no assertion or threshold weakened. Same-session review PASS; fresh-session review NOT RUN. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Final docs/privacy/assets/publication pending; M14 NOT STARTED.
+
+
+## Casino overnight — 2026-10-07 03:42:54 +08:00
+
+M13 repair5/10: first full gate PASS1360/267/native0 and final docs/privacy/audits PASS0. Before commit git diff --cached --check FAIL2: tests/browser/baccarat/nativeZoom.spec.ts:45 new blank line at EOF, originally appended by Set-Content. Commit NOT CREATED / push NOT RUN. Hypothesis: remove only extra terminal blank line; preserve all executable test statements. Exact test file changed after validation, so affected type/Lint/native cases and required final unified gate will rerun; first complete PASS receipt retained. No threshold/assertion/product change.
+
+
+## Casino overnight — 2026-10-07 03:44:39 +08:00
+
+M13 IMPLEMENTED; repairs5/10; exact test EOF correction staged-whitespace/typecheck/Lint/3nativeZoom PASS0. First unchanged unified1360Vitest/267Chromium/independentM1–M8 PASS0 preserved. Final exact-version unchanged unified gate IN PROGRESS after EOF-only test correction; commit/push NOT RUN, M14 NOT STARTED. Human visual PENDING/fresh-session review NOT RUN. Ledger1/3/2/5/0 each /10. Required scope/acceptance unchanged in BACCARAT_TABLE.md; no product/assertion/threshold changes.
+
+
+## Casino overnight — 2026-10-07 04:05:37 +08:00
+
+M13 repair6/10: final exact native verify.ps1 PASS0 (1360Vitest/267Chromium/independent preservation), but task-only output-restorer FAIL1 on fs.writeFileSync open docs/M10_T01_EVIDENCE/five-cards-1280.png UNKNOWN errno-4094. First generated file archived before failure; all320 original backups exist. Target is writable Archive/non-readonly, generated886823bytes; C free209205288960bytes. Exact transient/API/lock trigger not isolated. Hypothesis: Windows-native copy from preserved backup restores exact file without Node write-open path; hash verification on every recorded original and archive all known generated variants. Native script success distinct from failed wrapper; no commit/push. Fix ignored helper only, no executable product/tests changes after final verification.
+
+
+## Casino overnight — 2026-10-07 04:07:31 +08:00
+
+M13 repair7/10: repair6 native Copy-Item FAIL1 explicitly reports user-mapped section open. Subsequent read-only SHA proves first target already restored exactly3453eac0..., with generated7edb9e49... preserved. New evidence: mapped target causes overwrite/truncate error; C capacity/attributes are fine. Hypothesis: preserve generated bytes then replace differing target inode with copied original using File.Replace; skip already exact originals, verify all320. No application terminated or user data discarded; no product/tests changed. Native verify.ps1 remains final PASS0; wrapper restoration must independently PASS before publishing.
+
+
+## Casino overnight — 2026-10-07 04:08:16 +08:00
+
+M13 repair8/10: repair7 FAIL1 ArgumentException path not legal at File.Replace third null backup; PowerShell5 null string binding is suspected before ReplaceFile executes. Several previous originals are now hash-exact; remaining diff starts four-leaves-768. Hypothesis: explicit unique absolute displaced-file backup avoids null binding, preserves old generated inode as well as its archive. All paths confined to repo/.git evidence; verify entire320 original set, archive expected generated outputs. No runtime/test changes; native final full PASS0 remains distinct from output-recovery failure.
+
+
+## Casino overnight — 2026-10-07 04:09:44 +08:00
+
+M13 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Exact M12 engine/Blackjack construction preserved. Engine-connected Player/Tie/Banker wagers, exact5% commission, Clear/Deal/settlement/Next/atomic Repeat/insufficient balances, approved Celestine/local/alternate Avatar and formal fallback. Focused120/general/headless/Lint/build/both fixture guards PASS0; focused22Chromium PASS0; full unchanged verify.ps1 PASS/native0:107files/1360Vitest,267Chromium and independentM1–M8 preservation.1280/768/320 keyboard/focus44px,200% text/no overlap/no overflow and actual automatic Chrome200% zoom verified (API2, viewport half, dPR2x), required16+ images captured/inspected. Repairs8/10: lint parameter; trace/route/mobile text/contrast; stronger visual repair; enlarged desktop Dealer/DIP capture; extra test EOF (affected and full final gates rerun); mapped-PNG restoration/nullable backup binding/atomic explicit-backup recovery. Native full0 remains distinct from failed wrapper1, then restoration PASS0 with all320 original hashes verified. Native failed logs/PNG/trace and original galleries retained; no assertion or threshold weakened. Same-session review PASS; fresh-session review NOT RUN. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Final docs/privacy/assets/publication pending; M14 NOT STARTED.

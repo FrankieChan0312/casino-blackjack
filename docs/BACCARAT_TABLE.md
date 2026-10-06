@@ -1,0 +1,41 @@
+# M13 — Baccarat playable table
+
+Owner-authorized overnight stage. Baseline main `a9e40249f1b9d9d861cda97f36b74bfda774ad74`, local/tracking/live equal, CLEAN, untracked0,0/0 at2026-10-07 02:56:32+08. M12 primary581c4a368a67b5cab70166f0d9064ea7f9ce941c; receipt a9e4024; focused110/full1355Vitest/250Chromium/independent preservation PASS0, repairs2/10. Blackjack v1.0 remains accepted/frozen.
+
+## Contract
+
+- Task ID/milestone M13; initial repairs0/10, normal maximum10, no exception/reset.
+- Recommended GPT-6.1 Sol / Max; client metadata availability confirmed; actual selected runtime NOT VERIFIED.
+- Scope: engine-connected single-user Baccarat, native lobby/table routing, three wager zones, explicit funding/clear/deal/result/next/repeat, approved local avatar/formal Dealer, desktop/tablet/mobile/accessibility and required visual evidence.
+- Non-goals: Hit/Stand or Blackjack seat geometry, decorative bots, new art/dependencies, animation polish before M14, side bets/accounts/network/persistence/multiplayer/deployment/M15.
+- Acceptance: exact M12 authority and cent values; all natural/third-card/outcome/target flows, insufficient credits/atomic repeat, playable navigation/refresh, approved art/fallback with zero retired Dealer,1280/768/320 without overflow, keyboard/focus/touch,200% text and native200% zoom; all required16 captures and engine/preservation/full gate PASS0; documented/committed/normal main push/CLEAN/live0/0/untracked0 before M14. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Fresh-session review NOT RUN.
+- Step -> verification: bounded controller -> engine/atomic funding/settlement/public boundary tests; table and existing art -> examples/browser gallery; responsive/accessibility -> widths/text/keyboard/native zoom; publication -> complete unified gate/docs/privacy/assets/diff and Git equality.
+- Stop: authority conflict, unknown overlap, missing required tool, sensitive-data handling, unauthorized/destructive operation, repeated no-progress repair or10 failed repairs. Do not accept visuals on the owner's behalf.
+
+## Approved UI and controller
+
+Reuse unchanged DealerAvatar, approved formal pool/identity assignment, character registry/player PNGs, Cards, accepted styles/focus and native links. A single local human HUD has their chosen avatar; no other bettors are invented. Default Roland with Celestine reserved for Dealer; avatar changes retain Dealer and consume no gameplay RNG. Requested portrait -> approved generic formal PNG -> neutral text fallback is retained.
+
+Baccarat has a central Dealer/shoe, paired Player and Banker hand zones, concise totals/natural/result, and Player/Tie/Banker wager zones with restrained1:1/8:1/0.95:1 markings. The local avatar/credit HUD and controls sit below the cards. Mobile intentionally stacks the two hands; no seat arc is copied. Scoped baccarat-* CSS cannot change Blackjack selectors. No formulas or implementation vocabulary appears in the player flow.
+
+Selecting a target or denomination is presentation-only. Place Bet sets that target's exact whole-credit amount through M12; simultaneous stakes reserve authoritative exposure. Clear Bets refunds all pre-round exposure. Deal resolves and commits M12 first; cards/result/returned/net and current available/reserved/pending are then visible. Deal Again opens an empty betting round; Repeat Bet atomically funds all previous stakes, retaining balance/shoe. Invalid/insufficient inputs show the engine rejection without mutation or refill. Integrity interruption is distinct and supports the engine's explicit VOID/refund. Static immediate dealing is appropriate here; M14 owns the observational animation.
+
+The production main entry constructs only the selected game's controller. Existing Blackjack construction/App props and all accepted modules stay unchanged. A mode-e2e-only controlled Baccarat fixture import is excluded from production; separate guard checks that exclusion. CasinoApp retains its default bootstrap contract when no playable game is supplied; the integrated main advertises AVAILABLE / Play Baccarat. Existing new M11 browser registrations are updated only where the bootstrap is intentionally replaced by the now-playable table; all Blackjack assertions remain.
+
+## Native zoom verification
+
+Use installed Playwright Chromium persistent isolated test profiles and a temporary localhost-only MV3 extension. Browser `tabs.setZoom(2)` with automatic scaling is verified by `tabs.getZoom()` and actual renderer viewport/devicePixelRatio; no CSS zoom or CDP page-scale substitutes.200% text is separately tested at all three widths. No personal Chrome profile is read or changed. [Playwright extension/headless support](https://playwright.dev/docs/chrome-extensions); [native Chrome zoom API](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-setZoom). Execution remains NOT RUN until native evidence exists.
+
+Native zoom evidence uses [CDP screenshot capture](https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-captureScreenshot) with the real layout's DIP content bounds, avoiding Playwright's native-zoom CSS/DIP clip mismatch. The capture connection sends only layout inspection and screenshot commands; browser-native zoom remains untouched. Renderer/API readback and PNG width are independently asserted.
+
+## Verified checkpoint — 2026-10-07 03:41:13 +08:00
+
+M13 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Exact M12 engine/Blackjack construction preserved. Engine-connected Player/Tie/Banker wagers, exact5% commission, Clear/Deal/settlement/Next/atomic Repeat/insufficient balances, approved Celestine/local/alternate Avatar and formal fallback. Focused120/general/headless/Lint/build/both fixture guards PASS0; focused22Chromium PASS0; full unchanged verify.ps1 PASS/native0:107files/1360Vitest,267Chromium and independentM1–M8 preservation.1280/768/320 keyboard/focus44px,200% text/no overlap/no overflow and actual automatic Chrome200% zoom verified (API2, viewport half, dPR2x), required16+ images captured/inspected. Repairs4/10: lint parameter; trace/route/mobile text/contrast; stronger visual repair; enlarged desktop Dealer/DIP capture. Native failed logs/PNG/trace and original galleries retained; no assertion or threshold weakened. Same-session review PASS; fresh-session review NOT RUN. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Final docs/privacy/assets/publication pending; M14 NOT STARTED.
+
+[Native full receipt](CASINO_OVERNIGHT_EVIDENCE/m13/m13-unified.json); [executed gallery](CASINO_OVERNIGHT_EVIDENCE/m13/gallery/index.md).
+
+## Verified checkpoint — 2026-10-07 04:09:43 +08:00
+
+M13 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Exact M12 engine/Blackjack construction preserved. Engine-connected Player/Tie/Banker wagers, exact5% commission, Clear/Deal/settlement/Next/atomic Repeat/insufficient balances, approved Celestine/local/alternate Avatar and formal fallback. Focused120/general/headless/Lint/build/both fixture guards PASS0; focused22Chromium PASS0; full unchanged verify.ps1 PASS/native0:107files/1360Vitest,267Chromium and independentM1–M8 preservation.1280/768/320 keyboard/focus44px,200% text/no overlap/no overflow and actual automatic Chrome200% zoom verified (API2, viewport half, dPR2x), required16+ images captured/inspected. Repairs8/10: lint parameter; trace/route/mobile text/contrast; stronger visual repair; enlarged desktop Dealer/DIP capture; extra test EOF (affected and full final gates rerun); mapped-PNG restoration/nullable backup binding/atomic explicit-backup recovery. Native full0 remains distinct from failed wrapper1, then restoration PASS0 with all320 original hashes verified. Native failed logs/PNG/trace and original galleries retained; no assertion or threshold weakened. Same-session review PASS; fresh-session review NOT RUN. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Final docs/privacy/assets/publication pending; M14 NOT STARTED.
+
+[Native full receipt](CASINO_OVERNIGHT_EVIDENCE/m13/m13-repair5-unified.json); [executed gallery](CASINO_OVERNIGHT_EVIDENCE/m13/gallery/index.md).

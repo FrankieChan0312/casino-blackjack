@@ -1,3 +1,7 @@
+## Authorized M13 playable Baccarat amendment — 2026-10-07 02:59:14 +08:00
+
+[Table scope/acceptance and approved presentation](BACCARAT_TABLE.md) connects M12 authority to a single-user Baccarat table with existing art/cards/visual vocabulary. This supersedes only M11 Baccarat bootstrap availability. Accepted Blackjack remains protected; static dealing now, M14 animation after clean technical gate. Human visual acceptance PENDING; no multiplayer/deployment/M15.
+
 ## Authorized M12 Baccarat amendment — 2026-10-07 02:22:50 +08:00
 
 [Baccarat rules, bounded scope/acceptance and approved design](BACCARAT_RULES.md) implement owner-supplied eight-deck Punto Banco separately from protected Blackjack. Existing Blackjack requirements remain unchanged. M13/M14 require sequential gates; no side bets/multiplayer/deployment/M15.
