@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T21:14:33.173Z",
+  "finish": "2026-10-06T21:14:37.234Z",
+  "command": "powershell",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "npm.cmd test -- tests/m9/documentation.test.ts tests/unit/m8Contract.test.ts tests/unit/portfolio.test.ts; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m14-receipt-docs.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

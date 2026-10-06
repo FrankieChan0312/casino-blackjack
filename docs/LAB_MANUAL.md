@@ -2254,3 +2254,8 @@ A bounded Baccarat controller resolves and commits before notifying UI, preservi
 ## Observational Baccarat presentation — 2026-10-07 05:06:07 +08:00
 
 Resolve and commit authority before emitting public facts. Existing timeline epochs and generations govern only visual completion; card totals come from the last delivered authoritative draw record, never duplicate scoring. Integer-hundredth settled chip amounts require their own formatter while preserving shared tokens and Motion. Reduced/skip/unmount/resize cannot issue gameplay commands or change replay/digest. Native full-page screenshot helpers can resize and correctly trigger cleanup, so paused animation evidence uses capture without viewport changes and asserts unchanged overlay count. Fixed fresh browser measurements retain every sample and every required run; a fast median cannot excuse a threshold failure. Technical gates and normal publication remain separate from pending owner visual acceptance and unavailable fresh-session review.
+
+
+## Overnight delivery boundary — 2026-10-07 05:14:08 +08:00
+
+Technical R1-M14 publication complete at primary e290838a008e725e43e3a1f58d5366a080eac8dc. Mechanical verification, independent preservation and exact-version hashes establish technical evidence; they do not accept new visuals. Owner acceptance remains pending and genuinely fresh-session review was unavailable/NOT RUN. Fixed native timing records retain all samples, first failed captures and diagnosis. Stop before M15; no multiplayer/deployment.
