@@ -1,3 +1,9 @@
+## M10-PRE-T11 owner requirement and acceptance — 2026-10-06 10:43:11 +08:00
+
+M10-T07 / T08 / T09 / T10 HUMAN VISUAL ACCEPTANCE: **ACCEPTED**, explicitly recorded by the owner. Their dated PENDING records remain historical. [Legacy Dealer cleanup](M10_PRE_T11_DEALER_CLEANUP.md) is a new task, starting 0/10 with normal maximum10; closed T04/T06 counters remain unchanged. M10-T11 NOT STARTED; DEPLOYMENT NOT RUN.
+
+The old cartoon Dealer is retired from all live setup, active, exhausted-pool, unconfigured, failed-image, replay, quiet/immediate and responsive paths. Keep the exact five approved roster identities, deterministic session ordinal and seated exclusion. Before safe session resolution, or with no eligible/available roster portrait, use the owner-approved **non-roster generic formal portrait**; requested image failure -> generic PNG -> neutral non-image placeholder. No new identity, seat, RNG, replay/digest state, fake preview session, animation or timing change. This supersedes only the earlier generic illustration depiction; historical evidence and computer guest drawings stay intact. Implementation/verification of this new task initially NOT RUN; owner acceptance of this task PENDING.
+
 ## M10-T04B approved formal pool amendment — 2026-10-05 11:29:53 +08:00
 
 The owner supplies and approves the five-pair Dealer pack in [M10-T04B](M10_T04B.md), superseding the earlier absent-asset prerequisite and canonical-ID production fallback policy. The production registry is exactly noble_female/Celestine, knight_female/Seraphine, mage_female/Nyra, elf_female/Elaria, halforc_female/Vesha. Sources1086x1448 and runtime240x320 are transparent3:4 PNGs copied unchanged; original MANIFEST.json and separate import/provenance receipt retained. No PA1 artwork/provenance is rewritten and no generation/resizing is performed.

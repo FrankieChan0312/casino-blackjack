@@ -10,7 +10,7 @@ const hidden: Dealer = { upcard: { rank: '10', suit: 'clubs' }, visibleCards: [{
 
 it('[M10A-D01] the idle workstation has an accessible temporary character, card destination, shoe origin and exact rules', () => {
   const html = renderToStaticMarkup(<DealerZone dealer={undefined} />);
-  for (const text of ['aria-label="Dealer"', 'Original illustrated female dealer in professional attire', 'aria-label="Dealer hand"',
+  for (const text of ['aria-label="Dealer"', 'Dealer: generic formal portrait', 'aria-label="Dealer hand"',
     'Waiting for the initial deal', 'data-anchor="dealer-shoe"', 'aria-label="Shoe and deal origin"', '6 decks', 'BLACKJACK PAYS 3:2', 'DEALER STANDS ON ALL 17']) expect(html).toContain(text);
   expect(html).not.toContain('Hidden dealer card'); expect(html).not.toContain('Total:');
   expect(html).not.toMatch(/bankroll|wager|character-id|onClick/);

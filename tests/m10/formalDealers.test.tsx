@@ -89,7 +89,7 @@ it('[M10-F07] every static hook uses the same single portrait per identity; null
     expect(html).toContain(`alt="Dealer: ${characters.find(c=>c.id===asset.characterId)!.name}"`);expect(html).not.toContain('formal casino attire');
   }
   for(const id of [null,'noble_female'] as const){const html=renderToStaticMarkup(<DealerZone dealer={undefined} presentation={dealerPresentation(id,'IDLE')} />);
-    expect(html).toContain('temporary-fallback');expect(html).toContain('Original illustrated female dealer');expect(html).not.toContain('<img');}
+    expect(html).toContain('generic-formal');expect(html).toContain('Dealer: generic formal portrait');expect(html).toContain('src="/characters/dealer/generic_female/formal.png"'); expect(html).not.toContain('person-dealer');}
   const main=readFileSync('src/main.tsx','utf8');expect(main).toContain('FORMAL_DEALER_CONFIGURATION');
   expect(readFileSync('src/presentation/formalDealers.ts','utf8')).not.toMatch(/Math\.random|setTimeout|setInterval|motion|dispatch\s*\(/);
 });

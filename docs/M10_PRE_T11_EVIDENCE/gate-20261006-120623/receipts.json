@@ -1,0 +1,82 @@
+﻿[
+    {
+        "exitCode":  0,
+        "stage":  "units",
+        "finish":  "2026-10-06 12:06:45 +08:00",
+        "start":  "2026-10-06 12:06:25 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\units.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "chromium",
+        "finish":  "2026-10-06 12:24:20 +08:00",
+        "start":  "2026-10-06 12:06:46 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\chromium.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "preservation",
+        "finish":  "2026-10-06 12:27:32 +08:00",
+        "start":  "2026-10-06 12:24:26 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\preservation.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "current-preservation",
+        "finish":  "2026-10-06 12:27:50 +08:00",
+        "start":  "2026-10-06 12:27:33 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\current-preservation.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "live-guard",
+        "finish":  "2026-10-06 12:27:51 +08:00",
+        "start":  "2026-10-06 12:27:51 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\live-guard.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "dealer-assets",
+        "finish":  "2026-10-06 12:27:53 +08:00",
+        "start":  "2026-10-06 12:27:52 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\dealer-assets.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "generic-assets",
+        "finish":  "2026-10-06 12:27:54 +08:00",
+        "start":  "2026-10-06 12:27:54 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\generic-assets.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "generic-reproduction",
+        "finish":  "2026-10-06 12:27:57 +08:00",
+        "start":  "2026-10-06 12:27:55 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\generic-reproduction.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "player-assets",
+        "finish":  "2026-10-06 12:28:07 +08:00",
+        "start":  "2026-10-06 12:27:57 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\player-assets.txt"
+    },
+    {
+        "exitCode":  0,
+        "stage":  "unified",
+        "finish":  "2026-10-06 12:51:50 +08:00",
+        "start":  "2026-10-06 12:28:08 +08:00",
+        "status":  "PASS",
+        "log":  "docs\\M10_PRE_T11_EVIDENCE\\gate-20261006-120623\\unified.txt"
+    }
+]

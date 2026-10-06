@@ -1,0 +1,44 @@
+{
+  "originalCompleteStagedCheck": {
+    "affectedRawEvidenceFiles": [
+      "docs/M10_PRE_T11_EVIDENCE/final-documentation-check.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-a8275-shows-the-supplied-portrait-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-browser-repair2.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-browser.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-focused.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-lint-repair2.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-lint.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-typecheck.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/pre-t11-units-repair4.txt",
+      "docs/M10_PRE_T11_EVIDENCE/focused/repair2-browser-artifacts/m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/repair2-browser-artifacts/m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/repair5-browser-artifacts/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/focused/repair5-browser.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/chromium-browser-artifacts/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/chromium.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/units.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-111647/chromium.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-111647/units.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-114225/chromium-browser-artifacts/m10a-t09--M10A-T09-B03-lab-fa3cd-compositions-remain-bounded-chromium/error-context.md",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-114225/chromium.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-114225/units.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-120623/current-preservation.txt",
+      "docs/M10_PRE_T11_EVIDENCE/gate-20261006-120623/units.txt"
+    ],
+    "exitCode": 2,
+    "status": "FAIL"
+  },
+  "timestamp": "2026-10-06 13:01:34 +08:00",
+  "currentSourceDocumentationJsonAndScriptsCheck": {
+    "diagnostics": 0,
+    "scope": "All staged content except byte-preserved native txt output and Playwright-generated error-context.md",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  "technicalGateStages": "10 PASS/checked0, unchanged",
+  "codeOrTestChanges": false,
+  "repairCount": "7/10 unchanged",
+  "originalRawArtifactsPreserved": true
+}

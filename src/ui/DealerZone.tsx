@@ -15,7 +15,7 @@ export function DealerZone({ dealer, phase, presentation = dealerPresentation(nu
     data-dealer-status={status} data-dealer-character={presentation.characterId ?? undefined}
     data-dealer-role={presentation.role} data-dealer-variant={presentation.variant}
     data-dealer-presentation-state={presentation.presentationState}
-    data-dealer-art={presentation.asset ? 'formal' : 'temporary-fallback'} aria-label="Dealer">
+    data-dealer-art={presentation.asset ? 'formal' : 'generic-formal'} aria-label="Dealer">
     <DealerAvatar asset={presentation.asset} />
     <h2>Dealer</h2>
     <div ref={handAnchor} className="dealer-cards" data-anchor="dealer-cards" data-felt-destination="dealer-hand" role="group" aria-label="Dealer hand">

@@ -78,7 +78,7 @@ test('[PA1-E03] all twelve identities display the correct decoded portrait name 
     const ids = await lineup(page); expect(new Set(ids).size).toBe(4);
     await capturePa1Evidence(`docs/images/pa1-avatar-${id}.png`,test.info().outputPath(`pa1-avatar-${id}.png`),path=>hand.screenshot({path,animations:'disabled'}));
   }
-  await expect(page.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+  await expect(page.getByRole('img',{name:'Dealer: generic formal portrait',exact:true})).toBeVisible();
   for (const seat of [1,3,6]) {
     const guest = page.getByRole('region',{name:`Seat ${seat}`,exact:true});
     await expect(guest.getByRole('img',{name:/^Computer guest: /})).toBeVisible();

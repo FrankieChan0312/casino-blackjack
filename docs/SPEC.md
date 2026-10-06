@@ -1,3 +1,9 @@
+## M10-PRE-T11 owner requirement and acceptance — 2026-10-06 10:43:11 +08:00
+
+M10-T07 / T08 / T09 / T10 HUMAN VISUAL ACCEPTANCE: **ACCEPTED**, explicitly recorded by the owner. Their dated PENDING records remain historical. [Legacy Dealer cleanup](M10_PRE_T11_DEALER_CLEANUP.md) is a new task, starting 0/10 with normal maximum10; closed T04/T06 counters remain unchanged. M10-T11 NOT STARTED; DEPLOYMENT NOT RUN.
+
+The old cartoon Dealer is retired from all live setup, active, exhausted-pool, unconfigured, failed-image, replay, quiet/immediate and responsive paths. Keep the exact five approved roster identities, deterministic session ordinal and seated exclusion. Before safe session resolution, or with no eligible/available roster portrait, use the owner-approved **non-roster generic formal portrait**; requested image failure -> generic PNG -> neutral non-image placeholder. No new identity, seat, RNG, replay/digest state, fake preview session, animation or timing change. This supersedes only the earlier generic illustration depiction; historical evidence and computer guest drawings stay intact. Implementation/verification of this new task initially NOT RUN; owner acceptance of this task PENDING.
+
 # M10A — Casino Game UI Recomposition scope
 
 Owner-authorized new planning/design milestone after T01 technical publication at `6486ed9c2f5eab5fa87862de72a609884c4f1797` / receipt `0c943b088740d291e9604ebe09ef4a5b3363e271`. **M10-T01 Human Visual Acceptance = NOT ACCEPTED**; its IMPLEMENTED / VERIFIED / COMMITTED / PUSHED geometry foundation and11/11 OWNER-AUTHORIZED EXCEPTION ledger remain intact. M10A defines a new original table-centric casino game composition, with independent normal task repair counters; no M10A/M10-T02/M10-T04 implementation is authorized by this planning publication. [Planning contract](M10A_PLANNING.md), [DESIGN M10A.1–18](DESIGN.md), [UX](UX_UI.md), [task plan](PLAN.md).

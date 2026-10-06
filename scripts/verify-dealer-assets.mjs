@@ -23,7 +23,7 @@ function paeth(left, up, corner) {
   const p = left + up - corner, a = Math.abs(p - left), b = Math.abs(p - up), c = Math.abs(p - corner);
   return a <= b && a <= c ? left : b <= c ? up : corner;
 }
-export function auditDealerPng(path, dimensions, expectedSha256) {
+export function auditDealerPng(path, dimensions, expectedSha256, expectedAlphaMax = 255) {
   const file = readFileSync(path);
   strictEqual(sha(file), expectedSha256, path + ': supplied bytes changed');
   strictEqual(file.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', path + ': PNG signature');
@@ -65,9 +65,10 @@ export function auditDealerPng(path, dimensions, expectedSha256) {
   }
   ok(histogram[0] >= width * height * .01, path + ': meaningful transparency');
   ok(histogram.slice(128).reduce((a, b) => a + b, 0) >= width * height * .1, path + ': visible subject');
-  ok(histogram[255] > 0 && colours.size > 100, path + ': nonblank subject');
+  ok(histogram[expectedAlphaMax] > 0 && colours.size > 100, path + ': nonblank subject');
+  strictEqual(histogram.slice(expectedAlphaMax + 1).reduce((a, b) => a + b, 0), 0, path + ': actual alpha maximum');
   return { path: path.replaceAll('\\', '/'), bytes: file.length, sha256: sha(file), width, height, aspectRatio: '3:4',
-    format: 'PNG', bitDepth: 8, alphaChannel: true, alphaExtrema: [0, 255], transparentPixels: histogram[0],
+    format: 'PNG', bitDepth: 8, alphaChannel: true, alphaExtrema: [0, expectedAlphaMax], transparentPixels: histogram[0],
     visiblePixels: histogram.slice(128).reduce((a, b) => a + b, 0), decodedRgbaSha256: sha(pixels), chunks, chunkCrcs: 'PASS', status: 'PASS' };
 }
 export function verifyDealerAssets(packRoot) {

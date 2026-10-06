@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/dealerCleanup.spec.ts --grep PRE-T11-B06
+
+[WebServer] (node:17640) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:16408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-REDUCED_MOTION] responsive generic fallback and terminal replay preserve live audit/cards (12.3s)
+  ok 2 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-IMMEDIATE] responsive generic fallback and terminal replay preserve live audit/cards (1.4s)
+
+  2 passed (19.3s)

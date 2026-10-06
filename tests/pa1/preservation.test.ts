@@ -56,6 +56,9 @@ it('[PA1-P01] every pre-PA1 test assertion is unchanged except explicit historic
     if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll('/?fixture=player&dealer=legacy','/?fixture=player');
     // END T04B named unconfigured Dealer input adapter
     if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll("{ name: /^Computer guest: / }","{ name: 'Original illustrated computer guest in evening attire', exact: true }");
+    // BEGIN PRE-T11 owner-authorized Dealer depiction adapter
+    if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll('Dealer: generic formal portrait','Original illustrated female dealer in professional attire');
+    // END PRE-T11 owner-authorized Dealer depiction adapter
     expect(current,file).toBe(historical);
   }
   expect(offset).toBe(blobs.length);

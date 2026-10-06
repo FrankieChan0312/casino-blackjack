@@ -1,0 +1,15 @@
+[WebServer] (node:8292) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:30184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-1280-false] labelled public long-name four-result and five-card Dealer compositions remain bounded (25.0s)
+  ok 2 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-1280-true] labelled public long-name four-result and five-card Dealer compositions remain bounded (4.6s)
+  ok 3 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-768-false] labelled public long-name four-result and five-card Dealer compositions remain bounded (3.6s)
+  ok 4 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-768-true] labelled public long-name four-result and five-card Dealer compositions remain bounded (4.0s)
+  ok 5 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-320-false] labelled public long-name four-result and five-card Dealer compositions remain bounded (2.9s)
+  ok 6 [chromium] › tests\browser\m10a\t09.spec.ts:40:3 › [M10A-T09-B03-320-true] labelled public long-name four-result and five-card Dealer compositions remain bounded (3.0s)
+
+  6 passed (45.7s)

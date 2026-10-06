@@ -1,0 +1,46 @@
+[WebServer] (node:22328) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:19768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\browser\m10.spec.ts:343:1 › [M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text (30.8s)
+
+
+  1) [chromium] › tests\browser\m10.spec.ts:343:1 › [M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.evaluate: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.casino-table')
+        - locator resolved to visible <section data-player-count="4" data-dynamic-seats="true" data-felt-markings="true" aria-label="Blackjack table" class="table-surface casino-table">…</section>
+
+
+      10 | }
+      11 | async function geometry(page: Page) {
+    > 12 |   const data = await page.locator('.casino-table').evaluate(table => {
+         |                                                    ^
+      13 |     const rect = (el: Element) => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; };
+      14 |     const anchors = [...table.querySelectorAll('.dealer, .seat')].map(el => ({ label: el.getAttribute('aria-label'), ...rect(el) }));
+      15 |     return { table: rect(table), anchors, viewport: { width: innerWidth, height: innerHeight }, scrollWidth: document.documentElement.scrollWidth };
+        at geometry (C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10.spec.ts:12:52)
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10.spec.ts:358:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\browser\m10.spec.ts:343:1 › [M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text 

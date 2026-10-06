@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "task": "M10-PRE-T11",
+  "role": "dealer",
+  "variant": "formal",
+  "nonRoster": true,
+  "ownerApproved": true,
+  "approval": "Owner supplied and approved this standalone generic fallback in the M10-PRE-T11 request.",
+  "provenance": "Owner-supplied original copied byte-for-byte; deterministic local resize only; no generated replacement.",
+  "independentlyVerifiedGenerationOrLicensing": false,
+  "tool": {
+    "node": "v24.19.0",
+    "playwright": "1.63.0",
+    "chromium": "153.0.8010.12"
+  },
+  "method": "uniform contain; centered; transparent 240x320 canvas; high-quality smoothing; no crop",
+  "source": {
+    "path": "art/source/dealers/generic_female/formal.png",
+    "sha256": "6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c",
+    "width": 1086,
+    "height": 1448
+  },
+  "runtime": {
+    "path": "public/characters/dealer/generic_female/formal.png",
+    "sha256": "37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce",
+    "width": 240,
+    "height": 320,
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  }
+}

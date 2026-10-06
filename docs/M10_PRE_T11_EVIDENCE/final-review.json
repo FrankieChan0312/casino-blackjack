@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-06 13:02:45 +08:00",
+  "gateRun": "gate-20261006-120623",
+  "gateStages": [
+    {
+      "stage": "units",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "chromium",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "preservation",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "current-preservation",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "live-guard",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "dealer-assets",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "generic-assets",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "generic-reproduction",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "player-assets",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "stage": "unified",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "verifiedExecutableHashes": 268,
+  "historicalOutputHashes": 320,
+  "protectedDiff": "EMPTY",
+  "suppliedSourceIdentical": true,
+  "totalScreenshots": 2243,
+  "manuallyInspectedUniqueSha256": 389,
+  "oldCartoonDealerOccurrences": 0,
+  "ownerVisualAcceptance": "PENDING",
+  "freshSessionReview": "NOT COMPLETED",
+  "deployment": "NOT RUN",
+  "nextTask": "M10-T11 NOT STARTED"
+}

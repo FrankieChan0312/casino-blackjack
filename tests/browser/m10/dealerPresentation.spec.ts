@@ -24,7 +24,7 @@ for(let count=1;count<=7;count++)test(`[M10-D-E${count}] configured ${count}-pla
   await configuredFixture(page);await start(page,count);
   const dealer=page.getByRole('region',{name:'Dealer',exact:true});
   await expect(dealer).toHaveAttribute('data-dealer-character',expected[count-1]);
-  await expect(dealer).toHaveAttribute('data-dealer-art','temporary-fallback');
+  await expect(dealer).toHaveAttribute('data-dealer-art','generic-formal');
   await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
   const lineup=await page.locator('[data-seat-anchor]').evaluateAll(els=>els.map(el=>el.getAttribute('data-character')));
   expect(new Set(lineup).size).toBe(count);expect(lineup).not.toContain(expected[count-1]);
@@ -48,10 +48,10 @@ test('[M10-D-E08] explicit unconfigured fallback retains actual1/4/7 players, pu
   for(const count of [1,4,7])for(const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]){
     await page.setViewportSize(viewport);await page.goto('/?fixture=player-setup&dealer=legacy');await start(page,count);await deal(page);
     const dealer=page.getByRole('region',{name:'Dealer',exact:true});
-    await expect(dealer).toHaveAttribute('data-dealer-art','temporary-fallback');
+    await expect(dealer).toHaveAttribute('data-dealer-art','generic-formal');
     expect(await dealer.getAttribute('data-dealer-character')).toBeNull();
-    await expect(dealer.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
-    await expect(dealer.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible();await expect(dealer.locator('img')).toHaveCount(0);
+    await expect(dealer.getByRole('img',{name:'Dealer: generic formal portrait',exact:true})).toBeVisible();
+    await expect(dealer.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible();await expect(dealer.locator('img[data-dealer-avatar="generic-formal"]')).toHaveCount(1);
     await expect(page.locator('[data-seat-anchor]')).toHaveCount(count);
     const measure=()=>page.locator('.casino-table').evaluate(table=>{
       const rect=(el:Element)=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height};};
@@ -77,7 +77,7 @@ test('[M10-D-E09] intentionally invalid image contract fixture falls back withou
     // Deliberately undecodable data URI; no source, generated art or usable asset claim.
     ReactDOM.createRoot(slot).render(React.createElement(DealerAvatar,{asset:{characterId:'noble_male',src:'data:image/png;base64,invalid',width:240,height:320}}));
   });
-  await expect(dealer.locator('img')).toHaveCount(0);
-  await expect(dealer.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+  await expect(dealer.locator('img[data-dealer-avatar="generic-formal"]')).toHaveCount(1);
+  await expect(dealer.getByRole('img',{name:'Dealer: generic formal portrait',exact:true})).toBeVisible();
   await expect(page.getByRole('button',{name:'Deal',exact:true})).toBeEnabled();
 });

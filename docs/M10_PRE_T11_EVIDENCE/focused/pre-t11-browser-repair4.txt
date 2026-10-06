@@ -1,0 +1,14 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/pa1.spec.ts --grep PA1-E03
+
+[WebServer] (node:12280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:5360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\pa1.spec.ts:58:1 › [PA1-E03] all twelve identities display the correct decoded portrait name archetype and human controller without changing cards (14.7s)
+
+  1 passed (19.0s)

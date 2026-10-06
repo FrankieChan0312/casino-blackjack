@@ -36,8 +36,8 @@ test('[M10A-T09-B02] active first and second Split plus four depth-first termina
     await page.getByRole('button',{name:'Deal Again',exact:true}).click();await expect(page.locator('#player-wager')).toBeFocused();
   }
 });
-test('[M10A-T09-B03] labelled public long-name fallback four-result and five-card Dealer compositions remain bounded',async({page},info)=>{
-  for(const viewport of viewports)for(const fallback of [false,true]){
+for (const viewport of viewports) for (const fallback of [false,true]) {
+  test(`[M10A-T09-B03-${viewport.width}-${fallback}] labelled public long-name four-result and five-card Dealer compositions remain bounded`,async({page},info)=>{
     if(fallback)await page.route('**/characters/*.png',route=>route.abort());else await page.unroute('**/characters/*.png');
     await page.setViewportSize(viewport);await deal(page,'player');
     const hands=splitHands.map(h=>({...h,handId:h.handId.replace('seat-1','seat-4')}));
@@ -50,5 +50,5 @@ test('[M10A-T09-B03] labelled public long-name fallback four-result and five-car
     if(viewport.width===320)await page.getByRole('region',{name:'Seat 1',exact:true}).locator('summary').click();
     if(fallback){const img=page.locator('#player-hand .character-identity img');await expect(img).toHaveJSProperty('complete',true);await expect(img).toHaveJSProperty('naturalWidth',0);}
     for(const enlarged of [false,true]){if(enlarged)await page.addStyleTag({content:'html { font-size:200%; }'});await bounded(page);await page.screenshot({path:info.outputPath(`edge-${fallback?'fallback':'long-names'}${enlarged?'-text200':''}-${viewport.width}.png`),fullPage:true});}
-  }
-});
+  });
+}

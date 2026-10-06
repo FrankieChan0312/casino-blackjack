@@ -1,3 +1,11 @@
+## Dealer cleanup verified — 2026-10-06 12:54:41 +08:00
+
+The owner-supplied non-roster formal Dealer replaces the retired cartoon in setup and every fallback. Requested roster PNG -> generic formal PNG -> neutral non-image placeholder; the exact five-identity rotation, seated exclusion, gameplay/replay and accepted animation timings stay unchanged. Full 1236 Vitest/240 Chromium, preservation/assets/reproduction/verify.ps1 PASS / exit 0; complete new 2243 screenshot inspection finds0 old cartoon Dealers. Repairs 7/10 CLOSED. T07–T10 owner visuals ACCEPTED; cleanup owner confirmation PENDING, fresh separate-session review NOT COMPLETED, T11 NOT STARTED, deployment NOT RUN. [Task and 12-view gallery](docs/M10_PRE_T11_DEALER_CLEANUP.md). Earlier dated progress records below are historical.
+
+## M10-PRE-T11 Dealer cleanup — 2026-10-06 11:02:28 +08:00
+
+Owner human visual acceptance for M10-T07, T08, T09 and T10 is ACCEPTED. The supplied standalone formal portrait now replaces the old cartoon Dealer in setup/unconfigured/exhausted/failed-asset presentation. It has no roster identity or gameplay/replay role; the exact five-Dealer rotation, seating and accepted animation timing remain unchanged. Focused checks PASS; complete technical gate IN PROGRESS, repairs3/10. This task's owner visual confirmation remains PENDING; M10-T11 NOT STARTED; DEPLOYMENT NOT RUN. [Task and evidence](docs/M10_PRE_T11_DEALER_CLEANUP.md).
+
 ## M10 animation overnight batch
 
 Owner authorizes T07 through T10 with complete per-task technical and clean Git publication gates. T06 Human Visual Acceptance ACCEPTED; its historical12/12 final exception CLOSED is unchanged. [Task contracts and handoff](docs/M10_ANIMATION_OVERNIGHT_HANDOFF.md).

@@ -1,0 +1,11 @@
+src\ui\CasinoPerson.tsx:7:  const label = dealer ? 'Original illustrated female dealer in professional attire' : 'Original illustrated computer guest in evening attire';
+tests\browser\m10\dealerCleanup.spec.ts:24:  await expect(dealer.locator('.person-dealer,svg')).toHaveCount(0);
+tests\browser\m10\dealerCleanup.spec.ts:28:  await expect(page.locator('.person-dealer')).toHaveCount(0);
+tests\browser\m10\dealerCleanup.spec.ts:32:  await expect(page.locator('.person-dealer')).toHaveCount(0);
+tests\pa1\preservation.test.ts:60:    if (file === 'tests/browser/m9.spec.ts') current = current.replaceAll('Dealer: generic formal portrait','Original illustrated female dealer in professional attire');
+tests\m10\tableGeometry.test.tsx:130:    if (['tests/browser/m9.spec.ts','tests/browser/pa1.spec.ts'].includes(file)) current = current.replaceAll('Dealer: generic formal portrait','Original illustrated female dealer in professional attire');
+tests\m10\formalDealers.test.tsx:92:    expect(html).toContain('generic-formal');expect(html).toContain('Dealer: generic formal portrait');expect(html).toContain('src="/characters/dealer/generic_female/formal.png"'); expect(html).not.toContain('person-dealer');}
+tests\m10\dealerPresentation.test.tsx:47:  expect(html).toContain('src="/characters/dealer/generic_female/formal.png"'); expect(html).not.toContain('person-dealer'); expect(html).not.toContain('data-dealer-character=');
+tests\m10\dealerCleanup.test.tsx:26:  for (const source of ['<CasinoPerson kind="dealer" />', 'import {CasinoPerson as Portrait} from "./CasinoPerson.js";', '<CasinoPerson kind={role} />', '/legacy/dealer/cartoon.svg', 'Original illustrated female dealer']) {
+tests\m10\dealerCleanup.test.tsx:39:    expect(html).not.toMatch(/Original illustrated female|person-dealer|<svg/);
+tests\m10\dealerCleanup.test.tsx:48:  expect(html).not.toMatch(/person-dealer|Original illustrated female|data-dealer-character=/);

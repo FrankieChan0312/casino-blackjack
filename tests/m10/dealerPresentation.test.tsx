@@ -42,9 +42,9 @@ it('[M10-D03] absence of owner selection keeps all accepted player choices and n
   expect(table.characterId).toBeNull();
   for(const entry of characters)expect(changeDealerTableHuman(table,entry.id).lineup.human).toBe(entry.id);
   const html=renderToStaticMarkup(<DealerZone dealer={undefined} presentation={dealerPresentation(null,'IDLE')} />);
-  expect(html).toContain('data-dealer-art="temporary-fallback"');
-  expect(html).toContain('Original illustrated female dealer in professional attire');
-  expect(html).not.toContain('<img'); expect(html).not.toContain('data-dealer-character=');
+  expect(html).toContain('data-dealer-art="generic-formal"');
+  expect(html).toContain('Dealer: generic formal portrait');
+  expect(html).toContain('src="/characters/dealer/generic_female/formal.png"'); expect(html).not.toContain('person-dealer'); expect(html).not.toContain('data-dealer-character=');
 });
 it('[M10-D04] assignment, human exchanges and every state render consume no entropy or controller events', () => {
   const lineup=createCharacterLineup([1,3,6],()=>0);
@@ -74,7 +74,7 @@ it.each(stateCases)('[M10-D05] public fact fixture %j maps to %s without command
   const html=renderToStaticMarkup(<DealerZone dealer={undefined} presentation={dealerPresentation('noble_male',state)} />);
   expect(html).toContain(`data-dealer-presentation-state="${expected}"`);
   expect(html).toContain('data-dealer-role="dealer"');expect(html).toContain('data-dealer-variant="formal"');
-  expect(html).toContain('temporary-fallback');expect(html).not.toMatch(/onClick|onAnimation|setTimeout|deckIndex|physicalCardId/);
+  expect(html).toContain('generic-formal');expect(html).not.toMatch(/onClick|onAnimation|setTimeout|deckIndex|physicalCardId/);
 });
 it('[M10-D06] interruption cancels cosmetic intent and preserves explicit public diagnostic text', () => {
   expect(dealerPresentationState({awaitingPlayer:true,interrupted:true,observation:'RESULTS_COMMITTED'})).toBe('IDLE');

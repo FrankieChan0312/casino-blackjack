@@ -79,15 +79,15 @@ test('[M10-F-E04] all five approved identities seated use non-roster fallback, p
   });
   await choose(page,'noble_female');await start(page,7);
   const dealer=page.getByRole('region',{name:'Dealer',exact:true});expect(await dealer.getAttribute('data-dealer-character')).toBeNull();
-  await expect(dealer).toHaveAttribute('data-dealer-art','temporary-fallback');await expect(dealer.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+  await expect(dealer).toHaveAttribute('data-dealer-art','generic-formal');await expect(dealer.getByRole('img',{name:'Dealer: generic formal portrait',exact:true})).toBeVisible();
   const ids=await page.locator('[data-seat-anchor]').evaluateAll(els=>els.map(el=>el.getAttribute('data-character')));expect(ids).toHaveLength(7);expect(new Set(ids).size).toBe(7);for(const id of pool)expect(ids).toContain(id);
   await deal(page);await page.screenshot({path:info.outputPath('all-pool-seated-7-generic.png'),fullPage:true});await finish(page);
   await page.getByRole('button',{name:'Deal Again',exact:true}).click();expect(await dealer.getAttribute('data-dealer-character')).toBeNull();
 });
-test('[M10-F-E05] missing runtime image retains generic illustration and functional authoritative cards/actions',async({page})=>{
+test('[M10-F-E05] missing runtime images use a neutral non-image placeholder and functional authoritative cards/actions',async({page})=>{
   await page.route('**/characters/dealer/**/formal.png',route=>route.abort());await page.goto('/?fixture=player');
   const dealer=page.getByRole('region',{name:'Dealer',exact:true});await expect(dealer.locator('img')).toHaveCount(0);
-  await expect(dealer.getByRole('img',{name:'Original illustrated female dealer in professional attire',exact:true})).toBeVisible();
+  await expect(dealer.getByRole('img',{name:'Dealer portrait unavailable',exact:true})).toBeVisible();
   await deal(page);await expect(dealer.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible();await finish(page);
 });
 test('[M10-F-E06] formal1/4/7 players retain bounded cards/status/shoe/rules at desktop/tablet/mobile and text200',async({page},info)=>{

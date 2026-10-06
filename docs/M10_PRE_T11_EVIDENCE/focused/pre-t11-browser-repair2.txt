@@ -1,0 +1,96 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/dealerCleanup.spec.ts
+
+[WebServer] (node:24016) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 1 worker
+
+(node:21908) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:36:1 › [PRE-T11-B01] real unstarted setup preview has no roster identity and shows the supplied portrait (10.6s)
+  ok  2 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:44:32 › [PRE-T11-B02-1] eligible Celestine remains formal through active and complete 1-player rounds (2.6s)
+  ok  3 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:44:32 › [PRE-T11-B02-4] eligible Celestine remains formal through active and complete 4-player rounds (2.9s)
+  ok  4 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:44:32 › [PRE-T11-B02-7] eligible Celestine remains formal through active and complete 7-player rounds (3.3s)
+  ok  5 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:54:1 › [PRE-T11-B03] seated Celestine selects eligible Seraphine while retaining the human identity (1.4s)
+  ok  6 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:60:1 › [PRE-T11-B04] all approved identities seated use only the non-roster generic without replacing any player (2.1s)
+  ok  7 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:77:40 › [PRE-T11-B05-false] failed roster image falls through to decoded generic PNG (1.6s)
+  ok  8 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:77:40 › [PRE-T11-B05-true] failed roster image falls through to neutral text when both images fail (1.5s)
+  x   9 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-REDUCED_MOTION] responsive generic fallback and terminal replay preserve live audit/cards (30.3s)
+(node:6872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  10 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-IMMEDIATE] responsive generic fallback and terminal replay preserve live audit/cards (30.2s)
+(node:31268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [chromium] › tests\browser\m10\dealerCleanup.spec.ts:107:1 › [PRE-T11-B07] full motion Dealer remains formal at paused initial deal and real public reveal (3.6s)
+
+
+  1) [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-REDUCED_MOTION] responsive generic fallback and terminal replay preserve live audit/cards 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'View replay package', exact: true })
+
+
+      101 |   expect(await page.locator('.dealer-card-lane').innerHTML()).toBe(cards);
+      102 |   expect(await page.getByRole('region', { name: 'Your credits', exact: true }).innerHTML()).toBe(credits);
+    > 103 |   await page.getByRole('button', { name: 'View replay package', exact: true }).click();
+          |                                                                                ^
+      104 |   expect(JSON.parse(await page.getByLabel('Completed replay JSON', { exact: true }).inputValue())).toEqual(replay);
+      105 |   await portrait(page, generic); await capture(page, info, `08-${width}-${mode}-replay`);
+      106 | });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\dealerCleanup.spec.ts:103:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-dealerCleanup--PRE-T11-6e040-y-preserve-live-audit-cards-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-IMMEDIATE] responsive generic fallback and terminal replay preserve live audit/cards 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'View replay package', exact: true })
+
+
+      101 |   expect(await page.locator('.dealer-card-lane').innerHTML()).toBe(cards);
+      102 |   expect(await page.getByRole('region', { name: 'Your credits', exact: true }).innerHTML()).toBe(credits);
+    > 103 |   await page.getByRole('button', { name: 'View replay package', exact: true }).click();
+          |                                                                                ^
+      104 |   expect(JSON.parse(await page.getByLabel('Completed replay JSON', { exact: true }).inputValue())).toEqual(replay);
+      105 |   await portrait(page, generic); await capture(page, info, `08-${width}-${mode}-replay`);
+      106 | });
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\m10\dealerCleanup.spec.ts:103:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\m10-dealerCleanup--PRE-T11-c2109-y-preserve-live-audit-cards-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-REDUCED_MOTION] responsive generic fallback and terminal replay preserve live audit/cards 
+    [chromium] › tests\browser\m10\dealerCleanup.spec.ts:84:104 › [PRE-T11-B06-IMMEDIATE] responsive generic fallback and terminal replay preserve live audit/cards 
+  9 passed (1.6m)

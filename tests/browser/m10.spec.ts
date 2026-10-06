@@ -340,8 +340,8 @@ test('[M10A-E05] local HUD owns one real current hand and existing controls thro
   }
 });
 
-test('[M10A-E06] real five-card two-split and four-leaf local HUDs preserve exact ownership across widths and200percent text',async({page},info)=>{
-  for(const viewport of viewports)for(const scenario of ['five','two-split','four-split']){
+for (const viewport of viewports) for (const scenario of ['five','two-split','four-split']) {
+  test(`[M10A-E06-${viewport.width}-${scenario}] real local HUD preserves exact ownership at normal and200percent text`,async({page},info)=>{
     await page.setViewportSize(viewport);await deal(page,scenario==='five'?'player-five':scenario==='two-split'?'player-split':'player-rsa-cap');
     const local=page.locator('#player-hand');
     if(scenario==='five')for(let i=0;i<3;i++)await page.getByRole('button',{name:'Hit',exact:true}).click();
@@ -364,14 +364,14 @@ test('[M10A-E06] real five-card two-split and four-leaf local HUDs preserve exac
       await expect(local.locator('article[aria-current="true"] .hud-total')).toHaveText('Total: 11');
       await expect(local.locator('article[aria-current="true"] .turn-marker')).toHaveText('ACTIVE');
     }
-  }
-});
+  });
+}
 
 test('[M10A-E07] Dealer workstation owns initial hidden and real revealed three-card states across all surfaces', async ({ page }, info) => {
   for (const viewport of viewports) {
     await page.setViewportSize(viewport); await page.goto('/?fixture=player&dealer=legacy');
     const dealer = page.getByRole('region', { name: 'Dealer', exact: true });
-    await expect(dealer.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
+    await expect(dealer.getByRole('img', { name: 'Dealer: generic formal portrait', exact: true })).toBeVisible();
     await expect(dealer.getByText('Waiting for the initial deal', { exact: true })).toBeVisible();
     await expect(dealer.getByRole('group', { name: 'Shoe and deal origin', exact: true })).toBeVisible();
     await expect(dealer.getByLabel('House rules', { exact: true })).toContainText('BLACKJACK PAYS 3:2');

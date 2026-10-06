@@ -1,0 +1,18 @@
+[WebServer] (node:34224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:34776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-1280-five] real local HUD preserves exact ownership at normal and200percent text (18.1s)
+  ok 2 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-1280-two-split] real local HUD preserves exact ownership at normal and200percent text (3.2s)
+  ok 3 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-1280-four-split] real local HUD preserves exact ownership at normal and200percent text (3.6s)
+  ok 4 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-768-five] real local HUD preserves exact ownership at normal and200percent text (2.6s)
+  ok 5 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-768-two-split] real local HUD preserves exact ownership at normal and200percent text (2.5s)
+  ok 6 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-768-four-split] real local HUD preserves exact ownership at normal and200percent text (3.0s)
+  ok 7 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-320-five] real local HUD preserves exact ownership at normal and200percent text (2.1s)
+  ok 8 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-320-two-split] real local HUD preserves exact ownership at normal and200percent text (1.9s)
+  ok 9 [chromium] › tests\browser\m10.spec.ts:344:3 › [M10A-E06-320-four-split] real local HUD preserves exact ownership at normal and200percent text (2.3s)
+
+  9 passed (43.3s)

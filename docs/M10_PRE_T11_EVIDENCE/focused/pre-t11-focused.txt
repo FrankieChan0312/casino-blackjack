@@ -1,0 +1,13 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/dealerCleanup.test.tsx tests/m10/dealerPresentation.test.tsx tests/m10/dealerZone.test.tsx tests/m10/formalDealers.test.tsx tests/m10/tableGeometry.test.tsx tests/pa1/preservation.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  6 passed (6)
+      Tests  62 passed (62)
+   Start at  10:50:54
+   Duration  5.20s (tests 51%, import 37%, transform 11%, setup 1%)
+

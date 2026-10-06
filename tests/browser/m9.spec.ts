@@ -39,7 +39,7 @@ test('[M9-E01] first-person cards stay near player and center dealer without ove
 test('[M9-E02] original characters and compact mobile public guest cards retain reduced motion and secrecy', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 720 }); await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/?fixture=player&dealer=legacy');
-  await expect(page.getByRole('img', { name: 'Original illustrated female dealer in professional attire', exact: true })).toBeVisible();
+  await expect(page.getByRole('img', { name: 'Dealer: generic formal portrait', exact: true })).toBeVisible();
   await expect(page.getByRole('img', { name: /^Computer guest: / })).toHaveCount(3);
   await deal(page); await page.evaluate(() => scrollTo(0, 0));
   const guest = page.getByRole('region', { name: 'Seat 1', exact: true });

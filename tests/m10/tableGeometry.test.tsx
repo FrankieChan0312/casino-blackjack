@@ -126,6 +126,10 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
     if (file === 'tests/pa1/session.test.ts') current = current
       .replace("import { acceptedController } from '../m10/historicalConfiguration.js';\n", '')
       .replace("acceptedController(readFileSync('src/browser/controller.ts','utf8'))", "readFileSync('src/browser/controller.ts','utf8')");
+    // BEGIN PRE-T11 owner-authorized Dealer depiction adapter
+    if (['tests/browser/m9.spec.ts','tests/browser/pa1.spec.ts'].includes(file)) current = current.replaceAll('Dealer: generic formal portrait','Original illustrated female dealer in professional attire');
+    // END PRE-T11 owner-authorized Dealer depiction adapter
+    if (file === 'tests/pa1/preservation.test.ts') current = current.replace(/ {4}\/\/ BEGIN PRE-T11 owner-authorized Dealer depiction adapter[\s\S]*? {4}\/\/ END PRE-T11 owner-authorized Dealer depiction adapter\n/,'');
     expect(current, file).toBe(historical);
   }
   expect(offset).toBe(blobs.length);
