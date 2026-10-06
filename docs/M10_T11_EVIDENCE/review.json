@@ -1,0 +1,408 @@
+{
+  "at": "2026-10-06 18:56:14 +08:00",
+  "status": "M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11",
+  "acceptance": "M10: NOT ACCEPTED",
+  "freshIncomingReview": "PASS",
+  "postRepairReview": "Same-session scope/diff/evidence review; no second independent reviewer claimed",
+  "repairCount": 11,
+  "repairLimit": 11,
+  "sourceChanges": [
+    "src/presentation/motionTokens.ts: initialCardDeal80ms",
+    "src/ui/InitialDealFlight.ts: INITIAL uses initialCardDeal; actions remain110ms"
+  ],
+  "gate": [
+    {
+      "name": "exact unchanged publication check",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "docs3/9",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "incoming scope",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "required final unified gate",
+      "status": "BLOCKED",
+      "nativeExitCode": null,
+      "outerCollectorExitCode": 1
+    },
+    {
+      "name": "Chromium",
+      "status": "FAIL",
+      "recordedFailures": 2
+    },
+    {
+      "name": "fresh independent preservation",
+      "status": "BLOCKED"
+    },
+    {
+      "name": "output cleanup",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "originalWrapper": {
+    "status": "BLOCKED",
+    "exitCode": 1,
+    "record": "gate-20261006-150313/archival-first-failure.json"
+  },
+  "archivalRepair": {
+    "status": "PASS",
+    "exitCode": 0,
+    "record": "gate-20261006-150313/repair7-restoration.json"
+  },
+  "findings": [
+    {
+      "id": "HIGH-01",
+      "status": "CLOSED",
+      "repair": 1,
+      "issue": "Published generic assets omitted from historical protected guard",
+      "evidence": "gate-20261006-135811/units.txt",
+      "resolution": "Three exact tracked paths and approved hashes pinned; all original other protected comparisons retained; final full gate PASS0"
+    },
+    {
+      "id": "HIGH-02",
+      "status": "REOPENED",
+      "repair": 5,
+      "issue": "Cold full native Chromium initial deal exceeded unchanged2500ms",
+      "evidence": "native-timing-control-before-repair5.txt",
+      "resolution": "New required final rerun exceeds unchanged2500ms at1280/320; cause unproven; no fix or retry authorized",
+      "historicalResolution": "Initial-only80ms token, existing action/dealer110ms unchanged;3 cold native widths,4 headful controls,9 profiled rounds and final gates PASS0",
+      "latestEvidence": [
+        {
+          "width": 1280,
+          "height": 900,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2861.0999999046326,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        },
+        {
+          "width": 320,
+          "height": 720,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2891.600000143051,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        }
+      ]
+    },
+    {
+      "id": "LOW-01",
+      "status": "DISCLOSED_NONBLOCKING",
+      "repair": [
+        2,
+        3,
+        4
+      ],
+      "issue": "REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE",
+      "resolution": "Actual native activation cannot produce trustworthy hidden state; BLOCKED, strongest synthetic visibility/subsequent-action and all lifecycle equivalence PASS0; owner section21 permits this limitation"
+    },
+    {
+      "id": "LOW-02",
+      "status": "CLOSED",
+      "repair": 6,
+      "issue": "Supplemental cleanup oracle incorrectly required Audit equality after New Table",
+      "resolution": "Exact non-Audit baseline and one legitimate SESSION_RESET asserted; no old histories/clones remain"
+    },
+    {
+      "id": "LOW-03",
+      "status": "CLOSED",
+      "repair": 7,
+      "issue": "Final wrapper archival File.Replace failed with target in use",
+      "resolution": "Original wrapper exit1 preserved; ten native commands PASS0; isolated restoration PASS0,320 originals/269 inputs verified; handle owner unproven"
+    },
+    {
+      "id": "LOW-04",
+      "status": "CLOSED",
+      "repair": 8,
+      "issue": "Optional image consolidation nested the parsed Windows PowerShell5 array",
+      "resolution": "Remove redundant array wrapper; individually verify source/canonical bytes and bounds;1149 new duplicate files consolidated PASS0; no historical changes"
+    },
+    {
+      "id": "LOW-05",
+      "status": "CLOSED",
+      "repair": 9,
+      "issue": "Supplemental scope oracle trimmed native Git porcelain leading status column",
+      "resolution": "trimEnd preserves fixed status width; original allowed path and all scope assertions retained"
+    },
+    {
+      "id": "LOW-06",
+      "status": "CLOSED",
+      "repair": 10,
+      "issue": "Supplemental scope oracle read only unstaged changes after staging",
+      "resolution": "Compare exact product and historical-test deltas to the expected starting commit; all freeze/scope assertions retained; unchanged final exact publication audit and incoming scope PASS0 under repair11"
+    },
+    {
+      "id": "BLOCKER-01",
+      "status": "SUPERSEDED_BY_OWNER_AUTHORIZATION",
+      "issue": "Normal repair maximum10/10 reached with final document/publication audit failing",
+      "resolution": "Owner explicitly authorized exactly one documentation repair11; repair12 remains unauthorized. New required final gate remains blocked under BLOCKER-02."
+    },
+    {
+      "id": "LOW-07",
+      "status": "CLOSED",
+      "issue": "Generated current review prefixes retain9/10 while actual normal count is10/10",
+      "resolution": "Explicit current11/11 sections/current PLAN row; dated prior counts preserved; unchanged exact validator PASS0",
+      "closedAt": "2026-10-06 18:25:23 +08:00"
+    },
+    {
+      "id": "BLOCKER-02",
+      "status": "OPEN",
+      "issue": "Required final unified gate cannot be established PASS0; new Chromium timing failures and missing native exit receipt",
+      "evidence": "repair11-20261006-182042/failure-receipt.json",
+      "resolution": "STOP without repair12, acceptance, commit or push"
+    },
+    {
+      "id": "BLOCKER-03",
+      "status": "OPEN",
+      "issue": "Failed-evidence privacy scan incomplete due locked collector output",
+      "evidence": "repair11-20261006-182042/privacy-error.txt",
+      "resolution": "Retain error/stale-result label; no repair or retry; no publication"
+    }
+  ],
+  "manualGallery": {
+    "at": "2026-10-06 15:49:29 +08:00",
+    "status": "PASS",
+    "images": 20,
+    "scope": "All20 final selected gallery PNGs inspected individually at original resolution; final full-page four-leaf replacement included. No essential overlap, horizontal overflow, unintended old Dealer or wrong ownership observed. Moving viewport captures show their actual checkpoint; narrow/full-page images demonstrate expected vertical scrolling."
+  },
+  "canonicalImages": {
+    "status": "PASS",
+    "captures": 1211,
+    "consolidated": 1149
+  },
+  "deployment": "NOT RUN",
+  "latestVerification": {
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+    "start": "2026-10-06 18:28:24 +08:00",
+    "status": "BLOCKED",
+    "nativeExitCode": null,
+    "nativeExitStatus": "NOT AVAILABLE",
+    "outerCollector": {
+      "status": "FAIL",
+      "exitCode": 1,
+      "error": "NativeCommandError on redirected web-server NO_COLOR warning",
+      "record": "collector-error.txt"
+    },
+    "completedStages": [
+      {
+        "name": "typecheck",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "lint",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "test:100 files /1236 tests",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "typecheck:domain",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "build/production fixture boundary",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      }
+    ],
+    "chromium": {
+      "status": "FAIL",
+      "recordedFailedTests": [
+        "a88523d701a126864e96-332a24cb1982358e0c53",
+        "a88523d701a126864e96-f0fc257c5178aff256ce"
+      ],
+      "metrics": [
+        {
+          "width": 1280,
+          "height": 900,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2861.0999999046326,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 1577.4000000953674,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "PASS",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        },
+        {
+          "width": 320,
+          "height": 720,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2891.600000143051,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        }
+      ],
+      "completeSuiteSummary": "NOT VERIFIED; stdout/exit receipt missing; do not infer241/243PASS"
+    },
+    "independentPreservation": {
+      "status": "BLOCKED",
+      "reason": "No captured complete stdout or native receipt from the required rerun"
+    },
+    "retry": "NOT RUN",
+    "collectorRepair": "NOT RUN",
+    "records": [
+      "verify.txt",
+      "verification-wrapper.ps1.txt",
+      "failed-browser-artifacts/.last-run.json"
+    ]
+  },
+  "normalLimit": 10,
+  "exception": {
+    "ownerAuthorized": true,
+    "cycle": 11,
+    "label": "OWNER-AUTHORIZED EXCEPTION",
+    "repair12": "NOT AUTHORIZED / NOT RUN",
+    "status": "Documentation repair VERIFIED; final gate BLOCKED; milestone NOT CLOSED"
+  },
+  "previousVerification": {
+    "status": "FAIL",
+    "exitCode": 1,
+    "file": "final-audit.txt",
+    "cause": "Repair10 metadata generation left current9/10 unchanged; no cycle11 authorized"
+  },
+  "milestoneClosure": "BLOCKED",
+  "historicalGate": [
+    {
+      "exitCode": 0,
+      "stage": "units",
+      "finish": "2026-10-06 15:03:35 +08:00",
+      "start": "2026-10-06 15:03:15 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\units.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "chromium",
+      "finish": "2026-10-06 15:18:35 +08:00",
+      "start": "2026-10-06 15:03:35 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\chromium.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "preservation",
+      "finish": "2026-10-06 15:21:20 +08:00",
+      "start": "2026-10-06 15:18:40 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\preservation.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "current-preservation",
+      "finish": "2026-10-06 15:21:35 +08:00",
+      "start": "2026-10-06 15:21:21 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\current-preservation.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "live-guard",
+      "finish": "2026-10-06 15:21:36 +08:00",
+      "start": "2026-10-06 15:21:35 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\live-guard.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "dealer-assets",
+      "finish": "2026-10-06 15:21:37 +08:00",
+      "start": "2026-10-06 15:21:36 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\dealer-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "generic-assets",
+      "finish": "2026-10-06 15:21:38 +08:00",
+      "start": "2026-10-06 15:21:38 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\generic-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "generic-reproduction",
+      "finish": "2026-10-06 15:21:40 +08:00",
+      "start": "2026-10-06 15:21:38 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\generic-reproduction.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "player-assets",
+      "finish": "2026-10-06 15:21:49 +08:00",
+      "start": "2026-10-06 15:21:40 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\player-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "unified",
+      "finish": "2026-10-06 15:40:43 +08:00",
+      "start": "2026-10-06 15:21:49 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\unified.txt"
+    }
+  ],
+  "currentExceptionEvidence": "repair11-20261006-182042/failure-receipt.json",
+  "failedEvidencePrivacy": {
+    "status": "BLOCKED",
+    "exitCode": 1,
+    "record": "repair11-20261006-182042/failure-privacy-receipt.json",
+    "retry": "NOT RUN"
+  },
+  "finalGit": {
+    "at": "2026-10-06 18:56:16 +08:00",
+    "branch": "main",
+    "reviewClosureCommit": "NOT RUN",
+    "head": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "trackingHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "liveRemoteHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "liveRemoteRead": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "localEqualsTracking": true,
+    "localEqualsLive": true,
+    "ahead": 0,
+    "behind": 0,
+    "workingTree": "DIRTY",
+    "untrackedFiles": 611,
+    "untrackedCountMethod": "git ls-files --others --exclude-standard -z; actual files, not collapsed directory rows",
+    "push": "NOT RUN",
+    "deployment": "NOT RUN",
+    "scope": "Read-only final Git snapshot after failed gate; no add/commit/push/fetch/reset/cleanup"
+  }
+}

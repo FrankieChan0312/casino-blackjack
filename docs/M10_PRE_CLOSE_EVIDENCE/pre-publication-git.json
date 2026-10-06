@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-06 21:40:10 +08:00",
+  "status": "PASS",
+  "branch": "main",
+  "head": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "tracking": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "liveRemoteHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "remote": "https://github.com/FrankieChan0312/casino-blackjack.git",
+  "sourceDocumentationDiffCheck": {
+    "status": "PASS",
+    "exitCode": 0,
+    "scope": "Authored source/tests/scripts and current maintenance docs; immutable historical raw CLI output not reformatted"
+  },
+  "documentation": {
+    "status": "PASS",
+    "exitCode": 0,
+    "files": 3,
+    "tests": 9
+  },
+  "privacy": {
+    "status": "PASS",
+    "exitCode": 0,
+    "files": 3155,
+    "traceResources": 55,
+    "findings": 0,
+    "exclusions": []
+  },
+  "review": "Known incoming T11 checkpoint plus bounded maintenance files reviewed. All historical incoming T11 evidence unchanged. M10 NOT ACCEPTED; new-sessionT11 required; no deployment."
+}

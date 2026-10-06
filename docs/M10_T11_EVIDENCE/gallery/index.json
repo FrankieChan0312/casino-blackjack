@@ -1,0 +1,349 @@
+{
+  "at": "2026-10-06 15:40:58 +08:00",
+  "gate": "docs/M10_T11_EVIDENCE/gate-20261006-150313",
+  "chromium": {
+    "exitCode": 0,
+    "stage": "chromium",
+    "finish": "2026-10-06 15:18:35 +08:00",
+    "start": "2026-10-06 15:03:35 +08:00",
+    "status": "PASS",
+    "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\chromium.txt"
+  },
+  "method": "Exactly20 final-version primary Chromium captures. Source unchangedFreshCapture means newly executed fixed screenshot had identical bytes to the retained tracked PNG; actual stage compared320 captured outputs and only archived changed bytes. Gallery copies remain independent direct PNGs.",
+  "entries": [
+    {
+      "id": 1,
+      "label": "Setup formal Dealer",
+      "file": "01-setup-formal-dealer.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-a8275-shows-the-supplied-portrait-chromium/01-setup-generic.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-a8275-shows-the-supplied-portrait-chromium/01-setup-generic.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/repair2-browser-artifacts/m10-dealerCleanup--PRE-T11-a8275-shows-the-supplied-portrait-chromium/01-setup-generic.png"
+      },
+      "width": 1280,
+      "height": 913,
+      "sha256": "3efa514f07433bf608d597a38b50e796dfa825030ab484798741e840fee7002e",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 2,
+      "label": "1-player initial deal",
+      "file": "02-1-player-initial-deal.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+        "originalCapture": "docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+        "unchangedFreshCapture": false,
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "6a57bf01bbfc6851ac6cba1a1ee5b6cbeac67517f26bd2a43c47dd45991a9397",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 3,
+      "label": "4-player initial deal",
+      "file": "03-4-player-initial-deal.png",
+      "source": {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-first-pass.png",
+        "originalCapture": "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-first-pass.png",
+        "unchangedFreshCapture": true,
+        "immutableEquivalentCommit": "e7ceea652dd74ef079d933922668c782304dc31f",
+        "archivedLogicalPath": "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-first-pass.png",
+        "canonicalFile": "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-first-pass.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "6eb2919bb229bfd3e819cd740a2a254d67c8908fe5521d27c16caea94bd6d67f",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 4,
+      "label": "7-player initial deal",
+      "file": "04-7-player-initial-deal.png",
+      "source": {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-first-pass.png",
+        "originalCapture": "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-first-pass.png",
+        "unchangedFreshCapture": true,
+        "immutableEquivalentCommit": "e7ceea652dd74ef079d933922668c782304dc31f",
+        "archivedLogicalPath": "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-first-pass.png",
+        "canonicalFile": "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-first-pass.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "0857831cad7d77433e68d2b3347a8d898c7d031aa1dcff265a6974b11bb29c1d",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 5,
+      "label": "Hit",
+      "file": "05-hit.png",
+      "source": {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791270563102-Hit/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T07_EVIDENCE/browser/1791270563102-Hit/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791255863805-Hit/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "477c7b47513d58d4f85b30d2ffd2bfe66a456f8fdfda9842508089a21b57fc2b",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 6,
+      "label": "Double",
+      "file": "06-double.png",
+      "source": {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791270566448-Double/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T07_EVIDENCE/browser/1791270566448-Double/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791255867406-Double/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "c0671b094e837cb3fae14289f948d7e75ae989b34e0d8e883c6dd78185d31810",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 7,
+      "label": "Split",
+      "file": "07-split.png",
+      "source": {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791270570131-Split/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T07_EVIDENCE/browser/1791270570131-Split/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791255871417-Split/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "ada349568fda92eb6041c2789a26a2624b0842f3d2857ae48fd992d556ef59f3",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 8,
+      "label": "Four-leaf Split",
+      "file": "08-four-leaf-split.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E06-1280-four-sp-60fb2-t-normal-and200percent-text-chromium/hud-four-split-1280.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E06-1280-four-sp-60fb2-t-normal-and200percent-text-chromium/hud-four-split-1280.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/repair5-browser-artifacts/m10--M10A-E06-real-five-ca-bddd5-s-widths-and200percent-text-chromium/hud-four-split-1280.png"
+      },
+      "width": 1280,
+      "height": 1733,
+      "sha256": "23d618140210c0069501e3e0c2cbd83c0040cb7059d3d779bcf419024d818fb4",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 9,
+      "label": "Dealer hole-card reveal",
+      "file": "09-dealer-hole-card-reveal.png",
+      "source": {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791270393686-reveal-multiple/mid-face.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T08_EVIDENCE/browser/1791270393686-reveal-multiple/mid-face.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791255696599-reveal-multiple/mid-face.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "446ed984fc0200005e030dc975cfc5f333c358be1022324981d81600b44f8f41",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 10,
+      "label": "Dealer multi-draw",
+      "file": "10-dealer-multi-draw.png",
+      "source": {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791270393686-reveal-multiple/settled.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T08_EVIDENCE/browser/1791270393686-reveal-multiple/settled.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791258377256-reveal-multiple/settled.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "c96c706f5c13d8b2f81e67a5736dca8588c833e3863e2653b524c06d836e3d73",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 11,
+      "label": "Win payout",
+      "file": "11-win-payout.png",
+      "source": {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791270686138-PLAYER_WIN/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T09_EVIDENCE/browser/1791270686138-PLAYER_WIN/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791255973129-PLAYER_WIN/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "1ee9898b19a4313caef351e46b56beceb3d3271ab56196c45fa4a49c35b5fbd9",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 12,
+      "label": "Loss collection",
+      "file": "12-loss-collection.png",
+      "source": {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791270691838-DEALER_WIN/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T09_EVIDENCE/browser/1791270691838-DEALER_WIN/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791255979002-DEALER_WIN/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "590f4f499f423f128ca499607bfe64a5f9f43293265d3d66a6404328922f9e26",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 13,
+      "label": "Push return",
+      "file": "13-push-return.png",
+      "source": {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791270697517-PUSH/mid.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T09_EVIDENCE/browser/1791270697517-PUSH/mid.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791255984873-PUSH/mid.png"
+      },
+      "width": 1280,
+      "height": 900,
+      "sha256": "7f76b5aa4025dcbbfdd37fc8d7fd780f8f3e563354e70c0e3d694c2a29846e73",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 14,
+      "label": "Insurance",
+      "file": "14-insurance.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-1280.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-1280.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/chromium-browser-artifacts/m10-seatMapping--M10-S-E09-c8b40-e-density-and-enlarged-text-chromium/edge-player-seven-insurance-1280.png"
+      },
+      "width": 1280,
+      "height": 1627,
+      "sha256": "fda652b1b82c55e00341908d6759bcf3d8188d7ba3434cc5b0ba32d55c157ed4",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 15,
+      "label": "Round complete",
+      "file": "15-round-complete.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-0fb6e-nd-complete-4-player-rounds-chromium/03-table-4-complete.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-0fb6e-nd-complete-4-player-rounds-chromium/03-table-4-complete.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-0fb6e-nd-complete-4-player-rounds-chromium/03-table-4-complete.png"
+      },
+      "width": 1280,
+      "height": 1280,
+      "sha256": "dd719d0c12c66c39a6e2e17cfb3f1b344c360da270769d2b7bc7feb7b39182b6",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 16,
+      "label": "Reduced-motion settled",
+      "file": "16-reduced-motion-settled.png",
+      "source": {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791270280546-7-REDUCED_MOTION/round-settled.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/raw-generated/docs/M10_T10_EVIDENCE/browser/1791270280546-7-REDUCED_MOTION/round-settled.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791255582395-7-REDUCED_MOTION/round-settled.png"
+      },
+      "width": 320,
+      "height": 2062,
+      "sha256": "b5c3469ba31beb6c9ff72c4a7ade0587c3e70558508c120ea40ffe8362bacfbc",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 17,
+      "label": "Mobile active round",
+      "file": "17-mobile-active-round.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mobile-7-320.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mobile-7-320.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/gate-20261006-105804/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mobile-7-320.png"
+      },
+      "width": 320,
+      "height": 1952,
+      "sha256": "33447a2efb821e4d6c5dd48fa08fbc596ad9fc4987e5ba7820336a210088c712",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 18,
+      "label": "Tablet active round",
+      "file": "18-tablet-active-round.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/tablet-7-768.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/tablet-7-768.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-formalDealers--M10-F-E-de248-p-tablet-mobile-and-text200-chromium/formal-table-7-768.png"
+      },
+      "width": 768,
+      "height": 1913,
+      "sha256": "154a06dd9b0d6c0c26601afdc2a1234c253178980223824b5b90c63600ac5566",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 19,
+      "label": "Generic formal fallback",
+      "file": "19-generic-formal-fallback.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-5c039-ithout-replacing-any-player-chromium/06-all-pool-seated-generic.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-5c039-ithout-replacing-any-player-chromium/06-all-pool-seated-generic.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-5c039-ithout-replacing-any-player-chromium/06-all-pool-seated-generic.png"
+      },
+      "width": 1280,
+      "height": 1843,
+      "sha256": "681ad4ffcba3162a0ed8e96779beb7824580e42da64a1a4711cc3a304e5fcfa7",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    },
+    {
+      "id": 20,
+      "label": "Non-Celestine rotated Dealer",
+      "file": "20-non-celestine-rotated-dealer.png",
+      "source": {
+        "file": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-9fa17-nd-complete-1-player-rounds-chromium/04-rotated-Seraphine-after-1.png",
+        "archivedLogicalPath": "docs/M10_T11_EVIDENCE/gate-20261006-150313/chromium-browser-artifacts/m10-dealerCleanup--PRE-T11-9fa17-nd-complete-1-player-rounds-chromium/04-rotated-Seraphine-after-1.png",
+        "canonicalFile": "docs/M10_PRE_T11_EVIDENCE/focused/first-browser-artifacts/m10-dealerCleanup--PRE-T11-0fb6e-nd-complete-4-player-rounds-chromium/04-rotated-Seraphine-after-4.png"
+      },
+      "width": 1280,
+      "height": 1175,
+      "sha256": "6166c42e5b984038363c3b23630bc52b2049005272d003cb532b8d45ed153f41",
+      "manualInspection": "PASS",
+      "inspectedAt": "2026-10-06 15:49:29 +08:00",
+      "oldCartoonDealerAppearances": 0
+    }
+  ],
+  "manualInspection": {
+    "at": "2026-10-06 15:49:29 +08:00",
+    "status": "PASS",
+    "images": 20,
+    "scope": "All20 final selected gallery PNGs inspected individually at original resolution; final full-page four-leaf replacement included. No essential overlap, horizontal overflow, unintended old Dealer or wrong ownership observed. Moving viewport captures show their actual checkpoint; narrow/full-page images demonstrate expected vertical scrolling."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T12:49:49.449Z",
+  "finish": "2026-10-06T12:50:23.391Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test:e2e",
+    "--",
+    "tests/browser/m10/t11Performance.spec.ts"
+  ],
+  "log": ".git\\evidence-capture\\A-performance-repair7.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

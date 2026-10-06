@@ -1,0 +1,16 @@
+$ErrorActionPreference='Stop'
+Set-StrictMode -Version Latest
+$root=[IO.Path]::GetFullPath((Join-Path (Get-Location) 'docs/M10_T11_EVIDENCE'))+[IO.Path]::DirectorySeparatorChar
+$repo=(Get-Location).Path+[IO.Path]::DirectorySeparatorChar
+$rows=Get-Content .git/t11-image-duplicates.json -Raw | ConvertFrom-Json
+$results=@()
+foreach($row in $rows){
+  $source=[IO.Path]::GetFullPath((Join-Path (Get-Location) $row.logicalCapturePath))
+  $canonical=[IO.Path]::GetFullPath((Join-Path (Get-Location) $row.canonicalPath))
+  if(-not $source.StartsWith($root,[StringComparison]::OrdinalIgnoreCase) -or -not $canonical.StartsWith($repo,[StringComparison]::OrdinalIgnoreCase) -or $source -eq $canonical){throw 'Duplicate cleanup outside verified boundaries'}
+  if((Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash -ne $row.sha256 -or (Get-FileHash -LiteralPath $canonical -Algorithm SHA256).Hash -ne $row.sha256){throw 'Canonical image bytes changed'}
+  Remove-Item -LiteralPath $source
+  $results+=@{path=$row.logicalCapturePath;canonical=$row.canonicalPath;sha256=$row.sha256;status='PASS'}
+}
+@{at=(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K');status='PASS';removedDuplicates=$results.Count;individualFilesOnly=$true;results=$results} | ConvertTo-Json -Depth 6 | Set-Content docs/M10_T11_EVIDENCE/image-consolidation.json -Encoding UTF8
+Write-Output "PASS: $($results.Count) new byte-identical PNG duplicates indexed and consolidated"

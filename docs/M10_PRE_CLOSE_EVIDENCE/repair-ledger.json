@@ -1,0 +1,81 @@
+{
+  "at": "2026-10-06 21:37:05 +08:00",
+  "task": "M10-PRE-CLOSE",
+  "count": 7,
+  "limit": 10,
+  "cycles": [
+    {
+      "cycle": 1,
+      "failedStage": "C exact privacy",
+      "hypothesis": "Inherited PSModulePath is incompatible with WindowsPowerShell5.1",
+      "evidence": "C-module-probe.json",
+      "fix": "Native collector removes inherited PSModulePath only for powershell.exe; no scanner changes",
+      "affectedVerification": "C-exact-privacy-repair1 PASS/exit0; same original scanner407text/14trace entries,zero findings"
+    },
+    {
+      "cycle": 2,
+      "failedStage": "D-harness-regression 1PASS/3FAIL",
+      "hypothesis": "New helper local process shadows Node global process.env in its own initializer (temporal dead zone)",
+      "evidence": "D-harness-regression.txt",
+      "fix": "Rename local spawn result to child; preserve every assertion",
+      "affectedVerification": "D-harness-regression-repair2 FAIL2/PASS2; ReferenceError resolved, new Get-FileHash errors from module variable casing"
+    },
+    {
+      "cycle": 3,
+      "failedStage": "D harness under deliberately invalid inherited module path",
+      "hypothesis": "Windows case-insensitive environment is materialized as a case-sensitive JS object; Vitest/child process canonicalizes module key to PSMODULEPATH",
+      "evidence": [
+        "D-module-casing-probe.json",
+        "D-repair2-child-errors"
+      ],
+      "fix": "Remove all case variants of only PSModulePath for WindowsPowerShell children",
+      "affectedVerification": "D-harness-regression-repair3 3PASS/1FAIL; H01 module/hash/inventory and H03/H04 nowPASS; remaining H02 log credential missing",
+      "evidenceCorrection": "Standalone D-module-casing-probe actually reports PSModulePath, not uppercase; earlier execution note uppercase proof claim was inaccurate. Actual fixture child env key was not captured then. Case-insensitive removal resolved H01/H02 Get-FileHash failures; collector receipts now record only removed key names, no values.",
+      "followupEvidence": "Final H01/H02/H03 child receipts now explicitly show resetModuleVariables=[PSMODULEPATH]; standalone probe used mixed-case. Both variants are covered."
+    },
+    {
+      "cycle": 4,
+      "failedStage": "D H02 missing actual .log credential finding",
+      "hypothesis": "Text extension allowlist omitted .log while binary inventory still included it; credential pattern itself remains unchanged",
+      "evidence": "D-harness-regression-repair3.txt",
+      "fix": "Add .log to text scan coverage; keep expected2 findings and all original patterns; audit removed module variable names",
+      "affectedVerification": "D-harness-regression-repair4 PASS4/4/native0; C final original scanner PASS0; D final actual evidence subset PASS0"
+    },
+    {
+      "cycle": 5,
+      "failedStage": "E initial browser14PASS/1FAIL T06-B01-1",
+      "hypothesis": "Unpaused60ms first decorative card detaches between asynchronous Playwright locator assertions; getComputedStyle(detached element).opacity returns empty rather than attached1",
+      "evidence": "E-animation-browser.txt; retained trace/screenshot",
+      "impact": "Existing opacity/no-premature-arrival assertions are valid but lacked a deterministic first-flight checkpoint; native timing cases unaffected",
+      "fix": "Use existing observe checkpoint to pause first real flight, assert same opacity1/zero arrivals, resume actual WAAPI; no production/2500ms assertion change",
+      "affectedVerification": "E-animation-browser-repair5 PASS15/15/native0;320 historical outputs restored"
+    },
+    {
+      "cycle": 6,
+      "failedStage": "I unified nativeexit1: four lint no-undef errors; all other stages PASS",
+      "hypothesis": "New Node collector references process and console without explicit imports under the existing ESLint module environment",
+      "evidence": [
+        "I-unified.txt",
+        "I-unified-receipt.json",
+        "I-first-performance-summary.json"
+      ],
+      "fix": "Import node:process and node:console in collector only; no lint configuration, product token, thresholds or assertions changed",
+      "affectedVerification": "Lint/four harness/exact scanner/full privacy PASS0; second full unified FAIL1 solely native bounded desktop2665.1ms; 1240units,244otherChromium andM1-M8preservation PASS"
+    },
+    {
+      "cycle": 7,
+      "failedStage": "I-unified-repair6 bounded cold desktop actual2665.1ms >2500; complete nativeexit1",
+      "hypothesis": "Nominal16*60ms=960ms leaves1540ms overhead allowance; observed failed window contains1705.1ms additional scheduling/publication cost. Fixed passive six-sample followup confirms readiness delays up to809.7ms and creation-to-finish up to891.5ms, with native finish-to-event <=0.2ms and no >50ms observed main-thread task. Initial40ms lowers nominal total by320ms, increasing allowance to1860ms; must prove with bounded exact/full gates.",
+      "evidence": [
+        "I-unified-repair6-receipt.json",
+        "I-repair6-performance-summary.json",
+        "I-repair6-failed-browser-artifacts",
+        "diagnosis-repair7-before.json"
+      ],
+      "limitations": "Exact OS/browser trigger of historical or2665.1ms outlier not established; fixed six followup samples did not reproduce2665.1. No claim token savings exactly predict actual elapsed or guarantee any future machine load.",
+      "fix": "Central INITIAL token60->40ms only; all16realWAAPI stages/order/ease retained. Action/Dealer110ms, core semantics, test modes and2500ms assertions unchanged.",
+      "affectedVerification": "Lint PASS0; four harness tests PASS0; unchanged exact scanner and full actual privacy subset PASS0; final unified I-unified-repair7 PASS/native0 including 1240 Vitest tests, 245 Chromium cases and M1-M8 preservation"
+    }
+  ],
+  "t11": "11/11 BLOCKED; repair12 NOT AUTHORIZED"
+}

@@ -1,0 +1,141 @@
+import { chromium, expect } from '../node_modules/@playwright/test/index.mjs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { resolve } from 'node:path';
+import { deepStrictEqual } from 'node:assert';
+
+const stamp = () => execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+const id = Date.now(), root = `docs/M10_T11_EVIDENCE/supplemental-${id}`, profile = resolve(`.git/m10-t11-profile-${id}`);
+mkdirSync(root, { recursive: true }); mkdirSync(`${profile}/extension`, { recursive: true });
+writeFileSync(`${profile}/extension/manifest.json`, JSON.stringify({ manifest_version: 3, name: 'Blackjack T11 review zoom', version: '1.0', host_permissions: ['http://127.0.0.1/*'], background: { service_worker: 'background.js' } }));
+writeFileSync(`${profile}/extension/background.js`, 'chrome.runtime.onInstalled.addListener(() => {});\n');
+const receipt = { start: stamp(), status: 'IN PROGRESS', productChanges: false, background: [], performance: [], zoom: [] };
+const overlays = '[data-initial-deal-flight],[data-action-card-flight],[data-split-flight],[data-dealer-reveal],[data-wager-flight]';
+let context;
+const save = () => writeFileSync(`${root}/receipt.json`, JSON.stringify(receipt, null, 2) + '\n');
+async function settled(page) {
+  await expect.poll(() => page.locator(overlays).count()).toBe(0);
+  for (const flag of ['initial-deal', 'player-actions', 'dealer-actions', 'wagers']) await expect(page.locator('.game-scene')).toHaveAttribute(`data-${flag}-running`, 'false');
+}
+async function deal(page) {
+  await page.getByLabel('Your main wager', { exact: false }).fill('100');
+  await page.getByRole('button', { name: 'Deal', exact: true }).click(); await settled(page);
+}
+async function finish(page) {
+  for (let i = 0; i < 24 && !await page.getByRole('button', { name: 'Deal Again', exact: true }).count(); i++) {
+    const decline = page.getByRole('button', { name: 'Decline', exact: true });
+    await (await decline.count() ? decline : page.getByRole('button', { name: 'Stand', exact: true })).click();
+    await settled(page);
+  }
+  await expect(page.getByRole('button', { name: 'Deal Again', exact: true })).toBeEnabled(); await settled(page);
+}
+async function facts(page) {
+  return { cards: await page.locator('[data-card-slot]').evaluateAll(elements => elements.map(element => [element.getAttribute('data-card-slot'), element.getAttribute('aria-label')])),
+    credits: await page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').allTextContents(),
+    dealer: await page.locator('.dealer-zone').getAttribute('data-dealer-character'), audit: await page.locator('.audit-list').textContent() };
+}
+try {
+  context = await chromium.launchPersistentContext(`${profile}/browser`, { channel: 'chromium', headless: false, viewport: null, reducedMotion: 'no-preference', ignoreDefaultArgs: ['--disable-background-timer-throttling','--disable-backgrounding-occluded-windows','--disable-renderer-backgrounding'], args: [`--disable-extensions-except=${profile}/extension`, `--load-extension=${profile}/extension`, '--window-size=1280,1000'] });
+  await context.tracing.start({ screenshots: true, snapshots: true, sources: true });
+  receipt.browser = context.browser()?.version(); receipt.headless = false;
+  const worker = context.serviceWorkers()[0] ?? await context.waitForEvent('serviceworker');
+  const page = await context.newPage(); await page.goto('http://127.0.0.1:4189/?fixture=player-loss'); await page.bringToFront();
+  const cdp = await context.newCDPSession(page), windowInfo = await cdp.send('Browser.getWindowForTarget');
+  const width = await page.evaluate(() => innerWidth);
+  await cdp.send('Browser.setWindowBounds', { windowId: windowInfo.windowId, bounds: { width: windowInfo.bounds.width + 1280 - width } });
+  await expect.poll(() => page.evaluate(() => innerWidth)).toBe(1280);
+  const cover = await context.newPage(); await cover.goto('http://127.0.0.1:4189/?fixture=player-setup&cover=review-background');
+  receipt.nativeTabs = await worker.evaluate(async () => {
+    const tabs = await chrome.tabs.query({ url: 'http://127.0.0.1:4189/*' });
+    const cover = tabs.find(tab => tab.url.includes('cover=review-background')), game = tabs.find(tab => !tab.url.includes('cover=review-background'));
+    const before = tabs.map(({ id, windowId, active, url }) => ({ id, windowId, active, url }));
+    if (cover.windowId !== game.windowId) await chrome.tabs.move(cover.id, { windowId: game.windowId, index: -1 });
+    return { before, gameWindow: game.windowId };
+  }); save();
+  async function nativeActivate(cover) {
+    await worker.evaluate(async cover => { const tabs = await chrome.tabs.query({ url: 'http://127.0.0.1:4189/*' }); const tab = tabs.find(tab => tab.url.includes('cover=review-background') === cover); await chrome.tabs.update(tab.id, { active: true }); await chrome.windows.update(tab.windowId, { focused: true }); }, cover);
+  }
+  for (const phase of ['initial', 'Hit']) {
+    await nativeActivate(false); await page.goto('http://127.0.0.1:4189/?fixture=player-loss');
+    if (phase === 'Hit') await deal(page);
+    await page.evaluate(phase => {
+      window.t11Visibility = [];
+      document.addEventListener('visibilitychange', event => window.t11Visibility.push({ state: document.visibilityState, trusted: event.isTrusted, at: performance.now() }));
+      const selector = phase === 'initial' ? '[data-initial-deal-flight]' : '[data-action-card-flight]';
+      const observer = new MutationObserver(() => { const element = document.querySelector(selector); if (element) { element.getAnimations({ subtree: true }).forEach(animation => { animation.pause(); animation.currentTime = 45; }); observer.disconnect(); } });
+      observer.observe(document.body, { subtree: true, childList: true });
+    }, phase);
+    await page.getByRole('button', { name: phase === 'initial' ? 'Deal' : 'Hit', exact: true }).click();
+    const selector = phase === 'initial' ? '[data-initial-deal-flight]' : '[data-action-card-flight]';
+    await expect(page.locator(selector)).toHaveCount(1);
+    const before = await facts(page);
+    await nativeActivate(true);
+    try { await expect.poll(() => page.evaluate(() => document.visibilityState)).toBe('hidden'); }
+    catch (error) { receipt.background.push({ phase, status: 'BLOCKED', result: 'REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE', reason: String(error), tabs: await worker.evaluate(() => chrome.tabs.query({url:'http://127.0.0.1:4189/*'})) }); await nativeActivate(false); await page.getByRole('button',{name:'Skip current animation',exact:true}).click(); await settled(page); save(); break; }
+    await settled(page);
+    const hidden = await page.evaluate(() => ({ state: document.visibilityState, ownHiddenOverride: Object.hasOwn(document, 'hidden'), events: window.t11Visibility }));
+    expect(hidden.ownHiddenOverride).toBe(false); expect(hidden.events.some(event => event.state === 'hidden' && event.trusted)).toBe(true);
+    deepStrictEqual(await facts(page), before);
+    await nativeActivate(false); await expect.poll(() => page.evaluate(() => document.visibilityState)).toBe('visible'); await settled(page);
+    deepStrictEqual(await facts(page), before);
+    await expect(page.locator('[data-card-slot="dealer:1"]')).toHaveAttribute('aria-label', 'Hidden dealer card');
+    await page.screenshot({ path: `${root}/background-${phase}-resumed.png`, fullPage: true });
+    await finish(page);
+    receipt.background.push({ phase, status: 'PASS', method: 'real headful Chromium native chrome.tabs activation in one browser window; native trusted visibilitychange; no visibility override', before, hidden, resumed: await page.evaluate(() => window.t11Visibility), final: await facts(page) }); save();
+  }
+  await cover.close();
+  await context.tracing.stop({ path: `${root}/real-background-trace.zip` });
+  await context.close(); context = null;
+  context = await chromium.launchPersistentContext(`${profile}/performance`, { channel: 'chromium', headless: true, reducedMotion: 'no-preference', viewport: { width: 1280, height: 900 } });
+  const perfPage = await context.newPage();
+  for (const [width, height] of [[1280, 900], [768, 1024], [320, 720]]) {
+    await perfPage.setViewportSize({ width, height }); await perfPage.goto('http://127.0.0.1:4189/?fixture=player-setup');
+    await perfPage.getByLabel('Total players', { exact: true }).selectOption('7'); await perfPage.getByRole('button', { name: 'Start table', exact: true }).click(); await settled(perfPage);
+    const rounds = [];
+    for (let round = 1; round <= 3; round++) {
+      await perfPage.evaluate(() => {
+        const metric = { start: null, end: null, flights: 0, frames: [], longTasks: [] }; window.t11Metric = metric;
+        const longTasks = new PerformanceObserver(list => metric.longTasks.push(...list.getEntries().map(entry => ({ start: entry.startTime, duration: entry.duration })))); longTasks.observe({ type: 'longtask', buffered: false }); window.t11LongTasks = longTasks;
+        const observer = new MutationObserver(records => { for (const record of records) { for (const node of record.addedNodes) if (node instanceof HTMLElement && node.dataset.initialDealFlight) { metric.start ??= performance.now(); metric.flights++; }
+          if (record.type === 'attributes' && record.target instanceof HTMLElement && record.target.dataset.initialDealRunning === 'false' && metric.start !== null) metric.end ??= performance.now(); } });
+        observer.observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['data-initial-deal-running'] }); window.t11Observer = observer;
+        window.t11ProfileActive = true; let previous;
+        const frame = now => { if (!window.t11ProfileActive) return; if (previous !== undefined) metric.frames.push(now - previous); previous = now; window.t11FrameId = requestAnimationFrame(frame); }; window.t11FrameId = requestAnimationFrame(frame);
+      });
+      await deal(perfPage);
+      const metric = await perfPage.evaluate(() => { window.t11ProfileActive = false; cancelAnimationFrame(window.t11FrameId); window.t11LongTasks.disconnect(); window.t11Observer.disconnect(); return window.t11Metric; });
+      expect(metric.flights).toBe(16); expect(metric.end - metric.start).toBeLessThanOrEqual(2500);
+      metric.initialMilliseconds = metric.end - metric.start;
+      metric.animationLongTasks = metric.longTasks.filter(task => task.start >= metric.start && task.start <= metric.end);
+      await finish(perfPage);
+      const cleanup = await perfPage.evaluate(() => ({ nodes: document.querySelectorAll('*').length, clones: document.querySelectorAll('[data-initial-deal-flight],[data-action-card-flight],[data-split-flight],[data-wager-flight],[data-dealer-reveal]').length, hiddenVisualCards: document.querySelectorAll('[data-deal-visible="false"]').length, runningAnimations: document.getAnimations().filter(animation => animation.playState === 'running').length, width: innerWidth, scroll: document.documentElement.scrollWidth }));
+      expect(cleanup.clones).toBe(0); expect(cleanup.hiddenVisualCards).toBe(0); expect(cleanup.scroll).toBeLessThanOrEqual(cleanup.width);
+      rounds.push({ round, metric, cleanup, final: await facts(perfPage) }); save();
+      if (round < 3) { await perfPage.getByRole('button', { name: 'Deal Again', exact: true }).click(); await settled(perfPage); }
+    }
+    await perfPage.screenshot({ path: `${root}/repeated-seven-${width}.png`, fullPage: true }); receipt.performance.push({ width, height, rounds, status: 'PASS' }); save();
+  }
+  await context.close(); context = null;
+  context = await chromium.launchPersistentContext(`${profile}/zoom`, { channel: 'chromium', headless: true, viewport: null, reducedMotion: 'reduce', args: [`--disable-extensions-except=${profile}/extension`, `--load-extension=${profile}/extension`, '--window-size=1280,1000'] });
+  const zoomWorker = context.serviceWorkers()[0] ?? await context.waitForEvent('serviceworker'), zoomPage = await context.newPage();
+  await zoomPage.goto('http://127.0.0.1:4189/?fixture=player-dealer-multi');
+  const zoomCdp = await context.newCDPSession(zoomPage), native = await zoomCdp.send('Browser.getWindowForTarget'), zoomWidth = await zoomPage.evaluate(() => innerWidth);
+  await zoomCdp.send('Browser.setWindowBounds', { windowId: native.windowId, bounds: { width: native.bounds.width + 1280 - zoomWidth } });
+  await expect.poll(() => zoomPage.evaluate(() => innerWidth)).toBe(1280); receipt.zoomBaseline = await zoomPage.evaluate(() => ({ width: innerWidth, dpr: devicePixelRatio }));
+  for (const fixture of ['player-dealer-multi', 'player-rsa-cap', 'player-ace']) {
+    await zoomPage.goto(`http://127.0.0.1:4189/?fixture=${fixture}`);
+    const zoom = await zoomWorker.evaluate(async () => { const [tab] = await chrome.tabs.query({ url: 'http://127.0.0.1:4189/*' }); await chrome.tabs.setZoomSettings(tab.id, { mode: 'automatic', scope: 'per-tab' }); await chrome.tabs.setZoom(tab.id, 2); return chrome.tabs.getZoom(tab.id); });
+    expect(zoom).toBe(2); await expect.poll(() => zoomPage.evaluate(() => innerWidth)).toBe(640); await deal(zoomPage);
+    if (fixture === 'player-rsa-cap') { for (let i = 0; i < 3; i++) { await zoomPage.getByRole('button', { name: 'Split', exact: true }).click(); await settled(zoomPage); } await expect(zoomPage.locator('.hud-hand')).toHaveCount(4); }
+    else if (fixture === 'player-ace') { await zoomPage.getByRole('button', { name: 'Buy Insurance', exact: true }).click(); await settled(zoomPage); await expect(zoomPage.locator('[data-card-slot="dealer:1"]')).toHaveAttribute('aria-label', 'Hidden dealer card'); }
+    else await finish(zoomPage);
+    const facts = await zoomPage.evaluate(() => ({ width: innerWidth, dpr: devicePixelRatio, scroll: document.documentElement.scrollWidth, font: getComputedStyle(document.documentElement).fontSize, cssZoom: getComputedStyle(document.documentElement).zoom, portraits: [...document.querySelectorAll('.dealer-zone img')].map(image => ({ complete: image.complete, width: image.naturalWidth })), targets: [...document.querySelectorAll('.player-dock button')].filter(element => element.getClientRects().length).map(element => { const rect = element.getBoundingClientRect(); return { text: element.textContent, width: rect.width, height: rect.height }; }) }));
+    expect(facts.width).toBe(640); expect(facts.dpr / receipt.zoomBaseline.dpr).toBe(2); expect(facts.font).toBe('16px'); expect(facts.cssZoom).toBe('1'); expect(facts.scroll).toBeLessThanOrEqual(facts.width);
+    expect(facts.portraits).toEqual([{ complete: true, width: 240 }]); for (const target of facts.targets) { expect(target.width).toBeGreaterThanOrEqual(44); expect(target.height).toBeGreaterThanOrEqual(44); }
+    const images = [];
+    for (const [label, selector] of [['dealer', '.dealer-zone'], ['controls', '.player-dock']]) { await zoomPage.locator(selector).scrollIntoViewIfNeeded(); const shot = await zoomCdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true, captureBeyondViewport: false }); const filename = `native200-${fixture}-${label}.png`; writeFileSync(`${root}/${filename}`, Buffer.from(shot.data, 'base64')); images.push(filename); }
+    receipt.zoom.push({ fixture, zoom, method: 'native chrome.tabs.setZoom/getZoom; root16px; CSSzoom1', facts, images, status: 'PASS' }); save();
+  }
+  receipt.status = 'PASS'; receipt.exit = 0;
+} catch (error) { receipt.status = 'FAIL'; receipt.exit = 1; receipt.error = String(error); process.exitCode = 1; }
+finally { receipt.finish = stamp(); save(); await context?.close(); console.log(JSON.stringify({ root, ...receipt })); }

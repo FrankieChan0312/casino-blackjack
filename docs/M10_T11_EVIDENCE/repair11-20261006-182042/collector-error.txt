@@ -1,0 +1,8 @@
+Captured from the execution tool result for session42881 (outer process exit1). This is not the missing native verify.ps1 exit receipt.
+
+powershell.exe : [WebServer] (node:9888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At .git/m10-t11-repair11-verify.ps1:19 char:1
+CategoryInfo : NotSpecified: (...) [], RemoteException
+FullyQualifiedErrorId : NativeCommandError
+
+The unchanged scripts/verify.ps1 was invoked at18:28:24 +08:00. The outer collector used ErrorActionPreference=Stop with redirected native stderr and did not reach its exit-code or restoration receipt writes. Original wrapper and partial stdout are retained. Native verify.ps1 exit code NOT AVAILABLE. Do not infer0 or1 from the outer collector exit1. No retry or collector fix performed.

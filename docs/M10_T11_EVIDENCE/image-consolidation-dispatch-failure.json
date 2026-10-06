@@ -1,0 +1,9 @@
+{
+  "status": "FAIL",
+  "effect": "No file deleted or changed; index generation subsequently completed exit0",
+  "cause": "Index-generation exec had returned a live session; dependent cleanup was dispatched before plan existed",
+  "at": "2026-10-06 15:44:57 +08:00",
+  "operation": "First optional image-consolidation invocation",
+  "substantiveRepairCount": 7,
+  "exitCode": 1
+}

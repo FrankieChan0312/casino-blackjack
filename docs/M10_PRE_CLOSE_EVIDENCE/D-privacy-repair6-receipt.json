@@ -1,0 +1,22 @@
+{
+  "start": "2026-10-06T12:27:13.572Z",
+  "finish": "2026-10-06T12:27:28.709Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/scan-evidence.ps1",
+    "-ResultPath",
+    ".git/evidence-capture/D-privacy-repair6-result.json"
+  ],
+  "log": ".git\\evidence-capture\\D-privacy-repair6.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

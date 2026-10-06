@@ -1,0 +1,16 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  24 passed (24)
+      Tests  201 passed (201)
+   Start at  19:35:19
+   Duration  11.40s (tests 50%, import 44%, transform 4%, setup 1%)
+
+    Isolate  24 workers spawned · ~227ms startup each (spawn + environment, per file)
+             at least ~1.14s faster with isolate: false — reuses workers across files instead of one per file
+

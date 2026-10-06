@@ -1,0 +1,16 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/t11Performance.spec.ts
+
+[WebServer] (node:30216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:35160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-1280] cold native seven-player initial deal completes within 2500ms (27.8s)
+  ok 2 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-768] cold native seven-player initial deal completes within 2500ms (3.8s)
+  ok 3 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-320] cold native seven-player initial deal completes within 2500ms (3.4s)
+
+  3 passed (36.9s)

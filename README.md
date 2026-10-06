@@ -1,3 +1,63 @@
+## M10-PRE-CLOSE maintenance VERIFIED — 2026-10-06 21:37:05 +08:00
+
+**M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED.** Maintenance repairs **7/10**. Required A-I gates are **PASS / checked exit0**: exact native performance, bounded cold/warm performance, unchanged exact privacy scanner, full actual evidence subset and four harness regressions, focused animations, full Vitest, full Chromium, independent M1-M8 preservation, and unchanged unified verify.ps1. Final unified verification passed 101 files / 1240 Vitest tests and 245 Chromium cases. Cold samples launch a new native browser and fresh page; warm is an extra fresh page/new context in the third browser. Only browser-process reuse is claimed, not cache/context/renderer warmth. All 33 final-candidate recorded native initial-deal samples met the unchanged 2500ms budget with 16 ordered destinations each. 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. The first unified attempt failed only collector lint; the second failed one bounded desktop60ms sample2665.1ms. Both complete failures and all prior samples remain preserved.
+
+Initial-only central duration changed from 80ms to 40ms (first maintenance60ms candidate failed one bounded desktop sample); action and Dealer card flights remain 110ms, with every stage, ordering and ease retained. Diagnosis established cumulative serial WAAPI readiness/completion overhead. The fixed followup at60ms recorded readiness up to809.7ms and creation-to-finish up to891.5ms; native finish-to-event delay was <=0.2ms. The exact browser/OS stall trigger remains unproven. The historical 2861.1ms / 2891.6ms failure trigger remains **NOT ESTABLISHED**; fixed samples did not reproduce it. This evidence makes no universal machine-load guarantee.
+
+Privacy collection writes native stdout/stderr and scanner results outside all input targets, closes them before copying finalized evidence, and excludes no evidence paths or trace resources. Original credential/bearer/Vite patterns remain unchanged; .log coverage was added. Every artifact is inventoried by hash; text and non-image/font trace resources, including extensionless resources, are inspected. Synthetic screenshot provenance and visual checks supplement this inventory; no OCR certification is claimed. All incoming T11 historical evidence is byte-preserved, including 320 generated originals restored after tests. Domain diff from M10 start is EMPTY; gameplay, accounting, replay, RNG, Dealer system, assets and dependencies remain unchanged. Review here is in the same session. Normal origin/main publication is pending final documentation/privacy review.
+
+**M10-T11 remains BLOCKED AFTER 11/11; repair12 NOT AUTHORIZED. M10: NOT ACCEPTED. M10-T11 FRESH INDEPENDENT REVIEW REQUIRED in a new session; NOT RUN. DEPLOYMENT NOT RUN.**
+
+[Maintenance contract and executed evidence](docs/M10_PRE_CLOSE.md).
+
+## M10-PRE-CLOSE maintenance started — 2026-10-06 19:20:55 +08:00
+
+Owner-authorized performance/evidence maintenance, repairs0/10, main/e7ceea6 incomingDIRTY. T11 remains BLOCKED after11/11, repair12 NOT AUTHORIZED; M10 NOT ACCEPTED. [Scope and gates](docs/M10_PRE_CLOSE.md). Diagnose actual16card window before edits; unchanged2500ms; no features/domain/assets/dependencies/deployment. All incoming tracked/untracked hashes and historical failures retained. Recommended GPT Sol6.1/High; selected runtime NOT VERIFIED. Verification NOT RUN.
+
+## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
+
+New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.
+
+## M10-T11 current stop after exceptional repair11 — 2026-10-06 18:54:49 +08:00
+
+**M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11. M10: NOT ACCEPTED.** M10-T11: **11/11 — OWNER-AUTHORIZED EXCEPTION**; exhausted normal limit **10/10** is historical. Repair12 **NOT AUTHORIZED / NOT RUN**. Documentation count repair is **VERIFIED**; milestone closure remains **BLOCKED**. **DEPLOYMENT NOT RUN.**
+
+Unchanged exact publication check **PASS/exit0**; documentation tests **PASS/exit0 (3 files/9 tests)**; incoming-scope review **PASS/exit0**, incremental product/tests/assets/validators **EMPTY**. These completed checks precede the new failed final gate; they do not establish acceptance.
+
+Required unchanged scripts/verify.ps1 rerun: typecheck/lint/100 files-1236 Vitest/domain typecheck/build **PASS/checked0** in captured stdout. Chromium **FAIL**: cold seven-player initial deal **1280px2861.1ms** and **320px2891.6ms**, both above unchanged2500ms;768px1577.4ms. All three metrics record16 destinations. **HIGH-02 REOPENED**; timing cause not established. Earlier243/243 PASS is historical and cannot waive these new failures. Complete Chromium summary and fresh independent-preservation result are **BLOCKED / NOT VERIFIED**.
+
+Outer collector **FAIL/exit1** with PowerShell NativeCommandError on redirected web-server NO_COLOR stderr. It did not persist the actual verify.ps1 exit code; native exit **NOT AVAILABLE**, required unified gate **BLOCKED**. This collector failure does not explain away the two actual timing failures. No collector/product/validator/threshold repair or gate retry performed.
+
+Evidence-only cleanup **PASS/exit0**: all320 historical outputs restored byte-for-byte,269 incoming executable/asset inputs unchanged,57 fresh generated compatibility files archived alongside failed browser traces/metrics. Current stop records are appended; dated9/10,10/10,earlier11/11 start/verification evidence remains historical. No T11 review/closure commit or push; known incoming T11 changes remain uncommitted.
+
+[Current stop evidence](docs/M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
+
+## M10-T11 current exceptional documentation repair — 2026-10-06 18:24:52 +08:00
+
+**M10-T11: 11/11 — OWNER-AUTHORIZED EXCEPTION.** Normal limit: **10/10** exhausted. Repair12 **NOT AUTHORIZED / NOT RUN**. Owner explicitly authorizes exactly one documentation/publication count repair and conditional normal origin/main closure. Current repair IMPLEMENTED; exact publication check and fresh final verification **NOT RUN**. M10: NOT ACCEPTED until those checks and clean publication pass. **DEPLOYMENT NOT RUN.**
+
+Established runtime evidence:100 files/1236 Vitest,243 Chromium, preservation/privacy/assets/live Dealer guard and verify.ps1 PASS/checked0. This is prior evidence, not a claim of the new final rerun. Recommended GPT-6.1 Sol / Max (original task); actual selected model/effort NOT VERIFIED. No delegation.
+
+Scope: correct current repair count/status in closure docs and the current PLAN row. Incremental product/test/asset/dependency/runtime/validator changes must be EMPTY relative to the incoming repair11 snapshot; previously verified uncommitted T11 changes remain part of the overall review checkpoint. Non-goals: product changes, new features, deployment or repair12.
+
+Step -> verification: current documents -> exact unchanged final-audit.cjs PASS0; docs -> three files/nine tests; scope -> incoming source and historical-evidence SHA equality; final runtime -> scripts/verify.ps1 full units/Chromium/independent preservation; publication -> scoped diff/privacy/normal main push and exact CLEAN/live equality. Stop immediately on a failed exact check, unavailable tool, unexpected overlap, required-gate failure or unapproved action; no further repair authorized.
+
+All dated9/10,10/10 stop/failure/proposal records below are historical and preserved. The normal-limit10/10 field and current exception11/11 field have different meanings; neither counter is reset. See the newest repair11 evidence for current results.
+
+[Current repair evidence](docs/M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
+
+## M10-T11 STOPPED at normal repair limit — 2026-10-06 15:57:45 +08:00
+
+**M10_INDEPENDENT_REVIEW_BLOCKED. M10: NOT ACCEPTED.** Normal repair count **10/10**; further cycle NOT AUTHORIZED. Ten final technical native stages PASS/checked0 (100 files/1236 units,243 Chromium twice, preservation/assets/privacy/build/unified), but final added documentation/publication audit **FAIL/exit1** after repair10. The counter-generation script accidentally replaced10/10 with itself; dated review prefixes still say9/10. Those earlier claims are superseded here. Product/old-test/protected-input/320-output/1211-image/link checks passed before the failing current-counter assertion; no technical test failure is hidden.
+
+Publication STOPPED: no T11 commit or push, main remains starting e7ceea652dd74ef079d933922668c782304dc31f, working tree has known staged/uncommitted T11 files. A single additional documentation-only repair11 needs explicit owner authorization under AGENTS.md and this task's10/10 maximum. The unapplied proposal corrects final review counters/current statuses, retains all historical failed evidence and reruns current document/privacy/scope/staged checks. No product, old regression, threshold, timeout or deployment change. **DEPLOYMENT NOT RUN.** Future milestone unstarted. [Stop receipt](docs/M10_T11_EVIDENCE/stop-at-repair-limit.json); [unapplied proposal](docs/M10_T11_EVIDENCE/repair11-proposal.txt).
+
+## M10 final independent review — 2026-10-06 15:49:29 +08:00
+
+M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
+
+[Final review](docs/M10_T11.md), [consolidated evidence](docs/M10_T11_EVIDENCE/README.md), [20-image gallery](docs/M10_T11_EVIDENCE/gallery/README.md).
+
 ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
 
 Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](docs/M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
@@ -327,11 +387,11 @@ Records below preserve their historical versions, inventories, review boundaries
 
 # Casino Blackjack
 
-Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
+Choose a table for 1–7 players, press Start table, choose your own wager and play. One local human sits at Seat 4 with 0–6 unique fantasy computer guests and a formal fictional female Dealer. Choose your avatar under Change Character. Computer wagers, turns and Dealer resolution happen automatically; your hands and decisions stay near the edge of the felt.
 
 **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
 
-![Casino table geometry with central dealer, seated guests and near-edge own cards](docs/M10_T01_EVIDENCE/table-1280.png)
+![Current formal Dealer, four-player table and authoritative round result](docs/M10_T11_EVIDENCE/gallery/15-round-complete.png)
 
 ## Current M9 delivery
 
@@ -355,7 +415,7 @@ npx.cmd playwright install chromium
 npm.cmd run dev
 ```
 
-Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
+Open the local URL printed by Vite. Classic Blackjack is the default. Choose **Total players** (1–7, default 4), press **Start table**, then choose 10–1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
 
 The normal table uses **House Rules v1.2 / Classic**, with Re-split Aces. A Split-Ace hand receives one supplement. If it is A+A and funds/cap permit, choose **Split** or **Stand to keep Soft 12**. Otherwise it completes automatically. Hit, Double and Surrender remain unavailable; A+ten is ordinary 21. Historical v1.1 profiles remain available in secondary demo settings and preserve old replay behavior.
 
@@ -371,7 +431,7 @@ git diff --check
 git status --short --untracked-files=all
 ```
 
-The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current PA1 inventory:76 files/1031 Vitest/63 Chromium. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
+The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current final M10 inventory:100 files/1236 Vitest/243 Chromium; final exact-version execution PASS/checked0 is linked above. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
 
 ## Profiles and engineering
 
@@ -384,6 +444,6 @@ Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split 
 | `CLASSIC_6D_S17_V1_2` (normal Player Mode) | OFF | ENABLED |
 | `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
 
-Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The dealer retains its code-native SVG; fantasy portrait originals were supplied by the owner and preserved with audited transparent derivatives. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
+Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The Dealer uses the approved five-identity formal female pool with deterministic session rotation and a generic formal fallback; all source originals and PA1 portraits are preserved. Presentation-only card/action/Dealer/chip sequences observe authoritative public results, with immediate/reduced/skip equivalence. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
 
 No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).

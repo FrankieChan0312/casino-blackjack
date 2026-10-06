@@ -1,0 +1,187 @@
+{
+  "width": 1280,
+  "height": 900,
+  "mode": "FULL_MOTION",
+  "browser": "153.0.8010.12",
+  "samples": [
+    {
+      "temperature": "cold",
+      "elapsed": 1612.3999998569489,
+      "timing": {
+        "start": 2531.7000000476837,
+        "end": 4144.099999904633,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 1554.5,
+      "timing": {
+        "start": 1805.7999999523163,
+        "end": 3360.2999999523163,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 909.5999999046326,
+      "timing": {
+        "start": 1779.7000000476837,
+        "end": 2689.2999999523163,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "warm",
+      "elapsed": 884.0999999046326,
+      "timing": {
+        "start": 1155.2999999523163,
+        "end": 2039.3999998569489,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    }
+  ],
+  "median": 1232.0499999523163,
+  "worst": 1612.3999998569489,
+  "budgetMs": 2500
+}

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T12:50:47.518Z",
+  "finish": "2026-10-06T12:51:47.894Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test:e2e",
+    "--",
+    "tests/browser/m10/preClosePerformance.spec.ts"
+  ],
+  "log": ".git\\evidence-capture\\B-performance-repair7.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

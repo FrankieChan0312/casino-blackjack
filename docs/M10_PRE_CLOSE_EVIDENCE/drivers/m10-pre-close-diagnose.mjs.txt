@@ -1,0 +1,28 @@
+import { chromium, expect } from '../node_modules/@playwright/test/index.mjs';
+import fs from 'node:fs';import { spawn, execFileSync } from 'node:child_process';
+const dir='docs/M10_PRE_CLOSE_EVIDENCE',stamp=()=>execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const log=fs.openSync('.git/m10-pre-close-diagnostic-server.txt','w');
+const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--mode','e2e','--port','4189','--strictPort'],{stdio:['ignore',log,log],windowsHide:true});
+const result={start:stamp(),mode:'FULL_MOTION; native channel chromium, headless:true, reducedMotion:no-preference',method:'Fixed1280/768/320 cold and warm fresh page, six samples, passive WAAPI/MutationObserver/LongTask recording, no motion changes, no retries',samples:[]};
+try{
+  let available=false;for(let i=0;i<40;i++){if(server.exitCode!==null)throw Error('Own diagnostic server exited');try{const r=await fetch('http://127.0.0.1:4189');if(r.ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,250));}if(!available)throw Error('Own server not available');
+  for(const [width,height]of [[1280,900],[768,1024],[320,720]]){
+    const browser=await chromium.launch({channel:'chromium'});
+    try{for(const temperature of ['cold','warm']){
+      const page=await browser.newPage({viewport:{width,height},reducedMotion:'no-preference'});
+      await page.goto('http://127.0.0.1:4189/?fixture=player-setup');await page.getByLabel('Total players',{exact:true}).selectOption('7');await page.getByRole('button',{name:'Start table',exact:true}).click();
+      await page.evaluate(()=>{
+        const metric={start:null,end:null,insertions:[],animations:[],longTasks:[],hidden:document.hidden};window.preCloseDiagnosis=metric;
+        const original=Element.prototype.animate;
+        Element.prototype.animate=function(...args){const animation=original.apply(this,args);const flight=this.closest('[data-initial-deal-flight]');if(flight){const row={target:flight.dataset.dealTarget,created:performance.now(),duration:animation.effect.getTiming().duration,ready:null,nativeFinished:null,finishEvent:null};metric.animations.push(row);animation.ready.then(()=>row.ready=performance.now());animation.finished.then(()=>row.nativeFinished=performance.now(),()=>{});animation.addEventListener('finish',()=>row.finishEvent=performance.now());}return animation;};
+        new MutationObserver(records=>{for(const record of records){for(const node of record.addedNodes)if(node instanceof HTMLElement&&node.dataset.initialDealFlight){metric.start??=performance.now();metric.insertions.push({target:node.dataset.dealTarget,at:performance.now(),removed:null});}for(const node of record.removedNodes)if(node instanceof HTMLElement&&node.dataset.initialDealFlight){const row=metric.insertions.find(row=>row.target===node.dataset.dealTarget);if(row)row.removed=performance.now();}if(record.type==='attributes'&&record.target instanceof HTMLElement&&record.target.dataset.initialDealRunning==='false'&&metric.start!==null)metric.end??=performance.now();}}).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['data-initial-deal-running']});
+        new PerformanceObserver(list=>metric.longTasks.push(...list.getEntries().map(e=>({at:e.startTime,duration:e.duration})))).observe({type:'longtask',buffered:false});
+      });
+      await page.getByLabel('Your main wager',{exact:false}).fill('100');await page.getByRole('button',{name:'Deal',exact:true}).click();await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running','false');
+      const metric=await page.evaluate(()=>window.preCloseDiagnosis);expect(metric.insertions.map(r=>r.target)).toEqual([0,1].flatMap(index=>[1,2,3,4,5,6,7].map(seat=>`round-1/seat-${seat}:${index}`).concat(`dealer:${index}`)));
+      const elapsed=metric.end-metric.start;result.samples.push({width,height,temperature,browser:browser.version(),elapsed,status:elapsed<=2500?'PASS':'FAIL',metric});fs.writeFileSync(dir+'/diagnosis-before.json',JSON.stringify(result,null,2)+'\n');await page.close();
+    }}finally{await browser.close();}
+  }
+  result.status='PASS';result.scope='Diagnosis collected, not a claim the existing2500ms product gate passed';process.exitCode=0;
+}catch(e){result.status='FAIL';result.error=String(e);process.exitCode=1;}
+finally{result.finish=stamp();server.kill();fs.closeSync(log);fs.writeFileSync(dir+'/diagnosis-before.json',JSON.stringify(result,null,2)+'\n');fs.copyFileSync('.git/m10-pre-close-diagnostic-server.txt',dir+'/diagnostic-server.txt');console.log(JSON.stringify({status:result.status,samples:result.samples.map(s=>({width:s.width,temperature:s.temperature,elapsed:s.elapsed,status:s.status,animations:s.metric.animations.length,longTasks:s.metric.longTasks.filter(x=>x.at>=s.metric.start)})),error:result.error}));}

@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED",
+  "collectorExitCode": 1,
+  "command": [
+    "npm.cmd",
+    "run",
+    "lint"
+  ],
+  "cause": "Node spawn cannot directly launch a Windows .cmd file (EINVAL); lint NOT RUN in this invocation",
+  "correction": "Use native cmd.exe /d /c npm.cmd run lint. No source fix or additional repair cycle.",
+  "at": "2026-10-06T12:26:40.234Z"
+}

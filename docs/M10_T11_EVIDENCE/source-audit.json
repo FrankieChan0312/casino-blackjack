@@ -1,0 +1,30 @@
+[
+  {
+    "exitCode": 0,
+    "timestamp": "2026-10-06 14:06:50 +08:00",
+    "output": "",
+    "status": "PASS",
+    "command": "git diff --exit-code 4e6cd7efdca91651633931edcd9445a401886bce HEAD -- src/domain"
+  },
+  {
+    "exitCode": 0,
+    "timestamp": "2026-10-06 14:06:50 +08:00",
+    "output": "",
+    "status": "PASS",
+    "command": "git diff --exit-code 57443bbefddd47512104ba941c65e3ff1988cf02 HEAD -- src/domain"
+  },
+  {
+    "exitCode": 0,
+    "timestamp": "2026-10-06 14:06:50 +08:00",
+    "output": "",
+    "status": "PASS",
+    "command": "git log --format=%H 4e6cd7efdca91651633931edcd9445a401886bce..HEAD -- src/domain"
+  },
+  {
+    "exitCode": 0,
+    "timestamp": "2026-10-06 14:06:50 +08:00",
+    "output": "",
+    "status": "PASS",
+    "command": "git diff --exit-code 3c50ab4d0183cff13f2380bd60faa31583d3e988 HEAD -- art/source/characters public/characters :(exclude)public/characters/dealer art/character-production.json"
+  }
+]

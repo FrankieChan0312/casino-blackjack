@@ -1,0 +1,116 @@
+{
+  "label": "I-first",
+  "mode": "FULL_MOTION/native Chromium/no-preference",
+  "files": 5,
+  "samples": [
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 1,
+      "elapsedMs": 1971.7999999523163,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 2,
+      "elapsedMs": 2003.5,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 3,
+      "elapsedMs": 1653.3000001907349,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "warm",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 4,
+      "elapsedMs": 1459.3000001907349,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 1,
+      "elapsedMs": 2461.199999809265,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 2,
+      "elapsedMs": 1254.7000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 3,
+      "elapsedMs": 1646.2999999523163,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "warm",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 4,
+      "elapsedMs": 1251.2000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1213.4000000953674,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1489.7999999523163,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1982.4000000953674,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/I-first-timing-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    }
+  ],
+  "budgetMs": 2500,
+  "status": "PASS"
+}

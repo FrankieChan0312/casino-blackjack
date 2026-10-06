@@ -1,0 +1,21 @@
+{
+  "start": "2026-10-06T13:37:40.547Z",
+  "finish": "2026-10-06T13:37:44.782Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "test",
+    "--",
+    "tests/m9/documentation.test.ts",
+    "tests/unit/portfolio.test.ts",
+    "tests/unit/m8Contract.test.ts"
+  ],
+  "log": ".git\\evidence-capture\\publication-documentation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

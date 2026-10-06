@@ -1,0 +1,14 @@
+[
+  {
+    "name": "inherited",
+    "exitCode": 1,
+    "stdout": "5.1.26100.9444\r\n",
+    "stderr": "Get-Command : The term 'Get-FileHash' is not recognized as the name of a cmdlet, function, script file, or operable pro\r\ngram. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.\r\nAt line:1 char:39\r\n+ ... ersion.ToString(); Get-Command Get-FileHash -ErrorAction Stop | Selec ...\r\n+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : ObjectNotFound: (Get-FileHash:String) [Get-Command], CommandNotFoundException\r\n    + FullyQualifiedErrorId : CommandNotFoundException,Microsoft.PowerShell.Commands.GetCommandCommand\r\n \r\n"
+  },
+  {
+    "name": "runtime-default-modules",
+    "exitCode": 0,
+    "stdout": "5.1.26100.9444\r\n{\"Name\":\"Get-FileHash\",\"Source\":\"Microsoft.PowerShell.Utility\"}\r\n",
+    "stderr": ""
+  }
+]

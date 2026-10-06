@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-06 15:57:45 +08:00",
+  "status": "BLOCKED",
+  "exitCode": 1,
+  "normalRepairs": 10,
+  "limit": 10,
+  "exceptionAuthorized": false,
+  "latestFailure": "final-audit.txt",
+  "technicalGate": "Ten native stages PASS0; original wrapper failure and archival repair retained",
+  "acceptance": "M10: NOT ACCEPTED",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "deployment": "NOT RUN",
+  "sourceChanges": "Two bounded initial-duration lines; same frozen verified executable version",
+  "requiredNext": "Explicit authorization for one document-only repair11"
+}

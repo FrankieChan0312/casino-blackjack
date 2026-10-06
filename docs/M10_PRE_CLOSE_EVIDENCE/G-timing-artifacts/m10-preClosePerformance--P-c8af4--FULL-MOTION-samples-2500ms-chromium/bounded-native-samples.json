@@ -1,0 +1,187 @@
+{
+  "width": 1280,
+  "height": 900,
+  "mode": "FULL_MOTION",
+  "browser": "153.0.8010.12",
+  "samples": [
+    {
+      "temperature": "cold",
+      "elapsed": 1794.2999999523163,
+      "timing": {
+        "start": 2256.5,
+        "end": 4050.7999999523163,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 1244.7000000476837,
+      "timing": {
+        "start": 1682.8999998569489,
+        "end": 2927.5999999046326,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 2190.2999999523163,
+      "timing": {
+        "start": 1176.0999999046326,
+        "end": 3366.399999856949,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ]
+      }
+    },
+    {
+      "temperature": "warm",
+      "elapsed": 1700.4000000953674,
+      "timing": {
+        "start": 780,
+        "end": 2480.4000000953674,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60,
+          60
+        ]
+      }
+    }
+  ],
+  "median": 1747.3500000238419,
+  "worst": 2190.2999999523163,
+  "budgetMs": 2500
+}

@@ -1,0 +1,1268 @@
+﻿{
+    "at":  "2026-10-06 15:54:11 +08:00",
+    "scope":  "All new evidence text plus all non-image/font trace resources including extensionless resources; fresh localhost synthetic contexts only. Pattern scan plus contextual publication review; no AI session transcript or authenticated owner browser profile published.",
+    "findings":  [
+
+                 ],
+    "zipTextEntries":  [
+                           {
+                               "entry":  "trace.trace",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "trace.network",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "resources/b1a6213feccabda70f25054f32aec219213d50fc.html",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "resources/8545aed19f9f61c07fce1f607afffa54.jsonl",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "resources/01260034ca565e04b67411ebd080cb96.jsonl",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "resources/63442042febb17047d789eac1aaddf33.jsonl",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "trace.stacks",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           },
+                           {
+                               "entry":  "src/2e8420bf4e2b670cff68d6c965d5cb1a578f9dfb.mjs",
+                               "archive":  "supplemental-1791268969537/real-background-trace.zip"
+                           }
+                       ],
+    "textFiles":  [
+                      {
+                          "sha256":  "B41C3238404ABC75B5E24E6206D53772F5D144CAF000FBC09523B8F687F8C66F",
+                          "path":  "authored-documentation-diff.txt"
+                      },
+                      {
+                          "sha256":  "884D51CFE82B9E7CB177E143DD9885204E7D7AF51379D34D1C9707F96EC94E80",
+                          "path":  "bundle-baseline-build.txt"
+                      },
+                      {
+                          "sha256":  "3777352C0E27740AC55CB9E58ABA166D0D9B9B7E1F5985CF53333FA0D69C7AE6",
+                          "path":  "bundle-current-build.txt"
+                      },
+                      {
+                          "sha256":  "E25D3B264823C249051BA058D59CBC1A28147A5B0233728BA860D7FD6DED0183",
+                          "path":  "bundle-size.json"
+                      },
+                      {
+                          "sha256":  "B87AED75CAA7E6C1BEF85BA047EAA3263F10EBC65B35CB52AB9842E795FA0F68",
+                          "path":  "bundle-size.txt"
+                      },
+                      {
+                          "sha256":  "E6CC1B0C3749241D06CF5FECE22F24977D660051A3569055148A436E613269E3",
+                          "path":  "bundle-source-correction.json"
+                      },
+                      {
+                          "sha256":  "337CD22CF9B1E571537FC2D1F5325FCFBCDF33B3B10A0B8AA8D09E8115549708",
+                          "path":  "cleanup-first-driver.mjs.txt"
+                      },
+                      {
+                          "sha256":  "B345FFCEDA4B2ED8852BF8FBF1641D1A346AD89D74180B3594535021BB6A9383",
+                          "path":  "cleanup-first-run.txt"
+                      },
+                      {
+                          "sha256":  "9597C7342677239B9F81319853E123A87739A40FF41F917EE3D881FF9803D6C0",
+                          "path":  "cleanup-run.txt"
+                      },
+                      {
+                          "sha256":  "EABEF87488C225ABE7285F46F8DE014EA7B640671428C6378875AB7C56552ADD",
+                          "path":  "contrast-run.txt"
+                      },
+                      {
+                          "sha256":  "039D4D402D22D737AE40FC2CE8A30540A4C5DFEBB304BF6DB7D03556648025F2",
+                          "path":  "environment.json"
+                      },
+                      {
+                          "sha256":  "094DBC90890315D6FB71EF5A085DCE8E36C71CDD8084416C7740B5302614BECD",
+                          "path":  "final-audit-first-failure.txt"
+                      },
+                      {
+                          "sha256":  "85C399798D53C4102586AA1F87EB7FDA60EA00F28931E9CD4FC8C72864FEF383",
+                          "path":  "final-audit.json"
+                      },
+                      {
+                          "sha256":  "2E17B5A8AC42769AFE024B4F8116DD0E71B128CB9C620E2DC8DE03F59E05238C",
+                          "path":  "final-audit.txt"
+                      },
+                      {
+                          "sha256":  "D0B16483EA7578D1A7221695D3696B60144F2E75494C9A00929A5A8DBED4FC8D",
+                          "path":  "final-documentation-receipt.json"
+                      },
+                      {
+                          "sha256":  "9DBE8B405BE98001300E4F1EC5122CB468A07D3C4470C3E0395E2A1D8072B1F8",
+                          "path":  "final-documentation-tests.txt"
+                      },
+                      {
+                          "sha256":  "A5338D955B09046EC0B16F3A9625B7955C763AAE07DC722E474E6078745F932F",
+                          "path":  "github-deployments.json"
+                      },
+                      {
+                          "sha256":  "60AE986BD7F3AEB5C191F4FA588C15138688C8335780A3EDADC540E4E90E69FD",
+                          "path":  "image-byte-index.json"
+                      },
+                      {
+                          "sha256":  "7C7734264B8F570CC329805C2D83C13AFC5BC3A4BF9EC7C3BA9045CDC06D41C1",
+                          "path":  "image-consolidation-dispatch-failure.json"
+                      },
+                      {
+                          "sha256":  "9934E07DD8A2F9540F668556BDF9A25B699462F7AB2A1507B0B67781F1C5DD74",
+                          "path":  "image-consolidation-first-failure.txt"
+                      },
+                      {
+                          "sha256":  "B07A62545C420E0C6684BC67B208F380A3DA79491B0F83AAE46855F7B091E31A",
+                          "path":  "image-consolidation.json"
+                      },
+                      {
+                          "sha256":  "94F1918E7D1639CAA4BE23371E280C987FEDD576B64F60CA701EE3EFF4C14F01",
+                          "path":  "image-consolidation.txt"
+                      },
+                      {
+                          "sha256":  "7A7CE068C6F5EFD9F8070B3B43DDA5A9F7AA696BAC6A006753038CC757E1FE77",
+                          "path":  "immutable-raw-whitespace-receipt.json"
+                      },
+                      {
+                          "sha256":  "FCC8F748927A2E8C5CF792422EB6C7CE61451D9643A9BB13A9B7DD316DF3F5C3",
+                          "path":  "immutable-raw-whitespace.txt"
+                      },
+                      {
+                          "sha256":  "BCFA369B9E79A8EECCBCDD50EFF34CE834391338C61FF4C0B8EAFF1EB99EDCC4",
+                          "path":  "initial-gallery-selection.json"
+                      },
+                      {
+                          "sha256":  "447A4462E32B3B489C6A55E7302D50AD6F655409A9E61F77BD66080AC6C40AD5",
+                          "path":  "native-timing-control-before-repair5.json"
+                      },
+                      {
+                          "sha256":  "CAA74611095EDFCF562EAFFA3253A75E032EDD17278545FAF308B398C83ADD73",
+                          "path":  "native-timing-control-before-repair5.txt"
+                      },
+                      {
+                          "sha256":  "439170808A9C8D4C6919FE6778DA772C9FFAC9E7D7C6ED2DE59E43A2B8CCDDBB",
+                          "path":  "native-timing-control.json"
+                      },
+                      {
+                          "sha256":  "C36BCBE8EF01B45E0A4D38BC0804E0D28A65C4E850D95897E67F4C0D3A812F15",
+                          "path":  "native-timing-control.txt"
+                      },
+                      {
+                          "sha256":  "15945A007D047869E5968F0A4871A4D84A2E9455BF45B03F48CC985E69CCC471",
+                          "path":  "performance-zoom-before-repair5.txt"
+                      },
+                      {
+                          "sha256":  "2690FE43EC0784B74E33C612ABC8CD7D82AD926544F738B1AB026FD4DE01E4FE",
+                          "path":  "performance-zoom-run.txt"
+                      },
+                      {
+                          "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                          "path":  "precommit-fetch.txt"
+                      },
+                      {
+                          "sha256":  "97B3EEB0FB8B47A7F89F1E509AE3D1F21D3A977C6DF2C4D5CA95FA91F0A755E3",
+                          "path":  "precommit-remote.json"
+                      },
+                      {
+                          "sha256":  "A5D84099101DD42783A9A3F37EB89B75E8D021842695669792D20756C4EAD6EF",
+                          "path":  "privacy-review.json"
+                      },
+                      {
+                          "sha256":  "6780E16D2AF4FDC9AED4E33C4CA11129FB1ACA298EE6E0E74D990A75F64DC1A8",
+                          "path":  "raw-generated-movement.json"
+                      },
+                      {
+                          "sha256":  "128D68510CAF3381BA06EBF7554C21521CF3B3C7FCBE2BC0D53465FF740087E7",
+                          "path":  "README.md"
+                      },
+                      {
+                          "sha256":  "9FC2AC099B43F49928E216F2F45E10F0F5C47123CF811C3895942BACBBF40268",
+                          "path":  "receipt-scope-corrections.json"
+                      },
+                      {
+                          "sha256":  "3C0BCAE495FBE077886671492C427E00558AD593A8F8E7DF4B2D3C1D1C2FC070",
+                          "path":  "repair1-20261006-135956.txt"
+                      },
+                      {
+                          "sha256":  "723542773EB5A87D7F3B7F7E03F4B401D762A686F50073530D2FD410EF4AD944",
+                          "path":  "repair5-affected-units.txt"
+                      },
+                      {
+                          "sha256":  "FD01CC55677BCF264D8EF0734734F81E9E2B02DEAA7A6FEEDEF402F5E8EAD401",
+                          "path":  "repair5-native-regression.txt"
+                      },
+                      {
+                          "sha256":  "53839CCAD2C8F7B4B9A2ABB464E254DB6F6306626B92EDE4D299B5A642D45128",
+                          "path":  "repair5-typecheck.txt"
+                      },
+                      {
+                          "sha256":  "BA784407F7DC2051943429FE93DA6D1ABF9F5145CDB4CA2260DF4E948E28131A",
+                          "path":  "review.json"
+                      },
+                      {
+                          "sha256":  "DD095A23743FD019364C16E36C36F7D809D86155EF3AF343E57DEC6314CD1A4D",
+                          "path":  "scoped-whitespace-receipt.json"
+                      },
+                      {
+                          "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                          "path":  "scoped-whitespace.txt"
+                      },
+                      {
+                          "sha256":  "8C2C1080CF74BCE1B13C7D08F8FAA9EC81F3D6F07D404D91B540745EB2C3AA87",
+                          "path":  "source-audit.json"
+                      },
+                      {
+                          "sha256":  "C580BF832AA628F36FCFCB03CDD4DFD03EE38E2C0058742C0BBE856D2D0D5D0E",
+                          "path":  "staged-scope.txt"
+                      },
+                      {
+                          "sha256":  "FB44A413D0C090F65AC8DA03A3C3F0D258E724F43942108F2DF880C15E8D13F7",
+                          "path":  "supplemental-first-driver.mjs.txt"
+                      },
+                      {
+                          "sha256":  "8908F7FC575B3F5A8B4DF7C1AF0CDF94790E5943E48F9753A2CDC04811EE54E1",
+                          "path":  "supplemental-run-2.txt"
+                      },
+                      {
+                          "sha256":  "F2980EBF61559A25DED923CC7FCFE2F805DFCFC4D1596B115A37C3237B5DF72F",
+                          "path":  "supplemental-run-3.txt"
+                      },
+                      {
+                          "sha256":  "0B01F78864BC57D87FB727423B477B80A051F998FCA119DC85D1CC6BEA29CA44",
+                          "path":  "supplemental-run.txt"
+                      },
+                      {
+                          "sha256":  "6933DDAE3BA04771FAB5F2CD657FCAC22AFB0EDCE0ABE740DB2E8F4B0CA01CEE",
+                          "path":  "supplemental-second-driver.mjs.txt"
+                      },
+                      {
+                          "sha256":  "D907AC630B799D5C066F030A3118DCDA5B590E3E857B57272383A4280CCD8FF5",
+                          "path":  "supplemental-third-driver.mjs.txt"
+                      },
+                      {
+                          "sha256":  "2E879062F71D4BAA2A62915DAFB24D75C58637E4E960A9A1DAD24FB8F47B433D",
+                          "path":  "timing-control.json"
+                      },
+                      {
+                          "sha256":  "DBE9364A582300C58F3F60B66C4AB721095C5E6CABA5D38BC8F822B14CEF29C4",
+                          "path":  "timing-control.txt"
+                      },
+                      {
+                          "sha256":  "19EF7A4DDD99C5BFD61FB02BDF1362C4CCAE7F3EEC88328D9DC058E8A35C46C2",
+                          "path":  "contrast/control-contrast.json"
+                      },
+                      {
+                          "sha256":  "E72C20F06AB272AEBA0EFB209391CE4DB2608D1C0C40452B96DE20355DE715B3",
+                          "path":  "drivers/m10-t11-cleanup.mjs.txt"
+                      },
+                      {
+                          "sha256":  "A3FEBAB74B3BBDB9E5896E4F06E1503178116008E202D66157EFC8A1A44FD789",
+                          "path":  "drivers/m10-t11-contrast.cjs.txt"
+                      },
+                      {
+                          "sha256":  "152EF69A0C89258FE84A57EF33CC600599E85FF06881B0FE8FD57CB927DF9BDB",
+                          "path":  "drivers/m10-t11-dedupe.ps1.txt"
+                      },
+                      {
+                          "sha256":  "F55E3CEA793BD5B92022BF36F31AB0AFD08840FA94C36AF7690B3991F4E75D04",
+                          "path":  "drivers/m10-t11-diagnostic.mjs.txt"
+                      },
+                      {
+                          "sha256":  "A8880E03C4AC9E81B055A63B077C9EFF7FDE0CA29088F20D5EA73FA2CFD342BC",
+                          "path":  "drivers/m10-t11-final-audit.cjs.txt"
+                      },
+                      {
+                          "sha256":  "CB7B0D407C2A53E2D302406A21FFCB41871018F8A108DC3A110AC56A5547F79A",
+                          "path":  "drivers/m10-t11-gallery.cjs.txt"
+                      },
+                      {
+                          "sha256":  "0A0C87459A086ABF05AD7E9D8791B6B452310A15057551A16202455F1924CBE6",
+                          "path":  "drivers/m10-t11-image-index.cjs.txt"
+                      },
+                      {
+                          "sha256":  "19EB249FD841AC0E78F92FDB45B8D3A60A453E7733DCDFE796CBA9696D29D818",
+                          "path":  "drivers/m10-t11-move-generated.ps1.txt"
+                      },
+                      {
+                          "sha256":  "B3BC75A8BD69D3D818940BB74A19D0291B566AF15F8BC1798BBA4109338BCCCF",
+                          "path":  "drivers/m10-t11-native-control.mjs.txt"
+                      },
+                      {
+                          "sha256":  "6CD5A7108A4028B433473A232CDB7800CAD3F883C9D0A47FD606181066B3A073",
+                          "path":  "drivers/m10-t11-performance-zoom.mjs.txt"
+                      },
+                      {
+                          "sha256":  "90D2BA542B32CD9861FD35C7D7C759CA6EDC47E7EB25A999163420317DA5E284",
+                          "path":  "drivers/m10-t11-privacy.ps1.txt"
+                      },
+                      {
+                          "sha256":  "F5276FA68530311CFC645FB446E703E6CCF4EFA9B49C199A84E023A8B45DD782",
+                          "path":  "drivers/m10-t11-restore.ps1.txt"
+                      },
+                      {
+                          "sha256":  "D80EA40BEC68C4D67941BF209632764AD5D78156EFCC0CBDD8758EE091422DC2",
+                          "path":  "drivers/m10-t11-size.cjs.txt"
+                      },
+                      {
+                          "sha256":  "D907AC630B799D5C066F030A3118DCDA5B590E3E857B57272383A4280CCD8FF5",
+                          "path":  "drivers/m10-t11-supplemental.mjs.txt"
+                      },
+                      {
+                          "sha256":  "05CD4884BC5C7D65CA68ED79CD7D7A7DE484C745B59D486FBA034CFC511F22E7",
+                          "path":  "gallery/index.json"
+                      },
+                      {
+                          "sha256":  "265CE5512B1A20DA49845C92438552FEAA802772D9858CB0011BB98AF96970D8",
+                          "path":  "gallery/README.md"
+                      },
+                      {
+                          "sha256":  "2FF00EE1E39CBB19C36FB2B6FCC4D1B6AD5BF3C7E90A65B2B6C4514CFD62FF26",
+                          "path":  "gate-20261006-135811/executable-freeze.json"
+                      },
+                      {
+                          "sha256":  "B3B573969D8480F4A7E1BE91CA1426EEF37122FC40C8444C5E63BAD9F4735ABD",
+                          "path":  "gate-20261006-135811/gate-runner.ps1"
+                      },
+                      {
+                          "sha256":  "F90D9AAE45F60F38980FA37C8AF4BB1EF0F1B1B3408F022545E11C1035EE1844",
+                          "path":  "gate-20261006-135811/receipts.json"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-135811/units-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "99369FA6764C427B84988A1891B91E47373149FF7A7F96C7D8BD3D02C2B455C3",
+                          "path":  "gate-20261006-135811/units.txt"
+                      },
+                      {
+                          "sha256":  "A262E25E05500191BCAE6198E5E992549626918CF8F13436F208B866EE456CD8",
+                          "path":  "gate-20261006-140016/chromium-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "2DCF58A05CE68BFC82E0BCD8DC5170125A620165581CB56D3F4E44FED1B7BE78",
+                          "path":  "gate-20261006-140016/chromium.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/current-preservation-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "D935A761BE398B2C394DCFF0633665ED1D8F46277E7128B4673473486FF848F8",
+                          "path":  "gate-20261006-140016/current-preservation.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/dealer-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "9D81CE14F9EB2759D9BEB0F5E3010A67ACD8FA5F0AB4B1F8EFD20B57E54CD74B",
+                          "path":  "gate-20261006-140016/dealer-assets.txt"
+                      },
+                      {
+                          "sha256":  "6FE377C028AE9FF173531F5E619B2C1F34B75B71D845AE7B191C67CA697085A1",
+                          "path":  "gate-20261006-140016/executable-freeze.json"
+                      },
+                      {
+                          "sha256":  "B3B573969D8480F4A7E1BE91CA1426EEF37122FC40C8444C5E63BAD9F4735ABD",
+                          "path":  "gate-20261006-140016/gate-runner.ps1"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/generic-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "D911D57FC1D90A80C647D93CDC8157D03D6728CEED71F6565415A1DB2A50A4FE",
+                          "path":  "gate-20261006-140016/generic-assets.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/generic-reproduction-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "7D1966167FDD5BB18694862FC82BAEC2E229D4B2F30C77C28E4618BCCF9DCCB0",
+                          "path":  "gate-20261006-140016/generic-reproduction.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/live-guard-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "0884BE923AB946D5CA26DE4AE3DFD20D79D7BAC341DE538A3AECF30427508C22",
+                          "path":  "gate-20261006-140016/live-guard.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/player-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "1B0B9A01EC5F28B0E9126549ED0E139C4CCF9AE47E602A3AA577DD641E786DD3",
+                          "path":  "gate-20261006-140016/player-assets.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/preservation-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "FD62F04121AFF64A4F6BE784E547F28B1E57D49D1FA95F4D2F216BC39E5202DF",
+                          "path":  "gate-20261006-140016/preservation.txt"
+                      },
+                      {
+                          "sha256":  "BCA5F564088B0ED71A5B79138C0858C55DC25E39E9F0E563D173DC6809317883",
+                          "path":  "gate-20261006-140016/receipts.json"
+                      },
+                      {
+                          "sha256":  "9E3CEA9DFF8A2D29E57303A7A44BFF856F1570CB3945F509966C79BA4DEA4861",
+                          "path":  "gate-20261006-140016/unified-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "D206CB701E80EF7B1CF736E78ED64152545212000D4537103CD3688785086A96",
+                          "path":  "gate-20261006-140016/unified.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-140016/units-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "8C4F4FD1CFC1AEAA9B4A8EDA7E8E9EA09390B90485BF3752E9D6F80BEFDB008C",
+                          "path":  "gate-20261006-140016/units.txt"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "BAA3D0ADA66733E9AC8B7731D95D5A116664856F089683904C918170BAB0DDFD",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-footprints.json"
+                      },
+                      {
+                          "sha256":  "D422165E5CD70333C9C41FA76DF9B79B82A8DF423AB9F15509A8F42757E5FA50",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-text200.json"
+                      },
+                      {
+                          "sha256":  "C9F6BCA56F333F173B3CD60B037DF1F6AA2633CEF78D627B9EC135968248DF34",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-1280.json"
+                      },
+                      {
+                          "sha256":  "B0F0354D60D021155954205E6C3FB466E1E9CAF8DD2AE04C7F6D1DA7B92BA29F",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-320.json"
+                      },
+                      {
+                          "sha256":  "B760EED0E025E7F26180B3262B4343138ADA365DDF84D39083850A0805C8BD4D",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-768.json"
+                      },
+                      {
+                          "sha256":  "00F84CC2F74E7B053D88874E65A4A48ABAD80FD4179A90644AC0098D9B5430DB",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-dealerPresentation--M1-4d963-t-three-widths-plus-text200-chromium/dealer-layout.json"
+                      },
+                      {
+                          "sha256":  "A880D1EF68131D67600AC3C311574BC36C315CDED9855060BED95DBAF6F39B92",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B01-1-afb7d--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "3A71F39EAC3B8E5E3D2CBB49C4C97A54C3D5F87EC05B3A7D3DD984D78FA55D86",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B01-4-887ff--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "799C1E7418DDB0B8843FC84AA1E2AC558151E4B67F531DE60A10F041E3938E7A",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B01-7-088ad--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "43C6766C2386B0C8030CCA0A17F90ADF11C14F94846416961D9F9C3713BE5E2D",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "2A2B4FBEF16539C2B982EC30F29F15E5C9D81C67D6796E7DF49551616EE14BB7",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "46873C3768CEB99C554BAC7D50AE967C3BD73A8C47BE9BA08428C926A3F7697B",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "71B2482A7B18A4D7FD150110CE0732C08FB0977CB0DA275D516AB05F8226C065",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "57D098D8F282EBA33DDFEBDECC4E466FA9E92B7CA08C86F0FAFEFF2A7FB3822E",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "EFA9BC3464C266C59FF6394392316CC935BB2AB46A06E7CD22C1242579B581C1",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "D807F5FA18C5B207474092F69D33FFBF6253F318E5E16FF522D3EDD060040FFD",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "16B8966E1108DCEAC89E019CDB41B08C824D0FF697380E8079676414F374731B",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "676F892A1559A8D76A0F7624A219F4B4E231CA154C2722FA053284E29FCBC5A9",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "687C83ECC29DAB55E7F77659604AA3F5588459A6DD460D3DF7B78DFA8D3A401F",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "CAE4BD11163C0B4C26827315342A52E904056F35F20367E30BF783A8DA79BDA7",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "EC8F48D8040F4DD66FD770DE2D98B19BF338F13B8D735ED1711485FAEA4E8BCF",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "A7D9F9F2B8B4B94D0C43ED6358376BADED867400551868F5996FF8F02CB834E4",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/collapsed-summary-landing.json"
+                      },
+                      {
+                          "sha256":  "93274A2F696A1BA57E865A94D53C45B575BDBCA4C0CFCD6F24845B066571A564",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "5F400D594159936B33CB9FFA685094409DDCD628069197176276A32B577F6043",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "238AB82C4DD4F096F5D71A02E4FE3DFDAC7588EFF242BF2F8F79ED15C352C91C",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "93A07DD3DFF5E7FFA8B0FA2D9F389E2D0E538DE7CDF4203B9D94B54EDAD51F60",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "A0C9618763CF30B8933D97FDBF62AAB067A15693FBA7A0A078AC10D769A773F8",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "59487E34806544EAD440269E299222E488CEFDB7804FE742620CB8E94D19FD79",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "85AF41F7DA7F2023EFAC6EFA1F2CA38EE202449B52D6BA1FB68B93B640CFB691",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "47EB6A229D1EFFF767D7C8110FB566B3DDAB69FCD70FEDE9856264C56FAB4BD1",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "2D65C78E4E6B3D1F7BBA99E87F636DCE7AFE7F603DCD73F140E15C0855AB0E50",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/mapping-1.json"
+                      },
+                      {
+                          "sha256":  "11FE556C35B966E9570F8604150612D690FC2D786C48099332C57C13F03012AB",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/mapping-2.json"
+                      },
+                      {
+                          "sha256":  "C63C0DE1BE29CD10FFA106AD51C7BAC22C76D0869BD16364C90C8D711F459316",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/mapping-3.json"
+                      },
+                      {
+                          "sha256":  "DDDD8D2C3ECD54F979DC1C18A491D2C26B6A1CFF6C25E81894A6343AEEBA9AD8",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/mapping-4.json"
+                      },
+                      {
+                          "sha256":  "3E8607DF25BE9A21F99A0658EB48623ECD696B1ADAC2A6ED5D576170A3914401",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/mapping-5.json"
+                      },
+                      {
+                          "sha256":  "379BB952D460544C964E1B1494301832A6EB5DD46090B94203ED2A24609A905C",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/mapping-6.json"
+                      },
+                      {
+                          "sha256":  "0456881A0FFC7BF0208D70634FE261C95AB57FE219035AE729A72F543BFE78F4",
+                          "path":  "gate-20261006-140016/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mapping-7.json"
+                      },
+                      {
+                          "sha256":  "1C11A291714D49D789B85899F8E59865CE755894691E64F521465381C05E0295",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T01_EVIDENCE/geometry.json"
+                      },
+                      {
+                          "sha256":  "EBF1B16A82D722D39B1090F8B2509AD0968A3EE341A89191191161C6057030C1",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "E40883C3865055BD675B067622B152CE50966C28D8B732073A3115AF3A9F8450",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "503C92067BAE3BEA12DA8951080F9C86945DE3226C14FAB5CF1AD71E88D2DA1E",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "7D95AA5A29BFF59A4C9806A3E899E1B0BCF03A6FA9806F7B3B696133C99615F8",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json"
+                      },
+                      {
+                          "sha256":  "D04446E11A596FF18A0162A5A78BABCD429BB691E8A31A0D4FC5E58FB73E194B",
+                          "path":  "gate-20261006-140016/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-140016/preservation-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-140016/unified-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "1C11A291714D49D789B85899F8E59865CE755894691E64F521465381C05E0295",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T01_EVIDENCE/geometry.json"
+                      },
+                      {
+                          "sha256":  "EF02D2A096886A5C9E64ED8F86E1E3CC2BBBF4A2BD539D2D77A136EE47672647",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "1D585BDC019514E1EAB0ABFFCC3143047E5A809D3AE9B69E7FD135A4D5862DB8",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "23178B373FDEEB9E3E0680A481D036A8FCAB95874F6C09825A8B1FE102317998",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "5BC8DD17429C834F60AF7ACF2E058E3D15EAA113AA9960F04FF05C3080E7001B",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json"
+                      },
+                      {
+                          "sha256":  "67EA29E44E7300D5EFADE30F17C4D6EAB3DD493705A1F7D8029CB48CE39E25F7",
+                          "path":  "gate-20261006-140016/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json"
+                      },
+                      {
+                          "sha256":  "6E96755827EFB5276ADF5FA5F0BD19D0FDD7E34B36D05B8BD77C6B215267E2E3",
+                          "path":  "gate-20261006-150313/archival-first-failure.json"
+                      },
+                      {
+                          "sha256":  "DF1CDC8CBE7FC1E9ED4AAF609F618F7FB87B63D4BF1230ACD060F3DB0D027FB2",
+                          "path":  "gate-20261006-150313/chromium-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "BA1E3D2877A17050F6E8686CA7BC1700786A0D8BF7355BBE1C385073CEA11D9C",
+                          "path":  "gate-20261006-150313/chromium.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/current-preservation-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "75413B163133CC63891D2A82A5F022CD038FB22CF62856CE0559C33C3B176469",
+                          "path":  "gate-20261006-150313/current-preservation.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/dealer-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "9D81CE14F9EB2759D9BEB0F5E3010A67ACD8FA5F0AB4B1F8EFD20B57E54CD74B",
+                          "path":  "gate-20261006-150313/dealer-assets.txt"
+                      },
+                      {
+                          "sha256":  "5E0D7E36FAC0DAA6B29670B5ED39C6571A08A785F885216545C8DFAE4FF1D95E",
+                          "path":  "gate-20261006-150313/executable-freeze.json"
+                      },
+                      {
+                          "sha256":  "1529E5A409C990F002BBC2687E8EA22AB6518BBC526DAE8380F52C4AEE426A83",
+                          "path":  "gate-20261006-150313/gate-runner.ps1"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/generic-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "D911D57FC1D90A80C647D93CDC8157D03D6728CEED71F6565415A1DB2A50A4FE",
+                          "path":  "gate-20261006-150313/generic-assets.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/generic-reproduction-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "7D1966167FDD5BB18694862FC82BAEC2E229D4B2F30C77C28E4618BCCF9DCCB0",
+                          "path":  "gate-20261006-150313/generic-reproduction.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/live-guard-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "0884BE923AB946D5CA26DE4AE3DFD20D79D7BAC341DE538A3AECF30427508C22",
+                          "path":  "gate-20261006-150313/live-guard.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/player-assets-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "1B0B9A01EC5F28B0E9126549ED0E139C4CCF9AE47E602A3AA577DD641E786DD3",
+                          "path":  "gate-20261006-150313/player-assets.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/preservation-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "3154F60A4C286869D651AAED8334D17AEA44CBC78D0BD30939051460F1DC95CA",
+                          "path":  "gate-20261006-150313/preservation.txt"
+                      },
+                      {
+                          "sha256":  "0F029C8C9518056BC0B150BBAE37253B07E1E8F12CC8FF76FCF3D6DE8B62D220",
+                          "path":  "gate-20261006-150313/receipts.json"
+                      },
+                      {
+                          "sha256":  "DD27AF07981430EA4E314704DD08AAD7F1CC364EBDC99F63D40CE3FF0777C871",
+                          "path":  "gate-20261006-150313/repair7-restoration.json"
+                      },
+                      {
+                          "sha256":  "378BF1B130A6DEF360BD33DD6FA1350C9C1A17864D9B09B93AD1FA24BC33F840",
+                          "path":  "gate-20261006-150313/repair7-restoration.txt"
+                      },
+                      {
+                          "sha256":  "6BBE76600D302AE73D826E52A9634054930956DD6495CAC48DC7FE5D39FB68AA",
+                          "path":  "gate-20261006-150313/unified.txt"
+                      },
+                      {
+                          "sha256":  "84B1C14E68260082E3E79EDFF0A78F4EBF1942CFD6C593246044EC2149CBB87D",
+                          "path":  "gate-20261006-150313/units-output-preservation.json"
+                      },
+                      {
+                          "sha256":  "A6D6CBAF6A8B220F4BA7C714735A347D79CC9FED60A00F906A3767E959767CB8",
+                          "path":  "gate-20261006-150313/units.txt"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "BAA3D0ADA66733E9AC8B7731D95D5A116664856F089683904C918170BAB0DDFD",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-footprints.json"
+                      },
+                      {
+                          "sha256":  "D422165E5CD70333C9C41FA76DF9B79B82A8DF423AB9F15509A8F42757E5FA50",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E02-camera-repai-5dc0e-d-retains-native-wager-play-chromium/camera-text200.json"
+                      },
+                      {
+                          "sha256":  "C9F6BCA56F333F173B3CD60B037DF1F6AA2633CEF78D627B9EC135968248DF34",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-1280.json"
+                      },
+                      {
+                          "sha256":  "B0F0354D60D021155954205E6C3FB466E1E9CAF8DD2AE04C7F6D1DA7B92BA29F",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-320.json"
+                      },
+                      {
+                          "sha256":  "B760EED0E025E7F26180B3262B4343138ADA365DDF84D39083850A0805C8BD4D",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10--M10A-E03-remote-seat--3ef79-ic-hand-at-all-three-widths-chromium/seat-normal-768.json"
+                      },
+                      {
+                          "sha256":  "00F84CC2F74E7B053D88874E65A4A48ABAD80FD4179A90644AC0098D9B5430DB",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-dealerPresentation--M1-4d963-t-three-widths-plus-text200-chromium/dealer-layout.json"
+                      },
+                      {
+                          "sha256":  "AFCE5B29A368613F67D5D0E5540F5269F917326979052EC86B1C077C659DB189",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B01-1-afb7d--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "A99E4DD7B04FDC8EF53BEC309CBB5017472A653B01601292803C0A0A5F4180C2",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B01-4-887ff--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "882EFABB7E552D186A84C930E92A1CD36CAFA3D1D886FB0F510039BDE9E566B5",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B01-7-088ad--clone-no-premature-arrival-chromium/sequence.json"
+                      },
+                      {
+                          "sha256":  "44DDFA262C281A0A032ABF4775E8DFF48C1A06FD1F71A5690B6681D7D1BDB85F",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "7F4D16A125E3CA4A5B87F35CA7BCB5FCF0BD93E5A5A49CF6840DFF392B6D2F4B",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "0C429826DE2F619DA6D2365B7BC95EFC710A698693EFA28E55BC56F6057B85EA",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "AF51DB72B08F2C0BA82C552B9DB5D5B2A42816F10F4D9AD9E3B3C5E22F7CB703",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-1-c982b--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "AE05822BAB67127242C6BA1935D564B453E1366FDA830DA666BCC01B018FA3C5",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "7E633BAD1C4220A3072A0931B3623493605DBCF3CD7C4BF7984F899646D474AF",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "A1784107E14CD0DFBF643A6A5AF427849824EC6883F5CA85F36ED88412B7995B",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "25877FB3638967CFCDD328F7134F0466D0717EB6CD8CDD1875A98E538E12BE35",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-4-999e0--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "E5E6409E581FD005CC3F6F10A014BA492B5C87CB0FA9A04C640E9B76D8262380",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "4594CF458D9F7F2DC7E9084047C101F672F59BDEE21FD51DE2A2E4031F795E41",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "18C2D96A04D960B18DFAC0005BDFC40306CD25AD07D0FEFC50C145D813CC3208",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "5FF211A33DE8C629204EE4EBE1FB095C5EC03D3763F3D3E82BCD26755832EA3F",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "A7D9F9F2B8B4B94D0C43ED6358376BADED867400551868F5996FF8F02CB834E4",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-1c05f--start-first-second-settled-chromium/collapsed-summary-landing.json"
+                      },
+                      {
+                          "sha256":  "C7A1033F0D7A61521EC02653B42B7325CD5742B5A6EC11629BDCD321B9963DA3",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "4BAEB62451B0369F97C217A348917E2F675588901ED1ECFA16025E0EA8CD1F35",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "C65304F4EAA7CEAD4729F3F5F56568BD4106C29C0096ECF8CF71381AC41AE5C9",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "C389706DDA684FCFB943B9333B049F34DB850525AE63FA7C44DE43AF645DEDED",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-9d19c--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "AAD571BB835A40CDEF2664DA6923FE18FDC3281CBEC488A56AEA98F64AA24CB8",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-0.json"
+                      },
+                      {
+                          "sha256":  "331329FB86BB4882E269F8C45B49C57D36D59E16ACBF90712ED5EEE031E77BB7",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-1.json"
+                      },
+                      {
+                          "sha256":  "17C68385BA35F12E0A943622C5A62FADF1525E21F7A9D534C8159C171A6F079A",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-2.json"
+                      },
+                      {
+                          "sha256":  "08520F00C88F11294406B2AC20FA6582B720A4B3275B5451732AADA97C20C013",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-initialDeal--T06-B02-7-e70a4--start-first-second-settled-chromium/capture-3.json"
+                      },
+                      {
+                          "sha256":  "2D65C78E4E6B3D1F7BBA99E87F636DCE7AFE7F603DCD73F140E15C0855AB0E50",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E1--c2d09-ive-and-complete-footprints-chromium/mapping-1.json"
+                      },
+                      {
+                          "sha256":  "11FE556C35B966E9570F8604150612D690FC2D786C48099332C57C13F03012AB",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E2--eb644-ive-and-complete-footprints-chromium/mapping-2.json"
+                      },
+                      {
+                          "sha256":  "C63C0DE1BE29CD10FFA106AD51C7BAC22C76D0869BD16364C90C8D711F459316",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E3--5aa12-ive-and-complete-footprints-chromium/mapping-3.json"
+                      },
+                      {
+                          "sha256":  "DDDD8D2C3ECD54F979DC1C18A491D2C26B6A1CFF6C25E81894A6343AEEBA9AD8",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E4--d3a47-ive-and-complete-footprints-chromium/mapping-4.json"
+                      },
+                      {
+                          "sha256":  "3E8607DF25BE9A21F99A0658EB48623ECD696B1ADAC2A6ED5D576170A3914401",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E5--b411b-ive-and-complete-footprints-chromium/mapping-5.json"
+                      },
+                      {
+                          "sha256":  "379BB952D460544C964E1B1494301832A6EB5DD46090B94203ED2A24609A905C",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E6--04bf4-ive-and-complete-footprints-chromium/mapping-6.json"
+                      },
+                      {
+                          "sha256":  "0456881A0FFC7BF0208D70634FE261C95AB57FE219035AE729A72F543BFE78F4",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-seatMapping--M10-S-E7--2717d-ive-and-complete-footprints-chromium/mapping-7.json"
+                      },
+                      {
+                          "sha256":  "FEF72D3AB6CBA543F5058BEBADE482B58D543D902968369D788EBFC83EC54BF0",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "8DBFF42796C54E7367FC4324196954D9AE8517DCBD379D1D5F1458C0CAE9152D",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "199E2D20CF24BEDA9A2B55AA72460F1ECFA0CAB5CEC0F8DFF18CD654476F79B3",
+                          "path":  "gate-20261006-150313/chromium-browser-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "1C11A291714D49D789B85899F8E59865CE755894691E64F521465381C05E0295",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T01_EVIDENCE/geometry.json"
+                      },
+                      {
+                          "sha256":  "E38B38AE837F09AFD47F097E81C2104114C94BCF893BFEF923DF6CFB2242FD2E",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "E7ACAD71E9480465EBD8A70DEA95B6B6EA572357B9115ED2F343082F530F436F",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "F443C911EF3A0C76564F5EFBFB467BAAE0F965418C8A2B360CA7AE943B466F33",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "FC5496A2F30E2945DE7CE9CD8E61DD67C500464131A13070B861AA2C5ED591FA",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json"
+                      },
+                      {
+                          "sha256":  "505A016895DD6D5ADE22C1EFF551F41B307B2BF79FB7E20B927EA2DFAE50B876",
+                          "path":  "gate-20261006-150313/chromium-generated/docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-150313/preservation-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "gate-20261006-150313/unified-browser-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "1C11A291714D49D789B85899F8E59865CE755894691E64F521465381C05E0295",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T01_EVIDENCE/geometry.json"
+                      },
+                      {
+                          "sha256":  "B2BA40D2F8E955E6DC4D521F13353386E30E29E17230034FBFCEF8190E4934F0",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "A761B51AE4FC5E1BFC4318460704ED49124FF9D10B6D0D24323AC7366D1B7AE0",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "ECEBB80643CD68E0B5C3D2FD5BE368C3B0A05DDF38BF148DDF8825D75A3042F8",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json"
+                      },
+                      {
+                          "sha256":  "92F9CAA8E6736AE35BF1B73BF921D70C089A17BEC0C8BE0BA3127C82FFD0EDE6",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json"
+                      },
+                      {
+                          "sha256":  "9A2513C443BFCCCC757344C648DABB4DDBCEB461FFFB4B378EBA40D0C8265F7D",
+                          "path":  "gate-20261006-150313/unified-generated/docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json"
+                      },
+                      {
+                          "sha256":  "480DB7A167711B04256C4FA6963E23E239EC1E974EFCDCD7BD3520D673BA5393",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791266791961-Hit/receipt.json"
+                      },
+                      {
+                          "sha256":  "F95F74CBEF2111075CA816D6E7C8593A33B81034C70F369D312ECDC68FED5705",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791266795505-Double/receipt.json"
+                      },
+                      {
+                          "sha256":  "713A4890813D4718F4A1823A2F221C9324A793DEB445178DB824B73337D1851F",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791266799545-Split/receipt.json"
+                      },
+                      {
+                          "sha256":  "480DB7A167711B04256C4FA6963E23E239EC1E974EFCDCD7BD3520D673BA5393",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791267960848-Hit/receipt.json"
+                      },
+                      {
+                          "sha256":  "F95F74CBEF2111075CA816D6E7C8593A33B81034C70F369D312ECDC68FED5705",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791267964639-Double/receipt.json"
+                      },
+                      {
+                          "sha256":  "713A4890813D4718F4A1823A2F221C9324A793DEB445178DB824B73337D1851F",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791267968801-Split/receipt.json"
+                      },
+                      {
+                          "sha256":  "480DB7A167711B04256C4FA6963E23E239EC1E974EFCDCD7BD3520D673BA5393",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791270563102-Hit/receipt.json"
+                      },
+                      {
+                          "sha256":  "F95F74CBEF2111075CA816D6E7C8593A33B81034C70F369D312ECDC68FED5705",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791270566448-Double/receipt.json"
+                      },
+                      {
+                          "sha256":  "713A4890813D4718F4A1823A2F221C9324A793DEB445178DB824B73337D1851F",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791270570131-Split/receipt.json"
+                      },
+                      {
+                          "sha256":  "480DB7A167711B04256C4FA6963E23E239EC1E974EFCDCD7BD3520D673BA5393",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791271712316-Hit/receipt.json"
+                      },
+                      {
+                          "sha256":  "F95F74CBEF2111075CA816D6E7C8593A33B81034C70F369D312ECDC68FED5705",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791271715739-Double/receipt.json"
+                      },
+                      {
+                          "sha256":  "713A4890813D4718F4A1823A2F221C9324A793DEB445178DB824B73337D1851F",
+                          "path":  "raw-generated/docs/M10_T07_EVIDENCE/browser/1791271719707-Split/receipt.json"
+                      },
+                      {
+                          "sha256":  "AD2F83D61F347F8E635CEF32035F9D204C6F760B5AE3731682CE255C2BE5BBC6",
+                          "path":  "raw-generated/docs/M10_T08_EVIDENCE/browser/1791266627467-reveal-multiple/receipt.json"
+                      },
+                      {
+                          "sha256":  "AD2F83D61F347F8E635CEF32035F9D204C6F760B5AE3731682CE255C2BE5BBC6",
+                          "path":  "raw-generated/docs/M10_T08_EVIDENCE/browser/1791267778869-reveal-multiple/receipt.json"
+                      },
+                      {
+                          "sha256":  "AD2F83D61F347F8E635CEF32035F9D204C6F760B5AE3731682CE255C2BE5BBC6",
+                          "path":  "raw-generated/docs/M10_T08_EVIDENCE/browser/1791270393686-reveal-multiple/receipt.json"
+                      },
+                      {
+                          "sha256":  "AD2F83D61F347F8E635CEF32035F9D204C6F760B5AE3731682CE255C2BE5BBC6",
+                          "path":  "raw-generated/docs/M10_T08_EVIDENCE/browser/1791271546891-reveal-multiple/receipt.json"
+                      },
+                      {
+                          "sha256":  "E4AC2810B93B36E1C855675BDF8168EE355ED266093795585A3DA967ADCD91E9",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791266906710-PLAYER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F8E7B15A73ACEFD1C12E9AAFBD10B5EDDE991AB297B6CE2381D18E7D9CC20BD7",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791266913130-DEALER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F33A75F10ECA27B9A9CACDDC5F564A435BB4645A01D296DDB144518330EAC632",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791266919866-PUSH/receipt.json"
+                      },
+                      {
+                          "sha256":  "E4AC2810B93B36E1C855675BDF8168EE355ED266093795585A3DA967ADCD91E9",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791268077046-PLAYER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F8E7B15A73ACEFD1C12E9AAFBD10B5EDDE991AB297B6CE2381D18E7D9CC20BD7",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791268082989-DEALER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F33A75F10ECA27B9A9CACDDC5F564A435BB4645A01D296DDB144518330EAC632",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791268088799-PUSH/receipt.json"
+                      },
+                      {
+                          "sha256":  "E4AC2810B93B36E1C855675BDF8168EE355ED266093795585A3DA967ADCD91E9",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791270686138-PLAYER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F8E7B15A73ACEFD1C12E9AAFBD10B5EDDE991AB297B6CE2381D18E7D9CC20BD7",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791270691838-DEALER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F33A75F10ECA27B9A9CACDDC5F564A435BB4645A01D296DDB144518330EAC632",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791270697517-PUSH/receipt.json"
+                      },
+                      {
+                          "sha256":  "E4AC2810B93B36E1C855675BDF8168EE355ED266093795585A3DA967ADCD91E9",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791271844378-PLAYER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F8E7B15A73ACEFD1C12E9AAFBD10B5EDDE991AB297B6CE2381D18E7D9CC20BD7",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791271850758-DEALER_WIN/receipt.json"
+                      },
+                      {
+                          "sha256":  "F33A75F10ECA27B9A9CACDDC5F564A435BB4645A01D296DDB144518330EAC632",
+                          "path":  "raw-generated/docs/M10_T09_EVIDENCE/browser/1791271857158-PUSH/receipt.json"
+                      },
+                      {
+                          "sha256":  "D2AE51CDE35E6CA1FD6356C36E429C4DBBC429022D3B4AC8D78C5451D6C79499",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266489287-1-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "31815A3FC36C0AA8A07F739AF59D1B0F35E9C8450DB66BB28815E70E48617EC7",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266492099-1-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "D48A43D0574E7F81C1071FFB86B2871398CEDBC85C0F69A9F1F074CE5C9AFF34",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266494160-1-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "1CBD93D8E6E83CBE8BE4464D58C3513CA3984EEBA15A494A313DD42835165146",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266498072-4-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "042E2BA310B8DE04DE5346FAC81BEB4144380E09A33D73153EFA2C07A4B2508A",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266501929-4-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "65247D918021EA6C8DD2CE62B9A02804B2C6FA81E5CD61D2A839BFE36276AE71",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266503896-4-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "F47655854A5443DE9EA68FAC4448849B355DE4937C4A2A3572EBD459F700D9F1",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266509089-7-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "738A34FCB29AEAA1B1EAAC988857913CC82775142863390B4E103712819CEBFF",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266514424-7-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "0A8FBD84DEBA7609B4EFBCC82C75F4AA40E3D92B1D4EBBADABE4E60B2FA691A0",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791266516149-7-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "B142D2B7273D4C8056CAEE2333A912405BC8963C8633E2B2BE57A6714025ED45",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267637701-1-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "31815A3FC36C0AA8A07F739AF59D1B0F35E9C8450DB66BB28815E70E48617EC7",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267640806-1-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "D48A43D0574E7F81C1071FFB86B2871398CEDBC85C0F69A9F1F074CE5C9AFF34",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267642857-1-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "BA44DA23EB701200978ABFA2DB5778BEF18BC50239B9E88BA8A7B056EEBA8581",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267646875-4-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "042E2BA310B8DE04DE5346FAC81BEB4144380E09A33D73153EFA2C07A4B2508A",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267650891-4-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "65247D918021EA6C8DD2CE62B9A02804B2C6FA81E5CD61D2A839BFE36276AE71",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267652783-4-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "F5A2C1D968522CF39410236D947F07CBEEA64216FC85F141F1BFE90FC0038D3C",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267657752-7-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "738A34FCB29AEAA1B1EAAC988857913CC82775142863390B4E103712819CEBFF",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267663054-7-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "0A8FBD84DEBA7609B4EFBCC82C75F4AA40E3D92B1D4EBBADABE4E60B2FA691A0",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791267664851-7-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "19F858059CEBBB36CC0B41B39781860286DD6B0598FCE750FEDAEAFC2D21C08D",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270257093-1-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "31815A3FC36C0AA8A07F739AF59D1B0F35E9C8450DB66BB28815E70E48617EC7",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270259898-1-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "D48A43D0574E7F81C1071FFB86B2871398CEDBC85C0F69A9F1F074CE5C9AFF34",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270261855-1-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "9D33B54428F7E69D521B20D970CE9FDD5BE3410D586E94534DC895C60DD76B12",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270265594-4-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "042E2BA310B8DE04DE5346FAC81BEB4144380E09A33D73153EFA2C07A4B2508A",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270269316-4-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "65247D918021EA6C8DD2CE62B9A02804B2C6FA81E5CD61D2A839BFE36276AE71",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270271127-4-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "408F7E32DF5DC5A2510D855AB0D0FE1F4780E44087CFD85CECA4AB238F8E4CC8",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270275260-7-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "738A34FCB29AEAA1B1EAAC988857913CC82775142863390B4E103712819CEBFF",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270280546-7-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "0A8FBD84DEBA7609B4EFBCC82C75F4AA40E3D92B1D4EBBADABE4E60B2FA691A0",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791270282149-7-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "BF090677CED188AE8DED5C5105990AB6E217AB7085027A59EEC45678AB65BB4E",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271409361-1-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "31815A3FC36C0AA8A07F739AF59D1B0F35E9C8450DB66BB28815E70E48617EC7",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271412222-1-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "D48A43D0574E7F81C1071FFB86B2871398CEDBC85C0F69A9F1F074CE5C9AFF34",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271414220-1-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "50C91F497BD70D14DC4D13A8B7D5ED8C28001A53282E214A619F65D8AC57165A",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271417919-4-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "042E2BA310B8DE04DE5346FAC81BEB4144380E09A33D73153EFA2C07A4B2508A",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271421932-4-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "65247D918021EA6C8DD2CE62B9A02804B2C6FA81E5CD61D2A839BFE36276AE71",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271424195-4-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "7CA41500C56DA9B05082D9FF6012E708F45E4C5F8CED66F08B218A066A8A2AC2",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271429275-7-FULL_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "738A34FCB29AEAA1B1EAAC988857913CC82775142863390B4E103712819CEBFF",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271434641-7-REDUCED_MOTION/receipt.json"
+                      },
+                      {
+                          "sha256":  "0A8FBD84DEBA7609B4EFBCC82C75F4AA40E3D92B1D4EBBADABE4E60B2FA691A0",
+                          "path":  "raw-generated/docs/M10_T10_EVIDENCE/browser/1791271436283-7-IMMEDIATE/receipt.json"
+                      },
+                      {
+                          "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                          "path":  "repair5-native-regression-artifacts/.last-run.json"
+                      },
+                      {
+                          "sha256":  "C84D1DFF59DEE40E927A974F52782D583E29EDA56294E5E3A2B9D15E67F23E9E",
+                          "path":  "repair5-native-regression-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "08B1DEB94888C80EB8C556B27BE0320C994C0CD435381630CA377434576768AA",
+                          "path":  "repair5-native-regression-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "94619FC6BD9BADBC02D2E1C8B129DA8099FF721F49B26E708D8DE131F051C952",
+                          "path":  "repair5-native-regression-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+                      },
+                      {
+                          "sha256":  "FB15164B10005DFBC52D4AC1CA1CFE1328FC0D779BFC38221D509BAFABA7DC57",
+                          "path":  "supplemental-1791268769345/receipt.json"
+                      },
+                      {
+                          "sha256":  "E5719D967857C20F90131FE477677C1CC94AD74DC006B236F94E5E49CF43BFE8",
+                          "path":  "supplemental-1791268882506/receipt.json"
+                      },
+                      {
+                          "sha256":  "318083B9AFC4883FE99DF214D2F3EE6ABA1D655C8140CF37A170DBE4CFC3F8AF",
+                          "path":  "supplemental-1791268969537/receipt.json"
+                      },
+                      {
+                          "sha256":  "33C9BCE878785754C2170186319641D2CF04474099CBA5AF7885260725F273CB",
+                          "path":  "supplemental-1791269275796/receipt.json"
+                      },
+                      {
+                          "sha256":  "54FA437EFAEC6E507F99A0513E4234DB39A893C2FC2DDA375A915A5FE505F340",
+                          "path":  "supplemental-1791269737925/receipt.json"
+                      },
+                      {
+                          "sha256":  "DA46B05F65599AF752D95FAFB953C35D5C5CAAA198804DB314E3C98B70529C21",
+                          "path":  "supplemental-1791270051015/receipt.json"
+                      },
+                      {
+                          "sha256":  "D65B064DA661D23385E98145F33E945070F6FED350B859DC3ACC55BA52D7C655",
+                          "path":  "supplemental-1791270128808/receipt.json"
+                      }
+                  ],
+    "status":  "PASS"
+}

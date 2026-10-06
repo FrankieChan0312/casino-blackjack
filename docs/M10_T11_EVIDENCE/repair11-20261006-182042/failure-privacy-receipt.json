@@ -1,0 +1,16 @@
+{
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .git/m10-t11-privacy.ps1",
+  "finish": "2026-10-06 18:55:07 +08:00",
+  "historicalPrivacyRestored": true,
+  "start": "2026-10-06 18:55:06 +08:00",
+  "scope": "Privacy review of preserved failed evidence only; no runtime gate rerun or repair",
+  "exitCode": 1,
+  "status": "BLOCKED",
+  "nativeExitCode": 1,
+  "scanCompleted": false,
+  "resultJsonProduced": false,
+  "staleCopiedJson": "privacy-attempt-stale-output.json; prior historical PASS, not a current result",
+  "error": "IOException reading own locked redirected output inside scan root",
+  "errorRecord": "privacy-error.txt",
+  "retry": "NOT RUN"
+}

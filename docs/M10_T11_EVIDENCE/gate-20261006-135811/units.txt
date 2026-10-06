@@ -1,0 +1,42 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/tableGeometry.test.tsx (8 tests | 1 failed) 473ms
+   × [M10-G06] every pre-task assertion stays byte-identical except documented inventory and evidence-output adapters 276ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/tableGeometry.test.tsx > [M10-G06] every pre-task assertion stays byte-identical except documented inventory and evidence-output adapters
+AssertionError: expected 'art/source/dealers/generic_female/MAN…' to be '' // Object.is equality
+
+- Expected
++ Received
+
++ art/source/dealers/generic_female/MANIFEST.json
++ art/source/dealers/generic_female/formal.png
++ public/characters/dealer/generic_female/formal.png
+
+ ❯ tests/m10/tableGeometry.test.tsx:143:10
+    141|     ...['noble_female','knight_female','mage_female','elf_female','hal…
+    142|       `:(exclude)art/source/dealers/${id}/formal.png`, `:(exclude)publ…
+    143|     ]))).toBe('');
+       |          ^
+    144| });
+    145|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 99 passed (100)
+      Tests  1 failed | 1235 passed (1236)
+   Start at  13:58:16
+   Duration  25.39s (tests 60%, import 34%, transform 4%, setup 2%, worker 1%)
+
+     Import  182 modules were evaluated 309 times · 27.36s total, 34% of tracked time
+             ~2.13s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+

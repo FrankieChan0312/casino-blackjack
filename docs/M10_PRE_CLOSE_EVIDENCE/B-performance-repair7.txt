@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/preClosePerformance.spec.ts
+
+[WebServer] (node:33260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:33620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\preClosePerformance.spec.ts:6:3 › [PRE-CLOSE-P01-1280] three cold and one warm native FULL_MOTION samples <=2500ms (36.5s)
+  ok 2 [chromium] › tests\browser\m10\preClosePerformance.spec.ts:6:3 › [PRE-CLOSE-P01-320] three cold and one warm native FULL_MOTION samples <=2500ms (19.3s)
+
+  2 passed (59.5s)

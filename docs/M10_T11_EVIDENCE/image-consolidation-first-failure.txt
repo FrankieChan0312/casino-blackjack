@@ -1,0 +1,8 @@
+Join-Path : Cannot convert 'System.Object[]' to the type 'System.String' required by parameter 'ChildPath'. Specified m
+ethod is not supported.
+At C:\Users\user\Documents\GitHub\casino-blackjack\.git\m10-t11-dedupe.ps1:8 char:60
++ ... ath]::GetFullPath((Join-Path (Get-Location) $row.logicalCapturePath))
++                                                 ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Join-Path], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : CannotConvertArgument,Microsoft.PowerShell.Commands.JoinPathCommand
+ 

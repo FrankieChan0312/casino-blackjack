@@ -1,0 +1,17 @@
+{
+  "start": "2026-10-06T11:30:58.627Z",
+  "finish": "2026-10-06T11:31:00.982Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m10-t11-privacy.ps1"
+  ],
+  "log": ".git\\evidence-capture\\C-exact-privacy-repair1.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true
+}

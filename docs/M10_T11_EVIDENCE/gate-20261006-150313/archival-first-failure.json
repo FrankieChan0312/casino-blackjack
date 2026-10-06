@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-06 15:42:23 +08:00",
+  "hypothesis": "Atomic restore from captured original bytes in an isolated filesystem step after runner exit can complete without changing verified source",
+  "repair": 7,
+  "pendingReplacement": [
+    "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\m10-animation-T11-20261006-150313\\unified-replacement\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-end-first-pass.png"
+  ],
+  "nativeStageExitCodes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "runnerExit": 1,
+  "cause": "Handle owner unproven; completed runner no longer writes files",
+  "originalError": "File.Replace target in use by another process"
+}

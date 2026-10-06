@@ -1,0 +1,81 @@
+{
+  "at": "2026-10-06 19:29:07 +08:00",
+  "test": "[T11-P01-1280/768/320] cold native seven-player initial deal completes within2500ms",
+  "viewports": [
+    [
+      1280,
+      900
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      320,
+      720
+    ]
+  ],
+  "start": "MutationObserver first actual data-initial-deal-flight insertion performance.now()",
+  "end": "MutationObserver data-initial-deal-running=false after16 ordered card arrivals, performance.now()",
+  "includes": [
+    "real serial visible initial card flights",
+    "browser WAAPI ready/completion delivery",
+    "visual queue and React publication of initial completion"
+  ],
+  "excludes": [
+    "browser launch",
+    "page startup/load",
+    "fixture/player configuration",
+    "wager input",
+    "pre-flight chip presentation",
+    "remaining bot/Dealer/settlement/full-round presentation"
+  ],
+  "mode": "FULL_MOTION; native chromium153.0.8010.12; headless; no-preference; no skip or mocks",
+  "beforeSamples": [
+    {
+      "width": 1280,
+      "temperature": "cold",
+      "elapsedMs": 1601.5
+    },
+    {
+      "width": 1280,
+      "temperature": "warm",
+      "elapsedMs": 1501.2999999523163
+    },
+    {
+      "width": 768,
+      "temperature": "cold",
+      "elapsedMs": 1479.3000001907349
+    },
+    {
+      "width": 768,
+      "temperature": "warm",
+      "elapsedMs": 1599.3999998569489
+    },
+    {
+      "width": 320,
+      "temperature": "cold",
+      "elapsedMs": 1514.4000000953674
+    },
+    {
+      "width": 320,
+      "temperature": "warm",
+      "elapsedMs": 1471.0999999046326
+    }
+  ],
+  "animationDurationMs": 80,
+  "readyDelayMs": [
+    14.899999856948853,
+    124.70000004768372
+  ],
+  "creationToFinishMs": [
+    81.70000004768372,
+    191.79999995231628
+  ],
+  "interFlightQueueGapMs": "0.5..2.9 observed",
+  "longTasksAfterStart": 0,
+  "establishedCause": "The gate includes cumulative real serial WAAPI startup/frame/completion overhead beyond the nominal16*80ms; advancing to the next card waits for completion, not an arbitrary timer",
+  "originalFailureTrigger": "NOT ESTABLISHED: historical2861.1/2891.6ms was not reproduced by this fixed six-sample diagnosis; source shape is shared across viewports but equal triggering cause is not proven",
+  "repair": "Central initial-only80->60ms token creates320ms nominal headroom without altering16steps/order/ease/projections/actions/dealer110ms; bounded proof and full-suite exact gates required",
+  "limitations": "Observed PASS samples do not prove all future machine-load timings or explain the historical outlier; no retries or selective samples"
+}

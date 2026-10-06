@@ -1,0 +1,28 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/initialDeal.spec.ts
+
+[WebServer] (node:35156) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 1 worker
+
+(node:14300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-1] real FULL_MOTION two-pass order, one clone, no premature arrival (17.1s)
+  ok  2 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-4] real FULL_MOTION two-pass order, one clone, no premature arrival (2.1s)
+  ok  3 [chromium] › tests\browser\m10\initialDeal.spec.ts:40:30 › [T06-B01-7] real FULL_MOTION two-pass order, one clone, no premature arrival (2.7s)
+  ok  4 [chromium] › tests\browser\m10\initialDeal.spec.ts:61:103 › [T06-B02-1-1280] checkpoint captures actual start/first/second/settled (3.6s)
+  ok  5 [chromium] › tests\browser\m10\initialDeal.spec.ts:61:103 › [T06-B02-4-1280] checkpoint captures actual start/first/second/settled (4.2s)
+  ok  6 [chromium] › tests\browser\m10\initialDeal.spec.ts:61:103 › [T06-B02-7-1280] checkpoint captures actual start/first/second/settled (5.1s)
+  ok  7 [chromium] › tests\browser\m10\initialDeal.spec.ts:61:103 › [T06-B02-7-768] checkpoint captures actual start/first/second/settled (4.4s)
+  ok  8 [chromium] › tests\browser\m10\initialDeal.spec.ts:61:103 › [T06-B02-7-320] checkpoint captures actual start/first/second/settled (3.4s)
+  ok  9 [chromium] › tests\browser\m10\initialDeal.spec.ts:104:1 › [T06-B03] skip/keyboard legal action settles before dispatch; new round/new table never replay stale cards (3.3s)
+  ok 10 [chromium] › tests\browser\m10\initialDeal.spec.ts:125:1 › [T06-B04] resize/background/text200 settle safely, keep native focus and bounded geometry (2.0s)
+  ok 11 [chromium] › tests\browser\m10\initialDeal.spec.ts:142:1 › [T06-B05] reduced preference settles without flights; IMMEDIATE uses the identical authoritative result (2.0s)
+  ok 12 [chromium] › tests\browser\m10\initialDeal.spec.ts:165:1 › [T06-B06] real Provider unmount cancels the active flight, leaves authority and late callbacks unchanged (1.4s)
+  ok 13 [chromium] › tests\browser\m10\initialDeal.spec.ts:192:92 › [T06-B07-player-natural] post-deal Dealer state follows actual terminal/Insurance authority (1.9s)
+  ok 14 [chromium] › tests\browser\m10\initialDeal.spec.ts:192:92 › [T06-B07-player-ace] post-deal Dealer state follows actual terminal/Insurance authority (1.9s)
+  ok 15 [chromium] › tests\browser\m10\initialDeal.spec.ts:200:1 › [T06-B08] new table cancels an active terminal deal; later Hit stays immediate and fully visible (2.9s)
+
+  15 passed (1.0m)

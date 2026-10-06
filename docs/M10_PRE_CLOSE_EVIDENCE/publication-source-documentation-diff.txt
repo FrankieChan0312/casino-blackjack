@@ -1,0 +1,538 @@
+diff --git a/README.md b/README.md
+index dc5fef5..4d9f733 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,63 @@
++## M10-PRE-CLOSE maintenance VERIFIED — 2026-10-06 21:37:05 +08:00
++
++**M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED.** Maintenance repairs **7/10**. Required A-I gates are **PASS / checked exit0**: exact native performance, bounded cold/warm performance, unchanged exact privacy scanner, full actual evidence subset and four harness regressions, focused animations, full Vitest, full Chromium, independent M1-M8 preservation, and unchanged unified verify.ps1. Final unified verification passed 101 files / 1240 Vitest tests and 245 Chromium cases. Cold samples launch a new native browser and fresh page; warm is an extra fresh page/new context in the third browser. Only browser-process reuse is claimed, not cache/context/renderer warmth. All 33 final-candidate recorded native initial-deal samples met the unchanged 2500ms budget with 16 ordered destinations each. 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. The first unified attempt failed only collector lint; the second failed one bounded desktop60ms sample2665.1ms. Both complete failures and all prior samples remain preserved.
++
++Initial-only central duration changed from 80ms to 40ms (first maintenance60ms candidate failed one bounded desktop sample); action and Dealer card flights remain 110ms, with every stage, ordering and ease retained. Diagnosis established cumulative serial WAAPI readiness/completion overhead. The fixed followup at60ms recorded readiness up to809.7ms and creation-to-finish up to891.5ms; native finish-to-event delay was <=0.2ms. The exact browser/OS stall trigger remains unproven. The historical 2861.1ms / 2891.6ms failure trigger remains **NOT ESTABLISHED**; fixed samples did not reproduce it. This evidence makes no universal machine-load guarantee.
++
++Privacy collection writes native stdout/stderr and scanner results outside all input targets, closes them before copying finalized evidence, and excludes no evidence paths or trace resources. Original credential/bearer/Vite patterns remain unchanged; .log coverage was added. Every artifact is inventoried by hash; text and non-image/font trace resources, including extensionless resources, are inspected. Synthetic screenshot provenance and visual checks supplement this inventory; no OCR certification is claimed. All incoming T11 historical evidence is byte-preserved, including 320 generated originals restored after tests. Domain diff from M10 start is EMPTY; gameplay, accounting, replay, RNG, Dealer system, assets and dependencies remain unchanged. Review here is in the same session. Normal origin/main publication is pending final documentation/privacy review.
++
++**M10-T11 remains BLOCKED AFTER 11/11; repair12 NOT AUTHORIZED. M10: NOT ACCEPTED. M10-T11 FRESH INDEPENDENT REVIEW REQUIRED in a new session; NOT RUN. DEPLOYMENT NOT RUN.**
++
++[Maintenance contract and executed evidence](docs/M10_PRE_CLOSE.md).
++
++## M10-PRE-CLOSE maintenance started — 2026-10-06 19:20:55 +08:00
++
++Owner-authorized performance/evidence maintenance, repairs0/10, main/e7ceea6 incomingDIRTY. T11 remains BLOCKED after11/11, repair12 NOT AUTHORIZED; M10 NOT ACCEPTED. [Scope and gates](docs/M10_PRE_CLOSE.md). Diagnose actual16card window before edits; unchanged2500ms; no features/domain/assets/dependencies/deployment. All incoming tracked/untracked hashes and historical failures retained. Recommended GPT Sol6.1/High; selected runtime NOT VERIFIED. Verification NOT RUN.
++
++## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
++
++New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.
++
++## M10-T11 current stop after exceptional repair11 — 2026-10-06 18:54:49 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11. M10: NOT ACCEPTED.** M10-T11: **11/11 — OWNER-AUTHORIZED EXCEPTION**; exhausted normal limit **10/10** is historical. Repair12 **NOT AUTHORIZED / NOT RUN**. Documentation count repair is **VERIFIED**; milestone closure remains **BLOCKED**. **DEPLOYMENT NOT RUN.**
++
++Unchanged exact publication check **PASS/exit0**; documentation tests **PASS/exit0 (3 files/9 tests)**; incoming-scope review **PASS/exit0**, incremental product/tests/assets/validators **EMPTY**. These completed checks precede the new failed final gate; they do not establish acceptance.
++
++Required unchanged scripts/verify.ps1 rerun: typecheck/lint/100 files-1236 Vitest/domain typecheck/build **PASS/checked0** in captured stdout. Chromium **FAIL**: cold seven-player initial deal **1280px2861.1ms** and **320px2891.6ms**, both above unchanged2500ms;768px1577.4ms. All three metrics record16 destinations. **HIGH-02 REOPENED**; timing cause not established. Earlier243/243 PASS is historical and cannot waive these new failures. Complete Chromium summary and fresh independent-preservation result are **BLOCKED / NOT VERIFIED**.
++
++Outer collector **FAIL/exit1** with PowerShell NativeCommandError on redirected web-server NO_COLOR stderr. It did not persist the actual verify.ps1 exit code; native exit **NOT AVAILABLE**, required unified gate **BLOCKED**. This collector failure does not explain away the two actual timing failures. No collector/product/validator/threshold repair or gate retry performed.
++
++Evidence-only cleanup **PASS/exit0**: all320 historical outputs restored byte-for-byte,269 incoming executable/asset inputs unchanged,57 fresh generated compatibility files archived alongside failed browser traces/metrics. Current stop records are appended; dated9/10,10/10,earlier11/11 start/verification evidence remains historical. No T11 review/closure commit or push; known incoming T11 changes remain uncommitted.
++
++[Current stop evidence](docs/M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 current exceptional documentation repair — 2026-10-06 18:24:52 +08:00
++
++**M10-T11: 11/11 — OWNER-AUTHORIZED EXCEPTION.** Normal limit: **10/10** exhausted. Repair12 **NOT AUTHORIZED / NOT RUN**. Owner explicitly authorizes exactly one documentation/publication count repair and conditional normal origin/main closure. Current repair IMPLEMENTED; exact publication check and fresh final verification **NOT RUN**. M10: NOT ACCEPTED until those checks and clean publication pass. **DEPLOYMENT NOT RUN.**
++
++Established runtime evidence:100 files/1236 Vitest,243 Chromium, preservation/privacy/assets/live Dealer guard and verify.ps1 PASS/checked0. This is prior evidence, not a claim of the new final rerun. Recommended GPT-6.1 Sol / Max (original task); actual selected model/effort NOT VERIFIED. No delegation.
++
++Scope: correct current repair count/status in closure docs and the current PLAN row. Incremental product/test/asset/dependency/runtime/validator changes must be EMPTY relative to the incoming repair11 snapshot; previously verified uncommitted T11 changes remain part of the overall review checkpoint. Non-goals: product changes, new features, deployment or repair12.
++
++Step -> verification: current documents -> exact unchanged final-audit.cjs PASS0; docs -> three files/nine tests; scope -> incoming source and historical-evidence SHA equality; final runtime -> scripts/verify.ps1 full units/Chromium/independent preservation; publication -> scoped diff/privacy/normal main push and exact CLEAN/live equality. Stop immediately on a failed exact check, unavailable tool, unexpected overlap, required-gate failure or unapproved action; no further repair authorized.
++
++All dated9/10,10/10 stop/failure/proposal records below are historical and preserved. The normal-limit10/10 field and current exception11/11 field have different meanings; neither counter is reset. See the newest repair11 evidence for current results.
++
++[Current repair evidence](docs/M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 STOPPED at normal repair limit — 2026-10-06 15:57:45 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED. M10: NOT ACCEPTED.** Normal repair count **10/10**; further cycle NOT AUTHORIZED. Ten final technical native stages PASS/checked0 (100 files/1236 units,243 Chromium twice, preservation/assets/privacy/build/unified), but final added documentation/publication audit **FAIL/exit1** after repair10. The counter-generation script accidentally replaced10/10 with itself; dated review prefixes still say9/10. Those earlier claims are superseded here. Product/old-test/protected-input/320-output/1211-image/link checks passed before the failing current-counter assertion; no technical test failure is hidden.
++
++Publication STOPPED: no T11 commit or push, main remains starting e7ceea652dd74ef079d933922668c782304dc31f, working tree has known staged/uncommitted T11 files. A single additional documentation-only repair11 needs explicit owner authorization under AGENTS.md and this task's10/10 maximum. The unapplied proposal corrects final review counters/current statuses, retains all historical failed evidence and reruns current document/privacy/scope/staged checks. No product, old regression, threshold, timeout or deployment change. **DEPLOYMENT NOT RUN.** Future milestone unstarted. [Stop receipt](docs/M10_T11_EVIDENCE/stop-at-repair-limit.json); [unapplied proposal](docs/M10_T11_EVIDENCE/repair11-proposal.txt).
++
++## M10 final independent review — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++[Final review](docs/M10_T11.md), [consolidated evidence](docs/M10_T11_EVIDENCE/README.md), [20-image gallery](docs/M10_T11_EVIDENCE/gallery/README.md).
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](docs/M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
+@@ -327,11 +387,11 @@ Records below preserve their historical versions, inventories, review boundaries
+ 
+ # Casino Blackjack
+ 
+-Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
++Choose a table for 1–7 players, press Start table, choose your own wager and play. One local human sits at Seat 4 with 0–6 unique fantasy computer guests and a formal fictional female Dealer. Choose your avatar under Change Character. Computer wagers, turns and Dealer resolution happen automatically; your hands and decisions stay near the edge of the felt.
+ 
+ **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
+ 
+-![Casino table geometry with central dealer, seated guests and near-edge own cards](docs/M10_T01_EVIDENCE/table-1280.png)
++![Current formal Dealer, four-player table and authoritative round result](docs/M10_T11_EVIDENCE/gallery/15-round-complete.png)
+ 
+ ## Current M9 delivery
+ 
+@@ -355,7 +415,7 @@ npx.cmd playwright install chromium
+ npm.cmd run dev
+ ```
+ 
+-Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
++Open the local URL printed by Vite. Classic Blackjack is the default. Choose **Total players** (1–7, default 4), press **Start table**, then choose 10–1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
+ 
+ The normal table uses **House Rules v1.2 / Classic**, with Re-split Aces. A Split-Ace hand receives one supplement. If it is A+A and funds/cap permit, choose **Split** or **Stand to keep Soft 12**. Otherwise it completes automatically. Hit, Double and Surrender remain unavailable; A+ten is ordinary 21. Historical v1.1 profiles remain available in secondary demo settings and preserve old replay behavior.
+ 
+@@ -371,7 +431,7 @@ git diff --check
+ git status --short --untracked-files=all
+ ```
+ 
+-The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current PA1 inventory:76 files/1031 Vitest/63 Chromium. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
++The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current final M10 inventory:100 files/1236 Vitest/243 Chromium; final exact-version execution PASS/checked0 is linked above. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
+ 
+ ## Profiles and engineering
+ 
+@@ -384,6 +444,6 @@ Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split
+ | `CLASSIC_6D_S17_V1_2` (normal Player Mode) | OFF | ENABLED |
+ | `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
+ 
+-Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The dealer retains its code-native SVG; fantasy portrait originals were supplied by the owner and preserved with audited transparent derivatives. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
++Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The Dealer uses the approved five-identity formal female pool with deterministic session rotation and a generic formal fallback; all source originals and PA1 portraits are preserved. Presentation-only card/action/Dealer/chip sequences observe authoritative public results, with immediate/reduced/skip equivalence. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
+ 
+ No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).
+diff --git a/docs/DEVELOPMENT_LOG.md b/docs/DEVELOPMENT_LOG.md
+index a31603a..7d4f4e6 100644
+--- a/docs/DEVELOPMENT_LOG.md
++++ b/docs/DEVELOPMENT_LOG.md
+@@ -3742,3 +3742,77 @@ Affected exact historical comparisons10 PASS0 and PA1-E03 all12 portraits PASS0
+ 
+ 2026-10-06 13:05:06 +08:00 — M10-PRE-T11 implementation commit 245591e7e08164ec2f750f359280f9a3d59325b9: normal git push origin main PASS/exit0 at 2026-10-06 13:04:17 +08:00. Fetched origin/main and live GitHub main both equal local HEAD, parity0/0, CLEAN, untracked0. This documentation-only receipt checkpoint follows; no source/test/asset/settings change. Verified268 hashes remain frozen; ten technical gates PASS/checked0. All-content whitespace diagnostics were preserved only in original tool evidence; scoped source/docs/JSON/scripts check PASS0. Owner T07–T10 ACCEPTED; cleanup visual PENDING, fresh session NOT COMPLETED, T11 NOT STARTED, deployment NOT RUN. Final receipt SHA is resolved from Git after normal publication, avoiding a self-referential hash in its own commit.
+ 2026-10-06 13:06:07 +08:00 — M10-PRE-T11 documentation-only publication checkpoint verification: three files/nine tests PASS/exit0, current publication/task/gallery links resolve, all268 executable/asset hashes equal the complete-gate freeze. No code/tests/settings changed after full verification. Only publication receipt documents and their checked native-output evidence will be committed normally.
++
++2026-10-06 13:58:10 +08:00 — M10-T11 fresh independent review started at expected main/e7ceea652dd74ef079d933922668c782304dc31f; origin/main/live remote identical, 0/0/CLEAN/untracked0. Task contract and conditional normal main publication are owner-authorized; no deployment. Prior owner acceptance supplied with this task is recorded in M10_T11.md; dated pending/failure evidence remains unchanged. Repairs0/10, no product edits. Node24.19.0/npm11.17.0 executed. Full gate initially NOT RUN.
++
++
++2026-10-06 13:59:42 +08:00 — M10-T11 HIGH-01 recorded before repair: first full Vitest1235 PASS/1 FAIL exit1 at M10-G06, exactly three committed approved generic Dealer assets omitted from protected-diff allowlist. Cause/impact and bounded exact-path plus pinned-hash repair documented in M10_T11.md; raw gate retained, later stages NOT RUN. Repair1/10, no product changes.
++
++
++2026-10-06 14:00:15 +08:00 — M10-T11 repair1 affected verification PASS/exit0,2 files/14; exact three approved assets pinned and tracked, all historical oracles retained. Full frozen gate restarting once against this targeted test-only version; original first FAIL retained. No product/assets/settings changes.
++
++
++2026-10-06 14:41:16 +08:00 — T11 supplemental first native-background attempt FAIL/exit1: bringToFront left document.visibilityState visible; initial/Hit background and subsequent performance/zoom NOT RUN in this attempt. Raw receipt and exact driver preserved. LOW-01/repair2 hypothesis: native targets may belong to separate windows and automation launch disables backgrounding; inspect native tab/window IDs, use same-window native chrome.tabs activation with normal background flags, retain trusted visibility assertions. If unavailable, record BLOCKED/REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE and continue independent remaining checks. No product/test/timeout/assertion change; cumulative2/10. Complete ten-stage gate and verify.ps1 already PASS0.
++
++2026-10-06 14:42:48 +08:00 — T11 LOW-01 repair2 FAIL/exit1 retained: actual native tabs are in one window with game inactive/cover active but document still visible; fallback driver then timed out on its incorrect Skip current animation label. Installed Playwright coreBundle.js:37638 explicitly enables Emulation.setFocusEmulationEnabled true. Repair3 hypothesis: disable that automation focus override on both real targets and use actual Skip animations name. Preserve trusted native visibility, no document.hidden/visibility override, actual accounting/cards/Dealer equality, and independent perf/zoom assertions. Cumulative3/10; no product, existing test or configuration changes.
++
++2026-10-06 14:46:22 +08:00 — T11 HIGH-02 OPEN: supplemental repair3 exits1 on actual 7-player1280 initial deal2748.3ms > unchanged2500ms. Its driver unfortunately stored metrics only after the assertion, so per-frame raw data for the failed timing is NOT AVAILABLE; actual checked assertion/value retained. Prior complete gates prove mobile timing, not this expanded desktop benchmark. No product repair yet. Fixed four-sample desktop/mobile control without demand RAF/longtask sampling will distinguish instrumentation versus viewport cost; all samples will be retained, not retry-until-green. Native same-window activation remains visible even with both focus overrides disabled; REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE, strongest synthetic visibility equivalence already PASS in both full gates. No further identical native attempt. Cumulative3/10; M10 NOT ACCEPTED.
++
++2026-10-06 14:47:54 +08:00 — HIGH-02 diagnosis: fixed normal-context four samples PASS0, desktop2085/2096ms and mobile2030.6/2019.2ms, exact16 flights. This does not erase2748.3 or establish profiler overhead. Repair4 hypothesis: persistent benchmark used a new unactivated target alongside the implicit blank target; use and bringToFront the native initial target, retain demand RAF/LongTask profiling and unchanged2500ms for all nine predefined rounds, save metrics before assertion. Compositor attribution is a hypothesis. Native background remains BLOCKED explicitly; no further identical attempt. Test-driver-only change, cumulative4/10; no product changes.
++
++2026-10-06 14:50:29 +08:00 — Repair4 performance hypothesis FAIL/exit1: activated initial persistent target with profiling still2689.3ms; complete metric retained (16 flights,170 RAF samples, max460.9ms including pre-flight activity, one110ms LongTask before first flight). No attribution to target activation established. Further evidence: complete gate uses default Chromium headless shell, supplemental used channel chromium/full new-headless. Fixed real headful full-Chromium foreground control (same no-profiler timing observer, four predefined desktop/mobile samples) will isolate actual browser experience versus harness/channel effects; no product edits or acceptance claim.
++
++2026-10-06 14:52:45 +08:00 — HIGH-02 confirmed by fixed real headful Chromium native control: first desktop2521.3/mobile2644.2 FAIL, later2174.6/2194 PASS, exit1 retained. Existing default shell controls all<=2096ms. Repair5 cause/impact stated before edit: native cold rendering/completion overhead exhausts110ms*16 headroom; give initial flights separate80ms, retaining110ms actions/Dealer draws and all authority/order/privacy/paths. Add native3-width strict2500ms regressions; complete final gate required. Counter5/10, no exceptional authorization. No unknown src overlap; previous native automation limitation retained.
++
++2026-10-06 15:02:08 +08:00 — LOW-02/repair6 hypothesis before edit: new DOM cleanup equality overreaches into intentional audit SESSION_RESET. First native FAIL1 preserved; non-Audit228/clone0 already exact, one reset entry/4 audit nodes difference established by source audit.ts:124 and controller NEW_TABLE->startDemo. Assert baseline non-Audit and explicit reset/old-history removal instead; no old regression or product change. Counter6/10. Contrast PASS0:91 text/10 focus, minimum5.7857. Native nine rounds/200percent zoom PASS0, max2145.7ms, clone/running0.
++
++2026-10-06 15:03:13 +08:00 — Repair5 affected PASS0: typecheck,7 unit files/63, three new full-native Chromium regressions (actual1660.9/2402.8/2208ms), four real foreground controls1828.9/2317.2/1591.4/1576.6ms. Nine full-native profiled repeated rounds1713.7..2145.7ms, all16 flights, zero settled clones/running animations, native200percent zoom3 fixtures PASS0. Repair6 cleanup corrected oracle PASS0: non-Audit228 baseline restored, audit16->17 with exactly one SESSION_RESET and no round-3; prior false-oracle FAIL retained. Source changes exactly two initial-duration lines plus guard repair and three native regressions; full final freeze restarting. Normal source/action/Dealer/wager timing, domain/controller/PA1/dependencies unchanged. Initial complete gate passed the earlier version; it is historical, not final verification of repair5.
++2026-10-06 15:42:23 +08:00 — T11 LOW-03/repair7 hypothesis before restoration: all ten final native stages PASS/checked0 (unified finish15:40:43), wrapper exits1 during File.Replace archival. Failed output/ pending replacement preserved; handle owner unproven. Restore captured originals once in isolated post-run step, retaining new generated versions and verifying320 output/269 input hashes plus protected diff. No test/source/assets edit, rerun or threshold change; cumulative7/10. M10 NOT ACCEPTED until complete evidence/publication.
++2026-10-06 15:45:27 +08:00 — T11 LOW-04/repair8: optional evidence consolidation failed before any deletion. Windows PowerShell5 ConvertFrom-Json array was wrapped by an additional array expression, so the first logicalCapturePath became Object[] instead of one path. Remove only the redundant wrapper; preserve original failure, validate both source/canonical hashes and explicit native workspace paths before each individual duplicate deletion. No source/test/settings change; cumulative8/10. Earlier premature dispatch also retained separately, no files changed.
++
++2026-10-06 15:49:29 +08:00 — T11 final technical/source/render checkpoint: ten final native stages PASS/checked0, full100/1236 and243 Chromium twice via unified, preserved M1–M8/current36/284/build/privacy/assets/live69/0. Original wrapper File.Replace exit1 retained; repair7 isolated320 originals/269 input hashes PASS0. Repair8 array consolidation PASS0,1149 duplicate new PNGs SHA-indexed,1211 logical captures retained,20 direct gallery images all manually inspected,0 old Dealer. Native200% six images inspected, selected keyboard/contrast inspected,91 text/10 focus checks PASS. Current bundle SHA equals independent standalone measurement. HIGH01/02 and LOW02/03/04 CLOSED, LOW01 real-background BLOCKED disclosed. Fresh incoming independent review complete; repair review same-session, no second independent reviewer claimed. Publication/doc checks and conditional owner acceptance pending; deployment NOT RUN.
++2026-10-06 15:51:55 +08:00 — T11 LOW-05/repair9 hypothesis: added publication-scope oracle incorrectly applied trim() to porcelain Git output, removing first path's leading status space; README.md became EADME.md. Native git status confirms legitimate README. Preserve failed oracle; use trimEnd() to retain fixed-width status columns, with every allowed-path/hash/link assertion unchanged. Product/old tests untouched, cumulative9/10; no exceptional authorization.
++2026-10-06 15:52:40 +08:00 — T11 final supplemental audit PASS/checked0 after repair9:269 frozen inputs,320 historical outputs,1211 canonical capture hashes,20 manually inspected direct images,57 current links and12 AC mapping complete. Only two product lines/14 guard additions/three new strict native cases; no unrelated changes. Cumulative9/10, all HIGH and LOW02–05 CLOSED; actual background automation LOW01 disclosed. Final documentation tests, privacy and staged checks follow before normal authorized main publication; M10 acceptance pending CLEAN/live parity.
++2026-10-06 15:54:10 +08:00 — T11 pre-commit scoped whitespace PASS0; complete raw-inclusive command FAIL2 on31 locations confined to byte-preserved evidence txt/md, including native diff context. Exact diagnostic and status retained, no source/docs/JSON/runner whitespace issue. Final privacy298 text/8 trace resources PASS0; native fetch/local/tracking/live still expectede7ceea6. Authored diff/source/tests and all20 gallery reviewed. Normal review commit follows final scoped restage/freeze check. Cumulative9/10; no deployment.
++2026-10-06 15:55:13 +08:00 — T11 LOW-06/repair10 hypothesis: supplemental audit queried only unstaged git diff after legitimate scoped staging; empty unstaged product diff triggered its required two-line oracle. All269 frozen hashes still passed before that assertion. Compare product/old-test numstat directly against the authorizede7 baseline, excluding only the already-frozen new native test from the old-test delta. Keep exact1/1 two-path and14/0 original-guard assertions; no Git state/code/test/settings change. Failure preserved; cumulative10/10, no additional or exceptional cycle authorized. Affected final scope audit must PASS or STOP.
++
++2026-10-06 15:57:45 +08:00 — T11 repair10 affected audit FAIL/exit1; current README counter9/10 remains because generated replacement became10/10->10/10. Native baseline/source/test/hash/image/link checks passed before failing current metadata. Cumulative normal10/10; STOP, no extra cycle authorized. No T11 commit/push/acceptance/deployment. Failures/scripts retained, blocked state and unapplied one-cycle document-only proposal recorded. Owner asked for explicit extra authorization perAGENTS/task maximum; no dependent repair performed.
++
++2026-10-06 18:24:52 +08:00 — M10-T11 repair11/11 OWNER-AUTHORIZED EXCEPTION start. Baseline18:20:42 main/e7ceea6 with known staged/uncommitted prior T11 work; independently live/tracking equality0/0 and269 executable hashes confirmed. Exactly one extra documentation cycle authorized, repair12 NOT AUTHORIZED. Inspected final-audit.txt Missing current truth:README.md and failed counter generator. Falsifiable hypothesis: explicit current11/11 plus separate exhausted normal10/10 and existing truth fields satisfies the unchanged exact validator while dated history remains untouched. Added current closure sections/one PLAN row/review metadata only; no source/tests/assets/validator edit. Verification pending; no deployment.
++2026-10-06 18:28:22 +08:00 — Exceptional repair11 affected exact unchanged publication check PASS/exit0,18:25:23; docs3/9 PASS0; incremental source/tests/assets/validator EMPTY, all incoming historical evidence hashes preserved, exactly one current PLAN row changed. Separate normal10/10 and current11/11 record are explicit. Original failed publication output unchanged. Full final unchanged verify.ps1 starts next; no repair12 or deployment.
++
++2026-10-06 18:54:49 +08:00 — M10-T11 exceptional repair11 final STOP. A: exact unchanged publication validator PASS0 at2026-10-06 18:25:23 +08:00; SHA unchanged. B: docs3/9 PASS0 at2026-10-06 18:26:33 +08:00. C: scope PASS0 at2026-10-06 18:27:13 +08:00;14725 incoming files unchanged, eight current docs/review records changed, incremental source/tests/assets/validator EMPTY. D: unchanged unified verify invoked18:28:24; typecheck/lint100/1236/domain/build PASS checked0. Outer collector exited1 with NativeCommandError and failed to persist native verify exit; actual native exit NOT AVAILABLE. Fresh browser last-run=failed with two HIGH-02 regressions:1280x9002861.1ms,320x7202891.6ms (>2500);768x10241577.4ms,all16 destinations. Cause unproven; no aggregate243pass claim. Required final gate BLOCKED, independent-preservation rerun BLOCKED/NOT VERIFIED. Cleanup completed2026-10-06 18:50:47 +08:00 PASS0:320 historical outputs restored,269 inputs exact,57 new compatibility files archived; no verification retry or collector/product repair. HIGH-02 REOPENED, BLOCKER-02 OPEN; documentation LOW-07 closed, historical normal-limit blocker superseded by owner exception. Current docs/PLAN/review nowM10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11; M10 NOT ACCEPTED. Repair12 NOT AUTHORIZED/NOT RUN. Review/closure commit NOT RUN; push NOT RUN; deployment NOT RUN. Evidence:repair11-20261006-182042/failure-receipt.json.
++
++2026-10-06 18:56:14 +08:00 — Evidence-only privacy attempt after STOP: unchanged .git/m10-t11-privacy.ps1 native exit1/BLOCKED. Own redirected failure-privacy-review.txt inside scan root was locked; IOException stopped before result write. Original historical privacy JSON restored; stale copied prior result explicitly renamed privacy-attempt-stale-output.json and is not current PASS. Error/receipt preserved; no retry, scanner/collector/exclusion change. BLOCKER-03 OPEN; publication remains NOT RUN. This is a failed evidence-review attempt, not product repair12.
++
++2026-10-06 18:56:16 +08:00 — Final read-only Git snapshot: branchmain; review/closure commit NOT RUN; HEADe7ceea652dd74ef079d933922668c782304dc31f; trackinge7ceea652dd74ef079d933922668c782304dc31f; livee7ceea652dd74ef079d933922668c782304dc31f (readPASS/exit0); ahead/behind0/0; working treeDIRTY; actual untracked files611. Existing T11 changes and new failure records retained. No commit/push/deployment. [Receipt](M10_T11_EVIDENCE/repair11-20261006-182042/final-git.json).
++
++2026-10-06 19:20:55 +08:00 — M10-PRE-CLOSE new maintenance start (explicit owner authorization0/10, separate from T11 blocked11/11; no repair12). Main/e7 baseline confirmed, dirty known inherited T11 changes; captured15333 tracked/untracked paths and15333 file hashes/611 actual untracked files before edits.320 historical generated outputs backed up. Node24.19.0/npm11.17.0 present. Read relevant AGENTS/SKILL/RULES/SPEC/DESIGN/PLAN/STATE/UX contracts; no rule conflict. Exact T11-P01 native test measures first initial-flight DOM insertion to data-initial-deal-running=false; excludes browser/page/fixture startup, includes serial16flights+queue completion+React publication. Cold native renderer path; both1280/320 historicalfailures retained. Product edits NOT RUN pending per-flight diagnosis. Recommended GPT Sol6.1/High, actual selected runtime NOT VERIFIED.
++
++2026-10-06 19:29:07 +08:00 — First maintenance implementation (repair0/10): measured exact initial window and passive16-flight WAAPI/cold-warm diagnosis, six fixed samples1471.1..1601.5ms,ready delay14.9..124.7ms,finish81.7..191.8ms,no>50ms task. Earlier2861.1/2891.6ms trigger NOT ESTABLISHED; do not invent same desktop/mobile cause. Central initial-only token80->60ms adds320ms nominal allowance for cumulative startup/completion overhead; all stages/order/eases/action&Dealer110ms unchanged. A exact existing3cases PASS0 (1293.0/1335.3/1232.5ms,16destinations). New two bounded3cold+1warm tests retain all results before<=2500assertion, no retries. Added native external-FD collector and same-pattern scanner with outside result location/no path exclusions, plus4 meaningful lock/secret/trace/stderr regressions. B in progress; C..I NOT RUN. Domain/game semantics/assets/dependencies/test assertions unchanged.
++
++2026-10-06 19:30:57 +08:00 — M10-PRE-CLOSE repair1/10: C first exact privacy scanner FAIL/native1 (Get-FileHash command unavailable), original failure retained in C-exact-privacy.txt. Falsifiable cause: Node inherited PowerShell7 PSModulePath prevents WindowsPowerShell5.1 discovering its own utility module. Two fixed probes: inherited FAIL1; same runtime with only inherited PSModulePath removed PASS0/Get-FileHash Microsoft.PowerShell.Utility. Targeted collector fix deletes that inherited variable only for powershell.exe children; WindowsPowerShell restores its real standard module discovery. No cmdlet shim, scanner/pattern/coverage change. Regression scanner tests force invalid inherited module path. Rerun affected exact C next; docs count1/10, T11 remains11/11 blocked. All8 B samplesPASS0: desktop1410.5/1350.6/1313.1/1309.5 (median1331.85,worst1410.5);mobile1362.4/1405.8/1262.8/1218.7 (median1312.60,worst1405.8);fixed3cold+1warm,FULL_MOTION,16steps,2500unchanged.
++
++2026-10-06 19:32:18 +08:00 — Repair1 affected C nowPASS/native0 (407text/14trace entries/0findings), exact original scanner unchanged; historical privacy output restored. D actual full subsetPASS0 (1236artifact/source/test/script files/14traceentries,0findings,no exclusions). D new harness unit first execution1PASS/3FAIL: ReferenceError in new helper due local process shadowing globalprocess.env. Repair2/10 falsifiable cause shown atline16; rename only local result to child, no assertion weakening; affected4test rerun next. First product/A/B remain unchanged. T11 stays11/11 BLOCKED; no12.
++
++2026-10-06 19:33:26 +08:00 — Maintenance repair3/10. Repair2 targeted local-name fix removed TDZ; rerun2PASS/2FAIL reveals remaining module-path issue under deliberate incompatible-env fixture. Child receipts/errors preserved. Casing probe shows uppercasePSMODULEPATH despite caller mixed-casePSModulePath; plain JS env object keys are case-sensitive while Windows variables are not. Falsifiable targeted fix removes every case variant of only that variable for WindowsPowerShell children. No scanner/pattern/assertion change. Exact C previouslyPASS0 remains historical; final unified/scanner gates will run against final collector. A/B currentproduct unchanged.
++
++2026-10-06 19:34:35 +08:00 — Maintenance repair4/10. Repair3 affected3PASS/1FAIL: collector now handles invalid module environment (H01PASS), output-root refusal/stderrPASS; H02 finds bearer in extensionlesstrace but misses credential in actual.log. Exact cause: new scanner extensionlist omitted.log, same credential regex is intact. Add.log coverage; retain2findingassertion and all patterns/no exclusions. Collector receipts now include only removed module-variable names for runtime evidence. Correction to preceding repair3 note: standalone casing probe output is PSModulePath, not uppercasePSMODULEPATH; Vitest child key was not captured then, so that specific proof claim was inaccurate. Case-insensitive cleanup did remove prior Get-FileHash failure as affected H01 showed. Original failed records kept; targeted4test rerun follows.
++
++2026-10-06 19:37:09 +08:00 — Maintenance repair4 affected verificationPASS4/4/native0; all scanner inventory/output-lock/actual.log credential/extensionlesstrace bearer/root refusal/stderr assertions retained. Final C unchanged historical scannerPASS0; D final actual evidence/source/test/script subsetPASS0,zero findings/no exclusions. Collector environment reset key receipt retained; no values published. E focusedM10unit24files/201testsPASS0; E browser running; F..I NOT RUN. Task count4/10; no product changes after first initial60ms token.
++
++2026-10-06 19:38:26 +08:00 — Maintenance repair5/10. E browser14PASS/1FAIL: T06-B01-1 got computed opacity empty instead of1. Source explicitly setsopacity1; trace points to unpaused short-flight element detaching between asynchronous assertions. Falsifiable harness race hypothesis; valid expected opacity1/zero premature arrivals must remain. Existing observe() already supports real first-flight checkpoint pause. Add that same deterministic pause only to B01 correctness check, assert same facts before first arrival then resume real WAAPI. The strict unpaused native2500ms cases and every card stage/order/assertion remain unchanged. This is related test/harness repair, not hiding a performance failure. Original FAIL/trace/screenshot retained; historical outputs restored320. Rerun full15 focusedinitialbrowser cases. T11 account11/11 blocked unchanged.
++
++2026-10-06 19:40:23 +08:00 — E focused actual initialbrowserPASS15/15/native0 afterrepair5; all original order/oneclone/opacity/hidden/modes/skip/unmount/reset assertions preserved;320 historical outputs restored,19changed outputs archived. Final fixture collector receipts explicitly show removed uppercasePSMODULEPATH; standalone probe was mixedcase, both cases now covered. Current maintenance5/10. Final executable/assets/dependency/runtime inputs frozen (277 hashes); F fullunits/G fullChromium/H preservation/I unchanged unified gate next, no source edits planned.
++
++2026-10-06 19:43:53 +08:00 — F full Vitest101files/1240testsPASS0 at19:40:45. G full245Chromium in progress; H/I NOT RUN. Exact performance cases and8boundednative samples PASS0, same2500ms and16steps; all15focused initialbrowser and201M10unitsPASS0. Latest privacy after saving actual new failure trace/screenshot/log PASS0; output closed outside root,0findings. First EFAIL remains preserved, related checkpoint-only test repair disclosed. Executable freeze277 remains final candidate; no source changes during full ladder.
++
++2026-10-06 20:26:30 +08:00 — M10-PRE-CLOSE repair6/10. First unified nativeexit1 retained: only four collector lint no-undef errors; typecheck,1240tests,domain/build,245Chromium andM1–M8preservation PASS. Hypothesis: Node module globals need explicit imports under unchanged ESLint rules. Targeted fix imports node:process/node:console; final verification PENDING. T11blocked11/11;repair12 NOT AUTHORIZED;M10 NOT ACCEPTED.
++
++2026-10-06 20:40:34 +08:00 — Second unified I-unified-repair6 still running: bounded desktop first cold sample2665.1ms FAIL against unchanged2500ms. Other desktop samples1330.0/1397.4/1666.3ms and all four mobile2098.8/2195.2/1429.9/1638.3ms PASS, all16ordered destinations and16real60ms durations. Original exact native1280/768/320 samples1253.2/2016.2/2164.5ms PASS. Full11samples and failed trace/screenshots preserved before preservation resets test-results. Current maintenance6/10; candidate NOT VERIFIED. No retry, threshold/test exclusion or product edit during execution. Further diagnosis and targeted repair7 are pending real complete exit. T11blocked11/11;M10 NOT ACCEPTED.
++
++2026-10-06 20:49:48 +08:00 — M10-PRE-CLOSE repair7/10. Second unified FAIL/native1 solely bounded cold desktop2665.1ms; full1240units,244otherChromium andM1-M8preservation PASS. Fixed six passive followup samples1308.9..2156.8ms retain real16flights and60ms token; readiness16.0..809.7ms, creation-to-finish69.0..891.5ms, finish-to-event0..0.2ms, no>50ms observed main-thread task. Same original outlier OS/browser trigger remains NOT ESTABLISHED. Falsifiable headroom hypothesis:960ms nominal flight total +1705.1ms measured residual exceeded2500; reducing only centralINITIAL60->40ms lowers nominal320ms and gives1860ms allowance for overhead. No shortcut, timer, completion override, step removal or guarantee. Actions/Dealer110ms/order/ease/core/assertions unchanged. All affected and full gates PENDING; no retry-until-fast. T11 staysblocked11/11; repair12 NOT AUTHORIZED; M10 NOT ACCEPTED.
++
++2026-10-06 21:05:27 +08:00 — Repair7 current proof: A original native3 PASS0 (1280/768/320:1288.5/1952.3/2041.6ms); B fixed8 PASS0 (desktop median1963.95/worst2059.5, mobile median1792.20/worst2049.9ms). C original exact privacy/D full actual evidence+new failed trace and4harness PASS0; E201units/15browserPASS0; F101files/1240unitsPASS0. G245Chromium stillrunning; its11 native windows allPASS and preserved (worst1981.9ms). H/I NOT RUN for40ms final candidate. Count7/10; no executable change after repair7 freeze277. T11 staysblocked11/11; M10 NOT ACCEPTED.
++
++2026-10-06 21:37:05 +08:00 — M10-PRE-CLOSE final candidate IMPLEMENTED / VERIFIED, repairs7/10. Every required A-I native gate PASS/checked0; final unified I-unified-repair7 passed typecheck, lint, 101files/1240tests, domain/build/fixture checks, 245Chromium cases and independent M1-M8 preservation. Both earlier unified failures (collector lint, then bounded2665.1ms) remain preserved. All 277 executable/assets/settings input hashes match repair7 freeze. All 15326 incoming files are unchanged; seven intended existing paths changed, new scopes bounded. src/domain diff from M10 start4e6cd7 is EMPTY/exit0. All33 final-candidate native samples are retained with per-sample results: 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. Same FULL_MOTION/native/no-preference, unchanged2500ms,16steps; no retries. Original historical outlier trigger unproven. Privacy lifecycle output stays outside targets until closed; patterns and evidence coverage preserved. Historical T11 bytes remain intact; T11 blocked11/11, repair12 NOT AUTHORIZED. Same-session review only; fresh T11 NOT RUN. Normal publication pending final docs/privacy/scope. M10 NOT ACCEPTED; deployment NOT RUN.
+diff --git a/docs/LAB_MANUAL.md b/docs/LAB_MANUAL.md
+index a1eb913..bb6aa80 100644
+--- a/docs/LAB_MANUAL.md
++++ b/docs/LAB_MANUAL.md
+@@ -2165,3 +2165,33 @@ T08 verified checkpoint (2026-10-06 00:37:22 +08:00): authoritative public avail
+ ## M10-PRE-T11 — decorative fallback and truthful alpha
+ 
+ A non-roster fallback belongs in presentation, with no CharacterId, session ordinal, seat, entropy or replay fields. Keep approved identity assignment separate from the image failure chain. PNG alpha means transparency exists; opaque255 is not a universal nonblank requirement. This supplied source has mainly252/253 alpha, and deterministic resizing peaks254. Record actual extrema rather than altering source pixels or reporting255. Preserve strict255 checks for previously approved assets. Historical fixture inputs can remain while their superseded visual expectation is amended explicitly. [Task/evidence](M10_PRE_T11_DEALER_CLEANUP.md).
++
++## M10-T11 independent closure learning — 2026-10-06 15:49:29 +08:00
++
++A pre-commit protected git diff cannot see untracked assets: pin each exact approved file hash and require tracked paths, then re-establish the published baseline. Full native Chromium cold timing can differ materially from headless-shell results; keep strict2500ms and measure actual destinations before assertions. Separate initial80ms from existing action110ms with two bounded product lines, rather than changing authority or thresholds.
++
++Source authority, executed tests, actual browser/PNG inspection, independent review, owner acceptance, publication and deployment are separate facts. Synthetic visibility is not proof of real backgrounding. Finite repeated-round DOM growth includes deliberate public Audit history; assert exact non-Audit cleanup and the legitimate SESSION_RESET independently. Preserve failed cause hypotheses, unsaved metrics limitations and native archival failures. Persist native exits before artifact I/O; after archival failure, restore captured originals and recheck every frozen executable without erasing the original wrapper exit. Windows PowerShell5 JSON arrays require direct assignment before iteration. Byte deduplication retains each freshly executed capture's hash/provenance and immutable canonical Git blob; gallery files stay direct. Repairs8/10, no exceptional authorization; no deployment or future milestone.
++
++2026-10-06 15:51:56 +08:00 — T11 supplemental scope-oracle repair9/10: native git porcelain includes leading spaces in fixed status columns. Preserve them with trimEnd; trim invents a path error. The failed added oracle remains evidence, with no weakening of scope/hash assertions.
++
++2026-10-06 15:55:15 +08:00 — T11 supplemental scope-oracle repair10/10: native git porcelain includes leading spaces in fixed status columns. Preserve them with trimEnd; trim invents a path error. The failed added oracle remains evidence, with no weakening of scope/hash assertions.
++
++## M10-T11 exceptional documentation repair — 2026-10-06 18:24:52 +08:00
++
++Current exception11/11 and exhausted normal limit10/10 are distinct facts. Keep dated9/10/10/10 failures intact, update explicit current state with a bounded literal PLAN-row change, and execute the unchanged validator. A failed helper and historical stop proposal remain evidence. Repair12 is not authorized.
++
++## M10-T11 exceptional-repair stop — 2026-10-06 18:54:49 +08:00
++
++A correct documentation count and an unchanged validator passing do not prove milestone acceptance. The new required full rerun produced actual cold native timing failures2861.1/2891.6ms while the collector also lost the unified exit receipt. These are independent evidence: do not attribute a real browser failure solely to a PowerShell stderr collector error, infer native exit from wrapper exit, or use older green benchmarks to waive new failures. Restore historical generated output bytes and retain new failed traces before reporting. Cleanup is not a regression/preservation pass. At exceptional11/11, stop without a twelfth repair or a retry; accurately reopen the HIGH finding and keep acceptance/publication blocked.
++
++2026-10-06 18:56:14 +08:00 — Evidence collectors can interfere with the files a read-only scanner examines. This failed privacy attempt read its own locked output inside the evidence root. Record native exit1 and incomplete result; distinguish stale existing result JSON from a newly produced result, preserve historical bytes, and do not retry after the authorized stop.
++
++## M10-PRE-CLOSE — measured duration and evidence lifecycle (2026-10-06 19:43:53 +08:00)
++
++The strict native2500ms window starts at first real card-flight insertion and ends when all initial arrivals clear the presentation mask. Browser/page/fixture startup is outside that window; a long test wall time cannot be substituted for animation duration. Nominal16*80ms did not include native ready/frame/completion delivery; measured per-flight ready15..125ms and finish82..192ms informed a central initial-only60ms adjustment. Six before samples did not reproduce the old2861/2892ms outlier: its triggering cause remains unproven. Report that limit alongside every fixed cold/warm sample; do not claim retries or universal timing guarantees.
++
++Native stderr is an operating-system stream. Writing child stdout/stderr through file descriptors outside scan targets preserves true native exit and avoids PowerShell redirection promoting warning text into a terminating ErrorRecord. Close logs before copying into scanned/public evidence. WindowsPowerShell must discover its own modules; remove inherited PSModulePath case-insensitively, retaining other environment variables. Regressions independently check image/text inventory, actual.log credentials, extensionless trace resources, output-location rejection and stderr exit0. Privacy does not claim OCR certification.
++
++Rapid live animations also expose asynchronous assertion races. Use an existing first-flight checkpoint for attached opacity/hidden-card correctness, then resume the real animation. Keep the independent2500ms performance observer unpaused. Preserve the failure, all original correctness assertions, exact native exits, and restored historical screenshot bytes. Current maintenance repairs5/10 are separate from the owner's unchanged T11 blocked11/11 account; maintenance cannot accept M10 or replace the required fresh review.
++
++2026-10-06 21:37:05 +08:00 — M10-PRE-CLOSE final candidate IMPLEMENTED / VERIFIED, repairs7/10. Every required A-I native gate PASS/checked0; final unified I-unified-repair7 passed typecheck, lint, 101files/1240tests, domain/build/fixture checks, 245Chromium cases and independent M1-M8 preservation. Both earlier unified failures (collector lint, then bounded2665.1ms) remain preserved. All 277 executable/assets/settings input hashes match repair7 freeze. All 15326 incoming files are unchanged; seven intended existing paths changed, new scopes bounded. src/domain diff from M10 start4e6cd7 is EMPTY/exit0. All33 final-candidate native samples are retained with per-sample results: 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. Same FULL_MOTION/native/no-preference, unchanged2500ms,16steps; no retries. Original historical outlier trigger unproven. Privacy lifecycle output stays outside targets until closed; patterns and evidence coverage preserved. Historical T11 bytes remain intact; T11 blocked11/11, repair12 NOT AUTHORIZED. Same-session review only; fresh T11 NOT RUN. Normal publication pending final docs/privacy/scope. M10 NOT ACCEPTED; deployment NOT RUN.
+diff --git a/docs/PLAN.md b/docs/PLAN.md
+index 49a67ed..ed85276 100644
+--- a/docs/PLAN.md
++++ b/docs/PLAN.md
+@@ -1,3 +1,47 @@
++## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
++
++New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.
++
++## M10-T11 current stop after exceptional repair11 — 2026-10-06 18:54:49 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11. M10: NOT ACCEPTED.** M10-T11: **11/11 — OWNER-AUTHORIZED EXCEPTION**; exhausted normal limit **10/10** is historical. Repair12 **NOT AUTHORIZED / NOT RUN**. Documentation count repair is **VERIFIED**; milestone closure remains **BLOCKED**. **DEPLOYMENT NOT RUN.**
++
++Unchanged exact publication check **PASS/exit0**; documentation tests **PASS/exit0 (3 files/9 tests)**; incoming-scope review **PASS/exit0**, incremental product/tests/assets/validators **EMPTY**. These completed checks precede the new failed final gate; they do not establish acceptance.
++
++Required unchanged scripts/verify.ps1 rerun: typecheck/lint/100 files-1236 Vitest/domain typecheck/build **PASS/checked0** in captured stdout. Chromium **FAIL**: cold seven-player initial deal **1280px2861.1ms** and **320px2891.6ms**, both above unchanged2500ms;768px1577.4ms. All three metrics record16 destinations. **HIGH-02 REOPENED**; timing cause not established. Earlier243/243 PASS is historical and cannot waive these new failures. Complete Chromium summary and fresh independent-preservation result are **BLOCKED / NOT VERIFIED**.
++
++Outer collector **FAIL/exit1** with PowerShell NativeCommandError on redirected web-server NO_COLOR stderr. It did not persist the actual verify.ps1 exit code; native exit **NOT AVAILABLE**, required unified gate **BLOCKED**. This collector failure does not explain away the two actual timing failures. No collector/product/validator/threshold repair or gate retry performed.
++
++Evidence-only cleanup **PASS/exit0**: all320 historical outputs restored byte-for-byte,269 incoming executable/asset inputs unchanged,57 fresh generated compatibility files archived alongside failed browser traces/metrics. Current stop records are appended; dated9/10,10/10,earlier11/11 start/verification evidence remains historical. No T11 review/closure commit or push; known incoming T11 changes remain uncommitted.
++
++[Current stop evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 current exceptional documentation repair — 2026-10-06 18:24:52 +08:00
++
++**M10-T11: 11/11 — OWNER-AUTHORIZED EXCEPTION.** Normal limit: **10/10** exhausted. Repair12 **NOT AUTHORIZED / NOT RUN**. Owner explicitly authorizes exactly one documentation/publication count repair and conditional normal origin/main closure. Current repair IMPLEMENTED; exact publication check and fresh final verification **NOT RUN**. M10: NOT ACCEPTED until those checks and clean publication pass. **DEPLOYMENT NOT RUN.**
++
++Established runtime evidence:100 files/1236 Vitest,243 Chromium, preservation/privacy/assets/live Dealer guard and verify.ps1 PASS/checked0. This is prior evidence, not a claim of the new final rerun. Recommended GPT-6.1 Sol / Max (original task); actual selected model/effort NOT VERIFIED. No delegation.
++
++Scope: correct current repair count/status in closure docs and the current PLAN row. Incremental product/test/asset/dependency/runtime/validator changes must be EMPTY relative to the incoming repair11 snapshot; previously verified uncommitted T11 changes remain part of the overall review checkpoint. Non-goals: product changes, new features, deployment or repair12.
++
++Step -> verification: current documents -> exact unchanged final-audit.cjs PASS0; docs -> three files/nine tests; scope -> incoming source and historical-evidence SHA equality; final runtime -> scripts/verify.ps1 full units/Chromium/independent preservation; publication -> scoped diff/privacy/normal main push and exact CLEAN/live equality. Stop immediately on a failed exact check, unavailable tool, unexpected overlap, required-gate failure or unapproved action; no further repair authorized.
++
++All dated9/10,10/10 stop/failure/proposal records below are historical and preserved. The normal-limit10/10 field and current exception11/11 field have different meanings; neither counter is reset. See the newest repair11 evidence for current results.
++
++[Current repair evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 STOPPED at normal repair limit — 2026-10-06 15:57:45 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED. M10: NOT ACCEPTED.** Normal repair count **10/10**; further cycle NOT AUTHORIZED. Ten final technical native stages PASS/checked0 (100 files/1236 units,243 Chromium twice, preservation/assets/privacy/build/unified), but final added documentation/publication audit **FAIL/exit1** after repair10. The counter-generation script accidentally replaced10/10 with itself; dated review prefixes still say9/10. Those earlier claims are superseded here. Product/old-test/protected-input/320-output/1211-image/link checks passed before the failing current-counter assertion; no technical test failure is hidden.
++
++Publication STOPPED: no T11 commit or push, main remains starting e7ceea652dd74ef079d933922668c782304dc31f, working tree has known staged/uncommitted T11 files. A single additional documentation-only repair11 needs explicit owner authorization under AGENTS.md and this task's10/10 maximum. The unapplied proposal corrects final review counters/current statuses, retains all historical failed evidence and reruns current document/privacy/scope/staged checks. No product, old regression, threshold, timeout or deployment change. **DEPLOYMENT NOT RUN.** Future milestone unstarted. [Stop receipt](M10_T11_EVIDENCE/stop-at-repair-limit.json); [unapplied proposal](M10_T11_EVIDENCE/repair11-proposal.txt).
++
++## M10-T11 final review checkpoint — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++AC-M10-001..012 mapped in [final task](M10_T11.md); publication/conditional acceptance is the only remaining T11 step. No future milestone selected or started.
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
+@@ -375,7 +419,7 @@ For every future task: recommended GPT Sol 6.1 / High (client-supported gpt-6.1-
+ | M10-T09 / T08 | Chips/reserves/cancellation/committed settlement and natural/Charlie text feedback; SETTLING; AC004/007/009 | Exact independent stakes/gross/available values, win/loss/push/surrender/Insurance/side/back/Double/Split/VOID, failed funding no chips, exactly-once results -> event/UI/financial preservation + full harness | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; full1222/187 and preservation/assets/unified PASS0; repairs5/10 CLOSED; human visual ACCEPTED by owner 2026-10-06; publishedd0b5a0814c2a87f5cd942f17cc630db2bf935d37; clean0/0 receipt follows |
+ | M10-T10 / T09 | Preserve immediate terminal replay (optional animated playback omitted per SPEC AC008/DESIGN M10.15/owner sections57–58); full reduced/skip/preferences/hidden-tab compatibility; AC008/009/010 | Actual1/4/7 complete journal/outcomes/digest/live audit equality; three modes, seven skip phases, session/OS toggle, unmount/visibility/resize/round/table, unchanged2500ms -> deterministic/browser + full harness | IMPLEMENTED / VERIFIED; full1230/216,35/278,preservation/assets/unified PASS0; repairs3/10 CLOSED after exact artifact restoration; COMMITTED/PUSHED4b3c8c0,0/0/CLEAN/untracked0; documentation-only receipt follows; human visual ACCEPTED by owner 2026-10-06; STOP before T11 |
+ | M10-PRE-T11 / T10 | Retire legacy Dealer; supplied non-roster formal fallback; unchanged five-identity rotation and animations | Source/alpha/hash/provenance, live guard, setup/collision/exhaustion/failure/modes/replay/screenshots and full gate -> normal main publication -> owner visual confirmation | IMPLEMENTED / VERIFIED; all required gates PASS / exit 0; repairs 7/10 CLOSED; complete new screenshot inspection0 old Dealer; owner visual PENDING; implementation 245591e7e08164ec2f750f359280f9a3d59325b9 normally published on main |
+-| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | NOT STARTED |
++| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | Documentation repair VERIFIED; final gate BLOCKED; repair11/11 — OWNER-AUTHORIZED EXCEPTION; normal10/10 exhausted; HIGH-02 REOPENED (1280/320 >2500ms); repair12 NOT AUTHORIZED / NOT RUN; M10 NOT ACCEPTED; see M10_T11.md |
+ 
+ The proposed T01..T11 order is retained: the existing controller already provides deterministic command boundaries, and the PA1 dealer/portrait components can be prepared before the event feed. T04 tests poses using fixtures; real event integration depends on T05/T06, with reveal/settlement completed in T08/T09. Reduced-motion safety is required in every motion task; T10 supplies final replay/preference coverage, not first accessibility support.
+ 
+@@ -1303,3 +1347,9 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual
+ T04/T05 share one coherent final preservation/documentation verification checkpoint after the corrected Charlie test. Their delivery/repair identities remain separate. Evidence-only publication receipts follow without source/test/runtime changes. STOP at fresh-session review gate, with clean main parity0/0. No M10 or deployment.
+ 
+ 2026-10-05 14:42:59 +08:00 — Final blocked-status documentation check FAIL/1:5 files/13 cases,12 PASS and portfolio README stale-status regex matches across the new M8-PASS/T06-NOT-STARTED single paragraph. Exact failed README/test source and raw log retained. Paragraph-only patch is unapplied in next-repair-readme.patch, included in owner-authorization scope; no additional repair or rerun. Protected incoming scan initially FAIL for one known geometry.json rollback: Git CRLF smudge altered raw bytes. Verified canonical Git bytes equal captured incomingSHA and restored only that known generated artifact to exact bytes; remaining6098 protected hashes already match. Routine original-output rollback completed, not a new implementation/assertion/harness repair. Protected6099 PASS; original historical docs retained normalized. Full failed gate and10/10 stop remain unchanged.
++
++## M10-PRE-CLOSE maintenance — 2026-10-06 19:20:55 +08:00
++
++| Task | Scope | Verification | Status |
++| --- | --- | --- | --- |
++| M10-PRE-CLOSE | Initial2500ms performance + privacy output self-lock; no domain/features/deploy | A..I and normal clean publication per M10_PRE_CLOSE.md | IMPLEMENTED / VERIFIED; A-I PASS0; 7/10; normal publication pending; T11 blocked11/11; M10 NOT ACCEPTED |
+diff --git a/docs/STATE.md b/docs/STATE.md
+index e9d20f9..880790d 100644
+--- a/docs/STATE.md
++++ b/docs/STATE.md
+@@ -1,3 +1,75 @@
++## M10-PRE-CLOSE maintenance VERIFIED — 2026-10-06 21:37:05 +08:00
++
++**M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED.** Maintenance repairs **7/10**. Required A-I gates are **PASS / checked exit0**: exact native performance, bounded cold/warm performance, unchanged exact privacy scanner, full actual evidence subset and four harness regressions, focused animations, full Vitest, full Chromium, independent M1-M8 preservation, and unchanged unified verify.ps1. Final unified verification passed 101 files / 1240 Vitest tests and 245 Chromium cases. Cold samples launch a new native browser and fresh page; warm is an extra fresh page/new context in the third browser. Only browser-process reuse is claimed, not cache/context/renderer warmth. All 33 final-candidate recorded native initial-deal samples met the unchanged 2500ms budget with 16 ordered destinations each. 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. The first unified attempt failed only collector lint; the second failed one bounded desktop60ms sample2665.1ms. Both complete failures and all prior samples remain preserved.
++
++Initial-only central duration changed from 80ms to 40ms (first maintenance60ms candidate failed one bounded desktop sample); action and Dealer card flights remain 110ms, with every stage, ordering and ease retained. Diagnosis established cumulative serial WAAPI readiness/completion overhead. The fixed followup at60ms recorded readiness up to809.7ms and creation-to-finish up to891.5ms; native finish-to-event delay was <=0.2ms. The exact browser/OS stall trigger remains unproven. The historical 2861.1ms / 2891.6ms failure trigger remains **NOT ESTABLISHED**; fixed samples did not reproduce it. This evidence makes no universal machine-load guarantee.
++
++Privacy collection writes native stdout/stderr and scanner results outside all input targets, closes them before copying finalized evidence, and excludes no evidence paths or trace resources. Original credential/bearer/Vite patterns remain unchanged; .log coverage was added. Every artifact is inventoried by hash; text and non-image/font trace resources, including extensionless resources, are inspected. Synthetic screenshot provenance and visual checks supplement this inventory; no OCR certification is claimed. All incoming T11 historical evidence is byte-preserved, including 320 generated originals restored after tests. Domain diff from M10 start is EMPTY; gameplay, accounting, replay, RNG, Dealer system, assets and dependencies remain unchanged. Review here is in the same session. Normal origin/main publication is pending final documentation/privacy review.
++
++**M10-T11 remains BLOCKED AFTER 11/11; repair12 NOT AUTHORIZED. M10: NOT ACCEPTED. M10-T11 FRESH INDEPENDENT REVIEW REQUIRED in a new session; NOT RUN. DEPLOYMENT NOT RUN.**
++
++[Maintenance contract and executed evidence](M10_PRE_CLOSE.md).
++
++## M10-PRE-CLOSE current maintenance verification — 2026-10-06 19:32:18 +08:00
++
++Maintenance repairs2/10; A/B performancePASS0; exact unchanged C privacyPASS0 afterrepair1; actual D subsetPASS0; new D harness3FAIL/1PASS due test helper shadowing, repair2 targeted fix awaiting affected rerun. E..I NOT RUN. T11 blocked11/11; repair12 NOT AUTHORIZED. M10 NOT ACCEPTED; DEPLOYMENT NOT RUN.
++
++## M10-PRE-CLOSE maintenance started — 2026-10-06 19:20:55 +08:00
++
++Owner-authorized performance/evidence maintenance, repairs0/10, main/e7ceea6 incomingDIRTY. T11 remains BLOCKED after11/11, repair12 NOT AUTHORIZED; M10 NOT ACCEPTED. [Scope and gates](M10_PRE_CLOSE.md). Diagnose actual16card window before edits; unchanged2500ms; no features/domain/assets/dependencies/deployment. All incoming tracked/untracked hashes and historical failures retained. Recommended GPT Sol6.1/High; selected runtime NOT VERIFIED. Verification NOT RUN.
++
++## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
++
++New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.
++
++## M10-T11 current stop after exceptional repair11 — 2026-10-06 18:54:49 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11. M10: NOT ACCEPTED.** M10-T11: **11/11 — OWNER-AUTHORIZED EXCEPTION**; exhausted normal limit **10/10** is historical. Repair12 **NOT AUTHORIZED / NOT RUN**. Documentation count repair is **VERIFIED**; milestone closure remains **BLOCKED**. **DEPLOYMENT NOT RUN.**
++
++Unchanged exact publication check **PASS/exit0**; documentation tests **PASS/exit0 (3 files/9 tests)**; incoming-scope review **PASS/exit0**, incremental product/tests/assets/validators **EMPTY**. These completed checks precede the new failed final gate; they do not establish acceptance.
++
++Required unchanged scripts/verify.ps1 rerun: typecheck/lint/100 files-1236 Vitest/domain typecheck/build **PASS/checked0** in captured stdout. Chromium **FAIL**: cold seven-player initial deal **1280px2861.1ms** and **320px2891.6ms**, both above unchanged2500ms;768px1577.4ms. All three metrics record16 destinations. **HIGH-02 REOPENED**; timing cause not established. Earlier243/243 PASS is historical and cannot waive these new failures. Complete Chromium summary and fresh independent-preservation result are **BLOCKED / NOT VERIFIED**.
++
++Outer collector **FAIL/exit1** with PowerShell NativeCommandError on redirected web-server NO_COLOR stderr. It did not persist the actual verify.ps1 exit code; native exit **NOT AVAILABLE**, required unified gate **BLOCKED**. This collector failure does not explain away the two actual timing failures. No collector/product/validator/threshold repair or gate retry performed.
++
++Evidence-only cleanup **PASS/exit0**: all320 historical outputs restored byte-for-byte,269 incoming executable/asset inputs unchanged,57 fresh generated compatibility files archived alongside failed browser traces/metrics. Current stop records are appended; dated9/10,10/10,earlier11/11 start/verification evidence remains historical. No T11 review/closure commit or push; known incoming T11 changes remain uncommitted.
++
++[Current stop evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 current exceptional documentation repair — 2026-10-06 18:24:52 +08:00
++
++**M10-T11: 11/11 — OWNER-AUTHORIZED EXCEPTION.** Normal limit: **10/10** exhausted. Repair12 **NOT AUTHORIZED / NOT RUN**. Owner explicitly authorizes exactly one documentation/publication count repair and conditional normal origin/main closure. Current repair IMPLEMENTED; exact publication check and fresh final verification **NOT RUN**. M10: NOT ACCEPTED until those checks and clean publication pass. **DEPLOYMENT NOT RUN.**
++
++Established runtime evidence:100 files/1236 Vitest,243 Chromium, preservation/privacy/assets/live Dealer guard and verify.ps1 PASS/checked0. This is prior evidence, not a claim of the new final rerun. Recommended GPT-6.1 Sol / Max (original task); actual selected model/effort NOT VERIFIED. No delegation.
++
++Scope: correct current repair count/status in closure docs and the current PLAN row. Incremental product/test/asset/dependency/runtime/validator changes must be EMPTY relative to the incoming repair11 snapshot; previously verified uncommitted T11 changes remain part of the overall review checkpoint. Non-goals: product changes, new features, deployment or repair12.
++
++Step -> verification: current documents -> exact unchanged final-audit.cjs PASS0; docs -> three files/nine tests; scope -> incoming source and historical-evidence SHA equality; final runtime -> scripts/verify.ps1 full units/Chromium/independent preservation; publication -> scoped diff/privacy/normal main push and exact CLEAN/live equality. Stop immediately on a failed exact check, unavailable tool, unexpected overlap, required-gate failure or unapproved action; no further repair authorized.
++
++All dated9/10,10/10 stop/failure/proposal records below are historical and preserved. The normal-limit10/10 field and current exception11/11 field have different meanings; neither counter is reset. See the newest repair11 evidence for current results.
++
++[Current repair evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
++
++## M10-T11 STOPPED at normal repair limit — 2026-10-06 15:57:45 +08:00
++
++**M10_INDEPENDENT_REVIEW_BLOCKED. M10: NOT ACCEPTED.** Normal repair count **10/10**; further cycle NOT AUTHORIZED. Ten final technical native stages PASS/checked0 (100 files/1236 units,243 Chromium twice, preservation/assets/privacy/build/unified), but final added documentation/publication audit **FAIL/exit1** after repair10. The counter-generation script accidentally replaced10/10 with itself; dated review prefixes still say9/10. Those earlier claims are superseded here. Product/old-test/protected-input/320-output/1211-image/link checks passed before the failing current-counter assertion; no technical test failure is hidden.
++
++Publication STOPPED: no T11 commit or push, main remains starting e7ceea652dd74ef079d933922668c782304dc31f, working tree has known staged/uncommitted T11 files. A single additional documentation-only repair11 needs explicit owner authorization under AGENTS.md and this task's10/10 maximum. The unapplied proposal corrects final review counters/current statuses, retains all historical failed evidence and reruns current document/privacy/scope/staged checks. No product, old regression, threshold, timeout or deployment change. **DEPLOYMENT NOT RUN.** Future milestone unstarted. [Stop receipt](M10_T11_EVIDENCE/stop-at-repair-limit.json); [unapplied proposal](M10_T11_EVIDENCE/repair11-proposal.txt).
++
++## M10-T11 current technical truth — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++Latest verification: [native receipts](M10_T11_EVIDENCE/gate-20261006-150313/receipts.json), [archival repair](M10_T11_EVIDENCE/gate-20261006-150313/repair7-restoration.json), [review](M10_T11.md). Original final wrapper exit1 retained; isolated post-run restoration PASS0. Scope/source and exact publication checks follow. Recommended GPT-6.1 Sol Max/highest supported; actual selected runtime NOT VERIFIED.
++
++## M10-T11 final frozen verification in progress — 2026-10-06 15:04:56 +08:00
++
++Fresh independent review; repairs6/10, no exceptional authorization. HIGH-01 guard repaired with exact approved generic hashes; HIGH-02 cold native initial-deal budget repaired by separating initial80ms from unchanged action/Dealer110ms. Only two product lines, one guard repair and three native performance regressions. Affected63/3 and fixed native controls/nine rounds/three native200percent zoom scenarios/91text+10focus contrasts PASS0. LOW-02 new cleanup oracle corrected for legitimate SESSION_RESET; non-Audit228 baseline restored, prior FAIL retained. REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE (BLOCKED), reliable T10 synthetic authority/lifecycle equivalent PASS; user section21 permits this disclosed limitation. Final full100/1236 and243 Chromium/preservation/assets/unified gate IN PROGRESS against frozen repair5 source. All previous failures/failed hypotheses preserved in [T11 record](M10_T11.md). Owner acceptances as supplied in that record; no new human T01/timing acceptance invented. M10 NOT ACCEPTED pending full gate/visual/publication parity. DEPLOYMENT NOT RUN.
++
++## M10-T11 fresh independent review in progress — 2026-10-06 14:04:50 +08:00
++
++Expected clean main/e7ceea652dd74ef079d933922668c782304dc31f baseline and live remote parity independently established. [Review contract and first failure](M10_T11.md). M10A ACCEPTED/CLOSED; T02/T03/T06/T07/T08/T09 human visual ACCEPTED, T10 human ACCEPTED and PRE-T11 cleanup human ACCEPTED by the owner's current task. Historical pending/rejected records remain unchanged. First full Vitest1235/1236 FAIL1 identified HIGH-01: three approved committed generic assets omitted from M10-G06's historical allowlist. Bounded test-only repair1/10 pins all three exact approved hashes and retains every other protected empty-diff/historical assertion. Affected14 and fresh full1236 PASS/checked0; complete Chromium/preservation/assets/unified and independent visual/background/zoom review IN PROGRESS. No product/domain/assets/dependencies change. M10 NOT ACCEPTED pending the complete gate; deployment NOT RUN.
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
+@@ -1760,3 +1832,31 @@ Current PRE-T11 repair count6/10 (2026-10-06 11:41:52 +08:00): operational repai
+ 2026-10-06 12:03:58 +08:00 — PRE-T11 cumulative7/10: third gate1236 units PASS0; Chromium234 PASS/1 aggregate30s timeout in unchanged M10A-T09-B03 final fallback scenario. Six exact fixture sessions will be isolated with every assertion and12 captures preserved; no timeout/retry/product change. Gate4 pending; T11 NOT STARTED.
+ 
+ 2026-10-06 12:26:52 +08:00 — PRE-T11 current frozen gate4 full units1236 and Chromium240 PASS/0. M1–M8 preservation/current/assets/unified in progress; publication and final full screenshot inspection NOT RUN. Repairs7/10. T11 NOT STARTED; owner confirmation PENDING.
++
++2026-10-06 18:56:16 +08:00 — Final read-only Git snapshot: branchmain; review/closure commit NOT RUN; HEADe7ceea652dd74ef079d933922668c782304dc31f; trackinge7ceea652dd74ef079d933922668c782304dc31f; livee7ceea652dd74ef079d933922668c782304dc31f (readPASS/exit0); ahead/behind0/0; working treeDIRTY; actual untracked files611. Existing T11 changes and new failure records retained. No commit/push/deployment. [Receipt](M10_T11_EVIDENCE/repair11-20261006-182042/final-git.json).
++
++2026-10-06 19:29:07 +08:00 — First maintenance implementation (repair0/10): measured exact initial window and passive16-flight WAAPI/cold-warm diagnosis, six fixed samples1471.1..1601.5ms,ready delay14.9..124.7ms,finish81.7..191.8ms,no>50ms task. Earlier2861.1/2891.6ms trigger NOT ESTABLISHED; do not invent same desktop/mobile cause. Central initial-only token80->60ms adds320ms nominal allowance for cumulative startup/completion overhead; all stages/order/eases/action&Dealer110ms unchanged. A exact existing3cases PASS0 (1293.0/1335.3/1232.5ms,16destinations). New two bounded3cold+1warm tests retain all results before<=2500assertion, no retries. Added native external-FD collector and same-pattern scanner with outside result location/no path exclusions, plus4 meaningful lock/secret/trace/stderr regressions. B in progress; C..I NOT RUN. Domain/game semantics/assets/dependencies/test assertions unchanged.
++
++2026-10-06 19:30:57 +08:00 — M10-PRE-CLOSE repair1/10: C first exact privacy scanner FAIL/native1 (Get-FileHash command unavailable), original failure retained in C-exact-privacy.txt. Falsifiable cause: Node inherited PowerShell7 PSModulePath prevents WindowsPowerShell5.1 discovering its own utility module. Two fixed probes: inherited FAIL1; same runtime with only inherited PSModulePath removed PASS0/Get-FileHash Microsoft.PowerShell.Utility. Targeted collector fix deletes that inherited variable only for powershell.exe children; WindowsPowerShell restores its real standard module discovery. No cmdlet shim, scanner/pattern/coverage change. Regression scanner tests force invalid inherited module path. Rerun affected exact C next; docs count1/10, T11 remains11/11 blocked. All8 B samplesPASS0: desktop1410.5/1350.6/1313.1/1309.5 (median1331.85,worst1410.5);mobile1362.4/1405.8/1262.8/1218.7 (median1312.60,worst1405.8);fixed3cold+1warm,FULL_MOTION,16steps,2500unchanged.
++
++2026-10-06 19:33:26 +08:00 — Maintenance repair3/10. Repair2 targeted local-name fix removed TDZ; rerun2PASS/2FAIL reveals remaining module-path issue under deliberate incompatible-env fixture. Child receipts/errors preserved. Casing probe shows uppercasePSMODULEPATH despite caller mixed-casePSModulePath; plain JS env object keys are case-sensitive while Windows variables are not. Falsifiable targeted fix removes every case variant of only that variable for WindowsPowerShell children. No scanner/pattern/assertion change. Exact C previouslyPASS0 remains historical; final unified/scanner gates will run against final collector. A/B currentproduct unchanged.
++
++2026-10-06 19:34:35 +08:00 — Maintenance repair4/10. Repair3 affected3PASS/1FAIL: collector now handles invalid module environment (H01PASS), output-root refusal/stderrPASS; H02 finds bearer in extensionlesstrace but misses credential in actual.log. Exact cause: new scanner extensionlist omitted.log, same credential regex is intact. Add.log coverage; retain2findingassertion and all patterns/no exclusions. Collector receipts now include only removed module-variable names for runtime evidence. Correction to preceding repair3 note: standalone casing probe output is PSModulePath, not uppercasePSMODULEPATH; Vitest child key was not captured then, so that specific proof claim was inaccurate. Case-insensitive cleanup did remove prior Get-FileHash failure as affected H01 showed. Original failed records kept; targeted4test rerun follows.
++
++2026-10-06 19:37:09 +08:00 — Maintenance repair4 affected verificationPASS4/4/native0; all scanner inventory/output-lock/actual.log credential/extensionlesstrace bearer/root refusal/stderr assertions retained. Final C unchanged historical scannerPASS0; D final actual evidence/source/test/script subsetPASS0,zero findings/no exclusions. Collector environment reset key receipt retained; no values published. E focusedM10unit24files/201testsPASS0; E browser running; F..I NOT RUN. Task count4/10; no product changes after first initial60ms token.
++
++2026-10-06 19:38:26 +08:00 — Maintenance repair5/10. E browser14PASS/1FAIL: T06-B01-1 got computed opacity empty instead of1. Source explicitly setsopacity1; trace points to unpaused short-flight element detaching between asynchronous assertions. Falsifiable harness race hypothesis; valid expected opacity1/zero premature arrivals must remain. Existing observe() already supports real first-flight checkpoint pause. Add that same deterministic pause only to B01 correctness check, assert same facts before first arrival then resume real WAAPI. The strict unpaused native2500ms cases and every card stage/order/assertion remain unchanged. This is related test/harness repair, not hiding a performance failure. Original FAIL/trace/screenshot retained; historical outputs restored320. Rerun full15 focusedinitialbrowser cases. T11 account11/11 blocked unchanged.
++
++2026-10-06 19:40:23 +08:00 — E focused actual initialbrowserPASS15/15/native0 afterrepair5; all original order/oneclone/opacity/hidden/modes/skip/unmount/reset assertions preserved;320 historical outputs restored,19changed outputs archived. Final fixture collector receipts explicitly show removed uppercasePSMODULEPATH; standalone probe was mixedcase, both cases now covered. Current maintenance5/10. Final executable/assets/dependency/runtime inputs frozen (277 hashes); F fullunits/G fullChromium/H preservation/I unchanged unified gate next, no source edits planned.
++
++2026-10-06 19:43:53 +08:00 — F full Vitest101files/1240testsPASS0 at19:40:45. G full245Chromium in progress; H/I NOT RUN. Exact performance cases and8boundednative samples PASS0, same2500ms and16steps; all15focused initialbrowser and201M10unitsPASS0. Latest privacy after saving actual new failure trace/screenshot/log PASS0; output closed outside root,0findings. First EFAIL remains preserved, related checkpoint-only test repair disclosed. Executable freeze277 remains final candidate; no source changes during full ladder.
++
++2026-10-06 20:26:30 +08:00 — M10-PRE-CLOSE repair6/10. First unified nativeexit1 retained: only four collector lint no-undef errors; typecheck,1240tests,domain/build,245Chromium andM1–M8preservation PASS. Hypothesis: Node module globals need explicit imports under unchanged ESLint rules. Targeted fix imports node:process/node:console; final verification PENDING. T11blocked11/11;repair12 NOT AUTHORIZED;M10 NOT ACCEPTED.
++
++2026-10-06 20:40:34 +08:00 — Second unified I-unified-repair6 still running: bounded desktop first cold sample2665.1ms FAIL against unchanged2500ms. Other desktop samples1330.0/1397.4/1666.3ms and all four mobile2098.8/2195.2/1429.9/1638.3ms PASS, all16ordered destinations and16real60ms durations. Original exact native1280/768/320 samples1253.2/2016.2/2164.5ms PASS. Full11samples and failed trace/screenshots preserved before preservation resets test-results. Current maintenance6/10; candidate NOT VERIFIED. No retry, threshold/test exclusion or product edit during execution. Further diagnosis and targeted repair7 are pending real complete exit. T11blocked11/11;M10 NOT ACCEPTED.
++
++2026-10-06 20:49:48 +08:00 — M10-PRE-CLOSE repair7/10. Second unified FAIL/native1 solely bounded cold desktop2665.1ms; full1240units,244otherChromium andM1-M8preservation PASS. Fixed six passive followup samples1308.9..2156.8ms retain real16flights and60ms token; readiness16.0..809.7ms, creation-to-finish69.0..891.5ms, finish-to-event0..0.2ms, no>50ms observed main-thread task. Same original outlier OS/browser trigger remains NOT ESTABLISHED. Falsifiable headroom hypothesis:960ms nominal flight total +1705.1ms measured residual exceeded2500; reducing only centralINITIAL60->40ms lowers nominal320ms and gives1860ms allowance for overhead. No shortcut, timer, completion override, step removal or guarantee. Actions/Dealer110ms/order/ease/core/assertions unchanged. All affected and full gates PENDING; no retry-until-fast. T11 staysblocked11/11; repair12 NOT AUTHORIZED; M10 NOT ACCEPTED.
++
++2026-10-06 21:05:27 +08:00 — Repair7 current proof: A original native3 PASS0 (1280/768/320:1288.5/1952.3/2041.6ms); B fixed8 PASS0 (desktop median1963.95/worst2059.5, mobile median1792.20/worst2049.9ms). C original exact privacy/D full actual evidence+new failed trace and4harness PASS0; E201units/15browserPASS0; F101files/1240unitsPASS0. G245Chromium stillrunning; its11 native windows allPASS and preserved (worst1981.9ms). H/I NOT RUN for40ms final candidate. Count7/10; no executable change after repair7 freeze277. T11 staysblocked11/11; M10 NOT ACCEPTED.
++
++2026-10-06 21:37:05 +08:00 — M10-PRE-CLOSE final candidate IMPLEMENTED / VERIFIED, repairs7/10. Every required A-I native gate PASS/checked0; final unified I-unified-repair7 passed typecheck, lint, 101files/1240tests, domain/build/fixture checks, 245Chromium cases and independent M1-M8 preservation. Both earlier unified failures (collector lint, then bounded2665.1ms) remain preserved. All 277 executable/assets/settings input hashes match repair7 freeze. All 15326 incoming files are unchanged; seven intended existing paths changed, new scopes bounded. src/domain diff from M10 start4e6cd7 is EMPTY/exit0. All33 final-candidate native samples are retained with per-sample results: 1280px: 15 samples, median 1288.5ms, worst 2059.5ms; 768px: 3 samples, median 1952.3ms, worst 1981.9ms; 320px: 15 samples, median 1454.3ms, worst 2049.9ms. Same FULL_MOTION/native/no-preference, unchanged2500ms,16steps; no retries. Original historical outlier trigger unproven. Privacy lifecycle output stays outside targets until closed; patterns and evidence coverage preserved. Historical T11 bytes remain intact; T11 blocked11/11, repair12 NOT AUTHORIZED. Same-session review only; fresh T11 NOT RUN. Normal publication pending final docs/privacy/scope. M10 NOT ACCEPTED; deployment NOT RUN.
+diff --git a/src/presentation/motionTokens.ts b/src/presentation/motionTokens.ts
+index 91becfc..bcf51fe 100644
+--- a/src/presentation/motionTokens.ts
++++ b/src/presentation/motionTokens.ts
+@@ -1,6 +1,6 @@
+ // Provisional DESIGN M10.12 timings, seconds for Motion. T06–T09 own visual tuning.
+ export const MOTION_TOKENS = Object.freeze({
+-  cardDeal: 0.11, cardGap: 0.14, flip: 0.22, split: 0.22,
++  initialCardDeal: 0.04, cardDeal: 0.11, cardGap: 0.14, flip: 0.22, split: 0.22,
+   dealerEmphasis: 0.18, wager: 0.24, resultEmphasis: 0.16,
+   arrivalEase: [0, 0, 0.2, 1] as const, emphasisEase: [0.42, 0, 0.58, 1] as const,
+ });
+diff --git a/src/ui/InitialDealFlight.ts b/src/ui/InitialDealFlight.ts
+index 90bcfb7..9668363 100644
+--- a/src/ui/InitialDealFlight.ts
++++ b/src/ui/InitialDealFlight.ts
+@@ -31,7 +31,7 @@ export function playInitialDealFlight(event: InitialCardEvent, anchors: AnchorRe
+   const transform = `translate(${origin.left + origin.width / 2 + window.scrollX - x - width / 2}px, ${origin.top + origin.height / 2 + window.scrollY - y - height / 2}px) scale(.8) rotate(-6deg)`;
+   card.style.transform = transform;
+   const controls = animate(card, { transform: [transform, 'translate(0px, 0px) scale(1) rotate(0deg)'] },
+-    { duration: MOTION_TOKENS.cardDeal, ease: [...MOTION_TOKENS.arrivalEase] });
++    { duration: event.reason === 'INITIAL' ? MOTION_TOKENS.initialCardDeal : MOTION_TOKENS.cardDeal, ease: [...MOTION_TOKENS.arrivalEase] });
+   let settled = false;
+   return {
+     finished: new Promise<void>((resolve, reject) => { controls.then(resolve, reject); }),
+diff --git a/tests/browser/m10/initialDeal.spec.ts b/tests/browser/m10/initialDeal.spec.ts
+index 0f867b1..a5030da 100644
+--- a/tests/browser/m10/initialDeal.spec.ts
++++ b/tests/browser/m10/initialDeal.spec.ts
+@@ -38,13 +38,15 @@ async function observe(page: Page, checkpoints: string[] = []) {
+ }
+ const trace = (page: Page) => page.evaluate(() => (window as unknown as { dealTrace: Trace }).dealTrace);
+ for (const count of [1,4,7]) test(`[T06-B01-${count}] real FULL_MOTION two-pass order, one clone, no premature arrival`, async ({ page }, info) => {
+-  await setup(page, count); await observe(page);
++  // Hold the first real flight while checking its attached style and hidden slots.
++  await setup(page, count); await observe(page, [`round-1/seat-${seats[count][0]}:0`]);
+   const dealer = await page.locator('[data-dealer-character]').getAttribute('data-dealer-character');
+   await page.getByRole('button', { name: 'Deal', exact: true }).click();
+   await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running', 'true');
+   await expect(page.locator('.dealer-zone')).toHaveAttribute('data-dealer-presentation-state', 'DEALING');
+   expect(await page.locator('[data-initial-deal-flight] .card').evaluate(element => getComputedStyle(element).opacity)).toBe('1');
+   await expect(page.locator('[data-card-slot][data-deal-visible="true"]')).toHaveCount(0);
++  await page.locator('[data-initial-deal-flight]').evaluate(element => element.getAnimations({ subtree: true }).forEach(animation => animation.play()));
+   await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running', 'false');
+   const result = await trace(page), order = [0,1].flatMap(index => [...seats[count].map(seat => `round-1/seat-${seat}:${index}`), `dealer:${index}`]);
+   expect(result.flights).toEqual(order); expect(result.arrivals).toEqual(order);
+diff --git a/tests/browser/m10/t11Performance.spec.ts b/tests/browser/m10/t11Performance.spec.ts
+new file mode 100644
+index 0000000..108967c
+--- /dev/null
++++ b/tests/browser/m10/t11Performance.spec.ts
+@@ -0,0 +1,39 @@
++import { chromium, expect, test } from '@playwright/test';
++import { writeFileSync } from 'node:fs';
++
++// Full native Chromium's cold renderer is distinct from the default headless shell.
++// Measure real arrivals with explicit destinations; no production timing calculation.
++for (const [width, height] of [[1280, 900], [768, 1024], [320, 720]]) {
++  test(`[T11-P01-${width}] cold native seven-player initial deal completes within 2500ms`, async ({ baseURL }, info) => {
++    const browser = await chromium.launch({ channel: 'chromium' });
++    try {
++      const page = await browser.newPage({ viewport: { width, height }, reducedMotion: 'no-preference' });
++      await page.goto(`${baseURL}/?fixture=player-setup`);
++      await page.getByLabel('Total players', { exact: true }).selectOption('7');
++      await page.getByRole('button', { name: 'Start table', exact: true }).click();
++      await page.evaluate(() => {
++        const timing: { start: number | null; end: number | null; destinations: string[] } = { start: null, end: null, destinations: [] };
++        (window as unknown as { t11Timing: typeof timing }).t11Timing = timing;
++        new MutationObserver(records => {
++          for (const record of records) {
++            for (const node of record.addedNodes) if (node instanceof HTMLElement && node.dataset.initialDealFlight) {
++              timing.start ??= performance.now(); timing.destinations.push(node.dataset.dealTarget!);
++            }
++            if (record.type === 'attributes' && record.target instanceof HTMLElement && record.target.dataset.initialDealRunning === 'false' && timing.start !== null) timing.end ??= performance.now();
++          }
++        }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-initial-deal-running'] });
++      });
++      await page.getByLabel('Your main wager', { exact: false }).fill('100');
++      await page.getByRole('button', { name: 'Deal', exact: true }).click();
++      await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running', 'false');
++      const timing = await page.evaluate(() => (window as unknown as { t11Timing: { start: number | null; end: number | null; destinations: string[] } }).t11Timing);
++      writeFileSync(info.outputPath('native-initial-timing.json'), JSON.stringify({ width, height, browser: browser.version(), timing }, null, 2));
++      expect(timing.destinations).toEqual([0, 1].flatMap(index => [1, 2, 3, 4, 5, 6, 7].map(seat => `round-1/seat-${seat}:${index}`).concat(`dealer:${index}`)));
++      expect(timing.start).not.toBeNull(); expect(timing.end).not.toBeNull();
++      expect(timing.end! - timing.start!).toBeLessThanOrEqual(2500);
++      await expect(page.locator('[data-initial-deal-flight]')).toHaveCount(0);
++      await expect(page.locator('[data-card-slot="dealer:1"]')).toHaveAttribute('aria-label', 'Hidden dealer card');
++      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
++    } finally { await browser.close(); }
++  });
++}
+diff --git a/tests/m10/tableGeometry.test.tsx b/tests/m10/tableGeometry.test.tsx
+index a1149a4..585ab55 100644
+--- a/tests/m10/tableGeometry.test.tsx
++++ b/tests/m10/tableGeometry.test.tsx
+@@ -3,6 +3,7 @@ import { acceptedController } from './historicalConfiguration.js';
+ import { renderToStaticMarkup } from 'react-dom/server';
+ import { readFileSync } from 'node:fs';
+ import { execFileSync } from 'node:child_process';
++import { createHash } from 'node:crypto';
+ import { seatAnchors, TABLE_SEAT_ANCHORS, type SeatCount } from '../../src/presentation/tableGeometry.js';
+ import { Table } from '../../src/ui/Table.js';
+ import { App } from '../../src/ui/App.js';
+@@ -134,10 +135,23 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
+   }
+   expect(offset).toBe(blobs.length);
+   expect(acceptedController(readFileSync('src/browser/controller.ts', 'utf8')).trimEnd()).toBe(git('show', baseline + ':src/browser/controller.ts'));
++  // T11: the approved PRE-T11 files are committed additions, pinned separately
++  // so the historical empty-diff guard still rejects every other asset change.
++  const genericFiles = [
++    ['art/source/dealers/generic_female/MANIFEST.json', '2e757e358bb3cf98df42634077103ed7a718cd9148fe0b0046a9b4ecdda71f6c'],
++    ['art/source/dealers/generic_female/formal.png', '6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c'],
++    ['public/characters/dealer/generic_female/formal.png', '37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce'],
++  ] as const;
++  for (const [path, sha256] of genericFiles) {
++    const bytes = path.endsWith('.json') ? readFileSync(path, 'utf8').replaceAll('\r\n', '\n') : readFileSync(path);
++    expect(createHash('sha256').update(bytes).digest('hex'), path).toBe(sha256);
++    expect(git('ls-files', '--error-unmatch', path), path).toBe(path);
++  }
+   expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json',
+     ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts',
+     ':(exclude)src/browser/presentationObserver.ts', ':(exclude)package.json', ':(exclude)package-lock.json',
+     ':(exclude)art/dealer-assets.json', ':(exclude)art/source/dealers/MANIFEST.json',
++    ...genericFiles.map(([path]) => `:(exclude)${path}`),
+     ...['noble_female','knight_female','mage_female','elf_female','halforc_female'].flatMap(id => [
+       `:(exclude)art/source/dealers/${id}/formal.png`, `:(exclude)public/characters/dealer/${id}/formal.png`,
+     ]))).toBe('');

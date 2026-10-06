@@ -3,6 +3,7 @@ import { acceptedController } from './historicalConfiguration.js';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { seatAnchors, TABLE_SEAT_ANCHORS, type SeatCount } from '../../src/presentation/tableGeometry.js';
 import { Table } from '../../src/ui/Table.js';
 import { App } from '../../src/ui/App.js';
@@ -134,10 +135,23 @@ it('[M10-G06] every pre-task assertion stays byte-identical except documented in
   }
   expect(offset).toBe(blobs.length);
   expect(acceptedController(readFileSync('src/browser/controller.ts', 'utf8')).trimEnd()).toBe(git('show', baseline + ':src/browser/controller.ts'));
+  // T11: the approved PRE-T11 files are committed additions, pinned separately
+  // so the historical empty-diff guard still rejects every other asset change.
+  const genericFiles = [
+    ['art/source/dealers/generic_female/MANIFEST.json', '2e757e358bb3cf98df42634077103ed7a718cd9148fe0b0046a9b4ecdda71f6c'],
+    ['art/source/dealers/generic_female/formal.png', '6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c'],
+    ['public/characters/dealer/generic_female/formal.png', '37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce'],
+  ] as const;
+  for (const [path, sha256] of genericFiles) {
+    const bytes = path.endsWith('.json') ? readFileSync(path, 'utf8').replaceAll('\r\n', '\n') : readFileSync(path);
+    expect(createHash('sha256').update(bytes).digest('hex'), path).toBe(sha256);
+    expect(git('ls-files', '--error-unmatch', path), path).toBe(path);
+  }
   expect(git('diff', '--name-only', baseline, '--', 'src/domain', 'src/browser', 'art', 'public', 'package.json', 'package-lock.json',
     ':(exclude)src/browser/controller.ts', ':(exclude)src/browser/playerConfiguration.ts',
     ':(exclude)src/browser/presentationObserver.ts', ':(exclude)package.json', ':(exclude)package-lock.json',
     ':(exclude)art/dealer-assets.json', ':(exclude)art/source/dealers/MANIFEST.json',
+    ...genericFiles.map(([path]) => `:(exclude)${path}`),
     ...['noble_female','knight_female','mage_female','elf_female','halforc_female'].flatMap(id => [
       `:(exclude)art/source/dealers/${id}/formal.png`, `:(exclude)public/characters/dealer/${id}/formal.png`,
     ]))).toBe('');

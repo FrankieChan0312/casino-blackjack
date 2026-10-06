@@ -1,0 +1,6 @@
+$ErrorActionPreference = 'Stop'
+& (Join-Path (Get-Location).Path 'scripts/scan-evidence.ps1') -Roots @(
+ 'docs/M10_T11_EVIDENCE', 'docs/M10_PRE_CLOSE_EVIDENCE', 'src', 'tests', 'scripts',
+ 'README.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md', 'docs/LAB_MANUAL.md', 'docs/M10_PRE_CLOSE.md'
+) -ResultPath '.git/evidence-capture/publication-privacy-result.json'
+exit $LASTEXITCODE

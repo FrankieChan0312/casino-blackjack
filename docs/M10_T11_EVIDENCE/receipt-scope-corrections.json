@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-06 15:49:29 +08:00",
+  "status": "PASS",
+  "corrections": [
+    "Supplemental productChanges:false means the driver does not write product files. T11 itself has the documented two-line product repair5.",
+    "Raw bundle-size.json method was inaccurate; bundle-source-correction.json identifies the standalone build. Final unified production JS SHA matches40D629DDD5B1F4E3105A75C1F56A21C7A75B88F2BFC50F2CBCC2CA77E1D29267.",
+    "Whole-session frame intervals/longTasks include activity before/after initial flights; only animationLongTasks isolate the flight interval. OS/compositor attribution is unproven.",
+    "Real background traces were not saved for the first two failed drivers; third trace is retained. First2748.3ms assertion was preserved but its per-frame metric was not saved before assertion.",
+    "First optional consolidation command was dispatched before index-generation completed; no file changed. Failure is preserved; dependency sequencing corrected.",
+    "Fresh incoming implementation review is completed in this chat. The bounded product repair is reviewed here; a second separate-session review of that repair is NOT COMPLETED."
+  ]
+}

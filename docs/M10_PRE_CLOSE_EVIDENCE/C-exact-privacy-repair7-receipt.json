@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T12:52:02.656Z",
+  "finish": "2026-10-06T12:52:05.308Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m10-t11-privacy.ps1"
+  ],
+  "log": ".git\\evidence-capture\\C-exact-privacy-repair7.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

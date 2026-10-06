@@ -1,0 +1,21 @@
+{
+  "start": "2026-10-06T11:32:20.493Z",
+  "finish": "2026-10-06T11:32:20.925Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/scan-evidence.ps1",
+    "-Roots",
+    ".git/scanner-fixture-1a40e6ca-ba15-4133-82f9-99882805a8bf/evidence",
+    "-ResultPath",
+    ".git/scanner-fixture-1a40e6ca-ba15-4133-82f9-99882805a8bf/result.json"
+  ],
+  "log": ".git\\evidence-capture\\scanner-d4067069-c537-4aae-9c6a-140511d6bef9.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true
+}

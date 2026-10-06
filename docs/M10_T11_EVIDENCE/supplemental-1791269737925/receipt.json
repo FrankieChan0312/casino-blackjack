@@ -1,0 +1,2802 @@
+{
+  "start": "2026-10-06 14:55:38 +08:00",
+  "status": "PASS",
+  "productChanges": false,
+  "background": [
+    {
+      "status": "BLOCKED",
+      "result": "REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE",
+      "evidence": "supplemental-1791268969537/receipt.json",
+      "equivalent": "T10-B07 synthetic visibility and complete authority/lifecycle equality PASS in both full gates"
+    }
+  ],
+  "performance": [
+    {
+      "width": 1280,
+      "height": 900,
+      "rounds": [
+        {
+          "round": 1,
+          "metric": {
+            "start": 4935.100000143051,
+            "end": 6648.800000190735,
+            "flights": 16,
+            "frames": [
+              25.299999999999272,
+              18,
+              493.5,
+              17.100000000000364,
+              18,
+              123.89999999999964,
+              17.700000000000728,
+              70.29999999999927,
+              17.300000000000182,
+              18.100000000000364,
+              17.599999999999454,
+              17.600000000000364,
+              18,
+              17.5,
+              18.300000000000182,
+              17.399999999999636,
+              17.600000000000364,
+              17.699999999999818,
+              18.199999999999818,
+              17.5,
+              18,
+              17.400000000000546,
+              18.399999999999636,
+              17.5,
+              18,
+              17.600000000000364,
+              17.399999999999636,
+              17.800000000000182,
+              17.199999999999818,
+              17.800000000000182,
+              17.5,
+              17.5,
+              17.899999999999636,
+              18.199999999999818,
+              17.5,
+              17.700000000000728,
+              17.299999999999272,
+              17.400000000000546,
+              17.800000000000182,
+              17.399999999999636,
+              17.800000000000182,
+              17.399999999999636,
+              17.699999999999818,
+              18.400000000000546,
+              18.300000000000182,
+              17.399999999999636,
+              17.399999999999636,
+              17.700000000000728,
+              17.5,
+              17.899999999999636,
+              17.899999999999636,
+              17.800000000000182,
+              17.400000000000546,
+              17.799999999999272,
+              17.5,
+              17.700000000000728,
+              18,
+              17.899999999999636,
+              18.100000000000364,
+              18.199999999999818,
+              17.599999999999454,
+              17.5,
+              17.900000000000546,
+              17.300000000000182,
+              17.799999999999272,
+              18.300000000000182,
+              17.199999999999818,
+              17.5,
+              18.100000000000364,
+              17.399999999999636,
+              17.800000000000182,
+              17.699999999999818,
+              17.5,
+              18.200000000000728,
+              17.599999999999454,
+              17.5,
+              17.600000000000364,
+              17.300000000000182,
+              17.5,
+              17.399999999999636,
+              17.699999999999818,
+              18.199999999999818,
+              17.400000000000546,
+              17.5,
+              17.699999999999818,
+              17.399999999999636,
+              17.600000000000364,
+              17.600000000000364,
+              18,
+              18,
+              17.699999999999818,
+              18.199999999999818,
+              18.100000000000364,
+              17.5,
+              18.399999999999636,
+              17.5,
+              17.600000000000364,
+              18.199999999999818,
+              17.5,
+              18.199999999999818,
+              18.199999999999818,
+              18.300000000000182,
+              17.399999999999636,
+              17.600000000000364,
+              17.600000000000364,
+              17.599999999999454,
+              17.900000000000546,
+              17.399999999999636,
+              17.600000000000364,
+              18.099999999999454,
+              17.400000000000546,
+              18.099999999999454,
+              17.300000000000182,
+              17.300000000000182,
+              18.199999999999818,
+              17.399999999999636,
+              18.100000000000364,
+              17.699999999999818,
+              17.400000000000546,
+              17.699999999999818,
+              18,
+              18.099999999999454,
+              17.600000000000364,
+              18.100000000000364,
+              18.099999999999454,
+              18,
+              18,
+              18.100000000000364,
+              17.399999999999636,
+              17.800000000000182,
+              18.199999999999818,
+              17.5,
+              17.800000000000182,
+              17.300000000000182,
+              18,
+              17.5,
+              17.899999999999636,
+              18,
+              17.699999999999818,
+              17.800000000000182,
+              18,
+              18.100000000000364,
+              17.699999999999818,
+              17.600000000000364,
+              17.5,
+              18.099999999999454,
+              17.600000000000364,
+              17.800000000000182,
+              17.899999999999636,
+              17.600000000000364,
+              18.199999999999818,
+              17.399999999999636,
+              18.199999999999818,
+              18.100000000000364,
+              18.399999999999636,
+              17.5,
+              18.200000000000728,
+              18.199999999999818,
+              17.899999999999636,
+              18.300000000000182,
+              18.399999999999636
+            ],
+            "longTasks": [
+              {
+                "start": 4802.300000190735,
+                "duration": 134
+              }
+            ],
+            "initialMilliseconds": 1713.7000000476837,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 632,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 1280,
+            "scroll": 1280
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "4 of spades"
+              ],
+              [
+                "dealer:1",
+                "7 of diamonds"
+              ],
+              [
+                "dealer:2",
+                "3 of clubs"
+              ],
+              [
+                "dealer:3",
+                "10 of spades"
+              ],
+              [
+                "round-1/seat-1:0",
+                "J of hearts"
+              ],
+              [
+                "round-1/seat-1:1",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-1:2",
+                "3 of spades"
+              ],
+              [
+                "round-1/seat-2:0",
+                "A of hearts"
+              ],
+              [
+                "round-1/seat-2:1",
+                "K of clubs"
+              ],
+              [
+                "round-1/seat-3:0",
+                "5 of hearts"
+              ],
+              [
+                "round-1/seat-3:1",
+                "2 of clubs"
+              ],
+              [
+                "round-1/seat-3:2",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-3:3",
+                "7 of diamonds"
+              ],
+              [
+                "round-1/seat-4:0",
+                "9 of hearts"
+              ],
+              [
+                "round-1/seat-4:1",
+                "K of spades"
+              ],
+              [
+                "round-1/seat-5:0",
+                "4 of clubs"
+              ],
+              [
+                "round-1/seat-5:1",
+                "9 of spades"
+              ],
+              [
+                "round-1/seat-5:2",
+                "2 of hearts"
+              ],
+              [
+                "round-1/seat-5:3",
+                "3 of clubs"
+              ],
+              [
+                "round-1/seat-6:0",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-6:1",
+                "Q of clubs"
+              ],
+              [
+                "round-1/seat-6:2",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-7:0",
+                "8 of spades"
+              ],
+              [
+                "round-1/seat-7:1",
+                "10 of clubs"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 2,
+          "metric": {
+            "start": 14272.5,
+            "end": 16319.5,
+            "flights": 16,
+            "frames": [
+              17.5,
+              18.399999999999636,
+              17.799999999999272,
+              53,
+              17.899999999999636,
+              17.80000000000109,
+              17.799999999999272,
+              17.700000000000728,
+              17.69999999999891,
+              17.5,
+              17.400000000001455,
+              17.299999999999272,
+              17.600000000000364,
+              18.299999999999272,
+              17.5,
+              18.100000000000364,
+              18,
+              18.399999999999636,
+              17.899999999999636,
+              18.100000000000364,
+              17.399999999999636,
+              17.900000000001455,
+              17.69999999999891,
+              18.200000000000728,
+              17.69999999999891,
+              18,
+              17.700000000000728,
+              18.100000000000364,
+              17.399999999999636,
+              17.399999999999636,
+              17.5,
+              17.600000000000364,
+              18,
+              18,
+              18.799999999999272,
+              18,
+              18,
+              17.400000000001455,
+              17.899999999999636,
+              18.100000000000364,
+              17.69999999999891,
+              18.100000000000364,
+              18.100000000000364,
+              18,
+              18.100000000000364,
+              18,
+              18.19999999999891,
+              17.5,
+              17.399999999999636,
+              17.80000000000109,
+              17.19999999999891,
+              17.600000000000364,
+              17.899999999999636,
+              17.30000000000109,
+              22.19999999999891,
+              17.400000000001455,
+              17.399999999999636,
+              17.5,
+              17.899999999999636,
+              17.799999999999272,
+              17.900000000001455,
+              18,
+              354.59999999999854,
+              17.100000000000364,
+              17.399999999999636,
+              17.900000000001455,
+              18.099999999998545,
+              17.600000000000364,
+              18,
+              17.5,
+              17.80000000000109,
+              17.899999999999636,
+              18.5,
+              17.799999999999272,
+              17.100000000000364,
+              17.5,
+              17.100000000000364,
+              17.799999999999272,
+              17.899999999999636,
+              18.30000000000109,
+              17.399999999999636,
+              17.5,
+              17.899999999999636,
+              18,
+              17.200000000000728,
+              18.299999999999272,
+              18,
+              17.899999999999636,
+              17.30000000000109,
+              18.399999999999636,
+              17.600000000000364,
+              17.600000000000364,
+              17.899999999999636,
+              17.5,
+              17.899999999999636,
+              18,
+              18.399999999999636,
+              17.399999999999636,
+              18.100000000000364,
+              17.700000000000728,
+              17.19999999999891,
+              372,
+              53.5,
+              17.5,
+              17.400000000001455,
+              18,
+              17.399999999997817,
+              18.200000000000728,
+              17.600000000002183,
+              17.299999999999272,
+              17.5,
+              17.399999999997817,
+              18.100000000002183,
+              17.899999999997817,
+              17.400000000001455,
+              17.5,
+              17.5,
+              17.599999999998545,
+              17.400000000001455,
+              18.099999999998545,
+              17.30000000000291,
+              17.599999999998545,
+              18.099999999998545,
+              17.30000000000291,
+              17.599999999998545,
+              17.400000000001455,
+              17.5,
+              17.899999999997817,
+              18,
+              17.799999999999272,
+              17.900000000001455,
+              17.400000000001455,
+              17.599999999998545,
+              17.900000000001455,
+              442.7999999999993,
+              35.29999999999927,
+              17.599999999998545,
+              18.100000000002183,
+              17.299999999999272,
+              17.599999999998545,
+              17.600000000002183,
+              17.599999999998545,
+              17.5,
+              35,
+              17.299999999999272,
+              18,
+              17.5,
+              17.5,
+              17.600000000002183,
+              17.5,
+              17.799999999999272,
+              17.700000000000728,
+              17.899999999997817
+            ],
+            "longTasks": [
+              {
+                "start": 14205.600000143051,
+                "duration": 67
+              },
+              {
+                "start": 16711.800000190735,
+                "duration": 50
+              }
+            ],
+            "initialMilliseconds": 2047,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 911,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 1280,
+            "scroll": 1280
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "9 of hearts"
+              ],
+              [
+                "dealer:1",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-1:0",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-1:1",
+                "5 of diamonds"
+              ],
+              [
+                "round-2/seat-1:2",
+                "7 of diamonds"
+              ],
+              [
+                "round-2/seat-1:3",
+                "2 of hearts"
+              ],
+              [
+                "round-2/seat-1:4",
+                "2 of clubs"
+              ],
+              [
+                "round-2/seat-2:0",
+                "3 of clubs"
+              ],
+              [
+                "round-2/seat-2:1",
+                "8 of spades"
+              ],
+              [
+                "round-2/seat-2:2",
+                "2 of spades"
+              ],
+              [
+                "round-2/seat-2:3",
+                "3 of diamonds"
+              ],
+              [
+                "round-2/seat-2:4",
+                "K of diamonds"
+              ],
+              [
+                "round-2/seat-3:0",
+                "J of spades"
+              ],
+              [
+                "round-2/seat-3:1",
+                "8 of hearts"
+              ],
+              [
+                "round-2/seat-4:0",
+                "J of hearts"
+              ],
+              [
+                "round-2/seat-4:1",
+                "J of diamonds"
+              ],
+              [
+                "round-2/seat-5:0",
+                "10 of clubs"
+              ],
+              [
+                "round-2/seat-5:1",
+                "A of diamonds"
+              ],
+              [
+                "round-2/seat-6:0",
+                "6 of clubs"
+              ],
+              [
+                "round-2/seat-6:1",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-6:2",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-7:0",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-7:1",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-7:2",
+                "A of spades"
+              ],
+              [
+                "round-2/seat-7:3",
+                "7 of diamonds"
+              ]
+            ],
+            "credits": [
+              "1,200",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 3,
+          "metric": {
+            "start": 23403.10000014305,
+            "end": 25548.800000190735,
+            "flights": 16,
+            "frames": [
+              21.100000000002183,
+              17.599999999998545,
+              17.5,
+              17.900000000001455,
+              89,
+              17.399999999997817,
+              17.200000000000728,
+              17.700000000000728,
+              18.299999999999272,
+              17.400000000001455,
+              35.29999999999927,
+              17.399999999997817,
+              17.5,
+              17.5,
+              18.100000000002183,
+              17.399999999997817,
+              35.20000000000073,
+              17.299999999999272,
+              17.400000000001455,
+              17.599999999998545,
+              353.5,
+              17.5,
+              18,
+              17.600000000002183,
+              17.5,
+              18.200000000000728,
+              18.19999999999709,
+              34.5,
+              17.400000000001455,
+              18.400000000001455,
+              18.19999999999709,
+              18.100000000002183,
+              17.399999999997817,
+              36.10000000000218,
+              18.099999999998545,
+              17.600000000002183,
+              17.69999999999709,
+              17.5,
+              17.900000000001455,
+              17.900000000001455,
+              17.299999999999272,
+              17.200000000000728,
+              17.599999999998545,
+              17.5,
+              17.599999999998545,
+              17.30000000000291,
+              17.899999999997817,
+              17.900000000001455,
+              18.099999999998545,
+              17.400000000001455,
+              18,
+              17.700000000000728,
+              17.69999999999709,
+              17.400000000001455,
+              18.099999999998545,
+              17.30000000000291,
+              17.5,
+              17.799999999999272,
+              17.899999999997817,
+              17.30000000000291,
+              17.599999999998545,
+              17.400000000001455,
+              18,
+              35.099999999998545,
+              17.799999999999272,
+              17.200000000000728,
+              18.099999999998545,
+              18,
+              17.700000000000728,
+              18.5,
+              17.799999999999272,
+              17.30000000000291,
+              17.599999999998545,
+              17.900000000001455,
+              18.399999999997817,
+              17.200000000000728,
+              18.099999999998545,
+              17.100000000002183,
+              17.399999999997817,
+              17.5,
+              18.200000000000728,
+              35.400000000001455,
+              18.099999999998545,
+              18.299999999999272,
+              17.5,
+              17.5,
+              17.80000000000291,
+              17.799999999999272,
+              18.099999999998545,
+              17.5,
+              17.400000000001455,
+              17.799999999999272,
+              17.5,
+              17.599999999998545,
+              18.100000000002183,
+              18,
+              17.5,
+              17.599999999998545,
+              17.900000000001455,
+              17.5,
+              17.599999999998545,
+              17.299999999999272,
+              17.200000000000728,
+              17.400000000001455,
+              18.399999999997817,
+              17.400000000001455,
+              18,
+              17.400000000001455,
+              18.399999999997817,
+              18,
+              17.600000000002183,
+              17.19999999999709,
+              17.80000000000291,
+              18.299999999999272,
+              17.5,
+              18.5,
+              18.200000000000728,
+              17.599999999998545,
+              17.5,
+              17.599999999998545,
+              17.5,
+              17.80000000000291,
+              17.399999999997817,
+              230.29999999999927,
+              17.600000000002183,
+              17.5,
+              18.099999999998545,
+              18,
+              17.400000000001455,
+              17.399999999997817,
+              17.400000000001455,
+              18,
+              18.200000000000728,
+              17.5,
+              17.799999999999272,
+              17.900000000001455
+            ],
+            "longTasks": [
+              {
+                "start": 23304.10000014305,
+                "duration": 99
+              }
+            ],
+            "initialMilliseconds": 2145.7000000476837,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 1120,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 1280,
+            "scroll": 1280
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "J of spades"
+              ],
+              [
+                "dealer:1",
+                "Q of diamonds"
+              ],
+              [
+                "round-3/seat-1:0",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-1:1",
+                "10 of diamonds"
+              ],
+              [
+                "round-3/seat-2:0",
+                "10 of spades"
+              ],
+              [
+                "round-3/seat-2:1",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-3:0",
+                "K of hearts"
+              ],
+              [
+                "round-3/seat-3:1",
+                "8 of spades"
+              ],
+              [
+                "round-3/seat-4:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-4:1",
+                "2 of hearts"
+              ],
+              [
+                "round-3/seat-5:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-5:1",
+                "10 of clubs"
+              ],
+              [
+                "round-3/seat-5:2",
+                "J of hearts"
+              ],
+              [
+                "round-3/seat-6:0",
+                "5 of hearts"
+              ],
+              [
+                "round-3/seat-6:1",
+                "6 of spades"
+              ],
+              [
+                "round-3/seat-6:2",
+                "A of spades"
+              ],
+              [
+                "round-3/seat-6:3",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:0",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:1",
+                "J of spades"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50#85 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-2#86 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-2#87 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Computer#88 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Computer#89 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Computer#90 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Human#91 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Computer#92 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Computer#93 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Computer#94 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-3#95 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1Stake / amount: 25#96 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2Stake / amount: 25#97 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3Stake / amount: 25#98 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5Stake / amount: 25#99 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6Stake / amount: 25#100 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7Stake / amount: 25#101 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4Stake / amount: 100#102 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-3#103 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-3#104 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#105 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25#106 computer-2 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25#107 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25#108 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100#109 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#110 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25#111 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#112 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#113 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25#114 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-3#115 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-3#116 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25PushReturned 25#117 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25PushReturned 25#118 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25LossReturned 0#119 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100LossReturned 0#120 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25LossReturned 0#121 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25LossReturned 0#122 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25PushReturned 25"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "rounds": [
+        {
+          "round": 1,
+          "metric": {
+            "start": 2438.9000000953674,
+            "end": 4233.700000047684,
+            "flights": 16,
+            "frames": [
+              30.300000000000182,
+              18,
+              232,
+              17.799999999999727,
+              18,
+              18,
+              17.300000000000182,
+              17.59999999999991,
+              17.09999999999991,
+              17.200000000000273,
+              18.09999999999991,
+              17.199999999999818,
+              17.800000000000182,
+              17.40000000000009,
+              18,
+              17.59999999999991,
+              17.40000000000009,
+              17.399999999999636,
+              17.40000000000009,
+              17.90000000000009,
+              17.5,
+              1.099999999999909,
+              18.09999999999991,
+              17.5,
+              18.300000000000182,
+              17.300000000000182,
+              17.5,
+              17.399999999999636,
+              18,
+              17.5,
+              17.40000000000009,
+              18.200000000000273,
+              18.09999999999991,
+              18.09999999999991,
+              17.800000000000182,
+              18.199999999999818,
+              17.40000000000009,
+              17.59999999999991,
+              17.59999999999991,
+              17.800000000000182,
+              18.09999999999991,
+              17.40000000000009,
+              18.199999999999818,
+              17.300000000000182,
+              18.09999999999991,
+              17.40000000000009,
+              17.40000000000009,
+              18.199999999999818,
+              17.59999999999991,
+              17.5,
+              18.200000000000273,
+              18.09999999999991,
+              17.699999999999818,
+              17.90000000000009,
+              17.90000000000009,
+              17.5,
+              17.299999999999727,
+              18,
+              17.90000000000009,
+              18.200000000000273,
+              17.799999999999727,
+              17.700000000000273,
+              17.799999999999727,
+              18.200000000000273,
+              17.5,
+              18,
+              17.699999999999818,
+              17.300000000000182,
+              17.299999999999727,
+              17.300000000000182,
+              17.299999999999727,
+              18.200000000000273,
+              17.199999999999818,
+              17.59999999999991,
+              17.800000000000182,
+              17.800000000000182,
+              17.899999999999636,
+              18,
+              18.100000000000364,
+              17.199999999999818,
+              17.40000000000009,
+              17.59999999999991,
+              17.300000000000182,
+              18.09999999999991,
+              18,
+              17.59999999999991,
+              17.59999999999991,
+              17.500000000000455,
+              18.099999999999454,
+              17.400000000000546,
+              17.799999999999272,
+              18.300000000000182,
+              17.400000000000546,
+              17.699999999999818,
+              18,
+              17.899999999999636,
+              443.40000000000055,
+              18.399999999999636,
+              17.5,
+              18.199999999999818,
+              17.600000000000364,
+              17.5,
+              17.5,
+              17.800000000000182,
+              17.599999999999454,
+              18.300000000000182,
+              17.300000000000182,
+              18.099999999999454,
+              17.400000000000546,
+              18.099999999999454,
+              17.900000000000546,
+              17.5,
+              18.099999999999454,
+              18,
+              17.700000000000728,
+              17.899999999999636,
+              18,
+              17.399999999999636,
+              17.600000000000364,
+              18.100000000000364,
+              17.799999999999272,
+              17.400000000000546,
+              18.399999999999636,
+              18,
+              17.400000000000546,
+              17.799999999999272,
+              17.5,
+              17.5,
+              17.5,
+              18.200000000000728,
+              17.5,
+              17.5,
+              18.099999999999454,
+              18.600000000000364,
+              18.300000000000182
+            ],
+            "longTasks": [],
+            "initialMilliseconds": 1794.7999999523163,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 632,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 768,
+            "scroll": 768
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "4 of spades"
+              ],
+              [
+                "dealer:1",
+                "7 of diamonds"
+              ],
+              [
+                "dealer:2",
+                "3 of clubs"
+              ],
+              [
+                "dealer:3",
+                "10 of spades"
+              ],
+              [
+                "round-1/seat-1:0",
+                "J of hearts"
+              ],
+              [
+                "round-1/seat-1:1",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-1:2",
+                "3 of spades"
+              ],
+              [
+                "round-1/seat-2:0",
+                "A of hearts"
+              ],
+              [
+                "round-1/seat-2:1",
+                "K of clubs"
+              ],
+              [
+                "round-1/seat-3:0",
+                "5 of hearts"
+              ],
+              [
+                "round-1/seat-3:1",
+                "2 of clubs"
+              ],
+              [
+                "round-1/seat-3:2",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-3:3",
+                "7 of diamonds"
+              ],
+              [
+                "round-1/seat-4:0",
+                "9 of hearts"
+              ],
+              [
+                "round-1/seat-4:1",
+                "K of spades"
+              ],
+              [
+                "round-1/seat-5:0",
+                "4 of clubs"
+              ],
+              [
+                "round-1/seat-5:1",
+                "9 of spades"
+              ],
+              [
+                "round-1/seat-5:2",
+                "2 of hearts"
+              ],
+              [
+                "round-1/seat-5:3",
+                "3 of clubs"
+              ],
+              [
+                "round-1/seat-6:0",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-6:1",
+                "Q of clubs"
+              ],
+              [
+                "round-1/seat-6:2",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-7:0",
+                "8 of spades"
+              ],
+              [
+                "round-1/seat-7:1",
+                "10 of clubs"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 2,
+          "metric": {
+            "start": 13058.100000143051,
+            "end": 15196.400000095367,
+            "flights": 16,
+            "frames": [
+              129.89999999999964,
+              17.5,
+              17.5,
+              37.19999999999891,
+              18,
+              18.30000000000109,
+              17.399999999999636,
+              17.5,
+              18.100000000000364,
+              17.399999999999636,
+              17.399999999999636,
+              17.600000000000364,
+              17.899999999999636,
+              17.30000000000109,
+              18,
+              18,
+              17.899999999999636,
+              18.399999999999636,
+              18.100000000000364,
+              17.399999999999636,
+              18.700000000000728,
+              17.799999999999272,
+              17.399999999999636,
+              18.100000000000364,
+              17.5,
+              17.399999999999636,
+              17.899999999999636,
+              18,
+              17.900000000001455,
+              17.299999999999272,
+              18,
+              18,
+              17.5,
+              17.899999999999636,
+              17.30000000000109,
+              17.899999999999636,
+              17.19999999999891,
+              17.400000000001455,
+              17.299999999999272,
+              17.899999999999636,
+              17.399999999999636,
+              17.900000000001455,
+              18.299999999999272,
+              17.799999999999272,
+              17.400000000001455,
+              17.899999999999636,
+              17.19999999999891,
+              17.900000000001455,
+              17.599999999998545,
+              18.30000000000109,
+              17.399999999999636,
+              17.899999999999636,
+              17.30000000000109,
+              17.799999999999272,
+              17.399999999999636,
+              17.600000000000364,
+              17.399999999999636,
+              18,
+              17.200000000000728,
+              18.19999999999891,
+              17.400000000001455,
+              440.89999999999964,
+              35.100000000000364,
+              17.5,
+              18.299999999999272,
+              17.5,
+              17.5,
+              17.5,
+              17.299999999999272,
+              18,
+              18.30000000000109,
+              17.399999999999636,
+              17.600000000000364,
+              17.399999999999636,
+              34.70000000000073,
+              17.299999999999272,
+              17.700000000000728,
+              17.399999999999636,
+              17.5,
+              18.19999999999891,
+              18,
+              17.30000000000109,
+              18.299999999999272,
+              17.600000000000364,
+              17.799999999999272,
+              17.700000000000728,
+              18,
+              18.299999999999272,
+              17.5,
+              17.400000000001455,
+              17.69999999999891,
+              17.5,
+              18.200000000000728,
+              17.799999999999272,
+              17.600000000000364,
+              17.700000000000728,
+              17.5,
+              17.799999999999272,
+              17.200000000000728,
+              17.299999999999272,
+              407,
+              18,
+              17.399999999999636,
+              17.5,
+              17.30000000000109,
+              17.599999999998545,
+              17.600000000000364,
+              18.200000000000728,
+              17.799999999999272,
+              17.5,
+              17.899999999999636,
+              17.700000000000728,
+              17.299999999999272,
+              18.100000000000364,
+              17.600000000000364,
+              17.5,
+              17.5,
+              18.100000000000364,
+              17.5,
+              17.299999999999272,
+              18.100000000000364,
+              17.899999999999636,
+              17.600000000000364,
+              17.399999999999636,
+              18,
+              18,
+              17.30000000000109,
+              17.599999999998545,
+              18.100000000000364,
+              17.80000000000109,
+              17.399999999999636,
+              17.299999999999272,
+              17.600000000000364,
+              18.299999999999272,
+              17.5,
+              18.30000000000109,
+              18.19999999999891,
+              18.100000000000364,
+              17.30000000000109,
+              17.5,
+              19.799999999999272,
+              17.399999999999636,
+              18,
+              18.200000000000728,
+              18.399999999999636,
+              18.099999999998545,
+              18.100000000002183,
+              17.5,
+              17.599999999998545,
+              18.299999999999272,
+              17.600000000002183,
+              17.700000000000728,
+              18.5,
+              18,
+              18.099999999998545,
+              17.700000000000728,
+              17.5,
+              17.700000000000728,
+              17.799999999999272,
+              18.599999999998545,
+              18.400000000001455,
+              17.5,
+              18.399999999997817,
+              18,
+              17.400000000001455,
+              17.599999999998545,
+              18,
+              18.400000000001455,
+              17.200000000000728,
+              18.099999999998545,
+              18.200000000000728,
+              17.5
+            ],
+            "longTasks": [
+              {
+                "start": 13002.100000143051,
+                "duration": 56
+              }
+            ],
+            "initialMilliseconds": 2138.2999999523163,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 911,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 768,
+            "scroll": 768
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "9 of hearts"
+              ],
+              [
+                "dealer:1",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-1:0",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-1:1",
+                "5 of diamonds"
+              ],
+              [
+                "round-2/seat-1:2",
+                "7 of diamonds"
+              ],
+              [
+                "round-2/seat-1:3",
+                "2 of hearts"
+              ],
+              [
+                "round-2/seat-1:4",
+                "2 of clubs"
+              ],
+              [
+                "round-2/seat-2:0",
+                "3 of clubs"
+              ],
+              [
+                "round-2/seat-2:1",
+                "8 of spades"
+              ],
+              [
+                "round-2/seat-2:2",
+                "2 of spades"
+              ],
+              [
+                "round-2/seat-2:3",
+                "3 of diamonds"
+              ],
+              [
+                "round-2/seat-2:4",
+                "K of diamonds"
+              ],
+              [
+                "round-2/seat-3:0",
+                "J of spades"
+              ],
+              [
+                "round-2/seat-3:1",
+                "8 of hearts"
+              ],
+              [
+                "round-2/seat-4:0",
+                "J of hearts"
+              ],
+              [
+                "round-2/seat-4:1",
+                "J of diamonds"
+              ],
+              [
+                "round-2/seat-5:0",
+                "10 of clubs"
+              ],
+              [
+                "round-2/seat-5:1",
+                "A of diamonds"
+              ],
+              [
+                "round-2/seat-6:0",
+                "6 of clubs"
+              ],
+              [
+                "round-2/seat-6:1",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-6:2",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-7:0",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-7:1",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-7:2",
+                "A of spades"
+              ],
+              [
+                "round-2/seat-7:3",
+                "7 of diamonds"
+              ]
+            ],
+            "credits": [
+              "1,200",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 3,
+          "metric": {
+            "start": 24082.400000095367,
+            "end": 26207.5,
+            "flights": 16,
+            "frames": [
+              152.8979999999974,
+              18.100000000002183,
+              18,
+              89.29999999999927,
+              17.400000000001455,
+              18.099999999998545,
+              17.900000000001455,
+              18.299999999999272,
+              17.799999999999272,
+              18.400000000001455,
+              18,
+              18.299999999999272,
+              17.299999999999272,
+              17.700000000000728,
+              17.299999999999272,
+              35.29999999999927,
+              17.600000000002183,
+              17.799999999999272,
+              17.399999999997817,
+              17.80000000000291,
+              18.099999999998545,
+              35.20000000000073,
+              17.599999999998545,
+              17.799999999999272,
+              17.80000000000291,
+              17.19999999999709,
+              18,
+              35.5,
+              17.700000000000728,
+              17.799999999999272,
+              17.80000000000291,
+              17.19999999999709,
+              17.80000000000291,
+              17.69999999999709,
+              17.80000000000291,
+              17.5,
+              17.599999999998545,
+              17.299999999999272,
+              17.700000000000728,
+              18.099999999998545,
+              17.200000000000728,
+              18.100000000002183,
+              17.5,
+              17.799999999999272,
+              17.200000000000728,
+              18,
+              17.599999999998545,
+              17.900000000001455,
+              17.399999999997817,
+              17.5,
+              18,
+              17.799999999999272,
+              17.5,
+              18,
+              17.600000000002183,
+              17.299999999999272,
+              18.099999999998545,
+              18,
+              17.600000000002183,
+              17.299999999999272,
+              17.900000000001455,
+              391.8999999999978,
+              17.5,
+              18.400000000001455,
+              18.200000000000728,
+              18,
+              18.19999999999709,
+              17.5,
+              17.80000000000291,
+              18.099999999998545,
+              17.5,
+              18,
+              17.299999999999272,
+              17.700000000000728,
+              18,
+              17.799999999999272,
+              18,
+              17.600000000002183,
+              18.099999999998545,
+              17.400000000001455,
+              17.69999999999709,
+              17.5,
+              18.100000000002183,
+              18,
+              18,
+              18.099999999998545,
+              17.400000000001455,
+              17.5,
+              17.799999999999272,
+              17.400000000001455,
+              18,
+              18,
+              17.299999999999272,
+              17.099999999998545,
+              17.5,
+              17.5,
+              17.799999999999272,
+              18,
+              17.600000000002183,
+              18.099999999998545,
+              373.90000000000146,
+              36.099999999998545,
+              18,
+              18.100000000002183,
+              17.69999999999709,
+              18.100000000002183,
+              17.899999999997817,
+              18.30000000000291,
+              17.299999999999272,
+              18.399999999997817,
+              17.400000000001455,
+              54.599999999998545,
+              17.700000000000728,
+              17.400000000001455,
+              17.299999999999272,
+              17.400000000001455,
+              17.69999999999709,
+              17.900000000001455,
+              17.799999999999272,
+              17.700000000000728,
+              17.599999999998545,
+              18,
+              18,
+              17.100000000002183
+            ],
+            "longTasks": [
+              {
+                "start": 23982.299999952316,
+                "duration": 101
+              },
+              {
+                "start": 26785.900000095367,
+                "duration": 53
+              }
+            ],
+            "initialMilliseconds": 2125.0999999046326,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 1120,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 768,
+            "scroll": 768
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "J of spades"
+              ],
+              [
+                "dealer:1",
+                "Q of diamonds"
+              ],
+              [
+                "round-3/seat-1:0",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-1:1",
+                "10 of diamonds"
+              ],
+              [
+                "round-3/seat-2:0",
+                "10 of spades"
+              ],
+              [
+                "round-3/seat-2:1",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-3:0",
+                "K of hearts"
+              ],
+              [
+                "round-3/seat-3:1",
+                "8 of spades"
+              ],
+              [
+                "round-3/seat-4:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-4:1",
+                "2 of hearts"
+              ],
+              [
+                "round-3/seat-5:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-5:1",
+                "10 of clubs"
+              ],
+              [
+                "round-3/seat-5:2",
+                "J of hearts"
+              ],
+              [
+                "round-3/seat-6:0",
+                "5 of hearts"
+              ],
+              [
+                "round-3/seat-6:1",
+                "6 of spades"
+              ],
+              [
+                "round-3/seat-6:2",
+                "A of spades"
+              ],
+              [
+                "round-3/seat-6:3",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:0",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:1",
+                "J of spades"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50#85 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-2#86 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-2#87 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Computer#88 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Computer#89 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Computer#90 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Human#91 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Computer#92 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Computer#93 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Computer#94 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-3#95 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1Stake / amount: 25#96 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2Stake / amount: 25#97 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3Stake / amount: 25#98 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5Stake / amount: 25#99 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6Stake / amount: 25#100 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7Stake / amount: 25#101 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4Stake / amount: 100#102 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-3#103 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-3#104 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#105 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25#106 computer-2 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25#107 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25#108 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100#109 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#110 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25#111 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#112 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#113 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25#114 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-3#115 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-3#116 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25PushReturned 25#117 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25PushReturned 25#118 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25LossReturned 0#119 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100LossReturned 0#120 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25LossReturned 0#121 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25LossReturned 0#122 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25PushReturned 25"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "rounds": [
+        {
+          "round": 1,
+          "metric": {
+            "start": 2345.7999999523163,
+            "end": 4389.799999952316,
+            "flights": 16,
+            "frames": [
+              38.40000000000009,
+              17.5,
+              459.0999999999999,
+              18,
+              17.699999999999818,
+              18.09999999999991,
+              17.600000000000364,
+              18.09999999999991,
+              17.5,
+              17.5,
+              17.59999999999991,
+              17.800000000000182,
+              18.09999999999991,
+              17.40000000000009,
+              17.5,
+              17.5,
+              18.299999999999727,
+              18,
+              18.200000000000273,
+              17.899999999999636,
+              18.200000000000273,
+              18.09999999999991,
+              17.59999999999991,
+              17.700000000000273,
+              17.699999999999818,
+              18.699999999999818,
+              17.200000000000273,
+              18.199999999999818,
+              17.200000000000273,
+              17.5,
+              18.799999999999727,
+              17.5,
+              17.90000000000009,
+              17.5,
+              18.300000000000182,
+              17.5,
+              17.59999999999991,
+              18.09999999999991,
+              18.300000000000182,
+              17.09999999999991,
+              18.09999999999991,
+              18,
+              17.699999999999818,
+              18.300000000000182,
+              17.699999999999818,
+              17.300000000000182,
+              17.800000000000182,
+              18.199999999999818,
+              17.300000000000182,
+              17.799999999999727,
+              17.90000000000009,
+              17.300000000000182,
+              17.299999999999727,
+              17.300000000000182,
+              18,
+              18,
+              17.40000000000009,
+              18.09999999999991,
+              17.5,
+              18.59999999999991,
+              17.40000000000009,
+              18.5,
+              17.699999999999818,
+              17.700000000000273,
+              18,
+              17.399999999999636,
+              18.100000000000364,
+              18,
+              17.5,
+              18,
+              18,
+              17.699999999999818,
+              17.199999999999818,
+              18,
+              18.200000000000273,
+              18.09999999999991,
+              20.800000000000182,
+              17.899999999999636,
+              17.700000000000273,
+              18.09999999999991,
+              18.300000000000182,
+              17.899999999999636,
+              17.699999999999818,
+              17.800000000000182,
+              17.800000000000182,
+              18.199999999999818,
+              17.900000000000546,
+              17.399999999999636,
+              18.100000000000364,
+              17.899999999999636,
+              17.199999999999818,
+              17.800000000000182,
+              17.300000000000182,
+              17.800000000000182,
+              17.199999999999818,
+              17.899999999999636,
+              460,
+              18,
+              17.300000000000182,
+              17.5,
+              17.800000000000182,
+              17.899999999999636,
+              17.900000000000546,
+              17.199999999999818,
+              18,
+              18.199999999999818,
+              17.300000000000182,
+              17.800000000000182,
+              17.399999999999636,
+              18.199999999999818,
+              18.199999999999818,
+              17.600000000000364,
+              18.100000000000364,
+              17.799999999999272,
+              18.100000000000364,
+              17.800000000000182,
+              17.5,
+              17.5,
+              17.5,
+              17.599999999999454,
+              17.5,
+              17.600000000000364,
+              17.600000000000364,
+              18.099999999999454,
+              18,
+              17.5,
+              18.300000000000182,
+              17.600000000000364,
+              18.199999999999818,
+              18.099999999999454,
+              18.200000000000728,
+              18.099999999999454,
+              18,
+              17.699999999999818,
+              17.5,
+              18.200000000000728,
+              17.699999999999818,
+              17.899999999999636,
+              17.800000000000182,
+              17.699999999999818,
+              17.699999999999818,
+              18.300000000000182,
+              17.600000000000364,
+              18.300000000000182,
+              18.199999999999818,
+              18.399999999999636,
+              17.600000000000364,
+              17.800000000000182,
+              17.799999999999272,
+              17.900000000000546,
+              18,
+              18.399999999999636,
+              17.5,
+              17.5,
+              17.300000000000182,
+              17.600000000000364,
+              17.799999999999272,
+              17.800000000000182,
+              18.300000000000182,
+              17.600000000000364,
+              17.799999999999272,
+              17.5,
+              18.200000000000728,
+              17.599999999999454,
+              17.699999999999818,
+              18.100000000000364,
+              17.699999999999818,
+              18.300000000000182,
+              17.699999999999818,
+              18.300000000000182,
+              17.300000000000182,
+              17.399999999999636,
+              17.699999999999818,
+              17.600000000000364,
+              17.699999999999818,
+              17.699999999999818,
+              17.400000000000546
+            ],
+            "longTasks": [
+              {
+                "start": 2286.699999809265,
+                "duration": 59
+              }
+            ],
+            "initialMilliseconds": 2044,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 632,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 320,
+            "scroll": 320
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "4 of spades"
+              ],
+              [
+                "dealer:1",
+                "7 of diamonds"
+              ],
+              [
+                "dealer:2",
+                "3 of clubs"
+              ],
+              [
+                "dealer:3",
+                "10 of spades"
+              ],
+              [
+                "round-1/seat-1:0",
+                "J of hearts"
+              ],
+              [
+                "round-1/seat-1:1",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-1:2",
+                "3 of spades"
+              ],
+              [
+                "round-1/seat-2:0",
+                "A of hearts"
+              ],
+              [
+                "round-1/seat-2:1",
+                "K of clubs"
+              ],
+              [
+                "round-1/seat-3:0",
+                "5 of hearts"
+              ],
+              [
+                "round-1/seat-3:1",
+                "2 of clubs"
+              ],
+              [
+                "round-1/seat-3:2",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-3:3",
+                "7 of diamonds"
+              ],
+              [
+                "round-1/seat-4:0",
+                "9 of hearts"
+              ],
+              [
+                "round-1/seat-4:1",
+                "K of spades"
+              ],
+              [
+                "round-1/seat-5:0",
+                "4 of clubs"
+              ],
+              [
+                "round-1/seat-5:1",
+                "9 of spades"
+              ],
+              [
+                "round-1/seat-5:2",
+                "2 of hearts"
+              ],
+              [
+                "round-1/seat-5:3",
+                "3 of clubs"
+              ],
+              [
+                "round-1/seat-6:0",
+                "5 of diamonds"
+              ],
+              [
+                "round-1/seat-6:1",
+                "Q of clubs"
+              ],
+              [
+                "round-1/seat-6:2",
+                "6 of diamonds"
+              ],
+              [
+                "round-1/seat-7:0",
+                "8 of spades"
+              ],
+              [
+                "round-1/seat-7:1",
+                "10 of clubs"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 2,
+          "metric": {
+            "start": 13938.399999856949,
+            "end": 15695.399999856949,
+            "flights": 16,
+            "frames": [
+              179.10000000000036,
+              17.5,
+              18,
+              52.399999999999636,
+              18.100000000000364,
+              18,
+              18,
+              17.600000000000364,
+              18,
+              18.100000000000364,
+              18,
+              18,
+              17.399999999999636,
+              17.700000000000728,
+              18.599999999998545,
+              17.700000000000728,
+              17.299999999999272,
+              17.700000000000728,
+              17.399999999999636,
+              17.80000000000109,
+              17.5,
+              18,
+              17.799999999999272,
+              17.299999999999272,
+              17.5,
+              17.80000000000109,
+              17.69999999999891,
+              17.900000000001455,
+              18.099999999998545,
+              17.400000000001455,
+              18.399999999999636,
+              17.5,
+              17.5,
+              18,
+              17.299999999999272,
+              17.600000000000364,
+              18.100000000000364,
+              18,
+              17.299999999999272,
+              17.899999999999636,
+              17.700000000000728,
+              17.299999999999272,
+              17.400000000001455,
+              17.69999999999891,
+              17.399999999999636,
+              18,
+              17.400000000001455,
+              17.799999999999272,
+              17.600000000000364,
+              17.5,
+              17.5,
+              35.100000000000364,
+              17.5,
+              17.5,
+              18.099999999998545,
+              17.900000000001455,
+              17.5,
+              17.299999999999272,
+              17.299999999999272,
+              17.5,
+              19.400000000001455,
+              17.799999999999272,
+              18,
+              18,
+              17.299999999999272,
+              17.900000000001455,
+              17.69999999999891,
+              17.399999999999636,
+              17.700000000000728,
+              35.899999999999636,
+              18,
+              17.700000000000728,
+              17.19999999999891,
+              17.80000000000109,
+              17.799999999999272,
+              36.30000000000109,
+              17.299999999999272,
+              17.299999999999272,
+              17.600000000000364,
+              18.399999999999636,
+              18.100000000000364,
+              18,
+              17.80000000000109,
+              17.5,
+              18,
+              17.69999999999891,
+              18.30000000000109,
+              17.299999999999272,
+              18,
+              17.5,
+              17.5,
+              17.899999999999636,
+              17.399999999999636,
+              17.900000000001455,
+              17.399999999999636,
+              17.399999999999636,
+              17.5,
+              17.600000000000364,
+              17.600000000000364,
+              18,
+              17.299999999999272,
+              231.20000000000073,
+              17.899999999999636,
+              18.19999999999891,
+              17.200000000000728,
+              18.100000000000364,
+              17.799999999999272,
+              17.5,
+              18.200000000000728,
+              18.100000000000364,
+              17.799999999999272,
+              17.899999999999636,
+              18.100000000000364,
+              18,
+              17.899999999999636,
+              17.600000000000364,
+              18,
+              17.5,
+              17.100000000000364,
+              17.399999999999636,
+              18.100000000000364,
+              17.69999999999891,
+              17.5,
+              17.5,
+              18,
+              18,
+              18.100000000000364,
+              17.50000000000182,
+              17.899999999997817,
+              17.700000000000728,
+              17.400000000001455,
+              18.099999999998545,
+              18,
+              17.799999999999272,
+              17.600000000002183,
+              17.899999999997817,
+              18.100000000002183,
+              18.19999999999709,
+              17.600000000002183,
+              17.599999999998545,
+              17.900000000001455,
+              17.700000000000728,
+              18.19999999999709,
+              18,
+              17.600000000002183,
+              17.099999999998545,
+              18.100000000002183,
+              17.899999999997817,
+              17.700000000000728,
+              17.599999999998545,
+              18,
+              17.5,
+              17.600000000002183,
+              17.5
+            ],
+            "longTasks": [
+              {
+                "start": 13866.599999904633,
+                "duration": 72
+              }
+            ],
+            "initialMilliseconds": 1757,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 911,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 320,
+            "scroll": 320
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "9 of hearts"
+              ],
+              [
+                "dealer:1",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-1:0",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-1:1",
+                "5 of diamonds"
+              ],
+              [
+                "round-2/seat-1:2",
+                "7 of diamonds"
+              ],
+              [
+                "round-2/seat-1:3",
+                "2 of hearts"
+              ],
+              [
+                "round-2/seat-1:4",
+                "2 of clubs"
+              ],
+              [
+                "round-2/seat-2:0",
+                "3 of clubs"
+              ],
+              [
+                "round-2/seat-2:1",
+                "8 of spades"
+              ],
+              [
+                "round-2/seat-2:2",
+                "2 of spades"
+              ],
+              [
+                "round-2/seat-2:3",
+                "3 of diamonds"
+              ],
+              [
+                "round-2/seat-2:4",
+                "K of diamonds"
+              ],
+              [
+                "round-2/seat-3:0",
+                "J of spades"
+              ],
+              [
+                "round-2/seat-3:1",
+                "8 of hearts"
+              ],
+              [
+                "round-2/seat-4:0",
+                "J of hearts"
+              ],
+              [
+                "round-2/seat-4:1",
+                "J of diamonds"
+              ],
+              [
+                "round-2/seat-5:0",
+                "10 of clubs"
+              ],
+              [
+                "round-2/seat-5:1",
+                "A of diamonds"
+              ],
+              [
+                "round-2/seat-6:0",
+                "6 of clubs"
+              ],
+              [
+                "round-2/seat-6:1",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-6:2",
+                "9 of clubs"
+              ],
+              [
+                "round-2/seat-7:0",
+                "Q of clubs"
+              ],
+              [
+                "round-2/seat-7:1",
+                "2 of diamonds"
+              ],
+              [
+                "round-2/seat-7:2",
+                "A of spades"
+              ],
+              [
+                "round-2/seat-7:3",
+                "7 of diamonds"
+              ]
+            ],
+            "credits": [
+              "1,200",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50"
+          }
+        },
+        {
+          "round": 3,
+          "metric": {
+            "start": 23980.299999952316,
+            "end": 25978.89999985695,
+            "flights": 16,
+            "frames": [
+              20.445999999999913,
+              17.400000000001455,
+              17.299999999999272,
+              52.79999999999927,
+              18,
+              17.599999999998545,
+              18.100000000002183,
+              17.200000000000728,
+              17.599999999998545,
+              17.400000000001455,
+              18,
+              18,
+              17.5,
+              17.399999999997817,
+              17.900000000001455,
+              17.599999999998545,
+              18,
+              18,
+              19,
+              17.799999999999272,
+              17.5,
+              17.900000000001455,
+              17.200000000000728,
+              17.099999999998545,
+              17.600000000002183,
+              18,
+              17.19999999999709,
+              17.5,
+              18.100000000002183,
+              18.299999999999272,
+              17.299999999999272,
+              18.200000000000728,
+              17.700000000000728,
+              17.599999999998545,
+              17.700000000000728,
+              17.400000000001455,
+              18.099999999998545,
+              18,
+              18.299999999999272,
+              17.400000000001455,
+              17.799999999999272,
+              18.700000000000728,
+              17.5,
+              17.399999999997817,
+              17.600000000002183,
+              17.799999999999272,
+              17.700000000000728,
+              18.200000000000728,
+              17.399999999997817,
+              17.400000000001455,
+              17.5,
+              17.899999999997817,
+              17.700000000000728,
+              17.5,
+              17.400000000001455,
+              17.5,
+              17.599999999998545,
+              17.600000000002183,
+              17.5,
+              17.899999999997817,
+              17.5,
+              17.5,
+              17.5,
+              17.5,
+              17.5,
+              17.299999999999272,
+              17.600000000002183,
+              17.399999999997817,
+              17.900000000001455,
+              17.599999999998545,
+              265.90000000000146,
+              17.400000000001455,
+              17.899999999997817,
+              17.900000000001455,
+              17.200000000000728,
+              19,
+              17.69999999999709,
+              17.400000000001455,
+              17.900000000001455,
+              18.299999999999272,
+              17.899999999997817,
+              17.700000000000728,
+              17.400000000001455,
+              17.5,
+              17.599999999998545,
+              17.799999999999272,
+              17.600000000002183,
+              17.399999999997817,
+              35.20000000000073,
+              17.299999999999272,
+              17.30000000000291,
+              17.399999999997817,
+              17.400000000001455,
+              17.5,
+              35.70000000000073,
+              17.69999999999709,
+              17.5,
+              18.200000000000728,
+              17.600000000002183,
+              17.399999999997817,
+              17.799999999999272,
+              17.200000000000728,
+              494.6000000000022,
+              17.299999999999272,
+              17.799999999999272,
+              18.099999999998545,
+              17.100000000002183,
+              18,
+              18.099999999998545,
+              17.700000000000728,
+              17.200000000000728,
+              18.399999999997817,
+              17.900000000001455,
+              17.099999999998545,
+              17.400000000001455,
+              17.400000000001455,
+              17.5,
+              18.399999999997817,
+              17.600000000002183,
+              17.5,
+              17.19999999999709,
+              17.400000000001455,
+              18,
+              17.400000000001455,
+              17.899999999997817,
+              17.799999999999272,
+              17.900000000001455
+            ],
+            "longTasks": [
+              {
+                "start": 23902.799999952316,
+                "duration": 78
+              }
+            ],
+            "initialMilliseconds": 1998.5999999046326,
+            "animationLongTasks": []
+          },
+          "cleanup": {
+            "nodes": 1120,
+            "clones": 0,
+            "hiddenVisualCards": 0,
+            "runningAnimations": 0,
+            "width": 320,
+            "scroll": 320
+          },
+          "final": {
+            "cards": [
+              [
+                "dealer:0",
+                "J of spades"
+              ],
+              [
+                "dealer:1",
+                "Q of diamonds"
+              ],
+              [
+                "round-3/seat-1:0",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-1:1",
+                "10 of diamonds"
+              ],
+              [
+                "round-3/seat-2:0",
+                "10 of spades"
+              ],
+              [
+                "round-3/seat-2:1",
+                "Q of spades"
+              ],
+              [
+                "round-3/seat-3:0",
+                "K of hearts"
+              ],
+              [
+                "round-3/seat-3:1",
+                "8 of spades"
+              ],
+              [
+                "round-3/seat-4:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-4:1",
+                "2 of hearts"
+              ],
+              [
+                "round-3/seat-5:0",
+                "5 of spades"
+              ],
+              [
+                "round-3/seat-5:1",
+                "10 of clubs"
+              ],
+              [
+                "round-3/seat-5:2",
+                "J of hearts"
+              ],
+              [
+                "round-3/seat-6:0",
+                "5 of hearts"
+              ],
+              [
+                "round-3/seat-6:1",
+                "6 of spades"
+              ],
+              [
+                "round-3/seat-6:2",
+                "A of spades"
+              ],
+              [
+                "round-3/seat-6:3",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:0",
+                "10 of hearts"
+              ],
+              [
+                "round-3/seat-7:1",
+                "J of spades"
+              ]
+            ],
+            "credits": [
+              "1,100",
+              "0",
+              "0"
+            ],
+            "dealer": "noble_female",
+            "audit": "#1 system · SESSION_START · ACCEPTED2026-01-01T00:00:00.000Z#2 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Z#3 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 1Computer#4 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 2Computer#5 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 3Computer#6 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 4Human#7 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 5Computer#8 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 6Computer#9 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000ZSeat 7Computer#10 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-1#11 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Stake / amount: 25#12 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Stake / amount: 25#13 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Stake / amount: 25#14 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Stake / amount: 25#15 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Stake / amount: 25#16 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Stake / amount: 25#17 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Stake / amount: 100#18 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-1#19 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-1#20 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#21 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#22 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25#23 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#24 computer-3 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#25 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25#26 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100#27 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-1#28 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#29 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#30 computer-5 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25#31 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25#32 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25#33 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-1#34 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-1#35 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1round-1/seat-1Stake / amount: 25WinReturned 50#36 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2round-1/seat-2Stake / amount: 25BlackjackReturned 62.5#37 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3round-1/seat-3Stake / amount: 25WinReturned 50#38 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4round-1/seat-4Stake / amount: 100WinReturned 200#39 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5round-1/seat-5Stake / amount: 25WinReturned 50#40 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6round-1/seat-6Stake / amount: 25WinReturned 50#41 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7round-1/seat-7Stake / amount: 25WinReturned 50#42 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-1#43 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-1#44 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 1Computer#45 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 2Computer#46 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 3Computer#47 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 4Human#48 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 5Computer#49 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 6Computer#50 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-1Seat 7Computer#51 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-2#52 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Stake / amount: 25#53 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Stake / amount: 25#54 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Stake / amount: 25#55 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Stake / amount: 25#56 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Stake / amount: 25#57 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Stake / amount: 25#58 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Stake / amount: 100#59 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-2#60 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-2#61 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#62 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#63 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#64 computer-1 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#65 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25#66 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#67 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#68 computer-2 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25#69 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25#70 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100#71 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-2#72 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25#73 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#74 computer-7 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#75 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25#76 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-2#77 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-2#78 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1round-2/seat-1Stake / amount: 25LossReturned 0#79 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2round-2/seat-2Stake / amount: 25LossReturned 0#80 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3round-2/seat-3Stake / amount: 25LossReturned 0#81 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4round-2/seat-4Stake / amount: 100WinReturned 200#82 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5round-2/seat-5Stake / amount: 25BlackjackReturned 62.5#83 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6round-2/seat-6Stake / amount: 25LossReturned 0#84 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7round-2/seat-7Stake / amount: 25WinReturned 50#85 local-human · NEXT · ACCEPTED2026-01-01T00:00:00.000Zround-2#86 local-human · CONFIGURE · ACCEPTED2026-01-01T00:00:00.000Zround-2#87 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 1Computer#88 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 2Computer#89 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 3Computer#90 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 4Human#91 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 5Computer#92 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 6Computer#93 local-human · SEAT_CONFIGURED · ACCEPTED2026-01-01T00:00:00.000Zround-2Seat 7Computer#94 local-human · OPEN · ACCEPTED2026-01-01T00:00:00.000Zround-3#95 computer-1 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1Stake / amount: 25#96 computer-2 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2Stake / amount: 25#97 computer-3 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3Stake / amount: 25#98 computer-5 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5Stake / amount: 25#99 computer-6 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6Stake / amount: 25#100 computer-7 · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7Stake / amount: 25#101 local-human · MAIN_SET · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4Stake / amount: 100#102 local-human · CLOSE · ACCEPTED2026-01-01T00:00:00.000Zround-3#103 system · INITIAL_DEAL · ACCEPTED2026-01-01T00:00:00.000Zround-3#104 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#105 computer-1 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25#106 computer-2 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25#107 computer-3 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25#108 local-human · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100#109 system · ADVANCE · ACCEPTED2026-01-01T00:00:00.000Zround-3#110 computer-5 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25#111 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#112 computer-6 · HIT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25#113 computer-7 · STAND · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25#114 dealer · DEALER_COMPLETE · ACCEPTED2026-01-01T00:00:00.000Zround-3#115 system · SETTLE · ACCEPTED2026-01-01T00:00:00.000Zround-3#116 computer-1 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 1round-3/seat-1Stake / amount: 25PushReturned 25#117 computer-2 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 2round-3/seat-2Stake / amount: 25PushReturned 25#118 computer-3 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 3round-3/seat-3Stake / amount: 25LossReturned 0#119 local-human · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 4round-3/seat-4Stake / amount: 100LossReturned 0#120 computer-5 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 5round-3/seat-5Stake / amount: 25LossReturned 0#121 computer-6 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 6round-3/seat-6Stake / amount: 25LossReturned 0#122 computer-7 · WAGER_SETTLEMENT · ACCEPTED2026-01-01T00:00:00.000Zround-3Seat 7round-3/seat-7Stake / amount: 25PushReturned 25"
+          }
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "zoom": [
+    {
+      "fixture": "player-dealer-multi",
+      "zoom": 2,
+      "method": "native chrome.tabs.setZoom/getZoom; root16px; CSSzoom1",
+      "facts": {
+        "width": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "portraits": [
+          {
+            "complete": true,
+            "width": 240
+          }
+        ],
+        "targets": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44
+          },
+          {
+            "text": "Repeat Bet · 100 credits",
+            "width": 211.21875,
+            "height": 44
+          }
+        ]
+      },
+      "images": [
+        "native200-player-dealer-multi-dealer.png",
+        "native200-player-dealer-multi-controls.png"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-rsa-cap",
+      "zoom": 2,
+      "method": "native chrome.tabs.setZoom/getZoom; root16px; CSSzoom1",
+      "facts": {
+        "width": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "portraits": [
+          {
+            "complete": true,
+            "width": 240
+          }
+        ],
+        "targets": [
+          {
+            "text": "Deal Again",
+            "width": 116.015625,
+            "height": 44
+          },
+          {
+            "text": "Repeat Bet · 100 credits",
+            "width": 211.21875,
+            "height": 44
+          }
+        ]
+      },
+      "images": [
+        "native200-player-rsa-cap-dealer.png",
+        "native200-player-rsa-cap-controls.png"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "player-ace",
+      "zoom": 2,
+      "method": "native chrome.tabs.setZoom/getZoom; root16px; CSSzoom1",
+      "facts": {
+        "width": 640,
+        "dpr": 2,
+        "scroll": 640,
+        "font": "16px",
+        "cssZoom": "1",
+        "portraits": [
+          {
+            "complete": true,
+            "width": 240
+          }
+        ],
+        "targets": [
+          {
+            "text": "Hit",
+            "width": 116,
+            "height": 52
+          },
+          {
+            "text": "Stand",
+            "width": 116,
+            "height": 52
+          },
+          {
+            "text": "Double",
+            "width": 116,
+            "height": 52
+          },
+          {
+            "text": "Split",
+            "width": 116,
+            "height": 52
+          },
+          {
+            "text": "Surrender",
+            "width": 116,
+            "height": 52
+          }
+        ]
+      },
+      "images": [
+        "native200-player-ace-dealer.png",
+        "native200-player-ace-controls.png"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "method": "Reuse and activate native persistent initial target; fixed nine foreground 7-player rounds with unchanged2500ms, 16-flight, RAF/LongTask and cleanup checks; metrics saved before assertions",
+  "latestMetric": {
+    "width": 320,
+    "round": 3,
+    "metric": {
+      "start": 23980.299999952316,
+      "end": 25978.89999985695,
+      "flights": 16,
+      "frames": [
+        20.445999999999913,
+        17.400000000001455,
+        17.299999999999272,
+        52.79999999999927,
+        18,
+        17.599999999998545,
+        18.100000000002183,
+        17.200000000000728,
+        17.599999999998545,
+        17.400000000001455,
+        18,
+        18,
+        17.5,
+        17.399999999997817,
+        17.900000000001455,
+        17.599999999998545,
+        18,
+        18,
+        19,
+        17.799999999999272,
+        17.5,
+        17.900000000001455,
+        17.200000000000728,
+        17.099999999998545,
+        17.600000000002183,
+        18,
+        17.19999999999709,
+        17.5,
+        18.100000000002183,
+        18.299999999999272,
+        17.299999999999272,
+        18.200000000000728,
+        17.700000000000728,
+        17.599999999998545,
+        17.700000000000728,
+        17.400000000001455,
+        18.099999999998545,
+        18,
+        18.299999999999272,
+        17.400000000001455,
+        17.799999999999272,
+        18.700000000000728,
+        17.5,
+        17.399999999997817,
+        17.600000000002183,
+        17.799999999999272,
+        17.700000000000728,
+        18.200000000000728,
+        17.399999999997817,
+        17.400000000001455,
+        17.5,
+        17.899999999997817,
+        17.700000000000728,
+        17.5,
+        17.400000000001455,
+        17.5,
+        17.599999999998545,
+        17.600000000002183,
+        17.5,
+        17.899999999997817,
+        17.5,
+        17.5,
+        17.5,
+        17.5,
+        17.5,
+        17.299999999999272,
+        17.600000000002183,
+        17.399999999997817,
+        17.900000000001455,
+        17.599999999998545,
+        265.90000000000146,
+        17.400000000001455,
+        17.899999999997817,
+        17.900000000001455,
+        17.200000000000728,
+        19,
+        17.69999999999709,
+        17.400000000001455,
+        17.900000000001455,
+        18.299999999999272,
+        17.899999999997817,
+        17.700000000000728,
+        17.400000000001455,
+        17.5,
+        17.599999999998545,
+        17.799999999999272,
+        17.600000000002183,
+        17.399999999997817,
+        35.20000000000073,
+        17.299999999999272,
+        17.30000000000291,
+        17.399999999997817,
+        17.400000000001455,
+        17.5,
+        35.70000000000073,
+        17.69999999999709,
+        17.5,
+        18.200000000000728,
+        17.600000000002183,
+        17.399999999997817,
+        17.799999999999272,
+        17.200000000000728,
+        494.6000000000022,
+        17.299999999999272,
+        17.799999999999272,
+        18.099999999998545,
+        17.100000000002183,
+        18,
+        18.099999999998545,
+        17.700000000000728,
+        17.200000000000728,
+        18.399999999997817,
+        17.900000000001455,
+        17.099999999998545,
+        17.400000000001455,
+        17.400000000001455,
+        17.5,
+        18.399999999997817,
+        17.600000000002183,
+        17.5,
+        17.19999999999709,
+        17.400000000001455,
+        18,
+        17.400000000001455,
+        17.899999999997817,
+        17.799999999999272,
+        17.900000000001455
+      ],
+      "longTasks": [
+        {
+          "start": 23902.799999952316,
+          "duration": 78
+        }
+      ],
+      "initialMilliseconds": 1998.5999999046326,
+      "animationLongTasks": []
+    }
+  },
+  "zoomBaseline": {
+    "width": 1280,
+    "dpr": 1
+  },
+  "exit": 0,
+  "finish": "2026-10-06 14:57:21 +08:00"
+}

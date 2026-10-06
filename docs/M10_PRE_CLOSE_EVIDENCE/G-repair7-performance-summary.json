@@ -1,0 +1,116 @@
+{
+  "label": "G-repair7",
+  "mode": "FULL_MOTION/native Chromium/no-preference",
+  "files": 5,
+  "samples": [
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 1,
+      "elapsedMs": 1270.2000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 2,
+      "elapsedMs": 1468.2000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 3,
+      "elapsedMs": 1516.2000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "warm",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 4,
+      "elapsedMs": 954.3999998569489,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 1,
+      "elapsedMs": 1612.3999998569489,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 2,
+      "elapsedMs": 1554.5,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 3,
+      "elapsedMs": 909.5999999046326,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "warm",
+      "kind": "bounded PRE-CLOSE-P01",
+      "sample": 4,
+      "elapsedMs": 884.0999999046326,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1218.2999999523163,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1981.8999998569489,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "kind": "exact original T11-P01",
+      "elapsedMs": 1886.7000000476837,
+      "destinations": 16,
+      "record": "docs/M10_PRE_CLOSE_EVIDENCE/G-repair7-timing-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    }
+  ],
+  "budgetMs": 2500,
+  "status": "PASS"
+}

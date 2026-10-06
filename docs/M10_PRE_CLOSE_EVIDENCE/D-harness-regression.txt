@@ -1,0 +1,59 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/evidenceLifecycle.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/evidenceLifecycle.test.ts (4 tests | 3 failed) 785ms
+   × [PRE-CLOSE-H01] scanner and open collector output stay outside actual evidence; all files are inventoried 14ms
+   × [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection 421ms
+   × [PRE-CLOSE-H03] scanner refuses its own result inside input rather than silently exclude evidence 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H01] scanner and open collector output stay outside actual evidence; all files are inventoried
+ReferenceError: Cannot access 'process' before initialization
+ ❯ scan tests/m10/evidenceLifecycle.test.ts:16:33
+     14|   const process = spawnSync('node', ['scripts/collect-evidence.mjs', l…
+     15|     '-File', 'scripts/scan-evidence.ps1', '-Roots', root, '-ResultPath…
+     16|     encoding: 'utf8', env: { ...process.env, PSModulePath: `${root}/no…
+       |                                 ^
+     17|   });
+     18|   return { status: process.status, receipt: read(`.git/evidence-captur…
+ ❯ tests/m10/evidenceLifecycle.test.ts:25:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection
+ReferenceError: Cannot access 'process' before initialization
+ ❯ scan tests/m10/evidenceLifecycle.test.ts:16:33
+     14|   const process = spawnSync('node', ['scripts/collect-evidence.mjs', l…
+     15|     '-File', 'scripts/scan-evidence.ps1', '-Roots', root, '-ResultPath…
+     16|     encoding: 'utf8', env: { ...process.env, PSModulePath: `${root}/no…
+       |                                 ^
+     17|   });
+     18|   return { status: process.status, receipt: read(`.git/evidence-captur…
+ ❯ tests/m10/evidenceLifecycle.test.ts:36:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H03] scanner refuses its own result inside input rather than silently exclude evidence
+ReferenceError: Cannot access 'process' before initialization
+ ❯ scan tests/m10/evidenceLifecycle.test.ts:16:33
+     14|   const process = spawnSync('node', ['scripts/collect-evidence.mjs', l…
+     15|     '-File', 'scripts/scan-evidence.ps1', '-Roots', root, '-ResultPath…
+     16|     encoding: 'utf8', env: { ...process.env, PSModulePath: `${root}/no…
+       |                                 ^
+     17|   });
+     18|   return { status: process.status, receipt: read(`.git/evidence-captur…
+ ❯ tests/m10/evidenceLifecycle.test.ts:44:10
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 1 passed (4)
+   Start at  19:31:42
+   Duration  1.01s (tests 91%, transform 6%, setup 1%, import 1%, worker 1%)
+

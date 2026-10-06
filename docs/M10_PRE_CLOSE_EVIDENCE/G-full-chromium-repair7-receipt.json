@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T12:55:23.466Z",
+  "finish": "2026-10-06T13:11:24.659Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test:e2e"
+  ],
+  "log": ".git\\evidence-capture\\G-full-chromium-repair7.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

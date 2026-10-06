@@ -1,0 +1,27 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),crypto=require('node:crypto');
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const root='docs/M10_T11_EVIDENCE',gate=`${root}/gate-20261006-150313`;
+const commands=[];function git(args){const r=cp.spawnSync('git',args,{encoding:'utf8'});commands.push({command:['git',...args].join(' '),exitCode:r.status,output:r.stdout.trimEnd()});if(r.status!==0)throw Error(`Git audit failed: ${args.join(' ')}`);return r.stdout.trimEnd();}
+const freeze=read(`${gate}/executable-freeze.json`);for(const [p,sha] of Object.entries(freeze))if(hash(p).toUpperCase()!==sha)throw Error(`Frozen input changed:${p}`);
+const restored=read(`${gate}/repair7-restoration.json`);for(const e of restored.outputs)if(hash(e.path).toUpperCase()!==e.sha256)throw Error(`Historical file changed:${e.path}`);
+git(['diff','--exit-code','e7ceea652dd74ef079d933922668c782304dc31f','--','src','art','public','package.json','package-lock.json',':(exclude)src/presentation/motionTokens.ts',':(exclude)src/ui/InitialDealFlight.ts']);
+git(['diff','--exit-code','4e6cd7efdca91651633931edcd9445a401886bce','--','src/domain']);
+git(['diff','--exit-code','3c50ab4d0183cff13f2380bd60faa31583d3e988','--','art/source/characters','public/characters',':(exclude)public/characters/dealer','art/character-production.json']);
+const code=git(['diff','--numstat','--','src']);if(code.split('\n').filter(Boolean).length!==2||code.split('\n').some(x=>!x.startsWith('1\t1\t')))throw Error('Unexpected product diff');
+const tests=git(['diff','--numstat','--','tests']);if(tests!=='14\t0\ttests/m10/tableGeometry.test.tsx')throw Error('Unexpected changed regression');
+const scope=git(['status','--porcelain','--untracked-files=all']).split('\n').filter(Boolean).map(x=>x.slice(3));
+const allowed=new Set(['README.md','docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md','docs/M10_T11.md','src/presentation/motionTokens.ts','src/ui/InitialDealFlight.ts','tests/m10/tableGeometry.test.tsx','tests/browser/m10/t11Performance.spec.ts']);
+for(const p of scope)if(!allowed.has(p)&&!p.startsWith(root+'/'))throw Error(`Unexpected publication path:${p}`);
+const index=read(`${root}/image-byte-index.json`);for(const e of index.entries)if(hash(e.canonicalPath)!==e.sha256)throw Error(`Capture alias changed:${e.logicalCapturePath}`);
+const gallery=read(`${root}/gallery/index.json`);if(gallery.entries.length!==20)throw Error('Gallery missing');for(const e of gallery.entries)if(e.manualInspection!=='PASS'||e.oldCartoonDealerAppearances!==0||hash(`${root}/gallery/${e.file}`)!==e.sha256)throw Error('Visual review changed');
+const files=['docs/M10_T11.md',`${root}/README.md`,`${root}/gallery/README.md`];let links=0;
+for(const p of files){const body=fs.readFileSync(p,'utf8');for(const m of body.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)){const target=m[1].replace(/^<|>$/g,'').split('#')[0];if(!target||/^[a-z]+:\/\//i.test(target))continue;const resolved=path.resolve(path.dirname(p),target);if(!fs.existsSync(resolved))throw Error(`Missing current link: ${p} -> ${target}`);links++;}}
+const report=fs.readFileSync('docs/M10_T11.md','utf8');for(let i=1;i<=12;i++)if(!report.includes(`| AC-M10-${String(i).padStart(3,'0')} |`))throw Error('Incomplete acceptance mapping');
+for(const p of ['README.md','docs/STATE.md','docs/PLAN.md']){const prefix=fs.readFileSync(p,'utf8').slice(0,3500);if(!prefix.includes('1236')||!prefix.includes('243')||!prefix.includes('9/10')||!prefix.includes('DEPLOYMENT NOT RUN'))throw Error(`Missing current truth:${p}`);}
+const production=read(`${root}/bundle-source-correction.json`);if(hash(production.currentJS).toUpperCase()!==production.sha256)throw Error('Final production bundle differs');
+if(read(`${root}/privacy-review.json`).status!=='PASS')throw Error('Privacy not passed');
+if(read(`${root}/final-documentation-receipt.json`).exitCode!==0)throw Error('Doc tests not passed');
+const at=cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+const receipt={at,status:'PASS',exitCode:0,frozenInputs:Object.keys(freeze).length,historicalOutputs:restored.outputs.length,canonicalCaptures:index.entries.length,manualGallery:20,currentLinks:links,acceptanceMapping:12,publicationPaths:scope.length,productionBundleSha256:hash(production.currentJS),gitCommands:commands.map(x=>({...x,output:x.command.includes('status')?`Scoped${scope.length} task paths; see staged-scope.txt`:x.output})),scope:'Exact two-line initial-only repair,14 guard lines and3 new native regressions; no assets/domain/controller/dependencies/spec/style/history changes. Current docs/visuals manually reviewed; bounded repair same-session; original failures retained.'};
+fs.writeFileSync(`${root}/final-audit.json`,JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({...receipt,gitCommands:undefined}));

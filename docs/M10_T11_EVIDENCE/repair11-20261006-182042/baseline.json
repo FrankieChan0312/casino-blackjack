@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-06 18:22:58 +08:00",
+  "status": "PASS",
+  "task": "M10-T11 repair11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "head": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "branch": "main",
+  "tracking": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "live": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "aheadBehind": "0\t0",
+  "workingTree": "Known uncommitted T11 state; not CLEAN",
+  "untracked": 11,
+  "protectedInputs": 269,
+  "validatorSha256": "0dedd1a1c701b401ef6432a4f2e446d08ee6ee2eea871e2acc23e6b02c608f9b",
+  "scope": "Documentation/publication count closure only; incoming T11 two source lines and existing test additions are prior verified changes, not repair11 changes. Repair12 NOT AUTHORIZED. Recommended GPT-6.1 Sol/Max (original task); actual selected runtime NOT VERIFIED.",
+  "trackedAndKnownFiles": 14733
+}

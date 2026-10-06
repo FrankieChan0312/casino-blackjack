@@ -1,0 +1,103 @@
+{
+  "at": "2026-10-06 21:37:07 +08:00",
+  "status": "PASS",
+  "review": "Same-session maintenance source, diff, assertions, execution evidence and publication context review. Fresh T11 review NOT RUN.",
+  "scope": {
+    "at": "2026-10-06 21:37:05 +08:00",
+    "status": "PASS",
+    "incomingFiles": 15333,
+    "unchangedIncomingFiles": 15326,
+    "changedIncomingFiles": [
+      "README.md",
+      "docs/DEVELOPMENT_LOG.md",
+      "docs/LAB_MANUAL.md",
+      "docs/PLAN.md",
+      "docs/STATE.md",
+      "src/presentation/motionTokens.ts",
+      "tests/browser/m10/initialDeal.spec.ts"
+    ],
+    "newFiles": 1940,
+    "expectedNewScopes": [
+      "docs/M10_PRE_CLOSE.md",
+      "scripts/collect-evidence.mjs",
+      "scripts/scan-evidence.ps1",
+      "tests/browser/m10/preClosePerformance.spec.ts",
+      "tests/m10/evidenceLifecycle.test.ts",
+      "docs/M10_PRE_CLOSE_EVIDENCE/**"
+    ],
+    "frozenExecutableInputs": 277,
+    "domain": {
+      "status": "PASS",
+      "exitCode": 0,
+      "diff": "EMPTY",
+      "baseline": "4e6cd7efdca91651633931edcd9445a401886bce"
+    },
+    "historicalT11Evidence": "All incoming T11 raw/current documents/review JSON/failed evidence hashes unchanged; maintenance authority updates only general current docs",
+    "gameplayAssetsDependencies": "Incoming hashes unchanged",
+    "review": "Same-session scoped source/diff/test/evidence review only; fresh T11 NOT RUN"
+  },
+  "patterns": {
+    "status": "PASS",
+    "originalSha256": "90d2ba542b32cd9861fd35c7d7c759ca6edc47e7eb25a999163420317da5e284",
+    "unchangedKeys": [
+      "credential",
+      "bearer",
+      "viteEphemeralToken"
+    ]
+  },
+  "inheritance": "Known incoming T11 checkpoint includes INITIAL token seam, approved generic asset hash/tracking guard and original three native performance cases. These incoming source/tests and all blocked11/11 review history remain preserved; maintenance publishes the checkpoint without acceptance.",
+  "incrementalProduct": "Only centralized INITIAL duration80->40ms. Action/dealer110ms, every flight/order/settlement/privacy mode retained; no core changes.",
+  "testReview": "Original explicit destinations and2500ms assertions retained. Four fixed samples per desktop/mobile with fresh native browsers, unpaused real16WAAPI flights. Correctness-only first-flight checkpoint preserves original assertions and resumes real motion. Four harness regressions cover output lifecycle, actual log and extensionless trace detections, result refusal and native stderr.",
+  "privacyContext": "Synthetic localhost contexts only; no authenticated owner browser/session transcript or secret fixture published. All retained traces/text and actual artifacts included in publication scan. Binary hashes and manual representative screenshot inspection supplement; no OCR claim.",
+  "largestPublicationFiles": [
+    {
+      "path": "docs/M10_T05_EVIDENCE/focused-browser-artifacts.zip",
+      "bytes": 61533111
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/repair3-browser-artifacts.zip",
+      "bytes": 56338201
+    },
+    {
+      "path": "docs/M10_T06_EVIDENCE/I-first-artifacts.zip",
+      "bytes": 17043906
+    },
+    {
+      "path": "docs/M10_T06_EVIDENCE/I-r4-artifacts.zip",
+      "bytes": 16964277
+    },
+    {
+      "path": "docs/M10_T06_EVIDENCE/exception12-f-artifacts.zip",
+      "bytes": 15534911
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/regenerated-blocked.zip",
+      "bytes": 15400356
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/regenerated-second.zip",
+      "bytes": 15400356
+    },
+    {
+      "path": "docs/M10_T06_EVIDENCE/I-r5-reviewed-artifacts.zip",
+      "bytes": 14445741
+    },
+    {
+      "path": "docs/M10_T06_EVIDENCE/repair9-stage-before.zip",
+      "bytes": 14429744
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/exception11-stage-f-legacy-generated.json.gz",
+      "bytes": 13771555
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/exception11-stage-h-legacy-generated.json.gz",
+      "bytes": 13771555
+    },
+    {
+      "path": "docs/M10_T05_EVIDENCE/regenerated-first.zip",
+      "bytes": 11859321
+    }
+  ],
+  "baselineAt": "2026-10-06 19:20:55 +08:00"
+}

@@ -1,0 +1,72 @@
+const fs = require('node:fs');
+const cp = require('node:child_process');
+const crypto = require('node:crypto');
+const dir = 'docs/M10_PRE_CLOSE_EVIDENCE';
+const read = p => JSON.parse(fs.readFileSync(p, 'utf8').replace(/^\uFEFF/, ''));
+const git = (...args) => cp.execFileSync('git', args, { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trimEnd();
+const stamp = () => cp.execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+const sha = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const labels = ['A-performance-repair7', 'B-performance-repair7', 'C-exact-privacy-repair7', 'D-privacy-repair7', 'D-lint-repair6-native', 'D-harness-regression-repair7', 'E-animation-unit-repair7', 'E-animation-browser-repair7', 'F-full-vitest-repair7', 'G-full-chromium-repair7', 'H-preservation-repair7', 'I-unified-repair7'];
+const gates = labels.map(label => ({ label, ...read(`${dir}/${label}-receipt.json`) }));
+for (const gate of gates) if (gate.status !== 'PASS' || gate.exitCode !== 0 || !gate.outputClosed) throw Error('Required native gate not PASS0: ' + gate.label);
+const ledger = read(`${dir}/repair-ledger.json`);
+if (ledger.count !== 7) throw Error('Unexpected repair ledger');
+const frozen = read(`${dir}/executable-freeze-repair7.json`).hashes;
+for (const [p, expected] of Object.entries(frozen)) if (sha(p) !== expected) throw Error('Frozen executable changed: ' + p);
+const baseline = read('.git/m10-pre-close-baseline.json');
+const allowed = new Set(['README.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md', 'docs/LAB_MANUAL.md', 'src/presentation/motionTokens.ts', 'tests/browser/m10/initialDeal.spec.ts']);
+const changed = [], unchanged = [];
+for (const [p, hash] of Object.entries(baseline.hashes)) {
+  if (!fs.existsSync(p)) throw Error('Incoming file removed: ' + p);
+  if (sha(p) !== hash) { if (!allowed.has(p)) throw Error('Unknown overlapping change: ' + p); changed.push(p); }
+  else unchanged.push(p);
+}
+const newPaths = git('ls-files', '--others', '--exclude-standard', '-z').split('\0').filter(p => p && !(p in baseline.hashes));
+const newAllowed = new Set(['docs/M10_PRE_CLOSE.md', 'scripts/collect-evidence.mjs', 'scripts/scan-evidence.ps1', 'tests/browser/m10/preClosePerformance.spec.ts', 'tests/m10/evidenceLifecycle.test.ts']);
+for (const p of newPaths) if (!p.startsWith(dir + '/') && !newAllowed.has(p)) throw Error('Unexpected new path: ' + p);
+const domain = cp.spawnSync('git', ['diff', '--exit-code', '4e6cd7efdca91651633931edcd9445a401886bce', '--', 'src/domain'], { encoding: 'utf8' });
+if (domain.status !== 0) throw Error('Domain differs from M10 starting authority');
+const samples = [];
+const walk = p => fs.readdirSync(p, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(p + '/' + e.name) : [p + '/' + e.name]);
+for (const label of ['A-performance-repair7', 'B-performance-repair7']) for (const p of walk(`${dir}/${label}-browser-artifacts`).filter(p => /\/(native-initial-timing|bounded-native-samples)\.json$/.test(p))) {
+  const r = read(p);
+  if (r.timing) samples.push({ gate: label, width: r.width, temperature: 'cold', elapsedMs: r.timing.end - r.timing.start, destinations: r.timing.destinations.length, record: p });
+  else for (const [index, s] of r.samples.entries()) samples.push({ gate: label, width: r.width, temperature: s.temperature, sample: index + 1, elapsedMs: s.elapsed, destinations: s.timing.destinations.length, record: p });
+}
+for (const label of ['G-repair7', 'I-repair7']) {
+  const r = read(`${dir}/${label}-performance-summary.json`);
+  if (r.status !== 'PASS' || r.samples.length !== 11) throw Error('Missing full-gate timing: ' + label);
+  samples.push(...r.samples.map(s => ({ gate: label, gateOverall: 'PASS', ...s })));
+}
+if (samples.length !== 33 || samples.some(s => s.elapsedMs > 2500 || s.destinations !== 16)) throw Error('Performance samples incomplete/red');
+const summaries = [1280, 768, 320].map(width => {
+  const values = samples.filter(s => s.width === width).map(s => s.elapsedMs).sort((a, b) => a - b);
+  return { width, count: values.length, median: values.length % 2 ? values[Math.floor(values.length / 2)] : (values[values.length / 2 - 1] + values[values.length / 2]) / 2, worst: Math.max(...values) };
+});
+const history=[];
+for(const label of ['A-performance','B-performance'])for(const p of walk(dir+'/'+label+'-browser-artifacts').filter(p=>/\/(native-initial-timing|bounded-native-samples)\.json$/.test(p))){const r=read(p);if(r.timing)history.push({gate:label,width:r.width,temperature:'cold',elapsedMs:r.timing.end-r.timing.start,record:p});else for(const x of r.samples)history.push({gate:label,width:r.width,temperature:x.temperature,elapsedMs:x.elapsed,record:p});}
+for(const label of ['G','I-first','I-repair6'])history.push(...read(dir+'/'+label+'-performance-summary.json').samples.map(x=>({gate:label,...x})));
+if(history.length!==44||!history.some(x=>x.elapsedMs>2500))throw Error('Historical failure samples missing');
+fs.writeFileSync(dir+'/historical60ms-performance-samples.json',JSON.stringify({status:'FAIL: retained historical60ms candidate sample2665.1ms',count:history.length,samples:history},null,2)+'\n');
+const at = stamp();
+const scope = { at, status: 'PASS', incomingFiles: unchanged.length + changed.length, unchangedIncomingFiles: unchanged.length, changedIncomingFiles: changed, newFiles: newPaths.length, expectedNewScopes: [...newAllowed, dir + '/**'], frozenExecutableInputs: Object.keys(frozen).length, domain: { status: 'PASS', exitCode: domain.status, diff: 'EMPTY', baseline: '4e6cd7efdca91651633931edcd9445a401886bce' }, historicalT11Evidence: 'All incoming T11 raw/current documents/review JSON/failed evidence hashes unchanged; maintenance authority updates only general current docs', gameplayAssetsDependencies: 'Incoming hashes unchanged', review: 'Same-session scoped source/diff/test/evidence review only; fresh T11 NOT RUN' };
+fs.writeFileSync(`${dir}/scope-review.json`, JSON.stringify(scope, null, 2) + '\n');
+fs.writeFileSync(`${dir}/all-performance-samples.json`, JSON.stringify({ at, status: 'PASS', mode: 'FULL_MOTION/native Chromium/no-preference', budgetMs: 2500, count: samples.length, samples, summaries, originalFailureTrigger: 'NOT ESTABLISHED; retained historical outlier not reproduced in fixed initial diagnosis. All 33 final40ms candidate samples PASS; prior60ms2665.1ms failure and first unified lint failure remain preserved. No retries or universal machine-load guarantee.' }, null, 2) + '\n');
+const result = { at, status: 'M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED', task: 'M10-PRE-CLOSE', repairCount: ledger.count, repairLimit: 10, gates, scope, performance: summaries, publication: 'PENDING', t11: 'BLOCKED after 11/11; repair12 NOT AUTHORIZED; fresh independent review in new session REQUIRED / NOT RUN', m10: 'NOT ACCEPTED', deployment: 'NOT RUN' };
+fs.writeFileSync(`${dir}/verification-summary.json`, JSON.stringify(result, null, 2) + '\n');
+ledger.cycles[6].affectedVerification = 'Lint PASS0; four harness tests PASS0; unchanged exact scanner and full actual privacy subset PASS0; final unified I-unified-repair7 PASS/native0 including 1240 Vitest tests, 245 Chromium cases and M1-M8 preservation';
+ledger.at = at; fs.writeFileSync(`${dir}/repair-ledger.json`, JSON.stringify(ledger, null, 2) + '\n');
+const stats = summaries.map(s => `${s.width}px: ${s.count} samples, median ${s.median.toFixed(1)}ms, worst ${s.worst.toFixed(1)}ms`).join('; ');
+const prefix = `## M10-PRE-CLOSE maintenance VERIFIED — ${at}\n\n**M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED.** Maintenance repairs **7/10**. Required A-I gates are **PASS / checked exit0**: exact native performance, bounded cold/warm performance, unchanged exact privacy scanner, full actual evidence subset and four harness regressions, focused animations, full Vitest, full Chromium, independent M1-M8 preservation, and unchanged unified verify.ps1. Final unified verification passed 101 files / 1240 Vitest tests and 245 Chromium cases. Cold samples launch a new native browser and fresh page; warm is an extra fresh page/new context in the third browser. Only browser-process reuse is claimed, not cache/context/renderer warmth. All 33 final-candidate recorded native initial-deal samples met the unchanged 2500ms budget with 16 ordered destinations each. ${stats}. The first unified attempt failed only collector lint; the second failed one bounded desktop60ms sample2665.1ms. Both complete failures and all prior samples remain preserved.\n\nInitial-only central duration changed from 80ms to 40ms (first maintenance60ms candidate failed one bounded desktop sample); action and Dealer card flights remain 110ms, with every stage, ordering and ease retained. Diagnosis established cumulative serial WAAPI readiness/completion overhead. The fixed followup at60ms recorded readiness up to809.7ms and creation-to-finish up to891.5ms; native finish-to-event delay was <=0.2ms. The exact browser/OS stall trigger remains unproven. The historical 2861.1ms / 2891.6ms failure trigger remains **NOT ESTABLISHED**; fixed samples did not reproduce it. This evidence makes no universal machine-load guarantee.\n\nPrivacy collection writes native stdout/stderr and scanner results outside all input targets, closes them before copying finalized evidence, and excludes no evidence paths or trace resources. Original credential/bearer/Vite patterns remain unchanged; .log coverage was added. Every artifact is inventoried by hash; text and non-image/font trace resources, including extensionless resources, are inspected. Synthetic screenshot provenance and visual checks supplement this inventory; no OCR certification is claimed. All incoming T11 historical evidence is byte-preserved, including 320 generated originals restored after tests. Domain diff from M10 start is EMPTY; gameplay, accounting, replay, RNG, Dealer system, assets and dependencies remain unchanged. Review here is in the same session. Normal origin/main publication is pending final documentation/privacy review.\n\n**M10-T11 remains BLOCKED AFTER 11/11; repair12 NOT AUTHORIZED. M10: NOT ACCEPTED. M10-T11 FRESH INDEPENDENT REVIEW REQUIRED in a new session; NOT RUN. DEPLOYMENT NOT RUN.**\n\n`;
+for (const p of ['README.md', 'docs/STATE.md', 'docs/M10_PRE_CLOSE.md']) {
+  const target = p === 'README.md' ? 'docs/M10_PRE_CLOSE.md' : p === 'docs/M10_PRE_CLOSE.md' ? 'M10_PRE_CLOSE_EVIDENCE/verification-summary.json' : 'M10_PRE_CLOSE.md';
+  fs.writeFileSync(p, prefix + `[Maintenance contract and executed evidence](${target}).\n\n` + fs.readFileSync(p, 'utf8'));
+}
+const plan = fs.readFileSync('docs/PLAN.md', 'utf8');
+const rows = plan.split(/\r?\n/).filter(s => s.startsWith('| M10-PRE-CLOSE |'));
+if (rows.length !== 1 || !rows[0].includes('DIAGNOSIS;0/10;')) throw Error('Maintenance plan row ambiguous');
+fs.writeFileSync('docs/PLAN.md', plan.replace(rows[0], rows[0].replace('DIAGNOSIS;0/10;T11 staysblocked11/11;M10 NOT ACCEPTED', 'IMPLEMENTED / VERIFIED; A-I PASS0; 7/10; normal publication pending; T11 blocked11/11; M10 NOT ACCEPTED')));
+const note = `\n${at} — M10-PRE-CLOSE final candidate IMPLEMENTED / VERIFIED, repairs7/10. Every required A-I native gate PASS/checked0; final unified I-unified-repair7 passed typecheck, lint, 101files/1240tests, domain/build/fixture checks, 245Chromium cases and independent M1-M8 preservation. Both earlier unified failures (collector lint, then bounded2665.1ms) remain preserved. All ${Object.keys(frozen).length} executable/assets/settings input hashes match repair7 freeze. All ${unchanged.length} incoming files are unchanged; seven intended existing paths changed, new scopes bounded. src/domain diff from M10 start4e6cd7 is EMPTY/exit0. All33 final-candidate native samples are retained with per-sample results: ${stats}. Same FULL_MOTION/native/no-preference, unchanged2500ms,16steps; no retries. Original historical outlier trigger unproven. Privacy lifecycle output stays outside targets until closed; patterns and evidence coverage preserved. Historical T11 bytes remain intact; T11 blocked11/11, repair12 NOT AUTHORIZED. Same-session review only; fresh T11 NOT RUN. Normal publication pending final docs/privacy/scope. M10 NOT ACCEPTED; deployment NOT RUN.\n`;
+for (const p of ['docs/M10_PRE_CLOSE.md', 'docs/STATE.md', 'docs/DEVELOPMENT_LOG.md', 'docs/LAB_MANUAL.md']) fs.appendFileSync(p, note);
+fs.writeFileSync(`${dir}/README.md`, `# M10-PRE-CLOSE — verified maintenance evidence\n\n${prefix}[Contract](../M10_PRE_CLOSE.md), [candidate summary](verification-summary.json), [all 33 final samples](all-performance-samples.json), [scope review](scope-review.json), [repair ledger](repair-ledger.json), [final 277-input freeze](executable-freeze-repair7.json), [incoming baseline](baseline.json), [diagnosis](performance-analysis.json), [same-session image inspection](manual-images-repair7.json). [All 44 prior 60ms samples, including failure](historical60ms-performance-samples.json). All failed attempts and targeted reruns remain intact; T11 evidence is unchanged.\n\nEach native receipt records actual child exit, UTC start/finish and closed external output. Restoration records prove all 320 historical generated files are preserved and archive new compatibility outputs. Required final receipts are listed in verification-summary.json. The drivers directory preserves the exact task-local capture, diagnostic, restoration and scanner-wrapper sources as text. Native commands and final executable hashes are recorded in receipts; all source, tests and permanent scripts remain runnable from the repository. Final publication documentation/privacy receipts and Git facts follow.\n`);
+console.log(JSON.stringify({ at, status: result.status, repairs: '7/10', unchanged: unchanged.length, changed, samples: summaries }));

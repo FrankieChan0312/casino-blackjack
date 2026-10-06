@@ -31,7 +31,7 @@ export function playInitialDealFlight(event: InitialCardEvent, anchors: AnchorRe
   const transform = `translate(${origin.left + origin.width / 2 + window.scrollX - x - width / 2}px, ${origin.top + origin.height / 2 + window.scrollY - y - height / 2}px) scale(.8) rotate(-6deg)`;
   card.style.transform = transform;
   const controls = animate(card, { transform: [transform, 'translate(0px, 0px) scale(1) rotate(0deg)'] },
-    { duration: MOTION_TOKENS.cardDeal, ease: [...MOTION_TOKENS.arrivalEase] });
+    { duration: event.reason === 'INITIAL' ? MOTION_TOKENS.initialCardDeal : MOTION_TOKENS.cardDeal, ease: [...MOTION_TOKENS.arrivalEase] });
   let settled = false;
   return {
     finished: new Promise<void>((resolve, reject) => { controls.then(resolve, reject); }),

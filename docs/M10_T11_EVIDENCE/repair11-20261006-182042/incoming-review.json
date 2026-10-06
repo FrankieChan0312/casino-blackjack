@@ -1,0 +1,199 @@
+{
+  "at": "2026-10-06 15:49:29 +08:00",
+  "status": "BLOCKED",
+  "acceptance": "M10: NOT ACCEPTED",
+  "freshIncomingReview": "PASS",
+  "postRepairReview": "Same-session scope/diff/evidence review; no second independent reviewer claimed",
+  "repairCount": 10,
+  "repairLimit": 10,
+  "sourceChanges": [
+    "src/presentation/motionTokens.ts: initialCardDeal80ms",
+    "src/ui/InitialDealFlight.ts: INITIAL uses initialCardDeal; actions remain110ms"
+  ],
+  "gate": [
+    {
+      "exitCode": 0,
+      "stage": "units",
+      "finish": "2026-10-06 15:03:35 +08:00",
+      "start": "2026-10-06 15:03:15 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\units.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "chromium",
+      "finish": "2026-10-06 15:18:35 +08:00",
+      "start": "2026-10-06 15:03:35 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\chromium.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "preservation",
+      "finish": "2026-10-06 15:21:20 +08:00",
+      "start": "2026-10-06 15:18:40 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\preservation.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "current-preservation",
+      "finish": "2026-10-06 15:21:35 +08:00",
+      "start": "2026-10-06 15:21:21 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\current-preservation.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "live-guard",
+      "finish": "2026-10-06 15:21:36 +08:00",
+      "start": "2026-10-06 15:21:35 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\live-guard.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "dealer-assets",
+      "finish": "2026-10-06 15:21:37 +08:00",
+      "start": "2026-10-06 15:21:36 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\dealer-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "generic-assets",
+      "finish": "2026-10-06 15:21:38 +08:00",
+      "start": "2026-10-06 15:21:38 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\generic-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "generic-reproduction",
+      "finish": "2026-10-06 15:21:40 +08:00",
+      "start": "2026-10-06 15:21:38 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\generic-reproduction.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "player-assets",
+      "finish": "2026-10-06 15:21:49 +08:00",
+      "start": "2026-10-06 15:21:40 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\player-assets.txt"
+    },
+    {
+      "exitCode": 0,
+      "stage": "unified",
+      "finish": "2026-10-06 15:40:43 +08:00",
+      "start": "2026-10-06 15:21:49 +08:00",
+      "status": "PASS",
+      "log": "docs\\M10_T11_EVIDENCE\\gate-20261006-150313\\unified.txt"
+    }
+  ],
+  "originalWrapper": {
+    "status": "BLOCKED",
+    "exitCode": 1,
+    "record": "gate-20261006-150313/archival-first-failure.json"
+  },
+  "archivalRepair": {
+    "status": "PASS",
+    "exitCode": 0,
+    "record": "gate-20261006-150313/repair7-restoration.json"
+  },
+  "findings": [
+    {
+      "id": "HIGH-01",
+      "status": "CLOSED",
+      "repair": 1,
+      "issue": "Published generic assets omitted from historical protected guard",
+      "evidence": "gate-20261006-135811/units.txt",
+      "resolution": "Three exact tracked paths and approved hashes pinned; all original other protected comparisons retained; final full gate PASS0"
+    },
+    {
+      "id": "HIGH-02",
+      "status": "CLOSED",
+      "repair": 5,
+      "issue": "Cold full native Chromium initial deal exceeded unchanged2500ms",
+      "evidence": "native-timing-control-before-repair5.txt",
+      "resolution": "Initial-only80ms token, existing action/dealer110ms unchanged;3 cold native widths,4 headful controls,9 profiled rounds and final gates PASS0"
+    },
+    {
+      "id": "LOW-01",
+      "status": "DISCLOSED_NONBLOCKING",
+      "repair": [
+        2,
+        3,
+        4
+      ],
+      "issue": "REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE",
+      "resolution": "Actual native activation cannot produce trustworthy hidden state; BLOCKED, strongest synthetic visibility/subsequent-action and all lifecycle equivalence PASS0; owner section21 permits this limitation"
+    },
+    {
+      "id": "LOW-02",
+      "status": "CLOSED",
+      "repair": 6,
+      "issue": "Supplemental cleanup oracle incorrectly required Audit equality after New Table",
+      "resolution": "Exact non-Audit baseline and one legitimate SESSION_RESET asserted; no old histories/clones remain"
+    },
+    {
+      "id": "LOW-03",
+      "status": "CLOSED",
+      "repair": 7,
+      "issue": "Final wrapper archival File.Replace failed with target in use",
+      "resolution": "Original wrapper exit1 preserved; ten native commands PASS0; isolated restoration PASS0,320 originals/269 inputs verified; handle owner unproven"
+    },
+    {
+      "id": "LOW-04",
+      "status": "CLOSED",
+      "repair": 8,
+      "issue": "Optional image consolidation nested the parsed Windows PowerShell5 array",
+      "resolution": "Remove redundant array wrapper; individually verify source/canonical bytes and bounds;1149 new duplicate files consolidated PASS0; no historical changes"
+    },
+    {
+      "id": "LOW-05",
+      "status": "CLOSED",
+      "repair": 9,
+      "issue": "Supplemental scope oracle trimmed native Git porcelain leading status column",
+      "resolution": "trimEnd preserves fixed status width; original allowed path and all scope assertions retained"
+    },
+    {
+      "id": "LOW-06",
+      "status": "FIX_IMPLEMENTED_COMPLETE_VERIFICATION_FAILED",
+      "repair": 10,
+      "issue": "Supplemental scope oracle read only unstaged changes after staging",
+      "resolution": "Compare exact product and historical-test deltas to the expected starting commit; all freeze/scope assertions retained"
+    },
+    {
+      "id": "BLOCKER-01",
+      "status": "OPEN",
+      "issue": "Normal repair maximum10/10 reached with final document/publication audit failing",
+      "resolution": "Explicit owner authorization required before any additional repair/affected rerun"
+    },
+    {
+      "id": "LOW-07",
+      "status": "OPEN",
+      "issue": "Generated current review prefixes retain9/10 while actual normal count is10/10",
+      "resolution": "Correct only current review metadata/status under one explicit extra-cycle authorization; preserve earlier records"
+    }
+  ],
+  "manualGallery": {
+    "at": "2026-10-06 15:49:29 +08:00",
+    "status": "PASS",
+    "images": 20,
+    "scope": "All20 final selected gallery PNGs inspected individually at original resolution; final full-page four-leaf replacement included. No essential overlap, horizontal overflow, unintended old Dealer or wrong ownership observed. Moving viewport captures show their actual checkpoint; narrow/full-page images demonstrate expected vertical scrolling."
+  },
+  "canonicalImages": {
+    "status": "PASS",
+    "captures": 1211,
+    "consolidated": 1149
+  },
+  "deployment": "NOT RUN",
+  "latestVerification": {
+    "status": "FAIL",
+    "exitCode": 1,
+    "file": "final-audit.txt",
+    "cause": "Repair10 metadata generation left current9/10 unchanged; no cycle11 authorized"
+  }
+}

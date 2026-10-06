@@ -1,0 +1,312 @@
+{
+  "at": "2026-10-06 21:37:05 +08:00",
+  "status": "M10_PRE_CLOSE_MAINTENANCE_IMPLEMENTED_VERIFIED",
+  "task": "M10-PRE-CLOSE",
+  "repairCount": 7,
+  "repairLimit": 10,
+  "gates": [
+    {
+      "label": "A-performance-repair7",
+      "start": "2026-10-06T12:49:49.449Z",
+      "finish": "2026-10-06T12:50:23.391Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "run",
+        "test:e2e",
+        "--",
+        "tests/browser/m10/t11Performance.spec.ts"
+      ],
+      "log": ".git\\evidence-capture\\A-performance-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "B-performance-repair7",
+      "start": "2026-10-06T12:50:47.518Z",
+      "finish": "2026-10-06T12:51:47.894Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "run",
+        "test:e2e",
+        "--",
+        "tests/browser/m10/preClosePerformance.spec.ts"
+      ],
+      "log": ".git\\evidence-capture\\B-performance-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "C-exact-privacy-repair7",
+      "start": "2026-10-06T12:52:02.656Z",
+      "finish": "2026-10-06T12:52:05.308Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m10-t11-privacy.ps1"
+      ],
+      "log": ".git\\evidence-capture\\C-exact-privacy-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "label": "D-privacy-repair7",
+      "start": "2026-10-06T12:52:08.467Z",
+      "finish": "2026-10-06T12:52:24.295Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/scan-evidence.ps1",
+        "-ResultPath",
+        ".git/evidence-capture/D-privacy-repair7-result.json"
+      ],
+      "log": ".git\\evidence-capture\\D-privacy-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "label": "D-lint-repair6-native",
+      "start": "2026-10-06T12:26:40.658Z",
+      "finish": "2026-10-06T12:26:48.951Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "run",
+        "lint"
+      ],
+      "log": ".git\\evidence-capture\\D-lint-repair6-native.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "D-harness-regression-repair7",
+      "start": "2026-10-06T12:55:08.887Z",
+      "finish": "2026-10-06T12:55:12.150Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "test",
+        "--",
+        "tests/m10/evidenceLifecycle.test.ts"
+      ],
+      "log": ".git\\evidence-capture\\D-harness-regression-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "E-animation-unit-repair7",
+      "start": "2026-10-06T12:52:35.478Z",
+      "finish": "2026-10-06T12:52:47.369Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "test",
+        "--",
+        "tests/m10"
+      ],
+      "log": ".git\\evidence-capture\\E-animation-unit-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "E-animation-browser-repair7",
+      "start": "2026-10-06T12:53:06.731Z",
+      "finish": "2026-10-06T12:54:09.852Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "run",
+        "test:e2e",
+        "--",
+        "tests/browser/m10/initialDeal.spec.ts"
+      ],
+      "log": ".git\\evidence-capture\\E-animation-browser-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "F-full-vitest-repair7",
+      "start": "2026-10-06T12:54:22.699Z",
+      "finish": "2026-10-06T12:54:49.353Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "test"
+      ],
+      "log": ".git\\evidence-capture\\F-full-vitest-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "G-full-chromium-repair7",
+      "start": "2026-10-06T12:55:23.466Z",
+      "finish": "2026-10-06T13:11:24.659Z",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "npm.cmd",
+        "run",
+        "test:e2e"
+      ],
+      "log": ".git\\evidence-capture\\G-full-chromium-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "label": "H-preservation-repair7",
+      "start": "2026-10-06T13:11:37.049Z",
+      "finish": "2026-10-06T13:14:25.386Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/verify-preservation.ps1"
+      ],
+      "log": ".git\\evidence-capture\\H-preservation-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "label": "I-unified-repair7",
+      "start": "2026-10-06T13:15:07.841Z",
+      "finish": "2026-10-06T13:35:13.762Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/verify.ps1"
+      ],
+      "log": ".git\\evidence-capture\\I-unified-repair7.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    }
+  ],
+  "scope": {
+    "at": "2026-10-06 21:37:05 +08:00",
+    "status": "PASS",
+    "incomingFiles": 15333,
+    "unchangedIncomingFiles": 15326,
+    "changedIncomingFiles": [
+      "README.md",
+      "docs/DEVELOPMENT_LOG.md",
+      "docs/LAB_MANUAL.md",
+      "docs/PLAN.md",
+      "docs/STATE.md",
+      "src/presentation/motionTokens.ts",
+      "tests/browser/m10/initialDeal.spec.ts"
+    ],
+    "newFiles": 1940,
+    "expectedNewScopes": [
+      "docs/M10_PRE_CLOSE.md",
+      "scripts/collect-evidence.mjs",
+      "scripts/scan-evidence.ps1",
+      "tests/browser/m10/preClosePerformance.spec.ts",
+      "tests/m10/evidenceLifecycle.test.ts",
+      "docs/M10_PRE_CLOSE_EVIDENCE/**"
+    ],
+    "frozenExecutableInputs": 277,
+    "domain": {
+      "status": "PASS",
+      "exitCode": 0,
+      "diff": "EMPTY",
+      "baseline": "4e6cd7efdca91651633931edcd9445a401886bce"
+    },
+    "historicalT11Evidence": "All incoming T11 raw/current documents/review JSON/failed evidence hashes unchanged; maintenance authority updates only general current docs",
+    "gameplayAssetsDependencies": "Incoming hashes unchanged",
+    "review": "Same-session scoped source/diff/test/evidence review only; fresh T11 NOT RUN"
+  },
+  "performance": [
+    {
+      "width": 1280,
+      "count": 15,
+      "median": 1288.5,
+      "worst": 2059.5
+    },
+    {
+      "width": 768,
+      "count": 3,
+      "median": 1952.3000001907349,
+      "worst": 1981.8999998569489
+    },
+    {
+      "width": 320,
+      "count": 15,
+      "median": 1454.2999999523163,
+      "worst": 2049.9000000953674
+    }
+  ],
+  "publication": "PENDING",
+  "t11": "BLOCKED after 11/11; repair12 NOT AUTHORIZED; fresh independent review in new session REQUIRED / NOT RUN",
+  "m10": "NOT ACCEPTED",
+  "deployment": "NOT RUN"
+}

@@ -1,0 +1,7 @@
+Captured execution error; privacy script native exit1.
+Exception calling ReadAllText with1 argument(s): The process cannot access docs/M10_T11_EVIDENCE/repair11-20261006-182042/failure-privacy-review.txt because it is being used by another process.
+At .git/m10-t11-privacy.ps1:20 char:5
+CategoryInfo: NotSpecified: (:) [], ParentContainsErrorRecordException
+FullyQualifiedErrorId: IOException
+
+The collector opened its output inside the scan root. The unchanged privacy scanner encountered that locked output and terminated before writing its result. No retry, exclusion, pattern or validator modification. The prior privacy JSON was restored; a stale copy made by the collector is retained as privacy-attempt-stale-output.json and is NOT a result from this attempt.

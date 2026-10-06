@@ -1,0 +1,115 @@
+diff --git a/README.md b/README.md
+index dc5fef5..3c7a51c 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,9 @@
++## M10 final independent review — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++[Final review](docs/M10_T11.md), [consolidated evidence](docs/M10_T11_EVIDENCE/README.md), [20-image gallery](docs/M10_T11_EVIDENCE/gallery/README.md).
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](docs/M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
+@@ -327,11 +333,11 @@ Records below preserve their historical versions, inventories, review boundaries
+ 
+ # Casino Blackjack
+ 
+-Sit down at an illustrated blackjack table, choose your own wager and play. A central fictional female dealer and three unique fantasy computer guests are already present. Choose your avatar under Change Character. Computer wagers, turns and dealer resolution happen automatically; your hand and decisions stay at the near edge of the felt.
++Choose a table for1–7 players, press Start table, choose your own wager and play. One local human sits at Seat4 with0–6 unique fantasy computer guests and a formal fictional female Dealer. Choose your avatar under Change Character. Computer wagers, turns and Dealer resolution happen automatically; your hands and decisions stay near the edge of the felt.
+ 
+ **Simulated credits only, with no redemption value.** Local TypeScript / React / Vite portfolio project.
+ 
+-![Casino table geometry with central dealer, seated guests and near-edge own cards](docs/M10_T01_EVIDENCE/table-1280.png)
++![Current formal Dealer, four-player table and authoritative round result](docs/M10_T11_EVIDENCE/gallery/15-round-complete.png)
+ 
+ ## Current M9 delivery
+ 
+@@ -355,7 +361,7 @@ npx.cmd playwright install chromium
+ npm.cmd run dev
+ ```
+ 
+-Open the local URL printed by Vite. Classic Blackjack is the default. Choose 10-1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
++Open the local URL printed by Vite. Classic Blackjack is the default. Choose **Total players** (1–7, default4), press **Start table**, then choose10–1000 whole credits and press **Deal**. Hit, Stand, Double, Split or Surrender when eligible. Insurance / Even Money and your financial follower choices always wait for you.
+ 
+ The normal table uses **House Rules v1.2 / Classic**, with Re-split Aces. A Split-Ace hand receives one supplement. If it is A+A and funds/cap permit, choose **Split** or **Stand to keep Soft 12**. Otherwise it completes automatically. Hit, Double and Surrender remain unavailable; A+ten is ordinary 21. Historical v1.1 profiles remain available in secondary demo settings and preserve old replay behavior.
+ 
+@@ -371,7 +377,7 @@ git diff --check
+ git status --short --untracked-files=all
+ ```
+ 
+-The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current PA1 inventory:76 files/1031 Vitest/63 Chromium. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
++The harness runs typecheck, lint, Vitest, DOM-free domain compilation, production build/fixture exclusion, Chromium E2E and independent accepted M1-M8 preservation. It checks process exits and fails visibly. Current final M10 inventory:100 files/1236 Vitest/243 Chromium; final exact-version execution PASS/checked0 is linked above. Accepted M8 remains66/956/44; M9 owns22 unit/document and11 browser scenarios. RA1 adds42 Vitest and3 Chromium, including30 mapped RSA regressions. PA1 adds11 Vitest and5 Chromium checks; REG-M8-001..096 and all original assertions remain protected. Also run `node scripts/verify-character-assets.mjs` for complete original/production receipt equality and pinned byte-for-byte reproduction. [PA1 mapping](docs/PA1_MAPPING.md), [preservation](docs/PA1_PRESERVATION.md), [fresh review](docs/PA1_REVIEW_HANDOFF.md).
+ 
+ ## Profiles and engineering
+ 
+@@ -384,6 +390,6 @@ Six-deck S17 Classic includes accepted Double, Split/Re-split, restricted Split
+ | `CLASSIC_6D_S17_V1_2` (normal Player Mode) | OFF | ENABLED |
+ | `CHARLIE5_6D_S17_V1_2` | ON | ENABLED |
+ 
+-Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The dealer retains its code-native SVG; fantasy portrait originals were supplied by the owner and preserved with audited transparent derivatives. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
++Immutable headless domain handlers own cards, bankrolls and settlement. Browser-only orchestration expands player intentions into the same replayable/audited commands, with capacity checked before composite mutation. Integer half-credit accounting, exactly-once settlement/VOID and hidden-card projection stay unchanged from accepted M8. The Dealer uses the approved five-identity formal female pool with deterministic session rotation and a generic formal fallback; all source originals and PA1 portraits are preserved. Presentation-only card/action/Dealer/chip sequences observe authoritative public results, with immediate/reduced/skip equivalence. Keyboard focus, semantic cards, live feedback, reduced motion and320px layouts have automated coverage.
+ 
+ No network multiplayer, accounts, storage, payment, real money, certification or deployment is included. [Rules](docs/RULES.md), [scope](docs/SPEC.md), [design](docs/DESIGN.md), [UX](docs/UX_UI.md), [portfolio walkthrough](docs/PORTFOLIO.md).
+diff --git a/docs/LAB_MANUAL.md b/docs/LAB_MANUAL.md
+index a1eb913..8ad8e28 100644
+--- a/docs/LAB_MANUAL.md
++++ b/docs/LAB_MANUAL.md
+@@ -2165,3 +2165,11 @@ T08 verified checkpoint (2026-10-06 00:37:22 +08:00): authoritative public avail
+ ## M10-PRE-T11 — decorative fallback and truthful alpha
+ 
+ A non-roster fallback belongs in presentation, with no CharacterId, session ordinal, seat, entropy or replay fields. Keep approved identity assignment separate from the image failure chain. PNG alpha means transparency exists; opaque255 is not a universal nonblank requirement. This supplied source has mainly252/253 alpha, and deterministic resizing peaks254. Record actual extrema rather than altering source pixels or reporting255. Preserve strict255 checks for previously approved assets. Historical fixture inputs can remain while their superseded visual expectation is amended explicitly. [Task/evidence](M10_PRE_T11_DEALER_CLEANUP.md).
++
++## M10-T11 independent closure learning — 2026-10-06 15:49:29 +08:00
++
++A pre-commit protected git diff cannot see untracked assets: pin each exact approved file hash and require tracked paths, then re-establish the published baseline. Full native Chromium cold timing can differ materially from headless-shell results; keep strict2500ms and measure actual destinations before assertions. Separate initial80ms from existing action110ms with two bounded product lines, rather than changing authority or thresholds.
++
++Source authority, executed tests, actual browser/PNG inspection, independent review, owner acceptance, publication and deployment are separate facts. Synthetic visibility is not proof of real backgrounding. Finite repeated-round DOM growth includes deliberate public Audit history; assert exact non-Audit cleanup and the legitimate SESSION_RESET independently. Preserve failed cause hypotheses, unsaved metrics limitations and native archival failures. Persist native exits before artifact I/O; after archival failure, restore captured originals and recheck every frozen executable without erasing the original wrapper exit. Windows PowerShell5 JSON arrays require direct assignment before iteration. Byte deduplication retains each freshly executed capture's hash/provenance and immutable canonical Git blob; gallery files stay direct. Repairs8/10, no exceptional authorization; no deployment or future milestone.
++
++2026-10-06 15:51:56 +08:00 — T11 supplemental scope-oracle repair9/10: native git porcelain includes leading spaces in fixed status columns. Preserve them with trimEnd; trim invents a path error. The failed added oracle remains evidence, with no weakening of scope/hash assertions.
+diff --git a/docs/PLAN.md b/docs/PLAN.md
+index 49a67ed..6209008 100644
+--- a/docs/PLAN.md
++++ b/docs/PLAN.md
+@@ -1,3 +1,9 @@
++## M10-T11 final review checkpoint — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++AC-M10-001..012 mapped in [final task](M10_T11.md); publication/conditional acceptance is the only remaining T11 step. No future milestone selected or started.
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
+@@ -375,7 +381,7 @@ For every future task: recommended GPT Sol 6.1 / High (client-supported gpt-6.1-
+ | M10-T09 / T08 | Chips/reserves/cancellation/committed settlement and natural/Charlie text feedback; SETTLING; AC004/007/009 | Exact independent stakes/gross/available values, win/loss/push/surrender/Insurance/side/back/Double/Split/VOID, failed funding no chips, exactly-once results -> event/UI/financial preservation + full harness | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; full1222/187 and preservation/assets/unified PASS0; repairs5/10 CLOSED; human visual ACCEPTED by owner 2026-10-06; publishedd0b5a0814c2a87f5cd942f17cc630db2bf935d37; clean0/0 receipt follows |
+ | M10-T10 / T09 | Preserve immediate terminal replay (optional animated playback omitted per SPEC AC008/DESIGN M10.15/owner sections57–58); full reduced/skip/preferences/hidden-tab compatibility; AC008/009/010 | Actual1/4/7 complete journal/outcomes/digest/live audit equality; three modes, seven skip phases, session/OS toggle, unmount/visibility/resize/round/table, unchanged2500ms -> deterministic/browser + full harness | IMPLEMENTED / VERIFIED; full1230/216,35/278,preservation/assets/unified PASS0; repairs3/10 CLOSED after exact artifact restoration; COMMITTED/PUSHED4b3c8c0,0/0/CLEAN/untracked0; documentation-only receipt follows; human visual ACCEPTED by owner 2026-10-06; STOP before T11 |
+ | M10-PRE-T11 / T10 | Retire legacy Dealer; supplied non-roster formal fallback; unchanged five-identity rotation and animations | Source/alpha/hash/provenance, live guard, setup/collision/exhaustion/failure/modes/replay/screenshots and full gate -> normal main publication -> owner visual confirmation | IMPLEMENTED / VERIFIED; all required gates PASS / exit 0; repairs 7/10 CLOSED; complete new screenshot inspection0 old Dealer; owner visual PENDING; implementation 245591e7e08164ec2f750f359280f9a3d59325b9 normally published on main |
+-| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | NOT STARTED |
++| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | VERIFIED; repairs9/10; full1236/243 and preservation PASS0; publication/conditional final acceptance pending; see M10_T11.md |
+ 
+ The proposed T01..T11 order is retained: the existing controller already provides deterministic command boundaries, and the PA1 dealer/portrait components can be prepared before the event feed. T04 tests poses using fixtures; real event integration depends on T05/T06, with reveal/settlement completed in T08/T09. Reduced-motion safety is required in every motion task; T10 supplies final replay/preference coverage, not first accessibility support.
+ 
+diff --git a/docs/STATE.md b/docs/STATE.md
+index e9d20f9..ecf1fca 100644
+--- a/docs/STATE.md
++++ b/docs/STATE.md
+@@ -1,3 +1,17 @@
++## M10-T11 current technical truth — 2026-10-06 15:49:29 +08:00
++
++M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
++
++Latest verification: [native receipts](M10_T11_EVIDENCE/gate-20261006-150313/receipts.json), [archival repair](M10_T11_EVIDENCE/gate-20261006-150313/repair7-restoration.json), [review](M10_T11.md). Original final wrapper exit1 retained; isolated post-run restoration PASS0. Scope/source and exact publication checks follow. Recommended GPT-6.1 Sol Max/highest supported; actual selected runtime NOT VERIFIED.
++
++## M10-T11 final frozen verification in progress — 2026-10-06 15:04:56 +08:00
++
++Fresh independent review; repairs6/10, no exceptional authorization. HIGH-01 guard repaired with exact approved generic hashes; HIGH-02 cold native initial-deal budget repaired by separating initial80ms from unchanged action/Dealer110ms. Only two product lines, one guard repair and three native performance regressions. Affected63/3 and fixed native controls/nine rounds/three native200percent zoom scenarios/91text+10focus contrasts PASS0. LOW-02 new cleanup oracle corrected for legitimate SESSION_RESET; non-Audit228 baseline restored, prior FAIL retained. REAL BACKGROUND-TAB AUTOMATION NOT AVAILABLE (BLOCKED), reliable T10 synthetic authority/lifecycle equivalent PASS; user section21 permits this disclosed limitation. Final full100/1236 and243 Chromium/preservation/assets/unified gate IN PROGRESS against frozen repair5 source. All previous failures/failed hypotheses preserved in [T11 record](M10_T11.md). Owner acceptances as supplied in that record; no new human T01/timing acceptance invented. M10 NOT ACCEPTED pending full gate/visual/publication parity. DEPLOYMENT NOT RUN.
++
++## M10-T11 fresh independent review in progress — 2026-10-06 14:04:50 +08:00
++
++Expected clean main/e7ceea652dd74ef079d933922668c782304dc31f baseline and live remote parity independently established. [Review contract and first failure](M10_T11.md). M10A ACCEPTED/CLOSED; T02/T03/T06/T07/T08/T09 human visual ACCEPTED, T10 human ACCEPTED and PRE-T11 cleanup human ACCEPTED by the owner's current task. Historical pending/rejected records remain unchanged. First full Vitest1235/1236 FAIL1 identified HIGH-01: three approved committed generic assets omitted from M10-G06's historical allowlist. Bounded test-only repair1/10 pins all three exact approved hashes and retains every other protected empty-diff/historical assertion. Affected14 and fresh full1236 PASS/checked0; complete Chromium/preservation/assets/unified and independent visual/background/zoom review IN PROGRESS. No product/domain/assets/dependencies change. M10 NOT ACCEPTED pending the complete gate; deployment NOT RUN.
++
+ ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
+ 
+ Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**

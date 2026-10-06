@@ -1,0 +1,7 @@
+{
+  "scope": "Includes immutable native CLI output and preserved failure contexts; exact bytes retained. Authored scoped check follows.",
+  "status": "FAIL",
+  "command": "git -c core.whitespace=cr-at-eol diff --cached --check",
+  "exitCode": 2,
+  "at": "2026-10-06 15:53:29 +08:00"
+}

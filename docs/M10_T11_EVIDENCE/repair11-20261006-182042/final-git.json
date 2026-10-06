@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-06 18:56:16 +08:00",
+  "branch": "main",
+  "reviewClosureCommit": "NOT RUN",
+  "head": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "trackingHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "liveRemoteHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+  "liveRemoteRead": {
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "localEqualsTracking": true,
+  "localEqualsLive": true,
+  "ahead": 0,
+  "behind": 0,
+  "workingTree": "DIRTY",
+  "untrackedFiles": 611,
+  "untrackedCountMethod": "git ls-files --others --exclude-standard -z; actual files, not collapsed directory rows",
+  "push": "NOT RUN",
+  "deployment": "NOT RUN",
+  "scope": "Read-only final Git snapshot after failed gate; no add/commit/push/fetch/reset/cleanup"
+}

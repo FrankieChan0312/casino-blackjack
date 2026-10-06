@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T11:58:58.684Z",
+  "finish": "2026-10-06T12:01:32.921Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify-preservation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\H-preservation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

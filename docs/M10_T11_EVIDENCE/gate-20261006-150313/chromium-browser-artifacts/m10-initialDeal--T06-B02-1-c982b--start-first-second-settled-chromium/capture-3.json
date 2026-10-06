@@ -1,0 +1,80 @@
+{
+  "before": {
+    "arrivals": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1"
+    ],
+    "flights": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1",
+      "dealer:1"
+    ],
+    "duplicate": false,
+    "overlap": false,
+    "started": 566.1000001430511,
+    "finished": 0,
+    "paused": true,
+    "checkpoints": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1",
+      "dealer:1"
+    ],
+    "interruptions": [],
+    "pauseStates": [
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ]
+    ]
+  },
+  "after": {
+    "arrivals": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1"
+    ],
+    "flights": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1",
+      "dealer:1"
+    ],
+    "duplicate": false,
+    "overlap": false,
+    "started": 566.1000001430511,
+    "finished": 0,
+    "paused": true,
+    "checkpoints": [
+      "round-1/seat-4:0",
+      "dealer:0",
+      "round-1/seat-4:1",
+      "dealer:1"
+    ],
+    "interruptions": [],
+    "pauseStates": [
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ],
+      [
+        "paused"
+      ]
+    ]
+  }
+}

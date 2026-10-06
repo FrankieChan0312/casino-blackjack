@@ -1,0 +1,47 @@
+$ErrorActionPreference='Stop'
+Set-StrictMode -Version Latest
+$repo=(Get-Location).Path
+$dir='docs/M10_T11_EVIDENCE/repair11-20261006-182042'
+$backup='.git/m10-t11-repair11-verify-backup'
+$outputs=@(git ls-files docs/images docs/M10_T01_EVIDENCE docs/M10_T06_EVIDENCE/screenshots docs/M10_T06_EVIDENCE/reduced-seven-settled.png | Where-Object {$_ -match '\.(png|json)$'})
+if($LASTEXITCODE -ne 0 -or $outputs.Count -ne 320){throw 'Historical output inventory changed'}
+$freeze=Get-Content docs/M10_T11_EVIDENCE/gate-20261006-150313/executable-freeze.json -Raw | ConvertFrom-Json
+$originals=@{}
+foreach($path in $outputs){
+  $originals[$path]=[IO.File]::ReadAllBytes((Join-Path $repo $path))
+  $target=Join-Path $backup $path
+  New-Item -ItemType Directory -Path (Split-Path $target) -Force | Out-Null
+  [IO.File]::WriteAllBytes((Join-Path $repo $target),$originals[$path])
+}
+foreach($item in $freeze.PSObject.Properties){if((Get-FileHash -LiteralPath $item.Name -Algorithm SHA256).Hash -ne $item.Value){throw "Incoming frozen input changed:$($item.Name)"}}
+$start=Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'
+Write-Output "$start START unchanged scripts/verify.ps1 (full100/1236 +243 Chromium +independent preservation)"
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1 > "$dir/verify.txt" 2>&1
+$code=$LASTEXITCODE
+$finish=Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'
+@{start=$start;finish=$finish;command='powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1';status=if($code -eq 0){'PASS'}else{'FAIL'};exitCode=$code;scope='Unchanged unified entry point: all units/e2e plus independent accepted preservation; no opt-out/retry/configuration changes'} | ConvertTo-Json | Set-Content "$dir/verify-receipt.json" -Encoding UTF8
+Write-Output "$finish native verify exit $code persisted; capture archival starts"
+if(Test-Path test-results){Copy-Item -LiteralPath test-results -Destination "$dir/verify-browser-artifacts" -Recurse}
+$restored=@()
+foreach($path in $outputs){
+  $target=[IO.Path]::GetFullPath((Join-Path $repo $path))
+  $expected=(Get-FileHash -LiteralPath (Join-Path $backup $path) -Algorithm SHA256).Hash
+  $actual=(Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash
+  if($expected -ne $actual){
+    $archive=Join-Path $dir "verify-generated/$path"
+    New-Item -ItemType Directory -Path (Split-Path $archive) -Force | Out-Null
+    Copy-Item -LiteralPath $target -Destination $archive
+    $replacement=[IO.Path]::GetFullPath((Join-Path $backup "replacement/$path"))
+    $displaced=[IO.Path]::GetFullPath((Join-Path $backup "displaced/$path"))
+    foreach($checked in @($target,$replacement,$displaced)){if(-not $checked.StartsWith($repo+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)){throw 'Restoration outside workspace'}}
+    New-Item -ItemType Directory -Path (Split-Path $replacement),(Split-Path $displaced) -Force | Out-Null
+    [IO.File]::WriteAllBytes($replacement,$originals[$path])
+    [IO.File]::Replace($replacement,$target,$displaced)
+  }
+  if((Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash -ne $expected){throw "Historical restore failed:$path"}
+  $restored+=@{path=$path;sha256=$expected;generatedSha256=$actual;restored=$true}
+}
+foreach($item in $freeze.PSObject.Properties){if((Get-FileHash -LiteralPath $item.Name -Algorithm SHA256).Hash -ne $item.Value){throw "Verified frozen input changed:$($item.Name)"}}
+@{at=(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K');status='PASS';historicalOutputs=$outputs.Count;protectedInputs=@($freeze.PSObject.Properties).Count;outputs=$restored} | ConvertTo-Json -Depth 6 | Set-Content "$dir/verify-restoration.json" -Encoding UTF8
+Write-Output "PASS: restored320 historical outputs / protected269 inputs; native verification exit $code"
+exit $code

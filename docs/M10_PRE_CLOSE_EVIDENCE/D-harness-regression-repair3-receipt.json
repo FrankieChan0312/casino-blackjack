@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T11:33:27.044Z",
+  "finish": "2026-10-06T11:33:30.463Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "test",
+    "--",
+    "tests/m10/evidenceLifecycle.test.ts"
+  ],
+  "log": ".git\\evidence-capture\\D-harness-regression-repair3.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true
+}

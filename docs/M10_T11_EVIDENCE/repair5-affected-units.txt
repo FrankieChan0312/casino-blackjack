@@ -1,0 +1,13 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/initialDeal.test.ts tests/m10/presentationEvents.test.ts tests/m10/presentationTimeline.test.ts tests/m10/compatibility.test.ts tests/m10/dealerActions.test.ts tests/m10/playerActions.test.ts tests/m10/tableGeometry.test.tsx
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  7 passed (7)
+      Tests  63 passed (63)
+   Start at  14:53:18
+   Duration  1.82s (import 46%, transform 26%, tests 25%, setup 3%, worker 1%)
+

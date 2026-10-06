@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\casino-blackjack\.git\m10-t11-final-audit.cjs:21
+for(const p of ['README.md','docs/STATE.md','docs/PLAN.md']){const prefix=fs.readFileSync(p,'utf8').slice(0,3500);if(!prefix.includes('1236')||!prefix.includes('243')||!prefix.includes('10/10')||!prefix.includes('DEPLOYMENT NOT RUN'))throw Error(`Missing current truth:${p}`);}
+                                                                                                                                                                                                                                          ^
+
+Error: Missing current truth:README.md
+    at Object.<anonymous> (C:\Users\user\Documents\GitHub\casino-blackjack\.git\m10-t11-final-audit.cjs:21:241)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14)
+    at Object..js (node:internal/modules/cjs/loader:2003:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.19.0

@@ -1,0 +1,18 @@
+const fs = require('node:fs'), path = require('node:path'), zlib = require('node:zlib');
+const cp = require('node:child_process'), assert = require('node:assert/strict');
+const stamp = () => cp.execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+function measure(dir) {
+  const files = fs.readdirSync(dir).filter(name => name.endsWith('.js')).map(name => {
+    const bytes = fs.readFileSync(path.join(dir, name));
+    return { name, bytes: bytes.length, gzip: zlib.gzipSync(bytes).length };
+  });
+  return { files, totalGzip: files.reduce((sum, file) => sum + file.gzip, 0) };
+}
+const baseline = measure('.git/m10-t11-budget-baseline/dist/assets');
+const current = measure('dist/assets');
+assert.equal(baseline.totalGzip, 99361, 'independently rebuilt historical T05 baseline');
+const increase = current.totalGzip - baseline.totalGzip;
+assert.ok(increase <= 60 * 1024, 'AC-M10-011 <=60KiB gzip');
+const result = { at: stamp(), baselineSha: 'c853a7e7e7cc234dc6fad07477d5aab1d0a3035a', node: process.version, method: 'Production build of Git archive baseline using current pinned Node/Vite/React; actual Node gzipSync of every production JS asset; current dist from completed unified verification.', baseline, current, increaseBytes: increase, limitBytes: 61440, status: 'PASS', exitCode: 0 };
+fs.writeFileSync('docs/M10_T11_EVIDENCE/bundle-size.json', JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result));

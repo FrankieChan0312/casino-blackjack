@@ -1,0 +1,19 @@
+{
+  "start": "2026-10-06T11:27:48.444Z",
+  "finish": "2026-10-06T11:28:35.379Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test:e2e",
+    "--",
+    "tests/browser/m10/preClosePerformance.spec.ts"
+  ],
+  "log": ".git\\evidence-capture\\B-performance.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true
+}

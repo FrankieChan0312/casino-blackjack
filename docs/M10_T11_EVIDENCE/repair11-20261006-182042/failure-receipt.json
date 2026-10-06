@@ -1,0 +1,192 @@
+{
+  "at": "2026-10-06 18:54:49 +08:00",
+  "status": "M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11",
+  "normalRepairLimit": 10,
+  "currentRepair": "11/11 — OWNER-AUTHORIZED EXCEPTION",
+  "repair12": "NOT AUTHORIZED / NOT RUN",
+  "documentationFix": {
+    "status": "VERIFIED",
+    "exactPublication": {
+      "validatorSha256": "0dedd1a1c701b401ef6432a4f2e446d08ee6ee2eea871e2acc23e6b02c608f9b",
+      "start": "2026-10-06 18:25:19 +08:00",
+      "historicalOutputRestored": true,
+      "validatorChanged": false,
+      "status": "PASS",
+      "command": "node .git/m10-t11-final-audit.cjs",
+      "finish": "2026-10-06 18:25:23 +08:00",
+      "exitCode": 0
+    },
+    "documentationTests": {
+      "finish": "2026-10-06 18:26:33 +08:00",
+      "exitCode": 0,
+      "status": "PASS",
+      "start": "2026-10-06 18:26:29 +08:00",
+      "command": "npm.cmd test -- tests/m9/documentation.test.ts tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts",
+      "files": 3,
+      "tests": 9
+    },
+    "scope": {
+      "at": "2026-10-06 18:27:13 +08:00",
+      "status": "PASS",
+      "exitCode": 0,
+      "changed": [
+        "README.md",
+        "docs/DEVELOPMENT_LOG.md",
+        "docs/LAB_MANUAL.md",
+        "docs/M10_T11.md",
+        "docs/M10_T11_EVIDENCE/README.md",
+        "docs/M10_T11_EVIDENCE/review.json",
+        "docs/PLAN.md",
+        "docs/STATE.md"
+      ],
+      "unchangedFiles": 14725,
+      "incrementalProductDiff": "EMPTY",
+      "incrementalTestsDiff": "EMPTY",
+      "incrementalAssetsDiff": "EMPTY",
+      "validatorChanged": false,
+      "validatorSha256": "0dedd1a1c701b401ef6432a4f2e446d08ee6ee2eea871e2acc23e6b02c608f9b",
+      "historicalEvidence": "All incoming evidence files outside current review.json/README unchanged; all dated document bodies retained; exactly one current PLAN row updated",
+      "currentRepair": "11/11 — OWNER-AUTHORIZED EXCEPTION",
+      "repair12": "NOT AUTHORIZED / NOT RUN"
+    }
+  },
+  "finalVerification": {
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+    "start": "2026-10-06 18:28:24 +08:00",
+    "status": "BLOCKED",
+    "nativeExitCode": null,
+    "nativeExitStatus": "NOT AVAILABLE",
+    "outerCollector": {
+      "status": "FAIL",
+      "exitCode": 1,
+      "error": "NativeCommandError on redirected web-server NO_COLOR warning",
+      "record": "collector-error.txt"
+    },
+    "completedStages": [
+      {
+        "name": "typecheck",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "lint",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "test:100 files /1236 tests",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "typecheck:domain",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      },
+      {
+        "name": "build/production fixture boundary",
+        "status": "PASS",
+        "exitCode": 0,
+        "evidence": "verify.txt; unchanged entry point checks each stage exit before PASS"
+      }
+    ],
+    "chromium": {
+      "status": "FAIL",
+      "recordedFailedTests": [
+        "a88523d701a126864e96-332a24cb1982358e0c53",
+        "a88523d701a126864e96-f0fc257c5178aff256ce"
+      ],
+      "metrics": [
+        {
+          "width": 1280,
+          "height": 900,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2861.0999999046326,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 1577.4000000953674,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "PASS",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        },
+        {
+          "width": 320,
+          "height": 720,
+          "browser": "153.0.8010.12",
+          "elapsedMs": 2891.600000143051,
+          "budgetMs": 2500,
+          "destinations": 16,
+          "status": "FAIL",
+          "record": "docs/M10_T11_EVIDENCE/repair11-20261006-182042/failed-browser-artifacts/m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium/native-initial-timing.json"
+        }
+      ],
+      "completeSuiteSummary": "NOT VERIFIED; stdout/exit receipt missing; do not infer241/243PASS"
+    },
+    "independentPreservation": {
+      "status": "BLOCKED",
+      "reason": "No captured complete stdout or native receipt from the required rerun"
+    },
+    "retry": "NOT RUN",
+    "collectorRepair": "NOT RUN",
+    "records": [
+      "verify.txt",
+      "verification-wrapper.ps1.txt",
+      "failed-browser-artifacts/.last-run.json"
+    ]
+  },
+  "cleanup": {
+    "status": "PASS",
+    "exitCode": 0,
+    "at": "2026-10-06 18:50:47 +08:00",
+    "historicalOutputsRestored": 320,
+    "protectedIncomingInputs": 269,
+    "generatedCompatibilityFilesArchived": 57,
+    "scope": "Evidence preservation/authorized test-output cleanup only; no collector or product repair and no verification rerun",
+    "record": "failure-cleanup.json"
+  },
+  "acceptance": "M10: NOT ACCEPTED",
+  "reviewClosureCommit": "NOT RUN",
+  "push": "NOT RUN",
+  "deployment": "NOT RUN",
+  "nextAction": "STOP; owner must decide any future scope. Repair12 is not authorized.",
+  "failedEvidencePrivacy": {
+    "status": "BLOCKED",
+    "exitCode": 1,
+    "record": "repair11-20261006-182042/failure-privacy-receipt.json",
+    "retry": "NOT RUN"
+  },
+  "finalGit": {
+    "at": "2026-10-06 18:56:16 +08:00",
+    "branch": "main",
+    "reviewClosureCommit": "NOT RUN",
+    "head": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "trackingHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "liveRemoteHead": "e7ceea652dd74ef079d933922668c782304dc31f",
+    "liveRemoteRead": {
+      "status": "PASS",
+      "exitCode": 0
+    },
+    "localEqualsTracking": true,
+    "localEqualsLive": true,
+    "ahead": 0,
+    "behind": 0,
+    "workingTree": "DIRTY",
+    "untrackedFiles": 611,
+    "untrackedCountMethod": "git ls-files --others --exclude-standard -z; actual files, not collapsed directory rows",
+    "push": "NOT RUN",
+    "deployment": "NOT RUN",
+    "scope": "Read-only final Git snapshot after failed gate; no add/commit/push/fetch/reset/cleanup"
+  }
+}

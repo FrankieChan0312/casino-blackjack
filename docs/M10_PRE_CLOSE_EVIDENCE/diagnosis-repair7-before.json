@@ -1,0 +1,1396 @@
+{
+  "start": "2026-10-06 20:47:58 +08:00",
+  "mode": "FULL_MOTION; native channel chromium, headless:true, reducedMotion:no-preference",
+  "method": "Fixed1280/768/320 cold and warm fresh page, six samples, passive WAAPI/MutationObserver/LongTask recording, no motion changes, no retries",
+  "samples": [
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "cold",
+      "browser": "153.0.8010.12",
+      "elapsed": 1701.7000000476837,
+      "status": "PASS",
+      "metric": {
+        "start": 20600.5,
+        "end": 22302.200000047684,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 20600.5,
+            "removed": 20663.400000095367
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 20663.400000095367,
+            "removed": 20750.799999952316
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 20750.799999952316,
+            "removed": 20837.900000095367
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 20837.900000095367,
+            "removed": 20926.900000095367
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 20926.900000095367,
+            "removed": 21015.200000047684
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 21015.200000047684,
+            "removed": 21103.60000014305
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 21103.60000014305,
+            "removed": 21190.900000095367
+          },
+          {
+            "target": "dealer:0",
+            "at": 21190.900000095367,
+            "removed": 21279.299999952316
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 21279.299999952316,
+            "removed": 21366.5
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 21366.5,
+            "removed": 21773.799999952316
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 21773.799999952316,
+            "removed": 21861.60000014305
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 21861.60000014305,
+            "removed": 21949.400000095367
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 21949.400000095367,
+            "removed": 22038.200000047684
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 22038.200000047684,
+            "removed": 22127.5
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 22127.5,
+            "removed": 22198.10000014305
+          },
+          {
+            "target": "dealer:1",
+            "at": 22198.200000047684,
+            "removed": 22286.5
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 20584.900000095367,
+            "duration": 60,
+            "ready": 20609.60000014305,
+            "nativeFinished": 20662.10000014305,
+            "finishEvent": 20662.10000014305
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 20663.200000047684,
+            "duration": 60,
+            "ready": 20696.400000095367,
+            "nativeFinished": 20749.400000095367,
+            "finishEvent": 20749.400000095367
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 20750.60000014305,
+            "duration": 60,
+            "ready": 20784.299999952316,
+            "nativeFinished": 20837.10000014305,
+            "finishEvent": 20837.10000014305
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 20837.700000047684,
+            "duration": 60,
+            "ready": 20873.10000014305,
+            "nativeFinished": 20925.299999952316,
+            "finishEvent": 20925.299999952316
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 20926.700000047684,
+            "duration": 60,
+            "ready": 20961.10000014305,
+            "nativeFinished": 21013.5,
+            "finishEvent": 21013.5
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 21015,
+            "duration": 60,
+            "ready": 21048.400000095367,
+            "nativeFinished": 21101,
+            "finishEvent": 21101.10000014305
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 21103.299999952316,
+            "duration": 60,
+            "ready": 21135.900000095367,
+            "nativeFinished": 21189.299999952316,
+            "finishEvent": 21189.400000095367
+          },
+          {
+            "target": "dealer:0",
+            "created": 21190.700000047684,
+            "duration": 60,
+            "ready": 21224.200000047684,
+            "nativeFinished": 21277.10000014305,
+            "finishEvent": 21277.10000014305
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 21279.10000014305,
+            "duration": 60,
+            "ready": 21312.200000047684,
+            "nativeFinished": 21365.10000014305,
+            "finishEvent": 21365.10000014305
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 21366.400000095367,
+            "duration": 60,
+            "ready": 21400.299999952316,
+            "nativeFinished": 21772,
+            "finishEvent": 21772
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 21773.700000047684,
+            "duration": 60,
+            "ready": 21807.10000014305,
+            "nativeFinished": 21860.299999952316,
+            "finishEvent": 21860.299999952316
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 21861.400000095367,
+            "duration": 60,
+            "ready": 21895.200000047684,
+            "nativeFinished": 21947.900000095367,
+            "finishEvent": 21948
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 21949.299999952316,
+            "duration": 60,
+            "ready": 21984.200000047684,
+            "nativeFinished": 22037.10000014305,
+            "finishEvent": 22037.200000047684
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 22038.10000014305,
+            "duration": 60,
+            "ready": 22072.900000095367,
+            "nativeFinished": 22126.700000047684,
+            "finishEvent": 22126.700000047684
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 22127.400000095367,
+            "duration": 60,
+            "ready": 22144.5,
+            "nativeFinished": 22197.200000047684,
+            "finishEvent": 22197.200000047684
+          },
+          {
+            "target": "dealer:1",
+            "created": 22198,
+            "duration": 60,
+            "ready": 22232.60000014305,
+            "nativeFinished": 22285.700000047684,
+            "finishEvent": 22285.700000047684
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 20500.400000095367,
+            "duration": 101
+          }
+        ],
+        "hidden": false
+      }
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "temperature": "warm",
+      "browser": "153.0.8010.12",
+      "elapsed": 1768.2000000476837,
+      "status": "PASS",
+      "metric": {
+        "start": 608.7999999523163,
+        "end": 2377,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 608.7999999523163,
+            "removed": 678.7999999523163
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 678.7999999523163,
+            "removed": 749.7000000476837
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 749.7000000476837,
+            "removed": 821.0999999046326
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 821.0999999046326,
+            "removed": 909.5
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 909.5,
+            "removed": 998.2999999523163
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 998.2999999523163,
+            "removed": 1068.3999998569489
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 1068.3999998569489,
+            "removed": 1602.7999999523163
+          },
+          {
+            "target": "dealer:0",
+            "at": 1602.7999999523163,
+            "removed": 1688.7999999523163
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 1688.7999999523163,
+            "removed": 1777.3999998569489
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 1777.3999998569489,
+            "removed": 1864.5999999046326
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 1864.5999999046326,
+            "removed": 1936.5999999046326
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 1936.5999999046326,
+            "removed": 2025
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 2025,
+            "removed": 2112.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 2112.7999999523163,
+            "removed": 2185.399999856949
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 2185.399999856949,
+            "removed": 2275.399999856949
+          },
+          {
+            "target": "dealer:1",
+            "at": 2275.399999856949,
+            "removed": 2365.0999999046326
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 594.3999998569489,
+            "duration": 60,
+            "ready": 631.2000000476837,
+            "nativeFinished": 677.5999999046326,
+            "finishEvent": 677.5999999046326
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 678.5999999046326,
+            "duration": 60,
+            "ready": 694.7999999523163,
+            "nativeFinished": 748.7999999523163,
+            "finishEvent": 748.7999999523163
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 749.5999999046326,
+            "duration": 60,
+            "ready": 766.5999999046326,
+            "nativeFinished": 820.2000000476837,
+            "finishEvent": 820.2000000476837
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 820.8999998569489,
+            "duration": 60,
+            "ready": 860.5,
+            "nativeFinished": 908.5,
+            "finishEvent": 908.5
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 909.3999998569489,
+            "duration": 60,
+            "ready": 944.5999999046326,
+            "nativeFinished": 997.5,
+            "finishEvent": 997.5
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 998.2000000476837,
+            "duration": 60,
+            "ready": 1015.0999999046326,
+            "nativeFinished": 1067.2999999523163,
+            "finishEvent": 1067.2999999523163
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 1068.2999999523163,
+            "duration": 60,
+            "ready": 1084.7000000476837,
+            "nativeFinished": 1601.2000000476837,
+            "finishEvent": 1601.2000000476837
+          },
+          {
+            "target": "dealer:0",
+            "created": 1602.5999999046326,
+            "duration": 60,
+            "ready": 1634.7000000476837,
+            "nativeFinished": 1687.0999999046326,
+            "finishEvent": 1687.0999999046326
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 1688.5999999046326,
+            "duration": 60,
+            "ready": 1722.5999999046326,
+            "nativeFinished": 1775.7000000476837,
+            "finishEvent": 1775.7999999523163
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 1777.2000000476837,
+            "duration": 60,
+            "ready": 1811.2999999523163,
+            "nativeFinished": 1863.7999999523163,
+            "finishEvent": 1863.7999999523163
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 1864.5,
+            "duration": 60,
+            "ready": 1881.8999998569489,
+            "nativeFinished": 1935.3999998569489,
+            "finishEvent": 1935.3999998569489
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 1936.5999999046326,
+            "duration": 60,
+            "ready": 1970.7000000476837,
+            "nativeFinished": 2024,
+            "finishEvent": 2024
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 2024.8999998569489,
+            "duration": 60,
+            "ready": 2059.0999999046326,
+            "nativeFinished": 2112.2000000476837,
+            "finishEvent": 2112.2000000476837
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 2112.7999999523163,
+            "duration": 60,
+            "ready": 2130.5,
+            "nativeFinished": 2184.7000000476837,
+            "finishEvent": 2184.7000000476837
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 2185.2999999523163,
+            "duration": 60,
+            "ready": 2220.7000000476837,
+            "nativeFinished": 2274,
+            "finishEvent": 2274
+          },
+          {
+            "target": "dealer:1",
+            "created": 2275.2000000476837,
+            "duration": 60,
+            "ready": 2309.2000000476837,
+            "nativeFinished": 2364,
+            "finishEvent": 2364
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 541.3999998569489,
+            "duration": 68
+          }
+        ],
+        "hidden": false
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "temperature": "cold",
+      "browser": "153.0.8010.12",
+      "elapsed": 2156.7999999523163,
+      "status": "PASS",
+      "metric": {
+        "start": 927.7999999523163,
+        "end": 3084.5999999046326,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 927.8999998569489,
+            "removed": 1803.7999999523163
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 1803.7999999523163,
+            "removed": 1880.5
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 1880.5999999046326,
+            "removed": 1969
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 1969,
+            "removed": 2039.7999999523163
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 2039.7999999523163,
+            "removed": 2127.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 2127.7999999523163,
+            "removed": 2199.0999999046326
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 2199.0999999046326,
+            "removed": 2288.5999999046326
+          },
+          {
+            "target": "dealer:0",
+            "at": 2288.5999999046326,
+            "removed": 2377.5
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 2377.5,
+            "removed": 2466.5
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 2466.5,
+            "removed": 2552.7999999523163
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 2552.7999999523163,
+            "removed": 2622.699999809265
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 2622.699999809265,
+            "removed": 2711.899999856949
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 2711.899999856949,
+            "removed": 2800.0999999046326
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 2800.0999999046326,
+            "removed": 2887.199999809265
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 2887.199999809265,
+            "removed": 2978.5
+          },
+          {
+            "target": "dealer:1",
+            "at": 2978.5,
+            "removed": 3065.2999999523163
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 911.2999999523163,
+            "duration": 60,
+            "ready": 1721,
+            "nativeFinished": 1802.6999998092651,
+            "finishEvent": 1802.7999999523163
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 1803.5999999046326,
+            "duration": 60,
+            "ready": 1826.7999999523163,
+            "nativeFinished": 1879.3999998569489,
+            "finishEvent": 1879.3999998569489
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 1880.5,
+            "duration": 60,
+            "ready": 1914.8999998569489,
+            "nativeFinished": 1968.1999998092651,
+            "finishEvent": 1968.1999998092651
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 1968.8999998569489,
+            "duration": 60,
+            "ready": 1985.5999999046326,
+            "nativeFinished": 2038.2999999523163,
+            "finishEvent": 2038.2999999523163
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 2039.5999999046326,
+            "duration": 60,
+            "ready": 2074.2999999523163,
+            "nativeFinished": 2126.699999809265,
+            "finishEvent": 2126.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 2127.699999809265,
+            "duration": 60,
+            "ready": 2144.7999999523163,
+            "nativeFinished": 2197.5999999046326,
+            "finishEvent": 2197.5999999046326
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 2198.899999856949,
+            "duration": 60,
+            "ready": 2233.699999809265,
+            "nativeFinished": 2287,
+            "finishEvent": 2287
+          },
+          {
+            "target": "dealer:0",
+            "created": 2288.399999856949,
+            "duration": 60,
+            "ready": 2322.199999809265,
+            "nativeFinished": 2375.7999999523163,
+            "finishEvent": 2375.7999999523163
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 2377.399999856949,
+            "duration": 60,
+            "ready": 2411.2999999523163,
+            "nativeFinished": 2465,
+            "finishEvent": 2465
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 2466.399999856949,
+            "duration": 60,
+            "ready": 2500.199999809265,
+            "nativeFinished": 2552.0999999046326,
+            "finishEvent": 2552.0999999046326
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 2552.7999999523163,
+            "duration": 60,
+            "ready": 2569.5999999046326,
+            "nativeFinished": 2622,
+            "finishEvent": 2622
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 2622.699999809265,
+            "duration": 60,
+            "ready": 2657.2999999523163,
+            "nativeFinished": 2710.7999999523163,
+            "finishEvent": 2710.7999999523163
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 2711.7999999523163,
+            "duration": 60,
+            "ready": 2745.5,
+            "nativeFinished": 2798.7999999523163,
+            "finishEvent": 2798.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 2800,
+            "duration": 60,
+            "ready": 2833.2999999523163,
+            "nativeFinished": 2885.7999999523163,
+            "finishEvent": 2885.7999999523163
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 2887,
+            "duration": 60,
+            "ready": 2922,
+            "nativeFinished": 2975.199999809265,
+            "finishEvent": 2975.199999809265
+          },
+          {
+            "target": "dealer:1",
+            "created": 2978.2999999523163,
+            "duration": 60,
+            "ready": 3010.399999856949,
+            "nativeFinished": 3064.2999999523163,
+            "finishEvent": 3064.2999999523163
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 843,
+            "duration": 85
+          }
+        ],
+        "hidden": false
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "temperature": "warm",
+      "browser": "153.0.8010.12",
+      "elapsed": 1308.9000000953674,
+      "status": "PASS",
+      "metric": {
+        "start": 602,
+        "end": 1910.9000000953674,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 602,
+            "removed": 676.5
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 676.5,
+            "removed": 746.9000000953674
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 746.9000000953674,
+            "removed": 834.9000000953674
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 834.9000000953674,
+            "removed": 923.2000000476837
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 923.2000000476837,
+            "removed": 994.2999999523163
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 994.2999999523163,
+            "removed": 1083.7000000476837
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 1083.7000000476837,
+            "removed": 1172.0999999046326
+          },
+          {
+            "target": "dealer:0",
+            "at": 1172.0999999046326,
+            "removed": 1243.5
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 1243.5,
+            "removed": 1314.5
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 1314.5,
+            "removed": 1384.4000000953674
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 1384.4000000953674,
+            "removed": 1456.9000000953674
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 1456.9000000953674,
+            "removed": 1545.2000000476837
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 1545.2000000476837,
+            "removed": 1633.5999999046326
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 1633.5999999046326,
+            "removed": 1721.7000000476837
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 1721.7000000476837,
+            "removed": 1810.7000000476837
+          },
+          {
+            "target": "dealer:1",
+            "at": 1810.7000000476837,
+            "removed": 1898.9000000953674
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 587.2999999523163,
+            "duration": 60,
+            "ready": 623.9000000953674,
+            "nativeFinished": 675.5,
+            "finishEvent": 675.5999999046326
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 676.4000000953674,
+            "duration": 60,
+            "ready": 692.4000000953674,
+            "nativeFinished": 745.5999999046326,
+            "finishEvent": 745.5999999046326
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 746.7999999523163,
+            "duration": 60,
+            "ready": 780.5,
+            "nativeFinished": 834,
+            "finishEvent": 834
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 834.7999999523163,
+            "duration": 60,
+            "ready": 869.5,
+            "nativeFinished": 922.2000000476837,
+            "finishEvent": 922.2000000476837
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 923,
+            "duration": 60,
+            "ready": 940.7000000476837,
+            "nativeFinished": 993.0999999046326,
+            "finishEvent": 993.0999999046326
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 994.2000000476837,
+            "duration": 60,
+            "ready": 1028.5999999046326,
+            "nativeFinished": 1082.5999999046326,
+            "finishEvent": 1082.5999999046326
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 1083.5,
+            "duration": 60,
+            "ready": 1117.7000000476837,
+            "nativeFinished": 1171.0999999046326,
+            "finishEvent": 1171.2000000476837
+          },
+          {
+            "target": "dealer:0",
+            "created": 1172,
+            "duration": 60,
+            "ready": 1189.0999999046326,
+            "nativeFinished": 1242.5,
+            "finishEvent": 1242.5
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 1243.2999999523163,
+            "duration": 60,
+            "ready": 1260.5999999046326,
+            "nativeFinished": 1313.2999999523163,
+            "finishEvent": 1313.4000000953674
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 1314.4000000953674,
+            "duration": 60,
+            "ready": 1330.5,
+            "nativeFinished": 1383.5,
+            "finishEvent": 1383.5
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 1384.2999999523163,
+            "duration": 60,
+            "ready": 1401.0999999046326,
+            "nativeFinished": 1455.7000000476837,
+            "finishEvent": 1455.7000000476837
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 1456.7000000476837,
+            "duration": 60,
+            "ready": 1490.5999999046326,
+            "nativeFinished": 1544,
+            "finishEvent": 1544
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 1545.2000000476837,
+            "duration": 60,
+            "ready": 1579.2000000476837,
+            "nativeFinished": 1632.5,
+            "finishEvent": 1632.5
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 1633.5,
+            "duration": 60,
+            "ready": 1667.5999999046326,
+            "nativeFinished": 1720.5,
+            "finishEvent": 1720.5
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 1721.5999999046326,
+            "duration": 60,
+            "ready": 1755.4000000953674,
+            "nativeFinished": 1809.0999999046326,
+            "finishEvent": 1809.0999999046326
+          },
+          {
+            "target": "dealer:1",
+            "created": 1810.5,
+            "duration": 60,
+            "ready": 1843.7999999523163,
+            "nativeFinished": 1897.7000000476837,
+            "finishEvent": 1897.7000000476837
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 525.0999999046326,
+            "duration": 77
+          }
+        ],
+        "hidden": false
+      }
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "cold",
+      "browser": "153.0.8010.12",
+      "elapsed": 2008.2999999523163,
+      "status": "PASS",
+      "metric": {
+        "start": 919.2000000476837,
+        "end": 2927.5,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 919.2000000476837,
+            "removed": 1689
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 1689.1000001430511,
+            "removed": 1761.4000000953674
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 1761.4000000953674,
+            "removed": 1831.5
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 1831.5,
+            "removed": 1920
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 1920,
+            "removed": 2008.6000001430511
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 2008.6000001430511,
+            "removed": 2080.600000143051
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 2080.600000143051,
+            "removed": 2151.600000143051
+          },
+          {
+            "target": "dealer:0",
+            "at": 2151.600000143051,
+            "removed": 2238.4000000953674
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 2238.4000000953674,
+            "removed": 2308.2000000476837
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 2308.2000000476837,
+            "removed": 2398.5
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 2398.600000143051,
+            "removed": 2488.100000143051
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 2488.100000143051,
+            "removed": 2575.5
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 2575.5,
+            "removed": 2646.5
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 2646.5,
+            "removed": 2734.600000143051
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 2734.7000000476837,
+            "removed": 2823.9000000953674
+          },
+          {
+            "target": "dealer:1",
+            "at": 2823.9000000953674,
+            "removed": 2912.9000000953674
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 902.9000000953674,
+            "duration": 60,
+            "ready": 1688,
+            "nativeFinished": 1688,
+            "finishEvent": 1688
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 1688.7999999523163,
+            "duration": 60,
+            "ready": 1731.5,
+            "nativeFinished": 1760.5,
+            "finishEvent": 1760.5
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 1761.2000000476837,
+            "duration": 60,
+            "ready": 1777.7999999523163,
+            "nativeFinished": 1830.7000000476837,
+            "finishEvent": 1830.7000000476837
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 1831.4000000953674,
+            "duration": 60,
+            "ready": 1865.7000000476837,
+            "nativeFinished": 1918.7000000476837,
+            "finishEvent": 1918.7000000476837
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 1919.7999999523163,
+            "duration": 60,
+            "ready": 1955.1000001430511,
+            "nativeFinished": 2007.6000001430511,
+            "finishEvent": 2007.6000001430511
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 2008.5,
+            "duration": 60,
+            "ready": 2025.6000001430511,
+            "nativeFinished": 2079.5,
+            "finishEvent": 2079.5
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 2080.5,
+            "duration": 60,
+            "ready": 2096.7000000476837,
+            "nativeFinished": 2149.9000000953674,
+            "finishEvent": 2149.9000000953674
+          },
+          {
+            "target": "dealer:0",
+            "created": 2151.2999999523163,
+            "duration": 60,
+            "ready": 2184.2999999523163,
+            "nativeFinished": 2237.2000000476837,
+            "finishEvent": 2237.2999999523163
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 2238.4000000953674,
+            "duration": 60,
+            "ready": 2254.9000000953674,
+            "nativeFinished": 2307.4000000953674,
+            "finishEvent": 2307.4000000953674
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 2308.100000143051,
+            "duration": 60,
+            "ready": 2344.100000143051,
+            "nativeFinished": 2397.2000000476837,
+            "finishEvent": 2397.2000000476837
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 2398.2999999523163,
+            "duration": 60,
+            "ready": 2433.100000143051,
+            "nativeFinished": 2486.7999999523163,
+            "finishEvent": 2486.9000000953674
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 2488,
+            "duration": 60,
+            "ready": 2522.100000143051,
+            "nativeFinished": 2574.2999999523163,
+            "finishEvent": 2574.2999999523163
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 2575.4000000953674,
+            "duration": 60,
+            "ready": 2592.5,
+            "nativeFinished": 2645.2000000476837,
+            "finishEvent": 2645.2000000476837
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 2646.4000000953674,
+            "duration": 60,
+            "ready": 2681,
+            "nativeFinished": 2733.9000000953674,
+            "finishEvent": 2733.9000000953674
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 2734.600000143051,
+            "duration": 60,
+            "ready": 2770,
+            "nativeFinished": 2823.2000000476837,
+            "finishEvent": 2823.2000000476837
+          },
+          {
+            "target": "dealer:1",
+            "created": 2823.7999999523163,
+            "duration": 60,
+            "ready": 2859,
+            "nativeFinished": 2912.2000000476837,
+            "finishEvent": 2912.2000000476837
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 839,
+            "duration": 80
+          }
+        ],
+        "hidden": false
+      }
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "temperature": "warm",
+      "browser": "153.0.8010.12",
+      "elapsed": 1325.8999998569489,
+      "status": "PASS",
+      "metric": {
+        "start": 677.7999999523163,
+        "end": 2003.6999998092651,
+        "insertions": [
+          {
+            "target": "round-1/seat-1:0",
+            "at": 677.7999999523163,
+            "removed": 753.2999999523163
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "at": 753.2999999523163,
+            "removed": 842.0999999046326
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "at": 842.0999999046326,
+            "removed": 929.5999999046326
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "at": 929.5999999046326,
+            "removed": 1001.0999999046326
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "at": 1001.0999999046326,
+            "removed": 1089.0999999046326
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "at": 1089.0999999046326,
+            "removed": 1177.0999999046326
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "at": 1177.0999999046326,
+            "removed": 1248.5
+          },
+          {
+            "target": "dealer:0",
+            "at": 1248.5,
+            "removed": 1336.3999998569489
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "at": 1336.3999998569489,
+            "removed": 1406.8999998569489
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "at": 1406.8999998569489,
+            "removed": 1477.5999999046326
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "at": 1477.5999999046326,
+            "removed": 1565.2999999523163
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "at": 1565.2999999523163,
+            "removed": 1636.5999999046326
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "at": 1636.5999999046326,
+            "removed": 1724.8999998569489
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "at": 1724.8999998569489,
+            "removed": 1812.8999998569489
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "at": 1813,
+            "removed": 1900.7999999523163
+          },
+          {
+            "target": "dealer:1",
+            "at": 1900.7999999523163,
+            "removed": 1989.5999999046326
+          }
+        ],
+        "animations": [
+          {
+            "target": "round-1/seat-1:0",
+            "created": 663,
+            "duration": 60,
+            "ready": 700,
+            "nativeFinished": 751.7999999523163,
+            "finishEvent": 752
+          },
+          {
+            "target": "round-1/seat-2:0",
+            "created": 753.0999999046326,
+            "duration": 60,
+            "ready": 788.0999999046326,
+            "nativeFinished": 841.1999998092651,
+            "finishEvent": 841.1999998092651
+          },
+          {
+            "target": "round-1/seat-3:0",
+            "created": 842,
+            "duration": 60,
+            "ready": 876.1999998092651,
+            "nativeFinished": 928.6999998092651,
+            "finishEvent": 928.7999999523163
+          },
+          {
+            "target": "round-1/seat-4:0",
+            "created": 929.5,
+            "duration": 60,
+            "ready": 946.2999999523163,
+            "nativeFinished": 999.5,
+            "finishEvent": 999.5
+          },
+          {
+            "target": "round-1/seat-5:0",
+            "created": 1000.7999999523163,
+            "duration": 60,
+            "ready": 1034.2999999523163,
+            "nativeFinished": 1087.7999999523163,
+            "finishEvent": 1087.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:0",
+            "created": 1089,
+            "duration": 60,
+            "ready": 1123.1999998092651,
+            "nativeFinished": 1176.1999998092651,
+            "finishEvent": 1176.2999999523163
+          },
+          {
+            "target": "round-1/seat-7:0",
+            "created": 1177,
+            "duration": 60,
+            "ready": 1194.5999999046326,
+            "nativeFinished": 1247.2999999523163,
+            "finishEvent": 1247.2999999523163
+          },
+          {
+            "target": "dealer:0",
+            "created": 1248.3999998569489,
+            "duration": 60,
+            "ready": 1282.6999998092651,
+            "nativeFinished": 1335.5999999046326,
+            "finishEvent": 1335.5999999046326
+          },
+          {
+            "target": "round-1/seat-1:1",
+            "created": 1336.2999999523163,
+            "duration": 60,
+            "ready": 1353.5,
+            "nativeFinished": 1406.0999999046326,
+            "finishEvent": 1406.0999999046326
+          },
+          {
+            "target": "round-1/seat-2:1",
+            "created": 1406.7999999523163,
+            "duration": 60,
+            "ready": 1423.7999999523163,
+            "nativeFinished": 1476.2999999523163,
+            "finishEvent": 1476.2999999523163
+          },
+          {
+            "target": "round-1/seat-3:1",
+            "created": 1477.5,
+            "duration": 60,
+            "ready": 1512,
+            "nativeFinished": 1564.5,
+            "finishEvent": 1564.5
+          },
+          {
+            "target": "round-1/seat-4:1",
+            "created": 1565.1999998092651,
+            "duration": 60,
+            "ready": 1581.7999999523163,
+            "nativeFinished": 1635.5,
+            "finishEvent": 1635.5
+          },
+          {
+            "target": "round-1/seat-5:1",
+            "created": 1636.5,
+            "duration": 60,
+            "ready": 1670.2999999523163,
+            "nativeFinished": 1723.7999999523163,
+            "finishEvent": 1723.7999999523163
+          },
+          {
+            "target": "round-1/seat-6:1",
+            "created": 1724.7999999523163,
+            "duration": 60,
+            "ready": 1758.7999999523163,
+            "nativeFinished": 1811.1999998092651,
+            "finishEvent": 1811.1999998092651
+          },
+          {
+            "target": "round-1/seat-7:1",
+            "created": 1812.6999998092651,
+            "duration": 60,
+            "ready": 1846.5,
+            "nativeFinished": 1899.3999998569489,
+            "finishEvent": 1899.3999998569489
+          },
+          {
+            "target": "dealer:1",
+            "created": 1900.7999999523163,
+            "duration": 60,
+            "ready": 1935.0999999046326,
+            "nativeFinished": 1988.5,
+            "finishEvent": 1988.5999999046326
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 599.1999998092651,
+            "duration": 79
+          }
+        ],
+        "hidden": false
+      }
+    }
+  ],
+  "status": "PASS",
+  "scope": "Diagnosis collected, not a claim the existing2500ms product gate passed",
+  "finish": "2026-10-06 20:48:39 +08:00"
+}

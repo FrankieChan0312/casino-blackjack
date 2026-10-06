@@ -1,0 +1,49 @@
+import { chromium, expect } from '../node_modules/@playwright/test/index.mjs';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { resolve } from 'node:path';
+import { deepStrictEqual } from 'node:assert';
+
+const stamp = () => execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+const id = Date.now(), root = `docs/M10_T11_EVIDENCE/supplemental-${id}`, profile = resolve(`.git/m10-t11-profile-${id}`);
+mkdirSync(root, { recursive: true }); mkdirSync(`${profile}/extension`, { recursive: true });
+writeFileSync(`${profile}/extension/manifest.json`, JSON.stringify({ manifest_version: 3, name: 'Blackjack T11 review zoom', version: '1.0', host_permissions: ['http://127.0.0.1/*'], background: { service_worker: 'background.js' } }));
+writeFileSync(`${profile}/extension/background.js`, 'chrome.runtime.onInstalled.addListener(() => {});\n');
+const receipt = { start: stamp(), status: 'IN PROGRESS', productChanges: false, background: [], performance: [], zoom: [] };
+const overlays = '[data-initial-deal-flight],[data-action-card-flight],[data-split-flight],[data-dealer-reveal],[data-wager-flight]';
+let context;
+const save = () => writeFileSync(`${root}/receipt.json`, JSON.stringify(receipt, null, 2) + '\n');
+async function settled(page) {
+  await expect.poll(() => page.locator(overlays).count()).toBe(0);
+  for (const flag of ['initial-deal', 'player-actions', 'dealer-actions', 'wagers']) await expect(page.locator('.game-scene')).toHaveAttribute(`data-${flag}-running`, 'false');
+}
+async function deal(page) {
+  await page.getByLabel('Your main wager', { exact: false }).fill('100');
+  await page.getByRole('button', { name: 'Deal', exact: true }).click(); await settled(page);
+}
+async function finish(page) {
+  for (let i = 0; i < 24 && !await page.getByRole('button', { name: 'Deal Again', exact: true }).count(); i++) {
+    const decline = page.getByRole('button', { name: 'Decline', exact: true });
+    await (await decline.count() ? decline : page.getByRole('button', { name: 'Stand', exact: true })).click();
+    await settled(page);
+  }
+  await expect(page.getByRole('button', { name: 'Deal Again', exact: true })).toBeEnabled(); await settled(page);
+}
+async function facts(page) {
+  return { cards: await page.locator('[data-card-slot]').evaluateAll(elements => elements.map(element => [element.getAttribute('data-card-slot'), element.getAttribute('aria-label')])),
+    credits: await page.getByRole('region', { name: 'Your credits', exact: true }).locator('dd').allTextContents(),
+    dealer: await page.locator('.dealer-zone').getAttribute('data-dealer-character'), audit: await page.locator('.audit-list').textContent() };
+}
+receipt.method = 'Three quiet 7-player rounds: distinguish intended public Audit history growth from non-Audit DOM, then new table returns to the same ready baseline';
+async function snapshot(page) { return page.evaluate(() => { const audit=document.querySelector('.audit-list');const auditNodes=audit?.querySelectorAll('*').length??0;return {nodes:document.querySelectorAll('*').length,auditNodes,auditEntries:audit?.children.length??0,nonAuditNodes:document.querySelectorAll('*').length-auditNodes,clones:document.querySelectorAll('[data-initial-deal-flight],[data-action-card-flight],[data-split-flight],[data-wager-flight],[data-dealer-reveal]').length};}); }
+try {
+ context=await chromium.launchPersistentContext(profile+'/cleanup',{headless:true,reducedMotion:'reduce',viewport:{width:320,height:720}});
+ const page=context.pages()[0];await page.goto('http://127.0.0.1:4189/?fixture=player-setup');
+ await page.locator('#root').evaluate(async root=>{const {App}=await import('/src/ui/App.tsx'),{createBrowserController}=await import('/src/browser/controller.ts'),{FORMAL_DEALER_CONFIGURATION}=await import('/src/presentation/formalDealers.ts'),{default:React}=await import('/node_modules/.vite/deps/react.js'),{default:ReactDOM}=await import('/node_modules/.vite/deps/react-dom_client.js');const mount=document.createElement('div');root.replaceChildren(mount);ReactDOM.createRoot(mount).render(React.createElement(App,{controller:createBrowserController({playerMode:true,deferPlayerStart:true,seed:7}),chooseCharacter:()=>0,dealerConfiguration:FORMAL_DEALER_CONFIGURATION}));});
+ await page.getByLabel('Total players',{exact:true}).selectOption('7');await page.getByRole('button',{name:'Start table',exact:true}).click();await settled(page);receipt.baseline=await snapshot(page);receipt.rounds=[];
+ for(let round=1;round<=3;round++){await deal(page);await finish(page);const state=await snapshot(page);expect(state.clones).toBe(0);receipt.rounds.push({round,state,facts:await facts(page)});save();if(round<3){await page.getByRole('button',{name:'Deal Again',exact:true}).click();await settled(page);}}
+ await page.getByRole('button',{name:'New table · reset to 1000 credits',exact:true}).click();await expect(page.locator('[data-card-slot]')).toHaveCount(0);
+ await page.getByRole('button',{name:'Start table',exact:true}).click();await settled(page);await expect(page.locator('[data-card-slot]')).toHaveCount(0);receipt.afterNewTable=await snapshot(page);
+ receipt.afterNewTableAudit=await page.locator('.audit-list').textContent(); expect(receipt.afterNewTable.nonAuditNodes).toBe(receipt.baseline.nonAuditNodes); expect(receipt.afterNewTable.clones).toBe(0); expect(receipt.afterNewTable.auditEntries).toBe(receipt.baseline.auditEntries+1); expect(receipt.afterNewTableAudit.match(/SESSION_RESET/g)).toHaveLength(1); expect(receipt.afterNewTableAudit).not.toContain('round-3');receipt.status='PASS';receipt.exit=0;
+}catch(error){receipt.status='FAIL';receipt.exit=1;receipt.error=String(error);process.exitCode=1;}
+finally{receipt.finish=stamp();save();await context?.close();console.log(JSON.stringify({root,...receipt}));}

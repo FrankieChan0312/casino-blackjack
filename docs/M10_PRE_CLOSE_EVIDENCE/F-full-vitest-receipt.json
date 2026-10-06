@@ -1,0 +1,17 @@
+{
+  "start": "2026-10-06T11:40:24.325Z",
+  "finish": "2026-10-06T11:40:45.842Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "test"
+  ],
+  "log": ".git\\evidence-capture\\F-full-vitest.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

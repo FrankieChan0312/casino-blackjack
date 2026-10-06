@@ -1,0 +1,47 @@
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+$root = (Get-Location).Path
+$gate = 'docs/M10_T11_EVIDENCE/gate-20261006-150313'
+$backup = '.git/m10-animation-T11-20261006-150313'
+$receipt = @{ at = (Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'); repair = 7; originalRunnerExit = 1; nativeStages = 'Ten PASS / checked0; archival incomplete'; status = 'BLOCKED'; outputs = @() }
+try {
+  $paths = @(git ls-files docs/images docs/M10_T01_EVIDENCE docs/M10_T06_EVIDENCE/screenshots docs/M10_T06_EVIDENCE/reduced-seven-settled.png | Where-Object { $_ -match '\.(png|json)$' })
+  if ($LASTEXITCODE -ne 0 -or $paths.Count -ne 320) { throw 'Historical inventory changed' }
+  foreach ($path in $paths) {
+    $original = Join-Path $backup $path
+    $expected = (Get-FileHash -LiteralPath $original -Algorithm SHA256).Hash
+    $current = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash
+    if ($current -ne $expected) {
+      $archive = Join-Path $gate "unified-generated/$path"
+      New-Item -ItemType Directory -Path (Split-Path $archive) -Force | Out-Null
+      if (Test-Path -LiteralPath $archive) {
+        if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash -ne $current) { throw "Already archived bytes differ: $path" }
+      } else { Copy-Item -LiteralPath $path -Destination $archive }
+      $replacement = [IO.Path]::GetFullPath((Join-Path '.git/t11-restoration-repair7/original' $path))
+      $displaced = [IO.Path]::GetFullPath((Join-Path '.git/t11-restoration-repair7/generated' $path))
+      $target = [IO.Path]::GetFullPath((Join-Path $root $path))
+      foreach ($checked in @($replacement, $displaced, $target)) {
+        if (-not $checked.StartsWith($root + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw 'Restore target outside workspace' }
+      }
+      New-Item -ItemType Directory -Path (Split-Path $replacement), (Split-Path $displaced) -Force | Out-Null
+      Copy-Item -LiteralPath $original -Destination $replacement
+      $receipt.currentPath = $path
+      [IO.File]::Replace($replacement, $target, $displaced)
+    }
+    if ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $expected) { throw "Output not restored: $path" }
+    $receipt.outputs += @{ path = $path; sha256 = $expected; generatedSha256 = $current; restored = $true }
+  }
+  $freeze = Get-Content -LiteralPath "$gate/executable-freeze.json" -Raw | ConvertFrom-Json
+  foreach ($item in $freeze.PSObject.Properties) {
+    if ((Get-FileHash -LiteralPath $item.Name -Algorithm SHA256).Hash -ne $item.Value) { throw "Frozen input changed: $($item.Name)" }
+  }
+  & git diff --exit-code e7ceea652dd74ef079d933922668c782304dc31f -- src art public package.json package-lock.json ':(exclude)src/presentation/motionTokens.ts' ':(exclude)src/ui/InitialDealFlight.ts'
+  if ($LASTEXITCODE -ne 0) { throw 'Protected diff changed' }
+  $receipt.frozenInputs = @($freeze.PSObject.Properties).Count
+  $receipt.status = 'PASS'
+  $receipt.exitCode = 0
+} catch { $receipt.error = $_.Exception.Message; $receipt.exitCode = 1 }
+$receipt.finish = Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'
+$receipt | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath "$gate/repair7-restoration.json" -Encoding UTF8
+Write-Output "$($receipt.status): restored $($receipt.outputs.Count) historical outputs; frozen inputs $($receipt.frozenInputs); exit $($receipt.exitCode)"
+exit $receipt.exitCode

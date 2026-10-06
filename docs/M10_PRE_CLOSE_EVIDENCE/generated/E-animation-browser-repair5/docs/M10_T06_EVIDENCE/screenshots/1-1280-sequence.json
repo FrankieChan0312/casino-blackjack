@@ -1,0 +1,42 @@
+{
+  "arrivals": [
+    "round-1/seat-4:0",
+    "dealer:0",
+    "round-1/seat-4:1",
+    "dealer:1"
+  ],
+  "flights": [
+    "round-1/seat-4:0",
+    "dealer:0",
+    "round-1/seat-4:1",
+    "dealer:1"
+  ],
+  "duplicate": false,
+  "overlap": false,
+  "started": 511.39999985694885,
+  "finished": 2264.399999856949,
+  "paused": false,
+  "checkpoints": [
+    "round-1/seat-4:0",
+    "dealer:0",
+    "round-1/seat-4:1",
+    "dealer:1"
+  ],
+  "interruptions": [
+    "resize"
+  ],
+  "pauseStates": [
+    [
+      "paused"
+    ],
+    [
+      "paused"
+    ],
+    [
+      "paused"
+    ],
+    [
+      "paused"
+    ]
+  ]
+}

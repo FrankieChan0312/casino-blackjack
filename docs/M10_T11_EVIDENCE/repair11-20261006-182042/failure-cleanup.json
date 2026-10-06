@@ -1,0 +1,2216 @@
+﻿{
+    "at":  "2026-10-06 18:50:47 +08:00",
+    "scope":  "Evidence preservation/authorized test-output cleanup only; no collector or product repair and no verification rerun",
+    "historicalOutputs":  [
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/archives.json",
+                                  "sha256":  "0DF1A32A6F5FF4B4948BB967E2C9ECACD04FDED5E32EB5CA3783EF881CA1EF3C",
+                                  "generatedSha256":  "0DF1A32A6F5FF4B4948BB967E2C9ECACD04FDED5E32EB5CA3783EF881CA1EF3C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/diagnosis-desktop.png",
+                                  "sha256":  "84A3849048695AA69A435CFCF8C34E5A5C6CA9CAA007CD5F7C1FD843926EC0A6",
+                                  "generatedSha256":  "84A3849048695AA69A435CFCF8C34E5A5C6CA9CAA007CD5F7C1FD843926EC0A6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+                                  "sha256":  "3453EAC0771C1606459FE4C508A3B16ACDF91157890A05D8EC8FE6EA211C2B5F",
+                                  "generatedSha256":  "7EDB9E49C50F53254CD0B5D294C8FD7B9616FF3CB56D25A4A29D57C8CE2349DC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/five-cards-320.png",
+                                  "sha256":  "1ABF4C49EDECF0C8AFE79FDB0F80C5AB01CEF9B0E047D6412DD9928F6972EB16",
+                                  "generatedSha256":  "33884426D9B447BBD6A8B824EDDC01DC0B3BE0ACAC843BB35879A035C2DF8438",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/five-cards-768.png",
+                                  "sha256":  "D4A1E1EF022C91A06E00C4EBF31B0B83823A05B45C62FF47F3A6CDA5CA179462",
+                                  "generatedSha256":  "E16E701A9FB48640DD54BD6CB8F1D3490054FF424AF62935981A89F644707003",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/footprint-diagnosis.json",
+                                  "sha256":  "E6BE4031B299D1B86A394AAF587F15DE0AF19034538C9F6553932090418C97C9",
+                                  "generatedSha256":  "E6BE4031B299D1B86A394AAF587F15DE0AF19034538C9F6553932090418C97C9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+                                  "sha256":  "EFCE5BB2567EFEEC049BD36C487762AC77FE72FB2A56E97101145DD194B2E2E3",
+                                  "generatedSha256":  "23D618140210C0069501E3E0C2CBD83C0040CB7059D3D779BCF419024D818FB4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+                                  "sha256":  "C00AC9CC2141F7742DA423FB97ED360678BE69D453B870E3BF6C25362C57DA49",
+                                  "generatedSha256":  "A369270F94C468E5220DE36B8D18B70C091FD25A1395A1B9DC699AC0AA50FBC4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+                                  "sha256":  "219B41AD0FBEEB2E333A73526DC71FEF1B740676C154A84CF42114EA8677C4EE",
+                                  "generatedSha256":  "F6060CB22B6AD0776FF66F955741A103A773E4F241368C1A5498F034DAC621DA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/geometry.json",
+                                  "sha256":  "B5B1D4FA707AB1CE9E18769D63C21B17D76240B86BDE7918F71BB5B0E85614C3",
+                                  "generatedSha256":  "1C11A291714D49D789B85899F8E59865CE755894691E64F521465381C05E0295",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/initial-desktop-failure.png",
+                                  "sha256":  "0E6776DCB2BA3C094AA1E0D4E49A0B95B2DCFB8E8507FB4181A7046758D56CFE",
+                                  "generatedSha256":  "0E6776DCB2BA3C094AA1E0D4E49A0B95B2DCFB8E8507FB4181A7046758D56CFE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/initial-keyboard-failure.png",
+                                  "sha256":  "A7276120B7DB8A14E60AF455CEDAB588ED5F99743BBF4A9FDFE0CF916D093371",
+                                  "generatedSha256":  "A7276120B7DB8A14E60AF455CEDAB588ED5F99743BBF4A9FDFE0CF916D093371",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/.last-run.json",
+                                  "sha256":  "C3FDA7CE726BC3F693B18AFA651D236CDD65E9F32CF8B0473A1B8C92FE1672E1",
+                                  "generatedSha256":  "C3FDA7CE726BC3F693B18AFA651D236CDD65E9F32CF8B0473A1B8C92FE1672E1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/test-failed-1.png",
+                                  "sha256":  "A65241D1376C2C9CF355D2B961BB1341B78EF9DD96AA4B5D6C70A08450BCCA5B",
+                                  "generatedSha256":  "A65241D1376C2C9CF355D2B961BB1341B78EF9DD96AA4B5D6C70A08450BCCA5B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/PA1-evidence-subset.json",
+                                  "sha256":  "98DF6577705ED0B747C7926BDCA65646AAF947B29FC88069B04AE2479099F072",
+                                  "generatedSha256":  "98DF6577705ED0B747C7926BDCA65646AAF947B29FC88069B04AE2479099F072",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/administrative.json",
+                                  "sha256":  "EC50A0B2F11B77F4FCC81D88F31CFEF2D02FAC3632B24AFF2BEF472533119F3D",
+                                  "generatedSha256":  "EC50A0B2F11B77F4FCC81D88F31CFEF2D02FAC3632B24AFF2BEF472533119F3D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/baseline-manifest.json",
+                                  "sha256":  "819CC38A2079B9D3E27B237C9207C680A73201CA38B2DF68AC084C069C1E1410",
+                                  "generatedSha256":  "819CC38A2079B9D3E27B237C9207C680A73201CA38B2DF68AC084C069C1E1410",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/.last-run.json",
+                                  "sha256":  "C3FDA7CE726BC3F693B18AFA651D236CDD65E9F32CF8B0473A1B8C92FE1672E1",
+                                  "generatedSha256":  "C3FDA7CE726BC3F693B18AFA651D236CDD65E9F32CF8B0473A1B8C92FE1672E1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic-test-results/pa1--PA1-E03-all-twelve-id-cd136-ller-without-changing-cards-chromium/test-failed-1.png",
+                                  "sha256":  "CBCB12814A38E5CA4C3A612F151BF27F8B8340BB7FF661FD677A55F8F5DF89B6",
+                                  "generatedSha256":  "CBCB12814A38E5CA4C3A612F151BF27F8B8340BB7FF661FD677A55F8F5DF89B6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/controlled-diagnostic.json",
+                                  "sha256":  "CE14A1AFC164666563921D6694FB55DAB0BFA72A65B59C4FCE03A86A4DFA34AF",
+                                  "generatedSha256":  "CE14A1AFC164666563921D6694FB55DAB0BFA72A65B59C4FCE03A86A4DFA34AF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/current-file-owners.json",
+                                  "sha256":  "F5BF85088DDD37BC38239D98CD4E894AD7BFF6B7F4A04627FC19EBFE53A637A6",
+                                  "generatedSha256":  "F5BF85088DDD37BC38239D98CD4E894AD7BFF6B7F4A04627FC19EBFE53A637A6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-dwarf_female.png",
+                                  "sha256":  "6B045CF714EC0EAD94B68CAA83FDEBB9AD222CB2EB1EBA404F27039F857315A6",
+                                  "generatedSha256":  "6B045CF714EC0EAD94B68CAA83FDEBB9AD222CB2EB1EBA404F27039F857315A6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-dwarf_male.png",
+                                  "sha256":  "072AB449B1059D5D7A93566DD73EFE0BC825A16AB20EF5ADDD54B69E6315DB5E",
+                                  "generatedSha256":  "072AB449B1059D5D7A93566DD73EFE0BC825A16AB20EF5ADDD54B69E6315DB5E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-elf_female.png",
+                                  "sha256":  "859EFF7BAAE9441D9E6A0F070149F26688C2C78DE0CB809D3599763A5E014195",
+                                  "generatedSha256":  "859EFF7BAAE9441D9E6A0F070149F26688C2C78DE0CB809D3599763A5E014195",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-elf_male.png",
+                                  "sha256":  "9CE15EAEAB0F820D31503CBFC39BE0CEBFD74CCC0ACADA61170DB3F9681C90BD",
+                                  "generatedSha256":  "9CE15EAEAB0F820D31503CBFC39BE0CEBFD74CCC0ACADA61170DB3F9681C90BD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-halforc_female.png",
+                                  "sha256":  "0C10E15C65A231193327986BC00D966416146F99CA517820C2C340D22C4FAC88",
+                                  "generatedSha256":  "0C10E15C65A231193327986BC00D966416146F99CA517820C2C340D22C4FAC88",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-halforc_male.png",
+                                  "sha256":  "D99A4BF2E3C295057DCC93632C9098FAA7F70F5CE68DD41521C23CF3B88B31F1",
+                                  "generatedSha256":  "D99A4BF2E3C295057DCC93632C9098FAA7F70F5CE68DD41521C23CF3B88B31F1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-knight_female.png",
+                                  "sha256":  "BB13F2DAC90E1EDB645725015ED9BFD2BF61059BF4B13195DADC6F6AD7CC8F81",
+                                  "generatedSha256":  "BB13F2DAC90E1EDB645725015ED9BFD2BF61059BF4B13195DADC6F6AD7CC8F81",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-knight_male.png",
+                                  "sha256":  "26D5945FC0C802ADC382937A1823B08AE3212A8AE29A3ED41697443A13A6A81D",
+                                  "generatedSha256":  "26D5945FC0C802ADC382937A1823B08AE3212A8AE29A3ED41697443A13A6A81D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-mage_female.png",
+                                  "sha256":  "C1BF6BF0EC0C1BF64599D45E954FE6CC78A66634202AB551CC2B1CB738B2C40F",
+                                  "generatedSha256":  "C1BF6BF0EC0C1BF64599D45E954FE6CC78A66634202AB551CC2B1CB738B2C40F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-mage_male.png",
+                                  "sha256":  "803F81967776DE48A29237FAE8DE6EF0F346367109D53021E158E32EBE715795",
+                                  "generatedSha256":  "803F81967776DE48A29237FAE8DE6EF0F346367109D53021E158E32EBE715795",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-noble_female.png",
+                                  "sha256":  "6C975910F2453AB3996F9CF42A58BD0F3D5C7D830C1A34E0B384230D6E47E509",
+                                  "generatedSha256":  "6C975910F2453AB3996F9CF42A58BD0F3D5C7D830C1A34E0B384230D6E47E509",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-avatar-noble_male.png",
+                                  "sha256":  "26397EAA184B39D02B6712DDAF1C9EB42790ED57DAD6D4FDB20184FD2B873DE5",
+                                  "generatedSha256":  "26397EAA184B39D02B6712DDAF1C9EB42790ED57DAD6D4FDB20184FD2B873DE5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-1280.png",
+                                  "sha256":  "2BBA64BCF1805059362F6F67006EEF41ECADB304F6241BDBFDF52612C9CEE0BD",
+                                  "generatedSha256":  "2BBA64BCF1805059362F6F67006EEF41ECADB304F6241BDBFDF52612C9CEE0BD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-320.png",
+                                  "sha256":  "471A4865C7984792218E5F2577E0ABC5CECC496509D0C9DE0D97251FB3E48293",
+                                  "generatedSha256":  "471A4865C7984792218E5F2577E0ABC5CECC496509D0C9DE0D97251FB3E48293",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-responsive-768.png",
+                                  "sha256":  "6337007CD81FCAA528982326633EAF0BE7D8AD22273EB3D538E251EEA8D54E27",
+                                  "generatedSha256":  "6337007CD81FCAA528982326633EAF0BE7D8AD22273EB3D538E251EEA8D54E27",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-text-fallback-1280.png",
+                                  "sha256":  "F484085B53D7ACEF15EC6B5C53C29C6870EAAA8C26B6A05C0854175A2E067110",
+                                  "generatedSha256":  "F484085B53D7ACEF15EC6B5C53C29C6870EAAA8C26B6A05C0854175A2E067110",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/generated-historical/pa1-text-fallback-320.png",
+                                  "sha256":  "44583EF39EA47D4297AE471986E22DE359DC7197016F1A6CB6B5139754F8F730",
+                                  "generatedSha256":  "44583EF39EA47D4297AE471986E22DE359DC7197016F1A6CB6B5139754F8F730",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/historical-image-restoration.json",
+                                  "sha256":  "423D0AE93EE419E8BA02FD58A5D431A8A8702A37648FB267C755E157C779A609",
+                                  "generatedSha256":  "423D0AE93EE419E8BA02FD58A5D431A8A8702A37648FB267C755E157C779A609",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/isolated-E03-01.json",
+                                  "sha256":  "248AA82E4AE61534778D19AF1699B712E906B56C43B2EB194C0815776947C4D8",
+                                  "generatedSha256":  "248AA82E4AE61534778D19AF1699B712E906B56C43B2EB194C0815776947C4D8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/isolated-E03-02.json",
+                                  "sha256":  "16ADC2EED4A12B08B46F58E01284EBF64E19572A1820DBFA3F02424B14BAC75E",
+                                  "generatedSha256":  "16ADC2EED4A12B08B46F58E01284EBF64E19572A1820DBFA3F02424B14BAC75E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/isolated-E03-03.json",
+                                  "sha256":  "EFFA470B969891046016C3760985E9AA95F58AA508509386B473D207B4EAE062",
+                                  "generatedSha256":  "EFFA470B969891046016C3760985E9AA95F58AA508509386B473D207B4EAE062",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/isolated-E03-04.json",
+                                  "sha256":  "D295898A7B52F4F294BC15939B0C9D33C55AEF2BEBA64A8EC58DF9ECBAB7ED03",
+                                  "generatedSha256":  "D295898A7B52F4F294BC15939B0C9D33C55AEF2BEBA64A8EC58DF9ECBAB7ED03",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/new-failure-file-owner.json",
+                                  "sha256":  "11B73F3D31333D08D214E62608DA25329AF884B6556E3D7C9EA03D4F413B4D92",
+                                  "generatedSha256":  "11B73F3D31333D08D214E62608DA25329AF884B6556E3D7C9EA03D4F413B4D92",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/observed-error.json",
+                                  "sha256":  "51276BB82F2D7B5E5E090134013B1B3CBF66C671C743E4E73D4BCCAD6EA634B0",
+                                  "generatedSha256":  "51276BB82F2D7B5E5E090134013B1B3CBF66C671C743E4E73D4BCCAD6EA634B0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/parent-paths.json",
+                                  "sha256":  "11FBCDB72F964A1F791390B5E771C8F98900179E7ECB4246D1FF031010B7E8CA",
+                                  "generatedSha256":  "11FBCDB72F964A1F791390B5E771C8F98900179E7ECB4246D1FF031010B7E8CA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/previous-failures.json",
+                                  "sha256":  "C8DEE41CEF284E58E08BA38DA6D051BD05F486831E168298ECA00BA8D99B62F8",
+                                  "generatedSha256":  "C8DEE41CEF284E58E08BA38DA6D051BD05F486831E168298ECA00BA8D99B62F8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/privacy-receipt.json",
+                                  "sha256":  "46A9A4BB531F27E31753B3EEA51F2D683BD8DB8DC4149C30E3FE62FD7F539462",
+                                  "generatedSha256":  "46A9A4BB531F27E31753B3EEA51F2D683BD8DB8DC4149C30E3FE62FD7F539462",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/artifact-retention.json",
+                                  "sha256":  "D1FC5EA60DF8DABC9F6CEAFFDB59A39C91AB908C2310D9581949F0080F461762",
+                                  "generatedSha256":  "D1FC5EA60DF8DABC9F6CEAFFDB59A39C91AB908C2310D9581949F0080F461762",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/browser-experiment-summary.json",
+                                  "sha256":  "0C09B47B7037B46BC06B124106379386ABD4F297C18D272E6F012A2BD02F0A51",
+                                  "generatedSha256":  "0C09B47B7037B46BC06B124106379386ABD4F297C18D272E6F012A2BD02F0A51",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/browser-runtime.json",
+                                  "sha256":  "A5692E4704B02D5FA55F3F10FA92DB7D38E44236EAA99F6898FA257CB43302FF",
+                                  "generatedSha256":  "A5692E4704B02D5FA55F3F10FA92DB7D38E44236EAA99F6898FA257CB43302FF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/canonical-restoration.json",
+                                  "sha256":  "213A36A130AAABEA77DEECCDEB2D2795C73DFE0D8F0516237427C888A53D14C1",
+                                  "generatedSha256":  "213A36A130AAABEA77DEECCDEB2D2795C73DFE0D8F0516237427C888A53D14C1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/failed-target-powershell-inspection.json",
+                                  "sha256":  "03D9D82661D319805C152A2FFF8D138F3CF597D83F72F217C4C2A4940519CDA1",
+                                  "generatedSha256":  "03D9D82661D319805C152A2FFF8D138F3CF597D83F72F217C4C2A4940519CDA1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix-command.json",
+                                  "sha256":  "8A9B70B3047DC4C2E9B478525C643AA24D2D5C7E8F59FA13E89D5A08701D6D68",
+                                  "generatedSha256":  "8A9B70B3047DC4C2E9B478525C643AA24D2D5C7E8F59FA13E89D5A08701D6D68",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/filesystem-matrix-summary.json",
+                                  "sha256":  "6D47771E51620DFE0767E088465F34F3529388AC71FEE015FE86B8C4338183BA",
+                                  "generatedSha256":  "6D47771E51620DFE0767E088465F34F3529388AC71FEE015FE86B8C4338183BA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/incoming-manifest.json",
+                                  "sha256":  "928426FACE3DE654F789D2D627B2CE1DCF411633E90D8B2B4A89309C9482E6A2",
+                                  "generatedSha256":  "928426FACE3DE654F789D2D627B2CE1DCF411633E90D8B2B4A89309C9482E6A2",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/integrity-receipt.json",
+                                  "sha256":  "EF503D3418C247FA82D875132C6364026381B50A7CA5C69E5411B6188A93CD9D",
+                                  "generatedSha256":  "EF503D3418C247FA82D875132C6364026381B50A7CA5C69E5411B6188A93CD9D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-1/command.json",
+                                  "sha256":  "F8FD83809D02E9B0B34309E18232E034B87B7F6523A8B82136CF6D736CFACF8C",
+                                  "generatedSha256":  "F8FD83809D02E9B0B34309E18232E034B87B7F6523A8B82136CF6D736CFACF8C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/normal-2/command.json",
+                                  "sha256":  "7BAB0002EF96392BFD529D5DC6B745331A9F8862AB4F01EFCA98B16E4015F753",
+                                  "generatedSha256":  "7BAB0002EF96392BFD529D5DC6B745331A9F8862AB4F01EFCA98B16E4015F753",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-1/command.json",
+                                  "sha256":  "2B552F269558A425C36F0F4E93D2E86FB193CB15DDB7019E2B945C0412C4F4A1",
+                                  "generatedSha256":  "2B552F269558A425C36F0F4E93D2E86FB193CB15DDB7019E2B945C0412C4F4A1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/browser-artifacts/.last-run.json",
+                                  "sha256":  "6AE9F8669C6AF23ACCB6E4196A22C7731AC8C1744F13B5CB7C1306B9E73909C5",
+                                  "generatedSha256":  "6AE9F8669C6AF23ACCB6E4196A22C7731AC8C1744F13B5CB7C1306B9E73909C5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/browser-artifacts/pa1--PA1-E04-character-key-2dfc8-op-tablet-and-mobile-widths-chromium/test-failed-1.png",
+                                  "sha256":  "91CAA1178FCA8195070A077B1291FC4624AE21BFB123299F670C83DE45DD201B",
+                                  "generatedSha256":  "91CAA1178FCA8195070A077B1291FC4624AE21BFB123299F670C83DE45DD201B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/parallel-2/command.json",
+                                  "sha256":  "0EDCED92162CAF23516D881B0C8D0D085FF0C8DE52E4155ACE2AA646910E00EB",
+                                  "generatedSha256":  "0EDCED92162CAF23516D881B0C8D0D085FF0C8DE52E4155ACE2AA646910E00EB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-1/command.json",
+                                  "sha256":  "17EC379C16FBB154B0457A9805339814CAD46493AF1A57BE88B03B5A419B7AEA",
+                                  "generatedSha256":  "17EC379C16FBB154B0457A9805339814CAD46493AF1A57BE88B03B5A419B7AEA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/serial-2/command.json",
+                                  "sha256":  "7F5C8800CB3D471DBE866FA0C065DDB7BE10A0D0BF502E911C636D2B5B594F25",
+                                  "generatedSha256":  "7F5C8800CB3D471DBE866FA0C065DDB7BE10A0D0BF502E911C636D2B5B594F25",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/source-inspection.json",
+                                  "sha256":  "441FB196256B71A23898DC1FE6AB685FD1BF8F6D8A74ED4B0C5BF561A05923E0",
+                                  "generatedSha256":  "441FB196256B71A23898DC1FE6AB685FD1BF8F6D8A74ED4B0C5BF561A05923E0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-1/command.json",
+                                  "sha256":  "DAA3BD506C6840428C262221A2232EA240A551A7BCD485BFA83B4C83238A7B99",
+                                  "generatedSha256":  "DAA3BD506C6840428C262221A2232EA240A551A7BCD485BFA83B4C83238A7B99",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-2/command.json",
+                                  "sha256":  "0A137C08D83CE4FEE7C26F7B02E36BA0991AECA3E11305BBA34626BFDC68BC9A",
+                                  "generatedSha256":  "0A137C08D83CE4FEE7C26F7B02E36BA0991AECA3E11305BBA34626BFDC68BC9A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/browser-artifacts/.last-run.json",
+                                  "sha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "generatedSha256":  "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-3/command.json",
+                                  "sha256":  "49E787D6C7C6073141A3556DC1416638557AA626210BC88FA43A8B229011B927",
+                                  "generatedSha256":  "49E787D6C7C6073141A3556DC1416638557AA626210BC88FA43A8B229011B927",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/unique-canonical-before.json",
+                                  "sha256":  "F04D8A2FB3E52E7516E7AF3E6A42E856434B51A83167F054303C3BF89FE98CAA",
+                                  "generatedSha256":  "F04D8A2FB3E52E7516E7AF3E6A42E856434B51A83167F054303C3BF89FE98CAA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/recovery/windows-open-20261003-1915/windows-runtime.json",
+                                  "sha256":  "2DE38AA343A329720B3526A38E2E1726A76BE15F41E90DB3814D5301F9BBE499",
+                                  "generatedSha256":  "2DE38AA343A329720B3526A38E2E1726A76BE15F41E90DB3814D5301F9BBE499",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/regenerated-historical-images.json",
+                                  "sha256":  "A8A23C97239BE0FB776B117DA576901B6197CE64B57C3400F07DEF9B3972E60D",
+                                  "generatedSha256":  "A8A23C97239BE0FB776B117DA576901B6197CE64B57C3400F07DEF9B3972E60D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair04-desktop.png",
+                                  "sha256":  "9F638CF6EBE61D438471637FB779AD177FC4A30E303512DD3784B2A09F7A22BB",
+                                  "generatedSha256":  "9F638CF6EBE61D438471637FB779AD177FC4A30E303512DD3784B2A09F7A22BB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair04-footprint-diagnosis.json",
+                                  "sha256":  "9210A537106CF1064B59C1961EC52AC7F464F900AA7903291BA01C6481C580DB",
+                                  "generatedSha256":  "9210A537106CF1064B59C1961EC52AC7F464F900AA7903291BA01C6481C580DB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/canonical-after.json",
+                                  "sha256":  "BE1600C75B73735103BDFC660AB1B1030D7D9CE2E7522A2E3CB77E42825B7B82",
+                                  "generatedSha256":  "BE1600C75B73735103BDFC660AB1B1030D7D9CE2E7522A2E3CB77E42825B7B82",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/canonical-before.json",
+                                  "sha256":  "EFDEB2FDED0C26C4ECF3A4AFA9DD6317057ADD8CB702B372A314DA3275D585C9",
+                                  "generatedSha256":  "EFDEB2FDED0C26C4ECF3A4AFA9DD6317057ADD8CB702B372A314DA3275D585C9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/cleanup.json",
+                                  "sha256":  "471F8787BAA6B6D99596E1087FC0BD9BAA04C6E06AADD6A4F536F9333A8C9387",
+                                  "generatedSha256":  "471F8787BAA6B6D99596E1087FC0BD9BAA04C6E06AADD6A4F536F9333A8C9387",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/historical-m9-restoration.json",
+                                  "sha256":  "777A8DD7789C4EB756ED1340993162BF6B5A020A575551C1689A430999D0BCE4",
+                                  "generatedSha256":  "777A8DD7789C4EB756ED1340993162BF6B5A020A575551C1689A430999D0BCE4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/precommit.json",
+                                  "sha256":  "5E664F916A4346CC80B6382AA7A71A813817853AE4492DE6704018CBE2BCF283",
+                                  "generatedSha256":  "5E664F916A4346CC80B6382AA7A71A813817853AE4492DE6704018CBE2BCF283",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/privacy.json",
+                                  "sha256":  "263B90FF5D8CF27EA13A1DD70EE200D458C8E7322CF458C5F7D5550D4F7CB6F0",
+                                  "generatedSha256":  "263B90FF5D8CF27EA13A1DD70EE200D458C8E7322CF458C5F7D5550D4F7CB6F0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-B.json",
+                                  "sha256":  "5B3C720C8D1E81394A43493B8D3CEB1A8FC50D57C46DEF7E79F54BF0CBAF908A",
+                                  "generatedSha256":  "5B3C720C8D1E81394A43493B8D3CEB1A8FC50D57C46DEF7E79F54BF0CBAF908A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-C.json",
+                                  "sha256":  "AC737CF0AD4A2706ACBFDBDE6E0D27C6FE8E6CD2D2A22F7D61434CB5FB9E0F68",
+                                  "generatedSha256":  "AC737CF0AD4A2706ACBFDBDE6E0D27C6FE8E6CD2D2A22F7D61434CB5FB9E0F68",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-D-captures.json",
+                                  "sha256":  "9D02F7A0E48F7D030952A7D3452BBE0D48A5818B40AF103A0E094935B9F19D29",
+                                  "generatedSha256":  "9D02F7A0E48F7D030952A7D3452BBE0D48A5818B40AF103A0E094935B9F19D29",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-D.json",
+                                  "sha256":  "0140CDF522A4D015F498BC6FF45F9F46E1FC5FBD126B14CEF6E020A39672A984",
+                                  "generatedSha256":  "0140CDF522A4D015F498BC6FF45F9F46E1FC5FBD126B14CEF6E020A39672A984",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-E.json",
+                                  "sha256":  "9C223115AB5FB6F14CFBECA6D8C79BEBBB4BD7EE9DD50CEC7377D5F076E11E47",
+                                  "generatedSha256":  "9C223115AB5FB6F14CFBECA6D8C79BEBBB4BD7EE9DD50CEC7377D5F076E11E47",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-F-current.json",
+                                  "sha256":  "B5681B73348A8251358F532A7BFF139B6C4D4152984A2E40F110337338CA8DDA",
+                                  "generatedSha256":  "B5681B73348A8251358F532A7BFF139B6C4D4152984A2E40F110337338CA8DDA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-F-preservation.json",
+                                  "sha256":  "1756E6F84D0A48FB600046AD7E5001B6C8F9FCF21677F14ABA8678E8AF083053",
+                                  "generatedSha256":  "1756E6F84D0A48FB600046AD7E5001B6C8F9FCF21677F14ABA8678E8AF083053",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/stage-G.json",
+                                  "sha256":  "895E3DE8FAA750834F5B8485D6D639D2CD3896CCABE58778E264E49DA99FAA2A",
+                                  "generatedSha256":  "895E3DE8FAA750834F5B8485D6D639D2CD3896CCABE58778E264E49DA99FAA2A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair07/visual-review.json",
+                                  "sha256":  "C8EF1B3D8C2CED9D5803904F42D3E4C8B14D8BDD7F3EFD6B66A60D2EC27A1188",
+                                  "generatedSha256":  "C8EF1B3D8C2CED9D5803904F42D3E4C8B14D8BDD7F3EFD6B66A60D2EC27A1188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/administrative-final.json",
+                                  "sha256":  "9C7D8FEF755DE72D0E173EA7F3CCD81D90A27F51898777056543B1D19ADC19D4",
+                                  "generatedSha256":  "9C7D8FEF755DE72D0E173EA7F3CCD81D90A27F51898777056543B1D19ADC19D4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/archive-integrity-privacy.json",
+                                  "sha256":  "C2B6488E3C11207F24E4CCC7EEB3814013E47242408D9F98151E60097619069D",
+                                  "generatedSha256":  "C2B6488E3C11207F24E4CCC7EEB3814013E47242408D9F98151E60097619069D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before-composition.json",
+                                  "sha256":  "7FA3A2002A57549CBC5C8019ED463F46DB5DF7053E6218EC30AB448FBCF08A5C",
+                                  "generatedSha256":  "7FA3A2002A57549CBC5C8019ED463F46DB5DF7053E6218EC30AB448FBCF08A5C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before-dealt-1280.png",
+                                  "sha256":  "DF6E365CF276D54379994E3072FAF3B2DC3B68AD595D0D96A4C7D6FEE8BDF406",
+                                  "generatedSha256":  "DF6E365CF276D54379994E3072FAF3B2DC3B68AD595D0D96A4C7D6FEE8BDF406",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before-dealt-320.png",
+                                  "sha256":  "42EE8D9C415B06112A6A1295D7AE5177CB0A3E32E63DF8D6A4BEDA1DC7BD61A1",
+                                  "generatedSha256":  "42EE8D9C415B06112A6A1295D7AE5177CB0A3E32E63DF8D6A4BEDA1DC7BD61A1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before-dealt-768.png",
+                                  "sha256":  "E721EDECCBFE29068B2869788DCAEEF1062C86C7BDFD56799E396B32587C0E2D",
+                                  "generatedSha256":  "E721EDECCBFE29068B2869788DCAEEF1062C86C7BDFD56799E396B32587C0E2D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before-open-1280.png",
+                                  "sha256":  "AD32AE5298D36AC9DC761E1CD19C46029D53AE305DE0B150C7BDB267D5388C0A",
+                                  "generatedSha256":  "AD32AE5298D36AC9DC761E1CD19C46029D53AE305DE0B150C7BDB267D5388C0A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/before.json",
+                                  "sha256":  "A05369EBDA56D42FCC6A4B5308B41A4DA4E2FE30CF834C490FD81D4A435C32AB",
+                                  "generatedSha256":  "A05369EBDA56D42FCC6A4B5308B41A4DA4E2FE30CF834C490FD81D4A435C32AB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/candidate-composition.json",
+                                  "sha256":  "04EA6EDDA00B52B72359C6238FA79E874D3F7CCB19E4B6764FF98A13A67085F9",
+                                  "generatedSha256":  "04EA6EDDA00B52B72359C6238FA79E874D3F7CCB19E4B6764FF98A13A67085F9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/candidate-dealt-1280.png",
+                                  "sha256":  "8422175D340FF758E4861ACB485F02E9BF87CAFBA75502E3B2F999FAFF981204",
+                                  "generatedSha256":  "8422175D340FF758E4861ACB485F02E9BF87CAFBA75502E3B2F999FAFF981204",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/candidate-dealt-320.png",
+                                  "sha256":  "8973C9C72779A3316AB0FF25C0B7E0F83C226DF1BA315AC27EB967533B3F1E29",
+                                  "generatedSha256":  "8973C9C72779A3316AB0FF25C0B7E0F83C226DF1BA315AC27EB967533B3F1E29",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/candidate-dealt-768.png",
+                                  "sha256":  "8B828D47EEDA8B498318B514ED787500AC868896829388F4D3BE57C6C3F7C530",
+                                  "generatedSha256":  "8B828D47EEDA8B498318B514ED787500AC868896829388F4D3BE57C6C3F7C530",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/candidate-open-1280.png",
+                                  "sha256":  "3F0ED665B8C872E3ACBC088DDE5AA5604B2EE5CF835DA33235964160BAA7C402",
+                                  "generatedSha256":  "3F0ED665B8C872E3ACBC088DDE5AA5604B2EE5CF835DA33235964160BAA7C402",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/character-assets.json",
+                                  "sha256":  "2060ADEA8BA3A81F5250837A43DECDEF9296EAA1461669766A77241D60EB3695",
+                                  "generatedSha256":  "2060ADEA8BA3A81F5250837A43DECDEF9296EAA1461669766A77241D60EB3695",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/documentation-final.json",
+                                  "sha256":  "724BA6E0BC0E99AEF1A23D28B445812A21F68B8AE292F6BE18EDB4ACC1237A3A",
+                                  "generatedSha256":  "724BA6E0BC0E99AEF1A23D28B445812A21F68B8AE292F6BE18EDB4ACC1237A3A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/files.json",
+                                  "sha256":  "C42CB930B814A1D3817FC8A970D8E7C3CD9E23F195166C9625D38EB0CB215BC3",
+                                  "generatedSha256":  "C42CB930B814A1D3817FC8A970D8E7C3CD9E23F195166C9625D38EB0CB215BC3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/final-artifacts.json",
+                                  "sha256":  "8A1BB10035825D9996E84C2448B6D081C56BB22F850F7A69352214A6BBE43834",
+                                  "generatedSha256":  "8A1BB10035825D9996E84C2448B6D081C56BB22F850F7A69352214A6BBE43834",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/five-cards-1280.png",
+                                  "sha256":  "2D7194058276D627B8E560D362C83E1277C64A0947A322101ADD5E9C36181E91",
+                                  "generatedSha256":  "2D7194058276D627B8E560D362C83E1277C64A0947A322101ADD5E9C36181E91",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/five-cards-320.png",
+                                  "sha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "generatedSha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/five-cards-768.png",
+                                  "sha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "generatedSha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/four-leaves-1280.png",
+                                  "sha256":  "9E1DE06FE1F00DE0AF5F0F43EEBC57F4063FF012D78EF099D1F236714EF30200",
+                                  "generatedSha256":  "9E1DE06FE1F00DE0AF5F0F43EEBC57F4063FF012D78EF099D1F236714EF30200",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/four-leaves-320.png",
+                                  "sha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "generatedSha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/four-leaves-768.png",
+                                  "sha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "generatedSha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/git-final.json",
+                                  "sha256":  "CD1E907BD86E5AD806057CB9D90E715F23247C151743D3302794A96652DFDA76",
+                                  "generatedSha256":  "CD1E907BD86E5AD806057CB9D90E715F23247C151743D3302794A96652DFDA76",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/historical-restoration.json",
+                                  "sha256":  "E309E581EFE03D894C3E447C20E86D70FC7AA36B5B1AC3BB0038B909E14E0F3D",
+                                  "generatedSha256":  "E309E581EFE03D894C3E447C20E86D70FC7AA36B5B1AC3BB0038B909E14E0F3D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/initial-artifacts.json",
+                                  "sha256":  "B23DA75B15D78B14CBADEB026541AC9350C0DA74C79A12FDDF177B12379E59D3",
+                                  "generatedSha256":  "B23DA75B15D78B14CBADEB026541AC9350C0DA74C79A12FDDF177B12379E59D3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/protected-after.json",
+                                  "sha256":  "244EF7EB58639F186F78C7F3275B54C32E92717DCD8FF5E85A058D3DFA836BB3",
+                                  "generatedSha256":  "244EF7EB58639F186F78C7F3275B54C32E92717DCD8FF5E85A058D3DFA836BB3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/raw-log-archives.json",
+                                  "sha256":  "CEF4FE75CF4225D181B65D10D375EAAEB1945D4D9758E764E372A1E438EEFFD8",
+                                  "generatedSha256":  "CEF4FE75CF4225D181B65D10D375EAAEB1945D4D9758E764E372A1E438EEFFD8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+                                  "sha256":  "94D6A4E46C42D3EAEFA78F0A695744254522B24ECFF771B861A88FF2FB632B73",
+                                  "generatedSha256":  "6F711EC6F1F8DE9A7C2C1EBEB4F5900784591961ED01A12B32A26F52A71063A9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+                                  "sha256":  "41C7FE6A68A31ACAB8A3EE7AD4039CF90477321B7744CC4C765927F1DF872FF4",
+                                  "generatedSha256":  "029044C171172891EAD6EA4BEC0AA5028F83647128F428BE36486C28E3815358",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+                                  "sha256":  "53CAC22F27FB366230C9A63B62F698FA7B8B8ADAEEB68F072D9E83B04FC978EA",
+                                  "generatedSha256":  "27473D042F6A0D10131E8905C67B475A0702F4F306FED5DB4668018567D1B736",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+                                  "sha256":  "25F5FCD5B158A36560F2A9EDA378EFB976EB6FA7AC1BA2600924F6977AE6C51C",
+                                  "generatedSha256":  "E57A5DA7553989C9C9DD61CF62AD49CE8285C765FEAAAF2A2EFE63DE85D7AA6B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+                                  "sha256":  "4798578521C671073204E962B264B6B257F95A1C5A8F25D2373D03DA6AE938BF",
+                                  "generatedSha256":  "5F7D2E3D6ECB01845CE2B249F0762A7544228110C40F67C5BC719C5A43CDC2BE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+                                  "sha256":  "783CCF25BEAFBB2100C7CEAE38678CBF986315AF8E021D3A587DC7678643DB96",
+                                  "generatedSha256":  "CA2651DC47AA3CA733E8001C0771F454C65C9F138D6777F3347AD3D08EFDEA23",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/stage-A-final.json",
+                                  "sha256":  "478E6F8BD37EF86FA7F27E942FCA820EB5ECB09083E73BFDFEFB2126079B4508",
+                                  "generatedSha256":  "478E6F8BD37EF86FA7F27E942FCA820EB5ECB09083E73BFDFEFB2126079B4508",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/stage-A.json",
+                                  "sha256":  "7F9F90F712BFDBB19B0BE610027318EBAE585C6F41F8EC5E59C25DA245C8BB6D",
+                                  "generatedSha256":  "7F9F90F712BFDBB19B0BE610027318EBAE585C6F41F8EC5E59C25DA245C8BB6D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/stage-B-final.json",
+                                  "sha256":  "DBA59CF72C78C0ED324C3CF56295D846D896A3BB7F0936A46EAB96C965996ED1",
+                                  "generatedSha256":  "DBA59CF72C78C0ED324C3CF56295D846D896A3BB7F0936A46EAB96C965996ED1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/stage-B-initial.json",
+                                  "sha256":  "9A6619464A4BB83D7F96353BE11EED54EB39BBC206F0FA3B251A34AAB07C0EB3",
+                                  "generatedSha256":  "9A6619464A4BB83D7F96353BE11EED54EB39BBC206F0FA3B251A34AAB07C0EB3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/static-initial.json",
+                                  "sha256":  "4BBCF4F2CE9E3B072865ABD514166E79459C43FDAB37AC1471BAC60BD0F18D56",
+                                  "generatedSha256":  "4BBCF4F2CE9E3B072865ABD514166E79459C43FDAB37AC1471BAC60BD0F18D56",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/text-fallback-1280.png",
+                                  "sha256":  "9EE975BB189A2812D806C486637DC086D95DBB6A033D304A8EA3FE920DF838AD",
+                                  "generatedSha256":  "9EE975BB189A2812D806C486637DC086D95DBB6A033D304A8EA3FE920DF838AD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/text-fallback-320.png",
+                                  "sha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "generatedSha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/text-fallback-768.png",
+                                  "sha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "generatedSha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair09/visual-review.json",
+                                  "sha256":  "6474370DFB61959784DBF694BCFE5C28B5AF396E7A4FAE3735723CD544370448",
+                                  "generatedSha256":  "6474370DFB61959784DBF694BCFE5C28B5AF396E7A4FAE3735723CD544370448",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/administrative-check-failure.json",
+                                  "sha256":  "1E2D53194E4E1CA1A4334B29B2FDD7FC55772CF0C5CE7166787FB2FD2AFB2D3B",
+                                  "generatedSha256":  "1E2D53194E4E1CA1A4334B29B2FDD7FC55772CF0C5CE7166787FB2FD2AFB2D3B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/administrative-final.json",
+                                  "sha256":  "554861519727DDC296473B4D6E4D98C1DF606392A537F1B5A3B33D2DA66068CD",
+                                  "generatedSha256":  "554861519727DDC296473B4D6E4D98C1DF606392A537F1B5A3B33D2DA66068CD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/atomic-replaced-table-1280.png",
+                                  "sha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "generatedSha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/before.json",
+                                  "sha256":  "5CBD68D919BAC6F6C7FA9D082C85744AFF1C82FFE21865103F41A3C5B7F431DF",
+                                  "generatedSha256":  "5CBD68D919BAC6F6C7FA9D082C85744AFF1C82FFE21865103F41A3C5B7F431DF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/character-assets.json",
+                                  "sha256":  "39A57159B4D2CC2A058508FFC9ECBEDAD22FA8CA6EFA330F6D191E9112920ADC",
+                                  "generatedSha256":  "39A57159B4D2CC2A058508FFC9ECBEDAD22FA8CA6EFA330F6D191E9112920ADC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/diagnostic-closure.json",
+                                  "sha256":  "1E46255A0150D1E956506C66F6A3BF64D154EBEABC841E75F82687EEF5C17532",
+                                  "generatedSha256":  "1E46255A0150D1E956506C66F6A3BF64D154EBEABC841E75F82687EEF5C17532",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/documentation-final.json",
+                                  "sha256":  "05F12256253073B73DE2B94F8D8A2D3BDD17108CBE802279A2452C37651F92E9",
+                                  "generatedSha256":  "05F12256253073B73DE2B94F8D8A2D3BDD17108CBE802279A2452C37651F92E9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/documentation-reviewed.json",
+                                  "sha256":  "E2BC0577211605121F5C1E758BECF4B78102FE49DB2E8AE2CBF4CAE3F922132D",
+                                  "generatedSha256":  "E2BC0577211605121F5C1E758BECF4B78102FE49DB2E8AE2CBF4CAE3F922132D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/files.json",
+                                  "sha256":  "77076C5BAD61BAD504266A226BB3F050DF596BBA053C9525DA38F367526DEC8C",
+                                  "generatedSha256":  "77076C5BAD61BAD504266A226BB3F050DF596BBA053C9525DA38F367526DEC8C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/final-verify.json",
+                                  "sha256":  "BA23040F51318211E3F7005402188DE3DD155D2CBB83931D95D05A9E8BC0073E",
+                                  "generatedSha256":  "BA23040F51318211E3F7005402188DE3DD155D2CBB83931D95D05A9E8BC0073E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/five-cards-1280.png",
+                                  "sha256":  "ECD84DA543D828D8290FC8E1C2D58C6571E941AAFA2797F8BC1A955358654985",
+                                  "generatedSha256":  "ECD84DA543D828D8290FC8E1C2D58C6571E941AAFA2797F8BC1A955358654985",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/five-cards-320.png",
+                                  "sha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "generatedSha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/five-cards-768.png",
+                                  "sha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "generatedSha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/four-leaves-1280.png",
+                                  "sha256":  "DD0B71308877CC356705024AE31BA1435094B55227FC04A65DAE929E35CFC037",
+                                  "generatedSha256":  "DD0B71308877CC356705024AE31BA1435094B55227FC04A65DAE929E35CFC037",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/four-leaves-320.png",
+                                  "sha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "generatedSha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/four-leaves-768.png",
+                                  "sha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "generatedSha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/0650701a0dc7ca959bf2245b0ff38cd0945982ff05beb458c9f3fbf5785b0ea6.png",
+                                  "sha256":  "0650701A0DC7CA959BF2245B0FF38CD0945982FF05BEB458C9F3FBF5785B0EA6",
+                                  "generatedSha256":  "0650701A0DC7CA959BF2245B0FF38CD0945982FF05BEB458C9F3FBF5785B0EA6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/098a167d59cfc57d766c0b087f714499a2f336fa3594a7320b7cd075812f9008.png",
+                                  "sha256":  "098A167D59CFC57D766C0B087F714499A2F336FA3594A7320B7CD075812F9008",
+                                  "generatedSha256":  "098A167D59CFC57D766C0B087F714499A2F336FA3594A7320B7CD075812F9008",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/0c438a6dfef74a24e5d5ac7bba18ca660ec79087734f16a077ded2695b14160d.png",
+                                  "sha256":  "0C438A6DFEF74A24E5D5AC7BBA18CA660EC79087734F16A077DED2695B14160D",
+                                  "generatedSha256":  "0C438A6DFEF74A24E5D5AC7BBA18CA660EC79087734F16A077DED2695B14160D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/0d499307d09b307601017c5c471993a281195b6f0e9b2afc884030cb5b8462bd.png",
+                                  "sha256":  "0D499307D09B307601017C5C471993A281195B6F0E9B2AFC884030CB5B8462BD",
+                                  "generatedSha256":  "0D499307D09B307601017C5C471993A281195B6F0E9B2AFC884030CB5B8462BD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/10cd07d89464fa69116733c4d45cc89a57461ef7009dbf2c894fd19369c1a138.png",
+                                  "sha256":  "10CD07D89464FA69116733C4D45CC89A57461EF7009DBF2C894FD19369C1A138",
+                                  "generatedSha256":  "10CD07D89464FA69116733C4D45CC89A57461EF7009DBF2C894FD19369C1A138",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/145e9542abc0bda3bcced73205fe1fe8f7f1e14ee6b2b18d83b93a316ccbed73.png",
+                                  "sha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "generatedSha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/1a0fb332136d659a655e254454c8b1c854141f65fb1a358fbfbe3f5003f20d52.png",
+                                  "sha256":  "1A0FB332136D659A655E254454C8B1C854141F65FB1A358FBFBE3F5003F20D52",
+                                  "generatedSha256":  "1A0FB332136D659A655E254454C8B1C854141F65FB1A358FBFBE3F5003F20D52",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/1b9af2a38a0c47728ca9579c1a152631172ff98916c31f537b0199d2525b7dc8.png",
+                                  "sha256":  "1B9AF2A38A0C47728CA9579C1A152631172FF98916C31F537B0199D2525B7DC8",
+                                  "generatedSha256":  "1B9AF2A38A0C47728CA9579C1A152631172FF98916C31F537B0199D2525B7DC8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/20b44eb94c3faabea38a8979871faff5e3b33b19852ea3097195df56481cdca1.png",
+                                  "sha256":  "20B44EB94C3FAABEA38A8979871FAFF5E3B33B19852EA3097195DF56481CDCA1",
+                                  "generatedSha256":  "20B44EB94C3FAABEA38A8979871FAFF5E3B33B19852EA3097195DF56481CDCA1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/24a9489cc01deb082c16b7b5ef9068aba75e5c457167d56d0ce358dabb257bac.png",
+                                  "sha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "generatedSha256":  "24A9489CC01DEB082C16B7B5EF9068ABA75E5C457167D56D0CE358DABB257BAC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c.png",
+                                  "sha256":  "25F5FCD5B158A36560F2A9EDA378EFB976EB6FA7AC1BA2600924F6977AE6C51C",
+                                  "generatedSha256":  "25F5FCD5B158A36560F2A9EDA378EFB976EB6FA7AC1BA2600924F6977AE6C51C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/2756bf7a643e6b8f50a11f313f71be7e55d3d1e0e1fcb9cd82e8f3eea1e623d6.png",
+                                  "sha256":  "2756BF7A643E6B8F50A11F313F71BE7E55D3D1E0E1FCB9CD82E8F3EEA1E623D6",
+                                  "generatedSha256":  "2756BF7A643E6B8F50A11F313F71BE7E55D3D1E0E1FCB9CD82E8F3EEA1E623D6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/2ab6be79b0ca6ad246266595d8cb690e15b5b0942edc838ed3281ef840ba0d23.png",
+                                  "sha256":  "2AB6BE79B0CA6AD246266595D8CB690E15B5B0942EDC838ED3281EF840BA0D23",
+                                  "generatedSha256":  "2AB6BE79B0CA6AD246266595D8CB690E15B5B0942EDC838ED3281EF840BA0D23",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/304828c4e7b93cd2086ebde2b4b650b84edbb9050e86cbb20b129857d2735fa0.png",
+                                  "sha256":  "304828C4E7B93CD2086EBDE2B4B650B84EDBB9050E86CBB20B129857D2735FA0",
+                                  "generatedSha256":  "304828C4E7B93CD2086EBDE2B4B650B84EDBB9050E86CBB20B129857D2735FA0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/3301fcbf26aa740c81ce1a2d7c4bfab2d36147d52a9d78779c9872073c910e8e.png",
+                                  "sha256":  "3301FCBF26AA740C81CE1A2D7C4BFAB2D36147D52A9D78779C9872073C910E8E",
+                                  "generatedSha256":  "3301FCBF26AA740C81CE1A2D7C4BFAB2D36147D52A9D78779C9872073C910E8E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/4007e8c450d0df9b1ffdae215b613917f4e0fe7c41af4732a3beafe36e318681.png",
+                                  "sha256":  "4007E8C450D0DF9B1FFDAE215B613917F4E0FE7C41AF4732A3BEAFE36E318681",
+                                  "generatedSha256":  "4007E8C450D0DF9B1FFDAE215B613917F4E0FE7C41AF4732A3BEAFE36E318681",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4.png",
+                                  "sha256":  "41C7FE6A68A31ACAB8A3EE7AD4039CF90477321B7744CC4C765927F1DF872FF4",
+                                  "generatedSha256":  "41C7FE6A68A31ACAB8A3EE7AD4039CF90477321B7744CC4C765927F1DF872FF4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/44f5699c0563644b22bf3c527ca14091ca25720ba563cc8b453f87e129bafb91.png",
+                                  "sha256":  "44F5699C0563644B22BF3C527CA14091CA25720BA563CC8B453F87E129BAFB91",
+                                  "generatedSha256":  "44F5699C0563644B22BF3C527CA14091CA25720BA563CC8B453F87E129BAFB91",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/46593fd5076e95cad0b1c43eee0b1b2944a2cc6a2a3d9711afed3364e72a232a.png",
+                                  "sha256":  "46593FD5076E95CAD0B1C43EEE0B1B2944A2CC6A2A3D9711AFED3364E72A232A",
+                                  "generatedSha256":  "46593FD5076E95CAD0B1C43EEE0B1B2944A2CC6A2A3D9711AFED3364E72A232A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf.png",
+                                  "sha256":  "4798578521C671073204E962B264B6B257F95A1C5A8F25D2373D03DA6AE938BF",
+                                  "generatedSha256":  "4798578521C671073204E962B264B6B257F95A1C5A8F25D2373D03DA6AE938BF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea.png",
+                                  "sha256":  "53CAC22F27FB366230C9A63B62F698FA7B8B8ADAEEB68F072D9E83B04FC978EA",
+                                  "generatedSha256":  "53CAC22F27FB366230C9A63B62F698FA7B8B8ADAEEB68F072D9E83B04FC978EA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/58a6fff1dec76f59b66788a268430acfa9cd0d9dc343b7db78488725e7e809f5.png",
+                                  "sha256":  "58A6FFF1DEC76F59B66788A268430ACFA9CD0D9DC343B7DB78488725E7E809F5",
+                                  "generatedSha256":  "58A6FFF1DEC76F59B66788A268430ACFA9CD0D9DC343B7DB78488725E7E809F5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/5a8557cfa834c6d3ae36ae5db41495ee63f012a40c9c4b5f2becdbbead9fcdde.png",
+                                  "sha256":  "5A8557CFA834C6D3AE36AE5DB41495EE63F012A40C9C4B5F2BECDBBEAD9FCDDE",
+                                  "generatedSha256":  "5A8557CFA834C6D3AE36AE5DB41495EE63F012A40C9C4B5F2BECDBBEAD9FCDDE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/5d7ea4c5ed626596eac7a1c85fffbce8d5ebd97d5b15387c592b26e42cbdfb2e.png",
+                                  "sha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "generatedSha256":  "5D7EA4C5ED626596EAC7A1C85FFFBCE8D5EBD97D5B15387C592B26E42CBDFB2E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/5f53c23f0de90fd0b5ecbe08d7f0145dfe3c75e881db61fe7255284ab7dd5c01.json",
+                                  "sha256":  "5F53C23F0DE90FD0B5ECBE08D7F0145DFE3C75E881DB61FE7255284AB7DD5C01",
+                                  "generatedSha256":  "5F53C23F0DE90FD0B5ECBE08D7F0145DFE3C75E881DB61FE7255284AB7DD5C01",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/66850cf7f19427bf1eb425d2640b8dac76b68903154b202354d86ce6fc564adb.png",
+                                  "sha256":  "66850CF7F19427BF1EB425D2640B8DAC76B68903154B202354D86CE6FC564ADB",
+                                  "generatedSha256":  "66850CF7F19427BF1EB425D2640B8DAC76B68903154B202354D86CE6FC564ADB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/705324373b9f48b95661b260295687aabebb2e0bc3e5250ce2b88e9669582ac5.png",
+                                  "sha256":  "705324373B9F48B95661B260295687AABEBB2E0BC3E5250CE2B88E9669582AC5",
+                                  "generatedSha256":  "705324373B9F48B95661B260295687AABEBB2E0BC3E5250CE2B88E9669582AC5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96.png",
+                                  "sha256":  "783CCF25BEAFBB2100C7CEAE38678CBF986315AF8E021D3A587DC7678643DB96",
+                                  "generatedSha256":  "783CCF25BEAFBB2100C7CEAE38678CBF986315AF8E021D3A587DC7678643DB96",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/79d06bb7ec0745ed561154823981646e591c866af6909082b1573afb5ac7f35d.png",
+                                  "sha256":  "79D06BB7EC0745ED561154823981646E591C866AF6909082B1573AFB5AC7F35D",
+                                  "generatedSha256":  "79D06BB7EC0745ED561154823981646E591C866AF6909082B1573AFB5AC7F35D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/7d7fae444935010488c573926d0e1e4af7ba4b301df16d51d6a16dd82ac4490e.png",
+                                  "sha256":  "7D7FAE444935010488C573926D0E1E4AF7BA4B301DF16D51D6A16DD82AC4490E",
+                                  "generatedSha256":  "7D7FAE444935010488C573926D0E1E4AF7BA4B301DF16D51D6A16DD82AC4490E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/811bb1ce3ac2e5c1fdcfed5f7a5fc41138448028db1a033f7419fd34b19b906f.png",
+                                  "sha256":  "811BB1CE3AC2E5C1FDCFED5F7A5FC41138448028DB1A033F7419FD34B19B906F",
+                                  "generatedSha256":  "811BB1CE3AC2E5C1FDCFED5F7A5FC41138448028DB1A033F7419FD34B19B906F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/8a20231dd5a695d09d73ca212e4f94b85c1819624fddb2808de3c6c7f47149b1.png",
+                                  "sha256":  "8A20231DD5A695D09D73CA212E4F94B85C1819624FDDB2808DE3C6C7F47149B1",
+                                  "generatedSha256":  "8A20231DD5A695D09D73CA212E4F94B85C1819624FDDB2808DE3C6C7F47149B1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/8be97840a91233813d8374cb9ddebee6a9a9bcac366fa7d7323ba727cc23a946.png",
+                                  "sha256":  "8BE97840A91233813D8374CB9DDEBEE6A9A9BCAC366FA7D7323BA727CC23A946",
+                                  "generatedSha256":  "8BE97840A91233813D8374CB9DDEBEE6A9A9BCAC366FA7D7323BA727CC23A946",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/8c225a059097d0df955c5184c611cd0c08b0c8c6e7e7bae6296f1a2840fdb188.png",
+                                  "sha256":  "8C225A059097D0DF955C5184C611CD0C08B0C8C6E7E7BAE6296F1A2840FDB188",
+                                  "generatedSha256":  "8C225A059097D0DF955C5184C611CD0C08B0C8C6E7E7BAE6296F1A2840FDB188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/8cf6a9696ea3a36fefd152c6feabc88fc45daec7cc91d29e325998dfa45cc5be.png",
+                                  "sha256":  "8CF6A9696EA3A36FEFD152C6FEABC88FC45DAEC7CC91D29E325998DFA45CC5BE",
+                                  "generatedSha256":  "8CF6A9696EA3A36FEFD152C6FEABC88FC45DAEC7CC91D29E325998DFA45CC5BE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/8eb7492c2476fd6e594ca43797169d973ac5bce298ba1a257ceb5e555bd2f70d.png",
+                                  "sha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "generatedSha256":  "8EB7492C2476FD6E594CA43797169D973AC5BCE298BA1A257CEB5E555BD2F70D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73.png",
+                                  "sha256":  "94D6A4E46C42D3EAEFA78F0A695744254522B24ECFF771B861A88FF2FB632B73",
+                                  "generatedSha256":  "94D6A4E46C42D3EAEFA78F0A695744254522B24ECFF771B861A88FF2FB632B73",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/9816522086508faae75d42bb8d851807b4ee60f777f2af003153c507ae203776.png",
+                                  "sha256":  "9816522086508FAAE75D42BB8D851807B4EE60F777F2AF003153C507AE203776",
+                                  "generatedSha256":  "9816522086508FAAE75D42BB8D851807B4EE60F777F2AF003153C507AE203776",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/98d31bdabff3a307551df10def847bbfafb18540972c3d351d61ff84fc318799.png",
+                                  "sha256":  "98D31BDABFF3A307551DF10DEF847BBFAFB18540972C3D351D61FF84FC318799",
+                                  "generatedSha256":  "98D31BDABFF3A307551DF10DEF847BBFAFB18540972C3D351D61FF84FC318799",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/9a915726ef3623f84820a1a2c4753df76b2a27210a435d866e0e695346afdfde.png",
+                                  "sha256":  "9A915726EF3623F84820A1A2C4753DF76B2A27210A435D866E0E695346AFDFDE",
+                                  "generatedSha256":  "9A915726EF3623F84820A1A2C4753DF76B2A27210A435D866E0E695346AFDFDE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/a368e977761917d2a0c8b5daaff28f0e6a3f0d0cb9f3728bb01fb5ab9d254d9d.png",
+                                  "sha256":  "A368E977761917D2A0C8B5DAAFF28F0E6A3F0D0CB9F3728BB01FB5AB9D254D9D",
+                                  "generatedSha256":  "A368E977761917D2A0C8B5DAAFF28F0E6A3F0D0CB9F3728BB01FB5AB9D254D9D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3.json",
+                                  "sha256":  "B5B1D4FA707AB1CE9E18769D63C21B17D76240B86BDE7918F71BB5B0E85614C3",
+                                  "generatedSha256":  "B5B1D4FA707AB1CE9E18769D63C21B17D76240B86BDE7918F71BB5B0E85614C3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/b671b01f1811540d265431caa088b3197be9ff8f5224c2415f5c5c3d717583f1.png",
+                                  "sha256":  "B671B01F1811540D265431CAA088B3197BE9FF8F5224C2415F5C5C3D717583F1",
+                                  "generatedSha256":  "B671B01F1811540D265431CAA088B3197BE9FF8F5224C2415F5C5C3D717583F1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/baaee2e58bbf1c3f784247e42e37fd8f6884061bd8fc055c2d3d0232a09ff312.png",
+                                  "sha256":  "BAAEE2E58BBF1C3F784247E42E37FD8F6884061BD8FC055C2D3D0232A09FF312",
+                                  "generatedSha256":  "BAAEE2E58BBF1C3F784247E42E37FD8F6884061BD8FC055C2D3D0232A09FF312",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/bff62ce0ad1b4fc542f3f6ef81dcbffcb3d7e4331047ff380b422483a2e0dcf7.png",
+                                  "sha256":  "BFF62CE0AD1B4FC542F3F6EF81DCBFFCB3D7E4331047FF380B422483A2E0DCF7",
+                                  "generatedSha256":  "BFF62CE0AD1B4FC542F3F6EF81DCBFFCB3D7E4331047FF380B422483A2E0DCF7",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/c13791471079a646ba58abba9576d1f1ab37fea5fe32599e8d40b559401501e6.png",
+                                  "sha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "generatedSha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/c1d0223c7f3e83e904003700c2b1ed8cd3bd70d2c09ad1a1e2498411eecf6e57.png",
+                                  "sha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "generatedSha256":  "C1D0223C7F3E83E904003700C2B1ED8CD3BD70D2C09AD1A1E2498411EECF6E57",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/c2a6ea8262bf5d910b1f98daa09a328a77f9aa9b50817267a775850ff33d9b6a.png",
+                                  "sha256":  "C2A6EA8262BF5D910B1F98DAA09A328A77F9AA9B50817267A775850FF33D9B6A",
+                                  "generatedSha256":  "C2A6EA8262BF5D910B1F98DAA09A328A77F9AA9B50817267A775850FF33D9B6A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/cff5a284ef7ba1bfa8fcaee5cdb11b8c001f44d7298a257ba7593116c879f479.png",
+                                  "sha256":  "CFF5A284EF7BA1BFA8FCAEE5CDB11B8C001F44D7298A257BA7593116C879F479",
+                                  "generatedSha256":  "CFF5A284EF7BA1BFA8FCAEE5CDB11B8C001F44D7298A257BA7593116C879F479",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/d072f28d9579df2ca7b28b38d3d1cfd0d8dd5d9fe610ed838528f53d3652e717.png",
+                                  "sha256":  "D072F28D9579DF2CA7B28B38D3D1CFD0D8DD5D9FE610ED838528F53D3652E717",
+                                  "generatedSha256":  "D072F28D9579DF2CA7B28B38D3D1CFD0D8DD5D9FE610ED838528F53D3652E717",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/d100eec6c9167c61321a7ed79f10387904e37e6d4f0864cbb6aa0e8320556188.png",
+                                  "sha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "generatedSha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/da1cadab2b1ab53503dd2b424848cc275258f8d11bbe0fe2491751c68a5d24a7.png",
+                                  "sha256":  "DA1CADAB2B1AB53503DD2B424848CC275258F8D11BBE0FE2491751C68A5D24A7",
+                                  "generatedSha256":  "DA1CADAB2B1AB53503DD2B424848CC275258F8D11BBE0FE2491751C68A5D24A7",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/dd0b71308877cc356705024ae31ba1435094b55227fc04a65dae929e35cfc037.png",
+                                  "sha256":  "DD0B71308877CC356705024AE31BA1435094B55227FC04A65DAE929E35CFC037",
+                                  "generatedSha256":  "DD0B71308877CC356705024AE31BA1435094B55227FC04A65DAE929E35CFC037",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/e9307be64d419a3b366d936cc4da6e05c4462212320bbe957eb0f9a7b9f2d066.png",
+                                  "sha256":  "E9307BE64D419A3B366D936CC4DA6E05C4462212320BBE957EB0F9A7B9F2D066",
+                                  "generatedSha256":  "E9307BE64D419A3B366D936CC4DA6E05C4462212320BBE957EB0F9A7B9F2D066",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/ecd84da543d828d8290fc8e1c2d58c6571e941aafa2797f8bc1a955358654985.png",
+                                  "sha256":  "ECD84DA543D828D8290FC8E1C2D58C6571E941AAFA2797F8BC1A955358654985",
+                                  "generatedSha256":  "ECD84DA543D828D8290FC8E1C2D58C6571E941AAFA2797F8BC1A955358654985",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/generated/ed166d5724ac2edb67df07ecf0389f25101bd6f4b1dfac68801a9e9e79fe5ff9.png",
+                                  "sha256":  "ED166D5724AC2EDB67DF07ECF0389F25101BD6F4B1DFAC68801A9E9E79FE5FF9",
+                                  "generatedSha256":  "ED166D5724AC2EDB67DF07ECF0389F25101BD6F4B1DFAC68801A9E9E79FE5FF9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/git-prepublication.json",
+                                  "sha256":  "0A1879AB71BE4EA9BAF5B00F5B4A3CFD767AE5C47D9AADDBF51AC6225A22E730",
+                                  "generatedSha256":  "0A1879AB71BE4EA9BAF5B00F5B4A3CFD767AE5C47D9AADDBF51AC6225A22E730",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/protected-after.json",
+                                  "sha256":  "ADF0A069F1DBB9F89717C97874BD5B2AD790666377077938D812468FACE4F945",
+                                  "generatedSha256":  "ADF0A069F1DBB9F89717C97874BD5B2AD790666377077938D812468FACE4F945",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/protected-final.json",
+                                  "sha256":  "66D7D03C621053F272014AEF1C2E5907F37A33A4A5041A8546A8CEC9F79BE6AC",
+                                  "generatedSha256":  "66D7D03C621053F272014AEF1C2E5907F37A33A4A5041A8546A8CEC9F79BE6AC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/raw-generated-archives.json",
+                                  "sha256":  "2868E8A3AB68350C581D12CEC0B1593B5AC9FE254E4CD9459C83F2B804C25A32",
+                                  "generatedSha256":  "2868E8A3AB68350C581D12CEC0B1593B5AC9FE254E4CD9459C83F2B804C25A32",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/raw-log-archives.json",
+                                  "sha256":  "F8EB1BF29FCD838E1963100F3B24758C272733D53F57DFD52FE5176F24261BFE",
+                                  "generatedSha256":  "F8EB1BF29FCD838E1963100F3B24758C272733D53F57DFD52FE5176F24261BFE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-dealt-1280.png",
+                                  "sha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "generatedSha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-dealt-320.png",
+                                  "sha256":  "41C7FE6A68A31ACAB8A3EE7AD4039CF90477321B7744CC4C765927F1DF872FF4",
+                                  "generatedSha256":  "41C7FE6A68A31ACAB8A3EE7AD4039CF90477321B7744CC4C765927F1DF872FF4",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-dealt-768.png",
+                                  "sha256":  "53CAC22F27FB366230C9A63B62F698FA7B8B8ADAEEB68F072D9E83B04FC978EA",
+                                  "generatedSha256":  "53CAC22F27FB366230C9A63B62F698FA7B8B8ADAEEB68F072D9E83B04FC978EA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-open-1280.png",
+                                  "sha256":  "E9307BE64D419A3B366D936CC4DA6E05C4462212320BBE957EB0F9A7B9F2D066",
+                                  "generatedSha256":  "E9307BE64D419A3B366D936CC4DA6E05C4462212320BBE957EB0F9A7B9F2D066",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-open-320.png",
+                                  "sha256":  "4798578521C671073204E962B264B6B257F95A1C5A8F25D2373D03DA6AE938BF",
+                                  "generatedSha256":  "4798578521C671073204E962B264B6B257F95A1C5A8F25D2373D03DA6AE938BF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/scene-open-768.png",
+                                  "sha256":  "783CCF25BEAFBB2100C7CEAE38678CBF986315AF8E021D3A587DC7678643DB96",
+                                  "generatedSha256":  "783CCF25BEAFBB2100C7CEAE38678CBF986315AF8E021D3A587DC7678643DB96",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step1-desktop.png",
+                                  "sha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "generatedSha256":  "D100EEC6C9167C61321A7ED79F10387904E37E6D4F0864CBB6AA0E8320556188",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step1.json",
+                                  "sha256":  "84A9A55A107055FADD580EB08E048C60D2E093E47F725618BF5FC0BD2CB1FEE7",
+                                  "generatedSha256":  "84A9A55A107055FADD580EB08E048C60D2E093E47F725618BF5FC0BD2CB1FEE7",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step2-focused-corrected.json",
+                                  "sha256":  "3BC476BAA3A0617086B4A1E7160BF23199D8BF5BAF2A74B2FDAF23AF983F9C99",
+                                  "generatedSha256":  "3BC476BAA3A0617086B4A1E7160BF23199D8BF5BAF2A74B2FDAF23AF983F9C99",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step2-focused.json",
+                                  "sha256":  "2F4706B3F725BA3C2F62F0758F2594F988A4758C3F4FDFD7746A9225CEB6115D",
+                                  "generatedSha256":  "2F4706B3F725BA3C2F62F0758F2594F988A4758C3F4FDFD7746A9225CEB6115D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step3-browser.json",
+                                  "sha256":  "3C1D7997947CD5FD0279A7D1784F6D099F500B783D3606F75857ADECA079742D",
+                                  "generatedSha256":  "3C1D7997947CD5FD0279A7D1784F6D099F500B783D3606F75857ADECA079742D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step3-restoration-jobs.json",
+                                  "sha256":  "7078A705D8407F1FB24AC8788ACB4E5C949443352AE49414B1B41F000F75B452",
+                                  "generatedSha256":  "7078A705D8407F1FB24AC8788ACB4E5C949443352AE49414B1B41F000F75B452",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step4-chromium.json",
+                                  "sha256":  "FF349E42B1DA4F0E760279A991B0E81BD9BBFB2893809E5E5C4E388EBF505AB6",
+                                  "generatedSha256":  "FF349E42B1DA4F0E760279A991B0E81BD9BBFB2893809E5E5C4E388EBF505AB6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step4-preservation.json",
+                                  "sha256":  "3DCF39A43DB12269D5CBD256C449EB8D87B8AADA2D251B5DBBC232F1479DFAF3",
+                                  "generatedSha256":  "3DCF39A43DB12269D5CBD256C449EB8D87B8AADA2D251B5DBBC232F1479DFAF3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/step4-vitest.json",
+                                  "sha256":  "3E2F34B868D022B9C81FE0089BC36A7EAA5FA8A62FF4EDCCE86020C146C8C789",
+                                  "generatedSha256":  "3E2F34B868D022B9C81FE0089BC36A7EAA5FA8A62FF4EDCCE86020C146C8C789",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/text-fallback-1280.png",
+                                  "sha256":  "3301FCBF26AA740C81CE1A2D7C4BFAB2D36147D52A9D78779C9872073C910E8E",
+                                  "generatedSha256":  "3301FCBF26AA740C81CE1A2D7C4BFAB2D36147D52A9D78779C9872073C910E8E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/text-fallback-320.png",
+                                  "sha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "generatedSha256":  "145E9542ABC0BDA3BCCED73205FE1FE8F7F1E14EE6B2B18D83B93A316CCBED73",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/text-fallback-768.png",
+                                  "sha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "generatedSha256":  "C13791471079A646BA58ABBA9576D1F1AB37FEA5FE32599E8D40B559401501E6",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/trace-privacy.json",
+                                  "sha256":  "7A439B6B158DFD6AB6FD488728437C0E17B5F87FF28E33D4C231F65630A86581",
+                                  "generatedSha256":  "7A439B6B158DFD6AB6FD488728437C0E17B5F87FF28E33D4C231F65630A86581",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/visual-review.json",
+                                  "sha256":  "ABDAAEEE6383FF3D7A09EAB191FB85A0644F0A97460295AAD157B6D228447B4B",
+                                  "generatedSha256":  "ABDAAEEE6383FF3D7A09EAB191FB85A0644F0A97460295AAD157B6D228447B4B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-border-setup-failure.json",
+                                  "sha256":  "0574F6F7E41C8B5A18415AD6E49C319ED6239ED723B201B6C051E0EE0B0468DC",
+                                  "generatedSha256":  "0574F6F7E41C8B5A18415AD6E49C319ED6239ED723B201B6C051E0EE0B0468DC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-driver-failure.json",
+                                  "sha256":  "A42D4F0848133612E5B84999D3BBFE3E46ECFB13D0763ADFD34FDFA77ECC18FD",
+                                  "generatedSha256":  "A42D4F0848133612E5B84999D3BBFE3E46ECFB13D0763ADFD34FDFA77ECC18FD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-controls.png",
+                                  "sha256":  "879AC53D422BC99E7477E74F38BBE8D0FB6D965688F4C503C5E0B2B05F10F5E5",
+                                  "generatedSha256":  "879AC53D422BC99E7477E74F38BBE8D0FB6D965688F4C503C5E0B2B05F10F5E5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-five-controls.png",
+                                  "sha256":  "48A602BF8CAFB44CF75D5F5C8080B50207A3C4C7EC622B25D1A69E193722C3D3",
+                                  "generatedSha256":  "48A602BF8CAFB44CF75D5F5C8080B50207A3C4C7EC622B25D1A69E193722C3D3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-five-hand.png",
+                                  "sha256":  "CE31187B7914495069187BC1BAEC719A29D8BC707E783BC837BF28836814B7D8",
+                                  "generatedSha256":  "CE31187B7914495069187BC1BAEC719A29D8BC707E783BC837BF28836814B7D8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-five-top.png",
+                                  "sha256":  "E7EAE692C277FCD10339BFB7424057E3426BB4A13C76D1A362F6C984682E4FE0",
+                                  "generatedSha256":  "E7EAE692C277FCD10339BFB7424057E3426BB4A13C76D1A362F6C984682E4FE0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-five.png",
+                                  "sha256":  "E85969282B996A51C0A21CE0D8C0EC130DB838AACBB0AC346192A7B1686FA16B",
+                                  "generatedSha256":  "E85969282B996A51C0A21CE0D8C0EC130DB838AACBB0AC346192A7B1686FA16B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-hand.png",
+                                  "sha256":  "100540BE96EB166A6B72187A05CEB700C943BD865516A0CE98155D04BE283AC0",
+                                  "generatedSha256":  "100540BE96EB166A6B72187A05CEB700C943BD865516A0CE98155D04BE283AC0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-rsa-cap-controls.png",
+                                  "sha256":  "29713166D3D59F32769167F9A0EC393B595539A9B3D118186D11A2504784B554",
+                                  "generatedSha256":  "29713166D3D59F32769167F9A0EC393B595539A9B3D118186D11A2504784B554",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-rsa-cap-hand.png",
+                                  "sha256":  "24AE9D6D8FDFE27EB947A36F9851B8B06C69C4E3F7BC391400AFEEFBC6A0909D",
+                                  "generatedSha256":  "24AE9D6D8FDFE27EB947A36F9851B8B06C69C4E3F7BC391400AFEEFBC6A0909D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-rsa-cap-top.png",
+                                  "sha256":  "89586C8AFBE292CEEA7913EB787A77F61B3810513CBAABE27279C87CEEE9B229",
+                                  "generatedSha256":  "89586C8AFBE292CEEA7913EB787A77F61B3810513CBAABE27279C87CEEE9B229",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player-top.png",
+                                  "sha256":  "B5352BFE5A800CA58122D4B2AD8D2DA8B2FC1B91D4DB162FA0E733BD9CE47776",
+                                  "generatedSha256":  "B5352BFE5A800CA58122D4B2AD8D2DA8B2FC1B91D4DB162FA0E733BD9CE47776",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-player.png",
+                                  "sha256":  "2DC524757EA7DC74E93C0567F38C9964BF73CED24C5F0173DD508C9E8DCDCE9F",
+                                  "generatedSha256":  "2DC524757EA7DC74E93C0567F38C9964BF73CED24C5F0173DD508C9E8DCDCE9F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200-setup-failure.json",
+                                  "sha256":  "CC77EA4914A322689115422BF6B69490A157DF466ACA4C3BA3AEB5E58118EA41",
+                                  "generatedSha256":  "CC77EA4914A322689115422BF6B69490A157DF466ACA4C3BA3AEB5E58118EA41",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/repair11/zoom200.json",
+                                  "sha256":  "EC5F2190A984EE816839EB35778A8A3BB35CE55B023F8CA3D55DDFEE2239A971",
+                                  "generatedSha256":  "EC5F2190A984EE816839EB35778A8A3BB35CE55B023F8CA3D55DDFEE2239A971",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/table-1280.png",
+                                  "sha256":  "DF6E365CF276D54379994E3072FAF3B2DC3B68AD595D0D96A4C7D6FEE8BDF406",
+                                  "generatedSha256":  "6F711EC6F1F8DE9A7C2C1EBEB4F5900784591961ED01A12B32A26F52A71063A9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/table-320.png",
+                                  "sha256":  "42EE8D9C415B06112A6A1295D7AE5177CB0A3E32E63DF8D6A4BEDA1DC7BD61A1",
+                                  "generatedSha256":  "029044C171172891EAD6EA4BEC0AA5028F83647128F428BE36486C28E3815358",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/table-768.png",
+                                  "sha256":  "E721EDECCBFE29068B2869788DCAEEF1062C86C7BDFD56799E396B32587C0E2D",
+                                  "generatedSha256":  "27473D042F6A0D10131E8905C67B475A0702F4F306FED5DB4668018567D1B736",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+                                  "sha256":  "77E0DA2B5DE27C3D1BE03552031A70793018E01910BC3CFCF118DF508F05C804",
+                                  "generatedSha256":  "765F7A710FE94D5DB0D872BFBE842A3AAD8CED6254665905610DC81AA6A4E016",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+                                  "sha256":  "96B4698E3AC6AE70837FA8C0B39F13CFF89B8718F293EF49BFBB374301ABB98E",
+                                  "generatedSha256":  "69252EEA38CE2AE288F743B0D59C18986C05E45720860A908C65E90B09014C29",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+                                  "sha256":  "DC7C403AB38EA60ACCBDB8C6EADFBF5E645D6EFE24F2B007FD8A08FF42C895C4",
+                                  "generatedSha256":  "9BF19B79204B1029C96DA8F4AD1207375A7BEC2166239D32BFDA9205E175565F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/reduced-seven-settled.png",
+                                  "sha256":  "FB82B174F93685467C0B0FE9AE60E05795DDDBD4A9B461BBCB711551D10B68F4",
+                                  "generatedSha256":  "F437EB6CEC0D03406A3F2DF65CEF66085C14D4B563A8D680603738C04C71279C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-end-first-pass.png",
+                                  "sha256":  "1EBC87A901637B897F16CD89D0026B5950D148F4EB53B6292780D0CFBE499D37",
+                                  "generatedSha256":  "F315807336C5D29EC75AFF2B8EB1EC8B4F2796F0DBA246AB622F565B0F939C3C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-first-pass.png",
+                                  "sha256":  "AAC783E94A0E55372D23124B6E06F5FA4569AECC761F8FBF968A780FC1B6E668",
+                                  "generatedSha256":  "5D3D3D5F8545A6FF2B787028037D6C2D758E753E75EE2C7009D0B808D015CB2A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-second-pass.png",
+                                  "sha256":  "08511AEE4E4CBFC658D8D9053967805FF99FA1204900301A19ACF5F2789EFEB9",
+                                  "generatedSha256":  "508A8764579B72424DD849D03FACEA70CFAD156852E887F6DF3030C32D835D43",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json",
+                                  "sha256":  "EDE90E2699C4E081957B3F0D66E4F550A1AF3076A5752606D0F1A2C5628CC618",
+                                  "generatedSha256":  "B9623A72B9C3CD4DFD64E000315D48D157DCEFDCFCF9C4043998545CFDBDE6D8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-settled.png",
+                                  "sha256":  "8B2D4DD622510DD4BD8D38CEA8B2367C2E01C66486A93D8BEBD1E103F3E40C36",
+                                  "generatedSha256":  "2A3D2BFD49F91D60EFE7BA5A5919E563D0AE7D3412D76254805F84F1EEB435F1",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+                                  "sha256":  "D06B60F50482A02A9C2F15C54D160163ED7355FDCDE4C256012AA91866386A81",
+                                  "generatedSha256":  "6A57BF01BBFC6851AC6CBA1A1EE5B6CBEAC67517F26BD2A43C47DD45991A9397",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-end-first-pass.png",
+                                  "sha256":  "C7474AFF02A17DA5FED4C11F204EA624FDDA334E14DBAA75279353569EA5468F",
+                                  "generatedSha256":  "C7474AFF02A17DA5FED4C11F204EA624FDDA334E14DBAA75279353569EA5468F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-first-pass.png",
+                                  "sha256":  "6EB2919BB229BFD3E819CD740A2A254D67C8908FE5521D27C16CAEA94BD6D67F",
+                                  "generatedSha256":  "6EB2919BB229BFD3E819CD740A2A254D67C8908FE5521D27C16CAEA94BD6D67F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-mid-second-pass.png",
+                                  "sha256":  "EE2509F68FD242CE4D15CD01CABCDAFE3CC3B3B023EF19EBEC9BB64B1AD6C03D",
+                                  "generatedSha256":  "EE2509F68FD242CE4D15CD01CABCDAFE3CC3B3B023EF19EBEC9BB64B1AD6C03D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json",
+                                  "sha256":  "A3C4E1BFA9C9C163D1F7FB3CFBE3E04B1278CDD92F2E960A7073C28A2F5E623F",
+                                  "generatedSha256":  "84EC9DF3DFF8E8D007279076ADADBD149AE1EE4300AB0638BECA8E2DED8C9DA3",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-settled.png",
+                                  "sha256":  "547D45465662D0A18B8F7D5B89430A69F4AB286867104E2EB0B024A76AB9A4F7",
+                                  "generatedSha256":  "2A5581855A7E58A30B138F516F3A68D8336385F8133BE9A735D017418927E727",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/4-1280-start.png",
+                                  "sha256":  "1322E846EAF7D1FAB0B45A6C1C82F7E0170F8AAE4D2D6C915886A55E8B6BF1B5",
+                                  "generatedSha256":  "1322E846EAF7D1FAB0B45A6C1C82F7E0170F8AAE4D2D6C915886A55E8B6BF1B5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-end-first-pass.png",
+                                  "sha256":  "0761FBF1FEA085FE9417E7A1587503CA454D2F166F29085FD9D515856C78FC35",
+                                  "generatedSha256":  "0761FBF1FEA085FE9417E7A1587503CA454D2F166F29085FD9D515856C78FC35",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-first-pass.png",
+                                  "sha256":  "0857831CAD7D77433E68D2B3347A8D898C7D031AA1DCFF265A6974B11BB29C1D",
+                                  "generatedSha256":  "0857831CAD7D77433E68D2B3347A8D898C7D031AA1DCFF265A6974B11BB29C1D",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-mid-second-pass.png",
+                                  "sha256":  "8B726F1CB021F2463094D85E292B04287F8A79514D4FF2006EE43F913730647C",
+                                  "generatedSha256":  "8B726F1CB021F2463094D85E292B04287F8A79514D4FF2006EE43F913730647C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json",
+                                  "sha256":  "73BAE084D3D12514662E827CD1669CF0D88B4E5E85DBB691183CBB60A5550F80",
+                                  "generatedSha256":  "ED8BBCC94AE9C7B74433CD901B10F78CF57489D04E9BE48B38E43AA9B5A2D232",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-settled.png",
+                                  "sha256":  "1692175D872DC967E93232CF96AC3A470AE062E22BC06436B60B108523BAC4C3",
+                                  "generatedSha256":  "3AAC82D14FE9619D627C62E4A38026DE11D4E83DF7A03B95AA31AAF125DACDAC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-1280-start.png",
+                                  "sha256":  "CFE520E0C5C1EC8F52C9AFE65CF55A7C8047C4AB36C1324842726FFE3F90785F",
+                                  "generatedSha256":  "CFE520E0C5C1EC8F52C9AFE65CF55A7C8047C4AB36C1324842726FFE3F90785F",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-end-first-pass.png",
+                                  "sha256":  "AD5CA2B3979EEE5EE3E226778A042B8123A386C805D297AD873D9C270CCEB6EC",
+                                  "generatedSha256":  "81F835381F2AE4FE404B5755660BF6B1694B4A74653E594CCE504EB7CA91D7B9",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-first-pass.png",
+                                  "sha256":  "224DFC9430E3A6328FD229C35642FCCE76BC28533DB5321FB21986FD8458ADFD",
+                                  "generatedSha256":  "6C16A3ECA39936A335E4EF7FD589E7C0AA92C134A44839E8D7B1ED6F6D2EDF66",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-second-pass.png",
+                                  "sha256":  "A44AC02C5730E38B26318FB95190FB9120FDADDB257FAED596519FF0B76217DA",
+                                  "generatedSha256":  "B3385C8467CCCC1B27C1D553C250EA76E8DE08A0C62567C94731C52ADADF6D79",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json",
+                                  "sha256":  "920B8F8768423F8619058458DFA855B96C674B9719DBAF50A4A8D79A69EB0C95",
+                                  "generatedSha256":  "4819591399FC990C2EA6EBADF445291A00CB60C032A0E8CBAD322489CE679D64",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-settled.png",
+                                  "sha256":  "94BA3CCC540D3DA72D512EAF32B5F482308C66DB5EA4697442D636BD6E513F50",
+                                  "generatedSha256":  "2FBFD680BEED965767D81506CE0E628405362CD6F773B2C3AE672258969A33DF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-320-start.png",
+                                  "sha256":  "765848B1392D30AE2FF908806E9EC63DAE0F793E44274D1BF29FDABBE787FBF2",
+                                  "generatedSha256":  "3AD79CE48A728D7A2CF4025498EA17D01B3CA0E58E2DA5AF4F41F875E077023C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-end-first-pass.png",
+                                  "sha256":  "A513AFE2B1B1FBC960E7D5FDDA9953DA89F00115DF096DD6C0E3D7BB08F51BDC",
+                                  "generatedSha256":  "A513AFE2B1B1FBC960E7D5FDDA9953DA89F00115DF096DD6C0E3D7BB08F51BDC",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-mid-first-pass.png",
+                                  "sha256":  "ADB4CB2DB1DE0276A101F470398A2CCC07C0D74FADFCBB1E82F152091ABA1D87",
+                                  "generatedSha256":  "ADB4CB2DB1DE0276A101F470398A2CCC07C0D74FADFCBB1E82F152091ABA1D87",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-mid-second-pass.png",
+                                  "sha256":  "838EDDC391213D2DA10D8FAF84B12D893EA5331C46B49E2DB4E4EC2FB100C44A",
+                                  "generatedSha256":  "838EDDC391213D2DA10D8FAF84B12D893EA5331C46B49E2DB4E4EC2FB100C44A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json",
+                                  "sha256":  "9D14D23EF9FE0EAD18D67B1DDC743529C1EC04177A7E625A68CBD70A0A43F695",
+                                  "generatedSha256":  "E7AC57F1E258A00BBBCFFB6F642FB9C0DEC17F06BAD22B14A85157E2392D2764",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-settled.png",
+                                  "sha256":  "59D5857A012AE01F113048D28501CAE00F1B05A2DBFC3086DA773D24A23B09CE",
+                                  "generatedSha256":  "4A199800007E97B67477BEE0FCA314F2150855F4A7612D23290A82250EC7295B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/M10_T06_EVIDENCE/screenshots/7-768-start.png",
+                                  "sha256":  "097AE8924AD30CCD67A32B26ECD4EF967689D5FAA2AE956031FA6EE220DB8720",
+                                  "generatedSha256":  "097AE8924AD30CCD67A32B26ECD4EF967689D5FAA2AE956031FA6EE220DB8720",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/charlie-result.png",
+                                  "sha256":  "B2207C64723DFCBD506A9D8FD2C1D8C70C5E0812524D815C4173200A0E4479E8",
+                                  "generatedSha256":  "B2207C64723DFCBD506A9D8FD2C1D8C70C5E0812524D815C4173200A0E4479E8",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/classic-table.png",
+                                  "sha256":  "7CD374F4EF1813FB35D101C1F849101474F543781EB8FC7E96B3FE72F554A73B",
+                                  "generatedSha256":  "7CD374F4EF1813FB35D101C1F849101474F543781EB8FC7E96B3FE72F554A73B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-ready.png",
+                                  "sha256":  "32E77A1ED7D1046091DD224C54D90A7A01A7D17D4C2D44D84F2A8AD8BD6A011D",
+                                  "generatedSha256":  "E57A5DA7553989C9C9DD61CF62AD49CE8285C765FEAAAF2A2EFE63DE85D7AA6B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-results.png",
+                                  "sha256":  "6DD1C88008C3582177E6D860F288529A1C1D947AFDF18E8EB3ACA1CB5DA75EBE",
+                                  "generatedSha256":  "ABF6C8CF1A6D16BC11ED27629ECCDBB561ACC7C26AB7429D97B89FB977BACCAB",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-table-1280.png",
+                                  "sha256":  "06A0343599800453B5D0D55255FEE1A1017A2F89229EBFBFF8CF5A0B09A0EA27",
+                                  "generatedSha256":  "06A0343599800453B5D0D55255FEE1A1017A2F89229EBFBFF8CF5A0B09A0EA27",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-table-320.png",
+                                  "sha256":  "F5E585125753B12B7F222D24E0DFDF18738F840A6227DF658974C6722C912616",
+                                  "generatedSha256":  "F5E585125753B12B7F222D24E0DFDF18738F840A6227DF658974C6722C912616",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-table-768.png",
+                                  "sha256":  "D6AF087DECFB831356A540264839A38D500A94F3ACD18778CEBA85ABEBA2DC5C",
+                                  "generatedSha256":  "D6AF087DECFB831356A540264839A38D500A94F3ACD18778CEBA85ABEBA2DC5C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/m9-tools.png",
+                                  "sha256":  "82375819A7E7F7F580772EAE327C3A34DB03193DA4250ED7820E3C0D5DD8903E",
+                                  "generatedSha256":  "40B0C5ABD9E2AD4ACF24E857B7EEE22B609E2693173A29B81773C0A373DAD925",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/mobile-table.png",
+                                  "sha256":  "DA1CADAB2B1AB53503DD2B424848CC275258F8D11BBE0FE2491751C68A5D24A7",
+                                  "generatedSha256":  "DA1CADAB2B1AB53503DD2B424848CC275258F8D11BBE0FE2491751C68A5D24A7",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-dwarf_female.png",
+                                  "sha256":  "75083054C8959BF248E58880330D0CD6D3B1A165A2647912F4DB2EB422724DF0",
+                                  "generatedSha256":  "75083054C8959BF248E58880330D0CD6D3B1A165A2647912F4DB2EB422724DF0",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-dwarf_male.png",
+                                  "sha256":  "BC5D21B0F07A5C9990D9C22021A1F166F89A9F9A10675958A1D42870850E9ACE",
+                                  "generatedSha256":  "BC5D21B0F07A5C9990D9C22021A1F166F89A9F9A10675958A1D42870850E9ACE",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-elf_female.png",
+                                  "sha256":  "EBC6C30E65155DBA38F3A37B93942821947E59B23C2A151F6526404DB74C45F2",
+                                  "generatedSha256":  "EBC6C30E65155DBA38F3A37B93942821947E59B23C2A151F6526404DB74C45F2",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-elf_male.png",
+                                  "sha256":  "DBC500DE598C8F201FE315D464ECB68A11CD58E0FDAE67AACE7DD29E0E37F880",
+                                  "generatedSha256":  "DBC500DE598C8F201FE315D464ECB68A11CD58E0FDAE67AACE7DD29E0E37F880",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-halforc_female.png",
+                                  "sha256":  "DB6AC47BD42DE0FB9AE6440C9C7E0645881120D850E278AB094B78108DDC19DD",
+                                  "generatedSha256":  "DB6AC47BD42DE0FB9AE6440C9C7E0645881120D850E278AB094B78108DDC19DD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-halforc_male.png",
+                                  "sha256":  "2CD38547B9D2AE57137305EA8FC00B023B88CD248CA41ADA6BE631D8294FA1F5",
+                                  "generatedSha256":  "2CD38547B9D2AE57137305EA8FC00B023B88CD248CA41ADA6BE631D8294FA1F5",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-knight_female.png",
+                                  "sha256":  "A0FF09684C2E57D2FD22166D2F0DBBEA043DB5689DF9A7365DA26DD17791C535",
+                                  "generatedSha256":  "A0FF09684C2E57D2FD22166D2F0DBBEA043DB5689DF9A7365DA26DD17791C535",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-knight_male.png",
+                                  "sha256":  "FDF96D06BC5DED1A12E124A318CBE641849FD32EAE4E7F4B4003E12CB14CBDFF",
+                                  "generatedSha256":  "FDF96D06BC5DED1A12E124A318CBE641849FD32EAE4E7F4B4003E12CB14CBDFF",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-mage_female.png",
+                                  "sha256":  "C0B1C8F7D5206F0EC58CEADF343C5F973548C7A8B172B22AF4694DEB6BBC5594",
+                                  "generatedSha256":  "C0B1C8F7D5206F0EC58CEADF343C5F973548C7A8B172B22AF4694DEB6BBC5594",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-mage_male.png",
+                                  "sha256":  "FFAF4C62938285FCCA74E5C5C9791841DF7F6FEFB4471B44AFB03AD5642B0466",
+                                  "generatedSha256":  "FFAF4C62938285FCCA74E5C5C9791841DF7F6FEFB4471B44AFB03AD5642B0466",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-noble_female.png",
+                                  "sha256":  "BE2D116A985427844790F13F62F2B33BFF993FE90655918236E6ECBAE5B6007E",
+                                  "generatedSha256":  "BE2D116A985427844790F13F62F2B33BFF993FE90655918236E6ECBAE5B6007E",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-avatar-noble_male.png",
+                                  "sha256":  "1BB38FECF2F83BAE7CFED3E42CF82D45A1D05DA206030D9A8333EAAFD7718891",
+                                  "generatedSha256":  "1BB38FECF2F83BAE7CFED3E42CF82D45A1D05DA206030D9A8333EAAFD7718891",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-production-felt-1.png",
+                                  "sha256":  "DA0C67D28081D4548ACC5E193D97DF7A3EC1B46AA4E02A24365078E5461C6DFD",
+                                  "generatedSha256":  "DA0C67D28081D4548ACC5E193D97DF7A3EC1B46AA4E02A24365078E5461C6DFD",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-production-felt-2.png",
+                                  "sha256":  "91CA4C44AFE80A7E6AF4423BEEEAB0513D4FEB59C8587E9D7402B0984478C07A",
+                                  "generatedSha256":  "91CA4C44AFE80A7E6AF4423BEEEAB0513D4FEB59C8587E9D7402B0984478C07A",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-production-light-1.png",
+                                  "sha256":  "659826D4E924D255DFD6B5DCC29ABC43BC6417E8B6404D1802D20ECD74838B6B",
+                                  "generatedSha256":  "659826D4E924D255DFD6B5DCC29ABC43BC6417E8B6404D1802D20ECD74838B6B",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-production-light-2.png",
+                                  "sha256":  "FEDFDEF64DA08ECA6DB6A63E791354A19222B342D895137A5CC4E1653010AD9C",
+                                  "generatedSha256":  "FEDFDEF64DA08ECA6DB6A63E791354A19222B342D895137A5CC4E1653010AD9C",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-responsive-1280.png",
+                                  "sha256":  "D78107C8D031018F14A67920C20D1AD0535E3F10393EE2216ED71E6C6B111B33",
+                                  "generatedSha256":  "D78107C8D031018F14A67920C20D1AD0535E3F10393EE2216ED71E6C6B111B33",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-responsive-320.png",
+                                  "sha256":  "871651D579605B046214BF89621F55392F1672546463DC9E35A114DAE5A54F90",
+                                  "generatedSha256":  "871651D579605B046214BF89621F55392F1672546463DC9E35A114DAE5A54F90",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-responsive-768.png",
+                                  "sha256":  "8F7B01EE4E9CF7C2C0C332DE71D70DFF03557BE1265C62399AA4B314724AB0A2",
+                                  "generatedSha256":  "8F7B01EE4E9CF7C2C0C332DE71D70DFF03557BE1265C62399AA4B314724AB0A2",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-text-fallback-1280.png",
+                                  "sha256":  "D3609685F23C727BEE51FE36C70F887CF85DC07534DD4B5AD3A47BAB2404ED19",
+                                  "generatedSha256":  "D3609685F23C727BEE51FE36C70F887CF85DC07534DD4B5AD3A47BAB2404ED19",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/pa1-text-fallback-320.png",
+                                  "sha256":  "508CC6B9C19F046DE36A7A9E3BBF46C4822FD4BBAABD443A5AEEE7A819C29FDA",
+                                  "generatedSha256":  "508CC6B9C19F046DE36A7A9E3BBF46C4822FD4BBAABD443A5AEEE7A819C29FDA",
+                                  "restored":  true
+                              },
+                              {
+                                  "path":  "docs/images/replay-audit.png",
+                                  "sha256":  "59C96E613ADA184961DDF4999A91DCAE6537ECC33B74AC28A428664BA6EBCFEC",
+                                  "generatedSha256":  "59C96E613ADA184961DDF4999A91DCAE6537ECC33B74AC28A428664BA6EBCFEC",
+                                  "restored":  true
+                              }
+                          ],
+    "moved":  [
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/mid.png",
+                      "sha256":  "477C7B47513D58D4F85B30D2FFD2BFE66A456F8FDFDA9842508089A21B57FC2B"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/pre.png",
+                      "sha256":  "4F1381EB5F171DA553E1A9C46DB222F60068DE682571BE0214EA179834090204"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/receipt.json",
+                      "sha256":  "480DB7A167711B04256C4FA6963E23E239EC1E974EFCDCD7BD3520D673BA5393"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282895732-Hit/settled.png",
+                      "sha256":  "3047B01706CFDD003582023F177080BC64B23AFF77976173E4F3EFCEF0C95D44"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282899501-Double/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282899501-Double/mid.png",
+                      "sha256":  "C0671B094E837CB3FAE14289F948D7E75AE989B34E0D8E883C6DD78185D31810"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282899501-Double/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282899501-Double/pre.png",
+                      "sha256":  "D60158E1BB5D55CAA2CB25A8AD8A54E048A3AB4152CDCBE184CCE0ACEA25D287"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282899501-Double/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282899501-Double/receipt.json",
+                      "sha256":  "F95F74CBEF2111075CA816D6E7C8593A33B81034C70F369D312ECDC68FED5705"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282899501-Double/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282899501-Double/settled.png",
+                      "sha256":  "62135360E9E092AD2D6A00CF55FC9B4087357885E4D46F3C8FE9178AC2313EE1"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282904050-Split/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282904050-Split/mid.png",
+                      "sha256":  "ADA349568FDA92EB6041C2789A26A2624B0842F3D2857AE48FD992D556EF59F3"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282904050-Split/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282904050-Split/pre.png",
+                      "sha256":  "3D66D648DEBF6F37352192CF937AF364AF40BD9E5745F4C51787269A10D9F832"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282904050-Split/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282904050-Split/receipt.json",
+                      "sha256":  "713A4890813D4718F4A1823A2F221C9324A793DEB445178DB824B73337D1851F"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282904050-Split/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282904050-Split/settled.png",
+                      "sha256":  "20C84A4DDD0A4F543036D9D52D246851D362B2A841D29448C852118DB2AAD62F"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T07_EVIDENCE/browser/1791282921685-four-leaves/settled-four-leaves.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T07_EVIDENCE/browser/1791282921685-four-leaves/settled-four-leaves.png",
+                      "sha256":  "5BA08AEAA3D79180A95C2F77F45E6E4E9BF34AC2B6048D9E321FD7976B4E1A73"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/mid-back.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/mid-back.png",
+                      "sha256":  "E33FEFCFB6637E9C7734D46DA4D27619A69C7E2D7A53D654B9041CDFC40FD542"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/mid-face.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/mid-face.png",
+                      "sha256":  "446ED984FC0200005E030DC975CFC5F333C358BE1022324981D81600B44F8F41"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/pre.png",
+                      "sha256":  "E9774589EED5D558A8F95D838FBE1636D58CF870FD72ACD98933A3637EE9670B"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/receipt.json",
+                      "sha256":  "AD2F83D61F347F8E635CEF32035F9D204C6F760B5AE3731682CE255C2BE5BBC6"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T08_EVIDENCE/browser/1791282727661-reveal-multiple/settled.png",
+                      "sha256":  "D89B1E57B1A6A2212A3E37FAFB8D41951F285E46E9AB7E4A0D610FAA5CC4FEA3"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/mid.png",
+                      "sha256":  "1EE9898B19A4313CAEF351E46B56BECEB3D3271AB56196C45FA4A49C35B5FBD9"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/pre.png",
+                      "sha256":  "BB6C7F31CEDF165973D65E53020BE26AFE4F9A975EF55299D2A439EA94743D26"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/receipt.json",
+                      "sha256":  "E4AC2810B93B36E1C855675BDF8168EE355ED266093795585A3DA967ADCD91E9"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283020867-PLAYER_WIN/settled.png",
+                      "sha256":  "56453CF1EBAA49826F6CE7D480A772C123E143793601A527EB01A9AE3F1F18BB"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/mid.png",
+                      "sha256":  "590F4F499F423F128CA499607BFE64A5F9F43293265D3D66A6404328922F9E26"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/pre.png",
+                      "sha256":  "79B337681CF4C400E4E5FE418081A44D0E7AACDEF6C7E877AC05F49A28491B5C"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/receipt.json",
+                      "sha256":  "F8E7B15A73ACEFD1C12E9AAFBD10B5EDDE991AB297B6CE2381D18E7D9CC20BD7"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283026564-DEALER_WIN/settled.png",
+                      "sha256":  "0E3E3B98E74C73932ACED63D2A52C272582F8EAC3B07A669E34279E530B1C2D0"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/mid.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/mid.png",
+                      "sha256":  "7F76B5AA4025DCBBFDD37FC8D7FD780F8F3E563354E70C0E3D694C2A29846E73"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/pre.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/pre.png",
+                      "sha256":  "45707C695AA8F00EE5A414D073AC359ADDF48F37CCF49ADA5438646C3851532F"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/receipt.json",
+                      "sha256":  "F33A75F10ECA27B9A9CACDDC5F564A435BB4645A01D296DDB144518330EAC632"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T09_EVIDENCE/browser/1791283032350-PUSH/settled.png",
+                      "sha256":  "38CBE2F220C6250E07B89D870CEF0CA075BEAC7C36D3205FC789CE2D21BA0B7C"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/initial-settled.png",
+                      "sha256":  "5E31B99A536CA1895A04B3E864D06934C1E74952CABFF373D72E5D3E2A328CEC"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/receipt.json",
+                      "sha256":  "F91A45ABC40666E7F9075F69A8F1449F464874274DE788AB8C4F32728F0819C2"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282594616-1-FULL_MOTION/round-settled.png",
+                      "sha256":  "F85660AA75EDE1D1D68C91B86DEFD52BB634C5FD8869D72D2F345FB4641B688D"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/initial-settled.png",
+                      "sha256":  "5E31B99A536CA1895A04B3E864D06934C1E74952CABFF373D72E5D3E2A328CEC"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/receipt.json",
+                      "sha256":  "31815A3FC36C0AA8A07F739AF59D1B0F35E9C8450DB66BB28815E70E48617EC7"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282597222-1-REDUCED_MOTION/round-settled.png",
+                      "sha256":  "4502EEEB16FE767B9B46DECDB612493875B3856DCD1DADA2B3C5DE8D69A59784"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/initial-settled.png",
+                      "sha256":  "5E31B99A536CA1895A04B3E864D06934C1E74952CABFF373D72E5D3E2A328CEC"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/receipt.json",
+                      "sha256":  "D48A43D0574E7F81C1071FFB86B2871398CEDBC85C0F69A9F1F074CE5C9AFF34"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282599015-1-IMMEDIATE/round-settled.png",
+                      "sha256":  "F85660AA75EDE1D1D68C91B86DEFD52BB634C5FD8869D72D2F345FB4641B688D"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/initial-settled.png",
+                      "sha256":  "C544A1217B202AC7CC43C876234F414CABA49D6DA692BEA7DD33D80BD4EE6C5D"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/receipt.json",
+                      "sha256":  "C70F19547EA76CEE47E451C62A1464B13D5247530A6444F64B47AD16B5EEF8E4"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282602778-4-FULL_MOTION/round-settled.png",
+                      "sha256":  "A4E7FD73DA511025F8DE0E21054AE88399870C66A658840ED1CAEF37C892CA2E"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/initial-settled.png",
+                      "sha256":  "ACFE76890C43D316987CF6966066682C172BF6BB5ABD4C43E8DF8A5541AD6C58"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/receipt.json",
+                      "sha256":  "042E2BA310B8DE04DE5346FAC81BEB4144380E09A33D73153EFA2C07A4B2508A"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282606566-4-REDUCED_MOTION/round-settled.png",
+                      "sha256":  "48933F5270B5602C04FD2D18B0DDC022F85BC05652499E67539DF1C296C92E23"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/initial-settled.png",
+                      "sha256":  "ACFE76890C43D316987CF6966066682C172BF6BB5ABD4C43E8DF8A5541AD6C58"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/receipt.json",
+                      "sha256":  "65247D918021EA6C8DD2CE62B9A02804B2C6FA81E5CD61D2A839BFE36276AE71"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282608425-4-IMMEDIATE/round-settled.png",
+                      "sha256":  "A4E7FD73DA511025F8DE0E21054AE88399870C66A658840ED1CAEF37C892CA2E"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/initial-settled.png",
+                      "sha256":  "9383837D0348628493D108E354FFF5974930C1EDEF7E5FC6CED9F88B8A6CA243"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/receipt.json",
+                      "sha256":  "2903E8AA838BA117F4ED04101ECDC533BB3007240BE11CEFCB4BE1FE75FF3102"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282612764-7-FULL_MOTION/round-settled.png",
+                      "sha256":  "D6ADB21001EC64AFBFA8D350E2B33BC0FDC0E075156A78A8A1E60410EBB1B4BD"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/initial-settled.png",
+                      "sha256":  "CBC2D021B60C5068A064D49D8B4CC7861C561729ECDBA91E531C7CA2A15CAE9E"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/receipt.json",
+                      "sha256":  "738A34FCB29AEAA1B1EAAC988857913CC82775142863390B4E103712819CEBFF"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282618072-7-REDUCED_MOTION/round-settled.png",
+                      "sha256":  "B5C3469BA31BEB6C9FF72C4A7ADE0587C3E70558508C120EA40FFE8362BACFBC"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/initial-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/initial-settled.png",
+                      "sha256":  "9383837D0348628493D108E354FFF5974930C1EDEF7E5FC6CED9F88B8A6CA243"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/receipt.json",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/receipt.json",
+                      "sha256":  "0A8FBD84DEBA7609B4EFBCC82C75F4AA40E3D92B1D4EBBADABE4E60B2FA691A0"
+                  },
+                  {
+                      "originalPath":  "docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/round-settled.png",
+                      "archivedPath":  "docs/M10_T11_EVIDENCE/repair11-20261006-182042/generated-compatibility/docs/M10_T10_EVIDENCE/browser/1791282619950-7-IMMEDIATE/round-settled.png",
+                      "sha256":  "D6ADB21001EC64AFBFA8D350E2B33BC0FDC0E075156A78A8A1E60410EBB1B4BD"
+                  }
+              ],
+    "repair12":  "NOT AUTHORIZED / NOT RUN",
+    "status":  "PASS",
+    "protectedInputs":  269
+}

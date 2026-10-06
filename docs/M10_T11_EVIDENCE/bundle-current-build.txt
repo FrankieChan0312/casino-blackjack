@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 487 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-BStbh149.css   41.49 kB │ gzip:   8.23 kB
+dist/assets/index-DDEoQbPO.js   371.72 kB │ gzip: 111.54 kB
+
+✓ built in 292ms
+PASS: production fixture boundary (2 browser output files)

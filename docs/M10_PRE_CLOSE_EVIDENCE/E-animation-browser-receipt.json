@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T11:36:04.204Z",
+  "finish": "2026-10-06T11:37:04.303Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd",
+    "run",
+    "test:e2e",
+    "--",
+    "tests/browser/m10/initialDeal.spec.ts"
+  ],
+  "log": ".git\\evidence-capture\\E-animation-browser.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

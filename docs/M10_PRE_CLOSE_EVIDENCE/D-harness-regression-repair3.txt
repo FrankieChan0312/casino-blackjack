@@ -1,0 +1,39 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/evidenceLifecycle.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/evidenceLifecycle.test.ts (4 tests | 1 failed) 2362ms
+   × [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection 1050ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection
+AssertionError: expected [ 'bearer' ] to deeply equal [ 'bearer', 'credential' ]
+
+- Expected
++ Received
+
+  [
+    "bearer",
+-   "credential",
+  ]
+
+ ❯ tests/m10/evidenceLifecycle.test.ts:39:83
+     37|   expect(run.status).toBe(1); expect(run.receipt.exitCode).toBe(1); ex…
+     38|   expect(record.files).toHaveLength(2); expect(record.zipTextEntries).…
+     39|   expect(record.findings.map((finding: { type: string }) => finding.ty…
+       |                                                                                   ^
+     40|   expect(record.zipTextEntries[0].entry).toBe('response');
+     41| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed (4)
+   Start at  19:33:27
+   Duration  2.59s (tests 97%, transform 2%, import 1%)
+

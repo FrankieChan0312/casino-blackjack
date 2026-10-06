@@ -1,0 +1,20 @@
+const fs=require('node:fs'),cp=require('node:child_process'),crypto=require('node:crypto');
+const root='docs/M10_T11_EVIDENCE',commit='e7ceea652dd74ef079d933922668c782304dc31f';
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const walk=p=>fs.readdirSync(p,{withFileTypes:true}).flatMap(x=>x.isDirectory()?walk(`${p}/${x.name}`):[`${p}/${x.name}`]);
+const tracked=cp.execFileSync('git',['ls-tree','-rz','--full-tree',commit],{maxBuffer:20e6}).toString().split('\0').filter(Boolean);
+const canonical=new Map();
+for(const row of tracked){const [meta,file]=row.split('\t');if(!file.endsWith('.png')||!fs.existsSync(file))continue;const sha=hash(fs.readFileSync(file));if(!canonical.has(sha))canonical.set(sha,{path:file,commit,gitBlob:meta.split(' ')[2]});}
+const untracked=new Set(cp.execFileSync('git',['ls-files','--others','--exclude-standard','-z'],{maxBuffer:20e6}).toString().split('\0'));
+const files=walk(root).filter(f=>f.endsWith('.png')).sort((a,b)=>Number(!a.includes('/gallery/'))-Number(!b.includes('/gallery/'))||a.localeCompare(b));
+const entries=[],deletions=[];let bytes=0,saved=0;
+for(const file of files){if(!untracked.has(file))throw Error(`Unexpected tracked evidence: ${file}`);const b=fs.readFileSync(file),sha=hash(b);bytes+=b.length;
+let chosen=canonical.get(sha);const keep=file.includes('/gallery/')||file.includes('/supplemental-')||file.includes('/contrast/');
+if(!chosen){chosen={path:file,commit:null,gitBlob:null};canonical.set(sha,chosen);}
+const duplicate=chosen.path!==file&&!keep;
+const row={logicalCapturePath:file,sha256:sha,bytes:b.length,canonicalPath:duplicate?chosen.path:file,canonicalCommit:duplicate?chosen.commit:null,canonicalGitBlob:duplicate?chosen.gitBlob:null,retainedDirectly:!duplicate};entries.push(row);
+if(duplicate){deletions.push(row);saved+=b.length;}}
+const at=cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim();
+fs.writeFileSync(`${root}/image-byte-index.json`,JSON.stringify({at,method:'Every freshly executed logical capture remains indexed. Byte-identical duplicates resolve to a verified canonical PNG (immutable baseline commit/blob where applicable). Gallery20 and supplemental/contrast PNGs remain direct files. No historical file is removed or changed.',captures:files.length,beforeBytes:bytes,duplicateBytes:saved,entries},null,2)+'\n');
+fs.writeFileSync('.git/t11-image-duplicates.json',JSON.stringify(deletions,null,2));
+console.log(JSON.stringify({captures:files.length,beforeMiB:bytes/1048576,duplicates:deletions.length,savedMiB:saved/1048576}));

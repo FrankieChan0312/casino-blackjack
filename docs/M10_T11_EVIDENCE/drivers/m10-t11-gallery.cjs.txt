@@ -1,0 +1,51 @@
+const fs = require('node:fs'), path = require('node:path'), cp = require('node:child_process'), crypto = require('node:crypto');
+const gate = 'docs/M10_T11_EVIDENCE/gate-20261006-150313';
+const read = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+const receipts = read(`${gate}/receipts.json`), stage = receipts.find(row => row.stage === 'chromium');
+if (stage?.status !== 'PASS' || stage.exitCode !== 0) throw Error('Final primary Chromium not passed');
+const start = Date.parse(stage.start.replace(' ', 'T').replace(' ', ''));
+const finish = Date.parse(stage.finish.replace(' ', 'T').replace(' ', ''));
+function walk(dir) { return fs.readdirSync(dir, { withFileTypes: true }).flatMap(item => item.isDirectory() ? walk(`${dir}/${item.name}`) : [`${dir}/${item.name}`]); }
+const captures = walk(`${gate}/chromium-browser-artifacts`);
+function capture(name, fragment = '') { const matches = captures.filter(file => path.basename(file) === name && file.includes(fragment)); if (matches.length !== 1) throw Error(`Capture ambiguity ${name}: ${matches.length}`); return matches[0]; }
+function generated(name) { const original = `docs/M10_T06_EVIDENCE/screenshots/${name}`, fresh = `${gate}/chromium-generated/${original}`; return { file: fs.existsSync(fresh) ? fresh : original, originalCapture: original, unchangedFreshCapture: !fs.existsSync(fresh) }; }
+function task(number, suffix, name) {
+  const root = `docs/M10_T${number}_EVIDENCE/browser`;
+  const dirs = fs.readdirSync(root).filter(dir => /^\d{13}-/.test(dir) && dir.endsWith(suffix) && Number(dir.slice(0, 13)) >= start && Number(dir.slice(0, 13)) <= finish).sort();
+  if (dirs.length !== 1) throw Error(`Expected one final primary task ${number}/${suffix}, got${dirs.length}`);
+  return `${root}/${dirs[0]}/${name}`;
+}
+const definitions = [
+  ['Setup formal Dealer', capture('01-setup-generic.png', 'm10-dealerCleanup')],
+  ['1-player initial deal', generated('1-1280-start.png')],
+  ['4-player initial deal', generated('4-1280-mid-first-pass.png')],
+  ['7-player initial deal', generated('7-1280-mid-first-pass.png')],
+  ['Hit', task('07', '-Hit', 'mid.png')],
+  ['Double', task('07', '-Double', 'mid.png')],
+  ['Split', task('07', '-Split', 'mid.png')],
+  ['Four-leaf Split', capture('hud-four-split-1280.png')],
+  ['Dealer hole-card reveal', task('08', '-reveal-multiple', 'mid-face.png')],
+  ['Dealer multi-draw', task('08', '-reveal-multiple', 'settled.png')],
+  ['Win payout', task('09', '-PLAYER_WIN', 'mid.png')],
+  ['Loss collection', task('09', '-DEALER_WIN', 'mid.png')],
+  ['Push return', task('09', '-PUSH', 'mid.png')],
+  ['Insurance', capture('edge-player-seven-insurance-1280.png', 'm10-seatMapping')],
+  ['Round complete', capture('03-table-4-complete.png', 'm10-dealerCleanup')],
+  ['Reduced-motion settled', task('10', '-7-REDUCED_MOTION', 'round-settled.png')],
+  ['Mobile active round', capture('mobile-7-320.png', 'm10-seatMapping')],
+  ['Tablet active round', capture('tablet-7-768.png', 'm10-seatMapping')],
+  ['Generic formal fallback', capture('06-all-pool-seated-generic.png', 'm10-dealerCleanup')],
+  ['Non-Celestine rotated Dealer', capture('04-rotated-Seraphine-after-1.png', 'm10-dealerCleanup')],
+];
+const dir = 'docs/M10_T11_EVIDENCE/gallery'; fs.mkdirSync(dir, { recursive: true });
+const entries = definitions.map(([label, source], index) => {
+  const provenance = typeof source === 'string' ? { file: source } : source;
+  const bytes = provenance.unchangedFreshCapture ? cp.execFileSync('git', ['show', `e7ceea652dd74ef079d933922668c782304dc31f:${provenance.originalCapture}`], { maxBuffer: 20 * 1024 * 1024 }) : fs.readFileSync(provenance.file);
+  if (provenance.unchangedFreshCapture) provenance.immutableEquivalentCommit = 'e7ceea652dd74ef079d933922668c782304dc31f';
+  const file = `${String(index + 1).padStart(2, '0')}-${label.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-').replace(/-$/, '')}.png`;
+  const target = `${dir}/${file}`; fs.writeFileSync(target, bytes);
+  return { id: index + 1, label, file, source: provenance, width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20), sha256: crypto.createHash('sha256').update(bytes).digest('hex'), manualInspection: 'PENDING' };
+});
+const at = cp.execFileSync('powershell.exe', ['-NoProfile', '-Command', 'Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], { encoding: 'utf8' }).trim();
+fs.writeFileSync(`${dir}/index.json`, JSON.stringify({ at, gate, chromium: stage, method: 'Exactly20 final-version primary Chromium captures. Source unchangedFreshCapture means newly executed fixed screenshot had identical bytes to the retained tracked PNG; actual stage compared320 captured outputs and only archived changed bytes. Gallery copies remain independent direct PNGs.', entries }, null, 2) + '\n');
+console.log(JSON.stringify({ status: 'CREATED', at, images: entries.length }));

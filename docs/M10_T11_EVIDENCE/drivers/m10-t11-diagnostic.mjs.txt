@@ -1,0 +1,28 @@
+import { chromium, expect } from '../node_modules/@playwright/test/index.mjs';
+import { writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+const stamp = () => execFileSync('powershell.exe', ['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'], {encoding:'utf8'}).trim();
+const result = { start: stamp(), method: 'Fixed desktop/mobile/desktop/mobile four-sample control; same actual initial-flight MutationObserver; no demand RAF loop, no LongTask profiler; all outcomes retained, no retries.', samples: [] };
+const browser = await chromium.launch();
+try {
+  for (const [width,height] of [[1280,900],[320,720],[1280,900],[320,720]]) {
+    const page = await browser.newPage({viewport:{width,height},reducedMotion:'no-preference'});
+    await page.goto('http://127.0.0.1:4189/?fixture=player-setup');
+    await page.getByLabel('Total players',{exact:true}).selectOption('7');
+    await page.getByRole('button',{name:'Start table',exact:true}).click();
+    await page.evaluate(() => {
+      const metric = {start:null,end:null,flights:[]}; window.t11Control=metric;
+      const observer=new MutationObserver(records=>{for(const record of records){for(const node of record.addedNodes)if(node instanceof HTMLElement&&node.dataset.initialDealFlight){metric.start??=performance.now();metric.flights.push({at:performance.now(),target:node.dataset.dealTarget});}
+        if(record.type==='attributes'&&record.target instanceof HTMLElement&&record.target.dataset.initialDealRunning==='false'&&metric.start!==null)metric.end??=performance.now();}});
+      observer.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['data-initial-deal-running']});window.t11ControlObserver=observer;
+    });
+    await page.getByLabel('Your main wager',{exact:false}).fill('100');await page.getByRole('button',{name:'Deal',exact:true}).click();
+    await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running','false');
+    const metric=await page.evaluate(()=>{window.t11ControlObserver.disconnect();return window.t11Control;});
+    expect(metric.flights).toHaveLength(16);expect(metric.end).not.toBeNull();
+    const elapsed=metric.end-metric.start;result.samples.push({width,height,elapsed,metric,status:elapsed<=2500?'PASS':'FAIL'});
+    writeFileSync('docs/M10_T11_EVIDENCE/timing-control.json',JSON.stringify(result,null,2)+'\n');await page.close();
+  }
+  result.status=result.samples.every(sample=>sample.status==='PASS')?'PASS':'FAIL';result.exitCode=result.status==='PASS'?0:1;process.exitCode=result.exitCode;
+} catch(error) {result.status='FAIL';result.exitCode=1;result.error=String(error);process.exitCode=1;}
+finally {result.finish=stamp();await browser.close();writeFileSync('docs/M10_T11_EVIDENCE/timing-control.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));}

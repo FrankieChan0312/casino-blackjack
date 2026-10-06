@@ -1,0 +1,40 @@
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$root = (Resolve-Path 'docs/M10_T11_EVIDENCE').Path
+$patterns = @{
+  credential = '(?<![A-Za-z0-9])(?:gh[opusr]_[A-Za-z0-9]{30,}|sk-(?:proj-)?[A-Za-z0-9_-]{24,}|AIza[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16}|-----BEGIN [^-]*PRIVATE KEY-----)'
+  bearer = '(?i)Bearer\s+[A-Za-z0-9._~+/-]{16,}'
+  viteEphemeralToken = '(?i)wsToken\s*=\s*(?:\\?"|\x27)[^"\x27]{6,}'
+}
+$files = @(); $entries = @(); $findings = @()
+function Inspect([string]$body,[string]$location) {
+  foreach ($key in $patterns.Keys) {
+    $matches = [regex]::Matches($body, $patterns[$key])
+    if ($matches.Count -gt 0) { $script:findings += @{ path=$location; type=$key; count=$matches.Count } }
+  }
+}
+foreach ($file in Get-ChildItem -LiteralPath $root -Recurse -File) {
+  $relative = $file.FullName.Substring($root.Length+1).Replace('\','/')
+  if ($file.Extension -match '^\.(txt|md|json|ps1|mjs|cjs|js)$') {
+    Inspect ([IO.File]::ReadAllText($file.FullName)) $relative
+    $files += @{ path=$relative; sha256=(Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash }
+  }
+  if ($file.Extension -eq '.zip') {
+    $zip = [IO.Compression.ZipFile]::OpenRead($file.FullName)
+    try {
+      foreach ($entry in $zip.Entries) {
+        if ($entry.Length -eq 0 -or $entry.FullName -match '\.(png|jpg|jpeg|gif|woff2?|ttf|mp4)$') { continue }
+        $reader = [IO.StreamReader]::new($entry.Open())
+        try { $body=$reader.ReadToEnd() } finally { $reader.Dispose() }
+        Inspect $body ($relative+':'+$entry.FullName)
+        $entries += @{ archive=$relative; entry=$entry.FullName }
+      }
+    } finally { $zip.Dispose() }
+  }
+}
+$record = @{ at=(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'); status=if($findings.Count -eq 0){'PASS'}else{'BLOCKED'}; textFiles=$files; zipTextEntries=$entries; findings=$findings; scope='All new evidence text plus all non-image/font trace resources including extensionless resources; fresh localhost synthetic contexts only. Pattern scan plus contextual publication review; no AI session transcript or authenticated owner browser profile published.' }
+$record | ConvertTo-Json -Depth 7 | Set-Content docs/M10_T11_EVIDENCE/privacy-review.json -Encoding UTF8
+Write-Output "$($record.status): $($files.Count) text / $($entries.Count) trace entries; findings $($findings.Count)"
+foreach($finding in $findings){ Write-Output "$($finding.type): $($finding.path) count $($finding.count)" }
+if($findings.Count -gt 0){exit 1}; exit 0

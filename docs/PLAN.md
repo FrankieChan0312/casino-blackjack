@@ -1,3 +1,47 @@
+## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
+
+New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.
+
+## M10-T11 current stop after exceptional repair11 — 2026-10-06 18:54:49 +08:00
+
+**M10_INDEPENDENT_REVIEW_BLOCKED_AFTER_EXCEPTIONAL_REPAIR_11. M10: NOT ACCEPTED.** M10-T11: **11/11 — OWNER-AUTHORIZED EXCEPTION**; exhausted normal limit **10/10** is historical. Repair12 **NOT AUTHORIZED / NOT RUN**. Documentation count repair is **VERIFIED**; milestone closure remains **BLOCKED**. **DEPLOYMENT NOT RUN.**
+
+Unchanged exact publication check **PASS/exit0**; documentation tests **PASS/exit0 (3 files/9 tests)**; incoming-scope review **PASS/exit0**, incremental product/tests/assets/validators **EMPTY**. These completed checks precede the new failed final gate; they do not establish acceptance.
+
+Required unchanged scripts/verify.ps1 rerun: typecheck/lint/100 files-1236 Vitest/domain typecheck/build **PASS/checked0** in captured stdout. Chromium **FAIL**: cold seven-player initial deal **1280px2861.1ms** and **320px2891.6ms**, both above unchanged2500ms;768px1577.4ms. All three metrics record16 destinations. **HIGH-02 REOPENED**; timing cause not established. Earlier243/243 PASS is historical and cannot waive these new failures. Complete Chromium summary and fresh independent-preservation result are **BLOCKED / NOT VERIFIED**.
+
+Outer collector **FAIL/exit1** with PowerShell NativeCommandError on redirected web-server NO_COLOR stderr. It did not persist the actual verify.ps1 exit code; native exit **NOT AVAILABLE**, required unified gate **BLOCKED**. This collector failure does not explain away the two actual timing failures. No collector/product/validator/threshold repair or gate retry performed.
+
+Evidence-only cleanup **PASS/exit0**: all320 historical outputs restored byte-for-byte,269 incoming executable/asset inputs unchanged,57 fresh generated compatibility files archived alongside failed browser traces/metrics. Current stop records are appended; dated9/10,10/10,earlier11/11 start/verification evidence remains historical. No T11 review/closure commit or push; known incoming T11 changes remain uncommitted.
+
+[Current stop evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
+
+## M10-T11 current exceptional documentation repair — 2026-10-06 18:24:52 +08:00
+
+**M10-T11: 11/11 — OWNER-AUTHORIZED EXCEPTION.** Normal limit: **10/10** exhausted. Repair12 **NOT AUTHORIZED / NOT RUN**. Owner explicitly authorizes exactly one documentation/publication count repair and conditional normal origin/main closure. Current repair IMPLEMENTED; exact publication check and fresh final verification **NOT RUN**. M10: NOT ACCEPTED until those checks and clean publication pass. **DEPLOYMENT NOT RUN.**
+
+Established runtime evidence:100 files/1236 Vitest,243 Chromium, preservation/privacy/assets/live Dealer guard and verify.ps1 PASS/checked0. This is prior evidence, not a claim of the new final rerun. Recommended GPT-6.1 Sol / Max (original task); actual selected model/effort NOT VERIFIED. No delegation.
+
+Scope: correct current repair count/status in closure docs and the current PLAN row. Incremental product/test/asset/dependency/runtime/validator changes must be EMPTY relative to the incoming repair11 snapshot; previously verified uncommitted T11 changes remain part of the overall review checkpoint. Non-goals: product changes, new features, deployment or repair12.
+
+Step -> verification: current documents -> exact unchanged final-audit.cjs PASS0; docs -> three files/nine tests; scope -> incoming source and historical-evidence SHA equality; final runtime -> scripts/verify.ps1 full units/Chromium/independent preservation; publication -> scoped diff/privacy/normal main push and exact CLEAN/live equality. Stop immediately on a failed exact check, unavailable tool, unexpected overlap, required-gate failure or unapproved action; no further repair authorized.
+
+All dated9/10,10/10 stop/failure/proposal records below are historical and preserved. The normal-limit10/10 field and current exception11/11 field have different meanings; neither counter is reset. See the newest repair11 evidence for current results.
+
+[Current repair evidence](M10_T11_EVIDENCE/repair11-20261006-182042/README.md).
+
+## M10-T11 STOPPED at normal repair limit — 2026-10-06 15:57:45 +08:00
+
+**M10_INDEPENDENT_REVIEW_BLOCKED. M10: NOT ACCEPTED.** Normal repair count **10/10**; further cycle NOT AUTHORIZED. Ten final technical native stages PASS/checked0 (100 files/1236 units,243 Chromium twice, preservation/assets/privacy/build/unified), but final added documentation/publication audit **FAIL/exit1** after repair10. The counter-generation script accidentally replaced10/10 with itself; dated review prefixes still say9/10. Those earlier claims are superseded here. Product/old-test/protected-input/320-output/1211-image/link checks passed before the failing current-counter assertion; no technical test failure is hidden.
+
+Publication STOPPED: no T11 commit or push, main remains starting e7ceea652dd74ef079d933922668c782304dc31f, working tree has known staged/uncommitted T11 files. A single additional documentation-only repair11 needs explicit owner authorization under AGENTS.md and this task's10/10 maximum. The unapplied proposal corrects final review counters/current statuses, retains all historical failed evidence and reruns current document/privacy/scope/staged checks. No product, old regression, threshold, timeout or deployment change. **DEPLOYMENT NOT RUN.** Future milestone unstarted. [Stop receipt](M10_T11_EVIDENCE/stop-at-repair-limit.json); [unapplied proposal](M10_T11_EVIDENCE/repair11-proposal.txt).
+
+## M10-T11 final review checkpoint — 2026-10-06 15:49:29 +08:00
+
+M10-T11 fresh incoming review **VERIFIED**; full100 files/1236 Vitest and243 Chromium twice via unified, independent M1–M8/current36/284, privacy/assets/guard/build and verify.ps1 PASS/checked0. Exactly two initial-duration product lines repaired for cold native2500ms, all269 frozen inputs/320 historical outputs verified. Repairs **9/10**, HIGH-01/02 CLOSED; one disclosed LOW actual-background automation limitation (BLOCKED, synthetic equivalent PASS).20 final images manually inspected,0 old cartoon Dealer. Owner M10A CLOSED; T02/T03/T06/T07/T08/T09/T10/cleanup ACCEPTED accurately; original T01 visual rejection retained. **M10 acceptance pending clean normal publication; DEPLOYMENT NOT RUN.** Future milestone/deployment plan remains unstarted. Prior dated states below are historical.
+
+AC-M10-001..012 mapped in [final task](M10_T11.md); publication/conditional acceptance is the only remaining T11 step. No future milestone selected or started.
+
 ## M10-PRE-T11 implementation published — 2026-10-06 13:05:06 +08:00
 
 Verified implementation commit **245591e7e08164ec2f750f359280f9a3d59325b9** was normally pushed to **main** at 2026-10-06 13:04:17 +08:00; local / origin/main / live GitHub main matched, ahead/behind **0/0**, **CLEAN**, untracked **0**. [Publication receipt](M10_PRE_T11_EVIDENCE/implementation-publication.json). This follow-up checkpoint records publication in documentation/evidence only; its own final SHA is resolved from Git and the delivery report. All 268 verified executable/assets hashes stay unchanged. Prior dated publication-pending text below remains historical. Owner T07–T10 **ACCEPTED**; new cleanup visual **PENDING**. Same-session review PASS; fresh separate-session review NOT COMPLETED. **M10-T11 NOT STARTED — WAITING FOR OWNER VISUAL CONFIRMATION. DEPLOYMENT NOT RUN.**
@@ -375,7 +419,7 @@ For every future task: recommended GPT Sol 6.1 / High (client-supported gpt-6.1-
 | M10-T09 / T08 | Chips/reserves/cancellation/committed settlement and natural/Charlie text feedback; SETTLING; AC004/007/009 | Exact independent stakes/gross/available values, win/loss/push/surrender/Insurance/side/back/Double/Split/VOID, failed funding no chips, exactly-once results -> event/UI/financial preservation + full harness | IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; full1222/187 and preservation/assets/unified PASS0; repairs5/10 CLOSED; human visual ACCEPTED by owner 2026-10-06; publishedd0b5a0814c2a87f5cd942f17cc630db2bf935d37; clean0/0 receipt follows |
 | M10-T10 / T09 | Preserve immediate terminal replay (optional animated playback omitted per SPEC AC008/DESIGN M10.15/owner sections57–58); full reduced/skip/preferences/hidden-tab compatibility; AC008/009/010 | Actual1/4/7 complete journal/outcomes/digest/live audit equality; three modes, seven skip phases, session/OS toggle, unmount/visibility/resize/round/table, unchanged2500ms -> deterministic/browser + full harness | IMPLEMENTED / VERIFIED; full1230/216,35/278,preservation/assets/unified PASS0; repairs3/10 CLOSED after exact artifact restoration; COMMITTED/PUSHED4b3c8c0,0/0/CLEAN/untracked0; documentation-only receipt follows; human visual ACCEPTED by owner 2026-10-06; STOP before T11 |
 | M10-PRE-T11 / T10 | Retire legacy Dealer; supplied non-roster formal fallback; unchanged five-identity rotation and animations | Source/alpha/hash/provenance, live guard, setup/collision/exhaustion/failure/modes/replay/screenshots and full gate -> normal main publication -> owner visual confirmation | IMPLEMENTED / VERIFIED; all required gates PASS / exit 0; repairs 7/10 CLOSED; complete new screenshot inspection0 old Dealer; owner visual PENDING; implementation 245591e7e08164ec2f750f359280f9a3d59325b9 normally published on main |
-| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | NOT STARTED |
+| M10-T11 / T10 | Regression mapping, three-viewport/seven-count visuals, measured performance, docs/fresh review handoff; AC001..012 | Full unified verification + accepted M1–M8 preservation/current M9/RA1/PA1, exact protected-tree comparison, screenshot/trace review and owner walkthrough -> publish verified checkpoint -> genuinely fresh independent review -> explicit human acceptance | Documentation repair VERIFIED; final gate BLOCKED; repair11/11 — OWNER-AUTHORIZED EXCEPTION; normal10/10 exhausted; HIGH-02 REOPENED (1280/320 >2500ms); repair12 NOT AUTHORIZED / NOT RUN; M10 NOT ACCEPTED; see M10_T11.md |
 
 The proposed T01..T11 order is retained: the existing controller already provides deterministic command boundaries, and the PA1 dealer/portrait components can be prepared before the event feed. T04 tests poses using fixtures; real event integration depends on T05/T06, with reveal/settlement completed in T08/T09. Reduced-motion safety is required in every motion task; T10 supplies final replay/preference coverage, not first accessibility support.
 
@@ -1303,3 +1347,9 @@ Contract: [M9_CONTRACT](M9_CONTRACT.md). Recommended GPT Sol 6.1 / High; actual 
 T04/T05 share one coherent final preservation/documentation verification checkpoint after the corrected Charlie test. Their delivery/repair identities remain separate. Evidence-only publication receipts follow without source/test/runtime changes. STOP at fresh-session review gate, with clean main parity0/0. No M10 or deployment.
 
 2026-10-05 14:42:59 +08:00 — Final blocked-status documentation check FAIL/1:5 files/13 cases,12 PASS and portfolio README stale-status regex matches across the new M8-PASS/T06-NOT-STARTED single paragraph. Exact failed README/test source and raw log retained. Paragraph-only patch is unapplied in next-repair-readme.patch, included in owner-authorization scope; no additional repair or rerun. Protected incoming scan initially FAIL for one known geometry.json rollback: Git CRLF smudge altered raw bytes. Verified canonical Git bytes equal captured incomingSHA and restored only that known generated artifact to exact bytes; remaining6098 protected hashes already match. Routine original-output rollback completed, not a new implementation/assertion/harness repair. Protected6099 PASS; original historical docs retained normalized. Full failed gate and10/10 stop remain unchanged.
+
+## M10-PRE-CLOSE maintenance — 2026-10-06 19:20:55 +08:00
+
+| Task | Scope | Verification | Status |
+| --- | --- | --- | --- |
+| M10-PRE-CLOSE | Initial2500ms performance + privacy output self-lock; no domain/features/deploy | A..I and normal clean publication per M10_PRE_CLOSE.md | IMPLEMENTED / VERIFIED; A-I PASS0; 7/10; normal publication pending; T11 blocked11/11; M10 NOT ACCEPTED |

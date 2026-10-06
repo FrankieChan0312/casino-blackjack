@@ -1,0 +1,45 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/evidenceLifecycle.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/evidenceLifecycle.test.ts (4 tests | 2 failed) 2021ms
+   × [PRE-CLOSE-H01] scanner and open collector output stay outside actual evidence; all files are inventoried 516ms
+   × [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection 799ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H01] scanner and open collector output stay outside actual evidence; all files are inventoried
+Error: ENOENT: no such file or directory, open 'C:\Users\user\Documents\GitHub\casino-blackjack\.git\scanner-fixture-1a40e6ca-ba15-4133-82f9-99882805a8bf\result.json'
+ ❯ read tests/m10/evidenceLifecycle.test.ts:11:43
+      9|   return { directory, root, result: `${directory}/result.json` };
+     10| }
+     11| const read = (path: string) => JSON.parse(readFileSync(path, 'utf8').r…
+       |                                           ^
+     12| function scan(root: string, result: string) {
+     13|   const label = `scanner-${randomUUID()}`;
+ ❯ tests/m10/evidenceLifecycle.test.ts:25:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/m10/evidenceLifecycle.test.ts > [PRE-CLOSE-H02] actual logs and extensionless trace resources retain credential/bearer detection
+Error: ENOENT: no such file or directory, open 'C:\Users\user\Documents\GitHub\casino-blackjack\.git\scanner-fixture-a99b5a03-9610-436a-bf9a-a2482167ba19\result.json'
+ ❯ read tests/m10/evidenceLifecycle.test.ts:11:43
+      9|   return { directory, root, result: `${directory}/result.json` };
+     10| }
+     11| const read = (path: string) => JSON.parse(readFileSync(path, 'utf8').r…
+       |                                           ^
+     12| function scan(root: string, result: string) {
+     13|   const label = `scanner-${randomUUID()}`;
+ ❯ tests/m10/evidenceLifecycle.test.ts:36:44
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 2 passed (4)
+   Start at  19:32:20
+   Duration  2.26s (tests 96%, transform 2%, import 1%, setup 1%)
+

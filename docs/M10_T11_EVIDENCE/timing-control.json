@@ -1,0 +1,313 @@
+{
+  "start": "2026-10-06 14:46:24 +08:00",
+  "method": "Fixed desktop/mobile/desktop/mobile four-sample control; same actual initial-flight MutationObserver; no demand RAF loop, no LongTask profiler; all outcomes retained, no retries.",
+  "samples": [
+    {
+      "width": 1280,
+      "height": 900,
+      "elapsed": 2085,
+      "metric": {
+        "start": 1015.7000000476837,
+        "end": 3100.7000000476837,
+        "flights": [
+          {
+            "at": 1015.7000000476837,
+            "target": "round-1/seat-1:0"
+          },
+          {
+            "at": 1165.2999999523163,
+            "target": "round-1/seat-2:0"
+          },
+          {
+            "at": 1296.9000000953674,
+            "target": "round-1/seat-3:0"
+          },
+          {
+            "at": 1431,
+            "target": "round-1/seat-4:0"
+          },
+          {
+            "at": 1565.2000000476837,
+            "target": "round-1/seat-5:0"
+          },
+          {
+            "at": 1698.5,
+            "target": "round-1/seat-6:0"
+          },
+          {
+            "at": 1830.9000000953674,
+            "target": "round-1/seat-7:0"
+          },
+          {
+            "at": 1963.7999999523163,
+            "target": "dealer:0"
+          },
+          {
+            "at": 2098.7000000476837,
+            "target": "round-1/seat-1:1"
+          },
+          {
+            "at": 2214.5,
+            "target": "round-1/seat-2:1"
+          },
+          {
+            "at": 2347.7999999523163,
+            "target": "round-1/seat-3:1"
+          },
+          {
+            "at": 2480.0999999046326,
+            "target": "round-1/seat-4:1"
+          },
+          {
+            "at": 2597.4000000953674,
+            "target": "round-1/seat-5:1"
+          },
+          {
+            "at": 2713.7999999523163,
+            "target": "round-1/seat-6:1"
+          },
+          {
+            "at": 2830.5,
+            "target": "round-1/seat-7:1"
+          },
+          {
+            "at": 2948.2000000476837,
+            "target": "dealer:1"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "elapsed": 2030.5999999046326,
+      "metric": {
+        "start": 491.7999999523163,
+        "end": 2522.399999856949,
+        "flights": [
+          {
+            "at": 491.7999999523163,
+            "target": "round-1/seat-1:0"
+          },
+          {
+            "at": 606.3999998569489,
+            "target": "round-1/seat-2:0"
+          },
+          {
+            "at": 722.8999998569489,
+            "target": "round-1/seat-3:0"
+          },
+          {
+            "at": 856.5999999046326,
+            "target": "round-1/seat-4:0"
+          },
+          {
+            "at": 990.1999998092651,
+            "target": "round-1/seat-5:0"
+          },
+          {
+            "at": 1122.7999999523163,
+            "target": "round-1/seat-6:0"
+          },
+          {
+            "at": 1239.6999998092651,
+            "target": "round-1/seat-7:0"
+          },
+          {
+            "at": 1356.5999999046326,
+            "target": "dealer:0"
+          },
+          {
+            "at": 1491,
+            "target": "round-1/seat-1:1"
+          },
+          {
+            "at": 1623.5999999046326,
+            "target": "round-1/seat-2:1"
+          },
+          {
+            "at": 1739.6999998092651,
+            "target": "round-1/seat-3:1"
+          },
+          {
+            "at": 1857,
+            "target": "round-1/seat-4:1"
+          },
+          {
+            "at": 1990.3999998569489,
+            "target": "round-1/seat-5:1"
+          },
+          {
+            "at": 2124.2999999523163,
+            "target": "round-1/seat-6:1"
+          },
+          {
+            "at": 2242,
+            "target": "round-1/seat-7:1"
+          },
+          {
+            "at": 2373.399999856949,
+            "target": "dealer:1"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "elapsed": 2096,
+      "metric": {
+        "start": 455,
+        "end": 2551,
+        "flights": [
+          {
+            "at": 455,
+            "target": "round-1/seat-1:0"
+          },
+          {
+            "at": 602,
+            "target": "round-1/seat-2:0"
+          },
+          {
+            "at": 733.9000000953674,
+            "target": "round-1/seat-3:0"
+          },
+          {
+            "at": 867.9000000953674,
+            "target": "round-1/seat-4:0"
+          },
+          {
+            "at": 1000.4000000953674,
+            "target": "round-1/seat-5:0"
+          },
+          {
+            "at": 1135,
+            "target": "round-1/seat-6:0"
+          },
+          {
+            "at": 1267.6000001430511,
+            "target": "round-1/seat-7:0"
+          },
+          {
+            "at": 1400.7999999523163,
+            "target": "dealer:0"
+          },
+          {
+            "at": 1534.4000000953674,
+            "target": "round-1/seat-1:1"
+          },
+          {
+            "at": 1651.5,
+            "target": "round-1/seat-2:1"
+          },
+          {
+            "at": 1783.9000000953674,
+            "target": "round-1/seat-3:1"
+          },
+          {
+            "at": 1917.2000000476837,
+            "target": "round-1/seat-4:1"
+          },
+          {
+            "at": 2049.7000000476837,
+            "target": "round-1/seat-5:1"
+          },
+          {
+            "at": 2166.600000143051,
+            "target": "round-1/seat-6:1"
+          },
+          {
+            "at": 2283.7000000476837,
+            "target": "round-1/seat-7:1"
+          },
+          {
+            "at": 2417.600000143051,
+            "target": "dealer:1"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 320,
+      "height": 720,
+      "elapsed": 2019.2000000476837,
+      "metric": {
+        "start": 499.7000000476837,
+        "end": 2518.9000000953674,
+        "flights": [
+          {
+            "at": 499.7000000476837,
+            "target": "round-1/seat-1:0"
+          },
+          {
+            "at": 619.0999999046326,
+            "target": "round-1/seat-2:0"
+          },
+          {
+            "at": 736.2000000476837,
+            "target": "round-1/seat-3:0"
+          },
+          {
+            "at": 852.2999999523163,
+            "target": "round-1/seat-4:0"
+          },
+          {
+            "at": 985.7999999523163,
+            "target": "round-1/seat-5:0"
+          },
+          {
+            "at": 1118.2999999523163,
+            "target": "round-1/seat-6:0"
+          },
+          {
+            "at": 1234.9000000953674,
+            "target": "round-1/seat-7:0"
+          },
+          {
+            "at": 1352.5999999046326,
+            "target": "dealer:0"
+          },
+          {
+            "at": 1486,
+            "target": "round-1/seat-1:1"
+          },
+          {
+            "at": 1619.4000000953674,
+            "target": "round-1/seat-2:1"
+          },
+          {
+            "at": 1737.2999999523163,
+            "target": "round-1/seat-3:1"
+          },
+          {
+            "at": 1873.7000000476837,
+            "target": "round-1/seat-4:1"
+          },
+          {
+            "at": 2003,
+            "target": "round-1/seat-5:1"
+          },
+          {
+            "at": 2136.0999999046326,
+            "target": "round-1/seat-6:1"
+          },
+          {
+            "at": 2269.5,
+            "target": "round-1/seat-7:1"
+          },
+          {
+            "at": 2387.7000000476837,
+            "target": "dealer:1"
+          }
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "exitCode": 0,
+  "finish": "2026-10-06 14:46:37 +08:00"
+}

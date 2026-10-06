@@ -38,13 +38,15 @@ async function observe(page: Page, checkpoints: string[] = []) {
 }
 const trace = (page: Page) => page.evaluate(() => (window as unknown as { dealTrace: Trace }).dealTrace);
 for (const count of [1,4,7]) test(`[T06-B01-${count}] real FULL_MOTION two-pass order, one clone, no premature arrival`, async ({ page }, info) => {
-  await setup(page, count); await observe(page);
+  // Hold the first real flight while checking its attached style and hidden slots.
+  await setup(page, count); await observe(page, [`round-1/seat-${seats[count][0]}:0`]);
   const dealer = await page.locator('[data-dealer-character]').getAttribute('data-dealer-character');
   await page.getByRole('button', { name: 'Deal', exact: true }).click();
   await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running', 'true');
   await expect(page.locator('.dealer-zone')).toHaveAttribute('data-dealer-presentation-state', 'DEALING');
   expect(await page.locator('[data-initial-deal-flight] .card').evaluate(element => getComputedStyle(element).opacity)).toBe('1');
   await expect(page.locator('[data-card-slot][data-deal-visible="true"]')).toHaveCount(0);
+  await page.locator('[data-initial-deal-flight]').evaluate(element => element.getAnimations({ subtree: true }).forEach(animation => animation.play()));
   await expect(page.locator('.game-scene')).toHaveAttribute('data-initial-deal-running', 'false');
   const result = await trace(page), order = [0,1].flatMap(index => [...seats[count].map(seat => `round-1/seat-${seat}:${index}`), `dealer:${index}`]);
   expect(result.flights).toEqual(order); expect(result.arrivals).toEqual(order);

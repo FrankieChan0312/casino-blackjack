@@ -1,0 +1,15 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),crypto=require('node:crypto');
+const [label,command,...args]=process.argv.slice(2);if(!/^[a-zA-Z0-9-]+$/.test(label)||!command)throw Error('label/command required');
+const dir='docs/M10_PRE_CLOSE_EVIDENCE',baseline=JSON.parse(fs.readFileSync('.git/m10-pre-close-baseline.json','utf8'));
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const save=p=>{const q=path.join(dir,'generated',label,p);fs.mkdirSync(path.dirname(q),{recursive:true});return q;};
+const originalStatus=cp.execFileSync('git',['ls-files','--others','--exclude-standard','-z'],{encoding:'utf8',maxBuffer:32*1024*1024}).split('\0').filter(Boolean);const before=new Set(originalStatus);
+const child=cp.spawn(process.execPath,['scripts/collect-evidence.mjs',label,command,...args],{stdio:['ignore','inherit','inherit'],windowsHide:true});
+child.on('close',code=>{
+  const capture='.git/evidence-capture/'+label;fs.copyFileSync(capture+'.txt',dir+'/'+label+'.txt');fs.copyFileSync(capture+'.json',dir+'/'+label+'-receipt.json');
+  const changed=[];for(const p of baseline.originalGeneratedOutputs){if(sha(p)!==baseline.hashes[p]){fs.copyFileSync(p,save(p));fs.copyFileSync('.git/m10-pre-close-outputs/'+p,p);changed.push(p);}if(sha(p)!==baseline.hashes[p])throw Error('Failed historical restoration:'+p);}
+  const fresh=cp.execFileSync('git',['ls-files','--others','--exclude-standard','-z'],{encoding:'utf8',maxBuffer:32*1024*1024}).split('\0').filter(p=>p&&!before.has(p)&&/^docs\/M10_T0[789]_EVIDENCE\/browser\/|^docs\/M10_T10_EVIDENCE\/browser\//.test(p));
+  for(const p of fresh){const q=save(p);for(const target of [p,q])if(!path.resolve(target).startsWith(process.cwd()+path.sep))throw Error('Out-of-workspace archive');fs.renameSync(p,q);}
+  if(fs.existsSync('test-results'))fs.cpSync('test-results',dir+'/'+label+'-browser-artifacts',{recursive:true});
+  const record={at:cp.execFileSync('powershell.exe',['-NoProfile','-Command','Get-Date -Format "yyyy-MM-dd HH:mm:ss K"'],{encoding:'utf8'}).trim(),status:'PASS',historicalOutputs:baseline.originalGeneratedOutputs.length,restored:changed,generatedFilesArchived:fresh.length,commandExitCode:code};fs.writeFileSync(dir+'/'+label+'-restoration.json',JSON.stringify(record,null,2)+'\n');console.log(JSON.stringify({label,exitCode:code,restored:changed.length,archived:fresh.length}));process.exitCode=code??1;
+});
