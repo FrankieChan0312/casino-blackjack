@@ -8,7 +8,7 @@ M10 FINAL OWNER ACCEPTANCE: ACCEPTED
 
 M10_FINAL_REVIEW_R2: TECHNICALLY ACCEPTED (M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED). Final R2 findings: BLOCKER 0 / HIGH 0 / MEDIUM 0 / LOW 1. The non-blocking LOW remains: REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE; synthetic/equivalent visibility verification passed. [Canonical final closure receipt](docs/M10_FINAL_CLOSURE.md) preserves the exact performance, verification, Dealer and authority records. Historical T11 remains BLOCKED AFTER 11/11; repair 12 NOT AUTHORIZED / NOT RUN. R2 repairs remain 6/10; PRE-CLOSE maintenance remains a separate task at 7/10.
 
-M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED; required checks PASS / exit 0; ordinary commit/push NOT RUN; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary closure commit 4f8096ed39d90d8d4a705573ea1d71c527beece7 published by ordinary origin/main push, PASS / native exit 0; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
 
 <!-- END CURRENT M10 FINAL CLOSURE -->
 

@@ -107,7 +107,7 @@ Original M10-T01 visual rejection and exceptional repairs; T04/T05/T06 historica
 
 ## Current Documentation Verification and Publication
 
-M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED. Verification recorded 2026-10-07 00:16:03 +08:00; repairs 1/10. Normal commit/push: NOT RUN at this pre-publication checkpoint.
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED. Verification recorded 2026-10-07 00:16:03 +08:00; repairs 1/10. Primary closure commit 4f8096ed39d90d8d4a705573ea1d71c527beece7 on main: COMMITTED / PUSHED, ordinary origin/main push PASS / native exit 0. Observed 2026-10-07 00:17:04 +08:00: HEAD = origin/main = live remote; ahead/behind 0/0, CLEAN, untracked 0. This subsequent documentation-only publication receipt resolves its own SHA through Git HEAD, with final live parity checked after ordinary push.
 
 | Current closure check | Executed result |
 | --- | --- |
@@ -122,7 +122,7 @@ M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED. Verification recorded 2026-10-07
 
 Commands: npm.cmd test -- tests/m9/documentation.test.ts tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts; powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1; unchanged scripts/scan-evidence.ps1 with original roots plus R2 evidence and the seven closure documents; review-only .git/m10-closure-audit.cjs; git diff --check and git diff --cached --check. Final document-only edits require affected docs/scanner/audit checks before publication; no code/test/dependency/runtime change follows the full gate.
 
-Native logs and operational preservation receipts are retained outside tracked evidence in .git/m10-final-closure and .git/evidence-capture. All 320 pre-backed-up historical test outputs were preserved; generated outputs are archived separately. R2's historical performance and verification records above remain unchanged. Git publication will record the actually observed primary closure commit and ordinary push; a following documentation receipt resolves its own SHA through Git HEAD, following the existing repository convention.
+Native logs and operational preservation receipts are retained outside tracked evidence in .git/m10-final-closure and .git/evidence-capture. All 320 pre-backed-up historical test outputs were preserved; generated outputs are archived separately. R2's historical performance and verification records above remain unchanged. Publication recorded 2026-10-07 00:17:37 +08:00: the actual primary commit and normal push above are authoritative. A following documentation receipt follows existing repository convention; its final native command/SHA/parity result remains under .git/m10-final-closure/receipt-publication.json and is reported at handoff. This avoids a self-referential commit hash. Status: M10_FINAL_CLOSURE_DOCUMENTED; M10-FINAL-CLOSURE-DOCS IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. No deployment or next milestone is authorized.
 
 ## Deployment
 
