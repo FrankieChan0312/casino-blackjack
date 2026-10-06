@@ -1,0 +1,110 @@
+[
+  {
+    "label": "Casino Lobby",
+    "file": "01-casino-lobby.png",
+    "source": ".git/overnight/visual/m13/00-casino-lobby.png",
+    "sha256": "510efbc2718a12e06bda88110e4b5f537dce65913031362a267d323252634224"
+  },
+  {
+    "label": "Blackjack still opens correctly",
+    "file": "02-blackjack-opens.png",
+    "source": ".git/overnight/visual/m11/blackjack.png",
+    "sha256": "95907d85c9cb75b1ec5de590caf553dfe8b0aea8bb771973b91dfcfa7e80f03d"
+  },
+  {
+    "label": "Baccarat pre-bet desktop",
+    "file": "03-baccarat-pre-bet.png",
+    "source": ".git/overnight/visual/m13/01-pre-bet-desktop.png",
+    "sha256": "1a15cc448f9f8ef2bafa0798f9ba03f5cbc8c1aa1cbbc94b6abdf3c1de3c87f8"
+  },
+  {
+    "label": "Baccarat mobile",
+    "file": "04-baccarat-mobile.png",
+    "source": ".git/overnight/visual/m14/responsive-320.png",
+    "sha256": "65c0ac3282480c8941196b58ea14031053cb1b3945cb7abf4cea96901ce65fa9"
+  },
+  {
+    "label": "Player wager",
+    "file": "05-player-wager.png",
+    "source": ".git/overnight/visual/m13/02-player-wager.png",
+    "sha256": "3550b47f29d4073df9c62a375709849ead60d7043576e39181f008b0be149afc"
+  },
+  {
+    "label": "Banker wager",
+    "file": "06-banker-wager.png",
+    "source": ".git/overnight/visual/m13/03-banker-wager.png",
+    "sha256": "5279b7beed5dede801ccd48331db0c9eb35818ea2fa3189fb24e936d7652e729"
+  },
+  {
+    "label": "Tie wager",
+    "file": "07-tie-wager.png",
+    "source": ".git/overnight/visual/m13/04-tie-wager.png",
+    "sha256": "ae3170d96cf3a68a78928db6ca790be20160e08625d2a34cf60225e7deae2c4d"
+  },
+  {
+    "label": "Initial four-card deal flight",
+    "file": "08-four-card-deal.png",
+    "source": ".git/overnight/visual/m14/flight-initial.png",
+    "sha256": "3372a124be08ba40dd183760d1a392f7da8b573042383a87b1c19a6f5adb4e7b"
+  },
+  {
+    "label": "Player third-card flight",
+    "file": "09-player-third.png",
+    "source": ".git/overnight/visual/m14/flight-player.png",
+    "sha256": "934bfbd86da06b57de1ff9269492414c8191625a4878367556143332a417ddbd"
+  },
+  {
+    "label": "Banker third-card flight",
+    "file": "10-banker-third.png",
+    "source": ".git/overnight/visual/m14/flight-banker.png",
+    "sha256": "1837b20efadc80de3cc11598c4254b77a7db4937d58c44ca1b45bf24a26ece4e"
+  },
+  {
+    "label": "Six-card example",
+    "file": "11-six-card.png",
+    "source": ".git/overnight/visual/m14/branch-both-third.png",
+    "sha256": "370fb67373285c3ccbb3dbd42c821a40be944dcd815eee021bd31f5c5e05cc58"
+  },
+  {
+    "label": "Player win",
+    "file": "12-player-win.png",
+    "source": ".git/overnight/visual/m14/branch-player-natural.png",
+    "sha256": "cb982be2673d6151ad7bea55ffb7159af64feae4b152a666c0676dcc1f1f6533"
+  },
+  {
+    "label": "Banker win",
+    "file": "13-banker-win.png",
+    "source": ".git/overnight/visual/m14/branch-banker-natural.png",
+    "sha256": "389d9e3a7a6d595ddfe827a08feeaff1fff6c77f76a23ad7860ebdecc3213bea"
+  },
+  {
+    "label": "Tie",
+    "file": "14-tie.png",
+    "source": ".git/overnight/visual/m14/branch-tie.png",
+    "sha256": "ab2eda950101c4ad6e6355f83be04f774cf9133506dcccb98999047c0657d46a"
+  },
+  {
+    "label": "Exact commission chip settlement",
+    "file": "15-chip-settlement.png",
+    "source": ".git/overnight/visual/m14/settlement-banker.png",
+    "sha256": "6705fa64556f56b3e833c0faa0198e22e8a160c09693377795828f0dac652cbe"
+  },
+  {
+    "label": "Formal Dealer",
+    "file": "16-formal-dealer.png",
+    "source": ".git/overnight/visual/m14/responsive-1280.png",
+    "sha256": "6cd4489052b52b98fad2603da0b82701a8a221aba302fd1c67e661b590673de3"
+  },
+  {
+    "label": "Local Avatar/HUD",
+    "file": "17-local-avatar-hud.png",
+    "source": ".git/overnight/visual/m14/responsive-768.png",
+    "sha256": "aac62598cfb34314a9983c1e50b57a8c30f330cea3faef390a58dcb407d20b9c"
+  },
+  {
+    "label": "Reduced-motion settled result",
+    "file": "18-reduced-result.png",
+    "source": ".git/overnight/visual/m14/reduced-settled.png",
+    "sha256": "b428154e47900aa59606c48b436240f0e80069c40e451f3a39cdd5dad696f856"
+  }
+]

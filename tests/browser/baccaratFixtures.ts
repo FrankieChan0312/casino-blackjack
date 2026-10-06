@@ -8,7 +8,7 @@ const fixtures: Record<string, readonly number[]> = {
   'two-card': [6,7,0,0,9,9], 'player-third': [5,7,0,0,4,9],
   'banker-third': [7,5,0,0,2,9], 'both-third': [5,5,0,0,4,2], 'banker-win': [5,3,0,0,0,6],
 };
-export function createBaccaratFixture(name: string | null) {
+export function createBaccaratFixture(name: string | null, unmount?: () => void) {
   let state = createBaccarat(77);
   if (name) {
     const numbers = fixtures[name]; if (!numbers) throw new Error('Unknown controlled Baccarat fixture');
@@ -21,5 +21,6 @@ export function createBaccaratFixture(name: string | null) {
   const controller = createBaccaratController(state);
   // This diagnostic reference exists only in the excluded test factory.
   (window as unknown as { baccaratTestController: typeof controller }).baccaratTestController = controller;
+  (window as unknown as { baccaratTestUnmount?: () => void }).baccaratTestUnmount = unmount;
   return controller;
 }

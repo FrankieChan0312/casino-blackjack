@@ -29,11 +29,13 @@ async function baccaratEntry() {
   let controller;
   if (import.meta.env.MODE === 'e2e') {
     const { createBaccaratFixture } = await import('../tests/browser/baccaratFixtures.js');
-    controller = createBaccaratFixture(new URLSearchParams(location.search).get('baccaratFixture'));
+    controller = createBaccaratFixture(new URLSearchParams(location.search).get('baccaratFixture'), () => root.unmount());
   } else controller = createBaccaratController();
-  return <BaccaratTable controller={controller} />;
+  return <BaccaratTable controller={controller}
+    presentationMode={import.meta.env.MODE === 'e2e' && new URLSearchParams(location.search).get('motion') === 'IMMEDIATE' ? 'IMMEDIATE' : undefined} />;
 }
 const path = location.pathname;
-createRoot(document.getElementById('root')!).render(<CasinoApp path={path}
+const root = createRoot(document.getElementById('root')!);
+root.render(<CasinoApp path={path}
   blackjack={casinoRoute(path) === 'BLACKJACK' ? await blackjackEntry() : undefined}
   baccarat={casinoRoute(path) === 'BACCARAT' ? await baccaratEntry() : undefined} baccaratAvailable />);

@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T20:34:32.763Z",
+  "finish": "2026-10-06T20:35:52.131Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "npm.cmd run test:e2e -- tests/browser/baccarat/presentation.spec.ts; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m14-repair3-browser.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

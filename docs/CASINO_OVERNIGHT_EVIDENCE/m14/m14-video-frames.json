@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T20:40:50.960Z",
+  "finish": "2026-10-06T20:40:51.636Z",
+  "command": "C:\\Users\\user\\AppData\\Local\\ms-playwright\\ffmpeg-1011\\ffmpeg-win64.exe",
+  "args": [
+    "-i",
+    ".git/overnight/visual/m14/baccarat-six-card.webm",
+    "-r",
+    "8",
+    "-frames:v",
+    "32",
+    ".git/overnight/visual/m14/video-frame-%02d.png"
+  ],
+  "log": ".git\\evidence-capture\\m14-video-frames.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

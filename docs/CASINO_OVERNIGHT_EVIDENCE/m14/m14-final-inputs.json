@@ -1,0 +1,15 @@
+{
+  "start": "2026-10-06T21:06:22.921Z",
+  "finish": "2026-10-06T21:06:23.005Z",
+  "command": "node",
+  "args": [
+    ".git/overnight/m14-gate-inputs.cjs",
+    "check"
+  ],
+  "log": ".git\\evidence-capture\\m14-final-inputs.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

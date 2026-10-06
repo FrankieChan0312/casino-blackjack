@@ -1,0 +1,72 @@
+{
+  "thresholdMs": 2500,
+  "retries": 0,
+  "allRunsRetained": true,
+  "totalSamples": 60,
+  "runs": [
+    {
+      "file": "1791318118224-33752-1280.json",
+      "width": 1280,
+      "samples": 10,
+      "medianMs": 512.9500000476837,
+      "worstMs": 543.6000001430511,
+      "firstFailure": null
+    },
+    {
+      "file": "1791318144960-33752-320.json",
+      "width": 320,
+      "samples": 10,
+      "medianMs": 487.59999990463257,
+      "worstMs": 528,
+      "firstFailure": null
+    },
+    {
+      "file": "1791318563417-1392-1280.json",
+      "width": 1280,
+      "samples": 10,
+      "medianMs": 487.35000014305115,
+      "worstMs": 535,
+      "firstFailure": null
+    },
+    {
+      "file": "1791318586864-1392-320.json",
+      "width": 320,
+      "samples": 10,
+      "medianMs": 488.2000000476837,
+      "worstMs": 564.2000000476837,
+      "firstFailure": null
+    },
+    {
+      "file": "1791319071458-24000-1280.json",
+      "width": 1280,
+      "samples": 10,
+      "medianMs": 485.5500000715256,
+      "worstMs": 528.1000001430511,
+      "firstFailure": null
+    },
+    {
+      "file": "1791319095226-24000-320.json",
+      "width": 320,
+      "samples": 10,
+      "medianMs": 488.10000002384186,
+      "worstMs": 538.7000000476837,
+      "firstFailure": null
+    }
+  ],
+  "finalGateRuns": [
+    {
+      "file": "1791319071458-24000-1280.json",
+      "width": 1280,
+      "samples": 10,
+      "medianMs": 485.5500000715256,
+      "worstMs": 528.1000001430511
+    },
+    {
+      "file": "1791319095226-24000-320.json",
+      "width": 320,
+      "samples": 10,
+      "medianMs": 488.10000002384186,
+      "worstMs": 538.7000000476837
+    }
+  ]
+}

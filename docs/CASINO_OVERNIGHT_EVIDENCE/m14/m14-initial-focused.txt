@@ -1,0 +1,64 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ casino-tests/baccarat/presentation.test.ts (14 tests | 1 failed) 49ms
+   × [M14-U06] mapping/player contain no rule or command capability and rejected intent emits no batch 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  casino-tests/baccarat/presentation.test.ts > [M14-U06] mapping/player contain no rule or command capability and rejected intent emits no batch
+AssertionError: expected 'import type { PublicView } from \'../…' not to match /applyCommand|dispatch\(|resolv…/domain\
+
+- Expected:
+/applyCommand|dispatch\(|resolveRound|bankerDraws|playerDraws|grossReturn|\.\/domain\/rules\.js['"];/
+
++ Received:
+"import type { PublicView } from '../domain/engine.js';
+import { cardSlot, type PresentationFact } from '../../presentation/events.js';
+import type { Target } from '../domain/rules.js';
+
+export const baccaratHandId = (roundId: string, zone: 'PLAYER' | 'BANKER') => `${roundId}/${zone.toLowerCase()}`;
+export const baccaratWagerSeat: Record<Target, number> = { PLAYER: 0, BANKER: 1, TIE: 2 };
+
+// Copy resolved public facts. No scoring, drawing rules or payout calculation.
+export function baccaratFacts(round: NonNullable<PublicView['round']>): readonly PresentationFact[] {
+  return Object.freeze([
+    ...round.draws.map((draw): PresentationFact => {
+      const handId = baccaratHandId(round.id, draw.zone);
+      return Object.freeze({ type: 'DEAL_CARD', card: cardSlot(round.id, draw.zone === 'PLAYER' ? 0 : 1, handId, draw.index),
+        face: draw.card, reason: draw.reason === 'INITIAL' ? 'INITIAL' : 'SUPPLEMENT', destination: `card:${handId}:${draw.index}` });
+    }),
+    ...round.settlements.map((result): PresentationFact => Object.freeze({ type: 'SETTLE_RESULT',
+      seat: baccaratWagerSeat[result.target], kind: `BACCARAT_${result.target}`, outcome: result.result,
+      stake: result.stakeUnits, returned: result.grossUnits, returnTo: 'local-credits' })),
+  ]);
+}
+"
+
+ ❯ casino-tests/baccarat/presentation.test.ts:73:63
+     71| it('[M14-U06] mapping/player contain no rule or command capability and…
+     72|   for(const file of ['src/baccarat/presentation/facts.ts','src/baccara…
+     73|     const source=readFileSync(file,'utf8');expect(source).not.toMatch(…
+       |                                                               ^
+     74|   }
+     75|   const value=controller(),before=value.presentation.getSnapshot();exp…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 6 passed (7)
+      Tests  1 failed | 133 passed (134)
+   Start at  04:19:59
+   Duration  1.60s (tests 38%, import 35%, transform 23%, setup 3%, worker 1%)

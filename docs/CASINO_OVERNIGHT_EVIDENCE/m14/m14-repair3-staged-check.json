@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-06T20:34:31.384Z",
+  "finish": "2026-10-06T20:34:31.438Z",
+  "command": "git",
+  "args": [
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "log": ".git\\evidence-capture\\m14-repair3-staged-check.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

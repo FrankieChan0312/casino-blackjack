@@ -1,0 +1,22 @@
+{
+  "start": "2026-10-06T21:06:21.189Z",
+  "finish": "2026-10-06T21:06:21.249Z",
+  "command": "git",
+  "args": [
+    "diff",
+    "--exit-code",
+    "0a5cfee43860731afa40ebb64fb2e30d6981f43b",
+    "--",
+    "src/baccarat/domain",
+    "casino-tests/baccarat/engine.test.ts",
+    "casino-tests/baccarat/rules.test.ts",
+    "casino-tests/baccarat/replay.test.ts",
+    "casino-tests/baccarat/validator.test.ts"
+  ],
+  "log": ".git\\evidence-capture\\m14-final-domain.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

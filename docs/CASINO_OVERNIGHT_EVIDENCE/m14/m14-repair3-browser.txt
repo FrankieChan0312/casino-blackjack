@@ -1,0 +1,35 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/baccarat/presentation.spec.ts
+
+[WebServer] (node:25776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 22 tests using 1 worker
+
+(node:23972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-player-natural] full resolved order, faces and three wager results (19.3s)
+  ok  2 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-banker-natural] full resolved order, faces and three wager results (3.1s)
+  ok  3 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-two-card] full resolved order, faces and three wager results (3.2s)
+  ok  4 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-player-third] full resolved order, faces and three wager results (3.1s)
+  ok  5 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-banker-third] full resolved order, faces and three wager results (3.1s)
+  ok  6 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-both-third] full resolved order, faces and three wager results (3.1s)
+  ok  7 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-banker-win] full resolved order, faces and three wager results (3.2s)
+  ok  8 [chromium] › tests\browser\baccarat\presentation.spec.ts:33:11 › [M14-B01-tie] full resolved order, faces and three wager results (3.2s)
+  ok  9 [chromium] › tests\browser\baccarat\presentation.spec.ts:45:62 › [M14-B02-initial] safe skip, settled authority and no stale layers (1.7s)
+  ok 10 [chromium] › tests\browser\baccarat\presentation.spec.ts:45:62 › [M14-B02-player] safe skip, settled authority and no stale layers (1.9s)
+  ok 11 [chromium] › tests\browser\baccarat\presentation.spec.ts:45:62 › [M14-B02-banker] safe skip, settled authority and no stale layers (2.4s)
+  ok 12 [chromium] › tests\browser\baccarat\presentation.spec.ts:45:62 › [M14-B02-settlement] safe skip, settled authority and no stale layers (2.5s)
+  ok 13 [chromium] › tests\browser\baccarat\presentation.spec.ts:60:11 › [M14-B03-Player] exact authority chip destination and amount (2.0s)
+  ok 14 [chromium] › tests\browser\baccarat\presentation.spec.ts:60:11 › [M14-B03-Banker] exact authority chip destination and amount (1.8s)
+  ok 15 [chromium] › tests\browser\baccarat\presentation.spec.ts:60:11 › [M14-B03-Tie] exact authority chip destination and amount (1.7s)
+  ok 16 [chromium] › tests\browser\baccarat\presentation.spec.ts:66:1 › [M14-B04] full/reduced/immediate replay equivalence, OS and mid-sequence session reduce (5.0s)
+  ok 17 [chromium] › tests\browser\baccarat\presentation.spec.ts:75:34 › [M14-B05-1280] responsive visible cards, formal Dealer and local HUD (2.1s)
+  ok 18 [chromium] › tests\browser\baccarat\presentation.spec.ts:75:34 › [M14-B05-768] responsive visible cards, formal Dealer and local HUD (2.3s)
+  ok 19 [chromium] › tests\browser\baccarat\presentation.spec.ts:75:34 › [M14-B05-320] responsive visible cards, formal Dealer and local HUD (2.2s)
+  ok 20 [chromium] › tests\browser\baccarat\presentation.spec.ts:79:1 › [M14-B06] real React unmount cancels overlay and late completion (1.6s)
+  ok 21 [chromium] › tests\browser\baccarat\presentation.spec.ts:83:1 › [M14-B07] existing native video tooling records representative six-card motion (3.3s)
+  ok 22 [chromium] › tests\browser\baccarat\presentation.spec.ts:87:1 › [M14-B08] resize and visibility cleanup settle observation without commands (2.2s)
+
+  22 passed (1.3m)

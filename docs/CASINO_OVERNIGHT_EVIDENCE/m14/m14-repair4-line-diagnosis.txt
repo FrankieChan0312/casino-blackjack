@@ -1,0 +1,21 @@
+{
+  "raw": {
+    "crcrlf": 0,
+    "crlf": 33,
+    "bareCr": 1,
+    "lf": 33
+  },
+  "preview": {
+    "crcrlf": 0,
+    "crlf": 32,
+    "bareCr": 1,
+    "lf": 33
+  },
+  "staged": {
+    "crcrlf": 0,
+    "crlf": 32,
+    "bareCr": 1,
+    "lf": 33
+  },
+  "hypothesis": "Bare progress CR makes the file mixed-newline, so Git preserves CRLF and diff treats CR as trailing whitespace. Normalize preview only; raw stays intact."
+}

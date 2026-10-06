@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-07 05:01:49 +08:00",
+  "task": "M14 post-gate historical-output preservation",
+  "inheritedFailure": "M13 Windows historical PNG restoration",
+  "previousCumulative": 8,
+  "cumulative": 9,
+  "limit": 10,
+  "m14ProductRepairs": 3,
+  "nativeVerification": {
+    "receipt": ".git/evidence-capture/m14-unified.json",
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "wrapper": {
+    "status": "FAIL",
+    "exitCode": 1,
+    "session": 94307,
+    "source": ".git/overnight/gate.cjs",
+    "operation": "File.Replace",
+    "target": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+    "replacement": ".git/overnight/m14-unified/original-replacement-18.tmp",
+    "backup": ".git/overnight/m14-unified/displaced-generated-18.bin",
+    "error": "Another process is using the file; sharing violation",
+    "originalHash": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+    "generatedHash": "9bf19b79204b1029c96da8f4ad1207375a7bec2166239d32bfda9205e175565f"
+  },
+  "evidence": "Read-only hash comparison confirms unrestored bytes; non-mutating FileMode.Open write-handle probe succeeds. Exact holding process not isolated.",
+  "hypothesis": "Replacement requires delete/rename sharing that a non-deleting overwrite does not. Current write access permits native File.Copy restoration from retained original backups.",
+  "action": "Archive generated variants, use native overwrite without rename/delete, verify all320 original hashes and preserve newly generated outputs. No application/process termination, product/test/runtime or threshold change. Stop on first error; this failure budget is inherited rather than reset.",
+  "result": "Affected restoration pending"
+}

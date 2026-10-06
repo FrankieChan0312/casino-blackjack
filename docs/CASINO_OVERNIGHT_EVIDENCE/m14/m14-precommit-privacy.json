@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T21:08:12.205Z",
+  "finish": "2026-10-06T21:08:14.950Z",
+  "command": "powershell",
+  "args": [
+    "-NoProfile",
+    "-File",
+    ".git/overnight/privacy-m14-precommit.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m14-precommit-privacy.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

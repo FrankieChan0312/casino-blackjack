@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T21:01:50.021Z",
+  "finish": "2026-10-06T21:01:56.684Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/overnight/m14-inherited-repair9-restore.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m14-inherited-repair9-restore.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

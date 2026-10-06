@@ -1,0 +1,34 @@
+ffmpeg version n7.0.1-playwright-build-1011 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 9.3-win32 (GCC) 20200320
+  configuration: --arch=x86_64 --target-os=mingw32 --cross-prefix=/usr/bin/x86_64-w64-mingw32- --disable-doc --pkg-config=pkg-config --pkg-config-flags=--static --extra-cflags=-I//root/prefix/include --extra-ldflags='-L//root/prefix/lib -static' --prefix=/root/prefix --bindir=/root/ffmpeg/bin --extra-version=playwright-build-1011 --disable-debug --disable-autodetect --disable-everything --enable-ffmpeg --enable-protocol=pipe --enable-protocol=file --enable-parser=mjpeg --enable-decoder=mjpeg --enable-demuxer=image2pipe --enable-filter=pad --enable-filter=crop --enable-filter=scale --enable-muxer=webm --enable-libvpx --enable-static --enable-encoder=libvpx_vp8 --enable-decoder=libvpx_vp8 --enable-demuxer=matroska --enable-encoder=png --enable-zlib --enable-muxer=image2 --disable-iconv --disable-bzlib
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+[libvpx @ 000002aa82ce1a40] v1.14.1
+Input #0, matroska,webm, from '.git/overnight/visual/m14/baccarat-six-card.webm':
+  Metadata:
+    creation_time   : 2026-10-06T20:39:29.982000Z
+    ENCODER         : Lavf61.1.100
+  Duration: 00:00:03.04, start: 0.000000, bitrate: 872 kb/s
+  Stream #0:0(eng): Video: vp8 (libvpx), yuv420p(tv, progressive), 1280x1500, SAR 1:1 DAR 64:75, 25 fps, 25 tbr, 1k tbn (default)
+      Metadata:
+        ENCODER         : Lavc61.3.100 libvpx
+        DURATION        : 00:00:03.040000000
+[libvpx @ 000002aa82cd1f80] v1.14.1
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp8 (libvpx) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to '.git/overnight/visual/m14/video-frame-%02d.png':
+  Metadata:
+    encoder         : Lavf61.1.100
+  Stream #0:0(eng): Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 1280x1500 [SAR 1:1 DAR 64:75], q=2-31, 200 kb/s, 8 fps, 8 tbn (default)
+      Metadata:
+        DURATION        : 00:00:03.040000000
+        encoder         : Lavc61.3.100 png
+frame=   21 fps=0.0 q=-0.0 size=N/A time=N/A bitrate=N/A dup=0 drop=51 speed=N/A
+[out#0/image2 @ 000002aa82e17340] video:9460KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=   26 fps=0.0 q=-0.0 Lsize=N/A time=00:00:03.25 bitrate=N/A dup=0 drop=51 speed=5.47x

@@ -1,3 +1,7 @@
+## Authorized M14 observational Baccarat animation — 2026-10-07 04:16:32 +08:00
+
+[Presentation scope, acceptance, approved reuse and verification](BACCARAT_PRESENTATION.md) replaces only M13 static dealing with observation of committed authority. Protected Blackjack and Baccarat domain remain unchanged. Human visual acceptance PENDING; no M15/multiplayer/deployment.
+
 ## Authorized M13 playable Baccarat amendment — 2026-10-07 02:59:14 +08:00
 
 [Table scope/acceptance and approved presentation](BACCARAT_TABLE.md) connects M12 authority to a single-user Baccarat table with existing art/cards/visual vocabulary. This supersedes only M11 Baccarat bootstrap availability. Accepted Blackjack remains protected; static dealing now, M14 animation after clean technical gate. Human visual acceptance PENDING; no multiplayer/deployment/M15.

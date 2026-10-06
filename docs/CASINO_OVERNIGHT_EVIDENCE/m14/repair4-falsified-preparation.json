@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-07 05:09:55 +08:00",
+  "status": "FAIL",
+  "observedNativeExit": 1,
+  "mutated": false,
+  "hypothesis": "Repeated CRCRLF",
+  "evidence": "Initial guard asserted CRCRLF; actual raw contains0. Native paired diagnostic confirms33CRLF/1bareCR; before targeted mutation.",
+  "subsequentStage": "FAIL: pathspec for not-yet-written failed receipt; no task files staged by that attempted command",
+  "recordType": "Observed failure summary; not a fabricated native collector receipt"
+}

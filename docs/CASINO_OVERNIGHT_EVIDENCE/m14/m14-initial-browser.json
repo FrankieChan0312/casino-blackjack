@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T20:21:28.400Z",
+  "finish": "2026-10-06T20:27:39.361Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "npm.cmd run test:e2e -- tests/browser/baccarat tests/browser/casino/platform.spec.ts; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m14-initial-browser.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

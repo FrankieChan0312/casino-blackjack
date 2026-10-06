@@ -1,0 +1,118 @@
+[
+  {
+    "capture": "beyond",
+    "before": {
+      "events": [
+        {
+          "event": "paused",
+          "count": 1,
+          "states": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ],
+          "target": "baccarat-1/player:0"
+        }
+      ],
+      "layers": [
+        {
+          "target": "baccarat-1/player:0",
+          "animations": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ]
+        }
+      ],
+      "running": "true"
+    },
+    "after": {
+      "events": [
+        {
+          "event": "paused",
+          "count": 1,
+          "states": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ],
+          "target": "baccarat-1/player:0"
+        },
+        {
+          "event": "resize",
+          "time": 18666.799999952316,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "event": "resize",
+          "time": 18684.099999904633,
+          "width": 1280,
+          "height": 900
+        }
+      ],
+      "layers": [],
+      "running": "false"
+    }
+  },
+  {
+    "capture": "viewport",
+    "before": {
+      "events": [
+        {
+          "event": "paused",
+          "count": 1,
+          "states": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ],
+          "target": "baccarat-1/player:0"
+        }
+      ],
+      "layers": [
+        {
+          "target": "baccarat-1/player:0",
+          "animations": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ]
+        }
+      ],
+      "running": "true"
+    },
+    "after": {
+      "events": [
+        {
+          "event": "paused",
+          "count": 1,
+          "states": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ],
+          "target": "baccarat-1/player:0"
+        }
+      ],
+      "layers": [
+        {
+          "target": "baccarat-1/player:0",
+          "animations": [
+            {
+              "state": "paused",
+              "time": 20
+            }
+          ]
+        }
+      ],
+      "running": "true"
+    }
+  }
+]
