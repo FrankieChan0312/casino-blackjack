@@ -1,3 +1,21 @@
+## Current M10 final closure — 2026-10-06 23:50:11 +08:00
+
+**M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:
+
+CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: ACCEPTED
+
+M10 FINAL OWNER ACCEPTANCE: ACCEPTED
+
+M10_FINAL_REVIEW_R2: TECHNICALLY ACCEPTED (M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED). Final R2 findings: BLOCKER 0 / HIGH 0 / MEDIUM 0 / LOW 1. The non-blocking LOW remains: REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE; synthetic/equivalent visibility verification passed. [Canonical final closure receipt](M10_FINAL_CLOSURE.md) preserves the exact performance, verification, Dealer and authority records. Historical T11 remains BLOCKED AFTER 11/11; repair 12 NOT AUTHORIZED / NOT RUN. R2 repairs remain 6/10; PRE-CLOSE maintenance remains a separate task at 7/10.
+
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED; required checks PASS / exit 0; ordinary commit/push NOT RUN; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
+
+<!-- END CURRENT M10 FINAL CLOSURE -->
+
+## Historical records before final owner acceptance
+
+All following pre-closure records retain their original checkpoint meaning, including PENDING / NOT ACCEPTED / NOT STARTED statements. They are historical, not the current milestone status; the canonical final closure above supersedes their current-state claims.
+
 # M10-FINAL-REVIEW-R2 — Fresh independent final review
 
 Recorded 2026-10-06 22:36:37 +08:00. Fresh incoming review of main / `974a977dd5ebf33f4c09b08e352c3d57410a713c` after maintenance publication. This NEW review is separate from the historically blocked T11; T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN. All historical evidence is byte-preserved. No T11 repair12 exists.

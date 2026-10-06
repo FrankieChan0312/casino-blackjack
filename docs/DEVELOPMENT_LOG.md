@@ -1,3 +1,27 @@
+## Current M10 final closure — 2026-10-06 23:50:11 +08:00
+
+**M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:
+
+CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: ACCEPTED
+
+M10 FINAL OWNER ACCEPTANCE: ACCEPTED
+
+M10_FINAL_REVIEW_R2: TECHNICALLY ACCEPTED (M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED). Final R2 findings: BLOCKER 0 / HIGH 0 / MEDIUM 0 / LOW 1. The non-blocking LOW remains: REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE; synthetic/equivalent visibility verification passed. [Canonical final closure receipt](M10_FINAL_CLOSURE.md) preserves the exact performance, verification, Dealer and authority records. Historical T11 remains BLOCKED AFTER 11/11; repair 12 NOT AUTHORIZED / NOT RUN. R2 repairs remain 6/10; PRE-CLOSE maintenance remains a separate task at 7/10.
+
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED; required checks PASS / exit 0; ordinary commit/push NOT RUN; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
+
+Task start/preflight 2026-10-06 23:50:11 +08:00: main/8093315bf4c545e43ff5e39c4d6530e13d3e2b70; origin/main and live remote match; ahead/behind 0/0, CLEAN, untracked 0. Repository-local authority and historical R2 records inspected. Recommended GPT-6.1 Sol / High; client metadata confirms availability, selected runtime model/effort NOT VERIFIED. Scope: persist owner decisions and align current docs only. Verification: unchanged documentation tests, publication/current consistency/whitespace/scope checks, unchanged verify.ps1 and scanner. Stops: authority conflict, unknown overlap, missing required tool, scope breach, sensitive data, unauthorized operations or 10/10 failed repairs. Same-session documentation review will be recorded separately; no new technical or human review is claimed.
+
+Repair 1/10 — 2026-10-07 00:14:56 +08:00: full unchanged verify.ps1 PASS/native exit 0 (1240/245 and independent preservation). The following review-only historical output replacement failed EPERM/errno -4048 on 7-320-settled.png; original helper and failure ledger retained. Hypothesis: Windows replacement/delete semantics are refused for the destination, while direct overwrite may succeed; exact OS lock cause NOT ESTABLISHED. Targeted direct copy restored only pre-backed-up generated outputs; affected preservation PASS/exit 0, all 320 original hashes match, generated files/temp retained separately. Product/tests/validators/assets/settings unchanged. No full gate rerun or performance retry. Cumulative 1/10; no exceptional cycle.
+
+Verification checkpoint 2026-10-07 00:16:03 +08:00: unchanged docs tests PASS (3 files / 9 tests, native exit 0); unchanged verify.ps1 PASS/native exit 0 (101 files / 1240 Vitest, 245 Chromium, typecheck, lint, domain/build/fixture guards and independent preservation). Current publication/consistency/relative-link/full-scope audit PASS/exit 0; all 18119 protected incoming files and all six original documentation suffixes remain byte-identical. 81 stale-status occurrences classified historical; current stale 0. Privacy PASS/exit 0: 3993 files / 58 trace resources, 0 findings / 0 exclusions; historical R2 3993/58 results unchanged. Same-session documentation/diff review PASS; new fresh technical review NOT RUN (outside this closure task). Repairs 1/10. Normal commit/push NOT RUN at this checkpoint; deployment NOT RUN. Actual native logs and generated outputs are retained under .git/m10-final-closure and .git/evidence-capture.
+
+<!-- END CURRENT M10 FINAL CLOSURE -->
+
+## Historical records before final owner acceptance
+
+All following pre-closure records retain their original checkpoint meaning, including PENDING / NOT ACCEPTED / NOT STARTED statements. They are historical, not the current milestone status; the canonical final closure above supersedes their current-state claims.
+
 ## M10-FINAL-REVIEW-R2 technically accepted publication — 2026-10-06 22:49:49 +08:00
 
 **M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED.** Verified independent review commit **8ad650a339b5f6f540e1b1a7c3b67dd0baf87835** published by ordinary push to **origin/main**, native0. Observed 2026-10-06 22:48:18 +08:00: local HEAD=tracking=live remote, ahead/behind0/0, CLEAN/untracked0. This following documentation/evidence receipt records that observed publication; its own commit is resolved by Git HEAD and checked live after ordinary push. R2 repairs6/10, all review tooling/evidence handling, product/tests/assets/dependencies unchanged; full1240Vitest/245Chromium/unified/native performance/assets/preservation/privacy/30fresh gallery/current-doc scope gates PASS0. Current final closure evidence remains linked in [review](M10_FINAL_REVIEW_R2.md). **M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING.** M10 not fully owner-accepted. Historical T11 BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. DEPLOYMENT NOT RUN.

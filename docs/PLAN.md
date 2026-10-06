@@ -1,3 +1,23 @@
+## Current M10 final closure — 2026-10-06 23:50:11 +08:00
+
+**M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:
+
+CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: ACCEPTED
+
+M10 FINAL OWNER ACCEPTANCE: ACCEPTED
+
+M10_FINAL_REVIEW_R2: TECHNICALLY ACCEPTED (M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED). Final R2 findings: BLOCKER 0 / HIGH 0 / MEDIUM 0 / LOW 1. The non-blocking LOW remains: REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE; synthetic/equivalent visibility verification passed. [Canonical final closure receipt](M10_FINAL_CLOSURE.md) preserves the exact performance, verification, Dealer and authority records. Historical T11 remains BLOCKED AFTER 11/11; repair 12 NOT AUTHORIZED / NOT RUN. R2 repairs remain 6/10; PRE-CLOSE maintenance remains a separate task at 7/10.
+
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED; required checks PASS / exit 0; ordinary commit/push NOT RUN; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
+
+Task contract: M10-FINAL-CLOSURE-DOCS, M10 documentation closure. Scope/non-goals: documentation only; no functionality, new milestone, deployment or historical T11 repair. Acceptance: exact owner decisions and canonical CLOSED state, retained failures/LOW/R2 facts, documentation-only diff, all required checks exit 0, ordinary authorized origin/main publication with clean 0/0 parity. Recommended GPT-6.1 Sol / High; client availability confirmed by tool metadata, selected runtime NOT VERIFIED. Steps -> verification: closure/state update -> exact wording/history comparison; required gates -> native exit codes; diff/publication -> allowlist, normal commit/push and live parity. Stop on conflict, unknown overlap, unavailable tool, scope breach, sensitive data, unauthorized operation or repair limit. No exceptional repair.
+
+<!-- END CURRENT M10 FINAL CLOSURE -->
+
+## Historical records before final owner acceptance
+
+All following pre-closure records retain their original checkpoint meaning, including PENDING / NOT ACCEPTED / NOT STARTED statements. They are historical, not the current milestone status; the canonical final closure above supersedes their current-state claims.
+
 ## M10-FINAL-REVIEW-R2 technically accepted publication — 2026-10-06 22:49:49 +08:00
 
 **M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED.** Verified independent review commit **8ad650a339b5f6f540e1b1a7c3b67dd0baf87835** published by ordinary push to **origin/main**, native0. Observed 2026-10-06 22:48:18 +08:00: local HEAD=tracking=live remote, ahead/behind0/0, CLEAN/untracked0. This following documentation/evidence receipt records that observed publication; its own commit is resolved by Git HEAD and checked live after ordinary push. R2 repairs6/10, all review tooling/evidence handling, product/tests/assets/dependencies unchanged; full1240Vitest/245Chromium/unified/native performance/assets/preservation/privacy/30fresh gallery/current-doc scope gates PASS0. Current final closure evidence remains linked in [review](M10_FINAL_REVIEW_R2.md). **M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING.** M10 not fully owner-accepted. Historical T11 BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. DEPLOYMENT NOT RUN.

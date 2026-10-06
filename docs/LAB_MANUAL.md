@@ -1,3 +1,23 @@
+## Current M10 final closure — 2026-10-06 23:50:11 +08:00
+
+**M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:
+
+CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: ACCEPTED
+
+M10 FINAL OWNER ACCEPTANCE: ACCEPTED
+
+M10_FINAL_REVIEW_R2: TECHNICALLY ACCEPTED (M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED). Final R2 findings: BLOCKER 0 / HIGH 0 / MEDIUM 0 / LOW 1. The non-blocking LOW remains: REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE; synthetic/equivalent visibility verification passed. [Canonical final closure receipt](M10_FINAL_CLOSURE.md) preserves the exact performance, verification, Dealer and authority records. Historical T11 remains BLOCKED AFTER 11/11; repair 12 NOT AUTHORIZED / NOT RUN. R2 repairs remain 6/10; PRE-CLOSE maintenance remains a separate task at 7/10.
+
+M10-FINAL-CLOSURE-DOCS: IMPLEMENTED / VERIFIED; required checks PASS / exit 0; ordinary commit/push NOT RUN; repairs 1/10, normal maximum 10/10, no exceptional repair authorized. DEPLOYMENT: NOT RUN. NEXT MILESTONE: NOT SELECTED. WAITING FOR OWNER DIRECTION. No product, test semantics, asset, validator or animation timing changes.
+
+Learning checkpoint: technical verification, owner acceptance, documentation publication and deployment are separate events. The owner now accepts the current 40ms timing and final milestone. This later acceptance supersedes pending current state without rewriting failed intermediate reviews or their repair budgets. A documentation publication failure would not revoke the supplied owner decision.
+
+<!-- END CURRENT M10 FINAL CLOSURE -->
+
+## Historical records before final owner acceptance
+
+All following pre-closure records retain their original checkpoint meaning, including PENDING / NOT ACCEPTED / NOT STARTED statements. They are historical, not the current milestone status; the canonical final closure above supersedes their current-state claims.
+
 ## M10-FINAL-REVIEW-R2 publication boundary — 2026-10-06 22:49:49 +08:00
 
 Review technical publication 8ad650a339b5f6f540e1b1a7c3b67dd0baf87835 on origin/main achieved actual clean live parity 2026-10-06 22:48:18 +08:00. A following receipt commit records the observed event without inventing its own hash. Preserve exact native log bytes in scanned ZIP when readable text presentation conflicts with Git EOF formatting. Current40ms owner visual confirmation remains PENDING despite technical PASS; deployment NOT RUN. R2 repairs6/10; historical T11 BLOCKED11/11 unchanged. [Review](M10_FINAL_REVIEW_R2.md).
