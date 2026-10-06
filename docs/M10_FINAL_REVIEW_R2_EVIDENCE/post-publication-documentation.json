@@ -1,4 +1,20 @@
 {
-  "status": "NOT RUN",
-  "purpose": "Declared final review output destination; real closed native output must replace this before completion"
+  "start": "2026-10-06T14:49:49.407Z",
+  "finish": "2026-10-06T14:49:53.306Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/r2-documentation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\R2-post-publication-documentation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
 }

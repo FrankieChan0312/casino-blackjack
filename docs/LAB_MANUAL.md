@@ -1,3 +1,7 @@
+## M10-FINAL-REVIEW-R2 publication boundary — 2026-10-06 22:49:49 +08:00
+
+Review technical publication 8ad650a339b5f6f540e1b1a7c3b67dd0baf87835 on origin/main achieved actual clean live parity 2026-10-06 22:48:18 +08:00. A following receipt commit records the observed event without inventing its own hash. Preserve exact native log bytes in scanned ZIP when readable text presentation conflicts with Git EOF formatting. Current40ms owner visual confirmation remains PENDING despite technical PASS; deployment NOT RUN. R2 repairs6/10; historical T11 BLOCKED11/11 unchanged. [Review](M10_FINAL_REVIEW_R2.md).
+
 ## M10-FINAL-REVIEW-R2 learning checkpoint — 2026-10-06 22:36:37 +08:00
 
 Fresh review distinguishes reported claims from current executions: recompute old raw metrics, sample a fixed native schedule, retain every first failure, and compare protected bytes before publication. A3176->3178scan count reflects finalized artifacts and different explicit document roots; compare inventories rather than infer lost coverage from a count. Closed native output outside scan roots avoids collector self-lock without evidence exclusions. Observational40ms timing changes do not enter domain/RNG/digest; three-mode replay/credits equality and literal card destinations verify the boundary. Native zoom is a browser setting, not CSS enlargement. Technical review and clean publication cannot accept visual dealing speed for the owner. [Review](M10_FINAL_REVIEW_R2.md). R2 repairs6/10; old T1111/11 remains blocked; current40ms human confirmation PENDING; deployment NOT RUN.

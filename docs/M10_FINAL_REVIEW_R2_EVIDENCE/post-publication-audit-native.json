@@ -1,1 +1,14 @@
-{"status":"NOT RUN","purpose":"Declared closed native audit receipt"}
+{
+  "start": "2026-10-06T14:50:08.037Z",
+  "finish": "2026-10-06T14:50:48.181Z",
+  "command": "node",
+  "args": [
+    ".git/r2-final-audit.cjs"
+  ],
+  "log": ".git\\evidence-capture\\R2-post-publication-audit.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

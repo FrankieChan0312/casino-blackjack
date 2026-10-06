@@ -1,4 +1,349 @@
 {
-  "status": "NOT RUN",
-  "purpose": "Declared final review output destination; real closed native output must replace this before completion"
+  "at": "2026-10-06 22:50:48 +08:00",
+  "status": "PASS",
+  "exitCode": 0,
+  "baseline": "974a977dd5ebf33f4c09b08e352c3d57410a713c",
+  "unchangedInputs": 273,
+  "unchangedHistoricalFiles": 17034,
+  "publicationPaths": 19,
+  "galleryEntries": 30,
+  "currentLinks": [
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/publication.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/baseline.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/performance-summary.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/performance-zoom/receipt.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/environment.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/maintenance-claims-recomputed.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/final-privacy-result.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/baseline-scan-comparison.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/cleanup/receipt.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/extra-visual/receipt.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/contrast/control-contrast.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/unified.txt"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/unified.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/receipts.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair01.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair02.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair03.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair04.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair05.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/repair06.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/publication.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-documentation.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-privacy-result.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2.md",
+      "target": "M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-audit.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "../M10_FINAL_REVIEW_R2.md"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "baseline.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "unified.txt"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "unified.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "performance-summary.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "gallery/README.md"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "final-privacy-result.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair01.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair02.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair03.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair04.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair05.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "repair06.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "publication-audit.json"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md",
+      "target": "documentation-native-verbatim.zip"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "01-setup-formal-dealer.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "02-one-player-deal.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "03-four-player-deal.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "04-seven-player-deal.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "05-hit.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "06-double.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "07-split.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "08-four-leaf-split.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "09-dealer-reveal.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "10-dealer-multi-draw.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "11-win.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "12-loss.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "13-push.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "14-insurance.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "15-round-complete.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "16-reduced-motion.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "17-mobile-active.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "18-tablet-active.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "19-generic-dealer-fallback.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "20-non-celestine-dealer.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "21-one-player-mobile.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "22-four-player-mobile.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "23-initial-1-1280-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "24-initial-1-320-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "25-initial-4-1280-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "26-initial-4-320-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "27-initial-7-1280-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "28-initial-7-320-flight.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "29-native200-zoom-controls.png"
+    },
+    {
+      "file": "docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md",
+      "target": "30-native200-zoom-dealer.png"
+    }
+  ],
+  "commands": [
+    {
+      "args": [
+        "diff",
+        "--exit-code",
+        "974a977dd5ebf33f4c09b08e352c3d57410a713c",
+        "--",
+        "src",
+        "tests",
+        "scripts",
+        "art",
+        "public",
+        "package.json",
+        "package-lock.json",
+        "playwright.config.ts",
+        "vite.config.ts"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--exit-code",
+        "4e6cd7efdca91651633931edcd9445a401886bce",
+        "--",
+        "src/domain"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "args": [
+        "diff",
+        "--exit-code",
+        "3c50ab4d0183cff13f2380bd60faa31583d3e988",
+        "--",
+        "art/source/characters",
+        "public/characters",
+        ":(exclude)public/characters/dealer",
+        "art/character-production.json"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "args": [
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exitCode": 0,
+      "output": "M README.md\n M docs/DEVELOPMENT_LOG.md\n M docs/LAB_MANUAL.md\n M docs/M10_FINAL_REVIEW_R2.md\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/README.md\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/documentation-native-verbatim.zip\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/final-privacy-result.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/final-privacy.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/final-privacy.txt\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-documentation.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-documentation.txt\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-documentation.txt-provenance.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-privacy-result.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-privacy.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/post-publication-privacy.txt\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/publication.json\n M docs/M10_FINAL_REVIEW_R2_EVIDENCE/publication.txt\n M docs/PLAN.md\n M docs/STATE.md"
+    }
+  ],
+  "repairCount": "6/10",
+  "scope": "Only new review docs/evidence and current state/log/plan/lab/README. No product/test/asset/dependency/runtime repair. Historical T11 and maintenance bytes preserved. Human current40ms confirmation pending."
 }

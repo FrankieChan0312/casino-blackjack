@@ -1,1 +1,8 @@
-{"status":"NOT RUN","purpose":"Declared native post-publication output provenance"}
+{
+  "at": "2026-10-06 22:49:53 +08:00",
+  "original": "documentation-native-verbatim.zip:R2-post-publication-documentation.txt",
+  "originalSha256": "58B7C14B11E7C23A8D106A1180527A751C5A12B664AF1D843D36FA87DB606C68",
+  "preview": "post-publication-documentation.txt",
+  "previewSha256": "8DF855FA8562C968095EB8DAAD3339A5C92CF0459886B7184F2F72D0816B84C8",
+  "onlyChange": "Remove extra blank lines at EOF for Git-reviewed readable preview; full native bytes retained in ZIP and scanned as text"
+}
