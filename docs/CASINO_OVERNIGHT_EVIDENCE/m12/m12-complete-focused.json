@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T18:33:53.725Z",
+  "finish": "2026-10-06T18:34:11.699Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/overnight/m12-focused.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m12-complete-focused.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

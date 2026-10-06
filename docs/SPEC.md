@@ -1,3 +1,7 @@
+## Authorized M12 Baccarat amendment — 2026-10-07 02:22:50 +08:00
+
+[Baccarat rules, bounded scope/acceptance and approved design](BACCARAT_RULES.md) implement owner-supplied eight-deck Punto Banco separately from protected Blackjack. Existing Blackjack requirements remain unchanged. M13/M14 require sequential gates; no side bets/multiplayer/deployment/M15.
+
 ## Authorized Casino Platform M11 amendment — 2026-10-07 01:33:04 +08:00
 
 The owner authorizes a thin platform around accepted Blackjack; [M11 scope, acceptance and approved integration](CASINO_PLATFORM.md) defines /casino lobby, /blackjack deep link and /baccarat bootstrap, preserving /. Existing Blackjack requirements and accepted behaviour remain protected. Baccarat engine/UI/presentation require sequential M12/M13/M14 gates; no multiplayer, deployment or M15. This requirement/design amendment is not verification or human visual acceptance. Earlier M10 planning statements below are historical; M10 remains ACCEPTED / CLOSED under its final owner closure.

@@ -1,0 +1,41 @@
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests/baccarat
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ casino-tests/baccarat/engine.test.ts (12 tests | 1 failed) 659ms
+   × [M12-E08] malformed shoe enters integrity error, explicit VOID refunds exactly once and retires shoe 10ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  casino-tests/baccarat/engine.test.ts > [M12-E08] malformed shoe enters integrity error, explicit VOID refunds exactly once and retires shoe
+AssertionError: expected 'INTEGRITY_ERROR' to be 'RESOLVED' // Object.is equality
+
+Expected: "RESOLVED"
+Received: "INTEGRITY_ERROR"
+
+ ❯ casino-tests/baccarat/engine.test.ts:84:77
+     82|   expect([state.phase,state.availableUnits,state.reservedUnits,state.p…
+     83|   const result=applyCommand(state,{type:'VOID',roundId:state.roundId,r…
+     84|   state=send(send(state,{type:'REPEAT'}),{type:'DEAL'});expect(state.p…
+       |                                                                             ^
+     85| });
+     86| it('[M12-E09] public state hides seed/future shoe/physical IDs; author…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  1 failed | 108 passed (109)
+   Start at  02:30:46
+   Duration  1.15s (tests 53%, transform 32%, import 11%, setup 3%, worker 1%)

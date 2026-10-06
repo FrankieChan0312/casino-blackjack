@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bankerThird": 80,
+  "drawDecisions": 51,
+  "standDecisions": 29,
+  "standingBranches": 8,
+  "naturalPairs": 36,
+  "resolved": {
+    "count": 10000,
+    "naturals": 3600,
+    "playerOnly": 1740,
+    "bankerOnly": 1200,
+    "both": 3060,
+    "neither": 400
+  },
+  "oracle": "Independent literal matrix and fixture arithmetic"
+}

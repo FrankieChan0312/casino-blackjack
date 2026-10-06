@@ -3967,3 +3967,38 @@ M11 repair3/10: staged whitespace check FAIL/native2 on three trailing-space lin
 ## Casino overnight — 2026-10-07 02:21:29 +08:00
 
 M11 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary commit 7c6020bfe2f38e702fcca672bfdf8777a3c7084d normally published to origin/main PASS0. Observed local=tracking=live,0/0,CLEAN,untracked0 at 2026-10-07 02:21:29 +08:00. Full exact-version verify.ps1102files/1245Vitest/250Chromium and independentM1–M8 preservation PASS/native0. Focused platform/unit/browser plus original M8 contract, docs9, protected268inputs/exact discovery delta, accepted main construction and privacy PASS0. Repairs3/10; all failed attempts retained. /casino lobby; /blackjack native accepted entry; /baccarat truthful preview; / unchanged. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Same-session review PASS; fresh-session review NOT RUN. This documentation-only publication receipt records the primary SHA; its own SHA is resolved by Git and checked after normal push.
+
+
+## Casino overnight — 2026-10-07 02:22:50 +08:00
+
+M11 complete publication: primary7c6020b, receipt a0267c37c2d459f1bd80c5b06576a0f591cd5374, normally pushed origin/main PASS0. Final local=tracking=live/CLEAN/untracked0/0/0 at2026-10-07 02:21:47+08; receipt docs9/audit268+exact discovery/privacy PASS0. M11 repairs3/10. M12 STARTED / NOT IMPLEMENTED / verification NOT RUN, repairs0/10. [Baccarat authority contract](BACCARAT_RULES.md) records owner rules, independent validator counts, exact hundredth units/whole-credit1–1000 wagers, atomic simultaneous exposure, no burn/cut and pre-round minimum-six inventory choice. New headless config prepared. No Blackjack domain/configuration mutation. M13/M14 NOT STARTED; human visuals PENDING/fresh review NOT RUN; M15/multiplayer NOT STARTED/deployment NOT RUN. Repair ledger1/3/0/0/0 (each /10).
+
+
+## Casino overnight — 2026-10-07 02:30:25 +08:00
+
+M12 repair1/10: first focused native1 FAIL. General TypeScript/headless Baccarat TypeScript PASS0; Lint no-useless-assignment at engine.ts:41 FAIL; unit/independent/accounting/replay tests NOT RUN because focused script stops on failure. Falsifiable cause: initial state=before assignment is overwritten in every accepted switch path; rejecting paths return immediately. Surgical fix removes only initializer and keeps typed state plus each branch assignment. Affected exact focused gate rerun. Native first log/receipt m12-focused retained. No changed rule/assertion/threshold or Blackjack code. Repairs R1/M11/M12/M13/M14 1/3/1/0/0 each /10.
+
+
+## Casino overnight — 2026-10-07 02:31:59 +08:00
+
+M12 repair2/10: repaired focused native1 FAIL; general/headless TypeScript and Lint PASS0;108/109unit PASS, one engine E08 recovery FAIL (expected RESOLVED, actual INTEGRITY_ERROR after valid VOID->REPEAT->DEAL). Independent80/8/36/10000 rule validator, exact accounting and replay all executed/pass. Falsifiable cause: DEAL validates the retired corrupted inventory before the explicit replacement branch. Targeted fix validates existing inventory only while active; explicit retired shoes are replaced by createShoe, which validates the fresh416 inventory. Keep all active-shoe validation, once-only refund, original assertions and thresholds. Affected109 focused checks and required full gate pending; native first/repaired attempts retained. Repairs1/3/2/0/0 each /10.
+
+
+## Casino overnight — 2026-10-07 02:35:13 +08:00
+
+M12 IMPLEMENTED / NOT VERIFIED; focused general/headless TypeScript, Lint and110 tests PASS/native0. Independent80 Banker-third (51draw/29stand),8 standing,36 natural pairs and10000 complete scenarios PASS; real180-round multi-shoe replay/unique draws,80seedx20accounting and24seedx20replay PASS. Full required gate starts next; repairs2/10, no reset. Existing268acceptedinputs plus exact Casino test discovery/main construction PASS0. [Contract](BACCARAT_RULES.md). Commit/push pending; M13/M14 NOT STARTED; no Baccarat UI/animation yet. Blackjack ACCEPTED/FROZEN; M15/multiplayer NOT STARTED/deployment NOT RUN; fresh-session review NOT RUN.
+
+
+## Casino overnight — 2026-10-07 02:41:49 +08:00
+
+M12 same-session source/test/contract review: all round draw indices originate in the headless resolver; no third-card/payout authority in a browser/presentation module. Commission is exact for permitted whole-credit stakes; no rounding or floats accumulated. Rejections return identical State references and never draw; explicit commit and VOID are phase-guarded and once-only. Existing Blackjack domain/UI/browser/presentation/package/main/config diffs EMPTY relative to completed M11. Frozen type-only card and seeded/canonical primitives reused without extraction. Public projection removes seed/full inventory/physical IDs; digest excludes journal timestamps and all presentation identities. Independent expected matrix/scoring/counts do not call production rules. Explicit limitation: artificial externally corrupted-state fixtures are integrity diagnostics; their replay cannot verify against a valid initial seed/inventory and must be rejected, never treated as a normal loss or silently verified. Normal constructor states and seeded rollovers replay mechanically; no fault-injection UI is added. Same-session review PASS, genuinely fresh-session review NOT RUN.
+
+
+## Casino overnight — 2026-10-07 02:55:00 +08:00
+
+M12 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Focused general/headless TypeScript, Lint and110tests PASS0; independent80 Banker-third/8standing/36natural/10000whole-round oracle PASS (51draw/29stand). Actual180-round multi-shoe replay/unique cards,80seedsx20accounting and24seedsx20replay PASS. Full unchanged verify.ps1 PASS/native0:106files/1355Vitest,250Chromium, independentM1–M8 preservation, typecheck/lint/domain/build/fixture guard. Eight-deck Punto Banco/card0–9/modulo10/naturals/explicit Banker table/Player and Banker pushes/Tie8:1/5% commission. Integer hundredth units and whole-credit1–1000 stakes; simultaneous atomic funding, pending return, once-only commit/refund, stale/duplicate rejection. Private deterministic shoe and journal/replay/outcome fingerprint exclude visuals/clocks; public future inventory/seed/physical IDs absent. Repairs2/10 (redundant initializer; retired-shoe recovery); all attempts retained. Same-session review PASS; fresh-session review NOT RUN. Blackjack protected268inputs plus exact Casino discovery/main boundaries PASS0. Final docs/privacy/publication pending; M13/M14 NOT STARTED, human visual PENDING; M15/multiplayer NOT STARTED/deployment NOT RUN.
+
+
+## Casino overnight — 2026-10-07 02:55:50 +08:00
+
+M12 final source/test/contract/evidence diff reviewed; only new bounded Baccarat source/tests/headless config and authorized docs/evidence. Required unified gate PASS/native0 at2026-10-07 02:54:34+08,106files/1355Vitest/250Chromium and independentM1–M8. Focused110/headless compile and independent80/8/36/10000 PASS0. Final docs9/protected268+exact discovery/main/privacy275files0findings PASS0. Runtime inputs unchanged after full gate;98 historical output variants archived/restored. Repairs2/10. Same-session review PASS; fresh-session review NOT RUN. Normal main publication next.

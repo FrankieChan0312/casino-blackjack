@@ -1,0 +1,42 @@
+[
+  {
+    "file": "src/baccarat/domain/engine.ts",
+    "sha256": "0ff1a02b4f424e1c602e98afe05880d607089f1e05edeb32178046378bbb0bd7"
+  },
+  {
+    "file": "src/baccarat/domain/replay.ts",
+    "sha256": "025a352d305e372f1d07f96c3b8eeb62bcb8fcdf35042720cf1081c20ed550d6"
+  },
+  {
+    "file": "src/baccarat/domain/rules.ts",
+    "sha256": "badb35154c37aaae451c1b05d4767287aa1f20dd4cd6721875b49b8490d03512"
+  },
+  {
+    "file": "src/baccarat/domain/shoe.ts",
+    "sha256": "3f58961e53969e25bb91ecaf81f404d48e394f520ba3d5213a4ad65e8dcb3483"
+  },
+  {
+    "file": "casino-tests/baccarat/engine.test.ts",
+    "sha256": "b164025cc949ff976d04730019f7b99eab4bcd2f52139316b47cfd66c56c2a79"
+  },
+  {
+    "file": "casino-tests/baccarat/fixtures.ts",
+    "sha256": "0c4f92878ac4fa0846d6171738591b46c947d4d75eb619af6781b3f6d796561f"
+  },
+  {
+    "file": "casino-tests/baccarat/replay.test.ts",
+    "sha256": "5fdd87b07b6410c3a5bb55234587272af245d5b543dedd25abb3d364c6b9709f"
+  },
+  {
+    "file": "casino-tests/baccarat/rules.test.ts",
+    "sha256": "2e30fb68735fa269a03addbe729b550133c6e486a8213a934f1ab7faad372882"
+  },
+  {
+    "file": "casino-tests/baccarat/validator.test.ts",
+    "sha256": "3c338f25834192a35e01656587189dbdb24cf4a1e6080b37e99d65f5b3f5ad1d"
+  },
+  {
+    "file": "tsconfig.baccarat.json",
+    "sha256": "176e473eb1f4621d30d84ba0b0d04d0ad0ef83f85eee603dbd39ff7a724d0c38"
+  }
+]

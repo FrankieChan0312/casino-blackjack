@@ -1,3 +1,7 @@
+## Authorized M12 Baccarat amendment — 2026-10-07 02:22:50 +08:00
+
+[Baccarat rules, bounded scope/acceptance and approved design](BACCARAT_RULES.md) implement owner-supplied eight-deck Punto Banco separately from protected Blackjack. Existing Blackjack requirements remain unchanged. M13/M14 require sequential gates; no side bets/multiplayer/deployment/M15.
+
 # Blackjack House Rules v1.2
 
 Document date: 2026-10-01

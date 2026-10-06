@@ -1,0 +1,14 @@
+{
+  "start": "2026-10-06T18:35:10.658Z",
+  "finish": "2026-10-06T18:35:11.816Z",
+  "command": "node",
+  "args": [
+    ".git/overnight/audit.cjs"
+  ],
+  "log": ".git\\evidence-capture\\m12-protection.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

@@ -1,3 +1,5 @@
+Baccarat M12: independent eight-deck Punto Banco engine, exact commission/accounting and deterministic replay; [rules and execution evidence](docs/BACCARAT_RULES.md). Technical gate1355Vitest/250Chromium PASS. The Baccarat table remains a development preview until M13.
+
 Casino Platform M11: `/casino` lobby, `/blackjack` and preserved `/` Blackjack entries, `/baccarat` development preview. [Platform contract and evidence](docs/CASINO_PLATFORM.md). Technical verification1245Vitest/250Chromium PASS; Human Visual Acceptance PENDING.
 
 Accepted Blackjack release: `blackjack-v1.0` at `79533bc22afb8571f8ff53e37cd95eaa6c65e5d8`. [Frozen baseline and owner acceptance](docs/releases/BLACKJACK_V1_ACCEPTED.md). Casino expansion is tracked separately in the [overnight handoff](docs/CASINO_OVERNIGHT_M11_M14_HANDOFF.md); deployment NOT RUN.
