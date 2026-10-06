@@ -2239,3 +2239,8 @@ An annotated release tag identifies immutable accepted product bytes; a later do
 ## Casino routing and historical inventory — 2026-10-07 02:21:29 +08:00
 
 A native-link platform can retain the original Blackjack App byte-for-byte and construct its controller only on Blackjack routes. Frozen historical filesystem inventories must remain scoped to accepted registrations: the new Casino suite has an explicit separate discovery root, while the unchanged full runner executes both roots. This preserves old66-file assertions without weakening or disabling any test. M11 native full gate1245Vitest/250Chromium and independent preservation PASS0; human visual acceptance remains separate/PENDING. Repairs3/10: correct a new fixture assumption, then isolate new discovery from historical counting; finally normalize published diagnostic preview whitespace while retaining raw bytes.
+
+
+## Baccarat precision, independent oracles and recovery — 2026-10-07 02:56:13 +08:00
+
+Baccarat uses whole-credit stakes and integer hundredth units: a1-credit Banker win returns1.95 credits exactly; accepted Blackjack half-units remain unchanged. Independent literal Banker rows validate80 branches and36 natural pairs; an independent fixture oracle validates10000 full paths, detecting both decision and card-index errors. Exact exposure/pending/commit state prevents duplicate settlement; a retired corrupted shoe must be replaced before validating the new inventory. Normal active-shoe validation still runs. Real multi-shoe replay and unique-draw invariants passed. M12 repairs2/10; preserve both the initial lint failure and recovery failure. Fresh-session review NOT RUN; technical proof remains separate from owner acceptance.
