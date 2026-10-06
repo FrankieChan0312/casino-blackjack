@@ -218,7 +218,7 @@
                              "archive":  "gate-20261006-114225\\chromium-browser-artifacts\\m10a-t09--M10A-T09-B03-lab-fa3cd-compositions-remain-bounded-chromium\\trace.zip"
                          }
                      ],
-    "timestamp":  "2026-10-06 13:01:36 +08:00",
+    "timestamp":  "2026-10-06 13:06:10 +08:00",
     "textFiles":  [
                       {
                           "sha256":  "011A3BE3270298F88212DFEE85BD9292C51AE8C4EFBFC9956831F4CA471BD96A",
@@ -229,7 +229,7 @@
                           "path":  "final-documentation-check.txt"
                       },
                       {
-                          "sha256":  "A9D21504A5D750B0877F3A4CDFBE41BA6C03E0A61522873A966D14965140DE4C",
+                          "sha256":  "F6D6973879854D5E384D23359A1A0A6313AB522D230046424031296CDB85E9E2",
                           "path":  "final-review.json"
                       },
                       {
@@ -249,8 +249,20 @@
                           "path":  "git-staged-whitespace-original.txt"
                       },
                       {
-                          "sha256":  "CB8795B367B258BDE511AFB92473B2C18DD2FF705361DDDAD2ECD13BA6AA4AB7",
+                          "sha256":  "E2E6AF21F9F943A61D9F9F887441024E240F3F0EC9D2102AA3D8E675CA61A2C2",
+                          "path":  "implementation-publication.json"
+                      },
+                      {
+                          "sha256":  "003E223B5E2479FC2B50302E836E59A1D551C81FD3DBA2C2040C5760406F4C4F",
                           "path":  "privacy-review.json"
+                      },
+                      {
+                          "sha256":  "BA38FB153DCB4F24FE0D461C1A6D517C714F775C70E3D310D03BFC324F6CF093",
+                          "path":  "publication-documentation-check.json"
+                      },
+                      {
+                          "sha256":  "135048308394F2560F0C291D2593616D874DFCCEDFBD8B32BC14448250D9B219",
+                          "path":  "publication-documentation-check.txt"
                       },
                       {
                           "sha256":  "7A839CE365731F37307CEBA1B46AEA7133DFB94BF874E75E1E70617BBB3E875D",
