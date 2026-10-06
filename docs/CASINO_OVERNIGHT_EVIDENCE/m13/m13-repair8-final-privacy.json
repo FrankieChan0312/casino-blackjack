@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T20:10:12.782Z",
+  "finish": "2026-10-06T20:10:15.217Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/overnight/privacy-m13.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m13-repair8-final-privacy.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}
