@@ -3887,3 +3887,28 @@ Affected exact historical comparisons10 PASS0 and PA1-E03 all12 portraits PASS0 
 # M10-FINAL-REVIEW-R2 task start — 2026-10-06 21:58:31 +08:00
 
 Fresh independent owner-requested review; first preflight2026-10-06 21:53:46 +08:00 confirmed main/974a977dd5ebf33f4c09b08e352c3d57410a713c, CLEAN/untracked0. Tracking and live remote equal, ahead/behind0/0. Required authority read; historical scope/status records kept. Separate R2 counter starts0/10; T11 remains blocked11/11 and no repair12. Review runner initialization failed with git ls-files ENOBUFS before validations; repair1 raises only review-tool capture buffer, affected inventory PASS17316paths/320backups. Default scanner independently PASS0; fixed native repetitions now running. No product/test/assets/dependency edit. [Task](M10_FINAL_REVIEW_R2.md); actual selected model/effort NOT VERIFIED. Current40ms human confirmation PENDING; deployment NOT RUN.
+
+
+## Casino overnight — 2026-10-07 00:59:14 +08:00
+
+R1 start/baseline: main/79533bc22afb8571f8ff53e37cd95eaa6c65e5d8, tracked and live origin/main equal, CLEAN, untracked0, ahead/behind0/0. Read AGENTS, SKILL and relevant RULES/SPEC/DESIGN/PLAN/STATE/UX in order. No existing Baccarat contract found. Owner supplies authorized expansion requirements; no protected Blackjack requirement changed. R1 tag creation/normal push PASS0, peeled local/remote SHA exact. Release record and bounded handoff created; product changes NONE. Full current gate pending. Evidence collector and historical-output preservation driver retained under .git/overnight; no existing test/validator changed.
+
+
+## Casino overnight — 2026-10-07 01:05:24 +08:00
+
+R1 repair 1/10 — 2026-10-07 01:05:24 +08:00: first full gate FAIL. Typecheck/lint PASS0; Vitest 1239 PASS / 1 FAIL (PRE-T11-U01, 5814ms > unchanged5000ms). Verification deliberately terminated during Chromium after30 recorded passes; complete Chromium/preservation NOT RUN. Collector termination exit4294967295, not a normal gate exit. Evidence .git/evidence-capture/r1-unified.{txt,json}. Task-only driver retained16043 historical PNG/JSON buffers (9218844570bytes); measured runner private memory8934.3MiB / working set4246.7MiB. Falsifiable cause hypothesis: avoidable parent memory pressure slows native image/browser reproduction. Repair: snapshot only the existing gate's320 known output paths to disk, load one pair at a time, preserve hashes/archives and original bytes. No product/tests/thresholds/required command changed. Affected focused test + unchanged full gate pending; no retry-until-green. Old failure retained.
+
+
+## Casino overnight — 2026-10-07 01:11:36 +08:00
+
+R1 repair1 affected check at 2026-10-07 01:11:35 +08:00: unchanged PRE-T11-U01 and full Dealer-cleanup file PASS/native0 (6/6,4.21s total). Independent streaming original comparison PASS0,16043 original files,0 differences. First driver finished restoration normally before the later identity-guarded process-stop attempt; guard refused because runner was already absent, no process changed. Parent buffer allocation removed; full unchanged verify.ps1 now typecheck/lint/1240Vitest/domain/build PASS; Chromium/preservation in progress. Repair cumulative1/10, not reset. First failed/interrupted log and generated variants remain under .git/overnight/r1-unified and .git/evidence-capture.
+
+
+## Casino overnight — 2026-10-07 01:19:29 +08:00
+
+R1 first-attempt status clarification: unified runner FAIL/termination4294967295; Vitest FAIL1 (1239/1240 PASS); Chromium executed partially with30 recorded passes, full result BLOCKED because intentionally interrupted and native Chromium exit not collected; preservation NOT RUN. The earlier log shorthand complete Chromium/preservation NOT RUN did not describe partial execution accurately. Native failed output unchanged; repair cumulative1/10.
+
+
+## Casino overnight — 2026-10-07 01:27:53 +08:00
+
+R1 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Annotated blackjack-v1.0 local/remote peeled SHA79533bc22afb8571f8ff53e37cd95eaa6c65e5d8 exact. No product changes. Final unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, typecheck/lint/domain/build/fixture guard and independentM1–M8 preservation. Original16043PNG/JSON comparison PASS0; output variants archived, originals restored. Repairs1/10, first failure/interruption preserved. Same-session review PASS; new fresh-session review NOT RUN. Documentation/privacy/final audit pending before normal publication.

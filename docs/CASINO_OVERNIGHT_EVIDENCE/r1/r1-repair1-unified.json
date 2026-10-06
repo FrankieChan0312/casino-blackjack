@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T17:08:06.785Z",
+  "finish": "2026-10-06T17:26:53.786Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify.ps1"
+  ],
+  "log": ".git\\evidence-capture\\r1-repair1-unified.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-07 01:23:14 +08:00",
+  "firstRunnerPrivateMiB": 8934.3,
+  "firstRunnerWorkingSetMiB": 4246.7,
+  "firstBufferedFiles": 16043,
+  "firstBufferedBytes": 9218844570,
+  "repairedRunnerPrivateMiB": 104.4,
+  "repairedSnapshot": "320 known generated historical paths, disk-backed; no retained bulk buffers",
+  "hypothesis": "Parent memory pressure contributed to native reproduction latency; exact timeout trigger is not conclusively isolated from all host-load/cache effects",
+  "focusedStatus": "PASS",
+  "focusedExit": 0,
+  "fullGate": "IN PROGRESS",
+  "repairCount": 1
+}

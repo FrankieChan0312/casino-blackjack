@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T17:07:52.883Z",
+  "finish": "2026-10-06T17:07:58.793Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-Command",
+    "npm.cmd test -- tests/m10/dealerCleanup.test.tsx; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\r1-repair1-focused.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

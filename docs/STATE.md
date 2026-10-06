@@ -1,3 +1,11 @@
+## Casino overnight R1–M14 — 2026-10-07 01:27:53 +08:00
+
+R1 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Annotated blackjack-v1.0 local/remote peeled SHA79533bc22afb8571f8ff53e37cd95eaa6c65e5d8 exact. No product changes. Final unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, typecheck/lint/domain/build/fixture guard and independentM1–M8 preservation. Original16043PNG/JSON comparison PASS0; output variants archived, originals restored. Repairs1/10, first failure/interruption preserved. Same-session review PASS; new fresh-session review NOT RUN. Documentation/privacy/final audit pending before normal publication.
+
+[Contract, stage criteria and evidence](CASINO_OVERNIGHT_M11_M14_HANDOFF.md). M11–M14 NOT STARTED; repair ledger1/0/0/0/0 (each /10). Blackjack M10 ACCEPTED / CLOSED. Owner visual review deferred/PENDING. M15/multiplayer NOT STARTED; deployment NOT RUN. Prior records below remain historical.
+
+<!-- END CURRENT CASINO OVERNIGHT -->
+
 ## Current M10 final closure — 2026-10-06 23:50:11 +08:00
 
 **M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:

@@ -1,0 +1,114 @@
+Running: npm run typecheck
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+PASS: typecheck
+Running: npm run lint
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint
+Running: npm run test
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/dealerCleanup.test.tsx (6 tests | 1 failed) 6826ms
+   × [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes 5814ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/dealerCleanup.test.tsx > [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m10/dealerCleanup.test.tsx:13:1
+     11| import { characters } from '../../src/presentation/characters.js';
+     12|
+     13| it('[PRE-T11-U01] supplied generic PNG is independently decoded and de…
+       | ^
+     14|   const audit = JSON.parse(execFileSync(process.execPath, ['scripts/ve…
+     15|   expect(audit.status).toBe('PASS'); expect(audit.nonRoster).toBe(true…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 100 passed (101)
+      Tests  1 failed | 1239 passed (1240)
+   Start at  01:02:40
+   Duration  25.48s (tests 61%, import 33%, transform 3%, setup 2%, worker 1%)
+
+     Import  183 modules were evaluated 311 times · 26.42s total, 33% of tracked time
+             ~2.06s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+FAIL: test (exit 1)
+Running: npm run typecheck:domain
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain
+Running: npm run build
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 487 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.28 kB
+dist/assets/index-BStbh149.css   41.49 kB │ gzip:   8.23 kB
+dist/assets/index-oR64Vgsl.js   371.72 kB │ gzip: 111.54 kB
+
+✓ built in 577ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build
+Running: npm run test:e2e
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:28272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 245 tests using 1 worker
+
+(node:20700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (23.8s)
+  ok   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (1.1s)
+  ok   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (880ms)
+  ok   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (815ms)
+  ok   5 [chromium] › tests\browser\gameplay.spec.ts:7:1 › [REG-M7-045] [E2E-01] start a round and complete exact Hit/Stand flow (1.1s)
+  ok   6 [chromium] › tests\browser\gameplay.spec.ts:15:1 › [REG-M7-046] [UX-04] [E2E-02] known hidden rank/suit/physical ID absent from DOM and accessibility until reveal (872ms)
+  ok   7 [chromium] › tests\browser\gameplay.spec.ts:28:1 › [REG-M7-047] [UX-06] [E2E-03] completed hand has no further gameplay controls (847ms)
+  ok   8 [chromium] › tests\browser\gameplay.spec.ts:33:1 › [REG-M7-048] [UX-08] [E2E-04] insufficient available credits disable Double with a reason (725ms)
+  ok   9 [chromium] › tests\browser\gameplay.spec.ts:38:1 › [REG-M7-049] [UX-09] [E2E-05] Split displays two ordered hands and activates the sibling after Stand (822ms)
+  ok  10 [chromium] › tests\browser\gameplay.spec.ts:45:1 › [REG-M7-050] [E2E-06] Split Aces have one added card each and no Hit/Double/Surrender (823ms)
+  ok  11 [chromium] › tests\browser\gameplay.spec.ts:51:1 › [REG-M7-051] [E2E-07] Surrender shows exact half returned and half lost (838ms)
+  ok  12 [chromium] › tests\browser\gameplay.spec.ts:55:1 › [REG-M7-052] [E2E-08] Ace choices are before peek and eligible Even Money is distinct (809ms)
+  ok  13 [chromium] › tests\browser\gameplay.spec.ts:61:1 › [REG-M7-053] [UX-10] [E2E-09] one seat busts while another remains active and hole card stays hidden (825ms)
+  ok  14 [chromium] › tests\browser\gameplay.spec.ts:66:1 › [REG-M7-054] [E2E-10] independent side result survives a main loss (1.0s)
+  ok  15 [chromium] › tests\browser\gameplay.spec.ts:71:1 › [REG-M7-055] [E2E-11] spectator follower cannot control target hand (799ms)
+  ok  16 [chromium] › tests\browser\gameplay.spec.ts:76:1 › [REG-M7-056] [E2E-14] CLASSIC five-card hand is not Charlie and can continue (953ms)
+  ok  17 [chromium] › tests\browser\gameplay.spec.ts:81:1 › [REG-M7-057] [E2E-15] required-draw fault is interruption/VOID/refund with no normal winner (870ms)
+  ok  18 [chromium] › tests\browser\gameplay.spec.ts:87:1 › [REG-M7-058] controlled Double follow ADD has exact funded exposure and matching result (775ms)
+  ok  19 [chromium] › tests\browser\gameplay.spec.ts:92:1 › [REG-M7-059] controlled Split follow NO ADD tracks only ordered first child (777ms)
+  ok  20 [chromium] › tests\browser\gameplay.spec.ts:97:1 › [REG-M7-060] unfunded follow ADD is disabled without vetoing NO ADD continuation (763ms)
+  ok  21 [chromium] › tests\browser\gameplay.spec.ts:101:1 › [REG-M7-061] Insurance is separate and unavailable after peek; unfunded choice remains disabled (1.2s)
+  ok  22 [chromium] › tests\browser\gameplay.spec.ts:106:1 › [REG-M7-062] next round retains available funds and truthfully continues the same shoe (1.3s)
+  ok  23 [chromium] › tests\browser\gameplay.spec.ts:114:1 › [REG-M7-063] spectator setup places a real Bet Behind without an own MAIN or side bets (1.1s)
+  ok  24 [chromium] › tests\browser\gameplay.spec.ts:121:1 › [REG-M7-064] Re-split retains depth-first stable hand identities and completed leaves (934ms)
+  ok  25 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-1] actual 1-player three-mode replay/package/audit equality and initial timing (7.5s)
+  ok  26 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-4] actual 4-player three-mode replay/package/audit equality and initial timing (9.1s)
+  ok  27 [chromium] › tests\browser\m10\compatibility.spec.ts:32:84 › [T10-B01-7] actual 7-player three-mode replay/package/audit equality and initial timing (11.8s)
+  ok  28 [chromium] › tests\browser\m10\compatibility.spec.ts:61:52 › [T10-B09-1-FULL_MOTION] new round keeps Dealer; a terminal new table rotates Dealer and clears projections (5.4s)
+  ok  29 [chromium] › tests\browser\m10\compatibility.spec.ts:61:52 › [T10-B09-1-REDUCED_MOTION] new round keeps Dealer; a terminal new table rotates Dealer and clears projections (2.1s)
+  ok  30 [chromium] › tests\browser\m10\compatibility.spec.ts:61:52 › [T10-B09-1-IMMEDIATE] new round keeps Dealer; a terminal new table rotates Dealer and clears projections (2.0s)
