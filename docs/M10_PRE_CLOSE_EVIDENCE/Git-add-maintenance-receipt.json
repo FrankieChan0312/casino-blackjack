@@ -1,0 +1,17 @@
+{
+  "start": "2026-10-06T13:40:10.479Z",
+  "finish": "2026-10-06T13:40:25.570Z",
+  "command": "git.exe",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "add",
+    "--all"
+  ],
+  "log": ".git\\evidence-capture\\Git-add-maintenance.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

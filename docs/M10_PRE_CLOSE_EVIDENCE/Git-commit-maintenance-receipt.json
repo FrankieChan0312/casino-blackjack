@@ -1,0 +1,18 @@
+{
+  "start": "2026-10-06T13:41:18.647Z",
+  "finish": "2026-10-06T13:41:23.784Z",
+  "command": "git.exe",
+  "args": [
+    "-c",
+    "core.longpaths=true",
+    "commit",
+    "-m",
+    "Improve initial deal timing and evidence collection"
+  ],
+  "log": ".git\\evidence-capture\\Git-commit-maintenance.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

@@ -1352,4 +1352,4 @@ T04/T05 share one coherent final preservation/documentation verification checkpo
 
 | Task | Scope | Verification | Status |
 | --- | --- | --- | --- |
-| M10-PRE-CLOSE | Initial2500ms performance + privacy output self-lock; no domain/features/deploy | A..I and normal clean publication per M10_PRE_CLOSE.md | IMPLEMENTED / VERIFIED; A-I PASS0; 7/10; normal publication pending; T11 blocked11/11; M10 NOT ACCEPTED |
+| M10-PRE-CLOSE | Initial2500ms performance + privacy output self-lock; no domain/features/deploy | A..I and normal clean publication per M10_PRE_CLOSE.md | IMPLEMENTED / VERIFIED; A-I PASS0; 7/10; published origin/main 0912b3fe4b9551bcdf6ec4e41d44504dab770647; docs receipt follows; T11 blocked11/11; M10 NOT ACCEPTED |

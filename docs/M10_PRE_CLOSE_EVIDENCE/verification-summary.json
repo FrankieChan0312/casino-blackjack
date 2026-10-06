@@ -305,7 +305,13 @@
       "worst": 2049.9000000953674
     }
   ],
-  "publication": "PENDING",
+  "publication": {
+    "status": "PUBLISHED",
+    "implementationCommit": "0912b3fe4b9551bcdf6ec4e41d44504dab770647",
+    "branch": "main",
+    "normalPushExitCode": 0,
+    "receipt": "publication.json"
+  },
   "t11": "BLOCKED after 11/11; repair12 NOT AUTHORIZED; fresh independent review in new session REQUIRED / NOT RUN",
   "m10": "NOT ACCEPTED",
   "deployment": "NOT RUN"

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T13:44:07.054Z",
+  "finish": "2026-10-06T13:44:19.787Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m10-pre-close-publication-privacy.ps1"
+  ],
+  "log": ".git\\evidence-capture\\publication-receipt-privacy.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}
