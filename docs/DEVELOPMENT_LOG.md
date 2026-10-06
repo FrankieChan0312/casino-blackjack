@@ -3962,3 +3962,8 @@ M11 final review/checks PASS0: docs3files/9tests; accepted268protectedinputs unc
 ## Casino overnight — 2026-10-07 02:20:39 +08:00
 
 M11 repair3/10: staged whitespace check FAIL/native2 on three trailing-space lines in published first-failure log/context previews. Originals under .git/evidence-capture and .git/overnight/m11-first-browser-artifacts remain unchanged. Falsifiable cause: native diagnostic formatting is copied into Git text previews without per-line trailing-space normalization. Targeted documentation-only fix: remove trailing spaces on those two previews, retain exact raw files and SHA/byte receipts, disclose normalization. No runtime/tests/assertions/threshold changes. Affected whitespace/docs/privacy/audit checks rerun; full runtime gate remains exact and PASS0.
+
+
+## Casino overnight — 2026-10-07 02:21:29 +08:00
+
+M11 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary commit 7c6020bfe2f38e702fcca672bfdf8777a3c7084d normally published to origin/main PASS0. Observed local=tracking=live,0/0,CLEAN,untracked0 at 2026-10-07 02:21:29 +08:00. Full exact-version verify.ps1102files/1245Vitest/250Chromium and independentM1–M8 preservation PASS/native0. Focused platform/unit/browser plus original M8 contract, docs9, protected268inputs/exact discovery delta, accepted main construction and privacy PASS0. Repairs3/10; all failed attempts retained. /casino lobby; /blackjack native accepted entry; /baccarat truthful preview; / unchanged. Human Visual Acceptance PENDING — OWNER REVIEW DEFERRED BY EXPLICIT OVERNIGHT AUTHORIZATION. Same-session review PASS; fresh-session review NOT RUN. This documentation-only publication receipt records the primary SHA; its own SHA is resolved by Git and checked after normal push.

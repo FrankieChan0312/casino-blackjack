@@ -2234,3 +2234,8 @@ Rapid live animations also expose asynchronous assertion races. Use an existing 
 ## Accepted release freeze and evidence memory — 2026-10-07 01:29:29 +08:00
 
 An annotated release tag identifies immutable accepted product bytes; a later documentation commit must not move it. R1 froze79533bc at blackjack-v1.0. Full native gate1240/245 and independent preservation passed. The first evidence helper unnecessarily retained9.2GB of historical image/JSON buffers and coincided with a5000ms native-reproduction timeout. Disk-backed320-output preservation reduced measured parent private memory from8934.3MiB to104.4MiB; unchanged focused/full checks passed. This supports the resource-pressure hypothesis without proving the exact host/cache latency trigger. Preserve first failures, distinguish interrupted checks from NOT RUN, and never increase a threshold to conceal the failure. R1 repairs1/10.
+
+
+## Casino routing and historical inventory — 2026-10-07 02:21:29 +08:00
+
+A native-link platform can retain the original Blackjack App byte-for-byte and construct its controller only on Blackjack routes. Frozen historical filesystem inventories must remain scoped to accepted registrations: the new Casino suite has an explicit separate discovery root, while the unchanged full runner executes both roots. This preserves old66-file assertions without weakening or disabling any test. M11 native full gate1245Vitest/250Chromium and independent preservation PASS0; human visual acceptance remains separate/PENDING. Repairs3/10: correct a new fixture assumption, then isolate new discovery from historical counting; finally normalize published diagnostic preview whitespace while retaining raw bytes.
