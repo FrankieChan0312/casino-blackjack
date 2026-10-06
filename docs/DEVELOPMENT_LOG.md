@@ -3912,3 +3912,8 @@ R1 first-attempt status clarification: unified runner FAIL/termination4294967295
 ## Casino overnight — 2026-10-07 01:27:53 +08:00
 
 R1 IMPLEMENTED / VERIFIED; COMMIT/PUSH PENDING. Annotated blackjack-v1.0 local/remote peeled SHA79533bc22afb8571f8ff53e37cd95eaa6c65e5d8 exact. No product changes. Final unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, typecheck/lint/domain/build/fixture guard and independentM1–M8 preservation. Original16043PNG/JSON comparison PASS0; output variants archived, originals restored. Repairs1/10, first failure/interruption preserved. Same-session review PASS; new fresh-session review NOT RUN. Documentation/privacy/final audit pending before normal publication.
+
+
+## Casino overnight — 2026-10-07 01:29:29 +08:00
+
+R1 IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; primary commit b527969400ba35bb0eb645bdf1c1fc37cf07f9c5 published normally to origin/main, PASS/exit0; observed live=tracking=HEAD,0/0,CLEAN,untracked0 at 2026-10-07 01:29:29 +08:00. Tag blackjack-v1.0 still points exactly to original accepted79533bc22afb8571f8ff53e37cd95eaa6c65e5d8 locally/remotely. Full unchanged gate1240Vitest/245Chromium/independentM1–M8 PASS0; final documentation3files/9tests, audit269protectedinputs and privacy21files/0findings/0exclusions PASS0. Product diff EMPTY. Repairs1/10; first failure retained. Same-session review PASS; new fresh-session review NOT RUN. This documentation-only receipt records the primary publication; its own SHA is resolved by Git and rechecked after ordinary push.

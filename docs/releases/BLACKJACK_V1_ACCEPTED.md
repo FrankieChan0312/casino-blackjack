@@ -12,3 +12,5 @@
 R1 preflight at 2026-10-07 00:55:33 +08:00: repository `casino-blackjack`, branch main; HEAD = origin/main = live remote = accepted SHA; ahead/behind 0/0; CLEAN; untracked 0. Local and remote tag absent. Release creation/publication and verification are recorded in [overnight handoff](../CASINO_OVERNIGHT_M11_M14_HANDOFF.md).
 
 R1 final technical verification at 2026-10-07 01:27:53 +08:00: annotated local/remote tag exact; product diff EMPTY; unchanged full gate PASS/native0 (1240Vitest/245Chromium and independent historical preservation). R1 repairs1/10; first failure and driver repair retained. [Checked receipt](../CASINO_OVERNIGHT_EVIDENCE/r1/r1-repair1-unified.json). Normal main documentation publication pending.
+
+R1 primary documentation commit `b527969400ba35bb0eb645bdf1c1fc37cf07f9c5` normally pushed to origin/main at 2026-10-07 01:29:29 +08:00; local/tracking/live equality,0/0,CLEAN/untracked0 confirmed. Tag remains at original accepted SHA. Final docs9/audit/privacy PASS0.

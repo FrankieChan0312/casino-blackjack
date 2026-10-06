@@ -1,3 +1,5 @@
+Accepted Blackjack release: `blackjack-v1.0` at `79533bc22afb8571f8ff53e37cd95eaa6c65e5d8`. [Frozen baseline and owner acceptance](docs/releases/BLACKJACK_V1_ACCEPTED.md). Casino expansion is tracked separately in the [overnight handoff](docs/CASINO_OVERNIGHT_M11_M14_HANDOFF.md); deployment NOT RUN.
+
 ## Current M10 final closure — 2026-10-06 23:50:11 +08:00
 
 **M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:
