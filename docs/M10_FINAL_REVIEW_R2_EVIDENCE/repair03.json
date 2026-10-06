@@ -1,0 +1,16 @@
+{
+  "task": "M10-FINAL-REVIEW-R2",
+  "repairCount": "3/10",
+  "at": "2026-10-06 22:32:41 +08:00",
+  "firstFailureAt": "2026-10-06 22:29:18 +08:00 (enclosing command timestamp)",
+  "failure": "AssertionError [ERR_ASSERTION]: Missing fresh gallery: win; at add (.git/r2-gallery.cjs:6:111), at line11",
+  "nativeNodeExit": 1,
+  "enclosingPowerShellExit": 0,
+  "cause": "Gallery driver guessed lowercase outcome suffixes; fresh native fixture names are PLAYER_WIN, DEALER_WIN and PUSH",
+  "hypothesis": "Explicit label-to-authoritative-fixture mapping will locate each existing fresh settled screenshot without changing screenshots, tests or product",
+  "fix": "Review-only gallery selector mapping",
+  "affectedVerification": "node .git/r2-gallery.cjs",
+  "status": "VERIFIED / PASS / checked native0",
+  "productChanges": 0,
+  "verifiedAt": "2026-10-06 22:32:41 +08:00"
+}

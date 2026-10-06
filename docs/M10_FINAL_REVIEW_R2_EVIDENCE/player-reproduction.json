@@ -1,0 +1,15 @@
+{
+  "start": "2026-10-06T14:01:04.508Z",
+  "finish": "2026-10-06T14:01:12.753Z",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "scripts/build-character-assets.mjs",
+    "--check"
+  ],
+  "log": ".git\\evidence-capture\\R2-player-reproduction.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

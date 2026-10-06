@@ -1,0 +1,130 @@
+[
+  {
+    "stage": "privacy-baseline",
+    "start": "2026-10-06T13:58:08.797Z",
+    "finish": "2026-10-06T13:58:21.380Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "native-exact",
+    "start": "2026-10-06T13:58:21.385Z",
+    "finish": "2026-10-06T13:59:22.845Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "native-bounded",
+    "start": "2026-10-06T13:59:22.846Z",
+    "finish": "2026-10-06T14:00:43.410Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "live-dealer",
+    "start": "2026-10-06T14:00:43.411Z",
+    "finish": "2026-10-06T14:00:44.162Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "dealer-assets",
+    "start": "2026-10-06T14:00:44.163Z",
+    "finish": "2026-10-06T14:00:47.513Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "generic-assets",
+    "start": "2026-10-06T14:00:47.514Z",
+    "finish": "2026-10-06T14:00:48.783Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "generic-reproduction",
+    "start": "2026-10-06T14:00:48.785Z",
+    "finish": "2026-10-06T14:00:54.107Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "player-assets",
+    "start": "2026-10-06T14:00:54.109Z",
+    "finish": "2026-10-06T14:01:04.438Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "player-reproduction",
+    "start": "2026-10-06T14:01:04.440Z",
+    "finish": "2026-10-06T14:01:13.428Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "unified",
+    "start": "2026-10-06T14:01:13.561Z",
+    "finish": "2026-10-06T14:21:23.539Z",
+    "exitCode": 0,
+    "status": "PASS",
+    "archiveFailure": "Native verification passed; post-child copy-overwrite failed and is separately preserved in orchestrator-first-failure.json",
+    "recovery": "repair02-restoration.json"
+  },
+  {
+    "stage": "supplemental-performance-zoom",
+    "receipt": "supplemental-performance-zoom.json",
+    "start": "2026-10-06T14:26:24.731Z",
+    "finish": "2026-10-06T14:28:01.375Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "supplemental-cleanup",
+    "receipt": "supplemental-cleanup.json",
+    "start": "2026-10-06T14:28:01.460Z",
+    "finish": "2026-10-06T14:28:06.530Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "supplemental-contrast",
+    "receipt": "supplemental-contrast.json",
+    "start": "2026-10-06T14:28:06.616Z",
+    "finish": "2026-10-06T14:28:18.276Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "supplemental-visual",
+    "receipt": "supplemental-visual.json",
+    "start": "2026-10-06T14:28:18.366Z",
+    "finish": "2026-10-06T14:28:42.450Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "gallery",
+    "receipt": "gallery-build.json",
+    "start": "2026-10-06T14:32:41.560Z",
+    "finish": "2026-10-06T14:32:41.795Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "documentation",
+    "receipt": "documentation.json",
+    "start": "2026-10-06T14:35:34.980Z",
+    "finish": "2026-10-06T14:35:38.876Z",
+    "exitCode": 0,
+    "status": "PASS"
+  },
+  {
+    "stage": "final-privacy",
+    "receipt": "final-privacy.json",
+    "start": "2026-10-06T14:34:39.107Z",
+    "finish": "2026-10-06T14:35:01.800Z",
+    "exitCode": 0,
+    "status": "PASS"
+  }
+]

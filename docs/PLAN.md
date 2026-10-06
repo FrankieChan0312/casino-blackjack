@@ -1,3 +1,15 @@
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:36:37 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs6/10 (review tooling and evidence handling only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:35:02 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs3/10 (review inventory, archive restoration and gallery selection only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 started — 2026-10-06 21:58:31 +08:00
+
+Owner authorizes a NEW fresh independent review after maintenance, with separate normal0/10start and10/10maximum; current1/10 review inventory repair. [Contract](M10_FINAL_REVIEW_R2.md). Review current baseline974a977 on main -> fixed native samples -> full unchanged gates/privacy/assets/preservation -> fresh visuals/lifecycle -> documentation/conditional normal publication. Historical T11 remains BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. M10 NOT ACCEPTED; CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. DEPLOYMENT NOT RUN.
+
 ## Additional failed-evidence privacy review — 2026-10-06 18:56:14 +08:00
 
 New failed-evidence privacy review **BLOCKED/native exit1**: collector output was written inside the scanner root and locked; unchanged scanner stopped with IOException reading that output. No new complete privacy result was produced. Old privacy PASS is historical; its original bytes are restored. Stale copied JSON is explicitly labeled and retained. No retry, collector/scanner repair or exclusion change. Repair12 **NOT AUTHORIZED / NOT RUN**; acceptance/commit/push remain stopped.

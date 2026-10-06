@@ -1,0 +1,13 @@
+{
+  "task": "M10-FINAL-REVIEW-R2",
+  "at": "2026-10-06 22:43:50 +08:00",
+  "cycle": 6,
+  "limit": 10,
+  "firstFailure": "git diff --cached --check native2: docs/M10_FINAL_REVIEW_R2_EVIDENCE/documentation.txt:13: new blank line at EOF.",
+  "cause": "Verbatim Vitest stdout ends in two blank lines; staged new files are first covered by cached whitespace check",
+  "hypothesis": "Preserve exact stdout bytes in scanned ZIP, publish a clearly provenance-labeled readable text preview with only EOF empty lines normalized",
+  "targetedFix": "Evidence publication packaging only; no Git whitespace rule/test/source change",
+  "status": "VERIFIED / PASS / checked native0; staged whitespace gate retained, exact native stdout ZIP SHA preserved",
+  "productTestThresholdChanges": [],
+  "verifiedAt": "2026-10-06 22:45:09 +08:00"
+}

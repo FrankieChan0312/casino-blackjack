@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T14:01:13.561Z",
+  "finish": "2026-10-06T14:21:23.539Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify.ps1"
+  ],
+  "log": ".git\\evidence-capture\\R2-unified.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

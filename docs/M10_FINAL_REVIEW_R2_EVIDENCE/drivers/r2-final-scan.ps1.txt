@@ -1,0 +1,3 @@
+$ErrorActionPreference = 'Stop'
+& ./scripts/scan-evidence.ps1 -Roots @('docs/M10_T11_EVIDENCE', 'docs/M10_PRE_CLOSE_EVIDENCE', 'src', 'tests', 'scripts', 'docs/M10_FINAL_REVIEW_R2_EVIDENCE', 'README.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md', 'docs/LAB_MANUAL.md', 'docs/M10_PRE_CLOSE.md', 'docs/M10_FINAL_REVIEW_R2.md') -ResultPath '.git/evidence-capture/R2-final-privacy-result.json'
+exit $LASTEXITCODE

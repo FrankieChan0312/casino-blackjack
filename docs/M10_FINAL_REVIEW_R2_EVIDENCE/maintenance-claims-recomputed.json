@@ -1,0 +1,191 @@
+{
+  "at": "2026-10-06 22:07:39 +08:00",
+  "scope": "Independent recomputation of the33 reported final40ms maintenance measurements from original per-sample metric files, not new acceptance samples",
+  "recomputed": [
+    {
+      "width": 1280,
+      "count": 15,
+      "median": 1288.5,
+      "worst": 2059.5
+    },
+    {
+      "width": 768,
+      "count": 3,
+      "median": 1952.3000001907349,
+      "worst": 1981.8999998569489
+    },
+    {
+      "width": 320,
+      "count": 15,
+      "median": 1454.2999999523163,
+      "worst": 2049.9000000953674
+    }
+  ],
+  "samples": [
+    {
+      "width": 1280,
+      "elapsed": 1288.5,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\A-performance-repair7-browser-artifacts\\m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 768,
+      "elapsed": 1952.3000001907349,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\A-performance-repair7-browser-artifacts\\m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 2041.5999999046326,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\A-performance-repair7-browser-artifacts\\m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 2049.9000000953674,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1558,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 2026.3999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1130.3999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 2054,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1873.8999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 2059.5,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1374.7999999523163,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\B-performance-repair7-browser-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1270.2000000476837,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1468.2000000476837,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1516.2000000476837,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 954.3999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1612.3999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1554.5,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 909.5999999046326,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 884.0999999046326,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1218.2999999523163,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 768,
+      "elapsed": 1981.8999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1886.7000000476837,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\G-repair7-timing-artifacts\\m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1454.2999999523163,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1422.9000000953674,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1385.3999998569489,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1323.5999999046326,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-a07a1--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1299.2000000476837,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1111.5,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1200,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1019.0999999046326,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-preClosePerformance--P-c8af4--FULL-MOTION-samples-2500ms-chromium\\bounded-native-samples.json"
+    },
+    {
+      "width": 1280,
+      "elapsed": 1228.9000000953674,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-t11Performance--T11-P0-08e3b-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 768,
+      "elapsed": 1244.0,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-t11Performance--T11-P0-36cc2-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    },
+    {
+      "width": 320,
+      "elapsed": 1311.4000000953674,
+      "source": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_PRE_CLOSE_EVIDENCE\\I-repair7-timing-artifacts\\m10-t11Performance--T11-P0-7e176-eal-completes-within-2500ms-chromium\\native-initial-timing.json"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+const fs=require('node:fs'),path=require('node:path');
+const {PNG}=require('../node_modules/playwright-core/lib/utilsBundle.js');
+const directory='docs/M10_FINAL_REVIEW_R2_EVIDENCE/gallery';
+const entries=JSON.parse(fs.readFileSync(directory+'/index.json','utf8')).entries;
+for(let group=0;group<6;group++){
+  const output=new PNG({width:1600,height:1350});output.data.fill(28);
+  for(let item=0;item<5;item++){
+    const source=PNG.sync.read(fs.readFileSync(path.join(directory,entries[group*5+item].file)));
+    const cellX=(item%2)*800,cellY=Math.floor(item/2)*450;
+    const scale=Math.min(790/source.width,440/source.height);
+    for(let y=0;y<Math.floor(source.height*scale);y++)for(let x=0;x<Math.floor(source.width*scale);x++){
+      const start=(Math.floor(y/scale)*source.width+Math.floor(x/scale))*4;
+      const target=((cellY+y)*output.width+cellX+x)*4;
+      source.data.copy(output.data,target,start,start+4);
+    }
+  }
+  fs.writeFileSync(directory+`/contact-${group+1}.png`,PNG.sync.write(output));
+}
+console.log('Six inspection contact sheets; each row is ordered left then right, entries 01-30. Original images retained for detail.');

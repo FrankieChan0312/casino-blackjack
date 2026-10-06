@@ -1,0 +1,14 @@
+{
+  "start": "2026-10-06T14:36:41.409Z",
+  "finish": "2026-10-06T14:37:25.117Z",
+  "command": "node",
+  "args": [
+    ".git/r2-final-audit.cjs"
+  ],
+  "log": ".git\\evidence-capture\\R2-publication-audit.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

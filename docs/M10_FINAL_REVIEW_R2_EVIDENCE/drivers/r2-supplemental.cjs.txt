@@ -1,0 +1,17 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path');
+const root='docs/M10_FINAL_REVIEW_R2_EVIDENCE';
+const fd=fs.openSync('.git/evidence-capture/R2-supplemental-server.txt','w');
+const server=cp.spawn('cmd.exe',['/d','/c','npm.cmd run dev -- --mode e2e --port 4189 --strictPort'],{stdio:['ignore',fd,fd],windowsHide:true});
+let stopped=false;server.on('close',()=>{stopped=true;});
+async function run(label,file){const child=cp.spawn(process.execPath,['scripts/collect-evidence.mjs','R2-'+label,process.execPath,file],{stdio:'inherit',windowsHide:true});const code=await new Promise((resolve,reject)=>{child.on('close',resolve);child.on('error',reject);});for(const ext of ['txt','json'])fs.copyFileSync('.git/evidence-capture/R2-'+label+'.'+ext,root+'/'+label+'.'+ext);if(code!==0)throw Error(label+' failed with native exit '+code);}
+(async()=>{
+ let ready=false;for(let probe=0;probe<80;probe++){if(stopped)throw Error('Owned supplemental server stopped before readiness');if(fs.readFileSync('.git/evidence-capture/R2-supplemental-server.txt','utf8').includes('http://127.0.0.1:4189')){ready=true;break;}await new Promise(resolve=>setTimeout(resolve,250));}if(!ready)throw Error('Owned server readiness unavailable');
+ await run('supplemental-performance-zoom','.git/r2-performance-zoom.mjs');
+ await run('supplemental-cleanup','.git/r2-cleanup.mjs');
+ await run('supplemental-contrast','.git/r2-contrast.cjs');
+ await run('supplemental-visual','.git/r2-visual.cjs');
+})().catch(error=>{console.error(error);process.exitCode=1;}).finally(()=>{
+ const stoppedProcess=cp.spawnSync('taskkill',['/PID',String(server.pid),'/T','/F'],{encoding:'utf8',windowsHide:true});
+ fs.closeSync(fd);fs.copyFileSync('.git/evidence-capture/R2-supplemental-server.txt',root+'/supplemental-server.txt');
+ fs.writeFileSync(root+'/supplemental-server-lifecycle.json',JSON.stringify({ownedPid:server.pid,port:4189,strictPort:true,outputClosed:true,stopExitCode:stoppedProcess.status,stopOutput:stoppedProcess.stdout.trim()},null,2)+'\n');
+});

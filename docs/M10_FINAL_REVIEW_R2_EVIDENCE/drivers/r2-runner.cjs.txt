@@ -1,0 +1,66 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const { spawn, execFileSync } = require('node:child_process');
+const root = process.cwd();
+const evidence = 'docs/M10_FINAL_REVIEW_R2_EVIDENCE';
+const internal = '.git/r2-review';
+const sha = p => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const mkdir = p => fs.mkdirSync(p, { recursive: true });
+const write = (p,v) => { mkdir(path.dirname(p)); fs.writeFileSync(p, JSON.stringify(v,null,2)+'\n'); };
+const git = args => execFileSync('git', args, { encoding:'utf8', maxBuffer:64*1024*1024 }).trim();
+const tracked = git(['ls-files']).split('\n');
+const incoming = Object.fromEntries(tracked.map(p => [p,sha(p)]));
+const outputs = tracked.filter(p => /^(docs\/images\/|docs\/M10_T01_EVIDENCE\/|docs\/M10_T06_EVIDENCE\/(screenshots\/|reduced-seven-settled.png))/.test(p) && /\.(png|json)$/.test(p));
+for (const p of outputs) { const target = path.join(internal,'original',p); mkdir(path.dirname(target)); fs.copyFileSync(p,target); }
+write(path.join(internal,'incoming.json'),incoming);
+write(path.join(evidence,'baseline.json'),{ at:execFileSync('powershell.exe',['-NoProfile','-Command',"Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'"],{encoding:'utf8'}).trim(), branch:git(['branch','--show-current']),head:git(['rev-parse','HEAD']),tracking:git(['rev-parse','origin/main']),live:git(['ls-remote','origin','refs/heads/main']),aheadBehind:git(['rev-list','--left-right','--count','HEAD...origin/main']),status:git(['status','--porcelain=v1','--untracked-files=all']),historicalOutputs:outputs.length, incomingTrackedFiles:tracked.length, runtime:{node:process.version,npm:execFileSync('cmd.exe',['/d','/c','npm.cmd --version'],{encoding:'utf8'}).trim()},recommendedModel:'GPT-6.1 Sol',recommendedEffort:'Max / highest available',selectedRuntime:'NOT VERIFIED',repairCount:'0/10'});
+const receipts=[];
+function archive(stage) {
+  if(fs.existsSync('test-results')) fs.cpSync('test-results',path.join(evidence,stage+'-browser-artifacts'),{recursive:true});
+  const changes=[];
+  for(const p of outputs) if(sha(p)!==incoming[p]) {
+    const target=path.join(evidence,stage+'-generated',p);mkdir(path.dirname(target));fs.copyFileSync(p,target);
+    const generated=sha(p);fs.copyFileSync(path.join(internal,'original',p),p);
+    if(sha(p)!==incoming[p]) throw Error('Historical restore failed: '+p);
+    changes.push({path:p,original:incoming[p],generated,restored:true});
+  }
+  const newPaths=git(['ls-files','--others','--exclude-standard','docs']).split('\n').filter(p=>p && !p.startsWith(evidence+'/') && p!=='docs/M10_FINAL_REVIEW_R2.md');
+  for(const p of newPaths) {
+    const source=path.resolve(p),target=path.resolve(evidence,stage+'-generated',p);
+    if(!source.startsWith(root+path.sep)||!target.startsWith(path.resolve(evidence)+path.sep))throw Error('Archive outside review boundary');
+    mkdir(path.dirname(target));fs.renameSync(source,target);
+  }
+  write(path.join(evidence,stage+'-preservation.json'),{historicalOutputs:outputs.length,changes,newGeneratedPaths:newPaths});
+}
+async function run(label, command, args) {
+  const start=new Date().toISOString();
+  const child=spawn(process.execPath,['scripts/collect-evidence.mjs','R2-'+label,command,...args],{windowsHide:true,stdio:['ignore','pipe','pipe']});
+  child.stdout.on('data',data=>process.stdout.write(data));child.stderr.on('data',data=>process.stderr.write(data));
+  let captured=false;
+  const watcher=label==='unified'?setInterval(()=>{
+    const log='.git/evidence-capture/R2-unified.txt';
+    if(!captured && fs.existsSync(log) && /(?:PASS|FAIL): test:e2e/.test(fs.readFileSync(log,'utf8'))) {
+      captured=true;fs.cpSync('test-results',path.join(evidence,'unified-full-browser-artifacts'),{recursive:true});
+    }
+  },1000):null;
+  const code=await new Promise((resolve,reject)=>{child.on('error',reject);child.on('close',resolve);});
+  if(watcher)clearInterval(watcher);
+  for(const ext of ['txt','json'])fs.copyFileSync('.git/evidence-capture/R2-'+label+'.'+ext,path.join(evidence,label+'.'+ext));
+  archive(label);
+  receipts.push({stage:label,start,finish:new Date().toISOString(),exitCode:code,status:code===0?'PASS':'FAIL'});write(path.join(evidence,'receipts.json'),receipts);
+  console.log(label+': '+code);
+  if(code!==0)throw Error('Required stage failed: '+label);
+}
+(async()=>{
+  await run('privacy-baseline','powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/scan-evidence.ps1','-ResultPath','.git/evidence-capture/R2-baseline-privacy-result.json']);
+  fs.copyFileSync('.git/evidence-capture/R2-baseline-privacy-result.json',path.join(evidence,'baseline-privacy-result.json'));
+  await run('native-exact','cmd.exe',['/d','/c','npm.cmd run test:e2e -- tests/browser/m10/t11Performance.spec.ts --repeat-each=3']);
+  await run('native-bounded','cmd.exe',['/d','/c','npm.cmd run test:e2e -- tests/browser/m10/preClosePerformance.spec.ts --repeat-each=2']);
+  for(const [label,file,args] of [['live-dealer','check-live-dealer.mjs',[]],['dealer-assets','verify-dealer-assets.mjs',[]],['generic-assets','verify-generic-dealer.mjs',[]],['generic-reproduction','build-generic-dealer.mjs',['--check']],['player-assets','verify-character-assets.mjs',[]],['player-reproduction','build-character-assets.mjs',['--check']]]) await run(label,process.execPath,['scripts/'+file,...args]);
+  await run('unified','powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/verify.ps1']);
+  const changedInputs=tracked.filter(p=>/^(src\/|tests\/|scripts\/|art\/|public\/)|^(package|tsconfig|vite|playwright|eslint)/.test(p)&&sha(p)!==incoming[p]);
+  const changedHistorical=tracked.filter(p=>p.startsWith('docs/')&&!['docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md'].includes(p)&&sha(p)!==incoming[p]);
+  write(path.join(evidence,'scope-check.json'),{changedInputs,changedHistorical,historicalOutputs:outputs.length,allRestored:changedHistorical.length===0});
+  if(changedInputs.length||changedHistorical.length)throw Error('Unexpected incoming file change');
+})().catch(error=>{console.error(error);process.exitCode=1;});

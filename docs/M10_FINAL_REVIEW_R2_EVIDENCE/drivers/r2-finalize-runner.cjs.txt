@@ -1,0 +1,15 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),crypto=require('node:crypto');
+const root=process.cwd(),evidence='docs/M10_FINAL_REVIEW_R2_EVIDENCE';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const incoming=read('.git/r2-review/incoming.json'),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const newPaths=cp.execFileSync('git',['ls-files','--others','--exclude-standard','docs'],{encoding:'utf8',maxBuffer:64*1024*1024}).trim().split('\n').filter(p=>p&&!p.startsWith(evidence+'/')&&p!=='docs/M10_FINAL_REVIEW_R2.md');
+for(const p of newPaths){const source=path.resolve(p),target=path.resolve(evidence,'unified-generated',p);if(!source.startsWith(root+path.sep)||!target.startsWith(path.resolve(evidence)+path.sep))throw Error('Archive outside review boundary');fs.mkdirSync(path.dirname(target),{recursive:true});fs.renameSync(source,target);}
+const receipt=read(evidence+'/unified.json'),receipts=read(evidence+'/receipts.json');
+if(!receipts.some(r=>r.stage==='unified'))receipts.push({stage:'unified',start:receipt.start,finish:receipt.finish,exitCode:receipt.exitCode,status:receipt.status,archiveFailure:'Native verification passed; post-child copy-overwrite failed and is separately preserved in orchestrator-first-failure.json',recovery:'repair02-restoration.json'});
+fs.writeFileSync(evidence+'/receipts.json',JSON.stringify(receipts,null,2)+'\n');
+const changedInputs=Object.keys(incoming).filter(p=>/^(src\/|tests\/|scripts\/|art\/|public\/)|^(package|tsconfig|vite|playwright|eslint)/.test(p)&&sha(p)!==incoming[p]);
+const allowed=new Set(['docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md']);
+const changedHistorical=Object.keys(incoming).filter(p=>p.startsWith('docs/')&&!allowed.has(p)&&sha(p)!==incoming[p]);
+fs.writeFileSync(evidence+'/scope-check.json',JSON.stringify({changedInputs,changedHistorical,historicalOutputs:320,allRestored:changedHistorical.length===0,archivedNewPaths:newPaths},null,2)+'\n');
+if(changedInputs.length||changedHistorical.length)throw Error('Unexpected incoming bytes changed');
+console.log(JSON.stringify({status:'PASS',changedInputs:0,changedHistorical:0,archivedNewPaths:newPaths.length,nativeUnifiedExit:receipt.exitCode}));

@@ -1,0 +1,23 @@
+{
+  "method": "Same Node gzipSync as preserved T05 baseline",
+  "baseline": {
+    "files": [
+      {
+        "path": "index-DDY2_Q3V.js",
+        "bytes": 336058,
+        "gzip": 99361
+      }
+    ],
+    "totalGzip": 99361
+  },
+  "files": [
+    {
+      "path": "dist/assets/index-oR64Vgsl.js",
+      "bytes": 371729,
+      "gzip": 110530,
+      "sha256": "ab17e1f7abfeb68dfce9de67303e078838a2cc79a21d1f4d9e82466bcc2917ff"
+    }
+  ],
+  "total": 110530,
+  "budgetBytes": 61440
+}

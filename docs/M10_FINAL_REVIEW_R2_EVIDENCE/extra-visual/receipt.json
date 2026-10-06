@@ -1,0 +1,203 @@
+{
+  "start": "2026-10-06 22:28:19 +08:00",
+  "initial": [
+    {
+      "count": 1,
+      "width": 1280,
+      "height": 900,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-4:0",
+            "dealer:0",
+            "round-1/seat-4:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 1280,
+        "scrollWidth": 1280,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    },
+    {
+      "count": 4,
+      "width": 1280,
+      "height": 900,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-1:0",
+            "round-1/seat-3:0",
+            "round-1/seat-4:0",
+            "round-1/seat-6:0",
+            "dealer:0",
+            "round-1/seat-1:1",
+            "round-1/seat-3:1",
+            "round-1/seat-4:1",
+            "round-1/seat-6:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 1280,
+        "scrollWidth": 1280,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    },
+    {
+      "count": 7,
+      "width": 1280,
+      "height": 900,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-1:0",
+            "round-1/seat-2:0",
+            "round-1/seat-3:0",
+            "round-1/seat-4:0",
+            "round-1/seat-5:0",
+            "round-1/seat-6:0",
+            "round-1/seat-7:0",
+            "dealer:0",
+            "round-1/seat-1:1",
+            "round-1/seat-2:1",
+            "round-1/seat-3:1",
+            "round-1/seat-4:1",
+            "round-1/seat-5:1",
+            "round-1/seat-6:1",
+            "round-1/seat-7:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 1280,
+        "scrollWidth": 1280,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    },
+    {
+      "count": 1,
+      "width": 320,
+      "height": 720,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-4:0",
+            "dealer:0",
+            "round-1/seat-4:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 320,
+        "scrollWidth": 320,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    },
+    {
+      "count": 4,
+      "width": 320,
+      "height": 720,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-1:0",
+            "round-1/seat-3:0",
+            "round-1/seat-4:0",
+            "round-1/seat-6:0",
+            "dealer:0",
+            "round-1/seat-1:1",
+            "round-1/seat-3:1",
+            "round-1/seat-4:1",
+            "round-1/seat-6:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 320,
+        "scrollWidth": 320,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    },
+    {
+      "count": 7,
+      "width": 320,
+      "height": 720,
+      "facts": {
+        "sequence": {
+          "flights": [
+            "round-1/seat-1:0",
+            "round-1/seat-2:0",
+            "round-1/seat-3:0",
+            "round-1/seat-4:0",
+            "round-1/seat-5:0",
+            "round-1/seat-6:0",
+            "round-1/seat-7:0",
+            "dealer:0",
+            "round-1/seat-1:1",
+            "round-1/seat-2:1",
+            "round-1/seat-3:1",
+            "round-1/seat-4:1",
+            "round-1/seat-5:1",
+            "round-1/seat-6:1",
+            "round-1/seat-7:1",
+            "dealer:1"
+          ],
+          "duplicates": false,
+          "overlap": false
+        },
+        "width": 320,
+        "scrollWidth": 320,
+        "hidden": "Hidden dealer card",
+        "legacy": 0
+      },
+      "checkpoint": "First real native flight paused only for capture; not a performance sample",
+      "status": "PASS"
+    }
+  ],
+  "background": {
+    "foreground": {
+      "hidden": false,
+      "state": "visible"
+    },
+    "hidden": {
+      "hidden": false,
+      "state": "visible",
+      "events": []
+    },
+    "method": "Headed native Chromium; second browser tab brought to front; no document.hidden override or synthetic event",
+    "status": "BLOCKED",
+    "result": "REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE",
+    "equivalent": "Existing T06-B04 / T10-B07 synthetic visibility checks"
+  },
+  "status": "PASS",
+  "draw": {
+    "order": [
+      "dealer:2",
+      "dealer:3"
+    ],
+    "status": "PASS"
+  },
+  "finish": "2026-10-06 22:28:42 +08:00"
+}

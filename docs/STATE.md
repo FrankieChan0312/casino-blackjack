@@ -1,3 +1,39 @@
+## M10-FINAL-REVIEW-R2 final technical verification — 2026-10-06 22:47:41 +08:00
+
+Current independent R2 technical gates VERIFIED/PASS/native0: full unchanged verify.ps1 (101files/1240Vitest,245Chromium, independentM1–M8),45native performance samples<=2500ms,273protected inputs/17034historical files/320original outputs intact,30fresh gallery captures inspected0legacy, assets/reproduction, final9documentation tests, strict scope/links and staged whitespace. Privacy3993files/57trace resources/0findings/0exclusions; finalized output only copied after handles close. Repairs6/10, all review tooling/evidence handling; every first failure preserved, product unchanged. Normal origin/main commit/push PENDING. M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 repair06 publication packaging — 2026-10-06 22:43:53 +08:00
+
+R2 cumulative6/10. First staged whitespace gate FAIL/native2: documentation.txt:13:new blank line at EOF, after working diff-checkPASS. Preserve verbatim nine-test native stdout in scanned ZIP with raw/preview SHA receipt; normalize only extra EOF empty lines in readable preview. Strict staged Git check retained, no product/test/whitespace-rule change. Affected staged check NOT RUN. Previous repair05 current273input/17034historical/320output/gallery/links/scope audit PASS0. Current40ms human confirmation PENDING; T11 historicalBLOCKED11/11 and repair12 NOT AUTHORIZED; DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 repair05 targeted scope parser — 2026-10-06 22:38:51 +08:00
+
+R2 cumulative6/10. Publication audit first failure preserved native1: leading porcelain column removed by trim, README.md misparsed as EADME.md. Baseline executable/historical hashes and protected diffs already passed. Preserve leading columns; strict path allowlist unchanged. Affected current audit NOT RUN after targeted fix. Product/tests unchanged. Current40ms human confirmation PENDING; historical T11 BLOCKED11/11, repair12 NOT AUTHORIZED; DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:36:37 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs5/10 (review inventory, archive restoration, gallery selection and Windows command launch only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 repair04 closed — 2026-10-06 22:36:37 +08:00
+
+R2 cumulative4/10. Direct Node spawn of Windows npm.cmd failed EINVAL before tests (NOT RUN); review-only PowerShell invocation preserves actual npm exit. Unchanged collector and three documentation files/nine tests PASS/native0. First stderr preserved. No product/tests/threshold changes. Final review counter includes inventory, atomic archive restore, gallery mapping and command-launch repairs. Historical T11 BLOCKED11/11 and repair12 NOT AUTHORIZED / NOT RUN remain intact. Current40ms human confirmation PENDING; deployment NOT RUN.
+
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:35:02 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs3/10 (review inventory, archive restoration and gallery selection only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 repair03 closed — 2026-10-06 22:34:38 +08:00
+
+R2 cumulative3/10. Review-only gallery guessed lower-case outcome directories; actual fresh native paths use PLAYER_WIN/DEALER_WIN/PUSH. Preserve first assertion failure (node1/enclosing PowerShell0), explicit mapping repaired; gallery build PASS/native0,30fresh captures. All30 now technically visually inspected; old cartoon Dealer0. Product/tests/assets/dependencies unchanged. Full unified1240/245PASS0 remains current. Final documentation/privacy/publication checks pending; current40ms human confirmation PENDING, T11 historical11/11/repair12 NOT AUTHORIZED; DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 repair2 CLOSED — 2026-10-06 22:26:37 +08:00
+
+R2 repairs2/10. Full unchanged verify.ps1 PASS/native0:1240Vitest/245Chromium/independentM1–M8. Separate post-child copy-overwrite failed on a historical PNG; first wrapper FAIL preserved. Targeted same-volume atomic restore PASS0; all320original outputs/protected input hashes restored unchanged. No test/product/threshold repair or gate retry. Supplemental visuals/zoom/background/cleanup and final publication remain pending. [Repair evidence](M10_FINAL_REVIEW_R2_EVIDENCE/repair02.json). CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 started — 2026-10-06 21:58:31 +08:00
+
+New owner-authorized fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; local/tracking/live equal0/0/CLEAN/untracked0. [Distinct contract and evidence](M10_FINAL_REVIEW_R2.md). Scope: review/closure only, no features/deployment. Recommended GPT-6.1 Sol / Max, selected runtime NOT VERIFIED. R2 repairs1/10: review inventory capture overflow repaired with explicit buffer capacity; product/tests/thresholds unchanged. Native performance/full gate/visual/publication in progress; no technical acceptance claim. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 BLOCKED11/11; repair12 NOT AUTHORIZED / NOT RUN. M10 NOT ACCEPTED; DEPLOYMENT NOT RUN.
+
 ## M10-PRE-CLOSE publication — 2026-10-06 21:43:29 +08:00
 
 Verified maintenance implementation **0912b3fe4b9551bcdf6ec4e41d44504dab770647** published to **origin/main** by normal push, **PASS / native exit0**. At this checkpoint: local HEAD = tracking = live remote, ahead/behind **0/0**, working tree **CLEAN**, untracked **0**; all277 final executable hashes still match the verified repair7 freeze. This following documentation receipt records the actual implementation publication without altering runtime inputs; its commit is resolved by Git HEAD, with final push equality checked separately. Maintenance **7/10**, requiredA-I **PASS0**,33 final native samples <=2500ms.

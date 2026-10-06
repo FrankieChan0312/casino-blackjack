@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T14:45:17.488Z",
+  "finish": "2026-10-06T14:45:47.965Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/r2-final-scan.ps1"
+  ],
+  "log": ".git\\evidence-capture\\R2-final-privacy-repair06.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

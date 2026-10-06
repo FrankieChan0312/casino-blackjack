@@ -1,0 +1,27 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root='docs/M10_FINAL_REVIEW_R2_EVIDENCE',read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,'')),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const commands=[];
+function git(args){const r=cp.spawnSync('git',args,{encoding:'utf8',maxBuffer:64*1024*1024});commands.push({args,exitCode:r.status,output:r.stdout.trim()});assert.equal(r.status,0);return r.stdout.replace(/\r?\n$/,'');}
+const incoming=read(root+'/baseline-tracked-hashes.json'),allowed=new Set(['README.md','docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md']);
+const inputs=Object.keys(incoming).filter(p=>/^(src\/|tests\/|scripts\/|art\/|public\/)|^(package|tsconfig|vite|playwright|eslint)/.test(p));
+for(const p of inputs)assert.equal(hash(p),incoming[p],p);
+const historical=Object.keys(incoming).filter(p=>p.startsWith('docs/')&&!allowed.has(p));for(const p of historical)assert.equal(hash(p),incoming[p],p);
+git(['diff','--exit-code','974a977dd5ebf33f4c09b08e352c3d57410a713c','--','src','tests','scripts','art','public','package.json','package-lock.json','playwright.config.ts','vite.config.ts']);
+git(['diff','--exit-code','4e6cd7efdca91651633931edcd9445a401886bce','--','src/domain']);
+git(['diff','--exit-code','3c50ab4d0183cff13f2380bd60faa31583d3e988','--','art/source/characters','public/characters',':(exclude)public/characters/dealer','art/character-production.json']);
+const changed=git(['status','--porcelain=v1','--untracked-files=all']).split('\n').filter(Boolean).map(p=>p.slice(3));
+for(const p of changed)assert(allowed.has(p)||p==='docs/M10_FINAL_REVIEW_R2.md'||p.startsWith(root+'/'),p);
+const report=fs.readFileSync('docs/M10_FINAL_REVIEW_R2.md','utf8');
+for(const token of ['M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED','CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING','M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION','11/11','repair12 NOT AUTHORIZED','6/10','Deployment NOT RUN'])assert(report.includes(token),token);
+for(let n=1;n<=12;n++)assert(report.includes(`| AC-M10-${String(n).padStart(3,'0')} |`));
+for(const p of ['README.md','docs/STATE.md','docs/PLAN.md']){const prefix=fs.readFileSync(p,'utf8').slice(0,3800);for(const token of ['M10-FINAL-REVIEW-R2','1240','245','6/10','CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING','DEPLOYMENT NOT RUN'])assert(prefix.includes(token),p+':'+token);}
+const receipts=read(root+'/receipts.json');for(const receipt of receipts)assert.equal(receipt.exitCode,0);assert(receipts.some(r=>r.stage==='unified'));
+assert.equal(read(root+'/unified.json').exitCode,0);assert.equal(read(root+'/documentation.json').exitCode,0);
+const privacy=read(root+'/final-privacy-result.json');assert.equal(privacy.status,'PASS');assert.equal(privacy.findings.length,0);assert.equal(privacy.exclusions.length,0);
+const gallery=read(root+'/gallery/index.json');assert(gallery.entries.length>=20);for(const entry of gallery.entries){assert.equal(entry.manualInspection,'PASS');assert.equal(entry.oldCartoonDealerOccurrences,0);assert.equal(hash(root+'/gallery/'+entry.file),entry.sha256);}
+const performance=read(root+'/performance-summary.json');for(const width of [1280,768,320]){const value=performance.widths[String(width)];assert(value.samples.length>=(width===768?3:10));for(const sample of value.samples)assert(sample.elapsed<=2500);}
+const currentLinks=[];for(const p of ['docs/M10_FINAL_REVIEW_R2.md',root+'/README.md',root+'/gallery/README.md'])for(const m of fs.readFileSync(p,'utf8').matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)){const target=m[1].split('#')[0];if(!target||/^https?:/.test(target))continue;assert(fs.existsSync(path.resolve(path.dirname(p),target)),p+':'+target);currentLinks.push({file:p,target});}
+const whitespace=cp.spawnSync('git',['diff','--check'],{encoding:'utf8'});assert.equal(whitespace.status,0,whitespace.stdout+whitespace.stderr);
+const at=cp.execFileSync('powershell.exe',['-NoProfile','-Command',"Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'"],{encoding:'utf8'}).trim();
+const value={at,status:'PASS',exitCode:0,baseline:'974a977dd5ebf33f4c09b08e352c3d57410a713c',unchangedInputs:inputs.length,unchangedHistoricalFiles:historical.length,publicationPaths:changed.length,galleryEntries:gallery.entries.length,currentLinks,commands,repairCount:'6/10',scope:'Only new review docs/evidence and current state/log/plan/lab/README. No product/test/asset/dependency/runtime repair. Historical T11 and maintenance bytes preserved. Human current40ms confirmation pending.'};
+fs.writeFileSync(root+'/publication-audit.json',JSON.stringify(value,null,2)+'\n');console.log(JSON.stringify({...value,currentLinks:value.currentLinks.length,commands:undefined}));

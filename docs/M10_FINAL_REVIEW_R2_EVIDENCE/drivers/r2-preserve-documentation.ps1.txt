@@ -1,0 +1,20 @@
+param([string]$Label, [string]$Destination = 'documentation.txt')
+$ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$taskRoot = Join-Path (Get-Location) 'docs/M10_FINAL_REVIEW_R2_EVIDENCE'
+$taskNative = Join-Path (Get-Location) ".git/evidence-capture/$Label.txt"
+$taskArchivePath = Join-Path $taskRoot 'documentation-native-verbatim.zip'
+if (Test-Path -LiteralPath $taskArchivePath) {
+    $taskArchive = [IO.Compression.ZipFile]::Open($taskArchivePath, [IO.Compression.ZipArchiveMode]::Update)
+} else {
+    $taskArchive = [IO.Compression.ZipFile]::Open($taskArchivePath, [IO.Compression.ZipArchiveMode]::Create)
+}
+try {
+    [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($taskArchive, $taskNative, "$Label.txt") | Out-Null
+} finally { $taskArchive.Dispose() }
+$taskBytes = [IO.File]::ReadAllText($taskNative)
+$taskPreview = $taskBytes.TrimEnd([char[]]"`r`n") + "`n"
+[IO.File]::WriteAllText((Join-Path $taskRoot $Destination), $taskPreview)
+$taskReceipt = [ordered]@{at=(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'); original="documentation-native-verbatim.zip:$Label.txt"; originalSha256=(Get-FileHash -LiteralPath $taskNative -Algorithm SHA256).Hash; preview=$Destination; previewSha256=(Get-FileHash -LiteralPath (Join-Path $taskRoot $Destination) -Algorithm SHA256).Hash; onlyChange='Remove extra blank lines at EOF for Git-reviewed readable preview; full native bytes retained in ZIP and scanned as text'}
+$taskReceipt | ConvertTo-Json -Depth 6 | Set-Content -Encoding utf8 (Join-Path $taskRoot "$Destination-provenance.json")
+Write-Output "Preserved exact native bytes and prepared EOF-normalized preview: $Destination"

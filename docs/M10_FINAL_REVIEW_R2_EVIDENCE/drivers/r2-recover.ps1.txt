@@ -1,0 +1,33 @@
+$ErrorActionPreference = 'Stop'
+$r2Repo = (Get-Location).Path
+$r2Evidence = 'docs/M10_FINAL_REVIEW_R2_EVIDENCE'
+$r2Incoming = Get-Content '.git/r2-review/incoming.json' -Raw | ConvertFrom-Json
+$r2Outputs = @(git ls-files docs/images docs/M10_T01_EVIDENCE docs/M10_T06_EVIDENCE/screenshots docs/M10_T06_EVIDENCE/reduced-seven-settled.png | Where-Object { $_ -match '\.(png|json)$' })
+if ($LASTEXITCODE -ne 0) { throw 'Historical output inventory unavailable' }
+$r2Changes = @()
+foreach ($r2Path in $r2Outputs) {
+    $r2Target = [IO.Path]::GetFullPath((Join-Path $r2Repo $r2Path))
+    $r2Original = Join-Path $r2Repo ".git/r2-review/original/$r2Path"
+    $r2Expected = $r2Incoming.PSObject.Properties[$r2Path].Value
+    $r2Actual = (Get-FileHash -LiteralPath $r2Target -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($r2Actual -eq $r2Expected) { continue }
+    # Preserve both successful new capture and any displaced partial-write bytes.
+    $r2Archive = Join-Path $r2Repo "$r2Evidence/unified-generated/$r2Path"
+    if (-not (Test-Path -LiteralPath $r2Archive)) {
+        New-Item -ItemType Directory -Path (Split-Path $r2Archive) -Force | Out-Null
+        [IO.File]::WriteAllBytes($r2Archive, [IO.File]::ReadAllBytes($r2Target))
+    }
+    $r2Replacement = [IO.Path]::GetFullPath((Join-Path $r2Repo ".git/r2-review/replacement/$r2Path"))
+    $r2Displaced = [IO.Path]::GetFullPath((Join-Path $r2Repo ".git/r2-review/displaced/$r2Path"))
+    foreach ($r2Checked in @($r2Target,$r2Replacement,$r2Displaced)) {
+        if (-not $r2Checked.StartsWith($r2Repo + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw 'Historical swap outside repository' }
+    }
+    New-Item -ItemType Directory -Path (Split-Path $r2Replacement),(Split-Path $r2Displaced) -Force | Out-Null
+    [IO.File]::WriteAllBytes($r2Replacement, [IO.File]::ReadAllBytes($r2Original))
+    [IO.File]::Replace($r2Replacement,$r2Target,$r2Displaced)
+    $r2Restored = (Get-FileHash -LiteralPath $r2Target -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($r2Restored -ne $r2Expected) { throw "Original SHA restore failed: $r2Path" }
+    $r2Changes += @{path=$r2Path; before=$r2Actual; original=$r2Expected; restored=$true}
+}
+$r2Changes | ConvertTo-Json -Depth 5 | Set-Content "$r2Evidence/repair02-restoration.json" -Encoding utf8
+Write-Output "PASS: atomic restore $($r2Changes.Count) remaining outputs; all $($r2Outputs.Count) originals checked"

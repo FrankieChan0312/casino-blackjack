@@ -1,0 +1,3 @@
+$ErrorActionPreference = 'Stop'
+& npm.cmd test -- tests/m9/documentation.test.ts tests/unit/portfolio.test.ts tests/unit/m8Contract.test.ts
+exit $LASTEXITCODE

@@ -1,0 +1,26 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/m10/t11Performance.spec.ts --repeat-each=3
+
+[WebServer] (node:13212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:9124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-1280] cold native seven-player initial deal completes within 2500ms (22.1s)
+  ok 2 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-768] cold native seven-player initial deal completes within 2500ms (4.0s)
+  ok 3 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-320] cold native seven-player initial deal completes within 2500ms (4.0s)
+(node:32408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-1280] cold native seven-player initial deal completes within 2500ms (3.8s)
+  ok 5 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-768] cold native seven-player initial deal completes within 2500ms (3.7s)
+  ok 6 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-320] cold native seven-player initial deal completes within 2500ms (3.2s)
+(node:10784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 7 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-1280] cold native seven-player initial deal completes within 2500ms (3.8s)
+  ok 8 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-768] cold native seven-player initial deal completes within 2500ms (3.5s)
+  ok 9 [chromium] › tests\browser\m10\t11Performance.spec.ts:7:3 › [T11-P01-320] cold native seven-player initial deal completes within 2500ms (3.5s)
+
+  9 passed (57.4s)

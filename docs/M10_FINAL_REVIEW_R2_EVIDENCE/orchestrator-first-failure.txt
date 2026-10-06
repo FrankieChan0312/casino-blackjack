@@ -1,0 +1,31 @@
+{"start":"2026-10-06T13:58:08.878Z","finish":"2026-10-06T13:58:20.538Z","command":"powershell.exe","args":["-NoProfile","-ExecutionPolicy","Bypass","-File","scripts/scan-evidence.ps1","-ResultPath",".git/evidence-capture/R2-baseline-privacy-result.json"],"log":".git\\evidence-capture\\R2-privacy-baseline.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":["PSModulePath"],"receipt":".git\\evidence-capture\\R2-privacy-baseline.json"}
+privacy-baseline: 0
+{"start":"2026-10-06T13:58:21.475Z","finish":"2026-10-06T13:59:22.002Z","command":"cmd.exe","args":["/d","/c","npm.cmd run test:e2e -- tests/browser/m10/t11Performance.spec.ts --repeat-each=3"],"log":".git\\evidence-capture\\R2-native-exact.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-native-exact.json"}
+native-exact: 0
+{"start":"2026-10-06T13:59:22.944Z","finish":"2026-10-06T14:00:42.875Z","command":"cmd.exe","args":["/d","/c","npm.cmd run test:e2e -- tests/browser/m10/preClosePerformance.spec.ts --repeat-each=2"],"log":".git\\evidence-capture\\R2-native-bounded.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-native-bounded.json"}
+native-bounded: 0
+{"start":"2026-10-06T14:00:43.505Z","finish":"2026-10-06T14:00:43.593Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/check-live-dealer.mjs"],"log":".git\\evidence-capture\\R2-live-dealer.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-live-dealer.json"}
+live-dealer: 0
+{"start":"2026-10-06T14:00:44.294Z","finish":"2026-10-06T14:00:46.622Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/verify-dealer-assets.mjs"],"log":".git\\evidence-capture\\R2-dealer-assets.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-dealer-assets.json"}
+dealer-assets: 0
+{"start":"2026-10-06T14:00:47.694Z","finish":"2026-10-06T14:00:48.187Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/verify-generic-dealer.mjs"],"log":".git\\evidence-capture\\R2-generic-assets.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-generic-assets.json"}
+generic-assets: 0
+{"start":"2026-10-06T14:00:48.873Z","finish":"2026-10-06T14:00:53.506Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/build-generic-dealer.mjs","--check"],"log":".git\\evidence-capture\\R2-generic-reproduction.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-generic-reproduction.json"}
+generic-reproduction: 0
+{"start":"2026-10-06T14:00:54.228Z","finish":"2026-10-06T14:01:03.911Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/verify-character-assets.mjs"],"log":".git\\evidence-capture\\R2-player-assets.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-player-assets.json"}
+player-assets: 0
+{"start":"2026-10-06T14:01:04.508Z","finish":"2026-10-06T14:01:12.753Z","command":"C:\\Program Files\\nodejs\\node.exe","args":["scripts/build-character-assets.mjs","--check"],"log":".git\\evidence-capture\\R2-player-reproduction.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":[],"receipt":".git\\evidence-capture\\R2-player-reproduction.json"}
+player-reproduction: 0
+{"start":"2026-10-06T14:01:13.561Z","finish":"2026-10-06T14:21:23.539Z","command":"powershell.exe","args":["-NoProfile","-ExecutionPolicy","Bypass","-File","scripts/verify.ps1"],"log":".git\\evidence-capture\\R2-unified.txt","status":"PASS","exitCode":0,"signal":null,"outputClosed":true,"resetModuleVariables":["PSModulePath"],"receipt":".git\\evidence-capture\\R2-unified.json"}
+Error: UNKNOWN: unknown error, copyfile 'C:\Users\user\Documents\GitHub\casino-blackjack\.git\r2-review\original\docs\M10_T01_EVIDENCE\text-fallback-768.png' -> 'C:\Users\user\Documents\GitHub\casino-blackjack\docs\M10_T01_EVIDENCE\text-fallback-768.png'
+    at Object.copyFileSync (node:fs:3177:11)
+    at archive (C:\Users\user\Documents\GitHub\casino-blackjack\.git\r2-runner.cjs:24:31)
+    at run (C:\Users\user\Documents\GitHub\casino-blackjack\.git\r2-runner.cjs:50:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async C:\Users\user\Documents\GitHub\casino-blackjack\.git\r2-runner.cjs:61:3 {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'copyfile',
+  path: 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\r2-review\\original\\docs\\M10_T01_EVIDENCE\\text-fallback-768.png',
+  dest: 'C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\text-fallback-768.png'
+}

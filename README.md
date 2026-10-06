@@ -1,3 +1,11 @@
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:36:37 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs6/10 (review tooling and evidence handling only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](docs/M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+## M10-FINAL-REVIEW-R2 technical gates VERIFIED — 2026-10-06 22:35:02 +08:00
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs3/10 (review inventory, archive restoration and gallery selection only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](docs/M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
 ## M10-PRE-CLOSE publication — 2026-10-06 21:43:29 +08:00
 
 Verified maintenance implementation **0912b3fe4b9551bcdf6ec4e41d44504dab770647** published to **origin/main** by normal push, **PASS / native exit0**. At this checkpoint: local HEAD = tracking = live remote, ahead/behind **0/0**, working tree **CLEAN**, untracked **0**; all277 final executable hashes still match the verified repair7 freeze. This following documentation receipt records the actual implementation publication without altering runtime inputs; its commit is resolved by Git HEAD, with final push equality checked separately. Maintenance **7/10**, requiredA-I **PASS0**,33 final native samples <=2500ms.

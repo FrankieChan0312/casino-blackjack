@@ -1,0 +1,17 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const root='docs/M10_FINAL_REVIEW_R2_EVIDENCE';
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const walk=p=>fs.readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(p,e.name)):[path.join(p,e.name)]);
+const widths={'1280':{samples:[]},'768':{samples:[]},'320':{samples:[]}};
+for(const scope of ['native-exact-browser-artifacts','native-bounded-browser-artifacts','unified-full-browser-artifacts']){
+ const folder=root+'/'+scope;if(!fs.existsSync(folder))continue;
+ for(const file of walk(folder)){
+  if(file.endsWith('native-initial-timing.json')){const r=read(file);widths[r.width].samples.push({scope,source:file.replaceAll('\\','/'),temperature:'cold',elapsed:r.timing.end-r.timing.start,destinations:r.timing.destinations.length});}
+  if(file.endsWith('bounded-native-samples.json')){const r=read(file);r.samples.forEach((s,i)=>widths[r.width].samples.push({scope,source:file.replaceAll('\\','/'),sample:i+1,temperature:s.temperature,elapsed:s.elapsed,destinations:s.timing.destinations.length,durations:s.timing.durations}));}
+ }
+}
+if(fs.existsSync(root+'/performance-zoom/receipt.json')){for(const group of read(root+'/performance-zoom/receipt.json').performance)for(const sample of group.rounds)widths[group.width].samples.push({scope:'supplemental-native-persistent-repeated-round',round:sample.round,source:root+'/performance-zoom/receipt.json',elapsed:sample.metric.initialMilliseconds,destinations:sample.metric.flights});}
+for(const record of Object.values(widths)){const ordered=record.samples.map(s=>s.elapsed).sort((a,b)=>a-b);const m=Math.floor(ordered.length/2);record.median=ordered.length%2?ordered[m]:(ordered[m-1]+ordered[m])/2;record.worst=Math.max(...ordered);record.budgetMs=2500;record.status=record.samples.every(s=>s.elapsed<=2500&&s.destinations===16)?'PASS':'FAIL';}
+const at=cp.execFileSync('powershell.exe',['-NoProfile','-Command',"Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'"],{encoding:'utf8'}).trim();
+fs.writeFileSync(root+'/performance-summary.json',JSON.stringify({at,mode:'FULL_MOTION',semantics:'Native Chromium, no-preference; first initial flight DOM insertion through data-initial-deal-running=false. Every expected destination is independently asserted. Paused visual checkpoints excluded from performance measurements. Cold=separate native process; warm=new page/context reusing final native process, not a cache warmth claim.',thresholdMs:2500,widths},null,2)+'\n');
+console.log(JSON.stringify(Object.fromEntries(Object.entries(widths).map(([w,r])=>[w,{count:r.samples.length,values:r.samples.map(s=>Number(s.elapsed.toFixed(1))),median:r.median,worst:r.worst,status:r.status}]))));

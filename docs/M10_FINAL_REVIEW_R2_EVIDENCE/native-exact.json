@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-06T13:58:21.475Z",
+  "finish": "2026-10-06T13:59:22.002Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd run test:e2e -- tests/browser/m10/t11Performance.spec.ts --repeat-each=3"
+  ],
+  "log": ".git\\evidence-capture\\R2-native-exact.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

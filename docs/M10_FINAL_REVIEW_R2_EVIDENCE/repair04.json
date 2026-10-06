@@ -1,0 +1,15 @@
+{
+  "task": "M10-FINAL-REVIEW-R2",
+  "at": "2026-10-06 22:35:34 +08:00",
+  "cycle": 4,
+  "limit": 10,
+  "firstFailure": "Node collector spawn npm.cmd threw synchronous EINVAL errno-4071 before tests launched",
+  "firstFailureNativeExit": 1,
+  "testStatus": "NOT RUN in this failed attempt",
+  "hypothesis": "Windows .cmd requires a command interpreter; use Windows PowerShell to launch npm.cmd and propagate its actual LASTEXITCODE",
+  "targetedFix": "Review-only PowerShell wrapper; unchanged collector and unchanged nine tests",
+  "affectedVerification": "Collector powershell.exe .git/r2-documentation.ps1",
+  "status": "VERIFIED / PASS / checked native0; 3 files / 9 tests",
+  "productTestThresholdChanges": [],
+  "verifiedAt": "2026-10-06 22:35:38 +08:00"
+}

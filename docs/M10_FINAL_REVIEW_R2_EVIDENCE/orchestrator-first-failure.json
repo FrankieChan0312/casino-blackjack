@@ -1,0 +1,14 @@
+{
+  "start": "2026-10-06T13:57:20.536Z",
+  "finish": "2026-10-06T14:21:24.344Z",
+  "command": "node",
+  "args": [
+    ".git/r2-runner.cjs"
+  ],
+  "log": ".git\\evidence-capture\\R2-orchestrator.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

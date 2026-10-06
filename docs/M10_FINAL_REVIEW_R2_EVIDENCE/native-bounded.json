@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-06T13:59:22.944Z",
+  "finish": "2026-10-06T14:00:42.875Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npm.cmd run test:e2e -- tests/browser/m10/preClosePerformance.spec.ts --repeat-each=2"
+  ],
+  "log": ".git\\evidence-capture\\R2-native-bounded.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

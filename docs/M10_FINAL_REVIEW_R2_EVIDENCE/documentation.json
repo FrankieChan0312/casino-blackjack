@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T14:45:09.110Z",
+  "finish": "2026-10-06T14:45:16.833Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/r2-documentation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\R2-documentation-repair06.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

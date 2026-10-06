@@ -1,0 +1,22 @@
+{
+  "start": "2026-10-06T13:58:08.878Z",
+  "finish": "2026-10-06T13:58:20.538Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/scan-evidence.ps1",
+    "-ResultPath",
+    ".git/evidence-capture/R2-baseline-privacy-result.json"
+  ],
+  "log": ".git\\evidence-capture\\R2-privacy-baseline.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

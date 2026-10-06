@@ -1,0 +1,21 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root='docs/M10_FINAL_REVIEW_R2_EVIDENCE',gallery=root+'/gallery';fs.mkdirSync(gallery,{recursive:true});
+const walk=p=>fs.readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(p,e.name)):[path.join(p,e.name).replaceAll('\\','/')]);
+const files=walk(root).filter(p=>p.endsWith('.png')&&!p.includes('/gallery/'));
+const entries=[];
+function add(label,match){const source=files.find(p=>typeof match==='string'?p.endsWith(match):match.test(p));assert(source,'Missing fresh gallery: '+label);const file=String(entries.length+1).padStart(2,'0')+'-'+label+'.png';fs.copyFileSync(source,gallery+'/'+file);const bytes=fs.readFileSync(gallery+'/'+file);entries.push({file,label,source,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),manualInspection:'PENDING',oldCartoonDealerOccurrences:null});}
+add('setup-formal-dealer','01-setup-generic.png');
+add('one-player-deal','initial-1-1280-settled.png');add('four-player-deal','initial-4-1280-settled.png');add('seven-player-deal','initial-7-1280-settled.png');
+add('hit',/-Hit\/mid.png$/);add('double',/-Double\/mid.png$/);add('split',/-Split\/mid.png$/);add('four-leaf-split','settled-four-leaves.png');
+add('dealer-reveal',/-reveal-multiple\/mid-face.png$/);add('dealer-multi-draw','dealer-draw-mid.png');
+for(const [label,outcome] of [['win','PLAYER_WIN'],['loss','DEALER_WIN'],['push','PUSH']])add(label,new RegExp('-'+outcome+'/settled.png$'));
+add('insurance','control-contrast-insurance.png');add('round-complete','03-table-4-complete.png');
+add('reduced-motion',/1-REDUCED_MOTION\/initial-settled.png$/);
+add('mobile-active','initial-7-320-settled.png');add('tablet-active',/4-FULL_MOTION\/initial-settled.png$/);
+add('generic-dealer-fallback','06-all-pool-seated-generic.png');add('non-celestine-dealer','05-collision-Seraphine.png');
+add('one-player-mobile','initial-1-320-settled.png');add('four-player-mobile','initial-4-320-settled.png');
+for(const count of [1,4,7])for(const width of [1280,320])add(`initial-${count}-${width}-flight`,`initial-${count}-${width}-start.png`);
+add('native200-zoom-controls','native200-player-rsa-cap-controls.png');add('native200-zoom-dealer','native200-player-ace-dealer.png');
+fs.writeFileSync(gallery+'/index.json',JSON.stringify({baseline:'974a977dd5ebf33f4c09b08e352c3d57410a713c',scope:'Fresh current-baseline captures only. Engineering fixture/gallery inspection is separate from current40ms owner acceptance.',entries},null,2)+'\n');
+fs.writeFileSync(gallery+'/README.md','# M10-FINAL-REVIEW-R2 — Fresh gallery\n\nCurrent40ms INITIAL technical inspection; owner human confirmation PENDING. All captures are from this independent review. Native pauses are deterministic visual checkpoints, excluded from performance timing. Full raw sequence/metric/viewport records remain in the parent evidence directory.\n\n'+entries.map(e=>`- [${e.label}](${e.file}) — source: ${e.source}`).join('\n')+'\n');
+console.log(JSON.stringify({entries:entries.length,files:entries.map(e=>e.file)}));

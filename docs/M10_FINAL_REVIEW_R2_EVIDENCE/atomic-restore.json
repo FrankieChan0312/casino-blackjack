@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-06T14:24:55.915Z",
+  "finish": "2026-10-06T14:24:59.343Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/r2-recover.ps1"
+  ],
+  "log": ".git\\evidence-capture\\R2-atomic-restore.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

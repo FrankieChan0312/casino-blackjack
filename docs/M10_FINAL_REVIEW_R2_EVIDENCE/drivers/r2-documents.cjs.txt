@@ -1,0 +1,126 @@
+const fs=require('node:fs'),cp=require('node:child_process');
+const root='docs/M10_FINAL_REVIEW_R2_EVIDENCE',read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
+const at=cp.execFileSync('powershell.exe',['-NoProfile','-Command',"Get-Date -Format 'yyyy-MM-dd HH:mm:ss K'"],{encoding:'utf8'}).trim();
+const performance=read(root+'/performance-summary.json'),privacy=read(root+'/final-privacy-result.json'),visual=read(root+'/extra-visual/receipt.json'),contrast=read(root+'/contrast/control-contrast.json'),cleanup=read(root+'/cleanup/receipt.json');
+for(const p of ['unified.json','supplemental-performance-zoom.json','supplemental-cleanup.json','supplemental-contrast.json','supplemental-visual.json'])if(read(root+'/'+p).exitCode!==0)throw Error('Required gate not passed: '+p);
+if(privacy.status!=='PASS'||visual.status!=='PASS'||contrast.status!=='PASS'||cleanup.status!=='PASS')throw Error('Incomplete supplemental/privacy proof');
+const fmt=x=>x.toFixed(1);
+const rows=[1280,768,320].map(width=>{const r=performance.widths[width];return `| ${width}px | ${r.samples.length} | ${fmt(r.median)}ms | ${fmt(r.worst)}ms | 2500ms | PASS |`;}).join('\n');
+const samples=[1280,768,320].map(width=>`${width}px: ${performance.widths[width].samples.map(s=>fmt(s.elapsed)).join(', ')}ms.`).join('\n\n');
+const gallery=read(root+'/gallery/index.json');
+const report=`# M10-FINAL-REVIEW-R2 — Fresh independent final review
+
+Recorded ${at}. Fresh incoming review of main / \`974a977dd5ebf33f4c09b08e352c3d57410a713c\` after maintenance publication. This NEW review is separate from the historically blocked T11; T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN. All historical evidence is byte-preserved. No T11 repair12 exists.
+
+## Review conclusion and owner boundary
+
+Required technical gates **VERIFIED / PASS / native exit0**. Conditional publication is PENDING at this pre-publication record. The requested final status \`M10_FINAL_REVIEW_R2_TECHNICALLY_ACCEPTED\` applies only after normal main publication, CLEAN/untracked0 and live remote parity are actually confirmed and recorded below.
+
+M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION
+
+CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING
+
+M10 is not fully owner-accepted. Prior T06 and later owner acceptance history remains intact; it does not accept the changed40ms INITIAL timing. Deployment NOT RUN.
+
+## Contract, baseline and settings
+
+- Task ID: M10-FINAL-REVIEW-R2; milestone: M10 technical final review before owner closure.
+- Baseline: main/974a977; local/tracking/live SHA equal, ahead/behind0/0, CLEAN, untracked0. [Full baseline](M10_FINAL_REVIEW_R2_EVIDENCE/baseline.json).
+- Recommended model: GPT-6.1 Sol; reasoning: Max / highest available. Client tool metadata lists the model and max effort. Selected runtime model/effort NOT VERIFIED.
+- Scope: specification/design/source/tests/evidence review, fresh performance/visual/privacy/lifecycle checks and conditional review documentation/evidence publication.
+- Non-goals: gameplay features, rules, new identities/artwork/animation systems/panels/side bets, domain/strategy/accounting changes, dependencies or deployment.
+- Acceptance: no BLOCKER/HIGH; all required gates PASS0; every accepted native FULL_MOTION sample<=2500ms; privacy PASS0; live legacy Dealer references0; reviewed gallery; clean remote parity. Current timing human confirmation remains pending.
+- Step -> verification: authority/preflight -> repository/Git; native sampling -> exact independent timing/order; behavior -> full unchanged verify.ps1/preservation; assets/privacy -> guards/reproduction/scanner/harness; visuals/lifecycle -> current browser evidence; publication -> current document/scope/hash/links/diff review and ordinary push.
+- Stops: conflicts, unknown overlap, unavailable required tool, sensitive data, unauthorized/destructive operations, no-progress or10/10repair limit. No exceptional cycle authorized. Preserve first failures; no retry-until-green.
+
+## Performance and maintenance claims
+
+Exact semantics: native Chromium, FULL_MOTION/no-preference; first initial flight inserted into DOM -> data-initial-deal-running=false. Every sample asserts16destinations in two ascending-player passes with Dealer last; no reduced/mocked/stagger omission or threshold change. Cold samples use a fresh native process. Warm means a new page/context in the third process, not a cache/context warmth claim. Capture pauses are excluded from acceptance timing.
+
+| Viewport | Fresh samples | Median | Worst | Gate | Status |
+| --- | ---: | ---: | ---: | ---: | --- |
+${rows}
+
+${samples}
+
+[Every raw sample and source](M10_FINAL_REVIEW_R2_EVIDENCE/performance-summary.json). Fixed repetitions were scheduled before execution; all samples retained, zero product performance repairs/retries. Native extra repeated-round profiles also retain RAF intervals/LongTask observations and cleanup; these are local-machine measurements, not universal60fps/load guarantees. [Profiles and native200%zoom](M10_FINAL_REVIEW_R2_EVIDENCE/performance-zoom/receipt.json), [machine](M10_FINAL_REVIEW_R2_EVIDENCE/environment.json).
+
+The33historical final40ms maintenance values were independently recomputed from original per-sample files:1280 count15/median1288.5/worst2059.5;768 count3/median1952.3/worst1981.9;320 count15/median1454.3/worst2049.9, all unchanged2500ms. [Recomputation](M10_FINAL_REVIEW_R2_EVIDENCE/maintenance-claims-recomputed.json). Current central INITIAL token0.04s and action/Dealer0.11s confirmed in source. Two-pass/event/ease/flight logic is unchanged in this review. Historical80ms/60ms failures, HIGH-02reopening and maintenance are preserved; historical OS/browser stall trigger remains unproven.
+
+## Privacy/evidence harness
+
+Final independent scanner: **${privacy.files.length} files / ${privacy.zipTextEntries.length} trace resources / 0 findings / 0 exclusions**, PASS0. [Result inventory](M10_FINAL_REVIEW_R2_EVIDENCE/final-privacy-result.json). Output/result remain outside every scan root until scanner/collector handles close; finalized files are copied only afterward. No self-lock or arbitrary exclusion. Original credential/bearer/Vite patterns match historical driver; .log coverage remains active. All artifact hashes and non-image/font ZIP resources, including extensionless resources, are inspected. PNGs are visually reviewed; no OCR certification.
+
+Default baseline scan independentlyPASS0 at3178/55/0/0. The reported3176publication scan used six extra documentation roots; eight finalized artifacts were added afterward. Final R2 scan includes those six roots, current report and every new R2 artifact. [Exact root/path comparison](M10_FINAL_REVIEW_R2_EVIDENCE/baseline-scan-comparison.json). Four PRE-CLOSE-H01..04 lifecycle, actual.log secret, extensionless trace, output-root refusal and stderr regressions executed in the fresh1240unit gate; no coverage weakening.
+
+## Gameplay, accounting and replay authority
+
+src/domain protected diff against M10start4e6cd7 is **EMPTY / exit0**; all current source/tests/assets/dependencies/runtime hashes equal the requested974a977baseline. Controller additions since M10start are only the approved real-count configuration and private observation seams, guarded by historical-controller reconstruction tests. RNG, persistent shoe/physical cards, ascending seat/hand turns, legality, Dealer S17/computer strategy, atomic funding, settlement, digest and journal remain authoritative. Animation completion has no command/RNG capability.
+
+Main/Double/Split/Insurance, win/loss/push/Blackjack/Charlie/EvenMoney/surrender/VOID/back/side cases retain literal authoritative stakes/gross/net in current and preserved regressions. Observer copies committed wager records; wagerFlight chooses routes, never computes payouts. FULL/REDUCED/IMMEDIATE/skip/cancel/failure retain complete replay package, result, journal/digest/audit and exact credits. Viewport, timing, motion preference and Dealer identity remain outside gameplay digest. Replay package is available only at finalized boundary; terminal read-only reconstruction preserves live table.
+
+## Seating and Dealer
+
+Canonical actual occupancy:1:[4];2:[3,4];3:[3,4,6];4:[1,3,4,6];5:[1,3,4,5,6];6:[1,2,3,4,5,6];7:[1,2,3,4,5,6,7]. Exactly one local HUMAN Seat4; no duplicate/phantom/renumbered participants, only funded active seats receive cards. Sitting-out identities remain seated and excluded from Dealer pool.
+
+Formal pool: Celestine/noble_female, Seraphine/knight_female, Nyra/mage_female, Elaria/elf_female, Vesha/halforc_female. Deterministic cyclic session ordinal + seated exclusion, stable across rounds/actions/avatar/resize, no gameplay RNG; explicit safe new table/reset advances rotation. Exhaustion/unstarted/missing portrait -> non-roster generic formal PNG -> neutral text if both fail. All five pairs and player provenance/reproduction passed. Live legacy Dealer references **0**, guard69files. Retained CasinoPerson has only three allowed computer-guest callers; no live Dealer caller. Gallery legacy Dealer occurrences **0**.
+
+Hole card: pre-authority reveal has no rank/suit/physical identity in public projection/feed/DOM/ARIA/styles/clone. Generic initial hidden event has face:null even when CLOSE already resolves a natural; public reveal is a separate event. FULL/REDUCED/IMMEDIATE/skip/replay/responsive/privacy regressions passed. Decorative flights/clones are aria-hidden, non-focusable, removed on settle.
+
+## Animation, modes, lifecycle and accessibility
+
+Initial1/4/7-player1280/320fresh captures verify round-robin order, Dealer last, no duplicate/overlapping flights, correct anonymous hole slot and responsive destinations; original native checkpoint cases also cover768. Hit/Stand/Double/Split/four leaves preserve exact hand ownership/order, Stand no draw, Double one authoritative card, retained Split cards and depth-first supplements. Reveal precedes ordered Dealer additions; animation supplies no strategy. Six states IDLE/DEALING/WAITING_PLAYER/REVEALING/DRAWING/SETTLING remain coherent. Settlement observes committed per-wager amounts exactly once.
+
+Three modes and mid-initial/Hit/Double/Split/reveal/draw/settlement Skip cases passed; no stale cards/chips/Dealer states or invalid next action. New round/Deal Again/Repeat Bet/safe new table/count changes/resize/visibility/real App unmount preserve authority, release overlays and stale generations. Three additional quiet seven-player rounds distinguish intentional Audit history from non-Audit DOM; new table restores the original non-Audit node count and clears earlier rounds/queues. [Cleanup](M10_FINAL_REVIEW_R2_EVIDENCE/cleanup/receipt.json).
+
+Genuine background check: **${visual.background.status}**. [Actual current attempt](M10_FINAL_REVIEW_R2_EVIDENCE/extra-visual/receipt.json). ${visual.background.status==='PASS'?'Headed native Chromium tab switch produced document.hidden and trusted native visibility events, flushed a paused Hit, preserved settlement and resumed without stale overlays. Unrelated OS-application switching was not tested.':'REAL OS BACKGROUND-TAB AUTOMATION NOT AVAILABLE. Existing T06-B04/T10-B07 synthetic visibility equivalent PASS; this disclosed tooling limitation is not a correctness blocker.'}
+
+Desktop1280x900/tablet768x1024/mobile320x720,1/4/7 players/Split/round complete, keyboard/focus/semantic controls, long names/200%text/native200%browserzoom and44pxprimary touch contract passed. No page horizontal overflow; vertical reflow is intentional on mobile/enlarged layouts. Native zoom uses chrome.tabs.setZoom/getZoom=2, root16px/CSSzoom1 and doubled DPR; no CSS/device-scale substitute. Fresh computed text-versus-rendered-pixel/focus contrast checks passed: ${contrast.checks.length} text checks, ${contrast.focus.length} focus/non-text checks; bounded check, no WCAG certification. [Contrast](M10_FINAL_REVIEW_R2_EVIDENCE/contrast/control-contrast.json).
+
+## Full gate and acceptance mapping
+
+Unchanged scripts/verify.ps1 **PASS/native0**: typecheck, lint,101files/1240Vitest, domain typecheck, production build/fixture guard,245Chromium, independentM1–M8 preservation including M7 870/24 and acceptedM8 956/44. PA1/RA1/M9/M10A/currentM10/cleanup/maintenance/replay/privacy-harness tests are included in complete executed inventories. Asset/provenance/generic/player reproduction/live guard PASS0. Three documentation files/nine tests PASS0. Publication/final documentation audit follows this exact record. [Full native output](M10_FINAL_REVIEW_R2_EVIDENCE/unified.txt), [checked receipt](M10_FINAL_REVIEW_R2_EVIDENCE/unified.json), [all stage receipts](M10_FINAL_REVIEW_R2_EVIDENCE/receipts.json).
+
+| Acceptance | Current evidence / outcome |
+| --- | --- |
+| AC-M10-001 | S-E1..7/M10A layout/current gallery; all three widths, no horizontal overflow |
+| AC-M10-002 | C-E1..7 + playerCount literal canonical sets, one human, rejection/funding/cap protection |
+| AC-M10-003 | T05-E01/T06-B/native sample records; exactly2*n+2, two passes, anonymous hole |
+| AC-M10-004 | formalDealers/dealerCleanup/T08 six states; approved hashes/rotation/exclusion/fallback |
+| AC-M10-005 | T07 literal ownership/Double/Split/RSA/actual computer order and four leaves |
+| AC-M10-006 | T08 literal S17/natural/no-unneeded-draw/integrity cases, reveal/draw traces |
+| AC-M10-007 | T09/T10 authoritative stakes/returns, Insurance/side/back/VOID distinct |
+| AC-M10-008 | T05-P01/T07-P01/T10-B01 complete result/package/digest/audit equality |
+| AC-M10-009 | keyboard/focus/touch/privacy/three modes/skip/text/nativezoom/gallery |
+| AC-M10-010 | EMPTY protected domain, identical frozen inputs, historical controller/assertion preservation |
+| AC-M10-011 | pinned existing Motion unchanged; JSgzip110530-baseline99361=11169<=61440bytes; bounded RAF/LongTask/DOM profiles |
+| AC-M10-012 | distinct fresh review, checked commands,${gallery.entries.length}new gallery captures, preserved failures/counter and separate human gate |
+
+## Findings, repairs and publication
+
+BLOCKER:0. HIGH:0. MEDIUM:0. LOW:${visual.background.status==='PASS'?'0':'1 tooling limitation only: genuine background automation unavailable; synthetic equivalent PASS'}.
+
+M10-FINAL-REVIEW-R2: **6/10**. The first review runner failed before product validation with git ls-files ENOBUFS; explicit64MiB review-only output capacity repaired it, affected17316path/320backup inventory PASS. First failure excerpt/tool result retained; no product/test/threshold change. [Repair ledger](M10_FINAL_REVIEW_R2_EVIDENCE/repair01.json). Repair02: full unified native0 preceded a post-child copy-overwrite UNKNOWN/errno-4094; preserve failed output, same-volume atomic replacement restored23remaining outputs and checked all320original hashes. Exact native IO cause NOT ESTABLISHED; no gate retry. [Repair02](M10_FINAL_REVIEW_R2_EVIDENCE/repair02.json). Repair03: fresh gallery selector guessed lowercase win/loss/push paths; map observed PLAYER_WIN/DEALER_WIN/PUSH filenames, affected gallery build PASS/native0. The enclosing PowerShell command returned0 although failed Node returned1; this distinction is preserved. [Repair03](M10_FINAL_REVIEW_R2_EVIDENCE/repair03.json). Repair04: direct Node spawn of npm.cmd failed EINVAL before tests launched (NOT RUN); unchanged collector now invokes review-only PowerShell wrapper, propagating actual npm exit. Affected three documentation files/nine tests PASS/native0. [Repair04](M10_FINAL_REVIEW_R2_EVIDENCE/repair04.json). All four are review harness/evidence repairs; product/tests/threshold unchanged. Historical T1111/11/repair12NOTAUTHORIZED and pre-close7/10 remain untouched.
+
+[Fresh gallery](M10_FINAL_REVIEW_R2_EVIDENCE/gallery/README.md); every selected image inspected,0 old cartoon Dealer. Automated/agent technical inspection does not establish owner visual acceptance.
+
+Commit/push/live clean receipt is recorded after ordinary publication. No force-push, rewrite, merge, release or deployment. Only review documentation/evidence and current state/plan/log/lab/README change. Owner next action: visually review the current40ms INITIAL deal speed. STOP at that owner gate.
+`;
+fs.writeFileSync('docs/M10_FINAL_REVIEW_R2.md',report);
+const prefix=`## M10-FINAL-REVIEW-R2 technical gates VERIFIED — ${at}
+
+Fresh independent review of main/974a977dd5ebf33f4c09b08e352c3d57410a713c; full unchanged verify.ps1 PASS/native0:101files/1240Vitest,245Chromium, independentM1–M8 preservation; assets/reproduction/live guard0legacy/privacy/nativeperformance/gallery/documentation PASS0. R2 repairs6/10 (review inventory, archive restoration, gallery selection and Windows command launch only); product/tests/assets/dependencies unchanged. Conditional normal main publication PENDING. [Review and all current evidence](M10_FINAL_REVIEW_R2.md). M10 TECHNICALLY READY FOR FINAL OWNER CONFIRMATION. CURRENT 40ms INITIAL DEAL TIMING HUMAN CONFIRMATION: PENDING. Historical T11 remains BLOCKED11/11, repair12 NOT AUTHORIZED / NOT RUN; no old evidence overwritten. M10 not fully owner-accepted. DEPLOYMENT NOT RUN.
+
+`;
+for(const file of ['README.md','docs/STATE.md','docs/PLAN.md']){const body=fs.readFileSync(file,'utf8');const p=file==='README.md'?prefix.replace('(M10_FINAL_REVIEW_R2.md)','(docs/M10_FINAL_REVIEW_R2.md)'):prefix;fs.writeFileSync(file,p+body);}
+fs.writeFileSync('docs/DEVELOPMENT_LOG.md',`## M10-FINAL-REVIEW-R2 executed review — ${at}
+
+Independent source/spec/design/diff and current evidence review completed. Fixed native samples, full1240/245/unified0/M1–M8 preservation, assets/live guard and current privacy passed; raw native exits/closed-output receipts and every sample preserved in [R2 record](M10_FINAL_REVIEW_R2.md). Fresh gallery manually inspected0legacy; current40ms owner confirmation PENDING. Historical17316tracked inputs/320generated originals preserved; no product/test repair. R2 repairs6/10. Final document/publication scope audit follows; ordinary main commit/push pending. T11 remains historicalBLOCKED11/11, no repair12. DEPLOYMENT NOT RUN.
+
+`+fs.readFileSync('docs/DEVELOPMENT_LOG.md','utf8'));
+fs.writeFileSync('docs/LAB_MANUAL.md',`## M10-FINAL-REVIEW-R2 learning checkpoint — ${at}
+
+Fresh review distinguishes reported claims from current executions: recompute old raw metrics, sample a fixed native schedule, retain every first failure, and compare protected bytes before publication. A3176->3178scan count reflects finalized artifacts and different explicit document roots; compare inventories rather than infer lost coverage from a count. Closed native output outside scan roots avoids collector self-lock without evidence exclusions. Observational40ms timing changes do not enter domain/RNG/digest; three-mode replay/credits equality and literal card destinations verify the boundary. Native zoom is a browser setting, not CSS enlargement. Technical review and clean publication cannot accept visual dealing speed for the owner. [Review](M10_FINAL_REVIEW_R2.md). R2 repairs6/10; old T1111/11 remains blocked; current40ms human confirmation PENDING; deployment NOT RUN.
+
+`+fs.readFileSync('docs/LAB_MANUAL.md','utf8'));
+console.log(JSON.stringify({at,report:'docs/M10_FINAL_REVIEW_R2.md',filesChanged:6,privacyFiles:privacy.files.length,gallery:gallery.entries.length}));

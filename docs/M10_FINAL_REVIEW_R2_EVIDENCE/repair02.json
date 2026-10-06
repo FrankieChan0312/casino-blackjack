@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-06 22:26:37 +08:00",
+  "task": "M10-FINAL-REVIEW-R2",
+  "cycle": 2,
+  "limit": 10,
+  "firstFailure": "Post-child archive UNKNOWN/errno-4094 copyfile original text-fallback-768.png over existing historical PNG; full verify.ps1 already PASS/native0",
+  "failureReceipt": "orchestrator-first-failure.json",
+  "hypothesis": "Destination copy-overwrite can fail/partially truncate this mapped historical PNG; use repository-established same-volume atomic replacement rather than overwriting its byte stream",
+  "exactNativeIoCause": "NOT ESTABLISHED",
+  "targetedRepair": "Preserve generated capture, swap captured baseline bytes using IO.File.Replace, validate every original SHA; archive remaining generated paths only; no native gate retry",
+  "affectedVerification": "PASS/native0: atomic-restore.json plus scope-check.json; all320original outputs and incoming protected inputs unchanged",
+  "productTestThresholdChanges": []
+}

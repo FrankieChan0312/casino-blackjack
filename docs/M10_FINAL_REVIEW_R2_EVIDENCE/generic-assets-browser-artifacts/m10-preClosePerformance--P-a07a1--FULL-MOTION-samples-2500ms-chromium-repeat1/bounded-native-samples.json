@@ -1,0 +1,187 @@
+{
+  "width": 320,
+  "height": 720,
+  "mode": "FULL_MOTION",
+  "browser": "153.0.8010.12",
+  "samples": [
+    {
+      "temperature": "cold",
+      "elapsed": 1176.5,
+      "timing": {
+        "start": 1004.2999999523163,
+        "end": 2180.7999999523163,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 1046.5,
+      "timing": {
+        "start": 896.2000000476837,
+        "end": 1942.7000000476837,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "cold",
+      "elapsed": 1082.1000001430511,
+      "timing": {
+        "start": 994.2999999523163,
+        "end": 2076.4000000953674,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    },
+    {
+      "temperature": "warm",
+      "elapsed": 976.6000001430511,
+      "timing": {
+        "start": 785.3999998569489,
+        "end": 1762,
+        "destinations": [
+          "round-1/seat-1:0",
+          "round-1/seat-2:0",
+          "round-1/seat-3:0",
+          "round-1/seat-4:0",
+          "round-1/seat-5:0",
+          "round-1/seat-6:0",
+          "round-1/seat-7:0",
+          "dealer:0",
+          "round-1/seat-1:1",
+          "round-1/seat-2:1",
+          "round-1/seat-3:1",
+          "round-1/seat-4:1",
+          "round-1/seat-5:1",
+          "round-1/seat-6:1",
+          "round-1/seat-7:1",
+          "dealer:1"
+        ],
+        "durations": [
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40
+        ]
+      }
+    }
+  ],
+  "median": 1064.3000000715256,
+  "worst": 1176.5,
+  "budgetMs": 2500
+}

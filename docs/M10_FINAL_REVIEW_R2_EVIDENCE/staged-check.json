@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-06T14:46:32.330Z",
+  "finish": "2026-10-06T14:46:34.466Z",
+  "command": "git",
+  "args": [
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "log": ".git\\evidence-capture\\R2-staged-check-final.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}
