@@ -2,6 +2,8 @@
 
 **HARNESS_H1_RESTORATION_MAINTENANCE_VERIFIED** — technical verification; human acceptance PENDING. H1 repair **1/10**, M15 remains **7/10**. Original `UNKNOWN/-4094/open` root cause **STILL UNKNOWN**. [Task/protocol/repair contract](../HARNESS_H1.md).
 
+**Publication BLOCKED.** Local implementation commit `7802be29a9a21715a60c6980055913031453019a`; two normal origin/codex/harness-h1 pushes FAIL/1, both rejected by GitHub `Internal Server Error`; remote read PASS/0 confirms branch absent. No more attempts. [Publication receipt](publication-blocked.json), [commit log](primary-commit.txt), [first push failure](primary-push.txt), [intervening branch read](after-push-failure-remote.txt), [second push failure](primary-push-second.txt). Local docs-only checkpoint retains these failures without changing verified source. Publication/acceptance/integration are separate from technical verification.
+
 | Verification | Status / exit | Evidence |
 | --- | --- | --- |
 | Original helper normal PNG/JSON reproduction | PASS / 0 | [Exact historical source](legacy-preserve-output.cjs), [record](legacy-reproduction.json), [native stdout](legacy-stdout.txt) |
@@ -19,6 +21,7 @@
 | Syntax/product-scope/27local links/source and raw evidence hashes | PASS / 0 | [Prepublication receipt](prepublication-checks.json) |
 | Aggregate raw-evidence whitespace | FAIL / 2, retained native CRLF/blank EOF only | [Exact failure](staged-raw-whitespace.txt), [classification](whitespace-classification.json) |
 | Authored source/docs/attributes whitespace | PASS / 0 | [Scoped receipt](whitespace-classification.json) |
+| Publication privacy over36files | PASS / 0, no findings/exclusions | [Native log](privacy-publication.txt), [receipt](privacy-publication.json) |
 | M15 complete product gate / scripts/verify.ps1 | NOT RUN | Owner requires harness verification first; no product gate resumption |
 | Genuinely fresh-session review | NOT RUN | Same-session review only; no fresh-session result claimed |
 | Human acceptance / integration / deployment | NOT RUN | Separate explicit owner decisions required |

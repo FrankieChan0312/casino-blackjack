@@ -1,0 +1,36 @@
+[codex/harness-h1 7802be2] Make historical output restoration transactional and fail closed
+ 38 files changed, 78915 insertions(+)
+ create mode 100644 docs/HARNESS_H1.md
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/.gitattributes
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/audit-restoration.mjs
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/completed.jsonl
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/existing-harness-final.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/existing-harness-tests.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/final-integrity.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/final-integrity.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/focused-final.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/focused-first.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/focused-repair1.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/incoming.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/index.md
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/legacy-preserve-output.cjs
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/legacy-reproduction.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/legacy-stdout.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/lint-final.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/lint-first.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/lint-repair1.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/original-failure-readonly.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/pre-restore-manifest-diff.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/prepublication-checks.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/privacy-publication.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/privacy-publication.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/real-attempt.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/real-preflight.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/real-result.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/real-validation.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/staged-raw-whitespace.txt
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/validate-real.mjs
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/whitespace-classification.json
+ create mode 100644 docs/HARNESS_H1_EVIDENCE/worktree-creation-failure.json
+ create mode 100644 scripts/restore-historical-output.mjs
+ create mode 100644 tests/tools/historicalRestoration.test.mjs

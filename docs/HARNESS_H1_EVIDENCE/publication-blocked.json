@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-07T15:11:49.910Z",
+  "maintenanceBranch": "codex/harness-h1",
+  "primaryCommit": "7802be29a9a21715a60c6980055913031453019a",
+  "remote": "https://github.com/FrankieChan0312/casino-blackjack.git",
+  "commitStatus": "PASS",
+  "commitExitCode": 0,
+  "pushAttempts": [
+    {
+      "status": "FAIL",
+      "exitCode": 1,
+      "log": "primary-push.txt",
+      "reason": "remote rejected Internal Server Error"
+    },
+    {
+      "status": "FAIL",
+      "exitCode": 1,
+      "log": "primary-push-second.txt",
+      "reason": "remote rejected Internal Server Error"
+    }
+  ],
+  "remoteRead": {
+    "status": "PASS",
+    "exitCode": 0,
+    "branchPresent": false
+  },
+  "publicationStatus": "BLOCKED",
+  "technicalStatus": "HARNESS_H1_RESTORATION_MAINTENANCE_VERIFIED",
+  "freshReview": "NOT RUN",
+  "accepted": false,
+  "integrated": false,
+  "deployed": false,
+  "repairCount": 1,
+  "m15RepairCount": 7
+}
