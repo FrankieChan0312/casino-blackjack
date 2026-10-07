@@ -1,3 +1,7 @@
+## HARNESS-H1 preservation lesson — 2026-10-07 23:02:54 +08:00
+
+Direct writing can truncate a historical artifact before replacement bytes are verified. H1 materializes and hashes same-directory replacement bytes first, preserves a separate verified original because rename consumes its source, attempts replacement once, and treats final hash/cleanup failures as failures. Generated variants and original backups are independent evidence, never interchangeable. Tests use explicit fixture hashes and injected failures; an independent audit hashes the complete manifest and incoming dirty tree without calling restoration logic. Native read-only probe HRESULT is evidence of that probe only, not proof of an earlier Node/libuv errno's root cause. Real one-attempt success improves reliability but leaves original UNKNOWN/-4094 cause STILL UNKNOWN. H1 repair1/10 and M15 repair7/10 stay separate; technical verification/publication cannot imply acceptance or authorize integration.
+
 ## Current M10 final closure — 2026-10-06 23:50:11 +08:00
 
 **M10: ACCEPTED / CLOSED.** Owner decisions supplied in the M10-FINAL-CLOSURE-DOCS request after the successful R2 review:

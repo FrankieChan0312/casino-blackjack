@@ -1,0 +1,21 @@
+{
+  "archivedGeneratedSha256": "F437EB6CEC0D03406A3F2DF65CEF66085C14D4B563A8D680603738C04C71279C",
+  "originalBackupSha256": "FB82B174F93685467C0B0FE9AE60E05795DDDBD4A9B461BBCB711551D10B68F4",
+  "file": {
+    "FullName": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\reduced-seven-settled.png",
+    "Length": 1093634,
+    "Attributes": 32,
+    "LastWriteTime": "2026-10-07T12:48:00.5604711+08:00"
+  },
+  "rootCause": "UNKNOWN; no write retry or file replacement performed after the failure",
+  "currentSha256": "F437EB6CEC0D03406A3F2DF65CEF66085C14D4B563A8D680603738C04C71279C",
+  "at": "2026-10-07 13:09:24 +08:00",
+  "nativeFailure": {
+    "exitCode": 1,
+    "errno": -4094,
+    "syscall": "open",
+    "path": "docs/M10_T06_EVIDENCE/reduced-seven-settled.png",
+    "code": "UNKNOWN",
+    "operation": "write original PNG bytes"
+  }
+}

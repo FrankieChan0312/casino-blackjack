@@ -1,0 +1,13 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/verifyHarness.test.ts tests/harness.test.ts tests/m10/evidenceLifecycle.test.ts
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  3 passed (3)
+      Tests  11 passed (11)
+   Start at  22:55:03
+   Duration  5.75s (tests 95%, transform 2%, worker 1%, setup 1%, import 1%)
+

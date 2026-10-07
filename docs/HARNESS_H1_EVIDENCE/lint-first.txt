@@ -1,0 +1,17 @@
+
+C:\Users\user\Documents\GitHub\casino-blackjack-harness-h1\scripts\restore-historical-output.mjs
+  43:87  error  'Buffer' is not defined  no-undef
+
+C:\Users\user\Documents\GitHub\casino-blackjack-harness-h1\tests\tools\historicalRestoration.test.mjs
+   12:21  error  'Buffer' is not defined  no-undef
+   13:22  error  'Buffer' is not defined  no-undef
+   22:27  error  'Buffer' is not defined  no-undef
+   23:28  error  'Buffer' is not defined  no-undef
+   87:75  error  'Buffer' is not defined  no-undef
+  113:92  error  'Buffer' is not defined  no-undef
+  127:91  error  'Buffer' is not defined  no-undef
+  153:86  error  'Buffer' is not defined  no-undef
+  186:62  error  'URL' is not defined     no-undef
+
+✖ 10 problems (10 errors, 0 warnings)
+

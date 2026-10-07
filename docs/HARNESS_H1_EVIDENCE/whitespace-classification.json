@@ -1,0 +1,39 @@
+{
+  "at": "2026-10-07T15:08:36.630Z",
+  "rawAggregate": {
+    "status": "FAIL",
+    "exitCode": 2,
+    "reason": "Unnormalized native CRLF and blank EOF lines are retained exact evidence; not harness execution/assertion failures",
+    "paths": [
+      "docs/HARNESS_H1_EVIDENCE/existing-harness-final.txt",
+      "docs/HARNESS_H1_EVIDENCE/existing-harness-tests.txt",
+      "docs/HARNESS_H1_EVIDENCE/final-integrity.txt",
+      "docs/HARNESS_H1_EVIDENCE/focused-final.txt",
+      "docs/HARNESS_H1_EVIDENCE/focused-first.txt",
+      "docs/HARNESS_H1_EVIDENCE/focused-repair1.txt",
+      "docs/HARNESS_H1_EVIDENCE/legacy-stdout.txt",
+      "docs/HARNESS_H1_EVIDENCE/lint-first.txt",
+      "docs/HARNESS_H1_EVIDENCE/original-failure-readonly.json",
+      "docs/HARNESS_H1_EVIDENCE/real-validation.txt"
+    ]
+  },
+  "authored": {
+    "status": "PASS",
+    "exitCode": 0,
+    "files": [
+      "docs/DEVELOPMENT_LOG.md",
+      "docs/HARNESS_H1.md",
+      "docs/HARNESS_H1_EVIDENCE/.gitattributes",
+      "docs/HARNESS_H1_EVIDENCE/audit-restoration.mjs",
+      "docs/HARNESS_H1_EVIDENCE/index.md",
+      "docs/HARNESS_H1_EVIDENCE/validate-real.mjs",
+      "docs/LAB_MANUAL.md",
+      "docs/PLAN.md",
+      "docs/STATE.md",
+      "scripts/restore-historical-output.mjs",
+      "tests/tools/historicalRestoration.test.mjs"
+    ]
+  },
+  "repairCount": 1,
+  "m15RepairCount": 7
+}

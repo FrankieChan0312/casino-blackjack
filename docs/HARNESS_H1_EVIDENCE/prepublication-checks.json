@@ -1,0 +1,185 @@
+{
+  "at": "2026-10-07T15:05:59.789Z",
+  "status": "PASS",
+  "outcomes": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+        "--",
+        "src",
+        "public",
+        "casino-tests",
+        "tests/browser",
+        "vite.config.ts",
+        "package.json",
+        "package-lock.json",
+        "docs/RULES.md",
+        "docs/SPEC.md",
+        "docs/DESIGN.md",
+        "docs/UX_UI.md"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "scripts/restore-historical-output.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "tests/tools/historicalRestoration.test.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "docs/HARNESS_H1_EVIDENCE/validate-real.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "docs/HARNESS_H1_EVIDENCE/audit-restoration.mjs"
+      ],
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "localLinksChecked": 27,
+  "sourceHashes": [
+    {
+      "file": "scripts/restore-historical-output.mjs",
+      "sha256": "1a989b48ed4763dace7e13c44ead6bbb32264503b08f6407704fc98e112029a5"
+    },
+    {
+      "file": "tests/tools/historicalRestoration.test.mjs",
+      "sha256": "979ed1db38bae479c4733f544b737ae6621f1e5ddabc6c4f9732ce703be311d9"
+    },
+    {
+      "file": "docs/HARNESS_H1_EVIDENCE/validate-real.mjs",
+      "sha256": "69aad36bd190147bc32c94456fcce0b996ed489540465e383a9114ed9d710ade"
+    },
+    {
+      "file": "docs/HARNESS_H1_EVIDENCE/audit-restoration.mjs",
+      "sha256": "c1af2760319a5f72df436e16a1ab208384ad30e989527486c1d66f0064c4e4bd"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "file": "completed.jsonl",
+      "sha256": "6ef89c1626edc690e39f626f962579df3931428373d957f95da91def5c21c971"
+    },
+    {
+      "file": "existing-harness-final.txt",
+      "sha256": "a2e6b5132c759013d31351e4d30e7172ba9b3cbdbe4745ed2c9562a1dac3508c"
+    },
+    {
+      "file": "existing-harness-tests.txt",
+      "sha256": "ffce55bea33f40623cde8eb546cec9fd413f3175ecedb05d85a09c37ac540744"
+    },
+    {
+      "file": "final-integrity.json",
+      "sha256": "09846b05e7909856f002fc70c8654265ad25b1807ead280a87b7f08b7a3f791c"
+    },
+    {
+      "file": "final-integrity.txt",
+      "sha256": "f1f84914a45653b127c1d50eddc0578f1e0d43ffd69ed2fe552face929ca8551"
+    },
+    {
+      "file": "focused-final.txt",
+      "sha256": "cb691bfcd2276f0c4020b3e9617bebb51501a0dc1d76c9e6fb43f6173f445b15"
+    },
+    {
+      "file": "focused-first.txt",
+      "sha256": "8b42ddff726dc47e8f1c532e0cd1763dac12a18ca03a77238a9b9201c63ceeaf"
+    },
+    {
+      "file": "focused-repair1.txt",
+      "sha256": "8cec4612ed1e21feb24aa08fb4ee648536c01909a719be0c16bbece7e868572f"
+    },
+    {
+      "file": "incoming.json",
+      "sha256": "5ea12243fa5d6175428c77c53caf2f6ae8672859af91d12ba898c711f116c109"
+    },
+    {
+      "file": "legacy-preserve-output.cjs",
+      "sha256": "1faf2a467bdae4a5dcbea44409d4486d3a9518b007425630667721720e663546"
+    },
+    {
+      "file": "legacy-reproduction.json",
+      "sha256": "163511bcac0de3e910d730dcd17041198938c95bf51b2e985c3e2503c3e66ecc"
+    },
+    {
+      "file": "legacy-stdout.txt",
+      "sha256": "cc02f4e6bdedd2ebd30cc50c332f28b814e5c89f6f2a94deca210da8dacf8fae"
+    },
+    {
+      "file": "lint-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "lint-first.txt",
+      "sha256": "5533a03bb64e466c11a01d416c64779aecdf48340c8fca63869bc009be1dd214"
+    },
+    {
+      "file": "lint-repair1.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "original-failure-readonly.json",
+      "sha256": "af2b1f0aea5bc9ea119db7fb291663ca619e393f1d3aa3a3fa39a8a6500338e9"
+    },
+    {
+      "file": "pre-restore-manifest-diff.json",
+      "sha256": "f65b3661c08e900ee01dc66f67ebc26dd026601e7ae6ca2a7f9883e730bcfcc6"
+    },
+    {
+      "file": "real-attempt.json",
+      "sha256": "8ae11a8b2a9551d5f01bf58b6116882a03392842bba9a333f4cb80433b0bf846"
+    },
+    {
+      "file": "real-preflight.json",
+      "sha256": "6e408dcadc434e4bcaa6717f68957e912b40eeba49deb91a2a07b293733ddb8d"
+    },
+    {
+      "file": "real-result.json",
+      "sha256": "5e7b4c2c6fbc595543f7aac766e2ba2284ee9778e9574d8ff842887822723e22"
+    },
+    {
+      "file": "real-validation.txt",
+      "sha256": "0d117a43d3b21110a242f1b212d50e14b6b674728ba67d86a1f5d804743fb78c"
+    },
+    {
+      "file": "worktree-creation-failure.json",
+      "sha256": "7ac218d89b41e0b8efcebc323c0a251798327487e2d4d47e2d9823b8a0381d13"
+    }
+  ],
+  "review": "Same-session reviewed specification/design/diff/tests/native evidence; fresh-session NOT RUN",
+  "repairCount": 1,
+  "m15RepairCount": 7
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-07T15:01:03.453Z",
+  "status": "PASS",
+  "incomingFiles": 19160,
+  "incomingUnchanged": 19138,
+  "authorizedHistoricalRestorations": 22,
+  "historicalOutputs": 16475,
+  "allHistoricalHashesMatch": true,
+  "previousGeneratedArchives": 20,
+  "newGeneratedArchives": 22,
+  "preflightGeneratedCopies": 22,
+  "backupsChecked": 41,
+  "archivesPreserved": true,
+  "temporaryArtifacts": 0,
+  "originalPartial20Restored": true,
+  "productChanges": 0,
+  "privateLauncherIntegrated": false,
+  "mainHead": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+  "mainBranch": "main",
+  "failedPng": {
+    "finalSha256": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+    "backupSha256": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+    "generatedSha256": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+    "attempts": 1
+  }
+}

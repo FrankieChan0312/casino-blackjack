@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-07T14:50:08.248Z",
+  "status": "PASS",
+  "exitCode": 0,
+  "fixture": "C:\\Users\\user\\AppData\\Local\\Temp\\blackjack-h1-legacy-x1TiD3",
+  "helperSha256": "1faf2a467bdae4a5dcbea44409d4486d3a9518b007425630667721720e663546",
+  "cases": [
+    {
+      "file": "docs/fixture.png",
+      "expectedOriginal": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+      "expectedGenerated": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+      "restored": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+      "archived": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+      "backup": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4"
+    },
+    {
+      "file": "docs/fixture.json",
+      "expectedOriginal": "b394f0692c06177a3960586e9ffa8f5ba3888a720acdaf62e6461398935bc992",
+      "expectedGenerated": "b0ec07581d579e53bbad320af611ba477d29110c5238a8f4396a5e9c7382c99d",
+      "restored": "b394f0692c06177a3960586e9ffa8f5ba3888a720acdaf62e6461398935bc992",
+      "archived": "b0ec07581d579e53bbad320af611ba477d29110c5238a8f4396a5e9c7382c99d",
+      "backup": "b394f0692c06177a3960586e9ffa8f5ba3888a720acdaf62e6461398935bc992"
+    }
+  ],
+  "bytesLost": false
+}
