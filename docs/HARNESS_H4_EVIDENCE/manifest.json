@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-07T19:55:26.204Z",
+  "timestamp": "2026-10-07T20:02:53.574Z",
   "task": "HARNESS-H4",
   "rawPolicy": "Gzip losslessly archives original bytes; authored manifest remains ordinary text. No raw reformatting or whitespace bypass.",
   "records": [
@@ -569,6 +569,153 @@
       "sourceBytes": 67040,
       "sourceSHA256": "e8a3b74cb0d04f1c7044ba51675d469cb6dbcbcda3bf40c6a5b2937dc3c1de54",
       "archiveSHA256": "9e0580afd007e4620a4552f9871f4f5cffdc469d0040ee0eb85cd064abc2f855"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-publication.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 441,
+      "sourceSHA256": "696399f2fa489b18d086c4951ea338c8178835d2e3385938027e9547fbc3a106",
+      "archiveSHA256": "5fd9dcb985570ab0d9fb0c90abae311d42fba803445ee996bcdfe7266c589ab1"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/main-preservation-after-publication.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 409,
+      "sourceSHA256": "221c7e590e24aff7c454f3532dafbc1c64bfa0694e9ad18ac42caa77e8e44cf9",
+      "archiveSHA256": "28d4cabc36913a4815f3731a6c5953c8abee84c932aef270627887a91bc57709"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/publication-privacy-findings.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 132931,
+      "sourceSHA256": "92c87583cdd4efc7db26424dadfb9cb2cabe13fdae1da8db39b40e781bfd98f1",
+      "archiveSHA256": "66a3acc6a605cdee089e093f8753bcf83f23ae3a1728c9b457f5452cf0db1989"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/staged-check.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 231,
+      "sourceSHA256": "443cfd355fda349deb44a80c827c5c3815f568b47fc7a6716002b2128450033f",
+      "archiveSHA256": "51507285414a87f1c39ea45e25fe654f8ca3c3ece8113a6eb30ac6bb0b6c07eb"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/publication-check.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 256,
+      "sourceSHA256": "65547b78666814cbb57a97ee1ed52803cb1835fc81411a5648620e571a45cce3",
+      "archiveSHA256": "90afd986adff6533070c69de890d7dcf70add3538b5b4b911dbb33ef9263c8d2"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-commit.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 6056,
+      "sourceSHA256": "646d6a02db381ad4089fed6709fa974852a791d0c568243b3fcd711821443fc3",
+      "archiveSHA256": "6ff73d4c685d015cee0cc053dd5f1639c681f6d767fa37023c89e218e0ec13a0"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-commit.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-commit.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 481,
+      "sourceSHA256": "8e69390ffd162a0edefe47e924685d40258eeeb823eb73be7fcd97ad97174717",
+      "archiveSHA256": "50706ab3ddb8e5ed1361054089fa594fbf21e8cf40c9e1b979a1ea83dbb59e03"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-push.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-push.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 318,
+      "sourceSHA256": "42a2b02f5e627e3be711c4e93f50bcd39890e58536ebd70d826cb7db739e2258",
+      "archiveSHA256": "57bdf924d2993a6abfd2a6e467a1ced4a07d1447bc22e095859f20411c06384f"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/implementation-push.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 439,
+      "sourceSHA256": "06a5e7edd7b7e9f9a0926b0152793219f6274bb42e187bd32e01f02cf315ea6c",
+      "archiveSHA256": "e47b20668f52ab51326fa15f43a426f5e7ec4a8cd794604184996936e8a654dc"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/publication-privacy.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 47,
+      "sourceSHA256": "48d15eef0cb447d83ba5e56678dc1fb11896e8cd5cb734670c0d844b004dfe62",
+      "archiveSHA256": "07482f7152accedf694c9fdaef477f4f16a9dec5c84c2ff7868ef0a65793e25c"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/publication-privacy.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/publication-privacy.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 555,
+      "sourceSHA256": "e8d2789753e157ddbf17156b968cae8b3d592f105a710147b25f873df8323332",
+      "archiveSHA256": "ea037f45e051dadefa0eea0431ec0bfb6eae06d86018da56411baa2f586b4245"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-privacy-findings.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 140834,
+      "sourceSHA256": "def3ff48f45c5c246382c1c8b64c0b60d07b0c93a229972a49d6d3fd084cd2f0",
+      "archiveSHA256": "cbd02e3ee10f85734d8700e94cf7c95989471597854667d8f4b1aeb54c659b7d"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-docs.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 296,
+      "sourceSHA256": "c892b28812f1264c32ba31278c6fc2a8dfa37e1c5cdba0ea5f9a34f6aba18d76",
+      "archiveSHA256": "97f5fe36cc7a8f52340380fac5975966c0defd66df63a12366d7ef32c9db7bfa"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-docs.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-docs.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 505,
+      "sourceSHA256": "59e3a3ca0b9e0e2df92e4ba98a22fff55f9a855cadceb9ab53a4a41beecba54d",
+      "archiveSHA256": "abe318d00bab283beae9de1e1007835d874c4350ef9847cca0618bf68aeb79bf"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-privacy.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 47,
+      "sourceSHA256": "ffffc6fdf2097dc44a11859d0085c2f931e7900221b4ee254e53ad214b3740f6",
+      "archiveSHA256": "210da2ba2d9756d3bc96435ad32cd17b08a2443cd4ef4d313fcd545e636d9282"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-privacy.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/receipt-privacy.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 543,
+      "sourceSHA256": "175762977e124fcea6cf6184aa5573f37b838043040a9ba616d5f2aa28d2dd87",
+      "archiveSHA256": "6837cce87df35daf543a87d3fd119072b4d2fc8780cc648014e5acdf67095e06"
     }
   ]
 }
