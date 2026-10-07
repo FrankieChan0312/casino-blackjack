@@ -2259,3 +2259,9 @@ Resolve and commit authority before emitting public facts. Existing timeline epo
 ## Overnight delivery boundary — 2026-10-07 05:14:08 +08:00
 
 Technical R1-M14 publication complete at primary e290838a008e725e43e3a1f58d5366a080eac8dc. Mechanical verification, independent preservation and exact-version hashes establish technical evidence; they do not accept new visuals. Owner acceptance remains pending and genuinely fresh-session review was unavailable/NOT RUN. Fixed native timing records retain all samples, first failed captures and diagnosis. Stop before M15; no multiplayer/deployment.
+
+## HARNESS-H4 learning checkpoint — 2026-10-08 03:42:59 +08:00
+
+A linked Git worktree has a .git file, while its own metadata and the common object/ref store are separate directories. Run-local evidence belongs under git rev-parse --git-dir; shared objects/refs belong under --git-common-dir; application files belong under --show-toplevel. Git resolves these relationships; harnesses must not infer them from .git being a directory. Native executable calls retain failed status/stderr rather than falling back to a guessed location.
+
+The same five original cases passed in both an ordinary real Git directory fixture and the actual linked H4 worktree. Adding a new test under tests/harness initially changed the frozen M8 file inventory66->67; moving that same source into the existing post-M8 tests/m10 maintenance namespace restored the invariant without weakening accepted assertions. The first failed full run remains preserved. Final full1378/1378 and unchanged unified1378Vitest/291Chromium plus independentM1-M8 PASS0 provide mechanical evidence, not owner acceptance. Successful worktree/PNG runs do not identify the historical PNG timeout cause, which remains UNKNOWN. H4 repairs2/10; M15 remains7/10 with Repair8 NOT STARTED.

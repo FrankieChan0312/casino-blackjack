@@ -1,10 +1,11 @@
 import { chromium, expect, test } from '@playwright/test';
 import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
 type ZoomChrome = { tabs: { query(query: { url: string }): Promise<{ id: number }[]>; setZoomSettings(id: number, settings: { mode: string; scope: string }): Promise<void>; setZoom(id: number, factor: number): Promise<void>; getZoom(id: number): Promise<number> } };
 for (const width of [1280, 768, 640]) test(`[M13-B07-${width}] actual automatic native browser zoom 200%`, async ({ browserName }, info) => {
   expect(browserName).toBe('chromium');
-  const root = resolve('.git/overnight'); mkdirSync(root, { recursive: true });
+  const root = join(resolveGitDir(), 'overnight'); mkdirSync(root, { recursive: true });
   const extension = mkdtempSync(`${root}/zoom-extension-`), profile = mkdtempSync(`${root}/zoom-profile-`);
   writeFileSync(`${extension}/manifest.json`, JSON.stringify({ manifest_version: 3, name: 'Local Baccarat zoom evidence', version: '1.0', host_permissions: ['http://127.0.0.1/*'], background: { service_worker: 'worker.js' } }));
   writeFileSync(`${extension}/worker.js`, 'chrome.runtime.onInstalled.addListener(() => {});');
@@ -26,7 +27,7 @@ for (const width of [1280, 768, 640]) test(`[M13-B07-${width}] actual automatic 
     await page.getByRole('button', { name: 'Place Bet · Player' }).click(); await page.getByRole('button', { name: 'Deal', exact: true }).click();
     await expect(page.getByRole('status')).toContainText('ROUND COMPLETE');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-    const evidence = resolve('.git/overnight/visual/m13'); mkdirSync(evidence, { recursive: true });
+    const evidence = join(resolveGitDir(), 'overnight/visual/m13'); mkdirSync(evidence, { recursive: true });
     writeFileSync(`${evidence}/native-zoom-${width}.json`, JSON.stringify({ nativeApi: 'chrome.tabs.setZoom', mode: 'automatic', zoom, before, after }, null, 2));
     // Native zoom exposes CSS and DIP sizes separately. Capture in the protocol's
     // DIP coordinates; no emulation/zoom command is sent through CDP.

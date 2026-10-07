@@ -1,5 +1,7 @@
 import { expect, it } from 'vitest';
 import { mkdirSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../scripts/git-directory.mjs';
 import { bankerDraws, resolveRound } from '../../src/baccarat/domain/rules.js';
 import { cards } from './fixtures.js';
 
@@ -39,7 +41,7 @@ it('[M12-V04] ten thousand independently predicted whole-round draw paths and ou
   }
   expect({count,naturals,playerOnly,bankerOnly,both,neither})
     .toEqual({count:10000,naturals:3600,playerOnly:1740,bankerOnly:1200,both:3060,neither:400});
-  const directory='.git/overnight/m12-validator';mkdirSync(directory,{recursive:true});
+  const directory=join(resolveGitDir(),'overnight/m12-validator');mkdirSync(directory,{recursive:true});
   writeFileSync(`${directory}/${Date.now()}-${process.pid}.json`,JSON.stringify({status:'PASS',bankerThird:80,
     drawDecisions:51,standDecisions:29,standingBranches:8,naturalPairs:36,
     resolved:{count,naturals,playerOnly,bankerOnly,both,neither},oracle:'Independent literal matrix and fixture arithmetic'},null,2)+'\n');

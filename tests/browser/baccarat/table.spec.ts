@@ -1,6 +1,8 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
-const evidence = '.git/overnight/visual/m13';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
+const evidence = join(resolveGitDir(), 'overnight/visual/m13');
 async function capture(page: Page, name: string) { mkdirSync(evidence, { recursive: true }); await page.screenshot({ path: `${evidence}/${name}.png`, fullPage: true }); }
 async function open(page: Page, fixture = 'player-natural') { await page.goto(`/baccarat?baccaratFixture=${fixture}`); await expect(page.getByRole('button', { name: 'Place Bet · Player' })).toBeVisible(); }
 async function wager(page: Page, target: string, amount = '25') { await page.getByRole('button', { name: new RegExp(`^${target} `) }).click(); await page.getByLabel('Wager amount', { exact: true }).fill(amount); await page.getByRole('button', { name: `Place Bet · ${target}` }).click(); }

@@ -1,3 +1,6 @@
+## Git linked-worktree verification — 2026-10-08 03:42:59 +08:00
+
+The verification harness supports ordinary checkouts and Git linked worktrees. Test evidence uses the checkout-local metadata directory resolved by Git. [HARNESS-H4](docs/HARNESS_H4_GIT_WORKTREE.md) records the unchanged verify.ps1 PASS/native0 and preservation evidence. H4 remains separate from the blocked M15 working tree; integration and owner acceptance are pending. No product, timeout or deployment change is included.
 Casino Platform — Blackjack + playable animated Baccarat. `/casino` selects either game; `/blackjack` and preserved `/` open accepted frozen Blackjack, `/baccarat` opens single-user8-deck Punto Banco. Exact Player/Banker/Tie simulated-credit wagers, existing formal Dealer/avatar/cards, observational ordered dealing and settled chips, accessible responsive controls, reduced motion and safe skip. [Baccarat contract](docs/BACCARAT_PRESENTATION.md); [owner morning review and native motion evidence](docs/CASINO_OVERNIGHT_EVIDENCE/m14/morning-review/index.md). Technical1374Vitest/291Chromium/unified independent preservation PASS0. Human Visual Acceptance PENDING; M15/multiplayer NOT STARTED; deployment NOT RUN.
 
 ## Historical expansion checkpoints (superseded by current playable table)

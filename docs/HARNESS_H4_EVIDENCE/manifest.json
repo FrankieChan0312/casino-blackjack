@@ -1,0 +1,574 @@
+{
+  "timestamp": "2026-10-07T19:55:26.204Z",
+  "task": "HARNESS-H4",
+  "rawPolicy": "Gzip losslessly archives original bytes; authored manifest remains ordinary text. No raw reformatting or whitespace bypass.",
+  "records": [
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/worktree-add.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 90,
+      "sourceSHA256": "28279ff63ef3383aa93e73418275157617294750a8178f36bf8192a914d02245",
+      "archiveSHA256": "7c117d5ab678ed584ccc2fa8bb5807df580bc78617c064503e5e743bb82370ee"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/worktree-add.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 5438,
+      "sourceSHA256": "cb8cb9dfb47675b2eb1c09122b44080b2b024c0d34cb9d8d94421e5c72a94a38",
+      "archiveSHA256": "d08d53322840e8ba61887a2636d6220787296500ff48bb0d58011a8c185b1a8e"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/worktree-add.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 316,
+      "sourceSHA256": "6dab989008e82192d6c831c09052063a5d43d8940a0ea43ae7d0862848acf3ad",
+      "archiveSHA256": "c8fce3b7b127f3469b7d83116483f78c4d9fa90a8430240cd8e882cf288e8cbf"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/dependencies.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 225,
+      "sourceSHA256": "003ee68e36b8213067e8b1b0db57f5eb8dd300e85de9c5c8ce9ac6aebd7745bd",
+      "archiveSHA256": "f3e3710b852d5ba77873529cd72fac52d6d3cece521e0dffd4aa82692ca7fea2"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/dependencies.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/dependencies.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 417,
+      "sourceSHA256": "94addbcba363f1c727138df4d082b3d1781400af96377642a162a0b553229cb5",
+      "archiveSHA256": "68af80cbf8bf978480cd2c0545afc30a3084dd2f453693a53beb328a9535e78a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/focused.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 348,
+      "sourceSHA256": "cac1e1d38cedda69773c48655208c10ef5824eb8c97c6072f989a068574f0dee",
+      "archiveSHA256": "3a368e66ffcdaf3a55ed7f80caadd2ac0b5725a17ae670ce5740ead36b8979da"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/focused.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/focused.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 622,
+      "sourceSHA256": "1063dd38c3eebed2936e2bce2d2f085d65284316a763ca05e17b3972d15c447a",
+      "archiveSHA256": "589e241b2714199ceb09d63c18eca7a9fd352f9475651f2d34be121bb4bda862"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/ordinary.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 94,
+      "sourceSHA256": "f51c812be0994fd34b7dee673b8727dcc7f631b6608ca7f57596eaceaff6a213",
+      "archiveSHA256": "ced724d39ab3df345f55d8a21ff6bf49d81b01ebc2c59732622158c281d4e2bc"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/ordinary.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/ordinary.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 606,
+      "sourceSHA256": "0003d0e57892b3eb1aa7793518f94fa0880169a2feff1f434bdba98ded524a2a",
+      "archiveSHA256": "224d6791bce94c7065341ef008f0cce7c8668e5f366462ea84eb6e5b29f2e0ab"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/png-target.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 291,
+      "sourceSHA256": "452c055690ac8835a0b2d1aeaf4507c7010efff337166084dc13f4a61ae35adc",
+      "archiveSHA256": "cabf940d11fb9dcd7afc53fed2b53d16a4d4c6e7d56569bf4e8b3fc005465199"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/png-target.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/png-target.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 568,
+      "sourceSHA256": "3f9ea2dbb2a58ea9ae09efeed0ccc79562df82fcb1bf91aff995377e8ec1ff78",
+      "archiveSHA256": "9dfcc0d4c1d4d970cd5d79766f63250e8419b533b1ebc1fcb7d7b5c90364b354"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h1-h2.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 2425,
+      "sourceSHA256": "6c552906f880a1ab196c94bece3f26473a00ddae2caca463266be15fecbaecbe",
+      "archiveSHA256": "a5b2ebd6bd3eafa0dba5acf6732a1bf509668fdac4500f81d1e4582ff9aed767"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h1-h2.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h1-h2.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 517,
+      "sourceSHA256": "e8c8b297ebc2c4a13f808f182999404513b39669f792874848515a578f79bde0",
+      "archiveSHA256": "db6fff79aa13a5ec3fd6f8610100256911680f43c3d0c4f9efe67ae3290c912a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/typecheck.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 52,
+      "sourceSHA256": "1afd5de322c5295e760b989c7ebe13870ed73a9df4f0f6dd2fafccd8a28f30a6",
+      "archiveSHA256": "8940f12bddb3937b7e24941a6ef78dc965df39b09e60334b5820ef17653f2ac5"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/typecheck.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/typecheck.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 422,
+      "sourceSHA256": "7b956ba892c25632b835f049efcce6eaf999c88640964bb84b0db7086c4d5f41",
+      "archiveSHA256": "137b013e6d53a7dcbb983d48d2ed6b85c100e953add5459c3164bd318096299a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/lint.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 60,
+      "sourceSHA256": "dd47e925a563fd23b0ae2ae0712a0084329dd17d3a37a75f7a642e5abacd9450",
+      "archiveSHA256": "a03f7ee8e68a3c477801c06d1af0b5a6544775c36dae6555e5c78d04f346e379"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/lint.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/lint.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 407,
+      "sourceSHA256": "96525d954ea49bbb1868af24f772ee421650ebe71a36a02b1564d8df47e56f19",
+      "archiveSHA256": "d78919becb0f9218952b3e10219eb96bde40daba2dd5f9e28ce6e7d0ccdf5ee7"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/full-vitest.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 245,
+      "sourceSHA256": "8366f42ccd747bacba14a78e4f03580f85215e9950e324e186f0693f99e7dae3",
+      "archiveSHA256": "17356640cf2c22ddbb15e17bb9e436c9a8bccb708bd7f62e6a65cec7a06286f7"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/full-vitest.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/full-vitest.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 523,
+      "sourceSHA256": "393a3de386550913d23d5f6693a72604072eeae4dc952b694f8ba8dd4f16b96b",
+      "archiveSHA256": "e0c204dc7125a93f7290a149702c941717b20527364ef7d86d19112f82c1e766"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-affected.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 316,
+      "sourceSHA256": "a1d240c3b6587bee81094fcc34ef7c517d12440bd036e08201923a58cf95023e",
+      "archiveSHA256": "d134622a18e00c57477472315167a0e333bf3b3b60da06854e7fa5217d952534"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-affected.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-affected.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 599,
+      "sourceSHA256": "8dddad976431281fb107d68c006563662770e791693c709748da68231a412e1d",
+      "archiveSHA256": "425c9eaffb8d5ed194787d7c7b7a4494a861febce633f2145ea8dcf5b9cbdc1a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-full-vitest.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 261,
+      "sourceSHA256": "ca432d67f213f45a2d480e6a94504f677c266afccec0af4f2632c418468b63c6",
+      "archiveSHA256": "b1fb9fcae45a377e49e078e50b4f0eb1dd6aec1456f9fd0818f56bf773f1130a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-full-vitest.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-full-vitest.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 547,
+      "sourceSHA256": "16f9806e0d7cc15414089632d66bb1e7b3374053e5820ff58372830dee9ef18a",
+      "archiveSHA256": "2f529921e98bf7a7318cd7c49e9da4402063d511000f640ea76020e59a9f18e8"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/raw-index.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 140,
+      "sourceSHA256": "582821c759c18f05a1531362c0b37b8cc99775eaa984e5b0cd9766995b5b4b7b",
+      "archiveSHA256": "c6b750050b35da8a865f1502b038e2750052ddd5cb45a8573d7a8e53868d4c3b"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/raw-index.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/raw-index.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 492,
+      "sourceSHA256": "d5ecdf5b81c35486510bda161ec2f70a82810dbac3a16ff6cfb04730314d01be",
+      "archiveSHA256": "74fd6cfe214529baa00c71918c68f1a3e54f270001fb942ec033b43a65858245"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-linked.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 46,
+      "sourceSHA256": "7cc73825f2d8ed3547074d9b42096841a3db163795d71c34a4f4d0876c199cd4",
+      "archiveSHA256": "6a002572499660d28835e65e8b36ddf623082c8ad3a092885df2c1f4ad42dff3"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-linked.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-linked.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 537,
+      "sourceSHA256": "6e0f789038dfc80c4bea5021c1430141c8e91f6c9a039cddaaf6828884a09cf9",
+      "archiveSHA256": "7c4f3cfb947f9d0035a61d14ebdfc6f102069feda2a65984beb106e82d736137"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-ordinary.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 45,
+      "sourceSHA256": "81bcc50bd5684cbf3695bfe73a1b52bbf43b3bccacc158f6c14ed2d214180b75",
+      "archiveSHA256": "aa537dcac20a6e9685f1ca388770cf51b7f6d3a267052365dc158192bc17a467"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-ordinary.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/scanner-default-ordinary.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 603,
+      "sourceSHA256": "ffef7162295ed4e8f4fd00a68e14ca240771e5a44628043529759d6a866b98f8",
+      "archiveSHA256": "d102d894c35bac63e03006b040dfeb12f860ca3897fd4ddb62f8ca5a17337c99"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/unified.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 74298,
+      "sourceSHA256": "f8d580890786595de415e734b239643f2916a57b52603c4559f9e949adaf89f0",
+      "archiveSHA256": "30c3739ffb4ec41c819e8286c1cd247f6cc5cb8d0465c737acfd72dc26163386"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/unified.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 1056,
+      "sourceSHA256": "10138c8607492fc8f9e76ff32084fef114a4231bc4237a30ed4aa67449f4d9b4",
+      "archiveSHA256": "ad3897ce2619065b1e4207b7c46ad1056efede5e7c071d6a32c42755f4988aff"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/unified.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 471,
+      "sourceSHA256": "59cb25af4cb0512f597b99fb7c28057d437efa0cae7a68cc9722176ef08f4662",
+      "archiveSHA256": "654e1d65eca98a0c0eeef23876885700b808d161283513d5b1a33edbfbc321b3"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/generated-archive.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/generated-archive.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/generated-archive.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 563,
+      "sourceSHA256": "b2d056b935d19360093b891d57af6d4083e4cb5dbe82d88a407ca26591df0ebf",
+      "archiveSHA256": "866b5e320d89da5f4623936c5da36996ec3b67c721ba1d2dcdb1d007924b1003"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/docs.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 314,
+      "sourceSHA256": "2667ee58642f2946549747b6efe6c28234a78c914dd55899edfcdd61fb940004",
+      "archiveSHA256": "5ac08e94c81913d91692c335878a534daa8cb39332b1c91ac1de217c6a9456ac"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/docs.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/docs.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 585,
+      "sourceSHA256": "c94bcb6cd8e883f52373ac8e87a5c1b88f990ca2092c05ff45120e6240cd45bf",
+      "archiveSHA256": "270ab50a5a8390c318e585ef369910d07b826d432228889fcfa7d836d7c096a0"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 47,
+      "sourceSHA256": "db0b64e703b94ec976cbbe43e3fbbed7c45baa2f13dd02a0fd1382622026641d",
+      "archiveSHA256": "a216cbb2343fa0f9c974bf3934710c3cc28731aa38f778b3010fa0ad269f39ba"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 519,
+      "sourceSHA256": "d8ecf73d7ec129912997d6110c414159ab6785b866b11634e890d9b47cd267aa",
+      "archiveSHA256": "ed3fbf6c2998cf8c90edf964c7473bf691c3dc66006ae08cffc8bb0e5017e9d3"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy-final.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 47,
+      "sourceSHA256": "e22151a7092eb5caff5297a4e4be645c2c8d282517a6d9b91a843b8f87b373ad",
+      "archiveSHA256": "7cea4242b7c4f3ad68318d7df6467db1b18dbf3b6befad6145ef880b8f2d4d21"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy-final.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 0,
+      "sourceSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSHA256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy-final.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 531,
+      "sourceSHA256": "44a9f2eb6b330f85b3756accbe1503e59468354bdb0002fcd78dc800324fdde6",
+      "archiveSHA256": "0fc23f20fbc5a826e29916866f1a485af6bc10dcc95fceefe480c3e10c0e990e"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/preflight.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 10919,
+      "sourceSHA256": "263c0c2dd502f15945c68a97bc2a332a5c65e71e883db8d2987d6b4f9466cea3",
+      "archiveSHA256": "28783e86f2c9852c8ffefe4fc8d07f78e05f7115665e68e39a6195887ffa3251"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/main-preservation.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 409,
+      "sourceSHA256": "b22aee3cbf69f134f0fb535fb9bf7935dba18b61e5dea554145025b29a23697d",
+      "archiveSHA256": "0351e350a291e6f818650b8d121df6f9b1c32a13fc32fa36986aee68f1114563"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h2-raw-index.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 169,
+      "sourceSHA256": "56f3af45a36fc9931d7fd5a1f801e7a2019334377e46ab4f4924cd9a01e40b76",
+      "archiveSHA256": "b6549ec17f6ad151de25f761959a31647692929735489bf92e24dbee7a03ce36"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h1-identity.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 450,
+      "sourceSHA256": "bb458328c17cb6cf912c295eb965b48e66f33dc22794a720f8d1eb351823d6ee",
+      "archiveSHA256": "f478c42c5719461f539c522d28ad7b0698446191d26f2b1446e5be17cfdc9844"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/new-generated.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 10639,
+      "sourceSHA256": "f4e54b65a2df92ca7eef18d60901113735f01a9a5c878de1d65ca59693cc025e",
+      "archiveSHA256": "2d266ed5b5caef194bebd6937e3f0fe0116acf0e2c63db9b16abb1a92dadf402"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/generated-archive-check.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 235,
+      "sourceSHA256": "34c0ae114c3adc4d98b6b8bf91b87f911f2972fddef707f5f908a8797bc8bbd0",
+      "archiveSHA256": "f4233131307afa2fd2a521363dece99059a581088f0262d7b39961810ecf61bb"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/main-preservation-after-creation.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 409,
+      "sourceSHA256": "7c694b8938519c0dd68c9b5d948b3a699ecd43c600b8bf44a5403888c50bd206",
+      "archiveSHA256": "e278c7e455a4b400c3866d5d61f1df9e68f7a9afb3db5c903210b89f65aa9f86"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 403,
+      "sourceSHA256": "f3e803c317e57707d957f382a9c97f273438e7e5ee18f85d22d6798163801890",
+      "archiveSHA256": "5a068cf1fd3ba9d340a80350d17f0c0da891c68448c675d1a7297d46a36e265b"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair3.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 540,
+      "sourceSHA256": "b1a13683cc038362d51725246df4c3d38e48a95630e9733390f73f10efde0626",
+      "archiveSHA256": "18988740219905fbc44e925ceb0e0b8c6a53f857c00f0df38e120833e450cfbf"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/snapshot-capture-first-failure.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 427,
+      "sourceSHA256": "4a32d713ebc659b2c00225275cdbea325d2d3b92de234cd0501558d2d92ab115",
+      "archiveSHA256": "934bf913cb43a25af4bd98db1a46996e8c2ecf5df77ed5562666fe17487daf7d"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/historical-driver-first-failure.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 646,
+      "sourceSHA256": "466775e64c7a9669d40c1a48f3bfdea579257657d7a653a2588dc98d0dd649e2",
+      "archiveSHA256": "37ea3e86d2238f883a45e441f566a587b9d985159b7fb224ba69f1d66e638f3b"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/historical-after.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 38856,
+      "sourceSHA256": "6e5fc4a5867f0c677f9267020b67d5c1df052341362fac65bb2da5abdf9f0f49",
+      "archiveSHA256": "85335ab28eb6c7381c813560caf2d8f6b7664081cbf1bb65e415457b5a7f862d"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy-findings.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 95448,
+      "sourceSHA256": "8389c43c143758e9c5ccea66251eaa60db068154c569e74cf64286c2559f67ff",
+      "archiveSHA256": "10b061ae8992f3228368fbedf1747250fea3b5ac4397fab1ecad0326d1b9765d"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/privacy-capture-first-failure.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 638,
+      "sourceSHA256": "e9b00eeef606ec3c9fdb39a16e03c2a514f416b0b0d5d46bace5945aac33539e",
+      "archiveSHA256": "4e9f94529550ce9f56154a858a64f98046d0048efff754f185b6d637e7c186a7"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/final-review.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 27891,
+      "sourceSHA256": "fa40ec892e9614318e88962574c356e65c006069f476b5ecd020782feb25acf6",
+      "archiveSHA256": "9a1883fe34c32e3bd99a4456c62272edcd9a684d62b544e8996f20ba2d35b148"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/focused-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 25019,
+      "sourceSHA256": "9028cf7dbe61b3b78d9643f98b17e76b6cc86e226ec66c6d93ec46a2be7737b7",
+      "archiveSHA256": "1746ff5d844cb87d3fbecc886f8b783506f6d70670dd814a71722b1db73555d0"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/ordinary-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 25233,
+      "sourceSHA256": "fd3e399b3903298601c4b3aa0501c7edd46b353389def9a35a978e65e0152cb9",
+      "archiveSHA256": "427bce29386a69eb654c87fe9c533ffe151115359b295499458346ee0679c45f"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/png-target-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 2661,
+      "sourceSHA256": "b5d93eeac9d3a3986a264891d69098e9d24c67b9a35c8c602093a003ab8f14f8",
+      "archiveSHA256": "661bba53684ebed4e28694068022357854eb8d47b19731a29ada0004a5421c29"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/full-vitest-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 437247,
+      "sourceSHA256": "b656d8affebc3e3523526a1ba48143fa853f6f5af608102ea72fea91eb92e8bf",
+      "archiveSHA256": "f0dca8210d4c5d518eb854a8a9b11e9c69a82ac15d956efd98eec98c7380f1e3"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-affected-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 3502,
+      "sourceSHA256": "0328a39d59776690213b686183331345b31999b0104fe5231c90d124edf25e55",
+      "archiveSHA256": "d652ca891e556892345fc82dbc91afe768c5dc9c859334d1d77ca46b14fcd278"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/repair2-full-vitest-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 436350,
+      "sourceSHA256": "c6571d8b51c46959215eea03cb445e86d2b4bd7f2dbd1b3c0cad082451a44b4d",
+      "archiveSHA256": "56111e55d745ce108f65b11fa2d7de2963265fc423d988397850744641f2323a"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/docs-results.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 4077,
+      "sourceSHA256": "a3b0b0f80dc1c4b28c727541060e718b6e77993a9f59a4f9e56c9c69c63b2251",
+      "archiveSHA256": "11f4d25205f845d505ef797e06f39a2da58ca5d33c8552e88c818d9e4d0a2bfd"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/h3-five-failures-original.txt.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 5189,
+      "sourceSHA256": "cc3d6a74088902bd3ab2b99dae153cc01dac2abd02b5232c01e802c5c0091669",
+      "archiveSHA256": "a7e8c7f31d6654fac708ecc3a9550688bb53050ff2de60d07cae647fd405105d"
+    },
+    {
+      "path": "docs/HARNESS_H4_EVIDENCE/prior-preflight-stop.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "sourceBytes": 67040,
+      "sourceSHA256": "e8a3b74cb0d04f1c7044ba51675d469cb6dbcbcda3bf40c6a5b2937dc3c1de54",
+      "archiveSHA256": "9e0580afd007e4620a4552f9871f4f5cffdc469d0040ee0eb85cd064abc2f855"
+    }
+  ]
+}

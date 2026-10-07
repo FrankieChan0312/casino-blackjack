@@ -1,7 +1,9 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { Buffer } from 'node:buffer';
-const evidence='.git/overnight/visual/m14';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
+const evidence=join(resolveGitDir(),'overnight/visual/m14');
 test.use({reducedMotion:'no-preference',viewport:{width:1280,height:1500}});
 async function capture(page:Page,name:string){
   mkdirSync(evidence,{recursive:true});

@@ -1,0 +1,54 @@
+# HARNESS-H4 — Git linked-worktree compatibility
+
+Task start/preflight recovery recorded at 2026-10-08 03:13:11 +08:00. This is separate harness maintenance, not M15 Repair8. The committed pre-M15 baseline is 507d6d53b529f38b4510a8b488ed272216c0f5a9; the owner's current M15 governance supersedes historical baseline headings only for task status.
+
+Recommended settings: GPT Sol6.1 / High; client tool metadata confirms availability, actual selected runtime/effort NOT VERIFIED. Model selection is not validation evidence.
+
+## Contract
+
+Scope: repair Git-directory assumptions in the five HARNESS-H3 failures and the same evidence paths in the unchanged verify.ps1 execution graph. Evidence is checkout-local metadata, not shared objects/refs/index access. Non-goals: product, Blackjack/Baccarat, animation, PNG conversion/assertions/5000ms timeout, retry/scheduling/dependency configuration, H1 restoration semantics, H2 raw policy, M15 Repair8, main integration, M16 and deployment.
+
+Acceptance: five original cases5/5 without skips in real linked and ordinary directory checkouts; fail-closed Git resolution; unchanged PRE-T11-U01 PASS; full pre-M15 Vitest ALL PASS; unchanged verify.ps1 native0 in linked worktree; H1/H2 restoration/publication/hash/raw-byte PASS; product diff NONE. Stop on new unrelated failures, conflicting authority, main mutation, unavailable required tools or10 authored repair cycles. H4 starts0/10; first authored defect correction now1/10 under the owner's explicit accounting.
+
+Step -> verification: isolated recovery -> clean Git preflight/36 exact historical long-path blobs and main index/full-file preservation; semantics -> inspect original H3 five failures, apply one small harness-only resolver and existing browser evidence locations; focused -> real linked and ordinary fixtures plus fail-closed cases; PNG -> existing test unchanged; full -> full Vitest and unchanged verify.ps1 once each; preservation -> exact H1/H2 standalone cases, historical outputs/raw hashes and main byte identity; review -> scoped diff, docs/raw publication checks, normal H4 commit/push only after every mandatory gate passes, then wait for owner acceptance/integration authorization.
+
+## Five original failures and semantics
+
+| H3 test | File / failing line | Incorrect assumption | Required Git resource |
+| --- | --- | --- | --- |
+| M12-V04: ten thousand independently predicted whole-round draw paths and outcomes | casino-tests/baccarat/validator.test.ts:42 | .git/overnight/m12-validator is writable | Worktree-local evidence directory |
+| PRE-CLOSE-H01: scanner and open collector output stay outside actual evidence; all files are inventoried | tests/m10/evidenceLifecycle.test.ts:8, caller21 | .git/scanner-fixture-UUID/evidence is writable | Worktree-local fixture and collector evidence |
+| PRE-CLOSE-H02: actual logs and extensionless trace resources retain credential/bearer detection | same:8, caller31 | Same fixture assumption | Worktree-local fixture and collector evidence |
+| PRE-CLOSE-H03: scanner refuses its own result inside input rather than silently exclude evidence | same:8, caller43 | Same fixture assumption | Worktree-local fixture and collector evidence |
+| PRE-CLOSE-H04: native stderr cannot turn a successful child into a PowerShell collection failure | same:50; scripts/collect-evidence.mjs:13 | Collector can mkdir .git/evidence-capture | Worktree-local collector evidence |
+
+All five require git rev-parse --git-dir, resolved against the invoking cwd. None reads objects, refs or index, so --git-common-dir would place run-local artifacts in the wrong shared location. --show-toplevel identifies the public repository root, not these metadata destinations. Git remains authoritative; no manual gitfile parsing. Failed Git commands retain native status/stderr and throw. Typed declaration keeps JavaScript collector and TypeScript tests on the same small resolver; no product import uses it.
+
+PowerShell scanner defaults resolve --git-dir and check the exit, with absolute ResultPath supported for the resolved fixtures. Privacy patterns and exclusion policy are unchanged. Five existing platform/Baccarat browser files use the same local resolver because verify.ps1 executes them. The two older standalone M10 gate wrappers are not part of this acceptance graph and remain untouched to preserve their restoration guards.
+
+## Evidence and current results
+
+Private exact stdout/stderr and paired native receipts: C:/Users/user/.codex/outputs/harness-h4-20261008. The prior failed worktree checkout and private snapshot ENOBUFS error remain preserved; no failure was rewritten. One authorized recovery invocation: git -c core.longpaths=true worktree add C:\cb-h4 codex/harness-h4, native0. No persistent Git config change.
+
+Preflight: branch codex/harness-h4; HEAD507d6d53b529f38b4510a8b488ed272216c0f5a9; root C:/cb-h4; local Git directory C:/Users/user/Documents/GitHub/casino-blackjack/.git/worktrees/cb-h4; common Git directory C:/Users/user/Documents/GitHub/casino-blackjack/.git; .git is a77-byte gitfile with gitdir pointer. CLEAN/untracked0 and36 historical long-path raw blob comparisons PASS.
+
+Main preservation after creation:840staged, untracked0,19,580file hashes changed0, index SHA256 b51613b99b3f51c9cda123bfb3367f112efd04d53e8f6ffa81fd4e37f652db46 unchanged, config/status/HEAD unchanged. No main authored file is modified.
+
+Linked focused91/91 and ordinary real Git fixture91/91 PASS/native0, including original five5/5 without skips. Ordinary fixture copies the same repaired cases and their unchanged domain dependencies into an OS-private Git directory; it is not a clone or substitute for the actual linked-worktree gate. Malformed gitfile and missing-repository resolution both fail closed with native128/stderr. H1/H2 exact existing standalone tests29/29 PASS/native0, with immutable-byte and accepted PNG SHA assertions unchanged. PRE-T11-U01 PASS2867.919ms, assertions/5000ms timeout/production converters untouched. Typecheck and lint PASS/native0. Full Vitest, unchanged verify.ps1, post-run historical checks and review pending.
+
+Historical PRE-T11-U01 timeout root cause: UNKNOWN. H4 PASS would not explain5736/6452ms historical failures. H1/H2/H3 counters1/2/1 each /10; H4 authored1/10; M15 7/10; Repair8 NOT STARTED. Fresh-session review NOT RUN; owner acceptance PENDING; deployment NOT RUN.
+## HARNESS-H4 repair2 — 2026-10-08 03:16:05 +08:00
+
+First full Vitest FAIL/native1:1377PASS/1FAIL of1378; REG-M8-096 tests/unit/m8Contract.test.ts:62 expected66files, received67. Cause hypothesis: new H4 test placement under tests/harness was incorrectly included in the frozen M8 file inventory. Targeted correction moves identical tests to the existing post-M8 tests/m10 harness-maintenance namespace. No accepted assertion/count/filter/setup or product change; this is an authored H4 regression, not an unrelated defect. Original full native stdout/stderr/JSON retained unchanged. H4 cumulative2/10; first authored repair1 plus placement repair2. Affected REG-M8-096/new cases, full Vitest and unchanged verify.ps1 pending. PNG passed1652.610ms in failed run; historical timeout root cause UNKNOWN. H1/H2/H3 remain1/2/1; M15 7/10; Repair8 NOT STARTED.
+
+## HARNESS-H4 technical gates PASS — 2026-10-08 03:42:59 +08:00
+
+HARNESS_H4_GIT_WORKTREE_COMPATIBILITY_VERIFIED. H4 cumulative2/10 (first authored worktree repair1, new-test placement repair2); H1/H2/H3 remain1/2/1 each /10, M15 7/10; M15 Repair8 NOT STARTED. Linked and ordinary focused suites91/91 each, original five5/5 each without skips; final full pre-M15 Vitest1378/1378 PASS/native0, targetPRE-T11-U01 2601.375ms. Standalone target2867.919ms PASS, original5000ms/assertions/converters unchanged. Unchanged verify.ps1 PASS/native0,1378Vitest/291Chromium, all independentM1-M8 preservation including956Vitest/44Chromium M8. H1/H2 standalone29/29 PASS; exact two-file publishedH1 identity PASS; H2 immutable690/690working/index SHA PASS (342raw text/348binary), changed0. Historical16,475/16,475 hashes PASS after exact H1 archived/restored41generated variants once; no retry or restoration-semantics change. Main19,580file hashes/index/config/HEAD/status unchanged,840staged/untracked0. Product/gameplay/animation/dependency/timeout changes NONE. Historical PNG timeout root cause UNKNOWN; H4 does not establish its cause. Original H4 full1377PASS/1FAIL and private preparation errors retained. Same-session review/publication checks pending; genuinely fresh-session review NOT RUN, owner acceptance PENDING; commit/push pending. WAITING FOR OWNER AUTHORIZATION TO INTEGRATE H4 INTO M15 AND RUN ONE FINAL MAIN-TREE VERIFY. M16 NOT STARTED; deployment NOT RUN. [H4 evidence](HARNESS_H4_GIT_WORKTREE.md).
+
+## HARNESS-H4 review/publication readiness — 2026-10-08 03:50:08 +08:00
+
+HARNESS_H4_GIT_WORKTREE_COMPATIBILITY_VERIFIED; authored repairs2/10. Same-session specification/design/diff/tests/real evidence review PASS, frozen257executable files; product/PNG/verify/dependency/configuration diff NONE. Ordinary fixture and final H4 test sources byte-identical; all gzip archives verified against raw source SHA and98native generated files independently extracted byte-exact. Affected documentation tests9/9 PASS/native0. Privacy-final PASS/native0: 401files/findings0/exclusions0; scanner patterns unchanged, detailed result and collector receipt now use distinct paths. Earlier private capture collision retained: first scan PASS387files/findings0, detailed first result NOT PRESERVED after wrapper filename collision; original stdout/stderr/wrapper receipt/driver and diagnosis remain. No unavailable evidence is fabricated. Prior private inventory-buffer and Windows-module-loader preparation errors also remain. These private capture fixes change no repository-authored code or H1/H2 behaviour; H4 count stays2/10. H1/H2/H3/M15=1/2/1/7 each /10; M15 Repair8 NOT STARTED. Genuinely fresh-session review NOT RUN, owner acceptance PENDING. Normal H4 commit/push pending; no main integration, M16 or deployment.
+
+## HARNESS-H4 publication repair3 — 2026-10-08 03:55:25 +08:00
+
+First staged whitespace check FAIL/native2: docs/HARNESS_H4_GIT_WORKTREE.md:51 new blank line at EOF. Falsifiable cause: task-document here-string append adds an extra final blank line. Targeted authored correction removes only that blank line and retains one final newline. H4 cumulative3/10; no code/test/dependency/runtime/PNG or accepted assertion change. First finding retained in repair3 record; affected staged whitespace/frozen-code checks pending. Full1378/1378 and unchanged verify.ps1 native0 remain the verified executable version. Publication privacy PASS/native0:516files/findings0/exclusions0. H1/H2/H3/M15 remain1/2/1/7 each /10; M15 Repair8 NOT STARTED. Owner acceptance PENDING; fresh-session review NOT RUN; no main integration, M16 or deployment.
