@@ -1,0 +1,268 @@
+{
+  "task": "M15-CLOSURE",
+  "at": "2026-10-08 13:57:43 +08:00",
+  "status": "IMPLEMENTED / VERIFIED / COMMITTED / PUSHED",
+  "ownerAcceptance": "ACCEPTED",
+  "freshSessionReview": "PASS; current new conversation independently reviewed unchanged M15",
+  "findings": {
+    "BLOCKER": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "primaryClosureCommit": "39b359b5d9547959e6b1d78a1479dde67005073a",
+  "branch": "main",
+  "tracking": "39b359b5d9547959e6b1d78a1479dde67005073a",
+  "liveRemote": "39b359b5d9547959e6b1d78a1479dde67005073a",
+  "ahead": 0,
+  "behind": 0,
+  "workingTree": "CLEAN",
+  "untracked": 0,
+  "observedBeforeReceiptWrite": true,
+  "repairs": {
+    "M15-CLOSURE": "1/10",
+    "M15": "7/10",
+    "M15Repair8": "NOT STARTED",
+    "H1": "1/10",
+    "H2": "4/10",
+    "H3": "1/10",
+    "H4": "3/10"
+  },
+  "firstClosureFailure": {
+    "status": "FAIL",
+    "exitCode": 1,
+    "cause": "Dependent historical-PNG check ran before H1 restoration completed; generated and original SHA independently matched",
+    "preserved": true
+  },
+  "historicalPngTimeoutRootCause": "UNKNOWN",
+  "timeoutMs": 5000,
+  "assertionChanges": false,
+  "productChanges": false,
+  "gates": {
+    "a-units": {
+      "start": "2026-10-08T05:23:41.191Z",
+      "finish": "2026-10-08T05:23:51.301Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m16-batch/20261008-131935/focused-units.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-units.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "d8c925858e456157a1f1f03f7cbbc3e3322eb07936a9750652b22563a522c116"
+    },
+    "a-browser": {
+      "start": "2026-10-08T05:24:36.104Z",
+      "finish": "2026-10-08T05:26:04.059Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m16-batch/20261008-131935/focused-browser.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-browser.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "4fb3dd6790c2ace9de27d8372da837c4afb970c694175d920c43093a4745cae4"
+    },
+    "a-audit": {
+      "start": "2026-10-08T05:26:52.359Z",
+      "finish": "2026-10-08T05:26:53.579Z",
+      "command": "node",
+      "args": [
+        ".git/m16-batch/20261008-131935/review-audit.mjs"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-audit.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "670b06b9c3d056a056bc2b6e3bf2ae1795190bc6abd383e72c8c73c647427883"
+    },
+    "a-publication": {
+      "start": "2026-10-08T05:25:57.283Z",
+      "finish": "2026-10-08T05:26:47.616Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m16-batch/20261008-131935/publication.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-publication.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "8e6722878e3b1cd1dadf143236a188abb8046aa41617870df33f0c644e280ad4"
+    },
+    "a-unified": {
+      "start": "2026-10-08T05:27:19.122Z",
+      "finish": "2026-10-08T05:49:15.023Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/verify.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-unified.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "70487223d0f8e7f8227d9c4bc33cc581d12cdc6c9fcb7cab9487390634e6c6de"
+    },
+    "a-restoration": {
+      "start": "2026-10-08T05:49:26.674Z",
+      "finish": "2026-10-08T05:50:14.847Z",
+      "command": "node",
+      "args": [
+        ".git/m16-batch/20261008-131935/preserve.mjs",
+        "restore",
+        "a-unified"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-restoration.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "b2012e9904f0c7176b7beacbed92d63d76a4c4d6e269e5617f3866fb25705f66"
+    },
+    "a-harness-repair1": {
+      "start": "2026-10-08T05:51:52.286Z",
+      "finish": "2026-10-08T05:51:58.794Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m16-batch/20261008-131935/harness.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-harness-repair1.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "398faf88c9f54083606f3864ee4cfbb6a371762394969ec15d86aeb2ce1f08b9"
+    },
+    "a-privacy": {
+      "start": "2026-10-08T05:54:08.258Z",
+      "finish": "2026-10-08T05:54:09.180Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m16-batch/20261008-131935/privacy.ps1"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-privacy.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ],
+      "logSha256": "ed84bc9d42758c04d0cbb7d595b73a9b6e038e080e0a3cc541fa18750a6ca7b0"
+    },
+    "a-final-audit": {
+      "start": "2026-10-08T05:54:30.062Z",
+      "finish": "2026-10-08T05:54:31.210Z",
+      "command": "node",
+      "args": [
+        ".git/m16-batch/20261008-131935/final-audit.mjs"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-final-audit.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "e1174e837614e464e0d2a66ae49e4d34d76bc19cb24cd5fbef297fbed281368d"
+    },
+    "a-staged-publication": {
+      "start": "2026-10-08T05:54:31.324Z",
+      "finish": "2026-10-08T05:55:32.805Z",
+      "command": "node",
+      "args": [
+        "scripts/verify-evidence-publication.mjs"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-staged-publication.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "78c284e03ca9c9841857976d09154ae8c4ec602411bee812212954bba6778b15"
+    },
+    "a-commit": {
+      "start": "2026-10-08T05:56:12.785Z",
+      "finish": "2026-10-08T05:56:12.993Z",
+      "command": "git",
+      "args": [
+        "commit",
+        "-m",
+        "Close M15 with owner acceptance and fresh technical review"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-commit.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "7f7723faf743e6b599da2d48fc9e9e52a5cea2db10e01d04c2e2243069f740fd"
+    },
+    "a-push": {
+      "start": "2026-10-08T05:56:13.122Z",
+      "finish": "2026-10-08T05:56:16.917Z",
+      "command": "git",
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "log": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\.git\\evidence-capture\\m16-20261008-131935-a-push.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [],
+      "logSha256": "c0401401df44d2a6679e1217dc7c2b47c07bc37ea4a96cd75e61a1b2c5726e2e"
+    }
+  },
+  "M16": "NOT STARTED; conditionally authorized after this receipt normal publication and clean parity",
+  "M16OwnerAcceptance": "PENDING",
+  "deployment": "NOT RUN"
+}

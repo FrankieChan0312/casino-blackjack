@@ -1,3 +1,7 @@
+## M15 verified closure publication — 2026-10-08 13:57:43 +08:00
+
+M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. Fresh-session technical review and all required product/documentation/privacy/publication gates PASS/native0; unchanged full verify.ps1 exactly once,1410Vitest/321Chromium/independent M1–M8 preservation. Primary closure commit 39b359b5d9547959e6b1d78a1479dde67005073a normally pushed origin/main/native0; observed local=tracking=live,0/0,CLEAN/untracked0 before this factual receipt. [Exact closure receipt](M16_EVIDENCE/20261008-131935/m15-closure/publication.json). Closure repairs1/10; M15=7/10,Repair8 NOT STARTED; H1/H2/H3/H4=1/4/1/3 each /10. First closure-ordering FAIL retained; historical PNG timeout cause UNKNOWN;5000ms/assertions and accepted40ms/110ms timings unchanged. This receipt's own SHA is resolved from Git after its normal push. M16-T01–T05 NOT STARTED; conditional execution may begin only after receipt clean parity; M16 human visual acceptance PENDING; M17/multiplayer NOT STARTED; deployment NOT RUN. Earlier dated pending/failed checkpoints remain historical.
+
 # M15 final owner acceptance and fresh-session technical review
 
 Task: M15-CLOSURE. Started 2026-10-08 13:19:35 +08:00.

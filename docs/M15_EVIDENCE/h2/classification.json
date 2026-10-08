@@ -5,7 +5,7 @@
   "initialStagedPaths": 679,
   "initialUntrackedPaths": 58,
   "counts": {
-    "AUTHORED_TEXT": 85,
+    "AUTHORED_TEXT": 86,
     "RAW_IMMUTABLE_EVIDENCE": 596,
     "BINARY_ASSET": 403,
     "UNKNOWN": 0
@@ -8991,38 +8991,22 @@
       "byteExactPreservationRequired": true,
       "preH2Sha256": null,
       "publicationSha256": "ecee5f4d7ab1669cb9852d4e9d05e6da016deef9fb10a42c68aea21fa6268108"
+    },
+    {
+      "path": "docs/M16_EVIDENCE/20261008-131935/m15-closure/publication.json",
+      "category": "AUTHORED_TEXT",
+      "provenance": "Owner-authorized M15-CLOSURE, new run 20261008-131935",
+      "reason": "Editable closure documentation or current publication metadata; ordinary checked text diff",
+      "byteExactPreservationRequired": false,
+      "preH2Sha256": null
     }
   ],
   "baselineHead": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
   "closureSupplement": {
     "task": "M15-CLOSURE",
-    "at": "2026-10-08T05:54:10.421Z",
+    "at": "2026-10-08T05:58:23.036Z",
     "additions": [
-      "docs/M15_FINAL_CLOSURE.md",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/.gitattributes",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-audit.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-audit.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-browser.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-browser.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-harness-first-fail.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-harness-first-fail.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-harness-repair1.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-harness-repair1.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-publication.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-publication.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-restoration.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-restoration.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-unified.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-unified.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-units.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/a-units.txt.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/historical-restoration.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/index.md",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/manifest.json",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/native-performance-1280.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/native-performance-320.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/pair-oracle.json.gz",
-      "docs/M16_EVIDENCE/20261008-131935/m15-closure/shoe-oracle.json.gz"
+      "docs/M16_EVIDENCE/20261008-131935/m15-closure/publication.json"
     ],
     "originalEntryDefinitions": "Preserved unchanged"
   }
