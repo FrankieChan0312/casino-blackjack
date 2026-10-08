@@ -1,3 +1,7 @@
+## M15 verified main publication — 2026-10-08 12:57:50 +08:00
+
+M15_BACCARAT_SHOE_AND_PAIRS_IMPLEMENTED_VERIFIED / COMMITTED / PUSHED on main at 9d513af27bd3e2f5a8813ca68faa2c6285332074; normal push native0, observed local/tracking/live parity0/0,CLEAN/untracked0. [Actual publication and executed evidence](../HARNESS_H2_R4_EVIDENCE/outcome.json). This documentation receipt retains the completed primary publication; resolve the receipt's own SHA from the Git commit containing it. All executable inputs remain identical to the single passed unchanged verify.ps1 run. H1/H2/H3/H4=1/4/1/3 each /10; M15=7/10; Repair8 NOT STARTED. M15 HUMAN VISUAL ACCEPTANCE: PENDING; fresh-session review NOT RUN. WAITING FOR OWNER VISUAL ACCEPTANCE OF PAIR BETS / CUT CARD / NEW SHOE. M16 NOT STARTED; deployment NOT RUN. Earlier dated pending/failed states retain their observed history.
+
 ## M15 technical closure after H2 Repair 4 — 2026-10-08 12:52:23 +08:00
 
 **M15_BACCARAT_SHOE_AND_PAIRS_IMPLEMENTED_VERIFIED**. Owner-authorized URL import and new task-contract EOF correction only. A–F PASS/native0: scoped lint; H1/H2/streaming35 and H4 focused91; original900raw/binary working/index SHA unchanged; real68.38MiB archives; complete publication N; unchanged verify.ps1 exactly once. Final main Vitest1410/1410, Chromium321/321, independent accepted M1–M8 preservation PASS. Original product, PNG/assertions/5000ms timeout, runtime/animation timings and all historical evidence remain preserved. [Current closure and proof](../HARNESS_H2_REPAIR4.md).

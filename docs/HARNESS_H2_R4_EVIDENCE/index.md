@@ -5,3 +5,7 @@ M15_BACCARAT_SHOE_AND_PAIRS_IMPLEMENTED_VERIFIED. [Executed outcome](outcome.jso
 A–F PASS/native0. Scoped lint; H1/H2/streaming35 and H4 focused91; original900raw/binary changed0; real68.38MiB archives; complete N; unchanged verify.ps1 exactly once. Full Vitest1410/1410, Chromium321/321, independent M1–M8 preservation PASS. PNG5000ms unchanged/PASS; individual duration not emitted, no timing rerun, historical root UNKNOWN. Native performance20fresh samples<=2500ms. H1 restoration preserves generated variants privately and restores17,038original outputs exactly. Previous failures/raw archives remain intact.
 
 Publication PENDING final documentation/evidence gates and normal commit/push. H1/H2/H3/H4=1/4/1/3 each /10; M15=7/10; Repair8 NOT STARTED. Same-session review PASS; fresh-session review NOT RUN. Human visual acceptance PENDING; M16 NOT STARTED; deployment NOT RUN.
+
+## Normal main publication — 2026-10-08 12:57:50 +08:00
+
+Primary 9d513af27bd3e2f5a8813ca68faa2c6285332074 committed/pushed with native0; observed local/tracking/live parity0/0,CLEAN/untracked0. [Current factual receipt](outcome.json). The receipt checkpoint contains only factual documentation/evidence; executable inputs stay identical to the one passed verify.ps1 run. Its final SHA is returned after normal receipt push. Human visual acceptance PENDING; M16 NOT STARTED; deployment NOT RUN.

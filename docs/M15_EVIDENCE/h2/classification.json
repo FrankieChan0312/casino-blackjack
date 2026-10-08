@@ -6,7 +6,7 @@
   "initialUntrackedPaths": 58,
   "counts": {
     "AUTHORED_TEXT": 81,
-    "RAW_IMMUTABLE_EVIDENCE": 551,
+    "RAW_IMMUTABLE_EVIDENCE": 575,
     "BINARY_ASSET": 403,
     "UNKNOWN": 0
   },
@@ -8554,6 +8554,222 @@
       "byteExactPreservationRequired": true,
       "preH2Sha256": null,
       "publicationSha256": "864bf90103d19f63b29d356f6ab19143718dcb214547d32556aed752fac45f69"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-whitespace.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "37d57eda6a16abb488439dd1fc70c6a1def7610a8c673ec3adbd7bacf61ff5b1"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-whitespace.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-whitespace.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-publication.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "a7cf753d732ee89f6befdc24b84fcaa889dcbe87fbcf31749639f77331e3cb7b"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-publication.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "e08b656b3cbffbcf1fe36ddaf84f017ba93094ec6f4d514d79fc4f21a24a93a2"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/final-publication.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/precommit.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "7433256a3d862a2d6a3a465eedeb170851473c814536f0e42a258408a6ec064b"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/precommit.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "a504a914a6feeb5aef8720214a84c6b94bb4136c9dd0de9ec43a0aaddc1d0e9f"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/precommit.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-commit.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "44fbacdac72956c32995dc932b490485718d3c247f36ed494a1a8b930b44d53e"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-commit.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "c3dea216657875fd3d56b576241981aecdeaf99a1cadafec80ed1a04108337ac"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-commit.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-push.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "455f6a3f3f53d400f3320768f93fa32a90973d5522a3ef0ac317099bf8c78f9a"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-push.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-push.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "e7b4748aba0fbdd5ac983426fc4d533747266217de8a0bb640c25526419bbf64"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/primary-publication.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "caba29c6d9ca59d84d2c6074a7671b2d5293fab1e7c43742f87837349b7d1ef3"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-audit.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "e50c44a3f76ce8bcd462e01d35cdcd8f29c252cfb5736a5d59233160cdea5356"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-audit.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "053510a97420286cc709a9955dad8cf3bca76e0df206cc7e8733d3a64bf5e1de"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-audit.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/audit-receipt.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "766a6d688b1b3962348f3535661520314e6842e78ed5ac1d1d3586285fcf36f0"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-privacy.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "fdf17b39461723138e2746d236bddd1335c76a5d167815790f61ca4526687cf3"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-privacy.stdout.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9dae10bd291079769fa33b61b8a3a53a4325d2902c8fc6422a57361b9baf5aec"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/receipt-privacy.stderr.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63"
+    },
+    {
+      "path": "docs/HARNESS_H2_R4_EVIDENCE/privacy-native-receipt.json.gz",
+      "category": "RAW_IMMUTABLE_EVIDENCE",
+      "provenance": "Exact closed owner-authorized H2 Repair4 native execution or baseline; lossless gzip and SHA256",
+      "reason": "Preserve raw bytes and original failure history without normalization",
+      "byteExactPreservationRequired": true,
+      "preH2Sha256": null,
+      "publicationSha256": "e9e47d5bab9316e13f558977a9ad67732e8add28aa4a99e8e9580f5ba7736ecb"
     }
   ],
   "baselineHead": "507d6d53b529f38b4510a8b488ed272216c0f5a9"
