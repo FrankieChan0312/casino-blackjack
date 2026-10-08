@@ -1,13 +1,12 @@
 import { expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { createBaccaratController } from '../../src/baccarat/controller.js';
-import { createBaccarat } from '../../src/baccarat/domain/engine.js';
 import { replay } from '../../src/baccarat/domain/replay.js';
 import { baccaratFacts } from '../../src/baccarat/presentation/facts.js';
 import { createBaccaratPresentationRuntime } from '../../src/baccarat/presentation/runtime.js';
 import { consumePresentation } from '../../src/ui/PresentationProvider.js';
 import type { PresentationEvent } from '../../src/presentation/events.js';
-import { ordered } from './fixtures.js';
+import { ordered, createLegacyBaccarat as createBaccarat } from './fixtures.js';
 
 function controller(numbers = [5,5,0,0,4,2]) {
   const value = createBaccaratController(createBaccarat(77,100000,ordered(numbers)));

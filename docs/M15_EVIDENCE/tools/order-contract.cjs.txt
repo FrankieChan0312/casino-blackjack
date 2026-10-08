@@ -1,0 +1,19 @@
+const fs=require('node:fs');
+const file='docs/M15_BACCARAT_SHOE_AND_PAIRS.md',text=fs.readFileSync(file,'utf8');
+const marker='# M15 — Baccarat Shoe Lifecycle + Player/Banker Pair';
+const start=text.indexOf(marker);
+if(start<0)throw Error('M15 contract title missing');
+const ledger=text.slice(0,start),body=text.slice(start).replace('## Evidence and delivery','## Initial delivery record (superseded by current status)');
+const line=body.indexOf('\n');
+const current=`
+
+## Current status
+
+**M15_BACCARAT_SHOE_AND_PAIRS_BLOCKED** — IMPLEMENTED, not VERIFIED or ACCEPTED. Repair count **5/10**. Commit/push **NOT RUN** under the owner's all-gates-PASS condition. Human Visual Acceptance **PENDING**; genuinely fresh-session review **NOT RUN**.
+
+The latest complete full-Vitest execution has1405 passing tests and one frozen generic Dealer test exceeding its original5000ms deadline (5736ms). Repair5's affected run has19/20 passing tests and the same deadline failure at5369ms. General/headless compile, lint, build, fixture guards, focused161 tests, independent shoe/rank validators and the frozen-baseline v1 cross-check passed. Full unified gates were stopped after retaining their native failures; no complete unified PASS is claimed. The two scheduling experiments did not establish an acceptable fix; stop repairs rather than rerun until green. All accepted Blackjack inputs, assertions, asset bytes, deadlines and worker configuration remain unchanged.
+
+Standalone complete Chromium and independent M1–M8 preservation results, final privacy/assets/docs/diff reviews are pending collection. Their results will be added to this current record when actually executed. The [evidence index](M15_EVIDENCE/index.md) and [fifteen-category gallery](M15_EVIDENCE/visual/index.md) preserve successes and failures separately. M16 roadmaps/multiplayer **NOT STARTED**; deployment **NOT RUN**.
+`;
+fs.writeFileSync(file,body.slice(0,line)+current+body.slice(line)+'\n## Timestamped execution ledger (newest first)\n\n'+ledger);
+console.log(JSON.stringify({status:'PASS',scope:'New M15 document only; every previous execution record preserved'}));

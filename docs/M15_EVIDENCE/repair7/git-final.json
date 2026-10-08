@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-07T04:17:21.307Z",
+  "branch": "main",
+  "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+  "status": "M15_BLOCKED_AFTER_REPAIR_7_OTHER",
+  "repairCount": 7,
+  "dirtyTracked": 25,
+  "untracked": 200,
+  "previousFilesChecked": 212,
+  "permittedChanges": [
+    "vite.config.ts",
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/M15_BACCARAT_SHOE_AND_PAIRS.md",
+    "docs/M15_EVIDENCE/index.md",
+    "docs/M15_EVIDENCE/manifest.json"
+  ],
+  "unexpectedChanges": [],
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "watcher": "PASS",
+  "typecheck": "BLOCKED before child execution",
+  "remainingProductLadder": "NOT RUN",
+  "finalEvidencePrivacy": "PASS:19files/0findings",
+  "humanVisualAcceptance": "PENDING"
+}

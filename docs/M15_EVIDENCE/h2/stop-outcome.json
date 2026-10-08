@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-08 02:08:48 +08:00",
+  "status": "M15_BLOCKED_AFTER_H2",
+  "stopOnlyIntegrity": {
+    "status": "PASS",
+    "nativeExit": 0,
+    "stagedSnapshot": 835,
+    "authored": 54,
+    "raw": 380,
+    "binary": 401,
+    "unknown": 0,
+    "preH2ByteIdentical": 690,
+    "changed": 0,
+    "incomingFilesRetained": 19160,
+    "frozenInputs": 270,
+    "exactH1Files": 2,
+    "originalDocumentSuffixes": "PASS",
+    "linksHashes": "PASS",
+    "privacy": {
+      "files": 1100,
+      "traceTextEntries": 20,
+      "findings": 0,
+      "rawSha256": "6047412411e400a4e8ce938442ae415018d1dc79e127dcfb2a59f88f3b3910ab"
+    }
+  },
+  "requiredUnified": {
+    "status": "FAIL",
+    "nativeExit": 1,
+    "firstFailure": "PRE-T11-U01 generic PNG timeout6452ms >5000ms",
+    "rootCause": "UNKNOWN"
+  },
+  "repairs": {
+    "H1": 1,
+    "H2": 2,
+    "M15": 7,
+    "Repair8": "NOT STARTED"
+  },
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "humanVisualAcceptance": "PENDING",
+  "next": "WAITING FOR OWNER DECISION ON RECURRENT HISTORICAL PNG TIMEOUT",
+  "M16": "NOT STARTED",
+  "multiplayer": "NOT STARTED",
+  "deployment": "NOT RUN"
+}

@@ -1,0 +1,27 @@
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain (exit 0)
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint (exit 0)
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 502 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-D3wKiMW6.css   52.56 kB │ gzip:  10.31 kB
+dist/assets/index-DAWKyLNY.js   406.25 kB │ gzip: 121.93 kB
+
+✓ built in 540ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build (exit 0)
+PASS: Baccarat headless typecheck (exit 0)

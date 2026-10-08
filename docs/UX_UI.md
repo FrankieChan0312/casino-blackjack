@@ -1,3 +1,6 @@
+## Authorized M15 Baccarat shoe and Pair amendment — 2026-10-07 09:42:13 +08:00
+
+The owner's M15 request authorizes [shoe lifecycle, Player/Banker Pair, scope/acceptance and approved implementation](M15_BACCARAT_SHOE_AND_PAIRS.md). This supersedes the historical M12 no-burn/no-cut/multiple-main choices only for the M15 profile. Default eight decks, indicator plus additional burn, Casino Project cut reserve 14, six-card safety, finish/settle before replacement, one main plus optional independent rank pairs at 11:1 profit. Version-1 replay/regression retains its explicit historical profile. Completed history has shoe/round IDs, totals/winner/tie/pair flags; no roadmap coordinates. M11/M13/M14 owner visual acceptance ACCEPTED per the current request; M15 human visual acceptance PENDING. Blackjack V1 ACCEPTED / FROZEN; M16 roadmaps and multiplayer NOT STARTED; deployment NOT RUN. Dated records below retain their historical scope/status.
 ## Authorized M14 observational Baccarat animation — 2026-10-07 04:16:32 +08:00
 
 [Presentation scope, acceptance, approved reuse and verification](BACCARAT_PRESENTATION.md) replaces only M13 static dealing with observation of committed authority. Protected Blackjack and Baccarat domain remain unchanged. Human visual acceptance PENDING; no M15/multiplayer/deployment.

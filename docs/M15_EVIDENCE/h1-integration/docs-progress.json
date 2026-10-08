@@ -1,0 +1,315 @@
+{
+  "timestamp": "2026-10-08 00:17:52 +08:00",
+  "status": "IN PROGRESS",
+  "changes": [
+    {
+      "file": "docs/STATE.md",
+      "previousSha256": "cd47625ddc520da68043977ebf17a2275955a1d5c231726690800df71f573d06",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "docs/PLAN.md",
+      "previousSha256": "612ddab0011d8c3d62587d67525d132eea1fa3f93a50e2d1303b613012fd041e",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "docs/DEVELOPMENT_LOG.md",
+      "previousSha256": "ab2edd6fcf161b00504fc95ea7aaf511e7dadb8a41fe56942e2bd0c233468c9c",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "docs/LAB_MANUAL.md",
+      "previousSha256": "c7127928531c3fedd3de1d1e9030d57d839acb915ed939280a46938e6821ab86",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "docs/M15_BACCARAT_SHOE_AND_PAIRS.md",
+      "previousSha256": "54d1400e4a6c45cc43bf82aaf1ea2da779ff53c3c7296cf20abf1741034cbe01",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "docs/M15_EVIDENCE/index.md",
+      "previousSha256": "ec63f75b26c8aedb66adfaf30f2ca7630184783d530435253b3825a6bc2eb58a",
+      "originalBodyRetained": true
+    },
+    {
+      "file": "README.md",
+      "previousSha256": "aa1e7f18b728cd73a936589360f86946e1cb20f78c336e4436273de24f946a65",
+      "originalBodyRetained": true
+    }
+  ],
+  "rows": [
+    {
+      "name": "A typecheck",
+      "label": "m15-h1-a-typecheck",
+      "start": "2026-10-07T15:48:50.460Z",
+      "finish": "2026-10-07T15:48:59.449Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/a-typecheck.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-a-typecheck.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "B focused unit",
+      "label": "m15-h1-b-focused-unit",
+      "start": "2026-10-07T15:49:03.977Z",
+      "finish": "2026-10-07T15:49:07.462Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/b-focused-unit.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-b-focused-unit.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "B focused browser",
+      "label": "m15-h1-b-focused-browser",
+      "start": "2026-10-07T15:49:12.866Z",
+      "finish": "2026-10-07T15:50:06.826Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/b-focused-browser.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-b-focused-browser.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "C shoe validator",
+      "label": "m15-h1-c-shoe-validator",
+      "start": "2026-10-07T15:51:03.007Z",
+      "finish": "2026-10-07T15:51:04.901Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/c-shoe-validator.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-c-shoe-validator.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "D pair validator",
+      "label": "m15-h1-d-pair-validator",
+      "start": "2026-10-07T15:51:04.971Z",
+      "finish": "2026-10-07T15:51:06.481Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/d-pair-validator.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-d-pair-validator.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "E full Vitest once",
+      "label": "m15-h1-e-full-vitest",
+      "start": "2026-10-07T15:51:06.553Z",
+      "finish": "2026-10-07T15:51:30.220Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/e-full-vitest.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-e-full-vitest.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "F full Chromium once",
+      "label": "m15-h1-f-full-chromium",
+      "start": "2026-10-07T15:51:37.501Z",
+      "finish": "2026-10-07T16:09:57.444Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/f-full-chromium.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-f-full-chromium.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "G Blackjack preservation",
+      "label": "m15-h1-g-blackjack-preservation",
+      "start": "2026-10-07T16:11:16.096Z",
+      "finish": "2026-10-07T16:13:10.457Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/g-blackjack-preservation.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-g-blackjack-preservation.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "H Baccarat preservation",
+      "label": "m15-h1-h-baccarat-preservation",
+      "start": "2026-10-07T16:14:26.013Z",
+      "finish": "2026-10-07T16:14:32.402Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/h-baccarat-preservation.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-h-baccarat-preservation.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "I historical hashes",
+      "label": "m15-h1-i-historical-preservation",
+      "start": "2026-10-07T16:14:32.471Z",
+      "finish": "2026-10-07T16:15:16.310Z",
+      "command": "node",
+      "args": [
+        ".git/m15/h1-integration/verify-history.cjs",
+        "gate-i"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-i-historical-preservation.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": []
+    },
+    {
+      "name": "J assets / lint / build",
+      "label": "m15-h1-j-assets",
+      "start": "2026-10-07T16:16:00.482Z",
+      "finish": "2026-10-07T16:16:43.358Z",
+      "command": "powershell.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        ".git/m15/h1-integration/j-assets.ps1"
+      ],
+      "log": ".git\\evidence-capture\\m15-h1-j-assets.txt",
+      "status": "PASS",
+      "exitCode": 0,
+      "signal": null,
+      "outputClosed": true,
+      "resetModuleVariables": [
+        "PSModulePath"
+      ]
+    },
+    {
+      "name": "K privacy",
+      "label": "m15-h1-k-privacy",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "L responsive / accessibility",
+      "label": "m15-h1-l-responsive-accessibility",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "M bounded performance",
+      "label": "m15-h1-m-performance",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "N docs / publication / staged",
+      "label": "m15-h1-n-docs-staged",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "O unchanged verify.ps1",
+      "label": "m15-h1-o-unified",
+      "status": "NOT RUN",
+      "exitCode": null
+    }
+  ],
+  "repairCounts": {
+    "HARNESS_H1": "1/10",
+    "M15": "7/10",
+    "Repair8": "NOT STARTED"
+  }
+}

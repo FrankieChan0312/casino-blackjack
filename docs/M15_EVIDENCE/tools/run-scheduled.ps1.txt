@@ -1,0 +1,23 @@
+param([ValidateSet('affected','unified')][string]$Mode)
+$ErrorActionPreference='Stop'
+$m15Root='C:\Users\user\Documents\GitHub\casino-blackjack'
+if((Get-Location).Path -ne $m15Root){throw 'Incorrect M15 repository'}
+$m15OldOptions=$env:NODE_OPTIONS
+$m15OldLog=$env:M15_PRIORITY_LOG
+$m15Label="m15-repair5-$Mode"
+$env:M15_PRIORITY_LOG=Join-Path $m15Root ".git\m15\$m15Label-priority.jsonl"
+if(Test-Path -LiteralPath $env:M15_PRIORITY_LOG){throw 'Scheduling receipt already exists; no implicit rerun'}
+$env:NODE_OPTIONS=(@($m15OldOptions,'--require="C:/Users/user/Documents/GitHub/casino-blackjack/.git/m15/priority.cjs"') | Where-Object {$_}) -join ' '
+$m15NativeExit=1
+try {
+ if($Mode -eq 'affected'){
+  & node scripts/collect-evidence.mjs $m15Label powershell.exe -NoProfile -ExecutionPolicy Bypass -File .git/m15/repair5-affected.ps1
+ }else{
+  & node scripts/collect-evidence.mjs $m15Label powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1
+ }
+ $m15NativeExit=$LASTEXITCODE
+}finally{
+ $env:NODE_OPTIONS=$m15OldOptions
+ $env:M15_PRIORITY_LOG=$m15OldLog
+}
+exit $m15NativeExit

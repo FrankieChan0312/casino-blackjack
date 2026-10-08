@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-08 01:21:48 +08:00",
+  "task": "HARNESS-H2",
+  "cycle": 1,
+  "maximum": 10,
+  "firstFailure": "m15-h2-focused / native exit1; authored performance-summary.json text unset",
+  "hypothesis": "Unanchored basename rules recursively match nested authored files; leading slash confines every rule to its exact inventory path",
+  "fix": "Anchor each generated attribute path; add an isolated same-basename authored JSON regression",
+  "verification": "Pending focused rerun",
+  "M15": "7/10",
+  "Repair8": "NOT STARTED"
+}

@@ -1,0 +1,943 @@
+{
+  "at": "2026-10-07T04:12:20.060Z",
+  "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+  "branch": "main",
+  "status": "M README.md\n M casino-tests/baccarat/controller.test.tsx\n M casino-tests/baccarat/engine.test.ts\n M casino-tests/baccarat/fixtures.ts\n M casino-tests/baccarat/presentation.test.ts\n M casino-tests/baccarat/replay.test.ts\n M docs/BACCARAT_RULES.md\n M docs/DESIGN.md\n M docs/DEVELOPMENT_LOG.md\n M docs/LAB_MANUAL.md\n M docs/PLAN.md\n M docs/RULES.md\n M docs/SPEC.md\n M docs/STATE.md\n M docs/UX_UI.md\n M src/baccarat/BaccaratTable.tsx\n M src/baccarat/baccarat.css\n M src/baccarat/controller.ts\n M src/baccarat/domain/engine.ts\n M src/baccarat/domain/replay.ts\n M src/baccarat/domain/rules.ts\n M src/baccarat/domain/shoe.ts\n M src/baccarat/presentation/facts.ts\n M tests/browser/baccaratFixtures.ts\n?? casino-tests/baccarat/m15Fixtures.ts\n?? casino-tests/baccarat/m15Integrity.test.tsx\n?? casino-tests/baccarat/m15Pairs.test.ts\n?? casino-tests/baccarat/m15Shoe.test.ts\n?? casino-tests/baccarat/m15Validator.test.ts\n?? docs/M15_BACCARAT_SHOE_AND_PAIRS.md\n?? docs/M15_EVIDENCE/.gitattributes\n?? docs/M15_EVIDENCE/complete-chromium-failure/.last-run.json\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/test-failed-1.png\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/trace.zip\n?? docs/M15_EVIDENCE/first-gate-inputs.json\n?? docs/M15_EVIDENCE/frozen-inputs.json\n?? docs/M15_EVIDENCE/git-final.json\n?? docs/M15_EVIDENCE/index.md\n?? docs/M15_EVIDENCE/initial-gate-stop.json\n?? docs/M15_EVIDENCE/m15-assets.json\n?? docs/M15_EVIDENCE/m15-assets.txt\n?? docs/M15_EVIDENCE/m15-assets.txt.gz\n?? docs/M15_EVIDENCE/m15-complete-chromium.json\n?? docs/M15_EVIDENCE/m15-complete-chromium.txt\n?? docs/M15_EVIDENCE/m15-complete-chromium.txt.gz\n?? docs/M15_EVIDENCE/m15-final-assets.json\n?? docs/M15_EVIDENCE/m15-final-assets.txt\n?? docs/M15_EVIDENCE/m15-final-assets.txt.gz\n?? docs/M15_EVIDENCE/m15-final-docs.json\n?? docs/M15_EVIDENCE/m15-final-docs.txt\n?? docs/M15_EVIDENCE/m15-final-docs.txt.gz\n?? docs/M15_EVIDENCE/m15-final-privacy.json\n?? docs/M15_EVIDENCE/m15-final-privacy.txt\n?? docs/M15_EVIDENCE/m15-final-privacy.txt.gz\n?? docs/M15_EVIDENCE/m15-final-restoration.json\n?? docs/M15_EVIDENCE/m15-final-restoration.txt\n?? docs/M15_EVIDENCE/m15-final-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-final-unified.json\n?? docs/M15_EVIDENCE/m15-final-unified.txt\n?? docs/M15_EVIDENCE/m15-final-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-first-browser.json\n?? docs/M15_EVIDENCE/m15-first-browser.txt\n?? docs/M15_EVIDENCE/m15-first-browser.txt.gz\n?? docs/M15_EVIDENCE/m15-independent-preservation.json\n?? docs/M15_EVIDENCE/m15-independent-preservation.txt\n?? docs/M15_EVIDENCE/m15-independent-preservation.txt.gz\n?? docs/M15_EVIDENCE/m15-initial-focused.json\n?? docs/M15_EVIDENCE/m15-initial-focused.txt\n?? docs/M15_EVIDENCE/m15-initial-focused.txt.gz\n?? docs/M15_EVIDENCE/m15-initial-restoration.json\n?? docs/M15_EVIDENCE/m15-initial-restoration.txt\n?? docs/M15_EVIDENCE/m15-initial-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair1-backup.json\n?? docs/M15_EVIDENCE/m15-repair1-backup.txt\n?? docs/M15_EVIDENCE/m15-repair1-backup.txt.gz\n?? docs/M15_EVIDENCE/m15-repair2-affected.json\n?? docs/M15_EVIDENCE/m15-repair2-affected.txt\n?? docs/M15_EVIDENCE/m15-repair2-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair3-affected.json\n?? docs/M15_EVIDENCE/m15-repair3-affected.txt\n?? docs/M15_EVIDENCE/m15-repair3-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-affected-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair4-affected.json\n?? docs/M15_EVIDENCE/m15-repair4-affected.txt\n?? docs/M15_EVIDENCE/m15-repair4-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-restoration.json\n?? docs/M15_EVIDENCE/m15-repair4-restoration.txt\n?? docs/M15_EVIDENCE/m15-repair4-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-unified-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair4-unified.json\n?? docs/M15_EVIDENCE/m15-repair4-unified.txt\n?? docs/M15_EVIDENCE/m15-repair4-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-repair5-affected-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair5-affected.json\n?? docs/M15_EVIDENCE/m15-repair5-affected.txt\n?? docs/M15_EVIDENCE/m15-repair5-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair5-restoration.json\n?? docs/M15_EVIDENCE/m15-repair5-restoration.txt\n?? docs/M15_EVIDENCE/m15-repair5-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair6-docs.json\n?? docs/M15_EVIDENCE/m15-repair6-docs.txt\n?? docs/M15_EVIDENCE/m15-repair6-docs.txt.gz\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.json\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.txt\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.txt.gz\n?? docs/M15_EVIDENCE/m15-review-focused.json\n?? docs/M15_EVIDENCE/m15-review-focused.txt\n?? docs/M15_EVIDENCE/m15-review-focused.txt.gz\n?? docs/M15_EVIDENCE/m15-unified.json\n?? docs/M15_EVIDENCE/m15-unified.txt\n?? docs/M15_EVIDENCE/m15-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.json\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.txt\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.txt.gz\n?? docs/M15_EVIDENCE/manifest.json\n?? docs/M15_EVIDENCE/performance-summary.json\n?? docs/M15_EVIDENCE/performance/1791337434772-35576-1280.json\n?? docs/M15_EVIDENCE/performance/1791337469234-35576-320.json\n?? docs/M15_EVIDENCE/performance/1791337735089-30956-1280.json\n?? docs/M15_EVIDENCE/performance/1791337769431-30956-320.json\n?? docs/M15_EVIDENCE/performance/1791339283087-23336-1280.json\n?? docs/M15_EVIDENCE/performance/1791339345824-23336-320.json\n?? docs/M15_EVIDENCE/performance/1791340359753-14424-1280.json\n?? docs/M15_EVIDENCE/performance/1791340394225-14424-320.json\n?? docs/M15_EVIDENCE/privacy-scan.json\n?? docs/M15_EVIDENCE/raw-log-hashes.json\n?? docs/M15_EVIDENCE/repair2-browser-failure/.last-run.json\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/error-context.md\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/test-failed-1.png\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/trace.zip\n?? docs/M15_EVIDENCE/repair4-gate-stop.json\n?? docs/M15_EVIDENCE/repair5-gate-stop.json\n?? docs/M15_EVIDENCE/restoration-final-unified.json\n?? docs/M15_EVIDENCE/restoration-initial-unified.json\n?? docs/M15_EVIDENCE/restoration-repair4-stopped-gate.json\n?? docs/M15_EVIDENCE/restoration-repair5-stopped-gate.json\n?? docs/M15_EVIDENCE/tools/audit.cjs.txt\n?? docs/M15_EVIDENCE/tools/document-review.cjs.txt\n?? docs/M15_EVIDENCE/tools/fault.config.mjs.txt\n?? docs/M15_EVIDENCE/tools/fault.test.tsx.txt\n?? docs/M15_EVIDENCE/tools/final-assets.ps1.txt\n?? docs/M15_EVIDENCE/tools/final-chromium.ps1.txt\n?? docs/M15_EVIDENCE/tools/final-docs.ps1.txt\n?? docs/M15_EVIDENCE/tools/inputs.cjs.txt\n?? docs/M15_EVIDENCE/tools/legacy-snapshot.cjs.txt\n?? docs/M15_EVIDENCE/tools/legacy.config.mjs.txt\n?? docs/M15_EVIDENCE/tools/legacy.test.ts.txt\n?? docs/M15_EVIDENCE/tools/m15-spec-before-repair3.ts.txt\n?? docs/M15_EVIDENCE/tools/order-contract.cjs.txt\n?? docs/M15_EVIDENCE/tools/package.cjs.txt\n?? docs/M15_EVIDENCE/tools/preservation-before-repair1.cjs.txt\n?? docs/M15_EVIDENCE/tools/preservation.cjs.txt\n?? docs/M15_EVIDENCE/tools/priority-before-repair5.cjs.txt\n?? docs/M15_EVIDENCE/tools/priority.cjs.txt\n?? docs/M15_EVIDENCE/tools/privacy.ps1.txt\n?? docs/M15_EVIDENCE/tools/repair4-affected.ps1.txt\n?? docs/M15_EVIDENCE/tools/repair5-affected.ps1.txt\n?? docs/M15_EVIDENCE/tools/run-scheduled-before-repair5.ps1.txt\n?? docs/M15_EVIDENCE/tools/run-scheduled.ps1.txt\n?? docs/M15_EVIDENCE/validators/pairs.json\n?? docs/M15_EVIDENCE/validators/shoe.json\n?? docs/M15_EVIDENCE/visual/chip-banker_pair-loss.png\n?? docs/M15_EVIDENCE/visual/chip-banker_pair-win.png\n?? docs/M15_EVIDENCE/visual/chip-player_pair-loss.png\n?? docs/M15_EVIDENCE/visual/chip-player_pair-win.png\n?? docs/M15_EVIDENCE/visual/cut-during-round.png\n?? docs/M15_EVIDENCE/visual/cut-reached-closed.png\n?? docs/M15_EVIDENCE/visual/index.md\n?? docs/M15_EVIDENCE/visual/integrity-startup.json\n?? docs/M15_EVIDENCE/visual/integrity-unavailable.png\n?? docs/M15_EVIDENCE/visual/m15-banker-pair-banker_pair.png\n?? docs/M15_EVIDENCE/visual/m15-pair-loss-banker_pair.png\n?? docs/M15_EVIDENCE/visual/m15-pair-loss-player_pair.png\n?? docs/M15_EVIDENCE/visual/m15-player-pair-player_pair.png\n?? docs/M15_EVIDENCE/visual/motion-equivalence.json\n?? docs/M15_EVIDENCE/visual/native-zoom-1280.json\n?? docs/M15_EVIDENCE/visual/native-zoom-1280.png\n?? docs/M15_EVIDENCE/visual/native-zoom-640.json\n?? docs/M15_EVIDENCE/visual/native-zoom-640.png\n?? docs/M15_EVIDENCE/visual/native-zoom-768.json\n?? docs/M15_EVIDENCE/visual/native-zoom-768.png\n?? docs/M15_EVIDENCE/visual/new-shoe-empty.png\n?? docs/M15_EVIDENCE/visual/new-shoe.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-1280.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-320.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-768.png\n?? docs/M15_EVIDENCE/visual/selected-0.png\n?? docs/M15_EVIDENCE/visual/selected-1.png\n?? docs/M15_EVIDENCE/visual/selected-2.png\n?? docs/M15_EVIDENCE/visual/selected-3.png\n?? docs/M15_EVIDENCE/visual/selected-4.png\n?? docs/M15_EVIDENCE/visual/selected-5.png\n?? docs/M15_EVIDENCE/visual/settled-0.png\n?? docs/M15_EVIDENCE/visual/settled-1.png\n?? docs/M15_EVIDENCE/visual/settled-2.png\n?? docs/M15_EVIDENCE/visual/settled-3.png\n?? docs/M15_EVIDENCE/visual/settled-4.png\n?? docs/M15_EVIDENCE/visual/settled-5.png\n?? docs/M15_EVIDENCE/visual/shoe-normal.png\n?? docs/M15_EVIDENCE/visual/skip-settled.png\n?? docs/M15_EVIDENCE/visual/table-1280.png\n?? docs/M15_EVIDENCE/visual/table-320.png\n?? docs/M15_EVIDENCE/visual/table-768.png\n?? docs/M15_EVIDENCE/visual/text-200-1280.png\n?? docs/M15_EVIDENCE/visual/text-200-320.png\n?? docs/M15_EVIDENCE/visual/text-200-768.png\n?? src/baccarat/domain/config.ts\n?? tests/browser/baccarat/m15.spec.ts\n?? tests/browser/baccarat/m15Performance.spec.ts\n?? tests/browser/baccarat/m15Zoom.spec.ts",
+  "repairCount": 6,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "c680bff87cd0cec26999e9f77de043007f014fa3078f41060c092ae03d79ce57"
+    },
+    {
+      "path": "casino-tests/baccarat/controller.test.tsx",
+      "sha256": "c0545b1158d9f99357c0e740d57c3ee632ad6235652d30e1245b92d2e3cbb898"
+    },
+    {
+      "path": "casino-tests/baccarat/engine.test.ts",
+      "sha256": "d20247e7306b8d2f0e96cbc3f7e7f405333714e8b4bd9e1c73e21f6f0026ef8d"
+    },
+    {
+      "path": "casino-tests/baccarat/fixtures.ts",
+      "sha256": "dd317fb58d8aac3bfc3a62096aec09a65c360ad4fa7e1cb7209a9655969f07b8"
+    },
+    {
+      "path": "casino-tests/baccarat/presentation.test.ts",
+      "sha256": "79fefe7c5db153e3c753176357fd0415dd54a5bdd73a0f3551f130e61aa777c5"
+    },
+    {
+      "path": "casino-tests/baccarat/replay.test.ts",
+      "sha256": "58d64a6801546ccff4409cfbe8ceea0aaf7fde04fd453534bdecc98f0f147ba5"
+    },
+    {
+      "path": "docs/BACCARAT_RULES.md",
+      "sha256": "98186eed8a72e57fb95b4557b05c5d258f75d6dbeee04abde934f1b74c05eaed"
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "sha256": "1e0b474c907ffe2a81b394089e3930a52b73f03a0e62d7933c764d8066383a5d"
+    },
+    {
+      "path": "docs/DEVELOPMENT_LOG.md",
+      "sha256": "0b79b6b9442df193d2afd838fdad49801ee152759a30e84a17485b7a9ec4ed00"
+    },
+    {
+      "path": "docs/LAB_MANUAL.md",
+      "sha256": "f32ea83133d5f7d7f501db48192d633bf7b13a1b8975f7fc11ae77ab3d54c8fe"
+    },
+    {
+      "path": "docs/PLAN.md",
+      "sha256": "cdad0c55c1ff17d4254ede776823c070ba446bf30cff42e96137544ff44a219a"
+    },
+    {
+      "path": "docs/RULES.md",
+      "sha256": "fa6f9c987e93f6a6c47665ab7b397c4bea2a8f81fd382ad60970d8d3147c5d23"
+    },
+    {
+      "path": "docs/SPEC.md",
+      "sha256": "e73eba873b7ae187cd4d031879f9826e77f42082a402c21af45008fc9ef518c4"
+    },
+    {
+      "path": "docs/STATE.md",
+      "sha256": "745b62b764847315323aa84c361ecbfc8a5668453cf20cc0cecef617523461fe"
+    },
+    {
+      "path": "docs/UX_UI.md",
+      "sha256": "31adf40cd92de2915e1d07e3ac0749c3751df68e472d992420477669c8c5a947"
+    },
+    {
+      "path": "src/baccarat/BaccaratTable.tsx",
+      "sha256": "8f65c7d4089d9f2216198a311d94f36a941a96b935260180b5d34f944a722a2f"
+    },
+    {
+      "path": "src/baccarat/baccarat.css",
+      "sha256": "ffe8a25477310ffb9739e5d666106101252438e1c4c359c0b3cfd51013eeffd1"
+    },
+    {
+      "path": "src/baccarat/controller.ts",
+      "sha256": "daa7e3f3f2a5fac3822892fb58277536f0bb1aa1f6a6623eb3c682c9b64dd2be"
+    },
+    {
+      "path": "src/baccarat/domain/engine.ts",
+      "sha256": "b4a91093ce48ee3966f01469ef393e1c633dab8abf814378539d28e4c485357e"
+    },
+    {
+      "path": "src/baccarat/domain/replay.ts",
+      "sha256": "f0ed8476450b080c56bd2f574f3b6cd31f50809c62d3fbfbf3ba1cc0f9156465"
+    },
+    {
+      "path": "src/baccarat/domain/rules.ts",
+      "sha256": "5de38dc0a607b08cf42402e579495f7e346a05b2fc12460f7fb9ef541ce18fbe"
+    },
+    {
+      "path": "src/baccarat/domain/shoe.ts",
+      "sha256": "097ddc579fff1801b0affbae60d4dc575f28a5d5c6e65cd0e056bb745b66e4c6"
+    },
+    {
+      "path": "src/baccarat/presentation/facts.ts",
+      "sha256": "7232c4b5876435c83a84a3ac1dafdb4da5ecc7f7f01271a7d5edfed1d8aa59ab"
+    },
+    {
+      "path": "tests/browser/baccaratFixtures.ts",
+      "sha256": "d8fae0d3bbf64ba39ca647659c21eeade90ad57cdf9626f4ad4472e33be18bbc"
+    },
+    {
+      "path": "casino-tests/baccarat/m15Fixtures.ts",
+      "sha256": "0e6bc46e9223242eabd63442a05b1fa17b6628a3c30a309f18a2d1417098daab"
+    },
+    {
+      "path": "casino-tests/baccarat/m15Integrity.test.tsx",
+      "sha256": "ef01317903d71c029e5f14fbd306ca62729c76759e1b542f2e0eb63b99bb2499"
+    },
+    {
+      "path": "casino-tests/baccarat/m15Pairs.test.ts",
+      "sha256": "e8daf207b1e56f674cf065ecbff1694fd8debb59ebd18f75224c4c99fbe2bd5a"
+    },
+    {
+      "path": "casino-tests/baccarat/m15Shoe.test.ts",
+      "sha256": "5eaf884fd100af814a0c77fcc8616a15d3349bf009e67ca7169667debc6946e9"
+    },
+    {
+      "path": "casino-tests/baccarat/m15Validator.test.ts",
+      "sha256": "11db7e9babafdef78ff76cea210dfe6fff7dc8a0c8870108357bad94d69419a9"
+    },
+    {
+      "path": "docs/M15_BACCARAT_SHOE_AND_PAIRS.md",
+      "sha256": "7e0e89d9fd6e21653b07fd1c993e2d475cb7d149f29aa7be46acc10792e6b708"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/.gitattributes",
+      "sha256": "822b5b63ed5834aece3473e94b5ffa53240e6f4e814cfa96869d7a9c59f81e17"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/complete-chromium-failure/.last-run.json",
+      "sha256": "cd6282739e00cb7ce47f9e79b0c473d08fb9366fd0d4f093d6d60cd838a6886f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md",
+      "sha256": "26947ccdecaac685e67c9a33bab3e4365f21cdfcd642e0709adcdcb9cb9be723"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/test-failed-1.png",
+      "sha256": "57f45d88e654eeca054ff1cc37c39a437cb6e4b6ea2a6f59cf08a6228670107a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/trace.zip",
+      "sha256": "47094e703a63b3a902892fa7e2729d15020816cc5c720be3fa2586dc55f0d1f8"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/first-gate-inputs.json",
+      "sha256": "311e3b2069dbd76ca62711dfed51621fca61dadaa20b9f3b27f37a96249dce64"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/frozen-inputs.json",
+      "sha256": "77580f94235df284e618146ebb9a74a58f8de9731f47cfc7a02c5caaa22a32f1"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/git-final.json",
+      "sha256": "2c06f00fb5f38d1ca594602005988f7082adc26fe5b01ab56f9d5a15238f4e64"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/index.md",
+      "sha256": "a6f28a3f18d559fa98dd7f99c39c4e76385f3478d47f7becc370cc5f7fc9be57"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/initial-gate-stop.json",
+      "sha256": "5348c2268d0335afa9b017aa8626338b221c4598700bd8f6c5949f81c529a1d9"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-assets.json",
+      "sha256": "f9ccf724f89683131c003b7eb2f06112ea9b90b26ae638d0cf3a10323387ceec"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-assets.txt",
+      "sha256": "f49f6582373348156dfc31caae43c8b57656e295b706cee0d1638ff054165e76"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-assets.txt.gz",
+      "sha256": "e24c1928d6a287a86c84ea7c93b7084f1bd799f726c2f4c4b2c1896f1cdce32f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-complete-chromium.json",
+      "sha256": "3552ff151d4788e9cc47684bb2a31fb6446818be35388aecf9edc3d234cfb28c"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-complete-chromium.txt",
+      "sha256": "600d36a368a5910192be0786aade94efdeb3a7bdaa76051d49993692912603ce"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-complete-chromium.txt.gz",
+      "sha256": "ccc908e9cc4f88cf1e6d1b083a5d7e3c35b2a9459eefa00c16345e1c5ea66f2d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-assets.json",
+      "sha256": "3c1b4794f0a90584d2954030801927fb5cccdf6281a8dafb1bb424a95559ded9"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-assets.txt",
+      "sha256": "f828ca4000a5b37ee52d73066f6533daf17ba5f0d39accee64eebc999d30cea7"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-assets.txt.gz",
+      "sha256": "0f71baabf55468aeeafa2fbdb6dd8517f161e436268d6a773691a078390d7279"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-docs.json",
+      "sha256": "505875cbaa62021030f60c9478b0ef4994baad5e10ee11e9f4f47952bfc5087b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-docs.txt",
+      "sha256": "f236216b246aa7caae2fd6566b782eee16a52a0b4f8bbedddbc9ac0e6783182f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-docs.txt.gz",
+      "sha256": "9db407a0a4c9a0a7862d9f2779e0e8e39a619b008d2e5128a1b08c1306aee66e"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-privacy.json",
+      "sha256": "dbaa1bdb3855c288a67c310b9a03067f9dbaa0b983a22cfffbfc0b9d4eabfc31"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-privacy.txt",
+      "sha256": "6b5ac8519eff9ae3817387c265c2e3915675d8ce8453049827ad5319b7334080"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-privacy.txt.gz",
+      "sha256": "2e5e74c9e2b14663e4261f3f2cb8ba64925af1693ad190d5dcba98a6c0a51fef"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-restoration.json",
+      "sha256": "bed1e40f8c1793ae8a96010bf477a69a8e6824aca3f2079adeefd921a81c271b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-restoration.txt",
+      "sha256": "600f66594ddc7e5a4118c8902361e16e182d2fa0a0c043f76055b23413e236a0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-restoration.txt.gz",
+      "sha256": "c2ab2540e164b88a309c1cc9b5750b0aed6a0f0682fb7b2ae6e62e86eb63e1b5"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-unified.json",
+      "sha256": "4c97740358dde92367531b330710894e46ee209744ae2f5c8f525c9bae09a171"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-unified.txt",
+      "sha256": "3a14dc815477738912874bf1edfc0b5cb2e945d6870b650e81b1f1313caf0873"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-final-unified.txt.gz",
+      "sha256": "da7a16118711b029e3b5c77b4f937ea9c97db50094469d05be83264308859850"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-first-browser.json",
+      "sha256": "02c61d42de6f09c2bcec1fccd1bee74da4845a03bebcd47b1b465a540a2705b9"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-first-browser.txt",
+      "sha256": "76e6786fdd65d5c0c45a53bb3773dc807cdf078eee031c7c774c362c423e735a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-first-browser.txt.gz",
+      "sha256": "074ba762179241c555a407856690d574c038ce96ade8babd2321d470d556db1a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-independent-preservation.json",
+      "sha256": "c413fe661317a4ef219cb1c3eee878ba91592c5710d8f842bc995f428d638814"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-independent-preservation.txt",
+      "sha256": "beeeca446b57fba49c276c2fcacc213fdd6748282734e6c66e75c60c9265ead7"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-independent-preservation.txt.gz",
+      "sha256": "3ae9c2595560ab2578b447c66fdfd9385724981090e5b40c0e3a95d130f8d526"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-focused.json",
+      "sha256": "2aef234cb1fbc71a77448d48d4e34bb459e8c480ec769e2e4819413a82b65870"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-focused.txt",
+      "sha256": "eb8e30f3dd35b26fb6857936c983bce8ca5d14b016736f06cfc797a622666d85"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-focused.txt.gz",
+      "sha256": "39a016fca29875ae37fdfd5a63e028fc8d311bc8968de143ebfbdcf1f7886361"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-restoration.json",
+      "sha256": "8991800b3b85c2f539130d36e3eb2a98fd2d8b762c03075ee8670b91cbb5d1da"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-restoration.txt",
+      "sha256": "2bf0647cbd8e585e9d5d477aac45268b0acb95d5143b3946238489e374796f34"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-initial-restoration.txt.gz",
+      "sha256": "b7f6be1c94651018e7e51d3fd2b811576d9f8ef71f5120fe733ffff18732ad5d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair1-backup.json",
+      "sha256": "3692d9560d83220995b15c4159e550957022b86726937cc9c5ffdb001e1c873c"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair1-backup.txt",
+      "sha256": "58204e7f5f083b0ffa594d6946b6144dc221942f70826c4a3c2a264e910dad4b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair1-backup.txt.gz",
+      "sha256": "9370cb47dd81048016dfee6c3d19560f57cd6670567bc151010686b44fa18283"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair2-affected.json",
+      "sha256": "99a865ded0c712935228abf92cf17ac42fb13a7468132d4696f14ea07b58b19f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair2-affected.txt",
+      "sha256": "7975f075c9cfa128f38e60aebc75c4e93909890f7e17d6f0ad99c93719ec90e0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair2-affected.txt.gz",
+      "sha256": "be3d78492a3b42427be2468d2786d292f48e18b514b8998c767087ae44e5300b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair3-affected.json",
+      "sha256": "bb23490654358225b04cbd0c56386dc5578dedeb8e790514b4e37c225c3c2d45"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair3-affected.txt",
+      "sha256": "9313b386069703aaa70c3306c23ef2c4f29612880d0bf35fdc2066de40e410f1"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair3-affected.txt.gz",
+      "sha256": "50a9944aab2c3197056c076c6afb2ba1630085f15019259afe89ec1d9c4c69d2"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-affected-priority.jsonl.txt",
+      "sha256": "d3c81513333821e52b88ee67309663a08a492828f86fcc9baa46ca93f4a3010d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-affected.json",
+      "sha256": "3bc5c1ae6c03c92a838d41a5b94d8f0d07ffdff3d0d4ac2abb043e8f654e47ca"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-affected.txt",
+      "sha256": "4f08575582bc813874a752e8da9b9046242c19cd20617c2a422a0da121547d7f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-affected.txt.gz",
+      "sha256": "94d7a173316071167982fc634da68bacc34721bc4ce0f773de8a286a0675b907"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-restoration.json",
+      "sha256": "c1603857d26e083fbf3cc1ae5cde5b11c3d5629696ef205daa7da33c528b1a08"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-restoration.txt",
+      "sha256": "7fcc62cc7d8293aad63ab1df28475d0acde995bcbccccc3184c7e87725b0161b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-restoration.txt.gz",
+      "sha256": "b483fe52683c2533f7b39895921f2d1bb0563ad83e2c131937f98020d243bbd3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-unified-priority.jsonl.txt",
+      "sha256": "24e5908ee07715a05f24ad881be547edc61d394ff44d43b3d4daa0a92a6cc7f4"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-unified.json",
+      "sha256": "9ba55b3de28942bf7cb5214e3efe7daf5d6952969d041527d8d3230087b49542"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-unified.txt",
+      "sha256": "ab636c26f41bca79247505eba4472c131e49ca1649850870c81bbdfd1e42ecd3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair4-unified.txt.gz",
+      "sha256": "19e285e495fd1904f465122d756f657cccb6b66c52081c56622e39984df23779"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-affected-priority.jsonl.txt",
+      "sha256": "466549acfb524764d71470a5e7533d17796e444fd97daa269cdddff8ef7e0cc3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-affected.json",
+      "sha256": "91cdcb82984ed2702786f4d51120baf5dc36afa33599bb96b6e77c63b96408c5"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-affected.txt",
+      "sha256": "cdae66c852b2dcf14c4c2b6e79f0308fb427c1a0358c24e7cb1397e954be89cb"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-affected.txt.gz",
+      "sha256": "be5b6db754f955309e0ed8a2c7796f07a5a364e17498243e84df3e83f0240da3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-restoration.json",
+      "sha256": "1aa8718d503763f7b9afc22518933e113a6085b90ba5f7494646597048d72af6"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-restoration.txt",
+      "sha256": "7fcc62cc7d8293aad63ab1df28475d0acde995bcbccccc3184c7e87725b0161b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair5-restoration.txt.gz",
+      "sha256": "b483fe52683c2533f7b39895921f2d1bb0563ad83e2c131937f98020d243bbd3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair6-docs.json",
+      "sha256": "49191998a1b2bcc702bddbc78c0ab93e1f90ce08bd820c099f631fbd2ac5ce7f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair6-docs.txt",
+      "sha256": "05f1bc1d0ae344cfe40aa2cae7d073554d9ef3092061eed8247e38c2ca1d6b34"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-repair6-docs.txt.gz",
+      "sha256": "40cb8feb682c59c851d060ba1094ed8eb368aaa66ad721d7a5cb7a492e6b9b49"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-fault-reproduction.json",
+      "sha256": "b83e391d5c47b2684c3598f796e2b250fa57d35382ad307c5803946cd6aa9611"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-fault-reproduction.txt",
+      "sha256": "07b50c6672b2091d1797bbb9d3bb6c03b2b4a5d6bf49cbf2cff35f3325e5bc91"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-fault-reproduction.txt.gz",
+      "sha256": "5271cb1d293a5092dc1161b05c28bdd4f93669b823fc082db3033212981461e7"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-focused.json",
+      "sha256": "1e6e8b9c720a10b2726610d2fd0bf170971326d23bb551c43aadad2c3d3f6bde"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-focused.txt",
+      "sha256": "0ea98c4370a424d5147305178b61ec88327aa4b2a61af7ab507379dbfe390a53"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-review-focused.txt.gz",
+      "sha256": "651cdd59d9a59a519d11a5036960caa1d0f6319d1581d4c1a1cdbbc4eb9cb2b5"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-unified.json",
+      "sha256": "7cd7a16344891ef1b5d15838962d66d0ed32af0cf0c8ae02d6bfdd180aac4237"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-unified.txt",
+      "sha256": "ddd36097e9cdbcb944ba8c301c4218c70203eb81acbb56d03b9d1220b5b94305"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-unified.txt.gz",
+      "sha256": "1615dab8cc880fc075f57845a56c6c47a3262cd7c5d896c32dde19d872487819"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-v1-baseline-replay.json",
+      "sha256": "802d2feb08276f81b111c239e3d9f314b8884b3ee2e3c892b993a8a3f25bdb6d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-v1-baseline-replay.txt",
+      "sha256": "7c9f5fd756790c9da01d5b971ad7b4afa35c09b934998d8abc1bfe65d2423fa7"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/m15-v1-baseline-replay.txt.gz",
+      "sha256": "05f3fd4471c73128b1b3e80ee2fa98d0854fcd96cc0e09e2992cb4b8bd2fdf98"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/manifest.json",
+      "sha256": "e1af5d30f09d5cf07b1fd130486311fdcd88fb25937c50a037d7c07fee437dbf"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance-summary.json",
+      "sha256": "12c88ed501cd5d67a4b996a3cd4118ac32c73b9a4b67a3fcd97c51f9a6f86f1e"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791337434772-35576-1280.json",
+      "sha256": "c6afaaafd06f825509fbba96b972d4279b90481d4b454ad4a19a2ad680c91c55"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791337469234-35576-320.json",
+      "sha256": "93599e93e4ed51717ec984dd550749cb9f0f6f68dc673bf44135d5113aacb1da"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791337735089-30956-1280.json",
+      "sha256": "47963669cc3203415f97438fdd4772ee02fed33d527c907edb2d3360332678ad"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791337769431-30956-320.json",
+      "sha256": "1df4222ff9f4ebbff21ce9e9e365e251bd10df0631a6957bf9c5f494ae11849b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791339283087-23336-1280.json",
+      "sha256": "90df40670e2049b28d2571de860f154c1ce2f9eda26eaa2ca69ca4f1e9caf8a9"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791339345824-23336-320.json",
+      "sha256": "5e1b38c5017d97c6de93e08fd88850ccadaf27fba81b3f45f59e70d12c4a2eaf"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791340359753-14424-1280.json",
+      "sha256": "8f63f8f985f6541807f9f89497d55e296e737b29f0778f209b4d0df7ffc55d02"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/performance/1791340394225-14424-320.json",
+      "sha256": "dd15b1c341e2a05c89612156c81b2b66110553afc7105da1dbe6c374793edd07"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/privacy-scan.json",
+      "sha256": "70615b3f344a965acd1055236823fc4877c97a3968acb5a47045302283f2c02c"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/raw-log-hashes.json",
+      "sha256": "107519ead09d2a3b7ef8579a63632c44d2fbf384f923cbbcb33184dbd651aafd"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair2-browser-failure/.last-run.json",
+      "sha256": "3a3e932fae854909e51977571ed3881c12c5e993565d67ee7da2aa63e1b7d5ef"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/error-context.md",
+      "sha256": "76d269e32bde065fc3e8cb34d73fd9eeb774b52d7bcb5b53891de12ad7857996"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/test-failed-1.png",
+      "sha256": "57f45d88e654eeca054ff1cc37c39a437cb6e4b6ea2a6f59cf08a6228670107a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/trace.zip",
+      "sha256": "a66422db99b9f3f8fda50f5d3062d1c2f6e3d6dba49c63b6a17642e31bc6b780"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair4-gate-stop.json",
+      "sha256": "9d13ba14d6edf1133c1cc8b428301157596245fe765a6703240425a8bece74bc"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/repair5-gate-stop.json",
+      "sha256": "0873560be285927adb10ba92613b37422a9b0d675403ef298c047aeb32857faa"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/restoration-final-unified.json",
+      "sha256": "f82e7e177e5502e15772e6c139467c2093f88ebf165f10d88419d2ab7f92e557"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/restoration-initial-unified.json",
+      "sha256": "d81254479eb9194f3569dd6df65baa566f7a2f1734997c883bdbc0d0841af742"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/restoration-repair4-stopped-gate.json",
+      "sha256": "eeee63c7b83bfeb6fdbef4461ba1dfe9650d4ed0835773681b064d1e11ffbf83"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/restoration-repair5-stopped-gate.json",
+      "sha256": "eeee63c7b83bfeb6fdbef4461ba1dfe9650d4ed0835773681b064d1e11ffbf83"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/audit.cjs.txt",
+      "sha256": "a55e2d4e6b7da34c3ab18a70f4ae6c9bc4bba2c6c11a269aa45d71087d5e6417"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/document-review.cjs.txt",
+      "sha256": "6308f078a5c45f5183ea4643d4e8ee8a7d6a45b8455a71793956fea61f4c28c6"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/fault.config.mjs.txt",
+      "sha256": "97dc6331b16bfca8ea353f84c4b9d78c579ce9180a79038751c0fc08868fa4ce"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/fault.test.tsx.txt",
+      "sha256": "6140baa62a658631b706a8920767dab0c51160ea90698c0ceb6195a6b5a8d8b7"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/final-assets.ps1.txt",
+      "sha256": "b0e88e1a7c30cf083099b228e46e07f8f2838be9034373811d806a7a28898d7f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/final-chromium.ps1.txt",
+      "sha256": "c6dea5714417177eef619b94e49debfd41d1a3018ba0c33a3910894fd303ff3c"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/final-docs.ps1.txt",
+      "sha256": "566e2dc3c6158c11b8893cddda093576c96753119eca7c24e4676fd8a11048a2"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/inputs.cjs.txt",
+      "sha256": "5358f2d9c78e4efb52d2e965acb9d8e8047c2ba237f28f85c98535d8e71b16c4"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/legacy-snapshot.cjs.txt",
+      "sha256": "7f1a937d93b3b9d0d1c9718fde9ce75fbe06f0e5387f90bcaf749ad38039f20d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/legacy.config.mjs.txt",
+      "sha256": "50e2cce747b431ccf107e80f389888b87dcf186c49978826c07d9b57ecf603fb"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/legacy.test.ts.txt",
+      "sha256": "ec6e730f6a4035736f2a53b2e9fea2bf1efec4fc692995850df0a95b8704df3b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/m15-spec-before-repair3.ts.txt",
+      "sha256": "44326cc19d7088ab8a36a18b548dd346bdb2967d31f21cc68390d354832a4077"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/order-contract.cjs.txt",
+      "sha256": "c0de57b5b15551f8932adb78554ea26dd28f45fb4e091cd309494940b3febc09"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/package.cjs.txt",
+      "sha256": "c235e0ec9061f892b88a3d634b6b5918e147925a8c9a1535bae01ba361238157"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/preservation-before-repair1.cjs.txt",
+      "sha256": "63a5b033f371c03f2b84bbbd8b5cc71358e0731a15c24935efb40be7b042643e"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/preservation.cjs.txt",
+      "sha256": "fe63cba07e554b98bd8d1d5a3115d4dfffa93b80134eb9c709cb7a48d890be9f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/priority-before-repair5.cjs.txt",
+      "sha256": "bf3fa3ffa77325ac84815b917eb79ef7d11d720a5eb1bb31a8f4978b6e268aba"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/priority.cjs.txt",
+      "sha256": "54a185f76fab4a67d8665bebefacfd88ccd799cc185d3697bcab8518da9092dd"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/privacy.ps1.txt",
+      "sha256": "38e8224ee219d5dc9f536a5dfd680004a5df4535a2b96a9b0ac648245e756a48"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/repair4-affected.ps1.txt",
+      "sha256": "a50f1770ac838b0a85c017caa37d7812d8a7b68cacf141a7c41a22cd59ab1a54"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/repair5-affected.ps1.txt",
+      "sha256": "92cd677a062001454ad2ace26d78308653aab26e936f14ed1e50cb1e1a0e80d3"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/run-scheduled-before-repair5.ps1.txt",
+      "sha256": "4e10683e23b6b5dc3c0a541d80a9d251268971a011e20ff75805fd4628d2f5e0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/tools/run-scheduled.ps1.txt",
+      "sha256": "41a2d0caeceb0f4b459138856f1e42d721d181404e063838ba5689e91ee561f6"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/validators/pairs.json",
+      "sha256": "494a13bb736c08cc35d2de6c4fc7436fbbfb9bfc757025d33bb7c1a572ea9786"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/validators/shoe.json",
+      "sha256": "963b228312d38942b6226a16577e6fde622c120797f089e4da0666ae92b56396"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/chip-banker_pair-loss.png",
+      "sha256": "2ba565d4206b135e7da0d792d3a9a681371e93b0f01462b721dd16ae4c103e4b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/chip-banker_pair-win.png",
+      "sha256": "68f4da2115583631433e9b324801bfdc073fccbba7c89e22b25f2a88a4490bd2"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/chip-player_pair-loss.png",
+      "sha256": "402e6f089177748745e203b3c30ecd219fa43130e162960e55a305c2c8cd2a82"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/chip-player_pair-win.png",
+      "sha256": "714722f73e3e0932ac484248feae78162e32d1f4a0945008d0d213d1c5c4ab2a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/cut-during-round.png",
+      "sha256": "35d1968dbcfd6dc8e90d00dcf260283a439805f8f441331e454a7e405730f341"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/cut-reached-closed.png",
+      "sha256": "632104e94bc62f821279df84cd1625f104dd88644486e46a90e8d2115522c006"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/index.md",
+      "sha256": "e7be957e767e81aab184d61a4a33296e5ebed8c904fb45d03b869a9b9a487624"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/integrity-startup.json",
+      "sha256": "ea80ffa1448c0274b22e46b89cc146b98e59518bb3274a99cbbb17f1001f41e2"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/integrity-unavailable.png",
+      "sha256": "de6fa0e855c2337d7141d123e83688d7e4de5d3ebcac3780e5dd1e30b93af61e"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/m15-banker-pair-banker_pair.png",
+      "sha256": "08a361337512698529d63503f80752eba2ee5206922a07979a9cb9d3725359aa"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/m15-pair-loss-banker_pair.png",
+      "sha256": "915b276c1605d750ce5744e9ce895b30319a62efd12534e51c82e2f8d6de2a80"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/m15-pair-loss-player_pair.png",
+      "sha256": "4b82c120c5a6b8fd58fb4b554f62f87bd9a706370505a037acf8323f05cde8e1"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/m15-player-pair-player_pair.png",
+      "sha256": "d4ffa1962e4cb473d4f911028894a97bb2db5b6c7dde06aca65d30373b114ffc"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/motion-equivalence.json",
+      "sha256": "40691ac03f3530d72c201caab47a185dfe4ccf2e6854a51ef34d018c34d3f655"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-1280.json",
+      "sha256": "44968eeb5089f43c93ff6cc19b9f616a2e1e8096bf88eef16da511c502c92746"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-1280.png",
+      "sha256": "bd79a9e7be0c454c6faa6f34f3c29371ec50a8490bb2a1f88e43d3b7083a204a"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-640.json",
+      "sha256": "1444a4ac736265be06eda1a95377012086ebc515383fd5f628f37a90be23f59d"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-640.png",
+      "sha256": "4731891c3a51157da43c9dc6f8672cc613f85cfb5a3f849c8a9d7769383a331b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-768.json",
+      "sha256": "a367bf3103d2eb43c100f4e0c223b1d0339fc20ab43ca5c3913a6f4ac8b3be86"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/native-zoom-768.png",
+      "sha256": "9d1281bb8f26f8e9aea9c8cf5a336035b16caa97c4d3b447b6d30552c9efc345"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/new-shoe-empty.png",
+      "sha256": "f6d9c1c53d05726ae41924f611643ee9468dfdf8ba072d92332abf16caf5ce53"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/new-shoe.png",
+      "sha256": "84f892aef1e0c89cceafdc2f4f337a3a012e82272058ba9775319484bdcd5d05"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/pairs-settled-1280.png",
+      "sha256": "728379093bee392228dc94ec25bc2e75e21779acebe977d48502d638273d9bf8"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/pairs-settled-320.png",
+      "sha256": "d07cd530eca71e0b6704f3ee1363065f7053008273fe2512c0a60f80934a7a01"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/pairs-settled-768.png",
+      "sha256": "f9a827a7c539662fe831630221c556209b4353a1a01d4f2e5653fedb3e001bf0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-0.png",
+      "sha256": "6eac9ff4135dbdf3952781f4f547b3d7afc77c577be599c501866b4a2d8e0cc0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-1.png",
+      "sha256": "51a9b2a4bcc2da2077a30d71454cf54ffba0cfe41f8af9cd02caa7f5542e53b0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-2.png",
+      "sha256": "2e6cfaa4aabb7a9c94060bd04e7f9988c8f278e1cbdddea24b16adb7843867ce"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-3.png",
+      "sha256": "9544fd1a91f5dbfdcb0a5ee6a0151abeefbe9aaaf14c5f59dd85b99effbd64b1"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-4.png",
+      "sha256": "89a387abad4636ca5cc6e77ea713b9027265c11ee556d38736a1339dc5a6e367"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/selected-5.png",
+      "sha256": "756f1978b0cbe3df086216a2dfdbb88e79a9718ae171c3d19b58dc5208c26a7f"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-0.png",
+      "sha256": "9265d516fb37ac404a342afdfd8dcc55e8df31b3bbce9b92834006c3da6af3cd"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-1.png",
+      "sha256": "08bee24b4a40ea901c4b12f9215732a17f4bf0278574f24937a9bbfd707ae85c"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-2.png",
+      "sha256": "04cc2124b988ebefbe636fd151163c7c011e7b649b34a6ab47a246022a5728cc"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-3.png",
+      "sha256": "d4ab4fd62ea7e49fb3598d85b347a6040c20f04aee313daada41ad30bd4c9ce6"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-4.png",
+      "sha256": "9e9d8e0c4a453d361f33d4f346f2eaa0da28d783c41ef1450d62590e5dcb8f90"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/settled-5.png",
+      "sha256": "d429419f382a681ca21e4a14819cd7a909342a81dd5ad0c806b1a8755d39aff0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/shoe-normal.png",
+      "sha256": "e0f9bcf0c5db54260c8c9d360705e767d5bcab401f3c155c519cc51398bac3db"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/skip-settled.png",
+      "sha256": "132f14ab4a9264e463827c25452af60f5ee294d3cd6b357759d6e0e631097847"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/table-1280.png",
+      "sha256": "e0f9bcf0c5db54260c8c9d360705e767d5bcab401f3c155c519cc51398bac3db"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/table-320.png",
+      "sha256": "f537222a8ddb2f4bc1681507721e355fc60971f5927064c7b710e562e391816b"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/table-768.png",
+      "sha256": "86b273f27af6c097adb5a0aad7edecc40a4fb203270a28d04e4b7641773dd249"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/text-200-1280.png",
+      "sha256": "6ea86136ed6467b5eed99edad153b8d663ec19bbc000448a43b20743a1b17fab"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/text-200-320.png",
+      "sha256": "64a7c3b29d5acb6fac24d03df27413c569def7763bc076281c1affe2f5ab46f0"
+    },
+    {
+      "path": "docs/M15_EVIDENCE/visual/text-200-768.png",
+      "sha256": "8405e46396a0e6c7d4357072a3ea5ac24ea4b6ec297a4880edf9dbd44b046d2b"
+    },
+    {
+      "path": "src/baccarat/domain/config.ts",
+      "sha256": "77970ce5f3c13a703afe6d1659bc1cbd5efc0ce61d49e4e789ba7de6c77dc731"
+    },
+    {
+      "path": "tests/browser/baccarat/m15.spec.ts",
+      "sha256": "f2a0d0305dc5cecaad8f07e5a3fd560ab9b0525bb9d59dcdd1a8ff8f38a413a3"
+    },
+    {
+      "path": "tests/browser/baccarat/m15Performance.spec.ts",
+      "sha256": "d6760ffed289c7b8818a47acf23e9356297fee0722b796b004c0b33ead3626c1"
+    },
+    {
+      "path": "tests/browser/baccarat/m15Zoom.spec.ts",
+      "sha256": "0315d6239412aae80b724dcde4fccc216e05c7308360029b3c655fec60dbd3c9"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "5913df35181e3ca0528d6f2ed175b1db54818005b25d122147aa95ba358ad900"
+    }
+  ],
+  "dist": [
+    {
+      "path": "dist/index.html",
+      "sha256": "e910d295897aaa124cd523b4f102547318db02eea2336b329f11c3c539b4f35d"
+    },
+    {
+      "path": "dist/characters/noble_male.png",
+      "sha256": "84c90d956fd96cbfdc8d6395000a3eb5ffe5ec0a1a710eaf3f05a74d09c6cab3"
+    },
+    {
+      "path": "dist/characters/noble_female.png",
+      "sha256": "653583f627ae1f9b62186934417d292a9d20c23b694914c9b5644587a16e9472"
+    },
+    {
+      "path": "dist/characters/mage_male.png",
+      "sha256": "c0eb1322b0053501e86860c4f4e253365444d363b7980fa81ef03e87390a4690"
+    },
+    {
+      "path": "dist/characters/mage_female.png",
+      "sha256": "0a48367b8645e5c284f118188a44f7b43cb5bcefc846d1af360910182960802e"
+    },
+    {
+      "path": "dist/characters/knight_male.png",
+      "sha256": "c181f62d91695dd5b1fcc5adbd632528c48b26f04c2128095b6137b7674539d7"
+    },
+    {
+      "path": "dist/characters/knight_female.png",
+      "sha256": "cdcdb1fb3c44977469647ff852a84133b8c5444c57a4de777f92f229e8466052"
+    },
+    {
+      "path": "dist/characters/halforc_male.png",
+      "sha256": "2649a898b15902cefa72841d2cb00cb791417df67763ec476e6fc2fe887d75a7"
+    },
+    {
+      "path": "dist/characters/halforc_female.png",
+      "sha256": "41bf5d62cfae4382346f711f2efdccb30b46f632a9ca467de6c0fa104c9535a6"
+    },
+    {
+      "path": "dist/characters/elf_male.png",
+      "sha256": "3b8e0b860174ef19267feb282ae4d3b8d0c47c6ce5ce7cf7a9f44c516171f33f"
+    },
+    {
+      "path": "dist/characters/elf_female.png",
+      "sha256": "cd339e633c187cc2917a5259defaed888b42887d9ae48313977ab201854dc3ee"
+    },
+    {
+      "path": "dist/characters/dwarf_male.png",
+      "sha256": "980de0bef894ff15105a6b0e13c7285540e57c23e1c8cbb0755fe9c5d34641fc"
+    },
+    {
+      "path": "dist/characters/dwarf_female.png",
+      "sha256": "3c8af6e4349f6891cb8c9843edb82492fb09fdda31b88f59a4ee4c27b77c7d0c"
+    },
+    {
+      "path": "dist/characters/dealer/noble_female/formal.png",
+      "sha256": "73a1409d5db2e4565e294bebbef1c61f729b063f94e3c4afbc4bd46434dbddab"
+    },
+    {
+      "path": "dist/characters/dealer/mage_female/formal.png",
+      "sha256": "aaf123b256a272be9a13091ece2bbff4bcd6f17bd0cf5090ec003aa8bb7b63ed"
+    },
+    {
+      "path": "dist/characters/dealer/knight_female/formal.png",
+      "sha256": "8b4a4566ff56a135a8109549c93c3714b0c5f62bde1c8a3de21a5b52355a2b3d"
+    },
+    {
+      "path": "dist/characters/dealer/halforc_female/formal.png",
+      "sha256": "ccc53b5417a0d071d859e8e97d5e0dcf84c2ac4fec10581f36397dfafc9122a6"
+    },
+    {
+      "path": "dist/characters/dealer/generic_female/formal.png",
+      "sha256": "37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce"
+    },
+    {
+      "path": "dist/characters/dealer/elf_female/formal.png",
+      "sha256": "6145c299ec6abf5d4071b7f8d47e5a80173f42a949166ad1951d078b8d56f0f9"
+    },
+    {
+      "path": "dist/assets/index-DAWKyLNY.js",
+      "sha256": "d5ca45c8a55486616aa407211346e3c8c787d207ceae23fbc8d5c751e11cdda4"
+    },
+    {
+      "path": "dist/assets/index-D3wKiMW6.css",
+      "sha256": "011d197523b072f92246207f69052da13774fabb85a62b0975321d82807068c1"
+    }
+  ]
+}

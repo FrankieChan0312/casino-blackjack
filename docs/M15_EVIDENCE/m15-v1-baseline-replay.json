@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:57:00.458Z",
+  "finish": "2026-10-07T01:57:06.468Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "node .git/m15/legacy-snapshot.cjs && npx vitest run --config .git/m15/legacy.config.mjs"
+  ],
+  "log": ".git\\evidence-capture\\m15-v1-baseline-replay.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

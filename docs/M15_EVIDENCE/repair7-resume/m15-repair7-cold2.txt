@@ -1,0 +1,225 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/accessibility.spec.ts --grep REG-M7-041 --trace on --output .git/m15/repair7-resume/cold2
+
+2026-10-07T04:30:47.214Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-10-07T04:30:47.222Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-10-07T04:30:47.222Z pw:webserver Starting WebServer process npm run dev -- --mode e2e --port 4173 --strictPort...
+2026-10-07T04:30:47.245Z pw:webserver Process started
+2026-10-07T04:30:47.246Z pw:webserver Waiting for availability...
+2026-10-07T04:30:47.246Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-10-07T04:30:47.256Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-10-07T04:30:47.256Z pw:webserver Waiting 100ms
+2026-10-07T04:30:47.369Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-10-07T04:30:47.370Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-10-07T04:30:47.370Z pw:webserver Waiting 250ms
+[WebServer] 
+[WebServer] > casino-blackjack@0.0.0 dev
+[WebServer] > vite --host 127.0.0.1 --mode e2e --port 4173 --strictPort
+[WebServer] 
+2026-10-07T04:30:47.626Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-10-07T04:30:47.628Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-10-07T04:30:47.628Z pw:webserver Waiting 500ms
+[WebServer] (node:15928) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 
+[WebServer]   VITE v8.3.1   e2e   ready in 229 ms
+[WebServer] 
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-10-07T04:30:48.133Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+[WebServer]   vite:time 17.71ms /index.html +0ms
+2026-10-07T04:30:48.158Z pw:webserver HTTP Status: 200
+2026-10-07T04:30:48.159Z pw:webserver WebServer available
+[WebServer]   vite:transform 11.32ms /src/main.tsx +0ms
+
+Running 1 test using 1 worker
+
+[WebServer]   vite:transform 11.46ms /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=084c5f5b +14ms
+[WebServer]   vite:transform 12.83ms /src/casino/routes.ts +8ms
+[WebServer]   vite:transform 14.09ms /src/presentation/formalDealers.ts +1ms
+[WebServer]   vite:transform 15.00ms /src/casino/casino.css +1ms
+[WebServer]   vite:transform 15.44ms /src/ui/styles.css +1ms
+[WebServer]   vite:transform 15.88ms /src/baccarat/baccarat.css +1ms
+[WebServer]   vite:transform 31.65ms /node_modules/.vite/deps/react-dom_client.js?v=084c5f5b +11ms
+[WebServer]   vite:transform 32.05ms /src/baccarat/BaccaratTable.tsx +4ms
+[WebServer]   vite:transform 32.64ms /src/baccarat/controller.ts +1ms
+[WebServer]   vite:transform 33.32ms /src/casino/CasinoApp.tsx +0ms
+[WebServer]   vite:transform 33.70ms /src/browser/controller.ts +1ms
+[WebServer]   vite:transform 34.13ms /src/ui/App.tsx +1ms
+[WebServer]   vite:transform 10.54ms [skipped] /node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=084c5f5b +1ms
+[WebServer]   vite:transform 6.06ms /@react-refresh +1ms
+[WebServer]   vite:transform 12.51ms /node_modules/.vite/deps/react.js?v=084c5f5b +1ms
+[WebServer]   vite:transform 10.36ms /src/baccarat/format.ts +11ms
+[WebServer]   vite:transform 10.54ms /src/presentation/characters.ts +1ms
+[WebServer]   vite:transform 12.36ms /node_modules/.vite/deps/react-dom.js?v=084c5f5b +0ms
+[WebServer]   vite:transform 11.51ms /src/presentation/events.ts +1ms
+[WebServer]   vite:transform 11.59ms /src/domain/random.ts +0ms
+[WebServer]   vite:transform 11.65ms /src/domain/profile.ts +0ms
+[WebServer]   vite:transform 11.70ms /src/domain/hand.ts +0ms
+[WebServer]   vite:transform 12.16ms /src/ui/presentation.ts +1ms
+[WebServer]   vite:transform 12.48ms /src/browser/playerConfiguration.ts +0ms
+[WebServer]   vite:transform 23.35ms /src/ui/Cards.tsx +11ms
+[WebServer]   vite:transform 23.42ms /src/ui/DealerAvatar.tsx +0ms
+[WebServer]   vite:transform 23.62ms /src/presentation/dealerPresentation.ts +0ms
+[WebServer]   vite:transform 23.67ms /src/baccarat/presentation/facts.ts +0ms
+[WebServer]   vite:transform 23.93ms /src/baccarat/domain/replay.ts +0ms
+[WebServer]   vite:transform 24.32ms /src/domain/behindPublicView.ts +1ms
+[WebServer]   vite:transform 24.52ms /src/baccarat/presentation/Provider.tsx +0ms
+[WebServer]   vite:transform 24.59ms /src/domain/replay.ts +0ms
+[WebServer]   vite:transform 24.71ms /src/domain/behindGame.ts +1ms
+[WebServer]   vite:transform 24.75ms /src/domain/audit.ts +0ms
+[WebServer]   vite:transform 24.93ms /src/baccarat/domain/engine.ts +0ms
+[WebServer]   vite:transform 25.01ms /src/ui/Actions.tsx +0ms
+[WebServer]   vite:transform 25.00ms /src/browser/presentationObserver.ts +0ms
+[WebServer]   vite:transform 25.21ms /src/domain/sessionCommand.ts +0ms
+[WebServer]   vite:transform 25.28ms /src/ui/Betting.tsx +0ms
+[WebServer]   vite:transform 25.36ms /src/ui/Decisions.tsx +0ms
+[WebServer]   vite:transform 25.76ms /src/ui/Table.tsx +1ms
+[WebServer]   vite:transform 25.94ms /src/ui/DemoTools.tsx +0ms
+[WebServer]   vite:transform 26.34ms /src/ui/PresentationProvider.tsx +1ms
+[WebServer]   vite:transform 26.44ms /src/ui/PlayerSetup.tsx +0ms
+[WebServer]   vite:transform 26.95ms /src/ui/CharacterPicker.tsx +0ms
+[WebServer]   vite:transform 27.05ms /src/ui/PresentationAnchor.tsx +0ms
+[WebServer]   vite:transform 12.14ms /node_modules/.vite/deps/motion_mini.js?v=084c5f5b +15ms
+[WebServer]   vite:transform 17.36ms /node_modules/.vite/deps/motion_react.js?v=084c5f5b +8ms
+[WebServer]   vite:transform 16.38ms /src/baccarat/domain/config.ts +3ms
+[WebServer]   vite:transform 16.49ms /src/presentation/initialDeal.ts +0ms
+[WebServer]   vite:transform 16.69ms /src/presentation/genericDealer.ts +1ms
+[WebServer]   vite:transform 16.99ms /src/presentation/wagers.ts +0ms
+[WebServer]   vite:transform 17.07ms /src/domain/credits.ts +0ms
+[WebServer]   vite:transform 17.87ms /src/presentation/tableGeometry.ts +1ms
+[WebServer]   vite:transform 18.37ms /src/presentation/timeline.ts +1ms
+[WebServer]   vite:transform 18.48ms /src/presentation/anchors.ts +0ms
+[WebServer]   vite:transform 18.54ms /src/presentation/motionTokens.ts +0ms
+[WebServer]   vite:transform 23.54ms /src/domain/optionalPublicView.ts +4ms
+[WebServer]   vite:transform 23.71ms /src/baccarat/domain/shoe.ts +1ms
+[WebServer]   vite:transform 23.79ms /src/presentation/playerActions.ts +0ms
+[WebServer]   vite:transform 23.99ms /src/baccarat/presentation/runtime.ts +0ms
+[WebServer]   vite:transform 24.07ms /src/domain/bettingGame.ts +0ms
+[WebServer]   vite:transform 24.50ms /src/domain/optionalGame.ts +1ms
+[WebServer]   vite:transform 24.83ms /src/domain/advancedGame.ts +0ms
+[WebServer]   vite:transform 24.98ms /src/baccarat/domain/rules.ts +0ms
+[WebServer]   vite:transform 25.30ms /src/domain/behindController.ts +1ms
+[WebServer]   vite:transform 25.43ms /src/ui/CasinoPerson.tsx +0ms
+[WebServer]   vite:transform 25.52ms /src/presentation/seatMapping.ts +0ms
+[WebServer]   vite:transform 25.75ms /src/ui/SeatUnit.tsx +0ms
+[WebServer]   vite:transform 25.95ms /src/ui/LocalPlayerHud.tsx +0ms
+[WebServer]   vite:transform 26.12ms /src/ui/DealerZone.tsx +0ms
+[WebServer]   vite:transform 26.20ms /src/ui/InitialDealFlight.ts +1ms
+[WebServer]   vite:transform 26.24ms /src/ui/PlayerActionMotion.ts +0ms
+[WebServer]   vite:transform 26.31ms /src/presentation/dealerActions.ts +0ms
+[WebServer]   vite:transform 26.43ms /src/ui/WagerMotion.ts +0ms
+[WebServer]   vite:transform 25.66ms /src/ui/DealerActionMotion.ts +0ms
+[WebServer]   vite:transform 5.15ms [skipped] /node_modules/.vite/deps/animate-style-DAlyz7VU.js?v=084c5f5b +1ms
+[WebServer]   vite:transform 1.93ms /node_modules/.vite/deps/react_jsx-runtime.js?v=084c5f5b +1ms
+[WebServer]   vite:transform 2.10ms /src/domain/advancedPublicView.ts +2ms
+[WebServer]   vite:transform 2.43ms /src/domain/table.ts +1ms
+[WebServer]   vite:transform 2.51ms /src/domain/computer.ts +0ms
+[WebServer]   vite:transform 2.32ms /src/domain/outcome.ts +0ms
+[WebServer]   vite:transform 2.35ms /src/domain/dealer.ts +0ms
+[WebServer]   vite:transform 3.23ms /src/domain/sideBets.ts +0ms
+[WebServer]   vite:transform 3.40ms /src/domain/shoe.ts +1ms
+[WebServer]   vite:transform 3.46ms /src/domain/tableGame.ts +0ms
+[WebServer]   vite:transform 0.49ms /src/domain/card.ts +1ms
+(node:34260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer]   vite:time 3.13ms /index.html +623ms
+[WebServer]   vite:time 0.36ms /src/main.tsx +14ms
+[WebServer]   vite:time 6.97ms /@react-refresh +7ms
+[WebServer]   vite:time 5.56ms /node_modules/.vite/deps/react-dom_client.js?v=084c5f5b +10ms
+[WebServer]   vite:time 0.39ms /src/ui/App.tsx +12ms
+[WebServer]   vite:time 0.36ms /src/casino/CasinoApp.tsx +2ms
+[WebServer]   vite:time 0.49ms /src/browser/controller.ts +1ms
+[WebServer]   vite:time 0.31ms /src/presentation/formalDealers.ts +1ms
+[WebServer]   vite:time 0.19ms /src/casino/routes.ts +1ms
+[WebServer]   vite:time 0.32ms /src/baccarat/BaccaratTable.tsx +1ms
+[WebServer]   vite:time 0.20ms /src/baccarat/controller.ts +1ms
+[WebServer]   vite:time 0.19ms /src/ui/styles.css +0ms
+[WebServer]   vite:time 0.13ms /src/casino/casino.css +1ms
+[WebServer]   vite:time 0.15ms /src/baccarat/baccarat.css +1ms
+[WebServer]   vite:time 0.22ms /node_modules/.vite/deps/react_jsx-dev-runtime.js?v=084c5f5b +1ms
+[WebServer]   vite:time 0.22ms /src/ui/DealerAvatar.tsx +21ms
+[WebServer]   vite:time 0.86ms /node_modules/.vite/deps/react.js?v=084c5f5b +2ms
+[WebServer]   vite:time 0.29ms /src/ui/Table.tsx +1ms
+[WebServer]   vite:time 0.30ms /src/ui/presentation.ts +1ms
+[WebServer]   vite:time 0.31ms /src/ui/Betting.tsx +1ms
+[WebServer]   vite:time 0.41ms /src/ui/Actions.tsx +2ms
+[WebServer]   vite:time 0.55ms /src/ui/Decisions.tsx +2ms
+[WebServer]   vite:time 0.31ms /src/ui/DemoTools.tsx +1ms
+[WebServer]   vite:time 0.30ms /src/ui/PresentationProvider.tsx +2ms
+[WebServer]   vite:time 0.46ms /src/presentation/dealerPresentation.ts +1ms
+[WebServer]   vite:time 0.19ms /src/ui/CharacterPicker.tsx +2ms
+[WebServer]   vite:time 3.38ms /src/ui/PlayerSetup.tsx +4ms
+[WebServer]   vite:time 0.22ms /src/baccarat/presentation/facts.ts +2ms
+[WebServer]   vite:time 0.41ms /src/ui/PresentationAnchor.tsx +1ms
+[WebServer]   vite:time 0.27ms /src/baccarat/domain/engine.ts +1ms
+[WebServer]   vite:time 0.23ms /src/baccarat/domain/replay.ts +1ms
+[WebServer]   vite:time 0.38ms /src/presentation/events.ts +1ms
+[WebServer]   vite:time 0.52ms /src/browser/playerConfiguration.ts +1ms
+[WebServer]   vite:time 0.19ms /src/domain/behindGame.ts +0ms
+[WebServer]   vite:time 0.15ms /src/domain/behindPublicView.ts +1ms
+[WebServer]   vite:time 0.11ms /src/domain/random.ts +0ms
+[WebServer]   vite:time 0.38ms /src/domain/hand.ts +1ms
+[WebServer]   vite:time 0.78ms /src/domain/profile.ts +2ms
+[WebServer]   vite:transform 49.70ms /@vite/client +591ms
+[WebServer]   vite:time 100.67ms /@vite/client +9ms
+[WebServer]   vite:time 0.35ms /src/domain/replay.ts +2ms
+[WebServer]   vite:time 0.25ms /src/domain/sessionCommand.ts +1ms
+[WebServer]   vite:time 0.19ms /src/domain/audit.ts +0ms
+[WebServer]   vite:time 0.18ms /src/browser/presentationObserver.ts +1ms
+[WebServer]   vite:time 0.10ms /src/baccarat/format.ts +0ms
+[WebServer]   vite:time 0.14ms /src/ui/Cards.tsx +1ms
+[WebServer]   vite:time 0.17ms /src/presentation/characters.ts +0ms
+[WebServer]   vite:time 0.13ms /src/baccarat/presentation/Provider.tsx +1ms
+[WebServer]   vite:time 0.13ms /src/presentation/genericDealer.ts +0ms
+[WebServer]   vite:time 0.74ms /node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=084c5f5b +1ms
+[WebServer]   vite:time 0.24ms /src/ui/CasinoPerson.tsx +1ms
+[WebServer]   vite:time 0.14ms /src/presentation/tableGeometry.ts +0ms
+[WebServer]   vite:time 0.15ms /src/presentation/seatMapping.ts +1ms
+[WebServer]   vite:time 0.13ms /src/ui/SeatUnit.tsx +0ms
+[WebServer]   vite:time 0.31ms /src/ui/LocalPlayerHud.tsx +4ms
+[WebServer]   vite:time 0.43ms /src/ui/DealerZone.tsx +1ms
+[WebServer]   vite:time 0.23ms /node_modules/.vite/deps/react-dom.js?v=084c5f5b +1ms
+[WebServer]   vite:transform 0.30ms /node_modules/vite/dist/client/env.mjs +25ms
+[WebServer]   vite:time 5.13ms /node_modules/.vite/deps/motion_react.js?v=084c5f5b +35ms
+[WebServer]   vite:time 0.16ms /node_modules/.vite/deps/motion_mini.js?v=084c5f5b +7ms
+[WebServer]   vite:time 0.08ms /src/presentation/anchors.ts +0ms
+[WebServer]   vite:time 0.11ms /src/presentation/timeline.ts +0ms
+[WebServer]   vite:time 0.09ms /src/presentation/motionTokens.ts +1ms
+[WebServer]   vite:time 0.09ms /src/presentation/initialDeal.ts +0ms
+[WebServer]   vite:time 0.38ms /src/ui/InitialDealFlight.ts +2ms
+[WebServer]   vite:time 0.12ms /src/presentation/playerActions.ts +1ms
+[WebServer]   vite:time 0.10ms /src/ui/PlayerActionMotion.ts +0ms
+[WebServer]   vite:time 0.07ms /src/presentation/dealerActions.ts +0ms
+[WebServer]   vite:time 0.09ms /src/ui/DealerActionMotion.ts +1ms
+[WebServer]   vite:time 0.13ms /src/presentation/wagers.ts +1ms
+[WebServer]   vite:time 0.10ms /src/ui/WagerMotion.ts +1ms
+[WebServer]   vite:time 0.08ms /src/baccarat/domain/shoe.ts +0ms
+[WebServer]   vite:time 0.08ms /src/baccarat/domain/config.ts +0ms
+[WebServer]   vite:time 0.10ms /src/baccarat/domain/rules.ts +0ms
+[WebServer]   vite:time 0.13ms /src/domain/optionalGame.ts +3ms
+[WebServer]   vite:time 0.08ms /src/domain/credits.ts +0ms
+[WebServer]   vite:time 0.16ms /src/domain/bettingGame.ts +0ms
+[WebServer]   vite:time 0.12ms /src/domain/advancedGame.ts +1ms
+[WebServer]   vite:time 0.06ms /src/domain/optionalPublicView.ts +0ms
+[WebServer]   vite:time 0.21ms /src/domain/behindController.ts +1ms
+[WebServer]   vite:time 0.13ms /src/baccarat/presentation/runtime.ts +1ms
+[WebServer]   vite:time 0.42ms /node_modules/vite/dist/client/env.mjs +1ms
+[WebServer]   vite:time 1.08ms /node_modules/.vite/deps/animate-style-DAlyz7VU.js?v=084c5f5b +22ms
+[WebServer]   vite:time 0.30ms /src/domain/tableGame.ts +2ms
+[WebServer]   vite:time 0.18ms /src/domain/advancedPublicView.ts +1ms
+[WebServer]   vite:time 0.11ms /src/domain/table.ts +1ms
+[WebServer]   vite:time 0.13ms /src/domain/sideBets.ts +0ms
+[WebServer]   vite:time 0.09ms /src/domain/shoe.ts +0ms
+[WebServer]   vite:time 0.23ms /src/domain/computer.ts +7ms
+[WebServer]   vite:time 0.12ms /src/domain/dealer.ts +0ms
+[WebServer]   vite:time 0.10ms /src/domain/outcome.ts +0ms
+[WebServer]   vite:time 0.09ms /src/domain/card.ts +1ms
+[WebServer]   vite:time 0.26ms /node_modules/.vite/deps/react_jsx-runtime.js?v=084c5f5b +2ms
+[WebServer]   vite:transform 2.45ms /tests/browser/fixtures.ts +139ms
+[WebServer]   vite:time 4.12ms /tests/browser/fixtures.ts +49ms
+  ok 1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (1.6s)
+2026-10-07T04:30:50.471Z pw:webserver Terminating the WebServer
+2026-10-07T04:30:50.718Z pw:webserver Terminated the WebServer
+
+  1 passed (3.5s)

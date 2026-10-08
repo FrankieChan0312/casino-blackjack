@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T17:21:50.608Z",
+  "finish": "2026-10-07T17:23:10.363Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/harness-h2/focused.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h2-repair1-focused.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

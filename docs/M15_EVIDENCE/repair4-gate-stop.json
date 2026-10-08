@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-07 10:17:49 +08:00",
+  "ownedProcessIds": [
+    17432,
+    4732,
+    16736,
+    13996,
+    21368,
+    2060,
+    23336,
+    4304,
+    5976,
+    1288,
+    22436,
+    4600,
+    22252,
+    17104,
+    23784,
+    27144
+  ],
+  "reason": "Full Vitest frozen M10-F01 timeout makes this invocation FAIL; all M15 Chromium/performance/native zoom completed; stop only owned subtree for authored repair4 scheduling experiment, unchanged final full gate still required",
+  "collector": 31000,
+  "gate": 17432
+}

@@ -1,0 +1,14 @@
+$ErrorActionPreference='Stop'
+foreach($m15Script in @('scripts/verify-character-assets.mjs','scripts/verify-dealer-assets.mjs','scripts/verify-generic-dealer.mjs','scripts/build-generic-dealer.mjs')){
+ if($m15Script -eq 'scripts/build-generic-dealer.mjs'){& node $m15Script --check}else{& node $m15Script}
+ $m15Result=$LASTEXITCODE
+ if($m15Result -ne 0){throw "$m15Script FAIL (exit $m15Result)"}
+ Write-Output "PASS: $m15Script (exit0)"
+}
+foreach($m15Script in @('scripts/check-live-dealer.mjs','scripts/check-browser-build.mjs','scripts/check-baccarat-build.mjs','.git/overnight/audit.cjs','.git/m15/inputs.cjs')){
+ & node $m15Script
+ $m15Result=$LASTEXITCODE
+ if($m15Result -ne 0){throw "$m15Script FAIL (exit $m15Result)"}
+ Write-Output "PASS: $m15Script (exit0)"
+}
+exit 0

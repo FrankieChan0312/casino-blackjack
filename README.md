@@ -1,3 +1,32 @@
+## M15 technical closure after H2 Repair 4 — 2026-10-08 12:52:23 +08:00
+
+**M15_BACCARAT_SHOE_AND_PAIRS_IMPLEMENTED_VERIFIED**. Owner-authorized URL import and new task-contract EOF correction only. A–F PASS/native0: scoped lint; H1/H2/streaming35 and H4 focused91; original900raw/binary working/index SHA unchanged; real68.38MiB archives; complete publication N; unchanged verify.ps1 exactly once. Final main Vitest1410/1410, Chromium321/321, independent accepted M1–M8 preservation PASS. Original product, PNG/assertions/5000ms timeout, runtime/animation timings and all historical evidence remain preserved. [Current closure and proof](docs/HARNESS_H2_REPAIR4.md).
+
+PRE-T11-U01 passes the full suite; individual duration was not emitted by the default native reporter, so no duration is invented or timing rerun performed. Historical timeout root cause remains UNKNOWN. Current native M15 performance2x10 fresh samples<=2500ms PASS. Historical17,038outputs retained after exact verified H1 archive/restore; H4 twelve files remain Git-identical to f2c6c0cb. Original Baccarat version1 fingerprint/replay evidence remains valid for unchanged product inputs; current original Baccarat regressions also PASS.
+
+H1/H2/H3/H4 counts1/4/1/3 each /10; M15 remains7/10; Repair8 NOT STARTED. Eight-deck Baccarat indicator plus additional burn, reserve14/six-card safety, finish/settle then new shoe, independent first-two-rank Player/Banker pairs11:1 profit, exact exposure/atomic Repeat/replay/history. No roadmap. Same-session diff/evidence review PASS; genuinely fresh-session review NOT RUN. Publication PENDING final factual evidence gates and normal commit/push. M15 HUMAN VISUAL ACCEPTANCE: PENDING. WAITING FOR OWNER VISUAL ACCEPTANCE OF PAIR BETS / CUT CARD / NEW SHOE. M16 BACCARAT ROADMAPS NOT STARTED; DEPLOYMENT NOT RUN. Earlier dated failures remain actual history.
+
+## M15 stopped after H2 / unified failure — 2026-10-08 02:03:34 +08:00
+
+M15_BLOCKED_AFTER_H2. Evidence publication maintenance and N PASS; unchanged unified verification FAIL1 on the preserved historical PNG5000ms timeout. M15 remains7/10, Repair8 NOT STARTED, human visual acceptance PENDING. Commit/push NOT RUN; no M16/multiplayer/deployment. [Blocked evidence](docs/M15_EVIDENCE/h2/index.md). Earlier records remain retained below.
+
+## Current M15 integration stopped — 2026-10-08 00:29:23 +08:00
+
+M15_BLOCKED_AFTER_H1_INTEGRATION; repairs7/10. A-M PASS; N evidence publication whitespace FAIL; verify.ps1/commit/push NOT RUN. Human visual acceptance PENDING; M16 NOT STARTED.
+
+[First failure and stopped evidence](docs/M15_EVIDENCE/h1-integration/index.md).
+
+## Current M15 H1 integration / Repair7 validation — 2026-10-08 00:23:14 +08:00
+
+IN PROGRESS; repairs7/10. Exact verified H1 maintenance integrated; ordered validation resumes, publication NOT RUN. M16 NOT STARTED. [Current evidence](docs/M15_EVIDENCE/h1-integration/index.md). Earlier dated checkpoint text below is retained history.
+
+## Current M15 H1 integration / Repair7 validation — 2026-10-08 00:17:52 +08:00
+
+IN PROGRESS; repairs7/10. Exact verified H1 maintenance integrated; ordered validation resumes, publication NOT RUN. M16 NOT STARTED. [Current evidence](docs/M15_EVIDENCE/h1-integration/index.md). Earlier dated checkpoint text below is retained history.
+
+Casino Platform — Blackjack + Baccarat with shoe lifecycle and Player/Banker Pair. Default eight-deck Punto Banco exposes/burns an indicator, uses the Casino Project 14-card cut reserve, finishes the current round and opens a new shoe without resetting credits. One main target plus optional independent rank pairs, each 11:1 profit, exact integer accounting, deterministic replay/history and existing observed animation. [M15 contract and evidence](docs/M15_BACCARAT_SHOE_AND_PAIRS.md). M15 IMPLEMENTED; Repair7 verification resume remains BLOCKED by a native UNKNOWN filesystem error restoring a historical evidence PNG. Standalone full Vitest1406/1406 and Chromium321/321 PASS; original asset deadlines and earlier failures retained. Final unified verification/commit/push NOT RUN; human visual acceptance PENDING. M11/M13/M14 visuals ACCEPTED by the owner; Blackjack V1 ACCEPTED / FROZEN. M16 roadmaps/multiplayer NOT STARTED; deployment NOT RUN.
+
+## Historical M14 checkpoint (superseded by M15)
 Casino Platform — Blackjack + playable animated Baccarat. `/casino` selects either game; `/blackjack` and preserved `/` open accepted frozen Blackjack, `/baccarat` opens single-user8-deck Punto Banco. Exact Player/Banker/Tie simulated-credit wagers, existing formal Dealer/avatar/cards, observational ordered dealing and settled chips, accessible responsive controls, reduced motion and safe skip. [Baccarat contract](docs/BACCARAT_PRESENTATION.md); [owner morning review and native motion evidence](docs/CASINO_OVERNIGHT_EVIDENCE/m14/morning-review/index.md). Technical1374Vitest/291Chromium/unified independent preservation PASS0. Human Visual Acceptance PENDING; M15/multiplayer NOT STARTED; deployment NOT RUN.
 
 ## Historical expansion checkpoints (superseded by current playable table)

@@ -1,0 +1,17 @@
+const fs = require('node:fs'), cp = require('node:child_process'), assert = require('node:assert/strict');
+const root = '.git/m15/h1-integration', label = process.argv[2];
+assert(label && /^[a-z0-9-]+$/.test(label));
+const json = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+const git = (...args) => cp.execFileSync('git', ['-c', 'core.safecrlf=false', ...args], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
+const incoming = json(root + '/incoming.json');
+assert.equal(git('branch', '--show-current').trim(), 'main');
+assert.equal(git('rev-parse', 'HEAD').trim(), incoming.head);
+assert.equal(git('remote', 'get-url', 'origin').trim(), 'https://github.com/FrankieChan0312/casino-blackjack.git');
+const allowed = new Set([...incoming.dirty, ...incoming.fresh, 'scripts/restore-historical-output.mjs', 'tests/tools/historicalRestoration.test.mjs']);
+const files = [...new Set([...git('diff', '--name-only', '-z', incoming.head).split('\0'), ...git('ls-files', '--others', '--exclude-standard', '-z').split('\0')].filter(Boolean))];
+for (const file of files) assert(allowed.has(file) || file.startsWith('docs/M15_EVIDENCE/h1-integration/'), 'Unauthorized staging path: ' + file);
+const list = root + '/stage-paths-' + label + '.nul';
+fs.writeFileSync(list, files.join('\0') + '\0', { flag: 'wx' });
+git('--literal-pathspecs', 'add', '--pathspec-from-file=' + list, '--pathspec-file-nul');
+git('diff', '--cached', '--check');
+console.log(JSON.stringify({ at: new Date().toISOString(), status: 'PASS', stagedPaths: files.length, headUnchanged: incoming.head, commit: 'NOT RUN', allowed: 'Incoming authorized M15 paths plus exact H1 helper/test and current integration evidence' }));

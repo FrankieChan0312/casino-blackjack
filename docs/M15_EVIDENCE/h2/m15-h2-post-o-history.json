@@ -1,0 +1,15 @@
+{
+  "start": "2026-10-07T18:01:44.560Z",
+  "finish": "2026-10-07T18:02:26.174Z",
+  "command": "node",
+  "args": [
+    ".git/m15/h1-integration/verify-history.cjs",
+    "h2-o-stopped"
+  ],
+  "log": ".git\\evidence-capture\\m15-h2-post-o-history.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

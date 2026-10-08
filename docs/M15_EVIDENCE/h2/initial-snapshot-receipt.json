@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-08 01:20:09 +08:00",
+  "artifacts": [
+    {
+      "file": "snapshot.json.gz",
+      "uncompressedSha256": "7c25db5498fa6fa4e72f05a26898cff98c7525b2dfc9f6aa569b0235e07fd7b6",
+      "bytes": 4517024
+    },
+    {
+      "file": "findings.json.gz",
+      "uncompressedSha256": "c98591a6cb1f8677940c1b4bd2f2110c7e49fc86c10f1a48a7472eaa2b2e9fef",
+      "bytes": 2864567
+    },
+    {
+      "file": "index-before-h2.gz",
+      "uncompressedSha256": "9b7ee56aa1b825465e1b08d6b2a73a84bec28fa66de1a3163f64a8053ccf6076",
+      "bytes": 3733036
+    },
+    {
+      "file": "whitespace.stdout.gz",
+      "uncompressedSha256": "e6ee6aa397dee1d63ef0587b440c98511d7e633ca9edd82bd958df651c66471e",
+      "bytes": 1378253
+    },
+    {
+      "file": "whitespace.stderr.gz",
+      "uncompressedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "staged": 679,
+  "unstagedTracked": 10,
+  "untracked": 58,
+  "inventoryFiles": 19477,
+  "whitespaceExit": 2,
+  "findings": 8875,
+  "findingFiles": 35
+}

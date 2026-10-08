@@ -1,0 +1,9 @@
+$ErrorActionPreference='Stop'
+$m15PrivacyRoots=@('docs/M15_EVIDENCE','docs/M15_BACCARAT_SHOE_AND_PAIRS.md','docs/STATE.md','docs/PLAN.md','docs/DEVELOPMENT_LOG.md','docs/LAB_MANUAL.md','docs/BACCARAT_RULES.md','docs/RULES.md','docs/SPEC.md','docs/DESIGN.md','docs/UX_UI.md','README.md','src','tests','casino-tests','scripts')
+# Inspect exact native bytes only after their collector has closed the output.
+foreach($m15ReceiptFile in Get-ChildItem -LiteralPath '.git/evidence-capture' -Filter 'm15-*.json' -File){
+ $m15Receipt=Get-Content -LiteralPath $m15ReceiptFile.FullName -Raw | ConvertFrom-Json
+ if($m15Receipt.PSObject.Properties['outputClosed'] -and $m15Receipt.outputClosed -eq $true -and $m15Receipt.log){$m15PrivacyRoots+=$m15Receipt.log}
+}
+& ./scripts/scan-evidence.ps1 -Roots $m15PrivacyRoots -ResultPath '.git/evidence-capture/m15-privacy-result.json'
+exit $LASTEXITCODE

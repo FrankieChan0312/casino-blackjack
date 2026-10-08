@@ -1,0 +1,25 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),zlib=require('node:zlib'),assert=require('node:assert/strict');
+const target='docs/M15_EVIDENCE/h1-integration',privateRoot='.git/m15/h1-integration';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),json=f=>JSON.parse(fs.readFileSync(f,'utf8').replace(/^\uFEFF/,''));
+const copy=(source,destination)=>{const bytes=fs.readFileSync(source);fs.mkdirSync(path.dirname(destination),{recursive:true});if(fs.existsSync(destination))assert.equal(sha(fs.readFileSync(destination)),sha(bytes),'Evidence overwrite: '+destination);else fs.writeFileSync(destination,bytes,{flag:'wx'});};
+const raw=[];
+for(const name of fs.readdirSync('.git/evidence-capture').filter(name=>/^m15-h1-[a-z0-9-]+\.json$/.test(name)).sort()){
+ const source='.git/evidence-capture/'+name,receipt=json(source);assert.equal(receipt.outputClosed,true);assert(Number.isInteger(receipt.exitCode));
+ const label=name.slice(0,-5),bytes=fs.readFileSync(receipt.log);copy(source,target+'/'+name);
+ const preview=Buffer.from(bytes.toString('utf8').replace(/\r\n|\r/g,'\n')),previewFile=target+'/'+label+'.txt',archive=target+'/'+label+'.txt.gz';
+ if(fs.existsSync(previewFile))assert.equal(sha(fs.readFileSync(previewFile)),sha(preview));else fs.writeFileSync(previewFile,preview,{flag:'wx'});
+ if(fs.existsSync(archive))assert.equal(sha(zlib.gunzipSync(fs.readFileSync(archive))),sha(bytes));else fs.writeFileSync(archive,zlib.gzipSync(bytes),{flag:'wx'});
+ raw.push({label,rawSha256:sha(bytes),source:receipt.log,preview:'Line endings normalized only; exact native bytes in txt.gz'});
+}
+fs.writeFileSync(target+'/raw-log-hashes.json',JSON.stringify(raw,null,2)+'\n');
+for(const name of fs.readdirSync(privateRoot).filter(name=>name.endsWith('.json')&&!name.startsWith('privacy-')))copy(privateRoot+'/'+name,target+'/'+name);
+for(const name of fs.readdirSync(privateRoot).filter(name=>/\.(?:cjs|mjs|ps1)$/.test(name)))copy(privateRoot+'/'+name,target+'/tools/'+name+'.txt');
+const priorPerformance=new Set([...fs.readdirSync('docs/M15_EVIDENCE/performance'),...fs.readdirSync('docs/M15_EVIDENCE/repair7-resume/performance')]);
+for(const name of fs.readdirSync('.git/m15/performance').filter(name=>name.endsWith('.json')&&!priorPerformance.has(name)))copy('.git/m15/performance/'+name,target+'/performance/'+name);
+const runs=fs.existsSync(target+'/performance')?fs.readdirSync(target+'/performance').filter(name=>name.endsWith('.json')).sort().map(file=>({file,...json(target+'/performance/'+file)})):[];
+fs.writeFileSync(target+'/performance-summary.json',JSON.stringify({thresholdMs:2500,retries:0,priorEvidencePreserved:true,allNewRuns:runs,latestByWidth:[1280,320].map(width=>runs.filter(run=>run.width===width).at(-1))},null,2)+'\n');
+for(const group of ['validators','visual'])if(fs.existsSync('.git/m15/'+group)){
+ const version=process.argv[2];assert(version&&/^[a-z0-9-]+$/.test(version));
+ for(const name of fs.readdirSync('.git/m15/'+group,{recursive:true}).filter(name=>fs.statSync('.git/m15/'+group+'/'+name).isFile()))copy('.git/m15/'+group+'/'+name,target+'/'+group+'/'+version+'/'+name);
+}
+console.log(JSON.stringify({status:'PASS',closedLogs:raw.length,newPerformanceRuns:runs.length,oldEvidenceOverwrites:0}));

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T18:05:02.038Z",
+  "finish": "2026-10-07T18:06:32.764Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/harness-h2/stop-check.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h2-stop-records.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

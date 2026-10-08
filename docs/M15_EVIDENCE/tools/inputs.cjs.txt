@@ -1,0 +1,8 @@
+const fs=require('node:fs'),cp=require('node:child_process'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const files=cp.execFileSync('rg',['--files','src','tests','casino-tests','scripts'],{encoding:'utf8',maxBuffer:32*1024*1024}).trim().split(/\r?\n/).map(file=>file.replaceAll('\\','/'));
+files.push('package.json','package-lock.json','tsconfig.json','tsconfig.domain.json','tsconfig.baccarat.json','playwright.config.ts','vite.config.ts');
+const inputs=files.sort().map(file=>({file,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')}));
+const target='.git/m15/frozen-inputs.json';
+if(process.argv[2]==='freeze')fs.writeFileSync(target,JSON.stringify({at:new Date().toISOString(),inputs},null,2)+'\n');
+else assert.deepEqual(inputs,JSON.parse(fs.readFileSync(target)).inputs,'Exact verified executable inputs changed');
+console.log(JSON.stringify({status:'PASS',inputs:inputs.length,mode:process.argv[2]||'check'}));

@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-07 12:15:43 +08:00",
+  "status": "BLOCKED",
+  "classification": "TEST/HARNESS",
+  "operation": "typecheck evidence launcher",
+  "attemptedCommand": "node scripts/collect-evidence.mjs m15-repair7-typecheck npm.cmd run typecheck",
+  "launcherExitCode": 1,
+  "error": "Error: spawn EINVAL",
+  "code": "EINVAL",
+  "errno": -4071,
+  "syscall": "spawn",
+  "stack": [
+    "ChildProcess.spawn (node:internal/child_process:458:11)",
+    "spawn (node:child_process:813:9)",
+    "scripts/collect-evidence.mjs:26:15"
+  ],
+  "requiredCommandExecuted": false,
+  "childLaunched": false,
+  "nativeCollectorReceiptAvailable": false,
+  "source": "Captured exec_command tool output; collector threw before child launch. Empty opened stdout file retained.",
+  "repairCount": 7,
+  "authoredRepair8": false
+}

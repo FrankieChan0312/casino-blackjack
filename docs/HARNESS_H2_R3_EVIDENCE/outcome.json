@@ -1,0 +1,143 @@
+{
+  "at": "2026-10-08 11:07:58 +08:00",
+  "status": "HARNESS_H2_LARGE_PUBLICATION_BLOCKED",
+  "rootCause": "HARNESS BUFFER ARCHITECTURE",
+  "baseline": {
+    "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "staged": 954,
+    "rawBinary": 883,
+    "validatorSha256": "9ebe8dce3febbef6f996b94aea06673564f913f2cf1b1bff307d5f8f120288c6",
+    "artifact": {
+      "path": "docs/M15_H4_EVIDENCE/q-pre-unified/native-captures-i-chromium.tar.gz",
+      "size": 71698590,
+      "sha256": "920063097e5e7b854ee6124784a1f2c3e36ac77f08f09883fd563cc744a31485",
+      "blob": "100644 739c983dd0b47c73314bd51399010ef1cef00e77 0"
+    },
+    "oldFailure": {
+      "command": "node scripts/verify-evidence-publication.mjs",
+      "gitArgv": [
+        "git",
+        "-c",
+        "core.safecrlf=false",
+        "show",
+        ":docs/M15_H4_EVIDENCE/q-pre-unified/native-captures-i-chromium.tar.gz"
+      ],
+      "maxBuffer": 67108864,
+      "error": "spawnSync git ENOBUFS",
+      "code": 1,
+      "gitCode": null,
+      "gitSignal": "SIGTERM",
+      "stdoutSemantics": "Exact indexed blob bytes, needed only for SHA256",
+      "stderrSemantics": "Git diagnostics; empty in original failure",
+      "cause": "HARNESS BUFFER ARCHITECTURE"
+    }
+  },
+  "firstNewFailure": {
+    "command": "node node_modules/eslint/bin/eslint.js scripts/evidence-hash.mjs scripts/verify-evidence-publication.mjs tests/tools/evidenceStreaming.test.mjs --max-warnings 0",
+    "exitCode": 1,
+    "file": "tests/tools/evidenceStreaming.test.mjs",
+    "line": 21,
+    "error": "'URL' is not defined",
+    "rule": "no-undef",
+    "cause": "New Node test uses the global URL constructor without an explicit node:url import required by repository ESLint configuration",
+    "action": "STOP; no source fix or failed-gate retry"
+  },
+  "passed": {
+    "H1": 18,
+    "H2Existing": 11,
+    "H2Streaming": 6,
+    "totalNodeTests": 35,
+    "H4": 91,
+    "largeRegression": {
+      "logicalBytes": 69206016,
+      "chunkBytes": 32768,
+      "sha256": "7a4f3b16c8a9ad2dcbc2f4a6a35038d9a9ebb6a2f4da6161aaabed250bbf2593",
+      "status": "PASS",
+      "fixture": "Synthetic chunks; no large fixture or temporary file"
+    },
+    "ordinaryFixtureCleanup": "Node test t.after removed temporary repositories including spaced paths"
+  },
+  "notRun": [
+    "Real publication validator after repair",
+    "Stage N",
+    "Final verify.ps1",
+    "Current PRE-T11-U01",
+    "commit",
+    "push"
+  ],
+  "repairCounts": {
+    "H1": "1/10",
+    "H2": "3/10",
+    "H3": "1/10",
+    "H4": "3/10",
+    "M15": "7/10",
+    "M15Repair8": "NOT STARTED"
+  },
+  "PNG": {
+    "timeout": 5000,
+    "current": "NOT RUN",
+    "priorFullVitestMs": 4491.1642,
+    "historicalRootCause": "UNKNOWN"
+  },
+  "humanVisualAcceptance": "PENDING",
+  "freshSessionReview": "NOT RUN",
+  "M16": "NOT STARTED",
+  "deployment": "NOT RUN",
+  "nextAction": "STOP; WAITING FOR OWNER DECISION; H2 Repair 4 is not authorized",
+  "stopOnlyIntegrity": {
+    "status": "FAIL",
+    "wrapperExit": 1,
+    "gitExit": 2,
+    "command": "git -c core.safecrlf=false diff --cached --check",
+    "finding": "docs/HARNESS_H2_LARGE_PUBLICATION.md:20: new blank line at EOF.",
+    "source": "Exact child stdout byte array preserved in stop-integrity.stderr.gz",
+    "noFixOrRetry": true,
+    "completedAssertionsBeforeFailure": {
+      "allOriginal954PathsRetained": true,
+      "unrelatedOriginalStagedBlobs": 947,
+      "unrelatedWorkingFilesSHAIdentical": 19678,
+      "originalRawWorkingAndIndex": 883,
+      "changed": 0,
+      "rawIndexProof": "All original blob IDs/modes/stages unchanged and baseline streamed index SHA equals unchanged working SHA",
+      "originalDocumentBodies": "PASS",
+      "priorClassificationEntries": "PASS",
+      "attributes": "PASS",
+      "losslessCaptures": "PASS",
+      "currentM15ManifestHashes": "PASS",
+      "currentLinks": "PASS"
+    },
+    "notReached": [
+      "Remaining final clean/untracked assertions in that audit",
+      "Historical baseline comparison after whitespace check"
+    ]
+  },
+  "stopPrivacy": {
+    "status": "PASS",
+    "exitCode": 0,
+    "files": 296,
+    "traceEntries": 0,
+    "findings": 0,
+    "scope": "New native source outputs and stop records before final integrity/privacy receipts were appended; later receipts manually inspected, no new scanner invocation"
+  },
+  "finalRecordedAt": "2026-10-08 11:11:50 +08:00",
+  "finalGit": {
+    "at": "2026-10-08T03:12:18.420Z",
+    "branch": "main",
+    "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "originMain": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "aheadBehind": "0\t0",
+    "staged": 977,
+    "unstaged": 0,
+    "untracked": 0,
+    "largest": {
+      "path": "docs/M15_H4_EVIDENCE/q-pre-unified/native-captures-p-performance.tar.gz",
+      "bytes": 71698939
+    }
+  },
+  "finalPublicationClassification": {
+    "AUTHORED_TEXT": 77,
+    "RAW_IMMUTABLE_EVIDENCE": 497,
+    "BINARY_ASSET": 403,
+    "UNKNOWN": 0
+  }
+}

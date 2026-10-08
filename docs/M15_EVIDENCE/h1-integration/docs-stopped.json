@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-08 00:29:23 +08:00",
+  "status": "M15_BLOCKED_AFTER_H1_INTEGRATION",
+  "documents": [
+    "docs/STATE.md",
+    "docs/PLAN.md",
+    "docs/DEVELOPMENT_LOG.md",
+    "docs/LAB_MANUAL.md",
+    "docs/M15_BACCARAT_SHOE_AND_PAIRS.md",
+    "docs/M15_EVIDENCE/index.md",
+    "README.md"
+  ],
+  "repairCounts": {
+    "HARNESS_H1": "1/10",
+    "M15": "7/10"
+  },
+  "repair8": "NOT STARTED",
+  "requiredGateContinuation": false,
+  "repair": false,
+  "commit": "NOT RUN",
+  "push": "NOT RUN"
+}

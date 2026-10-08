@@ -1,0 +1,15 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/baccarat/m15Performance.spec.ts --output .git/m15/repair7-resume/performance-browser
+
+[WebServer] (node:29612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:22540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\baccarat\m15Performance.spec.ts:7:33 › [M15-P-1280] fixed ten fresh native six-card FULL_MOTION samples <=2500ms (37.2s)
+  ok 2 [chromium] › tests\browser\baccarat\m15Performance.spec.ts:7:33 › [M15-P-320] fixed ten fresh native six-card FULL_MOTION samples <=2500ms (31.6s)
+
+  2 passed (1.2m)

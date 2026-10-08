@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:42:15.220Z",
+  "finish": "2026-10-07T01:45:13.047Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npx tsc --noEmit && npm run build && node scripts/check-baccarat-build.mjs && npx playwright test tests/browser/baccarat/m15.spec.ts tests/browser/baccarat/m15Performance.spec.ts tests/browser/baccarat/m15Zoom.spec.ts"
+  ],
+  "log": ".git\\evidence-capture\\m15-first-browser.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

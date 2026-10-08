@@ -1,0 +1,3 @@
+$ErrorActionPreference='Stop'
+& npm.cmd run test:e2e
+exit $LASTEXITCODE

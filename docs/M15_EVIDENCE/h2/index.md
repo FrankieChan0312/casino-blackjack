@@ -1,0 +1,45 @@
+# Final stopped-record receipt — 2026-10-08 02:08:48 +08:00
+
+Stop-only evidence/record gate PASS/checked0:835staged snapshot54authored/380raw/401binary/UNKNOWN0; pre-H2immutable690/690working/index SHA unchanged, changed0; original19,160incoming files/document suffixes,270runtime inputs and both exact H1 files preserved; links/hashes/whitespace/staged consistency PASS. Privacy PASS:1100files/20trace text entries/findings0; exact CRLF/BOM scanner bytes are archived with SHA6047412411e400a4e8ce938442ae415018d1dc79e127dcfb2a59f88f3b3910ab. The final receipt archives are added after this observed snapshot; their hashes/classification and authored whitespace are checked separately.
+
+M15_BLOCKED_AFTER_H2. This evidence-only PASS does not close the unchanged verify.ps1 FAIL/native1 (PRE-T11-U01 generic PNG6452ms >original5000ms, exact cause UNKNOWN). H1 1/10, H2 2/10, M15 7/10; Repair8 NOT STARTED. No commit/push or retry. Human visual acceptance PENDING. WAITING FOR OWNER DECISION ON RECURRENT HISTORICAL PNG TIMEOUT. M16/multiplayer NOT STARTED; deployment NOT RUN.
+
+[Stopped outcome](stop-outcome.json); [closed stop-only gate](m15-h2-stop-records.json); [exact scanner bytes](stop-privacy.raw.json.gz); [scanner SHA](stop-privacy.raw.sha256); [15-item owner evidence](morning-review.md).
+
+# M15 blocked after H2 — 2026-10-08 02:03:34 +08:00
+
+M15_BLOCKED_AFTER_H2. HARNESS_H2_EVIDENCE_PUBLICATION_VERIFIED; repairs H1 1/10, H2 2/10, M15 7/10; Repair8 NOT STARTED. H2 isolated11/11, scoped lint, anchored attributes, initial737paths (47authored/342raw/348binary/UNKNOWN0), all690pre-H2immutable working/index SHA and16,475historical hashes PASS0. H2 repair1 fixed basename recursion; repair2 fixed manifest generation order. Both first failures and the failed manifest are preserved.
+
+Publication stage N PASS/checked0: whitespace, complete classification, original19,160incoming files/document suffixes, frozen270inputs, exact two-file H1 integration, evidence links/hashes, staged consistency and unchanged privacy scan. O unchanged verify.ps1 executed once and closed FAIL/native1. PASS typecheck; PASS lint; PASS domain typecheck; PASS production build; Vitest1405PASS/1FAIL of1406; Chromium321 PASS; accepted M1–M8 preservationPASS. First O failure is recurrent historical PRE-T11-U01 generic PNG decode/deterministic conversion timeout6452ms over the unchanged5000ms budget. Test, PNG tools and verify.ps1 are byte-identical to507d6d53;270runtime inputs remain frozen. Exact cause UNKNOWN; no H2 causation inferred, no failure retry, timeout change, new H2 repair or M15 Repair8. Current O failure is not overridden by earlier full1406/321PASS or later positive checks.
+
+After this one closed run, the exact H1 helper preserved native regenerated variants and restored historical originals once; restoration receipt PASS, all16,475original outputs and prior20/22archives/backup hashes retained. Original errno-4094 OS cause remains UNKNOWN. All existing raw H2 inventory bytes remain intact; new metadata is distinct. Commit/push NOT RUN because O failed. Branchmain, HEAD=origin/main=live507d6d53b529f38b4510a8b488ed272216c0f5a9, observed2026-10-08 02:03:34 +08:00; ahead/behind0/0, DIRTY work retained. Stop-only record integrity/privacy checks do not resume or close M15.
+
+Product summary retained: default eight decks; authoritative indicator plus additional burn (A1,2–9face,tens/faces10); public burn indicator; configurable cut reserve, default14; begin before boundary with six-card safety, complete/settle the permitted current round, block next old-shoe deal, then create/shuffle/burn new generation preserving credits/history. Optional independent Player Pair/Banker Pair use first two ranks only, suit/third irrelevant, both may win;11:1default profit, whole-credit stakes/integer hundredth units, total exposure and atomic Repeat include all components. No roadmaps.
+
+Blackjack V1 ACCEPTED/FROZEN at blackjack-v1.0; protected gameplay/domain/RNG/accounting/replay/digest/Dealer/UI and40msinitial/110msaction flights unchanged. Owner M11/M13/M14 acceptance remains ACCEPTED; M15 human visual acceptance PENDING. Same-session review recorded; genuinely fresh-session review NOT RUN. WAITING FOR OWNER DECISION ON RECURRENT HISTORICAL PNG TIMEOUT. M16 BACCARAT ROADMAPS NOT STARTED; MULTIPLAYER NOT STARTED; DEPLOYMENT NOT RUN. [Final blocked evidence](index.md); [15-item owner evidence](morning-review.md).
+
+[Closed O FAIL receipt](m15-h2-o-unified.json); [exact O output gzip](m15-h2-o-unified.txt.gz); [first O failure classification](first-o-failure.json); [N PASS receipt](m15-h2-repair2-publication-n.json); [N privacy](publication-n-privacy.json); [post-O preservation](historical-post-o.json); [H1 restoration](restoration-o-unified.json); [blocked closure record](closure-blocked.json).
+
+Earlier H2 attempts follow without rewriting their history.
+
+# H2 focused gate PASS — 2026-10-08 01:23:56 +08:00
+
+HARNESS_H2_EVIDENCE_PUBLICATION_VERIFIED. HARNESS-H2 repairs1/10; H1 1/10; M15 7/10; Repair8 NOT STARTED. Isolated Git behavioural matrix11/11, scoped ESLint, classification, authored whitespace, full attribute/index/working raw SHA and16,475historical hashes PASS/checked0. Initial737publication items47AUTHORED_TEXT/342RAW_IMMUTABLE_EVIDENCE/348BINARY_ASSET/UNKNOWN0. All690pre-H2 immutable raw/binary files byte-identical; changed0. The342raw text files also all retain their pre-H2 SHA. Exact slash-anchored individual binary paths prevent normalization/whitespace interpretation only for immutable artifacts. Every authored source/test/config/Markdown/JSON remains an ordinary text diff; no check is disabled.
+
+H2 repair1 corrected Git basename-pattern recursion, with first FAIL output retained and an added same-basename authored JSON regression. No product, timing, retry, assertion, dependency or verify.ps1 change. Original publication failure and all PNG timeout/FSWatcher/spawn EINVAL/errno-4094/H1 restoration records remain unchanged. Original errno-4094 OS cause remains UNKNOWN. Publication N is next; unchanged verify.ps1 O NOT RUN until N PASS. M15 final verification/commit/push PENDING, human visual acceptance PENDING; fresh-session review NOT RUN. M16/multiplayer NOT STARTED; deployment NOT RUN. [H2 evidence](index.md).
+
+[Focused PASS receipt](m15-h2-repair1-focused.json); [original focused FAIL](m15-h2-focused.json); [repair ledger](repair1.json). The preceding record is retained below.
+
+# HARNESS-H2 publication packaging
+
+Started 2026-10-08 01:20:09 +08:00. H2 0/10; M15 7/10; Repair8 NOT STARTED.
+
+HARNESS-H2 Evidence Publication Packaging is authorized independently of M15 Repair7. Recommended GPT-6.1 Sol / Max (highest available); client tool metadata confirms GPT-6.1 Sol and Max availability, selected runtime model/effort NOT VERIFIED. Scope: classify every publication path, preserve immutable evidence, exact-path binary attributes, isolated Git behavioural tests, final N audit, then unchanged verify.ps1. Non-goals: product/gameplay/animation/timing/dependency changes, retries, M15 Repair8, M16, multiplayer, deployment. Acceptance: UNKNOWN0, unchanged pre-H2 raw/binary SHA, authored whitespace rejection preserved, H2/N/O PASS0, full staged review, normal authorized main push and clean live parity. Stop: unclassifiable paths, required raw-byte edits, ambiguous product change, new product defect, H2 ten-cycle limit, Git conflict/force push or deployment. Counts H1 1/10, H2 0/10, M15 7/10; Repair8 NOT STARTED.
+
+Step -> verification: initial index/path/hash/full failure snapshot -> captured679/10/58 and19,477files; provenance classification/every finding ->737paths,47authored/342raw/348binary/UNKNOWN0,8,875findings across35files; exact-path Git packaging -> isolated ten-case matrix plus attributes/index/working SHA and authored check; publication N -> original-body/frozen-input/H1 identity, evidence links/hashes/privacy/staged audit; O -> unchanged verify.ps1 once, preserve first failure and classify before any repair; successful technical closure -> full staged review, normal commit/push/parity, concise15-item owner index. Human acceptance PENDING.
+
+Existing docs/M15_EVIDENCE/.gitattributes used * -text; that preserved working bytes but did not suppress raw whitespace checks and disabled conversion for authored indexes. H2 uses only individually inventoried immutable paths with Git binary (-text -diff -merge); editable indexes/manifests use text=auto. All8,875indexed findings independently corroborated against actual indexed lines/EOF. Every finding was preserved attempt evidence; authored corrections0, H2 repairs0/10. Original indexed and working snapshots remain separate, including all earlier failures.
+
+[H2 evidence](index.md).
+
+[Classification](classification.json); [initial snapshot receipt](initial-snapshot-receipt.json). Diagnostic index and full original whitespace output are retained byte-exact in adjacent gzip archives; inventory includes working file SHA values and original staged paths. Genuinely fresh-session review NOT RUN; human M15 acceptance PENDING.

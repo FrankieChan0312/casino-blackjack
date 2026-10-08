@@ -1,0 +1,123 @@
+Running: npm run typecheck
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+PASS: typecheck
+Running: npm run lint
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint
+Running: npm run test
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/formalDealers.test.tsx (14 tests | 1 failed) 8326ms
+   × [M10-F01] exactly five owner-approved source/runtime pairs decode with manifest hashes, alpha and dimensions 5370ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/formalDealers.test.tsx > [M10-F01] exactly five owner-approved source/runtime pairs decode with manifest hashes, alpha and dimensions
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m10/formalDealers.test.tsx:15:1
+     13| const pool = ['noble_female','knight_female','mage_female','elf_female…
+     14| const seats = [[4],[3,4],[3,4,6],[1,3,4,6],[1,3,4,5,6],[1,2,3,4,5,6],[…
+     15| it('[M10-F01] exactly five owner-approved source/runtime pairs decode …
+       | ^
+     16|   expect(FORMAL_DEALER_POOL).toEqual(pool);
+     17|   expect(FORMAL_DEALER_ASSETS.map(a=>a.characterId)).toEqual(pool);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 111 passed (112)
+      Tests  1 failed | 1405 passed (1406)
+   Start at  10:10:10
+   Duration  58.92s (tests 61%, import 32%, transform 4%, setup 2%, worker 1%)
+
+     Import  209 modules were evaluated 446 times · 57.04s total, 32% of tracked time
+             ~3.45s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+FAIL: test (exit 1)
+Running: npm run typecheck:domain
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain
+Running: npm run build
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 502 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-D3wKiMW6.css   52.56 kB │ gzip:  10.31 kB
+dist/assets/index-DAWKyLNY.js   406.25 kB │ gzip: 121.93 kB
+
+✓ built in 693ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build
+Running: npm run test:e2e
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:27144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 321 tests using 1 worker
+
+(node:11288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x    1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (30.3s)
+(node:23336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (13.8s)
+  ok   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (2.4s)
+  ok   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (2.4s)
+  ok   5 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-PLAYER] main wager only (2.9s)
+  ok   6 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-BANKER] main wager only (2.8s)
+  ok   7 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-TIE] main wager only (2.9s)
+  ok   8 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-0] optional wager composition PLAYER_PAIR (5.7s)
+  ok   9 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-1] optional wager composition BANKER_PAIR (6.0s)
+  ok  10 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-2] optional wager composition PLAYER_PAIR+BANKER_PAIR (6.0s)
+  ok  11 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-3] optional wager composition PLAYER+PLAYER_PAIR (6.0s)
+  ok  12 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-4] optional wager composition BANKER+BANKER_PAIR (6.0s)
+  ok  13 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-5] optional wager composition TIE+PLAYER_PAIR+BANKER_PAIR (6.4s)
+  ok  14 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-player-pair-PLAYER_PAIR] first two rank result and exact payout (4.1s)
+  ok  15 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-banker-pair-BANKER_PAIR] first two rank result and exact payout (4.1s)
+  ok  16 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-pair-loss-PLAYER_PAIR] first two rank result and exact payout (3.9s)
+  ok  17 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-pair-loss-BANKER_PAIR] first two rank result and exact payout (4.0s)
+  ok  18 [chromium] › tests\browser\baccarat\m15.spec.ts:54:1 › [M15-UI04] exposure rejection and single main are authoritative, Clear atomic (3.4s)
+  ok  19 [chromium] › tests\browser\baccarat\m15.spec.ts:60:1 › [M15-UI05] cut reached, valid six-card round completes, next shoe changes ID/burn without credit/history reset; Repeat includes both pairs (7.4s)
+  ok  20 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-1280] responsive Pair controls keyboard/focus/touch/200% text (7.9s)
+  ok  21 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-768] responsive Pair controls keyboard/focus/touch/200% text (6.4s)
+  ok  22 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-320] responsive Pair controls keyboard/focus/touch/200% text (4.4s)
+  ok  23 [chromium] › tests\browser\baccarat\m15.spec.ts:92:1 › [M15-UI07] FULL/REDUCED/IMMEDIATE and skip pair settlement yield identical authority; results precede third cards (16.9s)
+  ok  24 [chromium] › tests\browser\baccarat\m15.spec.ts:122:11 › [M15-UI08-PLAYER_PAIR-WIN] native Pair chip animation copies authority and safe skip (5.9s)
+  ok  25 [chromium] › tests\browser\baccarat\m15.spec.ts:122:11 › [M15-UI08-BANKER_PAIR-WIN] native Pair chip animation copies authority and safe skip (5.4s)
+  ok  26 [chromium] › tests\browser\baccarat\m15.spec.ts:122:11 › [M15-UI08-PLAYER_PAIR-LOSS] native Pair chip animation copies authority and safe skip (5.3s)
+  ok  27 [chromium] › tests\browser\baccarat\m15.spec.ts:122:11 › [M15-UI08-BANKER_PAIR-LOSS] native Pair chip animation copies authority and safe skip (5.8s)
+  ok  28 [chromium] › tests\browser\baccarat\m15.spec.ts:133:1 › [M15-UI09] cut card observation during existing valid round then empty new-shoe transition (7.2s)
+  ok  29 [chromium] › tests\browser\baccarat\m15.spec.ts:149:1 › [M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result (4.6s)
+  ok  30 [chromium] › tests\browser\baccarat\m15Performance.spec.ts:7:33 › [M15-P-1280] fixed ten fresh native six-card FULL_MOTION samples <=2500ms (1.0m)
+  ok  31 [chromium] › tests\browser\baccarat\m15Performance.spec.ts:7:33 › [M15-P-320] fixed ten fresh native six-card FULL_MOTION samples <=2500ms (59.2s)
+  ok  32 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-1280] actual automatic native browser zoom 200% (6.8s)
+  ok  33 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-768] actual automatic native browser zoom 200% (6.4s)
+  ok  34 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-640] actual automatic native browser zoom 200% (6.4s)
+  ok  35 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-1280] actual automatic native browser zoom 200% (6.7s)
+  ok  36 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-768] actual automatic native browser zoom 200% (6.3s)
+  ok  37 [chromium] › tests\browser\baccarat\nativeZoom.spec.ts:5:39 › [M13-B07-640] actual automatic native browser zoom 200% (6.4s)

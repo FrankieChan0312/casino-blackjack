@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T05:00:38.645Z",
+  "finish": "2026-10-07T05:00:40.159Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-Command",
+    "npm.cmd test -- casino-tests/baccarat/m15Validator.test.ts; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-validators.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

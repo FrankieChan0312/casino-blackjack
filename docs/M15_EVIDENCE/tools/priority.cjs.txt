@@ -1,0 +1,13 @@
+// Ephemeral verification scheduling only: no fixture, timeout or assertion change.
+const fs = require('node:fs'), os = require('node:os'), path = require('node:path');
+const log = process.env.M15_PRIORITY_LOG;
+if (!log || !path.isAbsolute(log)) throw Error('M15 scheduling requires an absolute receipt path');
+// Keep test workers/Vite/npm at their original priority. Prioritize only the
+// three real CPU-heavy asset audits; the conversion's native Chromium stays
+// on the same scheduler tier as the ordinary workers.
+const heavy = ['verify-dealer-assets.mjs','verify-generic-dealer.mjs','build-generic-dealer.mjs'].includes(path.basename(process.argv[1] || '').toLowerCase());
+const before = os.getPriority(0), requested = heavy ? os.constants.priority.PRIORITY_ABOVE_NORMAL : before;
+os.setPriority(0, requested);
+const actual = os.getPriority(0);
+if (actual !== requested) throw Error('M15 scheduling priority was not applied');
+fs.appendFileSync(log, JSON.stringify({at:new Date().toISOString(),profile:'assets-only',heavy,pid:process.pid,parent:process.ppid,before,requested,actual,argv:process.argv,cwd:process.cwd()})+'\n');

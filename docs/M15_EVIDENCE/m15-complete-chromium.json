@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T02:30:22.658Z",
+  "finish": "2026-10-07T02:51:30.126Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/final-chromium.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-complete-chromium.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

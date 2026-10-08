@@ -1,0 +1,4 @@
+$ErrorActionPreference = 'Stop'
+& npm.cmd run test:e2e -- tests/browser/baccarat/m15Performance.spec.ts
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+exit 0

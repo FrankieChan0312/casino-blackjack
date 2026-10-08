@@ -1,8 +1,8 @@
 import { expect, it } from 'vitest';
 import { readFileSync, readdirSync } from 'node:fs';
-import { createBaccarat, digest } from '../../src/baccarat/domain/engine.js';
+import { digest } from '../../src/baccarat/domain/engine.js';
 import { exportReplay, replay } from '../../src/baccarat/domain/replay.js';
-import { ordered, send } from './fixtures.js';
+import { ordered, send, createLegacyBaccarat as createBaccarat } from './fixtures.js';
 
 it('[M12-P01] replay reconstructs wagers, exact draw order/decisions/result/accounting/journal', () => {
   let state=createBaccarat(55,100000,ordered([5,5,0,0,4,2]));

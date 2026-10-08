@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T05:04:30.049Z",
+  "finish": "2026-10-07T05:05:02.301Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/repair7-resume/core-checks.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-core-checks.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,53 @@
+// Integration adapter only: unchanged verified H1 helper owns every restore.
+import fs from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import console from 'node:console';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { restoreHistoricalOutput } from '../../../scripts/restore-historical-output.mjs';
+
+const label = process.argv[2]; assert(label && /^[a-z0-9-]+$/.test(label));
+const root = process.cwd(), directory = '.git/m15/h1-integration';
+const json = (file) => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+const hash = (file) => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const baseline = json('.git/m15/baseline-preservation.json');
+const incoming = json(directory + '/incoming.json');
+const before = new Set(incoming.files.map((item) => item.file));
+const receipt = directory + '/restoration-' + label + '.json';
+assert(!fs.existsSync(receipt), 'Restoration receipt exists; never retry');
+const within = (file, base) => {
+  const absolute = path.resolve(file);
+  assert(absolute.startsWith(path.resolve(base) + path.sep), 'Outside intended directory');
+  return absolute;
+};
+const changes = [];
+for (const item of baseline.outputs) {
+  const targetPath = within(item.file, 'docs');
+  const generatedSha256 = hash(targetPath);
+  if (generatedSha256 === item.sha256) continue; // Already correct: no real restore.
+  const record = restoreHistoricalOutput({ targetPath,
+    backupPath: within('.git/m15/original/' + item.file, '.git/m15/original'),
+    archivePath: within('.git/m15/generated/h1-' + label + '/' + item.file, '.git/m15/generated/h1-' + label),
+    diagnosticPath: within(directory + '/failures/' + label + '/' + item.file + '.json', directory + '/failures/' + label),
+    expectedOriginalSha256: item.sha256, expectedGeneratedSha256: generatedSha256 });
+  changes.push({ file: item.file, ...record });
+}
+// Preserve only newly generated native outputs; every incoming file stays put.
+const fresh = execFileSync('git', ['ls-files', '--others', '--exclude-standard', 'docs'], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trim().split(/\r?\n/).filter(Boolean);
+for (const file of fresh) {
+  if (before.has(file) || file.startsWith('docs/M15_EVIDENCE/')) continue;
+  assert(/^docs\/(M10_.*_EVIDENCE\/|images\/)/.test(file), 'Unexpected fresh output: ' + file);
+  const source = within(file, 'docs');
+  const destination = within('docs/M15_EVIDENCE/h1-integration/generated/' + label + '/' + file, 'docs/M15_EVIDENCE/h1-integration/generated/' + label);
+  const digest = hash(source); assert(!fs.existsSync(destination), 'Generated destination exists');
+  fs.mkdirSync(path.dirname(destination), { recursive: true }); fs.renameSync(source, destination);
+  assert.equal(hash(destination), digest);
+  changes.push({ file, newGenerated: true, sha256: digest, movedTo: path.relative(root, destination), deleted: false });
+}
+for (const item of json('.git/m15/repair7/executable-inputs.json').inputs) assert.equal(hash(item.file), item.sha256, 'Protected M15 input changed: ' + item.file);
+for (const item of json(directory + '/integration-identity.json').imported) assert.equal(hash(item.file), item.sha256, 'Verified H1 bytes changed');
+const record = { at: new Date().toISOString(), status: 'PASS', originalsChecked: baseline.outputs.length, changes, deletedFiles: 0, helper: 'Exact imported H1', retries: 0 };
+fs.writeFileSync(receipt, JSON.stringify(record, null, 2) + '\n', { flag: 'wx' });
+console.log(JSON.stringify({ ...record, changes: changes.length }));

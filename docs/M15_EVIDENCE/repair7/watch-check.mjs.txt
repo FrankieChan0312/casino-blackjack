@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+import assert from 'node:assert/strict';
+import {createServer} from 'vite';
+const at=new Date().toISOString(),root=process.cwd(),directory='.git/m15/repair7';
+const required=execFileSync('rg',['--files','src','public','tests'],{encoding:'utf8'}).trim().split(/\r?\n/).map(p=>p.replaceAll('\\','/'));
+const server=await createServer({mode:'e2e',server:{host:'127.0.0.1',port:4173,strictPort:true}});
+let result;
+try {
+ await server.listen();
+ const started=Date.now();let entries,watched,missing;
+ do {
+  entries=Object.entries(server.watcher.getWatched());watched=new Set(entries.flatMap(([p,names])=>names.map(name=>path.join(p,name).replaceAll('\\','/'))));
+  missing=required.filter(p=>!watched.has(path.resolve(p).replaceAll('\\','/')));
+  if(!missing.length)break;
+  await new Promise(resolve=>setTimeout(resolve,50));
+ }while(Date.now()-started<10000);
+ const docsPrefix=path.resolve('docs').replaceAll('\\','/');const docs=[...watched].filter(p=>p===docsPrefix||p.startsWith(docsPrefix+'/'));
+ result={at,mode:server.config.mode,status:missing.length||docs.length?'FAIL':'PASS',effectiveIgnored:server.watcher.options.ignored,configuredIgnored:server.config.server.watch.ignored,directoryCount:entries.length,itemCount:watched.size,requiredCount:required.length,coverage:Object.fromEntries(['src','public','tests'].map(group=>[group,required.filter(p=>p.startsWith(group+'/')).length])),missing,docsWatched:docs,fixtures:['tests/browser/fixtures.ts','tests/browser/baccaratFixtures.ts'].map(p=>({path:p,watched:watched.has(path.resolve(p).replaceAll('\\','/'))})),watched:[...watched].map(p=>path.relative(root,p).replaceAll('\\','/')).sort()};
+ fs.writeFileSync(directory+'/watcher.json',JSON.stringify(result,null,2));
+ assert.equal(result.status,'PASS');assert.deepEqual(result.configuredIgnored,['**/docs/**']);
+ console.log(JSON.stringify({...result,watched:undefined}));
+}finally {await server.close();}

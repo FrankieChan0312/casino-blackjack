@@ -1,16 +1,23 @@
 import type { PhysicalCard, Rank } from '../../domain/card.js';
+import { DEFAULT_RULES, validateRules, type BaccaratRules } from './config.js';
 
 export type Target = 'PLAYER' | 'BANKER' | 'TIE';
 export const TARGETS: readonly Target[] = Object.freeze(['PLAYER', 'BANKER', 'TIE']);
-export type Wagers = Readonly<Record<Target, number>>;
+export type PairTarget = 'PLAYER_PAIR' | 'BANKER_PAIR';
+export type WagerTarget = Target | PairTarget;
+export const PAIR_TARGETS: readonly PairTarget[] = Object.freeze(['PLAYER_PAIR', 'BANKER_PAIR']);
+export const WAGER_TARGETS: readonly WagerTarget[] = Object.freeze([...TARGETS, ...PAIR_TARGETS]);
+export type Wagers = Readonly<Record<Target, number> & Partial<Record<PairTarget, number>>>;
 export const EMPTY_WAGERS: Wagers = Object.freeze({ PLAYER: 0, BANKER: 0, TIE: 0 });
-export type Settlement = Readonly<{ target: Target; stakeUnits: number; grossUnits: number; netUnits: number;
+export const EMPTY_M15_WAGERS: Wagers = Object.freeze({ ...EMPTY_WAGERS, PLAYER_PAIR: 0, BANKER_PAIR: 0 });
+export type Settlement = Readonly<{ target: WagerTarget; stakeUnits: number; grossUnits: number; netUnits: number;
   result: 'WIN' | 'LOSS' | 'PUSH' }>;
 export type Draw = Readonly<{ zone: 'PLAYER' | 'BANKER'; index: number; card: PhysicalCard;
   totalAfter: number; reason: 'INITIAL' | 'THIRD' }>;
 export type Round = Readonly<{ id: string; player: readonly PhysicalCard[]; banker: readonly PhysicalCard[];
   playerTotal: number; bankerTotal: number; playerInitial: number; bankerInitial: number;
   natural: boolean; playerNatural: boolean; bankerNatural: boolean;
+  playerPair: boolean; bankerPair: boolean; shoeId: string | null; shoeRoundNumber: number;
   playerDecision: 'DRAW' | 'STAND' | 'NATURAL'; bankerDecision: 'DRAW' | 'STAND' | 'NATURAL';
   outcome: Target; draws: readonly Draw[]; wagers: Wagers; settlements: readonly Settlement[] }>;
 
@@ -60,7 +67,22 @@ export function settleWagers(wagers: Wagers, outcome: Target): readonly Settleme
     return Object.freeze({ target, stakeUnits, grossUnits, netUnits: grossUnits - stakeUnits, result });
   }));
 }
-export function resolveRound(id: string, cards: readonly PhysicalCard[], wagers: Wagers = EMPTY_WAGERS): Round {
+export function isPair(cards: readonly Pick<PhysicalCard, 'rank'>[]): boolean {
+  return cards.length >= 2 && cards[0].rank === cards[1].rank;
+}
+export function settlePairs(wagers: Wagers, playerPair: boolean, bankerPair: boolean, rules: BaccaratRules = DEFAULT_RULES): readonly Settlement[] {
+  validateRules(rules);
+  return Object.freeze(PAIR_TARGETS.flatMap(target => {
+    const stakeUnits = wagers[target] ?? 0;
+    if (!Number.isSafeInteger(stakeUnits) || stakeUnits < 0 || stakeUnits > 100000 || stakeUnits % 100 !== 0) throw new RangeError('Invalid Pair wager');
+    if (!stakeUnits) return [];
+    const win = target === 'PLAYER_PAIR' ? playerPair : bankerPair;
+    const profit = target === 'PLAYER_PAIR' ? rules.playerPairProfit : rules.bankerPairProfit;
+    const grossUnits = win ? stakeUnits * (profit + 1) : 0;
+    return [Object.freeze({ target, stakeUnits, grossUnits, netUnits: grossUnits - stakeUnits, result: win ? 'WIN' as const : 'LOSS' as const })];
+  }));
+}
+export function resolveRound(id: string, cards: readonly PhysicalCard[], wagers: Wagers = EMPTY_WAGERS, rules: BaccaratRules = DEFAULT_RULES): Round {
   const player: PhysicalCard[] = [], banker: PhysicalCard[] = [], draws: Draw[] = [], seen = new Set<string>();
   let cursor = 0;
   function draw(zone: 'PLAYER' | 'BANKER', reason: 'INITIAL' | 'THIRD') {
@@ -75,6 +97,7 @@ export function resolveRound(id: string, cards: readonly PhysicalCard[], wagers:
   }
   draw('PLAYER', 'INITIAL'); draw('BANKER', 'INITIAL'); draw('PLAYER', 'INITIAL'); draw('BANKER', 'INITIAL');
   const playerInitial = total(player), bankerInitial = total(banker);
+  const playerPair = isPair(player), bankerPair = isPair(banker);
   const playerNatural = playerInitial >= 8, bankerNatural = bankerInitial >= 8, natural = playerNatural || bankerNatural;
   let playerDecision: Round['playerDecision'] = natural ? 'NATURAL' : 'STAND';
   let bankerDecision: Round['bankerDecision'] = natural ? 'NATURAL' : 'STAND';
@@ -87,6 +110,7 @@ export function resolveRound(id: string, cards: readonly PhysicalCard[], wagers:
   const playerTotal = total(player), bankerTotal = total(banker);
   const outcome: Target = playerTotal > bankerTotal ? 'PLAYER' : playerTotal < bankerTotal ? 'BANKER' : 'TIE';
   return Object.freeze({ id, player: Object.freeze(player), banker: Object.freeze(banker), playerInitial, bankerInitial,
-    playerTotal, bankerTotal, natural, playerNatural, bankerNatural, playerDecision, bankerDecision, outcome,
-    draws: Object.freeze(draws), wagers: Object.freeze({ ...wagers }), settlements: settleWagers(wagers, outcome) });
+    playerTotal, bankerTotal, natural, playerNatural, bankerNatural, playerPair, bankerPair, shoeId: null, shoeRoundNumber: 0,
+    playerDecision, bankerDecision, outcome, draws: Object.freeze(draws), wagers: Object.freeze({ ...wagers }),
+    settlements: Object.freeze([...settleWagers(wagers, outcome), ...settlePairs(wagers, playerPair, bankerPair, rules)]) });
 }

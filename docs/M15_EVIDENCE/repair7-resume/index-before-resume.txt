@@ -1,0 +1,23 @@
+## Current repair7 checkpoint
+
+**M15_BLOCKED_AFTER_REPAIR_7_OTHER**, repairs **7/10**. [Watcher scope and launcher failure](repair7/index.md). Watcher native PASS; typecheck launch BLOCKED before execution; remaining product verification NOT RUN under the owner new-failure stop. No commit/push. All previous success/failure records below remain historical evidence and do not close repair7.
+
+# M15 evidence
+
+Status: **M15_BACCARAT_SHOE_AND_PAIRS_BLOCKED**. Implementation exists, but full Vitest/unified verification has failed on frozen Dealer asset-test deadlines; full Chromium also fails on its first navigation deadline. M15 is not VERIFIED, ACCEPTED or published. Cumulative repair count6/10: core deadline repairs stopped after two failed scheduling experiments, followed by an artifact manifest-ordering repair. Human Visual Acceptance remains PENDING.
+
+The [task contract and execution ledger](../M15_BACCARAT_SHOE_AND_PAIRS.md) distinguish each attempt and required check. The [visual gallery](visual/index.md) maps all fifteen requested categories. Complete Chromium:320 PASS/1 FAIL/native1, all30 M15 cases PASS. Independent M1–M8 preservation PASS/native0. Assets/byte reproduction/fixture guards/frozen input/tag checks PASS/native0. Historical originals restored and 98 generated variants privately archived. Original privacy scanner PASS, zero findings. Exact artifact/native bytes and current documentation links/scope/whitespace PASS. These independent results do not override the failed full Vitest/Chromium/unified gate.
+
+Evidence conventions:
+
+- Native collectors write stdout/stderr, close it, then write an exit-code receipt. Only closed runs are packaged.
+- Text previews normalize line endings only. Each adjacent `.txt.gz` contains exact native bytes; `raw-log-hashes.json` identifies their SHA-256 values.
+- `manifest.json` lists exact artifact/tool bytes, excluding its own self-reference. This directory disables Git text conversion to preserve those bytes.
+- Tools are source snapshots with a final `.txt` suffix. This prevents documentation artifacts from entering the production/test/lint inventory. Copy a snapshot into `.git/m15`, removing only that suffix, to inspect or reproduce it.
+- The original repair1 ENOBUFS failure was captured in the task tool output and timestamped ledger, not by a native collector. Its pre-repair helper is retained; no fabricated raw log is supplied.
+- Failure logs, blank screenshot/context/trace and original test source remain preserved. Archive resources must pass the unchanged privacy scan before delivery.
+- All bounded native timing runs are retained, including runs from interrupted unified gates. Each has10 fresh samples per width, no performance retries, and the same2500ms threshold.
+
+Replay cross-check: copy the `legacy-snapshot.cjs.txt`, `legacy.config.mjs.txt` and `legacy.test.ts.txt` snapshots to `.git/m15` without `.txt`; run `node .git/m15/legacy-snapshot.cjs`, then `npx vitest run --config .git/m15/legacy.config.mjs`. This reads the real507d6d53 baseline source from Git and compares every v1 fingerprint over5seeds×180rounds, original exports and actual multi-shoe replay. It does not replace the full gate.
+
+Scheduling experiments are historical diagnostics. The repair4 preload prioritized all Node processes; repair5 prioritized only three real asset audit/conversion processes and retained ordinary worker priorities. Their actual priority receipts and both original preload versions are included. Neither experiment passed the complete mandatory gate; no test deadlines, workers, assertions or accepted Blackjack files were changed. Do not treat focused PASS as a full-suite PASS or repeat a failed run until green.

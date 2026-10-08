@@ -1,0 +1,107 @@
+{
+  "at": "2026-10-08 11:07:58 +08:00",
+  "captured": [
+    {
+      "file": "raw-baseline.json.gz",
+      "rawSha256": "de75f1af70bfdbe669159c77ac3a985d8b11b01cc57143b1556a56fc958d87ee",
+      "sha256": "3483ac2b242ee6b3c76ce16a53b5773c7ed20e451db8dae451e4491f6415d46e",
+      "rawBytes": 603372
+    },
+    {
+      "file": "focused.json.gz",
+      "rawSha256": "329932147d47e03471f9276995830808313847674df9a668da98844d97ffe6c6",
+      "sha256": "1d0d664ac2a09a8022f1d349d03ff905ec16b65ed5c71d4fa9fd04ad9d9ad53e",
+      "rawBytes": 562
+    },
+    {
+      "file": "focused.stdout.gz",
+      "rawSha256": "55890b7a9fabf970b7a5374bec2f92afd72b7e2c63c52f0b7d98172666a06d19",
+      "sha256": "1ea425f8a575f342bf2d9b977e88b487235695e3547995e5c05088017213d786",
+      "rawBytes": 2875
+    },
+    {
+      "file": "focused.stderr.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63",
+      "rawBytes": 0
+    },
+    {
+      "file": "h4-focused.json.gz",
+      "rawSha256": "cb1dcb77433e698eb628f48c4404b801c781b9d6b3ba1dbb86560f90469e0280",
+      "sha256": "f560efc25fbb1d9fd5c71c2127295fdb419bdb1b07c78706bea09bdabf910d15",
+      "rawBytes": 587
+    },
+    {
+      "file": "h4-focused.stdout.gz",
+      "rawSha256": "e1a297551fd3664fd9f002d496b100e6ba98855b9ff53d5b00adc9018ae46eed",
+      "sha256": "e60714f2e57f3f846c8b957537880d17f566ef6af750ce279ff567969f675956",
+      "rawBytes": 219
+    },
+    {
+      "file": "h4-focused.stderr.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63",
+      "rawBytes": 0
+    },
+    {
+      "file": "scoped-lint.json.gz",
+      "rawSha256": "4abfcac9d09b1be0ec5f566dd8427a3eb4a19138f01c997ea1009450273420cc",
+      "sha256": "a7734a75b4e803b11b4530baab304e497f39fdae6e0ab36bebc96bcaae43e264",
+      "rawBytes": 610
+    },
+    {
+      "file": "scoped-lint.stdout.gz",
+      "rawSha256": "03b707d57cbd25bbfa9f2ebd9bde786bf3dd5c5dfa70db885e0f057e69f897f0",
+      "sha256": "063f4842e5757285b41733db7f67ea3dfc18190aedc66e0830521be1f47503ea",
+      "rawBytes": 173
+    },
+    {
+      "file": "scoped-lint.stderr.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63",
+      "rawBytes": 0
+    },
+    {
+      "file": "stop-integrity.json.gz",
+      "rawSha256": "557e675efe9fe83cafef7f4da84186c90b15b391fb270bff1c900fea3c863f48",
+      "sha256": "ddd541cf04c15d4aba9476a729b722a2abd0263158ebcce87d36cba46dab12e4",
+      "rawBytes": 489
+    },
+    {
+      "file": "stop-integrity.stdout.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63",
+      "rawBytes": 0
+    },
+    {
+      "file": "stop-integrity.stderr.gz",
+      "rawSha256": "113b5474564af5be080448e8ae360c332d04291cbea98ea1337bd4fe40f2b0ec",
+      "sha256": "76e5bd5bb62985b2cc9a96932b1618a800aa0cd9bcc7c594e5413afcd1c06a91",
+      "rawBytes": 1559
+    },
+    {
+      "file": "stop-privacy.json.gz",
+      "rawSha256": "da4b87b789de5ff883f3c6aa2015809d2a3475b6808c47203d58c6c2950294b6",
+      "sha256": "d7d2db5ef27a6071d142545565bdf627f7fb9b954e272a43471818756ff1c214",
+      "rawBytes": 609
+    },
+    {
+      "file": "stop-privacy.stdout.gz",
+      "rawSha256": "c7c6b71c4ed9f1a390ef40c8e64db17edfba5a56aa39443ed16422cc1b5153a6",
+      "sha256": "bf40264da49a43b28a0b41fee5648d6f24ce853493b8e282805ad2ddac0a4fea",
+      "rawBytes": 47
+    },
+    {
+      "file": "stop-privacy.stderr.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "9e72928e7a01615b4cf090daa617b4ca9d68531748f887f323f695eb4ca3ef63",
+      "rawBytes": 0
+    },
+    {
+      "file": "stop-privacy-native.json.gz",
+      "rawSha256": "b0d31f0e413537e74246071c9d32b037fa7e38790128a1c71cf4eef9041e2389",
+      "sha256": "5c4993173140f30736f038355d6b4f5e1d6a71d079dfc1a54ceae8088fcb0cf0",
+      "rawBytes": 80409
+    }
+  ]
+}

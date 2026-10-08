@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:38:27.328Z",
+  "finish": "2026-10-07T01:39:25.305Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npx tsc --noEmit && npx tsc -p tsconfig.baccarat.json && npm run lint && npm test -- casino-tests/baccarat"
+  ],
+  "log": ".git\\evidence-capture\\m15-initial-focused.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

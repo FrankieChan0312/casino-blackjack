@@ -1,0 +1,4 @@
+$ErrorActionPreference = 'Stop'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-preservation.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+exit 0

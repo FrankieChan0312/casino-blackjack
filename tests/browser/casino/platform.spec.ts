@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
-const evidence = '.git/overnight/visual/m11';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
+const evidence = join(resolveGitDir(), 'overnight/visual/m11');
 test('[M11-B01] lobby native navigation, deep links and refresh mount accepted Blackjack', async ({ page }) => {
   await page.goto('/casino'); await expect(page.getByRole('heading', { name: 'Casino Lobby', exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Play Blackjack' }).click();

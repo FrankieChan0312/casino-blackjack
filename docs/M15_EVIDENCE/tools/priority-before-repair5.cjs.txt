@@ -1,0 +1,9 @@
+// Ephemeral verification scheduling only: no fixture, timeout or assertion change.
+const fs = require('node:fs'), os = require('node:os'), path = require('node:path');
+const log = process.env.M15_PRIORITY_LOG;
+if (!log || !path.isAbsolute(log)) throw Error('M15 scheduling requires an absolute receipt path');
+const before = os.getPriority(0), requested = os.constants.priority.PRIORITY_ABOVE_NORMAL;
+os.setPriority(0, requested);
+const actual = os.getPriority(0);
+if (actual !== requested) throw Error('M15 scheduling priority was not applied');
+fs.appendFileSync(log, JSON.stringify({at:new Date().toISOString(),pid:process.pid,parent:process.ppid,before,requested,actual,argv:process.argv,cwd:process.cwd()})+'\n');

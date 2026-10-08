@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T03:04:49.956Z",
+  "finish": "2026-10-07T03:05:24.428Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/final-docs.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair6-docs.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

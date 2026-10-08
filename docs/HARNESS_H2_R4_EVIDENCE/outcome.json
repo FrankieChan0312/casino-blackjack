@@ -1,0 +1,849 @@
+{
+  "at": "2026-10-08 12:52:23 +08:00",
+  "status": "HARNESS_H2_LARGE_PUBLICATION_VERIFIED_AND_M15_IMPLEMENTED_VERIFIED",
+  "M15": "M15_BACCARAT_SHOE_AND_PAIRS_IMPLEMENTED_VERIFIED",
+  "counts": {
+    "H1": "1/10",
+    "H2": "4/10",
+    "H3": "1/10",
+    "H4": "3/10",
+    "M15": "7/10",
+    "M15Repair8": "NOT STARTED"
+  },
+  "corrections": [
+    "Explicit URL import",
+    "New task-contract EOF whitespace only"
+  ],
+  "gates": {
+    "A": "PASS",
+    "B": "PASS: H1/H2/streaming35 plus H4 91",
+    "C": "PASS: original900raw/binary changed0",
+    "D": "PASS native0, real68.38MiB artifacts",
+    "E": "Complete N PASS native0",
+    "F": "Unchanged verify.ps1 exactly once PASS native0"
+  },
+  "vitest": 1410,
+  "chromium": 321,
+  "png": {
+    "status": "PASS in full1410 suite",
+    "timeoutMs": 5000,
+    "durationMs": null,
+    "durationEvidence": "Native default Vitest output emits only suite totals; individual duration unavailable, no timing rerun",
+    "historicalRootCause": "UNKNOWN"
+  },
+  "performance": [
+    {
+      "width": 1280,
+      "worstMs": 497.7000000476837,
+      "medianMs": 478.5,
+      "samples": 10
+    },
+    {
+      "width": 320,
+      "worstMs": 554.2000000476837,
+      "medianMs": 492.64999997615814,
+      "samples": 10
+    }
+  ],
+  "historical": {
+    "at": "2026-10-08T04:51:22.784Z",
+    "status": "PASS",
+    "historicalFiles": 17038,
+    "restoredCount": 41,
+    "restored": [
+      {
+        "file": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\five-cards-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\five-cards-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\five-cards-1280.png",
+        "originalSha256": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+        "generatedSha256": "7edb9e49c50f53254cd0b5d294c8fd7b9616ff3cb56d25a4a29d57c8ce2349dc",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-844261fc-ace9-4940-9dd4-a7f2ff7074c7.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-844261fc-ace9-4940-9dd4-a7f2ff7074c7.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\five-cards-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\five-cards-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\five-cards-320.png",
+        "originalSha256": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+        "generatedSha256": "33884426d9b447bbd6a8b824eddc01dc0b3be0acac843bb35879a035c2df8438",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-dce1ec56-cb28-4071-85f8-15ad57f3a7f3.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-dce1ec56-cb28-4071-85f8-15ad57f3a7f3.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\five-cards-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\five-cards-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\five-cards-768.png",
+        "originalSha256": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+        "generatedSha256": "e16e701a9fb48640dd54bd6cb8f1d3490054ff424af62935981a89f644707003",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-ba72e136-a99b-420c-9631-37254b15b66b.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-ba72e136-a99b-420c-9631-37254b15b66b.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\four-leaves-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\four-leaves-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\four-leaves-1280.png",
+        "originalSha256": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+        "generatedSha256": "23d618140210c0069501e3e0c2cbd83c0040cb7059d3d779bcf419024d818fb4",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-6f3a80c2-cad7-4206-8b2d-a2b87079f740.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-6f3a80c2-cad7-4206-8b2d-a2b87079f740.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\four-leaves-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\four-leaves-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\four-leaves-320.png",
+        "originalSha256": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+        "generatedSha256": "a369270f94c468e5220de36b8d18b70c091fd25a1395a1b9dc699ac0aa50fbc4",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-05650fd1-639e-4885-bf1b-8759e2ea52f0.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-05650fd1-639e-4885-bf1b-8759e2ea52f0.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\four-leaves-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\four-leaves-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\four-leaves-768.png",
+        "originalSha256": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+        "generatedSha256": "f6060cb22b6ad0776ff66f955741a103a773e4f241368c1a5498f034dac621da",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-bd91cd5c-2f9f-4122-aab3-b6706ee805a2.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-bd91cd5c-2f9f-4122-aab3-b6706ee805a2.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/geometry.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\geometry.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\geometry.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\geometry.json",
+        "originalSha256": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+        "generatedSha256": "1c11a291714d49d789b85899f8e59865ce755894691e64f521465381c05e0295",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-c08e9bc5-de09-4e15-acbb-82e179eaf7c4.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-c08e9bc5-de09-4e15-acbb-82e179eaf7c4.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-1280.png",
+        "originalSha256": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+        "generatedSha256": "6f711ec6f1f8de9a7c2c1ebeb4f5900784591961ed01a12b32a26f52a71063a9",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-c471f59f-8739-44a5-b2f7-16a69332e72d.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-c471f59f-8739-44a5-b2f7-16a69332e72d.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-320.png",
+        "originalSha256": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+        "generatedSha256": "029044c171172891ead6ea4bec0aa5028f83647128f428be36486c28e3815358",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-cf1b8bca-7c43-4b52-8e4a-c50fb4c069d5.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-cf1b8bca-7c43-4b52-8e4a-c50fb4c069d5.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-dealt-768.png",
+        "originalSha256": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+        "generatedSha256": "27473d042f6a0d10131e8905c67b475a0702f4f306fed5db4668018567d1b736",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-827d2cf5-19e1-489c-9a2d-951e547eec4e.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-827d2cf5-19e1-489c-9a2d-951e547eec4e.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-1280.png",
+        "originalSha256": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+        "generatedSha256": "e57a5da7553989c9c9dd61cf62ad49ce8285c765feaaaf2a2efe63de85d7aa6b",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-cf27a8c7-40d3-43e4-849c-21f916d58b99.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-cf27a8c7-40d3-43e4-849c-21f916d58b99.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-320.png",
+        "originalSha256": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+        "generatedSha256": "5f7d2e3d6ecb01845ce2b249f0762a7544228110c40f67c5bc719c5a43cdc2be",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-1ce330e6-6b83-46ce-bcc0-c9d4ba697db0.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-1ce330e6-6b83-46ce-bcc0-c9d4ba697db0.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\repair09\\scene-open-768.png",
+        "originalSha256": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+        "generatedSha256": "ca2651dc47aa3ca733e8001c0771f454c65c9f138d6777f3347ad3d08efdea23",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-original-8e375331-b74d-4569-80bb-2ca81623014e.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\repair09\\.h1-replace-8e375331-b74d-4569-80bb-2ca81623014e.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/table-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\table-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\table-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\table-1280.png",
+        "originalSha256": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+        "generatedSha256": "6f711ec6f1f8de9a7c2c1ebeb4f5900784591961ed01a12b32a26f52a71063a9",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-7270440a-b5af-4c4c-98f3-3d17856c7566.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-7270440a-b5af-4c4c-98f3-3d17856c7566.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/table-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\table-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\table-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\table-320.png",
+        "originalSha256": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+        "generatedSha256": "029044c171172891ead6ea4bec0aa5028f83647128f428be36486c28e3815358",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-23eae17c-f49e-44d2-8458-10655d2659eb.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-23eae17c-f49e-44d2-8458-10655d2659eb.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/table-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\table-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\table-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\table-768.png",
+        "originalSha256": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+        "generatedSha256": "27473d042f6a0d10131e8905c67b475a0702f4f306fed5db4668018567d1b736",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-0e5daa3c-da9e-4e24-8d19-0efa41d0b421.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-0e5daa3c-da9e-4e24-8d19-0efa41d0b421.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\text-fallback-1280.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\text-fallback-1280.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\text-fallback-1280.png",
+        "originalSha256": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+        "generatedSha256": "765f7a710fe94d5db0d872bfbe842a3aad8ced6254665905610dc81aa6a4e016",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-08944a26-319a-494c-b75d-18916e8b0a0b.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-08944a26-319a-494c-b75d-18916e8b0a0b.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\text-fallback-320.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\text-fallback-320.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\text-fallback-320.png",
+        "originalSha256": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+        "generatedSha256": "69252eea38ce2ae288f743b0d59c18986c05e45720860a908c65e90b09014c29",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-946a2051-4e95-4354-969f-7d81c6ed2966.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-946a2051-4e95-4354-969f-7d81c6ed2966.tmp"
+      },
+      {
+        "file": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\text-fallback-768.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T01_EVIDENCE\\text-fallback-768.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T01_EVIDENCE\\text-fallback-768.png",
+        "originalSha256": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+        "generatedSha256": "9bf19b79204b1029c96da8f4ad1207375a7bec2166239d32bfda9205e175565f",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-original-bf720fc8-c251-49ad-9b15-5f9006bb49d6.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T01_EVIDENCE\\.h1-replace-bf720fc8-c251-49ad-9b15-5f9006bb49d6.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/reduced-seven-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\reduced-seven-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\reduced-seven-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\reduced-seven-settled.png",
+        "originalSha256": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+        "generatedSha256": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\.h1-original-f976bf50-0087-47fa-94cd-1431c6eb3349.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\.h1-replace-f976bf50-0087-47fa-94cd-1431c6eb3349.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-end-first-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-end-first-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-end-first-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-end-first-pass.png",
+        "originalSha256": "1ebc87a901637b897f16cd89d0026b5950d148f4eb53b6292780d0cfbe499d37",
+        "generatedSha256": "f315807336c5d29ec75aff2b8eb1ec8b4f2796f0dba246ab622f565b0f939c3c",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-a95802d2-18ce-4930-b3c7-87ec1f163735.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-a95802d2-18ce-4930-b3c7-87ec1f163735.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-first-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-first-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-first-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-first-pass.png",
+        "originalSha256": "aac783e94a0e55372d23124b6e06f5fa4569aecc761f8fbf968a780fc1b6e668",
+        "generatedSha256": "5d3d3d5f8545a6ff2b787028037d6c2d758e753e75ee2c7009d0b808d015cb2a",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-6438a3d4-fd71-4dfb-82b7-e2df0f38a704.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-6438a3d4-fd71-4dfb-82b7-e2df0f38a704.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-second-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-second-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-second-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-mid-second-pass.png",
+        "originalSha256": "08511aee4e4cbfc658d8d9053967805ff99fa1204900301a19acf5f2789efeb9",
+        "generatedSha256": "508a8764579b72424dd849d03facea70cfad156852e887f6df3030c32d835d43",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-5558e55d-96ff-43f0-9024-c1bb834d4fbe.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-5558e55d-96ff-43f0-9024-c1bb834d4fbe.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-sequence.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-sequence.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-sequence.json",
+        "originalSha256": "ede90e2699c4e081957b3f0d66e4f550a1af3076a5752606d0f1a2c5628cc618",
+        "generatedSha256": "f0ffcd80a744901d1e659ceb30c9720e3325156c2a82fdce08f93ad0bcf4cfb1",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-e3c81e70-70ac-4a6c-83f3-cd27b397a8f9.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-e3c81e70-70ac-4a6c-83f3-cd27b397a8f9.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-settled.png",
+        "originalSha256": "8b2d4dd622510dd4bd8d38cea8b2367c2e01c66486a93d8bebd1e103f3e40c36",
+        "generatedSha256": "2a3d2bfd49f91d60efe7ba5a5919e563d0ae7d3412d76254805f84f1eeb435f1",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-b27d435c-8fb6-49b1-89ec-c30d6f4edc63.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-b27d435c-8fb6-49b1-89ec-c30d6f4edc63.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-start.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-start.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\1-1280-start.png",
+        "originalSha256": "d06b60f50482a02a9c2f15c54d160163ed7355fdcde4c256012aa91866386a81",
+        "generatedSha256": "6a57bf01bbfc6851ac6cba1a1ee5b6cbeac67517f26bd2a43c47dd45991a9397",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-d830967f-e0ff-4b5c-896b-bea0388e2e66.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-d830967f-e0ff-4b5c-896b-bea0388e2e66.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-sequence.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-sequence.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-sequence.json",
+        "originalSha256": "a3c4e1bfa9c9c163d1f7fb3cfbe3e04b1278cdd92f2e960a7073c28a2f5e623f",
+        "generatedSha256": "11885e50af0d6b022f729b2cf0676c650e96ae05c8b98cab94cb6a9a27c90e84",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-61c54532-5049-47fb-9a79-1218da887995.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-61c54532-5049-47fb-9a79-1218da887995.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/4-1280-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\4-1280-settled.png",
+        "originalSha256": "547d45465662d0a18b8f7d5b89430a69f4ab286867104e2eb0b024a76ab9a4f7",
+        "generatedSha256": "2a5581855a7e58a30b138f516f3a68d8336385f8133be9a735d017418927e727",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-4194d254-721f-4ba3-9456-a39f170d6a70.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-4194d254-721f-4ba3-9456-a39f170d6a70.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-sequence.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-sequence.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-sequence.json",
+        "originalSha256": "73bae084d3d12514662e827cd1669cf0d88b4e5e85dbb691183cbb60a5550f80",
+        "generatedSha256": "7458dd1092110affa083c47a3a34aeee791bdf82a424873beadfa6e5c51e4347",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-a942afd6-ad34-4c00-8da9-800ca5860dc1.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-a942afd6-ad34-4c00-8da9-800ca5860dc1.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-1280-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-1280-settled.png",
+        "originalSha256": "1692175d872dc967e93232cf96ac3a470ae062e22bc06436b60b108523bac4c3",
+        "generatedSha256": "3aac82d14fe9619d627c62e4a38026de11d4e83df7a03b95aa31aaf125dacdac",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-7a52c9bb-eb56-4014-9ab2-b368b3c56a05.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-7a52c9bb-eb56-4014-9ab2-b368b3c56a05.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-end-first-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-end-first-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-end-first-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-end-first-pass.png",
+        "originalSha256": "ad5ca2b3979eee5ee3e226778a042b8123a386c805d297ad873d9c270cceb6ec",
+        "generatedSha256": "81f835381f2ae4fe404b5755660bf6b1694b4a74653e594cce504eb7ca91d7b9",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-daaed379-9724-4207-8e00-a3b81b5f8827.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-daaed379-9724-4207-8e00-a3b81b5f8827.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-first-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-first-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-first-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-first-pass.png",
+        "originalSha256": "224dfc9430e3a6328fd229c35642fcce76bc28533db5321fb21986fd8458adfd",
+        "generatedSha256": "6c16a3eca39936a335e4ef7fd589e7c0aa92c134a44839e8d7b1ed6f6d2edf66",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-71870d5d-f0af-468d-8c51-ab37143b96ec.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-71870d5d-f0af-468d-8c51-ab37143b96ec.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-mid-second-pass.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-second-pass.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-second-pass.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-mid-second-pass.png",
+        "originalSha256": "a44ac02c5730e38b26318fb95190fb9120fdaddb257faed596519ff0b76217da",
+        "generatedSha256": "b3385c8467cccc1b27c1d553c250ea76e8de08a0c62567c94731c52adadf6d79",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-f88f15d2-9f49-40c3-827e-9173866c7b58.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-f88f15d2-9f49-40c3-827e-9173866c7b58.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-sequence.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-sequence.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-sequence.json",
+        "originalSha256": "920b8f8768423f8619058458dfa855b96c674b9719dbaf50a4a8d79a69eb0c95",
+        "generatedSha256": "81fcaf4f35b0229ce40879276f4436abb25fdcfa5948c757cd9dcf7cf259edf4",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-1bc8be5b-1800-4de8-873d-e1627edb6479.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-1bc8be5b-1800-4de8-873d-e1627edb6479.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-settled.png",
+        "originalSha256": "94ba3ccc540d3da72d512eaf32b5f482308c66db5ea4697442d636bd6e513f50",
+        "generatedSha256": "2fbfd680beed965767d81506ce0e628405362cd6f773b2c3ae672258969a33df",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-57ec99a5-975b-4260-8762-bf3fa5b0c9d6.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-57ec99a5-975b-4260-8762-bf3fa5b0c9d6.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-320-start.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-start.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-start.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-320-start.png",
+        "originalSha256": "765848b1392d30ae2ff908806e9ec63dae0f793e44274d1bf29fdabbe787fbf2",
+        "generatedSha256": "3ad79ce48a728d7a2cf4025498ea17d01b3ca0e58e2da5af4f41f875e077023c",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-50197730-e6bd-40c6-a82b-b62bb906ab9c.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-50197730-e6bd-40c6-a82b-b62bb906ab9c.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-sequence.json",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-sequence.json",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-sequence.json",
+        "originalSha256": "9d14d23ef9fe0ead18d67b1ddc743529c1ec04177a7e625a68cbd70a0a43f695",
+        "generatedSha256": "3e624784c51838ca354796436048eb45bb4d28b84da5b06cfd872777361c7491",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-3d1b5e6d-c8bd-4d58-9424-0e61b3685f95.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-3d1b5e6d-c8bd-4d58-9424-0e61b3685f95.tmp"
+      },
+      {
+        "file": "docs/M10_T06_EVIDENCE/screenshots/7-768-settled.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-settled.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-settled.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\M10_T06_EVIDENCE\\screenshots\\7-768-settled.png",
+        "originalSha256": "59d5857a012ae01f113048d28501cae00f1b05a2dbfc3086da773d24a23b09ce",
+        "generatedSha256": "4a199800007e97b67477bee0fca314f2150855f4a7612d23290a82250ec7295b",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-original-a36cd58e-843d-4a89-ba0c-324935c0d0dd.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\M10_T06_EVIDENCE\\screenshots\\.h1-replace-a36cd58e-843d-4a89-ba0c-324935c0d0dd.tmp"
+      },
+      {
+        "file": "docs/images/m9-ready.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\m9-ready.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\images\\m9-ready.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\images\\m9-ready.png",
+        "originalSha256": "32e77a1ed7d1046091dd224c54d90a7a01a7d17d4c2d44d84f2a8ad8bd6a011d",
+        "generatedSha256": "e57a5da7553989c9c9dd61cf62ad49ce8285c765feaaaf2a2efe63de85d7aa6b",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-original-0a3cd1d8-f2c2-4779-ae05-0ba4e536924f.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-replace-0a3cd1d8-f2c2-4779-ae05-0ba4e536924f.tmp"
+      },
+      {
+        "file": "docs/images/m9-results.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\m9-results.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\images\\m9-results.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\images\\m9-results.png",
+        "originalSha256": "6dd1c88008c3582177e6d860f288529a1c1d947afdf18e8eb3aca1cb5da75ebe",
+        "generatedSha256": "abf6c8cf1a6d16bc11ed27629eccdbb561acc7c26ab7429d97b89fb977baccab",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-original-3d4eb4e7-3b48-40e4-82e3-b3eecdeb7752.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-replace-3d4eb4e7-3b48-40e4-82e3-b3eecdeb7752.tmp"
+      },
+      {
+        "file": "docs/images/m9-tools.png",
+        "status": "PASS",
+        "targetPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\m9-tools.png",
+        "backupPath": "C:\\Users\\user\\.codex\\outputs\\m15-h4-closure-20261008\\historical-backup\\docs\\images\\m9-tools.png",
+        "archivePath": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\historical-generated\\docs\\images\\m9-tools.png",
+        "originalSha256": "82375819a7e7f7f580772eae327c3a34db03193da4250ed7820e3c0d5dd8903e",
+        "generatedSha256": "40b0c5abd9e2ad4acf24e857b7eee22b609e2693173a29b81773c0a373dad925",
+        "replacementAttempts": 1,
+        "temporaryPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-original-a6855cdc-1428-4162-a074-9977fca43e5d.tmp",
+        "replacementPath": "C:\\Users\\user\\Documents\\GitHub\\casino-blackjack\\docs\\images\\.h1-replace-a6855cdc-1428-4162-a074-9977fca43e5d.tmp"
+      }
+    ],
+    "moved": [
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434299744-Hit/mid.png",
+        "sha256": "477c7b47513d58d4f85b30d2ffd2bfe66a456f8fdfda9842508089a21b57fc2b",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434299744-Hit\\mid.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434299744-Hit/pre.png",
+        "sha256": "6060fad5cfabb7a0c2e498ae3a2c309788bff2c54bf3f6b324687abf6192c4f9",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434299744-Hit\\pre.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434299744-Hit/receipt.json",
+        "sha256": "480db7a167711b04256c4fa6963e23e239ec1e974efcdcd7bd3520d673ba5393",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434299744-Hit\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434299744-Hit/settled.png",
+        "sha256": "3047b01706cfdd003582023f177080bc64b23aff77976173e4f3efcef0c95d44",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434299744-Hit\\settled.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434303737-Double/mid.png",
+        "sha256": "c0671b094e837cb3fae14289f948d7e75ae989b34e0d8e883c6dd78185d31810",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434303737-Double\\mid.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434303737-Double/pre.png",
+        "sha256": "309f4fe9f827844eff3f64b5aedb882562074d49e1b3ffc5ddde9ad19e86eec6",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434303737-Double\\pre.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434303737-Double/receipt.json",
+        "sha256": "f95f74cbef2111075ca816d6e7c8593a33b81034c70f369d312ecdc68fed5705",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434303737-Double\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434303737-Double/settled.png",
+        "sha256": "565e519500fbb47faca03598c8d6c65e1189ae7a7db2d4ae182523902453f2a2",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434303737-Double\\settled.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434308036-Split/mid.png",
+        "sha256": "ada349568fda92eb6041c2789a26a2624b0842f3d2857ae48fd992d556ef59f3",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434308036-Split\\mid.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434308036-Split/pre.png",
+        "sha256": "81270e980e625a993f55f566e76f8fae42b383078b24ccc3759f8943c4414dbd",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434308036-Split\\pre.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434308036-Split/receipt.json",
+        "sha256": "713a4890813d4718f4a1823a2f221c9324a793deb445178db824b73337d1851f",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434308036-Split\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434308036-Split/settled.png",
+        "sha256": "20c84a4ddd0a4f543036d9d52d246851d362b2a841d29448c852118db2aad62f",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434308036-Split\\settled.png"
+      },
+      {
+        "file": "docs/M10_T07_EVIDENCE/browser/1791434325654-four-leaves/settled-four-leaves.png",
+        "sha256": "2a2f13b05d46a1702d352cea114d70127e2fb57c2bd43eaf482ef9a4993933a6",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T07_EVIDENCE\\browser\\1791434325654-four-leaves\\settled-four-leaves.png"
+      },
+      {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791434115973-reveal-multiple/mid-back.png",
+        "sha256": "e33fefcfb6637e9c7734d46da4d27619a69c7e2d7a53d654b9041cdfc40fd542",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T08_EVIDENCE\\browser\\1791434115973-reveal-multiple\\mid-back.png"
+      },
+      {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791434115973-reveal-multiple/mid-face.png",
+        "sha256": "446ed984fc0200005e030dc975cfc5f333c358be1022324981d81600b44f8f41",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T08_EVIDENCE\\browser\\1791434115973-reveal-multiple\\mid-face.png"
+      },
+      {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791434115973-reveal-multiple/pre.png",
+        "sha256": "ec13c90b65dcfd209abe22d71243122fe23b524d1cecdc664c4f259ffc4717ee",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T08_EVIDENCE\\browser\\1791434115973-reveal-multiple\\pre.png"
+      },
+      {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791434115973-reveal-multiple/receipt.json",
+        "sha256": "ad2f83d61f347f8e635cef32035f9d204c6f760b5ae3731682ce255c2be5bbc6",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T08_EVIDENCE\\browser\\1791434115973-reveal-multiple\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T08_EVIDENCE/browser/1791434115973-reveal-multiple/settled.png",
+        "sha256": "eb1446fa4b638c4347978c9462dc5959eab98f58fbf0f1d9a71439f6067b3029",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T08_EVIDENCE\\browser\\1791434115973-reveal-multiple\\settled.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434466237-PLAYER_WIN/mid.png",
+        "sha256": "1ee9898b19a4313caef351e46b56beceb3d3271ab56196c45fa4a49c35b5fbd9",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434466237-PLAYER_WIN\\mid.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434466237-PLAYER_WIN/pre.png",
+        "sha256": "7cf2874d88ebdff6aad2880c8d0914ffde319e69ea88063af2560fe00a1b5bb3",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434466237-PLAYER_WIN\\pre.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434466237-PLAYER_WIN/receipt.json",
+        "sha256": "e4ac2810b93b36e1c855675bdf8168ee355ed266093795585a3da967adcd91e9",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434466237-PLAYER_WIN\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434466237-PLAYER_WIN/settled.png",
+        "sha256": "56453cf1ebaa49826f6ce7d480a772c123e143793601a527eb01a9ae3f1f18bb",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434466237-PLAYER_WIN\\settled.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434471620-DEALER_WIN/mid.png",
+        "sha256": "590f4f499f423f128ca499607bfe64a5f9f43293265d3d66a6404328922f9e26",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434471620-DEALER_WIN\\mid.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434471620-DEALER_WIN/pre.png",
+        "sha256": "be0584a5d6ede6179b7bc3d8cc8cc89fae83c710af1621296609f1b2888a992b",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434471620-DEALER_WIN\\pre.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434471620-DEALER_WIN/receipt.json",
+        "sha256": "f8e7b15a73acefd1c12e9aafbd10b5edde991ab297b6ce2381d18e7d9cc20bd7",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434471620-DEALER_WIN\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434471620-DEALER_WIN/settled.png",
+        "sha256": "0e3e3b98e74c73932aced63d2a52c272582f8eac3b07a669e34279e530b1c2d0",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434471620-DEALER_WIN\\settled.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434476972-PUSH/mid.png",
+        "sha256": "7f76b5aa4025dcbbfdd37fc8d7fd780f8f3e563354e70c0e3d694c2a29846e73",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434476972-PUSH\\mid.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434476972-PUSH/pre.png",
+        "sha256": "fb055089efa199e927ca763eceaa2153b5e3270d344169d07b4e8e00abb07c19",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434476972-PUSH\\pre.png"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434476972-PUSH/receipt.json",
+        "sha256": "f33a75f10eca27b9a9cacddc5f564a435bb4645a01d296ddb144518330eac632",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434476972-PUSH\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T09_EVIDENCE/browser/1791434476972-PUSH/settled.png",
+        "sha256": "38cbe2f220c6250e07b89d870cef0ca075beac7c36d3205fc789ce2d21ba0b7c",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T09_EVIDENCE\\browser\\1791434476972-PUSH\\settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433993036-1-FULL_MOTION/initial-settled.png",
+        "sha256": "5e31b99a536ca1895a04b3e864d06934c1e74952cabff373d72e5d3e2a328cec",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433993036-1-FULL_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433993036-1-FULL_MOTION/receipt.json",
+        "sha256": "cb5879b5b9dd3f7d0698670b60472ae4aebbce6e6088afcf6cb517088fccf238",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433993036-1-FULL_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433993036-1-FULL_MOTION/round-settled.png",
+        "sha256": "f85660aa75ede1d1d68c91b86defd52bb634c5fd8869d72d2f345fb4641b688d",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433993036-1-FULL_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433995680-1-REDUCED_MOTION/initial-settled.png",
+        "sha256": "5e31b99a536ca1895a04b3e864d06934c1e74952cabff373d72e5d3e2a328cec",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433995680-1-REDUCED_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433995680-1-REDUCED_MOTION/receipt.json",
+        "sha256": "31815a3fc36c0aa8a07f739af59d1b0f35e9c8450db66bb28815e70e48617ec7",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433995680-1-REDUCED_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433995680-1-REDUCED_MOTION/round-settled.png",
+        "sha256": "4502eeeb16fe767b9b46decdb612493875b3856dcd1dada2b3c5de8d69a59784",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433995680-1-REDUCED_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433997255-1-IMMEDIATE/initial-settled.png",
+        "sha256": "5e31b99a536ca1895a04b3e864d06934c1e74952cabff373d72e5d3e2a328cec",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433997255-1-IMMEDIATE\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433997255-1-IMMEDIATE/receipt.json",
+        "sha256": "d48a43d0574e7f81c1071ffb86b2871398cedbc85c0f69a9f1f074ce5c9aff34",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433997255-1-IMMEDIATE\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791433997255-1-IMMEDIATE/round-settled.png",
+        "sha256": "f85660aa75ede1d1d68c91b86defd52bb634c5fd8869d72d2f345fb4641b688d",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791433997255-1-IMMEDIATE\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434000176-4-FULL_MOTION/initial-settled.png",
+        "sha256": "22838db25457c99436fc589d21857aeb6a35c0b82b224e5ebdb51e60a2cd4b48",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434000176-4-FULL_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434000176-4-FULL_MOTION/receipt.json",
+        "sha256": "3862eaeffcf16927ced826d8125adaf76efa07af745efeee7342508ef02761b3",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434000176-4-FULL_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434000176-4-FULL_MOTION/round-settled.png",
+        "sha256": "a4e7fd73da511025f8de0e21054ae88399870c66a658840ed1caef37c892ca2e",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434000176-4-FULL_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434003652-4-REDUCED_MOTION/initial-settled.png",
+        "sha256": "acfe76890c43d316987cf6966066682c172bf6bb5abd4c43e8df8a5541ad6c58",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434003652-4-REDUCED_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434003652-4-REDUCED_MOTION/receipt.json",
+        "sha256": "042e2ba310b8de04de5346fac81beb4144380e09a33d73153efa2c07a4b2508a",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434003652-4-REDUCED_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434003652-4-REDUCED_MOTION/round-settled.png",
+        "sha256": "48933f5270b5602c04fd2d18b0ddc022f85bc05652499e67539df1c296c92e23",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434003652-4-REDUCED_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434005407-4-IMMEDIATE/initial-settled.png",
+        "sha256": "acfe76890c43d316987cf6966066682c172bf6bb5abd4c43e8df8a5541ad6c58",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434005407-4-IMMEDIATE\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434005407-4-IMMEDIATE/receipt.json",
+        "sha256": "65247d918021ea6c8dd2ce62b9a02804b2c6fa81e5cd61d2a839bfe36276ae71",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434005407-4-IMMEDIATE\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434005407-4-IMMEDIATE/round-settled.png",
+        "sha256": "a4e7fd73da511025f8de0e21054ae88399870c66a658840ed1caef37c892ca2e",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434005407-4-IMMEDIATE\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434010946-7-FULL_MOTION/initial-settled.png",
+        "sha256": "9383837d0348628493d108e354fff5974930c1edef7e5fc6ced9f88b8a6ca243",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434010946-7-FULL_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434010946-7-FULL_MOTION/receipt.json",
+        "sha256": "595100af129f54a4d06ced3d79e3b8fa0de28ec606a0ced95bfbaaf17bed4b61",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434010946-7-FULL_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434010946-7-FULL_MOTION/round-settled.png",
+        "sha256": "d6adb21001ec64afbfa8d350e2b33bc0fdc0e075156a78a8a1e60410ebb1b4bd",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434010946-7-FULL_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434015860-7-REDUCED_MOTION/initial-settled.png",
+        "sha256": "cbc2d021b60c5068a064d49d8b4cc7861c561729ecdba91e531c7ca2a15cae9e",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434015860-7-REDUCED_MOTION\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434015860-7-REDUCED_MOTION/receipt.json",
+        "sha256": "738a34fcb29aeaa1b1eaac988857913cc82775142863390b4e103712819cebff",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434015860-7-REDUCED_MOTION\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434015860-7-REDUCED_MOTION/round-settled.png",
+        "sha256": "b5c3469ba31beb6c9ff72c4a7ade0587c3e70558508c120ea40ffe8362bacfbc",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434015860-7-REDUCED_MOTION\\round-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434017227-7-IMMEDIATE/initial-settled.png",
+        "sha256": "9383837d0348628493d108e354fff5974930c1edef7e5fc6ced9f88b8a6ca243",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434017227-7-IMMEDIATE\\initial-settled.png"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434017227-7-IMMEDIATE/receipt.json",
+        "sha256": "0a8fbd84deba7609b4efbcc82c75f4aa40e3d92b1d4ebbadabe4e60b2fa691a0",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434017227-7-IMMEDIATE\\receipt.json"
+      },
+      {
+        "file": "docs/M10_T10_EVIDENCE/browser/1791434017227-7-IMMEDIATE/round-settled.png",
+        "sha256": "d6adb21001ec64afbfa8d350e2b33bc0fdc0e075156a78a8a1e60410ebb1b4bd",
+        "archive": "C:\\Users\\user\\.codex\\outputs\\h2-repair4-20261008\\native-generated\\docs\\M10_T10_EVIDENCE\\browser\\1791434017227-7-IMMEDIATE\\round-settled.png"
+      }
+    ],
+    "rawNativeGenerated": "Preserved privately at exact SHA; originals restored with exact verified H1 helper"
+  },
+  "h4": {
+    "sha": "f2c6c0cb4d70962ad5ee5e1afb2302ad18e4e874",
+    "exactImportedPaths": 12,
+    "focused": 91,
+    "originalFive": "PASS"
+  },
+  "source": "All product/PNG/runtime inputs unchanged from the verified incoming M15 snapshot",
+  "sameSessionReview": "PASS: scope/diff/independent test expectations/evidence; current320px native Pair screenshot inspected",
+  "freshSessionReview": "NOT RUN",
+  "publication": "PENDING final documentation/evidence gates, commit and push",
+  "humanVisualAcceptance": "PENDING",
+  "M16": "NOT STARTED",
+  "deployment": "NOT RUN"
+}

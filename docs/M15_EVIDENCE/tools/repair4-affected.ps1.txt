@@ -1,0 +1,3 @@
+$ErrorActionPreference='Stop'
+& npm.cmd test -- tests/m10/formalDealers.test.tsx -t M10-F01
+exit $LASTEXITCODE

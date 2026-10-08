@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T05:00:45.530Z",
+  "finish": "2026-10-07T05:02:49.045Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify-preservation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-preservation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest';
-import { applyCommand, createBaccarat, digest, publicView, type State, type Command } from '../../src/baccarat/domain/engine.js';
+import { applyCommand, digest, publicView, type State, type Command } from '../../src/baccarat/domain/engine.js';
 import { inventory, createShoe, validateInventory } from '../../src/baccarat/domain/shoe.js';
-import { clock, ordered, send } from './fixtures.js';
+import { clock, ordered, send, createLegacyBaccarat as createBaccarat } from './fixtures.js';
 const bet = (state: State, target: 'PLAYER'|'BANKER'|'TIE', amountUnits=2500) => send(state,{type:'WAGER',target,amountUnits});
 
 it('[M12-E01] independent8x4x13 inventory count, frozen cards, deterministic separate seeded shoes', () => {

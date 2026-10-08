@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-08 01:36:45 +08:00",
+  "status": "M15_BLOCKED_AFTER_H2",
+  "firstFailure": "PRE-T11-U01 supplied generic PNG independent decode / deterministic conversion",
+  "measuredMs": 6452,
+  "originalTimeoutMs": 5000,
+  "vitest": {
+    "files": 112,
+    "passed": 1405,
+    "failed": 1,
+    "total": 1406
+  },
+  "nativeVitestExit": 1,
+  "classification": "RECURRENT_HISTORICAL_ASSET_TIMEOUT; no evidence of H2 authored packaging cause",
+  "exactRootCause": "UNKNOWN",
+  "identities": [
+    {
+      "file": "tests/m10/dealerCleanup.test.tsx",
+      "currentSha256": "621781f312b5ecc06654a853fd0e3ba4c228501463531b31e324d99409c5c99e",
+      "baselineSha256": "621781f312b5ecc06654a853fd0e3ba4c228501463531b31e324d99409c5c99e",
+      "identicalToBaseline": true
+    },
+    {
+      "file": "scripts/verify-generic-dealer.mjs",
+      "currentSha256": "9251f263afde3b022f4d881bc414825ce4211a852aa6e90fc51b3701ebb5a059",
+      "baselineSha256": "9251f263afde3b022f4d881bc414825ce4211a852aa6e90fc51b3701ebb5a059",
+      "identicalToBaseline": true
+    },
+    {
+      "file": "scripts/build-generic-dealer.mjs",
+      "currentSha256": "c8232cf9992ca2f1a830b3890b08b5e888d81dbf0450fa29764308af96fea576",
+      "baselineSha256": "c8232cf9992ca2f1a830b3890b08b5e888d81dbf0450fa29764308af96fea576",
+      "identicalToBaseline": true
+    },
+    {
+      "file": "scripts/verify.ps1",
+      "currentSha256": "fef3dc5a55fc12ba6362902a67e59092022bbfed73bc451d97ebfc4da7226f5f",
+      "baselineSha256": "fef3dc5a55fc12ba6362902a67e59092022bbfed73bc451d97ebfc4da7226f5f",
+      "identicalToBaseline": true
+    },
+    {
+      "file": "vite.config.ts",
+      "currentSha256": "f54541c15439a3979cbb226420fffcce2f6bbd9138977758deaec2d4b6313173",
+      "baselineSha256": "5913df35181e3ca0528d6f2ed175b1db54818005b25d122147aa95ba358ad900",
+      "identicalToBaseline": false
+    }
+  ],
+  "frozenProductInputs": 270,
+  "repairs": {
+    "H1": 1,
+    "H2": 2,
+    "M15": 7,
+    "Repair8": "NOT STARTED"
+  },
+  "unified": "Already-started unchanged script completes its scheduled checks; no retry or repair",
+  "commit": "NOT RUN",
+  "push": "NOT RUN",
+  "humanVisualAcceptance": "PENDING"
+}

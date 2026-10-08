@@ -1,0 +1,534 @@
+{
+  "at": "2026-10-07T05:10:54.130Z",
+  "status": "PASS",
+  "scope": "Read-only stopped-run evidence integrity; not a completed preservation/docs/privacy/unified gate",
+  "sourceInputs": 270,
+  "priorEvidenceHashes": 189,
+  "restorationStatus": "FAIL",
+  "partialArchives": 20,
+  "restored": 19,
+  "generatedRetained": 1,
+  "partial": [
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-1280.png",
+      "original": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "archive": "7edb9e49c50f53254cd0b5d294c8fd7b9616ff3cb56d25a4a29d57c8ce2349dc",
+      "current": "3453eac0771c1606459fe4c508a3b16acdf91157890a05d8ec8fe6ea211c2b5f",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-320.png",
+      "original": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "archive": "33884426d9b447bbd6a8b824eddc01dc0b3be0acac843bb35879a035c2df8438",
+      "current": "1abf4c49edecf0c8afe79fdb0f80c5ab01cef9b0e047d6412dd9928f6972eb16",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/five-cards-768.png",
+      "original": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "archive": "e16e701a9fb48640dd54bd6cb8f1d3490054ff424af62935981a89f644707003",
+      "current": "d4a1e1ef022c91a06e00c4ebf31b0b83823a05b45c62ff47f3a6cda5ca179462",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-1280.png",
+      "original": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "archive": "23d618140210c0069501e3e0c2cbd83c0040cb7059d3d779bcf419024d818fb4",
+      "current": "efce5bb2567efeec049bd36c487762ac77fe72fb2a56e97101145dd194b2e2e3",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-320.png",
+      "original": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "archive": "a369270f94c468e5220de36b8d18b70c091fd25a1395a1b9dc699ac0aa50fbc4",
+      "current": "c00ac9cc2141f7742da423fb97ed360678be69d453b870e3bf6c25362c57da49",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/four-leaves-768.png",
+      "original": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "archive": "f6060cb22b6ad0776ff66f955741a103a773e4f241368c1a5498f034dac621da",
+      "current": "219b41ad0fbeeb2e333a73526dc71fef1b740676c154a84cf42114ea8677c4ee",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/geometry.json",
+      "original": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "archive": "1c11a291714d49d789b85899f8e59865ce755894691e64f521465381c05e0295",
+      "current": "b5b1d4fa707ab1ce9e18769d63c21b17d76240b86bde7918f71bb5b0e85614c3",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-1280.png",
+      "original": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "archive": "6f711ec6f1f8de9a7c2c1ebeb4f5900784591961ed01a12b32a26f52a71063a9",
+      "current": "df6e365cf276d54379994e3072faf3b2dc3b68ad595d0d96a4c7d6fee8bdf406",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-320.png",
+      "original": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "archive": "029044c171172891ead6ea4bec0aa5028f83647128f428be36486c28e3815358",
+      "current": "42ee8d9c415b06112a6a1295d7ae5177cb0a3e32e63df8d6a4beda1dc7bd61a1",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/table-768.png",
+      "original": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "archive": "27473d042f6a0d10131e8905c67b475a0702f4f306fed5db4668018567d1b736",
+      "current": "e721edeccbfe29068b2869788dcaeef1062c86c7bdfd56799e396b32587c0e2d",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-1280.png",
+      "original": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "archive": "765f7a710fe94d5db0d872bfbe842a3aad8ced6254665905610dc81aa6a4e016",
+      "current": "77e0da2b5de27c3d1be03552031a70793018e01910bc3cfcf118df508f05c804",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-320.png",
+      "original": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "archive": "69252eea38ce2ae288f743b0d59c18986c05e45720860a908c65e90b09014c29",
+      "current": "96b4698e3ac6ae70837fa8c0b39f13cff89b8718f293ef49bfbb374301abb98e",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/text-fallback-768.png",
+      "original": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "archive": "9bf19b79204b1029c96da8f4ad1207375a7bec2166239d32bfda9205e175565f",
+      "current": "dc7c403ab38ea60accbdb8c6eadfbf5e645d6efe24f2b007fd8a08ff42c895c4",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T06_EVIDENCE/reduced-seven-settled.png",
+      "original": "fb82b174f93685467c0b0fe9ae60e05795dddbd4a9b461bbcb711551d10b68f4",
+      "archive": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+      "current": "f437eb6cec0d03406a3f2df65cef66085c14d4b563a8d680603738c04c71279c",
+      "state": "GENERATED_RETAINED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-1280.png",
+      "original": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "archive": "6f711ec6f1f8de9a7c2c1ebeb4f5900784591961ed01a12b32a26f52a71063a9",
+      "current": "94d6a4e46c42d3eaefa78f0a695744254522b24ecff771b861a88ff2fb632b73",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-320.png",
+      "original": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "archive": "029044c171172891ead6ea4bec0aa5028f83647128f428be36486c28e3815358",
+      "current": "41c7fe6a68a31acab8a3ee7ad4039cf90477321b7744cc4c765927f1df872ff4",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-dealt-768.png",
+      "original": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "archive": "27473d042f6a0d10131e8905c67b475a0702f4f306fed5db4668018567d1b736",
+      "current": "53cac22f27fb366230c9a63b62f698fa7b8b8adaeeb68f072d9e83b04fc978ea",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-1280.png",
+      "original": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "archive": "e57a5da7553989c9c9dd61cf62ad49ce8285c765feaaaf2a2efe63de85d7aa6b",
+      "current": "25f5fcd5b158a36560f2a9eda378efb976eb6fa7ac1ba2600924f6977ae6c51c",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-320.png",
+      "original": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "archive": "5f7d2e3d6ecb01845ce2b249f0762a7544228110c40f67c5bc719c5a43cdc2be",
+      "current": "4798578521c671073204e962b264b6b257f95a1c5a8f25d2373d03da6ae938bf",
+      "state": "RESTORED"
+    },
+    {
+      "file": "docs/M10_T01_EVIDENCE/repair09/scene-open-768.png",
+      "original": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "archive": "ca2651dc47aa3ca733e8001c0771f454c65c9f138d6777f3347ad3d08efdea23",
+      "current": "783ccf25beafbb2100c7ceae38678cbf986315af8e021d3a587dc7678643db96",
+      "state": "RESTORED"
+    }
+  ],
+  "originalFailure": {
+    "start": "2026-10-07T05:06:19.410Z",
+    "finish": "2026-10-07T05:06:47.928Z",
+    "command": "node",
+    "args": [
+      ".git/m15/repair7-resume/preserve-output.cjs",
+      "repair7-resume-before-unified"
+    ],
+    "log": ".git\\evidence-capture\\m15-repair7-resume-restoration.txt",
+    "status": "FAIL",
+    "exitCode": 1,
+    "signal": null,
+    "outputClosed": true,
+    "resetModuleVariables": []
+  },
+  "performance": {
+    "allRuns": 14,
+    "allSamples": 140,
+    "latest": [
+      {
+        "file": "1791349385611-22540-1280.json",
+        "width": 1280,
+        "thresholdMs": 2500,
+        "requiredSamples": 10,
+        "retries": 0,
+        "freshBrowserPerSample": true,
+        "samples": [
+          {
+            "sample": 1,
+            "width": 1280,
+            "dealMs": 470.09999990463257,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 2,
+            "width": 1280,
+            "dealMs": 522.7000000476837,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 3,
+            "width": 1280,
+            "dealMs": 510.2999999523163,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 4,
+            "width": 1280,
+            "dealMs": 560.2000000476837,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 5,
+            "width": 1280,
+            "dealMs": 528.9000000953674,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 6,
+            "width": 1280,
+            "dealMs": 519.5,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 7,
+            "width": 1280,
+            "dealMs": 558.5,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 8,
+            "width": 1280,
+            "dealMs": 517.9000000953674,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 9,
+            "width": 1280,
+            "dealMs": 542,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 10,
+            "width": 1280,
+            "dealMs": 487.59999990463257,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          }
+        ],
+        "medianMs": 521.1000000238419,
+        "worstMs": 560.2000000476837,
+        "firstFailure": null
+      },
+      {
+        "file": "1791349422883-22540-320.json",
+        "width": 320,
+        "thresholdMs": 2500,
+        "requiredSamples": 10,
+        "retries": 0,
+        "freshBrowserPerSample": true,
+        "samples": [
+          {
+            "sample": 1,
+            "width": 320,
+            "dealMs": 485.2999999523163,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 2,
+            "width": 320,
+            "dealMs": 520.5,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 3,
+            "width": 320,
+            "dealMs": 519.4000000953674,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 4,
+            "width": 320,
+            "dealMs": 470.5,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 5,
+            "width": 320,
+            "dealMs": 488,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 6,
+            "width": 320,
+            "dealMs": 492.40000009536743,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 7,
+            "width": 320,
+            "dealMs": 559.8999998569489,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 8,
+            "width": 320,
+            "dealMs": 481.30000019073486,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 9,
+            "width": 320,
+            "dealMs": 501.90000009536743,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          },
+          {
+            "sample": 10,
+            "width": 320,
+            "dealMs": 488,
+            "targets": [
+              "player:0",
+              "banker:0",
+              "player:1",
+              "banker:1",
+              "player:2",
+              "banker:2"
+            ],
+            "cards": 6,
+            "overflow": false,
+            "overlays": 0
+          }
+        ],
+        "medianMs": 490.2000000476837,
+        "worstMs": 559.8999998569489,
+        "firstFailure": null
+      }
+    ]
+  },
+  "git": {
+    "branch": "main",
+    "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "tracking": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "live": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+    "aheadBehind": "0\t0",
+    "trackedChanges": 47,
+    "untrackedFiles": 257,
+    "status": "M README.md\n M casino-tests/baccarat/controller.test.tsx\n M casino-tests/baccarat/engine.test.ts\n M casino-tests/baccarat/fixtures.ts\n M casino-tests/baccarat/presentation.test.ts\n M casino-tests/baccarat/replay.test.ts\n M docs/BACCARAT_RULES.md\n M docs/DESIGN.md\n M docs/DEVELOPMENT_LOG.md\n M docs/LAB_MANUAL.md\n M docs/M10_T06_EVIDENCE/reduced-seven-settled.png\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-end-first-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-first-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-mid-second-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-settled.png\n M docs/M10_T06_EVIDENCE/screenshots/1-1280-start.png\n M docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json\n M docs/M10_T06_EVIDENCE/screenshots/4-1280-settled.png\n M docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json\n M docs/M10_T06_EVIDENCE/screenshots/7-1280-settled.png\n M docs/M10_T06_EVIDENCE/screenshots/7-320-end-first-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/7-320-mid-first-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/7-320-mid-second-pass.png\n M docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json\n M docs/M10_T06_EVIDENCE/screenshots/7-320-settled.png\n M docs/M10_T06_EVIDENCE/screenshots/7-320-start.png\n M docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json\n M docs/M10_T06_EVIDENCE/screenshots/7-768-settled.png\n M docs/PLAN.md\n M docs/RULES.md\n M docs/SPEC.md\n M docs/STATE.md\n M docs/UX_UI.md\n M docs/images/m9-ready.png\n M docs/images/m9-results.png\n M docs/images/m9-tools.png\n M src/baccarat/BaccaratTable.tsx\n M src/baccarat/baccarat.css\n M src/baccarat/controller.ts\n M src/baccarat/domain/engine.ts\n M src/baccarat/domain/replay.ts\n M src/baccarat/domain/rules.ts\n M src/baccarat/domain/shoe.ts\n M src/baccarat/presentation/facts.ts\n M tests/browser/baccaratFixtures.ts\n M vite.config.ts\n?? casino-tests/baccarat/m15Fixtures.ts\n?? casino-tests/baccarat/m15Integrity.test.tsx\n?? casino-tests/baccarat/m15Pairs.test.ts\n?? casino-tests/baccarat/m15Shoe.test.ts\n?? casino-tests/baccarat/m15Validator.test.ts\n?? docs/M10_T07_EVIDENCE/browser/1791348490815-Hit/mid.png\n?? docs/M10_T07_EVIDENCE/browser/1791348490815-Hit/pre.png\n?? docs/M10_T07_EVIDENCE/browser/1791348490815-Hit/receipt.json\n?? docs/M10_T07_EVIDENCE/browser/1791348490815-Hit/settled.png\n?? docs/M10_T07_EVIDENCE/browser/1791348495354-Double/mid.png\n?? docs/M10_T07_EVIDENCE/browser/1791348495354-Double/pre.png\n?? docs/M10_T07_EVIDENCE/browser/1791348495354-Double/receipt.json\n?? docs/M10_T07_EVIDENCE/browser/1791348495354-Double/settled.png\n?? docs/M10_T07_EVIDENCE/browser/1791348500707-Split/mid.png\n?? docs/M10_T07_EVIDENCE/browser/1791348500707-Split/pre.png\n?? docs/M10_T07_EVIDENCE/browser/1791348500707-Split/receipt.json\n?? docs/M10_T07_EVIDENCE/browser/1791348500707-Split/settled.png\n?? docs/M10_T07_EVIDENCE/browser/1791348519835-four-leaves/settled-four-leaves.png\n?? docs/M10_T08_EVIDENCE/browser/1791348300508-reveal-multiple/mid-back.png\n?? docs/M10_T08_EVIDENCE/browser/1791348300508-reveal-multiple/mid-face.png\n?? docs/M10_T08_EVIDENCE/browser/1791348300508-reveal-multiple/pre.png\n?? docs/M10_T08_EVIDENCE/browser/1791348300508-reveal-multiple/receipt.json\n?? docs/M10_T08_EVIDENCE/browser/1791348300508-reveal-multiple/settled.png\n?? docs/M10_T09_EVIDENCE/browser/1791348658650-PLAYER_WIN/mid.png\n?? docs/M10_T09_EVIDENCE/browser/1791348658650-PLAYER_WIN/pre.png\n?? docs/M10_T09_EVIDENCE/browser/1791348658650-PLAYER_WIN/receipt.json\n?? docs/M10_T09_EVIDENCE/browser/1791348658650-PLAYER_WIN/settled.png\n?? docs/M10_T09_EVIDENCE/browser/1791348664835-DEALER_WIN/mid.png\n?? docs/M10_T09_EVIDENCE/browser/1791348664835-DEALER_WIN/pre.png\n?? docs/M10_T09_EVIDENCE/browser/1791348664835-DEALER_WIN/receipt.json\n?? docs/M10_T09_EVIDENCE/browser/1791348664835-DEALER_WIN/settled.png\n?? docs/M10_T09_EVIDENCE/browser/1791348671257-PUSH/mid.png\n?? docs/M10_T09_EVIDENCE/browser/1791348671257-PUSH/pre.png\n?? docs/M10_T09_EVIDENCE/browser/1791348671257-PUSH/receipt.json\n?? docs/M10_T09_EVIDENCE/browser/1791348671257-PUSH/settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348151604-1-FULL_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348151604-1-FULL_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348151604-1-FULL_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348154783-1-REDUCED_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348154783-1-REDUCED_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348154783-1-REDUCED_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348157100-1-IMMEDIATE/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348157100-1-IMMEDIATE/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348157100-1-IMMEDIATE/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348161037-4-FULL_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348161037-4-FULL_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348161037-4-FULL_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348165988-4-REDUCED_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348165988-4-REDUCED_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348165988-4-REDUCED_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348168532-4-IMMEDIATE/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348168532-4-IMMEDIATE/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348168532-4-IMMEDIATE/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348173732-7-FULL_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348173732-7-FULL_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348173732-7-FULL_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348179910-7-REDUCED_MOTION/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348179910-7-REDUCED_MOTION/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348179910-7-REDUCED_MOTION/round-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348182815-7-IMMEDIATE/initial-settled.png\n?? docs/M10_T10_EVIDENCE/browser/1791348182815-7-IMMEDIATE/receipt.json\n?? docs/M10_T10_EVIDENCE/browser/1791348182815-7-IMMEDIATE/round-settled.png\n?? docs/M15_BACCARAT_SHOE_AND_PAIRS.md\n?? docs/M15_EVIDENCE/.gitattributes\n?? docs/M15_EVIDENCE/complete-chromium-failure/.last-run.json\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/test-failed-1.png\n?? docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/trace.zip\n?? docs/M15_EVIDENCE/first-gate-inputs.json\n?? docs/M15_EVIDENCE/frozen-inputs.json\n?? docs/M15_EVIDENCE/git-final.json\n?? docs/M15_EVIDENCE/index.md\n?? docs/M15_EVIDENCE/initial-gate-stop.json\n?? docs/M15_EVIDENCE/m15-assets.json\n?? docs/M15_EVIDENCE/m15-assets.txt\n?? docs/M15_EVIDENCE/m15-assets.txt.gz\n?? docs/M15_EVIDENCE/m15-complete-chromium.json\n?? docs/M15_EVIDENCE/m15-complete-chromium.txt\n?? docs/M15_EVIDENCE/m15-complete-chromium.txt.gz\n?? docs/M15_EVIDENCE/m15-final-assets.json\n?? docs/M15_EVIDENCE/m15-final-assets.txt\n?? docs/M15_EVIDENCE/m15-final-assets.txt.gz\n?? docs/M15_EVIDENCE/m15-final-docs.json\n?? docs/M15_EVIDENCE/m15-final-docs.txt\n?? docs/M15_EVIDENCE/m15-final-docs.txt.gz\n?? docs/M15_EVIDENCE/m15-final-privacy.json\n?? docs/M15_EVIDENCE/m15-final-privacy.txt\n?? docs/M15_EVIDENCE/m15-final-privacy.txt.gz\n?? docs/M15_EVIDENCE/m15-final-restoration.json\n?? docs/M15_EVIDENCE/m15-final-restoration.txt\n?? docs/M15_EVIDENCE/m15-final-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-final-unified.json\n?? docs/M15_EVIDENCE/m15-final-unified.txt\n?? docs/M15_EVIDENCE/m15-final-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-first-browser.json\n?? docs/M15_EVIDENCE/m15-first-browser.txt\n?? docs/M15_EVIDENCE/m15-first-browser.txt.gz\n?? docs/M15_EVIDENCE/m15-independent-preservation.json\n?? docs/M15_EVIDENCE/m15-independent-preservation.txt\n?? docs/M15_EVIDENCE/m15-independent-preservation.txt.gz\n?? docs/M15_EVIDENCE/m15-initial-focused.json\n?? docs/M15_EVIDENCE/m15-initial-focused.txt\n?? docs/M15_EVIDENCE/m15-initial-focused.txt.gz\n?? docs/M15_EVIDENCE/m15-initial-restoration.json\n?? docs/M15_EVIDENCE/m15-initial-restoration.txt\n?? docs/M15_EVIDENCE/m15-initial-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair1-backup.json\n?? docs/M15_EVIDENCE/m15-repair1-backup.txt\n?? docs/M15_EVIDENCE/m15-repair1-backup.txt.gz\n?? docs/M15_EVIDENCE/m15-repair2-affected.json\n?? docs/M15_EVIDENCE/m15-repair2-affected.txt\n?? docs/M15_EVIDENCE/m15-repair2-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair3-affected.json\n?? docs/M15_EVIDENCE/m15-repair3-affected.txt\n?? docs/M15_EVIDENCE/m15-repair3-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-affected-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair4-affected.json\n?? docs/M15_EVIDENCE/m15-repair4-affected.txt\n?? docs/M15_EVIDENCE/m15-repair4-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-restoration.json\n?? docs/M15_EVIDENCE/m15-repair4-restoration.txt\n?? docs/M15_EVIDENCE/m15-repair4-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair4-unified-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair4-unified.json\n?? docs/M15_EVIDENCE/m15-repair4-unified.txt\n?? docs/M15_EVIDENCE/m15-repair4-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-repair5-affected-priority.jsonl.txt\n?? docs/M15_EVIDENCE/m15-repair5-affected.json\n?? docs/M15_EVIDENCE/m15-repair5-affected.txt\n?? docs/M15_EVIDENCE/m15-repair5-affected.txt.gz\n?? docs/M15_EVIDENCE/m15-repair5-restoration.json\n?? docs/M15_EVIDENCE/m15-repair5-restoration.txt\n?? docs/M15_EVIDENCE/m15-repair5-restoration.txt.gz\n?? docs/M15_EVIDENCE/m15-repair6-docs.json\n?? docs/M15_EVIDENCE/m15-repair6-docs.txt\n?? docs/M15_EVIDENCE/m15-repair6-docs.txt.gz\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.json\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.txt\n?? docs/M15_EVIDENCE/m15-review-fault-reproduction.txt.gz\n?? docs/M15_EVIDENCE/m15-review-focused.json\n?? docs/M15_EVIDENCE/m15-review-focused.txt\n?? docs/M15_EVIDENCE/m15-review-focused.txt.gz\n?? docs/M15_EVIDENCE/m15-unified.json\n?? docs/M15_EVIDENCE/m15-unified.txt\n?? docs/M15_EVIDENCE/m15-unified.txt.gz\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.json\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.txt\n?? docs/M15_EVIDENCE/m15-v1-baseline-replay.txt.gz\n?? docs/M15_EVIDENCE/manifest.json\n?? docs/M15_EVIDENCE/performance-summary.json\n?? docs/M15_EVIDENCE/performance/1791337434772-35576-1280.json\n?? docs/M15_EVIDENCE/performance/1791337469234-35576-320.json\n?? docs/M15_EVIDENCE/performance/1791337735089-30956-1280.json\n?? docs/M15_EVIDENCE/performance/1791337769431-30956-320.json\n?? docs/M15_EVIDENCE/performance/1791339283087-23336-1280.json\n?? docs/M15_EVIDENCE/performance/1791339345824-23336-320.json\n?? docs/M15_EVIDENCE/performance/1791340359753-14424-1280.json\n?? docs/M15_EVIDENCE/performance/1791340394225-14424-320.json\n?? docs/M15_EVIDENCE/privacy-scan.json\n?? docs/M15_EVIDENCE/raw-log-hashes.json\n?? docs/M15_EVIDENCE/repair2-browser-failure/.last-run.json\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/error-context.md\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/test-failed-1.png\n?? docs/M15_EVIDENCE/repair2-browser-failure/baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium/trace.zip\n?? docs/M15_EVIDENCE/repair4-gate-stop.json\n?? docs/M15_EVIDENCE/repair5-gate-stop.json\n?? docs/M15_EVIDENCE/repair7/baseline.json\n?? docs/M15_EVIDENCE/repair7/executable-inputs.json\n?? docs/M15_EVIDENCE/repair7/git-final.json\n?? docs/M15_EVIDENCE/repair7/index.md\n?? docs/M15_EVIDENCE/repair7/m15-repair7-typecheck.txt\n?? docs/M15_EVIDENCE/repair7/m15-repair7-watcher.json\n?? docs/M15_EVIDENCE/repair7/m15-repair7-watcher.txt\n?? docs/M15_EVIDENCE/repair7/manifest-before7.json\n?? docs/M15_EVIDENCE/repair7/typecheck-launch-error.json\n?? docs/M15_EVIDENCE/repair7/typecheck-launch-error.txt\n?? docs/M15_EVIDENCE/repair7/vite-before.ts.txt\n?? docs/M15_EVIDENCE/repair7/watch-check.mjs.txt\n?? docs/M15_EVIDENCE/repair7/watcher.json\n?? docs/M15_EVIDENCE/restoration-final-unified.json\n?? docs/M15_EVIDENCE/restoration-initial-unified.json\n?? docs/M15_EVIDENCE/restoration-repair4-stopped-gate.json\n?? docs/M15_EVIDENCE/restoration-repair5-stopped-gate.json\n?? docs/M15_EVIDENCE/tools/audit.cjs.txt\n?? docs/M15_EVIDENCE/tools/document-review.cjs.txt\n?? docs/M15_EVIDENCE/tools/fault.config.mjs.txt\n?? docs/M15_EVIDENCE/tools/fault.test.tsx.txt\n?? docs/M15_EVIDENCE/tools/final-assets.ps1.txt\n?? docs/M15_EVIDENCE/tools/final-chromium.ps1.txt\n?? docs/M15_EVIDENCE/tools/final-docs.ps1.txt\n?? docs/M15_EVIDENCE/tools/inputs.cjs.txt\n?? docs/M15_EVIDENCE/tools/legacy-snapshot.cjs.txt\n?? docs/M15_EVIDENCE/tools/legacy.config.mjs.txt\n?? docs/M15_EVIDENCE/tools/legacy.test.ts.txt\n?? docs/M15_EVIDENCE/tools/m15-spec-before-repair3.ts.txt\n?? docs/M15_EVIDENCE/tools/order-contract.cjs.txt\n?? docs/M15_EVIDENCE/tools/package.cjs.txt\n?? docs/M15_EVIDENCE/tools/preservation-before-repair1.cjs.txt\n?? docs/M15_EVIDENCE/tools/preservation.cjs.txt\n?? docs/M15_EVIDENCE/tools/priority-before-repair5.cjs.txt\n?? docs/M15_EVIDENCE/tools/priority.cjs.txt\n?? docs/M15_EVIDENCE/tools/privacy.ps1.txt\n?? docs/M15_EVIDENCE/tools/repair4-affected.ps1.txt\n?? docs/M15_EVIDENCE/tools/repair5-affected.ps1.txt\n?? docs/M15_EVIDENCE/tools/run-scheduled-before-repair5.ps1.txt\n?? docs/M15_EVIDENCE/tools/run-scheduled.ps1.txt\n?? docs/M15_EVIDENCE/validators/pairs.json\n?? docs/M15_EVIDENCE/validators/shoe.json\n?? docs/M15_EVIDENCE/visual/chip-banker_pair-loss.png\n?? docs/M15_EVIDENCE/visual/chip-banker_pair-win.png\n?? docs/M15_EVIDENCE/visual/chip-player_pair-loss.png\n?? docs/M15_EVIDENCE/visual/chip-player_pair-win.png\n?? docs/M15_EVIDENCE/visual/cut-during-round.png\n?? docs/M15_EVIDENCE/visual/cut-reached-closed.png\n?? docs/M15_EVIDENCE/visual/index.md\n?? docs/M15_EVIDENCE/visual/integrity-startup.json\n?? docs/M15_EVIDENCE/visual/integrity-unavailable.png\n?? docs/M15_EVIDENCE/visual/m15-banker-pair-banker_pair.png\n?? docs/M15_EVIDENCE/visual/m15-pair-loss-banker_pair.png\n?? docs/M15_EVIDENCE/visual/m15-pair-loss-player_pair.png\n?? docs/M15_EVIDENCE/visual/m15-player-pair-player_pair.png\n?? docs/M15_EVIDENCE/visual/motion-equivalence.json\n?? docs/M15_EVIDENCE/visual/native-zoom-1280.json\n?? docs/M15_EVIDENCE/visual/native-zoom-1280.png\n?? docs/M15_EVIDENCE/visual/native-zoom-640.json\n?? docs/M15_EVIDENCE/visual/native-zoom-640.png\n?? docs/M15_EVIDENCE/visual/native-zoom-768.json\n?? docs/M15_EVIDENCE/visual/native-zoom-768.png\n?? docs/M15_EVIDENCE/visual/new-shoe-empty.png\n?? docs/M15_EVIDENCE/visual/new-shoe.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-1280.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-320.png\n?? docs/M15_EVIDENCE/visual/pairs-settled-768.png\n?? docs/M15_EVIDENCE/visual/selected-0.png\n?? docs/M15_EVIDENCE/visual/selected-1.png\n?? docs/M15_EVIDENCE/visual/selected-2.png\n?? docs/M15_EVIDENCE/visual/selected-3.png\n?? docs/M15_EVIDENCE/visual/selected-4.png\n?? docs/M15_EVIDENCE/visual/selected-5.png\n?? docs/M15_EVIDENCE/visual/settled-0.png\n?? docs/M15_EVIDENCE/visual/settled-1.png\n?? docs/M15_EVIDENCE/visual/settled-2.png\n?? docs/M15_EVIDENCE/visual/settled-3.png\n?? docs/M15_EVIDENCE/visual/settled-4.png\n?? docs/M15_EVIDENCE/visual/settled-5.png\n?? docs/M15_EVIDENCE/visual/shoe-normal.png\n?? docs/M15_EVIDENCE/visual/skip-settled.png\n?? docs/M15_EVIDENCE/visual/table-1280.png\n?? docs/M15_EVIDENCE/visual/table-320.png\n?? docs/M15_EVIDENCE/visual/table-768.png\n?? docs/M15_EVIDENCE/visual/text-200-1280.png\n?? docs/M15_EVIDENCE/visual/text-200-320.png\n?? docs/M15_EVIDENCE/visual/text-200-768.png\n?? src/baccarat/domain/config.ts\n?? tests/browser/baccarat/m15.spec.ts\n?? tests/browser/baccarat/m15Performance.spec.ts\n?? tests/browser/baccarat/m15Zoom.spec.ts"
+  },
+  "repairCount": "7/10",
+  "newRepair": false,
+  "commit": "NOT RUN",
+  "push": "NOT RUN"
+}

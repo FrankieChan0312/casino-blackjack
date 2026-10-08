@@ -1,0 +1,26 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),zlib=require('node:zlib');
+const target='docs/M15_EVIDENCE';fs.mkdirSync(target,{recursive:true});
+for(const group of ['visual','validators','performance'])fs.cpSync('.git/m15/'+group,target+'/'+group,{recursive:true});
+const rawLogs=[];
+for(const label of ['m15-initial-focused','m15-review-focused','m15-first-browser','m15-repair1-backup','m15-assets','m15-unified','m15-initial-restoration','m15-v1-baseline-replay','m15-review-fault-reproduction','m15-repair2-affected','m15-repair3-affected','m15-final-unified','m15-repair4-restoration','m15-repair4-affected','m15-repair4-unified','m15-repair5-restoration','m15-repair5-affected','m15-repair5-unified','m15-complete-chromium','m15-independent-preservation','m15-final-restoration','m15-final-assets','m15-final-docs','m15-repair6-docs','m15-final-privacy'])for(const extension of ['json','txt']){
+ const file='.git/evidence-capture/'+label+'.'+extension;if(fs.existsSync(file)){
+  const bytes=fs.readFileSync(file);fs.writeFileSync(target+'/'+label+'.'+extension,extension==='txt'?bytes.toString('utf8').replace(/\r\n|\r/g,'\n'):bytes);
+  if(extension==='txt'){fs.writeFileSync(target+'/'+label+'.txt.gz',zlib.gzipSync(bytes));rawLogs.push({label,source:file,rawSha256:crypto.createHash('sha256').update(bytes).digest('hex'),preview:'Newline normalization only; exact native bytes in txt.gz'});}
+ }
+}
+for(const file of ['frozen-inputs.json','first-gate-inputs.json','restoration-unified.json','restoration-initial-unified.json','initial-gate-stop.json','repair4-gate-stop.json','repair5-gate-stop.json','restoration-repair4-stopped-gate.json','restoration-repair5-stopped-gate.json','restoration-final-unified.json','m15-repair4-affected-priority.jsonl','m15-repair4-unified-priority.jsonl','m15-repair5-affected-priority.jsonl','m15-repair5-unified-priority.jsonl'])if(fs.existsSync('.git/m15/'+file))fs.copyFileSync('.git/m15/'+file,target+'/'+file+(file.endsWith('.jsonl')?'.txt':''));
+fs.writeFileSync(target+'/raw-log-hashes.json',JSON.stringify(rawLogs,null,2)+'\n');
+fs.mkdirSync(target+'/tools',{recursive:true});
+for(const file of ['legacy-snapshot.cjs','legacy.config.mjs','legacy.test.ts','fault.config.mjs','fault.test.tsx','m15-spec-before-repair3.ts','priority.cjs','priority-before-repair5.cjs','run-scheduled.ps1','run-scheduled-before-repair5.ps1','repair4-affected.ps1','repair5-affected.ps1','preservation.cjs','preservation-before-repair1.cjs','inputs.cjs','audit.cjs','privacy.ps1','package.cjs','final-chromium.ps1','final-assets.ps1','final-docs.ps1','document-review.cjs','order-contract.cjs'])fs.copyFileSync('.git/m15/'+file,target+'/tools/'+file+'.txt');
+const failure='.git/m15/attempts/repair2-browser-failure';if(fs.existsSync(failure))fs.cpSync(failure,target+'/repair2-browser-failure',{recursive:true});
+const fullFailure='.git/m15/attempts/complete-chromium-failure';
+if(fs.existsSync(fullFailure)){
+ fs.mkdirSync(target+'/complete-chromium-failure',{recursive:true});
+ for(const file of fs.readdirSync(fullFailure))if(file==='.last-run.json'||file.startsWith('accessibility--REG-M7-041'))fs.cpSync(path.join(fullFailure,file),target+'/complete-chromium-failure/'+file,{recursive:true});
+}
+const runs=fs.readdirSync(target+'/performance').filter(file=>file.endsWith('.json')).map(file=>({file,...JSON.parse(fs.readFileSync(target+'/performance/'+file))})).sort((a,b)=>a.file.localeCompare(b.file));
+const final=[1280,320].map(width=>runs.filter(run=>run.width===width).at(-1));
+fs.writeFileSync(target+'/performance-summary.json',JSON.stringify({thresholdMs:2500,retries:0,allRuns:runs,final},null,2)+'\n');
+const files=fs.readdirSync(target,{recursive:true}).filter(file=>file!=='manifest.json'&&fs.statSync(path.join(target,file)).isFile());
+fs.writeFileSync(target+'/manifest.json',JSON.stringify({files:files.map(file=>({file,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(target,file))).digest('hex')}))},null,2)+'\n');
+console.log(JSON.stringify({status:'PASS',packaged:files.length,performanceRuns:runs.length,final:final.map(run=>({width:run.width,samples:run.samples.map(sample=>Number(sample.dealMs.toFixed(2))),median:run.medianMs,worst:run.worstMs}))}));

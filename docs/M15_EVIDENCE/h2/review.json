@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-08 02:03:34 +08:00",
+  "review": "Same-session specification/design/source/test/diff and real evidence review",
+  "freshSessionReview": "NOT RUN",
+  "humanVisualAcceptance": "PENDING",
+  "findings": "H2 basename recursion and stale manifest repaired with original failures retained; O historical PNG timeout remains mandatory blocker; no new product repair",
+  "images": [
+    {
+      "label": "Normal Baccarat table",
+      "file": "../h1-integration/visual/stopped/table-1280.png",
+      "sha256": "e0f9bcf0c5db54260c8c9d360705e767d5bcab401f3c155c519cc51398bac3db"
+    },
+    {
+      "label": "Player Pair selected",
+      "file": "../h1-integration/visual/stopped/selected-0.png",
+      "sha256": "6eac9ff4135dbdf3952781f4f547b3d7afc77c577be599c501866b4a2d8e0cc0"
+    },
+    {
+      "label": "Banker Pair selected",
+      "file": "../h1-integration/visual/stopped/selected-1.png",
+      "sha256": "51a9b2a4bcc2da2077a30d71454cf54ffba0cfe41f8af9cd02caa7f5542e53b0"
+    },
+    {
+      "label": "Both Pair wagers selected",
+      "file": "../h1-integration/visual/stopped/selected-2.png",
+      "sha256": "2e6cfaa4aabb7a9c94060bd04e7f9988c8f278e1cbdddea24b16adb7843867ce"
+    },
+    {
+      "label": "Player Pair win",
+      "file": "../h1-integration/visual/stopped/m15-player-pair-player_pair.png",
+      "sha256": "d4ffa1962e4cb473d4f911028894a97bb2db5b6c7dde06aca65d30373b114ffc"
+    },
+    {
+      "label": "Banker Pair win",
+      "file": "../h1-integration/visual/stopped/m15-banker-pair-banker_pair.png",
+      "sha256": "08a361337512698529d63503f80752eba2ee5206922a07979a9cb9d3725359aa"
+    },
+    {
+      "label": "Both Pair winning fixture",
+      "file": "../h1-integration/visual/stopped/settled-2.png",
+      "sha256": "04cc2124b988ebefbe636fd151163c7c011e7b649b34a6ab47a246022a5728cc"
+    },
+    {
+      "label": "Pair losing example",
+      "file": "../h1-integration/visual/stopped/m15-pair-loss-player_pair.png",
+      "sha256": "4b82c120c5a6b8fd58fb4b554f62f87bd9a706370505a037acf8323f05cde8e1"
+    },
+    {
+      "label": "Normal shoe status",
+      "file": "../h1-integration/visual/stopped/shoe-normal.png",
+      "sha256": "e0f9bcf0c5db54260c8c9d360705e767d5bcab401f3c155c519cc51398bac3db"
+    },
+    {
+      "label": "Cut card reached after settlement",
+      "file": "../h1-integration/visual/stopped/cut-reached-closed.png",
+      "sha256": "632104e94bc62f821279df84cd1625f104dd88644486e46a90e8d2115522c006"
+    },
+    {
+      "label": "Current round continuing after cut",
+      "file": "../h1-integration/visual/stopped/cut-during-round.png",
+      "sha256": "35d1968dbcfd6dc8e90d00dcf260283a439805f8f441331e454a7e405730f341"
+    },
+    {
+      "label": "New shoe without credit reset",
+      "file": "../h1-integration/visual/stopped/new-shoe-empty.png",
+      "sha256": "f6d9c1c53d05726ae41924f611643ee9468dfdf8ba072d92332abf16caf5ce53"
+    },
+    {
+      "label": "Repeat Bet restores main and both Pair wagers",
+      "file": "../h1-integration/visual/stopped/new-shoe.png",
+      "sha256": "84f892aef1e0c89cceafdc2f4f337a3a012e82272058ba9775319484bdcd5d05"
+    },
+    {
+      "label": "320px mobile Pair layout",
+      "file": "../h1-integration/visual/stopped/table-320.png",
+      "sha256": "f537222a8ddb2f4bc1681507721e355fc60971f5927064c7b710e562e391816b"
+    },
+    {
+      "label": "Settled main and Pair payout; native flight alongside",
+      "file": "../h1-integration/visual/stopped/settled-5.png",
+      "sha256": "d429419f382a681ca21e4a14819cd7a909342a81dd5ad0c806b1a8755d39aff0"
+    }
+  ]
+}

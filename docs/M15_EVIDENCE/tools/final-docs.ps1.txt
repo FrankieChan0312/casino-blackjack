@@ -1,0 +1,8 @@
+$ErrorActionPreference='Stop'
+& node .git/m15/audit.cjs
+if($LASTEXITCODE -ne 0){throw 'M15 scope/assertion/link audit FAIL'}
+& node .git/m15/document-review.cjs
+if($LASTEXITCODE -ne 0){throw 'M15 exact artifact/native evidence review FAIL'}
+& npm.cmd run lint
+if($LASTEXITCODE -ne 0){throw 'Final artifact/source lint FAIL'}
+exit 0

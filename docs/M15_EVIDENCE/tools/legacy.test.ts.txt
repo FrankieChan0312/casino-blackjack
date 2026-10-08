@@ -1,0 +1,23 @@
+import { expect, it } from 'vitest';
+import { createBaccarat as originalCreate, applyCommand as originalApply, digest as originalDigest } from './legacy-baseline/src/baccarat/domain/engine.js';
+import { exportReplay as originalExport } from './legacy-baseline/src/baccarat/domain/replay.js';
+import { createBaccarat, applyCommand, digest } from '../../src/baccarat/domain/engine.js';
+import { LEGACY_RULES } from '../../src/baccarat/domain/config.js';
+import { replay, exportReplay } from '../../src/baccarat/domain/replay.js';
+it('Frozen baseline implementation independently proves original v1 fingerprints/packages and actual multi-shoe replay compatibility',()=>{
+ for(let seed=0;seed<5;seed++){
+  let old=originalCreate(seed),current=createBaccarat(seed,100000,undefined,LEGACY_RULES);
+  expect(digest(current)).toBe(originalDigest(old));
+  function send(intent:{type:'WAGER';target:'PLAYER'|'BANKER'|'TIE';amountUnits:number}|{type:'DEAL'|'COMMIT'|'NEXT'}){
+   const input={...intent,roundId:old.roundId,requestId:`c${old.commands.length+1}`};
+   const a=originalApply(old,input),b=applyCommand(current,input);expect(a.ok).toBe(true);expect(b.ok).toBe(true);old=a.state;current=b.state;
+   expect(digest(current)).toBe(originalDigest(old));
+  }
+  for(let round=0;round<180;round++){
+   for(const target of ['PLAYER','BANKER','TIE']as const)send({type:'WAGER',target,amountUnits:100});
+   send({type:'DEAL'});send({type:'COMMIT'});if(round<179)send({type:'NEXT'});
+  }
+  expect(old.shoe.ordinal).toBeGreaterThan(0);expect(exportReplay(current)).toEqual(originalExport(old));
+  const rebuilt=replay(originalExport(old));expect(rebuilt.digest).toBe(originalDigest(old));expect(rebuilt.state.availableUnits).toBe(old.availableUnits);
+ }
+});

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-08 01:26:12 +08:00",
+  "task": "HARNESS-H2",
+  "cycle": 2,
+  "maximum": 10,
+  "failure": "Publication N native1: evidence manifest .gitattributes SHA mismatch",
+  "hypothesis": "Manifest was generated before classification refresh rewrote authored attributes/metadata; dependent hashes became stale",
+  "fix": "Sequence classification/attributes first, manifest second, stage updated manifest last; preserve the failed manifest",
+  "verification": "Pending affected N rerun",
+  "M15": "7/10",
+  "Repair8": "NOT STARTED"
+}

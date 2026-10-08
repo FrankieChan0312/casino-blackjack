@@ -1,10 +1,10 @@
 import { applyCommand, createBaccarat, digest, publicView, type Command, type State } from './domain/engine.js';
 import { exportReplay } from './domain/replay.js';
-import type { Target } from './domain/rules.js';
+import type { WagerTarget } from './domain/rules.js';
 import { createPresentationFeed } from '../presentation/events.js';
 import { baccaratFacts } from './presentation/facts.js';
 
-export type Intent = { type: Exclude<Command['type'], 'WAGER'> } | { type: 'WAGER'; target: Target; amountUnits: number };
+export type Intent = { type: Exclude<Command['type'], 'WAGER'> } | { type: 'WAGER'; target: WagerTarget; amountUnits: number };
 export function createBaccaratController(initial: State = createBaccarat(Math.floor(Math.random() * 0x100000000))) {
   let state = initial, snapshot = publicView(state), sequence = 0;
   const listeners = new Set<() => void>();

@@ -1,0 +1,2377 @@
+{
+  "status": "PASS",
+  "orderedCombinationsPerSide": 169,
+  "winningCombinationsPerSide": 13,
+  "counts": {
+    "PLAYER": 13,
+    "BANKER": 13
+  },
+  "rows": [
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "A",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "A",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "A",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "A",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "2",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "2",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "2",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "2",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "3",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "3",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "3",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "3",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "4",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "4",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "4",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "4",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "5",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "5",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "5",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "5",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "6",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "6",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "6",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "6",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "7",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "7",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "7",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "7",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "8",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "8",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "8",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "8",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "9",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "9",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "9",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "9",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "10",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "10",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "10",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "10",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "J",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "J",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "J",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "J",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "Q",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "Q",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "PLAYER",
+      "first": "Q",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "Q",
+      "second": "K",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "A",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "2",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "4",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "5",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "6",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "8",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "9",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "10",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "J",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "Q",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "side": "PLAYER",
+      "first": "K",
+      "second": "K",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "side": "BANKER",
+      "first": "K",
+      "second": "K",
+      "expected": true,
+      "actual": true
+    }
+  ]
+}

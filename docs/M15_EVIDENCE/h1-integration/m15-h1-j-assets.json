@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T16:16:00.482Z",
+  "finish": "2026-10-07T16:16:43.358Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/j-assets.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-j-assets.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

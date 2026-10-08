@@ -1,0 +1,36 @@
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/accessibility.spec.ts tests/browser/baccarat/m15Zoom.spec.ts
+
+[WebServer] (node:3264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:30988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (2.0s)
+  ok 2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (911ms)
+  ok 3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (820ms)
+  ok 4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (891ms)
+  ok 5 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-1280] actual automatic native browser zoom 200% (4.4s)
+  ok 6 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-768] actual automatic native browser zoom 200% (3.0s)
+  ok 7 [chromium] › tests\browser\baccarat\m15Zoom.spec.ts:5:39 › [M15-Z-640] actual automatic native browser zoom 200% (3.1s)
+
+  7 passed (17.3s)
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test tests/browser/baccarat/m15.spec.ts --grep M15-UI06
+
+[WebServer] (node:16488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:29564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-1280] responsive Pair controls keyboard/focus/touch/200% text (3.2s)
+  ok 2 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-768] responsive Pair controls keyboard/focus/touch/200% text (2.4s)
+  ok 3 [chromium] › tests\browser\baccarat\m15.spec.ts:78:35 › [M15-UI06-320] responsive Pair controls keyboard/focus/touch/200% text (1.9s)
+
+  3 passed (9.7s)

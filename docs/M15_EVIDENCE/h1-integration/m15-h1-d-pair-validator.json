@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T15:51:04.971Z",
+  "finish": "2026-10-07T15:51:06.481Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/d-pair-validator.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-d-pair-validator.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

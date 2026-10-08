@@ -1,7 +1,7 @@
 import { useState, useSyncExternalStore } from 'react';
 import type { BaccaratController, Intent } from './controller.js';
 import { baccaratCredits, signedCredits } from './format.js';
-import type { Target } from './domain/rules.js';
+import type { WagerTarget } from './domain/rules.js';
 import { Cards } from '../ui/Cards.js';
 import { DealerAvatar } from '../ui/DealerAvatar.js';
 import { character, characters, type CharacterId } from '../presentation/characters.js';
@@ -12,8 +12,8 @@ import type { PublicView } from './domain/engine.js';
 import { BaccaratPresentationProvider, useBaccaratAnchor, useBaccaratPresentation } from './presentation/Provider.js';
 import { baccaratHandId, baccaratWagerSeat } from './presentation/facts.js';
 
-const labels: Record<Target, string> = { PLAYER: 'Player', BANKER: 'Banker', TIE: 'Tie' };
-const markings: Record<Target, string> = { PLAYER: '1:1', BANKER: '0.95:1', TIE: '8:1' };
+const labels: Record<WagerTarget, string> = { PLAYER: 'Player', BANKER: 'Banker', TIE: 'Tie', PLAYER_PAIR: 'Player Pair', BANKER_PAIR: 'Banker Pair' };
+const markings = { PLAYER: '1:1', BANKER: '0.95:1', TIE: '8:1' };
 export function BaccaratTable({ controller, presentationMode }: { controller: BaccaratController; presentationMode?: PresentationMode }) {
   return <BaccaratPresentationProvider feed={controller.presentation} mode={presentationMode}><BaccaratScene controller={controller} /></BaccaratPresentationProvider>;
 }
@@ -22,14 +22,14 @@ function BaccaratCard({ card, handId, index }: { card: NonNullable<PublicView['r
   return <div ref={anchor} className="baccarat-card-slot" data-baccarat-slot={`${handId.endsWith('/player') ? 'PLAYER' : 'BANKER'}:${index}`}>
     {visual.visible(handId, index) ? <Cards cards={[card]} /> : <div className="baccarat-card-outline" aria-hidden="true" />}</div>;
 }
-function BaccaratWagerChip({ target, units }: { target: Target; units: number }) {
+function BaccaratWagerChip({ target, units }: { target: WagerTarget; units: number }) {
   const anchor = useBaccaratAnchor(`wager:${baccaratWagerSeat[target]}`);
   return <span ref={anchor} className="baccarat-wager-chip" data-wager-units={units}>{units ? `${baccaratCredits(units)} credits` : 'No bet'}</span>;
 }
 function BaccaratScene({ controller }: { controller: BaccaratController }) {
   const view = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
   const visual = useBaccaratPresentation(), shoeAnchor = useBaccaratAnchor('deal-origin'), dealerAnchor = useBaccaratAnchor('dealer-hand'), creditsAnchor = useBaccaratAnchor('local-credits');
-  const [selected, setSelected] = useState<Target>('PLAYER'), [amount, setAmount] = useState('25'), [error, setError] = useState('');
+  const [selected, setSelected] = useState<WagerTarget>('PLAYER'), [amount, setAmount] = useState('25'), [error, setError] = useState('');
   const [identity, setIdentity] = useState(() => createDealerTableIdentity([], () => 0, 'knight_male', 'noble_female', FORMAL_DEALER_POOL, 0));
   const human = character(identity.lineup.human), dealer = FORMAL_DEALER_ASSETS.find(asset => asset.characterId === identity.characterId) ?? null;
   const betting = view.phase === 'BETTING', complete = view.phase === 'COMPLETE', round = view.round;
@@ -39,6 +39,10 @@ function BaccaratScene({ controller }: { controller: BaccaratController }) {
   const status = visual.initialRunning ? 'DEALING' : round && !visual.visible(baccaratHandId(round.id, 'PLAYER'), 2) ? 'PLAYER DRAWS'
     : visual.cardsRunning ? 'BANKER DRAWS' : view.phase === 'INTEGRITY_ERROR' ? 'ROUND INTERRUPTED' : view.voided ? 'ROUND VOIDED'
     : round ? round.outcome === 'TIE' ? 'TIE' : `${round.outcome} WINS` : 'PLACE YOUR BET';
+  const shoeStatus = view.phase === 'INTEGRITY_ERROR' ? 'SHOE UNAVAILABLE · Void round to refund bets'
+    : view.voided ? 'SHOE RETIRED · New shoe on Deal Again or Repeat Bet'
+    : view.shoe.status !== 'PLAYABLE' ? `${view.shoe.cutReached ? 'CUT CARD REACHED' : 'SHOE COMPLETE'} · ${visual.running ? 'New shoe after this round' : 'New shoe on Deal Again or Repeat Bet'}`
+    : view.shoe.generation > 1 && view.shoe.roundNumber === 0 ? 'NEW SHOE READY' : 'Shoe ready';
   function dispatch(intent: Intent) {
     const result = controller.dispatch(intent, view.roundId); setError(result.ok ? '' : result.error ?? 'Unable to complete that action');
   }
@@ -47,18 +51,34 @@ function BaccaratScene({ controller }: { controller: BaccaratController }) {
     if (!Number.isInteger(credits) || credits < 1 || credits > 1000) { setError('Choose a whole-credit wager from 1 to 1,000.'); return; }
     dispatch({ type: 'WAGER', target: selected, amountUnits: credits * 100 });
   }
+  function wagerZone(target: WagerTarget) {
+    const pair = target === 'PLAYER_PAIR' || target === 'BANKER_PAIR';
+    const zone = target === 'PLAYER_PAIR' ? 'PLAYER' : 'BANKER';
+    const known = round && visual.visible(baccaratHandId(round.id, zone), 1);
+    const settlement = round?.settlements.find(result => result.target === target);
+    const resultVisible = pair ? known : !visual.cardsRunning;
+    const payout = target === 'PLAYER_PAIR' ? `${view.rules.playerPairProfit}:1` : target === 'BANKER_PAIR' ? `${view.rules.bankerPairProfit}:1` : markings[target];
+    return <div className={`baccarat-wager-zone${pair ? ' baccarat-pair-zone' : ''}`} key={target} data-wager-target={target}>
+      <button type="button" aria-pressed={selected === target} disabled={!betting} onClick={() => {setSelected(target);setError('');}}>{labels[target]}<small>{payout}</small></button>
+      <BaccaratWagerChip target={target} units={view.wagers[target] ?? 0} />
+      {resultVisible && settlement && <span className="baccarat-wager-result">{settlement.result}</span>}
+    </div>;
+  }
   return <main className="baccarat-page" data-game="baccarat" data-round-id={view.roundId} data-authority-digest={controller.getDigest()}
     data-baccarat-motion={visual.mode} data-cards-running={visual.cardsRunning} data-presentation-running={visual.running}>
-    <header className="baccarat-header"><div><p className="eyebrow">Punto Banco · Eight decks</p><h1>Baccarat</h1></div>
+    <header className="baccarat-header"><div><p className="eyebrow">Punto Banco · {view.rules.deckCount === 8 ? 'Eight' : view.rules.deckCount} decks</p><h1>Baccarat</h1></div>
       <p>Simulation credits only.<br />No real money or redemption value.</p></header>
     <section className="baccarat-table" aria-label="Baccarat table">
       <div ref={dealerAnchor} className="baccarat-dealer" data-dealer-character={identity.characterId ?? ''}>
         <DealerAvatar asset={dealer} /><p>{identity.characterId ? character(identity.characterId).name : 'Casino Dealer'} · Dealer</p>
-        <div ref={shoeAnchor} className="baccarat-shoe" aria-label="Eight-deck shoe"><span className="shoe-placeholder" aria-hidden="true" /><small>{view.remainingCards} cards remaining</small></div>
+        <div ref={shoeAnchor} className="baccarat-shoe" aria-label={`${view.rules.deckCount === 8 ? 'Eight' : view.rules.deckCount}-deck shoe`} data-shoe-id={view.shoe.id}><span className="shoe-placeholder" aria-hidden="true" /><small>{view.rules.deckCount} decks · Shoe {view.shoe.generation}</small><small>{view.remainingCards} cards remaining</small>
+          {view.rules.version === 'M15' && <small>Cut card: {view.shoe.cutReached ? 'REACHED' : 'ACTIVE'}</small>}</div>
       </div>
       <div className="baccarat-status" role="status" aria-live="polite"><strong>{status}</strong>
         {complete && !visual.running && <span>ROUND COMPLETE</span>}{!visual.cardsRunning && visual.settling && <span>Settling bets</span>}
         {!visual.initialRunning && round?.natural && <span>Natural · No third cards</span>}</div>
+      {view.rules.version === 'M15' && <p className="baccarat-shoe-status" role="status" aria-live="polite" data-shoe-status={view.shoe.status}>
+        {shoeStatus}</p>}
       <div className="baccarat-hands">
         {(['PLAYER','BANKER'] as const).map(zone => {
           const hand = zone === 'PLAYER' ? round?.player : round?.banker;
@@ -73,16 +93,12 @@ function BaccaratScene({ controller }: { controller: BaccaratController }) {
                 : [0,1].map(index => <div key={index} className="baccarat-card-outline" aria-hidden="true" />)}
             </div>
             <p className="baccarat-decision">{visual.initialRunning ? 'Cards arriving' : decision === 'DRAW' ? `${labels[zone]} draws a third card` : round ? `${labels[zone]} stands` : 'Cards arrive here'}</p>
+            {view.rules.version === 'M15' && round && visual.visible(handId,1) && (zone === 'PLAYER' ? round.playerPair : round.bankerPair) && <span className="baccarat-pair-marker">PAIR</span>}
           </section>;
         })}
       </div>
-      <section className="baccarat-wager-zones" aria-label="Wager targets">
-        {(['PLAYER','TIE','BANKER'] as const).map(target => <div className="baccarat-wager-zone" key={target} data-wager-target={target}>
-          <button type="button" aria-pressed={selected === target} disabled={!betting} onClick={() => {setSelected(target);setError('');}}>{labels[target]}<small>{markings[target]}</small></button>
-          <BaccaratWagerChip target={target} units={view.wagers[target]} />
-          {!visual.cardsRunning && round?.settlements.find(result=>result.target===target) && <span className="baccarat-wager-result">{round.settlements.find(result=>result.target===target)!.result}</span>}
-        </div>)}
-      </section>
+      {view.rules.version === 'M15' && <section className="baccarat-pair-zones" aria-label="Optional Pair side bets">{(['PLAYER_PAIR','BANKER_PAIR'] as const).map(wagerZone)}</section>}
+      <section className="baccarat-wager-zones" aria-label="Wager targets">{(['PLAYER','TIE','BANKER'] as const).map(wagerZone)}</section>
       <section className="baccarat-local-hud" aria-label="Your Baccarat credits">
         <div className="baccarat-human"><img src={human.portrait} width={72} height={96} alt={`Your character: ${human.name}, ${human.archetype}`} /><div><strong>You · {human.name}</strong><span>Human</span></div></div>
         <dl><div><dt>Available</dt><dd ref={creditsAnchor} data-credits="available">{baccaratCredits(view.availableUnits)}</dd></div>
@@ -112,7 +128,9 @@ function BaccaratScene({ controller }: { controller: BaccaratController }) {
       <label htmlFor="baccarat-character">Your character</label><select id="baccarat-character" value={human.id} onChange={event=>setIdentity(current=>changeDealerTableHuman(current,event.target.value as CharacterId))}>
         {characters.map(entry=><option key={entry.id} value={entry.id} disabled={entry.id===identity.characterId}>{entry.name} · {entry.archetype}{entry.id===identity.characterId?' · Dealer (reserved)':''}</option>)}</select>
       <p>{identity.characterId ? character(identity.characterId).name : 'The Dealer'} is reserved for the Dealer at this table.</p></details>
-      <details className="panel"><summary>Table rules</summary><p>Eight-deck Punto Banco. Player pays 1:1, Banker 0.95:1 after 5% commission, Tie 8:1. Player and Banker bets push on a Tie.</p><p>Whole-credit wagers from 1 to 1,000. No side bets.</p></details>
+      <details className="panel"><summary>Table rules</summary><p>{view.rules.deckCount}-deck Punto Banco. Player pays 1:1, Banker 0.95:1 after 5% commission, Tie 8:1. Player and Banker bets push on a Tie.</p><p>Whole-credit wagers from 1 to 1,000.</p>
+        {view.rules.version === 'M15' ? <><p>Choose one main target; optional Player Pair and Banker Pair use the first two ranks, regardless of suit or third cards. Both can win. Player Pair pays {view.rules.playerPairProfit}:1; Banker Pair pays {view.rules.bankerPairProfit}:1 profit.</p>
+          <p>Casino Project default rule: burn the indicator plus its burn value (Ace 1, 2–9 face value, tens and faces 10). Cut reserve: {view.rules.cutCardReserve} cards. Finish the current round, then prepare a new shoe without resetting credits.</p></> : <p>Historical M12 rules: no side bets.</p>}</details>
     </div>
   </main>;
 }

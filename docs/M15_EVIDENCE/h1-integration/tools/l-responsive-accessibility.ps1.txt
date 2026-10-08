@@ -1,0 +1,6 @@
+$ErrorActionPreference = 'Stop'
+& npm.cmd run test:e2e -- tests/browser/accessibility.spec.ts tests/browser/baccarat/m15Zoom.spec.ts
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+& npm.cmd run test:e2e -- tests/browser/baccarat/m15.spec.ts --grep M15-UI06
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+exit 0

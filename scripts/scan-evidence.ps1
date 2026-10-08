@@ -1,12 +1,17 @@
 param(
     [string[]]$Roots = @('docs/M10_T11_EVIDENCE', 'docs/M10_PRE_CLOSE_EVIDENCE', 'src', 'tests', 'scripts'),
-    [string]$ResultPath = '.git/evidence-capture/privacy-result.json'
+    [string]$ResultPath = ''
 )
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 Add-Type -AssemblyName System.IO.Compression.FileSystem
+if ([string]::IsNullOrEmpty($ResultPath)) {
+    $gitDirectory = & git rev-parse --git-dir
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($gitDirectory)) { throw 'Git directory resolution failed' }
+    $ResultPath = Join-Path $gitDirectory 'evidence-capture/privacy-result.json'
+}
 $resolvedRoots = @($Roots | ForEach-Object { (Resolve-Path -LiteralPath $_).Path })
-$result = [IO.Path]::GetFullPath((Join-Path (Get-Location).Path $ResultPath))
+$result = if ([IO.Path]::IsPathRooted($ResultPath)) { [IO.Path]::GetFullPath($ResultPath) } else { [IO.Path]::GetFullPath((Join-Path (Get-Location).Path $ResultPath)) }
 foreach ($root in $resolvedRoots) {
     if ($result -eq $root -or $result.StartsWith($root + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
         throw 'Scanner result must be outside every scan target; no evidence is excluded'

@@ -1,0 +1,53 @@
+{
+  "samples": [
+    {
+      "sample": 1,
+      "status": "PASS",
+      "exitCode": 0,
+      "commandStart": "2026-10-07T04:30:29.605Z",
+      "serverStart": "2026-10-07T04:30:30.653Z",
+      "serverReady": "2026-10-07T04:30:31.578Z",
+      "gotoStart": "2026-10-07T04:30:32.356Z",
+      "gotoEnd": "2026-10-07T04:30:32.883Z",
+      "gotoMs": 526.8600000000001,
+      "testTimeoutMs": 30000,
+      "requests": 93,
+      "html": 48.673,
+      "main": 10.061
+    },
+    {
+      "sample": 2,
+      "status": "PASS",
+      "exitCode": 0,
+      "commandStart": "2026-10-07T04:30:46.141Z",
+      "serverStart": "2026-10-07T04:30:47.245Z",
+      "serverReady": "2026-10-07T04:30:48.159Z",
+      "gotoStart": "2026-10-07T04:30:48.777Z",
+      "gotoEnd": "2026-10-07T04:30:49.167Z",
+      "gotoMs": 389.6229999999998,
+      "testTimeoutMs": 30000,
+      "requests": 93,
+      "html": 10.627,
+      "main": 9.89
+    },
+    {
+      "sample": 3,
+      "status": "PASS",
+      "exitCode": 0,
+      "commandStart": "2026-10-07T04:31:07.853Z",
+      "serverStart": "2026-10-07T04:31:09.088Z",
+      "serverReady": "2026-10-07T04:31:10.022Z",
+      "gotoStart": "2026-10-07T04:31:10.732Z",
+      "gotoEnd": "2026-10-07T04:31:11.415Z",
+      "gotoMs": 683.1010000000001,
+      "testTimeoutMs": 30000,
+      "requests": 93,
+      "html": 14.254999999999999,
+      "main": 12.144
+    }
+  ],
+  "retries": 0,
+  "freshServerPerSample": true,
+  "existingTimeout": 30000,
+  "waitUntil": "load"
+}

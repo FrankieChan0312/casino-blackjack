@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T15:49:12.866Z",
+  "finish": "2026-10-07T15:50:06.826Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/b-focused-browser.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-b-focused-browser.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

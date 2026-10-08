@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T05:03:03.188Z",
+  "finish": "2026-10-07T05:04:14.991Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-Command",
+    "npm.cmd run test:e2e -- tests/browser/baccarat/m15Performance.spec.ts --output .git/m15/repair7-resume/performance-browser; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-performance.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

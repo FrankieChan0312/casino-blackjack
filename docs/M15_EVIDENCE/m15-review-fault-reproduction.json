@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:54:49.321Z",
+  "finish": "2026-10-07T01:54:52.358Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npx vitest run --config .git/m15/fault.config.mjs"
+  ],
+  "log": ".git\\evidence-capture\\m15-review-fault-reproduction.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

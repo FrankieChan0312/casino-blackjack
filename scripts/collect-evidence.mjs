@@ -3,13 +3,14 @@ import console from 'node:console';
 import { closeSync, mkdirSync, openSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import process from 'node:process';
+import { resolveGitDir } from './git-directory.mjs';
 
 // Keep native stdout/stderr outside scan targets until the child and file close.
 const [label, command, ...args] = process.argv.slice(2);
 if (!label || !/^[a-zA-Z0-9-]+$/.test(label) || !command) {
   throw new Error('Usage: node scripts/collect-evidence.mjs LABEL COMMAND [ARGS]');
 }
-const directory = join('.git', 'evidence-capture');
+const directory = join(resolveGitDir(), 'evidence-capture');
 mkdirSync(directory, { recursive: true });
 const log = join(directory, `${label}.txt`);
 const receipt = join(directory, `${label}.json`);

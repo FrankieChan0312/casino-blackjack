@@ -1,0 +1,31 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run tests/m10/formalDealers.test.tsx tests/m10/dealerCleanup.test.tsx
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/dealerCleanup.test.tsx (6 tests | 1 failed) 6958ms
+   × [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes 5369ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/dealerCleanup.test.tsx > [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m10/dealerCleanup.test.tsx:13:1
+     11| import { characters } from '../../src/presentation/characters.js';
+     12|
+     13| it('[PRE-T11-U01] supplied generic PNG is independently decoded and de…
+       | ^
+     14|   const audit = JSON.parse(execFileSync(process.execPath, ['scripts/ve…
+     15|   expect(audit.status).toBe('PASS'); expect(audit.nonRoster).toBe(true…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 19 passed (20)
+   Start at  10:28:44
+   Duration  10.08s (tests 73%, import 16%, transform 11%)
+

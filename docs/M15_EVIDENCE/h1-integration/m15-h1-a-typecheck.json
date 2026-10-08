@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T15:48:50.460Z",
+  "finish": "2026-10-07T15:48:59.449Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/a-typecheck.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-a-typecheck.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T02:52:28.463Z",
+  "finish": "2026-10-07T02:55:06.245Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/verify-preservation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-independent-preservation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:58:30.384Z",
+  "finish": "2026-10-07T02:00:44.301Z",
+  "command": "node",
+  "args": [
+    ".git/m15/preservation.cjs",
+    "restore",
+    "initial-unified"
+  ],
+  "log": ".git\\evidence-capture\\m15-initial-restoration.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

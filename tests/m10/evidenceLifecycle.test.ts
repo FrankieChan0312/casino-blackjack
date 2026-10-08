@@ -2,9 +2,13 @@ import { expect, it } from 'vitest';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
+import { join } from 'node:path';
+import { resolveGitDir } from '../../scripts/git-directory.mjs';
+
+const gitDir = resolveGitDir();
 
 function fixture() {
-  const directory = `.git/scanner-fixture-${randomUUID()}`, root = `${directory}/evidence`;
+  const directory = join(gitDir, `scanner-fixture-${randomUUID()}`), root = `${directory}/evidence`;
   mkdirSync(root, { recursive: true });
   return { directory, root, result: `${directory}/result.json` };
 }
@@ -15,7 +19,7 @@ function scan(root: string, result: string) {
     '-File', 'scripts/scan-evidence.ps1', '-Roots', root, '-ResultPath', result], {
     encoding: 'utf8', env: { ...process.env, PSModulePath: `${root}/not-a-runtime-module-path` },
   });
-  return { status: child.status, receipt: read(`.git/evidence-capture/${label}.json`) };
+  return { status: child.status, receipt: read(join(gitDir, 'evidence-capture', `${label}.json`)) };
 }
 it('[PRE-CLOSE-H01] scanner and open collector output stay outside actual evidence; all files are inventoried', () => {
   const { root, result } = fixture();
@@ -48,6 +52,6 @@ it('[PRE-CLOSE-H04] native stderr cannot turn a successful child into a PowerShe
   const run = spawnSync('node', ['scripts/collect-evidence.mjs', label, 'powershell.exe', '-NoProfile', '-Command',
     "[Console]::Error.WriteLine('native stderr sentinel'); exit 0"], { encoding: 'utf8' });
   expect(run.status).toBe(0);
-  expect(read(`.git/evidence-capture/${label}.json`)).toMatchObject({ status: 'PASS', exitCode: 0, outputClosed: true });
-  expect(readFileSync(`.git/evidence-capture/${label}.txt`, 'utf8')).toContain('native stderr sentinel');
+  expect(read(join(gitDir, 'evidence-capture', `${label}.json`))).toMatchObject({ status: 'PASS', exitCode: 0, outputClosed: true });
+  expect(readFileSync(join(gitDir, 'evidence-capture', `${label}.txt`), 'utf8')).toContain('native stderr sentinel');
 });

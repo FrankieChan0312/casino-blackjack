@@ -1,0 +1,104 @@
+Running: npm run typecheck
+
+> casino-blackjack@0.0.0 typecheck
+> tsc --noEmit
+
+PASS: typecheck
+Running: npm run lint
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+PASS: lint
+Running: npm run test
+
+> casino-blackjack@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+ ❯ tests/m10/dealerCleanup.test.tsx (6 tests | 1 failed) 7535ms
+   × [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes 5736ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/m10/dealerCleanup.test.tsx > [PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/m10/dealerCleanup.test.tsx:13:1
+     11| import { characters } from '../../src/presentation/characters.js';
+     12|
+     13| it('[PRE-T11-U01] supplied generic PNG is independently decoded and de…
+       | ^
+     14|   const audit = JSON.parse(execFileSync(process.execPath, ['scripts/ve…
+     15|   expect(audit.status).toBe('PASS'); expect(audit.nonRoster).toBe(true…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 111 passed (112)
+      Tests  1 failed | 1405 passed (1406)
+   Start at  10:22:31
+   Duration  57.73s (tests 61%, import 31%, transform 4%, setup 2%, worker 1%)
+
+     Import  209 modules were evaluated 424 times · 54.54s total, 31% of tracked time
+             ~3.47s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+FAIL: test (exit 1)
+Running: npm run typecheck:domain
+
+> casino-blackjack@0.0.0 typecheck:domain
+> tsc -p tsconfig.domain.json
+
+PASS: typecheck:domain
+Running: npm run build
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 502 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-D3wKiMW6.css   52.56 kB │ gzip:  10.31 kB
+dist/assets/index-DAWKyLNY.js   406.25 kB │ gzip: 121.93 kB
+
+✓ built in 943ms
+PASS: production fixture boundary (2 browser output files)
+PASS: build
+Running: npm run test:e2e
+
+> casino-blackjack@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:1628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 321 tests using 1 worker
+
+(node:31436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x    1 [chromium] › tests\browser\accessibility.spec.ts:10:1 › [REG-M7-041] [UX-11] [E2E-12] keyboard-only setup, wager, Hit/Stand and completion with visible focus (30.3s)
+(node:21904) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   2 [chromium] › tests\browser\accessibility.spec.ts:22:1 › [REG-M7-042] desktop has no horizontal overflow and primary controls meet touch height (15.1s)
+  ok   3 [chromium] › tests\browser\accessibility.spec.ts:31:1 › [REG-M7-043] [UX-12] [E2E-13] 320px mobile prioritizes the local hand without page horizontal overflow (2.5s)
+  ok   4 [chromium] › tests\browser\accessibility.spec.ts:43:1 › [REG-M7-044] reduced-motion still exposes controls, semantic names and secret-free card back (2.4s)
+  ok   5 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-PLAYER] main wager only (3.2s)
+  ok   6 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-BANKER] main wager only (2.8s)
+  ok   7 [chromium] › tests\browser\baccarat\m15.spec.ts:25:56 › [M15-UI01-TIE] main wager only (2.8s)
+  ok   8 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-0] optional wager composition PLAYER_PAIR (5.8s)
+  ok   9 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-1] optional wager composition BANKER_PAIR (5.9s)
+  ok  10 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-2] optional wager composition PLAYER_PAIR+BANKER_PAIR (6.0s)
+  ok  11 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-3] optional wager composition PLAYER+PLAYER_PAIR (6.1s)
+  ok  12 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-4] optional wager composition BANKER+BANKER_PAIR (6.0s)
+  ok  13 [chromium] › tests\browser\baccarat\m15.spec.ts:32:52 › [M15-UI02-5] optional wager composition TIE+PLAYER_PAIR+BANKER_PAIR (6.1s)
+  ok  14 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-player-pair-PLAYER_PAIR] first two rank result and exact payout (4.3s)
+  ok  15 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-banker-pair-BANKER_PAIR] first two rank result and exact payout (3.9s)
+  ok  16 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-pair-loss-PLAYER_PAIR] first two rank result and exact payout (4.2s)
+  ok  17 [chromium] › tests\browser\baccarat\m15.spec.ts:48:11 › [M15-UI03-m15-pair-loss-BANKER_PAIR] first two rank result and exact payout (4.1s)
+  ok  18 [chromium] › tests\browser\baccarat\m15.spec.ts:54:1 › [M15-UI04] exposure rejection and single main are authoritative, Clear atomic (3.3s)

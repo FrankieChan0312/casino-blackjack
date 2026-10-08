@@ -2,11 +2,10 @@ import { expect, it } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createBaccaratController } from '../../src/baccarat/controller.js';
 import { BaccaratTable } from '../../src/baccarat/BaccaratTable.js';
-import { createBaccarat } from '../../src/baccarat/domain/engine.js';
 import { replay } from '../../src/baccarat/domain/replay.js';
 import { baccaratCredits, signedCredits } from '../../src/baccarat/format.js';
 import { CasinoApp } from '../../src/casino/CasinoApp.js';
-import { ordered } from './fixtures.js';
+import { ordered, createLegacyBaccarat as createBaccarat } from './fixtures.js';
 
 it('[M13-U01] controller commits first and notifies one settled exact Banker view', () => {
   const controller=createBaccaratController(createBaccarat(1,100000,ordered([3,9,0,0,7,7]))),observed:string[]=[];

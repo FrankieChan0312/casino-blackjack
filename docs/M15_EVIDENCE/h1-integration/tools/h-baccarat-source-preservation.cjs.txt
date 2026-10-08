@@ -1,0 +1,30 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),assert=require('node:assert/strict'),zlib=require('node:zlib');
+const json=file=>JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));
+const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const git=(...args)=>cp.execFileSync('git',args,{encoding:'utf8',maxBuffer:32*1024*1024}).trim();
+const inputs=json('.git/m15/repair7/executable-inputs.json');
+for(const item of inputs.inputs)assert.equal(sha(fs.readFileSync(item.file)),item.sha256,'Repair7 executable changed: '+item.file);
+const property="server: { watch: { ignored: ['**/docs/**'] } }, ";
+const vite=fs.readFileSync('vite.config.ts','utf8');assert.equal(vite.split(property).length,2);
+assert.equal(vite.replace(property,''),fs.readFileSync('.git/m15/repair7/vite-before.ts.txt','utf8'));
+const frozen='79533bc22afb8571f8ff53e37cd95eaa6c65e5d8';
+const accepted=git('ls-tree','-r','--name-only',frozen,'src','tests','scripts','art','public','package.json','package-lock.json','playwright.config.ts','vite.config.ts').split(/\r?\n/).filter(p=>p&&p!=='src/main.tsx'&&p!=='vite.config.ts');
+git('diff','--exit-code',frozen,'--',...accepted);
+const originalVite=git('show',frozen+':vite.config.ts').replace("'tests/**/*.test.tsx']","'tests/**/*.test.tsx', 'casino-tests/**/*.test.ts', 'casino-tests/**/*.test.tsx']");
+assert.equal(vite.replace(property,'').trim(),originalVite);
+assert.equal(fs.readFileSync('tsconfig.json','utf8').trim(),git('show',frozen+':tsconfig.json').replace('"tests/**/*.tsx",','"tests/**/*.tsx", "casino-tests/**/*.ts", "casino-tests/**/*.tsx",'));
+assert.equal(git('rev-parse','blackjack-v1.0^{}'),frozen);assert(git('ls-remote','origin','refs/tags/blackjack-v1.0^{}').startsWith(frozen+'\t'));
+const release=fs.readFileSync('docs/releases/BLACKJACK_V1_ACCEPTED.md','utf8');for(const value of [frozen,'1240','245','ACCEPTED / CLOSED','40ms','110ms','Baccarat is not part','NOT RUN'])assert(release.includes(value));
+const baseline='507d6d53b529f38b4510a8b488ed272216c0f5a9';
+for(const file of ['legacy-snapshot.cjs','legacy.config.mjs','legacy.test.ts'])assert.equal(sha(fs.readFileSync('.git/m15/'+file)),sha(fs.readFileSync('docs/M15_EVIDENCE/tools/'+file+'.txt')),'Frozen comparison helper: '+file);
+const legacySources=git('ls-tree','-r','--name-only',baseline,'src/domain','src/baccarat/domain').split(/\r?\n/).filter(Boolean);
+for(const file of legacySources)assert.equal(sha(fs.readFileSync('.git/m15/legacy-baseline/'+file)),sha(cp.execFileSync('git',['show',baseline+':'+file],{maxBuffer:4*1024*1024})),'Actual Git legacy baseline: '+file);
+for(const name of ['engine','replay','controller','presentation']){
+ const file='casino-tests/baccarat/'+name+'.test.'+(name==='controller'?'tsx':'ts');
+ const body=text=>text.split(/\r?\n/).filter(line=>!line.startsWith('import ')).join('\n').trimEnd();
+ assert.equal(body(fs.readFileSync(file,'utf8')),body(git('show',baseline+':'+file)),'Frozen Baccarat assertions: '+file);
+}
+
+const result={at:new Date().toISOString(),status:'PASS',executableInputs:inputs.inputs.length,acceptedBlackjackInputs:accepted.length,legacySources:legacySources.length,frozenBaccaratAssertionBodies:4,watcher:'Exact original Repair7 property',tag:frozen};
+fs.writeFileSync('.git/m15/h1-integration/h-baccarat-source-preservation.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));

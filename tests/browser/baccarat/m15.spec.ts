@@ -1,0 +1,162 @@
+import { expect, test, type Page } from '@playwright/test';
+import { mkdirSync, writeFileSync } from 'node:fs';
+const evidence='.git/m15/visual';
+const labels={PLAYER:'Player',BANKER:'Banker',TIE:'Tie',PLAYER_PAIR:'Player Pair',BANKER_PAIR:'Banker Pair'};
+type Target=keyof typeof labels;
+async function open(page:Page,fixture='m15-both-pair',motion=''){
+  await page.goto(`/baccarat?baccaratFixture=${fixture}${motion?'&motion='+motion:''}`);
+  await expect(page.getByRole('button',{name:'Place Bet · Player',exact:true})).toBeVisible();
+}
+async function bet(page:Page,target:Target,amount='25'){
+  await page.locator(`[data-wager-target="${target}"] button`).click();
+  await page.getByLabel('Wager amount',{exact:true}).fill(amount);
+  await page.getByRole('button',{name:`Place Bet · ${labels[target]}`,exact:true}).click();
+}
+async function settled(page:Page){
+  await expect(page.locator('[data-game="baccarat"]')).toHaveAttribute('data-presentation-running','false');
+  await expect(page.locator('.baccarat-status')).toContainText('ROUND COMPLETE');
+  await expect(page.locator('[data-initial-deal-flight],[data-action-card-flight],[data-wager-flight]')).toHaveCount(0);
+}
+async function capture(page:Page,name:string){mkdirSync(evidence,{recursive:true});await page.screenshot({path:`${evidence}/${name}.png`,fullPage:true});}
+async function authority(page:Page){return page.evaluate(()=>{
+  const controller=(window as unknown as{baccaratTestController:{getDigest():string;getSnapshot():unknown;exportReplay():unknown}}).baccaratTestController;
+  return{digest:controller.getDigest(),view:controller.getSnapshot(),replay:controller.exportReplay()};
+});}
+for(const target of ['PLAYER','BANKER','TIE'] as const)test(`[M15-UI01-${target}] main wager only`,async({page})=>{
+  await open(page,'m15-pair-loss');await bet(page,target);await page.getByRole('button',{name:'Deal',exact:true}).click();await settled(page);
+  await expect(page.locator('[data-credits="available"]')).toHaveText(target==='PLAYER'?'1,025':'975');
+  await expect(page.locator('[data-wager-target="PLAYER_PAIR"]')).toContainText('No bet');
+  await expect(page.locator('[data-wager-target="BANKER_PAIR"]')).toContainText('No bet');
+});
+const combinations:readonly(readonly Target[])[]=[['PLAYER_PAIR'],['BANKER_PAIR'],['PLAYER_PAIR','BANKER_PAIR'],['PLAYER','PLAYER_PAIR'],['BANKER','BANKER_PAIR'],['TIE','PLAYER_PAIR','BANKER_PAIR']];
+for(const [index,targets]of combinations.entries())test(`[M15-UI02-${index}] optional wager composition ${targets.join('+')}`,async({page})=>{
+  await open(page);for(const target of targets)await bet(page,target);
+  await expect(page.locator('[data-credits="reserved"]')).toHaveText(String(targets.length*25));
+  await capture(page,`selected-${index}`);
+  await page.getByRole('button',{name:'Deal',exact:true}).click();await settled(page);
+  for(const target of targets)await expect(page.locator(`[data-wager-target="${target}"]`)).toContainText(target==='PLAYER'||target==='BANKER'?'PUSH':'WIN');
+  const expected=[1275,1275,1550,1275,1275,1750][index];
+  await expect(page.locator('[data-credits="available"]')).toHaveText(expected.toLocaleString('en-US'));
+  await capture(page,`settled-${index}`);
+  await page.getByRole('button',{name:'Repeat Bet'}).click();
+  for(const target of targets)await expect(page.locator(`[data-wager-target="${target}"] [data-wager-units]`)).toHaveAttribute('data-wager-units','2500');
+  await expect(page.locator('[data-credits="reserved"]')).toHaveText(String(targets.length*25));
+  await page.getByRole('button',{name:'Clear Bets'}).click();await expect(page.locator('[data-credits="reserved"]')).toHaveText('0');
+});
+for(const [fixture,target,result]of[
+  ['m15-player-pair','PLAYER_PAIR','WIN'],['m15-banker-pair','BANKER_PAIR','WIN'],['m15-pair-loss','PLAYER_PAIR','LOSS'],['m15-pair-loss','BANKER_PAIR','LOSS'],
+]as const)test(`[M15-UI03-${fixture}-${target}] first two rank result and exact payout`,async({page})=>{
+  await open(page,fixture);await bet(page,target,'10');await page.getByRole('button',{name:'Deal',exact:true}).click();await settled(page);
+  await expect(page.locator(`[data-wager-target="${target}"]`)).toContainText(result);
+  await expect(page.locator('[data-credits="available"]')).toHaveText(result==='WIN'?'1,110':'990');
+  await capture(page,`${fixture}-${target.toLowerCase()}`);
+});
+test('[M15-UI04] exposure rejection and single main are authoritative, Clear atomic',async({page})=>{
+  await open(page);await bet(page,'PLAYER','1000');const before=await authority(page);
+  await bet(page,'PLAYER_PAIR','1');await expect(page.getByRole('alert')).toContainText('Insufficient');expect(await authority(page)).toEqual(before);
+  await bet(page,'BANKER','1');await expect(page.getByRole('alert')).toContainText('one main');expect(await authority(page)).toEqual(before);
+  await page.getByRole('button',{name:'Clear Bets'}).click();await expect(page.locator('[data-credits="available"]')).toHaveText('1,000');
+});
+test('[M15-UI05] cut reached, valid six-card round completes, next shoe changes ID/burn without credit/history reset; Repeat includes both pairs',async({page})=>{
+  await open(page,'m15-cut');await capture(page,'shoe-normal');
+  for(const target of ['BANKER','PLAYER_PAIR','BANKER_PAIR'] as const)await bet(page,target,'10');
+  await page.getByRole('button',{name:'Deal',exact:true}).click();await settled(page);
+  await expect(page.locator('.baccarat-shoe')).toContainText('Cut card: REACHED');
+  await expect(page.locator('[data-shoe-status]')).toHaveAttribute('data-shoe-status','CLOSED');
+  await expect(page.locator('.baccarat-hand-cards [role="img"]')).toHaveCount(6);await capture(page,'cut-reached-closed');
+  const before=await authority(page),view=before.view as{shoe:{id:string};history:unknown[];availableUnits:number};
+  expect(view.history).toHaveLength(1);expect(view.availableUnits).toBe(122000);
+  await page.getByRole('button',{name:'Repeat Bet'}).click();
+  const after=await authority(page),next=after.view as{shoe:{id:string;generation:number;totalBurned:number};history:unknown[];availableUnits:number};
+  expect(next.shoe.id).not.toBe(view.shoe.id);expect(next.shoe.generation).toBe(2);expect(next.shoe.totalBurned).toBeGreaterThanOrEqual(2);
+  expect(next.history).toEqual(view.history);expect(next.availableUnits).toBe(119000);
+  await expect(page.locator('[data-shoe-status]')).toContainText('NEW SHOE READY');
+  await expect(page.locator('.baccarat-shoe')).toContainText('Cut card: ACTIVE');await capture(page,'new-shoe');
+  for(const target of ['BANKER','PLAYER_PAIR','BANKER_PAIR'])await expect(page.locator(`[data-wager-target="${target}"] [data-wager-units]`)).toHaveAttribute('data-wager-units','1000');
+  expect(JSON.stringify(after.view)).not.toMatch(/orderedIds|deckIndex|seed|cursor/);
+});
+for(const width of [1280,768,320])test(`[M15-UI06-${width}] responsive Pair controls keyboard/focus/touch/200% text`,async({page})=>{
+  await page.setViewportSize({width,height:900});await open(page);await capture(page,`table-${width}`);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const button=page.getByRole('button',{name:'Player Pair 11:1',exact:true});
+  await button.focus();await expect(button).toBeFocused();expect(await button.evaluate(element=>getComputedStyle(element).outlineStyle)).not.toBe('none');
+  await page.keyboard.press('Enter');await expect(button).toHaveAttribute('aria-pressed','true');
+  for(const target of ['PLAYER_PAIR','BANKER_PAIR'])expect((await page.locator(`[data-wager-target="${target}"] button`).boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  await page.getByRole('button',{name:'Place Bet · Player Pair',exact:true}).focus();await page.keyboard.press('Enter');
+  await bet(page,'BANKER_PAIR');await page.getByRole('button',{name:'Deal',exact:true}).focus();await page.keyboard.press('Enter');await settled(page);await capture(page,`pairs-settled-${width}`);
+  await page.addStyleTag({content:'html { font-size:200% !important; }'});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const shoe=(await page.locator('.baccarat-shoe').boundingBox())!,status=(await page.locator('.baccarat-status').boundingBox())!;
+  expect(shoe.y+shoe.height).toBeLessThanOrEqual(status.y);await capture(page,`text-200-${width}`);
+});
+test('[M15-UI07] FULL/REDUCED/IMMEDIATE and skip pair settlement yield identical authority; results precede third cards',async({page})=>{
+  test.setTimeout(60000);const values:unknown[]=[];
+  for(const mode of ['FULL_MOTION','REDUCED_MOTION','IMMEDIATE']){
+    await page.emulateMedia({reducedMotion:mode==='REDUCED_MOTION'?'reduce':'no-preference'});await open(page,'m15-both-pair',mode==='IMMEDIATE'?mode:'');
+    for(const target of ['BANKER','PLAYER_PAIR','BANKER_PAIR'] as const)await bet(page,target,'10');
+    await page.getByRole('button',{name:'Deal',exact:true}).click();await settled(page);const result=await authority(page);values.push({digest:result.digest,replay:result.replay});
+    await expect(page.locator('[data-game="baccarat"]')).toHaveAttribute('data-baccarat-motion',mode);
+  }
+  expect(values[1]).toEqual(values[0]);expect(values[2]).toEqual(values[0]);
+  await open(page);await bet(page,'PLAYER_PAIR','10');await bet(page,'BANKER_PAIR','10');
+  await page.evaluate(()=>{
+    const observer=new MutationObserver(()=>{const layer=document.querySelector<HTMLElement>('[data-deal-target$="/player:2"]');if(layer){for(const animation of layer.getAnimations({subtree:true})){animation.pause();animation.currentTime=50;}observer.disconnect();}});
+    observer.observe(document.body,{childList:true});
+  });
+  await page.getByRole('button',{name:'Deal',exact:true}).click();
+  await expect(page.locator('[data-deal-target$="/player:2"]')).toHaveCount(1);
+  await expect(page.locator('[data-wager-target="PLAYER_PAIR"]')).toContainText('WIN');await expect(page.locator('[data-wager-target="BANKER_PAIR"]')).toContainText('WIN');
+  const before=await authority(page);await page.getByLabel('Reduce motion',{exact:true}).check();await settled(page);expect(await authority(page)).toEqual(before);
+  await page.getByLabel('Reduce motion',{exact:true}).uncheck();await open(page);await bet(page,'PLAYER_PAIR','10');await bet(page,'BANKER_PAIR','10');
+  await page.evaluate(()=>{
+    const observer=new MutationObserver(()=>{const layer=document.querySelector<HTMLElement>('[data-wager-kind="BACCARAT_PLAYER_PAIR"]');if(layer){for(const animation of layer.getAnimations({subtree:true})){animation.pause();animation.currentTime=50;}observer.disconnect();}});observer.observe(document.body,{childList:true});
+  });
+  await page.getByRole('button',{name:'Deal',exact:true}).click();
+  const layer=page.locator('[data-wager-kind="BACCARAT_PLAYER_PAIR"]');await expect(layer).toHaveAttribute('data-wager-amount','12000');await expect(layer).toHaveAttribute('data-wager-destination','local-credits');
+  const committed=await authority(page);await page.getByRole('button',{name:'Skip animation'}).click();await settled(page);expect(await authority(page)).toEqual(committed);await capture(page,'skip-settled');
+  mkdirSync(evidence,{recursive:true});writeFileSync(`${evidence}/motion-equivalence.json`,JSON.stringify({status:'PASS',modes:3,skip:true,midSequenceReduce:true,pairBeforeThird:true},null,2)+'\n');
+});
+for(const [fixture,target,outcome,amount,destination]of[
+  ['m15-player-pair','PLAYER_PAIR','WIN','12000','local-credits'],['m15-banker-pair','BANKER_PAIR','WIN','12000','local-credits'],
+  ['m15-pair-loss','PLAYER_PAIR','LOSS','1000','dealer-hand'],['m15-pair-loss','BANKER_PAIR','LOSS','1000','dealer-hand'],
+]as const)test(`[M15-UI08-${target}-${outcome}] native Pair chip animation copies authority and safe skip`,async({page})=>{
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1280,height:1500});await open(page,fixture);await bet(page,target,'10');
+  await page.evaluate(target=>{
+    const observer=new MutationObserver(()=>{const layer=document.querySelector<HTMLElement>(`[data-wager-kind="BACCARAT_${target}"]`);if(layer){for(const animation of layer.getAnimations({subtree:true})){animation.pause();animation.currentTime=50;}observer.disconnect();}});observer.observe(document.body,{childList:true});
+  },target);
+  await page.getByRole('button',{name:'Deal',exact:true}).click();const layer=page.locator(`[data-wager-kind="BACCARAT_${target}"]`);
+  await expect(layer).toHaveAttribute('data-wager-amount',amount);await expect(layer).toHaveAttribute('data-wager-outcome',outcome);await expect(layer).toHaveAttribute('data-wager-destination',destination);
+  expect(await layer.evaluate(element=>element.getAnimations({subtree:true}).map(animation=>animation.playState))).toEqual(['paused']);
+  mkdirSync(evidence,{recursive:true});await page.screenshot({path:`${evidence}/chip-${target.toLowerCase()}-${outcome.toLowerCase()}.png`,fullPage:false});
+  await expect(layer).toHaveCount(1);const before=await authority(page);await page.getByRole('button',{name:'Skip animation'}).click();await settled(page);expect(await authority(page)).toEqual(before);
+});
+test('[M15-UI09] cut card observation during existing valid round then empty new-shoe transition',async({page})=>{
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1280,height:1500});await open(page,'m15-cut');await bet(page,'PLAYER_PAIR','10');
+  await page.evaluate(()=>{
+    const observer=new MutationObserver(()=>{const layer=document.querySelector<HTMLElement>('[data-deal-target$="/player:2"]');if(layer){for(const animation of layer.getAnimations({subtree:true})){animation.pause();animation.currentTime=50;}observer.disconnect();}});observer.observe(document.body,{childList:true});
+  });
+  await page.getByRole('button',{name:'Deal',exact:true}).click();await expect(page.locator('[data-deal-target$="/player:2"]')).toHaveCount(1);
+  await expect(page.locator('[data-shoe-status]')).toContainText('CUT CARD REACHED · New shoe after this round');
+  await expect(page.getByRole('button',{name:'Deal Again'})).toBeDisabled();
+  mkdirSync(evidence,{recursive:true});await page.screenshot({path:`${evidence}/cut-during-round.png`,fullPage:false});
+  await expect(page.locator('[data-deal-target$="/player:2"]')).toHaveCount(1);
+  await page.getByRole('button',{name:'Skip animation'}).click();await settled(page);
+  await expect(page.locator('.baccarat-hand-cards [role="img"]')).toHaveCount(6);const before=await authority(page);
+  await page.getByRole('button',{name:'Deal Again'}).click();const after=await authority(page);
+  expect((after.view as{availableUnits:number}).availableUnits).toBe((before.view as{availableUnits:number}).availableUnits);
+  await expect(page.locator('[data-credits="reserved"]')).toHaveText('0');await capture(page,'new-shoe-empty');
+});
+test('[M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result',async({page})=>{
+  // Cold Vite imports are setup; the native deal-performance gate remains2500ms.
+  test.setTimeout(60000);const started=Date.now();await open(page,'m15-integrity');
+  mkdirSync(evidence,{recursive:true});writeFileSync(`${evidence}/integrity-startup.json`,JSON.stringify({budgetMs:60000,coldOpenMs:Date.now()-started},null,2)+'\n');
+  await bet(page,'PLAYER_PAIR','10');await page.getByRole('button',{name:'Deal',exact:true}).click();
+  await expect(page.locator('.baccarat-status')).toContainText('ROUND INTERRUPTED');
+  await expect(page.locator('[data-shoe-status]')).toContainText('SHOE UNAVAILABLE');await expect(page.locator('[data-shoe-status]')).not.toContainText('Shoe ready');
+  await expect(page.locator('[data-credits="available"]')).toHaveText('990');await expect(page.locator('[data-credits="reserved"]')).toHaveText('10');await capture(page,'integrity-unavailable');
+  await page.getByRole('button',{name:'Void round · refund bets'}).click();
+  await expect(page.locator('.baccarat-status')).toContainText('ROUND VOIDED');await expect(page.locator('[data-shoe-status]')).toContainText('SHOE RETIRED');
+  await expect(page.locator('[data-credits="available"]')).toHaveText('1,000');await expect(page.locator('[data-credits="reserved"]')).toHaveText('0');
+  await page.getByRole('button',{name:'Deal Again'}).click();await expect(page.locator('[data-shoe-status]')).toContainText('NEW SHOE READY');
+  expect((await authority(page)).view).toMatchObject({availableUnits:100000,history:[],shoe:{generation:2,mayBeginRound:true}});
+});

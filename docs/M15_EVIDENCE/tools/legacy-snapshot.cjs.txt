@@ -1,0 +1,5 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process');
+const sha='507d6d53b529f38b4510a8b488ed272216c0f5a9';
+const files=cp.execFileSync('git',['ls-tree','-r','--name-only',sha,'src/domain','src/baccarat/domain'],{encoding:'utf8',maxBuffer:4*1024*1024}).trim().split(/\r?\n/);
+for(const file of files){const bytes=cp.execFileSync('git',['show',sha+':'+file],{maxBuffer:4*1024*1024}),target=path.join('.git/m15/legacy-baseline',file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);}
+console.log(JSON.stringify({status:'PASS',sha,files:files.length,scope:'Read-only committed source reproduction in task Git metadata; live Blackjack unchanged'}));

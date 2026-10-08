@@ -1,0 +1,54 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/controller.test.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/engine.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/fixtures.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/presentation.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/replay.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/BACCARAT_RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DESIGN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DEVELOPMENT_LOG.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/LAB_MANUAL.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/PLAN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/STATE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/UX_UI.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/BaccaratTable.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/baccarat.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/controller.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/engine.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/replay.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/rules.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/shoe.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/presentation/facts.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/browser/baccaratFixtures.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/controller.test.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/engine.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/fixtures.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/presentation.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/replay.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/BACCARAT_RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DESIGN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DEVELOPMENT_LOG.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/LAB_MANUAL.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/PLAN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/STATE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/UX_UI.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/BaccaratTable.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/baccarat.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/controller.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/engine.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/replay.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/rules.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/shoe.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/presentation/facts.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/browser/baccaratFixtures.ts', LF will be replaced by CRLF the next time Git touches it
+{"status":"PASS","changed":24,"new":179,"scope":"M15 only; historical assertions intact; current links/whitespace valid"}
+{"status":"PASS","delivery":"BLOCKED","artifactHashes":168,"closedRawLogs":22,"latestNativeSamples":20,"scope":"Exact bytes, retained failures/native statuses, current links and bounded performance; no full-gate PASS inference"}
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+

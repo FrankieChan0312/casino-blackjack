@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T16:18:37.380Z",
+  "finish": "2026-10-07T16:19:06.785Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/l-responsive-accessibility.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-l-responsive-accessibility.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

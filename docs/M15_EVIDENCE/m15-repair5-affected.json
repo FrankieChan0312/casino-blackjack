@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T02:28:41.242Z",
+  "finish": "2026-10-07T02:28:54.713Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/repair5-affected.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair5-affected.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

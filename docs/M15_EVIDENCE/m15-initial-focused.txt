@@ -1,0 +1,17 @@
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests/baccarat
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  9 passed (9)
+      Tests  159 passed (159)
+   Start at  09:39:23
+   Duration  2.22s (import 40%, tests 35%, transform 22%, setup 3%, worker 1%)
+

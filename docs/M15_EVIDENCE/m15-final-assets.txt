@@ -1,0 +1,671 @@
+PASS: complete twelve-file PNG receipt / original hashes: art/source/characters/PA1_character_sources
+PASS: complete twelve-file PNG receipt / original hashes: public/characters
+PASS: 12 transparent 240x320 production PNGs reproduced byte-for-byte; sources unchanged
+PASS: scripts/verify-character-assets.mjs (exit0)
+{
+  "status": "PASS",
+  "manifestPath": "art/source/dealers/MANIFEST.json",
+  "files": [
+    {
+      "name": "Celestine",
+      "characterId": "noble_female",
+      "role": "dealer",
+      "variant": "formal",
+      "ownerApproved": true,
+      "provenance": {
+        "ownerManifestStatement": "Generated in this ChatGPT conversation from owner-approved character references; owner approved the resulting formal female Dealer artwork set.",
+        "independentlyVerifiedGenerationOrLicensing": false,
+        "importMethod": "Supplied source/runtime pair imported byte-for-byte; resize method not declared in manifest"
+      },
+      "source": {
+        "path": "art/source/dealers/noble_female/formal.png",
+        "bytes": 1766611,
+        "sha256": "cfd6a5aff817b19c38363bdefd52ed6a18993b6eb57d5619a7155daad5af8beb",
+        "width": 1086,
+        "height": 1448,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 646225,
+        "visiblePixels": 895497,
+        "decodedRgbaSha256": "a217914e1ccdfbfa64d40dd5a9ef5a995a46ff19a6042c77127dd7e2dcab6434",
+        "chunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/noble_female/formal.png",
+        "bytes": 122219,
+        "sha256": "73a1409d5db2e4565e294bebbef1c61f729b063f94e3c4afbc4bd46434dbddab",
+        "width": 240,
+        "height": 320,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 30713,
+        "visiblePixels": 43740,
+        "decodedRgbaSha256": "479fcb8fba718c73cc8b80bd2a3687450ac96577e44da7a573504ecc1b5ce4d1",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Seraphine",
+      "characterId": "knight_female",
+      "role": "dealer",
+      "variant": "formal",
+      "ownerApproved": true,
+      "provenance": {
+        "ownerManifestStatement": "Generated in this ChatGPT conversation from owner-approved character references; owner approved the resulting formal female Dealer artwork set.",
+        "independentlyVerifiedGenerationOrLicensing": false,
+        "importMethod": "Supplied source/runtime pair imported byte-for-byte; resize method not declared in manifest"
+      },
+      "source": {
+        "path": "art/source/dealers/knight_female/formal.png",
+        "bytes": 2006038,
+        "sha256": "09d869cc5ec6fe8160526832a77e5aaf09bebb623a488800bf9db43f67931a9c",
+        "width": 1086,
+        "height": 1448,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 552795,
+        "visiblePixels": 986726,
+        "decodedRgbaSha256": "2808f9bd414584e0e7d9ed4531c1c88aec27413e59d8fafbd95ec7a0ad5c23c2",
+        "chunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/knight_female/formal.png",
+        "bytes": 134532,
+        "sha256": "8b4a4566ff56a135a8109549c93c3714b0c5f62bde1c8a3de21a5b52355a2b3d",
+        "width": 240,
+        "height": 320,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 26321,
+        "visiblePixels": 48151,
+        "decodedRgbaSha256": "3846ab2c03cc1b0bd1fe3d67f0724d5eb9fed7dcc2eb8985c2cad1b6c81e6103",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Nyra",
+      "characterId": "mage_female",
+      "role": "dealer",
+      "variant": "formal",
+      "ownerApproved": true,
+      "provenance": {
+        "ownerManifestStatement": "Generated in this ChatGPT conversation from owner-approved character references; owner approved the resulting formal female Dealer artwork set.",
+        "independentlyVerifiedGenerationOrLicensing": false,
+        "importMethod": "Supplied source/runtime pair imported byte-for-byte; resize method not declared in manifest"
+      },
+      "source": {
+        "path": "art/source/dealers/mage_female/formal.png",
+        "bytes": 1948517,
+        "sha256": "e5f1bb09cddede5e25b6c89217bc1554a5db0b7a13a698a0403158cdbb92604b",
+        "width": 1086,
+        "height": 1448,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 564996,
+        "visiblePixels": 969202,
+        "decodedRgbaSha256": "83bd1a4c33f8c399a51c609ee1f3549ac1b368a1e138387fd7f4e8ab30da65bb",
+        "chunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/mage_female/formal.png",
+        "bytes": 130799,
+        "sha256": "aaf123b256a272be9a13091ece2bbff4bcd6f17bd0cf5090ec003aa8bb7b63ed",
+        "width": 240,
+        "height": 320,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 26917,
+        "visiblePixels": 47323,
+        "decodedRgbaSha256": "117dab7fa80d3956767d7256ab4b7793a95c5fb2f65f581c1b7bdde50d408ade",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Elaria",
+      "characterId": "elf_female",
+      "role": "dealer",
+      "variant": "formal",
+      "ownerApproved": true,
+      "provenance": {
+        "ownerManifestStatement": "Generated in this ChatGPT conversation from owner-approved character references; owner approved the resulting formal female Dealer artwork set.",
+        "independentlyVerifiedGenerationOrLicensing": false,
+        "importMethod": "Supplied source/runtime pair imported byte-for-byte; resize method not declared in manifest"
+      },
+      "source": {
+        "path": "art/source/dealers/elf_female/formal.png",
+        "bytes": 1938534,
+        "sha256": "dce9191837a86c49582535010c8321e63d8eeb76ae653a9c84743a0ec48909d6",
+        "width": 1086,
+        "height": 1448,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 566201,
+        "visiblePixels": 965964,
+        "decodedRgbaSha256": "f650af0a80c499109a81a5ccb79a4e526ddc21dc79cf3fe30ec4d2fd854b27e8",
+        "chunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/elf_female/formal.png",
+        "bytes": 130263,
+        "sha256": "6145c299ec6abf5d4071b7f8d47e5a80173f42a949166ad1951d078b8d56f0f9",
+        "width": 240,
+        "height": 320,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 27188,
+        "visiblePixels": 47150,
+        "decodedRgbaSha256": "f7ee0e28fe795663121ed4026b7bf267f2f26b1f462958db34a8c419dfda8575",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      }
+    },
+    {
+      "name": "Vesha",
+      "characterId": "halforc_female",
+      "role": "dealer",
+      "variant": "formal",
+      "ownerApproved": true,
+      "provenance": {
+        "ownerManifestStatement": "Generated in this ChatGPT conversation from owner-approved character references; owner approved the resulting formal female Dealer artwork set.",
+        "independentlyVerifiedGenerationOrLicensing": false,
+        "importMethod": "Supplied source/runtime pair imported byte-for-byte; resize method not declared in manifest"
+      },
+      "source": {
+        "path": "art/source/dealers/halforc_female/formal.png",
+        "bytes": 1867795,
+        "sha256": "fb9b9ec828ec1ee6bb50cbb2e19b2239953644fb1e40697d071f79b8119f7998",
+        "width": 1086,
+        "height": 1448,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 577150,
+        "visiblePixels": 954698,
+        "decodedRgbaSha256": "e2a1a8eda770cbd70077bb74d433e4a51048c7c83a30c82b371dd9462d2d6a78",
+        "chunks": [
+          "IHDR",
+          "caBX",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      },
+      "runtime": {
+        "path": "public/characters/dealer/halforc_female/formal.png",
+        "bytes": 127377,
+        "sha256": "ccc53b5417a0d071d859e8e97d5e0dcf84c2ac4fec10581f36397dfafc9122a6",
+        "width": 240,
+        "height": 320,
+        "aspectRatio": "3:4",
+        "format": "PNG",
+        "bitDepth": 8,
+        "alphaChannel": true,
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 27411,
+        "visiblePixels": 46635,
+        "decodedRgbaSha256": "b63ee9d598ed67579c4270d1e5cef36e13d4fa27955a3702ea69ce9f2f355ebe",
+        "chunks": [
+          "IHDR",
+          "IDAT",
+          "IDAT",
+          "IEND"
+        ],
+        "chunkCrcs": "PASS",
+        "status": "PASS"
+      }
+    }
+  ],
+  "regeneratedArtwork": false
+}
+PASS: scripts/verify-dealer-assets.mjs (exit0)
+{
+  "status": "PASS",
+  "manifestPath": "art/source/dealers/generic_female/MANIFEST.json",
+  "nonRoster": true,
+  "ownerApproved": true,
+  "source": {
+    "path": "art/source/dealers/generic_female/formal.png",
+    "bytes": 1723597,
+    "sha256": "6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c",
+    "width": 1086,
+    "height": 1448,
+    "aspectRatio": "3:4",
+    "format": "PNG",
+    "bitDepth": 8,
+    "alphaChannel": true,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "transparentPixels": 639696,
+    "visiblePixels": 905100,
+    "decodedRgbaSha256": "58efe8d040151f4253f4efc81478a249ee2931653721ba4ab9f02998ce3b1e9e",
+    "chunks": [
+      "IHDR",
+      "caBX",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "chunkCrcs": "PASS",
+    "status": "PASS"
+  },
+  "runtime": {
+    "path": "public/characters/dealer/generic_female/formal.png",
+    "bytes": 127007,
+    "sha256": "37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce",
+    "width": 240,
+    "height": 320,
+    "aspectRatio": "3:4",
+    "format": "PNG",
+    "bitDepth": 8,
+    "alphaChannel": true,
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "transparentPixels": 30900,
+    "visiblePixels": 44175,
+    "decodedRgbaSha256": "ad4a52fb2ee97c5f9ebaf6117367f2ddebbb51fd1f54b3f4727d469583b0a412",
+    "chunks": [
+      "IHDR",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IDAT",
+      "IEND"
+    ],
+    "chunkCrcs": "PASS",
+    "status": "PASS"
+  }
+}
+PASS: scripts/verify-generic-dealer.mjs (exit0)
+{
+  "status": "PASS",
+  "task": "M10-PRE-T11",
+  "role": "dealer",
+  "variant": "formal",
+  "nonRoster": true,
+  "ownerApproved": true,
+  "approval": "Owner supplied and approved this standalone generic fallback in the M10-PRE-T11 request.",
+  "provenance": "Owner-supplied original copied byte-for-byte; deterministic local resize only; no generated replacement.",
+  "independentlyVerifiedGenerationOrLicensing": false,
+  "tool": {
+    "node": "v24.19.0",
+    "playwright": "1.63.0",
+    "chromium": "153.0.8010.12"
+  },
+  "method": "uniform contain; centered; transparent 240x320 canvas; high-quality smoothing; no crop",
+  "source": {
+    "path": "art/source/dealers/generic_female/formal.png",
+    "sha256": "6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c",
+    "width": 1086,
+    "height": 1448
+  },
+  "runtime": {
+    "path": "public/characters/dealer/generic_female/formal.png",
+    "sha256": "37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce",
+    "width": 240,
+    "height": 320,
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  }
+}
+PASS: scripts/build-generic-dealer.mjs (exit0)
+{
+  "status": "PASS",
+  "scope": "current src and active asset manifests; excludes historical records",
+  "scannedFiles": 84,
+  "liveLegacyDealerCallers": 0,
+  "genericFallback": "non-roster formal PNG",
+  "retainedModule": "src/ui/CasinoPerson.tsx",
+  "retiredModuleSha256": "f792c9fa92a7f9602cf547afa3721dc8040f888aded3d86787163ec0bad91adc",
+  "retainedLiveUse": "three computer-guest variants only; no dealer caller"
+}
+PASS: scripts/check-live-dealer.mjs (exit0)
+PASS: production fixture boundary (2 browser output files)
+PASS: scripts/check-browser-build.mjs (exit0)
+PASS: Baccarat controlled inventory/fixture query/diagnostic excluded from production (2 browser files)
+PASS: scripts/check-baccarat-build.mjs (exit0)
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/controller.test.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/engine.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/fixtures.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/presentation.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'casino-tests/baccarat/replay.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/BACCARAT_RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DESIGN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DEVELOPMENT_LOG.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/LAB_MANUAL.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/M10_T06_EVIDENCE/screenshots/1-1280-sequence.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/M10_T06_EVIDENCE/screenshots/4-1280-sequence.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/M10_T06_EVIDENCE/screenshots/7-1280-sequence.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/M10_T06_EVIDENCE/screenshots/7-320-sequence.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/M10_T06_EVIDENCE/screenshots/7-768-sequence.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/PLAN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/RULES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/STATE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/UX_UI.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/BaccaratTable.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/baccarat.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/controller.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/engine.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/replay.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/rules.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/domain/shoe.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/baccarat/presentation/facts.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/browser/baccaratFixtures.ts', LF will be replaced by CRLF the next time Git touches it
+PASS: 268 accepted inputs unchanged; exact additive Vitest/TypeScript discovery; exact frozen local/remote tag, release record, documentation links and whitespace
+PASS: .git/overnight/audit.cjs (exit0)
+{"status":"PASS","inputs":270,"mode":"check"}
+PASS: .git/m15/inputs.cjs (exit0)

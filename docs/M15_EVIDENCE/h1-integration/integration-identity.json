@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-07T15:40:52.706Z",
+  "status": "PASS",
+  "imported": [
+    {
+      "file": "scripts/restore-historical-output.mjs",
+      "sha256": "1a989b48ed4763dace7e13c44ead6bbb32264503b08f6407704fc98e112029a5",
+      "source": "Git object bytes from c1a21f40c30120f9078b5e355d0d7c9a1a68647b"
+    },
+    {
+      "file": "tests/tools/historicalRestoration.test.mjs",
+      "sha256": "979ed1db38bae479c4733f544b737ae6621f1e5ddabc6c4f9732ce703be311d9",
+      "source": "Git object bytes from c1a21f40c30120f9078b5e355d0d7c9a1a68647b"
+    }
+  ],
+  "overlap": [],
+  "incomingUnchanged": 19160,
+  "productChanges": 0,
+  "indexChanged": false
+}

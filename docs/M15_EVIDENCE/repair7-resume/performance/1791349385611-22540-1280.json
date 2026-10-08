@@ -1,0 +1,172 @@
+{
+  "width": 1280,
+  "thresholdMs": 2500,
+  "requiredSamples": 10,
+  "retries": 0,
+  "freshBrowserPerSample": true,
+  "samples": [
+    {
+      "sample": 1,
+      "width": 1280,
+      "dealMs": 470.09999990463257,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 2,
+      "width": 1280,
+      "dealMs": 522.7000000476837,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 3,
+      "width": 1280,
+      "dealMs": 510.2999999523163,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 4,
+      "width": 1280,
+      "dealMs": 560.2000000476837,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 5,
+      "width": 1280,
+      "dealMs": 528.9000000953674,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 6,
+      "width": 1280,
+      "dealMs": 519.5,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 7,
+      "width": 1280,
+      "dealMs": 558.5,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 8,
+      "width": 1280,
+      "dealMs": 517.9000000953674,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 9,
+      "width": 1280,
+      "dealMs": 542,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    },
+    {
+      "sample": 10,
+      "width": 1280,
+      "dealMs": 487.59999990463257,
+      "targets": [
+        "player:0",
+        "banker:0",
+        "player:1",
+        "banker:1",
+        "player:2",
+        "banker:2"
+      ],
+      "cards": 6,
+      "overflow": false,
+      "overlays": 0
+    }
+  ],
+  "medianMs": 521.1000000238419,
+  "worstMs": 560.2000000476837,
+  "firstFailure": null
+}

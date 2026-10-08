@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T04:30:29.605Z",
+  "finish": "2026-10-07T04:30:34.782Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-Command",
+    "npm.cmd run test:e2e -- tests/browser/accessibility.spec.ts --grep REG-M7-041 --trace on --output .git/m15/repair7-resume/cold1; exit $LASTEXITCODE"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-cold1.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

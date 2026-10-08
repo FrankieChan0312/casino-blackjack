@@ -1,0 +1,7 @@
+Captured launcher error (required typecheck NOT RUN)
+Error: spawn EINVAL
+    at ChildProcess.spawn (node:internal/child_process:458:11)
+    at spawn (node:child_process:813:9)
+    at file:///C:/Users/user/Documents/GitHub/casino-blackjack/scripts/collect-evidence.mjs:26:15
+errno: -4071; code: EINVAL; syscall: spawn
+Node.js v24.19.0

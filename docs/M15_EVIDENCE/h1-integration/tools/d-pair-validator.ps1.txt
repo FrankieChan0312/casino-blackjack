@@ -1,0 +1,4 @@
+$ErrorActionPreference = 'Stop'
+& npm.cmd test -- casino-tests/baccarat/m15Validator.test.ts -t M15-V02
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+exit 0

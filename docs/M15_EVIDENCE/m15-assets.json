@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:44:57.324Z",
+  "finish": "2026-10-07T01:45:17.188Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "node scripts/verify-character-assets.mjs && node scripts/verify-dealer-assets.mjs && node scripts/verify-generic-dealer.mjs && node scripts/check-live-dealer.mjs && node .git/overnight/audit.cjs"
+  ],
+  "log": ".git\\evidence-capture\\m15-assets.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

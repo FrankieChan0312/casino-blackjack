@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T15:51:37.501Z",
+  "finish": "2026-10-07T16:09:57.444Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/f-full-chromium.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-f-full-chromium.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

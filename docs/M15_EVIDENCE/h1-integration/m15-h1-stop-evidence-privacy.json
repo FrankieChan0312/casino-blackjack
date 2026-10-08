@@ -1,0 +1,21 @@
+{
+  "start": "2026-10-07T16:29:23.691Z",
+  "finish": "2026-10-07T16:29:29.697Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/repair7-resume/privacy.ps1",
+    ".git/m15/h1-integration/privacy-stopped-evidence.json"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-stop-evidence-privacy.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

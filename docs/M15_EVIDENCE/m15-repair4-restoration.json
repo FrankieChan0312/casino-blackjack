@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T02:17:58.767Z",
+  "finish": "2026-10-07T02:20:14.944Z",
+  "command": "node",
+  "args": [
+    ".git/m15/preservation.cjs",
+    "restore",
+    "repair4-stopped-gate"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair4-restoration.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

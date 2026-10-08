@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-07T15:59:51.333Z",
+  "status": "PASS",
+  "reviewer": "Current agent; same session",
+  "observations": "1280/320 controls and shoe labels legible; simultaneous pair/Tie gross825/net750 shown; cut reached closure distinct; new shoe clears hands while retaining1110credits; integrity interruption exposes refund and no fabricated round result.",
+  "images": [
+    {
+      "file": "table-1280.png",
+      "sha256": "e0f9bcf0c5db54260c8c9d360705e767d5bcab401f3c155c519cc51398bac3db"
+    },
+    {
+      "file": "table-320.png",
+      "sha256": "f537222a8ddb2f4bc1681507721e355fc60971f5927064c7b710e562e391816b"
+    },
+    {
+      "file": "new-shoe-empty.png",
+      "sha256": "f6d9c1c53d05726ae41924f611643ee9468dfdf8ba072d92332abf16caf5ce53"
+    },
+    {
+      "file": "settled-5.png",
+      "sha256": "d429419f382a681ca21e4a14819cd7a909342a81dd5ad0c806b1a8755d39aff0"
+    },
+    {
+      "file": "cut-reached-closed.png",
+      "sha256": "632104e94bc62f821279df84cd1625f104dd88644486e46a90e8d2115522c006"
+    },
+    {
+      "file": "integrity-unavailable.png",
+      "sha256": "de6fa0e855c2337d7141d123e83688d7e4de5d3ebcac3780e5dd1e30b93af61e"
+    }
+  ],
+  "humanVisualAcceptance": "PENDING",
+  "freshSessionReview": "NOT RUN",
+  "productChanges": 0
+}

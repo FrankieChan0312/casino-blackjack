@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T16:14:26.013Z",
+  "finish": "2026-10-07T16:14:32.402Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/h1-integration/h-baccarat-preservation.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-h-baccarat-preservation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}

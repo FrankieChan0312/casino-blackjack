@@ -1,0 +1,48 @@
+const fs = require('node:fs'), path = require('node:path'), cp = require('node:child_process');
+const crypto = require('node:crypto'), zlib = require('node:zlib'), assert = require('node:assert/strict');
+const privateRoot = '.git/m15/h1-integration', root = 'docs/M15_EVIDENCE';
+const json = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const git = (...args) => cp.execFileSync('git', ['-c', 'core.safecrlf=false', ...args], { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trim();
+const incoming = json(privateRoot + '/incoming.json');
+const docs = new Set(['README.md', 'docs/STATE.md', 'docs/PLAN.md', 'docs/DEVELOPMENT_LOG.md', 'docs/LAB_MANUAL.md', 'docs/M15_BACCARAT_SHOE_AND_PAIRS.md', root + '/index.md']);
+let retained = 0;
+for (const item of incoming.files) {
+  const bytes = fs.readFileSync(item.file);
+  if (docs.has(item.file) && sha(bytes) !== item.sha256) {
+    const original = fs.readFileSync(privateRoot + '/before-docs/' + item.file);
+    assert.equal(sha(original), item.sha256);
+    assert(bytes.subarray(bytes.length - original.length).equals(original), 'Original documentation body changed: ' + item.file);
+  } else if (item.file === root + '/manifest.json') {
+    assert.equal(sha(fs.readFileSync(privateRoot + '/before-docs/M15-manifest.json')), item.sha256);
+  } else assert.equal(sha(bytes), item.sha256, 'Incoming file changed: ' + item.file);
+  retained++;
+}
+for (const item of json(privateRoot + '/integration-identity.json').imported) {
+  assert.equal(sha(fs.readFileSync(item.file)), item.sha256);
+  assert.equal(sha(cp.execFileSync('git', ['show', 'c1a21f40c30120f9078b5e355d0d7c9a1a68647b:' + item.file])), item.sha256);
+  if (git('diff', '--cached', '--name-only')) assert.equal(sha(cp.execFileSync('git', ['show', ':' + item.file])), item.sha256, 'Staged H1 bytes differ');
+}
+const allowed = new Set([...incoming.dirty, ...incoming.fresh, 'scripts/restore-historical-output.mjs', 'tests/tools/historicalRestoration.test.mjs']);
+const changed = git('diff', '--name-only', incoming.head).split(/\r?\n/).filter(Boolean);
+const fresh = git('ls-files', '--others', '--exclude-standard').split(/\r?\n/).filter(Boolean);
+for (const file of [...changed, ...fresh]) assert(allowed.has(file) || file.startsWith(root + '/h1-integration/'), 'Outside authorized integration/incoming M15 scope: ' + file);
+for (const item of json('.git/m15/repair7/executable-inputs.json').inputs) assert.equal(sha(fs.readFileSync(item.file)), item.sha256, 'Frozen executable input: ' + item.file);
+for (const file of docs) {
+  const bytes = fs.readFileSync(file), original = fs.readFileSync(privateRoot + '/before-docs/' + file);
+  const prefix = bytes.subarray(0, bytes.length - original.length).toString('utf8');
+  for (const match of prefix.matchAll(/\]\(([^)#]+)(?:#[^)]+)?\)/g)) if (!/^(https?:|codex:)/.test(match[1])) assert(fs.existsSync(path.resolve(path.dirname(file), match[1])), 'Current document link: ' + file + ' -> ' + match[1]);
+}
+for (const entry of json(root + '/manifest.json').files) assert.equal(sha(fs.readFileSync(path.join(root, entry.file))), entry.sha256, 'Evidence manifest: ' + entry.file);
+for (const entry of json(root + '/h1-integration/raw-log-hashes.json')) {
+  const bytes = zlib.gunzipSync(fs.readFileSync(root + '/h1-integration/' + entry.label + '.txt.gz'));
+  assert.equal(sha(bytes), entry.rawSha256);
+  assert.equal(fs.readFileSync(root + '/h1-integration/' + entry.label + '.txt', 'utf8'), bytes.toString('utf8').replace(/\r\n|\r/g, '\n'));
+  const receipt = json(root + '/h1-integration/' + entry.label + '.json');
+  assert.equal(receipt.outputClosed, true); assert(Number.isInteger(receipt.exitCode));
+  assert.equal(receipt.status, receipt.exitCode === 0 ? 'PASS' : 'FAIL');
+}
+for (const label of ['m15-final-unified', 'm15-repair4-unified', 'm15-repair5-affected']) assert.equal(json(root + '/' + label + '.json').status, 'FAIL');
+git('diff', '--check');
+git('diff', '--cached', '--check');
+console.log(JSON.stringify({ at: new Date().toISOString(), status: 'PASS', incomingFilesRetained: retained, originalDocBodies: 'Exact suffixes retained', importedH1Files: 2, executableInputs: 270, changed: changed.length, untracked: fresh.length, evidenceBytes: 'Exact native gzip bytes; previews normalize line endings only', historicalFailures: 'Retained', review: 'Same-session; fresh-session NOT RUN' }));

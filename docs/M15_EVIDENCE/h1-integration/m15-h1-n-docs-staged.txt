@@ -1,0 +1,268 @@
+{"at":"2026-10-07T16:23:15.327Z","status":"PASS","artifacts":584,"previousManifest":".git/m15/h1-integration/before-docs/M15-manifest.json","historicalEvidence":"Preserved; current index and inventory updated under owner authorization"}
+{"at":"2026-10-07T16:24:03.929Z","status":"PASS","incomingFilesRetained":19160,"originalDocBodies":"Exact suffixes retained","importedH1Files":2,"executableInputs":270,"changed":25,"untracked":654,"evidenceBytes":"Exact native gzip bytes; previews normalize line endings only","historicalFailures":"Retained","review":"Same-session; fresh-session NOT RUN"}
+node:child_process:981
+    throw err;
+    ^
+
+Error: Command failed: git -c core.safecrlf=false diff --cached --check
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at Object.execFileSync (node:child_process:978:15)
+    at git (C:\Users\user\Documents\GitHub\casino-blackjack\.git\m15\h1-integration\n-stage.cjs:5:29)
+    at Object.<anonymous> (C:\Users\user\Documents\GitHub\casino-blackjack\.git\m15\h1-integration\n-stage.cjs:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1872:14)
+    at Object..js (node:internal/modules/cjs/loader:2003:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12) {
+  status: 2,
+  signal: null,
+  output: [
+    null,
+    'docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md:29: trailing whitespace.\n' +
+      '+  2  | \n' +
+      'docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md:77: trailing whitespace.\n' +
+      '+  49 | \n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-a-typecheck.txt:4: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-b-focused-unit.txt:13: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-c-shoe-validator.txt:13: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-d-pair-validator.txt:13: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-e-full-vitest.txt:17: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/m15-h1-focus.txt:39: new blank line at EOF.\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:1: trailing whitespace.\n' +
+      '+﻿{\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:2: trailing whitespace.\n' +
+      '+    "zipTextEntries":  [\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:3: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:4: trailing whitespace.\n' +
+      '+                               "entry":  "src/4b4d02444261452adbf34184e4456c6717dcca3b.ts",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:5: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:6: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:7: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:8: trailing whitespace.\n' +
+      '+                               "entry":  "attachments/4ca0c0440d871b226c23ad6ce1e13e386ae9bbfe",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:9: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:10: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:11: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:12: trailing whitespace.\n' +
+      '+                               "entry":  "attachments/80d4fa6e70a309c1cf0e1272701ac0879b14e0f4",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:13: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:14: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:15: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:16: trailing whitespace.\n' +
+      '+                               "entry":  "test.trace",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:17: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:18: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:19: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:20: trailing whitespace.\n' +
+      '+                               "entry":  "1-trace.trace",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:21: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:22: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:23: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:24: trailing whitespace.\n' +
+      '+                               "entry":  "1-trace.network",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:25: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:26: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:27: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:28: trailing whitespace.\n' +
+      '+                               "entry":  "resources/b1a6213feccabda70f25054f32aec219213d50fc.html",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:29: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:30: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:31: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:32: trailing whitespace.\n' +
+      '+                               "entry":  "1-trace.stacks",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:33: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:34: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:35: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:36: trailing whitespace.\n' +
+      '+                               "entry":  "0-trace.trace",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:37: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:38: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:39: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:40: trailing whitespace.\n' +
+      '+                               "entry":  "0-trace.stacks",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:41: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:42: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:43: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:44: trailing whitespace.\n' +
+      '+                               "entry":  "src/9ec197f0dcaa32c4cdf3857cfff70f46a877fe6f.ts",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:45: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:46: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:47: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:48: trailing whitespace.\n' +
+      '+                               "entry":  "attachments/edc5b848c2d8bbcb8e06a2449bf19784aac83a02",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:49: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:50: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:51: trailing whitespace.\n' +
+      '+                           {\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:52: trailing whitespace.\n' +
+      '+                               "entry":  "attachments/80d4fa6e70a309c1cf0e1272701ac0879b14e0f4",\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:53: trailing whitespace.\n' +
+      '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:54: trailing whitespace.\n' +
+      '+                           },\r\n' +
+      'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:55: trailing whitespace.\n' +
+      '+             '... 1368017 more characters,
+    ''
+  ],
+  pid: 17488,
+  stdout: 'docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md:29: trailing whitespace.\n' +
+    '+  2  | \n' +
+    'docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md:77: trailing whitespace.\n' +
+    '+  49 | \n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-a-typecheck.txt:4: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-b-focused-unit.txt:13: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-c-shoe-validator.txt:13: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-d-pair-validator.txt:13: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-e-full-vitest.txt:17: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/m15-h1-focus.txt:39: new blank line at EOF.\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:1: trailing whitespace.\n' +
+    '+﻿{\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:2: trailing whitespace.\n' +
+    '+    "zipTextEntries":  [\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:3: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:4: trailing whitespace.\n' +
+    '+                               "entry":  "src/4b4d02444261452adbf34184e4456c6717dcca3b.ts",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:5: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:6: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:7: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:8: trailing whitespace.\n' +
+    '+                               "entry":  "attachments/4ca0c0440d871b226c23ad6ce1e13e386ae9bbfe",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:9: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:10: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:11: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:12: trailing whitespace.\n' +
+    '+                               "entry":  "attachments/80d4fa6e70a309c1cf0e1272701ac0879b14e0f4",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:13: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:14: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:15: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:16: trailing whitespace.\n' +
+    '+                               "entry":  "test.trace",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:17: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:18: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:19: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:20: trailing whitespace.\n' +
+    '+                               "entry":  "1-trace.trace",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:21: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:22: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:23: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:24: trailing whitespace.\n' +
+    '+                               "entry":  "1-trace.network",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:25: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:26: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:27: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:28: trailing whitespace.\n' +
+    '+                               "entry":  "resources/b1a6213feccabda70f25054f32aec219213d50fc.html",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:29: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:30: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:31: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:32: trailing whitespace.\n' +
+    '+                               "entry":  "1-trace.stacks",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:33: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:34: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:35: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:36: trailing whitespace.\n' +
+    '+                               "entry":  "0-trace.trace",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:37: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:38: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:39: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:40: trailing whitespace.\n' +
+    '+                               "entry":  "0-trace.stacks",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:41: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\complete-chromium-failure\\\\accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:42: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:43: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:44: trailing whitespace.\n' +
+    '+                               "entry":  "src/9ec197f0dcaa32c4cdf3857cfff70f46a877fe6f.ts",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:45: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:46: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:47: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:48: trailing whitespace.\n' +
+    '+                               "entry":  "attachments/edc5b848c2d8bbcb8e06a2449bf19784aac83a02",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:49: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:50: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:51: trailing whitespace.\n' +
+    '+                           {\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:52: trailing whitespace.\n' +
+    '+                               "entry":  "attachments/80d4fa6e70a309c1cf0e1272701ac0879b14e0f4",\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:53: trailing whitespace.\n' +
+    '+                               "archive":  "C:\\\\Users\\\\user\\\\Documents\\\\GitHub\\\\casino-blackjack\\\\docs\\\\M15_EVIDENCE\\\\repair2-browser-failure\\\\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\\\\trace.zip"\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:54: trailing whitespace.\n' +
+    '+                           },\r\n' +
+    'docs/M15_EVIDENCE/h1-integration/privacy-gate-k.json:55: trailing whitespace.\n' +
+    '+             '... 1368017 more characters,
+  stderr: ''
+}
+
+Node.js v24.19.0

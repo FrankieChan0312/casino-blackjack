@@ -1,0 +1,25 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),zlib=require('node:zlib'),assert=require('node:assert/strict');
+const root='docs/M15_EVIDENCE',sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const json=file=>JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));
+const manifest=json(root+'/manifest.json');
+for(const entry of manifest.files)assert.equal(sha(fs.readFileSync(path.join(root,entry.file))),entry.sha256,entry.file);
+for(const entry of json(root+'/raw-log-hashes.json')){
+ const bytes=zlib.gunzipSync(fs.readFileSync(root+'/'+entry.label+'.txt.gz'));
+ assert.equal(sha(bytes),entry.rawSha256,entry.label+' exact native bytes');
+ assert.equal(fs.readFileSync(root+'/'+entry.label+'.txt','utf8'),bytes.toString('utf8').replace(/\r\n|\r/g,'\n'),entry.label+' preview normalization');
+ assert.equal(json(root+'/'+entry.label+'.json').outputClosed,true);
+}
+for(const name of ['m15-complete-chromium','m15-independent-preservation','m15-final-restoration','m15-final-assets']){
+ const receipt=json(root+'/'+name+'.json');assert(Number.isInteger(receipt.exitCode),name);assert.equal(receipt.status,receipt.exitCode===0?'PASS':'FAIL',name+' native status');
+}
+for(const name of ['m15-final-unified','m15-repair4-unified','m15-repair5-affected'])assert.equal(json(root+'/'+name+'.json').status,'FAIL',name+' failure retained');
+const report=json(root+'/performance-summary.json');
+assert.equal(report.thresholdMs,2500);assert.equal(report.retries,0);
+for(const run of report.final){
+ assert.equal(run.samples.length,10);assert.equal(run.firstFailure,null);assert.equal(run.retries,0);
+ for(const sample of run.samples){assert(sample.dealMs<=2500);assert.equal(sample.cards,6);assert.equal(sample.overflow,false);assert.equal(sample.overlays,0);assert.deepEqual(sample.targets,['player:0','banker:0','player:1','banker:1','player:2','banker:2']);}
+}
+const files=['docs/M15_BACCARAT_SHOE_AND_PAIRS.md',root+'/index.md',root+'/visual/index.md'];
+for(const file of files)for(const match of fs.readFileSync(file,'utf8').matchAll(/\]\(([^)#]+)(?:#[^)]+)?\)/g))assert(fs.existsSync(path.resolve(path.dirname(file),match[1])),file+': '+match[1]);
+const contract=fs.readFileSync(files[0],'utf8');assert(contract.includes('M15_BACCARAT_SHOE_AND_PAIRS_BLOCKED'));assert(contract.includes('**6/10**'));
+console.log(JSON.stringify({status:'PASS',delivery:'BLOCKED',artifactHashes:manifest.files.length,closedRawLogs:json(root+'/raw-log-hashes.json').length,latestNativeSamples:20,scope:'Exact bytes, retained failures/native statuses, current links and bounded performance; no full-gate PASS inference'}));

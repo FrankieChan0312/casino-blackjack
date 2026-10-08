@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T01:59:33.077Z",
+  "finish": "2026-10-07T02:01:32.023Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npx tsc --noEmit && npx tsc -p tsconfig.baccarat.json && npm run lint && npm test -- casino-tests/baccarat && npx vitest run --config .git/m15/fault.config.mjs && npm run build && node scripts/check-baccarat-build.mjs && npx playwright test tests/browser/baccarat/m15.spec.ts --grep M15-UI10"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair2-affected.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

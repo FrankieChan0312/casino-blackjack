@@ -1,0 +1,21 @@
+const fs=require('node:fs'),cp=require('node:child_process'),assert=require('node:assert/strict'),path=require('node:path');
+const git=(...args)=>cp.execFileSync('git',args,{encoding:'utf8',maxBuffer:32*1024*1024}).trim();
+const allowed=new Set(['README.md',...['RULES','SPEC','DESIGN','UX_UI','STATE','PLAN','DEVELOPMENT_LOG','LAB_MANUAL','BACCARAT_RULES','M15_BACCARAT_SHOE_AND_PAIRS'].map(name=>'docs/'+name+'.md'),'tests/browser/baccaratFixtures.ts']);
+const changed=git('diff','--name-only','507d6d53b529f38b4510a8b488ed272216c0f5a9').split(/\r?\n/).filter(Boolean);
+const fresh=git('ls-files','--others','--exclude-standard').split(/\r?\n/).filter(Boolean);
+for(const file of [...changed,...fresh])assert(allowed.has(file)||file.startsWith('src/baccarat/')||file.startsWith('casino-tests/baccarat/')||file.startsWith('tests/browser/baccarat/m15')||file.startsWith('docs/M15_EVIDENCE/'),'Unexpected task diff: '+file);
+for(const file of ['engine','replay','controller','presentation']){
+ const name='casino-tests/baccarat/'+file+'.test.'+(file==='controller'?'tsx':'ts');
+ const current=fs.readFileSync(name,'utf8').split(/\r?\n/).filter(line=>!line.startsWith('import ')).join('\n');
+ const baseline=git('show','507d6d53b529f38b4510a8b488ed272216c0f5a9:'+name).split(/\r?\n/).filter(line=>!line.startsWith('import ')).join('\n');
+ assert.equal(current.trimEnd(),baseline.trimEnd(),'Original M12–M14 assertions changed: '+name);
+}
+for(const file of ['docs/M15_BACCARAT_SHOE_AND_PAIRS.md',...allowed].filter(file=>file.endsWith('.md')&&fs.existsSync(file))){
+ const content=fs.readFileSync(file,'utf8');
+ // New current sections only; historical links/records remain byte-preserved.
+ const section=content.split(/## (?:Casino overnight|M10|Historical|Current M10)/)[0];
+ for(const match of section.matchAll(/\]\(([^)#]+)(?:#[^)]+)?\)/g))if(!/^(https?:|codex:)/.test(match[1]))assert(fs.existsSync(path.resolve(path.dirname(file),match[1])),file+': missing '+match[1]);
+}
+assert(!fs.readFileSync('src/baccarat/BaccaratTable.tsx','utf8').includes('No side bets.'));
+git('diff','--check');
+console.log(JSON.stringify({status:'PASS',changed:changed.length,new:fresh.length,scope:'M15 only; historical assertions intact; current links/whitespace valid'}));

@@ -1,0 +1,36 @@
+const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto');
+const root=process.cwd(),dir=path.join(root,'.git/m15'),mode=process.argv[2],label=process.argv[3];
+const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+const git=(...args)=>cp.execFileSync('git',args,{encoding:'utf8'}).trim().split(/\r?\n/).filter(Boolean);
+if(mode==='backup'){
+ const files=git('ls-files','docs').filter(file=>/\.(png|json)$/.test(file));
+ const original=path.join(dir,'original');fs.mkdirSync(original,{recursive:true});
+ const entries=files.map(file=>{const bytes=fs.readFileSync(file),target=path.join(original,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);return{file,sha256:hash(bytes)};});
+ const protectedFiles=git('ls-files','src/domain','src/browser','src/presentation','src/ui','public','tests','scripts','package.json','package-lock.json','vite.config.ts','playwright.config.ts','src/main.tsx','src/casino').filter(file=>file!=='tests/browser/baccaratFixtures.ts');
+ const protectedEntries=protectedFiles.map(file=>({file,sha256:hash(fs.readFileSync(file))}));
+ fs.writeFileSync(path.join(dir,'baseline-preservation.json'),JSON.stringify({head:git('rev-parse','HEAD')[0],outputs:entries,protected:protectedEntries},null,2));
+ console.log(JSON.stringify({status:'PASS',backedUpOutputs:entries.length,protectedInputs:protectedEntries.length}));
+}else if(mode==='restore'){
+ if(!label||!/^[a-z0-9-]+$/.test(label))throw Error('A unique run label is required');
+ const baseline=JSON.parse(fs.readFileSync(path.join(dir,'baseline-preservation.json'))),changes=[];
+ for(const{file,sha256}of baseline.outputs){
+  const original=fs.readFileSync(path.join(dir,'original',file));if(hash(original)!==sha256)throw Error('Original backup mismatch');
+  const absolute=path.resolve(root,file);if(!absolute.startsWith(path.join(root,'docs')+path.sep))throw Error('Outside repository docs');
+  const current=fs.readFileSync(absolute);if(hash(current)!==sha256){
+   const archive=path.join(dir,'generated',label,file);fs.mkdirSync(path.dirname(archive),{recursive:true});fs.writeFileSync(archive,current);
+   // Direct overwrite preserves Windows delete/rename sharing. No destructive replacement.
+   fs.writeFileSync(absolute,original);if(hash(fs.readFileSync(absolute))!==sha256)throw Error('Restore mismatch');changes.push({file,original:sha256,generated:hash(current)});
+  }
+ }
+ for(const file of git('ls-files','--others','--exclude-standard','docs')){
+  if(file==='docs/M15_BACCARAT_SHOE_AND_PAIRS.md'||file.startsWith('docs/M15_EVIDENCE/'))continue;
+  if(!/^docs\/(M10_.*_EVIDENCE\/|images\/)/.test(file))throw Error('Unexpected generated file: '+file);
+  const absolute=path.resolve(root,file);if(!absolute.startsWith(path.join(root,'docs')+path.sep))throw Error('Outside repository docs');
+  const current=fs.readFileSync(absolute),archive=path.join(dir,'generated',label,file);fs.mkdirSync(path.dirname(archive),{recursive:true});fs.writeFileSync(archive,current);
+  if(hash(fs.readFileSync(archive))!==hash(current))throw Error('Generated archive mismatch');fs.unlinkSync(absolute);changes.push({file,newGenerated:true,generated:hash(current)});
+ }
+ for(const{file,sha256}of baseline.protected)if(hash(fs.readFileSync(file))!==sha256)throw Error('Protected input changed: '+file);
+ if(fs.existsSync('test-results'))fs.cpSync('test-results',path.join(dir,'attempts',label,'test-results'),{recursive:true});
+ fs.writeFileSync(path.join(dir,`restoration-${label}.json`),JSON.stringify({status:'PASS',originalsChecked:baseline.outputs.length,protectedChecked:baseline.protected.length,changes},null,2));
+ console.log(JSON.stringify({status:'PASS',originalsChecked:baseline.outputs.length,protectedChecked:baseline.protected.length,changes:changes.length}));
+}else throw Error('Invalid mode');

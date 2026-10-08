@@ -1,0 +1,15 @@
+{
+  "start": "2026-10-07T16:19:40.976Z",
+  "finish": "2026-10-07T16:20:25.602Z",
+  "command": "node",
+  "args": [
+    ".git/m15/h1-integration/restore-outputs.mjs",
+    "l-responsive"
+  ],
+  "log": ".git\\evidence-capture\\m15-h1-l-output-preservation.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

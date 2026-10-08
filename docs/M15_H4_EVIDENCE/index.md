@@ -1,0 +1,3 @@
+# M15 final main-tree closure — STOPPED
+
+M15_FINAL_MAIN_VERIFY_BLOCKED at 2026-10-08 10:08:33 +08:00. [Exact first-failure classification](stop/outcome.json); [lossless failure hashes](stop/manifest.json); [current task contract](../M15_H4_FINAL_CLOSURE.md). Q H2 publication failed with native1/ENOBUFS because the new68.38MiB archive exceeds its64MiB synchronous buffer. All existing archives are retained unchanged. A–P and Q streaming SHA/manifest audits passed; they do not override the failed publication gate. R/commit/push NOT RUN. Counts H1/H2/H3/H4=1/2/1/3 each /10; M15 7/10; Repair8 NOT STARTED. Human visual acceptance PENDING; M16 NOT STARTED; deployment NOT RUN. STOP and wait for owner decision; no retry/repair.

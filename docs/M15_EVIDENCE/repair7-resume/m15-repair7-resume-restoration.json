@@ -1,0 +1,15 @@
+{
+  "start": "2026-10-07T05:06:19.410Z",
+  "finish": "2026-10-07T05:06:47.928Z",
+  "command": "node",
+  "args": [
+    ".git/m15/repair7-resume/preserve-output.cjs",
+    "repair7-resume-before-unified"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-restoration.txt",
+  "status": "FAIL",
+  "exitCode": 1,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

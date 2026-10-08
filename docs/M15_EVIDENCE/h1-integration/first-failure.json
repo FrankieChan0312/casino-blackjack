@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-07T16:24:07.517Z",
+  "status": "M15_BLOCKED_AFTER_H1_INTEGRATION",
+  "gate": "N docs/publication/staged",
+  "firstCommand": "git -c core.safecrlf=false diff --cached --check",
+  "gitExitCode": 2,
+  "nodeWrapperExitCode": 1,
+  "gateNativeExitCode": 1,
+  "classification": "HARNESS / EVIDENCE_PUBLICATION_FORMAT",
+  "firstFinding": {
+    "file": "docs/M15_EVIDENCE/complete-chromium-failure/accessibility--REG-M7-041--e063b-mpletion-with-visible-focus-chromium/error-context.md",
+    "line": 29,
+    "message": "trailing whitespace",
+    "text": "+  2  | "
+  },
+  "additionalNativeFindings": [
+    "same original error-context.md:77 trailing whitespace",
+    "new native previews: new blank line at EOF",
+    "unchanged native privacy-gate-k.json: CRLF trailing whitespace"
+  ],
+  "assessment": "A publication/packaging treatment is needed; no product assertion failure or H1 restoration defect found. No repair authored or authorized after this failure.",
+  "nativeOutput": ".git\\evidence-capture\\m15-h1-n-docs-staged.txt",
+  "outputClosed": true,
+  "rawOutputLimitation": "Collector preserves every byte emitted by the Node/PowerShell wrapper. Node error inspection itself abbreviates the buffered Git stdout (1368017 more characters). The failed Git check was not rerun to obtain another result.",
+  "actionsNotRun": [
+    "O unchanged verify.ps1",
+    "commit",
+    "push",
+    "Repair8",
+    "M16"
+  ],
+  "repairCounts": {
+    "HARNESS_H1": "1/10",
+    "M15": "7/10"
+  }
+}

@@ -1,0 +1,17 @@
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests/baccarat
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  9 passed (9)
+      Tests  160 passed (160)
+   Start at  09:43:56
+   Duration  3.66s (tests 41%, import 30%, transform 25%, setup 2%, worker 1%)
+
+  Transform  transforming modules took 2.66s · 25% of tracked time, re-done on every run
+             persist transforms across runs with fsModuleCache: true
+             learn more: https://vitest.dev/guide/improving-performance#caching-between-reruns
+

@@ -1,0 +1,90 @@
+
+> casino-blackjack@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> casino-blackjack@0.0.0 test
+> vitest run casino-tests/baccarat
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  10 passed (10)
+      Tests  161 passed (161)
+   Start at  10:00:24
+   Duration  6.59s (tests 40%, import 36%, transform 20%, setup 2%, worker 1%)
+
+    Isolate  10 workers spawned · ~415ms startup each (spawn + environment, per file)
+             at least ~623ms faster with isolate: false — reuses workers across files instead of one per file
+
+
+ RUN  v5.0.2 C:/Users/user/Documents/GitHub/casino-blackjack
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  10:00:35
+   Duration  2.86s (import 49%, transform 45%, tests 6%, worker 1%)
+
+
+> casino-blackjack@0.0.0 build
+> vite build && node scripts/check-browser-build.mjs
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 502 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:   0.29 kB
+dist/assets/index-D3wKiMW6.css   52.56 kB │ gzip:  10.31 kB
+dist/assets/index-DAWKyLNY.js   406.25 kB │ gzip: 121.93 kB
+
+✓ built in 1.49s
+PASS: production fixture boundary (2 browser output files)
+PASS: Baccarat controlled inventory/fixture query/diagnostic excluded from production (2 browser files)
+[WebServer] (node:29900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:29600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [chromium] › tests\browser\baccarat\m15.spec.ts:149:1 › [M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result (30.4s)
+
+
+  1) [chromium] › tests\browser\baccarat\m15.spec.ts:149:1 › [M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://127.0.0.1:4173/baccarat?baccaratFixture=m15-integrity", waiting until "load"
+
+
+       5 | type Target=keyof typeof labels;
+       6 | async function open(page:Page,fixture='m15-both-pair',motion=''){
+    >  7 |   await page.goto(`/baccarat?baccaratFixture=${fixture}${motion?'&motion='+motion:''}`);
+         |              ^
+       8 |   await expect(page.getByRole('button',{name:'Place Bet · Player',exact:true})).toBeVisible();
+       9 | }
+      10 | async function bet(page:Page,target:Target,amount='25'){
+        at open (C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\baccarat\m15.spec.ts:7:14)
+        at C:\Users\user\Documents\GitHub\casino-blackjack\tests\browser\baccarat\m15.spec.ts:150:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\baccarat-m15--M15-UI10-int-19c36-without-a-fabricated-result-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests\browser\baccarat\m15.spec.ts:149:1 › [M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result 

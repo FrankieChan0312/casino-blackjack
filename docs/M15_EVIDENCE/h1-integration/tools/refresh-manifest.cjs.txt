@@ -1,0 +1,6 @@
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto');
+const root = 'docs/M15_EVIDENCE';
+const files = fs.readdirSync(root, { recursive: true }).filter(file => file !== 'manifest.json' && fs.statSync(path.join(root, file)).isFile()).sort();
+const manifest = { files: files.map(file => ({ file: file.replaceAll(path.sep, '/'), sha256: crypto.createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex') })) };
+fs.writeFileSync(root + '/manifest.json', JSON.stringify(manifest, null, 2) + '\n');
+console.log(JSON.stringify({ at: new Date().toISOString(), status: 'PASS', artifacts: files.length, previousManifest: '.git/m15/h1-integration/before-docs/M15-manifest.json', historicalEvidence: 'Preserved; current index and inventory updated under owner authorization' }));

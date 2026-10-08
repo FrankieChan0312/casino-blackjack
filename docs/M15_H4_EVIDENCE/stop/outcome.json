@@ -1,0 +1,84 @@
+{
+  "at": "2026-10-08 10:08:33 +08:00",
+  "status": "M15_FINAL_MAIN_VERIFY_BLOCKED",
+  "firstFailure": {
+    "stage": "Q H2 publication",
+    "command": "node scripts/verify-evidence-publication.mjs",
+    "exitCode": 1,
+    "error": "spawnSync git ENOBUFS",
+    "nodeErrno": -4060,
+    "gitChildStatus": null,
+    "gitChildSignal": "SIGTERM",
+    "gitCommand": "git -c core.safecrlf=false show :docs/M15_H4_EVIDENCE/q-pre-unified/native-captures-i-chromium.tar.gz"
+  },
+  "classification": "Evidence packaging / validator per-object synchronous buffer limit; not a product, H4 or PNG failure",
+  "cause": {
+    "artifact": "docs/M15_H4_EVIDENCE/q-pre-unified/native-captures-i-chromium.tar.gz",
+    "artifactBytes": 71698590,
+    "artifactSha256": "920063097e5e7b854ee6124784a1f2c3e36ac77f08f09883fd563cc744a31485",
+    "indexedBlob": "739c983dd0b47c73314bd51399010ef1cef00e77",
+    "validatorMaxBuffer": 67108864,
+    "preventionMissed": "Packaging checked the normal publication file limit, but did not check the existing H2 64 MiB synchronous read limit"
+  },
+  "passed": {
+    "A": true,
+    "B": 161,
+    "C": true,
+    "D": true,
+    "E": 18,
+    "F": 11,
+    "G": 91,
+    "originalFive": 5,
+    "H": 1410,
+    "I": 321,
+    "J": true,
+    "K": true,
+    "L": true,
+    "M": true,
+    "N": true,
+    "O": true,
+    "P": true,
+    "QStreamingIntegrity": true,
+    "QEvidenceManifest": true,
+    "rawWorkingAndIndex": 879,
+    "rawChanged": 0,
+    "unknown": 0,
+    "originalUnrelatedStagedBlobs": 830,
+    "originalM15Bodies": "Exact suffixes retained"
+  },
+  "notRun": [
+    "Q final standalone staged-whitespace command after failed publication",
+    "R unchanged verify.ps1",
+    "commit",
+    "push"
+  ],
+  "PNG": {
+    "timeout": 5000,
+    "fullVitestMs": 4491.1642,
+    "status": "PASS",
+    "historicalTimeoutsMs": [
+      5736,
+      6452
+    ],
+    "historicalRootCause": "UNKNOWN"
+  },
+  "counts": {
+    "H1": "1/10",
+    "H2": "2/10",
+    "H3": "1/10",
+    "H4": "3/10",
+    "M15": "7/10",
+    "M15Repair8": "NOT STARTED"
+  },
+  "head": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+  "tracking": "507d6d53b529f38b4510a8b488ed272216c0f5a9",
+  "branch": "main",
+  "aheadBehind": "0\t0",
+  "humanVisualAcceptance": "PENDING",
+  "freshReview": "NOT RUN",
+  "M16": "NOT STARTED",
+  "deployment": "NOT RUN",
+  "nextAction": "STOP; WAITING FOR OWNER DECISION ON EVIDENCE PACKAGING / H2 BUFFER LIMIT",
+  "retry": false,
+  "repairAuthored": false
+}

@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T02:06:17.679Z",
+  "finish": "2026-10-07T02:07:46.491Z",
+  "command": "cmd.exe",
+  "args": [
+    "/d",
+    "/c",
+    "npx tsc --noEmit && npx playwright test tests/browser/baccarat/m15.spec.ts --grep M15-UI10"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair3-affected.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": []
+}

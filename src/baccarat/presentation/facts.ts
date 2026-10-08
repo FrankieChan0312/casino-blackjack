@@ -1,9 +1,9 @@
 import type { PublicView } from '../domain/engine.js';
 import { cardSlot, type PresentationFact } from '../../presentation/events.js';
-import type { Target } from '../domain/rules.js';
+import type { WagerTarget } from '../domain/rules.js';
 
 export const baccaratHandId = (roundId: string, zone: 'PLAYER' | 'BANKER') => `${roundId}/${zone.toLowerCase()}`;
-export const baccaratWagerSeat: Record<Target, number> = { PLAYER: 0, BANKER: 1, TIE: 2 };
+export const baccaratWagerSeat: Record<WagerTarget, number> = { PLAYER: 0, BANKER: 1, TIE: 2, PLAYER_PAIR: 3, BANKER_PAIR: 4 };
 
 // Copy resolved public facts. No scoring, drawing rules or payout calculation.
 export function baccaratFacts(round: NonNullable<PublicView['round']>): readonly PresentationFact[] {

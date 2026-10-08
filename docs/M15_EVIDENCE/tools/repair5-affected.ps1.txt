@@ -1,0 +1,3 @@
+$ErrorActionPreference='Stop'
+& npm.cmd test -- tests/m10/formalDealers.test.tsx tests/m10/dealerCleanup.test.tsx
+exit $LASTEXITCODE

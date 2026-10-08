@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-07T05:05:16.590Z",
+  "finish": "2026-10-07T05:05:27.323Z",
+  "command": "powershell.exe",
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    ".git/m15/repair7-resume/assets.ps1"
+  ],
+  "log": ".git\\evidence-capture\\m15-repair7-resume-assets.txt",
+  "status": "PASS",
+  "exitCode": 0,
+  "signal": null,
+  "outputClosed": true,
+  "resetModuleVariables": [
+    "PSModulePath"
+  ]
+}
