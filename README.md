@@ -1,6 +1,20 @@
-## M15 verified closure publication — 2026-10-08 13:57:43 +08:00
+## M15 closure documentation Repair 2 — 2026-10-09 01:26:25 +08:00
 
-M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. Fresh-session technical review and all required product/documentation/privacy/publication gates PASS/native0; unchanged full verify.ps1 exactly once,1410Vitest/321Chromium/independent M1–M8 preservation. Primary closure commit 39b359b5d9547959e6b1d78a1479dde67005073a normally pushed origin/main/native0; observed local=tracking=live,0/0,CLEAN/untracked0 before this factual receipt. [Exact closure receipt](docs/M16_EVIDENCE/20261008-131935/m15-closure/publication.json). Closure repairs1/10; M15=7/10,Repair8 NOT STARTED; H1/H2/H3/H4=1/4/1/3 each /10. First closure-ordering FAIL retained; historical PNG timeout cause UNKNOWN;5000ms/assertions and accepted40ms/110ms timings unchanged. This receipt's own SHA is resolved from Git after its normal push. M16-T01–T05 NOT STARTED; conditional execution may begin only after receipt clean parity; M16 human visual acceptance PENDING; M17/multiplayer NOT STARTED; deployment NOT RUN. Earlier dated pending/failed checkpoints remain historical.
+M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE owner acceptance is recorded; the narrow README documentation correction is being completed under the existing Repair2/10 authorization. Current verification/publication results and retained failures are in the protected, uncommitted main draft `docs/M15_CLOSURE_REPAIR2.md` (not imported into H5).
+
+M8 preservation: PASS / preserved at the previous full verification. This documentation repair must independently pass the unchanged M8 assertion and preservation suite before publication.
+
+M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. Its existing specification, oracle fixtures and evidence remain intentionally uncommitted. M16 HUMAN VISUAL ACCEPTANCE: PENDING.
+
+M16-T02 through M16-T05: NOT STARTED. Resuming M16-T01 requires separate owner authorization. M17 and multiplayer: NOT STARTED. Deployment: NOT RUN.
+
+### Historical M15 closure publication — 2026-10-08 13:57:43 +08:00
+
+The earlier receipt recorded M15 ACCEPTED / CLOSED and owner visual acceptance ACCEPTED, with unchanged full verify.ps1 PASS/native0,1410Vitest/321Chromium/independent M1–M8 preservation. Its later README assertion failure remains retained in the Repair2 ledger.
+
+Primary closure commit 39b359b5d9547959e6b1d78a1479dde67005073a was normally pushed to origin/main/native0; local=tracking=live,0/0,CLEAN/untracked0 was observed before that factual receipt. [Exact historical closure receipt](docs/M16_EVIDENCE/20261008-131935/m15-closure/publication.json). Closure repairs were1/10 at that checkpoint; M15=7/10,Repair8 NOT STARTED; H1/H2/H3/H4=1/4/1/3 each /10. First closure-ordering FAIL retained; historical PNG timeout cause UNKNOWN;5000ms/assertions and accepted40ms/110ms timings unchanged. The receipt's own SHA is resolved from Git after its normal push.
+
+At that historical checkpoint, M16-T01–T05 were NOT STARTED and conditional execution required closure clean parity; M16 human visual acceptance was PENDING. M17/multiplayer were NOT STARTED; deployment was NOT RUN. The current task statuses above supersede that dated checkpoint; earlier failures remain historical evidence.
 
 ## M15 final owner closure — 2026-10-08 13:53:23 +08:00
 
