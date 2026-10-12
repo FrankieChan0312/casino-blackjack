@@ -1,3 +1,15 @@
+## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
+
+M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — PENDING VERIFICATION. OWNER FINAL ACCEPTANCE: PENDING.
+
+H5/H6: TECHNICALLY VERIFIED / INTEGRATED INTO MAIN. MAIN-INTEGRATION-I01: VERIFIED / INTEGRATED / PUSHED at 19d17343408d6f0d89ed8b903b014fdbec38781d. The full H5 receipt remains REUSED: 1,448 Vitest / 331 Chromium / native exit 0; no new full-suite execution is claimed.
+
+M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NOT STARTED. Multiplayer: NOT STARTED. Deployment: NOT RUN. Repair counts: H5 9/10, H6 1/10, M15-CLOSURE 3/10, M16-T01 1/10. Repair 4, H5 Repair 10 and M16-T01 Repair 2 are NOT AUTHORIZED.
+
+[Current M15 closure record](M15_FINAL_CLOSURE.md). The dated records below retain their original outcomes; unpublished local references are rendered as provenance text rather than public links.
+
+### Historical integration and milestone records
+
 ## Owner-authorized H5/H6 main integration — 2026-10-12 09:15:27 +08:00
 
 M15 implementation: ACCEPTED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE: NOT YET CLOSED. M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NOT STARTED. Multiplayer: NOT STARTED. Deployment: NOT RUN.
@@ -18,11 +30,11 @@ These observations include the original stopped M15-CLOSURE / M16-T01 work. They
 
 ## Closure-document regression lesson — 2026-10-08 14:20:36 +08:00
 
-A documentation-only receipt can still change an accepted test's input. The full gate before a later README edit does not verify that edited document. First T01 preservation955/956FAIL reveals M15 factual receipt a715239's same-line evidence/future-status combination; the accepted assertion remains intact. Capture first failure, prove the introducing Git version, prepare a concrete unapplied paragraph proposal, and obey the owner's explicit M15 stop/no-auto-repair boundary. Do not call partial fixture/source checks completed M16 verification. [Stopped handoff](CASINO_M16_OVERNIGHT_HANDOFF.md).
+A documentation-only receipt can still change an accepted test's input. The full gate before a later README edit does not verify that edited document. First T01 preservation955/956FAIL reveals M15 factual receipt a715239's same-line evidence/future-status combination; the accepted assertion remains intact. Capture first failure, prove the introducing Git version, prepare a concrete unapplied paragraph proposal, and obey the owner's explicit M15 stop/no-auto-repair boundary. Do not call partial fixture/source checks completed M16 verification. Stopped handoff (historical local WIP reference: `docs/CASINO_M16_OVERNIGHT_HANDOFF.md`; uncommitted, not a public repository link).
 
 ## M16 T01 learning checkpoint — 2026-10-08 14:12:38 +08:00
 
-Roadmap display coordinates differ from logical streak coordinates. A six-row tail must not truncate derived comparisons; compare full streak lengths/occupancy. Ties decorate a decisive cell but remain separate Bead Plate outcomes; pair flags are facts, not geometry. Freeze independent expected cells before production and separately assert thresholds/collisions. [Formal contract](M16_ROADMAPS_SPEC.md); [oracle provenance](M16_ORACLES/README.md). Model confidence does not replace executed fixtures or preservation.
+Roadmap display coordinates differ from logical streak coordinates. A six-row tail must not truncate derived comparisons; compare full streak lengths/occupancy. Ties decorate a decisive cell but remain separate Bead Plate outcomes; pair flags are facts, not geometry. Freeze independent expected cells before production and separately assert thresholds/collisions. Formal contract (historical local WIP reference: `docs/M16_ROADMAPS_SPEC.md`; uncommitted, not a public repository link); oracle provenance (historical local WIP reference: `docs/M16_ORACLES/README.md`; uncommitted, not a public repository link). Model confidence does not replace executed fixtures or preservation.
 
 ### H5/H6 technical history (original wording and dates retained)
 

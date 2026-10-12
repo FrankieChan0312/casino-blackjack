@@ -1,3 +1,15 @@
+## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
+
+M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — PENDING VERIFICATION. OWNER FINAL ACCEPTANCE: PENDING.
+
+H5/H6: TECHNICALLY VERIFIED / INTEGRATED INTO MAIN. MAIN-INTEGRATION-I01: VERIFIED / INTEGRATED / PUSHED at 19d17343408d6f0d89ed8b903b014fdbec38781d. The full H5 receipt remains REUSED: 1,448 Vitest / 331 Chromium / native exit 0; no new full-suite execution is claimed.
+
+M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NOT STARTED. Multiplayer: NOT STARTED. Deployment: NOT RUN. Repair counts: H5 9/10, H6 1/10, M15-CLOSURE 3/10, M16-T01 1/10. Repair 4, H5 Repair 10 and M16-T01 Repair 2 are NOT AUTHORIZED.
+
+[Current M15 closure record](docs/M15_FINAL_CLOSURE.md). The dated records below retain their original outcomes; unpublished local references are rendered as provenance text rather than public links.
+
+### Historical integration and milestone records
+
 ## Owner-authorized H5/H6 main integration — 2026-10-12 09:15:27 +08:00
 
 M15 implementation: ACCEPTED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE: NOT YET CLOSED. M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NOT STARTED. Multiplayer: NOT STARTED. Deployment: NOT RUN.
@@ -18,7 +30,7 @@ The following dated records describe their original observations. Earlier CLOSED
 
 ## M15 closure documentation Repair 2 — 2026-10-09 01:26:25 +08:00
 
-M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE owner acceptance is recorded; the narrow README documentation correction is being completed under the existing Repair2/10 authorization. Current verification/publication results and retained failures are in the [Repair 2 ledger](docs/M15_CLOSURE_REPAIR2.md).
+M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE owner acceptance is recorded; the narrow README documentation correction is being completed under the existing Repair2/10 authorization. Current verification/publication results and retained failures are in the Repair 2 ledger (historical local WIP reference: `docs/M15_CLOSURE_REPAIR2.md`; uncommitted, not a public repository link).
 
 M8 preservation: PASS / preserved at the previous full verification. This documentation repair must independently pass the unchanged M8 assertion and preservation suite before publication.
 
