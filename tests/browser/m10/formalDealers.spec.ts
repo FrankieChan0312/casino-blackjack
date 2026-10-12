@@ -90,8 +90,8 @@ test('[M10-F-E05] missing runtime images use a neutral non-image placeholder and
   await expect(dealer.getByRole('img',{name:'Dealer portrait unavailable',exact:true})).toBeVisible();
   await deal(page);await expect(dealer.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible();await finish(page);
 });
-test('[M10-F-E06] formal1/4/7 players retain bounded cards/status/shoe/rules at desktop/tablet/mobile and text200',async({page},info)=>{
-  for(const count of [1,4,7])for(const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]){
+for (const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]) test(`[M10-F-E06-${viewport.width}] formal1/4/7 players retain bounded cards/status/shoe/rules at desktop/tablet/mobile and text200`,async({page},info)=>{
+  for(const count of [1,4,7]){
     await page.setViewportSize(viewport);await page.goto('/?fixture=player-setup');await start(page,count);await formal(page,'noble_female');await deal(page);
     for(const enlarged of [false,true]){
       if(enlarged)await page.addStyleTag({content:'html {font-size:200%;}'});

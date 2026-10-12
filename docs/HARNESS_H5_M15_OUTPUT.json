@@ -1,0 +1,964 @@
+{
+  "version": 1,
+  "baseline": "a7152397079f5d9f493687eec9052d707b2ef596",
+  "accepted": "a7152397079f5d9f493687eec9052d707b2ef596",
+  "scope": "Separate owner-authorized M15 evidence-output root exception; original source identities retained",
+  "originalInventory": {
+    "nativeExit": 0,
+    "testCount": 321,
+    "sourceSha256": "86226a1d441febae4508ac1a899a5e5f06eb4f30e4b3f0e276ec076c6db7d792"
+  },
+  "entries": [
+    {
+      "file": "tests/browser/baccarat/m15.spec.ts",
+      "originalBlob": "3f0b5a72e436c7989ffe68ccb3c441d07d5b2be4",
+      "originalSha256": "f2a0d0305dc5cecaad8f07e5a3fd560ab9b0525bb9d59dcdd1a8ff8f38a413a3",
+      "approvedBlob": "0c030b589082dbf9ef5aa619a0b2b9388bd8c1a4",
+      "approvedSha256": "9373b34b586102e77da915e35e176ef6b91d81b6f9175a9090f76be31d2a3a72",
+      "approvedEdits": [
+        {
+          "from": "import { mkdirSync, writeFileSync } from 'node:fs';\n",
+          "to": "import { mkdirSync, writeFileSync } from 'node:fs';\nimport { resolve } from 'node:path';\nimport { resolveGitDir } from '../../../scripts/git-directory.mjs';\n"
+        },
+        {
+          "from": "const evidence='.git/m15/visual';",
+          "to": "const evidence=resolve(resolveGitDir(),'m15/visual');"
+        }
+      ],
+      "originalRegistrations": [
+        {
+          "text": "`[M15-UI01-${target}] main wager only`",
+          "line": 25
+        },
+        {
+          "text": "`[M15-UI02-${index}] optional wager composition ${targets.join('+')}`",
+          "line": 32
+        },
+        {
+          "text": "`[M15-UI03-${fixture}-${target}] first two rank result and exact payout`",
+          "line": 48
+        },
+        {
+          "text": "'[M15-UI04] exposure rejection and single main are authoritative, Clear atomic'",
+          "line": 54
+        },
+        {
+          "text": "'[M15-UI05] cut reached, valid six-card round completes, next shoe changes ID/burn without credit/history reset; Repeat includes both pairs'",
+          "line": 60
+        },
+        {
+          "text": "`[M15-UI06-${width}] responsive Pair controls keyboard/focus/touch/200% text`",
+          "line": 78
+        },
+        {
+          "text": "'[M15-UI07] FULL/REDUCED/IMMEDIATE and skip pair settlement yield identical authority; results precede third cards'",
+          "line": 92
+        },
+        {
+          "text": "`[M15-UI08-${target}-${outcome}] native Pair chip animation copies authority and safe skip`",
+          "line": 122
+        },
+        {
+          "text": "'[M15-UI09] cut card observation during existing valid round then empty new-shoe transition'",
+          "line": 133
+        },
+        {
+          "text": "'[M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result'",
+          "line": 149
+        }
+      ],
+      "originalAssertions": [
+        {
+          "text": "expect(page.getByRole('button',{name:'Place Bet · Player',exact:true})).toBeVisible()",
+          "line": 8
+        },
+        {
+          "text": "expect(page.locator('[data-game=\"baccarat\"]')).toHaveAttribute('data-presentation-running','false')",
+          "line": 16
+        },
+        {
+          "text": "expect(page.locator('.baccarat-status')).toContainText('ROUND COMPLETE')",
+          "line": 17
+        },
+        {
+          "text": "expect(page.locator('[data-initial-deal-flight],[data-action-card-flight],[data-wager-flight]')).toHaveCount(0)",
+          "line": 18
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText(target==='PLAYER'?'1,025':'975')",
+          "line": 27
+        },
+        {
+          "text": "expect(page.locator('[data-wager-target=\"PLAYER_PAIR\"]')).toContainText('No bet')",
+          "line": 28
+        },
+        {
+          "text": "expect(page.locator('[data-wager-target=\"BANKER_PAIR\"]')).toContainText('No bet')",
+          "line": 29
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText(String(targets.length*25))",
+          "line": 34
+        },
+        {
+          "text": "expect(page.locator(`[data-wager-target=\"${target}\"]`)).toContainText(target==='PLAYER'||target==='BANKER'?'PUSH':'WIN')",
+          "line": 37
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText(expected.toLocaleString('en-US'))",
+          "line": 39
+        },
+        {
+          "text": "expect(page.locator(`[data-wager-target=\"${target}\"] [data-wager-units]`)).toHaveAttribute('data-wager-units','2500')",
+          "line": 42
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText(String(targets.length*25))",
+          "line": 43
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText('0')",
+          "line": 44
+        },
+        {
+          "text": "expect(page.locator(`[data-wager-target=\"${target}\"]`)).toContainText(result)",
+          "line": 50
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText(result==='WIN'?'1,110':'990')",
+          "line": 51
+        },
+        {
+          "text": "expect(page.getByRole('alert')).toContainText('Insufficient')",
+          "line": 56
+        },
+        {
+          "text": "expect(await authority(page)).toEqual(before)",
+          "line": 56
+        },
+        {
+          "text": "expect(page.getByRole('alert')).toContainText('one main')",
+          "line": 57
+        },
+        {
+          "text": "expect(await authority(page)).toEqual(before)",
+          "line": 57
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText('1,000')",
+          "line": 58
+        },
+        {
+          "text": "expect(page.locator('.baccarat-shoe')).toContainText('Cut card: REACHED')",
+          "line": 64
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toHaveAttribute('data-shoe-status','CLOSED')",
+          "line": 65
+        },
+        {
+          "text": "expect(page.locator('.baccarat-hand-cards [role=\"img\"]')).toHaveCount(6)",
+          "line": 66
+        },
+        {
+          "text": "expect(view.history).toHaveLength(1)",
+          "line": 68
+        },
+        {
+          "text": "expect(view.availableUnits).toBe(122000)",
+          "line": 68
+        },
+        {
+          "text": "expect(next.shoe.id).not.toBe(view.shoe.id)",
+          "line": 71
+        },
+        {
+          "text": "expect(next.shoe.generation).toBe(2)",
+          "line": 71
+        },
+        {
+          "text": "expect(next.shoe.totalBurned).toBeGreaterThanOrEqual(2)",
+          "line": 71
+        },
+        {
+          "text": "expect(next.history).toEqual(view.history)",
+          "line": 72
+        },
+        {
+          "text": "expect(next.availableUnits).toBe(119000)",
+          "line": 72
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toContainText('NEW SHOE READY')",
+          "line": 73
+        },
+        {
+          "text": "expect(page.locator('.baccarat-shoe')).toContainText('Cut card: ACTIVE')",
+          "line": 74
+        },
+        {
+          "text": "expect(page.locator(`[data-wager-target=\"${target}\"] [data-wager-units]`)).toHaveAttribute('data-wager-units','1000')",
+          "line": 75
+        },
+        {
+          "text": "expect(JSON.stringify(after.view)).not.toMatch(/orderedIds|deckIndex|seed|cursor/)",
+          "line": 76
+        },
+        {
+          "text": "expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)",
+          "line": 80
+        },
+        {
+          "text": "expect(button).toBeFocused()",
+          "line": 82
+        },
+        {
+          "text": "expect(await button.evaluate(element=>getComputedStyle(element).outlineStyle)).not.toBe('none')",
+          "line": 82
+        },
+        {
+          "text": "expect(button).toHaveAttribute('aria-pressed','true')",
+          "line": 83
+        },
+        {
+          "text": "expect((await page.locator(`[data-wager-target=\"${target}\"] button`).boundingBox())!.height).toBeGreaterThanOrEqual(44)",
+          "line": 84
+        },
+        {
+          "text": "expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)",
+          "line": 88
+        },
+        {
+          "text": "expect(shoe.y+shoe.height).toBeLessThanOrEqual(status.y)",
+          "line": 90
+        },
+        {
+          "text": "expect(page.locator('[data-game=\"baccarat\"]')).toHaveAttribute('data-baccarat-motion',mode)",
+          "line": 98
+        },
+        {
+          "text": "expect(values[1]).toEqual(values[0])",
+          "line": 100
+        },
+        {
+          "text": "expect(values[2]).toEqual(values[0])",
+          "line": 100
+        },
+        {
+          "text": "expect(page.locator('[data-deal-target$=\"/player:2\"]')).toHaveCount(1)",
+          "line": 107
+        },
+        {
+          "text": "expect(page.locator('[data-wager-target=\"PLAYER_PAIR\"]')).toContainText('WIN')",
+          "line": 108
+        },
+        {
+          "text": "expect(page.locator('[data-wager-target=\"BANKER_PAIR\"]')).toContainText('WIN')",
+          "line": 108
+        },
+        {
+          "text": "expect(await authority(page)).toEqual(before)",
+          "line": 109
+        },
+        {
+          "text": "expect(layer).toHaveAttribute('data-wager-amount','12000')",
+          "line": 115
+        },
+        {
+          "text": "expect(layer).toHaveAttribute('data-wager-destination','local-credits')",
+          "line": 115
+        },
+        {
+          "text": "expect(await authority(page)).toEqual(committed)",
+          "line": 116
+        },
+        {
+          "text": "expect(layer).toHaveAttribute('data-wager-amount',amount)",
+          "line": 128
+        },
+        {
+          "text": "expect(layer).toHaveAttribute('data-wager-outcome',outcome)",
+          "line": 128
+        },
+        {
+          "text": "expect(layer).toHaveAttribute('data-wager-destination',destination)",
+          "line": 128
+        },
+        {
+          "text": "expect(await layer.evaluate(element=>element.getAnimations({subtree:true}).map(animation=>animation.playState))).toEqual(['paused'])",
+          "line": 129
+        },
+        {
+          "text": "expect(layer).toHaveCount(1)",
+          "line": 131
+        },
+        {
+          "text": "expect(await authority(page)).toEqual(before)",
+          "line": 131
+        },
+        {
+          "text": "expect(page.locator('[data-deal-target$=\"/player:2\"]')).toHaveCount(1)",
+          "line": 138
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toContainText('CUT CARD REACHED · New shoe after this round')",
+          "line": 139
+        },
+        {
+          "text": "expect(page.getByRole('button',{name:'Deal Again'})).toBeDisabled()",
+          "line": 140
+        },
+        {
+          "text": "expect(page.locator('[data-deal-target$=\"/player:2\"]')).toHaveCount(1)",
+          "line": 142
+        },
+        {
+          "text": "expect(page.locator('.baccarat-hand-cards [role=\"img\"]')).toHaveCount(6)",
+          "line": 144
+        },
+        {
+          "text": "expect((after.view as{availableUnits:number}).availableUnits).toBe((before.view as{availableUnits:number}).availableUnits)",
+          "line": 146
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText('0')",
+          "line": 147
+        },
+        {
+          "text": "expect(page.locator('.baccarat-status')).toContainText('ROUND INTERRUPTED')",
+          "line": 154
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toContainText('SHOE UNAVAILABLE')",
+          "line": 155
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).not.toContainText('Shoe ready')",
+          "line": 155
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText('990')",
+          "line": 156
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText('10')",
+          "line": 156
+        },
+        {
+          "text": "expect(page.locator('.baccarat-status')).toContainText('ROUND VOIDED')",
+          "line": 158
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toContainText('SHOE RETIRED')",
+          "line": 158
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"available\"]')).toHaveText('1,000')",
+          "line": 159
+        },
+        {
+          "text": "expect(page.locator('[data-credits=\"reserved\"]')).toHaveText('0')",
+          "line": 159
+        },
+        {
+          "text": "expect(page.locator('[data-shoe-status]')).toContainText('NEW SHOE READY')",
+          "line": 160
+        },
+        {
+          "text": "expect((await authority(page)).view).toMatchObject({availableUnits:100000,history:[],shoe:{generation:2,mayBeginRound:true}})",
+          "line": 161
+        }
+      ],
+      "originalOutputOperations": [
+        {
+          "text": "mkdirSync(evidence,{recursive:true})",
+          "line": 20
+        },
+        {
+          "text": "page.screenshot({path:`${evidence}/${name}.png`,fullPage:true})",
+          "line": 20
+        },
+        {
+          "text": "capture(page,`selected-${index}`)",
+          "line": 35
+        },
+        {
+          "text": "capture(page,`settled-${index}`)",
+          "line": 40
+        },
+        {
+          "text": "capture(page,`${fixture}-${target.toLowerCase()}`)",
+          "line": 52
+        },
+        {
+          "text": "capture(page,'shoe-normal')",
+          "line": 61
+        },
+        {
+          "text": "capture(page,'cut-reached-closed')",
+          "line": 66
+        },
+        {
+          "text": "capture(page,'new-shoe')",
+          "line": 74
+        },
+        {
+          "text": "capture(page,`table-${width}`)",
+          "line": 79
+        },
+        {
+          "text": "capture(page,`pairs-settled-${width}`)",
+          "line": 86
+        },
+        {
+          "text": "capture(page,`text-200-${width}`)",
+          "line": 90
+        },
+        {
+          "text": "capture(page,'skip-settled')",
+          "line": 116
+        },
+        {
+          "text": "mkdirSync(evidence,{recursive:true})",
+          "line": 117
+        },
+        {
+          "text": "writeFileSync(`${evidence}/motion-equivalence.json`,JSON.stringify({status:'PASS',modes:3,skip:true,midSequenceReduce:true,pairBeforeThird:true},null,2)+'\\n')",
+          "line": 117
+        },
+        {
+          "text": "mkdirSync(evidence,{recursive:true})",
+          "line": 130
+        },
+        {
+          "text": "page.screenshot({path:`${evidence}/chip-${target.toLowerCase()}-${outcome.toLowerCase()}.png`,fullPage:false})",
+          "line": 130
+        },
+        {
+          "text": "mkdirSync(evidence,{recursive:true})",
+          "line": 141
+        },
+        {
+          "text": "page.screenshot({path:`${evidence}/cut-during-round.png`,fullPage:false})",
+          "line": 141
+        },
+        {
+          "text": "capture(page,'new-shoe-empty')",
+          "line": 147
+        },
+        {
+          "text": "mkdirSync(evidence,{recursive:true})",
+          "line": 152
+        },
+        {
+          "text": "writeFileSync(`${evidence}/integrity-startup.json`,JSON.stringify({budgetMs:60000,coldOpenMs:Date.now()-started},null,2)+'\\n')",
+          "line": 152
+        },
+        {
+          "text": "capture(page,'integrity-unavailable')",
+          "line": 156
+        }
+      ],
+      "originalOutputNames": [
+        {
+          "text": "`${evidence}/${name}.png`",
+          "line": 20
+        },
+        {
+          "text": "`selected-${index}`",
+          "line": 35
+        },
+        {
+          "text": "`settled-${index}`",
+          "line": 40
+        },
+        {
+          "text": "`${fixture}-${target.toLowerCase()}`",
+          "line": 52
+        },
+        {
+          "text": "'shoe-normal'",
+          "line": 61
+        },
+        {
+          "text": "'cut-reached-closed'",
+          "line": 66
+        },
+        {
+          "text": "'new-shoe'",
+          "line": 74
+        },
+        {
+          "text": "`table-${width}`",
+          "line": 79
+        },
+        {
+          "text": "`pairs-settled-${width}`",
+          "line": 86
+        },
+        {
+          "text": "`text-200-${width}`",
+          "line": 90
+        },
+        {
+          "text": "'skip-settled'",
+          "line": 116
+        },
+        {
+          "text": "`${evidence}/motion-equivalence.json`",
+          "line": 117
+        },
+        {
+          "text": "`${evidence}/chip-${target.toLowerCase()}-${outcome.toLowerCase()}.png`",
+          "line": 130
+        },
+        {
+          "text": "`${evidence}/cut-during-round.png`",
+          "line": 141
+        },
+        {
+          "text": "'new-shoe-empty'",
+          "line": 147
+        },
+        {
+          "text": "`${evidence}/integrity-startup.json`",
+          "line": 152
+        },
+        {
+          "text": "'integrity-unavailable'",
+          "line": 156
+        }
+      ],
+      "originalOutputNameBindings": [],
+      "originalTimeouts": [
+        {
+          "text": "test.setTimeout(60000)",
+          "line": 93
+        },
+        {
+          "text": "test.setTimeout(60000)",
+          "line": 151
+        }
+      ],
+      "nativeRegistrations": [
+        {
+          "title": "[M15-UI01-PLAYER] main wager only",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-3d473e383250b909a7a5",
+          "project": "chromium",
+          "line": 25
+        },
+        {
+          "title": "[M15-UI01-BANKER] main wager only",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-4255e29a3f048d4a8f95",
+          "project": "chromium",
+          "line": 25
+        },
+        {
+          "title": "[M15-UI01-TIE] main wager only",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-2c3c79f86e5a1a0147a1",
+          "project": "chromium",
+          "line": 25
+        },
+        {
+          "title": "[M15-UI02-0] optional wager composition PLAYER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-63403d5ba71303eea2b7",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI02-1] optional wager composition BANKER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-c9b5eab96ee9e775489b",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI02-2] optional wager composition PLAYER_PAIR+BANKER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-ed2b030f022744175260",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI02-3] optional wager composition PLAYER+PLAYER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-d3b8801b203ba438d6bd",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI02-4] optional wager composition BANKER+BANKER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-3060e395617514ae09b1",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI02-5] optional wager composition TIE+PLAYER_PAIR+BANKER_PAIR",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-3fcb6d688d72fa63946f",
+          "project": "chromium",
+          "line": 32
+        },
+        {
+          "title": "[M15-UI03-m15-player-pair-PLAYER_PAIR] first two rank result and exact payout",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-9bdcee9547754d3ec59a",
+          "project": "chromium",
+          "line": 48
+        },
+        {
+          "title": "[M15-UI03-m15-banker-pair-BANKER_PAIR] first two rank result and exact payout",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-1a1435f5f913d870e73b",
+          "project": "chromium",
+          "line": 48
+        },
+        {
+          "title": "[M15-UI03-m15-pair-loss-PLAYER_PAIR] first two rank result and exact payout",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-852c62d18d281021487e",
+          "project": "chromium",
+          "line": 48
+        },
+        {
+          "title": "[M15-UI03-m15-pair-loss-BANKER_PAIR] first two rank result and exact payout",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-c9b92bbeddd95585464f",
+          "project": "chromium",
+          "line": 48
+        },
+        {
+          "title": "[M15-UI04] exposure rejection and single main are authoritative, Clear atomic",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-e9bf265013e202164e46",
+          "project": "chromium",
+          "line": 54
+        },
+        {
+          "title": "[M15-UI05] cut reached, valid six-card round completes, next shoe changes ID/burn without credit/history reset; Repeat includes both pairs",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-b84644a5cfaba199e46d",
+          "project": "chromium",
+          "line": 60
+        },
+        {
+          "title": "[M15-UI06-1280] responsive Pair controls keyboard/focus/touch/200% text",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-db890f99c9e1b1c9b2e8",
+          "project": "chromium",
+          "line": 78
+        },
+        {
+          "title": "[M15-UI06-768] responsive Pair controls keyboard/focus/touch/200% text",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-bc3bb0c1744325631753",
+          "project": "chromium",
+          "line": 78
+        },
+        {
+          "title": "[M15-UI06-320] responsive Pair controls keyboard/focus/touch/200% text",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-6ec4f1b87509c6bb28c3",
+          "project": "chromium",
+          "line": 78
+        },
+        {
+          "title": "[M15-UI07] FULL/REDUCED/IMMEDIATE and skip pair settlement yield identical authority; results precede third cards",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-3562716a2893fd225df5",
+          "project": "chromium",
+          "line": 92
+        },
+        {
+          "title": "[M15-UI08-PLAYER_PAIR-WIN] native Pair chip animation copies authority and safe skip",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-9df9915fb3200b2653bc",
+          "project": "chromium",
+          "line": 122
+        },
+        {
+          "title": "[M15-UI08-BANKER_PAIR-WIN] native Pair chip animation copies authority and safe skip",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-50ff6074fb50cb945e4b",
+          "project": "chromium",
+          "line": 122
+        },
+        {
+          "title": "[M15-UI08-PLAYER_PAIR-LOSS] native Pair chip animation copies authority and safe skip",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-1b9278fe43feb1effb2b",
+          "project": "chromium",
+          "line": 122
+        },
+        {
+          "title": "[M15-UI08-BANKER_PAIR-LOSS] native Pair chip animation copies authority and safe skip",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-c6ec3621fdbba04449c6",
+          "project": "chromium",
+          "line": 122
+        },
+        {
+          "title": "[M15-UI09] cut card observation during existing valid round then empty new-shoe transition",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-1b3f4aad144917a91a06",
+          "project": "chromium",
+          "line": 133
+        },
+        {
+          "title": "[M15-UI10] integrity is unavailable, explicit refund retires shoe, next replaces without a fabricated result",
+          "originalPlaywrightID": "99cf511a0f86223c4af8-3215ed8ec793a22172f6",
+          "project": "chromium",
+          "line": 149
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/baccarat/m15Performance.spec.ts",
+      "originalBlob": "74ec5cd5717015de4d602d290e119aff28a6d20f",
+      "originalSha256": "d6760ffed289c7b8818a47acf23e9356297fee0722b796b004c0b33ead3626c1",
+      "approvedBlob": "81817e79d72bc19001621d40e4a43690e774ea76",
+      "approvedSha256": "5ead4bf26a5f6ee34903ce5079efe5e9cfbfbc603ca30f8adc8cdc48384f8b72",
+      "approvedEdits": [
+        {
+          "from": "import { mkdirSync, writeFileSync } from 'node:fs';\n",
+          "to": "import { mkdirSync, writeFileSync } from 'node:fs';\nimport { resolve } from 'node:path';\nimport { resolveGitDir } from '../../../scripts/git-directory.mjs';\n"
+        },
+        {
+          "from": "const directory='.git/m15/performance';",
+          "to": "const directory=resolve(resolveGitDir(),'m15/performance');"
+        }
+      ],
+      "originalRegistrations": [
+        {
+          "text": "`[M15-P-${width}] fixed ten fresh native six-card FULL_MOTION samples <=2500ms`",
+          "line": 7
+        }
+      ],
+      "originalAssertions": [
+        {
+          "text": "expect(page.getByRole('button',{name:'Place Bet · Player'})).toBeVisible()",
+          "line": 22
+        },
+        {
+          "text": "expect(page.locator('[data-game=\"baccarat\"]')).toHaveAttribute('data-presentation-running','false')",
+          "line": 40
+        },
+        {
+          "text": "expect(samples).toHaveLength(10)",
+          "line": 49
+        },
+        {
+          "text": "expect(sample.targets).toEqual(['player:0','banker:0','player:1','banker:1','player:2','banker:2'])",
+          "line": 50
+        },
+        {
+          "text": "expect(sample.cards).toBe(6)",
+          "line": 50
+        },
+        {
+          "text": "expect(sample.overlays).toBe(0)",
+          "line": 50
+        },
+        {
+          "text": "expect(sample.overflow).toBe(false)",
+          "line": 50
+        },
+        {
+          "text": "expect(sample.dealMs).toBeLessThanOrEqual(2500)",
+          "line": 50
+        }
+      ],
+      "originalOutputOperations": [
+        {
+          "text": "mkdirSync(directory,{recursive:true})",
+          "line": 9
+        },
+        {
+          "text": "writeFileSync(file,JSON.stringify({width,thresholdMs:2500,requiredSamples:10,retries:0,freshBrowserPerSample:true,samples,\n      medianMs:sorted.length?(sorted[Math.floor(middle)]!+sorted[Math.ceil(middle)-1]!)/2:null,worstMs:sorted.at(-1)??null,\n      firstFailure:samples.find(sample=>sample.dealMs>2500||sample.cards!==6||sample.overflow||sample.overlays!==0)??null},null,2)+'\\n')",
+          "line": 13
+        }
+      ],
+      "originalOutputNames": [
+        {
+          "text": "file",
+          "line": 13
+        }
+      ],
+      "originalOutputNameBindings": [
+        {
+          "text": "file=`${directory}/${Date.now()}-${process.pid}-${width}.json`",
+          "line": 10
+        }
+      ],
+      "originalTimeouts": [
+        {
+          "text": "test.setTimeout(120000)",
+          "line": 8
+        }
+      ],
+      "nativeRegistrations": [
+        {
+          "title": "[M15-P-1280] fixed ten fresh native six-card FULL_MOTION samples <=2500ms",
+          "originalPlaywrightID": "a1412988d5353209d345-cd141e0fb69e88fff978",
+          "project": "chromium",
+          "line": 7
+        },
+        {
+          "title": "[M15-P-320] fixed ten fresh native six-card FULL_MOTION samples <=2500ms",
+          "originalPlaywrightID": "a1412988d5353209d345-4cbbf2c2e2ffea3c467a",
+          "project": "chromium",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/baccarat/m15Zoom.spec.ts",
+      "originalBlob": "7cc3b732463f67b0f2a83b869f84e6e61f1f233c",
+      "originalSha256": "0315d6239412aae80b724dcde4fccc216e05c7308360029b3c655fec60dbd3c9",
+      "approvedBlob": "235027a26c8f54ccf72c3e14aac2c8cbf3aa37e8",
+      "approvedSha256": "31a40c3c9663c899d57c2e3ef9bcce5c924ac1705ddb6673cfbdf1700624f1c7",
+      "approvedEdits": [
+        {
+          "from": "import { resolve } from 'node:path';\n",
+          "to": "import { resolve } from 'node:path';\nimport { resolveGitDir } from '../../../scripts/git-directory.mjs';\n"
+        },
+        {
+          "from": "resolve('.git/overnight')",
+          "to": "resolve(resolveGitDir(), 'overnight')"
+        },
+        {
+          "from": "resolve('.git/m15/visual')",
+          "to": "resolve(resolveGitDir(), 'm15/visual')"
+        }
+      ],
+      "originalRegistrations": [
+        {
+          "text": "`[M15-Z-${width}] actual automatic native browser zoom 200%`",
+          "line": 5
+        }
+      ],
+      "originalAssertions": [
+        {
+          "text": "expect(browserName).toBe('chromium')",
+          "line": 6
+        },
+        {
+          "text": "expect(page.getByRole('button', { name: 'Place Bet · Player' })).toBeVisible()",
+          "line": 15
+        },
+        {
+          "text": "expect(zoom).toBe(2)",
+          "line": 23
+        },
+        {
+          "text": "expect.poll(() => page.evaluate(() => devicePixelRatio)).toBe(before.dpr * 2)",
+          "line": 23
+        },
+        {
+          "text": "expect(Math.abs(after.width - before.width / 2)).toBeLessThanOrEqual(1)",
+          "line": 25
+        },
+        {
+          "text": "expect(after.overflow).toBe(false)",
+          "line": 25
+        },
+        {
+          "text": "expect(page.locator('.baccarat-status')).toContainText('ROUND COMPLETE')",
+          "line": 28
+        },
+        {
+          "text": "expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)",
+          "line": 29
+        },
+        {
+          "text": "expect(pixels.readUInt32BE(16)).toBe(Math.ceil(metrics.contentSize.width))",
+          "line": 39
+        }
+      ],
+      "originalOutputOperations": [
+        {
+          "text": "mkdirSync(root, { recursive: true })",
+          "line": 7
+        },
+        {
+          "text": "mkdtempSync(`${root}/zoom-extension-`)",
+          "line": 8
+        },
+        {
+          "text": "mkdtempSync(`${root}/zoom-profile-`)",
+          "line": 8
+        },
+        {
+          "text": "writeFileSync(`${extension}/manifest.json`, JSON.stringify({ manifest_version: 3, name: 'Local Baccarat zoom evidence', version: '1.0', host_permissions: ['http://127.0.0.1/*'], background: { service_worker: 'worker.js' } }))",
+          "line": 9
+        },
+        {
+          "text": "writeFileSync(`${extension}/worker.js`, 'chrome.runtime.onInstalled.addListener(() => {});')",
+          "line": 10
+        },
+        {
+          "text": "mkdirSync(evidence, { recursive: true })",
+          "line": 30
+        },
+        {
+          "text": "writeFileSync(`${evidence}/native-zoom-${width}.json`, JSON.stringify({ nativeApi: 'chrome.tabs.setZoom', mode: 'automatic', zoom, before, after }, null, 2))",
+          "line": 31
+        },
+        {
+          "text": "cdp.send('Page.captureScreenshot', { format: 'png', fromSurface: true, captureBeyondViewport: true, clip: { ...metrics.contentSize, scale: 1 } })",
+          "line": 37
+        },
+        {
+          "text": "writeFileSync(`${evidence}/native-zoom-${width}.png`, pixels)",
+          "line": 40
+        },
+        {
+          "text": "page.screenshot({ path: info.outputPath('native-zoom-failure.png'), fullPage: true })",
+          "line": 42
+        }
+      ],
+      "originalOutputNames": [
+        {
+          "text": "`${root}/zoom-extension-`",
+          "line": 8
+        },
+        {
+          "text": "`${root}/zoom-profile-`",
+          "line": 8
+        },
+        {
+          "text": "`${extension}/manifest.json`",
+          "line": 9
+        },
+        {
+          "text": "`${extension}/worker.js`",
+          "line": 10
+        },
+        {
+          "text": "`${evidence}/native-zoom-${width}.json`",
+          "line": 31
+        },
+        {
+          "text": "`${evidence}/native-zoom-${width}.png`",
+          "line": 40
+        },
+        {
+          "text": "info.outputPath('native-zoom-failure.png')",
+          "line": 42
+        }
+      ],
+      "originalOutputNameBindings": [
+        {
+          "text": "extension = mkdtempSync(`${root}/zoom-extension-`)",
+          "line": 8
+        },
+        {
+          "text": "profile = mkdtempSync(`${root}/zoom-profile-`)",
+          "line": 8
+        }
+      ],
+      "originalTimeouts": [],
+      "nativeRegistrations": [
+        {
+          "title": "[M15-Z-1280] actual automatic native browser zoom 200%",
+          "originalPlaywrightID": "7229c4a21f671921b427-69bcce93f63c857d7305",
+          "project": "chromium",
+          "line": 5
+        },
+        {
+          "title": "[M15-Z-768] actual automatic native browser zoom 200%",
+          "originalPlaywrightID": "7229c4a21f671921b427-dc7619fa8ae988188aa6",
+          "project": "chromium",
+          "line": 5
+        },
+        {
+          "title": "[M15-Z-640] actual automatic native browser zoom 200%",
+          "originalPlaywrightID": "7229c4a21f671921b427-c04d5fd50e10adbd1932",
+          "project": "chromium",
+          "line": 5
+        }
+      ]
+    }
+  ]
+}

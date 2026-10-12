@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "task": "HARNESS-H6",
+  "path": "tests/m10/dealerCleanup.test.tsx",
+  "baseline": "59100ce7abde397dec972da0c86c2f946704c357",
+  "originalCommit": "245591e7e08164ec2f750f359280f9a3d59325b9",
+  "originalBlob": "8d23a01eedc9c10a863b534cbc313dcc9e6326bf",
+  "originalSha256": "621781f312b5ecc06654a853fd0e3ba4c228501463531b31e324d99409c5c99e",
+  "approvedBlob": "d8d0e72a4cc172ca66e1a5eb62fe0d550f4f832b",
+  "approvedSha256": "db319051336b59dba1e55b0f518a024b482f64415caa511ef8a8ca9214f2aa3e",
+  "originalBody": "it('[PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes', () => {\n  const audit = JSON.parse(execFileSync(process.execPath, ['scripts/verify-generic-dealer.mjs'], { encoding: 'utf8' }));\n  expect(audit.status).toBe('PASS'); expect(audit.nonRoster).toBe(true);\n  expect(audit.source.sha256).toBe('6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c');\n  expect(audit.runtime.sha256).toBe('37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce');\n  expect([audit.runtime.width, audit.runtime.height]).toEqual([240, 320]);\n  expect(audit.runtime.alphaExtrema).toEqual([0, 254]); expect(audit.runtime.transparentPixels).toBe(30900);\n  expect(audit.runtime.visiblePixels).toBeGreaterThan(7680); expect(audit.runtime.chunkCrcs).toBe('PASS');\n  expect(JSON.parse(execFileSync(process.execPath, ['scripts/build-generic-dealer.mjs', '--check'], { encoding: 'utf8' })).status).toBe('PASS');\n});\n",
+  "deadlinePerTestMs": 5000,
+  "combinedDeadlinePreserved": false,
+  "subprocesses": [
+    [
+      "scripts/verify-generic-dealer.mjs"
+    ],
+    [
+      "scripts/build-generic-dealer.mjs",
+      "--check"
+    ]
+  ],
+  "assertions": [
+    "audit.status = PASS",
+    "audit.nonRoster = true",
+    "source.sha256 = 6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c",
+    "runtime.sha256 = 37a797a09a91ad59f96686a2a27f1db981c517bc4eb42bf426b0ebd62c77a6ce",
+    "runtime dimensions = [240, 320]",
+    "runtime.alphaExtrema = [0, 254]",
+    "runtime.transparentPixels = 30900",
+    "runtime.visiblePixels > 7680",
+    "runtime.chunkCrcs = PASS",
+    "real Chromium rebuild.status = PASS"
+  ],
+  "unchangedRegistrations": [
+    "PRE-T11-U02",
+    "PRE-T11-U03",
+    "PRE-T11-U04"
+  ]
+}

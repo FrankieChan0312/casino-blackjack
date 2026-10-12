@@ -1,6 +1,8 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const evidence='.git/m15/visual';
+import { resolve } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
+const evidence=resolve(resolveGitDir(),'m15/visual');
 const labels={PLAYER:'Player',BANKER:'Banker',TIE:'Tie',PLAYER_PAIR:'Player Pair',BANKER_PAIR:'Banker Pair'};
 type Target=keyof typeof labels;
 async function open(page:Page,fixture='m15-both-pair',motion=''){

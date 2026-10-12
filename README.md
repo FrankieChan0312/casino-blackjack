@@ -1,3 +1,21 @@
+## Owner-authorized H5/H6 main integration — 2026-10-12 09:15:27 +08:00
+
+M15 implementation: ACCEPTED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE: NOT YET CLOSED. M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NOT STARTED. Multiplayer: NOT STARTED. Deployment: NOT RUN.
+
+H5/H6 technical maintenance is IMPLEMENTED / VERIFIED at final source commit 886743c3810021030c1c9512366c28e92eb28646 (implementation a92ab1a5bc274ee7c38b1139483e12a33c674b85). The earlier H5 unchanged full verification passed native exit 0 with 1,448 Vitest tests, 331 Chromium cases and fixed preservation; those results remain earlier H5 receipts, not an automatic certification of this integration. Integrated-tree checks and source-identity reuse decisions require their own closed native receipts.
+
+Repair counts remain H5 9/10, H6 1/10, M15-CLOSURE 2/10 and M16-T01 1/10. H5 Repair 10, M15-CLOSURE Repair 3 and M16-T01 Repair 2 are NOT AUTHORIZED. This owner-authorized I01 reconciliation does not consume another milestone repair cycle.
+
+The original five main document versions are preserved by the separate documentation WIP checkpoint. The other five modified tracked files and all 29 original untracked files remain protected WIP and are excluded from this publication. The checkpoint does not accept or complete M15-CLOSURE or M16-T01.
+
+I01 native evidence is stored under the actual Git directory in main-integration-i01/20261012-090125 and the corresponding evidence-capture directories. These records identify the original and reconciled documents, checkpoint, merge parents/tree, staged scope, validation, WIP retention and normal push. Resolve the integration commit and publication result from those receipts and Git history; this document does not predict a future commit hash or push outcome.
+
+[Verified H5 contract and recovery](docs/HARNESS_H5.md); [H5/H6 integration design and history](docs/HARNESS_H5_H6_INTEGRATION.md). Main navigation and all existing clickable ledger links are retained below. Some links refer to protected local WIP: their targets remain uncommitted and are available in the working tree, rather than newly published by I01.
+
+### Historical main documentation WIP (original wording retained)
+
+The following dated records describe their original observations. Earlier CLOSED or pending-publication statements do not supersede the current unfinished closure state above.
+
 ## M15 closure documentation Repair 2 — 2026-10-09 01:26:25 +08:00
 
 M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE owner acceptance is recorded; the narrow README documentation correction is being completed under the existing Repair2/10 authorization. Current verification/publication results and retained failures are in the [Repair 2 ledger](docs/M15_CLOSURE_REPAIR2.md).
@@ -15,6 +33,16 @@ The earlier receipt recorded M15 ACCEPTED / CLOSED and owner visual acceptance A
 Primary closure commit 39b359b5d9547959e6b1d78a1479dde67005073a was normally pushed to origin/main/native0; local=tracking=live,0/0,CLEAN/untracked0 was observed before that factual receipt. [Exact historical closure receipt](docs/M16_EVIDENCE/20261008-131935/m15-closure/publication.json). Closure repairs were1/10 at that checkpoint; M15=7/10,Repair8 NOT STARTED; H1/H2/H3/H4=1/4/1/3 each /10. First closure-ordering FAIL retained; historical PNG timeout cause UNKNOWN;5000ms/assertions and accepted40ms/110ms timings unchanged. The receipt's own SHA is resolved from Git after its normal push.
 
 At that historical checkpoint, M16-T01–T05 were NOT STARTED and conditional execution required closure clean parity; M16 human visual acceptance was PENDING. M17/multiplayer were NOT STARTED; deployment was NOT RUN. The current task statuses above supersede that dated checkpoint; earlier failures remain historical evidence.
+
+### Historical H5 workspace provenance
+
+At H5 publication, the same Repair 2 record described its workspace boundary as follows; this historical note preserves the distinct H5 context while main's clickable ledger remains authoritative:
+
+> M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE owner acceptance is recorded; the narrow README documentation correction is being completed under the existing Repair2/10 authorization. Current verification/publication results and retained failures are in the protected, uncommitted main draft `docs/M15_CLOSURE_REPAIR2.md` (not imported into H5).
+
+### Shared historical body (retained once)
+
+This common history is preserved once from the original main bytes; cross-workspace LF/CRLF equivalence was checked without rewriting either original. Dated failures and earlier acceptance/publication observations retain their original meaning.
 
 ## M15 final owner closure — 2026-10-08 13:53:23 +08:00
 

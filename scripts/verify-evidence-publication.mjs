@@ -6,7 +6,13 @@ import process from 'node:process';
 import { performance } from 'node:perf_hooks';
 import { hashStream, hashGitBlob } from './evidence-hash.mjs';
 
-const manifest = JSON.parse(fs.readFileSync('docs/M15_EVIDENCE/h2/classification.json', 'utf8'));
+const historicalManifestPath = 'docs/M15_EVIDENCE/h2/classification.json';
+const h5ManifestPath = 'docs/HARNESS_H5_PUBLICATION/classification-v1.json';
+const args = process.argv.slice(2);
+assert(args.length === 0 ||
+  (args.length === 2 && args[0] === '--manifest' && args[1] === h5ManifestPath),
+'Expected no arguments or --manifest ' + h5ManifestPath);
+const manifest = JSON.parse(fs.readFileSync(args.length === 0 ? historicalManifestPath : h5ManifestPath, 'utf8'));
 // Only bounded path/attribute/check metadata uses synchronous output buffers.
 const git = (...args) => execFileSync('git', ['-c', 'core.safecrlf=false', ...args], { maxBuffer: 16 * 1024 * 1024 });
 const started = performance.now();

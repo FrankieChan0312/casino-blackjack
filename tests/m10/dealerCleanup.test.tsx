@@ -10,7 +10,7 @@ import { FORMAL_DEALER_CONFIGURATION } from '../../src/presentation/formalDealer
 import { GENERIC_FORMAL_DEALER } from '../../src/presentation/genericDealer.js';
 import { characters } from '../../src/presentation/characters.js';
 
-it('[PRE-T11-U01] supplied generic PNG is independently decoded and deterministic conversion reproduces exact bytes', () => {
+it('[PRE-T11-U01-A] generic Dealer PNG source/runtime audit', () => {
   const audit = JSON.parse(execFileSync(process.execPath, ['scripts/verify-generic-dealer.mjs'], { encoding: 'utf8' }));
   expect(audit.status).toBe('PASS'); expect(audit.nonRoster).toBe(true);
   expect(audit.source.sha256).toBe('6d0e58c7d074fd9b38da042f8d60ff2acb44c8b0196fac5f627d8a9e0c84c65c');
@@ -18,6 +18,8 @@ it('[PRE-T11-U01] supplied generic PNG is independently decoded and deterministi
   expect([audit.runtime.width, audit.runtime.height]).toEqual([240, 320]);
   expect(audit.runtime.alphaExtrema).toEqual([0, 254]); expect(audit.runtime.transparentPixels).toBe(30900);
   expect(audit.runtime.visiblePixels).toBeGreaterThan(7680); expect(audit.runtime.chunkCrcs).toBe('PASS');
+});
+it('[PRE-T11-U01-B] Chromium deterministic PNG rebuild reproduces exact bytes', () => {
   expect(JSON.parse(execFileSync(process.execPath, ['scripts/build-generic-dealer.mjs', '--check'], { encoding: 'utf8' })).status).toBe('PASS');
 });
 it('[PRE-T11-U02] live guard rejects resurrected direct, aliased, dynamic or manifest references', () => {

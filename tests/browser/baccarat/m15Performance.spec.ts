@@ -1,12 +1,14 @@
 import { chromium, expect, test } from '@playwright/test';
 import { mkdirSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { resolveGitDir } from '../../../scripts/git-directory.mjs';
 
 type Observation = { start: number | null; end: number | null; targets: string[] };
 type Sample = { sample: number; width: number; dealMs: number; targets: string[]; cards: number; overflow: boolean; overlays: number };
 test.use({ reducedMotion: 'no-preference' });
 for (const width of [1280,320]) test(`[M15-P-${width}] fixed ten fresh native six-card FULL_MOTION samples <=2500ms`, async ({ baseURL }) => {
   test.setTimeout(120000);
-  const directory='.git/m15/performance';mkdirSync(directory,{recursive:true});
+  const directory=resolve(resolveGitDir(),'m15/performance');mkdirSync(directory,{recursive:true});
   const file=`${directory}/${Date.now()}-${process.pid}-${width}.json`,samples:Sample[]=[];
   function save() {
     const sorted=samples.map(sample=>sample.dealMs).sort((a,b)=>a-b),middle=sorted.length/2;

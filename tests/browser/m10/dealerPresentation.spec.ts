@@ -43,9 +43,9 @@ for(let count=1;count<=7;count++)test(`[M10-D-E${count}] configured ${count}-pla
   await page.getByRole('button',{name:/^Repeat Bet/}).click();
   await expect(dealer).toHaveAttribute('data-dealer-character',expected[count-1]);
 });
-test('[M10-D-E08] explicit unconfigured fallback retains actual1/4/7 players, public cards and placement at three widths plus text200',async({page},info)=>{
+for (const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]) test(`[M10-D-E08-${viewport.width}] explicit unconfigured fallback retains actual1/4/7 players, public cards and placement at three widths plus text200`,async({page},info)=>{
   const receipts=[];
-  for(const count of [1,4,7])for(const viewport of [{width:1280,height:900},{width:768,height:1024},{width:320,height:720}]){
+  for(const count of [1,4,7]){
     await page.setViewportSize(viewport);await page.goto('/?fixture=player-setup&dealer=legacy');await start(page,count);await deal(page);
     const dealer=page.getByRole('region',{name:'Dealer',exact:true});
     await expect(dealer).toHaveAttribute('data-dealer-art','generic-formal');

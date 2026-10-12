@@ -1,0 +1,1222 @@
+{
+  "version": 1,
+  "baseline": "a7152397079f5d9f493687eec9052d707b2ef596",
+  "accepted": "79533bc22afb8571f8ff53e37cd95eaa6c65e5d8",
+  "originalInventoryFile": "docs/HARNESS_H5_ORIGINAL_INVENTORY.json",
+  "originalInventoryBlob": "0a1579dfc032d4b8a3eb9b6ca0e73dd0bc6db76a",
+  "originalInventorySha256": "94fcb446315c3af719939c120c2c20820d69ce205dfd4b0fdc0d59ce1cf26fa5",
+  "entries": [
+    {
+      "file": "tests/browser/m10/dealerPresentation.spec.ts",
+      "id": "M10-D-E08",
+      "originalBlob": "6fabd2175837e76de4c7439d0179e6ba03e054e7",
+      "historicalGitSha256": "3d7da792fc2b5988711bf73a12e87a197e222ee294909d5226d5b45e8a34d469",
+      "approvedBlob": "57ee9b38612a8bac3e508b1d4c95f571278e5068",
+      "approvedSourceSha256": "e6447c005bdadbc4bc1a2836f08d86decfe738e9f790e11ddfd2009aa64697a2",
+      "newIds": [
+        "M10-D-E08-1280",
+        "M10-D-E08-768",
+        "M10-D-E08-320"
+      ],
+      "checkpoints": 18,
+      "assertionSites": 9,
+      "screenshots": 18,
+      "scenarios": [
+        {
+          "key": "M10-D-E08-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-1280"
+        },
+        {
+          "key": "M10-D-E08-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-768"
+        },
+        {
+          "key": "M10-D-E08-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        },
+        {
+          "key": "M10-D-E08-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        },
+        {
+          "key": "M10-D-E08-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        },
+        {
+          "key": "M10-D-E08-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        },
+        {
+          "key": "M10-D-E08-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        },
+        {
+          "key": "M10-D-E08-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal",
+          "newTestId": "M10-D-E08-320"
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/m10/formalDealers.spec.ts",
+      "id": "M10-F-E06",
+      "originalBlob": "963cd51b28ae5763b6a3ae9b4c253ac652eb8967",
+      "historicalGitSha256": "38c5578bf28e237f2d66f86d266f977e650525295483c592a10f2f3458551b0d",
+      "approvedBlob": "4a3b6194555eb5afca3ea1ef51079f45914e0d1b",
+      "approvedSourceSha256": "9ddb2fd34883a4e88e9b993654f0924f514f14ca8dcc27a9280f302031c93e00",
+      "newIds": [
+        "M10-F-E06-1280",
+        "M10-F-E06-768",
+        "M10-F-E06-320"
+      ],
+      "checkpoints": 18,
+      "assertionSites": 12,
+      "screenshots": 18,
+      "scenarios": [
+        {
+          "key": "M10-F-E06-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-1280"
+        },
+        {
+          "key": "M10-F-E06-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-768"
+        },
+        {
+          "key": "M10-F-E06-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        },
+        {
+          "key": "M10-F-E06-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        },
+        {
+          "key": "M10-F-E06-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        },
+        {
+          "key": "M10-F-E06-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        },
+        {
+          "key": "M10-F-E06-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        },
+        {
+          "key": "M10-F-E06-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal",
+          "newTestId": "M10-F-E06-320"
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/m10a/controlIntegration.spec.ts",
+      "id": "M10A-CB06",
+      "originalBlob": "2368402b1d9c1509164308193f8af9a24c7801ad",
+      "historicalGitSha256": "1f1745fea7b85cbb84d6573c863cde1100d0f4d134371bab1d44f77de6e26f98",
+      "approvedBlob": "7d5f838363c35aa2283e5fec98c95a239ee4364a",
+      "approvedSourceSha256": "3149662d7f62e665a03280b8565fb673621b13f59ca1be5183501c8ba72ea80a",
+      "newIds": [
+        "M10A-CB06-1280",
+        "M10A-CB06-768",
+        "M10A-CB06-320"
+      ],
+      "checkpoints": 12,
+      "assertionSites": 8,
+      "screenshots": 12,
+      "scenarios": [
+        {
+          "key": "M10A-CB06-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-1280"
+        },
+        {
+          "key": "M10A-CB06-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-1280"
+        },
+        {
+          "key": "M10A-CB06-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace",
+          "newTestId": "M10A-CB06-1280"
+        },
+        {
+          "key": "M10A-CB06-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money",
+          "newTestId": "M10A-CB06-1280"
+        },
+        {
+          "key": "M10A-CB06-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-768"
+        },
+        {
+          "key": "M10A-CB06-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-768"
+        },
+        {
+          "key": "M10A-CB06-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace",
+          "newTestId": "M10A-CB06-768"
+        },
+        {
+          "key": "M10A-CB06-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money",
+          "newTestId": "M10A-CB06-768"
+        },
+        {
+          "key": "M10A-CB06-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-320"
+        },
+        {
+          "key": "M10A-CB06-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player",
+          "newTestId": "M10A-CB06-320"
+        },
+        {
+          "key": "M10A-CB06-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace",
+          "newTestId": "M10A-CB06-320"
+        },
+        {
+          "key": "M10A-CB06-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money",
+          "newTestId": "M10A-CB06-320"
+        }
+      ],
+      "previousApprovedVersions": [
+        {
+          "blob": "cd7f62b26d7feca2f09a457e8b46d76ee607ef7d",
+          "sha256": "75830311fcd7410718e394aa07172f90be1d5af70588ec93ecc4eec3c2f15d63",
+          "repair": 3,
+          "delta": "Repair 4 removes only five identified residual loop-line indentations; original identity remains fixed"
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/m10a/t07.spec.ts",
+      "id": "M10A-T07-B01",
+      "originalBlob": "65e0e373933e8f80e00012e5e2d148b720c773bf",
+      "historicalGitSha256": "7e5e3982c4eccccc671176fe84f991db15fe52c6b72f7632122daa363d9d3ea1",
+      "approvedBlob": "df2def55f98dc4d1b22ceef81e95b89c0f18e6a9",
+      "approvedSourceSha256": "16f028f6c221879736873f84d97fea78143088680b45152e766aefd6681d68b1",
+      "newIds": [
+        "M10A-T07-B01-1280",
+        "M10A-T07-B01-768",
+        "M10A-T07-B01-320"
+      ],
+      "checkpoints": 24,
+      "assertionSites": 9,
+      "screenshots": 6,
+      "scenarios": [
+        {
+          "key": "M10A-T07-B01-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-7",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-1280-8",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-1280"
+        },
+        {
+          "key": "M10A-T07-B01-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-7",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-768-8",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-768"
+        },
+        {
+          "key": "M10A-T07-B01-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-7",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        },
+        {
+          "key": "M10A-T07-B01-320-8",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false,
+          "newTestId": "M10A-T07-B01-320"
+        }
+      ],
+      "previousApprovedVersions": [
+        {
+          "blob": "3aa2c004888e3f66286d2e3c2adb3a6103a538e0",
+          "sha256": "80a529933ff5f5d8fae031dcd79941c0feabe2d39f703e70e2a985bc8dc94f61",
+          "repair": 3,
+          "delta": "Repair 4 removes only five identified residual loop-line indentations; original identity remains fixed"
+        }
+      ]
+    },
+    {
+      "file": "tests/browser/m10a/t09.spec.ts",
+      "id": "M10A-T09-B02",
+      "originalBlob": "6c7e1baa5404650791cd50f6320ecd0238ad6ba9",
+      "historicalGitSha256": "3207e88101327882f8bdc40d8c0a3ddf552e3d9ead3219a8fed857703ca2fdea",
+      "approvedBlob": "c78b5dbdfb967a40505cc04ca4a2033a21141ddf",
+      "approvedSourceSha256": "6eca899e7f79889de8caa1ff11c306003e094a380e6ae89acd01bbd4cb29843f",
+      "newIds": [
+        "M10A-T09-B02-1280",
+        "M10A-T09-B02-768",
+        "M10A-T09-B02-320"
+      ],
+      "checkpoints": 12,
+      "assertionSites": 15,
+      "screenshots": 12,
+      "scenarios": [
+        {
+          "key": "M10A-T09-B02-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-1280"
+        },
+        {
+          "key": "M10A-T09-B02-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-1280"
+        },
+        {
+          "key": "M10A-T09-B02-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-1280"
+        },
+        {
+          "key": "M10A-T09-B02-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true,
+          "newTestId": "M10A-T09-B02-1280"
+        },
+        {
+          "key": "M10A-T09-B02-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-768"
+        },
+        {
+          "key": "M10A-T09-B02-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-768"
+        },
+        {
+          "key": "M10A-T09-B02-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-768"
+        },
+        {
+          "key": "M10A-T09-B02-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true,
+          "newTestId": "M10A-T09-B02-768"
+        },
+        {
+          "key": "M10A-T09-B02-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-320"
+        },
+        {
+          "key": "M10A-T09-B02-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-320"
+        },
+        {
+          "key": "M10A-T09-B02-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false,
+          "newTestId": "M10A-T09-B02-320"
+        },
+        {
+          "key": "M10A-T09-B02-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true,
+          "newTestId": "M10A-T09-B02-320"
+        }
+      ],
+      "previousApprovedVersions": [
+        {
+          "blob": "6c414ff417d2b24df8341188a0f98e83db6ac713",
+          "sha256": "dc3e5fd3b630f7a066e6b282a0628df9ea6770f647f239ee2ea6b39ddd630828",
+          "repair": 3,
+          "delta": "Repair 4 removes only five identified residual loop-line indentations; original identity remains fixed"
+        }
+      ]
+    }
+  ]
+}

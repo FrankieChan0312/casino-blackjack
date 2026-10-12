@@ -1,0 +1,1787 @@
+{
+  "at": "2026-10-09 23:54:54 +08:00",
+  "kind": "READ_ONLY_STATIC_INVENTORY",
+  "scenarioMeaning": "Observed/checkpoint combinations including sequential gameplay states, not independent executable cases.",
+  "tests": [
+    {
+      "id": "M10-D-E08",
+      "path": "tests/browser/m10/dealerPresentation.spec.ts",
+      "helpers": [
+        "start",
+        "deal"
+      ],
+      "variants": [
+        {
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        }
+      ],
+      "shotsPerViewport": 6,
+      "geometry": "Page and Dealer child overflow; all Dealer/seat region pairs non-overlapping.",
+      "keyboard": [],
+      "dependencies": "Each count/viewport navigates fresh; normal then text200 shares the same dealt state.",
+      "sourceSha256": "3d7da792fc2b5988711bf73a12e87a197e222ee294909d5226d5b45e8a34d469",
+      "direct": {
+        "assertions": [
+          {
+            "line": 51,
+            "column": 11,
+            "source": "await expect(dealer).toHaveAttribute('data-dealer-art','generic-formal')"
+          },
+          {
+            "line": 52,
+            "column": 5,
+            "source": "expect(await dealer.getAttribute('data-dealer-character')).toBeNull()"
+          },
+          {
+            "line": 53,
+            "column": 11,
+            "source": "await expect(dealer.getByRole('img',{name:'Dealer: generic formal portrait',exact:true})).toBeVisible()"
+          },
+          {
+            "line": 54,
+            "column": 11,
+            "source": "await expect(dealer.getByRole('img',{name:'Hidden dealer card',exact:true})).toBeVisible()"
+          },
+          {
+            "line": 54,
+            "column": 102,
+            "source": "await expect(dealer.locator('img[data-dealer-avatar=\"generic-formal\"]')).toHaveCount(1)"
+          },
+          {
+            "line": 55,
+            "column": 11,
+            "source": "await expect(page.locator('[data-seat-anchor]')).toHaveCount(count)"
+          },
+          {
+            "line": 62,
+            "column": 31,
+            "source": "expect(r.scroll).toBeLessThanOrEqual(r.width)"
+          },
+          {
+            "line": 63,
+            "column": 41,
+            "source": "expect(box.scroll).toBeLessThanOrEqual(box.width)"
+          },
+          {
+            "line": 64,
+            "column": 100,
+            "source": "expect(a.x+a.w<=b.x+1||b.x+b.w<=a.x+1||a.y+a.h<=b.y+1||b.y+b.h<=a.y+1,`${a.label}/${b.label}`).toBe(true)"
+          }
+        ],
+        "screenshots": [
+          {
+            "line": 65,
+            "source": "page.screenshot({path:info.outputPath(`dealer-table-${count}-${viewport.width}${enlarged?'-text200':''}.png`),fullPage:true})"
+          }
+        ],
+        "keyboard": [],
+        "sha256": "b6824db5f49af9090b1b5918a35922c846470c155276e760a2e47570ec77e821"
+      },
+      "helperDetails": {
+        "start": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "21be0fbdaeef70f62c080946a1865fbf7e96a2b2ecb7e1864d8ef6f14f0f1181"
+        },
+        "deal": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "f47d6d58092d365b00362b46ed9c0c5b18695301c2363429849ac1962a82a19d"
+        }
+      },
+      "scenarios": [
+        {
+          "key": "M10-D-E08-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-D-E08-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup&dealer=legacy",
+          "state": "after Deal"
+        }
+      ],
+      "scenarioCount": 18,
+      "screenshotCount": 18,
+      "assertionSitesDirect": 9,
+      "assertionSitesWithHelpers": 9,
+      "assertionCountMeaning": "Static expect call sites, counted once per target plus its helpers. Runtime repetitions depend on DOM cardinalities and loops; these are not executed assertion totals."
+    },
+    {
+      "id": "M10-F-E06",
+      "path": "tests/browser/m10/formalDealers.spec.ts",
+      "helpers": [
+        "start",
+        "formal",
+        "deal",
+        "geometry"
+      ],
+      "variants": [
+        {
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        }
+      ],
+      "shotsPerViewport": 6,
+      "geometry": "Page/content overflow, contain object-fit, Dealer/seat pair non-overlap, portrait separated from lane.",
+      "keyboard": [],
+      "dependencies": "Each count/viewport navigates fresh; normal then text200 shares the same dealt state.",
+      "sourceSha256": "38c5578bf28e237f2d66f86d266f977e650525295483c592a10f2f3458551b0d",
+      "direct": {
+        "assertions": [],
+        "screenshots": [
+          {
+            "line": 98,
+            "source": "page.screenshot({path:info.outputPath(`formal-table-${count}-${viewport.width}${enlarged?'-text200':''}.png`),fullPage:true})"
+          }
+        ],
+        "keyboard": [],
+        "sha256": "5ef4e21cebef69647e02ccfb91bef193b5935296b617dd0818ffaeb0301e8294"
+      },
+      "helperDetails": {
+        "start": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "21be0fbdaeef70f62c080946a1865fbf7e96a2b2ecb7e1864d8ef6f14f0f1181"
+        },
+        "deal": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "f47d6d58092d365b00362b46ed9c0c5b18695301c2363429849ac1962a82a19d"
+        },
+        "formal": {
+          "assertions": [
+            {
+              "line": 18,
+              "column": 9,
+              "source": "await expect(dealer).toHaveAttribute('data-dealer-character',id)"
+            },
+            {
+              "line": 18,
+              "column": 74,
+              "source": "await expect(dealer).toHaveAttribute('data-dealer-art','formal')"
+            },
+            {
+              "line": 19,
+              "column": 92,
+              "source": "await expect(portrait).toBeVisible()"
+            },
+            {
+              "line": 20,
+              "column": 9,
+              "source": "await expect(portrait).toHaveAttribute('src',`/characters/dealer/${id}/formal.png`)"
+            },
+            {
+              "line": 21,
+              "column": 9,
+              "source": "await expect(portrait).toHaveJSProperty('naturalWidth',240)"
+            },
+            {
+              "line": 21,
+              "column": 69,
+              "source": "await expect(portrait).toHaveJSProperty('naturalHeight',320)"
+            },
+            {
+              "line": 22,
+              "column": 123,
+              "source": "expect(players).not.toContain(id)"
+            }
+          ],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "8c71ef913d9f811433770c56aecea68d3e50e4f288841a3b5b1ee6a9609d3e9f"
+        },
+        "geometry": {
+          "assertions": [
+            {
+              "line": 34,
+              "column": 3,
+              "source": "expect(r.scroll).toBeLessThanOrEqual(r.width)"
+            },
+            {
+              "line": 35,
+              "column": 3,
+              "source": "expect(r.objectFit).toBe('contain')"
+            },
+            {
+              "line": 36,
+              "column": 29,
+              "source": "expect(c.scroll,c.name).toBeLessThanOrEqual(c.width)"
+            },
+            {
+              "line": 37,
+              "column": 96,
+              "source": "expect(a.x+a.w<=b.x+1||b.x+b.w<=a.x+1||a.y+a.h<=b.y+1||b.y+b.h<=a.y+1,`${a.name}/${b.name}`).toBe(true)"
+            },
+            {
+              "line": 38,
+              "column": 3,
+              "source": "expect(r.portrait.x+r.portrait.w<=r.lane.x+1||r.portrait.y+r.portrait.h<=r.lane.y+1).toBe(true)"
+            }
+          ],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "45bb2785df6c373d10d545ecd97752d47f08dc9de81299fb3702f6d5fc575d43"
+        }
+      },
+      "scenarios": [
+        {
+          "key": "M10-F-E06-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 1,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 4,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": false,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        },
+        {
+          "key": "M10-F-E06-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "players": 7,
+          "text200": true,
+          "fixture": "player-setup",
+          "dealer": "noble_female",
+          "state": "after Deal"
+        }
+      ],
+      "scenarioCount": 18,
+      "screenshotCount": 18,
+      "assertionSitesDirect": 0,
+      "assertionSitesWithHelpers": 12,
+      "assertionCountMeaning": "Static expect call sites, counted once per target plus its helpers. Runtime repetitions depend on DOM cardinalities and loops; these are not executed assertion totals."
+    },
+    {
+      "id": "M10A-CB06",
+      "path": "tests/browser/m10a/controlIntegration.spec.ts",
+      "helpers": [
+        "deal",
+        "fit",
+        "capture"
+      ],
+      "variants": [
+        {
+          "state": "open",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "state": "player",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace"
+        },
+        {
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money"
+        }
+      ],
+      "shotsPerViewport": 4,
+      "geometry": "Page overflow; visible controls >=44px both dimensions, label fit, control/card non-overlap, viewport-specific hand/control gap.",
+      "keyboard": [
+        "player: focus Stand, Enter, player-result focused",
+        "insurance: focus Decline, Enter, player-hand focused"
+      ],
+      "dependencies": "Every state reloads; fit/capture precede keyboard action. Viewport persists within its four-state group.",
+      "sourceSha256": "1f1745fea7b85cbb84d6573c863cde1100d0f4d134371bab1d44f77de6e26f98",
+      "direct": {
+        "assertions": [
+          {
+            "line": 139,
+            "column": 112,
+            "source": "await expect(page.locator('#player-result')).toBeFocused()"
+          },
+          {
+            "line": 140,
+            "column": 117,
+            "source": "await expect(page.locator('#player-hand')).toBeFocused()"
+          }
+        ],
+        "screenshots": [],
+        "keyboard": [
+          {
+            "line": 139,
+            "source": "button(page, 'Stand').focus()"
+          },
+          {
+            "line": 139,
+            "source": "page.keyboard.press('Enter')"
+          },
+          {
+            "line": 140,
+            "source": "button(page, 'Decline').focus()"
+          },
+          {
+            "line": 140,
+            "source": "page.keyboard.press('Enter')"
+          }
+        ],
+        "sha256": "8e29f5f1fcce03630577faa76f865ae24dc281848ec721424162cbe4dfbf0ce1"
+      },
+      "helperDetails": {
+        "deal": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "316b291231e5c345db7892f9ece7a6fec3b36bfb2d368db446405dbca72a20c7"
+        },
+        "capture": {
+          "assertions": [],
+          "screenshots": [
+            {
+              "line": 11,
+              "source": "page.screenshot({ path: info.outputPath(`control-${name}-${width}.png`), fullPage: true })"
+            }
+          ],
+          "keyboard": [],
+          "sha256": "4dec774c5768c3c335bb1458d69212fd125841d741b8d5951b4244e9ce7c7f1e"
+        },
+        "fit": {
+          "assertions": [
+            {
+              "line": 14,
+              "column": 3,
+              "source": "expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)"
+            },
+            {
+              "line": 20,
+              "column": 5,
+              "source": "expect(box.width).toBeGreaterThanOrEqual(44)"
+            },
+            {
+              "line": 20,
+              "column": 51,
+              "source": "expect(box.height).toBeGreaterThanOrEqual(44)"
+            },
+            {
+              "line": 21,
+              "column": 5,
+              "source": "expect(await control.evaluate(el => el.scrollWidth <= el.clientWidth)).toBe(true)"
+            },
+            {
+              "line": 22,
+              "column": 31,
+              "source": "expect(box.x + box.width <= card.x || box.x >= card.right || box.y + box.height <= card.y || box.y >= card.bottom).toBe(true)"
+            },
+            {
+              "line": 26,
+              "column": 3,
+              "source": "expect(gap).toBe(width > 1100 ? 6 : width <= 600 ? 10 : 16)"
+            }
+          ],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "0a19542e697c8b18ccb25e527b5fd6e46d72483ae01154c59b1b6de0035be2f7"
+        }
+      },
+      "scenarios": [
+        {
+          "key": "M10A-CB06-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace"
+        },
+        {
+          "key": "M10A-CB06-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money"
+        },
+        {
+          "key": "M10A-CB06-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace"
+        },
+        {
+          "key": "M10A-CB06-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money"
+        },
+        {
+          "key": "M10A-CB06-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "open",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "player",
+          "text200": true,
+          "fixture": "player"
+        },
+        {
+          "key": "M10A-CB06-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "insurance",
+          "text200": true,
+          "fixture": "player-ace"
+        },
+        {
+          "key": "M10A-CB06-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "even-money",
+          "text200": true,
+          "fixture": "player-even-money"
+        }
+      ],
+      "scenarioCount": 12,
+      "screenshotCount": 12,
+      "assertionSitesDirect": 2,
+      "assertionSitesWithHelpers": 8,
+      "assertionCountMeaning": "Static expect call sites, counted once per target plus its helpers. Runtime repetitions depend on DOM cardinalities and loops; these are not executed assertion totals."
+    },
+    {
+      "id": "M10A-T07-B01",
+      "path": "tests/browser/m10a/t07.spec.ts",
+      "helpers": [
+        "start",
+        "funds"
+      ],
+      "variants": [
+        {
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false
+        },
+        {
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false
+        }
+      ],
+      "shotsPerViewport": 2,
+      "geometry": "Credits HUD, document and every dt/dd fit without horizontal overflow.",
+      "keyboard": [],
+      "dependencies": "main -> Split -> Double share one round; Insurance uses fresh 101 wager; pending fresh; loss wager -> Stand -> settlement share one round. Repeat1000 disabled after settlement.",
+      "sourceSha256": "7e5e3982c4eccccc671176fe84f991db15fe52c6b72f7632122daa363d9d3ea1",
+      "direct": {
+        "assertions": [
+          {
+            "line": 25,
+            "column": 11,
+            "source": "await expect(page.getByRole('button',{name:'Repeat Bet · 1,000 credits',exact:true})).toBeDisabled()"
+          }
+        ],
+        "screenshots": [
+          {
+            "line": 18,
+            "source": "page.screenshot({path:info.outputPath(`credits-open-${viewport.width}.png`),fullPage:true})"
+          },
+          {
+            "line": 23,
+            "source": "page.screenshot({path:info.outputPath(`credits-pending-${viewport.width}.png`),fullPage:true})"
+          }
+        ],
+        "keyboard": [],
+        "sha256": "0d99b3827e7a594311a36e52d6c50fea066028330187b4b5a80b00514e4e87d4"
+      },
+      "helperDetails": {
+        "start": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "c5b2a68f134532b9040d10c7e7108ad7975724830917a9d2047d33438be0d0cb"
+        },
+        "funds": {
+          "assertions": [
+            {
+              "line": 8,
+              "column": 80,
+              "source": "await expect(hud).toBeVisible()"
+            },
+            {
+              "line": 9,
+              "column": 9,
+              "source": "await expect(hud.locator('dt')).toHaveText(['Available','Reserved / current exposure','Pending return'])"
+            },
+            {
+              "line": 10,
+              "column": 9,
+              "source": "await expect(hud.locator('dd')).toHaveText(values)"
+            },
+            {
+              "line": 10,
+              "column": 61,
+              "source": "await expect(hud.getByRole('heading',{name:'Credits',exact:true})).toBeVisible()"
+            },
+            {
+              "line": 11,
+              "column": 3,
+              "source": "expect(await hud.evaluate(el=>el.scrollWidth<=el.clientWidth)).toBe(true)"
+            },
+            {
+              "line": 12,
+              "column": 3,
+              "source": "expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)"
+            },
+            {
+              "line": 13,
+              "column": 62,
+              "source": "await expect(el).toBeVisible()"
+            },
+            {
+              "line": 13,
+              "column": 88,
+              "source": "expect(await el.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true)"
+            }
+          ],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "8156b5f423761f76ef09a965c92fda33f5b16fba71dc0404e6473c5f4bca8d04"
+        }
+      },
+      "scenarios": [
+        {
+          "key": "M10A-T07-B01-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-5",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-6",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-7",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-1280-8",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-5",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-6",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-7",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-768-8",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "open",
+          "fixture": "player",
+          "credits": [
+            "1,000",
+            "0",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "main",
+          "fixture": "player-split",
+          "credits": [
+            "900",
+            "100",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "split",
+          "fixture": "player-split",
+          "credits": [
+            "800",
+            "200",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "double",
+          "fixture": "player-split",
+          "credits": [
+            "700",
+            "300",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-5",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "insurance101",
+          "fixture": "player-ace",
+          "credits": [
+            "848.5",
+            "151.5",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-6",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "pending",
+          "fixture": "player-pending",
+          "credits": [
+            "890",
+            "110",
+            "70"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-7",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "loss-wager1000",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "1,000",
+            "0"
+          ],
+          "text200": false
+        },
+        {
+          "key": "M10A-T07-B01-320-8",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "loss-settled",
+          "fixture": "player-loss",
+          "credits": [
+            "0",
+            "0",
+            "0"
+          ],
+          "text200": false
+        }
+      ],
+      "scenarioCount": 24,
+      "screenshotCount": 6,
+      "assertionSitesDirect": 1,
+      "assertionSitesWithHelpers": 9,
+      "assertionCountMeaning": "Static expect call sites, counted once per target plus its helpers. Runtime repetitions depend on DOM cardinalities and loops; these are not executed assertion totals."
+    },
+    {
+      "id": "M10A-T09-B02",
+      "path": "tests/browser/m10a/t09.spec.ts",
+      "helpers": [
+        "deal",
+        "bounded"
+      ],
+      "variants": [
+        {
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false
+        },
+        {
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true
+        }
+      ],
+      "shotsPerViewport": 4,
+      "geometry": "Page and semantic section overflow, Dealer/seat pair and per-hand card pair non-overlap, visible controls >=44px.",
+      "keyboard": [
+        "After text200 four-leaf state, click Deal Again; player-wager focused."
+      ],
+      "dependencies": "First Split -> Stand -> second child share round; fresh rsa-cap -> three Splits -> four terminal depth-first leaves -> text200 -> Deal Again. Preserve ordered IDs, individual100 wagers, Loss x4, credits600/0/0.",
+      "sourceSha256": "3207e88101327882f8bdc40d8c0a3ddf552e3d9ead3219a8fed857703ca2fdea",
+      "direct": {
+        "assertions": [
+          {
+            "line": 30,
+            "column": 11,
+            "source": "await expect(page.locator('#player-hand [aria-current=\"true\"]')).toHaveAttribute('data-hand-id','round-1/seat-4.1')"
+          },
+          {
+            "line": 31,
+            "column": 76,
+            "source": "await expect(page.locator('#player-hand [aria-current=\"true\"]')).toHaveAttribute('data-hand-id','round-1/seat-4.2')"
+          },
+          {
+            "line": 31,
+            "column": 192,
+            "source": "await expect(page.locator('#player-hand .hud-total')).toHaveText(['Total: 10','Total: 11'])"
+          },
+          {
+            "line": 33,
+            "column": 11,
+            "source": "await expect(page.locator('#player-hand .hud-hand')).toHaveCount(4)"
+          },
+          {
+            "line": 33,
+            "column": 73,
+            "source": "expect(await page.locator('#player-hand article').evaluateAll(els=>els.map(e=>e.getAttribute('data-hand-id')))).toEqual(['round-1/seat-4.1.1.1','round-1/seat-4.1.1.2','round-1/seat-4.1.2','round-1/seat-4.2'])"
+          },
+          {
+            "line": 34,
+            "column": 11,
+            "source": "await expect(page.locator('#player-hand .hud-wager')).toHaveText(Array(4).fill('Wager: 100 credits'))"
+          },
+          {
+            "line": 34,
+            "column": 113,
+            "source": "await expect(page.locator('#player-hand .hud-state')).toHaveText(Array(4).fill('Loss'))"
+          },
+          {
+            "line": 34,
+            "column": 201,
+            "source": "await expect(page.locator('.credits dd')).toHaveText(['600','0','0'])"
+          },
+          {
+            "line": 36,
+            "column": 81,
+            "source": "await expect(page.locator('#player-wager')).toBeFocused()"
+          }
+        ],
+        "screenshots": [
+          {
+            "line": 30,
+            "source": "page.screenshot({path:info.outputPath(`edge-split-first-${viewport.width}.png`),fullPage:true})"
+          },
+          {
+            "line": 31,
+            "source": "page.screenshot({path:info.outputPath(`edge-split-second-${viewport.width}.png`),fullPage:true})"
+          },
+          {
+            "line": 35,
+            "source": "page.screenshot({path:info.outputPath(`edge-four-leaves-${viewport.width}.png`),fullPage:true})"
+          },
+          {
+            "line": 35,
+            "source": "page.screenshot({path:info.outputPath(`edge-four-leaves-text200-${viewport.width}.png`),fullPage:true})"
+          }
+        ],
+        "keyboard": [],
+        "sha256": "2e6fa7a47eabcad3e27db247e4891254e01b2c2022181312093763ebbfe17e81"
+      },
+      "helperDetails": {
+        "deal": {
+          "assertions": [],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "0f4989253a972d66662c8975d6539add00aa21c0b7c69d8340ff059e21590148"
+        },
+        "bounded": {
+          "assertions": [
+            {
+              "line": 7,
+              "column": 3,
+              "source": "expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)"
+            },
+            {
+              "line": 8,
+              "column": 277,
+              "source": "expect(await el.evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true)"
+            },
+            {
+              "line": 10,
+              "column": 84,
+              "source": "expect(a.x+a.width<=b.x+1||b.x+b.width<=a.x+1||a.y+a.height<=b.y+1||b.y+b.height<=a.y+1,`${a.label} intersects ${b.label}`).toBe(true)"
+            },
+            {
+              "line": 13,
+              "column": 86,
+              "source": "expect(a.x+a.width<=b.x||b.x+b.width<=a.x||a.y+a.height<=b.y||b.y+b.height<=a.y).toBe(true)"
+            },
+            {
+              "line": 15,
+              "column": 120,
+              "source": "expect(b.width).toBeGreaterThanOrEqual(44)"
+            },
+            {
+              "line": 15,
+              "column": 163,
+              "source": "expect(b.height).toBeGreaterThanOrEqual(44)"
+            }
+          ],
+          "screenshots": [],
+          "keyboard": [],
+          "sha256": "523d461f2b7a262d0175d257b8b68a010a8aea5bbe2c40daa2bc54b908a49a3f"
+        }
+      },
+      "scenarios": [
+        {
+          "key": "M10A-T09-B02-1280-1",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-1280-2",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-1280-3",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-1280-4",
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true
+        },
+        {
+          "key": "M10A-T09-B02-768-1",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-768-2",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-768-3",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-768-4",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true
+        },
+        {
+          "key": "M10A-T09-B02-320-1",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "first-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-320-2",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "second-split",
+          "fixture": "player-split",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-320-3",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": false
+        },
+        {
+          "key": "M10A-T09-B02-320-4",
+          "viewport": {
+            "width": 320,
+            "height": 720
+          },
+          "state": "four-terminal-leaves",
+          "fixture": "player-rsa-cap",
+          "text200": true
+        }
+      ],
+      "scenarioCount": 12,
+      "screenshotCount": 12,
+      "assertionSitesDirect": 9,
+      "assertionSitesWithHelpers": 15,
+      "assertionCountMeaning": "Static expect call sites, counted once per target plus its helpers. Runtime repetitions depend on DOM cardinalities and loops; these are not executed assertion totals."
+    }
+  ]
+}

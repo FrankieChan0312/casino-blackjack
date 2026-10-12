@@ -25,8 +25,8 @@ test('[M10A-T09-B01] actual2/3/4/5 cards keep every corner and exact total under
     await page.addStyleTag({content:'html { font-size:200%; }'});await bounded(page);await page.screenshot({path:info.outputPath(`edge-five-text200-${viewport.width}.png`),fullPage:true});
   }
 });
-test('[M10A-T09-B02] active first and second Split plus four depth-first terminal leaves remain separate owners',async({page},info)=>{
-  for(const viewport of viewports){await page.setViewportSize(viewport);await deal(page,'player-split');await page.getByRole('button',{name:'Split',exact:true}).click();
+for (const viewport of viewports) test(`[M10A-T09-B02-${viewport.width}] active first and second Split plus four depth-first terminal leaves remain separate owners`,async({page},info)=>{
+  await page.setViewportSize(viewport);await deal(page,'player-split');await page.getByRole('button',{name:'Split',exact:true}).click();
     await expect(page.locator('#player-hand [aria-current="true"]')).toHaveAttribute('data-hand-id','round-1/seat-4.1');await bounded(page);await page.screenshot({path:info.outputPath(`edge-split-first-${viewport.width}.png`),fullPage:true});
     await page.getByRole('button',{name:'Stand',exact:true}).click();await expect(page.locator('#player-hand [aria-current="true"]')).toHaveAttribute('data-hand-id','round-1/seat-4.2');await expect(page.locator('#player-hand .hud-total')).toHaveText(['Total: 10','Total: 11']);await bounded(page);await page.screenshot({path:info.outputPath(`edge-split-second-${viewport.width}.png`),fullPage:true});
     await deal(page,'player-rsa-cap');for(let i=0;i<3;i++)await page.getByRole('button',{name:'Split',exact:true}).click();
@@ -34,7 +34,7 @@ test('[M10A-T09-B02] active first and second Split plus four depth-first termina
     await expect(page.locator('#player-hand .hud-wager')).toHaveText(Array(4).fill('Wager: 100 credits'));await expect(page.locator('#player-hand .hud-state')).toHaveText(Array(4).fill('Loss'));await expect(page.locator('.credits dd')).toHaveText(['600','0','0']);await bounded(page);
     await page.screenshot({path:info.outputPath(`edge-four-leaves-${viewport.width}.png`),fullPage:true});await page.addStyleTag({content:'html { font-size:200%; }'});await bounded(page);await page.screenshot({path:info.outputPath(`edge-four-leaves-text200-${viewport.width}.png`),fullPage:true});
     await page.getByRole('button',{name:'Deal Again',exact:true}).click();await expect(page.locator('#player-wager')).toBeFocused();
-  }
+
 });
 for (const viewport of viewports) for (const fallback of [false,true]) {
   test(`[M10A-T09-B03-${viewport.width}-${fallback}] labelled public long-name four-result and five-card Dealer compositions remain bounded`,async({page},info)=>{
