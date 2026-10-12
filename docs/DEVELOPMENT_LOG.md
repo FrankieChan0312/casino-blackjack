@@ -1,3 +1,31 @@
+## HARNESS_H5_H6_FULLY_RECOVERED - actual implementation publication - 2026-10-12 08:09:09 +08:00
+
+**HARNESS_H5_H6_FULLY_RECOVERED** for implementation commit a92ab1a5bc274ee7c38b1139483e12a33c674b85 on codex/harness-h5. Delivery state: IMPLEMENTED and VERIFIED. Owner acceptance and a genuinely separate Codex client review are NOT RUN; deployment is NOT RUN.
+
+The normal implementation commit and push both passed with native exit 0. Push finished at 2026-10-12 08:07:22.400 +08:00. The live snapshot at 08:08:04.260 +08:00 confirmed the same local, remote and upstream SHA, ahead/behind 0/0, CLEAN, and staged/unstaged/untracked 0. Main and H6 retained their HEAD, branch, status and index; all 39 main and 41 H6 saved raw files match the original baseline.
+
+The unchanged original verify.ps1 ran exactly once, 07:16:05.022-07:42:17.713 +08:00, and passed: 115 Vitest files / 1,448 tests, 331 Chromium cases, typecheck, lint, domain typecheck, build and every fixed Blackjack/Baccarat preservation phase. All 21 required closed receipts passed with native exit 0. Sequential supplements passed 35 H1/H2/H4, 33 publication-selection and 41 H5/H6/Git-directory cases, both standalone guards, all three asset validators, independent coverage 84 checkpoints / 53 assertion sites / 66 screenshots / 0 omissions, five documentation tests, privacy 3,288 files / 55 traces / 0 findings, explicit H5 staged publication, whitespace and the historical H2 default boundary.
+
+The final historical check at 08:01:05.637-08:03:21.792 +08:00 verified 17,049 working originals, 17,049 original backups and 333 unchanged full-run source inputs, with changes 0, pending transactions 0 and task writers 0. Existing H1 preserved 41 overwritten variants; 57 new timestamp variants were separately archived after path/time/SHA/size validation. All 98 new and 98 prior archives retain their hashes. Fifteen original Git versions/inventory and the frozen blackjack-v1.0 tag remain exact. M15 literal outputs remain 5,013 and 42,416 bytes with LF endings; Dealer PNG and raw-CRLF/Git-LF manifest identities remain unchanged. No OCR was performed.
+
+Repair 9 changes only H5-ATTR-C fixture handling: read and validate the native linked gitfile without rewriting it, then create independently owned missing/malformed gitfiles with wx. Both native exit 128 assertions and all LF/CRLF, fresh-attribute and negative contracts remain. The removed failed fixture's Hidden attribute remains UNKNOWN; Hidden plus default-w is a supported EPERM hypothesis. Real metadata permissions and attributes were not edited. Repair 8 guard SHA remains 826f64c9c289d9091f3fbdbc8cda7ac10bdbda7807d280e8d982626b9c464bd4, with one fresh 14-path attribute batch, all 17 path-aware current hashes, 25 Git calls and the original 5,000ms deadlines.
+
+| Case | Initial focused | Post-restoration sequential |
+| --- | ---: | ---: |
+| H5-P01 | 1,586ms; body 1,585.1684ms | 2,151ms; body 2,149.9612ms |
+| H6-P01 | 1,987ms | 2,744ms |
+| H5-ATTR-C | 1,139ms | 1,523ms |
+
+Both H5-P01 runs observed 25 Git calls and one root resolution. The original full reporter did not expose individual successful case times; file aggregate durations are not P01 times. Current H5 test OID is 723e921815a5c264ce3265a72f4c3f9761b55f77, SHA cde35b6b9d3f650237838de0f3d91abb025d65a75aea42904f9a64d387b495fe. The precise patch SHA is 1181c319db83a505cb68a9d3002e689bdec207628f1a52df324a951930a2881b. All 333 raw inputs and 18 committed source identities match the verified freeze; exact original/current identities remain in classification-v1.json.
+
+Classification retains 1,108 entries, 32 authorized paths, 18 source identities and all original 1,085 entries: 108 AUTHORED_TEXT, 597 RAW_IMMUTABLE_EVIDENCE, 403 BINARY_ASSET, UNKNOWN 0. Every raw/binary entry is validated; 690 historical immutable files remain byte-identical in working/index, changed 0. Original H2 SHA a2424f4e0e681519f7ea44997025b05db879264fb2679d15437e0a7e1135be03 is unchanged. The historical private-index default check belongs to old HEAD 59100ce7; this receipt uses the real index and explicit H5 manifest.
+
+Independent fresh-context review by /root/delivery_review passed, with no actionable findings and zero mismatches among 21 original receipts. Prior failed attempts and operational consumer errors remain preserved. No source fix, expected hash amendment, test retry, full rerun or product/config change followed verification. Evidence is under the actual H5 Git directory in h5-repair9/closure-candidate.json, fresh-context-review.json, implementation-publication.json, final-staging.json, final-historical.json, supplement-integrity.json and evidence-capture/h5-r9-* logs/receipts.
+
+This six-document publication receipt is a separate checkpoint. Its affected docs/privacy/explicit H5 staged publication/whitespace/source checks must pass before normal commit/push; its final SHA will be stored in private final Git evidence and the delivery message. Recommended settings remain GPT-6.1 Sol / Max or highest available; client metadata supports availability, while actual root runtime is NOT VERIFIED.
+
+Repair counts: H5 9/10, H6 1/10, M15-CLOSURE 2/10, M16-T01 1/10. Repair 10 is NOT AUTHORIZED. WAIT FOR OWNER INTEGRATION DECISION into main. M16-T02-T05 and multiplayer are NOT STARTED; deployment is NOT RUN.
+
 ## HARNESS-H5 Repair9 full verification and restoration execution evidence - 2026-10-12 07:54:10 +08:00
 
 Repair9 is IMPLEMENTED. The unchanged original verify.ps1 ran exactly once on the frozen inputs, 2026-10-12 07:16:05.022-07:42:17.713 +08:00 (1,572,691ms), PASS/native0: typecheck, global lint, 115 Vitest files/1,448 tests, domain typecheck, build, 331 Chromium cases (one original worker, 23.1m), and all original M1-M8 preservation phases including accepted M7 24 and M8 956 Vitest/44 Chromium. No retry, prewarm, test order, worker, deadline, product configuration, production guard or H6 source change followed the fixture correction.
