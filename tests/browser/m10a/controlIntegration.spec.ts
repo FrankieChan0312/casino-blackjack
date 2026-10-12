@@ -128,8 +128,8 @@ test('[M10A-CB05] disabled Insurance is identifiable and explained while native 
   }
 });
 
-test('[M10A-CB06] text 200% keeps every wager, action and Insurance/Even Money label operable without covering cards', async ({ page }, info) => {
-  for (const viewport of viewports) {
+for (const viewport of viewports) test(`[M10A-CB06-${viewport.width}] text 200% keeps every wager, action and Insurance/Even Money label operable without covering cards`, async ({ page }, info) => {
+
     await page.setViewportSize(viewport);
     for (const state of ['open', 'player', 'insurance', 'even-money']) {
       if (state === 'open') await page.goto('/?fixture=player');
@@ -139,7 +139,7 @@ test('[M10A-CB06] text 200% keeps every wager, action and Insurance/Even Money l
       if (state === 'player') { await button(page, 'Stand').focus(); await page.keyboard.press('Enter'); await expect(page.locator('#player-result')).toBeFocused(); }
       if (state === 'insurance') { await button(page, 'Decline').focus(); await page.keyboard.press('Enter'); await expect(page.locator('#player-hand')).toBeFocused(); }
     }
-  }
+
 });
 
 test('[M10A-CB07] native keyboard actions keep visible focus, real hand routing and result/next-round focus under reduced motion', async ({ page }) => {

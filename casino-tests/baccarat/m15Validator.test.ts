@@ -1,12 +1,14 @@
 import { expect, it } from 'vitest';
 import { mkdirSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { resolveGitDir } from '../../scripts/git-directory.mjs';
 import { DEFAULT_RULES } from '../../src/baccarat/domain/config.js';
 import { burnValue, consumeRound, closeAfterSettlement, mayBeginRound } from '../../src/baccarat/domain/shoe.js';
 import { resolveRound } from '../../src/baccarat/domain/rules.js';
 import { fixture, RANKS, BURN } from './m15Fixtures.js';
 import { send } from './fixtures.js';
 
-const directory='.git/m15/validators';
+const directory=resolve(resolveGitDir(),'m15/validators');
 it('[M15-V01] independent bounded shoe oracle: thirteen burns, literal boundary, round sizes4/5/6, closure and replacement', () => {
   const scenarios: unknown[]=[];
   for(let index=0;index<13;index++) {

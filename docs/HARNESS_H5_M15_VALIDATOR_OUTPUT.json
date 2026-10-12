@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "baseline": "a7152397079f5d9f493687eec9052d707b2ef596",
+  "accepted": "a7152397079f5d9f493687eec9052d707b2ef596",
+  "scope": "Distinct owner-authorized fourth M15 validator evidence-root exception; independent rules/oracles unchanged",
+  "entries": [
+    {
+      "file": "casino-tests/baccarat/m15Validator.test.ts",
+      "originalBlob": "10dd500af7586644bd859c9dcfa6550b58fd1af5",
+      "originalSha256": "11db7e9babafdef78ff76cea210dfe6fff7dc8a0c8870108357bad94d69419a9",
+      "approvedBlob": "a7b884ec2a6a4544b45b9fcc9c180b212d7ede1c",
+      "approvedSha256": "f23a78dac29c458065375f1915e506c9993c483c2b9a2d5104d8d20f563f8dc8",
+      "approvedEdits": [
+        {
+          "from": "import { mkdirSync, writeFileSync } from 'node:fs';\n",
+          "to": "import { mkdirSync, writeFileSync } from 'node:fs';\nimport { resolve } from 'node:path';\nimport { resolveGitDir } from '../../scripts/git-directory.mjs';\n"
+        },
+        {
+          "from": "const directory='.git/m15/validators';",
+          "to": "const directory=resolve(resolveGitDir(),'m15/validators');"
+        }
+      ],
+      "originalRegistrations": [
+        {
+          "text": "'[M15-V01] independent bounded shoe oracle: thirteen burns, literal boundary, round sizes4/5/6, closure and replacement'",
+          "line": 10
+        },
+        {
+          "text": "'[M15-V02] independent ordered13×13 rank matrix for each side: exactly13 wins of169, separate from point values'",
+          "line": 35
+        }
+      ],
+      "originalAssertions": [
+        {
+          "text": "expect(burnValue(RANKS[index])).toBe(BURN[index])",
+          "line": 14
+        },
+        {
+          "text": "expect(initial.shoe.cursor).toBe(BURN[index]+1)",
+          "line": 14
+        },
+        {
+          "text": "expect(initial.shoe.cutPosition).toBe(402)",
+          "line": 15
+        },
+        {
+          "text": "expect(initial.shoe.cards.length).toBe(416)",
+          "line": 15
+        },
+        {
+          "text": "expect(mayBeginRound(before)).toBe(true)",
+          "line": 17
+        },
+        {
+          "text": "expect([resolved.cursor,resolved.cutReached,resolved.status]).toEqual([401+length,true,'CLOSING'])",
+          "line": 19
+        },
+        {
+          "text": "expect([closed.status,mayBeginRound(closed)]).toEqual(['CLOSED',false])",
+          "line": 20
+        },
+        {
+          "text": "expect(416-closed.cursor).toBe(15-length)",
+          "line": 21
+        },
+        {
+          "text": "expect([state.shoe.cursor,state.shoe.status,state.pendingUnits]).toEqual([17,'CLOSING',9000])",
+          "line": 28
+        },
+        {
+          "text": "expect(state.availableUnits).toBe(108000)",
+          "line": 29
+        },
+        {
+          "text": "expect(state.shoe.status).toBe('CLOSED')",
+          "line": 29
+        },
+        {
+          "text": "expect([state.shoe.ordinal,state.shoe.roundNumber,state.availableUnits,state.reservedUnits]).toEqual([1,0,107000,1000])",
+          "line": 30
+        },
+        {
+          "text": "expect(state.shoe.id).toBe('baccarat-shoe-2')",
+          "line": 31
+        },
+        {
+          "text": "expect(state.shoe.cursor).toBeGreaterThanOrEqual(2)",
+          "line": 31
+        },
+        {
+          "text": "expect(state.shoe.cursor).toBeLessThanOrEqual(11)",
+          "line": 31
+        },
+        {
+          "text": "expect(mayBeginRound({...state.shoe,cursor:416-remaining,cutPosition:416})).toBe(remaining===6)",
+          "line": 32
+        },
+        {
+          "text": "expect(actual).toBe(expected)",
+          "line": 45
+        },
+        {
+          "text": "expect(round.settlements[0].grossUnits).toBe(expected?12000:0)",
+          "line": 45
+        },
+        {
+          "text": "expect(round.settlements[0].netUnits).toBe(expected?11000:-1000)",
+          "line": 46
+        },
+        {
+          "text": "expect(counts).toEqual({PLAYER:13,BANKER:13})",
+          "line": 50
+        }
+      ],
+      "originalOutputOperations": [
+        {
+          "text": "mkdirSync(directory,{recursive:true})",
+          "line": 33
+        },
+        {
+          "text": "writeFileSync(`${directory}/shoe.json`,JSON.stringify({status:'PASS',burnCategories:13,boundaryScenarios:39,safetyScenarios:7,transitionScenarios:1,scenarios},null,2)+'\\n')",
+          "line": 33
+        },
+        {
+          "text": "mkdirSync(directory,{recursive:true})",
+          "line": 51
+        },
+        {
+          "text": "writeFileSync(`${directory}/pairs.json`,JSON.stringify({status:'PASS',orderedCombinationsPerSide:169,winningCombinationsPerSide:13,counts,rows},null,2)+'\\n')",
+          "line": 51
+        }
+      ],
+      "originalOutputNames": [
+        {
+          "text": "`${directory}/shoe.json`",
+          "line": 33
+        },
+        {
+          "text": "`${directory}/pairs.json`",
+          "line": 51
+        }
+      ],
+      "originalOutputNameBindings": [],
+      "originalTimeouts": []
+    }
+  ]
+}
