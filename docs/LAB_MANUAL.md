@@ -1,3 +1,11 @@
+## Closure-document regression lesson — 2026-10-08 14:20:36 +08:00
+
+A documentation-only receipt can still change an accepted test's input. The full gate before a later README edit does not verify that edited document. First T01 preservation955/956FAIL reveals M15 factual receipt a715239's same-line evidence/future-status combination; the accepted assertion remains intact. Capture first failure, prove the introducing Git version, prepare a concrete unapplied paragraph proposal, and obey the owner's explicit M15 stop/no-auto-repair boundary. Do not call partial fixture/source checks completed M16 verification. [Stopped handoff](CASINO_M16_OVERNIGHT_HANDOFF.md).
+
+## M16 T01 learning checkpoint — 2026-10-08 14:12:38 +08:00
+
+Roadmap display coordinates differ from logical streak coordinates. A six-row tail must not truncate derived comparisons; compare full streak lengths/occupancy. Ties decorate a decisive cell but remain separate Bead Plate outcomes; pair flags are facts, not geometry. Freeze independent expected cells before production and separately assert thresholds/collisions. [Formal contract](M16_ROADMAPS_SPEC.md); [oracle provenance](M16_ORACLES/README.md). Model confidence does not replace executed fixtures or preservation.
+
 ## M15 verified closure publication — 2026-10-08 13:57:43 +08:00
 
 M15: ACCEPTED / CLOSED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. Fresh-session technical review and all required product/documentation/privacy/publication gates PASS/native0; unchanged full verify.ps1 exactly once,1410Vitest/321Chromium/independent M1–M8 preservation. Primary closure commit 39b359b5d9547959e6b1d78a1479dde67005073a normally pushed origin/main/native0; observed local=tracking=live,0/0,CLEAN/untracked0 before this factual receipt. [Exact closure receipt](M16_EVIDENCE/20261008-131935/m15-closure/publication.json). Closure repairs1/10; M15=7/10,Repair8 NOT STARTED; H1/H2/H3/H4=1/4/1/3 each /10. First closure-ordering FAIL retained; historical PNG timeout cause UNKNOWN;5000ms/assertions and accepted40ms/110ms timings unchanged. This receipt's own SHA is resolved from Git after its normal push. M16-T01–T05 NOT STARTED; conditional execution may begin only after receipt clean parity; M16 human visual acceptance PENDING; M17/multiplayer NOT STARTED; deployment NOT RUN. Earlier dated pending/failed checkpoints remain historical.
