@@ -1,6 +1,6 @@
 ## Current M15 closure addendum — 2026-10-12 11:27:04 +08:00
 
-M15-CLOSURE DOCUMENTATION — PENDING VERIFICATION. Task: M15-CLOSURE Repair 3/10. This owner-authorized documentation reconciliation changes no gameplay, harness, test, timeout, worker, dependency, runtime setting or M16 implementation. OWNER FINAL ACCEPTANCE: PENDING.
+M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED. Task: M15-CLOSURE Repair 3/10. This owner-authorized documentation reconciliation changes no gameplay, harness, test, timeout, worker, dependency, runtime setting or M16 implementation. OWNER FINAL ACCEPTANCE: PENDING.
 
 M15 implementation is IMPLEMENTED / VERIFIED / COMMITTED / PUSHED; prior owner visual acceptance is ACCEPTED. The accepted profile uses an eight-deck Baccarat shoe, burn indicator plus rank-valued additional burn cards, cut reserve 14, six-card round safety and settlement before shoe replacement. Player Pair and Banker Pair settle by rank at 11:1 profit. Atomic Repeat checks combined funding before mutation; deterministic accounting, replay v1/v2 and completed history identifiers/totals/winner/pair flags remain unchanged. [Accepted scope and product evidence](M15_BACCARAT_SHOE_AND_PAIRS.md); [prior owner acceptance and publication receipt](M16_EVIDENCE/20261008-131935/m15-closure/publication.json).
 
@@ -19,6 +19,26 @@ M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NO
 
 Private native receipts, original-byte recovery copies, complete link classification and WIP identities are stored under the actual Git directory at m15-closure-repair3/20261012-112443. These are not public repository links. Commit and remote parity will be recorded only after normal publication.
 
+### Executed primary publication receipt — 2026-10-12 11:40:27 +08:00
+
+The six-document primary correction was verified and normally committed/pushed on main as a2ed918a9bbdcff9cb18c3ec5a2bdf33d1fcad70. Closed commit and push exits are 0; local HEAD, origin/main and live remote HEAD match, ahead/behind 0/0. MAIN-INTEGRATION-I01 remains 19d17343408d6f0d89ed8b903b014fdbec38781d. This completed checkpoint establishes M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED; OWNER FINAL ACCEPTANCE remains PENDING.
+
+Remaining main work is DIRTY: four modified M16 authority documents and 29 untracked files; all 33 excluded original WIP raw identities are preserved. The local Repair2 ledger remains unchanged/unclassified/unpublished. No M16 source or immutable evidence was staged. Counts remain H5 9/10, H6 1/10, M15-CLOSURE 3/10 and M16-T01 1/10.
+
+This factual receipt records an observed publication, not a predicted commit. Its own final receipt commit and push result are resolved from Git and closed native receipts after its required affected checks. No new substantive repair is included. WAITING FOR OWNER FINAL ACCEPTANCE / M16-T01 RESUMPTION DECISION.
+### Fresh verification and review supporting the primary checkpoint
+
+Documentation/portfolio: 2 files / 5 tests PASS/native0. Link/scope/whitespace: all six staged blobs PASS/native0; 40 unpublished link occurrences rendered as explicit WIP provenance, all 816 prior committed clickable occurrences retained. M15 output/validator contracts: 3 browser source files / 30 native cases, validator 2 cases / 20 assertions PASS/native0; shoe/pairs literal outputs preserve 5013 / 42416 original bytes and SHA256. Historical closure package: 21 compressed/original captures unchanged. Historical immutable main outputs: 17,049 original raw identities PASS/native0; 8,071 original Git blob OID/type/size rows exact.
+
+H5/H6 guards were freshly executed PASS/native0 on the existing clean rehearsal source; the actual MAIN333 raw source identities remain unchanged, and the approved cross-checkout mode/OID identity bridge is exact. The full 115-file / 1,448 Vitest / 331 Chromium verify.ps1 receipt remains REUSED/native0; new full-suite execution NOT RUN and no certification of dirty M16 WIP. Direct validators that write historical output paths were not invoked.
+
+Primary staged privacy: 3,290 files / 55 trace entries, findings0/exclusions0 PASS/native0. Existing publication contract: 1,108 classifications, UNKNOWN0, six staged AUTHORED_TEXT paths, 690 raw/binary files byte-identical, attributes/authored and staged whitespace PASS/native0. Both original H2 and H5 classification manifests remain byte-identical; no classification was added to hide an unknown path.
+
+Independent fresh-context child review of the exact primary diff a659fedc68f32c83a09f3c250f2bfe8605dcde8189cf84ac4d0249d2b2e0f048 is PASS/actionable findings0. Separate-client genuinely fresh-session review is NOT RUN. An additional naive cross-checkout raw comparison initially FAILed at .gitattributes; preserved review observation and read-only identity evidence show 38 raw-equal / 295 EOL-only differences, non-EOL differences0 and333 exact modes/OIDs. No required validator rerun or source equalization followed that observation.
+
+Repair3 cause hypothesis: the old current closure headers and unpublished public links described the pre-H5 stop, although I01 had normally published the recovered technical source. A dated current addendum with explicit product/documentation/human-acceptance boundaries and WIP provenance links should remove that documentation gap without changing old failures or M16. Fresh scope/link, documentation, preservation and publication gates verified that hypothesis; older timeout/lint/full-gate failures and UNKNOWN causes remain historical, not retroactively passed.
+
+This publication receipt preserves existing M15 product visual acceptance as ACCEPTED; documentation OWNER FINAL ACCEPTANCE is PENDING. Independent technical review does not grant human acceptance. M16-T01 remains IN PROGRESS / NOT VERIFIED / NOT COMMITTED; T02 through T05 and multiplayer NOT STARTED; deployment NOT RUN.
 ### Historical closure observations and acceptance (original outcomes retained)
 
 ## Final stopped-checkpoint observation — 2026-10-08 14:22:55 +08:00

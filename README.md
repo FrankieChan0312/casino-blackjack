@@ -1,6 +1,6 @@
 ## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
 
-M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — PENDING VERIFICATION. OWNER FINAL ACCEPTANCE: PENDING.
+M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED. OWNER FINAL ACCEPTANCE: PENDING.
 
 H5/H6: TECHNICALLY VERIFIED / INTEGRATED INTO MAIN. MAIN-INTEGRATION-I01: VERIFIED / INTEGRATED / PUSHED at 19d17343408d6f0d89ed8b903b014fdbec38781d. The full H5 receipt remains REUSED: 1,448 Vitest / 331 Chromium / native exit 0; no new full-suite execution is claimed.
 
@@ -8,6 +8,13 @@ M16-T01: IN PROGRESS / NOT VERIFIED / NOT COMMITTED. M16-T02 through M16-T05: NO
 
 [Current M15 closure record](docs/M15_FINAL_CLOSURE.md). The dated records below retain their original outcomes; unpublished local references are rendered as provenance text rather than public links.
 
+### Executed primary publication receipt — 2026-10-12 11:40:27 +08:00
+
+The six-document primary correction was verified and normally committed/pushed on main as a2ed918a9bbdcff9cb18c3ec5a2bdf33d1fcad70. Closed commit and push exits are 0; local HEAD, origin/main and live remote HEAD match, ahead/behind 0/0. MAIN-INTEGRATION-I01 remains 19d17343408d6f0d89ed8b903b014fdbec38781d. This completed checkpoint establishes M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED; OWNER FINAL ACCEPTANCE remains PENDING.
+
+Remaining main work is DIRTY: four modified M16 authority documents and 29 untracked files; all 33 excluded original WIP raw identities are preserved. The local Repair2 ledger remains unchanged/unclassified/unpublished. No M16 source or immutable evidence was staged. Counts remain H5 9/10, H6 1/10, M15-CLOSURE 3/10 and M16-T01 1/10.
+
+This factual receipt records an observed publication, not a predicted commit. Its own final receipt commit and push result are resolved from Git and closed native receipts after its required affected checks. No new substantive repair is included. WAITING FOR OWNER FINAL ACCEPTANCE / M16-T01 RESUMPTION DECISION.
 ### Historical integration and milestone records
 
 ## Owner-authorized H5/H6 main integration — 2026-10-12 09:15:27 +08:00
