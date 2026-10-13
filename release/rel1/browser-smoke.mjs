@@ -93,6 +93,17 @@ async function screenshot(page, filename) {
   await page.screenshot({ path: join(outputDir, filename), fullPage: true });
   return filename;
 }
+async function failureEvidence(page) {
+  const check = report.checks.at(-1), basename = `failed-step-${report.checks.length}`;
+  try {
+    check.failureUrl = page.url();
+    await writeFile(join(outputDir, `${basename}.html`), await page.content());
+    check.failureHtml = `${basename}.html`;
+    check.failureScreenshot = await screenshot(page, `${basename}.png`);
+  } catch (error) {
+    check.failureCaptureError = error.stack ?? String(error);
+  }
+}
 async function keyboardEnter(locator) {
   await locator.focus();
   assert(await locator.evaluate(element => element === document.activeElement), 'Keyboard action must target the focused native control');
@@ -175,7 +186,8 @@ try {
         const refreshed = await page.reload(); assert.equal(refreshed.status(), 200);
         await heading(page, route); await portraits(page);
         return { route, images, screenshot: await screenshot(page, `direct-${route === '/' ? 'root' : route.slice(1)}.png`) };
-      } finally { await context.close(); }
+      } catch (error) { await failureEvidence(page); throw error; }
+      finally { await context.close(); }
     });
   }
   await step('Native lobby and game navigation', async () => {
@@ -189,7 +201,8 @@ try {
         await portraits(page);
       }
       return { routes: ['/casino', '/blackjack', '/casino', '/baccarat', '/blackjack', '/baccarat', '/casino'] };
-    } finally { await context.close(); }
+    } catch (error) { await failureEvidence(page); throw error; }
+    finally { await context.close(); }
   });
   await step('Blackjack real wager, legal action, settlement, repeat and next; native keyboard', async () => {
     const context = await freshContext(), page = await context.newPage();
@@ -222,7 +235,8 @@ try {
       }
       assert(observedAction, 'A player-action scenario was not observed in eight real rounds; do not claim it passed');
       return { actionObserved: observedAction, keyboard: ['Tab to chip preset', 'Enter to choose preset', 'Enter to start/deal/stand/repeat/next'], screenshot: 'blackjack-settled.png' };
-    } finally { await context.close(); }
+    } catch (error) { await failureEvidence(page); throw error; }
+    finally { await context.close(); }
   });
   await step('Baccarat real wager, deal, settlement, repeat and next; native keyboard', async () => {
     const context = await freshContext(), page = await context.newPage();
@@ -235,13 +249,21 @@ try {
       await keyboardEnter(page.getByRole('button', { name: 'Deal', exact: true }));
       let round = await baccaratRound(page, 'initial', 1000, 25); await screenshot(page, 'baccarat-settled.png');
       await keyboardEnter(page.getByRole('button', { name: 'Repeat Bet', exact: true }));
+      // Baccarat Repeat restores and reserves the previous wagers in BETTING;
+      // the existing production flow requires an explicit Deal afterward.
+      await page.getByLabel('Wager amount', { exact: true }).waitFor();
+      assert.equal(await page.locator('[data-wager-target="PLAYER"] .baccarat-wager-chip').innerText(), '25 credits');
+      assert.equal(numeric(await page.locator('[data-credits="reserved"]').innerText()), 25);
+      assert.equal(numeric(await page.locator('[data-credits="available"]').innerText()), round.available - 25);
+      await keyboardEnter(page.getByRole('button', { name: 'Deal', exact: true }));
       round = await baccaratRound(page, 'repeat', round.available, 25);
       await keyboardEnter(page.getByRole('button', { name: 'Deal Again', exact: true }));
       await page.getByLabel('Wager amount', { exact: true }).waitFor();
       assert.equal(numeric(await page.locator('[data-credits="reserved"]').innerText()), 0);
       assert.equal(numeric(await page.locator('[data-credits="available"]').innerText()), round.available);
-      return { keyboard: ['Enter to place wager/deal/repeat/next'], screenshot: 'baccarat-settled.png' };
-    } finally { await context.close(); }
+      return { repeat: 'Restored Player 25-credit wager in BETTING, then explicit Deal', keyboard: ['Enter to place wager/deal/repeat/next'], screenshot: 'baccarat-settled.png' };
+    } catch (error) { await failureEvidence(page); throw error; }
+    finally { await context.close(); }
   });
   for (const game of ['blackjack', 'baccarat']) {
     await step(`320px viewport: ${game} real wager and completed round`, async () => {
@@ -263,7 +285,8 @@ try {
         const settledDimensions = await noHorizontalOverflow(page);
         assert(await page.getByRole('button', { name: 'Deal Again', exact: true }).isVisible());
         return { viewport: { width: 320, height: 720 }, entryDimensions, settledDimensions, screenshot: await screenshot(page, `${game}-320px.png`) };
-      } finally { await context.close(); }
+      } catch (error) { await failureEvidence(page); throw error; }
+      finally { await context.close(); }
     });
   }
   await step('Required assets, console and network independence', async () => {

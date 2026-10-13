@@ -1,6 +1,6 @@
 # Casino — Interview Demo v1.0.0
 
-Prerequisite: install Node.js **24.19.x** (supported range: >=24.19.0 and <25). This is a Node launcher, not a bundled-runtime EXE. No npm install or build is required.
+Prerequisite: install Node.js **24.19.x** (supported range: >=24.19.0 and <25). Verification platform: **Node 24.19.0, Windows 10.0.26200.9457, Chromium 153.0.8010.12**. This is a Node launcher, not a bundled-runtime EXE. No npm install or build is required.
 
 1. Extract the **whole ZIP** into a folder. Do not launch inside the ZIP.
 2. On Windows, double-click **START-DEMO.cmd**. Or open a terminal in this folder and run `node start-demo.mjs`.
@@ -11,4 +11,4 @@ Do not double-click `dist/index.html`. If Node is missing, install the prerequis
 
 This single-player portfolio preview includes Blackjack, local computer guests, a casino lobby, and Baccarat. Credits are simulated and have no cash value. Session state is kept only in memory: refreshing, navigating between pages, or reopening starts a new 1,000-credit session and loses the prior history. Next-round/repeat controls preserve the current session. No M16 completion or production-casino claim is made.
 
-Exact executed platform/browser versions and verification results are in the release candidate report. Only Windows is tested for the command launcher; macOS/Linux support has not been verified. `VERSION.json` identifies the game and packaging commits and every payload hash. `THIRD-PARTY-NOTICES.txt` preserves runtime dependency notices.
+Only the Windows command launcher and the versions above are tested; macOS/Linux support has not been verified. `VERSION.json` identifies the game and packaging commits and every payload hash. `THIRD-PARTY-NOTICES.txt` preserves runtime dependency notices.
