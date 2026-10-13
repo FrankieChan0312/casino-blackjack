@@ -1,6 +1,6 @@
 # REL1 — Lightweight interview demo release
 
-Task: REL1, packaging only. Recommended model GPT Sol 6.1 / High; client availability confirmed, actual runtime model/effort NOT VERIFIED. Cumulative repair ledger: 4/10 (Repair4 package rerun pending). No historical milestone repair allowance is consumed.
+Task: REL1, packaging only. Recommended model GPT Sol 6.1 / High; client availability confirmed, actual runtime model/effort NOT VERIFIED. Cumulative repair ledger: 4/10. No historical milestone repair allowance is consumed.
 
 Game baseline: `920e1035f22eb7c770c50a409e977bcb33ee66ca`. Isolated branch: `codex/rel1-interview-demo`. Original `main` remains dirty and is owned by a separate active M16 session. No original worktree/index edits, process termination, evidence migration or history rewrite are part of REL1.
 
@@ -33,7 +33,7 @@ Source checkpoint verification and actual ZIP gates are pending. No upload, publ
 1. Browser harness first ESLint FAIL/native1 (30 no-undef errors). Hypothesis: Node/browser globals lacked lexical declarations. Added built-in imports and declared serialized browser globals; affected ESLint PASS/native0 at 2026-10-13 21:57:20 +08:00. Actual first output preserved, SHA-256 `7b75b148fbcf698d94b8e10e450daf2c301ca2431359ffb11debc2626e673906`.
 2. Launcher suite first sandbox run FAIL/native1: AppContainer TEMP realpath EPERM. Unchanged native rerun exposed two test issues (9 PASS / 2 FAIL / 1 cancelled): missing Host rejected by Node parser400, and wrapper stdin retained event loop. Hypothesis: parser rejection satisfies security requirement, wrapper stream prevents natural shutdown. New tests require real error/no index payload and destroy wrapper stdin; affected suite PASS12/native0. Original logs remain `launcher-initial.log` / `launcher-escalated.log`; success `launcher-repair2.log`.
 3. Root source lint FAIL/native1 (8 diagnostics): missing Node globals in launcher/tests and control-character regex rule. Hypothesis: lexical imports and an equivalent codepoint predicate preserve rejection behavior under unchanged lint rules. Targeted lexical imports/codepoint fix: lint PASS/native0 and launcher suite PASS12/native0 at 2026-10-13 22:12:26 +08:00; original `rel1-source-lint.log` retained.
-4. Actual candidate-01 browser FAIL/native1: first Baccarat settlement passed; Repeat then waited for a result without explicit Deal. Pinned engine101–112 proves REPEAT returns BETTING with reserved prior wagers, controller only resolves/commits DEAL. Hypothesis: assert restored wager/reserve then execute legal Deal before waiting. Harness-only targeted correction, plus failure DOM/screenshot retention, syntax/lint PASS/native0 at 2026-10-13 22:20:09 +08:00; actual candidate rerun pending. No timeout/game/test-fixture change. First browser report/log retained.
+4. Actual candidate-01 browser FAIL/native1: first Baccarat settlement passed; Repeat then waited for a result without explicit Deal. Pinned engine101–112 proves REPEAT returns BETTING with reserved prior wagers, controller only resolves/commits DEAL. Hypothesis: assert restored wager/reserve then execute legal Deal before waiting. Harness-only targeted correction, plus failure DOM/screenshot retention, syntax/lint PASS/native0 at 2026-10-13 22:20:09 +08:00; candidate-02 extracted browser10/10 PASS/native0. No timeout/game/test-fixture change. First browser report/log retained.
 
 ## Candidate-01 observations
 
@@ -42,3 +42,37 @@ Source checkpoint commit `ad965ce9325f2b22676a594f7afb405fdf70b4fc`; 26 files, Z
 Real Windows START-DEMO.cmd and direct node were invoked from a different cwd with spaces/non-ASCII extraction path. Both printed ready URLs; real terminal Ctrl+C printed `Demo stopped.` and both listener ports were closed. Terminal host exits1 on user interruption, separately disclosed; process-level SIGINT listener test naturally exits0 and verifies port reuse. Windows batch also presents its normal `Terminate batch job (Y/N)?` prompt. These outputs do not hide a normal command failure.
 
 Fresh-context reviewer requested exact versions inside START-HERE; corrected in the new candidate: Node24.19.0 / Windows10.0.26200.9457 / Chromium153.0.8010.12. Genuine separate-client fresh-session review remains NOT RUN. All retained failed logs will have external SHA-256 index entries before final delivery.
+
+## Final local candidate — READY_FOR_RELEASE_REVIEW
+
+Game baseline: `920e1035f22eb7c770c50a409e977bcb33ee66ca`. Exact packaging source: `dfdfc4ac8d4b40ca4d6af19153d50a5fecc5cd77`. Branch `codex/rel1-interview-demo`, locally committed; push NOT RUN. The later compact documentation receipt changes no package/runtime/test bytes and does not retarget provenance.
+
+Candidate-02 ZIP: **2,977,572 bytes / 2.8396339417 MiB / 26 files**, SHA-256 **de05a4692d50f099724d6875ca2cb5118f0b94c2b795eaa6b18099d4c546a6fb**. `SHA256SUMS.txt` is external. Payload manifest SHA-256 `93c263ad1c1a82bb6020b501827ff18c7ebf1c6f71fbb321a5eeddcde13fcddc`; VERSION excludes its own self-reference. Complete baseline18PNG assets and actual runtime license texts included. No source/tests/history/evidence/node_modules/browser binary enters ZIP.
+
+| Required local verification | Result | Native exit / evidence |
+| --- | --- | --- |
+| Pinned production build and both fixture guards | PASS | 0; production-build.log / baccarat-fixture-guard.log |
+| All release JavaScript lint, syntax and PowerShell parse | PASS | 0; source-checkpoint-lint.log / repair4-all-lint.log and native source checks |
+| Actual final ZIP extraction/layout/manifests/26 hashes | PASS | 0; package-inspection-02.log |
+| Launcher security/process + actual final extracted package | PASS | 0; 13/13, actual-zip-launcher-02.log; traversal/encoded/hidden/Host/method/symlink/port/Node/missing-dist/shutdown covered |
+| Production browser routes/direct/navigation/refresh | PASS | 0; four actual routes, browser-02/browser-report.json |
+| Real Blackjack/Baccarat wager/action/settlement/next/repeat | PASS | 0; six unseeded rounds, no fixture queries or RNG overrides |
+| Native keyboard, portraits/Dealer/cards/chips, 320px | PASS | 0; both games, dimensions320px, screenshots outside Git |
+| Local-only gameplay network and application errors | PASS | 0; outside/console/page/required-asset errors all0 |
+| Final source scope/package privacy/document navigation | PASS | 0; final-audit.json/log; 26 files scanned, findings0 |
+| Real final Windows CMD and Ctrl+C, different cwd/Chinese+spaces path | PASS | ready URL / stopped / listener closed; native-console-observations-02.json; terminal-host interruption exit1 separately disclosed, natural Node-handler suite exit0 |
+| Prior full product suites | PASS (REUSED) | historical1448Vitest/331Chromium/native0; source identity exact; fresh complete historical run NOT RUN |
+| Independent fresh-context child release review | PASS | Unresolved actionable findings0; review-final.md/json, exact source/artifact/169 evidence hashes independently checked |
+| Genuinely separate-client fresh-session release review | NOT RUN | Required before public release; child fresh-context review is separate |
+| Tag, push, draft/upload/download/publication/public download | NOT RUN | Proposed tag interview-demo-v1.0.0; no GitHub release/download URL exists |
+| README navigation | NOT RUN | README_NAVIGATION_PENDING; wait for real custom asset and reconcile active README WIP |
+
+Executed Node24.19.0 / Windows10.0.26200.9457 / Chromium153.0.8010.12. No macOS/Linux support claim. START-HERE carries these exact versions. Actual ZIP package has no node_modules and standalone launcher imports built-ins only.
+
+Original preservation read at 2026-10-13 22:29:07 +08:00: main/HEAD unchanged; index SHA-256 and all stage rows exact.115/121 durable baseline file hashes unchanged; six concurrent updates are README.md, docs/DEVELOPMENT_LOG.md, docs/PLAN.md, docs/STATE.md, docs/M16_T01_REPAIR3.md and docs/M16_T01_PUBLICATION/classification-v1.json. The separate active chat's read-only progress snapshot records its stop-document updates; receipt concurrent-session-observation.json preserves attribution. REL1 made no original-tree writes and did not restore/discard those updates. Original main remains DIRTY.
+
+External evidence index `evidence-index-01.json`:169 files, SHA-256 `50e8f34da8fd7ca2881ec4beae97251ef3652fe86ee66db2946ef56978a8d260`; every retained failed log is indexed with actual bytes/SHA-256. Later final review/receipt outputs are added to evidence-index-final.json; historical index and failed outputs retained. No raw evidence committed.
+
+Release reviewer findings about exact START-HERE versions and Repeat→Deal are repaired and independently rechecked. Final fresh-context review PASS/unresolved findings0; external review-final.md SHA-256 `31d72cb4d24c29baf7d24ffd127239c22da5da4bc771d1b05c9013ef56aae4d0`, review-final.json SHA-256 `1a756f51e48fd4dbbf80fb951b272dcbd9532a7715d52118e73853bdf5642c8d`. Genuinely separate-client fresh-session review is NOT COMPLETED. AGENTS.md section13 requires it, and task section9 explicitly selects this local handoff state if unavailable. Public release is stopped here. [Prepared concise release notes and exact publication target](RELEASE-NOTES.md).
+
+Evidence migration NOT RUN; Git history rewrite NOT RUN; M16 not included; multiplayer not added; hosted website deployment NOT RUN. No milestone human acceptance is changed. Next owner action: provide a genuinely fresh-session reviewer the exact packaging commit, candidate-02 ZIP/SHA256SUMS and external evidence index. After review, recheck remote/tag absence, push the release branch normally, create the exact new tag/draft, verify uploaded download and startup, publish prerelease and verify credential-free public download. README needs a separate safe narrow change after the real asset exists. Stop after this deliverable.

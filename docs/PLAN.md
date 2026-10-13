@@ -1,3 +1,7 @@
+## REL1 local delivery stop — 2026-10-13 22:37:41 +08:00
+
+REL1 fixed-source build -> PASS/native0; actualZIP security/launcher ->13PASS/native0; production walkthrough/network/320px ->10PASS/native0; exact provenance/privacy ->PASS/native0. [One concise plan/evidence/repair index](../release/rel1/REPORT.md), cumulative4/10. READY_FOR_RELEASE_REVIEW, mandatory genuinely separate-client review NOT RUN. Normal branch push/tag/draft/upload/publication and narrow README entry remain pending this gate. No original WIP or historical milestone budget consumed.
+
 ## REL1 isolated interview distribution — 2026-10-13 22:12:28 +08:00
 
 Task REL1: fixed game snapshot -> native production build/fixture guards; dependency-free launcher -> security/process tests; actual ZIP -> fresh extraction/browser/network/Windows checks; exact candidate -> independent review; reviewed candidate -> explicit tag/draft/public download verification. [One task contract and cumulative 3/10 ledger](../release/rel1/REPORT.md). Package gates PENDING; separate-client review NOT RUN. No M16 implementation or historical repair allowance is included.
