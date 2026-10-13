@@ -1,3 +1,7 @@
+## REL1 isolated release source checkpoint — 2026-10-13 22:12:28 +08:00
+
+REL1 IMPLEMENTED; package verification PENDING, cumulative repairs 3/10. [Contract, bounded plan and evidence index](../release/rel1/REPORT.md). Game pinned to 920e1035f22eb7c770c50a409e977bcb33ee66ca; only release-specific sources and compact navigation changed in an isolated sparse worktree. Original dirty main/M16 work is excluded. Genuine separate-client release review, upload/publication and README download navigation NOT RUN. No milestone human acceptance or hosted deployment is established. Earlier dated records retain their history.
+
 ## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
 
 M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED. OWNER FINAL ACCEPTANCE: PENDING.

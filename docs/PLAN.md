@@ -1,3 +1,7 @@
+## REL1 isolated interview distribution — 2026-10-13 22:12:28 +08:00
+
+Task REL1: fixed game snapshot -> native production build/fixture guards; dependency-free launcher -> security/process tests; actual ZIP -> fresh extraction/browser/network/Windows checks; exact candidate -> independent review; reviewed candidate -> explicit tag/draft/public download verification. [One task contract and cumulative 3/10 ledger](../release/rel1/REPORT.md). Package gates PENDING; separate-client review NOT RUN. No M16 implementation or historical repair allowance is included.
+
 ## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
 
 M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED. OWNER FINAL ACCEPTANCE: PENDING.

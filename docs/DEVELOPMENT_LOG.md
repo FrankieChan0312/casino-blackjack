@@ -1,3 +1,7 @@
+## REL1 source preparation — 2026-10-13 22:12:28 +08:00
+
+Pinned main920e1035 observed DIRTY at 2026-10-13 21:39:39 +08:00; isolated codex/rel1-interview-demo sparse worktree created. New raw outputs remain outside tracked source. Unmodified locked install PASS/native0 after retained sandbox DNS FAIL; fresh production build and both fixture guards PASS/native0. New launcher/browser/package sources only; [bounded plan, native evidence and cumulative repairs3/10](../release/rel1/REPORT.md). Exact package provenance follows an actual source checkpoint commit; ZIP/browser/fresh-session review/publication remain PENDING/NOT RUN, not acceptance.
+
 ## Current M15 documentation closure — 2026-10-12 11:27:04 +08:00
 
 M15 implementation: IMPLEMENTED / VERIFIED / COMMITTED / PUSHED. M15 HUMAN VISUAL ACCEPTANCE: ACCEPTED. M15-CLOSURE DOCUMENTATION — VERIFIED / COMMITTED / PUSHED. OWNER FINAL ACCEPTANCE: PENDING.
